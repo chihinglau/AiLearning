@@ -1,0 +1,70 @@
+from datetime import datetime
+from typing import Any, List, Optional
+
+from sqlalchemy import BigInteger, Boolean, ForeignKey, Integer, String, Text, UniqueConstraint
+from sqlalchemy.orm import Mapped, mapped_column
+
+from app.db.base import Base
+from app.db.types import JSONType
+
+
+class Textbook(Base):
+    """教材版本，如「人教版 / 牛津深圳版」；深圳本地化教材在此登记。"""
+
+    __tablename__ = "textbooks"
+    __table_args__ = (
+        UniqueConstraint("subject", "grade", "version", "semester", name="uq_textbook"),
+    )
+
+    id: Mapped[int] = mapped_column(BigInteger().with_variant(Integer, "sqlite"), primary_key=True)
+    subject: Mapped[str] = mapped_column(String(20), index=True)
+    grade: Mapped[int] = mapped_column(index=True)
+    version: Mapped[str] = mapped_column(String(50))
+    semester: Mapped[str] = mapped_column(String(10), default="first")
+    is_active: Mapped[bool] = mapped_column(Boolean, default=True)
+    created_at: Mapped[datetime] = mapped_column(default=datetime.utcnow)
+
+
+class Chapter(Base):
+    __tablename__ = "chapters"
+
+    id: Mapped[int] = mapped_column(BigInteger().with_variant(Integer, "sqlite"), primary_key=True)
+    textbook_id: Mapped[int] = mapped_column(ForeignKey("textbooks.id"), index=True)
+    grade: Mapped[int] = mapped_column(index=True)
+    name: Mapped[str] = mapped_column(String(100))
+    order_index: Mapped[int] = mapped_column(Integer, default=0)
+    summary: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    created_at: Mapped[datetime] = mapped_column(default=datetime.utcnow)
+
+
+class Question(Base):
+    __tablename__ = "questions"
+
+    id: Mapped[int] = mapped_column(BigInteger().with_variant(Integer, "sqlite"), primary_key=True)
+    chapter_id: Mapped[int] = mapped_column(ForeignKey("chapters.id"), index=True)
+    subject: Mapped[str] = mapped_column(String(20), index=True)
+    q_type: Mapped[str] = mapped_column(String(20), default="choice")
+    content: Mapped[dict[str, Any]] = mapped_column(JSONType)
+    options: Mapped[Optional[List[Any]]] = mapped_column(JSONType, nullable=True)
+    answer: Mapped[dict[str, Any]] = mapped_column(JSONType)
+    analysis: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    difficulty: Mapped[int] = mapped_column(Integer, default=3)
+    tags: Mapped[Optional[List[str]]] = mapped_column(JSONType, nullable=True)
+    created_at: Mapped[datetime] = mapped_column(default=datetime.utcnow)
+
+
+class KnowledgePoint(Base):
+    """知识点图谱，parent_id 自关联构建层级树。"""
+
+    __tablename__ = "knowledge_points"
+
+    id: Mapped[int] = mapped_column(BigInteger().with_variant(Integer, "sqlite"), primary_key=True)
+    subject: Mapped[str] = mapped_column(String(20), index=True)
+    name: Mapped[str] = mapped_column(String(100))
+    parent_id: Mapped[Optional[int]] = mapped_column(
+        ForeignKey("knowledge_points.id"), nullable=True, index=True
+    )
+    grade: Mapped[Optional[int]] = mapped_column(index=True, nullable=True)
+    prerequisites: Mapped[Optional[List[int]]] = mapped_column(JSONType, nullable=True)
+    explanation: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    created_at: Mapped[datetime] = mapped_column(default=datetime.utcnow)

@@ -1,0 +1,48 @@
+# === Shared toolchains (all junctions, zero extra disk) ===
+.tools/
+
+# === Build artifacts ===
+build/
+app/build/
+app/.dart_tool/
+app/.flutter-plugins-dependencies
+*.log
+build-apk.log
+build-apk.err
+
+# === Secrets & signing (must never be committed) ===
+keystore.properties
+.tools/signing/
+app/ohos/signing/
+
+# === Local env ===
+.env
+.env.local
+backend/.venv/
+backend/__pycache__/
+backend/scripts/__pycache__/
+backend/ailearning_dev.db
+backend/*.db-journal
+backend/pytest_cache/
+backend/.pytest_cache/
+
+# === Flutter ===
+app/.flutter-plugins
+app/.packages
+app/ohos/.hvigor/
+app/ohos/build/
+app/ohos/.cxx/
+app/ohos/.idea/
+app/android/.gradle/
+app/android/local.properties
+app/ohos/local.properties
+
+# === skill helper (contains PAT usage details) ===
+docs/skill_github_repo_access.md
+
+# === Editor / OS ===
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
