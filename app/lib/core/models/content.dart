@@ -17,6 +17,10 @@ class Textbook {
 
   String get subjectLabel => Subject.fromCode(subject).label;
 
+  String get semesterLabel => semester == 'second' ? '下册' : '上册';
+
+  String get displayName => '$subjectLabel $grade年级 · $version · $semesterLabel';
+
   factory Textbook.fromJson(Map<String, dynamic> json) {
     return Textbook(
       id: json['id'] as int,
@@ -78,6 +82,7 @@ class Question {
     required this.subject,
     required this.qType,
     required this.stem,
+    this.knowledgePointId,
     this.options = const [],
     this.difficulty = 3,
     this.tags = const [],
@@ -88,6 +93,7 @@ class Question {
   final String subject;
   final String qType;
   final String stem;
+  final int? knowledgePointId;
   final List<QuestionOption> options;
   final int difficulty;
   final List<String> tags;
@@ -101,6 +107,7 @@ class Question {
       subject: json['subject'] as String? ?? '',
       qType: json['q_type'] as String? ?? 'choice',
       stem: content['stem'] as String? ?? '',
+      knowledgePointId: json['knowledge_point_id'] as int?,
       options: rawOptions
           .map((item) => QuestionOption.fromJson(item as Map<String, dynamic>))
           .toList(),

@@ -42,6 +42,9 @@ class Question(Base):
 
     id: Mapped[int] = mapped_column(BigInteger().with_variant(Integer, "sqlite"), primary_key=True)
     chapter_id: Mapped[int] = mapped_column(ForeignKey("chapters.id"), index=True)
+    knowledge_point_id: Mapped[Optional[int]] = mapped_column(
+        ForeignKey("knowledge_points.id"), nullable=True, index=True
+    )
     subject: Mapped[str] = mapped_column(String(20), index=True)
     q_type: Mapped[str] = mapped_column(String(20), default="choice")
     content: Mapped[dict[str, Any]] = mapped_column(JSONType)

@@ -40,3 +40,28 @@ class MasteryScore(Base):
     score: Mapped[float] = mapped_column(default=0.0)
     confidence: Mapped[int] = mapped_column(Integer, default=0)
     updated_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+
+
+class WrongQuestion(Base):
+    """错题本：一生一错题一行，聚合多次作答并承载 SM-2 间隔复习调度。"""
+
+    __tablename__ = "wrong_questions"
+    __table_args__ = (
+        UniqueConstraint("user_id", "question_id", name="uq_wrong_user_question"),
+    )
+
+    id: Mapped[int] = mapped_column(BigInteger().with_variant(Integer, "sqlite"), primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
+    question_id: Mapped[int] = mapped_column(ForeignKey("questions.id"), index=True)
+    wrong_count: Mapped[int] = mapped_column(Integer, default=1)
+    correct_streak: Mapped[int] = mapped_column(Integer, default=0)
+    status: Mapped[str] = mapped_column(String(20), default="active", index=True)
+    # SM-2 Lite 调度字段
+    ease_factor: Mapped[float] = mapped_column(default=2.5)
+    interval_days: Mapped[int] = mapped_column(Integer, default=1)
+    reps: Mapped[int] = mapped_column(Integer, default=0)
+    lapses: Mapped[int] = mapped_column(Integer, default=0)
+    next_review_at: Mapped[Optional[datetime]] = mapped_column(DateTime, nullable=True, index=True)
+    last_wrong_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+    wrong_reason: Mapped[Optional[str]] = mapped_column(String(20), nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)

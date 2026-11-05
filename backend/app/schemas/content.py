@@ -44,6 +44,7 @@ class ChapterOut(BaseModel):
 
 class QuestionCreate(BaseModel):
     chapter_id: int
+    knowledge_point_id: Optional[int] = None
     subject: str = Field(min_length=1, max_length=20)
     q_type: str = Field(
         default="choice", pattern=r"^(choice|multiple|fill|judge|calc|listen)$"
@@ -72,6 +73,7 @@ class QuestionPublic(BaseModel):
 
     id: int
     chapter_id: int
+    knowledge_point_id: Optional[int]
     subject: str
     q_type: str
     content: dict[str, Any]

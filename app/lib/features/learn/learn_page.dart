@@ -5,14 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-class HomePage extends ConsumerStatefulWidget {
-  const HomePage({super.key});
+class LearnPage extends ConsumerStatefulWidget {
+  const LearnPage({super.key});
 
   @override
-  ConsumerState<HomePage> createState() => _HomePageState();
+  ConsumerState<LearnPage> createState() => _LearnPageState();
 }
 
-class _HomePageState extends ConsumerState<HomePage> {
+class _LearnPageState extends ConsumerState<LearnPage> {
   List<Textbook> _textbooks = const [];
   List<Chapter> _chapters = const [];
   Textbook? _selectedTextbook;
@@ -74,27 +74,11 @@ class _HomePageState extends ConsumerState<HomePage> {
     }
   }
 
-  Future<void> _logout() async {
-    await ref.read(authServiceProvider).logout();
-    ref.read(currentUserProvider.notifier).state = null;
-    if (!mounted) return;
-    context.go('/login');
-  }
-
   @override
   Widget build(BuildContext context) {
     final user = ref.watch(currentUserProvider);
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('深爱学'),
-        actions: [
-          IconButton(
-            onPressed: _logout,
-            icon: const Icon(Icons.logout),
-            tooltip: '退出登录',
-          ),
-        ],
-      ),
+      appBar: AppBar(title: const Text('深爱学 · 学习')),
       body: RefreshIndicator(
         onRefresh: _loadTextbooks,
         child: ListView(
@@ -124,9 +108,7 @@ class _HomePageState extends ConsumerState<HomePage> {
                 children: _textbooks
                     .map(
                       (textbook) => ChoiceChip(
-                        label: Text(
-                          '${textbook.subjectLabel} ${textbook.grade}年级 · ${textbook.version}',
-                        ),
+                        label: Text(textbook.displayName),
                         selected: _selectedTextbook?.id == textbook.id,
                         onSelected: (_) => _loadChapters(textbook),
                       ),
@@ -134,7 +116,12 @@ class _HomePageState extends ConsumerState<HomePage> {
                     .toList(),
               ),
             const SizedBox(height: 20),
-            Text('同步练习章节', style: Theme.of(context).textTheme.titleMedium),
+            Text('章节与知识点', style: Theme.of(context).textTheme.titleMedium),
+            const SizedBox(height: 4),
+            Text(
+              '按章节查看知识点掌握度，开始自适应练习',
+              style: Theme.of(context).textTheme.bodySmall,
+            ),
             const SizedBox(height: 8),
             if (_loadingChapters)
               const Padding(
@@ -154,9 +141,15 @@ class _HomePageState extends ConsumerState<HomePage> {
                     title: Text(chapter.name),
                     subtitle: chapter.summary == null ? null : Text(chapter.summary!),
                     trailing: const Icon(Icons.chevron_right),
-                    onTap: () => context.go(
-                      '/practice/${chapter.id}?name=${Uri.encodeComponent(chapter.name)}',
-                    ),
+                    onTap: () {
+                      final textbook = _selectedTextbook;
+                      if (textbook == null) return;
+                      context.go(
+                        '/knowledge/${textbook.id}'
+                        '?name=${Uri.encodeComponent(textbook.displayName)}'
+                        '&chapter=${chapter.id}',
+                      );
+                    },
                   ),
                 ),
               ),

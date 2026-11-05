@@ -1,0 +1,216 @@
+import 'package:ai_learning/core/models/learn.dart';
+import 'package:ai_learning/core/providers.dart';
+import 'package:ai_learning/core/services/api_client.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
+
+class ProfilePage extends ConsumerStatefulWidget {
+  const ProfilePage({super.key});
+
+  @override
+  ConsumerState<ProfilePage> createState() => _ProfilePageState();
+}
+
+class _ProfilePageState extends ConsumerState<ProfilePage> {
+  LearnStats? _stats;
+  bool _loading = true;
+  String? _error;
+
+  @override
+  void initState() {
+    super.initState();
+    _load();
+  }
+
+  Future<void> _load() async {
+    setState(() {
+      _loading = true;
+      _error = null;
+    });
+    try {
+      final stats = await ref.read(learnServiceProvider).stats();
+      if (!mounted) return;
+      setState(() {
+        _stats = stats;
+        _loading = false;
+      });
+    } on ApiException catch (error) {
+      if (!mounted) return;
+      setState(() {
+        _error = error.message;
+        _loading = false;
+      });
+    }
+  }
+
+  Future<void> _logout() async {
+    await ref.read(authServiceProvider).logout();
+    ref.read(currentUserProvider.notifier).state = null;
+    if (!mounted) return;
+    context.go('/login');
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final user = ref.watch(currentUserProvider);
+    final theme = Theme.of(context);
+    return Scaffold(
+      appBar: AppBar(title: const Text('我的')),
+      body: _loading
+          ? const Center(child: CircularProgressIndicator())
+          : RefreshIndicator(
+              onRefresh: _load,
+              child: ListView(
+                padding: const EdgeInsets.all(16),
+                children: [
+                  Card(
+                    color: theme.colorScheme.primaryContainer,
+                    child: Padding(
+                      padding: const EdgeInsets.all(16),
+                      child: Row(
+                        children: [
+                          CircleAvatar(
+                            radius: 28,
+                            backgroundColor: theme.colorScheme.primary,
+                            child: const Icon(Icons.person, color: Colors.white, size: 32),
+                          ),
+                          const SizedBox(width: 16),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  user?.nickname ?? '同学',
+                                  style: theme.textTheme.titleMedium,
+                                ),
+                                const SizedBox(height: 4),
+                                Text(
+                                  user?.grade != null ? '${user!.grade} 年级在读' : '深圳学生',
+                                  style: theme.textTheme.bodySmall,
+                                ),
+                                Text(user?.phone ?? '', style: theme.textTheme.bodySmall),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+                  if (_error != null)
+                    Text(_error!, style: TextStyle(color: theme.colorScheme.error)),
+                  if (_stats != null) ...[
+                    Row(
+                      children: [
+                        _StatCard(
+                          icon: Icons.local_fire_department_outlined,
+                          value: '${_stats!.streakDays}',
+                          label: '连续学习(天)',
+                          color: Colors.deepOrange,
+                        ),
+                        _StatCard(
+                          icon: Icons.edit_note,
+                          value: '${_stats!.totalAnswered}',
+                          label: '累计答题',
+                          color: Colors.blue,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        _StatCard(
+                          icon: Icons.verified_outlined,
+                          value: _stats!.accuracyPercent,
+                          label: '总正确率',
+                          color: Colors.green,
+                        ),
+                        _StatCard(
+                          icon: Icons.bookmark_border,
+                          value: '${_stats!.activeWrongCount}',
+                          label: '待消灭错题',
+                          color: Colors.redAccent,
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 8),
+                    Text('薄弱知识点 Top3', style: theme.textTheme.titleMedium),
+                    const SizedBox(height: 8),
+                    if (_stats!.weakPoints.isEmpty)
+                      Card(
+                        child: Padding(
+                          padding: const EdgeInsets.all(16),
+                          child: Text(
+                            _stats!.totalAnswered == 0
+                                ? '还没有答题记录，去「学习」里练一练吧。'
+                                : '掌握度都在 70 分以上，暂无薄弱知识点，继续保持！',
+                            style: theme.textTheme.bodyMedium,
+                          ),
+                        ),
+                      )
+                    else
+                      ..._stats!.weakPoints.map(
+                        (node) => Card(
+                          child: ListTile(
+                            leading: Icon(Icons.circle, size: 12, color: node.bandColor),
+                            title: Text('${node.subjectLabel} · ${node.name}'),
+                            subtitle: Text(
+                              node.explanation ?? '',
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                            trailing: Text(
+                              '${node.masteryScore.round()}',
+                              style: theme.textTheme.titleMedium
+                                  ?.copyWith(color: node.bandColor),
+                            ),
+                          ),
+                        ),
+                      ),
+                  ],
+                  const SizedBox(height: 24),
+                  OutlinedButton.icon(
+                    onPressed: _logout,
+                    icon: const Icon(Icons.logout),
+                    label: const Text('退出登录'),
+                  ),
+                ],
+              ),
+            ),
+    );
+  }
+}
+
+class _StatCard extends StatelessWidget {
+  const _StatCard({
+    required this.icon,
+    required this.value,
+    required this.label,
+    required this.color,
+  });
+
+  final IconData icon;
+  final String value;
+  final String label;
+  final Color color;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    return Expanded(
+      child: Card(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
+          child: Column(
+            children: [
+              Icon(icon, color: color),
+              const SizedBox(height: 6),
+              Text(value, style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+              Text(label, style: theme.textTheme.labelSmall),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
