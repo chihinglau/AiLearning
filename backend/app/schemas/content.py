@@ -90,5 +90,8 @@ class KnowledgePointOut(BaseModel):
     name: str
     parent_id: Optional[int]
     grade: Optional[int]
+    node_type: str = "point"
+    order_index: int = 0
+    weight: float = 1.0
     prerequisites: Optional[List[int]]
     explanation: Optional[str]

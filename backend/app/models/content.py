@@ -57,7 +57,10 @@ class Question(Base):
 
 
 class KnowledgePoint(Base):
-    """知识点图谱，parent_id 自关联构建层级树。"""
+    """知识点图谱，parent_id 自关联构建层级树。
+
+    node_type：`section` 为单元下的节（L2，parent_id 为空），`point` 为最小学习单位（L3）。
+    """
 
     __tablename__ = "knowledge_points"
 
@@ -68,6 +71,11 @@ class KnowledgePoint(Base):
         ForeignKey("knowledge_points.id"), nullable=True, index=True
     )
     grade: Mapped[Optional[int]] = mapped_column(index=True, nullable=True)
+    node_type: Mapped[str] = mapped_column(
+        String(20), default="point", server_default="point", index=True
+    )
+    order_index: Mapped[int] = mapped_column(Integer, default=0, server_default="0")
+    weight: Mapped[float] = mapped_column(default=1.0, server_default="1.0")
     prerequisites: Mapped[Optional[List[int]]] = mapped_column(JSONType, nullable=True)
     explanation: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
     created_at: Mapped[datetime] = mapped_column(default=datetime.utcnow)
