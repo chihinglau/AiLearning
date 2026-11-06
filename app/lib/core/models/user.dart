@@ -21,6 +21,19 @@ class AppUser {
 
   bool get isStudent => role == 'student';
 
+  AppUser copyWith({String? stage, int? grade}) {
+    return AppUser(
+      id: id,
+      phone: phone,
+      nickname: nickname,
+      role: role,
+      stage: stage ?? this.stage,
+      grade: grade ?? this.grade,
+      isChild: isChild,
+      dailyLimitMinutes: dailyLimitMinutes,
+    );
+  }
+
   factory AppUser.fromJson(Map<String, dynamic> json) {
     return AppUser(
       id: json['id'] as int,

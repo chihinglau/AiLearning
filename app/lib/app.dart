@@ -1,5 +1,8 @@
+import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/features/auth/login_page.dart';
 import 'package:ai_learning/features/learn/knowledge_page.dart';
+import 'package:ai_learning/features/onboarding/entry_gate_page.dart';
+import 'package:ai_learning/features/onboarding/onboarding_page.dart';
 import 'package:ai_learning/features/practice/practice_page.dart';
 import 'package:ai_learning/features/session/session_page.dart';
 import 'package:ai_learning/features/shell/app_shell.dart';
@@ -10,10 +13,30 @@ import 'package:go_router/go_router.dart';
 final routerProvider = Provider<GoRouter>((ref) {
   return GoRouter(
     initialLocation: '/login',
+    redirect: (context, state) {
+      final status = ref.read(onboardingStatusProvider);
+      final location = state.matchedLocation;
+      if (location == '/login' || location == '/gate') return null;
+      if (status == OnboardingStatus.required && location != '/onboarding') {
+        return '/onboarding';
+      }
+      if (status == OnboardingStatus.completed && location == '/onboarding') {
+        return '/shell';
+      }
+      return null;
+    },
     routes: [
       GoRoute(
         path: '/login',
         builder: (context, state) => const LoginPage(),
+      ),
+      GoRoute(
+        path: '/gate',
+        builder: (context, state) => const EntryGatePage(),
+      ),
+      GoRoute(
+        path: '/onboarding',
+        builder: (context, state) => const OnboardingPage(),
       ),
       GoRoute(
         path: '/shell',

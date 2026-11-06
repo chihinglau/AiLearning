@@ -2,10 +2,13 @@ import 'package:ai_learning/core/constants/app_constants.dart';
 import 'package:dio/dio.dart';
 
 class ApiException implements Exception {
-  const ApiException(this.message, {this.statusCode});
+  const ApiException(this.message, {this.statusCode, this.payload});
 
   final String message;
   final int? statusCode;
+
+  /// 后端结构化错误体（如 428 的 impact / confirm_token）。
+  final Map<String, dynamic>? payload;
 
   @override
   String toString() => message;
@@ -78,6 +81,18 @@ class ApiClient {
     }
   }
 
+  Future<Map<String, dynamic>> putJson(
+    String path,
+    Map<String, dynamic> body,
+  ) async {
+    try {
+      final response = await _dio.put<dynamic>(path, data: body);
+      return _asMap(response.data);
+    } on DioException catch (error) {
+      throw _toApiException(error);
+    }
+  }
+
   /// OAuth2 密码模式登录使用 form-urlencoded 提交。
   Future<Map<String, dynamic>> postForm(
     String path,
@@ -105,8 +120,17 @@ class ApiClient {
     if (data is Map<String, dynamic>) {
       final detail = data['detail'];
       if (detail is String) {
-        return ApiException(detail, statusCode: statusCode);
+        return ApiException(detail, statusCode: statusCode, payload: data);
       }
+      final message = data['message'];
+      if (message is String) {
+        return ApiException(message, statusCode: statusCode, payload: data);
+      }
+      return ApiException(
+        '请求失败（${statusCode ?? error.type.name}）',
+        statusCode: statusCode,
+        payload: data,
+      );
     }
     if (error.type == DioExceptionType.connectionError ||
         error.type == DioExceptionType.connectionTimeout) {

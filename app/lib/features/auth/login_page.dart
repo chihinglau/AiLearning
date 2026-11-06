@@ -40,7 +40,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
       );
       ref.read(currentUserProvider.notifier).state = user;
       if (!mounted) return;
-      context.go('/shell');
+      context.go('/gate');
     } on ApiException catch (error) {
       if (!mounted) return;
       setState(() => _error = error.message);
