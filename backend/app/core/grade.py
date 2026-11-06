@@ -83,3 +83,9 @@ def semester_start(dt: datetime) -> datetime:
         return datetime(dt.year - 1, 9, 1)
     return datetime(dt.year, 2, 1)
 
+
+def derive_semester(dt: datetime) -> str:
+    """9 月-次年 1 月为上学期，2-8 月为下学期。"""
+    return "first" if dt.month >= 9 or dt.month == 1 else "second"
+
+
