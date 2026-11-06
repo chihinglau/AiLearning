@@ -154,9 +154,12 @@ class LearnService {
     return HomeData.fromJson(data);
   }
 
-  /// 学情总览。
-  Future<LearnStats> stats() async {
-    final data = await _api.getJson('/api/learn/stats');
+  /// 学情总览；家长/教师可传 `studentId` 查看授权孩子或班级学生（服务端校验范围）。
+  Future<LearnStats> stats({int? studentId}) async {
+    final data = await _api.getJson(
+      '/api/learn/stats',
+      query: {'student_id': ?studentId},
+    );
     return LearnStats.fromJson(data);
   }
 

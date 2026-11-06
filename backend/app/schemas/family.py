@@ -30,3 +30,10 @@ class ChildOut(BaseModel):
     is_child: bool
     consent_at: Optional[datetime]
     bound_at: datetime
+    daily_limit_minutes: int = 120
+    teen_mode: bool = False
+
+
+class ChildControlsIn(BaseModel):
+    daily_limit_minutes: Optional[int] = Field(default=None, ge=0, le=240)
+    teen_mode: Optional[bool] = None

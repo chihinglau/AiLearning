@@ -25,6 +25,15 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
   }
 
   Future<void> _load() async {
+    final user = ref.read(currentUserProvider);
+    if (user == null || !user.isStudent) {
+      setState(() {
+        _stats = null;
+        _loading = false;
+        _error = null;
+      });
+      return;
+    }
     setState(() {
       _loading = true;
       _error = null;
@@ -87,7 +96,11 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                                 ),
                                 const SizedBox(height: 4),
                                 Text(
-                                  user?.grade != null ? '${user!.grade} 年级在读' : '深圳学生',
+                                  user?.isStudent == true
+                                      ? (user?.grade != null
+                                          ? '${user!.grade} 年级在读'
+                                          : '深圳学生')
+                                      : _roleLabel(user?.role),
                                   style: theme.textTheme.bodySmall,
                                 ),
                                 Text(user?.phone ?? '', style: theme.textTheme.bodySmall),
@@ -182,6 +195,18 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                     ),
                     const SizedBox(height: 16),
                   ],
+                  if (user?.hasPermission('learn:stats:child:read') == true) ...[
+                    Card(
+                      child: ListTile(
+                        leading: const Icon(Icons.family_restroom),
+                        title: const Text('家长中心'),
+                        subtitle: const Text('查看孩子学情、设置每日时长与青少年模式'),
+                        trailing: const Icon(Icons.chevron_right),
+                        onTap: () => context.go('/family'),
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                  ],
                   OutlinedButton.icon(
                     onPressed: _logout,
                     icon: const Icon(Icons.logout),
@@ -191,6 +216,30 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
               ),
             ),
     );
+  }
+}
+
+String _roleLabel(String? role) {
+  switch (role) {
+    case 'parent':
+      return '家长账号';
+    case 'teacher':
+      return '教师账号';
+    case 'head_teacher':
+      return '班主任';
+    case 'school_admin':
+      return '校级管理员';
+    case 'content_operator':
+      return '内容运营';
+    case 'auditor':
+      return '审核员';
+    case 'customer_service':
+      return '客服';
+    case 'super_admin':
+    case 'admin':
+      return '超级管理员';
+    default:
+      return '用户';
   }
 }
 

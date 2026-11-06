@@ -45,6 +45,9 @@ class User(Base):
     daily_limit_minutes: Mapped[int] = mapped_column(
         Integer, default=settings.default_daily_limit_minutes
     )
+    teen_mode: Mapped[bool] = mapped_column(
+        Boolean, default=False, server_default="0", nullable=False
+    )
     is_active: Mapped[bool] = mapped_column(Boolean, default=True)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
 

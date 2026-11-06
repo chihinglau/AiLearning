@@ -4,6 +4,7 @@ import 'package:ai_learning/features/common/permission_gate.dart';
 import 'package:ai_learning/features/exam/exam_list_page.dart';
 import 'package:ai_learning/features/exam/exam_page.dart';
 import 'package:ai_learning/features/exam/exam_report_page.dart';
+import 'package:ai_learning/features/family/parent_children_page.dart';
 import 'package:ai_learning/features/learn/knowledge_page.dart';
 import 'package:ai_learning/features/learn/kp_detail_page.dart';
 import 'package:ai_learning/features/learn/unit_page.dart';
@@ -102,6 +103,13 @@ final routerProvider = Provider<GoRouter>((ref) {
         builder: (context, state) => const PermissionGate(
           anyOf: ['learn:content:read'],
           child: TextbookManagePage(),
+        ),
+      ),
+      GoRoute(
+        path: '/family',
+        builder: (context, state) => const PermissionGate(
+          anyOf: ['family:report:read', 'learn:stats:child:read'],
+          child: ParentChildrenPage(),
         ),
       ),
       GoRoute(

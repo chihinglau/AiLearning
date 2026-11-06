@@ -9,7 +9,12 @@ from sqlalchemy.orm import Session
 from app.api.deps import require_permission
 from app.db.session import get_db
 from app.models.user import ParentChildBinding, User
-from app.schemas.family import BindingCreate, BindingOut, ChildOut
+from app.schemas.family import (
+    BindingCreate,
+    BindingOut,
+    ChildControlsIn,
+    ChildOut,
+)
 from app.services.audit import record_audit
 
 router = APIRouter(prefix="/family", tags=["家庭"])
@@ -149,6 +154,21 @@ def revoke_binding(
     return binding
 
 
+def _child_out(child: User, binding: ParentChildBinding) -> ChildOut:
+    return ChildOut(
+        id=child.id,
+        nickname=child.nickname,
+        stage=child.stage,
+        grade=child.grade,
+        grade_group=child.grade_group,
+        is_child=child.is_child,
+        consent_at=binding.consent_at,
+        bound_at=binding.created_at,
+        daily_limit_minutes=child.daily_limit_minutes,
+        teen_mode=child.teen_mode,
+    )
+
+
 @router.get("/children", response_model=list[ChildOut])
 def list_children(
     current: User = Depends(require_permission("family:report:read")),
@@ -163,16 +183,58 @@ def list_children(
         )
         .order_by(ParentChildBinding.created_at)
     ).all()
-    return [
-        ChildOut(
-            id=child.id,
-            nickname=child.nickname,
-            stage=child.stage,
-            grade=child.grade,
-            grade_group=child.grade_group,
-            is_child=child.is_child,
-            consent_at=binding.consent_at,
-            bound_at=binding.created_at,
+    return [_child_out(child, binding) for child, binding in rows]
+
+
+@router.put("/children/{child_id}/controls", response_model=ChildOut)
+def update_child_controls(
+    child_id: int,
+    payload: ChildControlsIn,
+    request: Request,
+    current: User = Depends(require_permission("family:binding:manage")),
+    db: Session = Depends(get_db),
+) -> ChildOut:
+    """家长设置孩子每日时长与青少年模式（D-03 §10.2）。"""
+    if payload.daily_limit_minutes is None and payload.teen_mode is None:
+        raise HTTPException(
+            status_code=422,
+            detail={"code": "CONTROLS_REQUIRED", "message": "请至少设置一项"},
         )
-        for child, binding in rows
-    ]
+    binding = db.scalar(
+        select(ParentChildBinding).where(
+            ParentChildBinding.parent_id == current.id,
+            ParentChildBinding.child_id == child_id,
+            ParentChildBinding.status == "active",
+        )
+    )
+    child = db.get(User, child_id)
+    if binding is None or child is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail={"code": "BINDING_NOT_ACTIVE", "message": "未找到已生效的孩子绑定"},
+        )
+
+    before = {
+        "daily_limit_minutes": child.daily_limit_minutes,
+        "teen_mode": child.teen_mode,
+    }
+    if payload.daily_limit_minutes is not None:
+        child.daily_limit_minutes = payload.daily_limit_minutes
+    if payload.teen_mode is not None:
+        child.teen_mode = payload.teen_mode
+    record_audit(
+        db,
+        user_id=current.id,
+        action="family.controls.update",
+        before=before,
+        after={
+            "daily_limit_minutes": child.daily_limit_minutes,
+            "teen_mode": child.teen_mode,
+        },
+        message=f"child_id={child.id}",
+        ip=_ip(request),
+        commit=False,
+    )
+    db.commit()
+    db.refresh(child)
+    return _child_out(child, binding)
