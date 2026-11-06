@@ -60,3 +60,25 @@ class AssignmentOut(BaseModel):
     class_id: int
     subject: str
     role_in_class: str
+
+
+class ClassWeakPointOut(BaseModel):
+    knowledge_point_id: int
+    name: str
+    subject: str
+    avg_mastery: float
+
+
+class ClassStatsOut(BaseModel):
+    class_id: int
+    class_name: str
+    grade: int
+    subject: Optional[str]
+    student_count: int
+    active_student_count: int
+    submission_rate: float
+    total_answered: int
+    accuracy: float
+    avg_mastery: float
+    weak_points: List[ClassWeakPointOut]
+

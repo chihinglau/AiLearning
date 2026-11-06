@@ -1,6 +1,7 @@
+from datetime import datetime, timedelta
 from typing import List, Optional
 
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
@@ -13,7 +14,9 @@ from app.api.deps import (
 from app.core.permissions import ALL_PERMISSIONS
 from app.core.scope import teacher_class_ids
 from app.db.session import get_db
+from app.models.content import KnowledgePoint, Question
 from app.models.org import ClassMember, School, SchoolClass, TeacherClassAssignment
+from app.models.practice import MasteryScore, StudentQuestionRecord
 from app.models.user import User
 from app.schemas.org import (
     AssignmentCreate,
@@ -22,6 +25,8 @@ from app.schemas.org import (
     ClassMemberAdd,
     ClassMemberAddOut,
     ClassOut,
+    ClassStatsOut,
+    ClassWeakPointOut,
     SchoolCreate,
     SchoolOut,
 )
@@ -201,6 +206,123 @@ def create_class(
         },
     )
     return _class_out(db, room)
+
+
+@router.get("/classes/{class_id}/stats", response_model=ClassStatsOut)
+def class_stats(
+    class_id: int,
+    subject: Optional[str] = Query(default=None, max_length=20),
+    current: User = Depends(require_permission("learn:stats:class:read")),
+    db: Session = Depends(get_db),
+) -> ClassStatsOut:
+    """班级学情聚合（D-03 §6.5）：只返回聚合值，不返回学生逐题作答原文。"""
+    room = db.get(SchoolClass, class_id)
+    if room is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="班级不存在")
+
+    if not _is_super(current):
+        if current.role == "school_admin":
+            if room.school_id != current.school_id:
+                raise _forbidden("SCOPE_DENIED", "无权查看该班级学情")
+        elif class_id not in teacher_class_ids(db, current, subject):
+            raise _forbidden("SCOPE_DENIED", "无权查看该班级学情")
+
+    member_ids = list(
+        db.scalars(select(ClassMember.student_id).where(ClassMember.class_id == class_id))
+    )
+    empty = ClassStatsOut(
+        class_id=room.id,
+        class_name=room.name,
+        grade=room.grade,
+        subject=subject,
+        student_count=len(member_ids),
+        active_student_count=0,
+        submission_rate=0.0,
+        total_answered=0,
+        accuracy=0.0,
+        avg_mastery=0.0,
+        weak_points=[],
+    )
+    if not member_ids:
+        return empty
+
+    record_filters = [StudentQuestionRecord.user_id.in_(member_ids)]
+    mastery_filters = [MasteryScore.user_id.in_(member_ids)]
+    if subject:
+        record_filters.append(Question.subject == subject)
+        mastery_filters.append(KnowledgePoint.subject == subject)
+
+    total_stmt = select(func.count(StudentQuestionRecord.id))
+    correct_stmt = select(func.count(StudentQuestionRecord.id)).where(
+        StudentQuestionRecord.is_correct.is_(True)
+    )
+    active_stmt = select(func.count(func.distinct(StudentQuestionRecord.user_id)))
+    if subject:
+        total_stmt = total_stmt.join(Question, Question.id == StudentQuestionRecord.question_id)
+        correct_stmt = correct_stmt.join(
+            Question, Question.id == StudentQuestionRecord.question_id
+        )
+        active_stmt = active_stmt.join(Question, Question.id == StudentQuestionRecord.question_id)
+    total = db.scalar(total_stmt.where(*record_filters)) or 0
+    correct = db.scalar(correct_stmt.where(*record_filters)) or 0
+    week_ago = datetime.utcnow() - timedelta(days=7)
+    active = (
+        db.scalar(
+            active_stmt.where(
+                *record_filters,
+                StudentQuestionRecord.attempted_at >= week_ago,
+            )
+        )
+        or 0
+    )
+
+    mastery_stmt = select(func.avg(MasteryScore.score))
+    if subject:
+        mastery_stmt = mastery_stmt.join(
+            KnowledgePoint, KnowledgePoint.id == MasteryScore.knowledge_point_id
+        )
+    avg_mastery = float(db.scalar(mastery_stmt.where(*mastery_filters)) or 0.0)
+
+    weak_stmt = (
+        select(
+            MasteryScore.knowledge_point_id,
+            func.avg(MasteryScore.score).label("avg_score"),
+        )
+        .join(KnowledgePoint, KnowledgePoint.id == MasteryScore.knowledge_point_id)
+        .where(*mastery_filters)
+        .having(func.avg(MasteryScore.score) < 70)
+        .group_by(MasteryScore.knowledge_point_id)
+        .order_by(func.avg(MasteryScore.score).asc())
+        .limit(5)
+    )
+    weak_points: list[ClassWeakPointOut] = []
+    for kp_id, avg_score in db.execute(weak_stmt).all():
+        kp = db.get(KnowledgePoint, kp_id)
+        if kp is None:
+            continue
+        weak_points.append(
+            ClassWeakPointOut(
+                knowledge_point_id=kp.id,
+                name=kp.name,
+                subject=kp.subject,
+                avg_mastery=round(float(avg_score), 1),
+            )
+        )
+
+    student_count = len(member_ids)
+    return ClassStatsOut(
+        class_id=room.id,
+        class_name=room.name,
+        grade=room.grade,
+        subject=subject,
+        student_count=student_count,
+        active_student_count=int(active),
+        submission_rate=round(active / student_count, 3) if student_count else 0.0,
+        total_answered=int(total),
+        accuracy=round(correct / total, 3) if total else 0.0,
+        avg_mastery=round(avg_mastery, 1),
+        weak_points=weak_points,
+    )
 
 
 @router.get("/classes/{class_id}/members", response_model=List[int])
