@@ -75,6 +75,21 @@ def require_permission(*required: str):
     return dependency
 
 
+def require_any_permission(*required: str):
+    """声明式权限依赖：满足任一权限点即可（用于多角色共用接口）。"""
+
+    def dependency(current: User = Depends(get_current_user)) -> User:
+        perms = permissions_for_role(current.role)
+        if ALL_PERMISSIONS not in perms and not any(p in perms for p in required):
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail={"code": "PERMISSION_DENIED", "message": "权限不足"},
+            )
+        return current
+
+    return dependency
+
+
 def require_admin(current: User = Depends(get_current_user)) -> User:
     """兼容改造：历史 admin 映射 super_admin；保持"全量权限"语义。"""
     if not has_permission(current, ALL_PERMISSIONS):

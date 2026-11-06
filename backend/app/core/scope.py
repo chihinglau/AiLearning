@@ -47,7 +47,7 @@ def scope_for_permission(role: str, permission: str) -> Optional[str]:
     return None
 
 
-def _teacher_class_ids(db: Session, actor: User, subject: Optional[str]) -> set[int]:
+def teacher_class_ids(db: Session, actor: User, subject: Optional[str] = None) -> set[int]:
     """教师可见班级：班主任所在班（全学科）+ 授课分配（按学科收窄）。"""
     if actor.school_id is None:
         return set()
@@ -94,7 +94,7 @@ def resolve_student_ids(
         )
         return set(rows)
     if scope == SCOPE_CLASS:
-        class_ids = _teacher_class_ids(db, actor, subject)
+        class_ids = teacher_class_ids(db, actor, subject)
         if not class_ids:
             return set()
         rows = db.scalars(
