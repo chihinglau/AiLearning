@@ -52,6 +52,7 @@ from app.services import practice as practice_service
 from app.services import recommendation
 from app.services import study_state
 from app.services import textbook as textbook_service
+from app.services import wrong_reason as wrong_reason_service
 
 router = APIRouter(prefix="/learn", tags=["自适应学习"])
 
@@ -1012,9 +1013,13 @@ def wrong_questions(
         for q in db.scalars(select(Question).where(Question.id.in_(q_ids)))
     } if q_ids else {}
     result: list[WrongQuestionOut] = []
+    now = datetime.utcnow()
     for row in rows:
         q = questions.get(row.question_id)
         out = WrongQuestionOut.model_validate(row)
+        out.priority_score, out.review_priority = wrong_reason_service.review_priority(
+            row, now
+        )
         if q is not None:
             out.subject = q.subject
             out.q_type = q.q_type
@@ -1025,6 +1030,10 @@ def wrong_questions(
         if subject and out.subject != subject:
             continue
         result.append(out)
+    result.sort(
+        key=lambda item: (item.priority_score, item.last_wrong_at.timestamp()),
+        reverse=True,
+    )
     return result
 
 

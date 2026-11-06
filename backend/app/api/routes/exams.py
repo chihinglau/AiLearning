@@ -44,6 +44,7 @@ from app.schemas.exam import (
     ExamWrongItemOut,
 )
 from app.services import learning as engine
+from app.services import wrong_reason as wrong_reason_service
 from app.services.exam_paper import generate_paper
 
 router = APIRouter(prefix="/exams", tags=["考试"])
@@ -513,7 +514,9 @@ def _finalize(
             db, user_id=attempt.user_id, question=question, is_correct=is_correct
         )
         if not is_correct and wrong is not None and wrong.wrong_reason is None:
-            wrong.wrong_reason = "other"
+            wrong.wrong_reason = wrong_reason_service.classify_exam_wrong(
+                question, row.user_answer if row is not None else None
+            )
     db.flush()
 
 
@@ -1105,7 +1108,10 @@ def self_assess(
             db, user_id=attempt.user_id, question=question, is_correct=is_correct
         )
         if not is_correct and wrong is not None and wrong.wrong_reason is None:
-            wrong.wrong_reason = "other"
+            answer_row = rows.get(question.id)
+            wrong.wrong_reason = wrong_reason_service.classify_exam_wrong(
+                question, answer_row.user_answer if answer_row is not None else None
+            )
 
     subjective_ids = [
         item["question_id"]

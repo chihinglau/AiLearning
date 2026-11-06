@@ -118,7 +118,7 @@ def test_unit_exam_backflow_writes_records_wrongbook_and_mastery(
     )
     assert wrong is not None
     assert wrong.wrong_count == 1
-    assert wrong.wrong_reason == "other"
+    assert wrong.wrong_reason == "concept"
 
     correct_kp = db.scalar(
         select(MasteryScore).where(

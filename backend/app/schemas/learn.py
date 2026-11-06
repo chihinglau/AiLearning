@@ -165,6 +165,9 @@ class WrongQuestionOut(BaseModel):
     next_review_at: Optional[datetime]
     last_wrong_at: datetime
     wrong_reason: Optional[str]
+    # P1-12 复习优先级：high/medium/low 与排序分数
+    review_priority: str = "low"
+    priority_score: int = 0
     # 联表冗余，方便错题本列表直接渲染
     subject: str = ""
     q_type: str = "choice"
