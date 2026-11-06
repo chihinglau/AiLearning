@@ -23,6 +23,8 @@ from app.schemas.learn import (
     HomeRecommendation,
     HomeTextbook,
     HomeTodayPlan,
+    KpBriefOut,
+    KpDetailOut,
     KnowledgeNodeOut,
     LearnStartIn,
     LearnStartOut,
@@ -30,6 +32,9 @@ from app.schemas.learn import (
     LearnSubmitIn,
     LearnSubmitOut,
     MasteryMapOut,
+    UnitDetailOut,
+    UnitOut,
+    UnitSectionOut,
     WrongQuestionOut,
     WrongReasonIn,
 )
@@ -121,6 +126,310 @@ def knowledge_tree(
         )
         result.append(tree)
     return result
+
+
+# ---------------------------------------------------------------------------
+# 目录视图：教材 → 单元 → 节 → 知识点（P0-19）
+# ---------------------------------------------------------------------------
+
+
+def _chapter_kps(db: Session, chapter_ids: list[int]) -> dict[int, dict[int, int]]:
+    """chapter_id → {kp_id: 题目数}。"""
+    if not chapter_ids:
+        return {}
+    rows = db.execute(
+        select(Question.chapter_id, Question.knowledge_point_id, func.count(Question.id))
+        .where(
+            Question.chapter_id.in_(chapter_ids),
+            Question.knowledge_point_id.is_not(None),
+        )
+        .group_by(Question.chapter_id, Question.knowledge_point_id)
+    ).all()
+    agg: dict[int, dict[int, int]] = {}
+    for chapter_id, kp_id, count in rows:
+        agg.setdefault(chapter_id, {})[int(kp_id)] = int(count)
+    return agg
+
+
+def _attempted_kps(db: Session, *, user_id: int, kp_ids: list[int]) -> set[int]:
+    if not kp_ids:
+        return set()
+    rows = db.execute(
+        select(Question.knowledge_point_id)
+        .join(StudentQuestionRecord, StudentQuestionRecord.question_id == Question.id)
+        .where(
+            StudentQuestionRecord.user_id == user_id,
+            Question.knowledge_point_id.in_(kp_ids),
+        )
+        .distinct()
+    ).all()
+    return {int(kp_id) for (kp_id,) in rows}
+
+
+def _due_review_kps(db: Session, *, user_id: int, kp_ids: list[int], now: datetime) -> set[int]:
+    if not kp_ids:
+        return set()
+    rows = db.execute(
+        select(Question.knowledge_point_id)
+        .join(WrongQuestion, WrongQuestion.question_id == Question.id)
+        .where(
+            WrongQuestion.user_id == user_id,
+            WrongQuestion.status == "active",
+            WrongQuestion.next_review_at.is_not(None),
+            WrongQuestion.next_review_at <= now,
+            Question.knowledge_point_id.in_(kp_ids),
+        )
+        .distinct()
+    ).all()
+    return {int(kp_id) for (kp_id,) in rows}
+
+
+def _last_studied_map(db: Session, *, user_id: int, kp_ids: list[int]) -> dict[int, datetime]:
+    if not kp_ids:
+        return {}
+    rows = db.execute(
+        select(Question.knowledge_point_id, func.max(StudentQuestionRecord.attempted_at))
+        .join(StudentQuestionRecord, StudentQuestionRecord.question_id == Question.id)
+        .where(
+            StudentQuestionRecord.user_id == user_id,
+            Question.knowledge_point_id.in_(kp_ids),
+        )
+        .group_by(Question.knowledge_point_id)
+    ).all()
+    return {int(kp_id): last for kp_id, last in rows if last is not None}
+
+
+def _kp_node(
+    kp: KnowledgePoint,
+    *,
+    question_count: int,
+    mastery: dict[int, MasteryScore],
+    attempted: set[int],
+    due: set[int],
+    last_studied: dict[int, datetime],
+) -> KnowledgeNodeOut:
+    row = mastery.get(kp.id)
+    score = round(row.score, 1) if row else 0.0
+    node = KnowledgeNodeOut.model_validate(kp)
+    node.mastery_score = score
+    node.mastery_confidence = row.confidence if row else 0
+    node.mastery_band = engine.mastery_band(score)
+    node.question_count = question_count
+    node.state = engine.derive_study_state(
+        mastery=score,
+        attempted=kp.id in attempted,
+        due_review=kp.id in due,
+    )
+    node.last_studied_at = last_studied.get(kp.id)
+    return node
+
+
+def _unit_out(
+    chapter: Chapter,
+    *,
+    kps: dict[int, KnowledgePoint],
+    counts: dict[int, int],
+    mastery: dict[int, MasteryScore],
+    attempted: set[int],
+) -> UnitOut:
+    kp_ids = list(counts)
+    scores = [mastery[kp_id].score if kp_id in mastery else 0.0 for kp_id in kp_ids]
+    avg = round(sum(scores) / len(scores), 1) if scores else 0.0
+    learned = sum(1 for kp_id in kp_ids if kp_id in attempted or kp_id in mastery)
+    parents = {kps[kp_id].parent_id for kp_id in kp_ids if kps[kp_id].parent_id}
+    return UnitOut(
+        id=chapter.id,
+        textbook_id=chapter.textbook_id,
+        grade=chapter.grade,
+        name=chapter.name,
+        order_index=chapter.order_index,
+        summary=chapter.summary,
+        section_count=len(parents),
+        kp_count=len(kp_ids),
+        question_count=sum(counts.values()),
+        avg_mastery=avg,
+        mastery_band=engine.mastery_band(avg),
+        learned_kp_count=learned,
+        progress=round(learned / len(kp_ids), 3) if kp_ids else 0.0,
+    )
+
+
+@router.get("/textbook/{textbook_id}/units", response_model=list[UnitOut])
+def textbook_units(
+    textbook_id: int,
+    current: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+) -> list[UnitOut]:
+    textbook = db.get(Textbook, textbook_id)
+    if textbook is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="教材不存在")
+    chapters = list(
+        db.scalars(
+            select(Chapter)
+            .where(Chapter.textbook_id == textbook_id)
+            .order_by(Chapter.order_index, Chapter.id)
+        )
+    )
+    if not chapters:
+        return []
+
+    agg = _chapter_kps(db, [c.id for c in chapters])
+    all_kp_ids = sorted({kp_id for counts in agg.values() for kp_id in counts})
+    kps = {
+        kp.id: kp
+        for kp in db.scalars(select(KnowledgePoint).where(KnowledgePoint.id.in_(all_kp_ids)))
+    } if all_kp_ids else {}
+    mastery = _mastery_map(db, user_id=current.id, subject=None)
+    attempted = _attempted_kps(db, user_id=current.id, kp_ids=all_kp_ids)
+
+    return [
+        _unit_out(
+            chapter,
+            kps=kps,
+            counts=agg.get(chapter.id, {}),
+            mastery=mastery,
+            attempted=attempted,
+        )
+        for chapter in chapters
+    ]
+
+
+@router.get("/unit/{chapter_id}", response_model=UnitDetailOut)
+def unit_detail(
+    chapter_id: int,
+    current: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+) -> UnitDetailOut:
+    chapter = db.get(Chapter, chapter_id)
+    if chapter is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="单元不存在")
+
+    counts = _chapter_kps(db, [chapter.id]).get(chapter.id, {})
+    kp_ids = list(counts)
+    kps = {
+        kp.id: kp
+        for kp in db.scalars(select(KnowledgePoint).where(KnowledgePoint.id.in_(kp_ids)))
+    } if kp_ids else {}
+    mastery = _mastery_map(db, user_id=current.id, subject=None)
+    attempted = _attempted_kps(db, user_id=current.id, kp_ids=kp_ids)
+    due = _due_review_kps(db, user_id=current.id, kp_ids=kp_ids, now=datetime.utcnow())
+    last_studied = _last_studied_map(db, user_id=current.id, kp_ids=kp_ids)
+
+    nodes = [
+        _kp_node(
+            kp,
+            question_count=counts.get(kp.id, 0),
+            mastery=mastery,
+            attempted=attempted,
+            due=due,
+            last_studied=last_studied,
+        )
+        for kp in kps.values()
+    ]
+    nodes.sort(key=lambda n: (n.order_index, n.id))
+
+    parent_ids = sorted({n.parent_id for n in nodes if n.parent_id})
+    parents = {
+        kp.id: kp
+        for kp in db.scalars(
+            select(KnowledgePoint).where(KnowledgePoint.id.in_(parent_ids))
+        )
+    } if parent_ids else {}
+    sections: list[UnitSectionOut] = []
+    for parent_id in parent_ids:
+        parent = parents.get(parent_id)
+        if parent is None:
+            continue
+        children = [n for n in nodes if n.parent_id == parent_id]
+        avg = round(sum(n.mastery_score for n in children) / len(children), 1)
+        sections.append(
+            UnitSectionOut(
+                id=parent.id,
+                name=parent.name,
+                order_index=parent.order_index,
+                kp_count=len(children),
+                avg_mastery=avg,
+                mastery_band=engine.mastery_band(avg),
+            )
+        )
+    sections.sort(key=lambda s: (s.order_index, s.id))
+
+    return UnitDetailOut(
+        unit=_unit_out(
+            chapter, kps=kps, counts=counts, mastery=mastery, attempted=attempted
+        ),
+        sections=sections,
+        knowledge_points=nodes,
+    )
+
+
+@router.get("/kp/{kp_id}", response_model=KpDetailOut)
+def kp_detail(
+    kp_id: int,
+    current: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+) -> KpDetailOut:
+    kp = db.get(KnowledgePoint, kp_id)
+    if kp is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="知识点不存在")
+
+    question_count = (
+        db.scalar(
+            select(func.count(Question.id)).where(
+                Question.knowledge_point_id == kp.id
+            )
+        )
+        or 0
+    )
+    mastery = _mastery_map(db, user_id=current.id, subject=None)
+    attempted = _attempted_kps(db, user_id=current.id, kp_ids=[kp.id])
+    due = _due_review_kps(
+        db, user_id=current.id, kp_ids=[kp.id], now=datetime.utcnow()
+    )
+    last_studied = _last_studied_map(db, user_id=current.id, kp_ids=[kp.id])
+    row = mastery.get(kp.id)
+    score = round(row.score, 1) if row else 0.0
+
+    section = db.get(KnowledgePoint, kp.parent_id) if kp.parent_id else None
+    prereq_ids = list(kp.prerequisites or [])
+    prereqs = {
+        item.id: item
+        for item in db.scalars(
+            select(KnowledgePoint).where(KnowledgePoint.id.in_(prereq_ids))
+        )
+    } if prereq_ids else {}
+
+    return KpDetailOut(
+        id=kp.id,
+        subject=kp.subject,
+        grade=kp.grade,
+        name=kp.name,
+        node_type=kp.node_type,
+        explanation=kp.explanation,
+        section_id=section.id if section else None,
+        section_name=section.name if section else None,
+        prerequisites=[
+            KpBriefOut(
+                id=prereq.id,
+                name=prereq.name,
+                subject=prereq.subject,
+                mastery_score=round(mastery[prereq.id].score, 1)
+                if prereq.id in mastery
+                else 0.0,
+            )
+            for prereq in prereqs.values()
+        ],
+        mastery_score=score,
+        mastery_confidence=row.confidence if row else 0,
+        mastery_band=engine.mastery_band(score),
+        question_count=question_count,
+        state=engine.derive_study_state(
+            mastery=score,
+            attempted=kp.id in attempted,
+            due_review=kp.id in due,
+        ),
+        last_studied_at=last_studied.get(kp.id),
+    )
 
 
 # ---------------------------------------------------------------------------

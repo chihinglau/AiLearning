@@ -91,6 +91,19 @@ def mastery_band(score: float) -> str:
     return "mastered"      # 精通
 
 
+def derive_study_state(
+    *, mastery: float, attempted: bool, due_review: bool = False
+) -> str:
+    """由掌握度与作答记录推导知识点学习状态（P0-20 状态机会覆盖为持久化状态）。"""
+    if due_review:
+        return "复习中"
+    if not attempted:
+        return "未学习"
+    if mastery >= 85:
+        return "已掌握"
+    return "待巩固"
+
+
 # ---------------------------------------------------------------------------
 # SM-2 Lite 错题调度
 # ---------------------------------------------------------------------------

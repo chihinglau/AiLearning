@@ -40,6 +40,64 @@ class KnowledgeNodeOut(KnowledgePointOut):
     mastery_confidence: int = 0
     mastery_band: str = "weak"
     question_count: int = 0
+    state: str = "未学习"
+    last_studied_at: Optional[datetime] = None
+
+
+class UnitOut(BaseModel):
+    id: int
+    textbook_id: int
+    grade: int
+    name: str
+    order_index: int
+    summary: Optional[str] = None
+    section_count: int = 0
+    kp_count: int = 0
+    question_count: int = 0
+    avg_mastery: float = 0.0
+    mastery_band: str = "weak"
+    learned_kp_count: int = 0
+    progress: float = 0.0
+
+
+class UnitSectionOut(BaseModel):
+    id: int
+    name: str
+    order_index: int
+    kp_count: int
+    avg_mastery: float
+    mastery_band: str
+
+
+class UnitDetailOut(BaseModel):
+    unit: UnitOut
+    sections: list[UnitSectionOut] = []
+    knowledge_points: list[KnowledgeNodeOut] = []
+
+
+class KpBriefOut(BaseModel):
+    id: int
+    name: str
+    subject: str
+    mastery_score: float = 0.0
+
+
+class KpDetailOut(BaseModel):
+    id: int
+    subject: str
+    grade: Optional[int]
+    name: str
+    node_type: str
+    explanation: Optional[str]
+    section_id: Optional[int] = None
+    section_name: Optional[str] = None
+    prerequisites: list[KpBriefOut] = []
+    mastery_score: float = 0.0
+    mastery_confidence: int = 0
+    mastery_band: str = "weak"
+    question_count: int = 0
+    state: str = "未学习"
+    last_studied_at: Optional[datetime] = None
 
 
 class ChapterTreeOut(BaseModel):
