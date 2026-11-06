@@ -11,15 +11,18 @@ from app.api.deps import get_current_user, require_permission
 from app.db.session import get_db
 from app.models.content import KnowledgePoint, Question
 from app.models.exam import Exam, ExamAnswer, ExamAttempt, ExamBlueprint
+from app.models.org import ClassMember, SchoolClass
 from app.models.practice import StudentQuestionRecord
 from app.models.user import User
 from app.schemas.content import QuestionPublic
 from app.schemas.exam import (
+    ExamAbilityStatOut,
     ExamAnswerOut,
     ExamAnswerSaveIn,
     ExamAttemptBriefOut,
     ExamAttemptOut,
     ExamAttemptStartIn,
+    ExamClassAverageOut,
     ExamDetailOut,
     ExamGenerateIn,
     ExamGenerateOut,
@@ -31,10 +34,12 @@ from app.schemas.exam import (
     ExamSaveOut,
     ExamSelfAssessIn,
     ExamSelfAssessOut,
+    ExamSubjectiveItemOut,
     ExamSubmitIn,
     ExamSubmitOut,
-    ExamSubjectiveItemOut,
     ExamSummaryOut,
+    ExamTrendOut,
+    ExamTrendPointOut,
     ExamTypeStatOut,
     ExamWrongItemOut,
 )
@@ -49,6 +54,34 @@ OBJECTIVE_TYPES = {"choice", "multiple", "fill", "judge"}
 # 考试回流掌握度权重：单元测 0.8、期中 0.6、期末 0.5（其余按 0.8）
 EXAM_TYPE_WEIGHT = {"unit": 0.8, "midterm": 0.6, "final": 0.5}
 DEFAULT_EXAM_WEIGHT = 0.8
+
+# 能力维度（D-04 §8.5）：默认按题型映射，学科可覆盖
+ABILITY_LABELS = {
+    "understand": "理解",
+    "calculate": "计算",
+    "apply": "应用",
+    "analyze": "分析",
+}
+ABILITY_ORDER = ("understand", "calculate", "apply", "analyze")
+ABILITY_BY_Q_TYPE = {
+    "choice": "understand",
+    "judge": "understand",
+    "fill": "calculate",
+    "multiple": "analyze",
+    "calc": "apply",
+    "answer": "analyze",
+    "listen": "understand",
+}
+SUBJECT_ABILITY_OVERRIDES: dict[str, dict[str, str]] = {
+    # 英语更关注语言应用；语文填空侧重理解
+    "english": {"fill": "apply", "listen": "understand"},
+    "chinese": {"fill": "understand"},
+}
+
+
+def _ability_of(subject: str, q_type: str) -> str:
+    override = SUBJECT_ABILITY_OVERRIDES.get(subject, {})
+    return override.get(q_type) or ABILITY_BY_Q_TYPE.get(q_type, "understand")
 
 
 # ---------------------------------------------------------------------------
@@ -675,6 +708,87 @@ def _scoring_points(question: Question) -> list[str]:
     return []
 
 
+def _class_average(db: Session, exam: Exam, current: User) -> ExamClassAverageOut:
+    """班级平均：仅统计同班已完成作答的聚合值，不返回任何学生标识。"""
+    room = db.scalars(
+        select(SchoolClass)
+        .join(ClassMember, ClassMember.class_id == SchoolClass.id)
+        .where(ClassMember.student_id == current.id)
+        .order_by(SchoolClass.id)
+    ).first()
+    if room is None:
+        return ExamClassAverageOut()
+
+    student_ids = list(
+        db.scalars(
+            select(ClassMember.student_id).where(ClassMember.class_id == room.id)
+        )
+    )
+    attempts = list(
+        db.scalars(
+            select(ExamAttempt).where(
+                ExamAttempt.exam_id == exam.id,
+                ExamAttempt.user_id.in_(student_ids),
+                ExamAttempt.status == "completed",
+                ExamAttempt.total_score.is_not(None),
+            )
+        )
+    )
+    if not attempts:
+        return ExamClassAverageOut(class_name=room.name)
+
+    average_score = (
+        sum(float(attempt.total_score or 0) for attempt in attempts) / len(attempts)
+    )
+    return ExamClassAverageOut(
+        available=True,
+        class_name=room.name,
+        student_count=len(attempts),
+        average_score=round(average_score, 2),
+        average_rate=(
+            round(average_score / exam.total_score, 3) if exam.total_score else 0.0
+        ),
+    )
+
+
+def _trend(db: Session, exam: Exam, current: User) -> ExamTrendOut:
+    """同科同类考试最近 5 次的得分率趋势，delta 为最近一次相对上一次。"""
+    rows = db.execute(
+        select(ExamAttempt, Exam)
+        .join(Exam, Exam.id == ExamAttempt.exam_id)
+        .where(
+            ExamAttempt.user_id == current.id,
+            Exam.subject == exam.subject,
+            Exam.exam_type == exam.exam_type,
+            ExamAttempt.total_score.is_not(None),
+        )
+        .order_by(ExamAttempt.submitted_at.desc(), ExamAttempt.id.desc())
+        .limit(5)
+    ).all()
+    points = [
+        ExamTrendPointOut(
+            attempt_id=row_attempt.id,
+            exam_id=row_exam.id,
+            exam_title=row_exam.title,
+            exam_type=row_exam.exam_type,
+            score_rate=(
+                round(float(row_attempt.total_score or 0) / row_exam.total_score, 3)
+                if row_exam.total_score
+                else 0.0
+            ),
+            total_score=row_attempt.total_score,
+            submitted_at=row_attempt.submitted_at,
+        )
+        for row_attempt, row_exam in reversed(rows)
+    ]
+    delta = (
+        round(points[-1].score_rate - points[-2].score_rate, 3)
+        if len(points) >= 2
+        else None
+    )
+    return ExamTrendOut(points=points, delta_rate=delta)
+
+
 @router.get("/attempts/{attempt_id}/report", response_model=ExamReportOut)
 def exam_report(
     attempt_id: int,
@@ -711,6 +825,7 @@ def exam_report(
 
     type_bucket: dict[str, dict[str, float]] = {}
     kp_bucket: dict[Optional[int], dict[str, float]] = {}
+    ability_bucket: dict[str, dict[str, float]] = {}
     wrong_items: list[ExamWrongItemOut] = []
     pending_subjective: list[ExamSubjectiveItemOut] = []
     question_count = 0
@@ -756,6 +871,17 @@ def exam_report(
         kp_stat["correct"] += 1 if is_correct else 0
         kp_stat["score"] += score
         kp_stat["full_score"] += item["score"]
+
+        ability = _ability_of(question.subject, question.q_type)
+        ability_bucket.setdefault(
+            ability,
+            {"question_count": 0.0, "correct": 0.0, "score": 0.0, "full_score": 0.0},
+        )
+        ability_stat = ability_bucket[ability]
+        ability_stat["question_count"] += 1
+        ability_stat["correct"] += 1 if is_correct else 0
+        ability_stat["score"] += score
+        ability_stat["full_score"] += item["score"]
 
         if row is not None and row.is_correct is False:
             wrong_items.append(
@@ -815,6 +941,21 @@ def exam_report(
     ]
     kp_stats.sort(key=lambda item: (item.score_rate, item.knowledge_point_id or 0))
 
+    ability_stats = [
+        ExamAbilityStatOut(
+            ability=ability,
+            label=ABILITY_LABELS.get(ability, ability),
+            question_count=int(ability_bucket[ability]["question_count"]),
+            score=round(ability_bucket[ability]["score"], 2),
+            full_score=round(ability_bucket[ability]["full_score"], 2),
+            score_rate=_rate(
+                ability_bucket[ability]["score"], ability_bucket[ability]["full_score"]
+            ),
+        )
+        for ability in ABILITY_ORDER
+        if ability in ability_bucket
+    ]
+
     weak_kp_ids = [
         item.knowledge_point_id
         for item in kp_stats
@@ -854,6 +995,9 @@ def exam_report(
         submitted_at=attempt.submitted_at,
         type_stats=type_stats,
         kp_stats=kp_stats,
+        ability_stats=ability_stats,
+        class_average=_class_average(db, exam, current),
+        trend=_trend(db, exam, current),
         wrong_questions=wrong_items,
         pending_subjective=pending_subjective,
         next_actions=next_actions,

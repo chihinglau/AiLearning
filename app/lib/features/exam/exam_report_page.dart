@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'package:ai_learning/core/errors/api_error_guide.dart';
 import 'package:ai_learning/core/models/exam.dart';
 import 'package:ai_learning/core/providers.dart';
@@ -174,6 +176,27 @@ class _ExamReportPageState extends ConsumerState<ExamReportPage> {
                   '${report.status == 'grading' ? ' · 主观题待批改' : ''}',
                   style: theme.textTheme.bodySmall,
                 ),
+                if (report.classAverage.available &&
+                    report.classAverage.averageScore != null) ...[
+                  const SizedBox(height: 4),
+                  Text(
+                    '班级平均 ${report.classAverage.averageScore!.round()} 分'
+                    ' · ${report.classAverage.studentCount} 人参与',
+                    style: theme.textTheme.bodySmall,
+                  ),
+                  if (report.classAverage.averageRate != null)
+                    Text(
+                      _compareWithClass(
+                        rate,
+                        report.classAverage.averageRate!,
+                      ),
+                      style: theme.textTheme.bodySmall?.copyWith(
+                        color: rate >= report.classAverage.averageRate!
+                            ? Colors.green.shade700
+                            : theme.colorScheme.error,
+                      ),
+                    ),
+                ],
                 const SizedBox(height: 16),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -268,6 +291,77 @@ class _ExamReportPageState extends ConsumerState<ExamReportPage> {
                     onTap: stat.knowledgePointId == null
                         ? null
                         : () => context.push('/kp/${stat.knowledgePointId}'),
+                  ),
+              ],
+            ),
+          ),
+        ],
+        if (report.abilityStats.isNotEmpty) ...[
+          const SizedBox(height: 16),
+          _SectionTitle('能力维度'),
+          const SizedBox(height: 4),
+          Text(
+            '按题型聚合的理解、计算、应用与分析表现',
+            style: theme.textTheme.bodySmall,
+          ),
+          const SizedBox(height: 8),
+          Card(
+            child: Padding(
+              padding: const EdgeInsets.all(12),
+              child: Column(
+                children: [
+                  if (report.abilityStats.length >= 3)
+                    SizedBox(
+                      height: 220,
+                      child: _AbilityRadar(stats: report.abilityStats),
+                    ),
+                  Wrap(
+                    spacing: 12,
+                    runSpacing: 6,
+                    alignment: WrapAlignment.center,
+                    children: [
+                      for (final stat in report.abilityStats)
+                        _AbilityChip(stat: stat),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+        if (report.trend.points.length >= 2) ...[
+          const SizedBox(height: 16),
+          _SectionTitle('成绩趋势'),
+          const SizedBox(height: 4),
+          Text(
+            _trendSummary(report.trend),
+            style: theme.textTheme.bodySmall?.copyWith(
+              color: (report.trend.deltaRate ?? 0) >= 0
+                  ? Colors.green.shade700
+                  : theme.colorScheme.error,
+            ),
+          ),
+          const SizedBox(height: 8),
+          Card(
+            child: Column(
+              children: [
+                for (final point in report.trend.points)
+                  ListTile(
+                    dense: true,
+                    title: Text(
+                      point.examTitle,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    subtitle: LinearProgressIndicator(
+                      value: point.scoreRate.clamp(0.0, 1.0).toDouble(),
+                      minHeight: 6,
+                      borderRadius: BorderRadius.circular(4),
+                    ),
+                    trailing: Text(
+                      '${(point.scoreRate * 100).round()}%',
+                      style: theme.textTheme.titleSmall,
+                    ),
                   ),
               ],
             ),
@@ -391,6 +485,19 @@ class _ExamReportPageState extends ConsumerState<ExamReportPage> {
     );
   }
 
+  String _compareWithClass(double myRate, double classRate) {
+    final diff = ((myRate - classRate) * 100).round().abs();
+    return myRate >= classRate ? '高于班级平均 $diff 个百分点' : '低于班级平均 $diff 个百分点';
+  }
+
+  String _trendSummary(ExamTrend trend) {
+    final delta = trend.deltaRate;
+    if (delta == null) return '共 ${trend.points.length} 次同类考试';
+    final percent = (delta * 100).round().abs();
+    if (percent == 0) return '与上次基本持平';
+    return delta > 0 ? '较上次提升 $percent 个百分点' : '较上次下降 $percent 个百分点';
+  }
+
   String _durationLabel(int durationMs) {
     if (durationMs <= 0) return '-';
     final minute = (durationMs / 60000).ceil();
@@ -456,5 +563,141 @@ class _Stat extends StatelessWidget {
         Text(label, style: theme.textTheme.labelSmall),
       ],
     );
+  }
+}
+
+class _AbilityChip extends StatelessWidget {
+  const _AbilityChip({required this.stat});
+
+  final ExamAbilityStat stat;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final rate = (stat.scoreRate * 100).round();
+    final color = stat.scoreRate >= 0.6
+        ? Colors.green.shade700
+        : theme.colorScheme.error;
+    return Text(
+      '${stat.label} $rate%',
+      style: theme.textTheme.bodySmall?.copyWith(
+        color: color,
+        fontWeight: FontWeight.w600,
+      ),
+    );
+  }
+}
+
+class _AbilityRadar extends StatelessWidget {
+  const _AbilityRadar({required this.stats});
+
+  final List<ExamAbilityStat> stats;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    return CustomPaint(
+      painter: _AbilityRadarPainter(
+        stats: stats,
+        lineColor: theme.colorScheme.primary,
+        gridColor: theme.colorScheme.outlineVariant,
+        textColor: theme.colorScheme.onSurfaceVariant,
+      ),
+      child: const SizedBox.expand(),
+    );
+  }
+}
+
+class _AbilityRadarPainter extends CustomPainter {
+  const _AbilityRadarPainter({
+    required this.stats,
+    required this.lineColor,
+    required this.gridColor,
+    required this.textColor,
+  });
+
+  final List<ExamAbilityStat> stats;
+  final Color lineColor;
+  final Color gridColor;
+  final Color textColor;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    if (stats.length < 3) return;
+    final center = Offset(size.width / 2, size.height / 2);
+    final radius = math.min(size.width, size.height) / 2 - 30;
+    if (radius <= 0) return;
+    final count = stats.length;
+    final step = 2 * math.pi / count;
+    final start = -math.pi / 2;
+
+    Offset pointAt(int index, double ratio) {
+      final angle = start + step * index;
+      return center +
+          Offset(math.cos(angle) * radius * ratio, math.sin(angle) * radius * ratio);
+    }
+
+    final gridPaint = Paint()
+      ..color = gridColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1;
+    for (final ratio in const [0.25, 0.5, 0.75, 1.0]) {
+      final path = Path()
+        ..moveTo(pointAt(0, ratio).dx, pointAt(0, ratio).dy);
+      for (var i = 1; i < count; i++) {
+        final point = pointAt(i, ratio);
+        path.lineTo(point.dx, point.dy);
+      }
+      path.close();
+      canvas.drawPath(path, gridPaint);
+    }
+    for (var i = 0; i < count; i++) {
+      canvas.drawLine(center, pointAt(i, 1.0), gridPaint);
+    }
+
+    final dataPath = Path();
+    for (var i = 0; i < count; i++) {
+      final point = pointAt(i, stats[i].scoreRate.clamp(0.0, 1.0).toDouble());
+      if (i == 0) {
+        dataPath.moveTo(point.dx, point.dy);
+      } else {
+        dataPath.lineTo(point.dx, point.dy);
+      }
+    }
+    dataPath.close();
+    canvas.drawPath(
+      dataPath,
+      Paint()
+        ..color = lineColor.withValues(alpha: 0.22)
+        ..style = PaintingStyle.fill,
+    );
+    canvas.drawPath(
+      dataPath,
+      Paint()
+        ..color = lineColor
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 2,
+    );
+
+    for (var i = 0; i < count; i++) {
+      final labelPainter = TextPainter(
+        text: TextSpan(
+          text: stats[i].label,
+          style: TextStyle(color: textColor, fontSize: 12),
+        ),
+        textDirection: TextDirection.ltr,
+      )..layout();
+      final position = pointAt(i, 1.0);
+      labelPainter.paint(
+        canvas,
+        position + Offset(0, i == 0 ? -labelPainter.height - 8 : 8) -
+            Offset(labelPainter.width / 2, 0),
+      );
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant _AbilityRadarPainter oldDelegate) {
+    return oldDelegate.stats != stats || oldDelegate.lineColor != lineColor;
   }
 }

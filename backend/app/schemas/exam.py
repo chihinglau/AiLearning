@@ -224,6 +224,42 @@ class ExamSelfAssessOut(BaseModel):
     pending_count: int = 0
 
 
+class ExamAbilityStatOut(BaseModel):
+    """能力维度统计：理解/计算/应用/分析（按学科题型配置聚合）。"""
+
+    ability: str
+    label: str
+    question_count: int = 0
+    score: float = 0.0
+    full_score: float = 0.0
+    score_rate: float = 0.0
+
+
+class ExamClassAverageOut(BaseModel):
+    """班级平均（仅聚合值；无班级或班级无人参加时不提供）。"""
+
+    available: bool = False
+    class_name: Optional[str] = None
+    student_count: int = 0
+    average_score: Optional[float] = None
+    average_rate: Optional[float] = None
+
+
+class ExamTrendPointOut(BaseModel):
+    attempt_id: int
+    exam_id: int
+    exam_title: str
+    exam_type: str
+    score_rate: float
+    total_score: Optional[float] = None
+    submitted_at: Optional[datetime] = None
+
+
+class ExamTrendOut(BaseModel):
+    points: list[ExamTrendPointOut] = Field(default_factory=list)
+    delta_rate: Optional[float] = None
+
+
 class ExamReportOut(BaseModel):
     attempt_id: int
     exam_id: int
@@ -242,6 +278,9 @@ class ExamReportOut(BaseModel):
     submitted_at: Optional[datetime] = None
     type_stats: list[ExamTypeStatOut] = Field(default_factory=list)
     kp_stats: list[ExamKpStatOut] = Field(default_factory=list)
+    ability_stats: list[ExamAbilityStatOut] = Field(default_factory=list)
+    class_average: ExamClassAverageOut = Field(default_factory=ExamClassAverageOut)
+    trend: ExamTrendOut = Field(default_factory=ExamTrendOut)
     wrong_questions: list[ExamWrongItemOut] = Field(default_factory=list)
     pending_subjective: list[ExamSubjectiveItemOut] = Field(default_factory=list)
     next_actions: list[ExamNextActionOut] = Field(default_factory=list)

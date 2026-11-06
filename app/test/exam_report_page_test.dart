@@ -28,6 +28,58 @@ class _FakeExamService extends ExamService {
       subjectiveScore: assessed ? 40 : null,
       questionCount: 2,
       answeredCount: 2,
+      abilityStats: const [
+        ExamAbilityStat(
+          ability: 'understand',
+          label: '理解',
+          questionCount: 1,
+          score: 20,
+          fullScore: 25,
+          scoreRate: 0.8,
+        ),
+        ExamAbilityStat(
+          ability: 'calculate',
+          label: '计算',
+          questionCount: 1,
+          score: 30,
+          fullScore: 40,
+          scoreRate: 0.75,
+        ),
+        ExamAbilityStat(
+          ability: 'analyze',
+          label: '分析',
+          questionCount: 1,
+          score: 10,
+          fullScore: 35,
+          scoreRate: 0.286,
+        ),
+      ],
+      classAverage: const ExamClassAverage(
+        available: true,
+        className: '三年级1班',
+        studentCount: 3,
+        averageScore: 60,
+        averageRate: 0.6,
+      ),
+      trend: const ExamTrend(
+        points: [
+          ExamTrendPoint(
+            attemptId: 8,
+            examId: 3,
+            examTitle: '第一次单元测',
+            examType: 'unit',
+            scoreRate: 0.5,
+          ),
+          ExamTrendPoint(
+            attemptId: 1,
+            examId: 4,
+            examTitle: '三年级数学期中',
+            examType: 'midterm',
+            scoreRate: 0.7,
+          ),
+        ],
+        deltaRate: 0.2,
+      ),
       pendingSubjective: assessed
           ? const []
           : const [
@@ -103,5 +155,29 @@ void main() {
     expect(find.text('自评已提交，成绩与学情已更新'), findsOneWidget);
     expect(find.text('主观题自评（1）'), findsNothing);
     expect(find.textContaining('主观题待批改'), findsNothing);
+  });
+
+  testWidgets('展示班级平均、能力维度雷达与成绩趋势', (tester) async {
+    tester.view.physicalSize = const Size(1000, 2400);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.reset);
+
+    final service = _FakeExamService();
+    await tester.pumpWidget(_app(service));
+    await tester.pumpAndSettle();
+
+    expect(find.textContaining('班级平均 60 分'), findsOneWidget);
+    expect(find.textContaining('3 人参与'), findsOneWidget);
+    expect(find.text('低于班级平均 10 个百分点'), findsOneWidget);
+
+    expect(find.text('能力维度'), findsOneWidget);
+    expect(find.text('理解 80%'), findsOneWidget);
+    expect(find.text('计算 75%'), findsOneWidget);
+    expect(find.text('分析 29%'), findsOneWidget);
+
+    expect(find.text('成绩趋势'), findsOneWidget);
+    expect(find.text('较上次提升 20 个百分点'), findsOneWidget);
+    expect(find.text('第一次单元测'), findsOneWidget);
+    expect(find.text('三年级数学期中'), findsNWidgets(2));
   });
 }

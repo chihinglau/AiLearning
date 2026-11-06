@@ -401,6 +401,9 @@ class ExamReport {
     this.submittedAt,
     this.typeStats = const [],
     this.kpStats = const [],
+    this.abilityStats = const [],
+    this.classAverage = const ExamClassAverage(),
+    this.trend = const ExamTrend(),
     this.wrongQuestions = const [],
     this.pendingSubjective = const [],
     this.nextActions = const [],
@@ -423,6 +426,9 @@ class ExamReport {
   final DateTime? submittedAt;
   final List<ExamTypeStat> typeStats;
   final List<ExamKpStat> kpStats;
+  final List<ExamAbilityStat> abilityStats;
+  final ExamClassAverage classAverage;
+  final ExamTrend trend;
   final List<ExamWrongItem> wrongQuestions;
   final List<ExamSubjectiveQuestion> pendingSubjective;
   final List<ExamNextAction> nextActions;
@@ -450,6 +456,15 @@ class ExamReport {
       kpStats: (json['kp_stats'] as List<dynamic>? ?? const [])
           .map((item) => ExamKpStat.fromJson(item as Map<String, dynamic>))
           .toList(),
+      abilityStats: (json['ability_stats'] as List<dynamic>? ?? const [])
+          .map((item) => ExamAbilityStat.fromJson(item as Map<String, dynamic>))
+          .toList(),
+      classAverage: ExamClassAverage.fromJson(
+        json['class_average'] as Map<String, dynamic>? ?? const {},
+      ),
+      trend: ExamTrend.fromJson(
+        json['trend'] as Map<String, dynamic>? ?? const {},
+      ),
       wrongQuestions: (json['wrong_questions'] as List<dynamic>? ?? const [])
           .map((item) => ExamWrongItem.fromJson(item as Map<String, dynamic>))
           .toList(),
@@ -528,6 +543,110 @@ class ExamKpStat {
       score: (json['score'] as num?)?.toDouble() ?? 0,
       fullScore: (json['full_score'] as num?)?.toDouble() ?? 0,
       scoreRate: (json['score_rate'] as num?)?.toDouble() ?? 0,
+    );
+  }
+}
+
+class ExamAbilityStat {
+  const ExamAbilityStat({
+    required this.ability,
+    required this.label,
+    required this.questionCount,
+    required this.score,
+    required this.fullScore,
+    required this.scoreRate,
+  });
+
+  final String ability;
+  final String label;
+  final int questionCount;
+  final double score;
+  final double fullScore;
+  final double scoreRate;
+
+  factory ExamAbilityStat.fromJson(Map<String, dynamic> json) {
+    return ExamAbilityStat(
+      ability: json['ability'] as String? ?? '',
+      label: json['label'] as String? ?? '',
+      questionCount: json['question_count'] as int? ?? 0,
+      score: (json['score'] as num?)?.toDouble() ?? 0,
+      fullScore: (json['full_score'] as num?)?.toDouble() ?? 0,
+      scoreRate: (json['score_rate'] as num?)?.toDouble() ?? 0,
+    );
+  }
+}
+
+/// 班级平均（仅聚合值，无班级或无人参加时不可用）。
+class ExamClassAverage {
+  const ExamClassAverage({
+    this.available = false,
+    this.className,
+    this.studentCount = 0,
+    this.averageScore,
+    this.averageRate,
+  });
+
+  final bool available;
+  final String? className;
+  final int studentCount;
+  final double? averageScore;
+  final double? averageRate;
+
+  factory ExamClassAverage.fromJson(Map<String, dynamic> json) {
+    return ExamClassAverage(
+      available: json['available'] as bool? ?? false,
+      className: json['class_name'] as String?,
+      studentCount: json['student_count'] as int? ?? 0,
+      averageScore: (json['average_score'] as num?)?.toDouble(),
+      averageRate: (json['average_rate'] as num?)?.toDouble(),
+    );
+  }
+}
+
+class ExamTrendPoint {
+  const ExamTrendPoint({
+    required this.attemptId,
+    required this.examId,
+    required this.examTitle,
+    required this.examType,
+    required this.scoreRate,
+    this.totalScore,
+    this.submittedAt,
+  });
+
+  final int attemptId;
+  final int examId;
+  final String examTitle;
+  final String examType;
+  final double scoreRate;
+  final double? totalScore;
+  final DateTime? submittedAt;
+
+  factory ExamTrendPoint.fromJson(Map<String, dynamic> json) {
+    return ExamTrendPoint(
+      attemptId: json['attempt_id'] as int? ?? 0,
+      examId: json['exam_id'] as int? ?? 0,
+      examTitle: json['exam_title'] as String? ?? '',
+      examType: json['exam_type'] as String? ?? '',
+      scoreRate: (json['score_rate'] as num?)?.toDouble() ?? 0,
+      totalScore: (json['total_score'] as num?)?.toDouble(),
+      submittedAt: DateTime.tryParse(json['submitted_at'] as String? ?? ''),
+    );
+  }
+}
+
+class ExamTrend {
+  const ExamTrend({this.points = const [], this.deltaRate});
+
+  final List<ExamTrendPoint> points;
+  final double? deltaRate;
+
+  factory ExamTrend.fromJson(Map<String, dynamic> json) {
+    return ExamTrend(
+      points: (json['points'] as List<dynamic>? ?? const [])
+          .map((item) => ExamTrendPoint.fromJson(item as Map<String, dynamic>))
+          .toList(),
+      deltaRate: (json['delta_rate'] as num?)?.toDouble(),
     );
   }
 }

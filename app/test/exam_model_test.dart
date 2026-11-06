@@ -222,5 +222,82 @@ void main() {
       expect(item.scoringPoints, hasLength(2));
       expect(item.selfScore, 40);
     });
+    test('解析能力维度、班级平均与成绩趋势', () {
+      final report = ExamReport.fromJson({
+        'attempt_id': 23,
+        'exam_id': 5,
+        'exam_title': '第二次单元测',
+        'exam_type': 'unit',
+        'status': 'completed',
+        'total_score': 85,
+        'full_score': 100,
+        'ability_stats': [
+          {
+            'ability': 'understand',
+            'label': '理解',
+            'question_count': 4,
+            'score': 32,
+            'full_score': 40,
+            'score_rate': 0.8,
+          },
+          {
+            'ability': 'calculate',
+            'label': '计算',
+            'question_count': 3,
+            'score': 24,
+            'full_score': 30,
+            'score_rate': 0.8,
+          },
+          {
+            'ability': 'analyze',
+            'label': '分析',
+            'question_count': 2,
+            'score': 12,
+            'full_score': 30,
+            'score_rate': 0.4,
+          },
+        ],
+        'class_average': {
+          'available': true,
+          'class_name': '三年级1班',
+          'student_count': 4,
+          'average_score': 72.5,
+          'average_rate': 0.725,
+        },
+        'trend': {
+          'points': [
+            {
+              'attempt_id': 21,
+              'exam_id': 4,
+              'exam_title': '第一次单元测',
+              'exam_type': 'unit',
+              'score_rate': 0.6,
+              'total_score': 60,
+              'submitted_at': '2026-11-06T02:00:00',
+            },
+            {
+              'attempt_id': 23,
+              'exam_id': 5,
+              'exam_title': '第二次单元测',
+              'exam_type': 'unit',
+              'score_rate': 0.85,
+              'total_score': 85,
+              'submitted_at': '2026-11-06T03:00:00',
+            },
+          ],
+          'delta_rate': 0.25,
+        },
+      });
+
+      expect(report.abilityStats, hasLength(3));
+      expect(report.abilityStats[1].label, '计算');
+      expect(report.abilityStats[2].scoreRate, 0.4);
+      expect(report.classAverage.available, isTrue);
+      expect(report.classAverage.className, '三年级1班');
+      expect(report.classAverage.averageScore, 72.5);
+      expect(report.trend.points, hasLength(2));
+      expect(report.trend.points.last.examTitle, '第二次单元测');
+      expect(report.trend.deltaRate, 0.25);
+    });
   });
 }
