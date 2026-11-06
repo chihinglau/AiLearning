@@ -4,7 +4,7 @@ from dataclasses import dataclass
 from typing import Literal, Optional
 
 from fastapi import HTTPException, status
-from sqlalchemy import select
+from sqlalchemy import or_, select
 from sqlalchemy.orm import Session
 
 from app.core.permissions import (
@@ -19,6 +19,7 @@ from app.core.permissions import (
     permissions_for_role,
     scope_for_role,
 )
+from app.models.org import ClassMember, SchoolClass, TeacherClassAssignment
 from app.models.user import ParentChildBinding, User
 
 Scope = Literal["NONE", "SELF", "CHILD", "CLASS", "SCHOOL", "ALL"]
@@ -46,6 +47,36 @@ def scope_for_permission(role: str, permission: str) -> Optional[str]:
     return None
 
 
+def _teacher_class_ids(db: Session, actor: User, subject: Optional[str]) -> set[int]:
+    """教师可见班级：班主任所在班（全学科）+ 授课分配（按学科收窄）。"""
+    if actor.school_id is None:
+        return set()
+    head_ids = set(
+        db.scalars(
+            select(SchoolClass.id).where(
+                SchoolClass.head_teacher_id == actor.id,
+                SchoolClass.school_id == actor.school_id,
+            )
+        )
+    )
+    stmt = (
+        select(TeacherClassAssignment.class_id)
+        .join(SchoolClass, SchoolClass.id == TeacherClassAssignment.class_id)
+        .where(
+            TeacherClassAssignment.teacher_id == actor.id,
+            SchoolClass.school_id == actor.school_id,
+        )
+    )
+    if subject:
+        stmt = stmt.where(
+            or_(
+                TeacherClassAssignment.subject == subject,
+                TeacherClassAssignment.role_in_class == "head_teacher",
+            )
+        )
+    return head_ids | set(db.scalars(stmt))
+
+
 def resolve_student_ids(
     db: Session, actor: User, scope: str, subject: Optional[str] = None
 ) -> Optional[set[int]]:
@@ -63,8 +94,13 @@ def resolve_student_ids(
         )
         return set(rows)
     if scope == SCOPE_CLASS:
-        # 班级/授课关系表由 P1-01 提供；未接入前安全默认返回空集
-        return set()
+        class_ids = _teacher_class_ids(db, actor, subject)
+        if not class_ids:
+            return set()
+        rows = db.scalars(
+            select(ClassMember.student_id).where(ClassMember.class_id.in_(class_ids))
+        )
+        return set(rows)
     if scope == SCOPE_SCHOOL:
         if actor.school_id is None:
             return set()

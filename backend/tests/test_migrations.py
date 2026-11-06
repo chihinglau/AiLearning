@@ -33,6 +33,10 @@ CORE_TABLES = {
     "student_question_records",
     "mastery_scores",
     "wrong_questions",
+    "schools",
+    "classes",
+    "class_members",
+    "teacher_class_assignments",
 }
 
 
