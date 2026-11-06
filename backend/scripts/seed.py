@@ -16,6 +16,7 @@ from app.core.security import hash_password
 from app.db.base import Base
 from app.db.session import SessionLocal, engine
 from app.models.content import Chapter, KnowledgePoint, Question, Textbook
+from app.models.exam import ExamBlueprint
 from app.models.user import User
 
 ADMIN_PHONE = "13800000000"
@@ -1011,6 +1012,85 @@ def _put_questions(db, *, chapter: Chapter, kp: KnowledgePoint, builders: list[C
     db.flush()
 
 
+# ---------------------------------------------------------------------------
+# 试卷蓝图（P0-25）：小学语数英单元测各 1 套
+# ---------------------------------------------------------------------------
+
+EXAM_BLUEPRINT_SEEDS: list[dict] = [
+    {
+        "code": "math_primary_unit",
+        "name": "小学数学单元测试卷",
+        "subject": "math",
+        "grade": 3,
+        "exam_type": "unit",
+        "total_score": 100,
+        "time_limit_min": 60,
+        "sections": [
+            {"name": "一、计算", "q_type": "fill", "count": 10, "score_each": 3, "difficulty": [1, 2]},
+            {"name": "二、填空", "q_type": "fill", "count": 10, "score_each": 2, "difficulty": [1, 2]},
+            {"name": "三、选择", "q_type": "choice", "count": 10, "score_each": 2, "difficulty": [2, 3]},
+            {"name": "四、解决问题", "q_type": "answer", "count": 6, "score_each": 5, "difficulty": [2, 4]},
+        ],
+        "kp_coverage_min": 0.8,
+        "difficulty_mix": {"easy": 0.7, "medium": 0.2, "hard": 0.1},
+    },
+    {
+        "code": "chinese_primary_unit",
+        "name": "小学语文单元测试卷",
+        "subject": "chinese",
+        "grade": 3,
+        "exam_type": "unit",
+        "total_score": 100,
+        "time_limit_min": 60,
+        "sections": [
+            {"name": "一、字词积累", "q_type": "fill", "count": 10, "score_each": 2, "difficulty": [1, 2]},
+            {"name": "二、句子运用", "q_type": "fill", "count": 5, "score_each": 4, "difficulty": [2, 3]},
+            {"name": "三、阅读理解", "q_type": "answer", "count": 3, "score_each": 10, "difficulty": [2, 4]},
+            {"name": "四、习作", "q_type": "answer", "count": 1, "score_each": 30, "difficulty": [3, 4]},
+        ],
+        "kp_coverage_min": 0.8,
+        "difficulty_mix": {"easy": 0.7, "medium": 0.2, "hard": 0.1},
+    },
+    {
+        "code": "english_primary_unit",
+        "name": "小学英语单元测试卷",
+        "subject": "english",
+        "grade": 3,
+        "exam_type": "unit",
+        "total_score": 100,
+        "time_limit_min": 60,
+        "sections": [
+            {"name": "一、听力选择", "q_type": "choice", "count": 10, "score_each": 3, "difficulty": [1, 2]},
+            {"name": "二、单项选择", "q_type": "choice", "count": 10, "score_each": 2, "difficulty": [1, 2]},
+            {"name": "三、阅读理解", "q_type": "choice", "count": 10, "score_each": 2, "difficulty": [2, 3]},
+            {"name": "四、书写填空", "q_type": "fill", "count": 10, "score_each": 3, "difficulty": [1, 2]},
+        ],
+        "kp_coverage_min": 0.8,
+        "difficulty_mix": {"easy": 0.7, "medium": 0.2, "hard": 0.1},
+    },
+]
+
+
+def _put_blueprint(db, *, code: str, **fields) -> ExamBlueprint:
+    """按 code 幂等写入蓝图，重复运行只更新字段。"""
+    blueprint = db.scalar(select(ExamBlueprint).where(ExamBlueprint.code == code))
+    if blueprint is None:
+        blueprint = ExamBlueprint(code=code, **fields)
+        db.add(blueprint)
+    else:
+        for key, value in fields.items():
+            setattr(blueprint, key, value)
+    db.flush()
+    return blueprint
+
+
+def _seed_blueprints(db) -> int:
+    for spec in EXAM_BLUEPRINT_SEEDS:
+        fields = {k: v for k, v in spec.items() if k != "code"}
+        _put_blueprint(db, code=spec["code"], **fields)
+    return len(EXAM_BLUEPRINT_SEEDS)
+
+
 def seed() -> None:
     Base.metadata.create_all(bind=engine)
     db = SessionLocal()
@@ -1108,6 +1188,9 @@ def seed() -> None:
         # 迁移补建的"默认节"在内容重新挂接后若无子节点则清理
         _prune_default_sections(db)
 
+        # ---- 试卷蓝图（小学语数英单元测）----
+        n_bp = _seed_blueprints(db)
+
         db.commit()
 
         n_tb = db.scalar(select(func.count(Textbook.id)))
@@ -1115,6 +1198,7 @@ def seed() -> None:
         n_kp = db.scalar(select(func.count(KnowledgePoint.id)))
         n_q = db.scalar(select(func.count(Question.id)))
         print(f"内容就绪：教材 {n_tb} 本 / 章节 {n_ch} 个 / 知识点 {n_kp} 个 / 题目 {n_q} 道")
+        print(f"试卷蓝图就绪：{n_bp} 套")
     finally:
         db.close()
 

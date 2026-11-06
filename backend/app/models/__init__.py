@@ -2,7 +2,7 @@
 
 from app.db.base import Base
 from app.models.content import Chapter, KnowledgePoint, Question, Textbook
-from app.models.exam import Exam, ExamSubmission
+from app.models.exam import Exam, ExamBlueprint, ExamSubmission
 from app.models.practice import (
     KpStudyState,
     MasteryScore,
@@ -30,5 +30,6 @@ __all__ = [
     "KpStudyState",
     "PracticeSession",
     "Exam",
+    "ExamBlueprint",
     "ExamSubmission",
 ]

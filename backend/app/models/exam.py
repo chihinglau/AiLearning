@@ -8,6 +8,26 @@ from app.db.base import Base
 from app.db.types import JSONType
 
 
+class ExamBlueprint(Base):
+    """试卷蓝图：题型分节 + 分值 + 难度分布 + 覆盖约束（P0-25）。"""
+
+    __tablename__ = "exam_blueprints"
+
+    id: Mapped[int] = mapped_column(BigInteger().with_variant(Integer, "sqlite"), primary_key=True)
+    code: Mapped[str] = mapped_column(String(80), unique=True, index=True)
+    name: Mapped[str] = mapped_column(String(120))
+    subject: Mapped[str] = mapped_column(String(20), index=True)
+    grade: Mapped[Optional[int]] = mapped_column(nullable=True, index=True)
+    exam_type: Mapped[str] = mapped_column(String(20), default="unit", index=True)
+    total_score: Mapped[int] = mapped_column(Integer, default=100)
+    time_limit_min: Mapped[int] = mapped_column(Integer, default=60)
+    sections: Mapped[list[dict[str, Any]]] = mapped_column(JSONType, default=list)
+    kp_coverage_min: Mapped[float] = mapped_column(default=0.8)
+    difficulty_mix: Mapped[dict[str, float]] = mapped_column(JSONType, default=dict)
+    is_active: Mapped[bool] = mapped_column(default=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+
+
 class Exam(Base):
     """模考卷：深圳一模/二模、历年真题等。"""
 
