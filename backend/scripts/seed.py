@@ -2,15 +2,15 @@
 
 - 管理员 / 体验学生账号
 - 全学段教材矩阵（小/初/高，深圳常用版本）
-- 小学 1-3 年级语数英：完整章节 → 知识点 → 多题型题目（确定性数据）
-- 4-12 年级各学科：每本教材 1 个样章（2 知识点 × 3 题）
+- 小学 1-3 年级语数英：完整章节 → 节 → 知识点 → 多题型题目（确定性数据）
+- 4-12 年级各学科：每本教材 1 个样章（节 + 2 知识点 × 3 题）
 
 用法：.venv\\Scripts\\python.exe -m scripts.seed
 """
 
 from typing import Callable, Optional
 
-from sqlalchemy import select
+from sqlalchemy import func, select
 
 from app.core.security import hash_password
 from app.db.base import Base
@@ -892,15 +892,95 @@ def _get_or_create(db, model, defaults: Optional[dict] = None, **filters):
     return row
 
 
-def _put_kp(db, *, subject: str, grade: int, name: str, explanation: str) -> KnowledgePoint:
-    return _get_or_create(
-        db,
-        KnowledgePoint,
-        subject=subject,
-        name=name,
-        grade=grade,
-        defaults={"explanation": explanation},
+def _put_section(
+    db, *, subject: str, grade: int, name: str, order_index: int
+) -> KnowledgePoint:
+    """单元（Chapter）下的"节"节点（L2），幂等。"""
+    section = db.scalar(
+        select(KnowledgePoint).where(
+            KnowledgePoint.subject == subject,
+            KnowledgePoint.grade == grade,
+            KnowledgePoint.name == name,
+            KnowledgePoint.node_type == "section",
+        )
     )
+    if section is None:
+        section = KnowledgePoint(
+            subject=subject,
+            name=name,
+            grade=grade,
+            node_type="section",
+            order_index=order_index,
+        )
+        db.add(section)
+        db.flush()
+    else:
+        section.order_index = order_index
+    return section
+
+
+def _put_kp(
+    db,
+    *,
+    subject: str,
+    grade: int,
+    name: str,
+    explanation: str,
+    section: KnowledgePoint,
+    order_index: int,
+) -> KnowledgePoint:
+    """知识点（L3），幂等并挂到所属"节"。
+
+    注意：不能直接用 `_get_or_create`——"节"与"知识点"可能同名，必须限定
+    `node_type='point'`，否则会把"节"误当成知识点并改成自引用。
+    """
+    kp = db.scalar(
+        select(KnowledgePoint).where(
+            KnowledgePoint.subject == subject,
+            KnowledgePoint.grade == grade,
+            KnowledgePoint.name == name,
+            KnowledgePoint.node_type == "point",
+        )
+    )
+    if kp is None:
+        kp = KnowledgePoint(
+            subject=subject,
+            name=name,
+            grade=grade,
+            node_type="point",
+            explanation=explanation,
+            parent_id=section.id,
+            order_index=order_index,
+        )
+        db.add(kp)
+        db.flush()
+    else:
+        kp.explanation = explanation
+        kp.parent_id = section.id
+        kp.order_index = order_index
+    return kp
+
+
+def _prune_default_sections(db) -> int:
+    """迁移补建的"默认节"在知识点重新挂接后若无子节点则清理。"""
+    db.flush()
+    removed = 0
+    for section in list(
+        db.scalars(
+            select(KnowledgePoint).where(
+                KnowledgePoint.node_type == "section",
+                KnowledgePoint.name == "默认节",
+            )
+        )
+    ):
+        if db.scalar(
+            select(func.count(KnowledgePoint.id)).where(
+                KnowledgePoint.parent_id == section.id
+            )
+        ) == 0:
+            db.delete(section)
+            removed += 1
+    return removed
 
 
 def _put_questions(db, *, chapter: Chapter, kp: KnowledgePoint, builders: list[Callable]):
@@ -998,29 +1078,38 @@ def seed() -> None:
                     textbook_id=textbook.id, name=spec[0],
                     defaults={"grade": grade, "order_index": order},
                 )
+                section = _put_section(
+                    db, subject=subj, grade=grade, name=spec[0], order_index=order
+                )
                 if len(spec) == 3:
                     # 小学完整内容：(章节名, 章节描述, [题目构造器/题目字典 ...])
                     # 章节名同时作为该章的核心知识点名称
                     _chapter_name, chapter_desc, items = spec
                     kp = _put_kp(db, subject=subj, grade=grade,
-                                 name=spec[0], explanation=chapter_desc)
+                                 name=spec[0], explanation=chapter_desc,
+                                 section=section, order_index=1)
                     builders = [
                         it if callable(it) else (lambda i, d=it: d) for it in items
                     ]
                     _put_questions(db, chapter=chapter, kp=kp, builders=builders)
                 else:
                     # 样章：(章节名, [(知识点名, 讲解, [题目字典 ...]), ...])
-                    for kp_name, kp_explain, qitems in spec[1]:
+                    for kp_order, (kp_name, kp_explain, qitems) in enumerate(
+                        spec[1], start=1
+                    ):
                         kp = _put_kp(db, subject=subj, grade=grade,
-                                     name=kp_name, explanation=kp_explain)
+                                     name=kp_name, explanation=kp_explain,
+                                     section=section, order_index=kp_order)
                         builders = [
                             q if callable(q) else (lambda i, d=q: d) for q in qitems
                         ]
                         _put_questions(db, chapter=chapter, kp=kp, builders=builders)
 
+        # 迁移补建的"默认节"在内容重新挂接后若无子节点则清理
+        _prune_default_sections(db)
+
         db.commit()
 
-        from sqlalchemy import func
         n_tb = db.scalar(select(func.count(Textbook.id)))
         n_ch = db.scalar(select(func.count(Chapter.id)))
         n_kp = db.scalar(select(func.count(KnowledgePoint.id)))
