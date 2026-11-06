@@ -170,6 +170,18 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                       ),
                   ],
                   const SizedBox(height: 24),
+                  if (user?.isStudent == true) ...[
+                    Card(
+                      child: ListTile(
+                        leading: const Icon(Icons.menu_book_outlined),
+                        title: const Text('教材管理'),
+                        subtitle: const Text('切换版本、学期或解绑教材'),
+                        trailing: const Icon(Icons.chevron_right),
+                        onTap: () => context.go('/textbooks'),
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                  ],
                   OutlinedButton.icon(
                     onPressed: _logout,
                     icon: const Icon(Icons.logout),

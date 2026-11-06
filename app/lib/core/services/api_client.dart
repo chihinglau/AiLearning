@@ -101,6 +101,15 @@ class ApiClient {
     }
   }
 
+  Future<Map<String, dynamic>> deleteJson(String path) async {
+    try {
+      final response = await _dio.delete<dynamic>(path);
+      return _asMap(response.data);
+    } on DioException catch (error) {
+      throw _toApiException(error);
+    }
+  }
+
   /// OAuth2 密码模式登录使用 form-urlencoded 提交。
   Future<Map<String, dynamic>> postForm(
     String path,

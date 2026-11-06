@@ -25,4 +25,20 @@ class TextbookService {
         .map((item) => TextbookBinding.fromJson(item as Map<String, dynamic>))
         .toList();
   }
+
+  Future<TextbookBinding> bind({
+    required String subject,
+    required int textbookId,
+  }) async {
+    final data = await _api.postJson('/api/me/textbooks/bind', {
+      'subject': subject,
+      'textbook_id': textbookId,
+    });
+    return TextbookBinding.fromJson(data);
+  }
+
+  Future<TextbookBinding> unbind(int bindingId) async {
+    final data = await _api.deleteJson('/api/me/textbooks/$bindingId');
+    return TextbookBinding.fromJson(data);
+  }
 }

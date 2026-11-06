@@ -108,17 +108,23 @@ def _upsert_binding(
 
 
 def _archive_others(
-    db: Session, *, user_id: int, subject: str, semester: str, keep_textbook_id: int
+    db: Session,
+    *,
+    user_id: int,
+    subject: str,
+    keep_textbook_id: int,
+    semester: str | None = None,
 ) -> None:
-    rows = db.scalars(
-        select(TextbookBinding).where(
-            TextbookBinding.user_id == user_id,
-            TextbookBinding.subject == subject,
-            TextbookBinding.semester == semester,
-            TextbookBinding.textbook_id != keep_textbook_id,
-            TextbookBinding.status == "active",
-        )
-    )
+    """归档同学科旧的生效绑定；semester 为空时跨学期一并归档（换册不混排）。"""
+    conditions = [
+        TextbookBinding.user_id == user_id,
+        TextbookBinding.subject == subject,
+        TextbookBinding.textbook_id != keep_textbook_id,
+        TextbookBinding.status == "active",
+    ]
+    if semester is not None:
+        conditions.append(TextbookBinding.semester == semester)
+    rows = db.scalars(select(TextbookBinding).where(*conditions))
     for row in rows:
         row.status = "archived"
 
@@ -158,9 +164,10 @@ def manual_bind(
         raise ValueError("TEXTBOOK_NOT_FOUND")
     if textbook.subject != subject:
         raise ValueError("SUBJECT_MISMATCH")
-    semester = user.semester or derive_semester(datetime.utcnow())
+    # 绑定学期以所选教材为准，避免上下册混排（D-04 §5.3）。
+    semester = textbook.semester or user.semester or derive_semester(datetime.utcnow())
     _archive_others(
-        db, user_id=user.id, subject=subject, semester=semester, keep_textbook_id=textbook_id
+        db, user_id=user.id, subject=subject, keep_textbook_id=textbook_id
     )
     binding = _upsert_binding(
         db,

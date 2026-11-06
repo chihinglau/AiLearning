@@ -104,6 +104,34 @@ def test_manual_bind_archives_previous(client: TestClient, db: Session) -> None:
     assert archived.status == "archived"
 
 
+def test_manual_bind_uses_textbook_semester(client: TestClient, db: Session) -> None:
+    books = _seed_books(db)
+    headers = _students(client, "13100000008")
+    client.post("/api/me/textbooks/auto-bind", headers=headers)
+
+    response = client.post(
+        "/api/me/textbooks/bind",
+        json={"subject": "math", "textbook_id": books[("math", "北师大版", "second")]},
+        headers=headers,
+    )
+    assert response.status_code == 201, response.text
+    assert response.json()["semester"] == "second"
+    assert response.json()["textbook"]["semester"] == "second"
+
+    listed = client.get("/api/me/textbooks", headers=headers).json()
+    math = [item for item in listed if item["subject"] == "math"]
+    assert [item["semester"] for item in math] == ["second"]
+
+    student = db.scalar(select(User).where(User.phone == "13100000008"))
+    archived = db.scalar(
+        select(TextbookBinding).where(
+            TextbookBinding.user_id == student.id,
+            TextbookBinding.textbook_id == books[("math", "北师大版", "first")],
+        )
+    )
+    assert archived.status == "archived"
+
+
 def test_unbind_removes_from_active_list(client: TestClient, db: Session) -> None:
     _seed_books(db)
     headers = _students(client, "13100000004")

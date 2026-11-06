@@ -239,6 +239,14 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
                     textbook: textbook,
                     onTap: () => _openTextbook(textbook),
                   ),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: TextButton.icon(
+                    onPressed: () => context.go('/textbooks'),
+                    icon: const Icon(Icons.tune),
+                    label: const Text('管理教材'),
+                  ),
+                ),
                 const SizedBox(height: 20),
               ],
               _SectionTitle('考试入口'),

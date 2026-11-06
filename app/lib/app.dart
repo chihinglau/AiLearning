@@ -7,6 +7,7 @@ import 'package:ai_learning/features/onboarding/onboarding_page.dart';
 import 'package:ai_learning/features/practice/practice_page.dart';
 import 'package:ai_learning/features/session/session_page.dart';
 import 'package:ai_learning/features/shell/app_shell.dart';
+import 'package:ai_learning/features/textbook/textbook_manage_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -59,6 +60,13 @@ final routerProvider = Provider<GoRouter>((ref) {
         builder: (context, state) => const PermissionGate(
           anyOf: ['learn:content:read'],
           child: AppShell(),
+        ),
+      ),
+      GoRoute(
+        path: '/textbooks',
+        builder: (context, state) => const PermissionGate(
+          anyOf: ['learn:content:read'],
+          child: TextbookManagePage(),
         ),
       ),
       GoRoute(
