@@ -112,3 +112,31 @@ def test_mask_phone() -> None:
     assert mask_phone("13812345678") == "138****5678"
     assert mask_phone(None) is None
     assert mask_phone("123") == "***"
+
+
+def test_resolve_class_scope_is_safe_default(db: Session) -> None:
+    teacher = _create_user(db, "13900000020", "teacher", school_id=10)
+    assert resolve_student_ids(db, teacher, "CLASS") == set()
+
+
+def test_resolve_unknown_scope_returns_empty(db: Session) -> None:
+    student = _create_user(db, "13900000021", "student", grade=3)
+    assert resolve_student_ids(db, student, "UNKNOWN") == set()
+
+
+def test_resolve_child_scope_without_binding_returns_empty(db: Session) -> None:
+    parent = _create_user(db, "13900000022", "parent")
+    assert resolve_student_ids(db, parent, "CHILD") == set()
+
+
+def test_ensure_student_access_all_scope_allows_any(db: Session) -> None:
+    admin = _create_user(db, "13900000023", "admin")
+    other = _create_user(db, "13900000024", "student", grade=6)
+    ensure_student_access(db, admin, "ALL", other.id)
+
+
+def test_scope_for_permission_denies_unrequested_scope() -> None:
+    assert scope_for_permission("student", "learn:exam:report:self") == "SELF"
+    assert scope_for_permission("parent", "learn:exam:take") is None
+    assert scope_for_permission("teacher", "content:question:write") is None
+    assert scope_for_permission("unknown_role", "learn:content:read") is None

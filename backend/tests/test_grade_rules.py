@@ -1,13 +1,20 @@
+from datetime import datetime
+
 import pytest
 from fastapi.testclient import TestClient
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.core.grade import (
+    GradeProfile,
     GradeValidationError,
+    academic_year,
     derive_grade_group,
+    derive_semester,
     derive_stage,
     resolve_grade_profile,
+    semester_start,
+    validate_elective_subjects,
 )
 from app.models.user import User
 
@@ -94,3 +101,74 @@ def test_parent_register_without_grade(client: TestClient) -> None:
     )
     assert response.status_code == 201, response.text
     assert response.json()["stage"] is None
+
+
+def test_grade_dimension_full_matrix() -> None:
+    profile_by_grade = {
+        1: ("primary", "primary_low"),
+        2: ("primary", "primary_low"),
+        3: ("primary", "primary_mid"),
+        4: ("primary", "primary_mid"),
+        5: ("primary", "primary_high"),
+        6: ("primary", "primary_high"),
+        7: ("junior", "junior"),
+        8: ("junior", "junior"),
+        9: ("junior", "junior"),
+        10: ("senior", "senior"),
+        11: ("senior", "senior"),
+        12: ("senior", "senior"),
+    }
+    for grade, (stage, group) in profile_by_grade.items():
+        assert derive_stage(grade) == stage, grade
+        assert derive_grade_group(grade) == group, grade
+
+
+@pytest.mark.parametrize("grade", [0, -3, 13, 100])
+def test_grade_out_of_range_carries_code(grade: int) -> None:
+    for derive in (derive_stage, derive_grade_group):
+        with pytest.raises(GradeValidationError) as exc:
+            derive(grade)
+        assert exc.value.code == "GRADE_OUT_OF_RANGE"
+
+
+def test_resolve_grade_profile_derives_and_validates_stage() -> None:
+    profile = resolve_grade_profile(9, stage="junior")
+    assert profile == GradeProfile(stage="junior", grade_group="junior")
+
+    with pytest.raises(GradeValidationError) as exc:
+        resolve_grade_profile(10, stage="junior")
+    assert exc.value.code == "STAGE_MISMATCH"
+
+    with pytest.raises(GradeValidationError) as exc:
+        resolve_grade_profile(None, role="student")
+    assert exc.value.code == "GRADE_REQUIRED"
+
+    assert resolve_grade_profile(None, role="parent") is None
+
+
+def test_elective_subjects_only_senior() -> None:
+    validate_elective_subjects(None, grade=8)
+    validate_elective_subjects([], grade=8)
+    validate_elective_subjects(["physics"], grade=11)
+
+    with pytest.raises(GradeValidationError) as exc:
+        validate_elective_subjects(["physics"], grade=8)
+    assert exc.value.code == "ELECTIVE_ONLY_SENIOR"
+
+    with pytest.raises(GradeValidationError) as exc:
+        validate_elective_subjects(["physics"], None)
+    assert exc.value.code == "ELECTIVE_ONLY_SENIOR"
+
+
+def test_academic_year_and_semester_boundaries() -> None:
+    assert academic_year(datetime(2026, 9, 1)) == "2026-2027"
+    assert academic_year(datetime(2026, 8, 31)) == "2025-2026"
+
+    assert semester_start(datetime(2026, 9, 1)) == datetime(2026, 9, 1)
+    assert semester_start(datetime(2026, 1, 15)) == datetime(2025, 9, 1)
+    assert semester_start(datetime(2026, 2, 1)) == datetime(2026, 2, 1)
+
+    assert derive_semester(datetime(2026, 1, 1)) == "first"
+    assert derive_semester(datetime(2026, 2, 1)) == "second"
+    assert derive_semester(datetime(2026, 8, 31)) == "second"
+    assert derive_semester(datetime(2026, 9, 1)) == "first"
