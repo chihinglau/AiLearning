@@ -2,6 +2,7 @@ import 'package:ai_learning/core/models/user.dart';
 import 'package:ai_learning/core/offline/offline_exam_store.dart';
 import 'package:ai_learning/core/offline/offline_exam_sync.dart';
 import 'package:ai_learning/core/services/api_client.dart';
+import 'package:ai_learning/core/services/ai_service.dart';
 import 'package:ai_learning/core/services/assignment_service.dart';
 import 'package:ai_learning/core/services/auth_service.dart';
 import 'package:ai_learning/core/services/content_service.dart';
@@ -63,6 +64,10 @@ final offlineExamSyncProvider = Provider<OfflineExamSync>((ref) {
 
 final assignmentServiceProvider = Provider<AssignmentService>((ref) {
   return AssignmentService(ref.watch(apiClientProvider));
+});
+
+final aiServiceProvider = Provider<AIService>((ref) {
+  return AIService(ref.watch(apiClientProvider));
 });
 
 final familyServiceProvider = Provider<FamilyService>((ref) {

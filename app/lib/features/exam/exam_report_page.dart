@@ -1,6 +1,7 @@
 import 'dart:math' as math;
 
 import 'package:ai_learning/core/errors/api_error_guide.dart';
+import 'package:ai_learning/core/models/ai.dart';
 import 'package:ai_learning/core/models/exam.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
@@ -24,6 +25,7 @@ class _ExamReportPageState extends ConsumerState<ExamReportPage> {
   String? _error;
   bool _submitting = false;
   final Map<int, double> _scores = {};
+  int? _explainingQuestionId;
 
   @override
   void initState() {
@@ -77,6 +79,29 @@ class _ExamReportPageState extends ConsumerState<ExamReportPage> {
         }
       default:
         break;
+    }
+  }
+
+  /// AI 讲解：仅学生可用（服务端要求已完成作答，避免变相泄题）。
+  Future<void> _explain(ExamWrongItem item) async {
+    if (_explainingQuestionId != null) return;
+    setState(() => _explainingQuestionId = item.questionId);
+    try {
+      final result = await ref.read(aiServiceProvider).explain(item.questionId);
+      if (!mounted) return;
+      setState(() => _explainingQuestionId = null);
+      await showModalBottomSheet<void>(
+        context: context,
+        isScrollControlled: true,
+        showDragHandle: true,
+        builder: (_) => _AIExplainSheet(explanation: result),
+      );
+    } on ApiException catch (error) {
+      if (!mounted) return;
+      setState(() => _explainingQuestionId = null);
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(ApiErrorGuide.from(error).message)),
+      );
     }
   }
 
@@ -142,6 +167,8 @@ class _ExamReportPageState extends ConsumerState<ExamReportPage> {
 
     final score = report.totalScore ?? report.objectiveScore;
     final rate = report.fullScore == 0 ? 0.0 : score / report.fullScore;
+    final user = ref.read(currentUserProvider);
+    final canExplain = user != null && user.hasPermission('learn:exam:take');
     return ListView(
       padding: const EdgeInsets.all(16),
       children: [
@@ -399,6 +426,26 @@ class _ExamReportPageState extends ConsumerState<ExamReportPage> {
                       ),
                     ),
                   ],
+                  if (canExplain) ...[
+                    const SizedBox(height: 4),
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: TextButton.icon(
+                        key: ValueKey('ai-explain-${item.questionId}'),
+                        onPressed: _explainingQuestionId == item.questionId
+                            ? null
+                            : () => _explain(item),
+                        icon: _explainingQuestionId == item.questionId
+                            ? const SizedBox(
+                                width: 14,
+                                height: 14,
+                                child: CircularProgressIndicator(strokeWidth: 2),
+                              )
+                            : const Icon(Icons.auto_awesome, size: 16),
+                        label: const Text('AI 讲解'),
+                      ),
+                    ),
+                  ],
                 ],
               ),
             ),
@@ -539,6 +586,81 @@ class _SectionTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(text, style: Theme.of(context).textTheme.titleMedium);
+  }
+}
+
+class _AIExplainSheet extends StatelessWidget {
+  const _AIExplainSheet({required this.explanation});
+
+  final AIExplanation explanation;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final isLlm = explanation.provider == 'llm';
+    return SafeArea(
+      child: ConstrainedBox(
+        constraints: BoxConstraints(
+          maxHeight: MediaQuery.sizeOf(context).height * 0.8,
+        ),
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Row(
+                children: [
+                  Text('AI 讲解', style: theme.textTheme.titleMedium),
+                  const SizedBox(width: 8),
+                  Chip(
+                    label: Text(isLlm ? 'AI 生成' : '规则讲解'),
+                    visualDensity: VisualDensity.compact,
+                    backgroundColor: theme.colorScheme.secondaryContainer,
+                  ),
+                ],
+              ),
+              const SizedBox(height: 8),
+              Text(explanation.explanation, style: theme.textTheme.bodyMedium),
+              if (explanation.steps.isNotEmpty) ...[
+                const SizedBox(height: 12),
+                Text('解题步骤', style: theme.textTheme.titleSmall),
+                const SizedBox(height: 4),
+                for (final step in explanation.steps)
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 4),
+                    child: Text('· $step', style: theme.textTheme.bodySmall),
+                  ),
+              ],
+              if (explanation.cautions.isNotEmpty) ...[
+                const SizedBox(height: 12),
+                Text('易错提醒', style: theme.textTheme.titleSmall),
+                const SizedBox(height: 4),
+                for (final caution in explanation.cautions)
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 4),
+                    child: Text('· $caution', style: theme.textTheme.bodySmall),
+                  ),
+              ],
+              const SizedBox(height: 8),
+              Text(
+                'AI 讲解仅供参考，请以老师和教材为准',
+                style: theme.textTheme.bodySmall
+                    ?.copyWith(color: theme.colorScheme.outline),
+              ),
+              const SizedBox(height: 16),
+              Align(
+                alignment: Alignment.centerRight,
+                child: OutlinedButton(
+                  onPressed: () => Navigator.of(context).pop(),
+                  child: const Text('关闭'),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
 

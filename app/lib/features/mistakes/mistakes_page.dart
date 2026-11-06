@@ -1,4 +1,5 @@
 import 'package:ai_learning/core/errors/api_error_guide.dart';
+import 'package:ai_learning/core/models/ai.dart';
 import 'package:ai_learning/core/models/learn.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
@@ -19,6 +20,7 @@ class _MistakesPageState extends ConsumerState<MistakesPage> {
   bool _loading = true;
   String? _error;
   bool _showMastered = false;
+  int? _diagnosingId;
 
   @override
   void initState() {
@@ -68,6 +70,34 @@ class _MistakesPageState extends ConsumerState<MistakesPage> {
 
   void _startReview() {
     context.go('/session?title=${Uri.encodeComponent('今日复习')}&review=1');
+  }
+
+  /// AI 错因归因：服务端基于题型与错误历史给出候选错因与改进建议。
+  Future<void> _diagnose(WrongQuestionItem item) async {
+    if (_diagnosingId != null) return;
+    setState(() => _diagnosingId = item.id);
+    try {
+      final diagnosis = await ref.read(aiServiceProvider).diagnose(item.id);
+      if (!mounted) return;
+      setState(() => _diagnosingId = null);
+      await showModalBottomSheet<void>(
+        context: context,
+        isScrollControlled: true,
+        showDragHandle: true,
+        builder: (sheetContext) => _DiagnosisSheet(
+          item: item,
+          diagnosis: diagnosis,
+          onApply: () async {
+            Navigator.of(sheetContext).pop();
+            await _tagReason(item, diagnosis.reason);
+          },
+        ),
+      );
+    } on ApiException catch (error) {
+      if (!mounted) return;
+      setState(() => _diagnosingId = null);
+      await handleApiError(context, ref, error);
+    }
   }
 
   @override
@@ -140,7 +170,9 @@ class _MistakesPageState extends ConsumerState<MistakesPage> {
                   else
                     ..._items.map((item) => _WrongCard(
                           item: item,
+                          diagnosing: _diagnosingId == item.id,
                           onTagReason: (reason) => _tagReason(item, reason),
+                          onDiagnose: () => _diagnose(item),
                         )),
                 ],
               ),
@@ -150,10 +182,17 @@ class _MistakesPageState extends ConsumerState<MistakesPage> {
 }
 
 class _WrongCard extends StatelessWidget {
-  const _WrongCard({required this.item, required this.onTagReason});
+  const _WrongCard({
+    required this.item,
+    required this.diagnosing,
+    required this.onTagReason,
+    required this.onDiagnose,
+  });
 
   final WrongQuestionItem item;
+  final bool diagnosing;
   final ValueChanged<String> onTagReason;
+  final VoidCallback onDiagnose;
 
   @override
   Widget build(BuildContext context) {
@@ -187,9 +226,27 @@ class _WrongCard extends StatelessWidget {
               children: [
                 Icon(Icons.label_outline, size: 16, color: theme.colorScheme.outline),
                 const SizedBox(width: 4),
-                Text('错因：${WrongReason.labelOf(item.wrongReason)}',
-                    style: theme.textTheme.bodySmall),
-                const Spacer(),
+                Expanded(
+                  child: Text('错因：${WrongReason.labelOf(item.wrongReason)}',
+                      style: theme.textTheme.bodySmall,
+                      overflow: TextOverflow.ellipsis),
+                ),
+                TextButton(
+                  key: ValueKey('ai-diagnose-${item.id}'),
+                  onPressed: diagnosing ? null : onDiagnose,
+                  style: TextButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(horizontal: 8),
+                    minimumSize: Size.zero,
+                    tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                  ),
+                  child: diagnosing
+                      ? const SizedBox(
+                          width: 14,
+                          height: 14,
+                          child: CircularProgressIndicator(strokeWidth: 2),
+                        )
+                      : const Text('AI 归因'),
+                ),
                 PopupMenuButton<String>(
                   tooltip: '标注错因',
                   onSelected: onTagReason,
@@ -205,6 +262,97 @@ class _WrongCard extends StatelessWidget {
               ],
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class _DiagnosisSheet extends StatelessWidget {
+  const _DiagnosisSheet({
+    required this.item,
+    required this.diagnosis,
+    required this.onApply,
+  });
+
+  final WrongQuestionItem item;
+  final AIDiagnosis diagnosis;
+  final VoidCallback onApply;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    return SafeArea(
+      child: ConstrainedBox(
+        constraints: BoxConstraints(
+          maxHeight: MediaQuery.sizeOf(context).height * 0.8,
+        ),
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text('AI 错因分析', style: theme.textTheme.titleMedium),
+              const SizedBox(height: 8),
+              Text(
+                item.stem.isEmpty ? '（题目内容缺失）' : item.stem,
+                style: theme.textTheme.bodyMedium,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
+              const SizedBox(height: 12),
+              Wrap(
+                spacing: 8,
+                children: [
+                  Chip(
+                    label: Text('候选错因：${diagnosis.reasonLabel}'),
+                    visualDensity: VisualDensity.compact,
+                  ),
+                  Chip(
+                    label: Text(diagnosis.confidenceLabel),
+                    visualDensity: VisualDensity.compact,
+                    backgroundColor: theme.colorScheme.secondaryContainer,
+                  ),
+                ],
+              ),
+              const SizedBox(height: 8),
+              Text(diagnosis.explanation, style: theme.textTheme.bodyMedium),
+              if (diagnosis.suggestions.isNotEmpty) ...[
+                const SizedBox(height: 12),
+                Text('改进建议', style: theme.textTheme.titleSmall),
+                const SizedBox(height: 4),
+                for (final tip in diagnosis.suggestions)
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 4),
+                    child: Text('· $tip', style: theme.textTheme.bodySmall),
+                  ),
+              ],
+              const SizedBox(height: 8),
+              Text(
+                'AI 归因仅供参考，请结合老师讲解确认',
+                style: theme.textTheme.bodySmall
+                    ?.copyWith(color: theme.colorScheme.outline),
+              ),
+              const SizedBox(height: 16),
+              Row(
+                children: [
+                  Expanded(
+                    child: FilledButton(
+                      key: const ValueKey('apply-ai-reason'),
+                      onPressed: onApply,
+                      child: Text('采用该错因（${diagnosis.reasonLabel}）'),
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  OutlinedButton(
+                    onPressed: () => Navigator.of(context).pop(),
+                    child: const Text('关闭'),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
