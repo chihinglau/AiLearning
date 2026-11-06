@@ -52,6 +52,18 @@ def _difficulty_band(difficulty: int) -> str:
     return "hard"
 
 
+# 蓝图可用 band 声明难度带（期中/期末 6:3:1），避免逐题罗列难度值
+BAND_DIFFICULTIES = {"easy": {1}, "medium": {2, 3}, "hard": {4, 5}}
+
+
+def _allowed_difficulties(section: dict) -> set[int]:
+    configured = set(section.get("difficulty") or [])
+    if configured:
+        return configured
+    band = section.get("band")
+    return set(BAND_DIFFICULTIES.get(band, set()))
+
+
 def _pick(
     candidates: list[Question], wanted: int, covered: set[int]
 ) -> list[Question]:
@@ -109,7 +121,7 @@ def generate_paper(
     for index, section in enumerate(sections):
         wanted = int(section.get("count", 0))
         q_type = section.get("q_type")
-        allowed_diff = set(section.get("difficulty") or [])
+        allowed_diff = _allowed_difficulties(section)
         score_each = float(section.get("score_each", 0))
 
         remaining = [q for q in pool if q.id not in used]

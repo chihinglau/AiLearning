@@ -1070,6 +1070,69 @@ EXAM_BLUEPRINT_SEEDS: list[dict] = [
     },
 ]
 
+# 期中/期末（P1-07）：章节集合内组卷，难度按 6:3:1 分数配比（60/30/10）
+_COMPREHENSIVE_SECTIONS: dict[str, list[dict]] = {
+    "math": [
+        {"name": "一、基础计算", "q_type": "fill",
+         "count": 10, "score_each": 3, "band": "easy"},
+        {"name": "二、基础选择", "q_type": "choice",
+         "count": 10, "score_each": 3, "band": "easy"},
+        {"name": "三、提升填空", "q_type": "fill",
+         "count": 5, "score_each": 4, "band": "medium"},
+        {"name": "四、提升应用", "q_type": "answer",
+         "count": 2, "score_each": 5, "band": "medium"},
+        {"name": "五、综合应用", "q_type": "answer",
+         "count": 1, "score_each": 10, "band": "hard"},
+    ],
+    "chinese": [
+        {"name": "一、字词积累", "q_type": "fill",
+         "count": 10, "score_each": 2, "band": "easy"},
+        {"name": "二、句子运用", "q_type": "fill",
+         "count": 10, "score_each": 2, "band": "easy"},
+        {"name": "三、课文选择", "q_type": "choice",
+         "count": 10, "score_each": 2, "band": "easy"},
+        {"name": "四、阅读理解", "q_type": "answer",
+         "count": 3, "score_each": 10, "band": "medium"},
+        {"name": "五、习作表达", "q_type": "answer",
+         "count": 1, "score_each": 10, "band": "hard"},
+    ],
+    "english": [
+        {"name": "一、听力选择", "q_type": "choice",
+         "count": 10, "score_each": 3, "band": "easy"},
+        {"name": "二、基础填空", "q_type": "fill",
+         "count": 10, "score_each": 3, "band": "easy"},
+        {"name": "三、单项选择", "q_type": "choice",
+         "count": 10, "score_each": 2, "band": "medium"},
+        {"name": "四、提升填空", "q_type": "fill",
+         "count": 5, "score_each": 2, "band": "medium"},
+        {"name": "五、综合表达", "q_type": "answer",
+         "count": 1, "score_each": 10, "band": "hard"},
+    ],
+}
+
+
+def _comprehensive_blueprint(*, subject: str, label: str, exam_type: str) -> dict:
+    suffix = "期中" if exam_type == "midterm" else "期末"
+    return {
+        "code": f"{subject}_primary_{exam_type}",
+        "name": f"小学{label}{suffix}测试卷",
+        "subject": subject,
+        "grade": 3,
+        "exam_type": exam_type,
+        "total_score": 100,
+        "time_limit_min": 90,
+        "sections": _COMPREHENSIVE_SECTIONS[subject],
+        "kp_coverage_min": 0.8,
+        "difficulty_mix": {"easy": 0.6, "medium": 0.3, "hard": 0.1},
+    }
+
+
+EXAM_BLUEPRINT_SEEDS += [
+    _comprehensive_blueprint(subject=subject, label=label, exam_type=exam_type)
+    for subject, label in (("math", "数学"), ("chinese", "语文"), ("english", "英语"))
+    for exam_type in ("midterm", "final")
+]
+
 
 def _put_blueprint(db, *, code: str, **fields) -> ExamBlueprint:
     """按 code 幂等写入蓝图，重复运行只更新字段。"""
