@@ -1,9 +1,9 @@
 # 深爱学（AiLearning）项目实施任务计划与进度跟踪
 
 > **文档性质**：项目主计划 / 进度跟踪 / 过程追溯（全程伴随开发周期）
-> **版本**：v1.62
+> **版本**：v1.63
 > **创建日期**：2026-11-06
-> **最后更新**：2026-11-07（P2-04 知识图谱视图完成）
+> **最后更新**：2026-11-07（P2-05 图片作答与离线整卷完成）
 > **参考设计文档**：见[§1.1 参考设计文档清单](#11-参考设计文档清单)（共 8 份，含 4 份设计方案、4 份支撑文档）
 > **需求追踪**：见[§1.2 需求—设计—任务追踪矩阵](#12-需求设计任务追踪矩阵)
 > **维护人**：项目负责人（PM）
@@ -60,7 +60,7 @@
 | 期中/期末/模考 | D-04 §8.1~§8.5 | D-04 §8、D-03 §5.2 | P1-07~P1-10、P2-07 | L9~L12 | `DOING`（P1-07 蓝图组卷、P1-08 考试窗口与过期处理、P1-09 主观题自评、P1-10 报告增强已完成，待 P2-07 模考） |
 | 主观题与报告增强 | D-04 §7.5/§8.5 | D-04 §7.5/§8.5 | P1-09、P1-10 | L11 | `DONE`（主观题自评与能力维度/班级平均/趋势对比已完成） |
 | 推荐与学习闭环 | D-04 §2.2/§6.6 | D-04 §2.2/§6.6 | P1-11、P1-12、P1-14 | 闭环验收 | `DONE`（六优先级推荐、考试错题默认错因/复习优先级、活服务端到端回归均已通过） |
-| 平台化与增强（RBAC/图谱/离线/AI） | D-03 §9.2、D-04 §14 | D-03 §9.2、D-04 §14 | P2-01~P2-10 | M4 | `DOING`（P2-01 RBAC 表/双写、P2-02 权限配置后台、P2-03 班级作业与主观题批改、P2-04 知识图谱视图已完成） |
+| 平台化与增强（RBAC/图谱/离线/AI） | D-03 §9.2、D-04 §14 | D-03 §9.2、D-04 §14 | P2-01~P2-10 | M4 | `DOING`（P2-01 RBAC 表/双写、P2-02 权限配置后台、P2-03 班级作业与主观题批改、P2-04 知识图谱视图、P2-05 图片作答与离线整卷已完成） |
 | 上架合规与发布 | D-08 §3/§7 | D-08 §3/§6 | R-01~R-09、P0-05、P0-09、P1-05、P2-08 | 发布验收 | `TODO` |
 
 **矩阵维护规则**：
@@ -262,7 +262,7 @@ DONE ──返工（需CR）──► DOING
 | P2-02 | 权限配置后台（角色-权限可视化） | AR/FE | 12 | P2 | P2-01 | `DONE` | 6 | 9.1 | 后端 `GET /api/admin/rbac/roles`、`GET /permissions`、`PUT /roles/{code}/permissions`（`system:config:write` 鉴权、超管只读、未知权限 422、变更审计 `rbac.role.permissions`）；前端 `features/admin/rbac_config_page.dart`（角色切换、按域勾选、保存差异提示），路由 `/admin/rbac` 与"我的"入口；`tests/test_admin_rbac.py` 6 例 + `app/test/rbac_config_page_test.dart` 2 例；全量 `pytest` 264 passed、`flutter test` 54 passed |
 | P2-03 | 教师布置作业/班级统一卷、批改主观题 | AR/FE | 16 | P2 | P1-09/P1-02 | `DONE` | 6 | 8.1/5.2 | 新增 `assignments` 表与迁移 `n4o5p6q7r8s9`（`exam_answers` 批改字段，空库/存量库升降级通过）；后端 `services/assignment.py` + `/api/assignments`（布置/列表/详情/批改清单/批量批改，班级越权、超分、客观题校验，作业卷隔离出通用考试列表与学生名单脱敏）；前端 `features/assignment/*`（列表/布置/详情/批改页 + 学习页与"我的"入口）；`tests/test_assignments.py` 2 例 + `app/test/assignment_list_page_test.dart` 2 例；全量 `pytest` 266 passed、`flutter analyze` 0 issues、`flutter test` 56 passed |
 | P2-04 | 知识图谱视图（前置依赖可视化、薄弱高亮） | FE | 10 | P2 | P0-19 | `DONE` | 4 | 6.2 | 前端 `features/learn/knowledge_graph_page.dart`：聚合教材全部单元知识点、按前置依赖计算列深并绘制箭头连线（`CustomPainter`）、薄弱节点红色高亮/图例、单元筛选与点击下钻知识点详情；路由 `/knowledge/:textbookId/graph` 与目录页「知识图谱」入口；`app/test/knowledge_graph_page_test.dart` 2 例；`flutter analyze` 0 issues、`flutter test` 58 passed |
-| P2-05 | 图片作答与离线整卷（本地队列、断网重放） | FE/AR | 16 | P2 | P0-23 | `TODO` | — | 13 章 | — |
+| P2-05 | 图片作答与离线整卷（本地队列、断网重放） | FE/AR | 16 | P2 | P0-23 | `DONE` | 8 | 13 章 | 后端主观题图片作答校验（PNG/JPEG/WEBP、单张 3 MB、合计 4 MB、最多 2 张、客观题拒绝）与 `tests/test_exam_image_answer.py`；前端 `OfflineExamStore`/`OfflineExamSync`（Hive 本地快照 + save/submit 队列按序重放、服务端冲突丢弃、12s 自动重试）、考试页离线横幅与交卷暂存、`SignatureAnswerPage` 手写导图、批改页展示手写图片；`app/test/offline_exam_sync_test.dart` 2 例；`pytest` 267 passed、`flutter analyze` 0 issues、`flutter test` 60 passed |
 | P2-06 | AI 讲解与错题归因辅助（LLM 接入、Prompt 安全） | AR | 16 | P2 | P0-19 | `TODO` | — | 6.4 | — |
 | P2-07 | 模考与真题库、考试窗口与公平性（同班同卷） | CT/AR | 12 | P2 | P1-08 | `TODO` | — | 8.3 | — |
 | P2-08 | 数据导出与合规审计增强（脱敏导出、用途登记） | AR | 6 | P2 | P0-05 | `TODO` | — | A10 | — |
@@ -429,12 +429,12 @@ flowchart LR
 | 指标 | 数值 |
 |---|---|
 | 任务总数（不含基线） | 77（开发 68：P0 43 + P1 15 + P2 10；发布 9：R-01~R-09） |
-| `TODO` | 15 |
+| `TODO` | 14 |
 | `DOING` | 0 |
-| `DONE` | 62（P0-01~P0-43、P1-01~P1-15、P2-01~P2-04；基线 5 项已冻结） |
+| `DONE` | 63（P0-01~P0-43、P1-01~P1-15、P2-01~P2-05；基线 5 项已冻结） |
 | `BLOCKED` | 0 |
 | 预估总工时 | 676 h（开发 557 = P0 310 + P1 129 + P2 118；发布 119） |
-| 已投入工时 | 204 h（P0-01 3、P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3、P0-23 3、P0-24 3、P0-25 3、P0-26 3、P0-27 3、P0-28 4、P0-29 3、P0-30 3、P0-31 4、P0-32 3、P0-33 4、P0-34 4、P0-35 6、P0-36 8、P0-37 10、P0-38 4、P0-39 6、P0-40 4、P0-41 6、P0-42 2、P0-43 3、P1-01 3、P1-02 2、P1-03 2、P1-04 3、P1-05 3、P1-06 3、P1-07 3、P1-08 3、P1-09 3、P1-10 3、P1-11 3、P1-12 2、P1-13 3、P1-14 3、P1-15 3、P2-01 6、P2-02 6、P2-03 6、P2-04 4） |
+| 已投入工时 | 212 h（P0-01 3、P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3、P0-23 3、P0-24 3、P0-25 3、P0-26 3、P0-27 3、P0-28 4、P0-29 3、P0-30 3、P0-31 4、P0-32 3、P0-33 4、P0-34 4、P0-35 6、P0-36 8、P0-37 10、P0-38 4、P0-39 6、P0-40 4、P0-41 6、P0-42 2、P0-43 3、P1-01 3、P1-02 2、P1-03 2、P1-04 3、P1-05 3、P1-06 3、P1-07 3、P1-08 3、P1-09 3、P1-10 3、P1-11 3、P1-12 2、P1-13 3、P1-14 3、P1-15 3、P2-01 6、P2-02 6、P2-03 6、P2-04 4、P2-05 8） |
 | 当前迭代 | P2（平台化与增强）+ 发布准备（R-05 软著先行） |
 | 迭代目标 | RBAC 配置后台、教师作业与班级管理、知识图谱、离线、AI 讲解、合规导出；并行推进软著/签名/隐私/部署 |
 | 里程碑 | M2.5（P0 技术验收通过，待签署）→ M3（P1 技术验收通过，待签署）→ M4（P2） |
@@ -537,6 +537,7 @@ flowchart LR
 | v1.60 | 2026-11-07 | AR/FE | P2-02 权限配置后台（后端 `GET /api/admin/rbac/roles`、`GET /permissions`、`PUT /roles/{code}/permissions`，`system:config:write` 鉴权 + 超管只读 + 未知权限 422 + `rbac.role.permissions` 审计；前端 `/admin/rbac` 角色权限勾选页与"我的"入口；`tests/test_admin_rbac.py` 6 例、`app/test/rbac_config_page_test.dart` 2 例；`pytest` 264 passed、`flutter analyze` 0 issues、`flutter test` 54 passed）；§1.2 角色权限行转 `DONE`；§6.4 补 9.1；§5.1 同步（DONE 60 / 投入 194 h / TODO 17） |
 | v1.61 | 2026-11-07 | AR/FE | P2-03 班级作业与主观题批改（`assignments` 表 + 迁移 `n4o5p6q7r8s9`、`exam_answers` 批改字段；`/api/assignments` 布置/列表/详情/批改清单/批量批改 + 班级越权/超分/客观题校验 + 作业卷隔离与名单脱敏；前端列表/布置/详情/批改页与学习页、"我的"入口；`tests/test_assignments.py` 2 例、`app/test/assignment_list_page_test.dart` 2 例；`pytest` 266 passed、`flutter analyze` 0 issues、`flutter test` 56 passed）；§1.2 平台化行转 `DOING`；§6.4 补 8.1/5.2；§5.1 同步（DONE 61 / 投入 200 h / TODO 16） |
 | v1.62 | 2026-11-07 | FE | P2-04 知识图谱视图（`knowledge_graph_page.dart` 聚合全教材知识点、按前置依赖计算列深 + `CustomPainter` 箭头连线、薄弱红框/图例、单元筛选、节点下钻；`/knowledge/:textbookId/graph` 路由与目录页入口；`app/test/knowledge_graph_page_test.dart` 2 例；`flutter analyze` 0 issues、`flutter test` 58 passed）；§6.4 补 6.2；§5.1 同步（DONE 62 / 投入 204 h / TODO 15） |
+| v1.63 | 2026-11-07 | FE/AR | P2-05 图片作答与离线整卷（后端主观题图片校验 + `test_exam_image_answer.py`；前端 Hive 离线快照/队列 + `OfflineExamSync` 按序重放与冲突丢弃、考试页离线横幅/交卷暂存、手写画板导图、批改页展示图片；`app/test/offline_exam_sync_test.dart` 2 例；`pytest` 267 passed、`flutter analyze` 0 issues、`flutter test` 60 passed）；§6.4 补 13 章；§5.1 同步（DONE 63 / 投入 212 h / TODO 14） |
 
 ---
 
@@ -610,8 +611,9 @@ flowchart LR
 | 8.1 | 班级统一作业：教师按班布置统一卷，学生仅本班可作答，提交后进入待批改 | P2-03 | `DONE` | 迁移 `n4o5p6q7r8s9`；`POST/GET /api/assignments`、`/grading`、`/grade`；作业卷隔离出通用考试列表；`tests/test_assignments.py` 端到端用例 |
 | 5.2 | 主观题教师批改：逐题给分/评语、超分与客观题拦截、作业总分与状态重算 | P2-03 | `DONE` | `grade_batch` 重算 `subjective_score/total_score/status`；审计 `assignment.*`；前端 `assignment_grading_page.dart`；`test_assignments.py` 越权/守卫用例 |
 | 6.2 | 知识图谱：前置依赖可视化、薄弱知识点高亮、节点可下钻 | P2-04 | `DONE` | 前端 `knowledge_graph_page.dart`（依赖列布局 + `CustomPainter` 箭头连线 + 薄弱红框/图例 + 单元筛选）；`app/test/knowledge_graph_page_test.dart` 2 例 |
+| 13 | 异常与边界：断网可继续整卷作答、离线保存/交卷队列重放、图片作答校验 | P2-05 | `DONE` | 后端图片作答白名单/大小/数量校验与客观题拦截；前端 Hive 快照 + `OfflineExamSync` 按序重放、冲突丢弃、自动重试；手写图片作答与批改展示；`test_exam_image_answer.py`、`offline_exam_sync_test.dart` 2 例 |
 
-**结论**：P2-01~P2-04 技术验收通过；P2 其余任务待实施，M4 保持 `TODO`。
+**结论**：P2-01~P2-05 技术验收通过；P2 其余任务待实施，M4 保持 `TODO`。
 
 ---
 
@@ -628,4 +630,4 @@ flowchart LR
 
 ---
 
-> **当前下一步**：P2-05（图片作答与离线整卷：本地队列、断网重放，依赖 P0-23）。所有任务按依赖图推进，每完成一个任务即回写本文件状态。
+> **当前下一步**：P2-06（AI 讲解与错题归因辅助：LLM 接入、Prompt 安全，依赖 P0-19）。所有任务按依赖图推进，每完成一个任务即回写本文件状态。
