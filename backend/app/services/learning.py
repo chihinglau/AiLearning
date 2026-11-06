@@ -53,8 +53,13 @@ def update_mastery(
     user_id: int,
     knowledge_point_id: Optional[int],
     is_correct: bool,
+    source: str = "practice",
+    weight: float = 1.0,
 ) -> Optional[MasteryScore]:
-    """按 EMA 更新某学生在某知识点上的掌握度；题目未挂知识点时跳过。"""
+    """按 EMA 更新某学生在某知识点上的掌握度；题目未挂知识点时跳过。
+
+    source 区分练习/复习/考试，weight 为来源权重（练习 1.0、单元测 0.8 等）。
+    """
     if knowledge_point_id is None:
         return None
     row = db.scalar(
@@ -63,13 +68,14 @@ def update_mastery(
             MasteryScore.knowledge_point_id == knowledge_point_id,
         )
     )
-    p = 1.0 if is_correct else 0.0
+    p = weight if is_correct else 0.0
     if row is None:
         row = MasteryScore(
             user_id=user_id,
             knowledge_point_id=knowledge_point_id,
             score=EMA_ALPHA * p * 100,
             confidence=1,
+            source_breakdown={},
         )
         db.add(row)
         db.flush()
@@ -77,7 +83,13 @@ def update_mastery(
         row.score = EMA_ALPHA * p * 100 + (1 - EMA_ALPHA) * row.score
         row.confidence = min(row.confidence + 1, MAX_CONFIDENCE)
         row.updated_at = datetime.utcnow()
-        db.flush()
+    breakdown = dict(row.source_breakdown or {})
+    bucket = dict(breakdown.get(source) or {"answered": 0, "correct": 0})
+    bucket["answered"] = int(bucket.get("answered", 0)) + 1
+    bucket["correct"] = int(bucket.get("correct", 0)) + (1 if is_correct else 0)
+    breakdown[source] = bucket
+    row.source_breakdown = breakdown
+    db.flush()
     return row
 
 

@@ -32,6 +32,9 @@ class LearnSubmitIn(BaseModel):
     question_id: int
     user_answer: dict[str, Any]
     duration_ms: int = Field(default=0, ge=0)
+    # P0-24：会话归属与数据来源（练习/复习/考试）
+    session_id: Optional[int] = None
+    source: str = Field(default="practice", pattern=r"^(practice|review|exam)$")
 
 
 class LearnSubmitOut(BaseModel):

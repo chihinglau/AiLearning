@@ -21,6 +21,12 @@ class StudentQuestionRecord(Base):
     duration_ms: Mapped[int] = mapped_column(Integer, default=0)
     wrong_reason: Mapped[Optional[str]] = mapped_column(String(20), nullable=True)
     mastered: Mapped[bool] = mapped_column(Boolean, default=False)
+    # P0-24 数据来源拆分：practice|review|exam；session_id 关联练习会话
+    source: Mapped[str] = mapped_column(String(20), default="practice", index=True)
+    session_id: Mapped[Optional[int]] = mapped_column(
+        ForeignKey("practice_sessions.id"), nullable=True, index=True
+    )
+    kp_weight: Mapped[float] = mapped_column(default=1.0)
     attempted_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, index=True)
 
 
@@ -39,6 +45,8 @@ class MasteryScore(Base):
     )
     score: Mapped[float] = mapped_column(default=0.0)
     confidence: Mapped[int] = mapped_column(Integer, default=0)
+    # P0-24 来源拆分：{practice: {answered, correct}, review: {...}, exam: {...}}
+    source_breakdown: Mapped[dict[str, Any]] = mapped_column(JSONType, default=dict)
     updated_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
 
 

@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from typing import Any, Optional
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
-from sqlalchemy import func, select
+from sqlalchemy import and_, func, or_, select
 from sqlalchemy.orm import Session
 
 from app.api.deps import get_current_user, require_student_access
@@ -570,7 +570,10 @@ def practice_preview(
 
 
 def _session_records(db: Session, session: PracticeSession) -> dict[int, StudentQuestionRecord]:
-    """会话窗口内每道题的最新作答（续答/结算共用）。"""
+    """会话窗口内每道题的最新作答（续答/结算共用）。
+
+    优先按 session_id 归属（P0-24），兼容早期无 session_id 但落在会话时间窗内的记录。
+    """
     qids = [int(qid) for qid in (session.question_ids or [])]
     if not qids:
         return {}
@@ -579,7 +582,13 @@ def _session_records(db: Session, session: PracticeSession) -> dict[int, Student
         .where(
             StudentQuestionRecord.user_id == session.user_id,
             StudentQuestionRecord.question_id.in_(qids),
-            StudentQuestionRecord.attempted_at >= session.started_at,
+            or_(
+                StudentQuestionRecord.session_id == session.id,
+                and_(
+                    StudentQuestionRecord.session_id.is_(None),
+                    StudentQuestionRecord.attempted_at >= session.started_at,
+                ),
+            ),
         )
         .order_by(StudentQuestionRecord.attempted_at)
     ).all()
@@ -865,6 +874,15 @@ def submit(
     if question is None:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="题目不存在")
 
+    session: Optional[PracticeSession] = None
+    if payload.session_id is not None:
+        session = _session_or_404(db, payload.session_id, current)
+        if question.id not in [int(qid) for qid in (session.question_ids or [])]:
+            raise HTTPException(
+                status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+                detail={"code": "QUESTION_NOT_IN_SESSION", "message": "题目不属于该练习会话"},
+            )
+
     is_correct = engine.grade_answer(question, payload.user_answer)
 
     record = StudentQuestionRecord(
@@ -873,6 +891,8 @@ def submit(
         is_correct=is_correct,
         user_answer=payload.user_answer,
         duration_ms=payload.duration_ms,
+        source=payload.source,
+        session_id=session.id if session is not None else None,
     )
     db.add(record)
 
@@ -882,6 +902,7 @@ def submit(
         knowledge_point_id=question.knowledge_point_id
         or _kp_id_by_tag(db, question),
         is_correct=is_correct,
+        source=payload.source,
     )
     if mastery_row is not None and question.knowledge_point_id is not None:
         # 首次练习 → 待巩固；掌握度≥85 → 已掌握（P0-20 状态机）
@@ -895,6 +916,11 @@ def submit(
     wrong = engine.upsert_wrong_question(
         db, user_id=current.id, question=question, is_correct=is_correct
     )
+    db.flush()
+    if session is not None:
+        detail = _session_out(db, session)
+        session.answered_count = detail.answered_count
+        session.correct_count = detail.correct_count
     db.commit()
 
     return LearnSubmitOut(
