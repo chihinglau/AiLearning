@@ -1,9 +1,9 @@
 # 深爱学（AiLearning）项目实施任务计划与进度跟踪
 
 > **文档性质**：项目主计划 / 进度跟踪 / 过程追溯（全程伴随开发周期）
-> **版本**：v1.53
+> **版本**：v1.54
 > **创建日期**：2026-11-06
-> **最后更新**：2026-11-07 03:05（P1-10 报告增强完成）
+> **最后更新**：2026-11-07 03:40（P1-11 推荐服务完成）
 > **参考设计文档**：见[§1.1 参考设计文档清单](#11-参考设计文档清单)（共 8 份，含 4 份设计方案、4 份支撑文档）
 > **需求追踪**：见[§1.2 需求—设计—任务追踪矩阵](#12-需求设计任务追踪矩阵)
 > **维护人**：项目负责人（PM）
@@ -53,13 +53,13 @@
 | 家长绑定与未成年人合规 | D-03 §7.2、D-05 | D-03 §7.2/§10.2 | P0-09、P1-05 | A4 | `DONE`（绑定/同意校验与家长端页面（切换孩子、孩子学情、每日时长、青少年模式）已完成） |
 | 学校/教师组织能力 | D-03 §7.3/§7.4/§10.3 | D-03 §7.3/§7.4/§10.3 | P1-01~P1-06 | A5/A6 | `DONE`（组织模型/API/角色变更/班级聚合/教师端页面已完成） |
 | 教材绑定与选择入口 | D-04 §4/§5 | D-04 §4/§5 | P0-11、P0-12、P0-13、P0-34、P0-16 | L1/L2/L3 | `DONE`（服务端推荐/绑定/冲突检测与前端教材管理页已完成） |
-| 学习首页与"下一步"入口 | D-04 §3/§6.6 | D-04 §3/§6.6 | P0-14、P0-33、P1-11 | L1/L14 | `DOING`（首页聚合接口与前端学习首页已完成，待 P1-11 推荐服务） |
+| 学习首页与"下一步"入口 | D-04 §3/§6.6 | D-04 §3/§6.6 | P0-14、P0-33、P1-11 | L1/L14 | `DONE`（首页聚合接口、前端学习首页与六优先级推荐服务已完成） |
 | 知识点分层与学习路径 | D-02 学科方案、D-04 §6 | D-04 §6 | P0-17~P0-20、P0-35 | L4/L5 | `DONE`（四层结构、状态机与前端单元/知识点详情已完成） |
 | 智能辅助练习 | D-02 学法、D-04 §7 | D-04 §7 | P0-21~P0-24、P0-36 | L6/L7/L8/L13 | `DONE`（服务端预览/组卷/会话/来源拆分 + 前端配置/预览/续答/结算已完成） |
 | 单元测试 | D-04 §8.1~§8.5 | D-04 §8 | P0-25~P0-30、P0-37 | L9/L10/L11/L12 | `DONE`（服务端组卷/交卷/报告/回流 + 前端考试中心/限时答题/报告页已完成） |
 | 期中/期末/模考 | D-04 §8.1~§8.5 | D-04 §8、D-03 §5.2 | P1-07~P1-10、P2-07 | L9~L12 | `DOING`（P1-07 蓝图组卷、P1-08 考试窗口与过期处理、P1-09 主观题自评、P1-10 报告增强已完成，待 P2-07 模考） |
 | 主观题与报告增强 | D-04 §7.5/§8.5 | D-04 §7.5/§8.5 | P1-09、P1-10 | L11 | `DONE`（主观题自评与能力维度/班级平均/趋势对比已完成） |
-| 推荐与学习闭环 | D-04 §2.2/§6.6 | D-04 §2.2/§6.6 | P1-11、P1-12 | 闭环验收 | `TODO` |
+| 推荐与学习闭环 | D-04 §2.2/§6.6 | D-04 §2.2/§6.6 | P1-11、P1-12 | 闭环验收 | `DOING`（P1-11 六优先级推荐已完成，待 P1-12 错题与考试联动优化） |
 | 平台化与增强（RBAC/图谱/离线/AI） | D-03 §9.2、D-04 §14 | D-03 §9.2、D-04 §14 | P2-01~P2-10 | M4 | `TODO` |
 | 上架合规与发布 | D-08 §3/§7 | D-08 §3/§6 | R-01~R-09、P0-05、P0-09、P1-05、P2-08 | 发布验收 | `TODO` |
 
@@ -246,7 +246,7 @@ DONE ──返工（需CR）──► DOING
 | P1-08 | 考试中心扩展：期中/期末/模考入口、考试窗口与过期处理 | AR/FE | 10 | P1 | P0-37/P1-07 | `DONE` | 3 | L10 | 后端：`exams.window_start/window_end`（迁移 `l2g3h4i5j6k7`）、`/api/exams/generate` 支持窗口配置、列表返回 `window_state`（open/scheduled/closed/unscheduled）、窗口外开考 403 `EXAM_WINDOW_NOT_OPEN/EXAM_WINDOW_CLOSED`、保存/交卷遇窗口关闭按已存答案自动交卷且不再接收新答案，`tests/test_exam_window.py` 3 例；前端：`ExamSummary` 窗口字段与 `windowLabel/windowRange`、考试列表新增类型筛选（单元测/期中/期末/模考）、窗口时间与状态展示、未开放时提示拦截，`exam_model_test.dart` +1 例、`exam_list_page_test.dart` 2 例；`pytest` 235 passed、`flutter analyze --no-pub` 0 issues、`flutter test --no-pub` 47 passed |
 | P1-09 | 主观题自评：参考答案、评分点、自评量表、成绩回写 | AR/FE | 10 | P1 | P0-29 | `DONE` | 3 | L11 | 后端：报告新增 `pending_subjective`（题干/作答/参考答案/`scoring_points`/解析/原自评分）、`POST /exams/attempts/{id}/self-assess`（未交卷 409、重复题/非主观题/超满分 422、题目不在卷 404；首次自评按 60% 及格线写 `StudentQuestionRecord`、掌握度 EMA 与错题本，重评不重复回流；按试卷重算主观分与总分，`pending_count==0` 转 `completed`），`tests/test_exam_self_assess.py` 4 例；前端：`ExamSubjectiveQuestion` 模型与 `pending_subjective` 解析、`ExamService.selfAssess`、报告页新增「主观题自评」卡（参考答案/评分点/解析/0~满分滑块/提交后刷新），`exam_model_test.dart` +1 例、`exam_report_page_test.dart` 1 例；`pytest` 239 passed、`flutter analyze --no-pub` 0 issues、`flutter test --no-pub` 49 passed |
 | P1-10 | 报告增强：能力维度雷达、班级平均（有班级时）、趋势对比 | AR/FE | 8 | P1 | P1-09/P1-03 | `DONE` | 3 | L11 | `GET /api/exams/attempts/{id}/report` 新增 `ability_stats`（理解/计算/应用/分析，题型默认映射+学科覆盖）、`class_average`（仅同班聚合值）、`trend`（同科同类近 5 次及 delta）；前端报告页新增能力雷达（`CustomPaint`）、班级平均对比、成绩趋势列表；`tests/test_exam_report_enhanced.py` 2 例、`exam_model_test.dart` +1 例、`exam_report_page_test.dart` 1 例；`pytest` 241 passed、`flutter analyze` 0 issues、`flutter test` 51 passed |
-| P1-11 | 推荐服务：今日计划生成规则（复习→薄弱→单元测→进度→每日一练） | AR | 8 | P1 | P0-14/P0-20 | `TODO` | — | 6.6 | — |
+| P1-11 | 推荐服务：今日计划生成规则（复习→薄弱→单元测→进度→每日一练） | AR | 8 | P1 | P0-14/P0-20 | `DONE` | 3 | 6.6 | 新增 `app/services/recommendation.py`（六优先级规则、当前单元薄弱知识点、单元测检测、学期进度基准每两周 1 单元、待办考试）；`GET /api/learn/home` 推荐增加 `chapter_id/chapter_name/exam_id`，`pending_exams` 填充本年级未完成试卷；前端 `HomeRecommendation` 扩展并支持 `unit_test` 跳转与章节继续；`tests/test_home_recommendation.py` 4 例、`learn_model_test.dart` +1 例；`pytest` 245 passed、`flutter analyze` 0 issues、`flutter test` 52 passed |
 | P1-12 | 错题与考试联动优化：考试错题错因默认分类、复习优先级 | AR | 4 | P1 | P0-30 | `TODO` | — | L12 | — |
 | P1-13 | 性能优化：首页聚合缓存、学情统计缓存失效策略 | AR | 6 | P1 | P0-14 | `TODO` | — | L14 | — |
 | P1-14 | P1 测试与真机回归 | QA | 12 | P1 | P1-01~P1-13 | `TODO` | — | — | — |
@@ -428,12 +428,12 @@ flowchart LR
 | 指标 | 数值 |
 |---|---|
 | 任务总数（不含基线） | 77（开发 68：P0 43 + P1 15 + P2 10；发布 9：R-01~R-09） |
-| `TODO` | 24 |
+| `TODO` | 23 |
 | `DOING` | 0 |
-| `DONE` | 53（P0-01~P0-43、P1-01~P1-10；基线 5 项已冻结） |
+| `DONE` | 54（P0-01~P0-43、P1-01~P1-11；基线 5 项已冻结） |
 | `BLOCKED` | 0 |
 | 预估总工时 | 676 h（开发 557 = P0 310 + P1 129 + P2 118；发布 119） |
-| 已投入工时 | 168 h（P0-01 3、P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3、P0-23 3、P0-24 3、P0-25 3、P0-26 3、P0-27 3、P0-28 4、P0-29 3、P0-30 3、P0-31 4、P0-32 3、P0-33 4、P0-34 4、P0-35 6、P0-36 8、P0-37 10、P0-38 4、P0-39 6、P0-40 4、P0-41 6、P0-42 2、P0-43 3、P1-01 3、P1-02 2、P1-03 2、P1-04 3、P1-05 3、P1-06 3、P1-07 3、P1-08 3、P1-09 3、P1-10 3） |
+| 已投入工时 | 171 h（P0-01 3、P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3、P0-23 3、P0-24 3、P0-25 3、P0-26 3、P0-27 3、P0-28 4、P0-29 3、P0-30 3、P0-31 4、P0-32 3、P0-33 4、P0-34 4、P0-35 6、P0-36 8、P0-37 10、P0-38 4、P0-39 6、P0-40 4、P0-41 6、P0-42 2、P0-43 3、P1-01 3、P1-02 2、P1-03 2、P1-04 3、P1-05 3、P1-06 3、P1-07 3、P1-08 3、P1-09 3、P1-10 3、P1-11 3） |
 | 当前迭代 | P1（角色扩展与综合考试）+ 发布准备（R-05 软著先行） |
 | 迭代目标 | 教师/班主任/校管/家长角色可用；期中/期末/模考闭环；主观题自评与报告增强；推荐服务上线；并行推进软著/签名/隐私/部署 |
 | 里程碑 | M2.5（P0 技术验收通过，待签署）→ M3（P1） |
@@ -527,6 +527,7 @@ flowchart LR
 | v1.51 | 2026-11-07 | AR | P1-08 考试窗口与过期处理（`exams.window_start/window_end` + 迁移 `l2g3h4i5j6k7`；生成接口支持窗口、列表 `window_state`、窗口外开考 403、窗口关闭按已存答案自动交卷且拒收新答案，`tests/test_exam_window.py` 3 例；前端类型筛选与窗口展示/拦截，`exam_list_page_test.dart` 2 例；`pytest` 235 passed、`flutter test` 47 passed）；§5.1 同步（DONE 51 / 投入 162 h / TODO 26） |
 | v1.52 | 2026-11-07 | AR | P1-09 主观题自评（报告 `pending_subjective` 含参考答案/评分点/解析、`POST /exams/attempts/{id}/self-assess` 成绩回写与首次回流、按卷重算主观/总分并转 completed，`tests/test_exam_self_assess.py` 4 例；前端自评卡与 `ExamService.selfAssess`，`exam_model_test.dart` +1 例、`exam_report_page_test.dart` 1 例；`pytest` 239 passed、`flutter analyze` 0 issues、`flutter test` 49 passed）；§1.2 主观题与报告增强转 `DOING`；§6.1 L9~L12 补充自评结算；§5.1 同步（DONE 52 / 投入 165 h / TODO 25） |
 | v1.53 | 2026-11-07 | AR | P1-10 报告增强（`GET /api/exams/attempts/{id}/report` 新增 `ability_stats`（理解/计算/应用/分析，题型映射+学科覆盖）、`class_average`（仅同班聚合值）、`trend`（同科同类近 5 次与 delta），`tests/test_exam_report_enhanced.py` 2 例；前端能力雷达 `CustomPaint`、班级平均对比、成绩趋势，`exam_model_test.dart` +1 例、`exam_report_page_test.dart` 1 例；`pytest` 241 passed、`flutter analyze` 0 issues、`flutter test` 51 passed）；§1.2 主观题与报告增强转 `DONE`、期中/期末/模考更新；§6.1 L9~L12 补充报告增强；§5.1 同步（DONE 53 / 投入 168 h / TODO 24） |
+| v1.54 | 2026-11-07 | AR | P1-11 推荐服务（新增 `app/services/recommendation.py` 六优先级规则（到期复习→当前单元 <40 讲解→40-70 练习→单元测→学期进度→每日一练）、待办考试聚合；`/api/learn/home` 推荐新增 `chapter_id/chapter_name/exam_id` 并填充 `pending_exams`；前端 `HomeRecommendation` 扩展、`unit_test` 跳转与按章节继续；`tests/test_home_recommendation.py` 4 例、`learn_model_test.dart` +1 例；`pytest` 245 passed、`flutter analyze` 0 issues、`flutter test` 52 passed）；§1.2 首页入口转 `DONE`、推荐闭环转 `DOING`；§5.1 同步（DONE 54 / 投入 171 h / TODO 23） |
 
 ---
 
@@ -589,4 +590,4 @@ flowchart LR
 
 ---
 
-> **当前下一步**：P1-11（推荐服务：今日计划生成规则）。所有任务按依赖图推进，每完成一个任务即回写本文件状态。
+> **当前下一步**：P1-12（错题与考试联动优化：考试错题错因默认分类、复习优先级）。所有任务按依赖图推进，每完成一个任务即回写本文件状态。
