@@ -13,6 +13,12 @@ class KnowledgeNode {
     this.masteryConfidence = 0,
     this.masteryBand = 'weak',
     this.questionCount = 0,
+    this.parentId,
+    this.nodeType = 'point',
+    this.orderIndex = 0,
+    this.prerequisites = const [],
+    this.state = '未学习',
+    this.lastStudiedAt,
   });
 
   final int id;
@@ -24,6 +30,12 @@ class KnowledgeNode {
   final int masteryConfidence;
   final String masteryBand;
   final int questionCount;
+  final int? parentId;
+  final String nodeType;
+  final int orderIndex;
+  final List<int> prerequisites;
+  final String state;
+  final DateTime? lastStudiedAt;
 
   String get subjectLabel => Subject.fromCode(subject).label;
 
@@ -64,6 +76,14 @@ class KnowledgeNode {
       masteryConfidence: json['mastery_confidence'] as int? ?? 0,
       masteryBand: json['mastery_band'] as String? ?? 'weak',
       questionCount: json['question_count'] as int? ?? 0,
+      parentId: json['parent_id'] as int?,
+      nodeType: json['node_type'] as String? ?? 'point',
+      orderIndex: json['order_index'] as int? ?? 0,
+      prerequisites: (json['prerequisites'] as List<dynamic>? ?? const [])
+          .map((item) => item as int)
+          .toList(),
+      state: json['state'] as String? ?? '未学习',
+      lastStudiedAt: DateTime.tryParse(json['last_studied_at'] as String? ?? ''),
     );
   }
 }
@@ -454,6 +474,312 @@ class LearnStats {
       weakPoints: rawWeak
           .map((item) => KnowledgeNode.fromJson(item as Map<String, dynamic>))
           .toList(),
+    );
+  }
+}
+
+String masteryBandLabel(String band) {
+  switch (band) {
+    case 'growing':
+      return '巩固中';
+    case 'skilled':
+      return '较熟练';
+    case 'mastered':
+      return '已精通';
+    default:
+      return '薄弱';
+  }
+}
+
+Color masteryBandColor(String band) {
+  switch (band) {
+    case 'growing':
+      return Colors.orange;
+    case 'skilled':
+      return Colors.blue;
+    case 'mastered':
+      return Colors.green;
+    default:
+      return Colors.redAccent;
+  }
+}
+
+/// 单元目录 /learn/textbook/{id}/units。
+class UnitSummary {
+  const UnitSummary({
+    required this.id,
+    required this.textbookId,
+    required this.grade,
+    required this.name,
+    required this.orderIndex,
+    this.summary,
+    this.sectionCount = 0,
+    this.kpCount = 0,
+    this.questionCount = 0,
+    this.avgMastery = 0,
+    this.masteryBand = 'weak',
+    this.learnedKpCount = 0,
+    this.progress = 0,
+  });
+
+  final int id;
+  final int textbookId;
+  final int grade;
+  final String name;
+  final int orderIndex;
+  final String? summary;
+  final int sectionCount;
+  final int kpCount;
+  final int questionCount;
+  final double avgMastery;
+  final String masteryBand;
+  final int learnedKpCount;
+  final double progress;
+
+  String get bandLabelText => masteryBandLabel(masteryBand);
+
+  Color get bandColor => masteryBandColor(masteryBand);
+
+  String get progressText => '已学 $learnedKpCount/$kpCount 知识点';
+
+  factory UnitSummary.fromJson(Map<String, dynamic> json) {
+    return UnitSummary(
+      id: json['id'] as int? ?? 0,
+      textbookId: json['textbook_id'] as int? ?? 0,
+      grade: json['grade'] as int? ?? 1,
+      name: json['name'] as String? ?? '',
+      orderIndex: json['order_index'] as int? ?? 0,
+      summary: json['summary'] as String?,
+      sectionCount: json['section_count'] as int? ?? 0,
+      kpCount: json['kp_count'] as int? ?? 0,
+      questionCount: json['question_count'] as int? ?? 0,
+      avgMastery: (json['avg_mastery'] as num?)?.toDouble() ?? 0,
+      masteryBand: json['mastery_band'] as String? ?? 'weak',
+      learnedKpCount: json['learned_kp_count'] as int? ?? 0,
+      progress: (json['progress'] as num?)?.toDouble() ?? 0,
+    );
+  }
+}
+
+/// 单元下的节。
+class UnitSection {
+  const UnitSection({
+    required this.id,
+    required this.name,
+    required this.orderIndex,
+    this.kpCount = 0,
+    this.avgMastery = 0,
+    this.masteryBand = 'weak',
+  });
+
+  final int id;
+  final String name;
+  final int orderIndex;
+  final int kpCount;
+  final double avgMastery;
+  final String masteryBand;
+
+  Color get bandColor => masteryBandColor(masteryBand);
+
+  factory UnitSection.fromJson(Map<String, dynamic> json) {
+    return UnitSection(
+      id: json['id'] as int? ?? 0,
+      name: json['name'] as String? ?? '',
+      orderIndex: json['order_index'] as int? ?? 0,
+      kpCount: json['kp_count'] as int? ?? 0,
+      avgMastery: (json['avg_mastery'] as num?)?.toDouble() ?? 0,
+      masteryBand: json['mastery_band'] as String? ?? 'weak',
+    );
+  }
+}
+
+/// 单元详情 /learn/unit/{id}。
+class UnitDetail {
+  const UnitDetail({
+    required this.unit,
+    this.sections = const [],
+    this.knowledgePoints = const [],
+  });
+
+  final UnitSummary unit;
+  final List<UnitSection> sections;
+  final List<KnowledgeNode> knowledgePoints;
+
+  /// 按节分组；无节归属的知识点归入「未分节」。
+  List<KnowledgeNode> nodesOfSection(int? sectionId) {
+    return knowledgePoints
+        .where((node) => node.parentId == sectionId)
+        .toList()
+      ..sort((a, b) => a.orderIndex.compareTo(b.orderIndex));
+  }
+
+  factory UnitDetail.fromJson(Map<String, dynamic> json) {
+    return UnitDetail(
+      unit: UnitSummary.fromJson(
+        json['unit'] as Map<String, dynamic>? ?? const {},
+      ),
+      sections: (json['sections'] as List<dynamic>? ?? const [])
+          .map((item) => UnitSection.fromJson(item as Map<String, dynamic>))
+          .toList(),
+      knowledgePoints: (json['knowledge_points'] as List<dynamic>? ?? const [])
+          .map((item) => KnowledgeNode.fromJson(item as Map<String, dynamic>))
+          .toList(),
+    );
+  }
+}
+
+/// 前置知识点（/learn/kp/{id}）。
+class KpBrief {
+  const KpBrief({
+    required this.id,
+    required this.name,
+    required this.subject,
+    this.masteryScore = 0,
+  });
+
+  final int id;
+  final String name;
+  final String subject;
+  final double masteryScore;
+
+  factory KpBrief.fromJson(Map<String, dynamic> json) {
+    return KpBrief(
+      id: json['id'] as int? ?? 0,
+      name: json['name'] as String? ?? '',
+      subject: json['subject'] as String? ?? '',
+      masteryScore: (json['mastery_score'] as num?)?.toDouble() ?? 0,
+    );
+  }
+}
+
+/// 知识点详情 /learn/kp/{id}：讲解、状态、前置、掌握度。
+class KpDetail {
+  const KpDetail({
+    required this.id,
+    required this.subject,
+    required this.name,
+    this.grade,
+    this.nodeType = 'point',
+    this.explanation,
+    this.sectionId,
+    this.sectionName,
+    this.prerequisites = const [],
+    this.masteryScore = 0,
+    this.masteryConfidence = 0,
+    this.masteryBand = 'weak',
+    this.questionCount = 0,
+    this.state = '未学习',
+    this.stateEvidence = 0,
+    this.lastStudiedAt,
+  });
+
+  final int id;
+  final String subject;
+  final int? grade;
+  final String name;
+  final String nodeType;
+  final String? explanation;
+  final int? sectionId;
+  final String? sectionName;
+  final List<KpBrief> prerequisites;
+  final double masteryScore;
+  final int masteryConfidence;
+  final String masteryBand;
+  final int questionCount;
+  final String state;
+  final int stateEvidence;
+  final DateTime? lastStudiedAt;
+
+  Color get bandColor => masteryBandColor(masteryBand);
+
+  String get bandLabelText => masteryBandLabel(masteryBand);
+
+  factory KpDetail.fromJson(Map<String, dynamic> json) {
+    return KpDetail(
+      id: json['id'] as int? ?? 0,
+      subject: json['subject'] as String? ?? '',
+      grade: json['grade'] as int?,
+      name: json['name'] as String? ?? '',
+      nodeType: json['node_type'] as String? ?? 'point',
+      explanation: json['explanation'] as String?,
+      sectionId: json['section_id'] as int?,
+      sectionName: json['section_name'] as String?,
+      prerequisites: (json['prerequisites'] as List<dynamic>? ?? const [])
+          .map((item) => KpBrief.fromJson(item as Map<String, dynamic>))
+          .toList(),
+      masteryScore: (json['mastery_score'] as num?)?.toDouble() ?? 0,
+      masteryConfidence: json['mastery_confidence'] as int? ?? 0,
+      masteryBand: json['mastery_band'] as String? ?? 'weak',
+      questionCount: json['question_count'] as int? ?? 0,
+      state: json['state'] as String? ?? '未学习',
+      stateEvidence: json['state_evidence'] as int? ?? 0,
+      lastStudiedAt: DateTime.tryParse(json['last_studied_at'] as String? ?? ''),
+    );
+  }
+}
+
+/// 知识点例题（带答案与解析）。
+class KpExample {
+  const KpExample({
+    required this.id,
+    required this.qType,
+    required this.stem,
+    this.options = const [],
+    required this.correctAnswer,
+    this.analysis,
+    this.difficulty = 3,
+  });
+
+  final int id;
+  final String qType;
+  final String stem;
+  final List<KpExampleOption> options;
+  final String correctAnswer;
+  final String? analysis;
+  final int difficulty;
+
+  String get typeLabel {
+    switch (qType) {
+      case 'choice':
+        return '单选题';
+      case 'fill':
+        return '填空题';
+      case 'judge':
+        return '判断题';
+      case 'short':
+        return '简答题';
+      default:
+        return qType;
+    }
+  }
+
+  factory KpExample.fromJson(Map<String, dynamic> json) {
+    final content = json['content'] as Map<String, dynamic>? ?? const {};
+    final answer = json['correct_answer'] as Map<String, dynamic>? ?? const {};
+    return KpExample(
+      id: json['id'] as int? ?? 0,
+      qType: json['q_type'] as String? ?? 'choice',
+      stem: content['stem'] as String? ?? '',
+      options: (json['options'] as List<dynamic>? ?? const [])
+          .map((item) => KpExampleOption.fromJson(item as Map<String, dynamic>))
+          .toList(),
+      correctAnswer: answer['value']?.toString() ?? '',
+      analysis: json['analysis'] as String?,
+      difficulty: json['difficulty'] as int? ?? 3,
+    );
+  }
+}
+
+class KpExampleOption {
+  const KpExampleOption({required this.key, required this.text});
+
+  final String key;
+  final String text;
+
+  factory KpExampleOption.fromJson(Map<String, dynamic> json) {
+    return KpExampleOption(
+      key: json['key']?.toString() ?? '',
+      text: json['text']?.toString() ?? '',
     );
   }
 }

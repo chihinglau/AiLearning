@@ -2,6 +2,8 @@ import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/features/auth/login_page.dart';
 import 'package:ai_learning/features/common/permission_gate.dart';
 import 'package:ai_learning/features/learn/knowledge_page.dart';
+import 'package:ai_learning/features/learn/kp_detail_page.dart';
+import 'package:ai_learning/features/learn/unit_page.dart';
 import 'package:ai_learning/features/onboarding/entry_gate_page.dart';
 import 'package:ai_learning/features/onboarding/onboarding_page.dart';
 import 'package:ai_learning/features/practice/practice_page.dart';
@@ -84,6 +86,33 @@ final routerProvider = Provider<GoRouter>((ref) {
               initialChapterId:
                   int.tryParse(state.uri.queryParameters['chapter'] ?? ''),
             ),
+          );
+        },
+      ),
+      GoRoute(
+        path: '/unit/:chapterId',
+        builder: (context, state) {
+          final chapterId = int.tryParse(state.pathParameters['chapterId'] ?? '');
+          if (chapterId == null) return const AppShell();
+          final query = state.uri.queryParameters;
+          return PermissionGate(
+            anyOf: const ['learn:kp:study'],
+            child: UnitPage(
+              chapterId: chapterId,
+              unitName: query['name'] ?? '单元',
+              textbookName: query['textbook'] ?? '教材',
+            ),
+          );
+        },
+      ),
+      GoRoute(
+        path: '/kp/:kpId',
+        builder: (context, state) {
+          final kpId = int.tryParse(state.pathParameters['kpId'] ?? '');
+          if (kpId == null) return const AppShell();
+          return PermissionGate(
+            anyOf: const ['learn:kp:study'],
+            child: KpDetailPage(kpId: kpId),
           );
         },
       ),

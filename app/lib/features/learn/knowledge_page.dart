@@ -2,10 +2,12 @@ import 'package:ai_learning/core/errors/api_error_guide.dart';
 import 'package:ai_learning/core/models/learn.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
+import 'package:ai_learning/features/learn/mastery_ring.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+/// 教材单元目录（D-04 §6.2）：单元 → 节 → 知识点逐层下钻。
 class KnowledgePage extends ConsumerStatefulWidget {
   const KnowledgePage({
     super.key,
@@ -23,10 +25,9 @@ class KnowledgePage extends ConsumerStatefulWidget {
 }
 
 class _KnowledgePageState extends ConsumerState<KnowledgePage> {
-  List<ChapterTree> _tree = const [];
+  List<UnitSummary> _units = const [];
   bool _loading = true;
   String? _error;
-  final Map<int, GlobalKey> _chapterKeys = {};
 
   @override
   void initState() {
@@ -40,16 +41,13 @@ class _KnowledgePageState extends ConsumerState<KnowledgePage> {
       _error = null;
     });
     try {
-      final tree =
-          await ref.read(learnServiceProvider).knowledgeTree(widget.textbookId);
+      final units =
+          await ref.read(learnServiceProvider).units(widget.textbookId);
       if (!mounted) return;
       setState(() {
-        _tree = tree;
+        _units = units;
         _loading = false;
       });
-      if (widget.initialChapterId != null) {
-        WidgetsBinding.instance.addPostFrameCallback((_) => _scrollToChapter());
-      }
     } on ApiException catch (error) {
       if (!mounted) return;
       setState(() {
@@ -59,23 +57,11 @@ class _KnowledgePageState extends ConsumerState<KnowledgePage> {
     }
   }
 
-  void _scrollToChapter() {
-    final key = _chapterKeys[widget.initialChapterId];
-    final context = key?.currentContext;
-    if (context != null) {
-      Scrollable.ensureVisible(
-        context,
-        duration: const Duration(milliseconds: 300),
-        alignment: 0.1,
-      );
-    }
-  }
-
-  void _startPractice(KnowledgeNode node) {
+  void _openUnit(UnitSummary unit) {
     context.go(
-      '/session'
-      '?kp=${node.id}'
-      '&title=${Uri.encodeComponent(node.name)}',
+      '/unit/${unit.id}'
+      '?name=${Uri.encodeComponent(unit.name)}'
+      '&textbook=${Uri.encodeComponent(widget.textbookName)}',
     );
   }
 
@@ -103,29 +89,26 @@ class _KnowledgePageState extends ConsumerState<KnowledgePage> {
         ),
       );
     }
-    if (_tree.isEmpty) {
-      return const Center(child: Text('该教材暂无知识点内容'));
+    if (_units.isEmpty) {
+      return const Center(child: Text('该教材暂无单元内容'));
     }
     return RefreshIndicator(
       onRefresh: _load,
       child: ListView(
         padding: const EdgeInsets.all(16),
         children: [
-          Text(
-            '知识点掌握度',
-            style: Theme.of(context).textTheme.titleMedium,
-          ),
+          Text('单元掌握度', style: Theme.of(context).textTheme.titleMedium),
           const SizedBox(height: 4),
           Text(
-            '薄弱 → 巩固 → 熟练 → 精通，答对率越高颜色越绿',
+            '薄弱 → 巩固 → 熟练 → 精通，点击单元查看节与知识点',
             style: Theme.of(context).textTheme.bodySmall,
           ),
           const SizedBox(height: 12),
-          for (final chapter in _tree) ...[
-            _ChapterCard(
-              chapterKey: _chapterKeys.putIfAbsent(chapter.id, GlobalKey.new),
-              chapter: chapter,
-              onPractice: _startPractice,
+          for (final unit in _units) ...[
+            _UnitCard(
+              unit: unit,
+              highlighted: unit.id == widget.initialChapterId,
+              onTap: () => _openUnit(unit),
             ),
             const SizedBox(height: 12),
           ],
@@ -135,140 +118,111 @@ class _KnowledgePageState extends ConsumerState<KnowledgePage> {
   }
 }
 
-class _ChapterCard extends StatelessWidget {
-  const _ChapterCard({
-    required this.chapterKey,
-    required this.chapter,
-    required this.onPractice,
+class _UnitCard extends StatelessWidget {
+  const _UnitCard({
+    required this.unit,
+    required this.highlighted,
+    required this.onTap,
   });
 
-  final GlobalKey chapterKey;
-  final ChapterTree chapter;
-  final ValueChanged<KnowledgeNode> onPractice;
+  final UnitSummary unit;
+  final bool highlighted;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final visited = unit.learnedKpCount > 0;
     return Card(
-      key: chapterKey,
-      child: Padding(
-        padding: const EdgeInsets.all(12),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                Icon(Icons.bookmark_outline, size: 20, color: theme.colorScheme.primary),
-                const SizedBox(width: 6),
-                Expanded(
-                  child: Text(
-                    chapter.name,
-                    style: theme.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold),
-                  ),
+      color: highlighted ? theme.colorScheme.primaryContainer : null,
+      child: InkWell(
+        borderRadius: BorderRadius.circular(12),
+        onTap: onTap,
+        child: Padding(
+          padding: const EdgeInsets.all(14),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              MasteryRing(score: unit.avgMastery, color: unit.bandColor),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Flexible(
+                          child: Text(
+                            unit.name,
+                            style: theme.textTheme.titleSmall?.copyWith(
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 6),
+                        _BandTag(
+                          label: visited ? unit.bandLabelText : '未学习',
+                          color: visited ? unit.bandColor : theme.colorScheme.outline,
+                        ),
+                      ],
+                    ),
+                    if (unit.summary != null && unit.summary!.isNotEmpty) ...[
+                      const SizedBox(height: 2),
+                      Text(
+                        unit.summary!,
+                        style: theme.textTheme.bodySmall,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ],
+                    const SizedBox(height: 6),
+                    Text(
+                      '${unit.sectionCount} 节 · ${unit.kpCount} 知识点 · '
+                      '${unit.questionCount} 道题',
+                      style: theme.textTheme.bodySmall,
+                    ),
+                    const SizedBox(height: 6),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(4),
+                      child: LinearProgressIndicator(
+                        value: unit.progress.clamp(0, 1),
+                        minHeight: 5,
+                        backgroundColor:
+                            theme.colorScheme.surfaceContainerHighest,
+                        color: unit.bandColor,
+                      ),
+                    ),
+                    const SizedBox(height: 4),
+                    Text(unit.progressText, style: theme.textTheme.labelSmall),
+                  ],
                 ),
-                Text('${chapter.knowledgePoints.length} 个知识点',
-                    style: theme.textTheme.bodySmall),
-              ],
-            ),
-            if (chapter.summary != null) ...[
-              const SizedBox(height: 4),
-              Text(chapter.summary!, style: theme.textTheme.bodySmall),
+              ),
+              Icon(Icons.chevron_right, color: theme.colorScheme.outline),
             ],
-            const Divider(height: 20),
-            if (chapter.knowledgePoints.isEmpty)
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 8),
-                child: Text('暂无知识点题目', style: theme.textTheme.bodySmall),
-              )
-            else
-              for (final node in chapter.knowledgePoints)
-                _KnowledgeTile(node: node, onPractice: () => onPractice(node)),
-          ],
+          ),
         ),
       ),
     );
   }
 }
 
-class _KnowledgeTile extends StatelessWidget {
-  const _KnowledgeTile({required this.node, required this.onPractice});
+class _BandTag extends StatelessWidget {
+  const _BandTag({required this.label, required this.color});
 
-  final KnowledgeNode node;
-  final VoidCallback onPractice;
+  final String label;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 6),
-      child: Row(
-        children: [
-          SizedBox(
-            width: 52,
-            height: 52,
-            child: Stack(
-              alignment: Alignment.center,
-              children: [
-                SizedBox(
-                  width: 48,
-                  height: 48,
-                  child: CircularProgressIndicator(
-                    value: (node.masteryScore / 100).clamp(0, 1),
-                    strokeWidth: 5,
-                    backgroundColor: theme.colorScheme.surfaceContainerHighest,
-                    color: node.bandColor,
-                  ),
-                ),
-                Text(
-                  node.masteryScore.round().toString(),
-                  style: theme.textTheme.labelSmall?.copyWith(fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(width: 12),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    Flexible(
-                      child: Text(
-                        node.name,
-                        style: theme.textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.w600),
-                      ),
-                    ),
-                    const SizedBox(width: 6),
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                      decoration: BoxDecoration(
-                        color: node.bandColor.withValues(alpha: 0.12),
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Text(
-                        node.bandLabel,
-                        style: theme.textTheme.labelSmall?.copyWith(color: node.bandColor),
-                      ),
-                    ),
-                  ],
-                ),
-                if (node.explanation != null && node.explanation!.isNotEmpty)
-                  Text(
-                    node.explanation!,
-                    style: theme.textTheme.bodySmall,
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                Text('${node.questionCount} 道题', style: theme.textTheme.labelSmall),
-              ],
-            ),
-          ),
-          FilledButton.tonal(
-            onPressed: onPractice,
-            child: const Text('练一练'),
-          ),
-        ],
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+      decoration: BoxDecoration(
+        color: color.withValues(alpha: 0.12),
+        borderRadius: BorderRadius.circular(8),
+      ),
+      child: Text(
+        label,
+        style: Theme.of(context).textTheme.labelSmall?.copyWith(color: color),
       ),
     );
   }

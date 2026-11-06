@@ -159,3 +159,35 @@ def test_kp_detail_unknown_returns_404(client: TestClient, db: Session) -> None:
     ids = _setup(client, db)
     response = client.get("/api/learn/kp/999999", headers=ids["headers"])
     assert response.status_code == 404
+
+
+def test_kp_examples_return_answer_and_analysis(
+    client: TestClient, db: Session
+) -> None:
+    ids = _setup(client, db)
+    db.add(
+        Question(
+            chapter_id=ids["chapter_id"],
+            knowledge_point_id=ids["kp1"],
+            subject="math",
+            q_type="choice",
+            content={"stem": "12 + 9 = ?"},
+            options=[{"key": "A", "text": "20"}, {"key": "B", "text": "21"}],
+            answer={"value": "B"},
+            analysis="个位 2 + 9 = 11，向十位进 1。",
+            difficulty=2,
+        )
+    )
+    db.commit()
+
+    response = client.get(f"/api/learn/kp/{ids['kp1']}/examples", headers=ids["headers"])
+    assert response.status_code == 200, response.text
+    items = response.json()
+    assert len(items) == 2
+    assert items[0]["difficulty"] == 2
+    assert items[0]["correct_answer"] == {"value": "B"}
+    assert items[0]["analysis"].startswith("个位")
+    assert items[0]["options"][1]["key"] == "B"
+
+    missing = client.get("/api/learn/kp/999999/examples", headers=ids["headers"])
+    assert missing.status_code == 404

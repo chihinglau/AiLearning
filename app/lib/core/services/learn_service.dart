@@ -97,4 +97,38 @@ class LearnService {
     final data = await _api.getJson('/api/learn/stats');
     return LearnStats.fromJson(data);
   }
+
+  /// 教材单元目录（D-04 §6.2）。
+  Future<List<UnitSummary>> units(int textbookId) async {
+    final data = await _api.getList('/api/learn/textbook/$textbookId/units');
+    return data
+        .map((item) => UnitSummary.fromJson(item as Map<String, dynamic>))
+        .toList();
+  }
+
+  /// 单元详情：节与知识点。
+  Future<UnitDetail> unitDetail(int chapterId) async {
+    final data = await _api.getJson('/api/learn/unit/$chapterId');
+    return UnitDetail.fromJson(data);
+  }
+
+  /// 知识点详情：讲解、前置、掌握度与状态。
+  Future<KpDetail> kpDetail(int kpId) async {
+    final data = await _api.getJson('/api/learn/kp/$kpId');
+    return KpDetail.fromJson(data);
+  }
+
+  /// 知识点例题（最多 2 道，带解析）。
+  Future<List<KpExample>> kpExamples(int kpId) async {
+    final data = await _api.getList('/api/learn/kp/$kpId/examples');
+    return data
+        .map((item) => KpExample.fromJson(item as Map<String, dynamic>))
+        .toList();
+  }
+
+  /// 阅读讲解：未学习 → 学习中。
+  Future<String> markKpRead(int kpId) async {
+    final data = await _api.postJson('/api/learn/kp/$kpId/read', const {});
+    return data['state'] as String? ?? '学习中';
+  }
 }

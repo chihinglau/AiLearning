@@ -117,6 +117,18 @@ class KpSelfTestIn(BaseModel):
     score: float = Field(ge=0, le=100)
 
 
+class KpExampleOut(BaseModel):
+    """知识点例题：带答案与解析的示范题（D-04 §6.4 第③步）。"""
+
+    id: int
+    q_type: str
+    content: dict[str, Any]
+    options: Optional[list[dict[str, Any]]] = None
+    correct_answer: dict[str, Any]
+    analysis: Optional[str] = None
+    difficulty: int = 3
+
+
 class KpStateOut(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 

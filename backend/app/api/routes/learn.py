@@ -25,6 +25,7 @@ from app.schemas.learn import (
     HomeTodayPlan,
     KpBriefOut,
     KpDetailOut,
+    KpExampleOut,
     KpSelfTestIn,
     KpStateOut,
     KnowledgeNodeOut,
@@ -475,6 +476,36 @@ def _kp_or_404(db: Session, kp_id: int) -> KnowledgePoint:
     if kp is None:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="知识点不存在")
     return kp
+
+
+@router.get("/kp/{kp_id}/examples", response_model=list[KpExampleOut])
+def kp_examples(
+    kp_id: int,
+    current: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+) -> list[KpExampleOut]:
+    """知识点例题（最多 2 道，带答案与解析，供讲解页示范）。"""
+    _kp_or_404(db, kp_id)
+    rows = list(
+        db.scalars(
+            select(Question)
+            .where(Question.knowledge_point_id == kp_id)
+            .order_by(Question.difficulty, Question.id)
+            .limit(2)
+        )
+    )
+    return [
+        KpExampleOut(
+            id=row.id,
+            q_type=row.q_type,
+            content=row.content or {},
+            options=row.options,
+            correct_answer=row.answer or {},
+            analysis=row.analysis,
+            difficulty=row.difficulty,
+        )
+        for row in rows
+    ]
 
 
 @router.post("/kp/{kp_id}/read", response_model=KpStateOut)
