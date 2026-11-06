@@ -25,6 +25,7 @@ class LearnStartIn(BaseModel):
 class LearnStartOut(BaseModel):
     questions: list[QuestionPublic]
     seed: Optional[int] = None
+    session_id: Optional[int] = None
 
 
 class LearnSubmitIn(BaseModel):
@@ -187,6 +188,47 @@ class PracticePreviewOut(BaseModel):
     q_type_mix: dict[str, int] = {}
     due_review_count: int
     seed: int
+
+
+class SessionAnswerOut(BaseModel):
+    question_id: int
+    answered: bool = False
+    is_correct: Optional[bool] = None
+    user_answer: Optional[dict[str, Any]] = None
+
+
+class PracticeSessionOut(BaseModel):
+    id: int
+    mode: str
+    scope_type: str
+    scope_ids: list[int] = []
+    seed: int
+    total_count: int
+    answered_count: int
+    correct_count: int
+    started_at: datetime
+    finished_at: Optional[datetime] = None
+    questions: list[QuestionPublic] = []
+    answers: list[SessionAnswerOut] = []
+    next_index: int = 0
+
+
+class SessionKpStatOut(BaseModel):
+    knowledge_point_id: int
+    name: str
+    answered: int
+    correct: int
+    accuracy: float
+    mastery_score: float
+
+
+class PracticeSessionFinishOut(BaseModel):
+    session: PracticeSessionOut
+    accuracy: float
+    duration_ms: int
+    wrong_count: int
+    kp_stats: list[SessionKpStatOut] = []
+    next_actions: list[str] = []
 
 
 class LearnStatsOut(BaseModel):

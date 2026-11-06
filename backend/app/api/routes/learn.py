@@ -12,7 +12,7 @@ from app.core.grade import derive_grade_group, derive_semester, derive_stage
 from app.core.scope import StudentAccess
 from app.db.session import get_db
 from app.models.content import Chapter, KnowledgePoint, Question, Textbook
-from app.models.practice import MasteryScore, StudentQuestionRecord, WrongQuestion
+from app.models.practice import MasteryScore, PracticeSession, StudentQuestionRecord, WrongQuestion
 from app.models.textbook import TextbookBinding
 from app.models.user import User
 from app.schemas.content import QuestionPublic
@@ -36,6 +36,10 @@ from app.schemas.learn import (
     MasteryMapOut,
     PracticePreviewIn,
     PracticePreviewOut,
+    PracticeSessionFinishOut,
+    PracticeSessionOut,
+    SessionAnswerOut,
+    SessionKpStatOut,
     UnitDetailOut,
     UnitOut,
     UnitSectionOut,
@@ -561,6 +565,153 @@ def practice_preview(
 
 
 # ---------------------------------------------------------------------------
+# 练习会话：断点续答与结算（P0-23）
+# ---------------------------------------------------------------------------
+
+
+def _session_records(db: Session, session: PracticeSession) -> dict[int, StudentQuestionRecord]:
+    """会话窗口内每道题的最新作答（续答/结算共用）。"""
+    qids = [int(qid) for qid in (session.question_ids or [])]
+    if not qids:
+        return {}
+    rows = db.scalars(
+        select(StudentQuestionRecord)
+        .where(
+            StudentQuestionRecord.user_id == session.user_id,
+            StudentQuestionRecord.question_id.in_(qids),
+            StudentQuestionRecord.attempted_at >= session.started_at,
+        )
+        .order_by(StudentQuestionRecord.attempted_at)
+    ).all()
+    latest: dict[int, StudentQuestionRecord] = {}
+    for row in rows:
+        latest[row.question_id] = row
+    return latest
+
+
+def _session_out(db: Session, session: PracticeSession) -> PracticeSessionOut:
+    qids = [int(qid) for qid in (session.question_ids or [])]
+    questions = {
+        q.id: q for q in db.scalars(select(Question).where(Question.id.in_(qids)))}
+    latest = _session_records(db, session)
+    answers = [
+        SessionAnswerOut(
+            question_id=qid,
+            answered=qid in latest,
+            is_correct=latest[qid].is_correct if qid in latest else None,
+            user_answer=latest[qid].user_answer if qid in latest else None,
+        )
+        for qid in qids
+    ]
+    next_index = next((i for i, a in enumerate(answers) if not a.answered), len(answers))
+    return PracticeSessionOut(
+        id=session.id,
+        mode=session.mode,
+        scope_type=session.scope_type,
+        scope_ids=[int(x) for x in (session.scope_ids or [])],
+        seed=session.seed,
+        total_count=session.total_count,
+        answered_count=len(latest),
+        correct_count=sum(1 for r in latest.values() if r.is_correct),
+        started_at=session.started_at,
+        finished_at=session.finished_at,
+        questions=[QuestionPublic.model_validate(questions[qid]) for qid in qids if qid in questions],
+        answers=answers,
+        next_index=next_index,
+    )
+
+
+def _session_or_404(db: Session, session_id: int, user: User) -> PracticeSession:
+    session = db.get(PracticeSession, session_id)
+    if session is None or session.user_id != user.id:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="练习会话不存在")
+    return session
+
+
+@router.get("/sessions/{session_id}", response_model=PracticeSessionOut)
+def get_session(
+    session_id: int,
+    current: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+) -> PracticeSessionOut:
+    """断点续答：返回会话题目、已答状态与下一题下标。"""
+    return _session_out(db, _session_or_404(db, session_id, current))
+
+
+@router.post("/sessions/{session_id}/finish", response_model=PracticeSessionFinishOut)
+def finish_session(
+    session_id: int,
+    current: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+) -> PracticeSessionFinishOut:
+    """结算：汇总正确率/用时/知识点表现/错题数；重复调用幂等。"""
+    session = _session_or_404(db, session_id, current)
+    if session.finished_at is None:
+        session.finished_at = datetime.utcnow()
+    finished_at = session.finished_at
+    detail = _session_out(db, session)
+    session.answered_count = detail.answered_count
+    session.correct_count = detail.correct_count
+    db.commit()
+
+    qids = [int(qid) for qid in (session.question_ids or [])]
+    questions = {
+        q.id: q for q in db.scalars(select(Question).where(Question.id.in_(qids)))}
+    latest = _session_records(db, session)
+
+    kp_bucket: dict[int, dict[str, int]] = {}
+    for qid, record in latest.items():
+        question = questions.get(qid)
+        if question is None or question.knowledge_point_id is None:
+            continue
+        bucket = kp_bucket.setdefault(question.knowledge_point_id, {"answered": 0, "correct": 0})
+        bucket["answered"] += 1
+        bucket["correct"] += 1 if record.is_correct else 0
+
+    kp_names = {
+        kp.id: kp.name
+        for kp in db.scalars(
+            select(KnowledgePoint).where(KnowledgePoint.id.in_(list(kp_bucket)))
+        )
+    } if kp_bucket else {}
+    mastery = _mastery_map(db, user_id=current.id, subject=None)
+    kp_stats = [
+        SessionKpStatOut(
+            knowledge_point_id=kp_id,
+            name=kp_names.get(kp_id, ""),
+            answered=stats["answered"],
+            correct=stats["correct"],
+            accuracy=round(stats["correct"] / stats["answered"], 3) if stats["answered"] else 0.0,
+            mastery_score=round(mastery[kp_id].score, 1) if kp_id in mastery else 0.0,
+        )
+        for kp_id, stats in sorted(kp_bucket.items())
+    ]
+
+    wrong_count = 0
+    if qids:
+        wrong_count = len(
+            list(
+                db.scalars(
+                    select(WrongQuestion.question_id).where(
+                        WrongQuestion.user_id == current.id,
+                        WrongQuestion.status == "active",
+                        WrongQuestion.question_id.in_(qids),
+                    )
+                )
+            )
+        )
+    answered = detail.answered_count
+    return PracticeSessionFinishOut(
+        session=detail,
+        accuracy=round(detail.correct_count / answered, 3) if answered else 0.0,
+        duration_ms=max(0, int((finished_at - session.started_at).total_seconds() * 1000)),
+        wrong_count=wrong_count,
+        kp_stats=kp_stats,
+        next_actions=["replay", "wrong_book", "back"],
+    )
+
+
+# ---------------------------------------------------------------------------
 # 自适应组卷
 # ---------------------------------------------------------------------------
 
@@ -636,9 +787,22 @@ def start(
         )
         if not plan.questions:
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="该范围暂无可用题目")
+        session = PracticeSession(
+            user_id=current.id,
+            mode=payload.mode,
+            scope_type=payload.scope_type,
+            scope_ids=payload.scope_ids,
+            question_ids=[q.id for q in plan.questions],
+            total_count=plan.count,
+            seed=plan.seed,
+        )
+        db.add(session)
+        db.commit()
+        db.refresh(session)
         return LearnStartOut(
             questions=[QuestionPublic.model_validate(q) for q in plan.questions],
             seed=plan.seed,
+            session_id=session.id,
         )
 
     # 兼容旧种子（题目只用 tags 关联知识点名称）

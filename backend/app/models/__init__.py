@@ -6,6 +6,7 @@ from app.models.exam import Exam, ExamSubmission
 from app.models.practice import (
     KpStudyState,
     MasteryScore,
+    PracticeSession,
     StudentQuestionRecord,
     WrongQuestion,
 )
@@ -27,6 +28,7 @@ __all__ = [
     "MasteryScore",
     "WrongQuestion",
     "KpStudyState",
+    "PracticeSession",
     "Exam",
     "ExamSubmission",
 ]

@@ -88,3 +88,22 @@ class WrongQuestion(Base):
     last_wrong_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
     wrong_reason: Mapped[Optional[str]] = mapped_column(String(20), nullable=True)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+
+
+class PracticeSession(Base):
+    """练习会话：支撑断点续答与结算（D-04 §11）。"""
+
+    __tablename__ = "practice_sessions"
+
+    id: Mapped[int] = mapped_column(BigInteger().with_variant(Integer, "sqlite"), primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
+    mode: Mapped[str] = mapped_column(String(20), default="special")
+    scope_type: Mapped[str] = mapped_column(String(20), default="chapter")
+    scope_ids: Mapped[Optional[list[int]]] = mapped_column(JSONType, nullable=True)
+    question_ids: Mapped[list[int]] = mapped_column(JSONType, default=list)
+    total_count: Mapped[int] = mapped_column(Integer, default=0)
+    answered_count: Mapped[int] = mapped_column(Integer, default=0)
+    correct_count: Mapped[int] = mapped_column(Integer, default=0)
+    seed: Mapped[int] = mapped_column(BigInteger)
+    started_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, index=True)
+    finished_at: Mapped[Optional[datetime]] = mapped_column(DateTime, nullable=True)
