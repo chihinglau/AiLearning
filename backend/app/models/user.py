@@ -6,6 +6,7 @@ from sqlalchemy.orm import Mapped, mapped_column
 
 from app.core.config import settings
 from app.db.base import Base
+from app.db.types import JSONType
 
 
 class User(Base):
@@ -20,11 +21,51 @@ class User(Base):
     role: Mapped[str] = mapped_column(String(20), default="student", index=True)
     stage: Mapped[Optional[str]] = mapped_column(String(20), nullable=True)
     grade: Mapped[Optional[int]] = mapped_column(nullable=True)
+    grade_group: Mapped[Optional[str]] = mapped_column(String(20), nullable=True)
+    enrollment_year: Mapped[Optional[int]] = mapped_column(Integer, nullable=True)
+    region: Mapped[str] = mapped_column(
+        String(20), nullable=False, default="shenzhen", server_default="shenzhen"
+    )
+    semester: Mapped[str] = mapped_column(
+        String(10), nullable=False, default="first", server_default="first"
+    )
+    elective_subjects: Mapped[Optional[list]] = mapped_column(JSONType, nullable=True)
+    grade_updated_at: Mapped[Optional[datetime]] = mapped_column(DateTime, nullable=True)
+    graduated_at: Mapped[Optional[datetime]] = mapped_column(DateTime, nullable=True)
+    token_version: Mapped[int] = mapped_column(
+        Integer, nullable=False, default=0, server_default="0"
+    )
+    teacher_subjects: Mapped[Optional[list]] = mapped_column(JSONType, nullable=True)
+    grade_start: Mapped[Optional[int]] = mapped_column(Integer, nullable=True)
+    grade_end: Mapped[Optional[int]] = mapped_column(Integer, nullable=True)
     is_child: Mapped[bool] = mapped_column(Boolean, default=False)
     daily_limit_minutes: Mapped[int] = mapped_column(
         Integer, default=settings.default_daily_limit_minutes
     )
     is_active: Mapped[bool] = mapped_column(Boolean, default=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+
+
+class GradeHistory(Base):
+    """年级变更/升级历史；(user_id, to_grade, school_year) 唯一保证升级幂等。"""
+
+    __tablename__ = "grade_histories"
+    __table_args__ = (
+        UniqueConstraint(
+            "user_id", "to_grade", "school_year", name="uq_grade_history_user_target_year"
+        ),
+    )
+
+    id: Mapped[int] = mapped_column(BigInteger().with_variant(Integer, "sqlite"), primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
+    from_grade: Mapped[Optional[int]] = mapped_column(Integer, nullable=True)
+    to_grade: Mapped[int] = mapped_column(Integer, nullable=False)
+    school_year: Mapped[str] = mapped_column(String(20), nullable=False)
+    source: Mapped[str] = mapped_column(String(20), nullable=False, default="self")
+    reason: Mapped[Optional[str]] = mapped_column(String(200), nullable=True)
+    operator_id: Mapped[Optional[int]] = mapped_column(
+        ForeignKey("users.id"), nullable=True, index=True
+    )
     created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
 
 

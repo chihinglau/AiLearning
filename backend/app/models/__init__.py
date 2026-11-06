@@ -4,11 +4,12 @@ from app.db.base import Base
 from app.models.content import Chapter, KnowledgePoint, Question, Textbook
 from app.models.exam import Exam, ExamSubmission
 from app.models.practice import MasteryScore, StudentQuestionRecord, WrongQuestion
-from app.models.user import AuditLog, ParentChildBinding, User
+from app.models.user import AuditLog, GradeHistory, ParentChildBinding, User
 
 __all__ = [
     "Base",
     "User",
+    "GradeHistory",
     "ParentChildBinding",
     "AuditLog",
     "Textbook",
