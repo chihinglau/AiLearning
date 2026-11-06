@@ -5,16 +5,18 @@ from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from app.api.deps import get_current_user
+from app.api.deps import current_user_permissions, current_user_scope, get_current_user
 from app.core.grade import (
     GradeValidationError,
     resolve_grade_profile,
     validate_elective_subjects,
 )
+from app.core.scope import mask_phone
 from app.core.security import create_access_token, hash_password, verify_password
 from app.db.session import get_db
 from app.models.user import AuditLog, User
-from app.schemas.user import TokenOut, UserCreate, UserOut
+from app.schemas.user import MeOut, PermissionsOut, TokenOut, UserCreate, UserOut
+from app.services.audit import record_audit
 
 router = APIRouter(prefix="/auth", tags=["账号"])
 
@@ -62,17 +64,49 @@ def register(payload: UserCreate, request: Request, db: Session = Depends(get_db
 
 
 @router.post("/login", response_model=TokenOut)
-def login(form: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)) -> TokenOut:
+def login(
+    request: Request,
+    form: OAuth2PasswordRequestForm = Depends(),
+    db: Session = Depends(get_db),
+) -> TokenOut:
+    ip = request.client.host if request.client else None
     user = db.scalar(select(User).where(User.phone == form.username))
     if user is None or not verify_password(form.password, user.password_hash):
+        record_audit(
+            db,
+            user_id=user.id if user else None,
+            action="auth.login_failed",
+            message=f"phone={mask_phone(form.username)}",
+            ip=ip,
+        )
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED, detail="手机号或密码错误"
         )
     if not user.is_active:
+        record_audit(
+            db,
+            user_id=user.id,
+            action="auth.login_blocked",
+            message="账号已停用",
+            ip=ip,
+        )
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="账号已停用")
     return TokenOut(access_token=create_access_token(str(user.id)))
 
 
-@router.get("/me", response_model=UserOut)
-def me(current: User = Depends(get_current_user)) -> User:
-    return current
+@router.get("/me", response_model=MeOut)
+def me(current: User = Depends(get_current_user)) -> MeOut:
+    data = UserOut.model_validate(current)
+    return MeOut(
+        **data.model_dump(),
+        permissions=current_user_permissions(current),
+        scope=current_user_scope(current),
+    )
+
+
+@router.get("/permissions", response_model=PermissionsOut)
+def permissions(current: User = Depends(get_current_user)) -> PermissionsOut:
+    return PermissionsOut(
+        permissions=current_user_permissions(current),
+        scope=current_user_scope(current),
+    )

@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import Optional
+from typing import List, Optional
 
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -24,9 +24,20 @@ class UserOut(BaseModel):
     role: str
     stage: Optional[str]
     grade: Optional[int]
+    grade_group: Optional[str] = None
     is_child: bool
     daily_limit_minutes: int
     created_at: datetime
+
+
+class PermissionsOut(BaseModel):
+    permissions: List[str]
+    scope: str
+
+
+class MeOut(UserOut):
+    permissions: List[str] = Field(default_factory=list)
+    scope: str = "SELF"
 
 
 class TokenOut(BaseModel):
