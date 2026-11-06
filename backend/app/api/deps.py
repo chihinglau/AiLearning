@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, Sequence, Union
 
 from fastapi import Depends, HTTPException, Query, status
 from fastapi.security import OAuth2PasswordBearer
@@ -7,6 +7,7 @@ from sqlalchemy.orm import Session
 from app.core.config import settings
 from app.core.permissions import (
     ALL_PERMISSIONS,
+    PERMISSION_SCOPE,
     SCOPE_SELF,
     permissions_for_role,
     scope_for_role,
@@ -85,15 +86,35 @@ def current_user_scope(user: User) -> str:
     return scope_for_role(user.role)
 
 
-def require_student_access(permission: str):
+def _select_permission(role: str, permission: Union[str, Sequence[str]]) -> Optional[str]:
+    """多候选权限点中，选与角色默认数据范围匹配的那一个。"""
+    candidates = (permission,) if isinstance(permission, str) else tuple(permission)
+    perms = permissions_for_role(role)
+    if ALL_PERMISSIONS in perms:
+        return candidates[0]
+    role_scope = scope_for_role(role)
+    available = [p for p in candidates if p in perms]
+    for candidate in available:
+        if role_scope in PERMISSION_SCOPE.get(candidate, ()):
+            return candidate
+    return available[0] if available else None
+
+
+def require_student_access(permission: Union[str, Sequence[str]]):
     """声明式数据范围依赖：校验权限点并按角色范围解析目标学生。"""
 
     def dependency(
         student_id: Optional[int] = Query(default=None, ge=1),
-        current: User = Depends(require_permission(permission)),
+        current: User = Depends(get_current_user),
         db: Session = Depends(get_db),
     ) -> StudentAccess:
-        scope = scope_for_permission(current.role, permission)
+        chosen = _select_permission(current.role, permission)
+        if chosen is None:
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail={"code": "PERMISSION_DENIED", "message": "权限不足"},
+            )
+        scope = scope_for_permission(current.role, chosen)
         if scope is None:
             raise HTTPException(
                 status_code=status.HTTP_403_FORBIDDEN,
@@ -112,7 +133,7 @@ def require_student_access(permission: str):
                     db,
                     user_id=current.id,
                     action="data.cross_user_read",
-                    message=f"permission={permission}, target={requested}, scope={scope}",
+                    message=f"permission={chosen}, target={requested}, scope={scope}",
                 )
         return StudentAccess(scope=scope, student_id=target, allowed_ids=allowed)
 

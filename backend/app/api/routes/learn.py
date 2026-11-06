@@ -7,7 +7,8 @@ from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
-from app.api.deps import get_current_user
+from app.api.deps import get_current_user, require_student_access
+from app.core.scope import StudentAccess
 from app.db.session import get_db
 from app.models.content import Chapter, KnowledgePoint, Question
 from app.models.practice import MasteryScore, StudentQuestionRecord, WrongQuestion
@@ -265,14 +266,24 @@ def _kp_id_by_tag(db: Session, question: Question) -> Optional[int]:
 # ---------------------------------------------------------------------------
 
 
+def _target_student(access: StudentAccess) -> int:
+    if access.student_id is None:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail={"code": "STUDENT_ID_REQUIRED", "message": "请选择要查看的学生"},
+        )
+    return access.student_id
+
+
 @router.get("/wrong-questions", response_model=list[WrongQuestionOut])
 def wrong_questions(
     status_filter: str = Query(default="active", alias="status"),
     subject: Optional[str] = None,
-    current: User = Depends(get_current_user),
+    access: StudentAccess = Depends(require_student_access("learn:wrong:self")),
     db: Session = Depends(get_db),
 ) -> list[WrongQuestionOut]:
-    stmt = select(WrongQuestion).where(WrongQuestion.user_id == current.id)
+    user_id = _target_student(access)
+    stmt = select(WrongQuestion).where(WrongQuestion.user_id == user_id)
     if status_filter in ("active", "mastered"):
         stmt = stmt.where(WrongQuestion.status == status_filter)
     rows = list(
@@ -340,23 +351,28 @@ def review_today(
 
 @router.get("/stats", response_model=LearnStatsOut)
 def stats(
-    current: User = Depends(get_current_user),
+    access: StudentAccess = Depends(
+        require_student_access(
+            ("learn:stats:self:read", "learn:stats:child:read", "learn:stats:class:read")
+        )
+    ),
     db: Session = Depends(get_db),
 ) -> LearnStatsOut:
+    user_id = _target_student(access)
     total = db.scalar(
         select(func.count(StudentQuestionRecord.id)).where(
-            StudentQuestionRecord.user_id == current.id
+            StudentQuestionRecord.user_id == user_id
         )
     ) or 0
     correct = db.scalar(
         select(func.count(StudentQuestionRecord.id)).where(
-            StudentQuestionRecord.user_id == current.id,
+            StudentQuestionRecord.user_id == user_id,
             StudentQuestionRecord.is_correct.is_(True),
         )
     ) or 0
     due_count = db.scalar(
         select(func.count(WrongQuestion.id)).where(
-            WrongQuestion.user_id == current.id,
+            WrongQuestion.user_id == user_id,
             WrongQuestion.status == "active",
             WrongQuestion.next_review_at.is_not(None),
             WrongQuestion.next_review_at <= datetime.utcnow(),
@@ -364,7 +380,7 @@ def stats(
     ) or 0
     active_wrong = db.scalar(
         select(func.count(WrongQuestion.id)).where(
-            WrongQuestion.user_id == current.id,
+            WrongQuestion.user_id == user_id,
             WrongQuestion.status == "active",
         )
     ) or 0
@@ -372,7 +388,7 @@ def stats(
     # 连续学习天数：按本地日期对答题记录去重
     days = db.scalars(
         select(func.date(StudentQuestionRecord.attempted_at))
-        .where(StudentQuestionRecord.user_id == current.id)
+        .where(StudentQuestionRecord.user_id == user_id)
         .distinct()
     ).all()
     streak = _calc_streak(sorted({str(d) for d in days}, reverse=True))
@@ -383,7 +399,7 @@ def stats(
         db.scalars(
             select(MasteryScore)
             .where(
-                MasteryScore.user_id == current.id,
+                MasteryScore.user_id == user_id,
                 MasteryScore.score < 70,
             )
             .order_by(MasteryScore.score.asc())
