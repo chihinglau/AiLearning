@@ -4,6 +4,7 @@ from app.db.base import Base
 from app.models.content import Chapter, KnowledgePoint, Question, Textbook
 from app.models.exam import Exam, ExamSubmission
 from app.models.practice import MasteryScore, StudentQuestionRecord, WrongQuestion
+from app.models.textbook import TextbookBinding
 from app.models.user import AuditLog, GradeHistory, ParentChildBinding, User
 
 __all__ = [
@@ -16,6 +17,7 @@ __all__ = [
     "Chapter",
     "Question",
     "KnowledgePoint",
+    "TextbookBinding",
     "StudentQuestionRecord",
     "MasteryScore",
     "WrongQuestion",
