@@ -86,6 +86,12 @@ class LearnService {
         .toList();
   }
 
+  /// 学习首页聚合（仅学生；非学生返回 403 NOT_STUDENT）。
+  Future<HomeData> home() async {
+    final data = await _api.getJson('/api/learn/home');
+    return HomeData.fromJson(data);
+  }
+
   /// 学情总览。
   Future<LearnStats> stats() async {
     final data = await _api.getJson('/api/learn/stats');

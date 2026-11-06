@@ -226,6 +226,200 @@ class WrongReason {
   }
 }
 
+/// 首页：当前教材（含绑定与年级冲突标识）。
+class HomeTextbook {
+  const HomeTextbook({
+    required this.subject,
+    required this.textbookId,
+    required this.version,
+    required this.grade,
+    required this.semester,
+    this.mismatch = false,
+  });
+
+  final String subject;
+  final int textbookId;
+  final String version;
+  final int grade;
+  final String semester;
+  final bool mismatch;
+
+  String get subjectLabel => Subject.fromCode(subject).label;
+
+  factory HomeTextbook.fromJson(Map<String, dynamic> json) {
+    return HomeTextbook(
+      subject: json['subject'] as String? ?? '',
+      textbookId: json['textbook_id'] as int? ?? 0,
+      version: json['version'] as String? ?? '',
+      grade: json['grade'] as int? ?? 1,
+      semester: json['semester'] as String? ?? '',
+      mismatch: json['mismatch'] as bool? ?? false,
+    );
+  }
+}
+
+/// 今日计划：到期复习、建议练题量与用时、新知识点目标。
+class HomeTodayPlan {
+  const HomeTodayPlan({
+    required this.dueReview,
+    required this.practiceQuestions,
+    required this.practiceMinutes,
+    required this.newKpTarget,
+  });
+
+  final int dueReview;
+  final int practiceQuestions;
+  final int practiceMinutes;
+  final int newKpTarget;
+
+  factory HomeTodayPlan.fromJson(Map<String, dynamic> json) {
+    return HomeTodayPlan(
+      dueReview: json['due_review'] as int? ?? 0,
+      practiceQuestions: json['practice_questions'] as int? ?? 0,
+      practiceMinutes: json['practice_minutes'] as int? ?? 0,
+      newKpTarget: json['new_kp_target'] as int? ?? 0,
+    );
+  }
+}
+
+/// 继续学习：上次学习到的章节/知识点。
+class HomeContinue {
+  const HomeContinue({
+    required this.subject,
+    this.chapterId,
+    this.chapterName,
+    this.knowledgePointId,
+    this.knowledgePointName,
+  });
+
+  final String subject;
+  final int? chapterId;
+  final String? chapterName;
+  final int? knowledgePointId;
+  final String? knowledgePointName;
+
+  String get subjectLabel => Subject.fromCode(subject).label;
+
+  String get title {
+    if (knowledgePointName != null && knowledgePointName!.isNotEmpty) {
+      return knowledgePointName!;
+    }
+    return chapterName ?? '上次学习内容';
+  }
+
+  factory HomeContinue.fromJson(Map<String, dynamic> json) {
+    return HomeContinue(
+      subject: json['subject'] as String? ?? '',
+      chapterId: json['chapter_id'] as int?,
+      chapterName: json['chapter_name'] as String?,
+      knowledgePointId: json['knowledge_point_id'] as int?,
+      knowledgePointName: json['knowledge_point_name'] as String?,
+    );
+  }
+}
+
+/// 首页推荐行动：review / learn_kp / practice / continue / daily。
+class HomeRecommendation {
+  const HomeRecommendation({
+    required this.action,
+    required this.label,
+    required this.reason,
+    this.knowledgePointId,
+  });
+
+  final String action;
+  final String label;
+  final String reason;
+  final int? knowledgePointId;
+
+  factory HomeRecommendation.fromJson(Map<String, dynamic> json) {
+    return HomeRecommendation(
+      action: json['action'] as String? ?? 'daily',
+      label: json['label'] as String? ?? '每日一练',
+      reason: json['reason'] as String? ?? '',
+      knowledgePointId: json['knowledge_point_id'] as int?,
+    );
+  }
+}
+
+/// 学习首页聚合 /learn/home。
+class HomeData {
+  const HomeData({
+    required this.grade,
+    required this.stage,
+    required this.gradeGroup,
+    required this.semester,
+    required this.region,
+    required this.needsBinding,
+    required this.todayPlan,
+    required this.recommendation,
+    this.textbooks = const [],
+    this.recommended = const [],
+    this.mismatchSubjects = const [],
+    this.continueLearning,
+    this.pendingExams = const [],
+  });
+
+  final int grade;
+  final String stage;
+  final String gradeGroup;
+  final String semester;
+  final String region;
+  final bool needsBinding;
+  final List<HomeTextbook> textbooks;
+  final List<HomeTextbook> recommended;
+  final List<String> mismatchSubjects;
+  final HomeTodayPlan todayPlan;
+  final HomeContinue? continueLearning;
+  final HomeRecommendation recommendation;
+  final List<Map<String, dynamic>> pendingExams;
+
+  Stage? get stageEnum => Stage.fromCode(stage);
+
+  /// 按学科取当前已绑定教材。
+  HomeTextbook? textbookOf(String subject) {
+    for (final item in textbooks) {
+      if (item.subject == subject) return item;
+    }
+    return null;
+  }
+
+  factory HomeData.fromJson(Map<String, dynamic> json) {
+    final rawTextbooks = json['textbooks'] as List<dynamic>? ?? const [];
+    final rawRecommended = json['recommended'] as List<dynamic>? ?? const [];
+    final rawMismatch = json['mismatch_subjects'] as List<dynamic>? ?? const [];
+    final rawExams = json['pending_exams'] as List<dynamic>? ?? const [];
+    final rawContinue = json['continue_learning'];
+    return HomeData(
+      grade: json['grade'] as int? ?? 1,
+      stage: json['stage'] as String? ?? '',
+      gradeGroup: json['grade_group'] as String? ?? '',
+      semester: json['semester'] as String? ?? '',
+      region: json['region'] as String? ?? '',
+      needsBinding: json['needs_binding'] as bool? ?? false,
+      textbooks: rawTextbooks
+          .map((item) => HomeTextbook.fromJson(item as Map<String, dynamic>))
+          .toList(),
+      recommended: rawRecommended
+          .map((item) => HomeTextbook.fromJson(item as Map<String, dynamic>))
+          .toList(),
+      mismatchSubjects: rawMismatch.map((item) => item.toString()).toList(),
+      todayPlan: HomeTodayPlan.fromJson(
+        json['today_plan'] as Map<String, dynamic>? ?? const {},
+      ),
+      continueLearning: rawContinue is Map<String, dynamic>
+          ? HomeContinue.fromJson(rawContinue)
+          : null,
+      recommendation: HomeRecommendation.fromJson(
+        json['recommendation'] as Map<String, dynamic>? ?? const {},
+      ),
+      pendingExams: rawExams
+          .map((item) => item as Map<String, dynamic>)
+          .toList(),
+    );
+  }
+}
+
 /// 学情总览 /learn/stats。
 class LearnStats {
   const LearnStats({

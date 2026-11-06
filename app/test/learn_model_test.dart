@@ -118,6 +118,77 @@ void main() {
     });
   });
 
+  group('HomeData 首页聚合', () {
+    test('解析教材、今日计划、继续学习与推荐', () {
+      final home = HomeData.fromJson({
+        'grade': 3,
+        'stage': 'primary',
+        'grade_group': 'primary_mid',
+        'semester': 'first',
+        'region': 'shenzhen',
+        'needs_binding': false,
+        'textbooks': [
+          {
+            'subject': 'math',
+            'textbook_id': 12,
+            'version': '人教版',
+            'grade': 3,
+            'semester': 'first',
+            'mismatch': false,
+          },
+        ],
+        'recommended': <Map<String, dynamic>>[],
+        'mismatch_subjects': <String>[],
+        'today_plan': {
+          'due_review': 3,
+          'practice_questions': 10,
+          'practice_minutes': 15,
+          'new_kp_target': 1,
+        },
+        'continue_learning': {
+          'subject': 'math',
+          'chapter_id': 7,
+          'chapter_name': '加与减',
+          'knowledge_point_id': 21,
+          'knowledge_point_name': '两位数加法',
+        },
+        'recommendation': {
+          'action': 'review',
+          'label': '去复习',
+          'reason': '今日有 3 道错题到期',
+          'knowledge_point_id': null,
+        },
+        'pending_exams': <Map<String, dynamic>>[],
+      });
+
+      expect(home.grade, 3);
+      expect(home.stageEnum?.label, '小学');
+      expect(home.textbooks.single.subjectLabel, '数学');
+      expect(home.todayPlan.dueReview, 3);
+      expect(home.continueLearning?.title, '两位数加法');
+      expect(home.textbookOf('math')?.textbookId, 12);
+      expect(home.recommendation.action, 'review');
+    });
+
+    test('未绑定教材时 needs_binding 与推荐教材可用', () {
+      final home = HomeData.fromJson({
+        'grade': 1,
+        'needs_binding': true,
+        'recommended': [
+          {'subject': 'chinese', 'textbook_id': 3, 'version': '人教版', 'grade': 1},
+        ],
+        'today_plan': <String, dynamic>{},
+        'recommendation': {'action': 'daily', 'label': '每日一练'},
+      });
+
+      expect(home.needsBinding, isTrue);
+      expect(home.textbooks, isEmpty);
+      expect(home.recommended.single.subjectLabel, '语文');
+      expect(home.continueLearning, isNull);
+      expect(home.todayPlan.practiceQuestions, 0);
+    });
+  });
+
   group('Question 知识点关联', () {
     test('Question.fromJson 解析 knowledge_point_id', () {
       final q = Question.fromJson({
