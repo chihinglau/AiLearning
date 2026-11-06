@@ -11,6 +11,7 @@ class UserCreate(BaseModel):
     role: str = Field(default="student", pattern=r"^(student|parent)$")
     stage: Optional[str] = Field(default=None, pattern=r"^(primary|junior|senior)$")
     grade: Optional[int] = Field(default=None, ge=1, le=12)
+    elective_subjects: Optional[list[str]] = Field(default=None, max_length=3)
     is_child: bool = False
 
 

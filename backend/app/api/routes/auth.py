@@ -1,9 +1,16 @@
+from datetime import datetime
+
 from fastapi import APIRouter, Depends, HTTPException, Request, status
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.api.deps import get_current_user
+from app.core.grade import (
+    GradeValidationError,
+    resolve_grade_profile,
+    validate_elective_subjects,
+)
 from app.core.security import create_access_token, hash_password, verify_password
 from app.db.session import get_db
 from app.models.user import AuditLog, User
@@ -18,13 +25,25 @@ def register(payload: UserCreate, request: Request, db: Session = Depends(get_db
     if exists is not None:
         raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail="该手机号已注册")
 
+    try:
+        profile = resolve_grade_profile(payload.grade, payload.stage, payload.role)
+        validate_elective_subjects(payload.elective_subjects, payload.grade)
+    except GradeValidationError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail={"code": exc.code, "message": exc.message},
+        ) from exc
+
     user = User(
         phone=payload.phone,
         password_hash=hash_password(payload.password),
         nickname=payload.nickname or payload.phone[-4:],
         role=payload.role,
-        stage=payload.stage,
+        stage=profile.stage if profile else None,
         grade=payload.grade,
+        grade_group=profile.grade_group if profile else None,
+        elective_subjects=payload.elective_subjects,
+        grade_updated_at=datetime.utcnow() if profile else None,
         is_child=payload.is_child,
     )
     db.add(user)

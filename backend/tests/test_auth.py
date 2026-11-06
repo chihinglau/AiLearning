@@ -22,7 +22,7 @@ def test_register_and_me(client: TestClient) -> None:
 
 
 def test_duplicate_phone_rejected(client: TestClient) -> None:
-    payload = {"phone": "13700000001", "password": "pass1234"}
+    payload = {"phone": "13700000001", "password": "pass1234", "grade": 5}
     assert client.post("/api/auth/register", json=payload).status_code == 201
     assert client.post("/api/auth/register", json=payload).status_code == 409
 
@@ -36,7 +36,9 @@ def test_admin_cannot_self_register(client: TestClient) -> None:
 
 
 def test_wrong_password(client: TestClient) -> None:
-    client.post("/api/auth/register", json={"phone": "13700000003", "password": "pass1234"})
+    client.post(
+        "/api/auth/register", json={"phone": "13700000003", "password": "pass1234", "grade": 2}
+    )
     response = client.post(
         "/api/auth/login", data={"username": "13700000003", "password": "wrong-pass"}
     )
