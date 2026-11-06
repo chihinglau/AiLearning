@@ -89,3 +89,49 @@ class LearnStatsOut(BaseModel):
     due_review_count: int
     active_wrong_count: int
     weak_points: list[KnowledgeNodeOut]
+
+
+class HomeTextbook(BaseModel):
+    subject: str
+    textbook_id: int
+    version: str
+    grade: int
+    semester: str
+
+
+class HomeTodayPlan(BaseModel):
+    due_review: int
+    practice_questions: int
+    practice_minutes: int
+    new_kp_target: int
+
+
+class HomeContinue(BaseModel):
+    subject: str
+    chapter_id: Optional[int] = None
+    chapter_name: Optional[str] = None
+    knowledge_point_id: Optional[int] = None
+    knowledge_point_name: Optional[str] = None
+
+
+class HomeRecommendation(BaseModel):
+    action: str
+    label: str
+    reason: str
+    knowledge_point_id: Optional[int] = None
+
+
+class HomeOut(BaseModel):
+    grade: int
+    stage: str
+    grade_group: str
+    semester: str
+    region: str
+    needs_binding: bool
+    textbooks: list[HomeTextbook] = []
+    recommended: list[HomeTextbook] = []
+    today_plan: HomeTodayPlan
+    continue_learning: Optional[HomeContinue] = None
+    recommendation: HomeRecommendation
+    pending_exams: list[dict[str, Any]] = []
+

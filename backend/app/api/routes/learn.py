@@ -8,14 +8,21 @@ from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from app.api.deps import get_current_user, require_student_access
+from app.core.grade import derive_grade_group, derive_semester, derive_stage
 from app.core.scope import StudentAccess
 from app.db.session import get_db
-from app.models.content import Chapter, KnowledgePoint, Question
+from app.models.content import Chapter, KnowledgePoint, Question, Textbook
 from app.models.practice import MasteryScore, StudentQuestionRecord, WrongQuestion
+from app.models.textbook import TextbookBinding
 from app.models.user import User
 from app.schemas.content import QuestionPublic
 from app.schemas.learn import (
     ChapterTreeOut,
+    HomeContinue,
+    HomeOut,
+    HomeRecommendation,
+    HomeTextbook,
+    HomeTodayPlan,
     KnowledgeNodeOut,
     LearnStartIn,
     LearnStartOut,
@@ -27,6 +34,7 @@ from app.schemas.learn import (
     WrongReasonIn,
 )
 from app.services import learning as engine
+from app.services import textbook as textbook_service
 
 router = APIRouter(prefix="/learn", tags=["自适应学习"])
 
@@ -443,3 +451,150 @@ def _calc_streak(reverse_days: list[str]) -> int:
         else:
             break
     return streak
+
+
+# 学段分组对应的单次练习量（D-03 §4.2）
+_PRACTICE_PLAN = {
+    "primary_low": (8, 12),
+    "primary_mid": (12, 20),
+    "primary_high": (14, 20),
+    "junior": (18, 30),
+    "senior": (20, 45),
+}
+
+
+def _home_textbook(subject: str, textbook: Textbook, semester: str) -> HomeTextbook:
+    return HomeTextbook(
+        subject=subject,
+        textbook_id=textbook.id,
+        version=textbook.version,
+        grade=textbook.grade,
+        semester=semester,
+    )
+
+
+@router.get("/home", response_model=HomeOut)
+def home(
+    current: User = Depends(get_current_user), db: Session = Depends(get_db)
+) -> HomeOut:
+    """学习首页聚合：当前教材、今日计划、继续学习、下一步推荐、待办考试。"""
+    if current.role != "student":
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail={"code": "NOT_STUDENT", "message": "仅学生账号可访问学习首页"},
+        )
+
+    now = datetime.utcnow()
+    grade = current.grade or 1
+    stage = current.stage or derive_stage(grade)
+    grade_group = current.grade_group or derive_grade_group(grade)
+    semester = current.semester or derive_semester(now)
+    region = current.region or "shenzhen"
+
+    rows = db.execute(
+        select(TextbookBinding, Textbook)
+        .join(Textbook, Textbook.id == TextbookBinding.textbook_id)
+        .where(
+            TextbookBinding.user_id == current.id,
+            TextbookBinding.status == "active",
+        )
+        .order_by(TextbookBinding.subject)
+    ).all()
+    textbooks = [_home_textbook(b.subject, t, b.semester) for b, t in rows]
+    needs_binding = not textbooks
+    recommended = []
+    if needs_binding:
+        recommended = [
+            _home_textbook(subject, textbook, semester)
+            for subject, textbook in textbook_service.recommended_textbooks(
+                db, grade=grade, semester=semester, region=region
+            )
+        ]
+
+    due_review = db.scalar(
+        select(func.count(WrongQuestion.id)).where(
+            WrongQuestion.user_id == current.id,
+            WrongQuestion.status == "active",
+            WrongQuestion.next_review_at.is_not(None),
+            WrongQuestion.next_review_at <= now,
+        )
+    ) or 0
+    question_count, minutes = _PRACTICE_PLAN.get(grade_group, _PRACTICE_PLAN["primary_mid"])
+
+    latest = db.scalar(
+        select(StudentQuestionRecord)
+        .where(StudentQuestionRecord.user_id == current.id)
+        .order_by(StudentQuestionRecord.attempted_at.desc())
+        .limit(1)
+    )
+    continue_learning: Optional[HomeContinue] = None
+    if latest is not None:
+        question = db.get(Question, latest.question_id)
+        if question is not None:
+            chapter = db.get(Chapter, question.chapter_id)
+            kp = (
+                db.get(KnowledgePoint, question.knowledge_point_id)
+                if question.knowledge_point_id
+                else None
+            )
+            continue_learning = HomeContinue(
+                subject=question.subject,
+                chapter_id=chapter.id if chapter else None,
+                chapter_name=chapter.name if chapter else None,
+                knowledge_point_id=kp.id if kp else None,
+                knowledge_point_name=kp.name if kp else None,
+            )
+
+    weakest = db.scalar(
+        select(MasteryScore)
+        .where(MasteryScore.user_id == current.id)
+        .order_by(MasteryScore.score.asc())
+        .limit(1)
+    )
+    if due_review > 0:
+        recommendation = HomeRecommendation(
+            action="review", label="去复习", reason=f"今日有 {due_review} 道错题到期"
+        )
+    elif weakest is not None and weakest.score < 40:
+        kp = db.get(KnowledgePoint, weakest.knowledge_point_id)
+        recommendation = HomeRecommendation(
+            action="learn_kp",
+            label="先学讲解",
+            reason="存在掌握度低于 40 的知识点",
+            knowledge_point_id=kp.id if kp else None,
+        )
+    elif weakest is not None and weakest.score < 70:
+        recommendation = HomeRecommendation(
+            action="practice",
+            label="专项练习",
+            reason="存在掌握度 40-70 的知识点，建议专项巩固",
+            knowledge_point_id=weakest.knowledge_point_id,
+        )
+    elif continue_learning is not None:
+        recommendation = HomeRecommendation(
+            action="continue", label="继续学习", reason="接着上次的学习内容继续"
+        )
+    else:
+        recommendation = HomeRecommendation(
+            action="daily", label="每日一练", reason="保持手感，从每日一练开始"
+        )
+
+    return HomeOut(
+        grade=grade,
+        stage=stage,
+        grade_group=grade_group,
+        semester=semester,
+        region=region,
+        needs_binding=needs_binding,
+        textbooks=textbooks,
+        recommended=recommended,
+        today_plan=HomeTodayPlan(
+            due_review=due_review,
+            practice_questions=question_count,
+            practice_minutes=minutes,
+            new_kp_target=1,
+        ),
+        continue_learning=continue_learning,
+        recommendation=recommendation,
+        pending_exams=[],
+    )
