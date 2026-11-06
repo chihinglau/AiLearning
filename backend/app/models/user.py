@@ -21,6 +21,9 @@ class User(Base):
     role: Mapped[str] = mapped_column(String(20), default="student", index=True)
     stage: Mapped[Optional[str]] = mapped_column(String(20), nullable=True)
     grade: Mapped[Optional[int]] = mapped_column(nullable=True)
+    school_id: Mapped[Optional[int]] = mapped_column(
+        BigInteger().with_variant(Integer, "sqlite"), nullable=True, index=True
+    )
     grade_group: Mapped[Optional[str]] = mapped_column(String(20), nullable=True)
     enrollment_year: Mapped[Optional[int]] = mapped_column(Integer, nullable=True)
     region: Mapped[str] = mapped_column(

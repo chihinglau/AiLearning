@@ -1,14 +1,21 @@
 from typing import Optional
 
-from fastapi import Depends, HTTPException, status
+from fastapi import Depends, HTTPException, Query, status
 from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy.orm import Session
 
 from app.core.config import settings
 from app.core.permissions import (
     ALL_PERMISSIONS,
+    SCOPE_SELF,
     permissions_for_role,
     scope_for_role,
+)
+from app.core.scope import (
+    StudentAccess,
+    ensure_student_access,
+    resolve_student_ids,
+    scope_for_permission,
 )
 from app.core.security import decode_access_token
 from app.db.session import get_db
@@ -69,3 +76,30 @@ def require_admin(current: User = Depends(get_current_user)) -> User:
 
 def current_user_scope(user: User) -> str:
     return scope_for_role(user.role)
+
+
+def require_student_access(permission: str):
+    """声明式数据范围依赖：校验权限点并按角色范围解析目标学生。"""
+
+    def dependency(
+        student_id: Optional[int] = Query(default=None, ge=1),
+        current: User = Depends(require_permission(permission)),
+        db: Session = Depends(get_db),
+    ) -> StudentAccess:
+        scope = scope_for_permission(current.role, permission)
+        if scope is None:
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail={"code": "SCOPE_DENIED", "message": "无权访问该学生数据"},
+            )
+        allowed = resolve_student_ids(db, current, scope)
+        # 直接调用（单测）时 Query 默认值是标记对象，统一归一化为 None
+        requested = student_id if isinstance(student_id, int) else None
+        target = requested
+        if target is None and scope == SCOPE_SELF:
+            target = current.id
+        if requested is not None:
+            ensure_student_access(db, current, scope, requested)
+        return StudentAccess(scope=scope, student_id=target, allowed_ids=allowed)
+
+    return dependency
