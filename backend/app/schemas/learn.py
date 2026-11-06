@@ -158,6 +158,28 @@ class MasteryMapOut(BaseModel):
     items: dict[str, float]
 
 
+class PracticePreviewIn(BaseModel):
+    scope_type: str = Field(pattern=r"^(kp|chapter|textbook|wrong)$")
+    scope_ids: list[int] = Field(default_factory=list, max_length=50)
+    count: int = Field(default=10, ge=1, le=50)
+    q_types: list[str] = Field(default_factory=list)
+    mode: str = "special"
+    seed: Optional[int] = None
+
+
+class PracticePreviewOut(BaseModel):
+    count: int
+    available: int
+    insufficient: bool
+    estimated_minutes: int
+    kp_coverage: float
+    covered_kp_count: int
+    range_kp_count: int
+    q_type_mix: dict[str, int] = {}
+    due_review_count: int
+    seed: int
+
+
 class LearnStatsOut(BaseModel):
     total_answered: int
     total_correct: int

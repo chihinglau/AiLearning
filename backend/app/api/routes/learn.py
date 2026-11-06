@@ -34,6 +34,8 @@ from app.schemas.learn import (
     LearnSubmitIn,
     LearnSubmitOut,
     MasteryMapOut,
+    PracticePreviewIn,
+    PracticePreviewOut,
     UnitDetailOut,
     UnitOut,
     UnitSectionOut,
@@ -41,6 +43,7 @@ from app.schemas.learn import (
     WrongReasonIn,
 )
 from app.services import learning as engine
+from app.services import practice as practice_service
 from app.services import study_state
 from app.services import textbook as textbook_service
 
@@ -518,6 +521,41 @@ def mastery(
 ) -> MasteryMapOut:
     rows = _mastery_map(db, user_id=current.id, subject=subject)
     return MasteryMapOut(items={str(kp_id): round(row.score, 1) for kp_id, row in rows.items()})
+
+
+# ---------------------------------------------------------------------------
+# 练习预览（P0-21）
+# ---------------------------------------------------------------------------
+
+
+@router.post("/practice/preview", response_model=PracticePreviewOut)
+def practice_preview(
+    payload: PracticePreviewIn,
+    current: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+) -> PracticePreviewOut:
+    """组卷预览：题量、知识点覆盖、预计时长、seed（与开始练习共用同一 seed）。"""
+    plan = practice_service.build_plan(
+        db,
+        user=current,
+        scope_type=payload.scope_type,
+        scope_ids=payload.scope_ids,
+        count=payload.count,
+        q_types=payload.q_types or None,
+        seed=payload.seed,
+    )
+    return PracticePreviewOut(
+        count=plan.count,
+        available=plan.available,
+        insufficient=plan.insufficient,
+        estimated_minutes=plan.estimated_minutes,
+        kp_coverage=plan.kp_coverage,
+        covered_kp_count=plan.covered_kp_count,
+        range_kp_count=plan.range_kp_count,
+        q_type_mix=plan.q_type_mix,
+        due_review_count=plan.due_review_count,
+        seed=plan.seed,
+    )
 
 
 # ---------------------------------------------------------------------------
