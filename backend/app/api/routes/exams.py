@@ -10,6 +10,7 @@ from sqlalchemy.orm import Session
 from app.api.deps import get_current_user, require_permission
 from app.core import cache
 from app.db.session import get_db
+from app.models.assignment import Assignment
 from app.models.content import KnowledgePoint, Question
 from app.models.exam import Exam, ExamAnswer, ExamAttempt, ExamBlueprint
 from app.models.org import ClassMember, SchoolClass
@@ -151,8 +152,11 @@ def _window_state(exam: Exam, now: datetime) -> str:
     return "open"
 
 
-def _ensure_takeable(exam: Exam, user: User) -> None:
-    """学生只能参加本年级已发布、且处于开放窗口内的试卷。"""
+def _ensure_takeable(exam: Exam, user: User, db: Optional[Session] = None) -> None:
+    """学生只能参加本年级已发布、且处于开放窗口内的试卷。
+
+    班级作业卷额外校验班级成员关系，避免同年级其他班学生按 id 直接进入。
+    """
     if user.role != "student":
         return
     if exam.status != "published":
@@ -173,6 +177,20 @@ def _ensure_takeable(exam: Exam, user: User) -> None:
             status_code=status.HTTP_403_FORBIDDEN,
             detail={"code": "EXAM_WINDOW_CLOSED", "message": "考试已结束"},
         )
+    if exam.source == "assignment" and db is not None:
+        assignment = db.scalar(
+            select(Assignment).where(Assignment.exam_id == exam.id)
+        )
+        if assignment is not None and db.scalar(
+            select(ClassMember).where(
+                ClassMember.class_id == assignment.class_id,
+                ClassMember.student_id == user.id,
+            )
+        ) is None:
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail={"code": "ASSIGNMENT_NOT_MEMBER", "message": "仅本班学生可参加该作业"},
+            )
 
 
 def _detail_out(db: Session, exam: Exam, now: Optional[datetime] = None) -> ExamDetailOut:
@@ -299,6 +317,8 @@ def list_exams(
     db: Session = Depends(get_db),
 ) -> list[ExamSummaryOut]:
     stmt = select(Exam)
+    # 班级作业卷通过 /api/assignments 暴露，避免在通用考试列表中重复出现
+    stmt = stmt.where(Exam.source != "assignment")
     if current.role == "student":
         stmt = stmt.where(Exam.status == "published")
         if current.grade:
@@ -377,7 +397,7 @@ def exam_detail(
     db: Session = Depends(get_db),
 ) -> ExamDetailOut:
     exam = _exam_or_404(db, exam_id)
-    _ensure_takeable(exam, current)
+    _ensure_takeable(exam, current, db)
     return _detail_out(db, exam)
 
 
@@ -555,7 +575,7 @@ def start_attempt(
 ) -> ExamAttemptOut:
     """开始或续答：复用进行中的作答；已超时的作答由服务端强制交卷后新建一次。"""
     exam = _exam_or_404(db, exam_id)
-    _ensure_takeable(exam, current)
+    _ensure_takeable(exam, current, db)
 
     now = datetime.utcnow()
     attempts = list(

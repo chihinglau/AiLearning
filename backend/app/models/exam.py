@@ -1,7 +1,15 @@
 from datetime import datetime
 from typing import Any, Optional
 
-from sqlalchemy import BigInteger, Boolean, DateTime, ForeignKey, Integer, String, UniqueConstraint
+from sqlalchemy import (
+    BigInteger,
+    Boolean,
+    DateTime,
+    ForeignKey,
+    Integer,
+    String,
+    UniqueConstraint,
+)
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.db.base import Base
@@ -92,6 +100,12 @@ class ExamAnswer(Base):
     is_correct: Mapped[Optional[bool]] = mapped_column(Boolean, nullable=True)
     score: Mapped[Optional[float]] = mapped_column(nullable=True)
     self_score: Mapped[Optional[float]] = mapped_column(nullable=True)
+    # P2-03 教师批改主观题
+    teacher_comment: Mapped[Optional[str]] = mapped_column(String(500), nullable=True)
+    graded_by: Mapped[Optional[int]] = mapped_column(
+        ForeignKey("users.id"), nullable=True, index=True
+    )
+    graded_at: Mapped[Optional[datetime]] = mapped_column(DateTime, nullable=True)
     updated_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
 
 

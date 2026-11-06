@@ -1,5 +1,9 @@
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/features/admin/rbac_config_page.dart';
+import 'package:ai_learning/features/assignment/assignment_create_page.dart';
+import 'package:ai_learning/features/assignment/assignment_detail_page.dart';
+import 'package:ai_learning/features/assignment/assignment_grading_page.dart';
+import 'package:ai_learning/features/assignment/assignment_list_page.dart';
 import 'package:ai_learning/features/auth/login_page.dart';
 import 'package:ai_learning/features/common/permission_gate.dart';
 import 'package:ai_learning/features/exam/exam_list_page.dart';
@@ -128,6 +132,44 @@ final routerProvider = Provider<GoRouter>((ref) {
           anyOf: ['system:config:write'],
           child: RbacConfigPage(),
         ),
+      ),
+      GoRoute(
+        path: '/assignments',
+        builder: (context, state) => const PermissionGate(
+          anyOf: ['learn:exam:take', 'learn:assignment:create'],
+          child: AssignmentListPage(),
+        ),
+      ),
+      GoRoute(
+        path: '/assignments/create',
+        builder: (context, state) => const PermissionGate(
+          anyOf: ['learn:assignment:create'],
+          child: AssignmentCreatePage(),
+        ),
+      ),
+      GoRoute(
+        path: '/assignments/:assignmentId/grading',
+        builder: (context, state) {
+          final assignmentId =
+              int.tryParse(state.pathParameters['assignmentId'] ?? '');
+          if (assignmentId == null) return const AssignmentListPage();
+          return PermissionGate(
+            anyOf: const ['learn:exam:grade'],
+            child: AssignmentGradingPage(assignmentId: assignmentId),
+          );
+        },
+      ),
+      GoRoute(
+        path: '/assignments/:assignmentId',
+        builder: (context, state) {
+          final assignmentId =
+              int.tryParse(state.pathParameters['assignmentId'] ?? '');
+          if (assignmentId == null) return const AssignmentListPage();
+          return PermissionGate(
+            anyOf: const ['learn:exam:take', 'learn:assignment:create'],
+            child: AssignmentDetailPage(assignmentId: assignmentId),
+          );
+        },
       ),
       GoRoute(
         path: '/teacher/classes/:classId/stats',

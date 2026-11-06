@@ -219,6 +219,18 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                     ),
                     const SizedBox(height: 16),
                   ],
+                  if (user?.hasPermission('learn:assignment:create') == true) ...[
+                    Card(
+                      child: ListTile(
+                        leading: const Icon(Icons.edit_document),
+                        title: const Text('班级作业'),
+                        subtitle: const Text('为班级布置统一卷并批改主观题'),
+                        trailing: const Icon(Icons.chevron_right),
+                        onTap: () => context.go('/assignments'),
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                  ],
                   if (user?.hasPermission('system:config:write') == true) ...[
                     Card(
                       child: ListTile(

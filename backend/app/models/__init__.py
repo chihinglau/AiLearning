@@ -1,6 +1,7 @@
 """SQLAlchemy 模型统一出口，Alembic 依赖此处的导入顺序。"""
 
 from app.db.base import Base
+from app.models.assignment import Assignment
 from app.models.content import Chapter, KnowledgePoint, Question, Textbook
 from app.models.exam import Exam, ExamAnswer, ExamAttempt, ExamBlueprint, ExamSubmission
 from app.models.org import ClassMember, School, SchoolClass, TeacherClassAssignment
@@ -40,6 +41,7 @@ __all__ = [
     "SchoolClass",
     "ClassMember",
     "TeacherClassAssignment",
+    "Assignment",
     "Role",
     "Permission",
     "RolePermission",

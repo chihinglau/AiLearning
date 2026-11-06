@@ -8,6 +8,7 @@ from app.api.routes import (
     admin,
     admin_rbac,
     admin_users,
+    assignments,
     auth,
     exams,
     family,
@@ -60,6 +61,7 @@ app.include_router(users.router, prefix=settings.api_prefix)
 app.include_router(family.router, prefix=settings.api_prefix)
 app.include_router(admin_users.router, prefix=settings.api_prefix)
 app.include_router(admin_rbac.router, prefix=settings.api_prefix)
+app.include_router(assignments.router, prefix=settings.api_prefix)
 app.include_router(org.router, prefix=settings.api_prefix)
 app.include_router(textbooks.router, prefix=settings.api_prefix)
 

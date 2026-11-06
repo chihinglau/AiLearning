@@ -37,6 +37,11 @@ CORE_TABLES = {
     "classes",
     "class_members",
     "teacher_class_assignments",
+    "roles",
+    "permissions",
+    "role_permissions",
+    "user_roles",
+    "assignments",
 }
 
 

@@ -327,6 +327,16 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
                   onTap: () => context.go('/exams'),
                 ),
               ),
+              const SizedBox(height: 8),
+              Card(
+                child: ListTile(
+                  leading: const Icon(Icons.edit_document),
+                  title: const Text('班级作业'),
+                  subtitle: const Text('查看老师布置的统一作业与批改结果'),
+                  trailing: const Icon(Icons.chevron_right),
+                  onTap: () => context.go('/assignments'),
+                ),
+              ),
             ],
           ],
         ),
