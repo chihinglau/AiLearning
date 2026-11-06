@@ -91,7 +91,7 @@ def login(
             ip=ip,
         )
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="账号已停用")
-    return TokenOut(access_token=create_access_token(str(user.id)))
+    return TokenOut(access_token=create_access_token(str(user.id), user.token_version or 0))
 
 
 @router.get("/me", response_model=MeOut)

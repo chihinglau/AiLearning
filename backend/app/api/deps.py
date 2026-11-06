@@ -28,16 +28,22 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl=f"{settings.api_prefix}/auth/login
 def get_current_user(
     token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)
 ) -> User:
-    subject = decode_access_token(token)
-    if subject is None:
+    data = decode_access_token(token)
+    if data is None:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="登录状态已失效，请重新登录",
             headers={"WWW-Authenticate": "Bearer"},
         )
-    user: Optional[User] = db.get(User, int(subject)) if subject.isdigit() else None
+    user: Optional[User] = db.get(User, int(data.subject)) if data.subject.isdigit() else None
     if user is None or not user.is_active:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="账号不存在或已停用")
+    if (user.token_version or 0) != data.version:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="登录状态已失效，请重新登录",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
     return user
 
 
