@@ -139,7 +139,20 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
           _startDaily();
         }
       case 'continue':
-        _openContinue(home);
+        if (home.continueLearning == null && rec.chapterId != null) {
+          context.go(
+            '/session?chapter=${rec.chapterId}'
+            '&title=${Uri.encodeComponent(rec.chapterName ?? '继续学习')}',
+          );
+        } else {
+          _openContinue(home);
+        }
+      case 'unit_test':
+        if (rec.examId != null) {
+          context.push('/exam/${rec.examId}');
+        } else {
+          context.go('/exams');
+        }
       case 'learn_kp':
         final textbook = home.continueLearning == null
             ? (home.textbooks.isEmpty ? null : home.textbooks.first)
@@ -397,6 +410,8 @@ class _RecommendationCard extends StatelessWidget {
         return Icons.fitness_center;
       case 'continue':
         return Icons.play_circle_outline;
+      case 'unit_test':
+        return Icons.assignment_outlined;
       default:
         return Icons.bolt_outlined;
     }

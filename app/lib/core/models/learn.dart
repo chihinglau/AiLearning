@@ -338,19 +338,25 @@ class HomeContinue {
   }
 }
 
-/// 首页推荐行动：review / learn_kp / practice / continue / daily。
+/// 首页推荐行动：review / learn_kp / practice / unit_test / continue / daily。
 class HomeRecommendation {
   const HomeRecommendation({
     required this.action,
     required this.label,
     required this.reason,
     this.knowledgePointId,
+    this.chapterId,
+    this.chapterName,
+    this.examId,
   });
 
   final String action;
   final String label;
   final String reason;
   final int? knowledgePointId;
+  final int? chapterId;
+  final String? chapterName;
+  final int? examId;
 
   factory HomeRecommendation.fromJson(Map<String, dynamic> json) {
     return HomeRecommendation(
@@ -358,6 +364,9 @@ class HomeRecommendation {
       label: json['label'] as String? ?? '每日一练',
       reason: json['reason'] as String? ?? '',
       knowledgePointId: json['knowledge_point_id'] as int?,
+      chapterId: json['chapter_id'] as int?,
+      chapterName: json['chapter_name'] as String?,
+      examId: json['exam_id'] as int?,
     );
   }
 }

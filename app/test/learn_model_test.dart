@@ -170,6 +170,37 @@ void main() {
       expect(home.recommendation.action, 'review');
     });
 
+    test('解析单元测推荐与章节/试卷信息', () {
+      final recommendation = HomeRecommendation.fromJson({
+        'action': 'unit_test',
+        'label': '单元测试',
+        'reason': '「第一单元」已掌握，建议完成单元测检验',
+        'chapter_id': 7,
+        'chapter_name': '第一单元',
+        'exam_id': 99,
+      });
+
+      expect(recommendation.action, 'unit_test');
+      expect(recommendation.chapterId, 7);
+      expect(recommendation.chapterName, '第一单元');
+      expect(recommendation.examId, 99);
+
+      final home = HomeData.fromJson({
+        'grade': 3,
+        'today_plan': <String, dynamic>{},
+        'recommendation': {
+          'action': 'unit_test',
+          'label': '单元测试',
+          'exam_id': 99,
+        },
+        'pending_exams': [
+          {'exam_id': 99, 'title': '第一单元测', 'exam_type': 'unit'},
+        ],
+      });
+      expect(home.pendingExams, hasLength(1));
+      expect(home.pendingExams.first['exam_id'], 99);
+    });
+
     test('未绑定教材时 needs_binding 与推荐教材可用', () {
       final home = HomeData.fromJson({
         'grade': 1,

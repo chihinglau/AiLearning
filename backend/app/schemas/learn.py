@@ -285,6 +285,9 @@ class HomeRecommendation(BaseModel):
     label: str
     reason: str
     knowledge_point_id: Optional[int] = None
+    chapter_id: Optional[int] = None
+    chapter_name: Optional[str] = None
+    exam_id: Optional[int] = None
 
 
 class HomeOut(BaseModel):

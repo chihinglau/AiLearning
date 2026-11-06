@@ -49,6 +49,7 @@ from app.schemas.learn import (
 )
 from app.services import learning as engine
 from app.services import practice as practice_service
+from app.services import recommendation
 from app.services import study_state
 from app.services import textbook as textbook_service
 
@@ -1257,39 +1258,26 @@ def home(
                 knowledge_point_name=kp.name if kp else None,
             )
 
-    weakest = db.scalar(
-        select(MasteryScore)
-        .where(MasteryScore.user_id == current.id)
-        .order_by(MasteryScore.score.asc())
-        .limit(1)
+    rec = recommendation.build_recommendation(
+        db,
+        user=current,
+        now=now,
+        due_review=int(due_review),
+        textbook_ids=[textbook.id for _, textbook in rows],
+        studied_chapter_id=(
+            continue_learning.chapter_id if continue_learning is not None else None
+        ),
     )
-    if due_review > 0:
-        recommendation = HomeRecommendation(
-            action="review", label="去复习", reason=f"今日有 {due_review} 道错题到期"
-        )
-    elif weakest is not None and weakest.score < 40:
-        kp = db.get(KnowledgePoint, weakest.knowledge_point_id)
-        recommendation = HomeRecommendation(
-            action="learn_kp",
-            label="先学讲解",
-            reason="存在掌握度低于 40 的知识点",
-            knowledge_point_id=kp.id if kp else None,
-        )
-    elif weakest is not None and weakest.score < 70:
-        recommendation = HomeRecommendation(
-            action="practice",
-            label="专项练习",
-            reason="存在掌握度 40-70 的知识点，建议专项巩固",
-            knowledge_point_id=weakest.knowledge_point_id,
-        )
-    elif continue_learning is not None:
-        recommendation = HomeRecommendation(
-            action="continue", label="继续学习", reason="接着上次的学习内容继续"
-        )
-    else:
-        recommendation = HomeRecommendation(
-            action="daily", label="每日一练", reason="保持手感，从每日一练开始"
-        )
+    recommendation_out = HomeRecommendation(
+        action=rec["action"],
+        label=rec["label"],
+        reason=rec["reason"],
+        knowledge_point_id=rec.get("knowledge_point_id"),
+        chapter_id=rec.get("chapter_id"),
+        chapter_name=rec.get("chapter_name"),
+        exam_id=rec.get("exam_id"),
+    )
+    pending_exams = recommendation.build_pending_exams(db, user=current, now=now)
 
     return HomeOut(
         grade=grade,
@@ -1308,6 +1296,6 @@ def home(
             new_kp_target=1,
         ),
         continue_learning=continue_learning,
-        recommendation=recommendation,
-        pending_exams=[],
+        recommendation=recommendation_out,
+        pending_exams=pending_exams,
     )
