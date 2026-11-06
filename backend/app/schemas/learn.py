@@ -11,6 +11,8 @@ class LearnStartIn(BaseModel):
     knowledge_point_id: Optional[int] = None
     subject: Optional[str] = None
     count: int = Field(default=10, ge=1, le=50)
+    # 教材与年级不一致时需二次确认后继续（D-04 §13）
+    confirm_mismatch: bool = False
 
 
 class LearnStartOut(BaseModel):
@@ -97,6 +99,7 @@ class HomeTextbook(BaseModel):
     version: str
     grade: int
     semester: str
+    mismatch: bool = False
 
 
 class HomeTodayPlan(BaseModel):
@@ -130,6 +133,7 @@ class HomeOut(BaseModel):
     needs_binding: bool
     textbooks: list[HomeTextbook] = []
     recommended: list[HomeTextbook] = []
+    mismatch_subjects: list[str] = []
     today_plan: HomeTodayPlan
     continue_learning: Optional[HomeContinue] = None
     recommendation: HomeRecommendation

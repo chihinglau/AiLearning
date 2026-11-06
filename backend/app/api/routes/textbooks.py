@@ -33,7 +33,7 @@ def _require_student(current: User) -> None:
         )
 
 
-def _binding_out(binding: TextbookBinding, textbook) -> BindingOut:
+def _binding_out(binding: TextbookBinding, textbook, grade: int | None) -> BindingOut:
     return BindingOut(
         id=binding.id,
         subject=binding.subject,
@@ -42,6 +42,7 @@ def _binding_out(binding: TextbookBinding, textbook) -> BindingOut:
         is_primary=binding.is_primary,
         status=binding.status,
         bound_at=binding.bound_at,
+        mismatch=grade is not None and textbook.grade != grade,
         textbook=TextbookBrief(
             id=textbook.id,
             subject=textbook.subject,
@@ -57,7 +58,7 @@ def list_bindings(
     current: User = Depends(get_current_user), db: Session = Depends(get_db)
 ) -> list[BindingOut]:
     _require_student(current)
-    return [_binding_out(b, t) for b, t in service.active_bindings(db, current)]
+    return [_binding_out(b, t, current.grade) for b, t in service.active_bindings(db, current)]
 
 
 @router.get("/recommend", response_model=RecommendationOut)
@@ -92,7 +93,9 @@ def auto_bind(
     _require_student(current)
     bindings = service.auto_bind(db, current)
     db.commit()
-    out = [_binding_out(b, db.get(Textbook, b.textbook_id)) for b in bindings]
+    out = [
+        _binding_out(b, db.get(Textbook, b.textbook_id), current.grade) for b in bindings
+    ]
     return AutoBindOut(bound=len(out), bindings=out)
 
 
@@ -120,7 +123,7 @@ def bind(
         )
     db.commit()
     textbook = db.get(Textbook, payload.textbook_id)
-    return _binding_out(binding, textbook)
+    return _binding_out(binding, textbook, current.grade)
 
 
 @router.delete("/{binding_id}", response_model=BindingOut)
@@ -145,4 +148,4 @@ def unbind(
         db.commit()
         db.refresh(binding)
     textbook = db.get(Textbook, binding.textbook_id)
-    return _binding_out(binding, textbook)
+    return _binding_out(binding, textbook, current.grade)

@@ -21,6 +21,8 @@ class BindingOut(BaseModel):
     status: str
     bound_at: datetime
     textbook: TextbookBrief
+    # 教材年级与当前年级不一致（D-04 §13）
+    mismatch: bool = False
 
 
 class RecommendedSubject(BaseModel):

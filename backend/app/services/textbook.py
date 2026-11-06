@@ -185,3 +185,35 @@ def active_bindings(db: Session, user: User) -> list[tuple[TextbookBinding, Text
         .order_by(TextbookBinding.subject)
     ).all()
     return [(binding, textbook) for binding, textbook in rows]
+
+
+def mismatched_subjects(db: Session, user: User) -> list[str]:
+    """绑定的教材年级与用户年级不一致的学科（D-04 §13 冲突检测）。"""
+    grade = user.grade
+    if grade is None:
+        return []
+    rows = db.execute(
+        select(TextbookBinding, Textbook)
+        .join(Textbook, Textbook.id == TextbookBinding.textbook_id)
+        .where(
+            TextbookBinding.user_id == user.id,
+            TextbookBinding.status == "active",
+        )
+    ).all()
+    return sorted({b.subject for b, t in rows if t.grade != grade})
+
+
+def has_mismatch(db: Session, user: User, subject: str) -> bool:
+    """指定学科的当前教材是否与年级不一致。"""
+    if user.grade is None:
+        return False
+    row = db.execute(
+        select(TextbookBinding, Textbook)
+        .join(Textbook, Textbook.id == TextbookBinding.textbook_id)
+        .where(
+            TextbookBinding.user_id == user.id,
+            TextbookBinding.subject == subject,
+            TextbookBinding.status == "active",
+        )
+    ).first()
+    return bool(row and row[1].grade != user.grade)

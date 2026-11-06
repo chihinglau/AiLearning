@@ -163,6 +163,29 @@ def start(
         stmt = stmt.where(Question.subject == payload.subject)
 
     candidates = list(db.scalars(stmt))
+
+    # 教材与年级不一致时练习前二次确认（D-04 §13）
+    scope_subject = payload.subject or (kp.subject if kp is not None else None)
+    if scope_subject is None and payload.chapter_id:
+        chapter = db.get(Chapter, payload.chapter_id)
+        if chapter is not None:
+            book = db.get(Textbook, chapter.textbook_id)
+            scope_subject = book.subject if book is not None else None
+    if (
+        current.role == "student"
+        and scope_subject
+        and not payload.confirm_mismatch
+        and textbook_service.has_mismatch(db, current, scope_subject)
+    ):
+        raise HTTPException(
+            status_code=428,
+            detail={
+                "code": "TEXTBOOK_MISMATCH",
+                "message": "当前教材与年级不一致，请确认后继续",
+                "subject": scope_subject,
+            },
+        )
+
     # 兼容旧种子（题目只用 tags 关联知识点名称）
     if kp is not None:
         linked = [q for q in candidates if q.knowledge_point_id == kp.id]
@@ -463,13 +486,16 @@ _PRACTICE_PLAN = {
 }
 
 
-def _home_textbook(subject: str, textbook: Textbook, semester: str) -> HomeTextbook:
+def _home_textbook(
+    subject: str, textbook: Textbook, semester: str, grade: int
+) -> HomeTextbook:
     return HomeTextbook(
         subject=subject,
         textbook_id=textbook.id,
         version=textbook.version,
         grade=textbook.grade,
         semester=semester,
+        mismatch=textbook.grade != grade,
     )
 
 
@@ -500,12 +526,13 @@ def home(
         )
         .order_by(TextbookBinding.subject)
     ).all()
-    textbooks = [_home_textbook(b.subject, t, b.semester) for b, t in rows]
+    textbooks = [_home_textbook(b.subject, t, b.semester, grade) for b, t in rows]
     needs_binding = not textbooks
+    mismatch_subjects = textbook_service.mismatched_subjects(db, current)
     recommended = []
     if needs_binding:
         recommended = [
-            _home_textbook(subject, textbook, semester)
+            _home_textbook(subject, textbook, semester, grade)
             for subject, textbook in textbook_service.recommended_textbooks(
                 db, grade=grade, semester=semester, region=region
             )
@@ -588,6 +615,7 @@ def home(
         needs_binding=needs_binding,
         textbooks=textbooks,
         recommended=recommended,
+        mismatch_subjects=mismatch_subjects,
         today_plan=HomeTodayPlan(
             due_review=due_review,
             practice_questions=question_count,
