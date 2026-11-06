@@ -1,9 +1,9 @@
 # 深爱学（AiLearning）项目实施任务计划与进度跟踪
 
 > **文档性质**：项目主计划 / 进度跟踪 / 过程追溯（全程伴随开发周期）
-> **版本**：v1.37
+> **版本**：v1.38
 > **创建日期**：2026-11-06
-> **最后更新**：2026-11-06 20:10（P0-37 考试中心/答题/报告完成）
+> **最后更新**：2026-11-06 21:00（P0-38 前端单测/组件测试补充完成）
 > **参考设计文档**：见[§1.1 参考设计文档清单](#11-参考设计文档清单)（共 8 份，含 4 份设计方案、4 份支撑文档）
 > **需求追踪**：见[§1.2 需求—设计—任务追踪矩阵](#12-需求设计任务追踪矩阵)
 > **维护人**：项目负责人（PM）
@@ -218,7 +218,7 @@ DONE ──返工（需CR）──► DOING
 | P0-35 | 单元/节/知识点树与详情页（掌握度环、状态、前置跳转、讲解/例题） | FE | 12 | P0 | P0-19/P0-20 | `DONE` | 6 | L4/L5 | `knowledge_page` 改为单元目录（掌握度环/进度/节·知识点·题量），新增 `unit_page`（节分组、知识点状态与练一练、单元综合练习）、`kp_detail_page`（讲解/前置跳转/状态/掌握置信度/例题带答案解析/我已理解）、`mastery_ring` 通用组件；`learn_service` 增加 units/unitDetail/kpDetail/kpExamples/markKpRead，模型增加 UnitSummary/UnitSection/UnitDetail/KpBrief/KpDetail/KpExample；后端新增 `GET /learn/kp/{id}/examples`（最多 2 道，带答案解析，`tests/test_unit_tree.py` 新增 1 例）；路由 `/unit/:id`、`/kp/:id`；`dart analyze` 0 issues、`flutter test` 10 passed、`pytest` 157 passed |
 | P0-36 | 练习配置页 + 预览 + 答题页扩展（模式、续答、结算、下一步） | FE | 12 | P0 | P0-21/P0-23 | `DONE` | 8 | L8/L13 | 新增 `practice/config` 配置页（专项/同步/考前模式、知识点/单元/整册范围、题量、题型、组卷预览与不足提示）；`session_page` 扩展范围组卷（同 seed 预览=实际）、428 教材年级冲突二次确认、断点续答（`/session?session=id`）、提交带 `session_id/source`、结算页（正确率/用时/错题/知识点表现/下一步）；首页增加「继续上次练习」入口（本地草稿 `practice_last_session`）；模型新增 PracticePreview/PracticeStartResult/PracticeSessionData/PracticeFinish；`dart analyze` 0 issues、`flutter test` 10 passed、`pytest` 157 passed |
 | P0-37 | 考试中心列表、考试详情/答题（计时、自动保存、交卷确认）、报告页 | FE | 16 | P0 | P0-28/P0-29 | `DONE` | 10 | L10/L11 | 新增 `core/models/exam.dart`（ExamSummary/ExamAttempt/ExamReport/题型与知识点统计/错题与下一步）、`exam_service.dart`（列表/开始续答/防抖保存/交卷/报告）、`api_client` 增加 `patchJson`；新增 `features/exam/exam_list_page.dart`（待考/进行中/已完成分类、开始/继续/查看报告）、`exam_page.dart`（倒计时、答题卡、3 秒防抖自动保存、交卷确认、超时自动交卷、退出保留计时）、`exam_report_page.dart`（总分/正确率/用时、题型得分率、知识点得分率与跳转、错题清单与解析、薄弱点专项/错题重练/再考一次下一步）；路由 `/exams`、`/exam/:examId`（`learn:exam:take`）、`/exam/report/:attemptId`（`learn:exam:report:self`），学习首页考试入口改为跳转考试中心；`exam_model_test.dart` 3 例；`dart analyze` 0 issues、`flutter test` 13 passed、`pytest` 157 passed |
-| P0-38 | 前端单测/组件测试补充（模型解析、状态机、守卫） | FE/QA | 8 | P0 | P0-31~P0-37 | `TODO` | — | L15 | — |
+| P0-38 | 前端单测/组件测试补充（模型解析、状态机、守卫） | FE/QA | 8 | P0 | P0-31~P0-37 | `DONE` | 4 | L15 | 新增 `permission_gate_test.dart`（命中任一权限放行、无权限 403、超管 `*` 直通、未登录 fallback、`anyOf` 为空不限制 + `AppUser` 权限判定 5 例组件测试）；`api_error_guide_test.dart` 5 例（`TOKEN_REVOKED`/`PERMISSION_DENIED`/`GRADE_REQUIRED`/401/403 兜底/普通文案）；`practice_session_model_test.dart` 4 例（预览、开始、会话续答、结算知识点表现）；`textbook_binding_model_test.dart` 4 例（绑定/推荐/学段映射）；累计前端测试 32 例全部通过、`dart analyze` 0 issues |
 
 #### 3.1.6 测试与验收 P0
 
@@ -428,12 +428,12 @@ flowchart LR
 | 指标 | 数值 |
 |---|---|
 | 任务总数（不含基线） | 77（开发 68：P0 43 + P1 15 + P2 10；发布 9：R-01~R-09） |
-| `TODO` | 40 |
+| `TODO` | 39 |
 | `DOING` | 0 |
-| `DONE` | 37（P0-01~P0-37；基线 5 项已冻结） |
+| `DONE` | 38（P0-01~P0-38；基线 5 项已冻结） |
 | `BLOCKED` | 0 |
 | 预估总工时 | 676 h（开发 557 = P0 310 + P1 129 + P2 118；发布 119） |
-| 已投入工时 | 115 h（P0-01 3、P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3、P0-23 3、P0-24 3、P0-25 3、P0-26 3、P0-27 3、P0-28 4、P0-29 3、P0-30 3、P0-31 4、P0-32 3、P0-33 4、P0-34 4、P0-35 6、P0-36 8、P0-37 10） |
+| 已投入工时 | 119 h（P0-01 3、P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3、P0-23 3、P0-24 3、P0-25 3、P0-26 3、P0-27 3、P0-28 4、P0-29 3、P0-30 3、P0-31 4、P0-32 3、P0-33 4、P0-34 4、P0-35 6、P0-36 8、P0-37 10、P0-38 4） |
 | 当前迭代 | P0（身份与学习主链路）+ 发布准备（R-05 软著先行） |
 | 迭代目标 | 年级必填与引导、教材绑定、学习首页、四层知识点、练习预览/续答、单元测客观题闭环；并行启动软著与签名/隐私/部署 |
 | 里程碑 | M2.5（P0 完成）→ M5（发布就绪） |
@@ -511,6 +511,7 @@ flowchart LR
 | v1.35 | 2026-11-06 | AR | P0-35 知识树与知识点详情落地（单元目录 → 节 → 知识点四层下钻；`unit_page` 展示节分组/状态/练一练/单元综合练习，`kp_detail_page` 展示讲解、前置跳转、掌握置信度、例题答案解析与「我已理解」；新增通用 `mastery_ring`；后端新增 `GET /learn/kp/{id}/examples` 带答案与解析）；§1.2 知识点分层转 `DONE`、§6.1 L4/L5 转 `DONE`；§5.1 同步（DONE 35 / 投入 97 h / pytest 157 / flutter test 10） |
 | v1.36 | 2026-11-06 | AR | P0-36 智能练习前端落地（新增 `practice/config` 配置页：模式/范围/题量/题型 + 组卷预览；答题页扩展范围组卷、428 冲突二次确认、断点续答、提交带会话与来源、结算页含知识点表现与下一步；首页新增「继续上次练习」本地草稿入口）；§1.2 智能辅助练习转 `DONE`、§6.1 L8/L13 转 `DONE`；§5.1 同步（DONE 36 / 投入 105 h / pytest 157 / flutter test 10） |
 | v1.37 | 2026-11-06 | AR | P0-37 考试前端闭环落地（新增考试中心列表、限时答题页（倒计时/答题卡/3 秒防抖自动保存/交卷确认/超时自动交卷）、报告页（总分/正确率、题型与知识点得分率、错题解析、薄弱点专项/错题重练/再考一次）；学习首页考试入口接通；`exam_model_test.dart` 3 例）；§1.2 单元测试转 `DONE`、§6.1 L9~L12 转 `DONE`；§5.1 同步（DONE 37 / 投入 115 h / pytest 157 / flutter test 13） |
+| v1.38 | 2026-11-06 | AR | P0-38 前端单测补充（`PermissionGate` 权限守卫 5 例组件测试、`ApiErrorGuide` 错误映射 5 例、练习会话模型 4 例、教材绑定模型与学段映射 4 例）；§5.1 同步（DONE 38 / 投入 119 h / pytest 157 / flutter test 32） |
 
 ---
 
@@ -558,4 +559,4 @@ flowchart LR
 
 ---
 
-> **当前下一步**：P0-38（前端单测/组件测试补充：模型解析、状态机、守卫）。所有任务按依赖图推进，每完成一个任务即回写本文件状态。
+> **当前下一步**：P0-39（后端单测：年级派生、权限矩阵、范围解析、组卷约束、考试幂等）。所有任务按依赖图推进，每完成一个任务即回写本文件状态。
