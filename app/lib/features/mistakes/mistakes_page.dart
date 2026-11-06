@@ -1,3 +1,4 @@
+import 'package:ai_learning/core/errors/api_error_guide.dart';
 import 'package:ai_learning/core/models/learn.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
@@ -45,7 +46,7 @@ class _MistakesPageState extends ConsumerState<MistakesPage> {
     } on ApiException catch (error) {
       if (!mounted) return;
       setState(() {
-        _error = error.message;
+        _error = ApiErrorGuide.from(error).message;
         _loading = false;
       });
     }
@@ -61,7 +62,7 @@ class _MistakesPageState extends ConsumerState<MistakesPage> {
       await _load();
     } on ApiException catch (error) {
       if (!mounted) return;
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(error.message)));
+      await handleApiError(context, ref, error);
     }
   }
 

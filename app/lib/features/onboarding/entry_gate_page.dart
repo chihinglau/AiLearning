@@ -1,3 +1,4 @@
+import 'package:ai_learning/core/errors/api_error_guide.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
 import 'package:flutter/material.dart';
@@ -53,7 +54,7 @@ class _EntryGatePageState extends ConsumerState<EntryGatePage> {
       if (!mounted) return;
       setState(() {
         _loading = false;
-        _error = error.message;
+        _error = ApiErrorGuide.from(error).message;
       });
     }
   }

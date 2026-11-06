@@ -1,3 +1,4 @@
+import 'package:ai_learning/core/errors/api_error_guide.dart';
 import 'package:ai_learning/core/models/content.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
@@ -45,7 +46,7 @@ class _LearnPageState extends ConsumerState<LearnPage> {
     } on ApiException catch (error) {
       if (!mounted) return;
       setState(() {
-        _error = error.message;
+        _error = ApiErrorGuide.from(error).message;
         _loadingTextbooks = false;
       });
     }
@@ -68,7 +69,7 @@ class _LearnPageState extends ConsumerState<LearnPage> {
     } on ApiException catch (error) {
       if (!mounted) return;
       setState(() {
-        _error = error.message;
+        _error = ApiErrorGuide.from(error).message;
         _loadingChapters = false;
       });
     }

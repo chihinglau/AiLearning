@@ -8,6 +8,8 @@ class AppUser {
     this.grade,
     this.isChild = false,
     this.dailyLimitMinutes = 120,
+    this.permissions = const [],
+    this.scope,
   });
 
   final int id;
@@ -18,10 +20,23 @@ class AppUser {
   final int? grade;
   final bool isChild;
   final int dailyLimitMinutes;
+  final List<String> permissions;
+  final String? scope;
 
   bool get isStudent => role == 'student';
 
-  AppUser copyWith({String? stage, int? grade}) {
+  bool get isSuperAdmin => permissions.contains('*');
+
+  bool hasPermission(String permission) {
+    return isSuperAdmin || permissions.contains(permission);
+  }
+
+  bool hasAnyPermission(Iterable<String> required) {
+    if (isSuperAdmin) return true;
+    return required.any(permissions.contains);
+  }
+
+  AppUser copyWith({String? stage, int? grade, List<String>? permissions}) {
     return AppUser(
       id: id,
       phone: phone,
@@ -31,6 +46,8 @@ class AppUser {
       grade: grade ?? this.grade,
       isChild: isChild,
       dailyLimitMinutes: dailyLimitMinutes,
+      permissions: permissions ?? this.permissions,
+      scope: scope,
     );
   }
 
@@ -44,6 +61,10 @@ class AppUser {
       grade: json['grade'] as int?,
       isChild: json['is_child'] as bool? ?? false,
       dailyLimitMinutes: json['daily_limit_minutes'] as int? ?? 120,
+      permissions: (json['permissions'] as List<dynamic>? ?? const [])
+          .map((item) => item as String)
+          .toList(),
+      scope: json['scope'] as String?,
     );
   }
 }

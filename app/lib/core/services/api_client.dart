@@ -2,13 +2,21 @@ import 'package:ai_learning/core/constants/app_constants.dart';
 import 'package:dio/dio.dart';
 
 class ApiException implements Exception {
-  const ApiException(this.message, {this.statusCode, this.payload});
+  const ApiException(
+    this.message, {
+    this.statusCode,
+    this.payload,
+    this.code,
+  });
 
   final String message;
   final int? statusCode;
 
   /// 后端结构化错误体（如 428 的 impact / confirm_token）。
   final Map<String, dynamic>? payload;
+
+  /// 统一业务错误码（如 TOKEN_REVOKED、PERMISSION_DENIED）。
+  final String? code;
 
   @override
   String toString() => message;
@@ -119,17 +127,39 @@ class ApiClient {
     final data = error.response?.data;
     if (data is Map<String, dynamic>) {
       final detail = data['detail'];
+      final topCode = data['code'] as String?;
       if (detail is String) {
-        return ApiException(detail, statusCode: statusCode, payload: data);
+        return ApiException(
+          detail,
+          statusCode: statusCode,
+          payload: data,
+          code: topCode,
+        );
+      }
+      if (detail is Map<String, dynamic>) {
+        final code = detail['code'] as String? ?? topCode;
+        final message = detail['message'] as String?;
+        return ApiException(
+          message ?? '请求失败（${statusCode ?? error.type.name}）',
+          statusCode: statusCode,
+          payload: data,
+          code: code,
+        );
       }
       final message = data['message'];
       if (message is String) {
-        return ApiException(message, statusCode: statusCode, payload: data);
+        return ApiException(
+          message,
+          statusCode: statusCode,
+          payload: data,
+          code: topCode,
+        );
       }
       return ApiException(
         '请求失败（${statusCode ?? error.type.name}）',
         statusCode: statusCode,
         payload: data,
+        code: topCode,
       );
     }
     if (error.type == DioExceptionType.connectionError ||

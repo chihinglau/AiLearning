@@ -1,5 +1,6 @@
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/features/auth/login_page.dart';
+import 'package:ai_learning/features/common/permission_gate.dart';
 import 'package:ai_learning/features/learn/knowledge_page.dart';
 import 'package:ai_learning/features/onboarding/entry_gate_page.dart';
 import 'package:ai_learning/features/onboarding/onboarding_page.dart';
@@ -14,9 +15,13 @@ final routerProvider = Provider<GoRouter>((ref) {
   return GoRouter(
     initialLocation: '/login',
     redirect: (context, state) {
-      final status = ref.read(onboardingStatusProvider);
       final location = state.matchedLocation;
-      if (location == '/login' || location == '/gate') return null;
+      final user = ref.read(currentUserProvider);
+      if (user == null) {
+        return location == '/login' ? null : '/login';
+      }
+      if (location == '/login') return null;
+      final status = ref.read(onboardingStatusProvider);
       if (status == OnboardingStatus.required && location != '/onboarding') {
         return '/onboarding';
       }
@@ -42,13 +47,19 @@ final routerProvider = Provider<GoRouter>((ref) {
         path: '/shell',
         builder: (context, state) {
           final tab = int.tryParse(state.uri.queryParameters['tab'] ?? '') ?? 0;
-          return AppShell(initialTab: tab.clamp(0, 2));
+          return PermissionGate(
+            anyOf: const ['learn:content:read'],
+            child: AppShell(initialTab: tab.clamp(0, 2)),
+          );
         },
       ),
       // 兼容旧版本跳转。
       GoRoute(
         path: '/home',
-        builder: (context, state) => const AppShell(),
+        builder: (context, state) => const PermissionGate(
+          anyOf: ['learn:content:read'],
+          child: AppShell(),
+        ),
       ),
       GoRoute(
         path: '/knowledge/:textbookId',
@@ -57,11 +68,14 @@ final routerProvider = Provider<GoRouter>((ref) {
           if (textbookId == null) {
             return const AppShell();
           }
-          return KnowledgePage(
-            textbookId: textbookId,
-            textbookName: state.uri.queryParameters['name'] ?? '知识点',
-            initialChapterId:
-                int.tryParse(state.uri.queryParameters['chapter'] ?? ''),
+          return PermissionGate(
+            anyOf: const ['learn:kp:study'],
+            child: KnowledgePage(
+              textbookId: textbookId,
+              textbookName: state.uri.queryParameters['name'] ?? '知识点',
+              initialChapterId:
+                  int.tryParse(state.uri.queryParameters['chapter'] ?? ''),
+            ),
           );
         },
       ),
@@ -69,12 +83,15 @@ final routerProvider = Provider<GoRouter>((ref) {
         path: '/session',
         builder: (context, state) {
           final qp = state.uri.queryParameters;
-          return SessionPage(
-            title: qp['title'] ?? '自适应练习',
-            knowledgePointId: int.tryParse(qp['kp'] ?? ''),
-            chapterId: int.tryParse(qp['chapter'] ?? ''),
-            subject: qp['subject'],
-            reviewMode: qp['review'] == '1',
+          return PermissionGate(
+            anyOf: const ['learn:practice:start'],
+            child: SessionPage(
+              title: qp['title'] ?? '自适应练习',
+              knowledgePointId: int.tryParse(qp['kp'] ?? ''),
+              chapterId: int.tryParse(qp['chapter'] ?? ''),
+              subject: qp['subject'],
+              reviewMode: qp['review'] == '1',
+            ),
           );
         },
       ),
@@ -86,7 +103,10 @@ final routerProvider = Provider<GoRouter>((ref) {
           if (chapterId == null) {
             return const LoginPage();
           }
-          return PracticePage(chapterId: chapterId, chapterName: name);
+          return PermissionGate(
+            anyOf: const ['learn:practice:start'],
+            child: PracticePage(chapterId: chapterId, chapterName: name),
+          );
         },
       ),
     ],

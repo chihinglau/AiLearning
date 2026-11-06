@@ -1,4 +1,5 @@
 import 'package:ai_learning/core/constants/app_constants.dart';
+import 'package:ai_learning/core/errors/api_error_guide.dart';
 import 'package:ai_learning/core/models/textbook_binding.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
@@ -84,7 +85,7 @@ class _OnboardingPageState extends ConsumerState<OnboardingPage> {
       return true;
     } on ApiException catch (error) {
       if (!mounted) return false;
-      setState(() => _error = error.message);
+      setState(() => _error = ApiErrorGuide.from(error).message);
       return false;
     }
   }
@@ -107,7 +108,7 @@ class _OnboardingPageState extends ConsumerState<OnboardingPage> {
       if (!mounted) return;
       setState(() {
         _loadingRecommendation = false;
-        _error = error.message;
+        _error = ApiErrorGuide.from(error).message;
       });
     }
   }
@@ -146,7 +147,7 @@ class _OnboardingPageState extends ConsumerState<OnboardingPage> {
       if (!mounted) return;
       setState(() {
         _submitting = false;
-        _error = error.message;
+        _error = ApiErrorGuide.from(error).message;
       });
     }
   }

@@ -1,3 +1,4 @@
+import 'package:ai_learning/core/errors/api_error_guide.dart';
 import 'package:ai_learning/core/models/content.dart';
 import 'package:ai_learning/core/models/learn.dart';
 import 'package:ai_learning/core/providers.dart';
@@ -84,7 +85,7 @@ class _SessionPageState extends ConsumerState<SessionPage> {
     } on ApiException catch (error) {
       if (!mounted) return;
       setState(() {
-        _error = error.message;
+        _error = ApiErrorGuide.from(error).message;
         _loading = false;
       });
     }
@@ -131,7 +132,7 @@ class _SessionPageState extends ConsumerState<SessionPage> {
       });
     } on ApiException catch (error) {
       if (!mounted) return;
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(error.message)));
+      await handleApiError(context, ref, error);
     } finally {
       if (mounted) setState(() => _submitting = false);
     }

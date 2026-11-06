@@ -1,3 +1,4 @@
+import 'package:ai_learning/core/errors/api_error_guide.dart';
 import 'package:ai_learning/core/models/learn.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
@@ -52,7 +53,7 @@ class _KnowledgePageState extends ConsumerState<KnowledgePage> {
     } on ApiException catch (error) {
       if (!mounted) return;
       setState(() {
-        _error = error.message;
+        _error = ApiErrorGuide.from(error).message;
         _loading = false;
       });
     }
