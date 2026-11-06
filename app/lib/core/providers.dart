@@ -2,6 +2,7 @@ import 'package:ai_learning/core/models/user.dart';
 import 'package:ai_learning/core/services/api_client.dart';
 import 'package:ai_learning/core/services/auth_service.dart';
 import 'package:ai_learning/core/services/content_service.dart';
+import 'package:ai_learning/core/services/exam_service.dart';
 import 'package:ai_learning/core/services/learn_service.dart';
 import 'package:ai_learning/core/services/textbook_service.dart';
 import 'package:ai_learning/core/services/user_service.dart';
@@ -37,6 +38,10 @@ final learnServiceProvider = Provider<LearnService>((ref) {
 
 final textbookServiceProvider = Provider<TextbookService>((ref) {
   return TextbookService(ref.watch(apiClientProvider));
+});
+
+final examServiceProvider = Provider<ExamService>((ref) {
+  return ExamService(ref.watch(apiClientProvider));
 });
 
 final userServiceProvider = Provider<UserService>((ref) {

@@ -311,11 +311,7 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
                         : '${_home!.pendingExams.length} 场考试待完成',
                   ),
                   trailing: const Icon(Icons.chevron_right),
-                  onTap: () {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('考试中心即将上线')),
-                    );
-                  },
+                  onTap: () => context.go('/exams'),
                 ),
               ),
             ],
