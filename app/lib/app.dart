@@ -6,6 +6,7 @@ import 'package:ai_learning/features/learn/kp_detail_page.dart';
 import 'package:ai_learning/features/learn/unit_page.dart';
 import 'package:ai_learning/features/onboarding/entry_gate_page.dart';
 import 'package:ai_learning/features/onboarding/onboarding_page.dart';
+import 'package:ai_learning/features/practice/practice_config_page.dart';
 import 'package:ai_learning/features/practice/practice_page.dart';
 import 'package:ai_learning/features/session/session_page.dart';
 import 'package:ai_learning/features/shell/app_shell.dart';
@@ -101,6 +102,7 @@ final routerProvider = Provider<GoRouter>((ref) {
               chapterId: chapterId,
               unitName: query['name'] ?? '单元',
               textbookName: query['textbook'] ?? '教材',
+              textbookId: int.tryParse(query['tid'] ?? ''),
             ),
           );
         },
@@ -117,6 +119,28 @@ final routerProvider = Provider<GoRouter>((ref) {
         },
       ),
       GoRoute(
+        path: '/practice/config',
+        builder: (context, state) {
+          final qp = state.uri.queryParameters;
+          final ids = (qp['ids'] ?? '')
+              .split(',')
+              .map(int.tryParse)
+              .whereType<int>()
+              .toList();
+          return PermissionGate(
+            anyOf: const ['learn:practice:start'],
+            child: PracticeConfigPage(
+              scopeType: qp['scope'] ?? 'kp',
+              scopeIds: ids,
+              title: qp['title'] ?? '智能练习',
+              chapterId: int.tryParse(qp['chapter'] ?? ''),
+              textbookId: int.tryParse(qp['textbook'] ?? ''),
+              initialMode: qp['mode'] ?? 'special',
+            ),
+          );
+        },
+      ),
+      GoRoute(
         path: '/session',
         builder: (context, state) {
           final qp = state.uri.queryParameters;
@@ -128,6 +152,20 @@ final routerProvider = Provider<GoRouter>((ref) {
               chapterId: int.tryParse(qp['chapter'] ?? ''),
               subject: qp['subject'],
               reviewMode: qp['review'] == '1',
+              sessionId: int.tryParse(qp['session'] ?? ''),
+              scopeType: qp['scope'],
+              scopeIds: (qp['ids'] ?? '')
+                  .split(',')
+                  .map(int.tryParse)
+                  .whereType<int>()
+                  .toList(),
+              count: int.tryParse(qp['count'] ?? '') ?? 10,
+              qTypes: (qp['qtypes'] ?? '')
+                  .split(',')
+                  .where((item) => item.isNotEmpty)
+                  .toList(),
+              mode: qp['mode'] ?? 'special',
+              seed: int.tryParse(qp['seed'] ?? ''),
             ),
           );
         },

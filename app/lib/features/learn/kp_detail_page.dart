@@ -108,7 +108,8 @@ class _KpDetailPageState extends ConsumerState<KpDetailPage> {
     final detail = _detail;
     if (detail == null) return;
     context.go(
-      '/session?kp=${detail.id}&title=${Uri.encodeComponent(detail.name)}',
+      '/practice/config?scope=kp&ids=${detail.id}'
+      '&title=${Uri.encodeComponent(detail.name)}',
     );
   }
 

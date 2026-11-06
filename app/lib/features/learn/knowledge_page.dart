@@ -61,7 +61,8 @@ class _KnowledgePageState extends ConsumerState<KnowledgePage> {
     context.go(
       '/unit/${unit.id}'
       '?name=${Uri.encodeComponent(unit.name)}'
-      '&textbook=${Uri.encodeComponent(widget.textbookName)}',
+      '&textbook=${Uri.encodeComponent(widget.textbookName)}'
+      '&tid=${widget.textbookId}',
     );
   }
 

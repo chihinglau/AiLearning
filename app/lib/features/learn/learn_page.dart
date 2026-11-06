@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:ai_learning/core/errors/api_error_guide.dart';
 import 'package:ai_learning/core/models/content.dart';
 import 'package:ai_learning/core/models/learn.dart';
@@ -31,6 +33,7 @@ class _StudentHomeView extends ConsumerStatefulWidget {
 
 class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
   HomeData? _home;
+  _LastPractice? _lastPractice;
   bool _loading = true;
   String? _error;
 
@@ -47,9 +50,11 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
     });
     try {
       final home = await ref.read(learnServiceProvider).home();
+      final lastPractice = await _loadLastPractice();
       if (!mounted) return;
       setState(() {
         _home = home;
+        _lastPractice = lastPractice;
         _loading = false;
       });
     } on ApiException catch (error) {
@@ -58,6 +63,28 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
         _error = ApiErrorGuide.from(error).message;
         _loading = false;
       });
+    }
+  }
+
+  Future<_LastPractice?> _loadLastPractice() async {
+    try {
+      final raw = await ref
+          .read(platformPalProvider)
+          .storage
+          .read('practice_last_session');
+      if (raw == null || raw.isEmpty) return null;
+      final data = jsonDecode(raw) as Map<String, dynamic>;
+      final total = data['total'] as int? ?? 0;
+      final answered = data['answered'] as int? ?? 0;
+      if (total <= 0 || answered >= total) return null;
+      return _LastPractice(
+        id: data['id'] as int? ?? 0,
+        title: data['title'] as String? ?? '上次练习',
+        total: total,
+        answered: answered,
+      );
+    } catch (_) {
+      return null;
     }
   }
 
@@ -172,6 +199,29 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
                 recommendation: _home!.recommendation,
                 onTap: () => _openRecommendation(_home!),
               ),
+              if (_lastPractice != null) ...[
+                const SizedBox(height: 12),
+                Card(
+                  child: ListTile(
+                    leading: CircleAvatar(
+                      backgroundColor: theme.colorScheme.tertiaryContainer,
+                      child: Icon(
+                        Icons.pause_circle_outline,
+                        color: theme.colorScheme.tertiary,
+                      ),
+                    ),
+                    title: Text('继续「${_lastPractice!.title}」'),
+                    subtitle: Text(
+                      '已完成 ${_lastPractice!.answered}/${_lastPractice!.total} 题',
+                    ),
+                    trailing: const Icon(Icons.chevron_right),
+                    onTap: () => context.go(
+                      '/session?session=${_lastPractice!.id}'
+                      '&title=${Uri.encodeComponent(_lastPractice!.title)}',
+                    ),
+                  ),
+                ),
+              ],
               const SizedBox(height: 20),
               _SectionTitle('今日计划'),
               const SizedBox(height: 8),
@@ -703,6 +753,20 @@ class _TextbookBrowseViewState extends ConsumerState<_TextbookBrowseView> {
       ),
     );
   }
+}
+
+class _LastPractice {
+  const _LastPractice({
+    required this.id,
+    required this.title,
+    required this.total,
+    required this.answered,
+  });
+
+  final int id;
+  final String title;
+  final int total;
+  final int answered;
 }
 
 String _semesterLabel(String semester) {

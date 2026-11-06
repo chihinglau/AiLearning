@@ -1,5 +1,6 @@
 import 'package:ai_learning/core/models/content.dart';
 import 'package:ai_learning/core/models/learn.dart';
+import 'package:ai_learning/core/models/practice_session.dart';
 import 'package:ai_learning/core/services/api_client.dart';
 
 class LearnService {
@@ -42,13 +43,74 @@ class LearnService {
     required int questionId,
     required Map<String, dynamic> userAnswer,
     int durationMs = 0,
+    int? sessionId,
+    String source = 'practice',
   }) async {
     final data = await _api.postJson('/api/learn/submit', {
       'question_id': questionId,
       'user_answer': userAnswer,
       'duration_ms': durationMs,
+      'session_id': sessionId,
+      'source': source,
     });
     return LearnSubmitResult.fromJson(data);
+  }
+
+  /// 智能练习组卷预览（P0-21）。
+  Future<PracticePreview> practicePreview({
+    required String scopeType,
+    List<int> scopeIds = const [],
+    int count = 10,
+    List<String> qTypes = const [],
+    String mode = 'special',
+    int? seed,
+  }) async {
+    final data = await _api.postJson('/api/learn/practice/preview', {
+      'scope_type': scopeType,
+      'scope_ids': scopeIds,
+      'count': count,
+      'q_types': qTypes,
+      'mode': mode,
+      'seed': seed,
+    });
+    return PracticePreview.fromJson(data);
+  }
+
+  /// 按预览参数开始练习（同一 seed 保证预览=实际），返回会话 ID。
+  Future<PracticeStartResult> startPractice({
+    required String scopeType,
+    List<int> scopeIds = const [],
+    int count = 10,
+    List<String> qTypes = const [],
+    String mode = 'special',
+    int? seed,
+    bool confirmMismatch = false,
+  }) async {
+    final data = await _api.postJson('/api/learn/start', {
+      'scope_type': scopeType,
+      'scope_ids': scopeIds,
+      'count': count,
+      'q_types': qTypes,
+      'mode': mode,
+      'seed': seed,
+      'confirm_mismatch': confirmMismatch,
+    });
+    return PracticeStartResult.fromJson(data);
+  }
+
+  /// 断点续答：会话题目、已答状态与下一题下标。
+  Future<PracticeSessionData> sessionDetail(int sessionId) async {
+    final data = await _api.getJson('/api/learn/sessions/$sessionId');
+    return PracticeSessionData.fromJson(data);
+  }
+
+  /// 结算：正确率、用时、知识点表现与错题数（幂等）。
+  Future<PracticeFinish> finishSession(int sessionId) async {
+    final data = await _api.postJson(
+      '/api/learn/sessions/$sessionId/finish',
+      const {},
+    );
+    return PracticeFinish.fromJson(data);
   }
 
   /// 错题本列表（active 待消灭 / mastered 已消灭）。

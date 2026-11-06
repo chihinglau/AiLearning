@@ -14,11 +14,13 @@ class UnitPage extends ConsumerStatefulWidget {
     required this.chapterId,
     required this.unitName,
     required this.textbookName,
+    this.textbookId,
   });
 
   final int chapterId;
   final String unitName;
   final String textbookName;
+  final int? textbookId;
 
   @override
   ConsumerState<UnitPage> createState() => _UnitPageState();
@@ -63,13 +65,17 @@ class _UnitPageState extends ConsumerState<UnitPage> {
 
   void _practiceNode(KnowledgeNode node) {
     context.go(
-      '/session?kp=${node.id}&title=${Uri.encodeComponent(node.name)}',
+      '/practice/config?scope=kp&ids=${node.id}'
+      '&chapter=${widget.chapterId}'
+      '${widget.textbookId == null ? '' : '&textbook=${widget.textbookId}'}'
+      '&title=${Uri.encodeComponent(node.name)}',
     );
   }
 
   void _practiceUnit() {
     context.go(
-      '/session?chapter=${widget.chapterId}'
+      '/practice/config?scope=chapter&ids=${widget.chapterId}'
+      '${widget.textbookId == null ? '' : '&textbook=${widget.textbookId}'}'
       '&title=${Uri.encodeComponent('${widget.unitName} · 综合练习')}',
     );
   }
