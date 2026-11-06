@@ -26,6 +26,10 @@ class StudentQuestionRecord(Base):
     session_id: Mapped[Optional[int]] = mapped_column(
         ForeignKey("practice_sessions.id"), nullable=True, index=True
     )
+    # P0-30 考试回流：attempt_id 关联考试作答
+    attempt_id: Mapped[Optional[int]] = mapped_column(
+        ForeignKey("exam_attempts.id"), nullable=True, index=True
+    )
     kp_weight: Mapped[float] = mapped_column(default=1.0)
     attempted_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, index=True)
 

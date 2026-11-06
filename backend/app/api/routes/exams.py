@@ -11,6 +11,7 @@ from app.api.deps import get_current_user, require_permission
 from app.db.session import get_db
 from app.models.content import KnowledgePoint, Question
 from app.models.exam import Exam, ExamAnswer, ExamAttempt, ExamBlueprint
+from app.models.practice import StudentQuestionRecord
 from app.models.user import User
 from app.schemas.content import QuestionPublic
 from app.schemas.exam import (
@@ -41,6 +42,10 @@ router = APIRouter(prefix="/exams", tags=["考试"])
 
 # 客观题：交卷即判；其余题型（calc/answer/listen 等）一期进入待批/自评
 OBJECTIVE_TYPES = {"choice", "multiple", "fill", "judge"}
+
+# 考试回流掌握度权重：单元测 0.8、期中 0.6、期末 0.5（其余按 0.8）
+EXAM_TYPE_WEIGHT = {"unit": 0.8, "midterm": 0.6, "final": 0.5}
+DEFAULT_EXAM_WEIGHT = 0.8
 
 
 # ---------------------------------------------------------------------------
@@ -410,6 +415,41 @@ def _finalize(
         attempt.duration_ms = duration_ms
     else:
         attempt.duration_ms = int((now - (attempt.started_at or now)).total_seconds() * 1000)
+    db.flush()
+
+    # P0-30 数据回流：客观题写入答题记录、错题本与掌握度（考试权重）
+    kp_weight = EXAM_TYPE_WEIGHT.get(exam.exam_type, DEFAULT_EXAM_WEIGHT)
+    for item in paper:
+        question = questions.get(item["question_id"])
+        if question is None or question.q_type not in OBJECTIVE_TYPES:
+            continue
+        row = rows.get(question.id)
+        is_correct = row is not None and row.is_correct is True
+        db.add(
+            StudentQuestionRecord(
+                user_id=attempt.user_id,
+                question_id=question.id,
+                is_correct=is_correct,
+                user_answer=row.user_answer if row is not None else None,
+                duration_ms=0,
+                source="exam",
+                attempt_id=attempt.id,
+                kp_weight=kp_weight,
+            )
+        )
+        engine.update_mastery(
+            db,
+            user_id=attempt.user_id,
+            knowledge_point_id=question.knowledge_point_id,
+            is_correct=is_correct,
+            source="exam",
+            weight=kp_weight,
+        )
+        wrong = engine.upsert_wrong_question(
+            db, user_id=attempt.user_id, question=question, is_correct=is_correct
+        )
+        if not is_correct and wrong is not None and wrong.wrong_reason is None:
+            wrong.wrong_reason = "other"
     db.flush()
 
 
