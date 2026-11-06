@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import Any, Optional
 
-from sqlalchemy import BigInteger, DateTime, ForeignKey, Integer, String
+from sqlalchemy import BigInteger, Boolean, DateTime, ForeignKey, Integer, String, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.db.base import Base
@@ -29,7 +29,7 @@ class ExamBlueprint(Base):
 
 
 class Exam(Base):
-    """模考卷：深圳一模/二模、历年真题等。"""
+    """试卷：模考卷 / 单元测 / 期中期末（由蓝图生成或人工录入）。"""
 
     __tablename__ = "exams"
 
@@ -42,7 +42,54 @@ class Exam(Base):
     total_score: Mapped[int] = mapped_column(Integer, default=100)
     time_limit_min: Mapped[int] = mapped_column(Integer, default=90)
     questions: Mapped[list[Any]] = mapped_column(JSONType)
+    # P0-27 考试闭环扩展
+    blueprint_id: Mapped[Optional[int]] = mapped_column(
+        ForeignKey("exam_blueprints.id"), nullable=True, index=True
+    )
+    exam_type: Mapped[str] = mapped_column(String(20), default="mock", index=True)
+    chapter_ids: Mapped[Optional[list[int]]] = mapped_column(JSONType, nullable=True)
+    status: Mapped[str] = mapped_column(String(20), default="published", index=True)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+
+
+class ExamAttempt(Base):
+    """一次考试作答（支持断点续答、幂等交卷与批改状态）。"""
+
+    __tablename__ = "exam_attempts"
+    __table_args__ = (
+        UniqueConstraint("user_id", "exam_id", "seed", name="uq_attempt_user_exam_seed"),
+    )
+
+    id: Mapped[int] = mapped_column(BigInteger().with_variant(Integer, "sqlite"), primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
+    exam_id: Mapped[int] = mapped_column(ForeignKey("exams.id"), index=True)
+    seed: Mapped[int] = mapped_column(BigInteger)
+    status: Mapped[str] = mapped_column(String(20), default="in_progress", index=True)
+    started_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+    submitted_at: Mapped[Optional[datetime]] = mapped_column(DateTime, nullable=True)
+    duration_ms: Mapped[int] = mapped_column(Integer, default=0)
+    objective_score: Mapped[float] = mapped_column(default=0.0)
+    subjective_score: Mapped[Optional[float]] = mapped_column(nullable=True)
+    total_score: Mapped[Optional[float]] = mapped_column(nullable=True)
+    submit_token: Mapped[Optional[str]] = mapped_column(String(64), nullable=True)
+
+
+class ExamAnswer(Base):
+    """考试逐题作答与判分（主观题保留自评分）。"""
+
+    __tablename__ = "exam_answers"
+    __table_args__ = (
+        UniqueConstraint("attempt_id", "question_id", name="uq_answer_attempt_question"),
+    )
+
+    id: Mapped[int] = mapped_column(BigInteger().with_variant(Integer, "sqlite"), primary_key=True)
+    attempt_id: Mapped[int] = mapped_column(ForeignKey("exam_attempts.id"), index=True)
+    question_id: Mapped[int] = mapped_column(ForeignKey("questions.id"), index=True)
+    user_answer: Mapped[Optional[dict[str, Any]]] = mapped_column(JSONType, nullable=True)
+    is_correct: Mapped[Optional[bool]] = mapped_column(Boolean, nullable=True)
+    score: Mapped[Optional[float]] = mapped_column(nullable=True)
+    self_score: Mapped[Optional[float]] = mapped_column(nullable=True)
+    updated_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
 
 
 class ExamSubmission(Base):
