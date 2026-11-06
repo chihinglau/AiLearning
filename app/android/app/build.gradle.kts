@@ -50,6 +50,20 @@ android {
     }
 }
 
+// integration_test 默认引入 espresso 3.2.0；在 AGP 8 下 espresso-core 与
+// espresso-idling-resource 共用 androidx.test.espresso 命名空间会触发
+// Manifest 合并校验失败，这里统一升级到 3.5.1（已拆分命名空间）。
+configurations.all {
+    resolutionStrategy {
+        force("androidx.test.espresso:espresso-core:3.5.1")
+        force("androidx.test.espresso:espresso-idling-resource:3.5.1")
+        force("androidx.test:core:1.5.0")
+        force("androidx.test:runner:1.5.2")
+        force("androidx.test:rules:1.5.0")
+        force("androidx.test.ext:junit:1.1.5")
+    }
+}
+
 flutter {
     source = "../.."
 }

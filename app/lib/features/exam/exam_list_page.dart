@@ -84,7 +84,16 @@ class _ExamListPageState extends ConsumerState<ExamListPage> {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return Scaffold(
-      appBar: AppBar(title: const Text('考试中心')),
+      appBar: AppBar(
+        leading: context.canPop()
+            ? null
+            : IconButton(
+                tooltip: '返回首页',
+                icon: const Icon(Icons.home_outlined),
+                onPressed: () => context.go('/shell'),
+              ),
+        title: const Text('考试中心'),
+      ),
       body: RefreshIndicator(
         onRefresh: _load,
         child: ListView(
