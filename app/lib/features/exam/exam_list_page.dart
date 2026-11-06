@@ -23,8 +23,17 @@ class _ExamListPageState extends ConsumerState<ExamListPage> {
     'completed': '已完成',
   };
 
+  static const _typeFilters = {
+    'all': '全部类型',
+    'unit': '单元测',
+    'midterm': '期中',
+    'final': '期末',
+    'mock': '模考',
+  };
+
   List<ExamSummary> _exams = const [];
   String _filter = 'all';
+  String _type = 'all';
   bool _loading = true;
   String? _error;
 
@@ -56,8 +65,11 @@ class _ExamListPageState extends ConsumerState<ExamListPage> {
   }
 
   List<ExamSummary> get _visible {
-    if (_filter == 'all') return _exams;
-    return _exams.where((exam) => exam.category == _filter).toList();
+    return _exams.where((exam) {
+      if (_filter != 'all' && exam.category != _filter) return false;
+      if (_type != 'all' && exam.examType != _type) return false;
+      return true;
+    }).toList();
   }
 
   int _countOf(String category) {
@@ -66,6 +78,12 @@ class _ExamListPageState extends ConsumerState<ExamListPage> {
   }
 
   void _open(ExamSummary exam) {
+    if (exam.category != 'completed' && !exam.windowOpen) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('${exam.windowLabel}，暂不可进入考试')),
+      );
+      return;
+    }
     switch (exam.category) {
       case 'available':
       case 'in_progress':
@@ -107,6 +125,19 @@ class _ExamListPageState extends ConsumerState<ExamListPage> {
                       label: Text('${entry.value} ${_countOf(entry.key)}'),
                       selected: _filter == entry.key,
                       onSelected: (_) => setState(() => _filter = entry.key),
+                    ),
+                  )
+                  .toList(),
+            ),
+            const SizedBox(height: 8),
+            Wrap(
+              spacing: 8,
+              children: _typeFilters.entries
+                  .map(
+                    (entry) => FilterChip(
+                      label: Text(entry.value),
+                      selected: _type == entry.key,
+                      onSelected: (_) => setState(() => _type = entry.key),
                     ),
                   )
                   .toList(),
@@ -160,11 +191,16 @@ class _ExamCard extends StatelessWidget {
     final attempt = exam.attempt;
     final isDone = exam.category == 'completed';
     final isDoing = exam.category == 'in_progress';
+    final blocked = !isDone && !exam.windowOpen;
     final actionLabel = isDone
         ? '查看报告'
-        : isDoing
-            ? '继续考试'
-            : '开始考试';
+        : blocked
+            ? exam.windowLabel
+            : isDoing
+                ? '继续考试'
+                : '开始考试';
+    final actionColor =
+        blocked ? theme.disabledColor : theme.colorScheme.primary;
     final statusColor = switch (exam.category) {
       'completed' => Colors.green.shade700,
       'in_progress' => Colors.orange.shade700,
@@ -225,6 +261,14 @@ class _ExamCard extends StatelessWidget {
                 '限时 ${exam.timeLimitMin} 分钟',
                 style: theme.textTheme.bodySmall,
               ),
+              if (exam.windowRange != null) ...[
+                const SizedBox(height: 2),
+                Text(
+                  '考试窗口 ${exam.windowRange}'
+                  '${exam.windowState == 'open' ? '（开放中）' : ''}',
+                  style: theme.textTheme.bodySmall,
+                ),
+              ],
               if (attempt != null) ...[
                 const SizedBox(height: 8),
                 Text(
@@ -241,13 +285,13 @@ class _ExamCard extends StatelessWidget {
                   Text(
                     actionLabel,
                     style: theme.textTheme.labelLarge?.copyWith(
-                      color: theme.colorScheme.primary,
+                      color: actionColor,
                     ),
                   ),
                   const Spacer(),
                   Icon(
                     isDone ? Icons.chevron_right : Icons.play_arrow_rounded,
-                    color: theme.colorScheme.primary,
+                    color: actionColor,
                   ),
                 ],
               ),

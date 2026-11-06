@@ -49,6 +49,9 @@ class Exam(Base):
     exam_type: Mapped[str] = mapped_column(String(20), default="mock", index=True)
     chapter_ids: Mapped[Optional[list[int]]] = mapped_column(JSONType, nullable=True)
     status: Mapped[str] = mapped_column(String(20), default="published", index=True)
+    # P1-08 考试窗口：为空表示不限时段
+    window_start: Mapped[Optional[datetime]] = mapped_column(DateTime, nullable=True)
+    window_end: Mapped[Optional[datetime]] = mapped_column(DateTime, nullable=True)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
 
 

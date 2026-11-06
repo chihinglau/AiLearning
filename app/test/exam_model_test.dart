@@ -28,6 +28,46 @@ void main() {
       expect(exam.category, 'in_progress');
       expect(exam.attempt?.id, 11);
       expect(exam.attempt?.remainingSeconds, 1800);
+      expect(exam.windowOpen, isTrue);
+      expect(exam.windowState, 'unscheduled');
+    });
+
+    test('解析考试窗口与可进入状态', () {
+      final scheduled = ExamSummary.fromJson({
+        'id': 8,
+        'title': '期中测试',
+        'subject': 'math',
+        'grade': 3,
+        'exam_type': 'midterm',
+        'total_score': 100,
+        'time_limit_min': 90,
+        'question_count': 28,
+        'category': 'available',
+        'window_start': '2026-11-08T01:00:00',
+        'window_end': '2026-11-08T02:30:00',
+        'window_state': 'scheduled',
+      });
+      expect(scheduled.typeLabel, '期中');
+      expect(scheduled.windowOpen, isFalse);
+      expect(scheduled.windowLabel, '未到开放时间');
+      expect(scheduled.windowRange, isNotNull);
+
+      final closed = ExamSummary.fromJson({
+        'id': 9,
+        'title': '期末测试',
+        'subject': 'english',
+        'grade': 3,
+        'exam_type': 'final',
+        'total_score': 100,
+        'time_limit_min': 90,
+        'question_count': 36,
+        'category': 'available',
+        'window_end': '2026-11-06T01:00:00',
+        'window_state': 'closed',
+      });
+      expect(closed.typeLabel, '期末');
+      expect(closed.windowOpen, isFalse);
+      expect(closed.windowLabel, '已结束');
     });
   });
 

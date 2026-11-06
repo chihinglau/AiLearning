@@ -13,6 +13,9 @@ class ExamSummary {
     required this.timeLimitMin,
     required this.questionCount,
     required this.category,
+    this.windowStart,
+    this.windowEnd,
+    this.windowState = 'unscheduled',
     this.attempt,
   });
 
@@ -28,7 +31,36 @@ class ExamSummary {
 
   /// available | in_progress | completed
   final String category;
+  final DateTime? windowStart;
+  final DateTime? windowEnd;
+
+  /// open | scheduled | closed | unscheduled
+  final String windowState;
   final ExamAttemptBrief? attempt;
+
+  bool get windowOpen => windowState != 'scheduled' && windowState != 'closed';
+
+  String get windowLabel {
+    switch (windowState) {
+      case 'scheduled':
+        return '未到开放时间';
+      case 'closed':
+        return '已结束';
+      case 'open':
+        return '开放中';
+      default:
+        return '';
+    }
+  }
+
+  String? get windowRange {
+    if (windowStart == null && windowEnd == null) return null;
+    final start = _formatTime(windowStart);
+    final end = _formatTime(windowEnd);
+    if (start != null && end != null) return '$start ~ $end';
+    if (start != null) return '$start 起';
+    return '截止 $end';
+  }
 
   String get typeLabel {
     switch (examType) {
@@ -57,10 +89,20 @@ class ExamSummary {
       timeLimitMin: json['time_limit_min'] as int? ?? 0,
       questionCount: json['question_count'] as int? ?? 0,
       category: json['category'] as String? ?? 'available',
+      windowStart: DateTime.tryParse(json['window_start'] as String? ?? ''),
+      windowEnd: DateTime.tryParse(json['window_end'] as String? ?? ''),
+      windowState: json['window_state'] as String? ?? 'unscheduled',
       attempt: json['attempt'] == null
           ? null
           : ExamAttemptBrief.fromJson(json['attempt'] as Map<String, dynamic>),
     );
+  }
+
+  static String? _formatTime(DateTime? value) {
+    if (value == null) return null;
+    final local = value.toLocal();
+    String two(int number) => number.toString().padLeft(2, '0');
+    return '${two(local.month)}-${two(local.day)} ${two(local.hour)}:${two(local.minute)}';
   }
 }
 

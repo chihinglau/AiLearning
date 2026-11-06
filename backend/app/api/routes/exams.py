@@ -102,8 +102,19 @@ def _exam_or_404(db: Session, exam_id: int) -> Exam:
     return exam
 
 
+def _window_state(exam: Exam, now: datetime) -> str:
+    """考试窗口状态：未配置 / 未开始 / 开放中 / 已结束。"""
+    if exam.window_start is None and exam.window_end is None:
+        return "unscheduled"
+    if exam.window_start is not None and now < exam.window_start:
+        return "scheduled"
+    if exam.window_end is not None and now >= exam.window_end:
+        return "closed"
+    return "open"
+
+
 def _ensure_takeable(exam: Exam, user: User) -> None:
-    """学生只能参加本年级已发布的试卷。"""
+    """学生只能参加本年级已发布、且处于开放窗口内的试卷。"""
     if user.role != "student":
         return
     if exam.status != "published":
@@ -113,9 +124,20 @@ def _ensure_takeable(exam: Exam, user: User) -> None:
             status_code=status.HTTP_403_FORBIDDEN,
             detail={"code": "GRADE_MISMATCH", "message": "试卷年级与当前年级不一致"},
         )
+    state = _window_state(exam, datetime.utcnow())
+    if state == "scheduled":
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail={"code": "EXAM_WINDOW_NOT_OPEN", "message": "考试尚未开放"},
+        )
+    if state == "closed":
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail={"code": "EXAM_WINDOW_CLOSED", "message": "考试已结束"},
+        )
 
 
-def _detail_out(db: Session, exam: Exam) -> ExamDetailOut:
+def _detail_out(db: Session, exam: Exam, now: Optional[datetime] = None) -> ExamDetailOut:
     items = _paper_items(exam)
     questions = _question_map(db, [item["question_id"] for item in items])
     out: list[ExamQuestionOut] = []
@@ -144,6 +166,9 @@ def _detail_out(db: Session, exam: Exam) -> ExamDetailOut:
         time_limit_min=exam.time_limit_min,
         status=exam.status,
         question_count=len(out),
+        window_start=exam.window_start,
+        window_end=exam.window_end,
+        window_state=_window_state(exam, now or datetime.utcnow()),
         questions=out,
     )
 
@@ -215,7 +240,7 @@ def _attempt_out(db: Session, exam: Exam, attempt: ExamAttempt, now: datetime) -
         submit_token=attempt.submit_token,
         remaining_seconds=_remaining_seconds(exam, attempt, now),
         server_now=now,
-        exam=_detail_out(db, exam),
+        exam=_detail_out(db, exam, now),
         answers=answers,
         next_index=next_index,
     )
@@ -298,6 +323,9 @@ def list_exams(
                 time_limit_min=exam.time_limit_min,
                 question_count=len(_paper_items(exam)),
                 category=category,
+                window_start=exam.window_start,
+                window_end=exam.window_end,
+                window_state=_window_state(exam, now),
                 attempt=brief,
             )
         )
@@ -552,8 +580,7 @@ def save_answers(
 
     saved = 0
     if attempt.status == "in_progress":
-        saved = _save_answers(db, attempt=attempt, paper=paper, answers=payload.answers)
-        if _remaining_seconds(exam, attempt, now) <= 0:
+        if _window_state(exam, now) == "closed":
             _finalize(
                 db,
                 attempt=attempt,
@@ -562,6 +589,17 @@ def save_answers(
                 submit_token=f"auto-expired-{attempt.id}",
                 duration_ms=None,
             )
+        else:
+            saved = _save_answers(db, attempt=attempt, paper=paper, answers=payload.answers)
+            if _remaining_seconds(exam, attempt, now) <= 0:
+                _finalize(
+                    db,
+                    attempt=attempt,
+                    exam=exam,
+                    paper=paper,
+                    submit_token=f"auto-expired-{attempt.id}",
+                    duration_ms=None,
+                )
     db.commit()
     db.refresh(attempt)
     return ExamSaveOut(
@@ -588,6 +626,20 @@ def submit_exam(
 
     if attempt.status != "in_progress":
         return _submit_out(db, attempt, paper, duplicate=True)
+
+    # 窗口已关闭：不再接收新答案，按已保存内容强制交卷
+    if _window_state(exam, datetime.utcnow()) == "closed":
+        _finalize(
+            db,
+            attempt=attempt,
+            exam=exam,
+            paper=paper,
+            submit_token=f"auto-expired-{attempt.id}",
+            duration_ms=None,
+        )
+        db.commit()
+        db.refresh(attempt)
+        return _submit_out(db, attempt, paper, duplicate=False)
 
     if payload.answers:
         _save_answers(db, attempt=attempt, paper=paper, answers=payload.answers)
@@ -827,6 +879,8 @@ def generate_exam(
         exam_type=blueprint.exam_type,
         chapter_ids=payload.chapter_ids,
         status="published",
+        window_start=payload.window_start,
+        window_end=payload.window_end,
     )
     db.add(exam)
     db.commit()

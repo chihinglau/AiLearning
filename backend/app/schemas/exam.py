@@ -32,6 +32,9 @@ class ExamSummaryOut(BaseModel):
     time_limit_min: int
     question_count: int
     category: str  # available | in_progress | completed
+    window_start: Optional[datetime] = None
+    window_end: Optional[datetime] = None
+    window_state: str = "unscheduled"  # open | scheduled | closed | unscheduled
     attempt: Optional[ExamAttemptBriefOut] = None
 
 
@@ -56,6 +59,9 @@ class ExamDetailOut(BaseModel):
     time_limit_min: int
     status: str
     question_count: int
+    window_start: Optional[datetime] = None
+    window_end: Optional[datetime] = None
+    window_state: str = "unscheduled"
     questions: list[ExamQuestionOut]
 
 
@@ -133,6 +139,8 @@ class ExamGenerateIn(BaseModel):
     chapter_ids: list[int] = Field(min_length=1, max_length=50)
     title: Optional[str] = Field(default=None, max_length=200)
     seed: Optional[int] = None
+    window_start: Optional[datetime] = None
+    window_end: Optional[datetime] = None
 
 
 class ExamGenerateOut(BaseModel):
