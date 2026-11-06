@@ -14,6 +14,8 @@ import 'package:ai_learning/features/practice/practice_config_page.dart';
 import 'package:ai_learning/features/practice/practice_page.dart';
 import 'package:ai_learning/features/session/session_page.dart';
 import 'package:ai_learning/features/shell/app_shell.dart';
+import 'package:ai_learning/features/teacher/class_stats_page.dart';
+import 'package:ai_learning/features/teacher/teacher_classes_page.dart';
 import 'package:ai_learning/features/textbook/textbook_manage_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -111,6 +113,29 @@ final routerProvider = Provider<GoRouter>((ref) {
           anyOf: ['family:report:read', 'learn:stats:child:read'],
           child: ParentChildrenPage(),
         ),
+      ),
+      GoRoute(
+        path: '/teacher/classes',
+        builder: (context, state) => const PermissionGate(
+          anyOf: ['learn:stats:class:read'],
+          child: TeacherClassesPage(),
+        ),
+      ),
+      GoRoute(
+        path: '/teacher/classes/:classId/stats',
+        builder: (context, state) {
+          final classId = int.tryParse(state.pathParameters['classId'] ?? '');
+          if (classId == null) return const TeacherClassesPage();
+          final query = state.uri.queryParameters;
+          return PermissionGate(
+            anyOf: const ['learn:stats:class:read'],
+            child: ClassStatsPage(
+              classId: classId,
+              className: query['name'] ?? '班级',
+              grade: int.tryParse(query['grade'] ?? ''),
+            ),
+          );
+        },
       ),
       GoRoute(
         path: '/knowledge/:textbookId',

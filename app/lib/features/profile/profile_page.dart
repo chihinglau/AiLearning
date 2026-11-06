@@ -207,6 +207,18 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                     ),
                     const SizedBox(height: 16),
                   ],
+                  if (user?.hasPermission('learn:stats:class:read') == true) ...[
+                    Card(
+                      child: ListTile(
+                        leading: const Icon(Icons.co_present_outlined),
+                        title: const Text('教师中心'),
+                        subtitle: const Text('查看授课班级概览与班级学情（聚合）'),
+                        trailing: const Icon(Icons.chevron_right),
+                        onTap: () => context.go('/teacher/classes'),
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                  ],
                   OutlinedButton.icon(
                     onPressed: _logout,
                     icon: const Icon(Icons.logout),
