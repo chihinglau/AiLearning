@@ -10,6 +10,7 @@ import 'package:ai_learning/features/exam/exam_list_page.dart';
 import 'package:ai_learning/features/exam/exam_page.dart';
 import 'package:ai_learning/features/exam/exam_report_page.dart';
 import 'package:ai_learning/features/family/parent_children_page.dart';
+import 'package:ai_learning/features/learn/knowledge_graph_page.dart';
 import 'package:ai_learning/features/learn/knowledge_page.dart';
 import 'package:ai_learning/features/learn/kp_detail_page.dart';
 import 'package:ai_learning/features/learn/unit_page.dart';
@@ -183,6 +184,20 @@ final routerProvider = Provider<GoRouter>((ref) {
               classId: classId,
               className: query['name'] ?? '班级',
               grade: int.tryParse(query['grade'] ?? ''),
+            ),
+          );
+        },
+      ),
+      GoRoute(
+        path: '/knowledge/:textbookId/graph',
+        builder: (context, state) {
+          final textbookId = int.tryParse(state.pathParameters['textbookId'] ?? '');
+          if (textbookId == null) return const AppShell();
+          return PermissionGate(
+            anyOf: const ['learn:kp:study'],
+            child: KnowledgeGraphPage(
+              textbookId: textbookId,
+              textbookName: state.uri.queryParameters['name'] ?? '教材',
             ),
           );
         },

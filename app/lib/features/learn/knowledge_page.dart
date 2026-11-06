@@ -69,7 +69,20 @@ class _KnowledgePageState extends ConsumerState<KnowledgePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(widget.textbookName)),
+      appBar: AppBar(
+        title: Text(widget.textbookName),
+        actions: [
+          IconButton(
+            key: const ValueKey('open-knowledge-graph'),
+            tooltip: '知识图谱',
+            icon: const Icon(Icons.account_tree_outlined),
+            onPressed: () => context.push(
+              '/knowledge/${widget.textbookId}/graph'
+              '?name=${Uri.encodeComponent(widget.textbookName)}',
+            ),
+          ),
+        ],
+      ),
       body: _buildBody(context),
     );
   }
