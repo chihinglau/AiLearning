@@ -56,4 +56,14 @@ class ExamService {
         await _api.getJson('/api/exams/attempts/$attemptId/report');
     return ExamReport.fromJson(data);
   }
+
+  /// 主观题自评：按题号提交 0~满分。
+  Future<void> selfAssess(int attemptId, Map<int, double> scores) async {
+    await _api.postJson('/api/exams/attempts/$attemptId/self-assess', {
+      'items': [
+        for (final entry in scores.entries)
+          {'question_id': entry.key, 'score': entry.value},
+      ],
+    });
+  }
 }

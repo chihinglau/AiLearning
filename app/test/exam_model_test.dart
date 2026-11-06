@@ -190,5 +190,37 @@ void main() {
       expect(report.wrongQuestions.first.userAnswerText, 'A');
       expect(report.nextActions.first.knowledgePointIds, [8]);
     });
+
+    test('解析待自评主观题：参考答案、评分点与自评分', () {
+      final report = ExamReport.fromJson({
+        'attempt_id': 22,
+        'exam_id': 4,
+        'exam_title': '期中测试',
+        'exam_type': 'midterm',
+        'status': 'grading',
+        'full_score': 100,
+        'pending_subjective': [
+          {
+            'question_id': 101,
+            'q_type': 'answer',
+            'stem': '计算 3/4 + 1/4 并写出过程',
+            'full_score': 50,
+            'user_answer': {'value': '4/4'},
+            'reference_answer': {'value': '1'},
+            'scoring_points': ['列式正确（25 分）', '结果正确（25 分）'],
+            'analysis': '同分母分数相加，分子相加。',
+            'self_score': 40,
+          },
+        ],
+      });
+
+      expect(report.pendingSubjective, hasLength(1));
+      final item = report.pendingSubjective.first;
+      expect(item.questionId, 101);
+      expect(item.userAnswerText, '4/4');
+      expect(item.referenceAnswerText, '1');
+      expect(item.scoringPoints, hasLength(2));
+      expect(item.selfScore, 40);
+    });
   });
 }

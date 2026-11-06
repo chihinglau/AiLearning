@@ -193,6 +193,37 @@ class ExamNextActionOut(BaseModel):
     count: int = 0
 
 
+class ExamSubjectiveItemOut(BaseModel):
+    question_id: int
+    q_type: str
+    stem: str
+    full_score: float
+    user_answer: Optional[dict[str, Any]] = None
+    reference_answer: Optional[dict[str, Any]] = None
+    scoring_points: list[str] = Field(default_factory=list)
+    analysis: Optional[str] = None
+    self_score: Optional[float] = None
+
+
+class SelfAssessItemIn(BaseModel):
+    question_id: int
+    score: float = Field(ge=0)
+
+
+class ExamSelfAssessIn(BaseModel):
+    items: list[SelfAssessItemIn] = Field(min_length=1, max_length=50)
+
+
+class ExamSelfAssessOut(BaseModel):
+    attempt_id: int
+    status: str
+    objective_score: float = 0.0
+    subjective_score: float = 0.0
+    total_score: float = 0.0
+    assessed_count: int = 0
+    pending_count: int = 0
+
+
 class ExamReportOut(BaseModel):
     attempt_id: int
     exam_id: int
@@ -212,5 +243,6 @@ class ExamReportOut(BaseModel):
     type_stats: list[ExamTypeStatOut] = Field(default_factory=list)
     kp_stats: list[ExamKpStatOut] = Field(default_factory=list)
     wrong_questions: list[ExamWrongItemOut] = Field(default_factory=list)
+    pending_subjective: list[ExamSubjectiveItemOut] = Field(default_factory=list)
     next_actions: list[ExamNextActionOut] = Field(default_factory=list)
 

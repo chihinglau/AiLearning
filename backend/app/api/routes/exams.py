@@ -29,8 +29,11 @@ from app.schemas.exam import (
     ExamReportOut,
     ExamSaveIn,
     ExamSaveOut,
+    ExamSelfAssessIn,
+    ExamSelfAssessOut,
     ExamSubmitIn,
     ExamSubmitOut,
+    ExamSubjectiveItemOut,
     ExamSummaryOut,
     ExamTypeStatOut,
     ExamWrongItemOut,
@@ -661,6 +664,17 @@ def submit_exam(
 # ---------------------------------------------------------------------------
 
 
+def _scoring_points(question: Question) -> list[str]:
+    """主观题评分点：优先取 answer.scoring_points，其次按分号切分文本。"""
+    answer = question.answer or {}
+    raw = answer.get("scoring_points") if isinstance(answer, dict) else None
+    if isinstance(raw, list):
+        return [str(point) for point in raw if point]
+    if isinstance(raw, str) and raw.strip():
+        return [part.strip() for part in raw.split("；") if part.strip()]
+    return []
+
+
 @router.get("/attempts/{attempt_id}/report", response_model=ExamReportOut)
 def exam_report(
     attempt_id: int,
@@ -698,6 +712,7 @@ def exam_report(
     type_bucket: dict[str, dict[str, float]] = {}
     kp_bucket: dict[Optional[int], dict[str, float]] = {}
     wrong_items: list[ExamWrongItemOut] = []
+    pending_subjective: list[ExamSubjectiveItemOut] = []
     question_count = 0
     answered_count = 0
     correct_count = 0
@@ -753,6 +768,20 @@ def exam_report(
                     analysis=question.analysis,
                     score=score,
                     full_score=item["score"],
+                )
+            )
+        elif question.q_type not in OBJECTIVE_TYPES and (row is None or row.score is None):
+            pending_subjective.append(
+                ExamSubjectiveItemOut(
+                    question_id=question.id,
+                    q_type=question.q_type,
+                    stem=str(question.content.get("stem", "")),
+                    full_score=float(item["score"]),
+                    user_answer=row.user_answer if row is not None else None,
+                    reference_answer=question.answer,
+                    scoring_points=_scoring_points(question),
+                    analysis=question.analysis,
+                    self_score=row.self_score if row is not None else None,
                 )
             )
 
@@ -826,7 +855,141 @@ def exam_report(
         type_stats=type_stats,
         kp_stats=kp_stats,
         wrong_questions=wrong_items,
+        pending_subjective=pending_subjective,
         next_actions=next_actions,
+    )
+
+
+@router.post("/attempts/{attempt_id}/self-assess", response_model=ExamSelfAssessOut)
+def self_assess(
+    attempt_id: int,
+    payload: ExamSelfAssessIn,
+    current: User = Depends(require_permission("learn:exam:report:self")),
+    db: Session = Depends(get_db),
+) -> ExamSelfAssessOut:
+    """主观题自评：按评分点给出 0~满分，写回成绩并回流掌握度/错题本。"""
+    attempt = _attempt_or_404(db, attempt_id, current)
+    if attempt.status == "in_progress":
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail={"code": "EXAM_NOT_SUBMITTED", "message": "考试尚未交卷，无法自评"},
+        )
+
+    exam = _exam_or_404(db, attempt.exam_id)
+    paper = _paper_items(exam)
+    paper_by_id = {item["question_id"]: item for item in paper}
+    questions = _question_map(db, [item["question_id"] for item in paper])
+    rows = {
+        row.question_id: row
+        for row in db.scalars(select(ExamAnswer).where(ExamAnswer.attempt_id == attempt.id))
+    }
+
+    assessed: list[tuple[Question, float, float, bool]] = []
+    seen: set[int] = set()
+    for item in payload.items:
+        if item.question_id in seen:
+            raise HTTPException(
+                status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+                detail={"code": "SELF_ASSESS_DUPLICATE", "message": "同一题目重复自评"},
+            )
+        seen.add(item.question_id)
+        question = questions.get(item.question_id)
+        entry = paper_by_id.get(item.question_id)
+        if question is None or entry is None:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail={"code": "QUESTION_NOT_IN_PAPER", "message": "题目不在本张试卷内"},
+            )
+        if question.q_type in OBJECTIVE_TYPES:
+            raise HTTPException(
+                status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+                detail={"code": "SELF_ASSESS_NOT_SUBJECTIVE", "message": "客观题由系统判分，无需自评"},
+            )
+        full_score = float(entry["score"])
+        if item.score > full_score:
+            raise HTTPException(
+                status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+                detail={
+                    "code": "SELF_SCORE_OUT_OF_RANGE",
+                    "message": f"自评分不得超过 {full_score:g} 分",
+                },
+            )
+
+        row = rows.get(question.id)
+        first_assessment = row is None or row.self_score is None
+        if row is None:
+            row = ExamAnswer(
+                attempt_id=attempt.id,
+                question_id=question.id,
+                user_answer=None,
+            )
+            db.add(row)
+            db.flush()
+            rows[question.id] = row
+        row.self_score = item.score
+        row.score = item.score
+        row.updated_at = datetime.utcnow()
+        assessed.append((question, full_score, item.score, first_assessment))
+
+    # 成绩回写：首次自评按 60% 及格线回流掌握度与错题本
+    kp_weight = EXAM_TYPE_WEIGHT.get(exam.exam_type, DEFAULT_EXAM_WEIGHT)
+    for question, full_score, score, first_assessment in assessed:
+        if not first_assessment:
+            continue
+        is_correct = score >= 0.6 * full_score
+        db.add(
+            StudentQuestionRecord(
+                user_id=attempt.user_id,
+                question_id=question.id,
+                is_correct=is_correct,
+                user_answer=rows[question.id].user_answer,
+                duration_ms=0,
+                source="exam",
+                attempt_id=attempt.id,
+                kp_weight=kp_weight,
+            )
+        )
+        engine.update_mastery(
+            db,
+            user_id=attempt.user_id,
+            knowledge_point_id=question.knowledge_point_id,
+            is_correct=is_correct,
+            source="exam",
+            weight=kp_weight,
+        )
+        wrong = engine.upsert_wrong_question(
+            db, user_id=attempt.user_id, question=question, is_correct=is_correct
+        )
+        if not is_correct and wrong is not None and wrong.wrong_reason is None:
+            wrong.wrong_reason = "other"
+
+    subjective_ids = [
+        item["question_id"]
+        for item in paper
+        if questions.get(item["question_id"]) is not None
+        and questions[item["question_id"]].q_type not in OBJECTIVE_TYPES
+    ]
+    subjective_rows = [rows.get(question_id) for question_id in subjective_ids]
+    subjective_score = round(
+        sum(row.score or 0 for row in subjective_rows if row is not None and row.score is not None),
+        2,
+    )
+    pending_count = sum(
+        1 for row in subjective_rows if row is None or row.score is None
+    )
+    attempt.subjective_score = subjective_score
+    attempt.total_score = round(attempt.objective_score + subjective_score, 2)
+    attempt.status = "completed" if pending_count == 0 else "grading"
+    db.commit()
+
+    return ExamSelfAssessOut(
+        attempt_id=attempt.id,
+        status=attempt.status,
+        objective_score=attempt.objective_score,
+        subjective_score=attempt.subjective_score,
+        total_score=attempt.total_score,
+        assessed_count=len(assessed),
+        pending_count=pending_count,
     )
 
 

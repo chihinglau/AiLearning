@@ -402,6 +402,7 @@ class ExamReport {
     this.typeStats = const [],
     this.kpStats = const [],
     this.wrongQuestions = const [],
+    this.pendingSubjective = const [],
     this.nextActions = const [],
   });
 
@@ -423,6 +424,7 @@ class ExamReport {
   final List<ExamTypeStat> typeStats;
   final List<ExamKpStat> kpStats;
   final List<ExamWrongItem> wrongQuestions;
+  final List<ExamSubjectiveQuestion> pendingSubjective;
   final List<ExamNextAction> nextActions;
 
   factory ExamReport.fromJson(Map<String, dynamic> json) {
@@ -451,6 +453,14 @@ class ExamReport {
       wrongQuestions: (json['wrong_questions'] as List<dynamic>? ?? const [])
           .map((item) => ExamWrongItem.fromJson(item as Map<String, dynamic>))
           .toList(),
+      pendingSubjective:
+          (json['pending_subjective'] as List<dynamic>? ?? const [])
+              .map(
+                (item) => ExamSubjectiveQuestion.fromJson(
+                  item as Map<String, dynamic>,
+                ),
+              )
+              .toList(),
       nextActions: (json['next_actions'] as List<dynamic>? ?? const [])
           .map((item) => ExamNextAction.fromJson(item as Map<String, dynamic>))
           .toList(),
@@ -518,6 +528,50 @@ class ExamKpStat {
       score: (json['score'] as num?)?.toDouble() ?? 0,
       fullScore: (json['full_score'] as num?)?.toDouble() ?? 0,
       scoreRate: (json['score_rate'] as num?)?.toDouble() ?? 0,
+    );
+  }
+}
+
+class ExamSubjectiveQuestion {
+  const ExamSubjectiveQuestion({
+    required this.questionId,
+    required this.qType,
+    required this.stem,
+    required this.fullScore,
+    this.userAnswer,
+    this.referenceAnswer,
+    this.scoringPoints = const [],
+    this.analysis,
+    this.selfScore,
+  });
+
+  final int questionId;
+  final String qType;
+  final String stem;
+  final double fullScore;
+  final Map<String, dynamic>? userAnswer;
+  final Map<String, dynamic>? referenceAnswer;
+  final List<String> scoringPoints;
+  final String? analysis;
+  final double? selfScore;
+
+  String get referenceAnswerText =>
+      referenceAnswer?['value']?.toString() ?? '暂无参考答案';
+  String get userAnswerText => userAnswer?['value']?.toString() ?? '未作答';
+
+  factory ExamSubjectiveQuestion.fromJson(Map<String, dynamic> json) {
+    return ExamSubjectiveQuestion(
+      questionId: json['question_id'] as int? ?? 0,
+      qType: json['q_type'] as String? ?? '',
+      stem: json['stem'] as String? ?? '',
+      fullScore: (json['full_score'] as num?)?.toDouble() ?? 0,
+      userAnswer: json['user_answer'] as Map<String, dynamic>?,
+      referenceAnswer: json['reference_answer'] as Map<String, dynamic>?,
+      scoringPoints: (json['scoring_points'] as List<dynamic>? ?? const [])
+          .map((item) => item.toString())
+          .toList(),
+      analysis: json['analysis'] as String?,
+      selfScore: (json['self_score'] as num?)?.toDouble(),
     );
   }
 }
