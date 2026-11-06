@@ -207,6 +207,20 @@ ROLE_PERMISSIONS: Dict[str, FrozenSet[str]] = {
 # 历史角色兼容：admin 视为 super_admin
 ROLE_ALIASES = {"admin": "super_admin"}
 
+# 角色元数据（code → (中文名, 层级)），D-03 §3.2；用于 RBAC 表 catalog 同步
+ROLE_INFO: Dict[str, Tuple[str, str]] = {
+    "guest": ("游客", "L0"),
+    "student": ("学生", "L4"),
+    "parent": ("家长/监护人", "L3"),
+    "teacher": ("教师", "L2"),
+    "head_teacher": ("班主任", "L2"),
+    "school_admin": ("校级管理员", "L2"),
+    "content_operator": ("内容运营", "L1"),
+    "auditor": ("审核员", "L1"),
+    "customer_service": ("客服", "L1"),
+    "super_admin": ("超级管理员", "L1"),
+}
+
 # 角色默认数据范围
 ROLE_SCOPE: Dict[str, str] = {
     "guest": SCOPE_NONE,

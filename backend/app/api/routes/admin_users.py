@@ -19,6 +19,7 @@ from app.schemas.user import (
     RoleChangeOut,
 )
 from app.services.audit import record_audit
+from app.services.rbac import sync_user_role
 
 router = APIRouter(prefix="/admin", tags=["管理端"])
 
@@ -33,8 +34,8 @@ def _forbidden(code: str, message: str) -> HTTPException:
     )
 
 
-def _is_super(user: User) -> bool:
-    return has_permission(user, ALL_PERMISSIONS)
+def _is_super(user: User, db: Optional[Session] = None) -> bool:
+    return has_permission(user, ALL_PERMISSIONS, db)
 
 
 def _to_out(user: User) -> AdminUserOut:
@@ -65,7 +66,7 @@ def list_users(
     db: Session = Depends(get_db),
 ) -> AdminUserListOut:
     filters = []
-    if not _is_super(current):
+    if not _is_super(current, db):
         if current.school_id is None:
             raise _forbidden("SCHOOL_UNBOUND", "账号未绑定学校")
         filters.append(User.school_id == current.school_id)
@@ -109,7 +110,7 @@ def change_user_roles(
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="用户不存在")
     if target.id == current.id:
         raise _forbidden("SELF_ROLE_DENIED", "不能修改自己的角色")
-    if not _is_super(current):
+    if not _is_super(current, db):
         if target.school_id != current.school_id:
             raise _forbidden("CROSS_SCHOOL", "无权操作其他学校用户")
         if normalize_role(target.role) in PRIVILEGED_ROLES:
@@ -139,9 +140,9 @@ def change_user_roles(
                 status_code=422,
                 detail={"code": "ROLE_INVALID", "message": "角色不存在"},
             )
-        if not _is_super(current) and role not in SCHOOL_MANAGED_ROLES:
+        if not _is_super(current, db) and role not in SCHOOL_MANAGED_ROLES:
             raise _forbidden("ROLE_NOT_ALLOWED", "校管只能授予学生/教师/班主任")
-        if role == "super_admin" and not _is_super(current):
+        if role == "super_admin" and not _is_super(current, db):
             raise _forbidden("ROLE_NOT_ALLOWED", "无权授予超管")
         new_role = role
     else:
@@ -156,7 +157,7 @@ def change_user_roles(
                 status_code=status.HTTP_409_CONFLICT,
                 detail={"code": "ROLE_MISMATCH", "message": "该用户未持有待回收角色"},
             )
-        if revoke_role in PRIVILEGED_ROLES and not _is_super(current):
+        if revoke_role in PRIVILEGED_ROLES and not _is_super(current, db):
             raise _forbidden("ROLE_NOT_ALLOWED", "无权回收该角色")
         new_role = "student"
 
@@ -166,6 +167,7 @@ def change_user_roles(
         )
 
     target.role = new_role
+    sync_user_role(db, target, new_role, granted_by=current.id)
     token_version = bump_token_version(target)
     db.commit()
     db.refresh(target)

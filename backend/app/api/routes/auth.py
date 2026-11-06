@@ -18,6 +18,7 @@ from app.models.user import AuditLog, User
 from app.schemas.user import MeOut, PermissionsOut, TokenOut, UserCreate, UserOut
 from app.services.audit import record_audit
 from app.services.family import has_active_guardian
+from app.services.rbac import sync_user_role
 
 router = APIRouter(prefix="/auth", tags=["账号"])
 
@@ -51,6 +52,7 @@ def register(payload: UserCreate, request: Request, db: Session = Depends(get_db
     )
     db.add(user)
     db.flush()
+    sync_user_role(db, user, payload.role)
     db.add(
         AuditLog(
             user_id=user.id,
@@ -102,15 +104,17 @@ def me(
     data = UserOut.model_validate(current)
     return MeOut(
         **data.model_dump(),
-        permissions=current_user_permissions(current),
-        scope=current_user_scope(current),
+        permissions=current_user_permissions(current, db),
+        scope=current_user_scope(current, db),
         guardian_consent=True if not current.is_child else has_active_guardian(db, current),
     )
 
 
 @router.get("/permissions", response_model=PermissionsOut)
-def permissions(current: User = Depends(get_current_user)) -> PermissionsOut:
+def permissions(
+    current: User = Depends(get_current_user), db: Session = Depends(get_db)
+) -> PermissionsOut:
     return PermissionsOut(
-        permissions=current_user_permissions(current),
-        scope=current_user_scope(current),
+        permissions=current_user_permissions(current, db),
+        scope=current_user_scope(current, db),
     )

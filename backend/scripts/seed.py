@@ -18,6 +18,7 @@ from app.db.session import SessionLocal, engine
 from app.models.content import Chapter, KnowledgePoint, Question, Textbook
 from app.models.exam import ExamBlueprint
 from app.models.user import User
+from app.services.rbac import backfill_user_roles, sync_catalog
 
 ADMIN_PHONE = "13800000000"
 ADMIN_PASSWORD = "admin123"
@@ -1253,6 +1254,10 @@ def seed() -> None:
 
         # ---- 试卷蓝图（小学语数英单元测）----
         n_bp = _seed_blueprints(db)
+
+        # ---- RBAC 目录与用户角色双写（P2-01，幂等）----
+        sync_catalog(db)
+        backfill_user_roles(db)
 
         db.commit()
 

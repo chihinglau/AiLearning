@@ -11,6 +11,7 @@ from app.models.practice import (
     StudentQuestionRecord,
     WrongQuestion,
 )
+from app.models.rbac import Permission, Role, RolePermission, UserRole
 from app.models.textbook import TextbookBinding
 from app.models.user import AuditLog, GradeHistory, ParentChildBinding, User
 
@@ -39,4 +40,8 @@ __all__ = [
     "SchoolClass",
     "ClassMember",
     "TeacherClassAssignment",
+    "Role",
+    "Permission",
+    "RolePermission",
+    "UserRole",
 ]

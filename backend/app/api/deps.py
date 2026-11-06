@@ -22,6 +22,7 @@ from app.core.security import decode_access_token
 from app.db.session import get_db
 from app.models.user import User
 from app.services.audit import record_audit
+from app.services.rbac import effective_permissions, effective_role, effective_scope
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl=f"{settings.api_prefix}/auth/login")
 
@@ -48,12 +49,25 @@ def get_current_user(
     return user
 
 
-def has_permission(user: User, permission: str) -> bool:
-    perms = permissions_for_role(user.role)
+def _db_or_none(db: object) -> Optional[Session]:
+    """直接调用依赖函数（单测）时 db 可能是 Depends 标记，统一降级为常量回退。"""
+    return db if isinstance(db, Session) else None
+
+
+def has_permission(user: User, permission: str, db: Optional[Session] = None) -> bool:
+    """权限判断：有会话时优先读 `user_roles/role_permissions`，否则回退常量表。"""
+    session = _db_or_none(db)
+    if session is not None:
+        perms = effective_permissions(session, user)
+    else:
+        perms = permissions_for_role(user.role)
     return ALL_PERMISSIONS in perms or permission in perms
 
 
-def current_user_permissions(user: User) -> list[str]:
+def current_user_permissions(user: User, db: Optional[Session] = None) -> list[str]:
+    session = _db_or_none(db)
+    if session is not None:
+        return effective_permissions(session, user)
     perms = permissions_for_role(user.role)
     if ALL_PERMISSIONS in perms:
         return [ALL_PERMISSIONS]
@@ -63,8 +77,10 @@ def current_user_permissions(user: User) -> list[str]:
 def require_permission(*required: str):
     """声明式权限依赖：要求当前用户具备全部指定权限点。"""
 
-    def dependency(current: User = Depends(get_current_user)) -> User:
-        perms = permissions_for_role(current.role)
+    def dependency(
+        current: User = Depends(get_current_user), db: Session = Depends(get_db)
+    ) -> User:
+        perms = current_user_permissions(current, db)
         if ALL_PERMISSIONS not in perms and not all(p in perms for p in required):
             raise HTTPException(
                 status_code=status.HTTP_403_FORBIDDEN,
@@ -78,8 +94,10 @@ def require_permission(*required: str):
 def require_any_permission(*required: str):
     """声明式权限依赖：满足任一权限点即可（用于多角色共用接口）。"""
 
-    def dependency(current: User = Depends(get_current_user)) -> User:
-        perms = permissions_for_role(current.role)
+    def dependency(
+        current: User = Depends(get_current_user), db: Session = Depends(get_db)
+    ) -> User:
+        perms = current_user_permissions(current, db)
         if ALL_PERMISSIONS not in perms and not any(p in perms for p in required):
             raise HTTPException(
                 status_code=status.HTTP_403_FORBIDDEN,
@@ -90,14 +108,19 @@ def require_any_permission(*required: str):
     return dependency
 
 
-def require_admin(current: User = Depends(get_current_user)) -> User:
+def require_admin(
+    current: User = Depends(get_current_user), db: Session = Depends(get_db)
+) -> User:
     """兼容改造：历史 admin 映射 super_admin；保持"全量权限"语义。"""
-    if not has_permission(current, ALL_PERMISSIONS):
+    if not has_permission(current, ALL_PERMISSIONS, db):
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="需要管理员权限")
     return current
 
 
-def current_user_scope(user: User) -> str:
+def current_user_scope(user: User, db: Optional[Session] = None) -> str:
+    session = _db_or_none(db)
+    if session is not None:
+        return effective_scope(session, user)
     return scope_for_role(user.role)
 
 
@@ -123,13 +146,14 @@ def require_student_access(permission: Union[str, Sequence[str]]):
         current: User = Depends(get_current_user),
         db: Session = Depends(get_db),
     ) -> StudentAccess:
-        chosen = _select_permission(current.role, permission)
+        role = effective_role(db, current) if isinstance(db, Session) else current.role
+        chosen = _select_permission(role, permission)
         if chosen is None:
             raise HTTPException(
                 status_code=status.HTTP_403_FORBIDDEN,
                 detail={"code": "PERMISSION_DENIED", "message": "权限不足"},
             )
-        scope = scope_for_permission(current.role, chosen)
+        scope = scope_for_permission(role, chosen)
         if scope is None:
             raise HTTPException(
                 status_code=status.HTTP_403_FORBIDDEN,
