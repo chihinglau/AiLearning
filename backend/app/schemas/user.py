@@ -59,3 +59,36 @@ class GradeChangeOut(BaseModel):
 class TokenOut(BaseModel):
     access_token: str
     token_type: str = "bearer"
+
+
+class AdminUserOut(BaseModel):
+    id: int
+    phone_masked: str
+    nickname: str
+    role: str
+    school_id: Optional[int] = None
+    grade: Optional[int] = None
+    grade_group: Optional[str] = None
+    teacher_subjects: Optional[List[str]] = None
+    grade_start: Optional[int] = None
+    grade_end: Optional[int] = None
+    is_active: bool
+
+
+class AdminUserListOut(BaseModel):
+    total: int
+    page: int
+    page_size: int
+    items: List[AdminUserOut]
+
+
+class RoleChangeIn(BaseModel):
+    grant: List[str] = Field(default_factory=list)
+    revoke: List[str] = Field(default_factory=list)
+
+
+class RoleChangeOut(BaseModel):
+    id: int
+    role: str
+    token_version: int
+
