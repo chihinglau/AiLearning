@@ -3,8 +3,10 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from app import models  # noqa: F401  确保模型在 create_all / Alembic 前完成注册
 from app.api.routes import (
     admin,
+    admin_rbac,
     admin_users,
     auth,
     exams,
@@ -20,7 +22,6 @@ from app.api.routes import (
 from app.core.config import settings
 from app.db.base import Base
 from app.db.session import engine
-from app import models  # noqa: F401  确保模型在 create_all / Alembic 前完成注册
 
 
 @asynccontextmanager
@@ -58,6 +59,7 @@ app.include_router(admin.router, prefix=settings.api_prefix)
 app.include_router(users.router, prefix=settings.api_prefix)
 app.include_router(family.router, prefix=settings.api_prefix)
 app.include_router(admin_users.router, prefix=settings.api_prefix)
+app.include_router(admin_rbac.router, prefix=settings.api_prefix)
 app.include_router(org.router, prefix=settings.api_prefix)
 app.include_router(textbooks.router, prefix=settings.api_prefix)
 

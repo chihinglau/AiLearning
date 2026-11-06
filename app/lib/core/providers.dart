@@ -6,6 +6,7 @@ import 'package:ai_learning/core/services/exam_service.dart';
 import 'package:ai_learning/core/services/family_service.dart';
 import 'package:ai_learning/core/services/learn_service.dart';
 import 'package:ai_learning/core/services/org_service.dart';
+import 'package:ai_learning/core/services/rbac_service.dart';
 import 'package:ai_learning/core/services/textbook_service.dart';
 import 'package:ai_learning/core/services/user_service.dart';
 import 'package:ai_learning/pal/platform_pal.dart';
@@ -52,6 +53,10 @@ final familyServiceProvider = Provider<FamilyService>((ref) {
 
 final orgServiceProvider = Provider<OrgService>((ref) {
   return OrgService(ref.watch(apiClientProvider));
+});
+
+final rbacServiceProvider = Provider<RbacService>((ref) {
+  return RbacService(ref.watch(apiClientProvider));
 });
 
 final userServiceProvider = Provider<UserService>((ref) {

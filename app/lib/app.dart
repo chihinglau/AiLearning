@@ -1,4 +1,5 @@
 import 'package:ai_learning/core/providers.dart';
+import 'package:ai_learning/features/admin/rbac_config_page.dart';
 import 'package:ai_learning/features/auth/login_page.dart';
 import 'package:ai_learning/features/common/permission_gate.dart';
 import 'package:ai_learning/features/exam/exam_list_page.dart';
@@ -119,6 +120,13 @@ final routerProvider = Provider<GoRouter>((ref) {
         builder: (context, state) => const PermissionGate(
           anyOf: ['learn:stats:class:read'],
           child: TeacherClassesPage(),
+        ),
+      ),
+      GoRoute(
+        path: '/admin/rbac',
+        builder: (context, state) => const PermissionGate(
+          anyOf: ['system:config:write'],
+          child: RbacConfigPage(),
         ),
       ),
       GoRoute(

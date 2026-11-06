@@ -219,6 +219,18 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                     ),
                     const SizedBox(height: 16),
                   ],
+                  if (user?.hasPermission('system:config:write') == true) ...[
+                    Card(
+                      child: ListTile(
+                        leading: const Icon(Icons.admin_panel_settings_outlined),
+                        title: const Text('权限配置'),
+                        subtitle: const Text('按角色查看与调整权限点（超级管理员）'),
+                        trailing: const Icon(Icons.chevron_right),
+                        onTap: () => context.go('/admin/rbac'),
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                  ],
                   OutlinedButton.icon(
                     onPressed: _logout,
                     icon: const Icon(Icons.logout),
