@@ -1,6 +1,7 @@
 """年级 / 学段派生规则（服务端唯一实现，见 D-03 §4.1）。"""
 
 from dataclasses import dataclass
+from datetime import datetime
 from typing import Optional
 
 
@@ -66,3 +67,19 @@ def validate_elective_subjects(subjects: Optional[list], grade: Optional[int]) -
         return
     if grade is None or derive_stage(grade) != "senior":
         raise GradeValidationError("ELECTIVE_ONLY_SENIOR", "选科仅在高中年级（10-12）可选")
+
+
+def academic_year(dt: datetime) -> str:
+    """学年标识：9 月及以后属于新学年。"""
+    start = dt.year if dt.month >= 9 else dt.year - 1
+    return f"{start}-{start + 1}"
+
+
+def semester_start(dt: datetime) -> datetime:
+    """当前学期起点（9/1 或 2/1），用于自助改年级的每学期频率限制。"""
+    if dt.month >= 9:
+        return datetime(dt.year, 9, 1)
+    if dt.month == 1:
+        return datetime(dt.year - 1, 9, 1)
+    return datetime(dt.year, 2, 1)
+

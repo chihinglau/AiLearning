@@ -40,6 +40,21 @@ class MeOut(UserOut):
     scope: str = "SELF"
 
 
+class GradeChangeIn(BaseModel):
+    grade: int = Field(ge=1, le=12)
+    confirm_token: Optional[str] = None
+
+
+class GradeChangeOut(BaseModel):
+    grade: int
+    stage: str
+    grade_group: str
+    cross_stage: bool
+    textbook_rebind_required: bool
+    reauth_required: bool = True
+    token_version: int
+
+
 class TokenOut(BaseModel):
     access_token: str
     token_type: str = "bearer"

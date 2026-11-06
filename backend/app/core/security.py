@@ -50,6 +50,45 @@ def decode_access_token(token: str) -> Optional[TokenData]:
         return None
 
 
+@dataclass(frozen=True)
+class GradeChangeTicket:
+    user_id: int
+    grade: int
+    version: int
+
+
+def create_grade_change_ticket(
+    user_id: int, grade: int, token_version: int, expires_minutes: int = 10
+) -> str:
+    """自助改年级的二次确认令牌（短期有效，绑定用户/目标年级/Token 版本）。"""
+    expire = datetime.now(timezone.utc) + timedelta(minutes=expires_minutes)
+    payload = {
+        "sub": str(user_id),
+        "grade": grade,
+        "ver": token_version,
+        "purpose": "grade_change",
+        "exp": expire,
+    }
+    return jwt.encode(payload, settings.jwt_secret, algorithm=settings.jwt_algorithm)
+
+
+def decode_grade_change_ticket(token: str) -> Optional[GradeChangeTicket]:
+    try:
+        payload = jwt.decode(token, settings.jwt_secret, algorithms=[settings.jwt_algorithm])
+    except JWTError:
+        return None
+    if payload.get("purpose") != "grade_change":
+        return None
+    try:
+        return GradeChangeTicket(
+            user_id=int(payload["sub"]),
+            grade=int(payload["grade"]),
+            version=int(payload.get("ver", 0)),
+        )
+    except (KeyError, TypeError, ValueError):
+        return None
+
+
 def bump_token_version(user: Any) -> int:
     """角色/年级等敏感变更后使旧 Token 失效。"""
     user.token_version = (user.token_version or 0) + 1

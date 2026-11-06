@@ -41,7 +41,7 @@ def get_current_user(
     if (user.token_version or 0) != data.version:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="登录状态已失效，请重新登录",
+            detail={"code": "TOKEN_REVOKED", "message": "登录状态已失效，请重新登录"},
             headers={"WWW-Authenticate": "Bearer"},
         )
     return user
