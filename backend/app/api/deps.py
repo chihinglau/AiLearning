@@ -20,6 +20,7 @@ from app.core.scope import (
 from app.core.security import decode_access_token
 from app.db.session import get_db
 from app.models.user import User
+from app.services.audit import record_audit
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl=f"{settings.api_prefix}/auth/login")
 
@@ -100,6 +101,13 @@ def require_student_access(permission: str):
             target = current.id
         if requested is not None:
             ensure_student_access(db, current, scope, requested)
+            if requested != current.id:
+                record_audit(
+                    db,
+                    user_id=current.id,
+                    action="data.cross_user_read",
+                    message=f"permission={permission}, target={requested}, scope={scope}",
+                )
         return StudentAccess(scope=scope, student_id=target, allowed_ids=allowed)
 
     return dependency
