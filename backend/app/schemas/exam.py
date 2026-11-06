@@ -1,0 +1,147 @@
+from datetime import datetime
+from typing import Any, Optional
+
+from pydantic import BaseModel, Field
+
+from app.schemas.content import QuestionPublic
+
+
+class ExamAttemptBriefOut(BaseModel):
+    """考试列表中的作答摘要。"""
+
+    id: int
+    status: str
+    seed: int
+    started_at: datetime
+    submitted_at: Optional[datetime] = None
+    duration_ms: int = 0
+    objective_score: float = 0.0
+    subjective_score: Optional[float] = None
+    total_score: Optional[float] = None
+    remaining_seconds: int = 0
+
+
+class ExamSummaryOut(BaseModel):
+    id: int
+    title: str
+    subject: str
+    grade: int
+    year: Optional[int] = None
+    exam_type: str
+    total_score: int
+    time_limit_min: int
+    question_count: int
+    category: str  # available | in_progress | completed
+    attempt: Optional[ExamAttemptBriefOut] = None
+
+
+class ExamQuestionOut(QuestionPublic):
+    """试卷题目：学生端不含答案，附分值与分节信息。"""
+
+    score: float = 0.0
+    section_index: int = 0
+    section_name: Optional[str] = None
+    order_index: int = 0
+
+
+class ExamDetailOut(BaseModel):
+    id: int
+    title: str
+    subject: str
+    grade: int
+    year: Optional[int] = None
+    source: str
+    exam_type: str
+    total_score: int
+    time_limit_min: int
+    status: str
+    question_count: int
+    questions: list[ExamQuestionOut]
+
+
+class ExamAnswerOut(BaseModel):
+    question_id: int
+    user_answer: Optional[dict[str, Any]] = None
+    is_correct: Optional[bool] = None
+    score: Optional[float] = None
+    self_score: Optional[float] = None
+    updated_at: Optional[datetime] = None
+
+
+class ExamAttemptOut(BaseModel):
+    id: int
+    exam_id: int
+    status: str
+    seed: int
+    started_at: datetime
+    submitted_at: Optional[datetime] = None
+    duration_ms: int = 0
+    objective_score: float = 0.0
+    subjective_score: Optional[float] = None
+    total_score: Optional[float] = None
+    submit_token: Optional[str] = None
+    remaining_seconds: int = 0
+    server_now: datetime
+    exam: ExamDetailOut
+    answers: list[ExamAnswerOut] = Field(default_factory=list)
+    next_index: int = 0
+
+
+class ExamAttemptStartIn(BaseModel):
+    seed: Optional[int] = None
+
+
+class ExamAnswerSaveIn(BaseModel):
+    question_id: int
+    user_answer: Optional[dict[str, Any]] = None
+
+
+class ExamSaveIn(BaseModel):
+    answers: list[ExamAnswerSaveIn] = Field(default_factory=list)
+
+
+class ExamSaveOut(BaseModel):
+    attempt_id: int
+    saved: int
+    saved_at: datetime
+    status: str
+    remaining_seconds: int
+    answers: list[ExamAnswerOut] = Field(default_factory=list)
+
+
+class ExamSubmitIn(BaseModel):
+    submit_token: str = Field(min_length=1, max_length=64)
+    answers: list[ExamAnswerSaveIn] = Field(default_factory=list)
+    duration_ms: Optional[int] = Field(default=None, ge=0)
+
+
+class ExamSubmitOut(BaseModel):
+    attempt_id: int
+    status: str
+    duplicate: bool = False
+    objective_score: float = 0.0
+    subjective_score: Optional[float] = None
+    total_score: Optional[float] = None
+    correct_count: int = 0
+    question_count: int = 0
+    pending_grading: bool = False
+    submitted_at: Optional[datetime] = None
+
+
+class ExamGenerateIn(BaseModel):
+    blueprint_code: str = Field(min_length=1, max_length=80)
+    chapter_ids: list[int] = Field(min_length=1, max_length=50)
+    title: Optional[str] = Field(default=None, max_length=200)
+    seed: Optional[int] = None
+
+
+class ExamGenerateOut(BaseModel):
+    exam_id: int
+    title: str
+    seed: int
+    question_count: int
+    total_score: float
+    kp_coverage: float
+    difficulty_mix: dict[str, int] = Field(default_factory=dict)
+    fallback_count: int = 0
+    insufficient: bool = False
