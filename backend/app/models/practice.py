@@ -42,6 +42,29 @@ class MasteryScore(Base):
     updated_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
 
 
+class KpStudyState(Base):
+    """知识点学习状态（P0-20 状态机），一生一知识点一行。"""
+
+    __tablename__ = "kp_study_states"
+    __table_args__ = (
+        UniqueConstraint("user_id", "knowledge_point_id", name="uq_kp_state_user_kp"),
+    )
+
+    id: Mapped[int] = mapped_column(BigInteger().with_variant(Integer, "sqlite"), primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
+    knowledge_point_id: Mapped[int] = mapped_column(
+        ForeignKey("knowledge_points.id"), index=True
+    )
+    state: Mapped[str] = mapped_column(String(20), default="未学习", index=True)
+    evidence_count: Mapped[int] = mapped_column(Integer, default=0)
+    last_event: Mapped[Optional[str]] = mapped_column(String(20), nullable=True)
+    read_at: Mapped[Optional[datetime]] = mapped_column(DateTime, nullable=True)
+    mastered_at: Mapped[Optional[datetime]] = mapped_column(DateTime, nullable=True)
+    updated_at: Mapped[datetime] = mapped_column(
+        DateTime, default=datetime.utcnow, onupdate=datetime.utcnow
+    )
+
+
 class WrongQuestion(Base):
     """错题本：一生一错题一行，聚合多次作答并承载 SM-2 间隔复习调度。"""
 

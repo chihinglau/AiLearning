@@ -3,7 +3,12 @@
 from app.db.base import Base
 from app.models.content import Chapter, KnowledgePoint, Question, Textbook
 from app.models.exam import Exam, ExamSubmission
-from app.models.practice import MasteryScore, StudentQuestionRecord, WrongQuestion
+from app.models.practice import (
+    KpStudyState,
+    MasteryScore,
+    StudentQuestionRecord,
+    WrongQuestion,
+)
 from app.models.textbook import TextbookBinding
 from app.models.user import AuditLog, GradeHistory, ParentChildBinding, User
 
@@ -21,6 +26,7 @@ __all__ = [
     "StudentQuestionRecord",
     "MasteryScore",
     "WrongQuestion",
+    "KpStudyState",
     "Exam",
     "ExamSubmission",
 ]

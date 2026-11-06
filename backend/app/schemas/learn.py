@@ -97,7 +97,24 @@ class KpDetailOut(BaseModel):
     mastery_band: str = "weak"
     question_count: int = 0
     state: str = "未学习"
+    state_evidence: int = 0
     last_studied_at: Optional[datetime] = None
+
+
+class KpSelfTestIn(BaseModel):
+    score: float = Field(ge=0, le=100)
+
+
+class KpStateOut(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
+    knowledge_point_id: int
+    state: str
+    evidence_count: int
+    last_event: Optional[str] = None
+    read_at: Optional[datetime] = None
+    mastered_at: Optional[datetime] = None
+    updated_at: datetime
 
 
 class ChapterTreeOut(BaseModel):

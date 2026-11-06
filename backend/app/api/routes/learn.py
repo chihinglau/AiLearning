@@ -25,6 +25,8 @@ from app.schemas.learn import (
     HomeTodayPlan,
     KpBriefOut,
     KpDetailOut,
+    KpSelfTestIn,
+    KpStateOut,
     KnowledgeNodeOut,
     LearnStartIn,
     LearnStartOut,
@@ -39,6 +41,7 @@ from app.schemas.learn import (
     WrongReasonIn,
 )
 from app.services import learning as engine
+from app.services import study_state
 from app.services import textbook as textbook_service
 
 router = APIRouter(prefix="/learn", tags=["自适应学习"])
@@ -98,6 +101,12 @@ def knowledge_tree(
         for kp in db.scalars(select(KnowledgePoint).where(KnowledgePoint.id.in_(kp_ids)))
     } if kp_ids else {}
     mastery = _mastery_map(db, user_id=current.id, subject=None)
+    attempted = _attempted_kps(db, user_id=current.id, kp_ids=kp_ids)
+    due = _due_review_kps(
+        db, user_id=current.id, kp_ids=kp_ids, now=datetime.utcnow()
+    )
+    last_studied = _last_studied_map(db, user_id=current.id, kp_ids=kp_ids)
+    states = study_state.states_for(db, user_id=current.id, kp_ids=kp_ids)
 
     # chapter_id -> {kp_id: count}
     agg: dict[int, dict[int, int]] = {}
@@ -113,14 +122,17 @@ def knowledge_tree(
             kp = kp_map.get(kp_id)
             if kp is None:
                 continue
-            node = KnowledgeNodeOut.model_validate(kp)
-            m = mastery.get(kp_id)
-            score = round(m.score, 1) if m else 0.0
-            node.mastery_score = score
-            node.mastery_confidence = m.confidence if m else 0
-            node.mastery_band = engine.mastery_band(score)
-            node.question_count = count
-            nodes.append(node)
+            nodes.append(
+                _kp_node(
+                    kp,
+                    question_count=count,
+                    mastery=mastery,
+                    attempted=attempted,
+                    due=due,
+                    last_studied=last_studied,
+                    states=states,
+                )
+            )
         tree.knowledge_points = sorted(
             nodes, key=lambda n: (n.mastery_score, n.id)
         )
@@ -207,6 +219,7 @@ def _kp_node(
     attempted: set[int],
     due: set[int],
     last_studied: dict[int, datetime],
+    states: dict[int, study_state.KpStudyState] | None = None,
 ) -> KnowledgeNodeOut:
     row = mastery.get(kp.id)
     score = round(row.score, 1) if row else 0.0
@@ -215,11 +228,18 @@ def _kp_node(
     node.mastery_confidence = row.confidence if row else 0
     node.mastery_band = engine.mastery_band(score)
     node.question_count = question_count
-    node.state = engine.derive_study_state(
-        mastery=score,
-        attempted=kp.id in attempted,
-        due_review=kp.id in due,
+    persisted = (states or {}).get(kp.id)
+    node.state = (
+        engine.derive_study_state(
+            mastery=score,
+            attempted=kp.id in attempted,
+            due_review=kp.id in due,
+        )
+        if persisted is None
+        else persisted.state
     )
+    if kp.id in due:
+        node.state = study_state.REVIEWING
     node.last_studied_at = last_studied.get(kp.id)
     return node
 
@@ -314,6 +334,7 @@ def unit_detail(
     attempted = _attempted_kps(db, user_id=current.id, kp_ids=kp_ids)
     due = _due_review_kps(db, user_id=current.id, kp_ids=kp_ids, now=datetime.utcnow())
     last_studied = _last_studied_map(db, user_id=current.id, kp_ids=kp_ids)
+    states = study_state.states_for(db, user_id=current.id, kp_ids=kp_ids)
 
     nodes = [
         _kp_node(
@@ -323,6 +344,7 @@ def unit_detail(
             attempted=attempted,
             due=due,
             last_studied=last_studied,
+            states=states,
         )
         for kp in kps.values()
     ]
@@ -389,6 +411,18 @@ def kp_detail(
     last_studied = _last_studied_map(db, user_id=current.id, kp_ids=[kp.id])
     row = mastery.get(kp.id)
     score = round(row.score, 1) if row else 0.0
+    persisted = study_state.get(db, user_id=current.id, kp_id=kp.id)
+    state = (
+        persisted.state
+        if persisted is not None
+        else engine.derive_study_state(
+            mastery=score,
+            attempted=kp.id in attempted,
+            due_review=kp.id in due,
+        )
+    )
+    if kp.id in due:
+        state = study_state.REVIEWING
 
     section = db.get(KnowledgePoint, kp.parent_id) if kp.parent_id else None
     prereq_ids = list(kp.prerequisites or [])
@@ -423,13 +457,52 @@ def kp_detail(
         mastery_confidence=row.confidence if row else 0,
         mastery_band=engine.mastery_band(score),
         question_count=question_count,
-        state=engine.derive_study_state(
-            mastery=score,
-            attempted=kp.id in attempted,
-            due_review=kp.id in due,
-        ),
+        state=state,
+        state_evidence=persisted.evidence_count if persisted else 0,
         last_studied_at=last_studied.get(kp.id),
     )
+
+
+def _kp_or_404(db: Session, kp_id: int) -> KnowledgePoint:
+    kp = db.get(KnowledgePoint, kp_id)
+    if kp is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="知识点不存在")
+    return kp
+
+
+@router.post("/kp/{kp_id}/read", response_model=KpStateOut)
+def mark_kp_read(
+    kp_id: int,
+    current: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+) -> KpStateOut:
+    """阅读讲解：未学习 → 学习中。"""
+    _kp_or_404(db, kp_id)
+    row = study_state.mark(db, user_id=current.id, kp_id=kp_id, event="read")
+    db.commit()
+    db.refresh(row)
+    return KpStateOut.model_validate(row)
+
+
+@router.post("/kp/{kp_id}/selftest", response_model=KpStateOut)
+def submit_kp_selftest(
+    kp_id: int,
+    payload: KpSelfTestIn,
+    current: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+) -> KpStateOut:
+    """自测达标（≥80 分）→ 已掌握，否则待巩固。"""
+    _kp_or_404(db, kp_id)
+    row = study_state.mark(
+        db,
+        user_id=current.id,
+        kp_id=kp_id,
+        event="selftest",
+        achieved=payload.score >= study_state.SELFTEST_PASS_SCORE,
+    )
+    db.commit()
+    db.refresh(row)
+    return KpStateOut.model_validate(row)
 
 
 # ---------------------------------------------------------------------------
@@ -573,6 +646,15 @@ def submit(
         or _kp_id_by_tag(db, question),
         is_correct=is_correct,
     )
+    if mastery_row is not None and question.knowledge_point_id is not None:
+        # 首次练习 → 待巩固；掌握度≥85 → 已掌握（P0-20 状态机）
+        study_state.mark(
+            db,
+            user_id=current.id,
+            kp_id=question.knowledge_point_id,
+            event="practice",
+            achieved=mastery_row.score >= 85,
+        )
     wrong = engine.upsert_wrong_question(
         db, user_id=current.id, question=question, is_correct=is_correct
     )
