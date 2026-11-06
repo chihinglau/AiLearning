@@ -13,10 +13,18 @@ class LearnStartIn(BaseModel):
     count: int = Field(default=10, ge=1, le=50)
     # 教材与年级不一致时需二次确认后继续（D-04 §13）
     confirm_mismatch: bool = False
+    # P0-22：新范围方式（与 /practice/preview 共用同一组参数，seed 相同即同一套题）
+    scope_type: Optional[str] = Field(default=None, pattern=r"^(kp|chapter|textbook|wrong)$")
+    scope_ids: list[int] = Field(default_factory=list, max_length=50)
+    q_types: list[str] = Field(default_factory=list)
+    mode: str = "special"
+    seed: Optional[int] = None
+    duration_limit_min: Optional[int] = Field(default=None, ge=1, le=120)
 
 
 class LearnStartOut(BaseModel):
     questions: list[QuestionPublic]
+    seed: Optional[int] = None
 
 
 class LearnSubmitIn(BaseModel):
@@ -165,6 +173,7 @@ class PracticePreviewIn(BaseModel):
     q_types: list[str] = Field(default_factory=list)
     mode: str = "special"
     seed: Optional[int] = None
+    duration_limit_min: Optional[int] = Field(default=None, ge=1, le=120)
 
 
 class PracticePreviewOut(BaseModel):

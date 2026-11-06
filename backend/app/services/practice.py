@@ -1,20 +1,67 @@
-"""练习组卷：范围解析 + 确定性选题（与预览共用同一 seed，保证所见即所得）。"""
+"""练习组卷：范围解析 + 题型配比 + 知识点覆盖 + 确定性选题（与预览共用同一 seed）。"""
 
 import math
 import random
 from dataclasses import dataclass, field
-from datetime import datetime
+from datetime import datetime, timedelta
 from typing import Optional
 
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
+from app.core.grade import derive_stage
 from app.models.content import Chapter, Question
-from app.models.practice import WrongQuestion
+from app.models.practice import StudentQuestionRecord, WrongQuestion
 from app.models.user import User
 
 # 预估单题耗时（秒），用于练习配置页展示
 SECONDS_PER_TYPE = {"choice": 30, "fill": 45, "judge": 25, "answer": 120}
+
+# 题型配比：按学段默认（D-04 §15.2）；unit/pre_exam 模式按单元测蓝图覆盖
+TYPE_RATIO_BY_STAGE: dict[str, dict[str, float]] = {
+    "primary": {"choice": 0.40, "judge": 0.20, "fill": 0.25, "answer": 0.15},
+    "junior": {"choice": 0.40, "multiple": 0.10, "judge": 0.05, "fill": 0.20, "answer": 0.25},
+    "senior": {"choice": 0.35, "multiple": 0.15, "fill": 0.15, "answer": 0.35},
+}
+TYPE_RATIO_BY_MODE: dict[str, dict[str, float]] = {
+    "unit": {"choice": 0.35, "judge": 0.15, "fill": 0.25, "answer": 0.25},
+    "pre_exam": {"choice": 0.30, "multiple": 0.15, "fill": 0.15, "answer": 0.40},
+}
+
+MIN_COVERAGE_RATIO = 0.8      # KP 覆盖率下限（D-04 §7.3）
+COVERAGE_FULL_KP = 3          # 范围 KP ≤ 3 时要求 100% 覆盖
+DUE_QUOTA_CAP = 5             # 到期错题绝对上限
+RECENT_EXCLUDE_DAYS = 7       # 去重窗口：7 天内做过的题不再出（D-04 §7.3）
+
+
+def ratio_for(stage: str, mode: str) -> dict[str, float]:
+    """题型配比：unit/pre_exam 用练习蓝图表，其余按学段默认。"""
+    if mode in TYPE_RATIO_BY_MODE:
+        return TYPE_RATIO_BY_MODE[mode]
+    return TYPE_RATIO_BY_STAGE.get(stage, TYPE_RATIO_BY_STAGE["primary"])
+
+
+def coverage_target(kp_count: int) -> int:
+    """覆盖率目标：KP≤3 要求全覆盖，否则 ≥80%。"""
+    if kp_count <= 0:
+        return 0
+    if kp_count <= COVERAGE_FULL_KP:
+        return kp_count
+    return math.ceil(kp_count * MIN_COVERAGE_RATIO)
+
+
+def recent_attempted_ids(
+    db: Session, *, user_id: int, days: int = RECENT_EXCLUDE_DAYS
+) -> set[int]:
+    """最近 N 天已作答的题目 id（用于去重）。"""
+    since = datetime.utcnow() - timedelta(days=days)
+    rows = db.scalars(
+        select(StudentQuestionRecord.question_id).where(
+            StudentQuestionRecord.user_id == user_id,
+            StudentQuestionRecord.attempted_at >= since,
+        )
+    )
+    return set(rows)
 
 
 @dataclass
@@ -121,22 +168,33 @@ def select_questions(
     seed: int,
     due_ids: Optional[set[int]] = None,
     due_quota_ratio: float = 0.25,
+    due_quota_cap: int = DUE_QUOTA_CAP,
+    type_ratio: Optional[dict[str, float]] = None,
+    duration_limit_min: Optional[int] = None,
+    kp_ids: Optional[set[int]] = None,
 ) -> list[Question]:
-    """确定性选题：到期错题优先（≤quota），其余按知识点轮流抽取以提升覆盖率。"""
+    """确定性选题（D-04 §7.3）：
+
+    1) 到期错题优先，占比 ≤ 25% 且上限 5 题；
+    2) 知识点覆盖：先每 KP 取 1 题，直到达到覆盖目标（KP≤3 时 100%，否则 ≥80%）；
+    3) 题型配比：按学段/模式蓝图分配剩余名额；
+    4) 兜底：按 KP 轮转补齐，题量不足时自然收敛；
+    5) 时长预算：超限时优先裁剪低难度非到期题。
+    """
     if not pool or count <= 0:
         return []
     due_ids = due_ids or set()
     rng = random.Random(seed)
 
+    # 到期错题配额（floor 保证占比不超 25%）
     due_pool = sorted([q for q in pool if q.id in due_ids], key=lambda q: q.id)
     rng.shuffle(due_pool)
-    due_quota = min(len(due_pool), max(0, int(count * due_quota_ratio)))
+    due_quota = min(len(due_pool), due_quota_cap, math.floor(count * due_quota_ratio))
 
-    # 按知识点分桶，桶内洗牌；按桶顺序轮流取题，避免同一知识点扎堆
+    # 按知识点分桶，桶内洗牌；到期错题只走配额，不参与常规抽取（错题范围无其他题时才回退）
+    normal_pool = [q for q in pool if q.id not in due_ids] or pool
     buckets: dict[int, list[Question]] = {}
-    for question in pool:
-        if question.id in due_ids:
-            continue
+    for question in normal_pool:
         buckets.setdefault(question.knowledge_point_id or 0, []).append(question)
     bucket_keys = sorted(buckets)
     rng.shuffle(bucket_keys)
@@ -144,22 +202,88 @@ def select_questions(
         buckets[key].sort(key=lambda q: q.id)
         rng.shuffle(buckets[key])
 
-    selected: list[Question] = due_pool[:due_quota]
+    selected: list[Question] = list(due_pool[:due_quota])
     seen = {q.id for q in selected}
+    covered = {q.knowledge_point_id for q in selected if q.knowledge_point_id}
+
+    range_kps = set(kp_ids) if kp_ids else {key for key in bucket_keys if key}
+    target = coverage_target(len(range_kps))
+
     cursor = 0
-    while len(selected) < count and bucket_keys:
-        if not any(buckets[k] for k in bucket_keys):
-            break
-        key = bucket_keys[cursor % len(bucket_keys)]
-        cursor += 1
+
+    def take_any(q_type: Optional[str] = None) -> Optional[Question]:
+        """按知识点轮转取 1 题；q_type 限定时跳过不匹配题但不丢弃。"""
+        nonlocal cursor
+        n = len(bucket_keys)
+        if n == 0:
+            return None
+        for step in range(n):
+            key = bucket_keys[(cursor + step) % n]
+            bucket = buckets[key]
+            for idx, question in enumerate(bucket):
+                if question.id in seen:
+                    continue
+                if q_type is not None and question.q_type != q_type:
+                    continue
+                question = bucket.pop(idx)
+                seen.add(question.id)
+                selected.append(question)
+                if question.knowledge_point_id:
+                    covered.add(question.knowledge_point_id)
+                cursor = (cursor + step + 1) % n
+                return question
+        return None
+
+    # 覆盖率优先：每个 KP 至少 1 题
+    for key in bucket_keys:
+        if not key or len(selected) >= count or len(covered) >= target:
+            continue
         bucket = buckets[key]
+        while bucket and bucket[0].id in seen:
+            bucket.pop(0)
         if not bucket:
             continue
         question = bucket.pop(0)
-        if question.id not in seen:
-            selected.append(question)
-            seen.add(question.id)
+        seen.add(question.id)
+        selected.append(question)
+        covered.add(key)
+
+    # 题型配比
+    if type_ratio:
+        existing = {q.q_type for q in pool}
+        quotas = {
+            q_type: int(round(count * ratio))
+            for q_type, ratio in type_ratio.items()
+            if q_type in existing and ratio > 0
+        }
+        actual = {q_type: sum(1 for q in selected if q.q_type == q_type) for q_type in quotas}
+        for q_type in sorted(quotas, key=lambda t: (-quotas[t], t)):
+            while actual.get(q_type, 0) < quotas[q_type] and len(selected) < count:
+                if take_any(q_type) is None:
+                    break
+                actual[q_type] = actual.get(q_type, 0) + 1
+
+    # 兜底补齐：按 KP 轮转
+    while len(selected) < count:
+        if take_any() is None:
+            break
+
+    # 时长预算：超限时优先裁剪低难度题（到期错题不裁）
+    if duration_limit_min:
+        limit_seconds = duration_limit_min * 60
+        while selected and _estimate_seconds(selected) > limit_seconds:
+            droppable = [q for q in selected if q.id not in due_ids]
+            if not droppable:
+                break
+            drop = min(droppable, key=lambda q: (q.difficulty, -q.id))
+            selected.remove(drop)
+            seen.discard(drop.id)
+
     return selected[:count]
+
+
+def _estimate_seconds(questions: list[Question]) -> int:
+    return sum(SECONDS_PER_TYPE.get(q.q_type, 40) for q in questions)
 
 
 def build_plan(
@@ -171,19 +295,43 @@ def build_plan(
     count: int,
     q_types: Optional[list[str]] = None,
     seed: Optional[int] = None,
+    mode: str = "special",
+    duration_limit_min: Optional[int] = None,
+    exclude_recent: bool = True,
 ) -> PracticePlan:
     pool = resolve_pool(
         db, user=user, scope_type=scope_type, scope_ids=scope_ids, q_types=q_types
     )
     actual_seed = int(seed) if seed is not None else random.randint(1, 2**31 - 1)
+
+    # 去重：排除最近 7 天已做题；若过滤后为空则回退全量，避免无题可练
+    availablePool = pool
+    if exclude_recent and pool:
+        recent = recent_attempted_ids(db, user_id=user.id)
+        filtered = [q for q in pool if q.id not in recent]
+        availablePool = filtered or pool
+
     due = due_review_ids(db, user_id=user.id)
-    selected = select_questions(pool, count=count, seed=actual_seed, due_ids=due)
+    try:
+        stage = derive_stage(user.grade) if user.grade else "primary"
+    except Exception:  # 非学生/异常年级兜底为小学配比
+        stage = "primary"
+
+    selected = select_questions(
+        availablePool,
+        count=count,
+        seed=actual_seed,
+        due_ids=due,
+        type_ratio=ratio_for(stage, mode),
+        duration_limit_min=duration_limit_min,
+        kp_ids={q.knowledge_point_id for q in pool if q.knowledge_point_id},
+    )
     mix: dict[str, int] = {}
     for question in selected:
         mix[question.q_type] = mix.get(question.q_type, 0) + 1
     return PracticePlan(
         questions=selected,
-        available=len(pool),
+        available=len(availablePool),
         range_kp_count=len({q.knowledge_point_id for q in pool if q.knowledge_point_id}),
         due_review_count=len([q for q in pool if q.id in due]),
         seed=actual_seed,

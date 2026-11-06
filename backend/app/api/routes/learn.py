@@ -543,6 +543,8 @@ def practice_preview(
         count=payload.count,
         q_types=payload.q_types or None,
         seed=payload.seed,
+        mode=payload.mode,
+        duration_limit_min=payload.duration_limit_min,
     )
     return PracticePreviewOut(
         count=plan.count,
@@ -591,6 +593,19 @@ def start(
         if chapter is not None:
             book = db.get(Textbook, chapter.textbook_id)
             scope_subject = book.subject if book is not None else None
+    if scope_subject is None and payload.scope_type and payload.scope_ids:
+        first_id = payload.scope_ids[0]
+        if payload.scope_type == "kp":
+            node = db.get(KnowledgePoint, first_id)
+            scope_subject = node.subject if node is not None else None
+        elif payload.scope_type == "chapter":
+            chapter = db.get(Chapter, first_id)
+            if chapter is not None:
+                book = db.get(Textbook, chapter.textbook_id)
+                scope_subject = book.subject if book is not None else None
+        elif payload.scope_type == "textbook":
+            book = db.get(Textbook, first_id)
+            scope_subject = book.subject if book is not None else None
     if (
         current.role == "student"
         and scope_subject
@@ -604,6 +619,26 @@ def start(
                 "message": "当前教材与年级不一致，请确认后继续",
                 "subject": scope_subject,
             },
+        )
+
+    # P0-22：新范围方式与预览共用同一组参数 + 同一 seed（预览=实际）
+    if payload.scope_type:
+        plan = practice_service.build_plan(
+            db,
+            user=current,
+            scope_type=payload.scope_type,
+            scope_ids=payload.scope_ids,
+            count=payload.count,
+            q_types=payload.q_types or None,
+            seed=payload.seed,
+            mode=payload.mode,
+            duration_limit_min=payload.duration_limit_min,
+        )
+        if not plan.questions:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="该范围暂无可用题目")
+        return LearnStartOut(
+            questions=[QuestionPublic.model_validate(q) for q in plan.questions],
+            seed=plan.seed,
         )
 
     # 兼容旧种子（题目只用 tags 关联知识点名称）
