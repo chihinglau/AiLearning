@@ -9,7 +9,7 @@ from sqlalchemy.orm import Session
 
 from app.api.deps import get_current_user, require_permission
 from app.db.session import get_db
-from app.models.content import Question
+from app.models.content import KnowledgePoint, Question
 from app.models.exam import Exam, ExamAnswer, ExamAttempt, ExamBlueprint
 from app.models.user import User
 from app.schemas.content import QuestionPublic
@@ -22,12 +22,17 @@ from app.schemas.exam import (
     ExamDetailOut,
     ExamGenerateIn,
     ExamGenerateOut,
+    ExamKpStatOut,
+    ExamNextActionOut,
     ExamQuestionOut,
+    ExamReportOut,
     ExamSaveIn,
     ExamSaveOut,
     ExamSubmitIn,
     ExamSubmitOut,
     ExamSummaryOut,
+    ExamTypeStatOut,
+    ExamWrongItemOut,
 )
 from app.services import learning as engine
 from app.services.exam_paper import generate_paper
@@ -557,6 +562,180 @@ def submit_exam(
     db.commit()
     db.refresh(attempt)
     return _submit_out(db, attempt, paper, duplicate=False)
+
+
+# ---------------------------------------------------------------------------
+# 考试报告（P0-29）
+# ---------------------------------------------------------------------------
+
+
+@router.get("/attempts/{attempt_id}/report", response_model=ExamReportOut)
+def exam_report(
+    attempt_id: int,
+    current: User = Depends(require_permission("learn:exam:report:self")),
+    db: Session = Depends(get_db),
+) -> ExamReportOut:
+    """交卷后报告：总分、题型得分、知识点得分率、错题清单与下一步。"""
+    attempt = _attempt_or_404(db, attempt_id, current)
+    if attempt.status == "in_progress":
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail={"code": "EXAM_NOT_SUBMITTED", "message": "考试尚未交卷，暂无报告"},
+        )
+
+    exam = _exam_or_404(db, attempt.exam_id)
+    paper = _paper_items(exam)
+    questions = _question_map(db, [item["question_id"] for item in paper])
+    rows = {
+        row.question_id: row
+        for row in db.scalars(select(ExamAnswer).where(ExamAnswer.attempt_id == attempt.id))
+    }
+    kp_ids = sorted(
+        {
+            questions[item["question_id"]].knowledge_point_id
+            for item in paper
+            if item["question_id"] in questions
+            and questions[item["question_id"]].knowledge_point_id is not None
+        }
+    )
+    kp_names = {
+        kp.id: kp.name
+        for kp in db.scalars(select(KnowledgePoint).where(KnowledgePoint.id.in_(kp_ids)))
+    } if kp_ids else {}
+
+    type_bucket: dict[str, dict[str, float]] = {}
+    kp_bucket: dict[Optional[int], dict[str, float]] = {}
+    wrong_items: list[ExamWrongItemOut] = []
+    question_count = 0
+    answered_count = 0
+    correct_count = 0
+    objective_answered = 0
+
+    for item in paper:
+        question = questions.get(item["question_id"])
+        if question is None:
+            continue
+        question_count += 1
+        row = rows.get(question.id)
+        answered = row is not None and row.user_answer is not None
+        is_correct = row is not None and row.is_correct is True
+        score = float(row.score) if row is not None and row.score is not None else 0.0
+
+        if answered:
+            answered_count += 1
+        if is_correct:
+            correct_count += 1
+        if question.q_type in OBJECTIVE_TYPES and answered:
+            objective_answered += 1
+
+        type_bucket.setdefault(
+            question.q_type,
+            {"question_count": 0.0, "answered": 0.0, "correct": 0.0, "score": 0.0, "full_score": 0.0},
+        )
+        type_stat = type_bucket[question.q_type]
+        type_stat["question_count"] += 1
+        type_stat["answered"] += 1 if answered else 0
+        type_stat["correct"] += 1 if is_correct else 0
+        type_stat["score"] += score
+        type_stat["full_score"] += item["score"]
+
+        kp_id = question.knowledge_point_id
+        kp_bucket.setdefault(
+            kp_id,
+            {"question_count": 0.0, "correct": 0.0, "score": 0.0, "full_score": 0.0},
+        )
+        kp_stat = kp_bucket[kp_id]
+        kp_stat["question_count"] += 1
+        kp_stat["correct"] += 1 if is_correct else 0
+        kp_stat["score"] += score
+        kp_stat["full_score"] += item["score"]
+
+        if row is not None and row.is_correct is False:
+            wrong_items.append(
+                ExamWrongItemOut(
+                    question_id=question.id,
+                    q_type=question.q_type,
+                    stem=str(question.content.get("stem", "")),
+                    user_answer=row.user_answer,
+                    correct_answer=question.answer,
+                    analysis=question.analysis,
+                    score=score,
+                    full_score=item["score"],
+                )
+            )
+
+    def _rate(score: float, full_score: float) -> float:
+        return round(score / full_score, 3) if full_score else 0.0
+
+    type_stats = [
+        ExamTypeStatOut(
+            q_type=q_type,
+            question_count=int(stat["question_count"]),
+            answered=int(stat["answered"]),
+            correct=int(stat["correct"]),
+            score=round(stat["score"], 2),
+            full_score=round(stat["full_score"], 2),
+            score_rate=_rate(stat["score"], stat["full_score"]),
+        )
+        for q_type, stat in sorted(type_bucket.items())
+    ]
+
+    kp_stats = [
+        ExamKpStatOut(
+            knowledge_point_id=kp_id,
+            name=kp_names.get(kp_id, "未关联知识点") if kp_id is not None else "未关联知识点",
+            question_count=int(stat["question_count"]),
+            correct=int(stat["correct"]),
+            score=round(stat["score"], 2),
+            full_score=round(stat["full_score"], 2),
+            score_rate=_rate(stat["score"], stat["full_score"]),
+        )
+        for kp_id, stat in kp_bucket.items()
+    ]
+    kp_stats.sort(key=lambda item: (item.score_rate, item.knowledge_point_id or 0))
+
+    weak_kp_ids = [
+        item.knowledge_point_id
+        for item in kp_stats
+        if item.knowledge_point_id is not None and item.score_rate < 0.6
+    ]
+    next_actions: list[ExamNextActionOut] = []
+    if weak_kp_ids:
+        next_actions.append(
+            ExamNextActionOut(
+                action="weak_practice",
+                label="薄弱点专项练习",
+                knowledge_point_ids=weak_kp_ids,
+                count=len(weak_kp_ids),
+            )
+        )
+    if wrong_items:
+        next_actions.append(
+            ExamNextActionOut(action="wrong_review", label="错题重练", count=len(wrong_items))
+        )
+    next_actions.append(ExamNextActionOut(action="retake", label="再考一次", count=1))
+
+    return ExamReportOut(
+        attempt_id=attempt.id,
+        exam_id=exam.id,
+        exam_title=exam.title,
+        exam_type=exam.exam_type,
+        status=attempt.status,
+        total_score=attempt.total_score,
+        full_score=float(exam.total_score),
+        objective_score=attempt.objective_score,
+        subjective_score=attempt.subjective_score,
+        correct_count=correct_count,
+        question_count=question_count,
+        answered_count=answered_count,
+        accuracy=round(correct_count / objective_answered, 3) if objective_answered else 0.0,
+        duration_ms=attempt.duration_ms,
+        submitted_at=attempt.submitted_at,
+        type_stats=type_stats,
+        kp_stats=kp_stats,
+        wrong_questions=wrong_items,
+        next_actions=next_actions,
+    )
 
 
 # ---------------------------------------------------------------------------

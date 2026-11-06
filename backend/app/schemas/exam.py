@@ -145,3 +145,64 @@ class ExamGenerateOut(BaseModel):
     difficulty_mix: dict[str, int] = Field(default_factory=dict)
     fallback_count: int = 0
     insufficient: bool = False
+
+
+class ExamTypeStatOut(BaseModel):
+    q_type: str
+    question_count: int
+    answered: int
+    correct: int
+    score: float
+    full_score: float
+    score_rate: float
+
+
+class ExamKpStatOut(BaseModel):
+    knowledge_point_id: Optional[int] = None
+    name: str
+    question_count: int
+    correct: int
+    score: float
+    full_score: float
+    score_rate: float
+
+
+class ExamWrongItemOut(BaseModel):
+    question_id: int
+    q_type: str
+    stem: str
+    user_answer: Optional[dict[str, Any]] = None
+    correct_answer: dict[str, Any]
+    analysis: Optional[str] = None
+    score: float
+    full_score: float
+
+
+class ExamNextActionOut(BaseModel):
+    action: str
+    label: str
+    knowledge_point_ids: list[int] = Field(default_factory=list)
+    count: int = 0
+
+
+class ExamReportOut(BaseModel):
+    attempt_id: int
+    exam_id: int
+    exam_title: str
+    exam_type: str
+    status: str
+    total_score: Optional[float] = None
+    full_score: float = 0.0
+    objective_score: float = 0.0
+    subjective_score: Optional[float] = None
+    correct_count: int = 0
+    question_count: int = 0
+    answered_count: int = 0
+    accuracy: float = 0.0
+    duration_ms: int = 0
+    submitted_at: Optional[datetime] = None
+    type_stats: list[ExamTypeStatOut] = Field(default_factory=list)
+    kp_stats: list[ExamKpStatOut] = Field(default_factory=list)
+    wrong_questions: list[ExamWrongItemOut] = Field(default_factory=list)
+    next_actions: list[ExamNextActionOut] = Field(default_factory=list)
+
