@@ -1,9 +1,9 @@
 # 深爱学（AiLearning）项目实施任务计划与进度跟踪
 
 > **文档性质**：项目主计划 / 进度跟踪 / 过程追溯（全程伴随开发周期）
-> **版本**：v1.50
+> **版本**：v1.51
 > **创建日期**：2026-11-06
-> **最后更新**：2026-11-07 01:45（P1-07 期中/期末蓝图与组卷完成）
+> **最后更新**：2026-11-07 02:05（P1-08 考试窗口与过期处理完成）
 > **参考设计文档**：见[§1.1 参考设计文档清单](#11-参考设计文档清单)（共 8 份，含 4 份设计方案、4 份支撑文档）
 > **需求追踪**：见[§1.2 需求—设计—任务追踪矩阵](#12-需求设计任务追踪矩阵)
 > **维护人**：项目负责人（PM）
@@ -57,7 +57,7 @@
 | 知识点分层与学习路径 | D-02 学科方案、D-04 §6 | D-04 §6 | P0-17~P0-20、P0-35 | L4/L5 | `DONE`（四层结构、状态机与前端单元/知识点详情已完成） |
 | 智能辅助练习 | D-02 学法、D-04 §7 | D-04 §7 | P0-21~P0-24、P0-36 | L6/L7/L8/L13 | `DONE`（服务端预览/组卷/会话/来源拆分 + 前端配置/预览/续答/结算已完成） |
 | 单元测试 | D-04 §8.1~§8.5 | D-04 §8 | P0-25~P0-30、P0-37 | L9/L10/L11/L12 | `DONE`（服务端组卷/交卷/报告/回流 + 前端考试中心/限时答题/报告页已完成） |
-| 期中/期末/模考 | D-04 §8.1~§8.5 | D-04 §8、D-03 §5.2 | P1-07~P1-10、P2-07 | L9~L12 | `DOING`（P1-07 期中/期末蓝图与组卷已完成，待考试中心与模考） |
+| 期中/期末/模考 | D-04 §8.1~§8.5 | D-04 §8、D-03 §5.2 | P1-07~P1-10、P2-07 | L9~L12 | `DOING`（P1-07 蓝图组卷、P1-08 考试窗口与过期处理已完成，待 P1-09/P1-10 与 P2-07 模考） |
 | 主观题与报告增强 | D-04 §7.5/§8.5 | D-04 §7.5/§8.5 | P1-09、P1-10 | L11 | `TODO` |
 | 推荐与学习闭环 | D-04 §2.2/§6.6 | D-04 §2.2/§6.6 | P1-11、P1-12 | 闭环验收 | `TODO` |
 | 平台化与增强（RBAC/图谱/离线/AI） | D-03 §9.2、D-04 §14 | D-03 §9.2、D-04 §14 | P2-01~P2-10 | M4 | `TODO` |
@@ -243,7 +243,7 @@ DONE ──返工（需CR）──► DOING
 | P1-05 | 家长端页面：切换孩子、孩子学情、时长与青少年模式 | FE | 12 | P1 | P0-09 | `DONE` | 3 | A4 | 后端：`users.teen_mode` 字段（迁移 `k1f2g3h4i5j6`）、`GET /family/children` 返回 `daily_limit_minutes/teen_mode`、`PUT /family/children/{id}/controls`（空字段 422 `CONTROLS_REQUIRED`、无 active 绑定 404、审计 `family.controls.update`），`tests/test_family_controls.py` 2 例；前端：`FamilyChild` 模型、`FamilyService`、`ParentChildrenPage`（ChoiceChip 切换孩子、按 `student_id` 拉取学情、时长滑块 0~240、青少年模式开关、保存提示）、`/family` 路由 + `PermissionGate`、个人中心家长入口，非学生账号不再请求个人统计；`family_model_test.dart` 2 例、`parent_children_page_test.dart` 4 例；`flutter analyze --no-pub` 0 issues、`flutter test --no-pub` 38 passed、`pytest` 228 passed、`ruff` 0 issue |
 | P1-06 | 教师端页面：班级概览、班级报告（聚合） | FE | 12 | P1 | P1-03 | `DONE` | 3 | A5 | 前端：`ClassSummary`/`ClassStats`/`ClassWeakPoint` 模型、`OrgService`（`GET /org/classes`、`GET /org/classes/{id}/stats` 支持 `subject`）、`TeacherClassesPage`（班级卡片/空态/下拉刷新）、`ClassStatsPage`（学生数/近 7 日活跃/正确率/平均掌握度/提交率/薄弱 Top5，页面明示仅聚合数据）、`/teacher/classes` 与 `/teacher/classes/:classId/stats` 路由 + `PermissionGate`、个人中心教师入口；`org_model_test.dart` 3 例、`teacher_pages_test.dart` 3 例；`flutter analyze --no-pub` 0 issues、`flutter test --no-pub` 44 passed |
 | P1-07 | 期中/期末蓝图与组卷（范围=章节集合、6:3:1 难度、KP 覆盖） | CT/AR | 10 | P1 | P0-26 | `DONE` | 3 | L9 | 蓝图：`scripts/seed.py` 新增 6 套期中/期末蓝图（语数英各 2 套，`exam_type=midterm/final`，`sections` 按 `band` 分带，得分 60/30/10，`kp_coverage_min=0.8`，时限 90 分钟）；组卷：`app/services/exam_paper.py` 支持 `band → difficulty` 映射（easy 1 / medium 2~3 / hard 4~5）；`tests/test_exam_comprehensive.py` 4 例（蓝图规格、两章范围组卷得分 60/30/10 且覆盖 6/6 KP、同 seed 幂等、`/api/exams/generate` 发布 midterm 试卷）；`tests/test_exam_blueprint.py` 同步 9 套蓝图断言；`pytest` 232 passed |
-| P1-08 | 考试中心扩展：期中/期末/模考入口、考试窗口与过期处理 | AR/FE | 10 | P1 | P0-37/P1-07 | `TODO` | — | L10 | — |
+| P1-08 | 考试中心扩展：期中/期末/模考入口、考试窗口与过期处理 | AR/FE | 10 | P1 | P0-37/P1-07 | `DONE` | 3 | L10 | 后端：`exams.window_start/window_end`（迁移 `l2g3h4i5j6k7`）、`/api/exams/generate` 支持窗口配置、列表返回 `window_state`（open/scheduled/closed/unscheduled）、窗口外开考 403 `EXAM_WINDOW_NOT_OPEN/EXAM_WINDOW_CLOSED`、保存/交卷遇窗口关闭按已存答案自动交卷且不再接收新答案，`tests/test_exam_window.py` 3 例；前端：`ExamSummary` 窗口字段与 `windowLabel/windowRange`、考试列表新增类型筛选（单元测/期中/期末/模考）、窗口时间与状态展示、未开放时提示拦截，`exam_model_test.dart` +1 例、`exam_list_page_test.dart` 2 例；`pytest` 235 passed、`flutter analyze --no-pub` 0 issues、`flutter test --no-pub` 47 passed |
 | P1-09 | 主观题自评：参考答案、评分点、自评量表、成绩回写 | AR/FE | 10 | P1 | P0-29 | `TODO` | — | L11 | — |
 | P1-10 | 报告增强：能力维度雷达、班级平均（有班级时）、趋势对比 | AR/FE | 8 | P1 | P1-09/P1-03 | `TODO` | — | L11 | — |
 | P1-11 | 推荐服务：今日计划生成规则（复习→薄弱→单元测→进度→每日一练） | AR | 8 | P1 | P0-14/P0-20 | `TODO` | — | 6.6 | — |
@@ -428,12 +428,12 @@ flowchart LR
 | 指标 | 数值 |
 |---|---|
 | 任务总数（不含基线） | 77（开发 68：P0 43 + P1 15 + P2 10；发布 9：R-01~R-09） |
-| `TODO` | 27 |
+| `TODO` | 26 |
 | `DOING` | 0 |
-| `DONE` | 50（P0-01~P0-43、P1-01~P1-07；基线 5 项已冻结） |
+| `DONE` | 51（P0-01~P0-43、P1-01~P1-08；基线 5 项已冻结） |
 | `BLOCKED` | 0 |
 | 预估总工时 | 676 h（开发 557 = P0 310 + P1 129 + P2 118；发布 119） |
-| 已投入工时 | 159 h（P0-01 3、P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3、P0-23 3、P0-24 3、P0-25 3、P0-26 3、P0-27 3、P0-28 4、P0-29 3、P0-30 3、P0-31 4、P0-32 3、P0-33 4、P0-34 4、P0-35 6、P0-36 8、P0-37 10、P0-38 4、P0-39 6、P0-40 4、P0-41 6、P0-42 2、P0-43 3、P1-01 3、P1-02 2、P1-03 2、P1-04 3、P1-05 3、P1-06 3、P1-07 3） |
+| 已投入工时 | 162 h（P0-01 3、P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3、P0-23 3、P0-24 3、P0-25 3、P0-26 3、P0-27 3、P0-28 4、P0-29 3、P0-30 3、P0-31 4、P0-32 3、P0-33 4、P0-34 4、P0-35 6、P0-36 8、P0-37 10、P0-38 4、P0-39 6、P0-40 4、P0-41 6、P0-42 2、P0-43 3、P1-01 3、P1-02 2、P1-03 2、P1-04 3、P1-05 3、P1-06 3、P1-07 3、P1-08 3） |
 | 当前迭代 | P1（角色扩展与综合考试）+ 发布准备（R-05 软著先行） |
 | 迭代目标 | 教师/班主任/校管/家长角色可用；期中/期末/模考闭环；主观题自评与报告增强；推荐服务上线；并行推进软著/签名/隐私/部署 |
 | 里程碑 | M2.5（P0 技术验收通过，待签署）→ M3（P1） |
@@ -524,6 +524,7 @@ flowchart LR
 | v1.48 | 2026-11-07 | AR | P1-05 家长端页面（后端 `teen_mode` 字段+迁移 `k1f2g3h4i5j6`、`PUT /family/children/{id}/controls` 含审计与边界校验、`tests/test_family_controls.py` 2 例；前端 `FamilyChild`/`FamilyService`/`ParentChildrenPage`（切换孩子、按 `student_id` 拉学情、每日时长、青少年模式）、`/family` 路由与个人中心入口、非学生隐藏个人统计；`flutter analyze` 0 issues、`flutter test` 38 passed、`pytest` 228 passed）；§1.2 家长绑定与未成年人合规转 `DONE`；§5.1 同步（DONE 48 / 投入 153 h / TODO 29） |
 | v1.49 | 2026-11-07 | AR | P1-06 教师端页面（`ClassSummary`/`ClassStats` 模型与 `OrgService`、`TeacherClassesPage` 班级概览、`ClassStatsPage` 聚合报告与薄弱 Top5、`/teacher/classes` 路由与个人中心教师入口；`org_model_test.dart` 3 例、`teacher_pages_test.dart` 3 例；`flutter analyze` 0 issues、`flutter test` 44 passed）；§1.2 学校/教师组织能力转 `DONE`；§6.1 A3~A6 补充教师端；§5.1 同步（DONE 49 / 投入 156 h / TODO 28） |
 | v1.50 | 2026-11-07 | AR | P1-07 期中/期末蓝图与组卷（6 套蓝图按 band 分带，得分 60/30/10、`kp_coverage_min=0.8`；`generate_paper` 支持 band→difficulty 映射；`tests/test_exam_comprehensive.py` 4 例验证两章范围组卷、难度得分配比、KP 覆盖、同 seed 幂等与 API 发布；`test_exam_blueprint.py` 同步 9 套断言；`pytest` 232 passed）；§1.2 期中/期末/模考转 `DOING`；§5.1 同步（DONE 50 / 投入 159 h / TODO 27） |
+| v1.51 | 2026-11-07 | AR | P1-08 考试窗口与过期处理（`exams.window_start/window_end` + 迁移 `l2g3h4i5j6k7`；生成接口支持窗口、列表 `window_state`、窗口外开考 403、窗口关闭按已存答案自动交卷且拒收新答案，`tests/test_exam_window.py` 3 例；前端类型筛选与窗口展示/拦截，`exam_list_page_test.dart` 2 例；`pytest` 235 passed、`flutter test` 47 passed）；§5.1 同步（DONE 51 / 投入 162 h / TODO 26） |
 
 ---
 
@@ -586,4 +587,4 @@ flowchart LR
 
 ---
 
-> **当前下一步**：P1-08（考试中心扩展：期中/期末/模考入口、考试窗口与过期处理）。所有任务按依赖图推进，每完成一个任务即回写本文件状态。
+> **当前下一步**：P1-09（主观题自评：参考答案、评分点、自评量表、成绩回写）。所有任务按依赖图推进，每完成一个任务即回写本文件状态。
