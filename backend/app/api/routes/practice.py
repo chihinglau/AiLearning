@@ -5,6 +5,7 @@ from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from app.api.deps import get_current_user
+from app.core import cache
 from app.db.session import get_db
 from app.models.content import KnowledgePoint, Question
 from app.models.practice import StudentQuestionRecord
@@ -86,6 +87,7 @@ def submit_answer(
         )
     )
     db.commit()
+    cache.invalidate_user(current.id)
     return PracticeSubmitOut(
         is_correct=is_correct,
         correct_answer=question.answer,

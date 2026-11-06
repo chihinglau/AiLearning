@@ -8,6 +8,7 @@ from sqlalchemy import and_, func, or_, select
 from sqlalchemy.orm import Session
 
 from app.api.deps import get_current_user, require_student_access
+from app.core import cache
 from app.core.grade import derive_grade_group, derive_semester, derive_stage
 from app.core.scope import StudentAccess
 from app.db.session import get_db
@@ -695,6 +696,7 @@ def finish_session(
     session.answered_count = detail.answered_count
     session.correct_count = detail.correct_count
     db.commit()
+    cache.invalidate_user(current.id)
 
     qids = [int(qid) for qid in (session.question_ids or [])]
     questions = {
@@ -955,6 +957,7 @@ def submit(
         session.answered_count = detail.answered_count
         session.correct_count = detail.correct_count
     db.commit()
+    cache.invalidate_user(current.id)
 
     return LearnSubmitOut(
         is_correct=is_correct,
@@ -1085,6 +1088,10 @@ def stats(
     db: Session = Depends(get_db),
 ) -> LearnStatsOut:
     user_id = _target_student(access)
+    cache_key = f"stats:{user_id}"
+    cached = cache.get(cache_key)
+    if cached is not None:
+        return cached
     total = db.scalar(
         select(func.count(StudentQuestionRecord.id)).where(
             StudentQuestionRecord.user_id == user_id
@@ -1141,7 +1148,7 @@ def stats(
         node.mastery_band = engine.mastery_band(m.score)
         weak_nodes.append(node)
 
-    return LearnStatsOut(
+    result = LearnStatsOut(
         total_answered=total,
         total_correct=correct,
         accuracy=round(correct / total, 3) if total else 0.0,
@@ -1150,6 +1157,8 @@ def stats(
         active_wrong_count=active_wrong,
         weak_points=weak_nodes,
     )
+    cache.set(cache_key, result)
+    return result
 
 
 def _calc_streak(reverse_days: list[str]) -> int:
@@ -1207,6 +1216,10 @@ def home(
 
     now = datetime.utcnow()
     grade = current.grade or 1
+    cache_key = f"home:{current.id}:{grade}:{current.semester}"
+    cached = cache.get(cache_key)
+    if cached is not None:
+        return cached
     stage = current.stage or derive_stage(grade)
     grade_group = current.grade_group or derive_grade_group(grade)
     semester = current.semester or derive_semester(now)
@@ -1288,7 +1301,7 @@ def home(
     )
     pending_exams = recommendation.build_pending_exams(db, user=current, now=now)
 
-    return HomeOut(
+    result = HomeOut(
         grade=grade,
         stage=stage,
         grade_group=grade_group,
@@ -1308,3 +1321,5 @@ def home(
         recommendation=recommendation_out,
         pending_exams=pending_exams,
     )
+    cache.set(cache_key, result)
+    return result

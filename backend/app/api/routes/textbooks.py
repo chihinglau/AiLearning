@@ -7,6 +7,7 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.api.deps import get_current_user
+from app.core import cache
 from app.core.grade import derive_semester
 from app.db.session import get_db
 from app.models.content import Textbook
@@ -93,6 +94,7 @@ def auto_bind(
     _require_student(current)
     bindings = service.auto_bind(db, current)
     db.commit()
+    cache.invalidate_user(current.id)
     out = [
         _binding_out(b, db.get(Textbook, b.textbook_id), current.grade) for b in bindings
     ]
@@ -122,6 +124,7 @@ def bind(
             detail={"code": code, "message": message},
         )
     db.commit()
+    cache.invalidate_user(current.id)
     textbook = db.get(Textbook, payload.textbook_id)
     return _binding_out(binding, textbook, current.grade)
 
@@ -147,5 +150,6 @@ def unbind(
         binding.status = "archived"
         db.commit()
         db.refresh(binding)
+        cache.invalidate_user(current.id)
     textbook = db.get(Textbook, binding.textbook_id)
     return _binding_out(binding, textbook, current.grade)

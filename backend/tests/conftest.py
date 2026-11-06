@@ -7,6 +7,7 @@ from sqlalchemy.orm import Session, sessionmaker
 from sqlalchemy.pool import StaticPool
 
 from app import models  # noqa: F401  注册全部模型
+from app.core import cache
 from app.core.security import hash_password
 from app.db.base import Base
 from app.db.session import get_db
@@ -23,9 +24,11 @@ TestingSessionLocal = sessionmaker(bind=engine, autocommit=False, autoflush=Fals
 
 @pytest.fixture(autouse=True)
 def prepare_schema() -> Generator[None, None, None]:
+    cache.clear()
     Base.metadata.create_all(bind=engine)
     yield
     Base.metadata.drop_all(bind=engine)
+    cache.clear()
 
 
 @pytest.fixture

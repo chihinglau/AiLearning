@@ -8,6 +8,7 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.api.deps import get_current_user, require_permission
+from app.core import cache
 from app.db.session import get_db
 from app.models.content import KnowledgePoint, Question
 from app.models.exam import Exam, ExamAnswer, ExamAttempt, ExamBlueprint
@@ -518,6 +519,7 @@ def _finalize(
                 question, row.user_answer if row is not None else None
             )
     db.flush()
+    cache.invalidate_user(attempt.user_id)
 
 
 def _submit_out(
@@ -1131,6 +1133,7 @@ def self_assess(
     attempt.total_score = round(attempt.objective_score + subjective_score, 2)
     attempt.status = "completed" if pending_count == 0 else "grading"
     db.commit()
+    cache.invalidate_user(attempt.user_id)
 
     return ExamSelfAssessOut(
         attempt_id=attempt.id,
