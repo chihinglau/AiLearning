@@ -17,6 +17,7 @@ from app.db.session import get_db
 from app.models.user import AuditLog, User
 from app.schemas.user import MeOut, PermissionsOut, TokenOut, UserCreate, UserOut
 from app.services.audit import record_audit
+from app.services.family import has_active_guardian
 
 router = APIRouter(prefix="/auth", tags=["账号"])
 
@@ -95,12 +96,15 @@ def login(
 
 
 @router.get("/me", response_model=MeOut)
-def me(current: User = Depends(get_current_user)) -> MeOut:
+def me(
+    current: User = Depends(get_current_user), db: Session = Depends(get_db)
+) -> MeOut:
     data = UserOut.model_validate(current)
     return MeOut(
         **data.model_dump(),
         permissions=current_user_permissions(current),
         scope=current_user_scope(current),
+        guardian_consent=True if not current.is_child else has_active_guardian(db, current),
     )
 
 

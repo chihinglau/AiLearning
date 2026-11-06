@@ -38,6 +38,7 @@ class PermissionsOut(BaseModel):
 class MeOut(UserOut):
     permissions: List[str] = Field(default_factory=list)
     scope: str = "SELF"
+    guardian_consent: bool = True
 
 
 class GradeChangeIn(BaseModel):
