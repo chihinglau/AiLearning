@@ -23,6 +23,12 @@ class ExamService {
     return ExamAttempt.fromJson(data);
   }
 
+  /// 开始/续答并返回原始 JSON，供离线整卷快照使用。
+  Future<(ExamAttempt, Map<String, dynamic>)> startAttemptRaw(int examId) async {
+    final data = await _api.postJson('/api/exams/$examId/attempts', const {});
+    return (ExamAttempt.fromJson(data), data);
+  }
+
   Future<ExamSaveResult> saveAnswers(
     int attemptId,
     List<Map<String, dynamic>> answers,

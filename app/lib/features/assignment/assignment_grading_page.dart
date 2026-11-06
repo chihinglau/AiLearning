@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:ai_learning/core/errors/api_error_guide.dart';
 import 'package:ai_learning/core/models/assignment.dart';
 import 'package:ai_learning/core/providers.dart';
@@ -191,8 +193,27 @@ class _AssignmentGradingPageState extends ConsumerState<AssignmentGradingPage> {
                             const SizedBox(height: 12),
                             _LabeledLine(
                               label: '学生作答',
-                              value: item.userAnswer ?? '（未作答）',
+                              value: item.userAnswer ?? (item.images.isEmpty ? '（未作答）' : '见手写图片'),
                             ),
+                            if (item.images.isNotEmpty) ...[
+                              const SizedBox(height: 8),
+                              Wrap(
+                                spacing: 8,
+                                runSpacing: 8,
+                                children: [
+                                  for (final image in item.images)
+                                    ClipRRect(
+                                      borderRadius: BorderRadius.circular(8),
+                                      child: Image.memory(
+                                        _imageBytes(image),
+                                        width: 140,
+                                        height: 100,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                ],
+                              ),
+                            ],
                             _LabeledLine(
                               label: '参考答案',
                               value: item.reference.isEmpty ? '—' : item.reference,
@@ -254,6 +275,11 @@ class _AssignmentGradingPageState extends ConsumerState<AssignmentGradingPage> {
             ),
     );
   }
+}
+
+Uint8List _imageBytes(String dataUrl) {
+  final comma = dataUrl.indexOf(',');
+  return base64Decode(comma >= 0 ? dataUrl.substring(comma + 1) : dataUrl);
 }
 
 class _LabeledLine extends StatelessWidget {

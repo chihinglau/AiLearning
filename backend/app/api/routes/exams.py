@@ -406,6 +406,62 @@ def exam_detail(
 # ---------------------------------------------------------------------------
 
 
+# 图片作答：仅主观题支持，最多 2 张，单张 data URL 上限 3 MB、合计 4 MB
+IMAGE_DATA_PREFIXES = (
+    "data:image/png;base64,",
+    "data:image/jpeg;base64,",
+    "data:image/jpg;base64,",
+    "data:image/webp;base64,",
+)
+MAX_IMAGE_DATA_URL = 3_000_000
+MAX_IMAGES_TOTAL = 4_000_000
+MAX_IMAGES_PER_ANSWER = 2
+
+
+def _validate_answer_images(
+    answer: ExamAnswerSaveIn, question: Optional[Question]
+) -> None:
+    """校验图片作答：仅主观题、白名单格式、大小与数量限制。"""
+    if not isinstance(answer.user_answer, dict):
+        return
+    images = answer.user_answer.get("images")
+    if images is None:
+        return
+    if not isinstance(images, list) or not images:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail={"code": "IMAGE_INVALID", "message": "图片作答格式不正确"},
+        )
+    if question is None or question.q_type in OBJECTIVE_TYPES:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail={"code": "IMAGE_NOT_ALLOWED", "message": "客观题不支持图片作答"},
+        )
+    if len(images) > MAX_IMAGES_PER_ANSWER:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail={"code": "IMAGE_TOO_MANY", "message": "每道题最多上传 2 张图片"},
+        )
+    total = 0
+    for image in images:
+        if not isinstance(image, str) or not image.startswith(IMAGE_DATA_PREFIXES):
+            raise HTTPException(
+                status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+                detail={"code": "IMAGE_INVALID", "message": "仅支持 PNG/JPEG/WEBP 图片"},
+            )
+        if len(image) > MAX_IMAGE_DATA_URL:
+            raise HTTPException(
+                status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+                detail={"code": "IMAGE_TOO_LARGE", "message": "单张图片不得超过 3 MB"},
+            )
+        total += len(image)
+    if total > MAX_IMAGES_TOTAL:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail={"code": "IMAGE_TOO_LARGE", "message": "图片合计不得超过 4 MB"},
+        )
+
+
 def _save_answers(
     db: Session,
     *,
@@ -414,6 +470,7 @@ def _save_answers(
     answers: list[ExamAnswerSaveIn],
 ) -> int:
     allowed = {item["question_id"] for item in paper}
+    questions = _question_map(db, [answer.question_id for answer in answers])
     rows = {
         row.question_id: row
         for row in db.scalars(
@@ -428,6 +485,7 @@ def _save_answers(
                 status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
                 detail={"code": "QUESTION_NOT_IN_EXAM", "message": "题目不属于该试卷"},
             )
+        _validate_answer_images(answer, questions.get(answer.question_id))
         row = rows.get(answer.question_id)
         if row is None:
             row = ExamAnswer(

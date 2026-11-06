@@ -1,4 +1,6 @@
 import 'package:ai_learning/core/models/user.dart';
+import 'package:ai_learning/core/offline/offline_exam_store.dart';
+import 'package:ai_learning/core/offline/offline_exam_sync.dart';
 import 'package:ai_learning/core/services/api_client.dart';
 import 'package:ai_learning/core/services/assignment_service.dart';
 import 'package:ai_learning/core/services/auth_service.dart';
@@ -46,6 +48,17 @@ final textbookServiceProvider = Provider<TextbookService>((ref) {
 
 final examServiceProvider = Provider<ExamService>((ref) {
   return ExamService(ref.watch(apiClientProvider));
+});
+
+final offlineExamStoreProvider = Provider<OfflineExamStore>((ref) {
+  return HiveOfflineExamStore();
+});
+
+final offlineExamSyncProvider = Provider<OfflineExamSync>((ref) {
+  return OfflineExamSync(
+    ref.watch(examServiceProvider),
+    ref.watch(offlineExamStoreProvider),
+  );
 });
 
 final assignmentServiceProvider = Provider<AssignmentService>((ref) {

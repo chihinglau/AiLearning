@@ -151,6 +151,7 @@ class GradingItem {
     this.reference = '',
     this.analysis,
     this.userAnswer,
+    this.images = const [],
     required this.maxScore,
     this.currentScore,
     this.comment,
@@ -165,6 +166,7 @@ class GradingItem {
   final String reference;
   final String? analysis;
   final String? userAnswer;
+  final List<String> images;
   final double maxScore;
   final double? currentScore;
   final String? comment;
@@ -183,6 +185,9 @@ class GradingItem {
       reference: answer['value'] as String? ?? '',
       analysis: json['analysis'] as String?,
       userAnswer: userAnswer?['value'] as String?,
+      images: (userAnswer?['images'] as List<dynamic>? ?? const [])
+          .whereType<String>()
+          .toList(),
       maxScore: (json['max_score'] as num?)?.toDouble() ?? 0,
       currentScore: (json['current_score'] as num?)?.toDouble(),
       comment: json['comment'] as String?,
