@@ -1,9 +1,9 @@
 # 深爱学（AiLearning）项目实施任务计划与进度跟踪
 
 > **文档性质**：项目主计划 / 进度跟踪 / 过程追溯（全程伴随开发周期）
-> **版本**：v1.47
+> **版本**：v1.48
 > **创建日期**：2026-11-06
-> **最后更新**：2026-11-07 00:50（P1-04 管理端用户列表与角色变更完成）
+> **最后更新**：2026-11-07 01:05（P1-05 家长端页面完成）
 > **参考设计文档**：见[§1.1 参考设计文档清单](#11-参考设计文档清单)（共 8 份，含 4 份设计方案、4 份支撑文档）
 > **需求追踪**：见[§1.2 需求—设计—任务追踪矩阵](#12-需求设计任务追踪矩阵)
 > **维护人**：项目负责人（PM）
@@ -50,7 +50,7 @@
 | 学生年级细分与必填 | D-03 §4/§7.1 | D-03 §4/§7.1、D-04 §4.5 | P0-01、P0-02、P0-08、P0-15、P0-31、P0-42 | A1/A2/A9/L1 | `DONE`（年级校验/引导/改年级确认与迁移回归、seed 幂等均已通过） |
 | 数据访问范围控制 | D-03 §6 | D-03 §6 | P0-04、P0-10、P0-40 | A3/A4/A5/A6 | `DONE`（范围解析、学习域改造与越权专项测试已通过） |
 | 权限校验与审计 | D-03 §8 | D-03 §8 | P0-05、P0-07、P0-32、P0-39 | A7/A8/A10 | `DONE`（审计/`/me`/Token 失效/前端路由守卫/权限矩阵用例已通过） |
-| 家长绑定与未成年人合规 | D-03 §7.2、D-05 | D-03 §7.2/§10.2 | P0-09、P1-05 | A4 | `DOING`（绑定与同意校验已完成，待 P1-05 家长端页面） |
+| 家长绑定与未成年人合规 | D-03 §7.2、D-05 | D-03 §7.2/§10.2 | P0-09、P1-05 | A4 | `DONE`（绑定/同意校验与家长端页面（切换孩子、孩子学情、每日时长、青少年模式）已完成） |
 | 学校/教师组织能力 | D-03 §7.3/§7.4/§10.3 | D-03 §7.3/§7.4/§10.3 | P1-01~P1-06 | A5/A6 | `DOING`（P1-01~P1-03 已完成，待 P1-06 教师端页面） |
 | 教材绑定与选择入口 | D-04 §4/§5 | D-04 §4/§5 | P0-11、P0-12、P0-13、P0-34、P0-16 | L1/L2/L3 | `DONE`（服务端推荐/绑定/冲突检测与前端教材管理页已完成） |
 | 学习首页与"下一步"入口 | D-04 §3/§6.6 | D-04 §3/§6.6 | P0-14、P0-33、P1-11 | L1/L14 | `DOING`（首页聚合接口与前端学习首页已完成，待 P1-11 推荐服务） |
@@ -240,7 +240,7 @@ DONE ──返工（需CR）──► DOING
 | P1-02 | 班级与授课分配 API、教师年级/学科范围校验 | AR | 8 | P1 | P1-01 | `DONE` | 2 | A5 | `api/routes/org.py`：`GET/POST /org/schools`（超管）、`GET/POST /org/classes`（校管按本校、教师按授课班）、`GET/POST /org/classes/{id}/members`（批量入班，校验学生角色/同校/年级一致、重复入班幂等）、`GET/POST /org/assignments`（校验教师角色、同学段、`teacher_subjects`、`grade_start/grade_end`，班主任冲突/重复分配 409）；`schemas/org.py`；`deps.require_any_permission`；审计 `org.school.create/class.create/member.add/teacher.assign`；`tests/test_org_api.py` 3 例（班级/成员/教师可见性、跨校与角色拒绝、分配规则与冲突）；`pytest` 220 passed |
 | P1-03 | 班级学情聚合接口（仅聚合值，不泄露逐题原文） | AR | 8 | P1 | P1-02/P0-04 | `DONE` | 2 | A5/6.5 | `GET /api/org/classes/{id}/stats`：返回学生数/近 7 日活跃数与提交率、答题数与正确率、平均掌握度、薄弱知识点 Top5（班级均值），支持 `subject` 收窄；教师按授课班+学科校验，校管限本校，越权 `SCOPE_DENIED`；响应不含任何学生标识与逐题原文；`tests/test_org_stats.py` 2 例（聚合口径与字段白名单、教师/校管/学生/跨校范围）；`pytest` 222 passed |
 | P1-04 | 管理端用户列表与角色授予/回收（禁止自授超管、本校范围） | AR | 8 | P1 | P1-01 | `DONE` | 3 | A6/A8 | `api/routes/admin_users.py`：`GET /admin/users`（分页/角色/学校/年级/关键词筛选，校管强制本校，手机号脱敏）；`POST /admin/users/{id}/roles`（grant/revoke 单角色，`SELF_ROLE_DENIED` 禁自改与自授超管、校管仅可授予学生/教师/班主任且限本校、`ROLE_MISMATCH`/`ROLE_INVALID`/`ROLE_CONFLICT`）；角色变更 `bump_token_version` 旧 Token 401 `TOKEN_REVOKED`；审计 `admin.role.assign` 含 before/after；`tests/test_admin_users.py` 4 例；`pytest` 226 passed、`ruff` 0 issue |
-| P1-05 | 家长端页面：切换孩子、孩子学情、时长与青少年模式 | FE | 12 | P1 | P0-09 | `TODO` | — | A4 | — |
+| P1-05 | 家长端页面：切换孩子、孩子学情、时长与青少年模式 | FE | 12 | P1 | P0-09 | `DONE` | 3 | A4 | 后端：`users.teen_mode` 字段（迁移 `k1f2g3h4i5j6`）、`GET /family/children` 返回 `daily_limit_minutes/teen_mode`、`PUT /family/children/{id}/controls`（空字段 422 `CONTROLS_REQUIRED`、无 active 绑定 404、审计 `family.controls.update`），`tests/test_family_controls.py` 2 例；前端：`FamilyChild` 模型、`FamilyService`、`ParentChildrenPage`（ChoiceChip 切换孩子、按 `student_id` 拉取学情、时长滑块 0~240、青少年模式开关、保存提示）、`/family` 路由 + `PermissionGate`、个人中心家长入口，非学生账号不再请求个人统计；`family_model_test.dart` 2 例、`parent_children_page_test.dart` 4 例；`flutter analyze --no-pub` 0 issues、`flutter test --no-pub` 38 passed、`pytest` 228 passed、`ruff` 0 issue |
 | P1-06 | 教师端页面：班级概览、班级报告（聚合） | FE | 12 | P1 | P1-03 | `TODO` | — | A5 | — |
 | P1-07 | 期中/期末蓝图与组卷（范围=章节集合、6:3:1 难度、KP 覆盖） | CT/AR | 10 | P1 | P0-26 | `TODO` | — | L9 | — |
 | P1-08 | 考试中心扩展：期中/期末/模考入口、考试窗口与过期处理 | AR/FE | 10 | P1 | P0-37/P1-07 | `TODO` | — | L10 | — |
@@ -428,12 +428,12 @@ flowchart LR
 | 指标 | 数值 |
 |---|---|
 | 任务总数（不含基线） | 77（开发 68：P0 43 + P1 15 + P2 10；发布 9：R-01~R-09） |
-| `TODO` | 30 |
+| `TODO` | 29 |
 | `DOING` | 0 |
-| `DONE` | 47（P0-01~P0-43、P1-01~P1-04；基线 5 项已冻结） |
+| `DONE` | 48（P0-01~P0-43、P1-01~P1-05；基线 5 项已冻结） |
 | `BLOCKED` | 0 |
 | 预估总工时 | 676 h（开发 557 = P0 310 + P1 129 + P2 118；发布 119） |
-| 已投入工时 | 150 h（P0-01 3、P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3、P0-23 3、P0-24 3、P0-25 3、P0-26 3、P0-27 3、P0-28 4、P0-29 3、P0-30 3、P0-31 4、P0-32 3、P0-33 4、P0-34 4、P0-35 6、P0-36 8、P0-37 10、P0-38 4、P0-39 6、P0-40 4、P0-41 6、P0-42 2、P0-43 3、P1-01 3、P1-02 2、P1-03 2、P1-04 3） |
+| 已投入工时 | 153 h（P0-01 3、P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3、P0-23 3、P0-24 3、P0-25 3、P0-26 3、P0-27 3、P0-28 4、P0-29 3、P0-30 3、P0-31 4、P0-32 3、P0-33 4、P0-34 4、P0-35 6、P0-36 8、P0-37 10、P0-38 4、P0-39 6、P0-40 4、P0-41 6、P0-42 2、P0-43 3、P1-01 3、P1-02 2、P1-03 2、P1-04 3、P1-05 3） |
 | 当前迭代 | P1（角色扩展与综合考试）+ 发布准备（R-05 软著先行） |
 | 迭代目标 | 教师/班主任/校管/家长角色可用；期中/期末/模考闭环；主观题自评与报告增强；推荐服务上线；并行推进软著/签名/隐私/部署 |
 | 里程碑 | M2.5（P0 技术验收通过，待签署）→ M3（P1） |
@@ -521,6 +521,7 @@ flowchart LR
 | v1.45 | 2026-11-07 | AR | P1-02 班级与授课分配 API 落地（`/org/schools`、`/org/classes`、`/org/classes/{id}/members`、`/org/assignments`；教师学科/年级范围与人班主任唯一性校验；批量入班幂等与跨校拒绝；审计四类操作；`tests/test_org_api.py` 3 例）；`require_any_permission` 依赖；§5.1 同步（DONE 45 / 投入 145 h / pytest 220） |
 | v1.46 | 2026-11-07 | AR | P1-03 班级学情聚合接口（`GET /org/classes/{id}/stats` 仅返回聚合值：提交率/正确率/平均掌握度/薄弱 Top5；支持学科收窄，教师按授课班+学科、校管限本校；`tests/test_org_stats.py` 2 例）；§5.1 同步（DONE 46 / 投入 147 h / pytest 222） |
 | v1.47 | 2026-11-07 | AR | P1-04 管理端用户列表与角色授予/回收（分页筛选+手机脱敏、校管限本校；自改/自授超管拒绝、Token 失效、审计 before/after；`tests/test_admin_users.py` 4 例）；§6.1 A10 更新（改角色审计已接入）；§5.1 同步（DONE 47 / 投入 150 h / pytest 226） |
+| v1.48 | 2026-11-07 | AR | P1-05 家长端页面（后端 `teen_mode` 字段+迁移 `k1f2g3h4i5j6`、`PUT /family/children/{id}/controls` 含审计与边界校验、`tests/test_family_controls.py` 2 例；前端 `FamilyChild`/`FamilyService`/`ParentChildrenPage`（切换孩子、按 `student_id` 拉学情、每日时长、青少年模式）、`/family` 路由与个人中心入口、非学生隐藏个人统计；`flutter analyze` 0 issues、`flutter test` 38 passed、`pytest` 228 passed）；§1.2 家长绑定与未成年人合规转 `DONE`；§5.1 同步（DONE 48 / 投入 153 h / TODO 29） |
 
 ---
 
@@ -538,7 +539,7 @@ flowchart LR
 | 编号 | 验收项 | 对应任务 | 状态 |
 |---|---|---|---|
 | A1/A2 | 年级必填 + 学段一致性 | P0-02/P0-08/P0-31 | `DONE`（后端校验 + 改年级 428 确认 + 前端三步引导） |
-| A3~A6 | 越权拦截（学生/家长/教师/校管） | P0-04/P0-10/P0-40 | `DONE`（范围解析、家长绑定、学习域改造 + `test_access_control.py` 越权用例通过） |
+| A3~A6 | 越权拦截（学生/家长/教师/校管） | P0-04/P0-10/P0-40/P1-05 | `DONE`（范围解析、家长绑定与家长端页面、学习域改造 + `test_access_control.py` 越权用例通过） |
 | A7 | 角色变更旧 Token 失效 | P0-07 | `DONE`（`ver` 校验 + `bump_token_version`） |
 | A8 | 权限点覆盖所有路由 | P0-03/P0-32/P0-39 | `DONE`（前端路由守卫 + 后端 9 角色权限矩阵/权限→范围映射用例通过） |
 | A9 | 升级幂等 | P0-01/P0-15/P0-42 | `DONE`（空库升级→降级→升级、存量库升级回填、seed 二次幂等回归全部通过） |
@@ -583,4 +584,4 @@ flowchart LR
 
 ---
 
-> **当前下一步**：P1-05（审计日志查询接口：按范围过滤、分页、脱敏）。所有任务按依赖图推进，每完成一个任务即回写本文件状态。
+> **当前下一步**：P1-06（教师端页面：班级概览、班级报告（聚合））。所有任务按依赖图推进，每完成一个任务即回写本文件状态。
