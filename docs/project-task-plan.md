@@ -1,9 +1,9 @@
 # 深爱学（AiLearning）项目实施任务计划与进度跟踪
 
 > **文档性质**：项目主计划 / 进度跟踪 / 过程追溯（全程伴随开发周期）
-> **版本**：v1.22
+> **版本**：v1.23
 > **创建日期**：2026-11-06
-> **最后更新**：2026-11-06 22:55（P0-22 组卷算法扩展完成）
+> **最后更新**：2026-11-06 23:10（P0-23 练习会话续答与结算完成）
 > **参考设计文档**：见[§1.1 参考设计文档清单](#11-参考设计文档清单)（共 8 份，含 4 份设计方案、4 份支撑文档）
 > **需求追踪**：见[§1.2 需求—设计—任务追踪矩阵](#12-需求设计任务追踪矩阵)
 > **维护人**：项目负责人（PM）
@@ -193,7 +193,7 @@ DONE ──返工（需CR）──► DOING
 | P0-20 | `kp_study_states` 表与状态机（未学习/学习中/待巩固/已掌握/复习中），讲解阅读与自测达标写入 | AR | 6 | P0 | P0-19 | `DONE` | 2 | L5 | `models/practice.KpStudyState` + 迁移 `d4e5f6a7b8c9`；`services/study_state.py` 状态迁移（read→学习中、practice→待巩固、selftest≥80→已掌握、revision→复习中）与幂等 upsert；接口 `POST /learn/kp/{id}/read`、`POST /learn/kp/{id}/selftest`；`/learn/submit` 自动写入；知识树/单元/知识点详情优先展示持久化状态、复习到期覆盖为"复习中"；`tests/test_study_state.py` 3 例 |
 | P0-21 | 练习预览 `POST /learn/practice/preview`：题量、KP 覆盖、时长、seed，题量不足提示 | AR | 6 | P0 | P0-19 | `DONE` | 2 | L6/L8 | `services/practice.py`（`resolve_pool` 支持 kp/chapter/textbook/wrong 四范围、`select_questions` 确定性选题 + 到期错题配额 25% + 按知识点分桶轮转、`PracticePlan` 覆盖率/时长统计）；`POST /learn/practice/preview` 返回可用题量/是否不足/覆盖率/预估时长/题型分布/到期错题数/seed；`tests/test_practice_preview.py` 5 例（不足提示、章节/教材范围、题型过滤+同 seed 幂等、错题范围到期计数、非法范围 422）；修复分桶轮转在空桶时不推进游标导致的死循环 |
 | P0-22 | 组卷算法扩展：题型配比、KP 覆盖≥80%、去重、时长预算、到期错题≤25% | AR | 10 | P0 | P0-21 | `DONE` | 3 | L6/L7 | `services/practice.py`：题型配比按学段（小学 40/20/25/15，初中/高中另设）与 `unit`/`pre_exam` 蓝图；覆盖目标 KP≤3 全覆、否则 ≥80%；7 天内已作答去重（过滤后为空回退全量）；到期错题 floor(25%) 且上限 5、只走配额；时长预算超限裁剪低难度非到期题；`/learn/start` 支持 `scope_type/scope_ids/q_types/mode/seed/duration_limit_min` 与预览同 seed 同题，旧参数兼容；`tests/test_practice_plan.py` 6 例 |
-| P0-23 | `practice_sessions` 表与续答/结算：`POST /learn/sessions/{id}/finish`、`GET /learn/sessions/{id}` | AR | 7 | P0 | P0-22 | `TODO` | — | L13 | — |
+| P0-23 | `practice_sessions` 表与续答/结算：`POST /learn/sessions/{id}/finish`、`GET /learn/sessions/{id}` | AR | 7 | P0 | P0-22 | `DONE` | 3 | L13 | `models/practice.PracticeSession` + 迁移 `e5f6a7b8c9d0`（question_ids/scope JSON、计数、seed、起止时间）；`/learn/start` 新范围方式创建会话并返回 `session_id`；`GET /learn/sessions/{id}` 返回题目+已答状态+`next_index`（断点续答）；`POST .../finish` 汇总正确率/用时/知识点表现/错题数，重复调用幂等（保留首次 `finished_at`）；会话仅本人可见；`tests/test_practice_session.py` 5 例 |
 | P0-24 | 练习提交兼容扩展：`session_id/source` 写入、掌握度来源拆分 | AR | 4 | P0 | P0-23 | `TODO` | — | L12 | — |
 
 #### 3.1.4 单元测试闭环
@@ -428,12 +428,12 @@ flowchart LR
 | 指标 | 数值 |
 |---|---|
 | 任务总数（不含基线） | 77（开发 68：P0 43 + P1 15 + P2 10；发布 9：R-01~R-09） |
-| `TODO` | 55 |
+| `TODO` | 54 |
 | `DOING` | 0 |
-| `DONE` | 22（P0-01~P0-22；基线 5 项已冻结） |
+| `DONE` | 23（P0-01~P0-23；基线 5 项已冻结） |
 | `BLOCKED` | 0 |
 | 预估总工时 | 676 h（开发 557 = P0 310 + P1 129 + P2 118；发布 119） |
-| 已投入工时 | 51 h（P0-01 3、P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3） |
+| 已投入工时 | 54 h（P0-01 3、P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3、P0-23 3） |
 | 当前迭代 | P0（身份与学习主链路）+ 发布准备（R-05 软著先行） |
 | 迭代目标 | 年级必填与引导、教材绑定、学习首页、四层知识点、练习预览/续答、单元测客观题闭环；并行启动软著与签名/隐私/部署 |
 | 里程碑 | M2.5（P0 完成）→ M5（发布就绪） |
@@ -496,6 +496,7 @@ flowchart LR
 | v1.20 | 2026-11-06 | AR | P0-20 知识点学习状态机落地（`kp_study_states` 表 + 迁移、阅读/自测接口、提交自动写入、到期复习覆盖）；§5.1 同步（DONE 20 / 投入 46 h / pytest 108） |
 | v1.21 | 2026-11-06 | AR | P0-21 练习组卷预览落地（四范围解析、确定性选题、到期错题配额、KP 覆盖率与时长统计，`POST /learn/practice/preview`）；修复分桶轮转在空桶时不推进游标导致的死循环；§1.2 智能辅助练习转 `DOING`；§6.1 L8 转 `DOING`；§5.1 同步（DONE 21 / 投入 48 h / pytest 113） |
 | v1.22 | 2026-11-06 | AR | P0-22 组卷算法扩展落地（题型配比、KP 覆盖≥80%、7 天去重、时长预算、到期错题≤25%；`/learn/start` 与预览同 seed 同题并兼容旧参数）；§6.1 L6/L7、L8 转 `DOING`；§5.1 同步（DONE 22 / 投入 51 h / pytest 119） |
+| v1.23 | 2026-11-06 | AR | P0-23 练习会话落地（`practice_sessions` 表 + 迁移 `e5f6a7b8c9d0`、`/start` 返回 `session_id`、断点续答 `GET /learn/sessions/{id}`、幂等结算 `POST .../finish` 含知识点表现与错题数）；§6.1 L13 转 `DOING`；§5.1 同步（DONE 23 / 投入 54 h / pytest 124） |
 | — | — | — | — |
 
 ---
@@ -525,7 +526,7 @@ flowchart LR
 | L6/L7 | 覆盖率≥80%、错题占比≤25% | P0-22/P0-39 | `DOING`（服务端组卷指标已达标，待 P0-39 验收用例） |
 | L8 | 预览=实际（同 seed） | P0-21/P0-22/P0-36 | `DOING`（预览与 `/start` 同 seed 同题已完成，待 P0-36 前端） |
 | L9~L12 | 组卷/交卷幂等/报告/数据回流 | P0-25~P0-30/P0-39 | `TODO` |
-| L13 | 断点续答 | P0-23/P0-36 | `TODO` |
+| L13 | 断点续答 | P0-23/P0-36 | `DOING`（服务端会话续答已落地，待 P0-36 前端） |
 | L14 | 首页聚合 P95<300ms | P0-14/P1-13 | `TODO`（接口已落地，性能待 P1-13 压测） |
 | L15 | 权限范围与验收 | P0-10/P0-40/P0-41 | `TODO` |
 
@@ -544,4 +545,4 @@ flowchart LR
 
 ---
 
-> **当前下一步**：P0-23（`practice_sessions` 表与断点续答/结算）。所有任务按依赖图推进，每完成一个任务即回写本文件状态。
+> **当前下一步**：P0-24（练习提交兼容扩展：`session_id/source` 写入与掌握度来源拆分）。所有任务按依赖图推进，每完成一个任务即回写本文件状态。
