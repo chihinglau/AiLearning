@@ -1,9 +1,9 @@
 # 深爱学（AiLearning）项目实施任务计划与进度跟踪
 
 > **文档性质**：项目主计划 / 进度跟踪 / 过程追溯（全程伴随开发周期）
-> **版本**：v1.34
+> **版本**：v1.35
 > **创建日期**：2026-11-06
-> **最后更新**：2026-11-06 18:10（P0-34 教材管理页完成）
+> **最后更新**：2026-11-06 18:35（P0-35 知识树与知识点详情页完成）
 > **参考设计文档**：见[§1.1 参考设计文档清单](#11-参考设计文档清单)（共 8 份，含 4 份设计方案、4 份支撑文档）
 > **需求追踪**：见[§1.2 需求—设计—任务追踪矩阵](#12-需求设计任务追踪矩阵)
 > **维护人**：项目负责人（PM）
@@ -54,7 +54,7 @@
 | 学校/教师组织能力 | D-03 §7.3/§7.4/§10.3 | D-03 §7.3/§7.4/§10.3 | P1-01~P1-06 | A5/A6 | `TODO` |
 | 教材绑定与选择入口 | D-04 §4/§5 | D-04 §4/§5 | P0-11、P0-12、P0-13、P0-34、P0-16 | L1/L2/L3 | `DONE`（服务端推荐/绑定/冲突检测与前端教材管理页已完成） |
 | 学习首页与"下一步"入口 | D-04 §3/§6.6 | D-04 §3/§6.6 | P0-14、P0-33、P1-11 | L1/L14 | `DOING`（首页聚合接口与前端学习首页已完成，待 P1-11 推荐服务） |
-| 知识点分层与学习路径 | D-02 学科方案、D-04 §6 | D-04 §6 | P0-17~P0-20、P0-35 | L4/L5 | `DOING`（P0-17~P0-20 已完成，待 P0-35 前端） |
+| 知识点分层与学习路径 | D-02 学科方案、D-04 §6 | D-04 §6 | P0-17~P0-20、P0-35 | L4/L5 | `DONE`（四层结构、状态机与前端单元/知识点详情已完成） |
 | 智能辅助练习 | D-02 学法、D-04 §7 | D-04 §7 | P0-21~P0-24、P0-36 | L6/L7/L8/L13 | `DOING`（P0-21~P0-24 服务端预览/组卷/会话/来源拆分已完成，待 P0-36 前端） |
 | 单元测试 | D-04 §8.1~§8.5 | D-04 §8 | P0-25~P0-30、P0-37 | L9/L10/L11/L12 | `DOING`（服务端 P0-25~P0-30 已完成，待 P0-37 前端） |
 | 期中/期末/模考 | D-04 §8.1~§8.5 | D-04 §8、D-03 §5.2 | P1-07~P1-10、P2-07 | L9~L12 | `TODO` |
@@ -215,7 +215,7 @@ DONE ──返工（需CR）──► DOING
 | P0-32 | 路由守卫 + `PermissionGate` + 403 错误统一处理（按业务码给引导） | FE | 6 | P0 | P0-03/P0-06 | `DONE` | 3 | A8 | 新增 `core/errors/api_error_guide.dart`（`TOKEN_REVOKED`→重登、`PERMISSION_DENIED`/`SCOPE_DENIED`→无权限文案、`GRADE_REQUIRED`/`GRADE_MISSING`→引导页、401/403 兜底）；`features/common/permission_gate.dart`（`anyOf` 任一命中放行、超管 `*` 直通、`ForbiddenPage` 返回/回首页）；`app.dart` 未登录统一跳 `/login`，`/shell`/`/home` 需 `learn:content:read`、`/knowledge/*` 需 `learn:kp:study`、`/session`/`/practice/*` 需 `learn:practice:start`；各页错误统一走 `ApiErrorGuide`/`handleApiError`；`dart analyze lib test` 0 issues、`flutter test` 8 passed |
 | P0-33 | 学习首页重构：当前教材卡、今日计划、继续学习、学科入口、考试入口 | FE | 12 | P0 | P0-14 | `DONE` | 4 | L1/L15 | `core/models/learn.dart` 新增 `HomeData/HomeTextbook/HomeTodayPlan/HomeContinue/HomeRecommendation`（`textbookOf`/`stageEnum`/学期与学科标签）；`learn_service.home()` 接入 `GET /api/learn/home`；`features/learn/learn_page.dart` 重构为学生首页聚合（推荐下一步卡、今日计划三项可点、继续学习、学科入口教材卡含年级冲突标识、考试入口占位）与家长非学生教材章节浏览降级；未绑定教材展示推荐与 `/gate` 绑定入口；`learn_model_test.dart` 新增 HomeData 2 例；`dart analyze lib test` 0 issues、`flutter test` 10 passed |
 | P0-34 | 教材管理页：学科/学期切换、版本选择、推荐标识、冲突二次确认、解绑 | FE | 8 | P0 | P0-13 | `DONE` | 4 | L2/L3 | 新增 `features/textbook/textbook_manage_page.dart`（学科 Chip、上册/下册切换、推荐标识、使用中高亮、年级不一致二次确认、解绑确认与空态）；`textbook_service` 增加 `bind/unbind`，`api_client` 增加 `deleteJson`，`/textbooks` 路由 + 学习首页/我的页入口；后端 `manual_bind` 绑定学期改为以教材为准并跨学期归档同学科旧绑定（`tests/test_textbook.py` 新增 1 例）；`dart analyze lib test` 0 issues、`flutter test` 10 passed、`pytest` 156 passed |
-| P0-35 | 单元/节/知识点树与详情页（掌握度环、状态、前置跳转、讲解/例题） | FE | 12 | P0 | P0-19/P0-20 | `TODO` | — | L4/L5 | — |
+| P0-35 | 单元/节/知识点树与详情页（掌握度环、状态、前置跳转、讲解/例题） | FE | 12 | P0 | P0-19/P0-20 | `DONE` | 6 | L4/L5 | `knowledge_page` 改为单元目录（掌握度环/进度/节·知识点·题量），新增 `unit_page`（节分组、知识点状态与练一练、单元综合练习）、`kp_detail_page`（讲解/前置跳转/状态/掌握置信度/例题带答案解析/我已理解）、`mastery_ring` 通用组件；`learn_service` 增加 units/unitDetail/kpDetail/kpExamples/markKpRead，模型增加 UnitSummary/UnitSection/UnitDetail/KpBrief/KpDetail/KpExample；后端新增 `GET /learn/kp/{id}/examples`（最多 2 道，带答案解析，`tests/test_unit_tree.py` 新增 1 例）；路由 `/unit/:id`、`/kp/:id`；`dart analyze` 0 issues、`flutter test` 10 passed、`pytest` 157 passed |
 | P0-36 | 练习配置页 + 预览 + 答题页扩展（模式、续答、结算、下一步） | FE | 12 | P0 | P0-21/P0-23 | `TODO` | — | L8/L13 | — |
 | P0-37 | 考试中心列表、考试详情/答题（计时、自动保存、交卷确认）、报告页 | FE | 16 | P0 | P0-28/P0-29 | `TODO` | — | L10/L11 | — |
 | P0-38 | 前端单测/组件测试补充（模型解析、状态机、守卫） | FE/QA | 8 | P0 | P0-31~P0-37 | `TODO` | — | L15 | — |
@@ -428,12 +428,12 @@ flowchart LR
 | 指标 | 数值 |
 |---|---|
 | 任务总数（不含基线） | 77（开发 68：P0 43 + P1 15 + P2 10；发布 9：R-01~R-09） |
-| `TODO` | 43 |
+| `TODO` | 42 |
 | `DOING` | 0 |
-| `DONE` | 34（P0-01~P0-34；基线 5 项已冻结） |
+| `DONE` | 35（P0-01~P0-35；基线 5 项已冻结） |
 | `BLOCKED` | 0 |
 | 预估总工时 | 676 h（开发 557 = P0 310 + P1 129 + P2 118；发布 119） |
-| 已投入工时 | 91 h（P0-01 3、P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3、P0-23 3、P0-24 3、P0-25 3、P0-26 3、P0-27 3、P0-28 4、P0-29 3、P0-30 3、P0-31 4、P0-32 3、P0-33 4、P0-34 4） |
+| 已投入工时 | 97 h（P0-01 3、P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3、P0-23 3、P0-24 3、P0-25 3、P0-26 3、P0-27 3、P0-28 4、P0-29 3、P0-30 3、P0-31 4、P0-32 3、P0-33 4、P0-34 4、P0-35 6） |
 | 当前迭代 | P0（身份与学习主链路）+ 发布准备（R-05 软著先行） |
 | 迭代目标 | 年级必填与引导、教材绑定、学习首页、四层知识点、练习预览/续答、单元测客观题闭环；并行启动软著与签名/隐私/部署 |
 | 里程碑 | M2.5（P0 完成）→ M5（发布就绪） |
@@ -508,6 +508,7 @@ flowchart LR
 | v1.32 | 2026-11-07 | AR | P0-32 路由守卫与权限错误引导落地（未登录统一跳 `/login`；`/shell`/`/home`/`/knowledge`/`/session`/`/practice` 由 `PermissionGate` 按权限点拦截；`ApiErrorGuide` 统一 401/403/业务码文案与重登/引导跳转；各页 catch 接入）；§6.1 A1/A2 转 `DONE`、A8 转 `DOING`；§5.1 同步（DONE 32 / 投入 83 h / flutter test 8） |
 | v1.33 | 2026-11-07 | AR | P0-33 学习首页重构落地（`HomeData` 等首页聚合模型 + `learn_service.home()`；学生首页展示推荐下一步、今日计划、继续学习、学科入口教材卡与考试入口，儿童年级冲突标识；未绑定教材给推荐与 `/gate` 入口；非学生降级教材章节浏览）；`learn_model_test.dart` 新增 HomeData 2 例；§1.2 学习首页推进；§5.1 同步（DONE 33 / 投入 87 h / flutter test 10） |
 | v1.34 | 2026-11-06 | AR | P0-34 教材管理页落地（学科 Chip + 上册/下册切换、版本选择与推荐标识、使用中高亮、年级不一致二次确认、解绑确认与空态；`textbook_service` 增加 `bind/unbind`、`api_client` 增加 `deleteJson`、新增 `/textbooks` 路由与首页/我的页入口）；后端 `manual_bind` 绑定学期以教材为准并跨学期归档同学科旧绑定；`tests/test_textbook.py` 新增 1 例；§1.2 教材绑定转 `DONE`、§6.1 L2/L3 转 `DONE`；§5.1 同步（DONE 34 / 投入 91 h / pytest 156 / flutter test 10） |
+| v1.35 | 2026-11-06 | AR | P0-35 知识树与知识点详情落地（单元目录 → 节 → 知识点四层下钻；`unit_page` 展示节分组/状态/练一练/单元综合练习，`kp_detail_page` 展示讲解、前置跳转、掌握置信度、例题答案解析与「我已理解」；新增通用 `mastery_ring`；后端新增 `GET /learn/kp/{id}/examples` 带答案与解析）；§1.2 知识点分层转 `DONE`、§6.1 L4/L5 转 `DONE`；§5.1 同步（DONE 35 / 投入 97 h / pytest 157 / flutter test 10） |
 
 ---
 
@@ -532,7 +533,7 @@ flowchart LR
 | A10 | 敏感操作审计 | P0-05 | `TODO` |
 | L1 | 3 步内完成年级+教材确认 | P0-31 | `DONE` |
 | L2/L3 | 教材绑定幂等、上下册不混排 | P0-11~P0-13/P0-15/P0-16/P0-34 | `DONE`（服务端幂等/学期归档/冲突检测 + 前端教材管理页；手动绑定以教材学期为准并归档同学科旧绑定） |
-| L4/L5 | 四层下钻、状态与掌握度 | P0-17~P0-20/P0-35 | `DOING`（服务端四层与状态机已完成，待 P0-35 前端） |
+| L4/L5 | 四层下钻、状态与掌握度 | P0-17~P0-20/P0-35 | `DONE`（服务端四层与状态机 + 前端单元目录/节/知识点详情、前置跳转与例题解析） |
 | L6/L7 | 覆盖率≥80%、错题占比≤25% | P0-22/P0-39 | `DOING`（服务端组卷指标已达标，待 P0-39 验收用例） |
 | L8 | 预览=实际（同 seed） | P0-21/P0-22/P0-36 | `DOING`（预览与 `/start` 同 seed 同题已完成，待 P0-36 前端） |
 | L9~L12 | 组卷/交卷幂等/报告/数据回流 | P0-24~P0-30/P0-39 | `DOING`（P0-24~P0-30 数据来源/蓝图/试卷生成/考试表/接口与客观判/报告/数据回流已完成，待 P0-39 验收用例） |
@@ -555,4 +556,4 @@ flowchart LR
 
 ---
 
-> **当前下一步**：P0-35（单元/节/知识点树与详情页：掌握度环、状态、前置跳转、讲解/例题）。所有任务按依赖图推进，每完成一个任务即回写本文件状态。
+> **当前下一步**：P0-36（智能练习前端：预习/复习/薄弱配置、练习预览、续答与来源拆分展示）。所有任务按依赖图推进，每完成一个任务即回写本文件状态。
