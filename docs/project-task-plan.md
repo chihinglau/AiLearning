@@ -1,9 +1,9 @@
 # 深爱学（AiLearning）项目实施任务计划与进度跟踪
 
 > **文档性质**：项目主计划 / 进度跟踪 / 过程追溯（全程伴随开发周期）
-> **版本**：v1.71
+> **版本**：v1.72
 > **创建日期**：2026-11-06
-> **最后更新**：2026-11-07（R-03 隐私政策公网发布与首启同意链路完成）
+> **最后更新**：2026-11-07（R-04 账号注销、数据导出与青少年模式时长生效完成）
 > **参考设计文档**：见[§1.1 参考设计文档清单](#11-参考设计文档清单)（共 8 份，含 4 份设计方案、4 份支撑文档）
 > **需求追踪**：见[§1.2 需求—设计—任务追踪矩阵](#12-需求设计任务追踪矩阵)
 > **维护人**：项目负责人（PM）
@@ -23,10 +23,10 @@
 | **D-02** | [subject-tutoring-and-m2-design.md](./subject-tutoring-and-m2-design.md) | v1.0 | 学科辅导专项设计 | 五大学法支柱、九学科分学段辅导方案、深圳教材适配、M2 数据模型与算法 | B-03/B-04；P0-17~P0-24；P1-07 | CT/AR | 已生效（M2 已交付） | 2026-11-06 |
 | **D-03** | [user-role-permission-design.md](./user-role-permission-design.md) | v1.0 | 角色权限专项设计 | 多级角色体系、年级维度、权限矩阵、数据范围、权限校验、数据模型与 API | P0-01~P0-10；P1-01~P1-06；P2-01/P2-02/P2-08/P2-09 | AR/PM | 已生效（P0/P1/P2 范围已交付） | 2026-11-07 |
 | **D-04** | [learning-page-design.md](./learning-page-design.md) | v1.0 | 学习页专项设计 | 教材绑定、学习首页、知识点分层、智能练习、综合考试、数据流与 API | P0-11~P0-38；P1-07~P1-11；P2-03~P2-07 | FE/AR | 已生效（P0~P2 范围已交付） | 2026-11-07 |
-| **D-05** | [privacy.md](./privacy.md) | v1.0（2026.11.06） | 合规支撑 | 隐私政策、未成年人数据、家长同意与数据留存 | P0-05/P0-09；P1-05；P2-08 | PM | 已生效（P2-08 脱敏导出与用途登记已落地；R-03 公网发布与首启同意链路已上线） | 2026-11-07 |
+| **D-05** | [privacy.md](./privacy.md) | v1.0（2026.11.06） | 合规支撑 | 隐私政策、未成年人数据、家长同意与数据留存 | P0-05/P0-09；P1-05；P2-08 | PM | 已生效（P2-08 脱敏导出与用途登记已落地；R-03 公网发布与首启同意链路已上线；R-04 注销/导出/青少年模式时长已生效） | 2026-11-07 |
 | **D-06** | [skills.md](./skills.md) | 现行 | 工程支撑 | 开发规范、技能与接口使用说明 | 全部任务（开发约定） | AR | 已生效 | 2026-11-06 |
 | **D-07** | [skill_github_repo_access.md](./skill_github_repo_access.md) | 现行 | 内部支撑 | 仓库访问与凭据说明（不进入版本库） | 发布/提交相关任务 | AR | 内部参考 | 2026-11-06 |
-| **D-08** | [release-plan.md](./release-plan.md) | v1.0 | 发布支撑 | 上架缺口、渠道矩阵、备案/软著、合规红线、素材与时间线 | 发布任务 R-01~R-09；P0-05/P0-09、P1-05、P2-08 | PM/AR | 已生效（R-01 签名、R-02 生产化部署、R-03 法务同意链路已落地，R-04~R-09 待执行） | 2026-11-07 |
+| **D-08** | [release-plan.md](./release-plan.md) | v1.0 | 发布支撑 | 上架缺口、渠道矩阵、备案/软著、合规红线、素材与时间线 | 发布任务 R-01~R-09；P0-05/P0-09、P1-05、P2-08 | PM/AR | 已生效（R-01 签名、R-02 生产化部署、R-03 法务同意链路、R-04 商店合规功能已落地，R-05~R-09 待执行） | 2026-11-07 |
 
 **文档优先级**：需求冲突时，`D-01`（总体）> 专项设计（`D-02/D-03/D-04`）> 支撑文档（`D-05`~`D-08`）。专项之间冲突由 PM 裁决并登记 CR。发布相关的合规与上架要求以 `D-08` 为准。
 
@@ -61,7 +61,7 @@
 | 主观题与报告增强 | D-04 §7.5/§8.5 | D-04 §7.5/§8.5 | P1-09、P1-10 | L11 | `DONE`（主观题自评与能力维度/班级平均/趋势对比已完成） |
 | 推荐与学习闭环 | D-04 §2.2/§6.6 | D-04 §2.2/§6.6 | P1-11、P1-12、P1-14 | 闭环验收 | `DONE`（六优先级推荐、考试错题默认错因/复习优先级、活服务端到端回归均已通过） |
 | 平台化与增强（RBAC/图谱/离线/AI/真题库/合规导出/内容复核） | D-03 §9.2、D-04 §14 | D-03 §9.2、D-04 §14 | P2-01~P2-10 | M4 | `DONE`（P2-01~P2-10 全部完成并通过技术验收，M4 待 PM 签署） |
-| 上架合规与发布 | D-08 §3/§7 | D-08 §3/§6 | R-01~R-09、P0-05、P0-09、P1-05、P2-08 | 发布验收 | `DOING`（R-01 签名、R-02 生产化部署、R-03 法务同意链路已完成，R-04~R-09 待执行） |
+| 上架合规与发布 | D-08 §3/§7 | D-08 §3/§6 | R-01~R-09、P0-05、P0-09、P1-05、P2-08 | 发布验收 | `DOING`（R-01 签名、R-02 生产化部署、R-03 法务同意链路、R-04 商店合规功能已完成，R-05~R-09 待执行） |
 
 **矩阵维护规则**：
 
@@ -153,7 +153,7 @@ DONE ──返工（需CR）──► DOING
 ## 三、任务台账
 
 > **状态字段实时更新**；`实际(h)` 在任务完成时填写；`证据` 填 commit / 测试结果 / 截图路径。
-> **总任务数**：77（开发 68：P0 43 + P1 15 + P2 10；发布 9：R-01~R-09）；**基线已完成**：5；**进行中**：0；**阻塞中**：0；**待启动**：6（R-04~R-09）；**总预估工时**：676 h（开发 557 + 发布 119）。
+> **总任务数**：77（开发 68：P0 43 + P1 15 + P2 10；发布 9：R-01~R-09）；**基线已完成**：5；**进行中**：0；**阻塞中**：0；**待启动**：5（R-05~R-09）；**总预估工时**：676 h（开发 557 + 发布 119）。
 
 ### 3.1 阶段 P0：身份与学习主链路
 
@@ -280,7 +280,7 @@ DONE ──返工（需CR）──► DOING
 | R-01 | 正式签名与构建纪律：生成 release keystore（`make-release-keystore.ps1`）+ 备份；`build.gradle.kts` release 缺 keystore 时 fail-fast（禁止回退 debug）；统一 Android/HarmonyOS `versionCode` 规则（`1.0.0+1 → 10001`）；导出签名 MD5/SHA-256；AGC 正式签名证书与 Profile | AR | 5 | P0 | 无 | `DONE` | 2 | 缺口1 / R-A1 | `make-release-keystore.ps1`（复用密码 + 自动备份 zip）、`build.gradle.kts`（缺签名 fail-fast、`releaseVersionCode`）、`sync-version.ps1`、`signature-info.ps1`；鸿蒙 `versionCode=10001`；release APK `CN=AiLearning`、MD5 `EB:51:94:8B:3D:DB:AA:41:05:01:0E:40:E2:CC:72:95`；缺 keystore 时 Gradle `BUILD FAILED`；AGC 证书待 PM 在开放平台生成归档 |
 | R-02 | 后端生产化部署：云主机 + 域名 + HTTPS；切 PostgreSQL + `alembic upgrade head` + `seed.py`；密钥环境变量化；CORS 白名单、登录/注册限流、错误脱敏；每日备份与恢复演练；审计日志留存 ≥6 个月 | AR | 16 | P0 | 无 | `DONE` | 6 | 缺口3 / R-A2 | `deploy/`（Dockerfile/compose/Nginx TLS/.env 样例）；`validate_settings` 生产启动校验（默认密钥/debug/自动建表/CORS 通配直接拒绝，实测正反两例）；登录/注册限流 429 `RATE_LIMITED`（4 例）；未捕获异常 500 `INTERNAL_ERROR`+request_id（1 例）；`db_backup/db_restore` 备份恢复演练 users=9/questions=564/audit=7 且 `quick_check` 通过；`prune_audit` 留存 <6 月拒绝（3 例）；Android/鸿蒙 release 禁止明文 HTTP、release 构建强制 HTTPS（http 地址实测拒绝）；pytest 312 passed；云主机/域名/证书上线待 PM 提供资源后执行 |
 | R-03 | 隐私政策公网发布 + App 内法务与同意链路：后端 `GET /legal/privacy`、`/legal/terms`（HTTPS、免登录）；「我的」页新增隐私政策/用户协议/联系我们；首启 ConsentGate（主动勾选、拒绝退出、无网络请求）；儿童注册监护人确认；政策版本升高重新同意并留痕 | AR/FE | 20 | P0 | R-02 | `DONE` | 20 | 缺口2 / R-A3 | `app/legal/` 隐私政策+用户协议（JSON/HTML 双形态、根路径与 `/api` 双挂载、`legal_public_base_url`）；`consent_records` 表 + 迁移 `q7r8s9t0u1v2`（空库/上一版库升级、降级再升级通过）；`POST /api/legal/consent` 409 版本校验 + 幂等留痕 + 审计 `legal.consent.accepted`；`/auth/me` 返回已同意版本与 `needs_reconsent`；儿童注册强制 `guardian_consent`；App 首启 `ConsentGate`、`/consent` 重新同意页、「我的」三项法务入口、内置 Markdown 离线回退；`pytest` 318 passed、`flutter analyze` 0 issues、`flutter test` 75 passed |
-| R-04 | 商店硬性合规功能：账号注销（15 个工作日删除/匿名化）+ 数据导出（最小可用版）；家长绑定与 `consent_at` 生效；`daily_limit_minutes` 青少年模式生效；敏感操作审计（完整脱敏导出与用途登记仍由 P2-08 承接） | AR/FE | 20 | P0 | P0-05、P0-09 | `TODO` | — | 缺口8 / R-A4 | — |
+| R-04 | 商店硬性合规功能：账号注销（15 个工作日删除/匿名化）+ 数据导出（最小可用版）；家长绑定与 `consent_at` 生效；`daily_limit_minutes` 青少年模式生效；敏感操作审计（完整脱敏导出与用途登记仍由 P2-08 承接） | AR/FE | 20 | P0 | P0-05、P0-09 | `DONE` | 20 | 缺口8 / R-A4 | `DELETE /api/users/me`（立即停用+匿名化+解绑+Token 失效+审计 `account.deletion.requested`，15 个工作日 due_at）；`services/usage.py` 中国时区今日时长与 `GET /api/users/me/usage`，练习/考试开始 429 `DAILY_LIMIT_REACHED` + `Retry-After`；App「账号与安全」页（时长/导出/注销）；迁移 `r8s9t0u1v2w3` 空库与上一版库升降级通过；`pytest` 324 passed、`flutter test` 77 passed |
 | R-05 | 软著申请：整理源码 60 页（`app/lib` + `backend/app`）+ 操作说明书 + CPCC 线上提交（加急）+ 登记号归档（名称建议"深爱学学习辅助软件"） | PM/CT | 12 | P1 | 无（第 1 天启动） | `TODO` | — | 缺口5 / R-A5 | — |
 | R-06 | 备案：域名 ICP 备案 → 导出签名 MD5 → 华为/小米商店侧 APP 备案（包名、签名、隐私 URL、SDK"无"）→ 备案号回填后端并在关于页展示 → 固化包名/签名不可变更 | PM/AR | 8 | P1 | R-01、R-03、R-05 | `TODO` | — | 缺口4 / R-A6 | — |
 | R-07 | 内容版权与教育合规：建立《题源与授权台账》（来源/授权凭证/录入/审核）；商店与 App 内免责声明；删除"官方教材/名师/提分/押题"表述；举报入口与 24h 下架流程演练 | CT/AR/FE | 16 | P0 | P0-18 | `TODO` | — | 缺口6 / R-A7 | — |
@@ -429,15 +429,15 @@ flowchart LR
 | 指标 | 数值 |
 |---|---|
 | 任务总数（不含基线） | 77（开发 68：P0 43 + P1 15 + P2 10；发布 9：R-01~R-09） |
-| `TODO` | 6 |
+| `TODO` | 5 |
 | `DOING` | 0 |
-| `DONE` | 71（P0-01~P0-43、P1-01~P1-15、P2-01~P2-10、R-01~R-03；基线 5 项已冻结） |
+| `DONE` | 72（P0-01~P0-43、P1-01~P1-15、P2-01~P2-10、R-01~R-04；基线 5 项已冻结） |
 | `BLOCKED` | 0 |
 | 预估总工时 | 676 h（开发 557 = P0 310 + P1 129 + P2 118；发布 119） |
-| 已投入工时 | 270 h（P0-01 3、P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3、P0-23 3、P0-24 3、P0-25 3、P0-26 3、P0-27 3、P0-28 4、P0-29 3、P0-30 3、P0-31 4、P0-32 3、P0-33 4、P0-34 4、P0-35 6、P0-36 8、P0-37 10、P0-38 4、P0-39 6、P0-40 4、P0-41 6、P0-42 2、P0-43 3、P1-01 3、P1-02 2、P1-03 2、P1-04 3、P1-05 3、P1-06 3、P1-07 3、P1-08 3、P1-09 3、P1-10 3、P1-11 3、P1-12 2、P1-13 3、P1-14 3、P1-15 3、P2-01 6、P2-02 6、P2-03 6、P2-04 4、P2-05 8、P2-06 8、P2-07 8、P2-08 4、P2-09 6、P2-10 4、R-01 2、R-02 6、R-03 20） |
+| 已投入工时 | 290 h（P0-01 3、P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3、P0-23 3、P0-24 3、P0-25 3、P0-26 3、P0-27 3、P0-28 4、P0-29 3、P0-30 3、P0-31 4、P0-32 3、P0-33 4、P0-34 4、P0-35 6、P0-36 8、P0-37 10、P0-38 4、P0-39 6、P0-40 4、P0-41 6、P0-42 2、P0-43 3、P1-01 3、P1-02 2、P1-03 2、P1-04 3、P1-05 3、P1-06 3、P1-07 3、P1-08 3、P1-09 3、P1-10 3、P1-11 3、P1-12 2、P1-13 3、P1-14 3、P1-15 3、P2-01 6、P2-02 6、P2-03 6、P2-04 4、P2-05 8、P2-06 8、P2-07 8、P2-08 4、P2-09 6、P2-10 4、R-01 2、R-02 6、R-03 20、R-04 20） |
 | 当前迭代 | 发布准备（R-01~R-09；R-05 软著先行） |
 | 迭代目标 | 上架合规缺口整改、隐私/注销/导出入口、内容授权台账、商店素材与发布流水线 |
-| 里程碑 | M2.5（P0 技术验收通过，待签署）→ M3（P1 技术验收通过，待签署）→ M4（P2 技术验收通过，待签署）→ M5（发布就绪，R-01/R-02/R-03 已完成） |
+| 里程碑 | M2.5（P0 技术验收通过，待签署）→ M3（P1 技术验收通过，待签署）→ M4（P2 技术验收通过，待签署）→ M5（发布就绪，R-01/R-02/R-03/R-04 已完成） |
 
 ### 5.2 同步节奏
 
@@ -546,6 +546,7 @@ flowchart LR
 | v1.69 | 2026-11-07 | AR/PM | R-01 正式签名与构建纪律（`make-release-keystore.ps1` 生成 keystore + 自动备份 zip + 重跑复用密码；`build.gradle.kts` release 缺 `keystore.properties` 直接 fail-fast（实测 `BUILD FAILED`），debug 不受影响；新增 `releaseVersionCode` 统一规则 `major*10000+minor*100+patch*10+build`，`1.0.0+1 → 10001`；`sync-version.ps1` 以 pubspec 为唯一来源同步鸿蒙 `versionCode=10001`；`signature-info.ps1` 导出 MD5/SHA-256 并校验 `CN=AiLearning`）；release APK `versionCode=10001`、签名 `CN=AiLearning`、MD5 `EB:51:94:8B:3D:DB:AA:41:05:01:0E:40:E2:CC:72:95` 已归档；§1.2 发布行转 `DOING`、§3.4 R-01 转 `DONE`、§1.1 D-08 状态更新、新增 §6.6 R-A1 记录、§5.1 同步（DONE 69 / 投入 244 h / TODO 8）；AGC 正式签名证书/Profile 待 PM 在开放平台生成归档；当前下一步 R-02 |
 | v1.70 | 2026-11-07 | AR/PM | R-02 后端生产化部署（`validate_settings` 生产配置强制校验 + 启动即 failure；`SlidingWindowLimiter` 登录/注册按 IP 限流（429 + `Retry-After`）与 `ErrorMaskingMiddleware` 500 脱敏；`prune_audit_logs` 审计留存 24 月（下限 6 月）与 `prune_audit.py`；`services/backup.py` + `db_backup.py`/`db_restore.py`（SQLite `quick_check`、`overwrite` 保护、损坏备份拒绝、保留策略）；Android main 禁明文 + debug overlay、鸿蒙 `network_config.json`、`build-apk.ps1` release 强制 HTTPS；`deploy/`（Dockerfile/entrypoint/compose/nginx TLS/.env.example）；`docs/skills.md` §5.6；新增测试 12 例、全量 `pytest` 312 passed；备份恢复演练 users=9/questions=564/audit_logs=7；HTTPS release APK 构建成功（`versionCode=10001`、`networkSecurityConfig` 已写入）；§3.4 R-02 转 `DONE`、新增 §6.7 R-A2 记录、§5.1 同步（DONE 70 / 投入 250 h / TODO 7）；云主机/备案域名/证书待 PM 提供；当前下一步 R-03 |
 | v1.71 | 2026-11-07 | AR/FE | R-03 隐私政策公网发布与首启同意链路（`backend/app/legal/` 隐私政策+用户协议、JSON/HTML 双形态、根路径与 `/api/legal/*` 双挂载、`LEGAL_PUBLIC_BASE_URL`；`consent_records` 表 + 迁移 `q7r8s9t0u1v2`（空库/上一版库升级与降级再升级通过）；`POST /api/legal/consent` 409 版本校验 + 幂等留痕 + 审计 `legal.consent.accepted`；`/auth/me` 返回 `privacy_version`/`terms_version`/`needs_reconsent`；儿童注册强制 `guardian_consent`（422）；App `ConsentGate` 首启强制勾选/拒绝退出/无网络、`/consent` 重新同意页、「我的」隐私政策/用户协议/联系我们、内置 Markdown 离线回退；`pytest` 318 passed、`ruff` 变更文件 0 issue、`flutter analyze` 0 issues、`flutter test` 75 passed；§3.4 R-03 转 `DONE`、新增 §6.8 R-A3 记录、§5.1 同步（DONE 71 / 投入 270 h / TODO 6）；`docs/skills.md` 新增 §5.7；当前下一步 R-04 |
+| v1.72 | 2026-11-07 | AR/FE | R-04 账号注销、数据导出与青少年模式时长生效（`DELETE /api/users/me` 立即停用+匿名化+解绑+Token 失效+审计 `account.deletion.requested`、15 个工作日 `due_at`，422/409 错误码；`users.deletion_requested_at` + 迁移 `r8s9t0u1v2w3`（空库与上一版库升降级通过）；`services/usage.py` 中国时区今日时长与 `GET /api/users/me/usage`，练习/考试开始 429 `DAILY_LIMIT_REACHED`+`Retry-After`；App「账号与安全」页（今日时长/导出 JSON/注销二次确认）与 `DAILY_LIMIT_REACHED` 引导弹窗；`pytest` 324 passed、变更文件 `ruff` 0 issue、`flutter analyze` 0 issues、`flutter test` 77 passed；§3.4 R-04 转 `DONE`、新增 §6.9 R-A4 记录、§5.1 同步（DONE 72 / 投入 290 h / TODO 5）；`docs/skills.md` 新增 §5.8；当前下一步 R-05 |
 
 ---
 
@@ -694,6 +695,23 @@ flowchart LR
 
 **结论**：R-A3 验收通过（公网法务页免登录可用、同意记录与审计留痕完整、版本升级可强制重新同意、儿童注册监护人确认生效、首启同意链路无网络请求、迁移与全量回归通过）；隐私 URL 的正式域名以 R-06 备案结果为准。
 
+### 6.9 发布验收记录（R-A4，2026-11-07）
+
+| 核对项 | 结果 | 证据 |
+|---|---|---|
+| 任务台账 | R-04 `DONE`（R-01~R-03 已 `DONE`），R-05~R-09 待执行 | §3.4 |
+| 账号注销 | `DELETE /api/users/me` 需登录且 `confirm=true`，缺失返回 422 `CONFIRM_REQUIRED`；重复提交返回 409 `ALREADY_REQUESTED`；成功后 202 返回 `requested_at`/`due_at`（15 个工作日，跳过周末）/提示文案 | `api/routes/users.py::delete_my_account`、`tests/test_account_deletion.py` 2 例 |
+| 注销即时生效 | 手机号改写为 `deleted-{id}-{hex8}`、昵称改为「已注销用户」、密码替换为随机串、`is_active=false`、`token_version` 自增；家长绑定全部置 `revoked` 并清空 `consent_at`；审计 `account.deletion.requested` 记录脱敏手机号与解绑条数 | `api/routes/users.py`、`services/audit.py` |
+| 数据导出 | 「账号与安全」页一键导出当前账号数据（沿用 P2-08 `GET /api/data/export` 脱敏最小可用版），复制 JSON 到剪贴板并提示脱敏字段 | `app/lib/core/services/compliance_service.dart`、`account_security_page.dart` |
+| 青少年模式时长 | `GET /api/users/me/usage` 返回 `daily_limit_minutes`/`used_minutes`/`remaining_minutes`/`limited`/`unlocks_at`；按中国时区（UTC+8）零点切日，`duration_ms` 向上取整为分钟；`daily_limit_minutes=0` 视为不限时 | `services/usage.py`、`tests/test_daily_limit.py` 4 例 |
+| 限额拦截 | 练习 `POST /api/practice/start` 与考试开始（新建作答）在超限时返回 429 `DAILY_LIMIT_REACHED`（含上限/已用/解锁时间）并带 `Retry-After`；续答与查看已有作答不受影响；昨日记录不计入今日 | `api/routes/practice.py`、`api/routes/exams.py`、`tests/test_daily_limit.py` |
+| App 端呈现 | 「我的 → 账号与安全」展示今日已用/上限/剩余与状态；注销走二次确认弹窗，成功后提示、登出并回到登录页；`DAILY_LIMIT_REACHED` 统一引导弹窗并指向「账号与安全」查看时长 | `account_security_page.dart`、`api_error_guide.dart` |
+| 数据库迁移 | `users.deletion_requested_at` 列；迁移 `r8s9t0u1v2w3` 空库 `upgrade head` 通过；上一发布版库（`q7r8s9t0u1v2`）`upgrade head` → `downgrade -1` → `upgrade head` 通过，列存在且 `alembic_version=r8s9t0u1v2w3` | `alembic/versions/r8s9t0u1v2w3_account_deletion.py` |
+| 回归 | 新增后端测试 6 例（时长 4 + 注销 2）、前端模型测试 2 例；全量 `pytest` 324 passed；变更文件 `ruff check --select E,F,I` 0 issue；`flutter analyze` 0 issues；`flutter test` 77 passed | `backend/tests`、`app/test` |
+| 文档同步 | `docs/skills.md` 新增 §5.8 账号注销/数据导出/青少年模式 | D-06 |
+
+**结论**：R-A4 验收通过（注销即时匿名化与 15 个工作日承诺、数据导出入口可用、青少年模式时长按中国时区生效并在练习/考试入口拦截、迁移与全量回归通过）；注销后的物理删除/匿名化留存周期由运维按 D-05 执行。
+
 ---
 
 ## 七、开发执行约定
@@ -709,4 +727,4 @@ flowchart LR
 
 ---
 
-> **当前下一步**：R-04（商店硬性合规功能：账号注销 + 数据导出 + 家长同意/青少年模式生效，依赖 R-02、P0-05、P0-09；依据 D-08 缺口 8）。所有任务按依赖图推进，每完成一个任务即回写本文件状态。
+> **当前下一步**：R-05（软著申请：源码 60 页 + 操作说明书 + CPCC 线上提交（加急）+ 登记号归档；依赖无，须第 1 天启动；依据 D-08 缺口 5）。所有任务按依赖图推进，每完成一个任务即回写本文件状态。

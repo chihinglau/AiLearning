@@ -439,6 +439,32 @@ Copy-Item backend\app\legal\privacy.md app\assets\legal\privacy.md -Force
 Copy-Item backend\app\legal\terms.md   app\assets\legal\terms.md   -Force
 ```
 
+### 5.8 账号注销 / 数据导出 / 青少年模式（R-04）
+
+**账号注销**（`DELETE /api/users/me`，需登录）：
+
+| 行为 | 说明 |
+|---|---|
+| 请求体 | `{"confirm": true, "reason": "可选"}`；缺少 `confirm` 返回 422 `CONFIRM_REQUIRED` |
+| 重复提交 | `deletion_requested_at` 已存在返回 409 `ALREADY_REQUESTED` |
+| 即时生效 | `is_active=false`；手机号改写 `deleted-{id}-{hex8}`；昵称「已注销用户」；密码随机；`token_version` 自增（旧 Token 全部失效） |
+| 关系解除 | 家长绑定全部置 `revoked` 并清空 `consent_at` |
+| 审计 | `account.deletion.requested`（含脱敏手机号、解绑条数、`due_at`） |
+| 响应 | 202，返回 `requested_at`、`due_at`（15 个工作日，跳过周末）、提示文案 |
+
+> 注销不可恢复；物理删除/匿名化留存周期按 D-05 执行。前端入口：「我的 → 账号与安全 → 注销账号」（二次确认后调用并登出）。
+
+**数据导出**：沿用 P2-08 `GET /api/data/export`（脱敏最小可用版）；App 在「账号与安全」页一键导出并把 JSON 复制到剪贴板。
+
+**青少年模式时长**（`backend/app/services/usage.py`）：
+
+| 方法 | 路径/位置 | 说明 |
+|---|---|---|
+| GET | `/api/users/me/usage` | `daily_limit_minutes`/`used_minutes`/`remaining_minutes`/`limited`/`unlocks_at` |
+| 拦截点 | `POST /api/practice/start`、考试开始（新建作答） | 超限返回 429 `DAILY_LIMIT_REACHED`（含上限/已用/解锁时间）+ `Retry-After` |
+
+规则：按中国时区（UTC+8）自然日统计 `student_question_records.duration_ms` 总和并向上取整为分钟；`daily_limit_minutes=0` 视为不限时；续答与查看已有作答不受影响。
+
 ---
 
 ## 6. 双端架构约定（PlatformPal）
