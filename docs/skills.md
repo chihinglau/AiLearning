@@ -403,6 +403,44 @@ PostgreSQL 环境使用 `pg_dump` / `pg_restore`；SQLite 使用在线备份 API
 
 ---
 
+### 5.7 法务内容与同意链路（R-03）
+
+**内容存放**（唯一来源，App 内置版本需同步复制）：
+
+| 文件 | 用途 |
+|---|---|
+| `backend/app/legal/privacy.md` | 隐私政策正文（公网页与 App 共用） |
+| `backend/app/legal/terms.md` | 用户协议正文 |
+| `backend/app/legal/__init__.py` | 版本号（`PRIVACY_VERSION` / `TERMS_VERSION`）、Markdown → HTML 渲染 |
+| `app/assets/legal/*.md` | App 离线回退副本（`flutter: assets: - assets/legal/`） |
+| `app/lib/core/constants/legal_constants.dart` | 客户端版本号与文案常量，须与后端一致 |
+
+**接口**：
+
+| 方法 | 路径 | 说明 |
+|---|---|---|
+| GET | `/legal/privacy`、`/legal/terms` | 免登录；浏览器 `Accept: text/html` 返回 HTML，其他返回 JSON |
+| GET | `/legal/policies` | 当前版本与公网地址（也可走 `/api/legal/*`） |
+| POST | `/api/legal/consent` | 登录后同意当前版本（版本不符 409 `POLICY_VERSION_MISMATCH`） |
+
+公网地址：生产环境设置 `LEGAL_PUBLIC_BASE_URL=https://<备案域名>`，否则按请求 Host 推导。
+备案完成后需核对 `https://<域名>/legal/privacy` 可直接打开（商店审核会访问该 URL）。
+
+**同意规则**：
+
+1. 首启由 `ConsentGate` 强制展示同意页：必须主动勾选，未勾选按钮禁用；拒绝退出 App；首启阶段只读内置 Markdown，不发网络请求。
+2. 儿童账号注册需 `is_child=true` + `guardian_consent=true`；否则返回 422 `GUARDIAN_CONSENT_REQUIRED`。
+3. 同意记录写入 `consent_records`（`(user_id, doc_type, version)` 唯一，重复同意幂等），审计动作 `legal.consent.accepted`。
+4. 版本升级：修改文档版本号 → App 常量同步 → `/api/auth/me` 返回 `needs_reconsent=true` → 登录后强制跳转 `/consent` 重新同意。
+5. 升级文档时必须重建 App 内置副本：
+
+```powershell
+Copy-Item backend\app\legal\privacy.md app\assets\legal\privacy.md -Force
+Copy-Item backend\app\legal\terms.md   app\assets\legal\terms.md   -Force
+```
+
+---
+
 ## 6. 双端架构约定（PlatformPal）
 
 ```
