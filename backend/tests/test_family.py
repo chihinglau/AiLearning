@@ -14,10 +14,19 @@ def _login(client: TestClient, phone: str) -> dict[str, str]:
     return {"Authorization": f"Bearer {response.json()['access_token']}"}
 
 
-def _child(client: TestClient, phone: str, grade: int = 2, is_child: bool = True) -> dict[str, str]:
+def _child(
+    client: TestClient, phone: str, grade: int = 2, is_child: bool = True
+) -> dict[str, str]:
+    # R-03：儿童账号注册必须携带监护人确认。
     _register(
         client,
-        {"phone": phone, "password": "pass1234", "grade": grade, "is_child": is_child},
+        {
+            "phone": phone,
+            "password": "pass1234",
+            "grade": grade,
+            "is_child": is_child,
+            "guardian_consent": True,
+        },
     )
     return _login(client, phone)
 
@@ -43,7 +52,8 @@ def test_binding_lifecycle(client: TestClient) -> None:
     binding_id = binding["id"]
 
     assert client.get("/api/family/children", headers=parent_headers).json() == []
-    assert client.get("/api/auth/me", headers=child_headers).json()["guardian_consent"] is False
+    me = client.get("/api/auth/me", headers=child_headers).json()
+    assert me["guardian_consent"] is False
 
     confirmed = client.post(
         f"/api/family/bindings/{binding_id}/confirm", headers=child_headers
@@ -55,13 +65,17 @@ def test_binding_lifecycle(client: TestClient) -> None:
     children = client.get("/api/family/children", headers=parent_headers)
     assert children.status_code == 200
     assert [item["id"] for item in children.json()] == [binding["child_id"]]
-    assert client.get("/api/auth/me", headers=child_headers).json()["guardian_consent"] is True
+    me = client.get("/api/auth/me", headers=child_headers).json()
+    assert me["guardian_consent"] is True
 
-    revoked = client.delete(f"/api/family/bindings/{binding_id}", headers=parent_headers)
+    revoked = client.delete(
+        f"/api/family/bindings/{binding_id}", headers=parent_headers
+    )
     assert revoked.status_code == 200
     assert revoked.json()["status"] == "revoked"
     assert client.get("/api/family/children", headers=parent_headers).json() == []
-    assert client.get("/api/auth/me", headers=child_headers).json()["guardian_consent"] is False
+    me = client.get("/api/auth/me", headers=child_headers).json()
+    assert me["guardian_consent"] is False
 
 
 def test_only_parent_can_request(client: TestClient) -> None:

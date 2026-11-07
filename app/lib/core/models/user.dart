@@ -10,6 +10,7 @@ class AppUser {
     this.dailyLimitMinutes = 120,
     this.permissions = const [],
     this.scope,
+    this.needsReconsent = false,
   });
 
   final int id;
@@ -22,6 +23,9 @@ class AppUser {
   final int dailyLimitMinutes;
   final List<String> permissions;
   final String? scope;
+
+  /// 政策版本升高后为 true，登录后须重新阅读并同意（R-03）。
+  final bool needsReconsent;
 
   bool get isStudent => role == 'student';
 
@@ -36,7 +40,12 @@ class AppUser {
     return required.any(permissions.contains);
   }
 
-  AppUser copyWith({String? stage, int? grade, List<String>? permissions}) {
+  AppUser copyWith({
+    String? stage,
+    int? grade,
+    List<String>? permissions,
+    bool? needsReconsent,
+  }) {
     return AppUser(
       id: id,
       phone: phone,
@@ -48,6 +57,7 @@ class AppUser {
       dailyLimitMinutes: dailyLimitMinutes,
       permissions: permissions ?? this.permissions,
       scope: scope,
+      needsReconsent: needsReconsent ?? this.needsReconsent,
     );
   }
 
@@ -65,6 +75,7 @@ class AppUser {
           .map((item) => item as String)
           .toList(),
       scope: json['scope'] as String?,
+      needsReconsent: json['needs_reconsent'] as bool? ?? false,
     );
   }
 }

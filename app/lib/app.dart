@@ -16,6 +16,9 @@ import 'package:ai_learning/features/learn/knowledge_graph_page.dart';
 import 'package:ai_learning/features/learn/knowledge_page.dart';
 import 'package:ai_learning/features/learn/kp_detail_page.dart';
 import 'package:ai_learning/features/learn/unit_page.dart';
+import 'package:ai_learning/features/legal/consent_gate.dart';
+import 'package:ai_learning/features/legal/legal_consent_page.dart';
+import 'package:ai_learning/features/legal/legal_document_page.dart';
 import 'package:ai_learning/features/onboarding/entry_gate_page.dart';
 import 'package:ai_learning/features/onboarding/onboarding_page.dart';
 import 'package:ai_learning/features/practice/practice_config_page.dart';
@@ -39,8 +42,19 @@ final routerProvider = Provider<GoRouter>((ref) {
         return location == '/login' ? null : '/login';
       }
       if (location == '/login') return null;
+      // R-03：政策版本升高后强制先重新同意。
+      if (user.needsReconsent &&
+          location != '/consent' &&
+          !location.startsWith('/legal')) {
+        return '/consent';
+      }
+      if (!user.needsReconsent && location == '/consent') {
+        return '/gate';
+      }
       final status = ref.read(onboardingStatusProvider);
-      if (status == OnboardingStatus.required && location != '/onboarding') {
+      if (status == OnboardingStatus.required &&
+          location != '/onboarding' &&
+          location != '/consent') {
         return '/onboarding';
       }
       if (status == OnboardingStatus.completed && location == '/onboarding') {
@@ -60,6 +74,19 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/onboarding',
         builder: (context, state) => const OnboardingPage(),
+      ),
+      // R-03：政策版本升高后的重新同意页与法务文档页。
+      GoRoute(
+        path: '/consent',
+        builder: (context, state) => const LegalConsentPage(),
+      ),
+      GoRoute(
+        path: '/legal/privacy',
+        builder: (context, state) => const LegalDocumentPage(docType: 'privacy'),
+      ),
+      GoRoute(
+        path: '/legal/terms',
+        builder: (context, state) => const LegalDocumentPage(docType: 'terms'),
       ),
       GoRoute(
         path: '/shell',
@@ -340,15 +367,19 @@ class AiLearningApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final router = ref.watch(routerProvider);
-    return MaterialApp.router(
-      title: '深爱学',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF1E6FD9)),
-        scaffoldBackgroundColor: const Color(0xFFF7F9FC),
+    final storage = ref.watch(platformPalProvider).storage;
+    return ConsentGate(
+      storage: storage,
+      child: MaterialApp.router(
+        title: '深爱学',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          useMaterial3: true,
+          colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF1E6FD9)),
+          scaffoldBackgroundColor: const Color(0xFFF7F9FC),
+        ),
+        routerConfig: router,
       ),
-      routerConfig: router,
     );
   }
 }

@@ -40,7 +40,8 @@ class _LoginPageState extends ConsumerState<LoginPage> {
       );
       ref.read(currentUserProvider.notifier).state = user;
       if (!mounted) return;
-      context.go('/gate');
+      // R-03：政策版本升高时先完成重新同意，再进入引导/首页。
+      context.go(user.needsReconsent ? '/consent' : '/gate');
     } on ApiException catch (error) {
       if (!mounted) return;
       setState(() => _error = error.message);

@@ -13,6 +13,10 @@ class UserCreate(BaseModel):
     grade: Optional[int] = Field(default=None, ge=1, le=12)
     elective_subjects: Optional[list[str]] = Field(default=None, max_length=3)
     is_child: bool = False
+    # R-03 法务：儿童账号须监护人确认；同时可携带已阅读的政策版本用于留痕。
+    guardian_consent: bool = False
+    privacy_version: Optional[str] = Field(default=None, max_length=20)
+    terms_version: Optional[str] = Field(default=None, max_length=20)
 
 
 class UserOut(BaseModel):
@@ -39,6 +43,10 @@ class MeOut(UserOut):
     permissions: List[str] = Field(default_factory=list)
     scope: str = "SELF"
     guardian_consent: bool = True
+    # R-03 法务：已同意的版本与是否需要重新同意（版本升高时）
+    privacy_version: Optional[str] = None
+    terms_version: Optional[str] = None
+    needs_reconsent: bool = False
 
 
 class GradeChangeIn(BaseModel):

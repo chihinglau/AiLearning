@@ -17,6 +17,7 @@ from app.api.routes import (
     family,
     health,
     learn,
+    legal,
     org,
     practice,
     public,
@@ -60,6 +61,9 @@ app.add_middleware(RateLimitMiddleware)
 app.add_middleware(ErrorMaskingMiddleware)
 
 app.include_router(health.router)
+# 法务文档需公网免登录访问：同时挂在根路径（商店审核用）与 /api 前缀（App 内使用）。
+app.include_router(legal.router)
+app.include_router(legal.router, prefix=settings.api_prefix)
 app.include_router(auth.router, prefix=settings.api_prefix)
 app.include_router(public.router, prefix=settings.api_prefix)
 app.include_router(practice.router, prefix=settings.api_prefix)

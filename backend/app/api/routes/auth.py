@@ -14,20 +14,26 @@ from app.core.grade import (
 from app.core.scope import mask_phone
 from app.core.security import create_access_token, hash_password, verify_password
 from app.db.session import get_db
+from app.legal import current_version
 from app.models.user import AuditLog, User
 from app.schemas.user import MeOut, PermissionsOut, TokenOut, UserCreate, UserOut
 from app.services.audit import record_audit
 from app.services.family import has_active_guardian
+from app.services.legal import accepted_version, needs_reconsent, record_consents
 from app.services.rbac import sync_user_role
 
 router = APIRouter(prefix="/auth", tags=["账号"])
 
 
 @router.post("/register", response_model=UserOut, status_code=status.HTTP_201_CREATED)
-def register(payload: UserCreate, request: Request, db: Session = Depends(get_db)) -> User:
+def register(
+    payload: UserCreate, request: Request, db: Session = Depends(get_db)
+) -> User:
     exists = db.scalar(select(User).where(User.phone == payload.phone))
     if exists is not None:
-        raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail="该手机号已注册")
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT, detail="该手机号已注册"
+        )
 
     try:
         profile = resolve_grade_profile(payload.grade, payload.stage, payload.role)
@@ -37,6 +43,38 @@ def register(payload: UserCreate, request: Request, db: Session = Depends(get_db
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
             detail={"code": exc.code, "message": exc.message},
         ) from exc
+
+    # R-03 法务：儿童账号注册须监护人明确同意，避免未取得同意即采集信息。
+    if payload.is_child and not payload.guardian_consent:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail={
+                "code": "GUARDIAN_CONSENT_REQUIRED",
+                "message": (
+                    "未满 14 周岁账号注册需监护人阅读并确认"
+                    "《隐私政策》《用户协议》"
+                ),
+            },
+        )
+
+    provided_versions = {
+        "privacy": payload.privacy_version,
+        "terms": payload.terms_version,
+    }
+    if any(version is not None for version in provided_versions.values()):
+        expected = {
+            "privacy": current_version("privacy"),
+            "terms": current_version("terms"),
+        }
+        if provided_versions != expected:
+            raise HTTPException(
+                status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+                detail={
+                    "code": "POLICY_VERSION_MISMATCH",
+                    "message": "法务文档版本已更新，请重新阅读后同意",
+                    "current": expected,
+                },
+            )
 
     user = User(
         phone=payload.phone,
@@ -53,11 +91,24 @@ def register(payload: UserCreate, request: Request, db: Session = Depends(get_db
     db.add(user)
     db.flush()
     sync_user_role(db, user, payload.role)
+    if payload.privacy_version and payload.terms_version:
+        record_consents(
+            db,
+            user_id=user.id,
+            privacy_version=payload.privacy_version,
+            terms_version=payload.terms_version,
+            guardian_confirmed=payload.guardian_consent,
+            ip=request.client.host if request.client else None,
+            commit=False,
+        )
     db.add(
         AuditLog(
             user_id=user.id,
             action="user.register",
-            detail=f"role={user.role}, is_child={user.is_child}",
+            detail=(
+                f"role={user.role}, is_child={user.is_child}, "
+                f"guardian_consent={payload.guardian_consent}"
+            ),
             ip=request.client.host if request.client else None,
         )
     )
@@ -94,7 +145,9 @@ def login(
             ip=ip,
         )
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="账号已停用")
-    return TokenOut(access_token=create_access_token(str(user.id), user.token_version or 0))
+    return TokenOut(
+        access_token=create_access_token(str(user.id), user.token_version or 0)
+    )
 
 
 @router.get("/me", response_model=MeOut)
@@ -106,7 +159,12 @@ def me(
         **data.model_dump(),
         permissions=current_user_permissions(current, db),
         scope=current_user_scope(current, db),
-        guardian_consent=True if not current.is_child else has_active_guardian(db, current),
+        guardian_consent=(
+            True if not current.is_child else has_active_guardian(db, current)
+        ),
+        privacy_version=accepted_version(db, current.id, "privacy"),
+        terms_version=accepted_version(db, current.id, "terms"),
+        needs_reconsent=needs_reconsent(db, current.id),
     )
 
 

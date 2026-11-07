@@ -1,3 +1,4 @@
+import 'package:ai_learning/core/constants/legal_constants.dart';
 import 'package:ai_learning/core/errors/api_error_guide.dart';
 import 'package:ai_learning/core/models/learn.dart';
 import 'package:ai_learning/core/models/user.dart';
@@ -60,6 +61,32 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
     ref.read(currentUserProvider.notifier).state = null;
     if (!mounted) return;
     context.go('/login');
+  }
+
+  void _showContact(BuildContext context) {
+    showDialog<void>(
+      context: context,
+      builder: (dialogContext) => AlertDialog(
+        title: const Text('联系我们'),
+        content: const Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text('客服与个人信息保护负责人邮箱'),
+            SizedBox(height: 8),
+            SelectableText(kLegalSupportEmail),
+            SizedBox(height: 12),
+            Text('我们将在收到问题后 15 个工作日内回复。'),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(dialogContext).pop(),
+            child: const Text('知道了'),
+          ),
+        ],
+      ),
+    );
   }
 
   @override
@@ -256,6 +283,38 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                     ),
                     const SizedBox(height: 16),
                   ],
+                  const SizedBox(height: 16),
+                  // R-03：法务入口（隐私政策 / 用户协议 / 联系我们）。
+                  Card(
+                    child: Column(
+                      children: [
+                        ListTile(
+                          leading: const Icon(Icons.privacy_tip_outlined),
+                          title: const Text('隐私政策'),
+                          subtitle: const Text('我们如何收集、使用与保护个人信息'),
+                          trailing: const Icon(Icons.chevron_right),
+                          onTap: () => context.go('/legal/privacy'),
+                        ),
+                        const Divider(height: 1),
+                        ListTile(
+                          leading: const Icon(Icons.description_outlined),
+                          title: const Text('用户协议'),
+                          subtitle: const Text('服务内容、使用规范与未成年人保护'),
+                          trailing: const Icon(Icons.chevron_right),
+                          onTap: () => context.go('/legal/terms'),
+                        ),
+                        const Divider(height: 1),
+                        ListTile(
+                          leading: const Icon(Icons.support_agent_outlined),
+                          title: const Text('联系我们'),
+                          subtitle: const Text(kLegalSupportEmail),
+                          trailing: const Icon(Icons.chevron_right),
+                          onTap: () => _showContact(context),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 16),
                   OutlinedButton.icon(
                     onPressed: _logout,
                     icon: const Icon(Icons.logout),

@@ -37,6 +37,9 @@ class Settings(BaseSettings):
     # R-02 合规留存：审计日志至少保留 6 个月，默认 24 个月后清理
     audit_retention_months: int = 24
 
+    # R-03 法务：隐私政策/用户协议公网地址（为空时按请求 Host 推导）
+    legal_public_base_url: str = ""
+
     # P2-06 AI 讲解：默认关闭外部 LLM（走规则兜底），生产按需开启
     llm_enabled: bool = False
     llm_api_key: str = ""

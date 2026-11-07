@@ -10,6 +10,7 @@ import 'package:ai_learning/core/services/content_review_service.dart';
 import 'package:ai_learning/core/services/exam_service.dart';
 import 'package:ai_learning/core/services/family_service.dart';
 import 'package:ai_learning/core/services/learn_service.dart';
+import 'package:ai_learning/core/services/legal_service.dart';
 import 'package:ai_learning/core/services/org_service.dart';
 import 'package:ai_learning/core/services/rbac_service.dart';
 import 'package:ai_learning/core/services/textbook_service.dart';
@@ -89,6 +90,10 @@ final rbacServiceProvider = Provider<RbacService>((ref) {
 
 final userServiceProvider = Provider<UserService>((ref) {
   return UserService(ref.watch(apiClientProvider));
+});
+
+final legalServiceProvider = Provider<LegalService>((ref) {
+  return LegalService(ref.watch(apiClientProvider));
 });
 
 final currentUserProvider = StateProvider<AppUser?>((ref) => null);
