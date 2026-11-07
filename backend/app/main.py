@@ -19,6 +19,7 @@ from app.api.routes import (
     health,
     learn,
     legal,
+    monitor,
     org,
     practice,
     public,
@@ -69,6 +70,7 @@ app.include_router(legal.router, prefix=settings.api_prefix)
 app.include_router(app_info.router)
 app.include_router(app_info.router, prefix=settings.api_prefix)
 app.include_router(auth.router, prefix=settings.api_prefix)
+app.include_router(monitor.router, prefix=settings.api_prefix)
 app.include_router(public.router, prefix=settings.api_prefix)
 app.include_router(practice.router, prefix=settings.api_prefix)
 app.include_router(learn.router, prefix=settings.api_prefix)

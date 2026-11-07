@@ -1,6 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 学习数据需网络访问；release 源集不继承 debug/profile 的权限声明，须在此显式声明。 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
-        android:label="ai_learning"
+        android:label="深爱学"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
         android:networkSecurityConfig="@xml/network_security_config">

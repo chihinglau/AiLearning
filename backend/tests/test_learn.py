@@ -3,7 +3,7 @@
 from datetime import datetime, timedelta
 
 from app.models.content import Chapter, KnowledgePoint, Question, Textbook
-from app.models.practice import MasteryScore, WrongQuestion
+from app.models.practice import MasteryScore
 from app.services import learning as engine
 
 
@@ -125,7 +125,7 @@ def test_due_review_listing(db):
     q.id = 200
     db.add(q)
     db.commit()
-    item = engine.upsert_wrong_question(db, user_id=7, question=q, is_correct=False)
+    engine.upsert_wrong_question(db, user_id=7, question=q, is_correct=False)
     db.commit()
     now = datetime.utcnow()
 

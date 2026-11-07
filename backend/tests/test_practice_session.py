@@ -3,11 +3,9 @@
 from typing import Any
 
 from fastapi.testclient import TestClient
-from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.models.content import Chapter, KnowledgePoint, Question, Textbook
-from app.models.user import User
 
 
 def _setup(client: TestClient, db: Session) -> dict[str, Any]:

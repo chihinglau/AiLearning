@@ -33,6 +33,7 @@ class Settings(BaseSettings):
     rate_limit_enabled: bool = True
     login_rate_limit_per_minute: int = 10
     register_rate_limit_per_minute: int = 5
+    monitor_rate_limit_per_minute: int = 30
 
     # R-02 合规留存：审计日志至少保留 6 个月，默认 24 个月后清理
     audit_retention_months: int = 24

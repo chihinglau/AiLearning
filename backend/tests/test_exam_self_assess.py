@@ -7,7 +7,6 @@ from sqlalchemy.orm import Session
 from app.models.content import Chapter, KnowledgePoint, Question, Textbook
 from app.models.exam import Exam
 from app.models.practice import StudentQuestionRecord
-from app.models.user import User
 
 
 def _student(

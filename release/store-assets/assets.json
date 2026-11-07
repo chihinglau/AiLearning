@@ -1,0 +1,90 @@
+{
+  "task": "R-08",
+  "notes": "全部为虚构示例数据；不含教材封面、学校标识、真实学生信息",
+  "assets": [
+    {
+      "path": "icon-1024.png",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 33182,
+      "sha256": "b8924302d3b03a4898b927cbb28b65af5f6d491e76719b9c3e2c658263b06d5b"
+    },
+    {
+      "path": "icon-512.png",
+      "width": 512,
+      "height": 512,
+      "bytes": 28987,
+      "sha256": "2b2fe20cced4a0b0acca78ad809029925370553a108cdae4e06f7684b0f40780"
+    },
+    {
+      "path": "icon-216.png",
+      "width": 216,
+      "height": 216,
+      "bytes": 11642,
+      "sha256": "8a50e386747893b1ad93498c0cbf32484acbd8dd00fac004e3dac8426094f3f9"
+    },
+    {
+      "path": "feature-graphic-1024x500.png",
+      "width": 1024,
+      "height": 500,
+      "bytes": 52496,
+      "sha256": "237c9fa2f8fb334b7642a7999a0a5a854065a61ebc3a095b7160ee4832cae417"
+    },
+    {
+      "path": "screenshots/01-home.png",
+      "width": 1080,
+      "height": 1920,
+      "bytes": 122489,
+      "sha256": "0d7074e9b7926ecec69d4a238aa57c3018ce06eadb84e6efbbd722d1ddbf8912"
+    },
+    {
+      "path": "screenshots/02-knowledge.png",
+      "width": 1080,
+      "height": 1920,
+      "bytes": 110781,
+      "sha256": "ff59918ab7c6b0a64826b6bbbdad8be8784e7a20ce0b32a3f45d2cf6c7b103a1"
+    },
+    {
+      "path": "screenshots/03-question.png",
+      "width": 1080,
+      "height": 1920,
+      "bytes": 86717,
+      "sha256": "1baef7ebc330033f21c9c563b9eeb4e23cc23dccab24cd10e2fa789808f0b001"
+    },
+    {
+      "path": "screenshots/04-practice.png",
+      "width": 1080,
+      "height": 1920,
+      "bytes": 112215,
+      "sha256": "4cfa56b2dcf8c12d7aa5f104627970e09722ffd91c471cc063a6134ac5a3b41c"
+    },
+    {
+      "path": "screenshots/05-wrongbook.png",
+      "width": 1080,
+      "height": 1920,
+      "bytes": 117329,
+      "sha256": "b77e1ebbc5ef82f3ae4ff45de6f7abfbe3224182639f50b7a66c64c02a181bde"
+    },
+    {
+      "path": "screenshots/06-report.png",
+      "width": 1080,
+      "height": 1920,
+      "bytes": 74532,
+      "sha256": "75a68feec4c69dfab7998c24c61a61b7608cf678eeae4024e84e3b0b4dcd650c"
+    },
+    {
+      "path": "screenshots/07-parent.png",
+      "width": 1080,
+      "height": 1920,
+      "bytes": 105905,
+      "sha256": "b11e8ca794296cf81d66995a5270b800faea4af52a89561bd73381bb736f898f"
+    },
+    {
+      "path": "screenshots/08-profile.png",
+      "width": 1080,
+      "height": 1920,
+      "bytes": 106069,
+      "sha256": "012201942c777e3feefe0edc808dbc025828592804a231a4833083f385884e43"
+    }
+  ]
+}

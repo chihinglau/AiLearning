@@ -1,6 +1,6 @@
 from typing import Optional, Sequence, Union
 
-from fastapi import Depends, HTTPException, Query, status
+from fastapi import Depends, Header, HTTPException, Query, status
 from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy.orm import Session
 
@@ -46,6 +46,27 @@ def get_current_user(
             detail={"code": "TOKEN_REVOKED", "message": "登录状态已失效，请重新登录"},
             headers={"WWW-Authenticate": "Bearer"},
         )
+    return user
+
+
+def get_optional_user(
+    authorization: Optional[str] = Header(default=None),
+    db: Session = Depends(get_db),
+) -> Optional[User]:
+    """可选登录依赖：崩溃上报等匿名可用接口，带合法 Token 时关联用户。"""
+    if not authorization or not authorization.lower().startswith("bearer "):
+        return None
+    token = authorization[7:].strip()
+    data = decode_access_token(token)
+    if data is None or not data.subject.isdigit():
+        return None
+    user: Optional[User] = db.get(User, int(data.subject))
+    if (
+        user is None
+        or not user.is_active
+        or (user.token_version or 0) != data.version
+    ):
+        return None
     return user
 
 

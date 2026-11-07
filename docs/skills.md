@@ -521,6 +521,44 @@ App「我的 → 关于」展示应用名/版本、ICP 备案号、APP 备案号
 
 授权台账与演练记录见 `release/content-compliance/license-ledger.md`（教材名称仅作标识、章节结构自建、示例题自编、解析规则化 + 人工抽检、AI 讲解仅供参考）。
 
+### 5.12 商店素材与合规表单（R-08）
+
+`scripts/make-store-assets.py` 一键生成 `release/store-assets/`：`icon-1024/512/216`、`feature-graphic-1024x500`、8 张 1080×1920 虚构示例截图（底部标注「示例数据」）、`assets.json`（尺寸/字节/sha256）；配套 `README.md`（平台规格与提审顺序）、`listing.md`（名称/简短描述/完整描述/更新说明/华为文案）、`data-safety.md`、`audience-rating.md`、`huawei-privacy-label.md`。素材不得使用教材封面、学校名称或真实学生信息。
+
+### 5.13 发布流水线与崩溃监控（R-09）
+
+一条命令发布（在仓库根目录执行）：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\ci.ps1 -SkipBuild          # 只跑质量门禁 + 检查表
+powershell -ExecutionPolicy Bypass -File scripts\ci.ps1                     # 门禁 + Release APK + 验签 + 归档
+powershell -ExecutionPolicy Bypass -File scripts\ci.ps1 -BuildAab -WithHap -Tag   # 全量发布并打 tag
+```
+
+| 参数 | 作用 |
+|---|---|
+| `-SkipTests` | 跳过 ruff / pytest / flutter analyze / flutter test |
+| `-SkipBuild` | 跳过 APK 构建、签名校验与产物归档 |
+| `-BuildAab` | 额外构建 AAB |
+| `-WithHap` | 额外构建 HarmonyOS HAP（需 ohos 工具链） |
+| `-Tag` | 门禁与构建全通过且工作区干净时创建 `v<versionName>` 标签 |
+| `-AllowDirty` | 允许脏工作区打 tag（默认禁止） |
+| `-ApiBaseUrl` | Release 包 API 地址，必须 `https://` |
+
+产物：`build/release/<versionName>+<build>/`（APK/AAB/HAP、`metadata.json`、`SHA256SUMS.txt`、`signature-info.txt`、`release-checklist.md`）；`build/` 已 gitignore。检查表结论 `BLOCKED` 时脚本退出码 1，`PASS-WITH-WARNINGS` 表示仅剩人工资质项（软著受理号、ICP/APP 备案号）。
+
+崩溃与错误监控：
+
+| 方法 | 路径 | 权限 | 说明 |
+|---|---|---|---|
+| POST | `/api/monitor/crash` | 匿名 / 可选登录 | App 上报，201 返回 `id/fingerprint`；30 次/分/IP 限流 |
+| GET | `/api/monitor/crashes/summary` | 超管 | `?days=1..90&limit=1..50`，按指纹聚合总数/Top N/平台/版本分布 |
+| GET | `/api/monitor/crashes` | 超管 | 最近明细，支持 `?source=app|backend&platform=` |
+
+服务端统一清洗：控制字符剔除、手机号 `1**********`、邮箱 `***@***`，消息截断 500 字、栈 4000 字；`fingerprint = sha256(error_type|消息首行|栈首行)`。后端 500 由 `ErrorMaskingMiddleware` 落 `source=backend` 并带 `request_id`。App 侧 `CrashReporter` 在 `main()` 中 `install()` + `flush()`：`FlutterError.onError`/`PlatformDispatcher.onError` 捕获，队列上限 10，启动重放，4xx 丢弃、5xx/断网保留。
+
+> PowerShell 5.1 约定：`.ps1` 若含中文，必须保存为 **UTF-8 with BOM**，否则按 ANSI 解析会出现引号错乱（`Expressions are only allowed as the first element of a pipeline`）。
+
 ---
 
 ## 6. 双端架构约定（PlatformPal）

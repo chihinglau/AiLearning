@@ -109,7 +109,6 @@ def resolve_pool(
     q_types: Optional[list[str]] = None,
 ) -> list[Question]:
     """按范围取候选题目。scope_type: kp | chapter | textbook | wrong。"""
-    due_ids: set[int] = set()
     if scope_type == "kp":
         if not scope_ids:
             return []
@@ -134,11 +133,6 @@ def resolve_pool(
         )
         if not wrong:
             return []
-        due_ids = {
-            row.question_id
-            for row in wrong
-            if row.next_review_at is not None and row.next_review_at <= datetime.utcnow()
-        }
         stmt = select(Question).where(Question.id.in_([row.question_id for row in wrong]))
     else:
         return []

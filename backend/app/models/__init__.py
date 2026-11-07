@@ -16,6 +16,7 @@ from app.models.practice import (
     WrongQuestion,
 )
 from app.models.rbac import Permission, Role, RolePermission, UserRole
+from app.models.telemetry import CrashReport
 from app.models.textbook import TextbookBinding
 from app.models.user import AuditLog, GradeHistory, ParentChildBinding, User
 
@@ -52,4 +53,5 @@ __all__ = [
     "ContentReview",
     "ContentReport",
     "ConsentRecord",
+    "CrashReport",
 ]
