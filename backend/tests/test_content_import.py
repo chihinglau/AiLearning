@@ -75,6 +75,29 @@ def test_import_is_idempotent(db):
     assert len(list(db.scalars(select(Question)))) == 2
 
 
+def test_same_name_point_gets_unique_suffix(db):
+    data = _document()
+    data["knowledge"][1]["name"] = "10以内加减法"
+    for question in data["chapters"][0]["questions"]:
+        question["knowledge_point"] = "10以内加减法"
+
+    import_document(db, data)
+
+    section = db.scalar(
+        select(KnowledgePoint).where(KnowledgePoint.node_type == "section")
+    )
+    point = db.scalar(
+        select(KnowledgePoint).where(KnowledgePoint.node_type == "point")
+    )
+    assert section.name == "10以内加减法"
+    assert point.name == "10以内加减法（要点）"
+    assert point.parent_id == section.id
+    assert all(
+        row.knowledge_point_id == point.id
+        for row in db.scalars(select(Question))
+    )
+
+
 def test_invalid_answer_key_rejected(db):
     data = _document()
     data["chapters"][0]["questions"][0]["answer"] = {"value": "Z"}

@@ -1,9 +1,9 @@
 # 深爱学（AiLearning）项目实施任务计划与进度跟踪
 
 > **文档性质**：项目主计划 / 进度跟踪 / 过程追溯（全程伴随开发周期）
-> **版本**：v1.82
+> **版本**：v1.84
 > **创建日期**：2026-11-06
-> **最后更新**：2026-11-07（教材基线补齐：高中地理改人教版，小学 1-6 年级补道德与法治教材）
+> **最后更新**：2026-11-07（知识点同名全量去重 + 每日入库流水线：--pattern/--manifest/基线生成）
 > **参考设计文档**：见[§1.1 参考设计文档清单](#11-参考设计文档清单)（共 8 份，含 4 份设计方案、4 份支撑文档）
 > **需求追踪**：见[§1.2 需求—设计—任务追踪矩阵](#12-需求设计任务追踪矩阵)
 > **维护人**：项目负责人（PM）
@@ -153,7 +153,7 @@ DONE ──返工（需CR）──► DOING
 ## 三、任务台账
 
 > **状态字段实时更新**；`实际(h)` 在任务完成时填写；`证据` 填 commit / 测试结果 / 截图路径。
-> **总任务数**：81（开发 72：P0 43 + P1 15 + P2 10 + UX 2 + CT 2；发布 9：R-01~R-09）；**基线已完成**：5；**进行中**：0；**阻塞中**：0；**待启动**：0；**总预估工时**：696 h（开发 577 + 发布 119）。
+> **总任务数**：82（开发 73：P0 43 + P1 15 + P2 10 + UX 2 + CT 3；发布 9：R-01~R-09）；**基线已完成**：5；**进行中**：0；**阻塞中**：0；**待启动**：0；**总预估工时**：700 h（开发 581 + 发布 119）。
 
 ### 3.1 阶段 P0：身份与学习主链路
 
@@ -408,8 +408,9 @@ flowchart LR
 |---|---|---|---|---|---|---|---|---|---|
 | CT-01 | 题库/知识库作者模板与导入 CLI（9 学科 JSON 模板、字段规范、幂等导入、dry-run、单测） | BE+教研 | 6 | P2 | R-09 | `DONE` | 6 | R-A12 | `docs/content-templates/`（README + 9 学科模板）；`backend/app/services/content_import.py`、`backend/scripts/import_content.py`；`pytest tests/test_content_import.py` 3 例、9 模板 dry-run 全部通过 |
 | CT-02 | 题库/知识库来源与版权登记（`source_type/source_name/source_ref/copyright_owner/license_note/adapted_from`、迁移、导入校验、模板示例、管理接口暴露） | BE+教研 | 4 | P2 | CT-01 | `DONE` | 4 | R-A13 | 迁移 `u1v2w3x4y5z6`；`pytest tests/test_content_import.py` 7 passed、`tests/test_migrations.py` 3 passed；9 模板 dry-run 全通过；来源非原创必填名称、授权必填说明、外部导入必须 `draft` |
+| CT-03 | 知识点同名消歧与每日入库流水线（迁移 `y1z2a3b4c5d6`、seed/导入自动后缀、`build_kp_baseline`、`--pattern`/`--manifest`） | BE+教研 | 4 | P1 | CT-01 | `DONE` | 4 | R-A14 | 两库同名组 54→0；`pytest tests/test_content_import.py tests/test_seed_layers.py tests/test_migrations.py` 15 passed；基线重建歧义 0；清单二次运行全部跳过 |
 
-> **CT 小计**：2 项，预估 **10 h**。
+> **CT 小计**：3 项，预估 **14 h**。
 
 ---
 
@@ -450,16 +451,16 @@ flowchart LR
 
 | 指标 | 数值 |
 |---|---|
-| 任务总数（不含基线） | 81（开发 72：P0 43 + P1 15 + P2 10 + UX 2 + CT 2；发布 9：R-01~R-09） |
+| 任务总数（不含基线） | 82（开发 73：P0 43 + P1 15 + P2 10 + UX 2 + CT 3；发布 9：R-01~R-09） |
 | `TODO` | 0 |
 | `DOING` | 0 |
-| `DONE` | 81（P0-01~P0-43、P1-01~P1-15、P2-01~P2-10、UX-01~UX-02、CT-01~CT-02、R-01~R-09；基线 5 项已冻结） |
+| `DONE` | 82（P0-01~P0-43、P1-01~P1-15、P2-01~P2-10、UX-01~UX-02、CT-01~CT-03、R-01~R-09；基线 5 项已冻结） |
 | `BLOCKED` | 0 |
-| 预估总工时 | 696 h（开发 577 = P0 310 + P1 129 + P2 118 + UX 10 + CT 10；发布 119） |
-| 已投入工时 | 360 h（P0-01 3、P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3、P0-23 3、P0-24 3、P0-25 3、P0-26 3、P0-27 3、P0-28 4、P0-29 3、P0-30 3、P0-31 4、P0-32 3、P0-33 4、P0-34 4、P0-35 6、P0-36 8、P0-37 10、P0-38 4、P0-39 6、P0-40 4、P0-41 6、P0-42 2、P0-43 3、P1-01 3、P1-02 2、P1-03 2、P1-04 3、P1-05 3、P1-06 3、P1-07 3、P1-08 3、P1-09 3、P1-10 3、P1-11 3、P1-12 2、P1-13 3、P1-14 3、P1-15 3、P2-01 6、P2-02 6、P2-03 6、P2-04 4、P2-05 8、P2-06 8、P2-07 8、P2-08 4、P2-09 6、P2-10 4、R-01 2、R-02 6、R-03 20、R-04 20、R-05 12、R-06 8、R-07 8、R-08 12、R-09 10、UX-01 8、UX-02 2、CT-01 6、CT-02 4） |
-| 当前迭代 | 体验与内容建设（UX-01/UX-02/CT-01/CT-02 已完成） |
-| 迭代目标 | 视觉升级、子页面返回链路修复、9 学科题库/知识库模板与导入工具、来源与版权登记全部落地 |
-| 里程碑 | M2.5（P0 技术验收通过，待签署）→ M3（P1 技术验收通过，待签署）→ M4（P2 技术验收通过，待签署）→ M5（发布就绪，R-01~R-09 已完成，待 PM 签署）→ UX-01（体验优化，`DONE`）→ UX-02（返回链路修复，`DONE`）→ CT-01（内容模板，`DONE`）→ CT-02（来源与版权登记，`DONE`） |
+| 预估总工时 | 700 h（开发 581 = P0 310 + P1 129 + P2 118 + UX 10 + CT 14；发布 119） |
+| 已投入工时 | 364 h（P0-01 3、P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3、P0-23 3、P0-24 3、P0-25 3、P0-26 3、P0-27 3、P0-28 4、P0-29 3、P0-30 3、P0-31 4、P0-32 3、P0-33 4、P0-34 4、P0-35 6、P0-36 8、P0-37 10、P0-38 4、P0-39 6、P0-40 4、P0-41 6、P0-42 2、P0-43 3、P1-01 3、P1-02 2、P1-03 2、P1-04 3、P1-05 3、P1-06 3、P1-07 3、P1-08 3、P1-09 3、P1-10 3、P1-11 3、P1-12 2、P1-13 3、P1-14 3、P1-15 3、P2-01 6、P2-02 6、P2-03 6、P2-04 4、P2-05 8、P2-06 8、P2-07 8、P2-08 4、P2-09 6、P2-10 4、R-01 2、R-02 6、R-03 20、R-04 20、R-05 12、R-06 8、R-07 8、R-08 12、R-09 10、UX-01 8、UX-02 2、CT-01 6、CT-02 4、CT-03 4） |
+| 当前迭代 | 体验与内容建设（UX-01/UX-02/CT-01/CT-02/CT-03 已完成） |
+| 迭代目标 | 视觉升级、子页面返回链路修复、9 学科题库/知识库模板与导入工具、来源与版权登记、知识点去重与每日入库流水线全部落地 |
+| 里程碑 | M2.5（P0 技术验收通过，待签署）→ M3（P1 技术验收通过，待签署）→ M4（P2 技术验收通过，待签署）→ M5（发布就绪，R-01~R-09 已完成，待 PM 签署）→ UX-01（体验优化，`DONE`）→ UX-02（返回链路修复，`DONE`）→ CT-01（内容模板，`DONE`）→ CT-02（来源与版权登记，`DONE`）→ CT-03（去重与入库流水线，`DONE`） |
 
 ### 5.2 同步节奏
 
@@ -579,6 +580,8 @@ flowchart LR
 | v1.80 | 2026-11-07 | BE+教研 | CT-02 来源与版权登记：`questions` 增 `source_type/source_name/source_ref/copyright_owner/license_note/adapted_from`，`knowledge_points` 增前五项（默认 `original`），迁移 `u1v2w3x4y5z6`；导入器新增四条校验（非原创必填 `source_name`、`licensed` 必填 `license_note`、题目 `adapted` 必填 `adapted_from`、`external` 必须 `draft`）；`QuestionCreate/QuestionOut`、`KnowledgePointOut` 暴露来源字段；9 份模板首知识点/首题演示 `original`，README 增字段表与规则；`tests/test_content_import.py` 7 passed、`tests/test_migrations.py` 3 passed、ruff E9/F 全绿、9 模板 dry-run 全通过；§3.7 增 CT-02、新增 §6.17 R-A13、§5.1 同步（DONE 81 / 投入 360 h / 任务 81）；当前下一步按模板扩充内容并如实登记来源 |
 | v1.81 | 2026-11-07 | BE+教研 | 高中教材版本校正：`scripts/seed.py` 增 `SENIOR_VERSIONS`（数学 `人教版A版`、英语 `外研版`），迁移 `v1w2x3y4z5a6` 同步存量教材（若目标版本已存在则迁移章节后删除旧记录）；设备库 134 本教材无重复，seed 幂等复跑计数不变（134/120/310/592）；README 深圳教材基线同步；不新增任务与工时 |
 | v1.82 | 2026-11-07 | BE+教研 | 教材基线补齐：`SENIOR_VERSIONS` 增地理 `人教版`（初中仍 `湘教版`），迁移 `x1y2z3a4b5c6` 同步存量高中地理；`PRIMARY_SUBJECTS` 增 `politics`，补齐小学 1-6 年级道德与法治教材。设备库 146 教材 / 126 章节 / 328 知识点 / 628 题，重复教材 0；`pytest tests/test_migrations.py` 3 passed；不新增任务与工时 |
+| v1.83 | 2026-11-07 | BE+教研 | 默认 dev 库对齐：`ailearning_dev.db` 停在 `i9d0e1f2g3h4` 且 `schools` 等表已存在无法直接升级，先备份为 `ailearning_dev.db.bak-20261107`，重建后 `alembic upgrade head` + `seed` + 九模板导入；dev 与 device 均为 146 教材 / 126 章节 / 337 知识点 / 646 题、教材版本字符串一致、重复教材 0。README 修正语文入库版本声明（`人教版`，非 `部编版`），并补充目标库 `DATABASE_URL` 说明；不新增任务与工时 |
+| v1.84 | 2026-11-07 | BE+教研 | 新增 CT-03：迁移 `y1z2a3b4c5d6` 保留 54 个 section 原名、重命名 56 个 point 为「名称（要点）」，两库同名组 54→0，题目外键不变；`seed` 与导入器对重名 point 自动加后缀；新增 `scripts/build_kp_baseline.py` 重建基线（歧义 0）；`import_content` 增 `--pattern`/`--manifest`，支持每日文件定向导入与二次跳过。任务 82 项、预估 700 h、投入 364 h；验收见 §6.18 R-A14 |
 
 ---
 
@@ -868,6 +871,19 @@ flowchart LR
 
 **结论**：R-A13 验收通过。来源字段已可登记、校验与查询；需注意**标注来源不构成版权授权**，引用/改编内容仍须取得授权或控制在合法使用范围。
 
+### 6.18 知识点同名消歧与入库流水线验收记录（R-A14，2026-11-07）
+
+| 核对项 | 结果 | 证据 |
+|---|---|---|
+| 库内同名 | 两库均为 54 组 → 0 组；56 个 point 改名为「名称（要点）」，section 原名不变 | 迁移 `y1z2a3b4c5d6`；dev/device 查询 `GROUP BY subject,grade,name HAVING COUNT>1` 为 0 |
+| 题目影响 | 题目按 `knowledge_point_id` 挂载，改名不影响外键；复跑 seed 不新增同名 | `scripts/seed.py` `_point_name`；`tests/test_seed_layers.py` 新增用例 |
+| 导入侧 | point 与 section 重名时自动加后缀；题目仍可按模板原名挂载 | `app/services/content_import.py`；`tests/test_content_import.py` 新增用例 |
+| 基线 | `_knowledge-points-baseline_20261107.{md,json}` 重建，歧义 0 | `scripts/build_kp_baseline.py` |
+| 流水线 | `--pattern` 只导入当日文件；`--manifest` 二次运行跳过；逐文件事务保持 | `scripts/import_content.py`；`chinese.json` 连续两次第二遍全部 manifest 跳过 |
+| 回归 | `pytest test_content_import/test_seed_layers/test_migrations` 15 passed；ruff E9/F 全绿 | `backend/` |
+
+**结论**：R-A14 验收通过。库内同名知识点已清零，自动化可按名称安全引用；每日文件建议按 README「每日自动化入库」四步执行，导入后必须重建基线。
+
 ---
 
 ## 七、开发执行约定
@@ -883,4 +899,4 @@ flowchart LR
 
 ---
 
-> **当前下一步**：UX-02、CT-01、CT-02 已完成（验收见 §6.16/§6.17）。后续：①教研按 `docs/content-templates/README.md` 填充各科题目，先 `--dry-run` 再导入；**每道题与知识点必须如实登记 `source_type` 等来源字段**，非原创填 `source_name`、授权内容填 `license_note`、外部导入先置 `draft`，复核后转 `published`；②在 OXF-AN10 上继续走查登录/学习/练习/考试/作业/家长/教师主链路返回行为；③记录真机反馈，评估功能卡片是否推广到知识点/考试/作业列表（推广前登记 CR）。并行人工项：M5 发布就绪签署；PM 回填软著受理号/登记号与 ICP/APP 备案号；代码提交后运行 `scripts\ci.ps1 -Tag` 生成 `v1.0.0` 标签。
+> **当前下一步**：UX-02、CT-01、CT-02、CT-03 已完成（验收见 §6.16/§6.17/§6.18）。后续：①教研按 `docs/content-templates/README.md` 的“每日自动化入库”四步执行（离线自检 → `--dry-run` → 带 `--manifest` 导入 → 重建基线）；**每道题与知识点必须如实登记 `source_type` 等来源字段**，非原创填 `source_name`、授权内容填 `license_note`、外部导入先置 `draft`，复核后转 `published`；②在 OXF-AN10 上继续走查登录/学习/练习/考试/作业/家长/教师主链路返回行为；③记录真机反馈，评估功能卡片是否推广到知识点/考试/作业列表（推广前登记 CR）。并行人工项：M5 发布就绪签署；PM 回填软著受理号/登记号与 ICP/APP 备案号；代码提交后运行 `scripts\ci.ps1 -Tag` 生成 `v1.0.0` 标签。

@@ -241,10 +241,19 @@ def import_document(db: Session, data: dict[str, Any], *, overwrite: bool = Fals
 
     section_map: dict[str, KnowledgePoint] = {}
     point_map: dict[str, KnowledgePoint] = {}
+    taken_names = set(
+        db.scalars(
+            select(KnowledgePoint.name).where(
+                KnowledgePoint.subject == subject,
+                KnowledgePoint.grade == grade,
+            )
+        )
+    )
     kp_created = 0
     kp_updated = 0
     for item in data["knowledge"]:
         node_type = item.get("node_type", "point")
+        item_name = item["name"]
         if node_type == "section":
             row = db.scalar(
                 select(KnowledgePoint).where(
@@ -260,14 +269,38 @@ def import_document(db: Session, data: dict[str, Any], *, overwrite: bool = Fals
             row = db.scalar(
                 select(KnowledgePoint).where(
                     KnowledgePoint.parent_id == parent.id,
-                    KnowledgePoint.name == item["name"],
+                    KnowledgePoint.name == item_name,
                 )
             )
+            if row is None and item_name in taken_names:
+                # 与库内 section/point 重名时给 point 加「（要点）」后缀，
+                # 保证同学科同年级内名称唯一，题目仍可按模板原名挂载。
+                index = 0
+                while True:
+                    index += 1
+                    candidate = (
+                        f"{item_name}（要点）"
+                        if index == 1
+                        else f"{item_name}（要点{index}）"
+                    )
+                    found = db.scalar(
+                        select(KnowledgePoint).where(
+                            KnowledgePoint.parent_id == parent.id,
+                            KnowledgePoint.name == candidate,
+                        )
+                    )
+                    if found is not None:
+                        row = found
+                        item_name = candidate
+                        break
+                    if candidate not in taken_names:
+                        item_name = candidate
+                        break
         if row is None:
             row = KnowledgePoint(
                 subject=subject,
                 grade=grade,
-                name=item["name"],
+                name=item_name,
                 parent_id=None if node_type == "section" else section_map[item["parent"]].id,
                 node_type=node_type,
                 order_index=int(item.get("order_index", 0)),
@@ -293,6 +326,7 @@ def import_document(db: Session, data: dict[str, Any], *, overwrite: bool = Fals
                 if field in item:
                     setattr(row, field, item[field])
             kp_updated += 1
+        taken_names.add(row.name)
         if node_type == "section":
             section_map[item["name"]] = row
         else:

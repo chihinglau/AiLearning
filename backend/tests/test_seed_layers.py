@@ -71,6 +71,35 @@ def test_put_is_idempotent_and_updates_order(db: Session) -> None:
     assert _count(db, subject="math", grade=1, node_type="point") == 1
 
 
+def test_point_name_avoids_section_collision(db: Session) -> None:
+    section = _put_section(
+        db, subject="math", grade=1, name="10以内加减法", order_index=1
+    )
+    point = _put_kp(
+        db,
+        subject="math",
+        grade=1,
+        name="10以内加减法",
+        explanation="掌握 10 以内口算",
+        section=section,
+        order_index=1,
+    )
+    again = _put_kp(
+        db,
+        subject="math",
+        grade=1,
+        name="10以内加减法",
+        explanation="掌握 10 以内口算",
+        section=section,
+        order_index=1,
+    )
+    db.commit()
+
+    assert point.name == "10以内加减法（要点）"
+    assert again.id == point.id
+    assert _count(db, subject="math", grade=1) == 2
+
+
 def test_prune_default_sections(db: Session) -> None:
     default = _put_section(db, subject="math", grade=9, name="默认节", order_index=0)
     child = KnowledgePoint(

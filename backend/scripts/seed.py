@@ -929,6 +929,48 @@ def _put_section(
     return section
 
 
+def _point_name(db, *, subject: str, grade: int, name: str) -> str:
+    """返回不与 section/既有 point 重名的知识点名称。
+
+    小学章节名同时作为核心知识点名时会与 section 冲突；统一给 point
+    加「（要点）」后缀，保证同学科同年级内名称唯一。
+    """
+    point = db.scalar(
+        select(KnowledgePoint).where(
+            KnowledgePoint.subject == subject,
+            KnowledgePoint.grade == grade,
+            KnowledgePoint.name == name,
+            KnowledgePoint.node_type == "point",
+        )
+    )
+    if point is not None:
+        return name
+    taken = set(
+        db.scalars(
+            select(KnowledgePoint.name).where(
+                KnowledgePoint.subject == subject,
+                KnowledgePoint.grade == grade,
+            )
+        )
+    )
+    if name not in taken:
+        return name
+    index = 0
+    while True:
+        index += 1
+        candidate = f"{name}（要点）" if index == 1 else f"{name}（要点{index}）"
+        point = db.scalar(
+            select(KnowledgePoint).where(
+                KnowledgePoint.subject == subject,
+                KnowledgePoint.grade == grade,
+                KnowledgePoint.name == candidate,
+                KnowledgePoint.node_type == "point",
+            )
+        )
+        if point is not None or candidate not in taken:
+            return candidate
+
+
 def _put_kp(
     db,
     *,
@@ -944,6 +986,7 @@ def _put_kp(
     注意：不能直接用 `_get_or_create`——"节"与"知识点"可能同名，必须限定
     `node_type='point'`，否则会把"节"误当成知识点并改成自引用。
     """
+    name = _point_name(db, subject=subject, grade=grade, name=name)
     kp = db.scalar(
         select(KnowledgePoint).where(
             KnowledgePoint.subject == subject,
