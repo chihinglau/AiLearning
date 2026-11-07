@@ -505,6 +505,22 @@ App「我的 → 关于」展示应用名/版本、ICP 备案号、APP 备案号
 
 商店技术信息与固化纪律见 `release/record-filing/checklist.md`：包名 `com.ailearning.ai_learning`、签名 MD5（CN=AiLearning）、versionCode 只增不减、SDK「无」、隐私 URL `/legal/privacy`；备案号取得后回填环境变量并重启服务，验证公网 `/app/info`。
 
+### 5.11 内容举报与 24 小时下架链路（R-07）
+
+| 方法 | 路径 | 权限 | 说明 |
+|---|---|---|---|
+| POST | `/api/content/reports` | 登录用户 | 提交举报，201；`target_type` ∈ `question`/`textbook`/`other`，`reason` 为枚举，`description` ≤ 500 |
+| GET | `/api/content/reports` | `content:review:decide` | 举报列表，支持 `?status=pending`，按 id 倒序 |
+| PATCH | `/api/content/reports/{id}` | `content:review:decide` | `action` ∈ `takedown`/`dismiss`，`note` ≤ 200 |
+
+处理规则：`target_type=question` 必须带 `target_id`，否则 422 `TARGET_REQUIRED`；题目不存在返回 404 `CONTENT_NOT_FOUND`；重复处理非 `pending` 记录返回 409 `REPORT_ALREADY_HANDLED`。`takedown` 将 `Question.status` 置为 `offline`（前台同步不可见），并写入审计 `content.report.takedown`；`dismiss` 写 `content.report.dismissed`；提交写 `content.report.created`。
+
+数据：`content_reports` 表（迁移 `s9t0u1v2w3x4`），字段 `reporter_id`/`target_type`/`target_id`/`reason`/`description`/`status`/`handled_by`/`handled_at`/`handle_note`/`created_at`。
+
+前端：`我的 → 内容举报`（`/content/report` → `ContentReportPage`），提交成功提示「24 小时内核实处理」。免责声明位于用户协议 §6.4，协议版本升至 `2026.11.07`（`kLegalTermsVersion` 同步），隐私政策仍为 `2026.11.06`；新增协议版本会触发 `needs_reconsent` 重新勾选。
+
+授权台账与演练记录见 `release/content-compliance/license-ledger.md`（教材名称仅作标识、章节结构自建、示例题自编、解析规则化 + 人工抽检、AI 讲解仅供参考）。
+
 ---
 
 ## 6. 双端架构约定（PlatformPal）
