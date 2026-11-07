@@ -217,11 +217,28 @@ powershell -ExecutionPolicy Bypass -File scripts\build-apk.ps1 -BuildAab
 powershell -ExecutionPolicy Bypass -File scripts\make-release-keystore.ps1
 ```
 
-生成 `.tools\signing\ailearning.jks` 并写 `keystore.properties`（gitignore）。`app/android/app/build.gradle.kts` 已接入 `keystore.properties`；缺失时自动回退 debug 签名（仅用于内测）。
+生成 `.tools\signing\ailearning.jks` 与 `keystore.properties`（均 gitignore），并在 `.tools\signing\backup\` 自动归档一份带时间戳的 zip。重复执行时复用 `keystore.properties` 中已记录的密码，不会覆盖已有 keystore。
 
+- **禁止 debug 回退**：`app/android/app/build.gradle.kts` 在 release 构建时若缺 `keystore.properties` / 签名文件不存在，直接抛出 Gradle 异常并中止；debug 构建不受影响。
+- **签名指纹归档**：`scripts\signature-info.ps1` 导出证书 MD5/SHA-256 并校验 APK 实际签名（要求 `CN=AiLearning`），输出 `build\signatures\signature-<时间戳>.txt`，用于 APP 备案。
 - 首次打包若提示 license：`flutter doctor --android-licenses`（一次性）。
-- 上架前请用密钥管理系统/HSM 生成正式签名并加入应用商店的应用签名计划。
-- 包名：`com.ailearning.ai_learning`。
+- 上架前请用密钥管理系统/HSM 生成正式签名并加入应用商店的应用签名计划；keystore 丢失将无法升级。
+- 包名 `com.ailearning.ai_learning` 与签名证书一经备案**终身不变**。
+
+**发版号规则**（Android 与 HarmonyOS 必须同值）：
+
+```
+versionCode = major * 10000 + minor * 100 + patch * 10 + build
+例：pubspec version: 1.0.0+1 -> versionCode 10001
+```
+
+`app/pubspec.yaml` 是唯一版本来源。Android 由 `build.gradle.kts` 构建期按同一公式计算；HarmonyOS 用脚本写入 `app/ohos/AppScope/app.json5`：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\sync-version.ps1          # 写入并打印
+powershell -ExecutionPolicy Bypass -File scripts\sync-version.ps1 -Check   # 只校验双端一致
+```
+
 
 ### 5.4 打包鸿蒙 HAP
 

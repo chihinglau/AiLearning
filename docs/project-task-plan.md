@@ -1,9 +1,9 @@
 # 深爱学（AiLearning）项目实施任务计划与进度跟踪
 
 > **文档性质**：项目主计划 / 进度跟踪 / 过程追溯（全程伴随开发周期）
-> **版本**：v1.68
+> **版本**：v1.69
 > **创建日期**：2026-11-06
-> **最后更新**：2026-11-07（P2-10 P2 回归与验收完成）
+> **最后更新**：2026-11-07（R-01 正式签名与构建纪律完成）
 > **参考设计文档**：见[§1.1 参考设计文档清单](#11-参考设计文档清单)（共 8 份，含 4 份设计方案、4 份支撑文档）
 > **需求追踪**：见[§1.2 需求—设计—任务追踪矩阵](#12-需求设计任务追踪矩阵)
 > **维护人**：项目负责人（PM）
@@ -26,7 +26,7 @@
 | **D-05** | [privacy.md](./privacy.md) | v1.0（2026.11.06） | 合规支撑 | 隐私政策、未成年人数据、家长同意与数据留存 | P0-05/P0-09；P1-05；P2-08 | PM | 已生效（P2-08 脱敏导出与用途登记已落地，公网发布待 R-03） | 2026-11-07 |
 | **D-06** | [skills.md](./skills.md) | 现行 | 工程支撑 | 开发规范、技能与接口使用说明 | 全部任务（开发约定） | AR | 已生效 | 2026-11-06 |
 | **D-07** | [skill_github_repo_access.md](./skill_github_repo_access.md) | 现行 | 内部支撑 | 仓库访问与凭据说明（不进入版本库） | 发布/提交相关任务 | AR | 内部参考 | 2026-11-06 |
-| **D-08** | [release-plan.md](./release-plan.md) | v1.0 | 发布支撑 | 上架缺口、渠道矩阵、备案/软著、合规红线、素材与时间线 | 发布任务 R-01~R-09；P0-05/P0-09、P1-05、P2-08 | PM/AR | 源稿（待执行） | 2026-11-06 |
+| **D-08** | [release-plan.md](./release-plan.md) | v1.0 | 发布支撑 | 上架缺口、渠道矩阵、备案/软著、合规红线、素材与时间线 | 发布任务 R-01~R-09；P0-05/P0-09、P1-05、P2-08 | PM/AR | 已生效（R-01 签名与版本号纪律已落地，R-02~R-09 待执行） | 2026-11-07 |
 
 **文档优先级**：需求冲突时，`D-01`（总体）> 专项设计（`D-02/D-03/D-04`）> 支撑文档（`D-05`~`D-08`）。专项之间冲突由 PM 裁决并登记 CR。发布相关的合规与上架要求以 `D-08` 为准。
 
@@ -61,7 +61,7 @@
 | 主观题与报告增强 | D-04 §7.5/§8.5 | D-04 §7.5/§8.5 | P1-09、P1-10 | L11 | `DONE`（主观题自评与能力维度/班级平均/趋势对比已完成） |
 | 推荐与学习闭环 | D-04 §2.2/§6.6 | D-04 §2.2/§6.6 | P1-11、P1-12、P1-14 | 闭环验收 | `DONE`（六优先级推荐、考试错题默认错因/复习优先级、活服务端到端回归均已通过） |
 | 平台化与增强（RBAC/图谱/离线/AI/真题库/合规导出/内容复核） | D-03 §9.2、D-04 §14 | D-03 §9.2、D-04 §14 | P2-01~P2-10 | M4 | `DONE`（P2-01~P2-10 全部完成并通过技术验收，M4 待 PM 签署） |
-| 上架合规与发布 | D-08 §3/§7 | D-08 §3/§6 | R-01~R-09、P0-05、P0-09、P1-05、P2-08 | 发布验收 | `TODO`（P2-08 脱敏导出与用途登记已落地，R-01~R-09 发布项待执行） |
+| 上架合规与发布 | D-08 §3/§7 | D-08 §3/§6 | R-01~R-09、P0-05、P0-09、P1-05、P2-08 | 发布验收 | `DOING`（R-01 正式签名与版本号纪律已完成，R-02~R-09 待执行） |
 
 **矩阵维护规则**：
 
@@ -153,7 +153,7 @@ DONE ──返工（需CR）──► DOING
 ## 三、任务台账
 
 > **状态字段实时更新**；`实际(h)` 在任务完成时填写；`证据` 填 commit / 测试结果 / 截图路径。
-> **总任务数**：77（开发 68：P0 43 + P1 15 + P2 10；发布 9：R-01~R-09）；**基线已完成**：5；**进行中**：0；**阻塞中**：0；**待启动**：9（R-01~R-09）；**总预估工时**：676 h（开发 557 + 发布 119）。
+> **总任务数**：77（开发 68：P0 43 + P1 15 + P2 10；发布 9：R-01~R-09）；**基线已完成**：5；**进行中**：0；**阻塞中**：0；**待启动**：8（R-02~R-09）；**总预估工时**：676 h（开发 557 + 发布 119）。
 
 ### 3.1 阶段 P0：身份与学习主链路
 
@@ -277,7 +277,7 @@ DONE ──返工（需CR）──► DOING
 
 | ID | 任务（可执行项） | 负责人 | 预估(h) | 优先级 | 依赖 | 状态 | 实际(h) | 缺口/验收 | 证据 |
 |---|---|---|---|---|---|---|---|---|---|
-| R-01 | 正式签名与构建纪律：生成 release keystore（`make-release-keystore.ps1`）+ 备份；`build.gradle.kts` release 缺 keystore 时 fail-fast（禁止回退 debug）；统一 Android/HarmonyOS `versionCode` 规则（`1.0.0+1 → 10001`）；导出签名 MD5/SHA-256；AGC 正式签名证书与 Profile | AR | 5 | P0 | 无 | `TODO` | — | 缺口1 / R-A1 | — |
+| R-01 | 正式签名与构建纪律：生成 release keystore（`make-release-keystore.ps1`）+ 备份；`build.gradle.kts` release 缺 keystore 时 fail-fast（禁止回退 debug）；统一 Android/HarmonyOS `versionCode` 规则（`1.0.0+1 → 10001`）；导出签名 MD5/SHA-256；AGC 正式签名证书与 Profile | AR | 5 | P0 | 无 | `DONE` | 2 | 缺口1 / R-A1 | `make-release-keystore.ps1`（复用密码 + 自动备份 zip）、`build.gradle.kts`（缺签名 fail-fast、`releaseVersionCode`）、`sync-version.ps1`、`signature-info.ps1`；鸿蒙 `versionCode=10001`；release APK `CN=AiLearning`、MD5 `EB:51:94:8B:3D:DB:AA:41:05:01:0E:40:E2:CC:72:95`；缺 keystore 时 Gradle `BUILD FAILED`；AGC 证书待 PM 在开放平台生成归档 |
 | R-02 | 后端生产化部署：云主机 + 域名 + HTTPS；切 PostgreSQL + `alembic upgrade head` + `seed.py`；密钥环境变量化；CORS 白名单、登录/注册限流、错误脱敏；每日备份与恢复演练；审计日志留存 ≥6 个月 | AR | 16 | P0 | 无 | `TODO` | — | 缺口3 / R-A2 | — |
 | R-03 | 隐私政策公网发布 + App 内法务与同意链路：后端 `GET /legal/privacy`、`/legal/terms`（HTTPS、免登录）；「我的」页新增隐私政策/用户协议/联系我们；首启 ConsentGate（主动勾选、拒绝退出、无网络请求）；儿童注册监护人确认；政策版本升高重新同意并留痕 | AR/FE | 20 | P0 | R-02 | `TODO` | — | 缺口2 / R-A3 | — |
 | R-04 | 商店硬性合规功能：账号注销（15 个工作日删除/匿名化）+ 数据导出（最小可用版）；家长绑定与 `consent_at` 生效；`daily_limit_minutes` 青少年模式生效；敏感操作审计（完整脱敏导出与用途登记仍由 P2-08 承接） | AR/FE | 20 | P0 | P0-05、P0-09 | `TODO` | — | 缺口8 / R-A4 | — |
@@ -429,15 +429,15 @@ flowchart LR
 | 指标 | 数值 |
 |---|---|
 | 任务总数（不含基线） | 77（开发 68：P0 43 + P1 15 + P2 10；发布 9：R-01~R-09） |
-| `TODO` | 9 |
+| `TODO` | 8 |
 | `DOING` | 0 |
-| `DONE` | 68（P0-01~P0-43、P1-01~P1-15、P2-01~P2-10；基线 5 项已冻结） |
+| `DONE` | 69（P0-01~P0-43、P1-01~P1-15、P2-01~P2-10、R-01；基线 5 项已冻结） |
 | `BLOCKED` | 0 |
 | 预估总工时 | 676 h（开发 557 = P0 310 + P1 129 + P2 118；发布 119） |
-| 已投入工时 | 242 h（P0-01 3、P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3、P0-23 3、P0-24 3、P0-25 3、P0-26 3、P0-27 3、P0-28 4、P0-29 3、P0-30 3、P0-31 4、P0-32 3、P0-33 4、P0-34 4、P0-35 6、P0-36 8、P0-37 10、P0-38 4、P0-39 6、P0-40 4、P0-41 6、P0-42 2、P0-43 3、P1-01 3、P1-02 2、P1-03 2、P1-04 3、P1-05 3、P1-06 3、P1-07 3、P1-08 3、P1-09 3、P1-10 3、P1-11 3、P1-12 2、P1-13 3、P1-14 3、P1-15 3、P2-01 6、P2-02 6、P2-03 6、P2-04 4、P2-05 8、P2-06 8、P2-07 8、P2-08 4、P2-09 6、P2-10 4） |
+| 已投入工时 | 244 h（P0-01 3、P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3、P0-23 3、P0-24 3、P0-25 3、P0-26 3、P0-27 3、P0-28 4、P0-29 3、P0-30 3、P0-31 4、P0-32 3、P0-33 4、P0-34 4、P0-35 6、P0-36 8、P0-37 10、P0-38 4、P0-39 6、P0-40 4、P0-41 6、P0-42 2、P0-43 3、P1-01 3、P1-02 2、P1-03 2、P1-04 3、P1-05 3、P1-06 3、P1-07 3、P1-08 3、P1-09 3、P1-10 3、P1-11 3、P1-12 2、P1-13 3、P1-14 3、P1-15 3、P2-01 6、P2-02 6、P2-03 6、P2-04 4、P2-05 8、P2-06 8、P2-07 8、P2-08 4、P2-09 6、P2-10 4、R-01 2） |
 | 当前迭代 | 发布准备（R-01~R-09；R-05 软著先行） |
 | 迭代目标 | 上架合规缺口整改、隐私/注销/导出入口、内容授权台账、商店素材与发布流水线 |
-| 里程碑 | M2.5（P0 技术验收通过，待签署）→ M3（P1 技术验收通过，待签署）→ M4（P2 技术验收通过，待签署）→ M5（发布就绪） |
+| 里程碑 | M2.5（P0 技术验收通过，待签署）→ M3（P1 技术验收通过，待签署）→ M4（P2 技术验收通过，待签署）→ M5（发布就绪，R-01 已完成） |
 
 ### 5.2 同步节奏
 
@@ -543,6 +543,7 @@ flowchart LR
 | v1.66 | 2026-11-07 | AR | P2-08 数据导出与合规审计增强（新增 `services/export.py`（五类用途、`SECTION_LIMIT=1000` 截断、手机号掩码）与 `api/routes/data.py`（`GET /api/data/export` 自助/家长/校管三档授权、`GET /api/data/export/purposes`）；导出写审计 `data.export`（用途/目标/范围/条数，不落明文手机号）；`tests/test_export.py` 9 例；`pytest` 289 passed）；§6.1 A10 转 `DONE`、§6.4 补 A10 行；§5.1 同步（DONE 66 / 投入 232 h / TODO 11）；当前下一步 P2-09 |
 | v1.67 | 2026-11-07 | AR/FE | P2-09 内容审核双人复核（迁移 `p6q7r8s9t0u1` 建 `content_reviews` 表并给 `questions` 增 `status`，存量回填 `published`；`services/content_review.py` + `api/routes/content.py` 提交/复核/发布三态机：自审 403、复核人自发布 403、驳回必填原因、重复提交 409、未通过发布 409，审计 `content.review.submit`/`content.review.decide`/`content.publish`；前端 `/content/reviews` 审核页（筛选/通过/驳回/发布）与我的页入口；`tests/test_content_review.py` 11 例、`content_review_page_test.dart` 2 例；迁移空库升降级 + 存量库回填验证；`pytest` 300 passed、`flutter analyze` 0 issues、`flutter test` 67 passed）；§6.4 补 5.3 行；§5.1 同步（DONE 67 / 投入 238 h / TODO 10）；当前下一步 P2-10 |
 | v1.68 | 2026-11-07 | QA/PM | P2-10 P2 回归与验收（`pytest` 300 passed、新增/修改文件 `ruff check --select E,F,I` 0 issue、`flutter analyze` 0 issues、`flutter test` 67 passed；空库迁移 + `seed` 两次幂等、存量库回填验证；回归期对 P2-08/P2-09 新文件 `ruff format`/导入排序对齐 commit `0082d67`；新增 §6.5 M4 验收记录）；§1.2 平台化行转 `DONE`、§6.2 M4 转 `DONE`、§5.1 同步（DONE 68 / 投入 242 h / TODO 9）、§1.1 D-03/D-04 状态更新；当前下一步 R-01 |
+| v1.69 | 2026-11-07 | AR/PM | R-01 正式签名与构建纪律（`make-release-keystore.ps1` 生成 keystore + 自动备份 zip + 重跑复用密码；`build.gradle.kts` release 缺 `keystore.properties` 直接 fail-fast（实测 `BUILD FAILED`），debug 不受影响；新增 `releaseVersionCode` 统一规则 `major*10000+minor*100+patch*10+build`，`1.0.0+1 → 10001`；`sync-version.ps1` 以 pubspec 为唯一来源同步鸿蒙 `versionCode=10001`；`signature-info.ps1` 导出 MD5/SHA-256 并校验 `CN=AiLearning`）；release APK `versionCode=10001`、签名 `CN=AiLearning`、MD5 `EB:51:94:8B:3D:DB:AA:41:05:01:0E:40:E2:CC:72:95` 已归档；§1.2 发布行转 `DOING`、§3.4 R-01 转 `DONE`、§1.1 D-08 状态更新、新增 §6.6 R-A1 记录、§5.1 同步（DONE 69 / 投入 244 h / TODO 8）；AGC 正式签名证书/Profile 待 PM 在开放平台生成归档；当前下一步 R-02 |
 
 ---
 
@@ -640,6 +641,20 @@ flowchart LR
 
 **结论**：M4 技术验收通过，待 PM 签署后进入发布准备（R-01~R-09）。
 
+### 6.6 发布验收记录（R-A1，2026-11-07）
+
+| 核对项 | 结果 | 证据 |
+|---|---|---|
+| 任务台账 | R-01 `DONE`，R-02~R-09 待执行 | §3.4 |
+| 正式签名 | keystore `.tools\signing\ailearning.jks`（别名 `ail`，CN=AiLearning，有效期 10000 天），备份 zip 在 `.tools\signing\backup\` | `scripts\make-release-keystore.ps1` |
+| 缺签名 fail-fast | 移走 `keystore.properties` 后执行 `:app:assembleRelease`：Gradle 直接报“缺少 keystore.properties，release 构建禁止回退 debug 签名”，`BUILD FAILED`（exit=1）；恢复后 debug 构建不受影响 | `app\android\app\build.gradle.kts` |
+| 版本号统一 | pubspec `1.0.0+1` → `versionCode=10001`；Android APK `versionCode=10001`（`aapt`/`apksigner` 校验）；鸿蒙 `app/ohos/AppScope/app.json5` 同步为 `10001`，`sync-version.ps1 -Check` 通过 | `scripts\sync-version.ps1` |
+| 签名校验 | `apksigner verify --print-certs` 输出 `CN=AiLearning`；MD5 `EB:51:94:8B:3D:DB:AA:41:05:01:0E:40:E2:CC:72:95`、SHA-256 `D4:33:90:4F:19:07:52:5D:72:5A:F7:ED:96:70:6E:D2:93:37:3F:D7:0A:01:83:53:F3:99:3A:87:59:90:2A:80` 已归档至 `build\signatures\` | `scripts\signature-info.ps1` |
+| AGC 证书/Profile | 需 PM 在华为 AGC 生成正式签名证书与 Profile 并归档（需开发者账号与实名信息；包名 `com.ailearning.ai_learning` 与 Android 一致） | 待外部执行 |
+| 文档同步 | `docs/skills.md` §5.3 已更新签名纪律、禁止 debug 回退、版本号公式与包名/签名固化说明 | D-06 |
+
+**结论**：R-A1 代码与构建侧验收通过（fail-fast、双端 versionCode、CN=AiLearning、MD5 归档）；AGC 正式证书/Profile 为外部账号操作，列入 PM 待办，不阻塞 R-02。
+
 ---
 
 ## 七、开发执行约定
@@ -655,4 +670,4 @@ flowchart LR
 
 ---
 
-> **当前下一步**：R-01（正式签名与构建纪律，依赖：无；依据 D-08 缺口 1）。所有任务按依赖图推进，每完成一个任务即回写本文件状态。
+> **当前下一步**：R-02（后端生产化部署，依赖 R-01；依据 D-08 缺口 2）。所有任务按依赖图推进，每完成一个任务即回写本文件状态。
