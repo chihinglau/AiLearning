@@ -32,7 +32,9 @@ def _ip(request: Request) -> str | None:
     return request.client.host if request.client else None
 
 
-def _active_binding(db: Session, parent_id: int, child_id: int) -> ParentChildBinding | None:
+def _active_binding(
+    db: Session, parent_id: int, child_id: int
+) -> ParentChildBinding | None:
     return db.scalar(
         select(ParentChildBinding).where(
             ParentChildBinding.parent_id == parent_id,
@@ -58,7 +60,10 @@ def _authorize(db: Session, current: User, student_id: int) -> tuple[str, User]:
     if not has_permission(current, "data:export", db):
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
-            detail={"code": "PERMISSION_DENIED", "message": "权限不足，无法导出他人数据"},
+            detail={
+                "code": "PERMISSION_DENIED",
+                "message": "权限不足，无法导出他人数据",
+            },
         )
     scope = current_user_scope(current, db)
     if scope == SCOPE_ALL:

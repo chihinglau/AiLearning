@@ -64,7 +64,10 @@ def resolve_purpose(purpose: str | None, scope: str) -> tuple[str, str]:
     if code not in allowed:
         raise HTTPException(
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
-            detail={"code": "PURPOSE_NOT_ALLOWED", "message": "该用途与当前操作身份不匹配"},
+            detail={
+                "code": "PURPOSE_NOT_ALLOWED",
+                "message": "该用途与当前操作身份不匹配",
+            },
         )
     return code, EXPORT_PURPOSES[code]
 
@@ -102,14 +105,18 @@ def _stats(db: Session, student_id: int) -> dict[str, Any]:
         .where(MasteryScore.user_id == student_id)
     )
     attempts = db.scalar(
-        select(func.count()).select_from(ExamAttempt).where(ExamAttempt.user_id == student_id)
+        select(func.count())
+        .select_from(ExamAttempt)
+        .where(ExamAttempt.user_id == student_id)
     )
     answered_total = int(answered or 0)
     correct_total = int(correct or 0)
     return {
         "answered_total": answered_total,
         "correct_total": correct_total,
-        "correct_rate": round(correct_total / answered_total, 4) if answered_total else 0.0,
+        "correct_rate": round(correct_total / answered_total, 4)
+        if answered_total
+        else 0.0,
         "wrong_active": int(wrong_active or 0),
         "mastery_count": int(mastery or 0),
         "exam_attempt_total": int(attempts or 0),

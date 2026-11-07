@@ -58,7 +58,9 @@ def test_self_export_masks_phone_and_registers_purpose(
             user_answer={"value": "A"},
         )
     )
-    db.add(WrongQuestion(user_id=student.id, question_id=sample_question, wrong_count=2))
+    db.add(
+        WrongQuestion(user_id=student.id, question_id=sample_question, wrong_count=2)
+    )
     db.commit()
 
     response = client.get(
@@ -79,7 +81,9 @@ def test_self_export_masks_phone_and_registers_purpose(
     assert body["wrong_questions"][0]["wrong_count"] == 2
 
     audit = db.scalar(
-        select(AuditLog).where(AuditLog.action == "data.export").order_by(AuditLog.id.desc())
+        select(AuditLog)
+        .where(AuditLog.action == "data.export")
+        .order_by(AuditLog.id.desc())
     )
     assert audit is not None
     detail = json.loads(audit.detail or "{}")
@@ -88,7 +92,9 @@ def test_self_export_masks_phone_and_registers_purpose(
     assert "139****0000" in audit.detail
 
 
-def test_export_requires_purpose(client: TestClient, student_headers: dict[str, str]) -> None:
+def test_export_requires_purpose(
+    client: TestClient, student_headers: dict[str, str]
+) -> None:
     response = client.get("/api/data/export", headers=student_headers)
     assert response.status_code == 422, response.text
     assert response.json()["detail"]["code"] == "PURPOSE_REQUIRED"
@@ -104,9 +110,13 @@ def test_export_rejects_unknown_purpose(
     assert response.json()["detail"]["code"] == "PURPOSE_INVALID"
 
 
-def test_purpose_must_match_scope(client: TestClient, student_headers: dict[str, str]) -> None:
+def test_purpose_must_match_scope(
+    client: TestClient, student_headers: dict[str, str]
+) -> None:
     response = client.get(
-        "/api/data/export", params={"purpose": "school_management"}, headers=student_headers
+        "/api/data/export",
+        params={"purpose": "school_management"},
+        headers=student_headers,
     )
     assert response.status_code == 422, response.text
     assert response.json()["detail"]["code"] == "PURPOSE_NOT_ALLOWED"
@@ -118,7 +128,9 @@ def test_parent_exports_bound_child(client: TestClient, db: Session) -> None:
     parent_headers = _login(client, "13300000032")
 
     created = client.post(
-        "/api/family/bindings", json={"child_phone": child.phone}, headers=parent_headers
+        "/api/family/bindings",
+        json={"child_phone": child.phone},
+        headers=parent_headers,
     )
     assert created.status_code == 201, created.text
     binding_id = created.json()["id"]
@@ -141,7 +153,9 @@ def test_parent_exports_bound_child(client: TestClient, db: Session) -> None:
     assert body["profile"]["phone"] == "133****0031"
 
     audit = db.scalar(
-        select(AuditLog).where(AuditLog.action == "data.export").order_by(AuditLog.id.desc())
+        select(AuditLog)
+        .where(AuditLog.action == "data.export")
+        .order_by(AuditLog.id.desc())
     )
     assert audit is not None
     assert f"target={child.id}" in (audit.detail or "")
@@ -213,7 +227,9 @@ def test_teacher_cannot_export_other_student(client: TestClient, db: Session) ->
     assert response.json()["detail"]["code"] == "PERMISSION_DENIED"
 
 
-def test_export_purposes_catalog(client: TestClient, student_headers: dict[str, str]) -> None:
+def test_export_purposes_catalog(
+    client: TestClient, student_headers: dict[str, str]
+) -> None:
     response = client.get("/api/data/export/purposes", headers=student_headers)
     assert response.status_code == 200, response.text
     assert response.json()["self_copy"] == "个人数据副本"

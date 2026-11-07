@@ -106,7 +106,9 @@ def test_full_review_flow_publishes_exam(
         assert json.loads(record.detail or "{}")["after"]
 
 
-def test_operator_cannot_decide(client: TestClient, db: Session, sample_question: int) -> None:
+def test_operator_cannot_decide(
+    client: TestClient, db: Session, sample_question: int
+) -> None:
     exam = _draft_exam(db, sample_question)
     operator = _add_user(db, "13600000053", "content_operator")
     headers = _login(client, operator.phone)
@@ -227,7 +229,9 @@ def test_duplicate_pending_review_rejected(
     assert duplicate.json()["detail"]["code"] == "REVIEW_PENDING_EXISTS"
 
 
-def test_reviewer_cannot_publish(client: TestClient, db: Session, sample_question: int) -> None:
+def test_reviewer_cannot_publish(
+    client: TestClient, db: Session, sample_question: int
+) -> None:
     exam = _draft_exam(db, sample_question)
     operator = _add_user(db, "13600000059", "content_operator")
     auditor = _add_user(db, "13600000060", "auditor")
@@ -273,7 +277,9 @@ def test_super_admin_cannot_publish_self_reviewed(
     )
     assert decided.status_code == 200, decided.text
 
-    denied = client.post(f"/api/content/reviews/{review_id}/publish", headers=admin_headers)
+    denied = client.post(
+        f"/api/content/reviews/{review_id}/publish", headers=admin_headers
+    )
     assert denied.status_code == 403, denied.text
     assert denied.json()["detail"]["code"] == "PUBLISH_SELF_DENIED"
 
@@ -301,7 +307,9 @@ def test_question_review_publish_updates_status(
         json={"decision": "approve"},
         headers=auditor_headers,
     )
-    published = client.post(f"/api/content/reviews/{review_id}/publish", headers=operator_headers)
+    published = client.post(
+        f"/api/content/reviews/{review_id}/publish", headers=operator_headers
+    )
     assert published.status_code == 200, published.text
 
     db.expire_all()

@@ -95,7 +95,11 @@ def submit_review(
         user_id=user.id,
         action="content.review.submit",
         message=f"review={review.id}, type={content_type}, content={content_id}",
-        after={"review_id": review.id, "content_type": content_type, "content_id": content_id},
+        after={
+            "review_id": review.id,
+            "content_type": content_type,
+            "content_id": content_id,
+        },
         ip=ip,
         commit=False,
     )
@@ -123,12 +127,18 @@ def decide_review(
     if review.submitted_by == user.id:
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
-            detail={"code": "REVIEW_SELF_DENIED", "message": "提交人不得复核自己的内容"},
+            detail={
+                "code": "REVIEW_SELF_DENIED",
+                "message": "提交人不得复核自己的内容",
+            },
         )
     if decision not in ("approve", "reject"):
         raise HTTPException(
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
-            detail={"code": "DECISION_INVALID", "message": "decision 仅支持 approve/reject"},
+            detail={
+                "code": "DECISION_INVALID",
+                "message": "decision 仅支持 approve/reject",
+            },
         )
     if decision == "reject" and not (comment or "").strip():
         raise HTTPException(
@@ -158,7 +168,9 @@ def decide_review(
     return review
 
 
-def publish_review(db: Session, *, user: User, review_id: int, ip: str | None) -> ContentReview:
+def publish_review(
+    db: Session, *, user: User, review_id: int, ip: str | None
+) -> ContentReview:
     """复核通过后由运营发布；复核人不得自行发布（双人复核）。"""
     review = _review_or_404(db, review_id)
     if review.status != "approved":
@@ -181,7 +193,10 @@ def publish_review(db: Session, *, user: User, review_id: int, ip: str | None) -
         db,
         user_id=user.id,
         action="content.publish",
-        message=f"review={review.id}, type={review.content_type}, content={review.content_id}",
+        message=(
+            f"review={review.id}, type={review.content_type}, "
+            f"content={review.content_id}"
+        ),
         before={"status": before_status},
         after={"status": "published", "review_id": review.id},
         ip=ip,

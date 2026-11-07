@@ -43,7 +43,9 @@ def _review_or_404(db: Session, review_id: int) -> ContentReview:
     return review
 
 
-@router.post("/reviews", response_model=ContentReviewOut, status_code=status.HTTP_201_CREATED)
+@router.post(
+    "/reviews", response_model=ContentReviewOut, status_code=status.HTTP_201_CREATED
+)
 def submit_content_review(
     payload: ContentReviewSubmitIn,
     request: Request,

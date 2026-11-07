@@ -13,7 +13,9 @@ class ContentReview(Base):
 
     __tablename__ = "content_reviews"
 
-    id: Mapped[int] = mapped_column(BigInteger().with_variant(Integer, "sqlite"), primary_key=True)
+    id: Mapped[int] = mapped_column(
+        BigInteger().with_variant(Integer, "sqlite"), primary_key=True
+    )
     content_type: Mapped[str] = mapped_column(String(20), index=True)
     content_id: Mapped[int] = mapped_column(BigInteger)
     title: Mapped[str] = mapped_column(String(200), default="")

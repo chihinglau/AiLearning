@@ -18,7 +18,9 @@ depends_on = None
 def upgrade() -> None:
     op.create_table(
         "content_reviews",
-        sa.Column("id", sa.BigInteger().with_variant(sa.Integer, "sqlite"), primary_key=True),
+        sa.Column(
+            "id", sa.BigInteger().with_variant(sa.Integer, "sqlite"), primary_key=True
+        ),
         sa.Column("content_type", sa.String(length=20), nullable=False),
         sa.Column("content_id", sa.BigInteger(), nullable=False),
         sa.Column("title", sa.String(length=200), nullable=False, server_default=""),
@@ -29,20 +31,34 @@ def upgrade() -> None:
             nullable=False,
             server_default="pending",
         ),
-        sa.Column("submitted_by", sa.BigInteger(), sa.ForeignKey("users.id"), nullable=False),
+        sa.Column(
+            "submitted_by", sa.BigInteger(), sa.ForeignKey("users.id"), nullable=False
+        ),
         sa.Column("submitted_at", sa.DateTime(), nullable=False),
-        sa.Column("reviewed_by", sa.BigInteger(), sa.ForeignKey("users.id"), nullable=True),
+        sa.Column(
+            "reviewed_by", sa.BigInteger(), sa.ForeignKey("users.id"), nullable=True
+        ),
         sa.Column("reviewed_at", sa.DateTime(), nullable=True),
         sa.Column("comment", sa.Text(), nullable=True),
-        sa.Column("published_by", sa.BigInteger(), sa.ForeignKey("users.id"), nullable=True),
+        sa.Column(
+            "published_by", sa.BigInteger(), sa.ForeignKey("users.id"), nullable=True
+        ),
         sa.Column("published_at", sa.DateTime(), nullable=True),
         sa.Column("created_at", sa.DateTime(), nullable=False),
     )
-    op.create_index("ix_content_reviews_content_type", "content_reviews", ["content_type"])
+    op.create_index(
+        "ix_content_reviews_content_type", "content_reviews", ["content_type"]
+    )
     op.create_index("ix_content_reviews_status", "content_reviews", ["status"])
-    op.create_index("ix_content_reviews_submitted_by", "content_reviews", ["submitted_by"])
-    op.create_index("ix_content_reviews_reviewed_by", "content_reviews", ["reviewed_by"])
-    op.create_index("ix_content_reviews_published_by", "content_reviews", ["published_by"])
+    op.create_index(
+        "ix_content_reviews_submitted_by", "content_reviews", ["submitted_by"]
+    )
+    op.create_index(
+        "ix_content_reviews_reviewed_by", "content_reviews", ["reviewed_by"]
+    )
+    op.create_index(
+        "ix_content_reviews_published_by", "content_reviews", ["published_by"]
+    )
 
     with op.batch_alter_table("questions") as batch:
         batch.add_column(
