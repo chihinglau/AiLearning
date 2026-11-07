@@ -465,6 +465,24 @@ Copy-Item backend\app\legal\terms.md   app\assets\legal\terms.md   -Force
 
 规则：按中国时区（UTC+8）自然日统计 `student_question_records.duration_ms` 总和并向上取整为分钟；`daily_limit_minutes=0` 视为不限时；续答与查看已有作答不受影响。
 
+### 5.9 软著申请材料生成（R-05）
+
+```powershell
+backend\.venv\Scripts\python.exe scripts\make-copyright-docs.py
+```
+
+输出到 `release/software-copyright/`：
+
+| 文件 | 说明 |
+|---|---|
+| `source-code.docx` | 60 页源程序（前 30 + 后 30，每页 50 行；页眉「软件名称+版本+源程序」，页脚「第 N 页 共 60 页」；8pt Courier New、12pt 固定行距） |
+| `user-manual.docx` | 13 章操作说明书（目录页 + 各功能模块 + 隐私与注销说明） |
+| `metadata.json` | 申请表字段（软件全称/版本/开发完成日期/首次发表/著作权人/软硬件环境/编程语言/源程序量） |
+| `submission-checklist.md` | CPCC 线上提交流程与注意事项 |
+| `registration.txt` | 受理号/登记号/证书归档模板（取得证书后回填） |
+
+规则：源程序取自 `backend/app` 与 `app/lib`；软著名称须与商店展示名、R-06 APP 备案名称一致；材料中不得出现真实手机号/学生信息；修改源码后重跑脚本即可重建。
+
 ---
 
 ## 6. 双端架构约定（PlatformPal）
