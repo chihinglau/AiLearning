@@ -1,9 +1,9 @@
 # 深爱学（AiLearning）项目实施任务计划与进度跟踪
 
 > **文档性质**：项目主计划 / 进度跟踪 / 过程追溯（全程伴随开发周期）
-> **版本**：v1.67
+> **版本**：v1.68
 > **创建日期**：2026-11-06
-> **最后更新**：2026-11-07（P2-09 内容审核双人复核完成）
+> **最后更新**：2026-11-07（P2-10 P2 回归与验收完成）
 > **参考设计文档**：见[§1.1 参考设计文档清单](#11-参考设计文档清单)（共 8 份，含 4 份设计方案、4 份支撑文档）
 > **需求追踪**：见[§1.2 需求—设计—任务追踪矩阵](#12-需求设计任务追踪矩阵)
 > **维护人**：项目负责人（PM）
@@ -21,8 +21,8 @@
 |---|---|---|---|---|---|---|---|---|
 | **D-01** | [k12-learning-app-design.md](./k12-learning-app-design.md) | v0.2 | 总体产品设计 | 产品定位、用户画像、信息架构、里程碑、技术栈 | 基线 B-01~B-05；P0 总体范围 | PM/AR | 已生效（M1/M2 基线） | 2026-11-06 |
 | **D-02** | [subject-tutoring-and-m2-design.md](./subject-tutoring-and-m2-design.md) | v1.0 | 学科辅导专项设计 | 五大学法支柱、九学科分学段辅导方案、深圳教材适配、M2 数据模型与算法 | B-03/B-04；P0-17~P0-24；P1-07 | CT/AR | 已生效（M2 已交付） | 2026-11-06 |
-| **D-03** | [user-role-permission-design.md](./user-role-permission-design.md) | v1.0 | 角色权限专项设计 | 多级角色体系、年级维度、权限矩阵、数据范围、权限校验、数据模型与 API | P0-01~P0-10；P1-01~P1-06；P2-01/P2-02 | AR/PM | 已生效（P0/P1/P2-01/P2-02 已落地） | 2026-11-07 |
-| **D-04** | [learning-page-design.md](./learning-page-design.md) | v1.0 | 学习页专项设计 | 教材绑定、学习首页、知识点分层、智能练习、综合考试、数据流与 API | P0-11~P0-38；P1-07~P1-11；P2-03~P2-07 | FE/AR | 已生效（P0/P1 范围已落地，P2 待实施） | 2026-11-07 |
+| **D-03** | [user-role-permission-design.md](./user-role-permission-design.md) | v1.0 | 角色权限专项设计 | 多级角色体系、年级维度、权限矩阵、数据范围、权限校验、数据模型与 API | P0-01~P0-10；P1-01~P1-06；P2-01/P2-02/P2-08/P2-09 | AR/PM | 已生效（P0/P1/P2 范围已交付） | 2026-11-07 |
+| **D-04** | [learning-page-design.md](./learning-page-design.md) | v1.0 | 学习页专项设计 | 教材绑定、学习首页、知识点分层、智能练习、综合考试、数据流与 API | P0-11~P0-38；P1-07~P1-11；P2-03~P2-07 | FE/AR | 已生效（P0~P2 范围已交付） | 2026-11-07 |
 | **D-05** | [privacy.md](./privacy.md) | v1.0（2026.11.06） | 合规支撑 | 隐私政策、未成年人数据、家长同意与数据留存 | P0-05/P0-09；P1-05；P2-08 | PM | 已生效（P2-08 脱敏导出与用途登记已落地，公网发布待 R-03） | 2026-11-07 |
 | **D-06** | [skills.md](./skills.md) | 现行 | 工程支撑 | 开发规范、技能与接口使用说明 | 全部任务（开发约定） | AR | 已生效 | 2026-11-06 |
 | **D-07** | [skill_github_repo_access.md](./skill_github_repo_access.md) | 现行 | 内部支撑 | 仓库访问与凭据说明（不进入版本库） | 发布/提交相关任务 | AR | 内部参考 | 2026-11-06 |
@@ -60,7 +60,7 @@
 | 期中/期末/模考 | D-04 §8.1~§8.5 | D-04 §8、D-03 §5.2 | P1-07~P1-10、P2-07 | L9~L12 | `DONE`（P1-07 蓝图组卷、P1-08 考试窗口与过期处理、P1-09 主观题自评、P1-10 报告增强、P2-07 真题库与班级同卷模考已完成） |
 | 主观题与报告增强 | D-04 §7.5/§8.5 | D-04 §7.5/§8.5 | P1-09、P1-10 | L11 | `DONE`（主观题自评与能力维度/班级平均/趋势对比已完成） |
 | 推荐与学习闭环 | D-04 §2.2/§6.6 | D-04 §2.2/§6.6 | P1-11、P1-12、P1-14 | 闭环验收 | `DONE`（六优先级推荐、考试错题默认错因/复习优先级、活服务端到端回归均已通过） |
-| 平台化与增强（RBAC/图谱/离线/AI/真题库/合规导出/内容复核） | D-03 §9.2、D-04 §14 | D-03 §9.2、D-04 §14 | P2-01~P2-10 | M4 | `DOING`（P2-01 RBAC 表/双写、P2-02 权限配置后台、P2-03 班级作业与主观题批改、P2-04 知识图谱视图、P2-05 图片作答与离线整卷、P2-06 AI 讲解与错题归因、P2-07 真题库与班级同卷模考、P2-08 脱敏导出与用途登记、P2-09 内容审核双人复核已完成） |
+| 平台化与增强（RBAC/图谱/离线/AI/真题库/合规导出/内容复核） | D-03 §9.2、D-04 §14 | D-03 §9.2、D-04 §14 | P2-01~P2-10 | M4 | `DONE`（P2-01~P2-10 全部完成并通过技术验收，M4 待 PM 签署） |
 | 上架合规与发布 | D-08 §3/§7 | D-08 §3/§6 | R-01~R-09、P0-05、P0-09、P1-05、P2-08 | 发布验收 | `TODO`（P2-08 脱敏导出与用途登记已落地，R-01~R-09 发布项待执行） |
 
 **矩阵维护规则**：
@@ -153,7 +153,7 @@ DONE ──返工（需CR）──► DOING
 ## 三、任务台账
 
 > **状态字段实时更新**；`实际(h)` 在任务完成时填写；`证据` 填 commit / 测试结果 / 截图路径。
-> **总任务数**：77（开发 68：P0 43 + P1 15 + P2 10；发布 9：R-01~R-09）；**基线已完成**：5；**进行中**：0；**阻塞中**：0；**待启动**：10（P2-10、R-01~R-09）；**总预估工时**：676 h（开发 557 + 发布 119）。
+> **总任务数**：77（开发 68：P0 43 + P1 15 + P2 10；发布 9：R-01~R-09）；**基线已完成**：5；**进行中**：0；**阻塞中**：0；**待启动**：9（R-01~R-09）；**总预估工时**：676 h（开发 557 + 发布 119）。
 
 ### 3.1 阶段 P0：身份与学习主链路
 
@@ -267,7 +267,7 @@ DONE ──返工（需CR）──► DOING
 | P2-07 | 模考与真题库、考试窗口与公平性（同班同卷） | CT/AR | 12 | P2 | P1-08 | `DONE` | 8 | 8.3 | 迁移 `o5p6q7r8s9t0` 增 `exams.region/is_past_paper/class_id`；`GET /api/exams/past-papers`（年级/学科/年份/地区筛选、窗口状态）、`POST /api/exams/mock`（教师按班派发同卷，`class_authorized` + 年级一致 + 窗口校验 + 审计 `exam.mock.assign`）；考试列表对班级卷仅本班可见、非本班进入 403 `EXAM_NOT_MEMBER`；`generate` 支持标记真题/地区；seed 内置 3 套演示真题（幂等）；前端真题库页（学科/年份筛选、窗口提示）、考试中心入口；`tests/test_mock_exams.py` 3 例、`app/test/past_paper_page_test.dart` 2 例；迁移空库 upgrade/downgrade/upgrade 通过、seed 两次幂等；`pytest` 280 passed、`flutter analyze` 0 issues、`flutter test` 65 passed |
 | P2-08 | 数据导出与合规审计增强（脱敏导出、用途登记） | AR | 6 | P2 | P0-05 | `DONE` | 4 | A10 | 新增 `services/export.py`（五类用途登记、`SECTION_LIMIT=1000` 显式截断、手机号掩码）与 `api/routes/data.py`（`GET /api/data/export` 自助/家长/校管三档授权，`GET /api/data/export/purposes`）；导出写审计 `data.export`（含用途、目标用户、范围、各段条数，不落明文手机号）；`tests/test_export.py` 9 例（脱敏、用途必填/非法/身份不匹配、家长绑定越权、校管跨校 `SCOPE_DENIED`）；`pytest` 289 passed |
 | P2-09 | 内容审核双人复核流程 | AR/FE | 8 | P2 | P0-05 | `DONE` | 6 | 5.3 | 新增 `content_reviews` 表 + `questions.status`（迁移 `p6q7r8s9t0u1`，存量题目回填 `published`）；`services/content_review.py` + `api/routes/content.py`（提交/复核/发布三态机，提交人自审 403 `REVIEW_SELF_DENIED`、复核人自发布 403 `PUBLISH_SELF_DENIED`、驳回必填原因、重复提交 409、未通过发布 409，全程审计 `content.review.submit`/`content.review.decide`/`content.publish`）；前端 `/content/reviews` 审核页与我的页入口（`content_review_page.dart`）；`tests/test_content_review.py` 11 例、`content_review_page_test.dart` 2 例；迁移空库/存量库升降级通过；`pytest` 300 passed、`flutter analyze` 0 issues、`flutter test` 67 passed |
-| P2-10 | P2 回归与验收 | QA/PM | 10 | P2 | P2-01~P2-09 | `TODO` | — | — | — |
+| P2-10 | P2 回归与验收 | QA/PM | 10 | P2 | P2-01~P2-09 | `DONE` | 4 | M4 | 全量回归：`pytest` 300 passed；新增/修改文件 `ruff check --select E,F,I` 0 issue（全仓 E501 既有基线不纳入本任务）；`flutter analyze --no-pub` 0 issues；`flutter test --no-pub` 67 passed；空库 `alembic upgrade head` + `seed` 两次：首次创建 3 套真题、二次 0 套（幂等），教材 134/章节 112/知识点 282/题目 564/蓝图 9 稳定；回归期对 P2-08/P2-09 新文件做 `ruff format` 与导入排序对齐（commit `0082d67`）；验收记录见 §6.5 |
 
 > **P2 小计**：10 项，预估 **118 h**。
 
@@ -429,15 +429,15 @@ flowchart LR
 | 指标 | 数值 |
 |---|---|
 | 任务总数（不含基线） | 77（开发 68：P0 43 + P1 15 + P2 10；发布 9：R-01~R-09） |
-| `TODO` | 10 |
+| `TODO` | 9 |
 | `DOING` | 0 |
-| `DONE` | 67（P0-01~P0-43、P1-01~P1-15、P2-01~P2-09；基线 5 项已冻结） |
+| `DONE` | 68（P0-01~P0-43、P1-01~P1-15、P2-01~P2-10；基线 5 项已冻结） |
 | `BLOCKED` | 0 |
 | 预估总工时 | 676 h（开发 557 = P0 310 + P1 129 + P2 118；发布 119） |
-| 已投入工时 | 238 h（P0-01 3、P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3、P0-23 3、P0-24 3、P0-25 3、P0-26 3、P0-27 3、P0-28 4、P0-29 3、P0-30 3、P0-31 4、P0-32 3、P0-33 4、P0-34 4、P0-35 6、P0-36 8、P0-37 10、P0-38 4、P0-39 6、P0-40 4、P0-41 6、P0-42 2、P0-43 3、P1-01 3、P1-02 2、P1-03 2、P1-04 3、P1-05 3、P1-06 3、P1-07 3、P1-08 3、P1-09 3、P1-10 3、P1-11 3、P1-12 2、P1-13 3、P1-14 3、P1-15 3、P2-01 6、P2-02 6、P2-03 6、P2-04 4、P2-05 8、P2-06 8、P2-07 8、P2-08 4、P2-09 6） |
-| 当前迭代 | P2（平台化与增强）+ 发布准备（R-05 软著先行） |
-| 迭代目标 | RBAC 配置后台、教师作业与班级管理、知识图谱、离线、AI 讲解、合规导出；并行推进软著/签名/隐私/部署 |
-| 里程碑 | M2.5（P0 技术验收通过，待签署）→ M3（P1 技术验收通过，待签署）→ M4（P2） |
+| 已投入工时 | 242 h（P0-01 3、P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3、P0-23 3、P0-24 3、P0-25 3、P0-26 3、P0-27 3、P0-28 4、P0-29 3、P0-30 3、P0-31 4、P0-32 3、P0-33 4、P0-34 4、P0-35 6、P0-36 8、P0-37 10、P0-38 4、P0-39 6、P0-40 4、P0-41 6、P0-42 2、P0-43 3、P1-01 3、P1-02 2、P1-03 2、P1-04 3、P1-05 3、P1-06 3、P1-07 3、P1-08 3、P1-09 3、P1-10 3、P1-11 3、P1-12 2、P1-13 3、P1-14 3、P1-15 3、P2-01 6、P2-02 6、P2-03 6、P2-04 4、P2-05 8、P2-06 8、P2-07 8、P2-08 4、P2-09 6、P2-10 4） |
+| 当前迭代 | 发布准备（R-01~R-09；R-05 软著先行） |
+| 迭代目标 | 上架合规缺口整改、隐私/注销/导出入口、内容授权台账、商店素材与发布流水线 |
+| 里程碑 | M2.5（P0 技术验收通过，待签署）→ M3（P1 技术验收通过，待签署）→ M4（P2 技术验收通过，待签署）→ M5（发布就绪） |
 
 ### 5.2 同步节奏
 
@@ -542,6 +542,7 @@ flowchart LR
 | v1.65 | 2026-11-07 | CT/AR | P2-07 模考与真题库、班级同卷（迁移 `o5p6q7r8s9t0` 增 `region/is_past_paper/class_id`；`GET /api/exams/past-papers`、`POST /api/exams/mock`、班级卷可见性与 `EXAM_NOT_MEMBER`、`generate` 支持真题标记；前端真题库页与考试中心入口；seed 3 套真题幂等；`test_mock_exams.py` 3 例、`past_paper_page_test.dart` 2 例；迁移升降级与 seed 双跑验证；`pytest` 280 passed、`flutter analyze` 0 issues、`flutter test` 65 passed）；§6.4 补 8.3 行；§5.1 同步（DONE 65 / 投入 228 h / TODO 12） |
 | v1.66 | 2026-11-07 | AR | P2-08 数据导出与合规审计增强（新增 `services/export.py`（五类用途、`SECTION_LIMIT=1000` 截断、手机号掩码）与 `api/routes/data.py`（`GET /api/data/export` 自助/家长/校管三档授权、`GET /api/data/export/purposes`）；导出写审计 `data.export`（用途/目标/范围/条数，不落明文手机号）；`tests/test_export.py` 9 例；`pytest` 289 passed）；§6.1 A10 转 `DONE`、§6.4 补 A10 行；§5.1 同步（DONE 66 / 投入 232 h / TODO 11）；当前下一步 P2-09 |
 | v1.67 | 2026-11-07 | AR/FE | P2-09 内容审核双人复核（迁移 `p6q7r8s9t0u1` 建 `content_reviews` 表并给 `questions` 增 `status`，存量回填 `published`；`services/content_review.py` + `api/routes/content.py` 提交/复核/发布三态机：自审 403、复核人自发布 403、驳回必填原因、重复提交 409、未通过发布 409，审计 `content.review.submit`/`content.review.decide`/`content.publish`；前端 `/content/reviews` 审核页（筛选/通过/驳回/发布）与我的页入口；`tests/test_content_review.py` 11 例、`content_review_page_test.dart` 2 例；迁移空库升降级 + 存量库回填验证；`pytest` 300 passed、`flutter analyze` 0 issues、`flutter test` 67 passed）；§6.4 补 5.3 行；§5.1 同步（DONE 67 / 投入 238 h / TODO 10）；当前下一步 P2-10 |
+| v1.68 | 2026-11-07 | QA/PM | P2-10 P2 回归与验收（`pytest` 300 passed、新增/修改文件 `ruff check --select E,F,I` 0 issue、`flutter analyze` 0 issues、`flutter test` 67 passed；空库迁移 + `seed` 两次幂等、存量库回填验证；回归期对 P2-08/P2-09 新文件 `ruff format`/导入排序对齐 commit `0082d67`；新增 §6.5 M4 验收记录）；§1.2 平台化行转 `DONE`、§6.2 M4 转 `DONE`、§5.1 同步（DONE 68 / 投入 242 h / TODO 9）、§1.1 D-03/D-04 状态更新；当前下一步 R-01 |
 
 ---
 
@@ -551,7 +552,7 @@ flowchart LR
 |---|---|---|---|---|---|
 | **M2.5（P0）** | P0-01 ~ P0-43 | 年级必填与引导可用；教材绑定生效；学习首页聚合；四层知识点可下钻；练习预览=实际、可续答；单元测可组卷/交卷/报告；错题与掌握度回流；权限越权测试全通过；真机 E2E 通过 | `DONE`（技术验收通过，待 PM 签署） | 2026-11-06 | PM（Agent 预验收） |
 | **M3（P1）** | P1-01 ~ P1-15 | 教师/班主任/校管可用；家长端可用；期中/期末/模考闭环；主观题自评与报告增强；推荐服务上线 | `DONE`（技术验收通过，待 PM 签署） | 2026-11-07 | PM（Agent 预验收） |
-| **M4（P2）** | P2-01 ~ P2-10 | RBAC 表与配置后台；教师作业；图谱；离线；AI 讲解；合规导出 | `TODO` | — | PM |
+| **M4（P2）** | P2-01 ~ P2-10 | RBAC 表与配置后台；教师作业；图谱；离线；AI 讲解；合规导出；内容复核 | `DONE`（技术验收通过，待 PM 签署） | 2026-11-07 | PM（Agent 预验收） |
 | **M5（发布就绪）** | R-01 ~ R-09 | 正式签名可验证；生产后端 HTTPS 可用；隐私 URL 与首启同意链路可用；注销/导出/家长同意/时长生效；软著受理；APP 备案下发；内容授权台账与免责声明上线；商店素材与表单齐备；发布流水线可追溯 | `TODO` | — | PM |
 
 ### 6.1 P0 验收对照（摘自设计文档）
@@ -621,7 +622,23 @@ flowchart LR
 | A10 | 合规数据导出：手机号脱敏、用途必填并登记审计、自助/家长/校管三档授权、越权拒绝 | P2-08 | `DONE` | `services/export.py` + `api/routes/data.py`；`GET /api/data/export` 写审计 `data.export`（用途/目标/范围/条数）；`tests/test_export.py` 9 例 |
 | 5.3 | 内容审核双人复核：提交人不得自审、复核人不得自发布、驳回必填原因、重复提交拦截、发布后状态切换 | P2-09 | `DONE` | `content_reviews` 表 + `questions.status`（迁移 `p6q7r8s9t0u1`）；`/api/content/reviews` 提交/复核/发布；`tests/test_content_review.py` 11 例、`content_review_page_test.dart` 2 例 |
 
-**结论**：P2-01~P2-09 技术验收通过；P2-10 待实施，M4 保持 `TODO`。
+**结论**：P2-01~P2-10 技术验收通过，M4 待 PM 签署。
+
+### 6.5 M4（P2）验收记录（2026-11-07）
+
+| 核对项 | 结果 | 证据 |
+|---|---|---|
+| 任务台账 | P2-01~P2-10 共 10 项全部 `DONE`，无 `DOING`/`BLOCKED` | §3.3 |
+| 后端回归 | `pytest -q -p no:warnings` 300 passed | `backend/tests`（含 `test_export.py` 9 例、`test_content_review.py` 11 例） |
+| 静态检查 | 新增/修改文件 `ruff check --select E,F,I` 0 issue；`ruff format` 已对齐 | commit `0082d67` |
+| 前端回归 | `flutter analyze --no-pub` 0 issues；`flutter test --no-pub` 67 passed | `app/test` |
+| 迁移/种子 | 空库 `alembic upgrade head`（含 `p6q7r8s9t0u1`）通过；`seed` 两次：首次真题 3 套、二次 0 套（幂等），教材 134/章节 112/知识点 282/题目 564/蓝图 9 稳定 | 临时库实测 |
+| 存量库回填 | 旧库升级后题目 `status` 回填 `published`，`content_reviews` 表创建成功 | 临时库实测 |
+| 验收对照 | §6.4 的 9.1/9.2/8.1/5.2/6.2/13/6.4/8.3/A10/5.3 全部 `DONE` | §6.4 |
+| 设计文档同步 | D-03/D-04 的 P2 范围已落地，状态更新为“已生效（P2 已交付）”，D-05 导出/用途登记已落地 | §1.1 |
+| 遗留事项 | 真机复测随 R-09；dev 库 `ailearning_dev.db` 过旧需重建后迁移；全仓 E501 为既有基线，不在本任务整改范围 | §4 |
+
+**结论**：M4 技术验收通过，待 PM 签署后进入发布准备（R-01~R-09）。
 
 ---
 
@@ -638,4 +655,4 @@ flowchart LR
 
 ---
 
-> **当前下一步**：P2-10（P2 回归与验收，依赖 P2-01~P2-09）。所有任务按依赖图推进，每完成一个任务即回写本文件状态。
+> **当前下一步**：R-01（正式签名与构建纪律，依赖：无；依据 D-08 缺口 1）。所有任务按依赖图推进，每完成一个任务即回写本文件状态。
