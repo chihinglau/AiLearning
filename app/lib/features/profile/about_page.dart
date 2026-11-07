@@ -142,6 +142,14 @@ class _AboutPageState extends ConsumerState<AboutPage> {
           ),
           const SizedBox(height: 16),
           Text(
+            '本应用为学习辅助工具，内容与解析仅供参考，不构成官方教材或考试命题，'
+            '也不承诺任何学习效果。如发现内容问题，可通过「我的 → 内容举报」反馈，'
+            '我们将在 24 小时内核实处理。',
+            style: theme.textTheme.bodySmall,
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 8),
+          Text(
             '备案号与登记号以主管部门最终下发为准，如有更新请以本页展示为准。',
             style: theme.textTheme.bodySmall,
             textAlign: TextAlign.center,

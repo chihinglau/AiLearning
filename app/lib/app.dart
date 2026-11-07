@@ -6,6 +6,7 @@ import 'package:ai_learning/features/assignment/assignment_grading_page.dart';
 import 'package:ai_learning/features/assignment/assignment_list_page.dart';
 import 'package:ai_learning/features/auth/login_page.dart';
 import 'package:ai_learning/features/common/permission_gate.dart';
+import 'package:ai_learning/features/content/content_report_page.dart';
 import 'package:ai_learning/features/content/content_review_page.dart';
 import 'package:ai_learning/features/exam/exam_list_page.dart';
 import 'package:ai_learning/features/exam/exam_page.dart';
@@ -90,6 +91,11 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/about',
         builder: (context, state) => const AboutPage(),
+      ),
+      // R-07：内容举报入口。
+      GoRoute(
+        path: '/content/report',
+        builder: (context, state) => const ContentReportPage(),
       ),
       GoRoute(
         path: '/legal/privacy',

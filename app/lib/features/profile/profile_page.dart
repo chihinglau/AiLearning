@@ -324,6 +324,14 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                         ),
                         const Divider(height: 1),
                         ListTile(
+                          leading: const Icon(Icons.flag_outlined),
+                          title: const Text('内容举报'),
+                          subtitle: const Text('题目/教材内容问题反馈，24 小时内处理'),
+                          trailing: const Icon(Icons.chevron_right),
+                          onTap: () => context.go('/content/report'),
+                        ),
+                        const Divider(height: 1),
+                        ListTile(
                           leading: const Icon(Icons.info_outline),
                           title: const Text('关于'),
                           subtitle: const Text('版本信息、备案号与软著登记号'),

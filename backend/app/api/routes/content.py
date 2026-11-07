@@ -5,13 +5,20 @@ from sqlalchemy.orm import Session
 
 from app.api.deps import get_current_user, has_permission, require_permission
 from app.db.session import get_db
+from app.models.content_report import ContentReport
 from app.models.content_review import ContentReview
 from app.models.user import User
+from app.schemas.content_report import (
+    ContentReportHandleIn,
+    ContentReportIn,
+    ContentReportOut,
+)
 from app.schemas.content_review import (
     ContentReviewDecisionIn,
     ContentReviewOut,
     ContentReviewSubmitIn,
 )
+from app.services.content_report import create_report, handle_report, list_reports
 from app.services.content_review import (
     CONTENT_TYPES,
     REVIEW_STATUSES,
@@ -146,3 +153,51 @@ def list_review_statuses(
 ) -> list[str]:
     """复核状态字典（前端筛选使用）。"""
     return list(REVIEW_STATUSES)
+
+
+# R-07：用户举报入口与 24 小时内下架处理。
+
+
+@router.post(
+    "/reports", response_model=ContentReportOut, status_code=status.HTTP_201_CREATED
+)
+def create_content_report(
+    payload: ContentReportIn,
+    request: Request,
+    current: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+) -> ContentReport:
+    return create_report(db, user=current, payload=payload, ip=_ip(request))
+
+
+@router.get("/reports", response_model=list[ContentReportOut])
+def get_content_reports(
+    status_filter: str | None = Query(None, alias="status"),
+    current: User = Depends(require_permission("content:review:decide")),
+    db: Session = Depends(get_db),
+) -> list[ContentReport]:
+    return list_reports(db, status_filter=status_filter)
+
+
+@router.patch("/reports/{report_id}", response_model=ContentReportOut)
+def handle_content_report(
+    report_id: int,
+    payload: ContentReportHandleIn,
+    request: Request,
+    current: User = Depends(require_permission("content:review:decide")),
+    db: Session = Depends(get_db),
+) -> ContentReport:
+    report = db.get(ContentReport, report_id)
+    if report is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail={"code": "REPORT_NOT_FOUND", "message": "举报不存在"},
+        )
+    return handle_report(
+        db,
+        report=report,
+        action=payload.action,
+        note=payload.note,
+        user=current,
+        ip=_ip(request),
+    )

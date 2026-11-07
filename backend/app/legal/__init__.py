@@ -14,7 +14,8 @@ from pathlib import Path
 LEGAL_DIR = Path(__file__).resolve().parent
 
 PRIVACY_VERSION = "2026.11.06"
-TERMS_VERSION = "2026.11.06"
+# R-07 在用户协议中补充内容来源与 24 小时下架声明，版本独立递增。
+TERMS_VERSION = "2026.11.07"
 
 TITLES = {"privacy": "隐私政策", "terms": "用户协议"}
 
