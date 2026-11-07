@@ -90,13 +90,15 @@ VERSIONS = {
     "politics": "部编版",
 }
 
-# 高中阶段与义务教育阶段版本不同：数学为人教 A 版，英语为外研版
+# 高中阶段与义务教育阶段版本不同：数学为人教 A 版，英语为外研版，地理为人教版
 SENIOR_VERSIONS = {
     "math": "人教版A版",
     "english": "外研版",
+    "geography": "人教版",
 }
 
-PRIMARY_SUBJECTS = ["math", "chinese", "english"]
+# 小学含道德与法治（1-6 年级），与深圳教材基线一致
+PRIMARY_SUBJECTS = ["math", "chinese", "english", "politics"]
 JUNIOR_SUBJECTS = {
     7: ["chinese", "math", "english", "biology", "history", "geography", "politics"],
     8: ["chinese", "math", "english", "physics", "biology", "history", "geography", "politics"],

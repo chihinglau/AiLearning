@@ -1,9 +1,9 @@
 # 深爱学（AiLearning）项目实施任务计划与进度跟踪
 
 > **文档性质**：项目主计划 / 进度跟踪 / 过程追溯（全程伴随开发周期）
-> **版本**：v1.81
+> **版本**：v1.82
 > **创建日期**：2026-11-06
-> **最后更新**：2026-11-07（高中教材版本校正：数学人教版 A 版、英语外研版，种子与存量库同步）
+> **最后更新**：2026-11-07（教材基线补齐：高中地理改人教版，小学 1-6 年级补道德与法治教材）
 > **参考设计文档**：见[§1.1 参考设计文档清单](#11-参考设计文档清单)（共 8 份，含 4 份设计方案、4 份支撑文档）
 > **需求追踪**：见[§1.2 需求—设计—任务追踪矩阵](#12-需求设计任务追踪矩阵)
 > **维护人**：项目负责人（PM）
@@ -578,6 +578,7 @@ flowchart LR
 | v1.79 | 2026-11-07 | FE+BE | UX-02（返回链路）：`learn/profile/knowledge/unit/kp_detail/mistakes` 入口由 `go` 改 `push`，考试提交改 `pushReplacement`，教师班级/家长中心自定义返回改 `canPop ? pop : go('/shell')`；真机验证首页→知识点→单元→详情逐级返回；`dart analyze` 0 issues、`flutter test` 88 passed。CT-01（内容模板）：新增 `docs/content-templates/`（README + 9 学科 JSON）、`backend/app/services/content_import.py`、`backend/scripts/import_content.py`（幂等、`--dry-run`、`--overwrite`、题目可引用库中知识点），新增 `tests/test_content_import.py` 3 例并通过，9 模板 dry-run 全通过；§3.6 增 UX-02、§3.7 增 CT-01、新增 §6.16 R-A11/R-A12、§5.1 同步（DONE 80 / 投入 356 h / 任务 80）；当前下一步补充各科内容并向学生灰度 |
 | v1.80 | 2026-11-07 | BE+教研 | CT-02 来源与版权登记：`questions` 增 `source_type/source_name/source_ref/copyright_owner/license_note/adapted_from`，`knowledge_points` 增前五项（默认 `original`），迁移 `u1v2w3x4y5z6`；导入器新增四条校验（非原创必填 `source_name`、`licensed` 必填 `license_note`、题目 `adapted` 必填 `adapted_from`、`external` 必须 `draft`）；`QuestionCreate/QuestionOut`、`KnowledgePointOut` 暴露来源字段；9 份模板首知识点/首题演示 `original`，README 增字段表与规则；`tests/test_content_import.py` 7 passed、`tests/test_migrations.py` 3 passed、ruff E9/F 全绿、9 模板 dry-run 全通过；§3.7 增 CT-02、新增 §6.17 R-A13、§5.1 同步（DONE 81 / 投入 360 h / 任务 81）；当前下一步按模板扩充内容并如实登记来源 |
 | v1.81 | 2026-11-07 | BE+教研 | 高中教材版本校正：`scripts/seed.py` 增 `SENIOR_VERSIONS`（数学 `人教版A版`、英语 `外研版`），迁移 `v1w2x3y4z5a6` 同步存量教材（若目标版本已存在则迁移章节后删除旧记录）；设备库 134 本教材无重复，seed 幂等复跑计数不变（134/120/310/592）；README 深圳教材基线同步；不新增任务与工时 |
+| v1.82 | 2026-11-07 | BE+教研 | 教材基线补齐：`SENIOR_VERSIONS` 增地理 `人教版`（初中仍 `湘教版`），迁移 `x1y2z3a4b5c6` 同步存量高中地理；`PRIMARY_SUBJECTS` 增 `politics`，补齐小学 1-6 年级道德与法治教材。设备库 146 教材 / 126 章节 / 328 知识点 / 628 题，重复教材 0；`pytest tests/test_migrations.py` 3 passed；不新增任务与工时 |
 
 ---
 
