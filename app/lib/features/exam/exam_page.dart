@@ -84,7 +84,7 @@ class _ExamPageState extends ConsumerState<ExamPage> {
       if (attempt.status != 'in_progress') {
         await store.clearForExam(widget.examId);
         if (!mounted) return;
-        context.go('/exam/report/${attempt.id}');
+        context.pushReplacement('/exam/report/${attempt.id}');
         return;
       }
       final questions = attempt.exam.questions;
@@ -238,7 +238,7 @@ class _ExamPageState extends ConsumerState<ExamPage> {
         if (!mounted) return;
         _ticker?.cancel();
         _syncTimer?.cancel();
-        context.go('/exam/report/${result.submittedAttemptId}');
+        context.pushReplacement('/exam/report/${result.submittedAttemptId}');
         return;
       }
       if (!silent && result.saved > 0) {
@@ -312,7 +312,7 @@ class _ExamPageState extends ConsumerState<ExamPage> {
         _ticker?.cancel();
         await ref.read(offlineExamStoreProvider).clearForExam(widget.examId);
         if (!mounted) return;
-        context.go('/exam/report/${attempt.id}');
+        context.pushReplacement('/exam/report/${attempt.id}');
         return;
       }
       _deadline = DateTime.now().add(Duration(seconds: result.remainingSeconds));
@@ -404,7 +404,7 @@ class _ExamPageState extends ConsumerState<ExamPage> {
     final attempt = _attempt;
     if (attempt == null || _submitting) return;
     if (attempt.status != 'in_progress') {
-      context.go('/exam/report/${attempt.id}');
+      context.pushReplacement('/exam/report/${attempt.id}');
       return;
     }
     _saveTimer?.cancel();
@@ -433,7 +433,7 @@ class _ExamPageState extends ConsumerState<ExamPage> {
           const SnackBar(content: Text('考试时间已到，系统已自动交卷')),
         );
       }
-      context.go('/exam/report/${result.attemptId}');
+      context.pushReplacement('/exam/report/${result.attemptId}');
     } on ApiException catch (error) {
       if (!mounted) return;
       if (error.statusCode == null) {

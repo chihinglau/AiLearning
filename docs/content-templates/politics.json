@@ -1,0 +1,93 @@
+{
+  "_说明": "道德与法治模板：复制后修改年级/版本与内容；导入命令见 README.md。",
+  "subject": "politics",
+  "grade": 7,
+  "version": "部编版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "成长的节拍",
+      "order_index": 1,
+      "explanation": "认识中学时代的意义，理解学习与成长。"
+    },
+    {
+      "node_type": "point",
+      "name": "中学时代",
+      "parent": "成长的节拍",
+      "order_index": 1,
+      "explanation": "中学时代是人生发展的新阶段，带来新机会与新挑战。",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "学习伴成长",
+      "parent": "成长的节拍",
+      "order_index": 2,
+      "explanation": "学习不仅表现为接受和掌握，还表现为探究、发现、体验和感悟。",
+      "prerequisites": ["中学时代"]
+    },
+    {
+      "node_type": "point",
+      "name": "认识自我",
+      "parent": "成长的节拍",
+      "order_index": 3,
+      "explanation": "正确认识自己的优点与不足，学会接纳与欣赏自己。",
+      "prerequisites": ["学习伴成长"]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一单元 成长的节拍",
+      "order_index": 1,
+      "summary": "中学时代、学习与自我认识。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "进入中学后，我们面对的新挑战不包括（  ）",
+          "options": ["新的课程", "新的同学", "更多的自主管理", "完全不需要老师"],
+          "answer": {"value": "D"},
+          "analysis": "中学阶段仍需要老师的指导，只是更强调自主学习。",
+          "difficulty": 1,
+          "knowledge_point": "中学时代"
+        },
+        {
+          "q_type": "fill",
+          "stem": "学习不仅表现为接受和掌握，而且表现为（  ）、发现、体验和感悟。",
+          "answer": {"value": ["探究", "探索"]},
+          "analysis": "教材表述为「探究、发现、体验和感悟」，强调主动学习。",
+          "difficulty": 2,
+          "knowledge_point": "学习伴成长"
+        },
+        {
+          "q_type": "judge",
+          "stem": "中学时代是人生发展的一个新阶段。",
+          "answer": {"value": "T"},
+          "analysis": "中学时代见证一个人从少年到青年的生命进阶。",
+          "difficulty": 1,
+          "knowledge_point": "中学时代"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "正确认识自己有助于（  ）",
+          "options": ["增强自信", "促进自我发展", "更好与他人交往", "回避所有缺点"],
+          "answer": {"value": ["A", "B", "C"]},
+          "analysis": "正确认识自己有助于增强自信、促进自我发展、改善人际交往；但不能回避缺点。",
+          "difficulty": 2,
+          "knowledge_point": "认识自我",
+          "tags": ["自我认识", "多选"]
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出自己的两个优点和一个需要改进的方面，并说明改进方法。",
+          "answer": {"value": "示例：优点——认真、乐于助人；不足——做事拖延；方法——制定每日计划并按时完成。"},
+          "analysis": "开放性试题，能客观描述优点与不足，并给出可执行的改进方法即可。",
+          "difficulty": 2,
+          "knowledge_point": "认识自我",
+          "tags": ["开放题", "自我评价"],
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

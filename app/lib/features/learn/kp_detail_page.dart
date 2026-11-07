@@ -101,13 +101,13 @@ class _KpDetailPageState extends ConsumerState<KpDetailPage> {
   }
 
   void _openPrerequisite(KpBrief prerequisite) {
-    context.go('/kp/${prerequisite.id}');
+    context.push('/kp/${prerequisite.id}');
   }
 
   void _practice() {
     final detail = _detail;
     if (detail == null) return;
-    context.go(
+    context.push(
       '/practice/config?scope=kp&ids=${detail.id}'
       '&title=${Uri.encodeComponent(detail.name)}',
     );

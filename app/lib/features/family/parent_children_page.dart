@@ -135,7 +135,7 @@ class _ParentChildrenPageState extends ConsumerState<ParentChildrenPage> {
         title: const Text('家长中心'),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
-          onPressed: () => context.go('/shell'),
+          onPressed: () => context.canPop() ? context.pop() : context.go('/shell'),
         ),
       ),
       body: RefreshIndicator(

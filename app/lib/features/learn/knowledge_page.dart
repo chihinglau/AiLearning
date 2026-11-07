@@ -58,7 +58,7 @@ class _KnowledgePageState extends ConsumerState<KnowledgePage> {
   }
 
   void _openUnit(UnitSummary unit) {
-    context.go(
+    context.push(
       '/unit/${unit.id}'
       '?name=${Uri.encodeComponent(unit.name)}'
       '&textbook=${Uri.encodeComponent(widget.textbookName)}'

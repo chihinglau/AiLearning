@@ -1,0 +1,94 @@
+{
+  "_说明": "英语模板：复制后修改年级/版本与内容；导入命令见 README.md。",
+  "subject": "english",
+  "grade": 1,
+  "version": "牛津深圳版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "Greetings and Numbers",
+      "order_index": 1,
+      "explanation": "能用英语问候并介绍自己的年龄。"
+    },
+    {
+      "node_type": "point",
+      "name": "Greetings",
+      "parent": "Greetings and Numbers",
+      "order_index": 1,
+      "explanation": "掌握 Hello / Good morning / Goodbye 等问候语。",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "Numbers 1-10",
+      "parent": "Greetings and Numbers",
+      "order_index": 2,
+      "explanation": "能听、说、读 1~10 的英文数字。",
+      "prerequisites": ["Greetings"]
+    },
+    {
+      "node_type": "point",
+      "name": "Classroom English",
+      "parent": "Greetings and Numbers",
+      "order_index": 3,
+      "explanation": "听懂并回应 Stand up / Sit down / Open your book 等课堂指令。",
+      "prerequisites": ["Greetings"]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "Unit 1 Hello",
+      "order_index": 1,
+      "summary": "问候语与自我介绍。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "— Hello! — ____",
+          "options": ["Hello!", "Goodbye!", "Thank you!", "Sorry!"],
+          "answer": {"value": "A"},
+          "analysis": "别人说 Hello 时，用 Hello 回应。",
+          "difficulty": 1,
+          "knowledge_point": "Greetings",
+          "tags": ["greeting"]
+        },
+        {
+          "q_type": "fill",
+          "stem": "— How old are you? — I am six ____ old.",
+          "answer": {"value": "years"},
+          "analysis": "表达年龄用「数字 + years old」。",
+          "difficulty": 2,
+          "knowledge_point": "Numbers 1-10"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「Good morning」用于早上问候。",
+          "answer": {"value": "T"},
+          "analysis": "Good morning 表示「早上好」，用于上午见面时问候。",
+          "difficulty": 1,
+          "knowledge_point": "Greetings"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following are greetings?（  ）",
+          "options": ["Hello", "Good morning", "Goodbye", "Stand up"],
+          "answer": {"value": ["A", "B", "C"]},
+          "analysis": "Hello、Good morning、Goodbye 都是问候或告别语；Stand up 是课堂指令。",
+          "difficulty": 2,
+          "knowledge_point": "Greetings",
+          "tags": ["greeting", "multiple"]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Introduce yourself with two sentences: your name and your age.",
+          "answer": {"value": "My name is Li Ming. I am seven years old."},
+          "analysis": "参考表达：My name is ... / I am ... years old. 姓名与年龄表达正确即可。",
+          "difficulty": 2,
+          "knowledge_point": "Greetings",
+          "tags": ["self-introduction"],
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

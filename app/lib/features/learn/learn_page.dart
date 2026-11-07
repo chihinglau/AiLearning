@@ -5,6 +5,8 @@ import 'package:ai_learning/core/models/content.dart';
 import 'package:ai_learning/core/models/learn.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
+import 'package:ai_learning/core/theme/app_accents.dart';
+import 'package:ai_learning/widgets/feature_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -89,7 +91,7 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
   }
 
   void _openTextbook(HomeTextbook textbook) {
-    context.go(
+    context.push(
       '/knowledge/${textbook.textbookId}'
       '?name=${Uri.encodeComponent(textbook.subjectLabel)}',
     );
@@ -104,14 +106,14 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
     final textbook = home.textbookOf(item.subject);
     if (textbook != null) {
       final chapter = item.chapterId == null ? '' : '&chapter=${item.chapterId}';
-      context.go(
+      context.push(
         '/knowledge/${textbook.textbookId}'
         '?name=${Uri.encodeComponent(textbook.subjectLabel)}$chapter',
       );
       return;
     }
     if (item.chapterId != null) {
-      context.go(
+      context.push(
         '/session?chapter=${item.chapterId}'
         '&title=${Uri.encodeComponent(item.title)}',
       );
@@ -121,17 +123,17 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
   }
 
   void _startDaily() {
-    context.go('/session?title=${Uri.encodeComponent('每日一练')}');
+    context.push('/session?title=${Uri.encodeComponent('每日一练')}');
   }
 
   void _openRecommendation(HomeData home) {
     final rec = home.recommendation;
     switch (rec.action) {
       case 'review':
-        context.go('/session?review=1&title=${Uri.encodeComponent('今日复习')}');
+        context.push('/session?review=1&title=${Uri.encodeComponent('今日复习')}');
       case 'practice':
         if (rec.knowledgePointId != null) {
-          context.go(
+          context.push(
             '/session?kp=${rec.knowledgePointId}'
             '&title=${Uri.encodeComponent('专项练习')}',
           );
@@ -140,7 +142,7 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
         }
       case 'continue':
         if (home.continueLearning == null && rec.chapterId != null) {
-          context.go(
+          context.push(
             '/session?chapter=${rec.chapterId}'
             '&title=${Uri.encodeComponent(rec.chapterName ?? '继续学习')}',
           );
@@ -151,7 +153,7 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
         if (rec.examId != null) {
           context.push('/exam/${rec.examId}');
         } else {
-          context.go('/exams');
+          context.push('/exams');
         }
       case 'learn_kp':
         final textbook = home.continueLearning == null
@@ -172,6 +174,7 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
   Widget build(BuildContext context) {
     final user = ref.watch(currentUserProvider);
     final theme = Theme.of(context);
+    final accents = AppAccents.of(context);
     return Scaffold(
       appBar: AppBar(title: const Text('深爱学 · 学习')),
       body: RefreshIndicator(
@@ -214,24 +217,18 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
               ),
               if (_lastPractice != null) ...[
                 const SizedBox(height: 12),
-                Card(
-                  child: ListTile(
-                    leading: CircleAvatar(
-                      backgroundColor: theme.colorScheme.tertiaryContainer,
-                      child: Icon(
-                        Icons.pause_circle_outline,
-                        color: theme.colorScheme.tertiary,
-                      ),
-                    ),
-                    title: Text('继续「${_lastPractice!.title}」'),
-                    subtitle: Text(
+                FeatureCard(
+                  icon: Icons.pause_circle_outline,
+                  accent: accents.practice,
+                  title: '继续「${_lastPractice!.title}」',
+                  subtitle:
                       '已完成 ${_lastPractice!.answered}/${_lastPractice!.total} 题',
-                    ),
-                    trailing: const Icon(Icons.chevron_right),
-                    onTap: () => context.go(
-                      '/session?session=${_lastPractice!.id}'
-                      '&title=${Uri.encodeComponent(_lastPractice!.title)}',
-                    ),
+                  progress: _lastPractice!.total > 0
+                      ? _lastPractice!.answered / _lastPractice!.total
+                      : null,
+                  onTap: () => context.push(
+                    '/session?session=${_lastPractice!.id}'
+                    '&title=${Uri.encodeComponent(_lastPractice!.title)}',
                   ),
                 ),
               ],
@@ -240,7 +237,7 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
               const SizedBox(height: 8),
               _TodayPlanCard(
                 plan: _home!.todayPlan,
-                onReview: () => context.go(
+                onReview: () => context.push(
                   '/session?review=1&title=${Uri.encodeComponent('今日复习')}',
                 ),
                 onPractice: _startDaily,
@@ -249,23 +246,14 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
               if (_home!.continueLearning != null) ...[
                 _SectionTitle('继续学习'),
                 const SizedBox(height: 8),
-                Card(
-                  child: ListTile(
-                    leading: CircleAvatar(
-                      backgroundColor: theme.colorScheme.primaryContainer,
-                      child: Icon(
-                        Icons.play_arrow_rounded,
-                        color: theme.colorScheme.primary,
-                      ),
-                    ),
-                    title: Text(_home!.continueLearning!.title),
-                    subtitle: Text(
+                FeatureCard(
+                  icon: Icons.play_arrow_rounded,
+                  accent: accents.learn,
+                  title: _home!.continueLearning!.title,
+                  subtitle:
                       '${_home!.continueLearning!.subjectLabel}'
                       '${_home!.continueLearning!.chapterName == null ? '' : ' · ${_home!.continueLearning!.chapterName}'}',
-                    ),
-                    trailing: const Icon(Icons.chevron_right),
-                    onTap: () => _openContinue(_home!),
-                  ),
+                  onTap: () => _openContinue(_home!),
                 ),
                 const SizedBox(height: 20),
               ],
@@ -285,11 +273,11 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
                   for (final textbook in _home!.recommended)
                     _TextbookTile(
                       textbook: textbook,
-                      onTap: () => context.go('/gate'),
+                      onTap: () => context.push('/gate'),
                     ),
                 const SizedBox(height: 8),
                 FilledButton.icon(
-                  onPressed: () => context.go('/gate'),
+                  onPressed: () => context.push('/gate'),
                   icon: const Icon(Icons.link),
                   label: const Text('去绑定教材'),
                 ),
@@ -305,7 +293,7 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
                 Align(
                   alignment: Alignment.centerLeft,
                   child: TextButton.icon(
-                    onPressed: () => context.go('/textbooks'),
+                    onPressed: () => context.push('/textbooks'),
                     icon: const Icon(Icons.tune),
                     label: const Text('管理教材'),
                   ),
@@ -314,28 +302,22 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
               ],
               _SectionTitle('考试入口'),
               const SizedBox(height: 8),
-              Card(
-                child: ListTile(
-                  leading: const Icon(Icons.assignment_outlined),
-                  title: const Text('考试中心'),
-                  subtitle: Text(
-                    _home!.pendingExams.isEmpty
-                        ? '暂无待考考试'
-                        : '${_home!.pendingExams.length} 场考试待完成',
-                  ),
-                  trailing: const Icon(Icons.chevron_right),
-                  onTap: () => context.go('/exams'),
-                ),
+              FeatureCard(
+                icon: Icons.assignment_outlined,
+                accent: accents.exam,
+                title: '考试中心',
+                subtitle: _home!.pendingExams.isEmpty
+                    ? '暂无待考考试'
+                    : '${_home!.pendingExams.length} 场考试待完成',
+                onTap: () => context.push('/exams'),
               ),
               const SizedBox(height: 8),
-              Card(
-                child: ListTile(
-                  leading: const Icon(Icons.edit_document),
-                  title: const Text('班级作业'),
-                  subtitle: const Text('查看老师布置的统一作业与批改结果'),
-                  trailing: const Icon(Icons.chevron_right),
-                  onTap: () => context.go('/assignments'),
-                ),
+              FeatureCard(
+                icon: Icons.edit_document,
+                accent: accents.assignment,
+                title: '班级作业',
+                subtitle: '查看老师布置的统一作业与批改结果',
+                onTap: () => context.push('/assignments'),
               ),
             ],
           ],
@@ -760,7 +742,7 @@ class _TextbookBrowseViewState extends ConsumerState<_TextbookBrowseView> {
                     onTap: () {
                       final textbook = _selectedTextbook;
                       if (textbook == null) return;
-                      context.go(
+                      context.push(
                         '/knowledge/${textbook.id}'
                         '?name=${Uri.encodeComponent(textbook.displayName)}'
                         '&chapter=${chapter.id}',

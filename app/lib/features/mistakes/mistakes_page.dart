@@ -69,7 +69,7 @@ class _MistakesPageState extends ConsumerState<MistakesPage> {
   }
 
   void _startReview() {
-    context.go('/session?title=${Uri.encodeComponent('今日复习')}&review=1');
+    context.push('/session?title=${Uri.encodeComponent('今日复习')}&review=1');
   }
 
   /// AI 错因归因：服务端基于题型与错误历史给出候选错因与改进建议。

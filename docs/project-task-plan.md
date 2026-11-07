@@ -1,9 +1,9 @@
 # 深爱学（AiLearning）项目实施任务计划与进度跟踪
 
 > **文档性质**：项目主计划 / 进度跟踪 / 过程追溯（全程伴随开发周期）
-> **版本**：v1.77
+> **版本**：v1.79
 > **创建日期**：2026-11-06
-> **最后更新**：2026-11-07（R-09 发布流水线 `ci.ps1`、崩溃与错误监控、发布检查表自动化完成）
+> **最后更新**：2026-11-07（UX-02 子页面返回链路修复 + CT-01 九学科题库/知识库模板与导入工具落地，真机导航回归通过）
 > **参考设计文档**：见[§1.1 参考设计文档清单](#11-参考设计文档清单)（共 8 份，含 4 份设计方案、4 份支撑文档）
 > **需求追踪**：见[§1.2 需求—设计—任务追踪矩阵](#12-需求设计任务追踪矩阵)
 > **维护人**：项目负责人（PM）
@@ -389,6 +389,25 @@ flowchart LR
 
 > **发布关键路径**：R-01 → R-02 → R-03 → R-06（备案）→ R-08 → 提审；R-05 软著为最长外部周期，须第 1 天启动。R-04 依赖 P0-05/P0-09 完成后方可验收。
 
+### 3.6 体验优化任务（UX，M5 后追加）
+
+> 来源：2026-11-07 产品建议——参考 RetroEmuPouch `feature_card.dart` 的淡彩功能卡片，提升视觉层次与学习兴趣。设计规范见 [k12-learning-app-design.md](./k12-learning-app-design.md) §3.6。
+
+| ID | 任务 | 负责人 | 预估(h) | 优先级 | 依赖 | 状态 | 实际(h) | 验收映射 | 证据 |
+|---|---|---|---|---|---|---|---|---|---|
+| UX-01 | 视觉升级：品牌柔和彩功能卡片（accent token + `FeatureCard` + 学习首页 4 个入口分色；可访问性/暗色公式约束） | FE | 8 | P2 | R-09 | `DONE` | 8 | R-A10 | 设计规范 §3.6；`AppAccents`/`FeatureCard` + 首页 4 入口分色；`dart analyze` 0 issues、`flutter test` 88 passed；OXF-AN10 真机登录学生账号验证（§6.15） |
+| UX-02 | 子页面返回链路修复：入口统一 `push`、考试提交 `pushReplacement`、自定义返回按 `canPop` 回退 | FE | 2 | P1 | UX-01 | `DONE` | 2 | R-A11 | 知识点/单元/知识点详情、教材管理、班级学情等子页均出现系统返回；真机三级下钻逐级返回首页（§6.16） |
+
+> **UX 小计**：2 项，预估 **10 h**。
+
+### 3.7 内容建设任务（CT，M5 后追加）
+
+> 来源：2026-11-07 反馈——各科题目与知识点数量偏少，需要可复制的题库/知识库模板与低门槛导入方式。
+
+| ID | 任务 | 负责人 | 预估(h) | 优先级 | 依赖 | 状态 | 实际(h) | 验收映射 | 证据 |
+|---|---|---|---|---|---|---|---|---|---|
+| CT-01 | 题库/知识库作者模板与导入 CLI（9 学科 JSON 模板、字段规范、幂等导入、dry-run、单测） | BE+教研 | 6 | P2 | R-09 | `DONE` | 6 | R-A12 | `docs/content-templates/`（README + 9 学科模板）；`backend/app/services/content_import.py`、`backend/scripts/import_content.py`；`pytest tests/test_content_import.py` 3 例、9 模板 dry-run 全部通过 |
+
 ---
 
 ## 四、问题记录与解决方案
@@ -428,16 +447,16 @@ flowchart LR
 
 | 指标 | 数值 |
 |---|---|
-| 任务总数（不含基线） | 77（开发 68：P0 43 + P1 15 + P2 10；发布 9：R-01~R-09） |
+| 任务总数（不含基线） | 80（开发 71：P0 43 + P1 15 + P2 10 + UX 2 + CT 1；发布 9：R-01~R-09） |
 | `TODO` | 0 |
 | `DOING` | 0 |
-| `DONE` | 77（P0-01~P0-43、P1-01~P1-15、P2-01~P2-10、R-01~R-09；基线 5 项已冻结） |
+| `DONE` | 80（P0-01~P0-43、P1-01~P1-15、P2-01~P2-10、UX-01~UX-02、CT-01、R-01~R-09；基线 5 项已冻结） |
 | `BLOCKED` | 0 |
-| 预估总工时 | 676 h（开发 557 = P0 310 + P1 129 + P2 118；发布 119） |
-| 已投入工时 | 340 h（P0-01 3、P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3、P0-23 3、P0-24 3、P0-25 3、P0-26 3、P0-27 3、P0-28 4、P0-29 3、P0-30 3、P0-31 4、P0-32 3、P0-33 4、P0-34 4、P0-35 6、P0-36 8、P0-37 10、P0-38 4、P0-39 6、P0-40 4、P0-41 6、P0-42 2、P0-43 3、P1-01 3、P1-02 2、P1-03 2、P1-04 3、P1-05 3、P1-06 3、P1-07 3、P1-08 3、P1-09 3、P1-10 3、P1-11 3、P1-12 2、P1-13 3、P1-14 3、P1-15 3、P2-01 6、P2-02 6、P2-03 6、P2-04 4、P2-05 8、P2-06 8、P2-07 8、P2-08 4、P2-09 6、P2-10 4、R-01 2、R-02 6、R-03 20、R-04 20、R-05 12、R-06 8、R-07 8、R-08 12、R-09 10） |
-| 当前迭代 | 发布准备（R-01~R-09 全部完成，待 PM 签署 M5） |
-| 迭代目标 | 上架合规缺口整改、隐私/注销/导出入口、内容授权台账、商店素材与发布流水线 |
-| 里程碑 | M2.5（P0 技术验收通过，待签署）→ M3（P1 技术验收通过，待签署）→ M4（P2 技术验收通过，待签署）→ M5（发布就绪，R-01~R-09 已完成，待 PM 签署） |
+| 预估总工时 | 692 h（开发 573 = P0 310 + P1 129 + P2 118 + UX 10 + CT 6；发布 119） |
+| 已投入工时 | 356 h（P0-01 3、P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3、P0-23 3、P0-24 3、P0-25 3、P0-26 3、P0-27 3、P0-28 4、P0-29 3、P0-30 3、P0-31 4、P0-32 3、P0-33 4、P0-34 4、P0-35 6、P0-36 8、P0-37 10、P0-38 4、P0-39 6、P0-40 4、P0-41 6、P0-42 2、P0-43 3、P1-01 3、P1-02 2、P1-03 2、P1-04 3、P1-05 3、P1-06 3、P1-07 3、P1-08 3、P1-09 3、P1-10 3、P1-11 3、P1-12 2、P1-13 3、P1-14 3、P1-15 3、P2-01 6、P2-02 6、P2-03 6、P2-04 4、P2-05 8、P2-06 8、P2-07 8、P2-08 4、P2-09 6、P2-10 4、R-01 2、R-02 6、R-03 20、R-04 20、R-05 12、R-06 8、R-07 8、R-08 12、R-09 10、UX-01 8、UX-02 2、CT-01 6） |
+| 当前迭代 | 体验与内容建设（UX-01/UX-02/CT-01 已完成） |
+| 迭代目标 | 视觉升级、子页面返回链路修复、9 学科题库/知识库模板与导入工具全部落地 |
+| 里程碑 | M2.5（P0 技术验收通过，待签署）→ M3（P1 技术验收通过，待签署）→ M4（P2 技术验收通过，待签署）→ M5（发布就绪，R-01~R-09 已完成，待 PM 签署）→ UX-01（体验优化，`DONE`）→ UX-02（返回链路修复，`DONE`）→ CT-01（内容模板，`DONE`） |
 
 ### 5.2 同步节奏
 
@@ -552,6 +571,8 @@ flowchart LR
 | v1.75 | 2026-11-07 | CT/AR/FE | R-07 内容版权与教育合规（`content_reports` 表 + 迁移 `s9t0u1v2w3x4`（空库与降级再升级通过）；`POST /api/content/reports` 学生举报（题目须存在，422/404），`GET/PATCH /api/content/reports` 需 `content:review:decide`，`takedown` 将题目置 `offline` 并写审计 `content.report.created/takedown/dismissed`；用户协议新增 §6.4 内容来源与 24 小时下架声明，版本升至 `2026.11.07`；App「我的 → 内容举报」页（类型/原因/题目 ID/描述）与关于页免责声明；`release/content-compliance/license-ledger.md` 含授权台账、免责声明、违规表述扫描（无「名师/保过/包过」，否定式免责表述除外）与 24h 流程演练；`pytest` 330 passed、变更文件 `ruff` 0 issue、`flutter analyze` 0 issues、`flutter test` 79 passed；§3.4 R-07 转 `DONE`、新增 §6.12 R-A7 记录、§5.1 同步（DONE 75 / 投入 318 h / TODO 2）；`docs/skills.md` 新增 §5.11；当前下一步 R-08 |
 | v1.76 | 2026-11-07 | PM/QA | R-08 商店素材与合规表单（`scripts/make-store-assets.py` 一键生成 `release/store-assets/`：`icon-1024/512/216`、`feature-graphic-1024x500`、8 张 1080×1920 虚构示例截图与 `assets.json`（尺寸/字节/sha256）；`README.md` 平台规格与提审顺序、`listing.md` 名称/简短描述/完整描述/更新说明/华为文案、`data-safety.md` 6 类数据与安全实践、`audience-rating.md` 目标受众/Families/IARC/华为 3+、`huawei-privacy-label.md` 与 Data Safety 一致性核对）；修复 release 阻断项（Android main manifest 显式 `INTERNET`、`android:label="深爱学"`、Launcher 图标 48~192、鸿蒙 `app_name`/`app_icon`）；`pytest` 330 passed、`flutter analyze` 0 issues、`flutter test` 79 passed；§3.4 R-08 转 `DONE`、新增 §6.13 R-A8 记录、§5.1 同步（DONE 76 / 投入 330 h / TODO 1）；`docs/skills.md` 新增 §5.12；当前下一步 R-09 |
 | v1.77 | 2026-11-07 | AR/QA | R-09 发布流水线与监控（`scripts/ci.ps1` 一条命令完成版本校验/ruff/pytest/flutter analyze/test/APK(AAB/HAP 可选)/`apksigner` 校验/产物归档/发布检查表/Git Tag；`-SkipTests/-SkipBuild/-BuildAab/-WithHap/-Tag/-AllowDirty`）；崩溃监控 `crash_reports` 表 + 迁移 `t0u1v2w3x4y5`、`POST /api/monitor/crash`（匿名可用、30 次/分限流、手机号/邮箱掩码与截断）、`GET /api/monitor/crashes[/summary]`（超管、按指纹聚合 Top N）、`ErrorMaskingMiddleware` 后端异常落库；App `CrashReporter`（`FlutterError.onError` + `PlatformDispatcher.onError`、本地 10 条队列、启动重放、4xx 丢弃/5xx 保留）；`tests/test_monitor.py` 6 例、`app/test/crash_reporter_test.dart` 5 例；实测 `ci.ps1 -SkipTests` 构建 93s、签名 `CN=AiLearning`、归档 `build/release/1.0.0+1/`（APK + `metadata.json` + `SHA256SUMS.txt` + `signature-info.txt` + `release-checklist.md`，PASS-WITH-WARNINGS/0 blockers）；`pytest` 336 passed、`flutter analyze` 0 issues、`flutter test` 84 passed；顺带清理 7 处既有 ruff E9/F 基线（未使用导入/变量）；§3.4 R-09 转 `DONE`、§6.14 R-A9 记录、§5.1 同步（DONE 77 / 投入 340 h / TODO 0）；`docs/skills.md` 新增 §5.13；当前下一步 M5 签署与 PM 资质回填 |
+| v1.78 | 2026-11-07 | FE | UX-01 品牌柔和彩功能卡片（新增 `AppAccents`（ThemeExtension，practice `#4F46C8`/learn `#0B7A6D`/exam `#B45309`/assignment `#A63D6D`，含 `copyWith`/`lerp` 暗色预留）与通用 `FeatureCard`（淡彩底 12% + 描边 18% + 40px 图标圆底 + 标题/副标题 + 可选进度条 + 禁用 38% + `Semantics`）；`app.dart` 注册 `extensions: [AppAccents.light]`；学习首页「继续练习/继续学习/考试中心/班级作业」4 张入口卡改用 `FeatureCard` 分色，欢迎卡与推荐卡保持品牌/中性；新增 `app/test/feature_card_test.dart` 4 例；`dart analyze` 0 issues、`flutter test` 88 passed；OXF-AN10 真机同意隐私后登录学生账号，截图确认青绿/琥珀/玫红三卡；§3.6 UX-01 转 `DONE`（8 h）、新增 §6.15 R-A10 记录、§5.1 同步（DONE 78 / 投入 348 h / DOING 0）；`docs/k12-learning-app-design.md` §3.6 实施状态回写；当前下一步收集真机反馈并评估推广范围 |
+| v1.79 | 2026-11-07 | FE+BE | UX-02（返回链路）：`learn/profile/knowledge/unit/kp_detail/mistakes` 入口由 `go` 改 `push`，考试提交改 `pushReplacement`，教师班级/家长中心自定义返回改 `canPop ? pop : go('/shell')`；真机验证首页→知识点→单元→详情逐级返回；`dart analyze` 0 issues、`flutter test` 88 passed。CT-01（内容模板）：新增 `docs/content-templates/`（README + 9 学科 JSON）、`backend/app/services/content_import.py`、`backend/scripts/import_content.py`（幂等、`--dry-run`、`--overwrite`、题目可引用库中知识点），新增 `tests/test_content_import.py` 3 例并通过，9 模板 dry-run 全通过；§3.6 增 UX-02、§3.7 增 CT-01、新增 §6.16 R-A11/R-A12、§5.1 同步（DONE 80 / 投入 356 h / 任务 80）；当前下一步补充各科内容并向学生灰度 |
 
 ---
 
@@ -798,6 +819,36 @@ flowchart LR
 
 **结论**：R-A9 验收通过（流水线可一条命令复现，Release 包签名与产物可追溯，崩溃/错误监控上报-落库-聚合链路可用，发布检查表自动生成）。剩余人工项：软著受理号/登记号、ICP/APP 备案号回填，以及提交后执行 `-Tag` 打标。
 
+### 6.15 体验优化验收记录（R-A10，2026-11-07）
+
+| 核对项 | 结果 | 证据 |
+|---|---|---|
+| 任务台账 | UX-01 `DONE`（实际 8 h），开发任务 69/69 完成 | §3.6 |
+| 设计规范 | 品牌柔和彩规范 3.6.1~3.6.6 已落文档：语义分色、12% 淡彩底、同屏 accent ≤3、暗色公式 | `docs/k12-learning-app-design.md` §3.6 |
+| Token 下发 | 新增 `AppAccents extends ThemeExtension`（practice `#4F46C8` / learn `#0B7A6D` / exam `#B45309` / assignment `#A63D6D`），在 `app.dart` 主题注册，页面不硬编码色值 | `app/lib/core/theme/app_accents.dart`、`app/lib/app.dart` |
+| 通用组件 | 新增 `FeatureCard`（淡彩底 12%、描边 18%、40px 图标圆底、标题 15/w600 accent、副标题 12.5 中性色、可选进度条、禁用态 38%、`Semantics` 合并标题与副标题）；测试环境禁用水波纹以规避着色器差异 | `app/lib/widgets/feature_card.dart`、`app/test/feature_card_test.dart`（4 例） |
+| 首页试点 | 「继续练习 / 继续学习 / 考试中心 / 班级作业」四张入口卡分别使用 practice/learn/exam/assignment；欢迎卡与推荐卡保持品牌/中性，未整页染色 | `app/lib/features/learn/learn_page.dart` |
+| 静态分析与单测 | `dart analyze lib test` 0 issues；`flutter test` 88 passed（原 84 + 新增 4） | `app/` |
+| 真机验证 | OXF-AN10（`66B0219C18003002`）安装 debug 包，同意隐私政策后登录学生账号（13900000000），首页依次展示「继续学习（青绿）」「考试中心（琥珀）」「班级作业（玫红）」淡彩卡片，图标/标题/副标题齐全、无溢出；「继续练习」无未完成会话时按设计不显示 | `app/build/device-ux07.png`、`app/build/device-ux08.png` |
+| 可访问性 | accent 文本与淡彩底对比度按规范 ≥4.5:1；入口颜色均为辅助识别，图标与文案同时存在；点击区 ≥48dp | 设计校验 + 真机截图 |
+| 环境备注 | 本机 Flutter SDK 含 OHOS 平台工具链，`flutter analyze/pub get` 在缺少 `npm` 时触发 hvigor 插件安装异常；已改用 `dart analyze` 完成静态分析，`flutter clean` 后测试资源重建，`flutter test` 全绿 | 本记录 |
+
+**结论**：R-A10 验收通过（品牌柔和彩功能卡片在学习首页 4 个入口试点落地，token 化与组件化可复用，质量门禁与真机亮色验收均通过）。后续是否推广到知识点/考试/作业列表，待收集真机使用反馈后另行评估。
+
+### 6.16 返回链路与内容模板验收记录（R-A11/R-A12，2026-11-07）
+
+| 核对项 | 结果 | 证据 |
+|---|---|---|
+| 路由结构审计 | 全部业务路由为顶层平级，原 `context.go` 进入子页会清空栈导致无返回按钮；已统一改为 `context.push`，考试提交改 `pushReplacement`，保留结果页返回列表 | `app/lib/app.dart`、`app/lib/features/learn/{learn,unit,kp_detail,knowledge}_page.dart`、`app/lib/features/profile/profile_page.dart` |
+| 返回行为 | 知识点列表/单元/知识点详情/教材管理/班级学情等页面均出现系统返回按钮；系统返回键可逐级回退 | 真机 OXF-AN10：首页→知识点→单元→知识点详情→三次返回回首页 |
+| 自定义返回 | 家长中心、教师班级页、考试/作业列表等自定义 leading 改为 `canPop ? pop : go('/shell')`，有栈时回上一页，无栈时回首页 | `parent_children_page.dart`、`teacher_classes_page.dart` |
+| 回归 | `dart analyze` 0 issues；`flutter test` 88 passed；真机安装 debug 包并完成导航回归 | `app/` |
+| 内容模板 | 9 学科 JSON 模板（语文/数学/英语/物理/化学/生物/历史/地理/道德与法治）+ README 字段规范 + 出题质量要求 | `docs/content-templates/` |
+| 导入工具 | `import_content` 幂等导入（章节/知识树/题目）、`--dry-run` 校验回滚、`--overwrite` 覆盖；支持只补题目（引用库中已有知识点） | `backend/app/services/content_import.py`、`backend/scripts/import_content.py` |
+| 校验结果 | `pytest tests/test_content_import.py` 3 passed；ruff E9/F 全绿；9 份模板 dry-run 全部通过（预计新增章节 8、知识点 28、题目 28，重复 0） | `backend/` |
+
+**结论**：R-A11/R-A12 验收通过（子页面不再出现无法返回的死胡同；教研可按学科模板新增题库/知识库并用 dry-run 预检后导入）。
+
 ---
 
 ## 七、开发执行约定
@@ -813,4 +864,4 @@ flowchart LR
 
 ---
 
-> **当前下一步**：M5 发布就绪签署（R-01~R-09 已全部完成）；PM 需回填软著受理号/登记号与 ICP/APP 备案号，提交代码后运行 `scripts\ci.ps1 -Tag` 生成 `v1.0.0` 标签。真机 E2E 复测待 §4.1 I-005 设备条件满足后补跑。
+> **当前下一步**：UX-02 与 CT-01 已完成（验收见 §6.16）。后续：①教研按 `docs/content-templates/README.md` 填充各科题目，先 `--dry-run` 再导入，题目初始 `draft`，复核后转 `published`；②在 OXF-AN10 上继续走查登录/学习/练习/考试/作业/家长/教师主链路返回行为；③记录真机反馈，评估功能卡片是否推广到知识点/考试/作业列表（推广前登记 CR）。并行人工项：M5 发布就绪签署；PM 回填软著受理号/登记号与 ICP/APP 备案号；代码提交后运行 `scripts\ci.ps1 -Tag` 生成 `v1.0.0` 标签。

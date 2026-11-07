@@ -55,7 +55,7 @@ class _TeacherClassesPageState extends ConsumerState<TeacherClassesPage> {
       path: '/teacher/classes/${item.id}/stats',
       queryParameters: query,
     );
-    context.go(uri.toString());
+    context.push(uri.toString());
   }
 
   @override
@@ -66,7 +66,7 @@ class _TeacherClassesPageState extends ConsumerState<TeacherClassesPage> {
         title: const Text('教师中心'),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
-          onPressed: () => context.go('/shell'),
+          onPressed: () => context.canPop() ? context.pop() : context.go('/shell'),
         ),
       ),
       body: _loading

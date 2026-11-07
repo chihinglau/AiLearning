@@ -60,11 +60,11 @@ class _UnitPageState extends ConsumerState<UnitPage> {
   }
 
   void _openKp(KnowledgeNode node) {
-    context.go('/kp/${node.id}');
+    context.push('/kp/${node.id}');
   }
 
   void _practiceNode(KnowledgeNode node) {
-    context.go(
+    context.push(
       '/practice/config?scope=kp&ids=${node.id}'
       '&chapter=${widget.chapterId}'
       '${widget.textbookId == null ? '' : '&textbook=${widget.textbookId}'}'
@@ -73,7 +73,7 @@ class _UnitPageState extends ConsumerState<UnitPage> {
   }
 
   void _practiceUnit() {
-    context.go(
+    context.push(
       '/practice/config?scope=chapter&ids=${widget.chapterId}'
       '${widget.textbookId == null ? '' : '&textbook=${widget.textbookId}'}'
       '&title=${Uri.encodeComponent('${widget.unitName} · 综合练习')}',

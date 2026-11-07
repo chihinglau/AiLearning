@@ -1,0 +1,111 @@
+{
+  "_说明": "数学模板：复制后修改年级/版本与内容；导入命令见 README.md。",
+  "subject": "math",
+  "grade": 1,
+  "version": "北师大版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "10以内数的认识与加减法",
+      "order_index": 1,
+      "explanation": "认识 0~10，理解加减法的含义并能口算。"
+    },
+    {
+      "node_type": "point",
+      "name": "10以内数的认识",
+      "parent": "10以内数的认识与加减法",
+      "order_index": 1,
+      "explanation": "会数、读、写 0~10，理解数的顺序与大小。",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "10以内加法",
+      "parent": "10以内数的认识与加减法",
+      "order_index": 2,
+      "explanation": "理解把两部分合起来用加法，能正确口算 10 以内加法。",
+      "prerequisites": ["10以内数的认识"]
+    },
+    {
+      "node_type": "point",
+      "name": "10以内减法",
+      "parent": "10以内数的认识与加减法",
+      "order_index": 3,
+      "explanation": "理解从总数里去掉一部分用减法，能正确口算 10 以内减法。",
+      "prerequisites": ["10以内数的认识"]
+    },
+    {
+      "node_type": "point",
+      "name": "加减法应用",
+      "parent": "10以内数的认识与加减法",
+      "order_index": 4,
+      "explanation": "能用加减法解决求总数、求剩余等简单实际问题。",
+      "prerequisites": ["10以内加法", "10以内减法"]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "加与减（一）",
+      "order_index": 3,
+      "summary": "10 以内加减法的意义与口算。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "3 + 4 = ?",
+          "options": ["5", "6", "7", "8"],
+          "answer": {"value": "C"},
+          "analysis": "3 加 4 得 7，所以选 C。",
+          "difficulty": 1,
+          "knowledge_point": "10以内加法",
+          "tags": ["加法", "10以内"]
+        },
+        {
+          "q_type": "fill",
+          "stem": "5 + 2 = （  ）",
+          "answer": {"value": "7"},
+          "analysis": "从 5 往后数 2 个数：6、7，所以 5 + 2 = 7。",
+          "difficulty": 1,
+          "knowledge_point": "10以内加法"
+        },
+        {
+          "q_type": "judge",
+          "stem": "两个数相加，交换位置后结果不变。",
+          "answer": {"value": "T"},
+          "analysis": "例如 3 + 4 = 7，4 + 3 = 7，加法满足交换律。",
+          "difficulty": 2,
+          "knowledge_point": "10以内加法"
+        },
+        {
+          "q_type": "choice",
+          "stem": "有 8 个苹果，吃掉 3 个，还剩几个？",
+          "options": ["4", "5", "6", "11"],
+          "answer": {"value": "B"},
+          "analysis": "求剩下的用减法：8 - 3 = 5。",
+          "difficulty": 2,
+          "knowledge_point": "10以内减法"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列算式中，得数是 7 的有（  ）",
+          "options": ["3 + 4", "2 + 5", "9 - 2", "10 - 4"],
+          "answer": {"value": ["A", "B", "C"]},
+          "analysis": "3 + 4 = 7，2 + 5 = 7，9 - 2 = 7，10 - 4 = 6。",
+          "difficulty": 2,
+          "knowledge_point": "10以内加法",
+          "tags": ["多选", "口算"]
+        },
+        {
+          "q_type": "answer",
+          "stem": "小明有 5 支铅笔，妈妈又买来 3 支，现在一共有多少支？请写出算式和答案。",
+          "answer": {"value": "5 + 3 = 8（支）"},
+          "analysis": "求总数用加法：5 + 3 = 8（支）。",
+          "difficulty": 2,
+          "knowledge_point": "加减法应用",
+          "tags": ["解决问题"],
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

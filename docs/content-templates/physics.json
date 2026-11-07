@@ -1,0 +1,98 @@
+{
+  "_说明": "物理模板：复制后修改年级/版本与内容；导入命令见 README.md。",
+  "subject": "physics",
+  "grade": 8,
+  "version": "人教版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "声现象",
+      "order_index": 1,
+      "explanation": "声音的产生、传播与特性。"
+    },
+    {
+      "node_type": "point",
+      "name": "声音的产生",
+      "parent": "声现象",
+      "order_index": 1,
+      "explanation": "声音由物体振动产生，振动停止发声也停止。",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "声音的传播",
+      "parent": "声现象",
+      "order_index": 2,
+      "explanation": "声音需要介质传播，真空不能传声，声速与介质和温度有关。",
+      "prerequisites": ["声音的产生"]
+    },
+    {
+      "node_type": "point",
+      "name": "声音的特性",
+      "parent": "声现象",
+      "order_index": 3,
+      "explanation": "声音有音调、响度、音色三个特性，分别由频率、振幅和发声体材料结构决定。",
+      "prerequisites": ["声音的传播"]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一章 声现象",
+      "order_index": 1,
+      "summary": "声音的产生、传播、特性与噪声控制。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "关于声音的产生，下列说法正确的是（  ）",
+          "options": [
+            "声音由物体振动产生",
+            "声音由物体运动产生",
+            "声音由物体温度升高产生",
+            "声音由物体形变产生"
+          ],
+          "answer": {"value": "A"},
+          "analysis": "一切发声的物体都在振动，振动停止，发声停止。",
+          "difficulty": 2,
+          "knowledge_point": "声音的产生"
+        },
+        {
+          "q_type": "fill",
+          "stem": "声音在 15℃ 空气中的传播速度约为（  ）m/s。",
+          "answer": {"value": "340"},
+          "analysis": "15℃ 时空气中的声速约为 340 m/s。",
+          "difficulty": 2,
+          "knowledge_point": "声音的传播"
+        },
+        {
+          "q_type": "judge",
+          "stem": "真空不能传声。",
+          "answer": {"value": "T"},
+          "analysis": "声音传播需要介质，真空没有介质，因此不能传声。",
+          "difficulty": 1,
+          "knowledge_point": "声音的传播"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列属于声音特性的有（  ）",
+          "options": ["音调", "响度", "音色", "声速"],
+          "answer": {"value": ["A", "B", "C"]},
+          "analysis": "声音的特性包括音调、响度、音色；声速描述的是声音传播的快慢，不属于声音特性。",
+          "difficulty": 2,
+          "knowledge_point": "声音的特性",
+          "tags": ["声音特性", "多选"]
+        },
+        {
+          "q_type": "answer",
+          "stem": "打雷时为什么总是先看到闪电，后听到雷声？",
+          "answer": {"value": "光在空气中的传播速度远大于声速，传播相同距离光所需时间更短，所以先看到闪电后听到雷声。"},
+          "analysis": "光速约 3×10⁸ m/s，声速约 340 m/s，相同距离下光传播时间可忽略。",
+          "difficulty": 3,
+          "knowledge_point": "声音的传播",
+          "tags": ["声速", "简答"],
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

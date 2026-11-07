@@ -1,0 +1,93 @@
+{
+  "_说明": "历史模板：复制后修改年级/版本与内容；导入命令见 README.md。",
+  "subject": "history",
+  "grade": 7,
+  "version": "部编版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "史前时期",
+      "order_index": 1,
+      "explanation": "中国境内早期人类与原始农耕文明。"
+    },
+    {
+      "node_type": "point",
+      "name": "中国境内早期人类",
+      "parent": "史前时期",
+      "order_index": 1,
+      "explanation": "元谋人、北京人、山顶洞人的发现地点与生活状况。",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "原始农耕生活",
+      "parent": "史前时期",
+      "order_index": 2,
+      "explanation": "河姆渡与半坡居民的农耕、畜牧与定居生活。",
+      "prerequisites": ["中国境内早期人类"]
+    },
+    {
+      "node_type": "point",
+      "name": "尧舜禹的禅让",
+      "parent": "史前时期",
+      "order_index": 3,
+      "explanation": "了解部落联盟与禅让制，理解尧舜禹时期的公共事务管理。",
+      "prerequisites": ["原始农耕生活"]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一单元 史前时期：中国境内早期人类与文明的起源",
+      "order_index": 1,
+      "summary": "早期人类与原始农耕文明。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "我国境内目前已确认的最早的古人类是（  ）",
+          "options": ["北京人", "元谋人", "山顶洞人", "蓝田人"],
+          "answer": {"value": "B"},
+          "analysis": "元谋人距今约 170 万年，是我国境内已确认的最早古人类。",
+          "difficulty": 1,
+          "knowledge_point": "中国境内早期人类"
+        },
+        {
+          "q_type": "fill",
+          "stem": "半坡居民主要种植的农作物是（  ）。",
+          "answer": {"value": "粟"},
+          "analysis": "半坡居民生活在黄河流域，主要种植粟，兼有少量水稻。",
+          "difficulty": 2,
+          "knowledge_point": "原始农耕生活"
+        },
+        {
+          "q_type": "judge",
+          "stem": "河姆渡居民主要种植水稻。",
+          "answer": {"value": "T"},
+          "analysis": "河姆渡遗址位于长江流域，出土了大量稻谷遗存。",
+          "difficulty": 1,
+          "knowledge_point": "原始农耕生活"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列属于原始农耕时代重要标志的有（  ）",
+          "options": ["农作物种植", "家畜饲养", "磨制石器", "使用打制石器"],
+          "answer": {"value": ["A", "B", "C"]},
+          "analysis": "原始农耕时代的标志包括农作物种植、家畜饲养和磨制石器；打制石器属于旧石器时代。",
+          "difficulty": 2,
+          "knowledge_point": "原始农耕生活",
+          "tags": ["农耕文明", "多选"]
+        },
+        {
+          "q_type": "answer",
+          "stem": "简述河姆渡居民与半坡居民在生产生活上的主要差异。",
+          "answer": {"value": "河姆渡居民种植水稻、住干栏式房屋；半坡居民种植粟、住半地穴式房屋。"},
+          "analysis": "差异主要源于自然地理环境：长江流域湿润多水，黄河流域相对干旱。",
+          "difficulty": 3,
+          "knowledge_point": "原始农耕生活",
+          "tags": ["对比", "简答"],
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+# 题库 / 知识库作者模板
+
+用于教研按学科手工补充题目与知识点。每个学科一份 JSON（文件名即学科代码），复制后修改内容即可。
+
+## 目录
+
+| 文件 | 学科 | 默认教材 |
+|---|---|---|
+| `chinese.json` | 语文 | 人教版 1 年级上册 |
+| `math.json` | 数学 | 北师大版 1 年级上册 |
+| `english.json` | 英语 | 牛津深圳版 1 年级上册 |
+| `physics.json` | 物理 | 人教版 8 年级上册 |
+| `chemistry.json` | 化学 | 人教版 9 年级上册 |
+| `biology.json` | 生物 | 人教版 7 年级上册 |
+| `history.json` | 历史 | 部编版 7 年级上册 |
+| `geography.json` | 地理 | 湘教版 7 年级上册 |
+| `politics.json` | 道德与法治 | 部编版 7 年级上册 |
+
+> 模板里的教材/年级可改；同一份文件只对应「一个学科 + 一个年级 + 一个教材版本 + 一个学期」。
+>
+> 每份模板都是可直接导入的完整示例：含 1 个节 + 3~4 个知识点（带前置关系），以及 `choice`、`multiple`、`judge`、`fill`、`answer` 五种题型各 1 道，可作为新增内容时的结构参照。
+
+## 导入
+
+在 `backend` 目录执行（先 `alembic upgrade head`）：
+
+```powershell
+.venv\Scripts\python.exe -m scripts.import_content --path ..\docs\content-templates\math.json
+.venv\Scripts\python.exe -m scripts.import_content --path ..\docs\content-templates --dry-run
+```
+
+- 默认幂等：同章节、同题干、同题型已存在则跳过；加 `--overwrite` 覆盖题面/答案/解析。
+- 批量：`--path` 传目录时递归读取所有 `*.json`（跳过文件名以 `_` 开头的模板），可一次导入多学科、多年级文件。
+- 事务：每个文件独立提交，单个文件校验/导入失败不影响同批其他文件（命令最终返回码为 1，列出失败文件）。
+- `--dry-run` 只校验、统计并回滚，不写库；失败会指出文件与具体条目。
+- 一个文件只对应「一个学科 + 一个年级 + 一个教材版本 + 一个学期」，不同年级/版本请拆分为多个文件。
+- 模板之间不要互相引用知识点：题目 `knowledge_point` 只能引用本文件 `knowledge` 或库中已有知识点（同名知识点有多个时会拒绝导入）。
+
+## 顶层结构
+
+```json
+{
+  "subject": "math",
+  "grade": 1,
+  "version": "北师大版",
+  "semester": "first",
+  "knowledge": [],
+  "chapters": []
+}
+```
+
+| 字段 | 必填 | 说明 |
+|---|---|---|
+| `subject` | 是 | 学科代码：`chinese/math/english/physics/chemistry/biology/history/geography/politics` |
+| `grade` | 是 | 1~12 |
+| `version` | 是 | 教材版本名，与现有教材一致（如「人教版」「北师大版」「牛津深圳版」「部编版」「湘教版」） |
+| `semester` | 否 | `first`（上册，默认）/ `second`（下册） |
+| `knowledge` | 否 | 知识树：先 `section`（节），再 `point`（最小知识点）；只补题目时可省略 |
+| `chapters` | 否 | 章节与题目；章节名与教材目录一致；只补知识点时可省略 |
+
+> `knowledge` 与 `chapters` 至少填写一项。只补题目时，`knowledge_point` 可引用库中已有知识点（按学科+年级+名称匹配）。
+
+## 知识库条目
+
+```json
+{
+  "node_type": "point",
+  "name": "10以内加法",
+  "parent": "10以内数的认识与加减法",
+  "order_index": 1,
+  "weight": 1.0,
+  "explanation": "理解加法的含义，能正确计算 10 以内的加法。",
+  "prerequisites": ["10以内数的认识"]
+}
+```
+
+| 字段 | 必填 | 说明 |
+|---|---|---|
+| `node_type` | 否 | `section` 或 `point`（默认 `point`） |
+| `name` | 是 | 同一文件内唯一；`point` 与 `section` 可同名但不建议 |
+| `parent` | point 必填 | 所属 `section` 的 `name`，必须在本文件 `knowledge` 中定义 |
+| `explanation` | 建议 | 1~3 句讲解，供知识点详情页展示 |
+| `prerequisites` | 否 | 前置知识点名称数组，仅解析本文件内名称 |
+| `order_index` / `weight` | 否 | 排序与掌握度权重，默认 0 / 1.0 |
+
+## 题库条目
+
+```json
+{
+  "name": "加与减（一）",
+  "order_index": 1,
+  "summary": "10 以内加减法的意义与计算。",
+  "questions": [
+    {
+      "q_type": "choice",
+      "stem": "3 + 4 = ?",
+      "options": ["5", "6", "7", "8"],
+      "answer": {"value": "C"},
+      "analysis": "3 加 4 得 7，所以选 C。",
+      "difficulty": 1,
+      "knowledge_point": "10以内加法",
+      "tags": ["加法", "10以内"],
+      "status": "published"
+    }
+  ]
+}
+```
+
+| 字段 | 必填 | 说明 |
+|---|---|---|
+| `q_type` | 是 | `choice` 单选 / `multiple` 多选 / `judge` 判断 / `fill` 填空 / `answer` 主观题 |
+| `stem` | 是 | 题干；当前客户端仅渲染 `stem`，不要放图片/长材料 |
+| `options` | 选择/判断必填 | 字符串数组（自动编 A/B/C…）或 `[{"key":"A","text":"…"}]`；判断题可省略，默认 T/F |
+| `answer.value` | 是 | 单选：`"C"`；多选：`["A","C"]`；判断：`"T"/"F"`；填空：`"340"` 或多答案列表 `["凹液面最低处","凹液面的最低处"]`；主观题：参考答案文本 |
+| `analysis` | 建议 | 解析文本，展示在作答反馈中 |
+| `difficulty` | 否 | 1~5，默认 2 |
+| `knowledge_point` | 是 | 挂载的知识点 `name`（本文件内的 point/section，或库中已有知识点） |
+| `tags` | 否 | 字符串数组 |
+| `status` | 否 | `published`（默认）/ `draft`（待审核，练习/组卷不采用）/ `offline` |
+
+## 出题质量要求
+
+1. 题干独立可答，不依赖图片、音频或上文；不含「如图」「上题」等指代。
+2. 选项互斥且长度接近，不出现「以上都对」这类不稳定选项（多选请用 `multiple`）。
+3. 填空题答案能唯一判定；多写法用答案列表穷举，不要用「略」。
+4. 主观题必须给参考答案与评分要点，建议同步给出 `analysis`。
+5. 解析写明关键步骤或易错点，不写「因为答案如此」。
+6. 每题至少挂 1 个知识点；新增知识点时先补 `knowledge`，再补题目。
+7. 单文件建议不超过 200 题，按「章节」拆分文件便于评审与回滚。
+8. 提交前先跑 `--dry-run`；上线前题目 `status` 建议先 `draft`，走内容复核后再 `published`。

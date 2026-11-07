@@ -1,0 +1,93 @@
+{
+  "_说明": "化学模板：复制后修改年级/版本与内容；导入命令见 README.md。",
+  "subject": "chemistry",
+  "grade": 9,
+  "version": "人教版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "走进化学世界",
+      "order_index": 1,
+      "explanation": "认识物理变化与化学变化，掌握基本实验操作。"
+    },
+    {
+      "node_type": "point",
+      "name": "物理变化与化学变化",
+      "parent": "走进化学世界",
+      "order_index": 1,
+      "explanation": "没有新物质生成的变化是物理变化，有新物质生成的是化学变化。",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "基本实验操作",
+      "parent": "走进化学世界",
+      "order_index": 2,
+      "explanation": "掌握药品取用、量筒读数、加热等基本操作规范。",
+      "prerequisites": ["物理变化与化学变化"]
+    },
+    {
+      "node_type": "point",
+      "name": "物质的性质",
+      "parent": "走进化学世界",
+      "order_index": 3,
+      "explanation": "区分物理性质与化学性质，能描述常见物质的性质。",
+      "prerequisites": ["物理变化与化学变化"]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一单元 走进化学世界",
+      "order_index": 1,
+      "summary": "物质的变化与性质、基本实验技能。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "下列变化属于化学变化的是（  ）",
+          "options": ["冰雪融化", "铁丝弯曲", "蜡烛燃烧", "酒精挥发"],
+          "answer": {"value": "C"},
+          "analysis": "蜡烛燃烧生成二氧化碳和水，有新物质生成，属于化学变化。",
+          "difficulty": 1,
+          "knowledge_point": "物理变化与化学变化"
+        },
+        {
+          "q_type": "fill",
+          "stem": "用量筒量取液体时，读数应与（  ）保持水平。",
+          "answer": {"value": ["凹液面最低处", "凹液面的最低处"]},
+          "analysis": "读数时视线要与量筒内凹液面的最低处保持水平，避免俯视或仰视误差。",
+          "difficulty": 2,
+          "knowledge_point": "基本实验操作"
+        },
+        {
+          "q_type": "judge",
+          "stem": "化学变化一定伴随物理变化。",
+          "answer": {"value": "T"},
+          "analysis": "化学变化过程中常伴随发光、放热、状态改变等物理变化。",
+          "difficulty": 2,
+          "knowledge_point": "物理变化与化学变化"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列属于化学性质的有（  ）",
+          "options": ["可燃性", "氧化性", "密度", "熔点"],
+          "answer": {"value": ["A", "B"]},
+          "analysis": "可燃性、氧化性需通过化学变化表现出来，属于化学性质；密度、熔点是物理性质。",
+          "difficulty": 2,
+          "knowledge_point": "物质的性质",
+          "tags": ["物质性质", "多选"]
+        },
+        {
+          "q_type": "answer",
+          "stem": "分别指出蜡烛燃烧过程中发生的一个物理变化和一个化学变化。",
+          "answer": {"value": "蜡烛受热熔化成蜡油是物理变化；蜡烛燃烧生成二氧化碳和水是化学变化。"},
+          "analysis": "判断依据是是否有新物质生成：熔化没有新物质生成，燃烧有新物质生成。",
+          "difficulty": 3,
+          "knowledge_point": "物理变化与化学变化",
+          "tags": ["变化辨析", "简答"],
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

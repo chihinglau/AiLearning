@@ -1,0 +1,93 @@
+{
+  "_说明": "地理模板：复制后修改年级/版本与内容；导入命令见 README.md。",
+  "subject": "geography",
+  "grade": 7,
+  "version": "湘教版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "地球与地图",
+      "order_index": 1,
+      "explanation": "地球的形状大小、经纬网与地图基本要素。"
+    },
+    {
+      "node_type": "point",
+      "name": "地球的形状与大小",
+      "parent": "地球与地图",
+      "order_index": 1,
+      "explanation": "地球是一个两极稍扁、赤道略鼓的不规则球体，平均半径约 6371 千米。",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "经纬网",
+      "parent": "地球与地图",
+      "order_index": 2,
+      "explanation": "经线指示南北方向，纬线指示东西方向，用经纬度定位。",
+      "prerequisites": ["地球的形状与大小"]
+    },
+    {
+      "node_type": "point",
+      "name": "地图的阅读",
+      "parent": "地球与地图",
+      "order_index": 3,
+      "explanation": "掌握比例尺、方向、图例三要素，能进行简单距离与方向判读。",
+      "prerequisites": ["经纬网"]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一章 地球和地图",
+      "order_index": 1,
+      "summary": "地球形状、经纬网与地图判读。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "地球的平均半径约为（  ）",
+          "options": ["4 万千米", "6371 千米", "5.1 亿千米", "1.5 亿千米"],
+          "answer": {"value": "B"},
+          "analysis": "地球平均半径约 6371 千米，赤道周长约 4 万千米。",
+          "difficulty": 1,
+          "knowledge_point": "地球的形状与大小"
+        },
+        {
+          "q_type": "fill",
+          "stem": "经线指示（  ）方向。",
+          "answer": {"value": "南北"},
+          "analysis": "经线连接南北两极，指示南北方向；纬线指示东西方向。",
+          "difficulty": 1,
+          "knowledge_point": "经纬网"
+        },
+        {
+          "q_type": "judge",
+          "stem": "赤道是最长的纬线。",
+          "answer": {"value": "T"},
+          "analysis": "纬线长度从赤道向两极递减，赤道是最长的纬线。",
+          "difficulty": 1,
+          "knowledge_point": "经纬网"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "地图的基本要素包括（  ）",
+          "options": ["比例尺", "方向", "图例", "经纬度"],
+          "answer": {"value": ["A", "B", "C"]},
+          "analysis": "比例尺、方向、图例是地图的三要素；经纬度属于定位要素，不是地图基本要素。",
+          "difficulty": 2,
+          "knowledge_point": "地图的阅读",
+          "tags": ["地图三要素", "多选"]
+        },
+        {
+          "q_type": "answer",
+          "stem": "在比例尺为 1:50000 的地图上，量得甲、乙两地距离为 4 厘米，两地实际距离是多少千米？",
+          "answer": {"value": "4 × 50000 = 200000（厘米）= 2（千米）"},
+          "analysis": "实际距离 = 图上距离 × 比例尺分母，再换算单位：200000 厘米 = 2 千米。",
+          "difficulty": 3,
+          "knowledge_point": "地图的阅读",
+          "tags": ["比例尺", "计算"],
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

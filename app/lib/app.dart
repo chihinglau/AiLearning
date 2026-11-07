@@ -1,4 +1,5 @@
 import 'package:ai_learning/core/providers.dart';
+import 'package:ai_learning/core/theme/app_accents.dart';
 import 'package:ai_learning/features/admin/rbac_config_page.dart';
 import 'package:ai_learning/features/assignment/assignment_create_page.dart';
 import 'package:ai_learning/features/assignment/assignment_detail_page.dart';
@@ -394,6 +395,7 @@ class AiLearningApp extends ConsumerWidget {
           useMaterial3: true,
           colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF1E6FD9)),
           scaffoldBackgroundColor: const Color(0xFFF7F9FC),
+          extensions: const [AppAccents.light],
         ),
         routerConfig: router,
       ),

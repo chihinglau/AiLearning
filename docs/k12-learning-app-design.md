@@ -319,6 +319,92 @@ smartstudy/
 
 ---
 
+### 3.6 视觉规范：品牌柔和彩功能卡片（2026-11-07 追加）
+
+> 目标：用低饱和淡彩卡片强化功能入口识别度，提升学习兴趣，同时保持品牌统一与可访问性。参考 RetroEmuPouch `feature_card.dart` 的「淡彩底 + 同色图标/标题」做法，但改为语义化固定配色，禁止随机多色。
+
+#### 3.6.1 设计原则
+
+1. **语义分色**：一种功能固定一种 accent，颜色用于识别而非装饰；同屏最多 3 种 accent。
+2. **品牌优先**：主 CTA、欢迎区继续使用品牌蓝 `#1E6FD9`，功能卡片不得抢占主视觉。
+3. **弱彩底、强识别**：卡片底色为 accent 12% 叠加表面色；标题/图标用 accent 深色，正文保持中性色。
+4. **不依赖颜色**：图标、标题、副标题必须同时存在，色弱与灰度模式仍可区分。
+5. **克制装饰**：无渐变、无彩色阴影、无发光；圆角 14、elevation 0、描边 accent 18%。
+
+#### 3.6.2 色彩 Token
+
+| Token | 语义 | Accent | 淡彩底（12% 叠白） | 典型用途 |
+|---|---|---|---|---|
+| `AppAccents.practice` | 练习/错题 | `#4F46C8` | `#EAE9F8` | 继续练习、错题复训 |
+| `AppAccents.learn` | 学习/知识点 | `#0B7A6D` | `#E2EFED` | 继续学习、知识图谱 |
+| `AppAccents.exam` | 考试/成绩 | `#B45309` | `#F6EAE1` | 考试中心、模考、报告 |
+| `AppAccents.assignment` | 作业/班级 | `#A63D6D` | `#F4E8ED` | 班级作业、教师互动 |
+| 品牌主色 | 主 CTA/欢迎 | `#1E6FD9` | `#E6EFFB` | 欢迎卡、主要按钮 |
+
+对比度要求：accent 文本在淡彩底上 ≥4.5:1（以上组合均已满足）；不得把 accent 用作正文段落颜色。
+
+#### 3.6.3 组件规范
+
+新增 `app/lib/widgets/feature_card.dart`：
+
+```dart
+FeatureCard(
+  icon: Icons.edit_note,
+  title: '继续练习',
+  subtitle: '还有 12 道错题待复训',
+  accent: AppAccents.practice,
+  trailing: Icon(Icons.chevron_right),
+  onTap: () {},
+)
+```
+
+- 结构：左侧 20px accent 图标（可带 40px 淡彩圆底）→ 标题 15/w600 + 副标题 12–13 中性灰 → 可选尾部箭头/进度。
+- 变体仅两种：`compact`（首页入口）、`progress`（带进度条的学习卡）；不新增第三种卡片样式。
+- 交互：`InkWell` 水波纹取 accent 低透明度；点击区域 ≥48dp；禁用态整体 38% 透明度。
+- 长标题单行省略，副标题最多一行；不在卡片内放长段落。
+
+#### 3.6.4 页面应用范围
+
+| 页面/区域 | 改造方式 |
+|---|---|
+| 学习首页「继续练习/继续学习/考试中心/班级作业」 | 四张入口卡分别使用 practice/learn/exam/assignment 色 |
+| 学习首页欢迎卡 | 保持品牌 `primaryContainer`，作为唯一视觉锚点 |
+| 学习首页推荐卡 | 整卡保持中性，仅类型标签/图标使用 accent |
+| 知识点/目录页 | 复用同一 token；现有 `withValues(alpha:0.12)` 标签与卡片统一透明度 |
+| 考试/作业列表 | 状态标签使用对应 accent，列表卡片底色保持中性，避免整页染色 |
+
+非目标：不做全站随机多色、不做饱和糖果色大面积铺底、不做渐变/发光卡片、不修改品牌主色体系。
+
+#### 3.6.5 暗色模式适配
+
+当前仅亮色主题；未来接入暗色时按以下公式，禁止直接叠加白色 alpha：
+
+- 卡片底色：`Color.alphaBlend(accent.withValues(alpha: 0.16), surfaceContainer)`
+- 标题/图标：`Color.lerp(accent, Colors.white, 0.35)`
+- 描边：`accent.withValues(alpha: 0.24)`
+
+accent token 通过 `ThemeExtension` 下发，页面不得硬编码色值。
+
+#### 3.6.6 验收标准
+
+1. `flutter analyze` 0 issues，`flutter test` 全绿。
+2. OXF-AN10 真机亮色截图：首页首屏 accent ≤3 种，入口层级清晰。
+3. 灰度/色弱模拟下仍能通过图标与标题区分入口。
+4. accent 文本与淡彩底对比度 ≥4.5:1；点击区 ≥48dp；无布局溢出。
+
+#### 3.6.7 实施状态（2026-11-07，UX-01 `DONE`）
+
+| 项 | 落地情况 |
+|---|---|
+| Token | `app/lib/core/theme/app_accents.dart`：`AppAccents extends ThemeExtension<AppAccents>`，`AppAccents.light` 提供 practice/learn/exam/assignment 四色，含 `copyWith`/`lerp`；`app.dart` 注册 `extensions: const [AppAccents.light]` |
+| 组件 | `app/lib/widgets/feature_card.dart`：淡彩底 12% 叠表面色、描边 18%、40px 图标圆底、标题 15/w600、副标题 12.5、可选进度条、禁用 38%、`Semantics` 合并标题与副标题 |
+| 页面试点 | `learn_page.dart` 学习首页「继续练习 / 继续学习 / 考试中心 / 班级作业」四张入口卡分色；欢迎卡保持品牌 `primaryContainer`，推荐卡保持中性 |
+| 回归 | `dart analyze lib test` 0 issues；`flutter test` 88 passed（新增 `feature_card_test.dart` 4 例） |
+| 真机 | OXF-AN10 学生账号登录后首页确认青绿/琥珀/玫红三色入口卡正常，文案与图标完整；「继续练习」按“存在未完成会话”条件显示 |
+| 推广 | 暂不推广到知识点/考试/作业列表；如需推广，先登记 CR 并按本规范复用 token，不新增卡片样式 |
+
+---
+
 ## 四、前后端技术栈选型
 
 ### 4.1 选型原则
