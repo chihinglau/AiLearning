@@ -40,6 +40,14 @@ class Settings(BaseSettings):
     # R-03 法务：隐私政策/用户协议公网地址（为空时按请求 Host 推导）
     legal_public_base_url: str = ""
 
+    # R-06 备案与上架信息：备案号、软著登记号在取得后回填，App「关于」页展示
+    app_display_name: str = "深爱学"
+    app_version_label: str = "1.0.0"
+    icp_record_no: str = ""
+    app_record_no: str = ""
+    software_copyright_no: str = ""
+    support_email: str = "support@ailearning.cn"
+
     # P2-06 AI 讲解：默认关闭外部 LLM（走规则兜底），生产按需开启
     llm_enabled: bool = False
     llm_api_key: str = ""

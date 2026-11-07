@@ -50,6 +50,13 @@ class AppConfig {
     defaultValue: 'http://127.0.0.1:18080',
   );
 
+  /// R-06：关于页展示的应用信息（备案号取得后在此回填，与后端配置保持一致）。
+  static const String displayName = '深爱学';
+  static const String versionLabel = '1.0.0';
+  static const String icpRecordNo = '';
+  static const String appRecordNo = '';
+  static const String softwareCopyrightNo = '';
+
   /// 深圳本地化教材版本。
   static const List<String> shenzhenTextbookVersions = ['人教版', '粤教版', '牛津深圳版'];
 

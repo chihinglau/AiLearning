@@ -9,6 +9,7 @@ from app.api.routes import (
     admin_rbac,
     admin_users,
     ai,
+    app_info,
     assignments,
     auth,
     content,
@@ -64,6 +65,9 @@ app.include_router(health.router)
 # 法务文档需公网免登录访问：同时挂在根路径（商店审核用）与 /api 前缀（App 内使用）。
 app.include_router(legal.router)
 app.include_router(legal.router, prefix=settings.api_prefix)
+# R-06：备案信息同样公网免登录，供商店审核与 App「关于」页使用。
+app.include_router(app_info.router)
+app.include_router(app_info.router, prefix=settings.api_prefix)
 app.include_router(auth.router, prefix=settings.api_prefix)
 app.include_router(public.router, prefix=settings.api_prefix)
 app.include_router(practice.router, prefix=settings.api_prefix)

@@ -2,6 +2,7 @@ import 'package:ai_learning/core/models/user.dart';
 import 'package:ai_learning/core/offline/offline_exam_store.dart';
 import 'package:ai_learning/core/offline/offline_exam_sync.dart';
 import 'package:ai_learning/core/services/api_client.dart';
+import 'package:ai_learning/core/services/app_info_service.dart';
 import 'package:ai_learning/core/services/ai_service.dart';
 import 'package:ai_learning/core/services/assignment_service.dart';
 import 'package:ai_learning/core/services/auth_service.dart';
@@ -99,6 +100,10 @@ final legalServiceProvider = Provider<LegalService>((ref) {
 
 final complianceServiceProvider = Provider<ComplianceService>((ref) {
   return ComplianceService(ref.watch(apiClientProvider));
+});
+
+final appInfoServiceProvider = Provider<AppInfoService>((ref) {
+  return AppInfoService(ref.watch(apiClientProvider));
 });
 
 final currentUserProvider = StateProvider<AppUser?>((ref) => null);

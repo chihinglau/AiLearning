@@ -23,6 +23,7 @@ import 'package:ai_learning/features/onboarding/entry_gate_page.dart';
 import 'package:ai_learning/features/onboarding/onboarding_page.dart';
 import 'package:ai_learning/features/practice/practice_config_page.dart';
 import 'package:ai_learning/features/practice/practice_page.dart';
+import 'package:ai_learning/features/profile/about_page.dart';
 import 'package:ai_learning/features/profile/account_security_page.dart';
 import 'package:ai_learning/features/session/session_page.dart';
 import 'package:ai_learning/features/shell/app_shell.dart';
@@ -84,6 +85,11 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/account/security',
         builder: (context, state) => const AccountSecurityPage(),
+      ),
+      // R-06：关于页（备案号/软著登记号/法务入口）。
+      GoRoute(
+        path: '/about',
+        builder: (context, state) => const AboutPage(),
       ),
       GoRoute(
         path: '/legal/privacy',
