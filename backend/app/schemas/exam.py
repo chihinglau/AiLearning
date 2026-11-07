@@ -35,6 +35,9 @@ class ExamSummaryOut(BaseModel):
     window_start: Optional[datetime] = None
     window_end: Optional[datetime] = None
     window_state: str = "unscheduled"  # open | scheduled | closed | unscheduled
+    region: Optional[str] = None
+    is_past_paper: bool = False
+    class_id: Optional[int] = None
     attempt: Optional[ExamAttemptBriefOut] = None
 
 
@@ -62,6 +65,9 @@ class ExamDetailOut(BaseModel):
     window_start: Optional[datetime] = None
     window_end: Optional[datetime] = None
     window_state: str = "unscheduled"
+    region: Optional[str] = None
+    is_past_paper: bool = False
+    class_id: Optional[int] = None
     questions: list[ExamQuestionOut]
 
 
@@ -139,6 +145,42 @@ class ExamGenerateIn(BaseModel):
     chapter_ids: list[int] = Field(min_length=1, max_length=50)
     title: Optional[str] = Field(default=None, max_length=200)
     seed: Optional[int] = None
+    window_start: Optional[datetime] = None
+    window_end: Optional[datetime] = None
+    region: Optional[str] = Field(default=None, max_length=40)
+    is_past_paper: bool = False
+
+
+class PastPaperOut(BaseModel):
+    id: int
+    title: str
+    subject: str
+    grade: int
+    year: Optional[int] = None
+    region: Optional[str] = None
+    exam_type: str
+    total_score: int
+    time_limit_min: int
+    question_count: int
+    window_start: Optional[datetime] = None
+    window_end: Optional[datetime] = None
+    window_state: str = "unscheduled"
+
+
+class MockExamAssignIn(BaseModel):
+    class_id: int = Field(ge=1)
+    exam_id: int = Field(ge=1)
+    title: Optional[str] = Field(default=None, max_length=200)
+    window_start: Optional[datetime] = None
+    window_end: Optional[datetime] = None
+
+
+class MockExamAssignOut(BaseModel):
+    exam_id: int
+    class_id: int
+    title: str
+    question_count: int
+    student_count: int
     window_start: Optional[datetime] = None
     window_end: Optional[datetime] = None
 

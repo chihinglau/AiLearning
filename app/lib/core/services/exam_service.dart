@@ -23,6 +23,45 @@ class ExamService {
     return ExamAttempt.fromJson(data);
   }
 
+  /// 真题库：按学科/年份/地区筛选已发布的历年真题。
+  Future<List<ExamSummary>> pastPapers({
+    String? subject,
+    int? year,
+    String? region,
+  }) async {
+    final query = <String>[
+      if (subject != null && subject.isNotEmpty) 'subject=$subject',
+      if (year != null) 'year=$year',
+      if (region != null && region.isNotEmpty)
+        'region=${Uri.encodeQueryComponent(region)}',
+    ];
+    final path = query.isEmpty
+        ? '/api/exams/past-papers'
+        : '/api/exams/past-papers?${query.join('&')}';
+    final data = await _api.getList(path);
+    return data
+        .map((item) => ExamSummary.fromJson(item as Map<String, dynamic>))
+        .toList();
+  }
+
+  /// 教师把一张真题/模考模板派发为班级同卷模考。
+  Future<MockExamAssignment> assignClassMock({
+    required int classId,
+    required int examId,
+    String? title,
+    DateTime? windowStart,
+    DateTime? windowEnd,
+  }) async {
+    final data = await _api.postJson('/api/exams/mock', {
+      'class_id': classId,
+      'exam_id': examId,
+      'title': ?title,
+      'window_start': ?windowStart?.toIso8601String(),
+      'window_end': ?windowEnd?.toIso8601String(),
+    });
+    return MockExamAssignment.fromJson(data);
+  }
+
   /// 开始/续答并返回原始 JSON，供离线整卷快照使用。
   Future<(ExamAttempt, Map<String, dynamic>)> startAttemptRaw(int examId) async {
     final data = await _api.postJson('/api/exams/$examId/attempts', const {});

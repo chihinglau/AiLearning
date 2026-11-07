@@ -16,6 +16,9 @@ class ExamSummary {
     this.windowStart,
     this.windowEnd,
     this.windowState = 'unscheduled',
+    this.region,
+    this.isPastPaper = false,
+    this.classId,
     this.attempt,
   });
 
@@ -36,6 +39,11 @@ class ExamSummary {
 
   /// open | scheduled | closed | unscheduled
   final String windowState;
+
+  /// P2-07 真题库与班级同卷模考
+  final String? region;
+  final bool isPastPaper;
+  final int? classId;
   final ExamAttemptBrief? attempt;
 
   bool get windowOpen => windowState != 'scheduled' && windowState != 'closed';
@@ -92,6 +100,9 @@ class ExamSummary {
       windowStart: DateTime.tryParse(json['window_start'] as String? ?? ''),
       windowEnd: DateTime.tryParse(json['window_end'] as String? ?? ''),
       windowState: json['window_state'] as String? ?? 'unscheduled',
+      region: json['region'] as String?,
+      isPastPaper: json['is_past_paper'] as bool? ?? false,
+      classId: json['class_id'] as int?,
       attempt: json['attempt'] == null
           ? null
           : ExamAttemptBrief.fromJson(json['attempt'] as Map<String, dynamic>),
@@ -755,6 +766,39 @@ class ExamNextAction {
           .map((item) => item as int)
           .toList(),
       count: json['count'] as int? ?? 0,
+    );
+  }
+}
+
+/// P2-07 班级同卷模考派发结果（POST /exams/mock）。
+class MockExamAssignment {
+  const MockExamAssignment({
+    required this.examId,
+    required this.classId,
+    required this.title,
+    required this.questionCount,
+    required this.studentCount,
+    this.windowStart,
+    this.windowEnd,
+  });
+
+  final int examId;
+  final int classId;
+  final String title;
+  final int questionCount;
+  final int studentCount;
+  final DateTime? windowStart;
+  final DateTime? windowEnd;
+
+  factory MockExamAssignment.fromJson(Map<String, dynamic> json) {
+    return MockExamAssignment(
+      examId: json['exam_id'] as int? ?? 0,
+      classId: json['class_id'] as int? ?? 0,
+      title: json['title'] as String? ?? '',
+      questionCount: json['question_count'] as int? ?? 0,
+      studentCount: json['student_count'] as int? ?? 0,
+      windowStart: DateTime.tryParse(json['window_start'] as String? ?? ''),
+      windowEnd: DateTime.tryParse(json['window_end'] as String? ?? ''),
     );
   }
 }

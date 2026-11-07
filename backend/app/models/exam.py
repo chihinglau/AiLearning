@@ -60,6 +60,12 @@ class Exam(Base):
     # P1-08 考试窗口：为空表示不限时段
     window_start: Mapped[Optional[datetime]] = mapped_column(DateTime, nullable=True)
     window_end: Mapped[Optional[datetime]] = mapped_column(DateTime, nullable=True)
+    # P2-07 真题库与班级同卷模考
+    region: Mapped[Optional[str]] = mapped_column(String(40), nullable=True, index=True)
+    is_past_paper: Mapped[bool] = mapped_column(Boolean, default=False, index=True)
+    class_id: Mapped[Optional[int]] = mapped_column(
+        ForeignKey("classes.id"), nullable=True, index=True
+    )
     created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
 
 

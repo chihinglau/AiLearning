@@ -16,8 +16,9 @@ from app.core.security import hash_password
 from app.db.base import Base
 from app.db.session import SessionLocal, engine
 from app.models.content import Chapter, KnowledgePoint, Question, Textbook
-from app.models.exam import ExamBlueprint
+from app.models.exam import Exam, ExamBlueprint
 from app.models.user import User
+from app.services.exam_paper import generate_paper
 from app.services.rbac import backfill_user_roles, sync_catalog
 
 ADMIN_PHONE = "13800000000"
@@ -1155,6 +1156,111 @@ def _seed_blueprints(db) -> int:
     return len(EXAM_BLUEPRINT_SEEDS)
 
 
+# P2-07 真题库：按蓝图生成 3 套演示真题（按标题+年份+地区幂等）
+PAST_PAPER_SEEDS: list[dict] = [
+    {
+        "title": "深圳市一年级数学期末真题（2025）",
+        "subject": "math",
+        "grade": 1,
+        "blueprint": "math_primary_unit",
+        "year": 2025,
+        "region": "深圳",
+        "seed": 11,
+    },
+    {
+        "title": "深圳市一年级语文期末真题（2025）",
+        "subject": "chinese",
+        "grade": 1,
+        "blueprint": "chinese_primary_unit",
+        "year": 2025,
+        "region": "深圳",
+        "seed": 12,
+    },
+    {
+        "title": "深圳市三年级数学期末真题（2024）",
+        "subject": "math",
+        "grade": 3,
+        "blueprint": "math_primary_unit",
+        "year": 2024,
+        "region": "深圳",
+        "seed": 13,
+    },
+]
+
+
+def _seed_past_papers(db) -> int:
+    admin = db.scalar(select(User).where(User.phone == ADMIN_PHONE))
+    if admin is None:
+        return 0
+    created = 0
+    for spec in PAST_PAPER_SEEDS:
+        exists = db.scalar(
+            select(Exam).where(
+                Exam.title == spec["title"],
+                Exam.year == spec["year"],
+                Exam.region == spec["region"],
+                Exam.is_past_paper.is_(True),
+            )
+        )
+        if exists is not None:
+            continue
+        blueprint = db.scalar(
+            select(ExamBlueprint).where(ExamBlueprint.code == spec["blueprint"])
+        )
+        if blueprint is None:
+            continue
+        chapter_ids = list(
+            db.scalars(
+                select(Chapter.id)
+                .join(Textbook, Chapter.textbook_id == Textbook.id)
+                .where(
+                    Textbook.subject == spec["subject"],
+                    Textbook.grade == spec["grade"],
+                )
+            )
+        )
+        if not chapter_ids:
+            continue
+        paper = generate_paper(
+            db,
+            user=admin,
+            blueprint=blueprint,
+            chapter_ids=chapter_ids,
+            seed=spec["seed"],
+        )
+        if not paper.items:
+            continue
+        db.add(
+            Exam(
+                title=spec["title"],
+                subject=spec["subject"],
+                grade=spec["grade"],
+                year=spec["year"],
+                source="past_paper",
+                exam_type="mock",
+                total_score=int(round(paper.total_score)),
+                time_limit_min=blueprint.time_limit_min,
+                questions=[
+                    {
+                        "question_id": item.question.id,
+                        "score": item.score,
+                        "section_index": item.section_index,
+                        "section_name": item.section_name,
+                    }
+                    for item in paper.items
+                ],
+                blueprint_id=blueprint.id,
+                chapter_ids=chapter_ids,
+                status="published",
+                region=spec["region"],
+                is_past_paper=True,
+            )
+        )
+        db.flush()
+        created += 1
+    return created
+
+
 def seed() -> None:
     Base.metadata.create_all(bind=engine)
     db = SessionLocal()
@@ -1255,6 +1361,9 @@ def seed() -> None:
         # ---- 试卷蓝图（小学语数英单元测）----
         n_bp = _seed_blueprints(db)
 
+        # ---- 真题库（P2-07）：演示真题卷，重复运行幂等 ----
+        n_pp = _seed_past_papers(db)
+
         # ---- RBAC 目录与用户角色双写（P2-01，幂等）----
         sync_catalog(db)
         backfill_user_roles(db)
@@ -1267,6 +1376,7 @@ def seed() -> None:
         n_q = db.scalar(select(func.count(Question.id)))
         print(f"内容就绪：教材 {n_tb} 本 / 章节 {n_ch} 个 / 知识点 {n_kp} 个 / 题目 {n_q} 道")
         print(f"试卷蓝图就绪：{n_bp} 套")
+        print(f"真题库就绪：{n_pp} 套")
     finally:
         db.close()
 

@@ -4,7 +4,7 @@ from datetime import datetime
 from typing import Any, Optional
 
 from fastapi import APIRouter, Body, Depends, HTTPException, Query, status
-from sqlalchemy import select
+from sqlalchemy import or_, select
 from sqlalchemy.orm import Session
 
 from app.api.deps import get_current_user, require_permission
@@ -44,9 +44,14 @@ from app.schemas.exam import (
     ExamTrendPointOut,
     ExamTypeStatOut,
     ExamWrongItemOut,
+    MockExamAssignIn,
+    MockExamAssignOut,
+    PastPaperOut,
 )
 from app.services import learning as engine
 from app.services import wrong_reason as wrong_reason_service
+from app.services.assignment import class_authorized
+from app.services.audit import record_audit
 from app.services.exam_paper import generate_paper
 
 router = APIRouter(prefix="/exams", tags=["考试"])
@@ -191,6 +196,18 @@ def _ensure_takeable(exam: Exam, user: User, db: Optional[Session] = None) -> No
                 status_code=status.HTTP_403_FORBIDDEN,
                 detail={"code": "ASSIGNMENT_NOT_MEMBER", "message": "仅本班学生可参加该作业"},
             )
+    # 班级同卷模考：仅本班学生可进入，保证全班共用同一张卷
+    if exam.class_id is not None and db is not None:
+        if db.scalar(
+            select(ClassMember).where(
+                ClassMember.class_id == exam.class_id,
+                ClassMember.student_id == user.id,
+            )
+        ) is None:
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail={"code": "EXAM_NOT_MEMBER", "message": "仅本班学生可参加该模考"},
+            )
 
 
 def _detail_out(db: Session, exam: Exam, now: Optional[datetime] = None) -> ExamDetailOut:
@@ -225,6 +242,9 @@ def _detail_out(db: Session, exam: Exam, now: Optional[datetime] = None) -> Exam
         window_start=exam.window_start,
         window_end=exam.window_end,
         window_state=_window_state(exam, now or datetime.utcnow()),
+        region=exam.region,
+        is_past_paper=bool(exam.is_past_paper),
+        class_id=exam.class_id,
         questions=out,
     )
 
@@ -321,8 +341,17 @@ def list_exams(
     stmt = stmt.where(Exam.source != "assignment")
     if current.role == "student":
         stmt = stmt.where(Exam.status == "published")
+        # 真题统一在「真题库」入口展示，避免与常规考试列表重复
+        stmt = stmt.where(Exam.is_past_paper.is_(False))
         if current.grade:
             stmt = stmt.where(Exam.grade == current.grade)
+        # 班级同卷模考仅本班可见（非班级卷对所有学生开放）
+        member_classes = select(ClassMember.class_id).where(
+            ClassMember.student_id == current.id
+        )
+        stmt = stmt.where(
+            or_(Exam.class_id.is_(None), Exam.class_id.in_(member_classes))
+        )
     if exam_type:
         stmt = stmt.where(Exam.exam_type == exam_type)
     exams = list(db.scalars(stmt.order_by(Exam.id.desc()).limit(100)))
@@ -384,10 +413,148 @@ def list_exams(
                 window_start=exam.window_start,
                 window_end=exam.window_end,
                 window_state=_window_state(exam, now),
+                region=exam.region,
+                is_past_paper=bool(exam.is_past_paper),
+                class_id=exam.class_id,
                 attempt=brief,
             )
         )
     return result
+
+
+@router.get("/past-papers", response_model=list[PastPaperOut])
+def list_past_papers(
+    subject: Optional[str] = Query(default=None, max_length=20),
+    year: Optional[int] = Query(default=None, ge=2000, le=2100),
+    region: Optional[str] = Query(default=None, max_length=40),
+    current: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+) -> list[PastPaperOut]:
+    """真题库：已发布的历年真题/模考卷，学生按年级过滤。"""
+    stmt = select(Exam).where(
+        Exam.status == "published",
+        Exam.is_past_paper.is_(True),
+        Exam.class_id.is_(None),
+    )
+    if current.role == "student" and current.grade:
+        stmt = stmt.where(Exam.grade == current.grade)
+    if subject:
+        stmt = stmt.where(Exam.subject == subject)
+    if year is not None:
+        stmt = stmt.where(Exam.year == year)
+    if region:
+        stmt = stmt.where(Exam.region == region)
+    exams = list(db.scalars(stmt.order_by(Exam.year.desc(), Exam.id.desc()).limit(60)))
+    now = datetime.utcnow()
+    return [
+        PastPaperOut(
+            id=exam.id,
+            title=exam.title,
+            subject=exam.subject,
+            grade=exam.grade,
+            year=exam.year,
+            region=exam.region,
+            exam_type=exam.exam_type,
+            total_score=exam.total_score,
+            time_limit_min=exam.time_limit_min,
+            question_count=len(_paper_items(exam)),
+            window_start=exam.window_start,
+            window_end=exam.window_end,
+            window_state=_window_state(exam, now),
+        )
+        for exam in exams
+    ]
+
+
+@router.post("/mock", response_model=MockExamAssignOut)
+def assign_class_mock(
+    payload: MockExamAssignIn,
+    current: User = Depends(require_permission("learn:assignment:create")),
+    db: Session = Depends(get_db),
+) -> MockExamAssignOut:
+    """教师把一张真题/模考模板派发为班级同卷模考（全班共用同一 exam id）。"""
+    template = db.get(Exam, payload.exam_id)
+    if template is None or template.status != "published":
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="模考模板不存在")
+    school_class = db.get(SchoolClass, payload.class_id)
+    if school_class is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="班级不存在")
+    if not class_authorized(db, current, school_class, template.subject):
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail={"code": "CLASS_FORBIDDEN", "message": "无权为该班级布置模考"},
+        )
+    if school_class.grade and template.grade and school_class.grade != template.grade:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail={"code": "CLASS_GRADE_MISMATCH", "message": "模考年级与班级年级不一致"},
+        )
+    if (
+        payload.window_start is not None
+        and payload.window_end is not None
+        and payload.window_start >= payload.window_end
+    ):
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail={"code": "EXAM_WINDOW_INVALID", "message": "结束时间必须晚于开始时间"},
+        )
+    questions = list(template.questions or [])
+    if not questions:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail={"code": "NO_QUESTIONS", "message": "模考模板暂无题目"},
+        )
+
+    exam = Exam(
+        title=payload.title or f"{school_class.name}·{template.title}",
+        subject=template.subject,
+        grade=template.grade,
+        year=template.year,
+        source="mock_class",
+        exam_type="mock",
+        total_score=template.total_score,
+        time_limit_min=template.time_limit_min,
+        questions=questions,
+        blueprint_id=template.blueprint_id,
+        chapter_ids=template.chapter_ids,
+        status="published",
+        window_start=payload.window_start,
+        window_end=payload.window_end,
+        region=template.region,
+        is_past_paper=False,
+        class_id=school_class.id,
+    )
+    db.add(exam)
+    db.flush()
+    student_count = len(
+        list(
+            db.scalars(
+                select(ClassMember.student_id).where(
+                    ClassMember.class_id == school_class.id
+                )
+            )
+        )
+    )
+    record_audit(
+        db,
+        user_id=current.id,
+        action="exam.mock.assign",
+        message=(
+            f"exam={exam.id}, class={school_class.id}, "
+            f"template={template.id}, students={student_count}"
+        ),
+    )
+    db.commit()
+    db.refresh(exam)
+    return MockExamAssignOut(
+        exam_id=exam.id,
+        class_id=school_class.id,
+        title=exam.title,
+        question_count=len(_paper_items(exam)),
+        student_count=student_count,
+        window_start=exam.window_start,
+        window_end=exam.window_end,
+    )
 
 
 @router.get("/{exam_id}", response_model=ExamDetailOut)
@@ -1275,6 +1442,8 @@ def generate_exam(
         status="published",
         window_start=payload.window_start,
         window_end=payload.window_end,
+        region=payload.region,
+        is_past_paper=payload.is_past_paper,
     )
     db.add(exam)
     db.commit()

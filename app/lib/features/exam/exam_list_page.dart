@@ -111,6 +111,14 @@ class _ExamListPageState extends ConsumerState<ExamListPage> {
                 onPressed: () => context.go('/shell'),
               ),
         title: const Text('考试中心'),
+        actions: [
+          IconButton(
+            key: const ValueKey('open-past-papers'),
+            tooltip: '真题库',
+            icon: const Icon(Icons.library_books_outlined),
+            onPressed: () => context.push('/past-papers'),
+          ),
+        ],
       ),
       body: RefreshIndicator(
         onRefresh: _load,
