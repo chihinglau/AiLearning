@@ -6,6 +6,8 @@
   "semester": "first",
   "knowledge": [
     {
+      "source_type": "original",
+      "source_name": "教研组自编",
       "node_type": "section",
       "name": "识字与写字",
       "order_index": 1,
@@ -43,6 +45,8 @@
       "summary": "认识天、地、人等常用字，掌握基本笔画。",
       "questions": [
         {
+          "source_type": "original",
+          "source_name": "自主命题",
           "q_type": "choice",
           "stem": "「人」的正确读音是（  ）",
           "options": ["rén", "rèn", "réng", "rěn"],

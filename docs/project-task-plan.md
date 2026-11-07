@@ -1,9 +1,9 @@
 # 深爱学（AiLearning）项目实施任务计划与进度跟踪
 
 > **文档性质**：项目主计划 / 进度跟踪 / 过程追溯（全程伴随开发周期）
-> **版本**：v1.79
+> **版本**：v1.80
 > **创建日期**：2026-11-06
-> **最后更新**：2026-11-07（UX-02 子页面返回链路修复 + CT-01 九学科题库/知识库模板与导入工具落地，真机导航回归通过）
+> **最后更新**：2026-11-07（CT-02 题库/知识库来源与版权登记字段落地，含迁移、模板与导入校验）
 > **参考设计文档**：见[§1.1 参考设计文档清单](#11-参考设计文档清单)（共 8 份，含 4 份设计方案、4 份支撑文档）
 > **需求追踪**：见[§1.2 需求—设计—任务追踪矩阵](#12-需求设计任务追踪矩阵)
 > **维护人**：项目负责人（PM）
@@ -153,7 +153,7 @@ DONE ──返工（需CR）──► DOING
 ## 三、任务台账
 
 > **状态字段实时更新**；`实际(h)` 在任务完成时填写；`证据` 填 commit / 测试结果 / 截图路径。
-> **总任务数**：77（开发 68：P0 43 + P1 15 + P2 10；发布 9：R-01~R-09）；**基线已完成**：5；**进行中**：0；**阻塞中**：0；**待启动**：0；**总预估工时**：676 h（开发 557 + 发布 119）。
+> **总任务数**：81（开发 72：P0 43 + P1 15 + P2 10 + UX 2 + CT 2；发布 9：R-01~R-09）；**基线已完成**：5；**进行中**：0；**阻塞中**：0；**待启动**：0；**总预估工时**：696 h（开发 577 + 发布 119）。
 
 ### 3.1 阶段 P0：身份与学习主链路
 
@@ -407,6 +407,9 @@ flowchart LR
 | ID | 任务 | 负责人 | 预估(h) | 优先级 | 依赖 | 状态 | 实际(h) | 验收映射 | 证据 |
 |---|---|---|---|---|---|---|---|---|---|
 | CT-01 | 题库/知识库作者模板与导入 CLI（9 学科 JSON 模板、字段规范、幂等导入、dry-run、单测） | BE+教研 | 6 | P2 | R-09 | `DONE` | 6 | R-A12 | `docs/content-templates/`（README + 9 学科模板）；`backend/app/services/content_import.py`、`backend/scripts/import_content.py`；`pytest tests/test_content_import.py` 3 例、9 模板 dry-run 全部通过 |
+| CT-02 | 题库/知识库来源与版权登记（`source_type/source_name/source_ref/copyright_owner/license_note/adapted_from`、迁移、导入校验、模板示例、管理接口暴露） | BE+教研 | 4 | P2 | CT-01 | `DONE` | 4 | R-A13 | 迁移 `u1v2w3x4y5z6`；`pytest tests/test_content_import.py` 7 passed、`tests/test_migrations.py` 3 passed；9 模板 dry-run 全通过；来源非原创必填名称、授权必填说明、外部导入必须 `draft` |
+
+> **CT 小计**：2 项，预估 **10 h**。
 
 ---
 
@@ -447,16 +450,16 @@ flowchart LR
 
 | 指标 | 数值 |
 |---|---|
-| 任务总数（不含基线） | 80（开发 71：P0 43 + P1 15 + P2 10 + UX 2 + CT 1；发布 9：R-01~R-09） |
+| 任务总数（不含基线） | 81（开发 72：P0 43 + P1 15 + P2 10 + UX 2 + CT 2；发布 9：R-01~R-09） |
 | `TODO` | 0 |
 | `DOING` | 0 |
-| `DONE` | 80（P0-01~P0-43、P1-01~P1-15、P2-01~P2-10、UX-01~UX-02、CT-01、R-01~R-09；基线 5 项已冻结） |
+| `DONE` | 81（P0-01~P0-43、P1-01~P1-15、P2-01~P2-10、UX-01~UX-02、CT-01~CT-02、R-01~R-09；基线 5 项已冻结） |
 | `BLOCKED` | 0 |
-| 预估总工时 | 692 h（开发 573 = P0 310 + P1 129 + P2 118 + UX 10 + CT 6；发布 119） |
-| 已投入工时 | 356 h（P0-01 3、P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3、P0-23 3、P0-24 3、P0-25 3、P0-26 3、P0-27 3、P0-28 4、P0-29 3、P0-30 3、P0-31 4、P0-32 3、P0-33 4、P0-34 4、P0-35 6、P0-36 8、P0-37 10、P0-38 4、P0-39 6、P0-40 4、P0-41 6、P0-42 2、P0-43 3、P1-01 3、P1-02 2、P1-03 2、P1-04 3、P1-05 3、P1-06 3、P1-07 3、P1-08 3、P1-09 3、P1-10 3、P1-11 3、P1-12 2、P1-13 3、P1-14 3、P1-15 3、P2-01 6、P2-02 6、P2-03 6、P2-04 4、P2-05 8、P2-06 8、P2-07 8、P2-08 4、P2-09 6、P2-10 4、R-01 2、R-02 6、R-03 20、R-04 20、R-05 12、R-06 8、R-07 8、R-08 12、R-09 10、UX-01 8、UX-02 2、CT-01 6） |
-| 当前迭代 | 体验与内容建设（UX-01/UX-02/CT-01 已完成） |
-| 迭代目标 | 视觉升级、子页面返回链路修复、9 学科题库/知识库模板与导入工具全部落地 |
-| 里程碑 | M2.5（P0 技术验收通过，待签署）→ M3（P1 技术验收通过，待签署）→ M4（P2 技术验收通过，待签署）→ M5（发布就绪，R-01~R-09 已完成，待 PM 签署）→ UX-01（体验优化，`DONE`）→ UX-02（返回链路修复，`DONE`）→ CT-01（内容模板，`DONE`） |
+| 预估总工时 | 696 h（开发 577 = P0 310 + P1 129 + P2 118 + UX 10 + CT 10；发布 119） |
+| 已投入工时 | 360 h（P0-01 3、P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3、P0-23 3、P0-24 3、P0-25 3、P0-26 3、P0-27 3、P0-28 4、P0-29 3、P0-30 3、P0-31 4、P0-32 3、P0-33 4、P0-34 4、P0-35 6、P0-36 8、P0-37 10、P0-38 4、P0-39 6、P0-40 4、P0-41 6、P0-42 2、P0-43 3、P1-01 3、P1-02 2、P1-03 2、P1-04 3、P1-05 3、P1-06 3、P1-07 3、P1-08 3、P1-09 3、P1-10 3、P1-11 3、P1-12 2、P1-13 3、P1-14 3、P1-15 3、P2-01 6、P2-02 6、P2-03 6、P2-04 4、P2-05 8、P2-06 8、P2-07 8、P2-08 4、P2-09 6、P2-10 4、R-01 2、R-02 6、R-03 20、R-04 20、R-05 12、R-06 8、R-07 8、R-08 12、R-09 10、UX-01 8、UX-02 2、CT-01 6、CT-02 4） |
+| 当前迭代 | 体验与内容建设（UX-01/UX-02/CT-01/CT-02 已完成） |
+| 迭代目标 | 视觉升级、子页面返回链路修复、9 学科题库/知识库模板与导入工具、来源与版权登记全部落地 |
+| 里程碑 | M2.5（P0 技术验收通过，待签署）→ M3（P1 技术验收通过，待签署）→ M4（P2 技术验收通过，待签署）→ M5（发布就绪，R-01~R-09 已完成，待 PM 签署）→ UX-01（体验优化，`DONE`）→ UX-02（返回链路修复，`DONE`）→ CT-01（内容模板，`DONE`）→ CT-02（来源与版权登记，`DONE`） |
 
 ### 5.2 同步节奏
 
@@ -573,6 +576,7 @@ flowchart LR
 | v1.77 | 2026-11-07 | AR/QA | R-09 发布流水线与监控（`scripts/ci.ps1` 一条命令完成版本校验/ruff/pytest/flutter analyze/test/APK(AAB/HAP 可选)/`apksigner` 校验/产物归档/发布检查表/Git Tag；`-SkipTests/-SkipBuild/-BuildAab/-WithHap/-Tag/-AllowDirty`）；崩溃监控 `crash_reports` 表 + 迁移 `t0u1v2w3x4y5`、`POST /api/monitor/crash`（匿名可用、30 次/分限流、手机号/邮箱掩码与截断）、`GET /api/monitor/crashes[/summary]`（超管、按指纹聚合 Top N）、`ErrorMaskingMiddleware` 后端异常落库；App `CrashReporter`（`FlutterError.onError` + `PlatformDispatcher.onError`、本地 10 条队列、启动重放、4xx 丢弃/5xx 保留）；`tests/test_monitor.py` 6 例、`app/test/crash_reporter_test.dart` 5 例；实测 `ci.ps1 -SkipTests` 构建 93s、签名 `CN=AiLearning`、归档 `build/release/1.0.0+1/`（APK + `metadata.json` + `SHA256SUMS.txt` + `signature-info.txt` + `release-checklist.md`，PASS-WITH-WARNINGS/0 blockers）；`pytest` 336 passed、`flutter analyze` 0 issues、`flutter test` 84 passed；顺带清理 7 处既有 ruff E9/F 基线（未使用导入/变量）；§3.4 R-09 转 `DONE`、§6.14 R-A9 记录、§5.1 同步（DONE 77 / 投入 340 h / TODO 0）；`docs/skills.md` 新增 §5.13；当前下一步 M5 签署与 PM 资质回填 |
 | v1.78 | 2026-11-07 | FE | UX-01 品牌柔和彩功能卡片（新增 `AppAccents`（ThemeExtension，practice `#4F46C8`/learn `#0B7A6D`/exam `#B45309`/assignment `#A63D6D`，含 `copyWith`/`lerp` 暗色预留）与通用 `FeatureCard`（淡彩底 12% + 描边 18% + 40px 图标圆底 + 标题/副标题 + 可选进度条 + 禁用 38% + `Semantics`）；`app.dart` 注册 `extensions: [AppAccents.light]`；学习首页「继续练习/继续学习/考试中心/班级作业」4 张入口卡改用 `FeatureCard` 分色，欢迎卡与推荐卡保持品牌/中性；新增 `app/test/feature_card_test.dart` 4 例；`dart analyze` 0 issues、`flutter test` 88 passed；OXF-AN10 真机同意隐私后登录学生账号，截图确认青绿/琥珀/玫红三卡；§3.6 UX-01 转 `DONE`（8 h）、新增 §6.15 R-A10 记录、§5.1 同步（DONE 78 / 投入 348 h / DOING 0）；`docs/k12-learning-app-design.md` §3.6 实施状态回写；当前下一步收集真机反馈并评估推广范围 |
 | v1.79 | 2026-11-07 | FE+BE | UX-02（返回链路）：`learn/profile/knowledge/unit/kp_detail/mistakes` 入口由 `go` 改 `push`，考试提交改 `pushReplacement`，教师班级/家长中心自定义返回改 `canPop ? pop : go('/shell')`；真机验证首页→知识点→单元→详情逐级返回；`dart analyze` 0 issues、`flutter test` 88 passed。CT-01（内容模板）：新增 `docs/content-templates/`（README + 9 学科 JSON）、`backend/app/services/content_import.py`、`backend/scripts/import_content.py`（幂等、`--dry-run`、`--overwrite`、题目可引用库中知识点），新增 `tests/test_content_import.py` 3 例并通过，9 模板 dry-run 全通过；§3.6 增 UX-02、§3.7 增 CT-01、新增 §6.16 R-A11/R-A12、§5.1 同步（DONE 80 / 投入 356 h / 任务 80）；当前下一步补充各科内容并向学生灰度 |
+| v1.80 | 2026-11-07 | BE+教研 | CT-02 来源与版权登记：`questions` 增 `source_type/source_name/source_ref/copyright_owner/license_note/adapted_from`，`knowledge_points` 增前五项（默认 `original`），迁移 `u1v2w3x4y5z6`；导入器新增四条校验（非原创必填 `source_name`、`licensed` 必填 `license_note`、题目 `adapted` 必填 `adapted_from`、`external` 必须 `draft`）；`QuestionCreate/QuestionOut`、`KnowledgePointOut` 暴露来源字段；9 份模板首知识点/首题演示 `original`，README 增字段表与规则；`tests/test_content_import.py` 7 passed、`tests/test_migrations.py` 3 passed、ruff E9/F 全绿、9 模板 dry-run 全通过；§3.7 增 CT-02、新增 §6.17 R-A13、§5.1 同步（DONE 81 / 投入 360 h / 任务 81）；当前下一步按模板扩充内容并如实登记来源 |
 
 ---
 
@@ -849,6 +853,19 @@ flowchart LR
 
 **结论**：R-A11/R-A12 验收通过（子页面不再出现无法返回的死胡同；教研可按学科模板新增题库/知识库并用 dry-run 预检后导入）。
 
+### 6.17 内容来源与版权登记验收记录（R-A13，2026-11-07）
+
+| 核对项 | 结果 | 证据 |
+|---|---|---|
+| 数据模型 | `questions` 增 `source_type/source_name/source_ref/copyright_owner/license_note/adapted_from`；`knowledge_points` 增前五项；默认 `original` | `app/models/content.py`、迁移 `u1v2w3x4y5z6` |
+| 迁移验证 | 空库 upgrade→downgrade→upgrade、存量库升级均通过；设备库 `ailearning_device.db` 已升级 | `tests/test_migrations.py` 3 passed |
+| 导入校验 | 非原创必须填 `source_name`；`licensed` 必须填 `license_note`；题目 `adapted` 必须填 `adapted_from`；题目 `external` 必须 `draft` | `app/services/content_import.py`、`tests/test_content_import.py` 7 passed |
+| 接口暴露 | `QuestionCreate/QuestionOut` 与管理端题目接口、`KnowledgePointOut` 均返回来源字段 | `app/schemas/content.py` |
+| 模板示例 | 9 份模板的首个知识点与首题演示 `original` 写法；README 增来源字段表与四条校验规则 | `docs/content-templates/` |
+| 回归 | ruff E9/F 全绿；9 份模板 dry-run 全部通过（各学科知识点 +1、题目 +2，重复项正常跳过） | `backend/` |
+
+**结论**：R-A13 验收通过。来源字段已可登记、校验与查询；需注意**标注来源不构成版权授权**，引用/改编内容仍须取得授权或控制在合法使用范围。
+
 ---
 
 ## 七、开发执行约定
@@ -864,4 +881,4 @@ flowchart LR
 
 ---
 
-> **当前下一步**：UX-02 与 CT-01 已完成（验收见 §6.16）。后续：①教研按 `docs/content-templates/README.md` 填充各科题目，先 `--dry-run` 再导入，题目初始 `draft`，复核后转 `published`；②在 OXF-AN10 上继续走查登录/学习/练习/考试/作业/家长/教师主链路返回行为；③记录真机反馈，评估功能卡片是否推广到知识点/考试/作业列表（推广前登记 CR）。并行人工项：M5 发布就绪签署；PM 回填软著受理号/登记号与 ICP/APP 备案号；代码提交后运行 `scripts\ci.ps1 -Tag` 生成 `v1.0.0` 标签。
+> **当前下一步**：UX-02、CT-01、CT-02 已完成（验收见 §6.16/§6.17）。后续：①教研按 `docs/content-templates/README.md` 填充各科题目，先 `--dry-run` 再导入；**每道题与知识点必须如实登记 `source_type` 等来源字段**，非原创填 `source_name`、授权内容填 `license_note`、外部导入先置 `draft`，复核后转 `published`；②在 OXF-AN10 上继续走查登录/学习/练习/考试/作业/家长/教师主链路返回行为；③记录真机反馈，评估功能卡片是否推广到知识点/考试/作业列表（推广前登记 CR）。并行人工项：M5 发布就绪签署；PM 回填软著受理号/登记号与 ICP/APP 备案号；代码提交后运行 `scripts\ci.ps1 -Tag` 生成 `v1.0.0` 标签。

@@ -96,3 +96,68 @@ def test_multiple_requires_list_answer():
         assert "必须是列表" in str(exc)
     else:  # pragma: no cover
         raise AssertionError("多选题答案必须是列表")
+
+
+def test_source_fields_persisted(db):
+    data = _document()
+    data["knowledge"][0].update(
+        {"source_type": "original", "source_name": "教研组自编"}
+    )
+    data["chapters"][0]["questions"][0].update(
+        {
+            "source_type": "adapted",
+            "source_name": "人教版八年级上册",
+            "source_ref": "P35 第2题",
+            "copyright_owner": "人民教育出版社",
+            "adapted_from": "P35 第2题",
+        }
+    )
+    import_document(db, data)
+    question = db.scalar(select(Question).where(Question.q_type == "choice"))
+    assert question.source_type == "adapted"
+    assert question.source_name == "人教版八年级上册"
+    assert question.source_ref == "P35 第2题"
+    assert question.copyright_owner == "人民教育出版社"
+    assert question.adapted_from == "P35 第2题"
+    point = db.scalar(select(KnowledgePoint).where(KnowledgePoint.node_type == "section"))
+    assert point.source_type == "original"
+    assert point.source_name == "教研组自编"
+
+
+def test_licensed_requires_license_note():
+    data = _document()
+    data["chapters"][0]["questions"][0].update(
+        {"source_type": "licensed", "source_name": "某题库授权"}
+    )
+    try:
+        validate_document(data)
+    except ValueError as exc:
+        assert "license_note" in str(exc)
+    else:  # pragma: no cover
+        raise AssertionError("已授权内容必须填写 license_note")
+
+
+def test_adapted_requires_adapted_from():
+    data = _document()
+    data["chapters"][0]["questions"][0].update(
+        {"source_type": "adapted", "source_name": "人教版八年级上册"}
+    )
+    try:
+        validate_document(data)
+    except ValueError as exc:
+        assert "adapted_from" in str(exc)
+    else:  # pragma: no cover
+        raise AssertionError("改编题必须填写 adapted_from")
+
+
+def test_external_question_must_be_draft():
+    data = _document()
+    data["chapters"][0]["questions"][0].update(
+        {"source_type": "external", "source_name": "外部题库"}
+    )
+    try:
+        validate_document(data)
+    except ValueError as exc:
+        assert "draft" in str(exc)
+    else:  # pragma: no cover
+        raise AssertionError("外部导入题目必须先进入待审核状态")

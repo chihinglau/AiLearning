@@ -6,6 +6,8 @@
   "semester": "first",
   "knowledge": [
     {
+      "source_type": "original",
+      "source_name": "教研组自编",
       "node_type": "section",
       "name": "生物与细胞",
       "order_index": 1,
@@ -43,6 +45,8 @@
       "summary": "生物的基本特征与调查方法。",
       "questions": [
         {
+          "source_type": "original",
+          "source_name": "自主命题",
           "q_type": "choice",
           "stem": "下列不属于生物的是（  ）",
           "options": ["生石花", "珊瑚", "病毒", "蘑菇"],

@@ -6,6 +6,8 @@
   "semester": "first",
   "knowledge": [
     {
+      "source_type": "original",
+      "source_name": "教研组自编",
       "node_type": "section",
       "name": "地球与地图",
       "order_index": 1,
@@ -43,6 +45,8 @@
       "summary": "地球形状、经纬网与地图判读。",
       "questions": [
         {
+          "source_type": "original",
+          "source_name": "自主命题",
           "q_type": "choice",
           "stem": "地球的平均半径约为（  ）",
           "options": ["4 万千米", "6371 千米", "5.1 亿千米", "1.5 亿千米"],

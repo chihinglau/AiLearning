@@ -118,6 +118,28 @@
 | `tags` | 否 | 字符串数组 |
 | `status` | 否 | `published`（默认）/ `draft`（待审核，练习/组卷不采用）/ `offline` |
 
+## 来源与版权登记
+
+题目与知识点都支持来源字段。**标注来源不等于获得授权**：原创内容标 `original`；引用或改编教材、真题、教辅时必须如实登记，并确认已取得授权或属于允许使用的范围。
+
+| 字段 | 适用 | 说明 |
+|---|---|---|
+| `source_type` | 题目 / 知识点 | `original` 原创（默认）/ `adapted` 改编 / `licensed` 已授权 / `public` 公共领域 / `external` 外部导入待核 |
+| `source_name` | 非原创必填 | 来源名称，如「人教版八年级上册」 |
+| `source_ref` | 否 | 页码、题号或 URL |
+| `copyright_owner` | 否 | 版权方 |
+| `license_note` | `licensed` 必填 | 授权说明或协议编号 |
+| `adapted_from` | `adapted` 题目必填 | 改编自哪道题或哪份材料 |
+
+导入校验规则：
+
+1. `source_type` 非 `original` 时必须填写 `source_name`；
+2. `licensed` 必须填写 `license_note`；
+3. 题目 `adapted` 必须填写 `adapted_from`；
+4. 题目 `external` 的 `status` 必须为 `draft`，复核后才可转 `published`。
+
+模板中的知识点与首题已演示 `original` 写法；复制新增时请按实际来源填写，不要把改编或引用内容标成 `original`。
+
 ## 出题质量要求
 
 1. 题干独立可答，不依赖图片、音频或上文；不含「如图」「上题」等指代。

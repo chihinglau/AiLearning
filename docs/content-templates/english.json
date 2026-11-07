@@ -6,6 +6,8 @@
   "semester": "first",
   "knowledge": [
     {
+      "source_type": "original",
+      "source_name": "教研组自编",
       "node_type": "section",
       "name": "Greetings and Numbers",
       "order_index": 1,
@@ -43,6 +45,8 @@
       "summary": "问候语与自我介绍。",
       "questions": [
         {
+          "source_type": "original",
+          "source_name": "自主命题",
           "q_type": "choice",
           "stem": "— Hello! — ____",
           "options": ["Hello!", "Goodbye!", "Thank you!", "Sorry!"],

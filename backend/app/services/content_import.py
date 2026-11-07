@@ -37,6 +37,7 @@ Q_TYPES = {"choice", "multiple", "judge", "fill", "answer"}
 OPTION_REQUIRED = {"choice", "multiple"}
 SEMESTERS = {"first", "second"}
 MAX_DIFFICULTY = 5
+SOURCE_TYPES = {"original", "adapted", "licensed", "public", "external"}
 
 
 def load_document(path: Path) -> dict[str, Any]:
@@ -74,6 +75,7 @@ def validate_document(data: dict[str, Any]) -> None:
         name = str(item.get("name") or "").strip()
         if not name:
             raise ValueError("knowledge 中存在空名称")
+        _validate_source(item, f"知识点「{name}」", allow_adapted_from=False)
         node_type = item.get("node_type", "point")
         if node_type not in {"section", "point"}:
             raise ValueError(f"知识点「{name}」node_type 只能是 section 或 point")
@@ -149,6 +151,40 @@ def _validate_question(question: dict[str, Any], chapter_name: str) -> None:
     difficulty = question.get("difficulty", 2)
     if not isinstance(difficulty, int) or not 1 <= difficulty <= MAX_DIFFICULTY:
         raise ValueError(f"题目「{stem}」difficulty 必须是 1~{MAX_DIFFICULTY}")
+    _validate_source(
+        question,
+        f"题目「{stem}」",
+        status=str(question.get("status", "published")),
+    )
+
+
+def _validate_source(
+    item: dict[str, Any],
+    label: str,
+    *,
+    status: str | None = None,
+    allow_adapted_from: bool = True,
+) -> None:
+    """来源字段校验：非原创必须可溯源，授权必须写授权说明，外部导入必须待审。"""
+    source_type = item.get("source_type", "original")
+    if source_type not in SOURCE_TYPES:
+        raise ValueError(
+            f"{label}的 source_type 非法：{source_type!r}，可选 {sorted(SOURCE_TYPES)}"
+        )
+    if source_type != "original" and not str(item.get("source_name") or "").strip():
+        raise ValueError(f"{label}的 source_type 为 {source_type}，必须填写 source_name")
+    if source_type == "licensed" and not str(item.get("license_note") or "").strip():
+        raise ValueError(
+            f"{label}的 source_type 为 licensed，必须填写 license_note（授权说明或协议编号）"
+        )
+    if (
+        allow_adapted_from
+        and source_type == "adapted"
+        and not str(item.get("adapted_from") or "").strip()
+    ):
+        raise ValueError(f"{label}的 source_type 为 adapted，必须填写 adapted_from")
+    if source_type == "external" and status is not None and status != "draft":
+        raise ValueError(f"{label}为外部导入（external），status 必须为 draft，复核后再发布")
 
 
 def import_document(db: Session, data: dict[str, Any], *, overwrite: bool = False) -> dict[str, int]:
@@ -238,6 +274,7 @@ def import_document(db: Session, data: dict[str, Any], *, overwrite: bool = Fals
                 weight=float(item.get("weight", 1.0)),
                 explanation=item.get("explanation"),
             )
+            _apply_source(row, item)
             db.add(row)
             db.flush()
             kp_created += 1
@@ -246,6 +283,15 @@ def import_document(db: Session, data: dict[str, Any], *, overwrite: bool = Fals
             row.weight = float(item.get("weight", row.weight))
             if item.get("explanation"):
                 row.explanation = item["explanation"]
+            for field in (
+                "source_type",
+                "source_name",
+                "source_ref",
+                "copyright_owner",
+                "license_note",
+            ):
+                if field in item:
+                    setattr(row, field, item[field])
             kp_updated += 1
         if node_type == "section":
             section_map[item["name"]] = row
@@ -354,9 +400,25 @@ def _fill_question(
     row.difficulty = int(question.get("difficulty", 2))
     row.tags = question.get("tags") or []
     row.status = question.get("status", "published")
+    _apply_source(row, question, include_adapted_from=True)
     row.subject = subject
     row.chapter_id = chapter_id
     row.knowledge_point_id = kp_id
+
+
+def _apply_source(
+    row: Question | KnowledgePoint,
+    item: dict[str, Any],
+    *,
+    include_adapted_from: bool = False,
+) -> None:
+    row.source_type = item.get("source_type", "original")
+    row.source_name = item.get("source_name")
+    row.source_ref = item.get("source_ref")
+    row.copyright_owner = item.get("copyright_owner")
+    row.license_note = item.get("license_note")
+    if include_adapted_from:
+        row.adapted_from = item.get("adapted_from")
 
 
 def _normalize_options(options: list[Any]) -> list[dict[str, str]]:

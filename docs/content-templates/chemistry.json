@@ -6,6 +6,8 @@
   "semester": "first",
   "knowledge": [
     {
+      "source_type": "original",
+      "source_name": "教研组自编",
       "node_type": "section",
       "name": "走进化学世界",
       "order_index": 1,
@@ -43,6 +45,8 @@
       "summary": "物质的变化与性质、基本实验技能。",
       "questions": [
         {
+          "source_type": "original",
+          "source_name": "自主命题",
           "q_type": "choice",
           "stem": "下列变化属于化学变化的是（  ）",
           "options": ["冰雪融化", "铁丝弯曲", "蜡烛燃烧", "酒精挥发"],

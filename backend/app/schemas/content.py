@@ -55,6 +55,15 @@ class QuestionCreate(BaseModel):
     analysis: Optional[str] = None
     difficulty: int = Field(default=3, ge=1, le=5)
     tags: Optional[List[str]] = None
+    # CT-02 来源与版权登记
+    source_type: str = Field(
+        default="original", pattern=r"^(original|adapted|licensed|public|external)$"
+    )
+    source_name: Optional[str] = Field(default=None, max_length=200)
+    source_ref: Optional[str] = Field(default=None, max_length=200)
+    copyright_owner: Optional[str] = Field(default=None, max_length=200)
+    license_note: Optional[str] = None
+    adapted_from: Optional[str] = Field(default=None, max_length=200)
 
 
 class QuestionOut(QuestionCreate):
@@ -95,3 +104,9 @@ class KnowledgePointOut(BaseModel):
     weight: float = 1.0
     prerequisites: Optional[List[int]]
     explanation: Optional[str]
+    # CT-02 讲解来源登记
+    source_type: str = "original"
+    source_name: Optional[str] = None
+    source_ref: Optional[str] = None
+    copyright_owner: Optional[str] = None
+    license_note: Optional[str] = None

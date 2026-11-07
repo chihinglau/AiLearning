@@ -57,6 +57,15 @@ class Question(Base):
     status: Mapped[str] = mapped_column(
         String(20), default="published", server_default="published", index=True
     )
+    # CT-02 内容来源与版权登记：original/adapted/licensed/public/external
+    source_type: Mapped[str] = mapped_column(
+        String(20), default="original", server_default="original"
+    )
+    source_name: Mapped[Optional[str]] = mapped_column(String(200), nullable=True)
+    source_ref: Mapped[Optional[str]] = mapped_column(String(200), nullable=True)
+    copyright_owner: Mapped[Optional[str]] = mapped_column(String(200), nullable=True)
+    license_note: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    adapted_from: Mapped[Optional[str]] = mapped_column(String(200), nullable=True)
     created_at: Mapped[datetime] = mapped_column(default=datetime.utcnow)
 
 
@@ -82,4 +91,12 @@ class KnowledgePoint(Base):
     weight: Mapped[float] = mapped_column(default=1.0, server_default="1.0")
     prerequisites: Mapped[Optional[List[int]]] = mapped_column(JSONType, nullable=True)
     explanation: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    # CT-02 讲解来源登记（教材原文引用需标注版权方与授权说明）
+    source_type: Mapped[str] = mapped_column(
+        String(20), default="original", server_default="original"
+    )
+    source_name: Mapped[Optional[str]] = mapped_column(String(200), nullable=True)
+    source_ref: Mapped[Optional[str]] = mapped_column(String(200), nullable=True)
+    copyright_owner: Mapped[Optional[str]] = mapped_column(String(200), nullable=True)
+    license_note: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
     created_at: Mapped[datetime] = mapped_column(default=datetime.utcnow)

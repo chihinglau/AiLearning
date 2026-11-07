@@ -6,6 +6,8 @@
   "semester": "first",
   "knowledge": [
     {
+      "source_type": "original",
+      "source_name": "教研组自编",
       "node_type": "section",
       "name": "10以内数的认识与加减法",
       "order_index": 1,
@@ -51,6 +53,8 @@
       "summary": "10 以内加减法的意义与口算。",
       "questions": [
         {
+          "source_type": "original",
+          "source_name": "自主命题",
           "q_type": "choice",
           "stem": "3 + 4 = ?",
           "options": ["5", "6", "7", "8"],
