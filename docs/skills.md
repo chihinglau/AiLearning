@@ -364,6 +364,43 @@ hdc shell "uitest uiInput click x y"
 
 > 截图文件 `ailaunch.png` / `ailaunch2.png` 拉取为 0 字节，疑为 EBG 机型兼容性问题；建议真机亮屏后再次 `adb exec-out screencap -p` 或用系统截图验证 UI。
 
+### 5.6 生产部署与运维（R-02）
+
+**部署资产目录 `deploy/`**：
+
+- `Dockerfile`：Python 3.12 + uvicorn，容器启动先执行 `alembic upgrade head`
+- `docker-compose.yml`：PostgreSQL 16 + API + Nginx（TLS 终结）
+- `nginx/ailearning.conf`：80→443 跳转、HSTS、反向代理到 `api:8000`
+- `.env.example`：复制为 `deploy/.env` 后填写（`deploy/.env`、`deploy/certs/` 已 gitignore）
+
+```powershell
+Copy-Item deploy\.env.example deploy\.env
+# 填写 POSTGRES_PASSWORD / JWT_SECRET / CORS_ORIGINS（JSON 数组）
+# 证书放到 deploy\certs\fullchain.pem 与 privkey.pem
+docker compose -f deploy\docker-compose.yml up -d --build
+# 首次部署可选：RUN_SEED=true，或手动执行
+docker compose -f deploy\docker-compose.yml exec api python -m scripts.seed
+```
+
+**启动校验**：`APP_ENV=production` 时，若 `JWT_SECRET` 仍为默认值或长度 < 32、`DEBUG=true`、`AUTO_CREATE_TABLES=true`、`CORS_ORIGINS` 为空/含 `*`/localhost，进程直接拒绝启动。
+
+**网络安全**：Android release 由 `network_security_config.xml` 禁止明文 HTTP（debug 源集单独放行本地调试）；`build-apk.ps1` 对 release 强制要求 `https://` 的 `API_BASE_URL`；鸿蒙 `module.json5` 通过 `networkSecurityConfig` 引用同一策略。
+
+**鉴权与错误脱敏**：登录/注册按 IP 限流（默认 10 / 5 次每分钟，超限 429 `RATE_LIMITED` 且带 `Retry-After`）；未捕获异常统一返回 500 `INTERNAL_ERROR` + `request_id`，不泄漏堆栈与数据库信息。
+
+**备份与恢复演练**（建议每日执行，保留 ≥ 30 天）：
+
+```powershell
+cd backend
+.venv\Scripts\python.exe -m scripts.db_backup --keep-days 30
+# 恢复演练：必须指向独立目标库，先校验备份完整性
+.venv\Scripts\python.exe -m scripts.db_restore --backup build\backups\ailearning-backup-xxx.db --target-url sqlite:///./build/restore_drill.db --force
+```
+
+PostgreSQL 环境使用 `pg_dump` / `pg_restore`；SQLite 使用在线备份 API，备份与恢复后均执行 `PRAGMA quick_check`。
+
+**审计留存**：`python -m scripts.prune_audit --months 24`（少于 6 个月直接拒绝）；建议每月先 `--dry-run` 核对再清理。
+
 ---
 
 ## 6. 双端架构约定（PlatformPal）
