@@ -18,6 +18,8 @@ app/ohos/signing/
 # === Local env ===
 .env
 .env.local
+deploy/.env
+deploy/certs/
 backend/.venv/
 backend/__pycache__/
 backend/scripts/__pycache__/

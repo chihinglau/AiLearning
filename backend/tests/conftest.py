@@ -8,6 +8,7 @@ from sqlalchemy.pool import StaticPool
 
 from app import models  # noqa: F401  注册全部模型
 from app.core import cache
+from app.core.rate_limit import rate_limiter
 from app.core.security import hash_password
 from app.db.base import Base
 from app.db.session import get_db
@@ -25,10 +26,12 @@ TestingSessionLocal = sessionmaker(bind=engine, autocommit=False, autoflush=Fals
 @pytest.fixture(autouse=True)
 def prepare_schema() -> Generator[None, None, None]:
     cache.clear()
+    rate_limiter.reset()
     Base.metadata.create_all(bind=engine)
     yield
     Base.metadata.drop_all(bind=engine)
     cache.clear()
+    rate_limiter.reset()
 
 
 @pytest.fixture
@@ -59,7 +62,12 @@ def _create_user(phone: str, password: str, role: str) -> None:
     session = TestingSessionLocal()
     try:
         session.add(
-            User(phone=phone, password_hash=hash_password(password), nickname=role, role=role)
+            User(
+                phone=phone,
+                password_hash=hash_password(password),
+                nickname=role,
+                role=role,
+            )
         )
         session.commit()
     finally:
@@ -67,7 +75,9 @@ def _create_user(phone: str, password: str, role: str) -> None:
 
 
 def _login(client: TestClient, phone: str, password: str) -> dict[str, str]:
-    response = client.post("/api/auth/login", data={"username": phone, "password": password})
+    response = client.post(
+        "/api/auth/login", data={"username": phone, "password": password}
+    )
     assert response.status_code == 200, response.text
     return {"Authorization": f"Bearer {response.json()['access_token']}"}
 
@@ -108,7 +118,9 @@ def sample_chapter(client: TestClient, admin_headers: dict[str, str]) -> int:
 
 
 @pytest.fixture
-def sample_question(client: TestClient, admin_headers: dict[str, str], sample_chapter: int) -> int:
+def sample_question(
+    client: TestClient, admin_headers: dict[str, str], sample_chapter: int
+) -> int:
     question = client.post(
         "/api/admin/questions",
         headers=admin_headers,

@@ -23,6 +23,12 @@ param(
 )
 $ErrorActionPreference = 'Stop'
 $Root  = if ($PSScriptRoot) { (Resolve-Path (Join-Path $PSScriptRoot '..')).Path } else { (Resolve-Path (Join-Path (Split-Path -Parent $MyInvocation.MyCommand.Path) '..')).Path }
+
+# R-02: release builds must point at an HTTPS backend; cleartext HTTP is debug-only.
+if (-not $DebugBuild -and $ApiBaseUrl -notmatch '^https://') {
+  throw "release build requires HTTPS API_BASE_URL (got: $ApiBaseUrl); pass -ApiBaseUrl https://your-domain"
+}
+
 $Tools = Join-Path $Root '.tools'
 
 $jdk = Join-Path $Tools 'jdk21'

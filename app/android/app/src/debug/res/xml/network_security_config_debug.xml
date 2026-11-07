@@ -1,0 +1,4 @@
+<network-security-config>
+    <!-- 仅 debug 构建允许本地 HTTP（10.0.2.2 / 局域网调试）。 -->
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>

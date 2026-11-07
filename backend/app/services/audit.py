@@ -1,6 +1,7 @@
 """合规审计日志写入（D-03 §8、D-05 合规要求）。"""
 
 import json
+from datetime import datetime, timedelta
 from typing import Any, Optional
 
 from sqlalchemy.orm import Session
@@ -8,6 +9,7 @@ from sqlalchemy.orm import Session
 from app.models.user import AuditLog
 
 DETAIL_MAX_LENGTH = 1000
+MIN_RETENTION_MONTHS = 6
 
 
 def record_audit(
@@ -39,3 +41,23 @@ def record_audit(
     if commit:
         db.commit()
     return log
+
+
+def prune_audit_logs(
+    db: Session,
+    *,
+    months: int = 24,
+    now: Optional[datetime] = None,
+    dry_run: bool = False,
+) -> int:
+    """清理超过留存期的审计日志；留存期不得短于 6 个月（D-05 合规红线）。"""
+    if months < MIN_RETENTION_MONTHS:
+        raise ValueError(f"审计日志留存期不得少于 {MIN_RETENTION_MONTHS} 个月")
+    cutoff = (now or datetime.utcnow()) - timedelta(days=months * 30)
+    query = db.query(AuditLog).filter(AuditLog.created_at < cutoff)
+    count = query.count()
+    if dry_run:
+        return count
+    deleted = query.delete(synchronize_session=False)
+    db.commit()
+    return deleted

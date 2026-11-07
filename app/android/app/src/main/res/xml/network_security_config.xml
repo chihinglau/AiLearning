@@ -1,0 +1,4 @@
+<network-security-config>
+    <!-- R-02：release 构建禁止明文 HTTP，API 必须使用 HTTPS。 -->
+    <base-config cleartextTrafficPermitted="false" />
+</network-security-config>

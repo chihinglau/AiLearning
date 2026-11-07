@@ -23,7 +23,8 @@ from app.api.routes import (
     textbooks,
     users,
 )
-from app.core.config import settings
+from app.core.config import settings, validate_settings
+from app.core.middleware import ErrorMaskingMiddleware, RateLimitMiddleware
 from app.db.base import Base
 from app.db.session import engine
 
@@ -31,6 +32,7 @@ from app.db.session import engine
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """本地开发可开启自动建表；生产环境请使用 Alembic 迁移。"""
+    validate_settings()
     if settings.auto_create_tables:
         Base.metadata.create_all(bind=engine)
     yield
@@ -52,6 +54,10 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# 中间件顺序：后添加的在外层。ErrorMasking 最外层兜底，其次限流，最后 CORS。
+app.add_middleware(RateLimitMiddleware)
+app.add_middleware(ErrorMaskingMiddleware)
 
 app.include_router(health.router)
 app.include_router(auth.router, prefix=settings.api_prefix)
