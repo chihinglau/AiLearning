@@ -11,6 +11,7 @@ from app.api.routes import (
     ai,
     assignments,
     auth,
+    data,
     exams,
     family,
     health,
@@ -64,6 +65,7 @@ app.include_router(admin_users.router, prefix=settings.api_prefix)
 app.include_router(admin_rbac.router, prefix=settings.api_prefix)
 app.include_router(assignments.router, prefix=settings.api_prefix)
 app.include_router(ai.router, prefix=settings.api_prefix)
+app.include_router(data.router, prefix=settings.api_prefix)
 app.include_router(org.router, prefix=settings.api_prefix)
 app.include_router(textbooks.router, prefix=settings.api_prefix)
 
