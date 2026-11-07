@@ -1,9 +1,9 @@
 # 深爱学（AiLearning）项目实施任务计划与进度跟踪
 
 > **文档性质**：项目主计划 / 进度跟踪 / 过程追溯（全程伴随开发周期）
-> **版本**：v1.80
+> **版本**：v1.81
 > **创建日期**：2026-11-06
-> **最后更新**：2026-11-07（CT-02 题库/知识库来源与版权登记字段落地，含迁移、模板与导入校验）
+> **最后更新**：2026-11-07（高中教材版本校正：数学人教版 A 版、英语外研版，种子与存量库同步）
 > **参考设计文档**：见[§1.1 参考设计文档清单](#11-参考设计文档清单)（共 8 份，含 4 份设计方案、4 份支撑文档）
 > **需求追踪**：见[§1.2 需求—设计—任务追踪矩阵](#12-需求设计任务追踪矩阵)
 > **维护人**：项目负责人（PM）
@@ -577,6 +577,7 @@ flowchart LR
 | v1.78 | 2026-11-07 | FE | UX-01 品牌柔和彩功能卡片（新增 `AppAccents`（ThemeExtension，practice `#4F46C8`/learn `#0B7A6D`/exam `#B45309`/assignment `#A63D6D`，含 `copyWith`/`lerp` 暗色预留）与通用 `FeatureCard`（淡彩底 12% + 描边 18% + 40px 图标圆底 + 标题/副标题 + 可选进度条 + 禁用 38% + `Semantics`）；`app.dart` 注册 `extensions: [AppAccents.light]`；学习首页「继续练习/继续学习/考试中心/班级作业」4 张入口卡改用 `FeatureCard` 分色，欢迎卡与推荐卡保持品牌/中性；新增 `app/test/feature_card_test.dart` 4 例；`dart analyze` 0 issues、`flutter test` 88 passed；OXF-AN10 真机同意隐私后登录学生账号，截图确认青绿/琥珀/玫红三卡；§3.6 UX-01 转 `DONE`（8 h）、新增 §6.15 R-A10 记录、§5.1 同步（DONE 78 / 投入 348 h / DOING 0）；`docs/k12-learning-app-design.md` §3.6 实施状态回写；当前下一步收集真机反馈并评估推广范围 |
 | v1.79 | 2026-11-07 | FE+BE | UX-02（返回链路）：`learn/profile/knowledge/unit/kp_detail/mistakes` 入口由 `go` 改 `push`，考试提交改 `pushReplacement`，教师班级/家长中心自定义返回改 `canPop ? pop : go('/shell')`；真机验证首页→知识点→单元→详情逐级返回；`dart analyze` 0 issues、`flutter test` 88 passed。CT-01（内容模板）：新增 `docs/content-templates/`（README + 9 学科 JSON）、`backend/app/services/content_import.py`、`backend/scripts/import_content.py`（幂等、`--dry-run`、`--overwrite`、题目可引用库中知识点），新增 `tests/test_content_import.py` 3 例并通过，9 模板 dry-run 全通过；§3.6 增 UX-02、§3.7 增 CT-01、新增 §6.16 R-A11/R-A12、§5.1 同步（DONE 80 / 投入 356 h / 任务 80）；当前下一步补充各科内容并向学生灰度 |
 | v1.80 | 2026-11-07 | BE+教研 | CT-02 来源与版权登记：`questions` 增 `source_type/source_name/source_ref/copyright_owner/license_note/adapted_from`，`knowledge_points` 增前五项（默认 `original`），迁移 `u1v2w3x4y5z6`；导入器新增四条校验（非原创必填 `source_name`、`licensed` 必填 `license_note`、题目 `adapted` 必填 `adapted_from`、`external` 必须 `draft`）；`QuestionCreate/QuestionOut`、`KnowledgePointOut` 暴露来源字段；9 份模板首知识点/首题演示 `original`，README 增字段表与规则；`tests/test_content_import.py` 7 passed、`tests/test_migrations.py` 3 passed、ruff E9/F 全绿、9 模板 dry-run 全通过；§3.7 增 CT-02、新增 §6.17 R-A13、§5.1 同步（DONE 81 / 投入 360 h / 任务 81）；当前下一步按模板扩充内容并如实登记来源 |
+| v1.81 | 2026-11-07 | BE+教研 | 高中教材版本校正：`scripts/seed.py` 增 `SENIOR_VERSIONS`（数学 `人教版A版`、英语 `外研版`），迁移 `v1w2x3y4z5a6` 同步存量教材（若目标版本已存在则迁移章节后删除旧记录）；设备库 134 本教材无重复，seed 幂等复跑计数不变（134/120/310/592）；README 深圳教材基线同步；不新增任务与工时 |
 
 ---
 

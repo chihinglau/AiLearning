@@ -90,6 +90,12 @@ VERSIONS = {
     "politics": "部编版",
 }
 
+# 高中阶段与义务教育阶段版本不同：数学为人教 A 版，英语为外研版
+SENIOR_VERSIONS = {
+    "math": "人教版A版",
+    "english": "外研版",
+}
+
 PRIMARY_SUBJECTS = ["math", "chinese", "english"]
 JUNIOR_SUBJECTS = {
     7: ["chinese", "math", "english", "biology", "history", "geography", "politics"],
@@ -123,7 +129,6 @@ def _arith_fill(a, b, op, idx, difficulty):
 
 
 def _arith_choice(a, b, op, idx, difficulty):
-    sym = {"add": "+", "sub": "-", "mul": "×", "div": "÷"}[op]
     if op == "add":
         target, expr = a + b, f"{a} + {b}"
     elif op == "sub":
@@ -1302,7 +1307,11 @@ def seed() -> None:
                 matrix.append((grade, subj, "second"))
 
         for grade, subj, semester in matrix:
-            version = VERSIONS[subj]
+            version = (
+                SENIOR_VERSIONS.get(subj, VERSIONS[subj])
+                if grade >= 10
+                else VERSIONS[subj]
+            )
             textbook = _get_or_create(
                 db, Textbook,
                 subject=subj, grade=grade, version=version, semester=semester,
