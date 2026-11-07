@@ -44,6 +44,8 @@ class ApiErrorGuide {
           message: '请先完善年级信息',
           action: ApiErrorAction.onboarding,
         );
+      case 'DAILY_LIMIT_REACHED':
+        return ApiErrorGuide(code: 'DAILY_LIMIT_REACHED', message: error.message);
     }
     if (error.statusCode == 401) {
       return const ApiErrorGuide(
@@ -75,6 +77,22 @@ Future<void> handleApiError(
   if (guide.action == ApiErrorAction.onboarding) {
     ref.read(onboardingStatusProvider.notifier).state = OnboardingStatus.required;
     if (context.mounted) context.go('/onboarding');
+    return;
+  }
+  if (guide.code == 'DAILY_LIMIT_REACHED' && context.mounted) {
+    await showDialog<void>(
+      context: context,
+      builder: (dialogContext) => AlertDialog(
+        title: const Text('今日学习时长已用完'),
+        content: Text('${guide.message}。可在「我的 → 账号与安全」查看今日时长。'),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(dialogContext).pop(),
+            child: const Text('知道了'),
+          ),
+        ],
+      ),
+    );
     return;
   }
   if (context.mounted) {

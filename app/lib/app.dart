@@ -23,6 +23,7 @@ import 'package:ai_learning/features/onboarding/entry_gate_page.dart';
 import 'package:ai_learning/features/onboarding/onboarding_page.dart';
 import 'package:ai_learning/features/practice/practice_config_page.dart';
 import 'package:ai_learning/features/practice/practice_page.dart';
+import 'package:ai_learning/features/profile/account_security_page.dart';
 import 'package:ai_learning/features/session/session_page.dart';
 import 'package:ai_learning/features/shell/app_shell.dart';
 import 'package:ai_learning/features/teacher/class_stats_page.dart';
@@ -79,6 +80,10 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/consent',
         builder: (context, state) => const LegalConsentPage(),
+      ),
+      GoRoute(
+        path: '/account/security',
+        builder: (context, state) => const AccountSecurityPage(),
       ),
       GoRoute(
         path: '/legal/privacy',

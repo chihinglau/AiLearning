@@ -5,6 +5,7 @@ import 'package:ai_learning/core/services/api_client.dart';
 import 'package:ai_learning/core/services/ai_service.dart';
 import 'package:ai_learning/core/services/assignment_service.dart';
 import 'package:ai_learning/core/services/auth_service.dart';
+import 'package:ai_learning/core/services/compliance_service.dart';
 import 'package:ai_learning/core/services/content_service.dart';
 import 'package:ai_learning/core/services/content_review_service.dart';
 import 'package:ai_learning/core/services/exam_service.dart';
@@ -94,6 +95,10 @@ final userServiceProvider = Provider<UserService>((ref) {
 
 final legalServiceProvider = Provider<LegalService>((ref) {
   return LegalService(ref.watch(apiClientProvider));
+});
+
+final complianceServiceProvider = Provider<ComplianceService>((ref) {
+  return ComplianceService(ref.watch(apiClientProvider));
 });
 
 final currentUserProvider = StateProvider<AppUser?>((ref) => null);

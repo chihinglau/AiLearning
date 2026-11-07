@@ -284,6 +284,17 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                     const SizedBox(height: 16),
                   ],
                   const SizedBox(height: 16),
+                  // R-04：账号与安全（时长状态、数据导出、账号注销）。
+                  Card(
+                    child: ListTile(
+                      leading: const Icon(Icons.security_outlined),
+                      title: const Text('账号与安全'),
+                      subtitle: const Text('今日学习时长、数据导出、注销账号'),
+                      trailing: const Icon(Icons.chevron_right),
+                      onTap: () => context.go('/account/security'),
+                    ),
+                  ),
+                  const SizedBox(height: 16),
                   // R-03：法务入口（隐私政策 / 用户协议 / 联系我们）。
                   Card(
                     child: Column(

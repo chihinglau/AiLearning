@@ -113,9 +113,12 @@ class ApiClient {
     }
   }
 
-  Future<Map<String, dynamic>> deleteJson(String path) async {
+  Future<Map<String, dynamic>> deleteJson(
+    String path, {
+    Map<String, dynamic>? body,
+  }) async {
     try {
-      final response = await _dio.delete<dynamic>(path);
+      final response = await _dio.delete<dynamic>(path, data: body);
       return _asMap(response.data);
     } on DioException catch (error) {
       throw _toApiException(error);

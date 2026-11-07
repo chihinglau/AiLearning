@@ -53,6 +53,11 @@ from app.services import wrong_reason as wrong_reason_service
 from app.services.assignment import class_authorized
 from app.services.audit import record_audit
 from app.services.exam_paper import generate_paper
+from app.services.usage import (
+    daily_limit_status,
+    limit_exceeded_detail,
+    retry_after_seconds,
+)
 
 router = APIRouter(prefix="/exams", tags=["考试"])
 
@@ -194,7 +199,10 @@ def _ensure_takeable(exam: Exam, user: User, db: Optional[Session] = None) -> No
         ) is None:
             raise HTTPException(
                 status_code=status.HTTP_403_FORBIDDEN,
-                detail={"code": "ASSIGNMENT_NOT_MEMBER", "message": "仅本班学生可参加该作业"},
+                detail={
+                    "code": "ASSIGNMENT_NOT_MEMBER",
+                    "message": "仅本班学生可参加该作业",
+                },
             )
     # 班级同卷模考：仅本班学生可进入，保证全班共用同一张卷
     if exam.class_id is not None and db is not None:
@@ -206,11 +214,18 @@ def _ensure_takeable(exam: Exam, user: User, db: Optional[Session] = None) -> No
         ) is None:
             raise HTTPException(
                 status_code=status.HTTP_403_FORBIDDEN,
-                detail={"code": "EXAM_NOT_MEMBER", "message": "仅本班学生可参加该模考"},
+                detail={
+                    "code": "EXAM_NOT_MEMBER",
+                    "message": "仅本班学生可参加该模考",
+                },
             )
 
 
-def _detail_out(db: Session, exam: Exam, now: Optional[datetime] = None) -> ExamDetailOut:
+def _detail_out(
+    db: Session,
+    exam: Exam,
+    now: Optional[datetime] = None,
+) -> ExamDetailOut:
     items = _paper_items(exam)
     questions = _question_map(db, [item["question_id"] for item in items])
     out: list[ExamQuestionOut] = []
@@ -265,11 +280,18 @@ def _remaining_seconds(exam: Exam, attempt: ExamAttempt, now: datetime) -> int:
 def _attempt_or_404(db: Session, attempt_id: int, user: User) -> ExamAttempt:
     attempt = db.get(ExamAttempt, attempt_id)
     if attempt is None or attempt.user_id != user.id:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="考试作答不存在")
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="考试作答不存在",
+        )
     return attempt
 
 
-def _answers_out(db: Session, attempt: ExamAttempt, paper: list[dict[str, Any]]) -> list[ExamAnswerOut]:
+def _answers_out(
+    db: Session,
+    attempt: ExamAttempt,
+    paper: list[dict[str, Any]],
+) -> list[ExamAnswerOut]:
     rows = {
         row.question_id: row
         for row in db.scalars(
@@ -294,10 +316,17 @@ def _answers_out(db: Session, attempt: ExamAttempt, paper: list[dict[str, Any]])
     return result
 
 
-def _attempt_out(db: Session, exam: Exam, attempt: ExamAttempt, now: datetime) -> ExamAttemptOut:
+def _attempt_out(
+    db: Session,
+    exam: Exam,
+    attempt: ExamAttempt,
+    now: datetime,
+) -> ExamAttemptOut:
     paper = _paper_items(exam)
     answers = _answers_out(db, attempt, paper)
-    answered = {answer.question_id for answer in answers if answer.user_answer is not None}
+    answered = {
+        answer.question_id for answer in answers if answer.user_answer is not None
+    }
     next_index = next(
         (i for i, item in enumerate(paper) if item["question_id"] not in answered),
         len(paper),
@@ -475,7 +504,10 @@ def assign_class_mock(
     """教师把一张真题/模考模板派发为班级同卷模考（全班共用同一 exam id）。"""
     template = db.get(Exam, payload.exam_id)
     if template is None or template.status != "published":
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="模考模板不存在")
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="模考模板不存在",
+        )
     school_class = db.get(SchoolClass, payload.class_id)
     if school_class is None:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="班级不存在")
@@ -487,7 +519,10 @@ def assign_class_mock(
     if school_class.grade and template.grade and school_class.grade != template.grade:
         raise HTTPException(
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
-            detail={"code": "CLASS_GRADE_MISMATCH", "message": "模考年级与班级年级不一致"},
+            detail={
+                "code": "CLASS_GRADE_MISMATCH",
+                "message": "模考年级与班级年级不一致",
+            },
         )
     if (
         payload.window_start is not None
@@ -496,7 +531,10 @@ def assign_class_mock(
     ):
         raise HTTPException(
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
-            detail={"code": "EXAM_WINDOW_INVALID", "message": "结束时间必须晚于开始时间"},
+            detail={
+                "code": "EXAM_WINDOW_INVALID",
+                "message": "结束时间必须晚于开始时间",
+            },
         )
     questions = list(template.questions or [])
     if not questions:
@@ -614,7 +652,10 @@ def _validate_answer_images(
         if not isinstance(image, str) or not image.startswith(IMAGE_DATA_PREFIXES):
             raise HTTPException(
                 status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
-                detail={"code": "IMAGE_INVALID", "message": "仅支持 PNG/JPEG/WEBP 图片"},
+                detail={
+                    "code": "IMAGE_INVALID",
+                    "message": "仅支持 PNG/JPEG/WEBP 图片",
+                },
             )
         if len(image) > MAX_IMAGE_DATA_URL:
             raise HTTPException(
@@ -699,7 +740,9 @@ def _finalize(
         row = rows.get(item["question_id"])
         if question.q_type in OBJECTIVE_TYPES:
             is_correct = bool(
-                row and row.user_answer is not None and engine.grade_answer(question, row.user_answer)
+                row
+                and row.user_answer is not None
+                and engine.grade_answer(question, row.user_answer)
             )
             if row is None:
                 row = ExamAnswer(attempt_id=attempt.id, question_id=item["question_id"])
@@ -725,7 +768,9 @@ def _finalize(
     if duration_ms is not None:
         attempt.duration_ms = duration_ms
     else:
-        attempt.duration_ms = int((now - (attempt.started_at or now)).total_seconds() * 1000)
+        attempt.duration_ms = int(
+            (now - (attempt.started_at or now)).total_seconds() * 1000
+        )
     db.flush()
 
     # P0-30 数据回流：客观题写入答题记录、错题本与掌握度（考试权重）
@@ -827,12 +872,24 @@ def start_attempt(
         )
         db.commit()
 
+    # R-04 青少年模式：新建作答前校验当日学习时长上限（续答不受影响）。
+    limit = daily_limit_status(db, current)
+    if limit["limited"]:
+        raise HTTPException(
+            status_code=status.HTTP_429_TOO_MANY_REQUESTS,
+            detail=limit_exceeded_detail(limit),
+            headers={"Retry-After": str(retry_after_seconds(limit))},
+        )
+
     used_seeds = {attempt.seed for attempt in attempts}
     if payload.seed is not None:
         if payload.seed in used_seeds:
             raise HTTPException(
                 status_code=status.HTTP_409_CONFLICT,
-                detail={"code": "SEED_CONFLICT", "message": "该试卷已使用相同 seed 作答"},
+                detail={
+                    "code": "SEED_CONFLICT",
+                    "message": "该试卷已使用相同 seed 作答",
+                },
             )
         seed = payload.seed
     else:
@@ -876,7 +933,12 @@ def save_answers(
                 duration_ms=None,
             )
         else:
-            saved = _save_answers(db, attempt=attempt, paper=paper, answers=payload.answers)
+            saved = _save_answers(
+                db,
+                attempt=attempt,
+                paper=paper,
+                answers=payload.answers,
+            )
             if _remaining_seconds(exam, attempt, now) <= 0:
                 _finalize(
                     db,
@@ -1058,7 +1120,9 @@ def exam_report(
     questions = _question_map(db, [item["question_id"] for item in paper])
     rows = {
         row.question_id: row
-        for row in db.scalars(select(ExamAnswer).where(ExamAnswer.attempt_id == attempt.id))
+        for row in db.scalars(
+            select(ExamAnswer).where(ExamAnswer.attempt_id == attempt.id)
+        )
     }
     kp_ids = sorted(
         {
@@ -1070,7 +1134,9 @@ def exam_report(
     )
     kp_names = {
         kp.id: kp.name
-        for kp in db.scalars(select(KnowledgePoint).where(KnowledgePoint.id.in_(kp_ids)))
+        for kp in db.scalars(
+            select(KnowledgePoint).where(KnowledgePoint.id.in_(kp_ids))
+        )
     } if kp_ids else {}
 
     type_bucket: dict[str, dict[str, float]] = {}
@@ -1102,7 +1168,13 @@ def exam_report(
 
         type_bucket.setdefault(
             question.q_type,
-            {"question_count": 0.0, "answered": 0.0, "correct": 0.0, "score": 0.0, "full_score": 0.0},
+            {
+                "question_count": 0.0,
+                "answered": 0.0,
+                "correct": 0.0,
+                "score": 0.0,
+                "full_score": 0.0,
+            },
         )
         type_stat = type_bucket[question.q_type]
         type_stat["question_count"] += 1
@@ -1146,7 +1218,9 @@ def exam_report(
                     full_score=item["score"],
                 )
             )
-        elif question.q_type not in OBJECTIVE_TYPES and (row is None or row.score is None):
+        elif question.q_type not in OBJECTIVE_TYPES and (
+            row is None or row.score is None
+        ):
             pending_subjective.append(
                 ExamSubjectiveItemOut(
                     question_id=question.id,
@@ -1180,7 +1254,11 @@ def exam_report(
     kp_stats = [
         ExamKpStatOut(
             knowledge_point_id=kp_id,
-            name=kp_names.get(kp_id, "未关联知识点") if kp_id is not None else "未关联知识点",
+            name=(
+                kp_names.get(kp_id, "未关联知识点")
+                if kp_id is not None
+                else "未关联知识点"
+            ),
             question_count=int(stat["question_count"]),
             correct=int(stat["correct"]),
             score=round(stat["score"], 2),
@@ -1223,7 +1301,11 @@ def exam_report(
         )
     if wrong_items:
         next_actions.append(
-            ExamNextActionOut(action="wrong_review", label="错题重练", count=len(wrong_items))
+            ExamNextActionOut(
+                action="wrong_review",
+                label="错题重练",
+                count=len(wrong_items),
+            )
         )
     next_actions.append(ExamNextActionOut(action="retake", label="再考一次", count=1))
 
@@ -1240,7 +1322,9 @@ def exam_report(
         correct_count=correct_count,
         question_count=question_count,
         answered_count=answered_count,
-        accuracy=round(correct_count / objective_answered, 3) if objective_answered else 0.0,
+        accuracy=(
+            round(correct_count / objective_answered, 3) if objective_answered else 0.0
+        ),
         duration_ms=attempt.duration_ms,
         submitted_at=attempt.submitted_at,
         type_stats=type_stats,
@@ -1275,7 +1359,9 @@ def self_assess(
     questions = _question_map(db, [item["question_id"] for item in paper])
     rows = {
         row.question_id: row
-        for row in db.scalars(select(ExamAnswer).where(ExamAnswer.attempt_id == attempt.id))
+        for row in db.scalars(
+            select(ExamAnswer).where(ExamAnswer.attempt_id == attempt.id)
+        )
     }
 
     assessed: list[tuple[Question, float, float, bool]] = []
@@ -1292,12 +1378,18 @@ def self_assess(
         if question is None or entry is None:
             raise HTTPException(
                 status_code=status.HTTP_404_NOT_FOUND,
-                detail={"code": "QUESTION_NOT_IN_PAPER", "message": "题目不在本张试卷内"},
+                detail={
+                    "code": "QUESTION_NOT_IN_PAPER",
+                    "message": "题目不在本张试卷内",
+                },
             )
         if question.q_type in OBJECTIVE_TYPES:
             raise HTTPException(
                 status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
-                detail={"code": "SELF_ASSESS_NOT_SUBJECTIVE", "message": "客观题由系统判分，无需自评"},
+                detail={
+                    "code": "SELF_ASSESS_NOT_SUBJECTIVE",
+                    "message": "客观题由系统判分，无需自评",
+                },
             )
         full_score = float(entry["score"])
         if item.score > full_score:
@@ -1368,7 +1460,11 @@ def self_assess(
     ]
     subjective_rows = [rows.get(question_id) for question_id in subjective_ids]
     subjective_score = round(
-        sum(row.score or 0 for row in subjective_rows if row is not None and row.score is not None),
+        sum(
+            row.score or 0
+            for row in subjective_rows
+            if row is not None and row.score is not None
+        ),
         2,
     )
     pending_count = sum(
@@ -1402,9 +1498,14 @@ def generate_exam(
     current: User = Depends(require_permission("content:exam:write")),
     db: Session = Depends(get_db),
 ) -> ExamGenerateOut:
-    blueprint = db.scalar(select(ExamBlueprint).where(ExamBlueprint.code == payload.blueprint_code))
+    blueprint = db.scalar(
+        select(ExamBlueprint).where(ExamBlueprint.code == payload.blueprint_code)
+    )
     if blueprint is None or not blueprint.is_active:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="试卷蓝图不存在或已停用")
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="试卷蓝图不存在或已停用",
+        )
 
     paper = generate_paper(
         db,

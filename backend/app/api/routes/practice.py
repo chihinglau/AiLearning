@@ -17,6 +17,11 @@ from app.schemas.practice import (
     PracticeSubmitIn,
     PracticeSubmitOut,
 )
+from app.services.usage import (
+    daily_limit_status,
+    limit_exceeded_detail,
+    retry_after_seconds,
+)
 
 router = APIRouter(prefix="/practice", tags=["同步练习"])
 
@@ -42,6 +47,15 @@ def start_practice(
     current: User = Depends(get_current_user),
     db: Session = Depends(get_db),
 ) -> PracticeStartOut:
+    # R-04 青少年模式：当日累计学习时长达到上限后停止抽题。
+    limit = daily_limit_status(db, current)
+    if limit["limited"]:
+        raise HTTPException(
+            status_code=status.HTTP_429_TOO_MANY_REQUESTS,
+            detail=limit_exceeded_detail(limit),
+            headers={"Retry-After": str(retry_after_seconds(limit))},
+        )
+
     stmt = select(Question)
     kp: Optional[KnowledgePoint] = None
     if payload.chapter_id:
@@ -49,7 +63,10 @@ def start_practice(
     if payload.knowledge_point_id:
         kp = db.get(KnowledgePoint, payload.knowledge_point_id)
         if kp is None:
-            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="知识点不存在")
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="知识点不存在",
+            )
         stmt = stmt.where(Question.subject == kp.subject)
     if payload.subject:
         stmt = stmt.where(Question.subject == payload.subject)
@@ -62,7 +79,10 @@ def start_practice(
         questions = [q for q in questions if kp.name in (q.tags or [])]
     questions = questions[: payload.count]
     if not questions:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="该范围暂无可用题目")
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="该范围暂无可用题目",
+        )
     return PracticeStartOut(questions=questions)
 
 
