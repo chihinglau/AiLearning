@@ -6,6 +6,7 @@ import 'package:ai_learning/core/services/ai_service.dart';
 import 'package:ai_learning/core/services/assignment_service.dart';
 import 'package:ai_learning/core/services/auth_service.dart';
 import 'package:ai_learning/core/services/content_service.dart';
+import 'package:ai_learning/core/services/content_review_service.dart';
 import 'package:ai_learning/core/services/exam_service.dart';
 import 'package:ai_learning/core/services/family_service.dart';
 import 'package:ai_learning/core/services/learn_service.dart';
@@ -68,6 +69,10 @@ final assignmentServiceProvider = Provider<AssignmentService>((ref) {
 
 final aiServiceProvider = Provider<AIService>((ref) {
   return AIService(ref.watch(apiClientProvider));
+});
+
+final contentReviewServiceProvider = Provider<ContentReviewService>((ref) {
+  return ContentReviewService(ref.watch(apiClientProvider));
 });
 
 final familyServiceProvider = Provider<FamilyService>((ref) {

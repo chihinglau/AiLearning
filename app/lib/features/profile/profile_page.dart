@@ -1,5 +1,6 @@
 import 'package:ai_learning/core/errors/api_error_guide.dart';
 import 'package:ai_learning/core/models/learn.dart';
+import 'package:ai_learning/core/models/user.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
 import 'package:flutter/material.dart';
@@ -231,6 +232,18 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                     ),
                     const SizedBox(height: 16),
                   ],
+                  if (_canReviewContent(user)) ...[
+                    Card(
+                      child: ListTile(
+                        leading: const Icon(Icons.fact_check_outlined),
+                        title: const Text('内容审核'),
+                        subtitle: const Text('复核题目/试卷并发布（双人复核）'),
+                        trailing: const Icon(Icons.chevron_right),
+                        onTap: () => context.go('/content/reviews'),
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                  ],
                   if (user?.hasPermission('system:config:write') == true) ...[
                     Card(
                       child: ListTile(
@@ -253,6 +266,14 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
             ),
     );
   }
+}
+
+bool _canReviewContent(AppUser? user) {
+  if (user == null) return false;
+  return user.hasPermission('content:review:decide') ||
+      user.hasPermission('content:publish') ||
+      user.hasPermission('content:question:write') ||
+      user.hasPermission('content:exam:write');
 }
 
 String _roleLabel(String? role) {

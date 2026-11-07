@@ -3,6 +3,7 @@
 from app.db.base import Base
 from app.models.assignment import Assignment
 from app.models.content import Chapter, KnowledgePoint, Question, Textbook
+from app.models.content_review import ContentReview
 from app.models.exam import Exam, ExamAnswer, ExamAttempt, ExamBlueprint, ExamSubmission
 from app.models.org import ClassMember, School, SchoolClass, TeacherClassAssignment
 from app.models.practice import (
@@ -46,4 +47,5 @@ __all__ = [
     "Permission",
     "RolePermission",
     "UserRole",
+    "ContentReview",
 ]

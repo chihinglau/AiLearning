@@ -6,6 +6,7 @@ import 'package:ai_learning/features/assignment/assignment_grading_page.dart';
 import 'package:ai_learning/features/assignment/assignment_list_page.dart';
 import 'package:ai_learning/features/auth/login_page.dart';
 import 'package:ai_learning/features/common/permission_gate.dart';
+import 'package:ai_learning/features/content/content_review_page.dart';
 import 'package:ai_learning/features/exam/exam_list_page.dart';
 import 'package:ai_learning/features/exam/exam_page.dart';
 import 'package:ai_learning/features/exam/exam_report_page.dart';
@@ -133,6 +134,13 @@ final routerProvider = Provider<GoRouter>((ref) {
         builder: (context, state) => const PermissionGate(
           anyOf: ['learn:stats:class:read'],
           child: TeacherClassesPage(),
+        ),
+      ),
+      GoRoute(
+        path: '/content/reviews',
+        builder: (context, state) => const PermissionGate(
+          anyOf: ['content:review:decide', 'content:publish'],
+          child: ContentReviewPage(),
         ),
       ),
       GoRoute(

@@ -53,6 +53,10 @@ class Question(Base):
     analysis: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
     difficulty: Mapped[int] = mapped_column(Integer, default=3)
     tags: Mapped[Optional[List[str]]] = mapped_column(JSONType, nullable=True)
+    # P2-09 内容复核：draft（待审核）/published（已发布）/offline（已下架）
+    status: Mapped[str] = mapped_column(
+        String(20), default="published", server_default="published", index=True
+    )
     created_at: Mapped[datetime] = mapped_column(default=datetime.utcnow)
 
 
