@@ -1,7 +1,7 @@
 #requires -Version 5.1
 <#
-  Generates a release signing keystore for AiLearning and writes
-  keystore.properties in the project root (gitignored).
+  Generates a release signing keystore for AiLearning, writes keystore.properties
+  in the project root (gitignored), and archives a local backup under .tools\signing\backup.
 
   Usage:
     powershell -ExecutionPolicy Bypass -File scripts\make-release-keystore.ps1
@@ -11,6 +11,8 @@
   WARNING
     Local development keystore only. Store release signing keys in your secret
     manager / HSM, and enrol in the store's app-signing program.
+    Re-running this script with an existing keystore reuses the recorded
+    passwords in keystore.properties instead of generating new ones.
 #>
 [CmdletBinding()]
 param(
@@ -27,20 +29,54 @@ $jdk   = Join-Path $Tools 'jdk21'
 if (-not (Test-Path (Join-Path $jdk 'bin\java.exe'))) { $jdk = Join-Path $Tools 'jdk17' }
 if (-not (Test-Path (Join-Path $jdk 'bin\java.exe'))) { throw 'JDK not found under .tools; run scripts\setup-env.ps1 first' }
 
-$keytool = Join-Path $jdk 'bin\keytool.exe'
-$signing = Join-Path $Tools 'signing'
+$keytool  = Join-Path $jdk 'bin\keytool.exe'
+$signing  = Join-Path $Tools 'signing'
+$propsPath = Join-Path $Root 'keystore.properties'
 New-Item -ItemType Directory -Force $signing | Out-Null
 $ks = Join-Path $signing 'ailearning.jks'
 
-if (-not $StorePass) {
-  $StorePass = -join ((48..57 + 65..90 + 97..122) | Get-Random -Count 24 | ForEach-Object { [char]$_ })
+function Read-Props([string]$path) {
+  $map = @{}
+  Get-Content -LiteralPath $path | ForEach-Object {
+    if ($_ -match '^(?<key>[^#=]+)=(?<value>.*)$') {
+      $map[$Matches['key'].Trim()] = $Matches['value'].Trim()
+    }
+  }
+  return $map
 }
-if (-not $KeyPass) { $KeyPass = $StorePass }
+
+function Backup-Signing([string]$reason) {
+  $backupDir = Join-Path $signing 'backup'
+  New-Item -ItemType Directory -Force $backupDir | Out-Null
+  $stamp = Get-Date -Format 'yyyyMMdd-HHmmss'
+  $zip = Join-Path $backupDir "ailearning-signing-$stamp.zip"
+  Compress-Archive -Path $ks, $propsPath -DestinationPath $zip -Force
+  Write-Host "[backup] $reason -> $zip" -ForegroundColor Yellow
+  Write-Host "         move this archive to your secret manager / key vault" -ForegroundColor Yellow
+}
 
 if (Test-Path $ks) {
   Write-Host "keystore already exists: $ks (left untouched)" -ForegroundColor Yellow
+  if (Test-Path $propsPath) {
+    $existing = Read-Props $propsPath
+    if (-not $StorePass) { $StorePass = $existing['storePassword'] }
+    if (-not $KeyPass)   { $KeyPass   = $existing['keyPassword'] }
+    if (-not $StorePass -or -not $KeyPass) {
+      throw 'keystore.properties 缺少密码字段，无法复用已有 keystore；请从备份恢复或改用 -StorePass/-KeyPass'
+    }
+    if ($existing['keyAlias']) { $Alias = $existing['keyAlias'] }
+  }
+  else {
+    throw 'keystore exists but keystore.properties is missing; restore keystore.properties from backup (passwords cannot be recovered)'
+  }
+  Backup-Signing 'existing keystore'
 }
 else {
+  if (-not $StorePass) {
+    $StorePass = -join ((48..57 + 65..90 + 97..122) | Get-Random -Count 24 | ForEach-Object { [char]$_ })
+  }
+  if (-not $KeyPass) { $KeyPass = $StorePass }
+
   Write-Host "generating release keystore -> $ks" -ForegroundColor Cyan
   & $keytool -genkeypair -v `
     -keystore $ks -storetype JKS `
@@ -58,10 +94,22 @@ storePassword=$StorePass
 keyAlias=$Alias
 keyPassword=$KeyPass
 "@
-Set-Content -LiteralPath (Join-Path $Root 'keystore.properties') -Value $props -Encoding ASCII
+Set-Content -LiteralPath $propsPath -Value $props -Encoding ASCII
+
+if (-not (Test-Path $ks)) { throw "keystore missing after generation: $ks" }
+Backup-Signing 'new keystore'
+
+$oldEap = $ErrorActionPreference
+$ErrorActionPreference = 'Continue'
+$list = & $keytool -list -v -keystore $ks -alias $Alias -storepass $StorePass 2>&1
+$listExit = $LASTEXITCODE
+$ErrorActionPreference = $oldEap
+if ($listExit -ne 0) { throw "keytool -list failed ($listExit)" }
+Write-Host "`n========== certificate fingerprints ==========" -ForegroundColor Cyan
+$list | Select-String -Pattern 'Owner:|Valid from|MD5:|SHA256:' | ForEach-Object { Write-Host $_.Line }
 
 Write-Host "`nwrote keystore.properties" -ForegroundColor Green
 Write-Host "  storeFile     = $ks"
 Write-Host "  keyAlias      = $Alias"
 Write-Host "  validity days = $Validity"
-Write-Host "`n[REMINDER] backup the keystore + passwords to your secret manager NOW." -ForegroundColor Yellow
+Write-Host "`n[REMINDER] back up the keystore + passwords to your secret manager NOW." -ForegroundColor Yellow
