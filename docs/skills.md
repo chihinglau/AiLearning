@@ -483,6 +483,28 @@ backend\.venv\Scripts\python.exe scripts\make-copyright-docs.py
 
 规则：源程序取自 `backend/app` 与 `app/lib`；软著名称须与商店展示名、R-06 APP 备案名称一致；材料中不得出现真实手机号/学生信息；修改源码后重跑脚本即可重建。
 
+### 5.10 备案信息接口与关于页（R-06）
+
+| 方法 | 路径 | 说明 |
+|---|---|---|
+| GET | `/app/info`、`/api/app/info` | 免登录；返回 `name`/`version`/`icp_record_no`/`app_record_no`/`software_copyright_no`/`privacy_url`/`terms_url`/`support_email` |
+
+配置（`deploy/.env`，未配置时返回空串，App 显示「待补充」）：
+
+```ini
+LEGAL_PUBLIC_BASE_URL=https://<域名>
+APP_DISPLAY_NAME=深爱学
+APP_VERSION_LABEL=1.0.0
+ICP_RECORD_NO=
+APP_RECORD_NO=
+SOFTWARE_COPYRIGHT_NO=
+SUPPORT_EMAIL=support@ailearning.cn
+```
+
+App「我的 → 关于」展示应用名/版本、ICP 备案号、APP 备案号、软著登记号与法务入口；离线回退 `AppConfig` 本地常量。
+
+商店技术信息与固化纪律见 `release/record-filing/checklist.md`：包名 `com.ailearning.ai_learning`、签名 MD5（CN=AiLearning）、versionCode 只增不减、SDK「无」、隐私 URL `/legal/privacy`；备案号取得后回填环境变量并重启服务，验证公网 `/app/info`。
+
 ---
 
 ## 6. 双端架构约定（PlatformPal）
