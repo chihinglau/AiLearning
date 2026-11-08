@@ -21,7 +21,9 @@ def _document():
         ],
         "chapters": [
             {
-                "name": "加与减（一）",
+                # 用教材真实章节名：旧样章名（如「加与减（一）」）会被导入层重定向到
+                # 教材真实章节，幂等性另有 test_chapter_placeholder.py 覆盖。
+                "name": "第三单元 整理与分类",
                 "order_index": 3,
                 "questions": [
                     {
@@ -50,14 +52,19 @@ def test_import_is_idempotent(db):
         "textbook_created": 1,
         "chapters_created": 1,
         "chapters_updated": 0,
+        "chapters_discarded": 0,
         "knowledge_created": 2,
         "knowledge_updated": 0,
+        "knowledge_discarded": 0,
         "questions_created": 2,
         "questions_skipped": 0,
+        "questions_discarded": 0,
+        "discarded_detail": [],
+        "legacy_file": False,
     }
     textbook = db.scalar(select(Textbook))
     assert textbook.version == "北师大版"
-    assert db.scalar(select(Chapter).where(Chapter.textbook_id == textbook.id)).name == "加与减（一）"
+    assert db.scalar(select(Chapter).where(Chapter.textbook_id == textbook.id)).name == "第三单元 整理与分类"
     point = db.scalar(
         select(KnowledgePoint).where(KnowledgePoint.name == "10以内加法")
     )

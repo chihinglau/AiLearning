@@ -1,0 +1,42 @@
+{
+  "subject": "math",
+  "grade": 1,
+  "version": "北师大版",
+  "semester": "first",
+  "knowledge": [
+    {"node_type": "section", "name": "10以内数加与减", "order_index": 5},
+    {"node_type": "point", "name": "10以内加法的含义", "parent": "10以内数加与减", "order_index": 1, "explanation": "把两部分合起来求一共是多少，用加法。看到「又来了」「又买来」「合起来」要先想加法，再按数的分与合算出结果。", "prerequisites": [], "weight": 1.3, "source_type": "original", "source_name": "教研组自编"},
+    {"node_type": "point", "name": "10以内减法的含义", "parent": "10以内数加与减", "order_index": 2, "explanation": "从总数里去掉一部分求剩下多少，或求两数相差多少，都用减法。算完可以用「剩下的 + 去掉的 = 总数」检验。", "prerequisites": ["10以内加法的含义"], "weight": 1.3, "source_type": "original", "source_name": "教研组自编"},
+    {"node_type": "point", "name": "加法与减法的互逆", "parent": "10以内数加与减", "order_index": 3, "explanation": "由一道加法算式可以写出两道减法算式：和减去一个加数等于另一个加数。用这个关系既能填空，也能验算减法算得对不对。", "prerequisites": ["10以内加法的含义", "10以内减法的含义"], "weight": 1.2, "source_type": "original", "source_name": "教研组自编"},
+    {"node_type": "point", "name": "10以内加减情境问题", "parent": "10以内数加与减", "order_index": 4, "explanation": "读题时先圈出「增加」还是「去掉」，再决定加还是减；两步问题要按顺序一步一步算，最后写清单位并检查答案是否符合生活常识。", "prerequisites": ["10以内加法的含义", "10以内减法的含义", "加法与减法的互逆"], "weight": 1.4, "source_type": "original", "source_name": "教研组自编"}
+  ],
+  "chapters": [
+    {
+      "name": "第四单元 10以内数加与减",
+      "order_index": 5,
+      "summary": "10 以内数加与减：加法与减法的含义、加减互逆关系，以及用两步运算解决生活中的简单问题。",
+      "questions": [
+        {"q_type": "choice", "stem": "盘子里有 4 个苹果，妈妈又放进去 3 个，现在一共有几个苹果？", "options": ["6 个", "7 个", "8 个", "9 个"], "answer": {"value": "B"}, "analysis": "4 + 3 = 7，一共有 7 个苹果，所以选 B。「又放进去」表示把两部分合起来，要用加法，不能算成 4 - 3 = 1。", "difficulty": 1, "knowledge_point": "10以内加法的含义", "source_type": "original", "source_name": "自主命题", "status": "published"},
+        {"q_type": "fill", "stem": "6 + 2 = （  ）", "answer": {"value": "8"}, "analysis": "6 + 2 = 8，从 6 往后接着数 2 个数是 7、8，所以填 8；也可以用 8 - 2 = 6 反过来验算。", "difficulty": 1, "knowledge_point": "10以内加法的含义", "source_type": "original", "source_name": "自主命题", "status": "published"},
+        {"q_type": "judge", "stem": "算式 3 + 5 = 8 表示把 3 和 5 合起来一共是 8。", "answer": {"value": "T"}, "analysis": "3 + 5 = 8，加法的含义正是把两部分合并成总数，所以这个说法正确；若把 3 和 5 相减得不到 8。", "difficulty": 3, "knowledge_point": "10以内加法的含义", "source_type": "original", "source_name": "自主命题", "status": "published"},
+        {"q_type": "choice", "stem": "下面哪个算式的结果与 2 + 7 相同？", "options": ["3 + 5", "4 + 5", "6 + 2", "1 + 7"], "answer": {"value": "B"}, "analysis": "先算 2 + 7 = 9；A 3 + 5 = 8，C 6 + 2 = 8，D 1 + 7 = 8，都不到 9；B 4 + 5 = 9，与它相同，所以选 B。", "difficulty": 3, "knowledge_point": "10以内加法的含义", "source_type": "original", "source_name": "自主命题", "status": "published"},
+        {"q_type": "answer", "stem": "小明有 5 张贴纸，小红又送给他 4 张。小明现在一共有多少张贴纸？请写出加法算式，并说说为什么用加法。", "answer": {"value": "5 + 4 = 9（张）。因为是把原来的 5 张和又得到的 4 张合起来求一共多少，所以用加法。"}, "analysis": "评分要点：算式 5 + 4 = 9 得 2 分，说明「合起来求总数用加法」得 1 分，写单位「张」得 1 分。易错点：看到「送」就误列 5 - 4 = 1，要注意贴纸是增加而不是减少。", "difficulty": 4, "knowledge_point": "10以内加法的含义", "source_type": "original", "source_name": "自主命题", "status": "published"},
+        {"q_type": "choice", "stem": "树上有 9 只小鸟，飞走了 4 只，还剩几只？", "options": ["4 只", "5 只", "6 只", "13 只"], "answer": {"value": "B"}, "analysis": "9 - 4 = 5，还剩 5 只，所以选 B。「飞走」是从总数里去掉一部分，用减法；D 的 9 + 4 = 13 把飞走的又加回去了，方向反了。", "difficulty": 1, "knowledge_point": "10以内减法的含义", "source_type": "original", "source_name": "自主命题", "status": "published"},
+        {"q_type": "fill", "stem": "10 - 3 = （  ）", "answer": {"value": "7"}, "analysis": "10 - 3 = 7，从 10 里面去掉 3 剩 7；再用 7 + 3 = 10 检验，说明结果正确。", "difficulty": 2, "knowledge_point": "10以内减法的含义", "source_type": "original", "source_name": "自主命题", "status": "published"},
+        {"q_type": "judge", "stem": "8 - 2 = 6，也可以说 8 比 2 多 6。", "answer": {"value": "T"}, "analysis": "8 - 2 = 6，减法除了表示「去掉」，还可以表示求两个数相差多少，所以 8 比 2 多 6 的说法正确。", "difficulty": 3, "knowledge_point": "10以内减法的含义", "source_type": "original", "source_name": "自主命题", "status": "published"},
+        {"q_type": "multiple", "stem": "下面哪些算式的结果是 5？", "options": ["9 - 4", "7 - 2", "10 - 4", "8 - 3"], "answer": {"value": ["A", "B", "D"]}, "analysis": "逐项计算：A 9 - 4 = 5 ✓；B 7 - 2 = 5 ✓；C 10 - 4 = 6 ✗；D 8 - 3 = 5 ✓。只有 A、B、D 的差是 5，C 多减了一个 1 才容易看错。", "difficulty": 4, "knowledge_point": "10以内减法的含义", "source_type": "original", "source_name": "自主命题", "status": "published"},
+        {"q_type": "answer", "stem": "盒子里有 8 支铅笔，用掉了 3 支，还剩几支？写出算式并说明这个减法表示什么。", "answer": {"value": "8 - 3 = 5（支）。减法表示从总数 8 支里去掉用掉的 3 支，求剩下的那一部分。"}, "analysis": "评分要点：算式 8 - 3 = 5 得 2 分，单位「支」得 1 分，说明「从总数里去掉一部分」得 1 分。易错点：把 8 与 3 相加得 11，或漏写单位。", "difficulty": 2, "knowledge_point": "10以内减法的含义", "source_type": "original", "source_name": "自主命题", "status": "published"},
+        {"q_type": "choice", "stem": "因为 6 + 3 = 9，所以 9 - 3 = （  ）", "options": ["3", "6", "9", "12"], "answer": {"value": "B"}, "analysis": "6 + 3 = 9，和减去一个加数等于另一个加数，所以 9 - 3 = 6，选 B；D 的 12 是把 9 和 3 又加了一次。", "difficulty": 1, "knowledge_point": "加法与减法的互逆", "source_type": "original", "source_name": "自主命题", "status": "published"},
+        {"q_type": "fill", "stem": "已知 2 + 7 = 9，那么 9 - （  ） = 2，括号里应填几？", "answer": {"value": "7"}, "analysis": "9 - 2 = 7，所以 9 - 7 = 2，括号里填 7；用 2 + 7 = 9 验算，2 与 7 互换位置结果不变。", "difficulty": 3, "knowledge_point": "加法与减法的互逆", "source_type": "original", "source_name": "自主命题", "status": "published"},
+        {"q_type": "judge", "stem": "算式 10 - 6 = 4 可以用 4 + 6 = 10 来验算。", "answer": {"value": "T"}, "analysis": "4 + 6 = 10，差加减数正好等于被减数，说明 10 - 6 = 4 算对了，所以说法正确。", "difficulty": 3, "knowledge_point": "加法与减法的互逆", "source_type": "original", "source_name": "自主命题", "status": "published"},
+        {"q_type": "multiple", "stem": "已知 3 + 4 = 7，下面哪些说法是正确的？", "options": ["7 - 3 = 4", "7 - 4 = 3", "7 - 3 = 3", "7 + 4 = 10"], "answer": {"value": ["A", "B"]}, "analysis": "逐项验算：A 7 - 3 = 4 ✓；B 7 - 4 = 3 ✓；C 7 - 3 = 3 ✗（错，正确差是 4）；D 7 + 4 = 10 ✗（错，正确和是 11）。由一道加法算式只能得到「和减一个加数等于另一个加数」这两道减法。", "difficulty": 4, "knowledge_point": "加法与减法的互逆", "source_type": "original", "source_name": "自主命题", "status": "published"},
+        {"q_type": "answer", "stem": "根据 5 + 2 = 7 写出两道减法算式，再说说加法和减法有什么关系。", "answer": {"value": "7 - 5 = 2，7 - 2 = 5。加法把两部分合成总数，减法从总数里去掉一部分得到另一部分，两者互为逆运算，可以互相验算。"}, "analysis": "评分要点：两道减法算式各 1 分，写出「互逆／互相验算」得 2 分。易错点：写成 5 - 2 = 3 这类同方向相减，或漏掉其中一道减法算式。", "difficulty": 3, "knowledge_point": "加法与减法的互逆", "source_type": "original", "source_name": "自主命题", "status": "published"},
+        {"q_type": "choice", "stem": "一年级图书角原有 6 本故事书，老师又买来 3 本，现在有几本故事书？", "options": ["3 本", "8 本", "9 本", "10 本"], "answer": {"value": "C"}, "analysis": "6 + 3 = 9，现在有 9 本，所以选 C。「又买来」表示数量增加，用加法；A 的 3 本只是新买的数量，不是总数。", "difficulty": 2, "knowledge_point": "10以内加减情境问题", "source_type": "original", "source_name": "自主命题", "status": "published"},
+        {"q_type": "fill", "stem": "公交车上原有 10 人，到站下车 4 人，车上还有 （  ） 人。", "answer": {"value": "6"}, "analysis": "10 - 4 = 6，下车使人数减少，用减法；再用 6 + 4 = 10 验算，结果与原来人数一致。", "difficulty": 3, "knowledge_point": "10以内加减情境问题", "source_type": "original", "source_name": "自主命题", "status": "published"},
+        {"q_type": "judge", "stem": "小明有 7 颗糖，吃了 2 颗，还剩 5 颗，列式是 7 - 2 = 5。", "answer": {"value": "T"}, "analysis": "7 - 2 = 5，「吃了」表示从总数里去掉，列式与结果都正确，所以说法正确；5 + 2 = 7 也能验算。", "difficulty": 1, "knowledge_point": "10以内加减情境问题", "source_type": "original", "source_name": "自主命题", "status": "published"},
+        {"q_type": "multiple", "stem": "一年级同学做手工：先折了 4 只纸鹤，又折了 3 只，然后送给老师 2 只。下面哪些说法正确？", "options": ["一共折了 4 + 3 = 7 只", "送出后还剩 7 - 2 = 5 只", "一共折了 4 + 3 + 2 = 9 只", "送出后还剩 4 + 3 = 7 只"], "answer": {"value": ["A", "B"]}, "analysis": "逐项判断：A 4 + 3 = 7 ✓（两次折的合起来）；B 7 - 2 = 5 ✓（送走 2 只后剩 5 只）；C 4 + 3 + 2 = 9 ✗（送出的 2 只不是新折的，不能加进去）；D 4 + 3 = 7 ✗（算式虽对，但 7 是送出前的数量，送出后应是 5）。", "difficulty": 5, "knowledge_point": "10以内加减情境问题", "source_type": "original", "source_name": "自主命题", "status": "published"},
+        {"q_type": "answer", "stem": "盒里有 10 个小球，先拿走 3 个，又放回 2 个，现在盒里有几个小球？写出每一步算式并说明是加还是减。", "answer": {"value": "10 - 3 = 7（个），7 + 2 = 9（个），现在有 9 个。拿走要减，放回来要加。"}, "analysis": "评分要点：第一步 10 - 3 = 7 得 2 分，第二步 7 + 2 = 9 得 2 分，说明「拿走用减、放回用加」得 1 分。易错点：把两步合并成 10 - 3 - 2 = 5，或忘了第二步要接着第一次剩下的 7 个算。", "difficulty": 3, "knowledge_point": "10以内加减情境问题", "source_type": "original", "source_name": "自主命题", "status": "published"}
+      ]
+    }
+  ]
+}

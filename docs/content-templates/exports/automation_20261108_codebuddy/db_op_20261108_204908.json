@@ -1,0 +1,131 @@
+{
+  "_meta": {
+    "kind": "chapter_drop_legacy",
+    "generated": "2026-11-08T20:49:08",
+    "tool": "chapter_drop_legacy.py（人工运维，--confirm I_KNOW）",
+    "database": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\ailearning_dev.db",
+    "backup": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\build\\backups\\ailearning-backup-20261108-204908.db",
+    "restore_hint": "python db_ops.py restore --backup \"D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\build\\backups\\ailearning-backup-20261108-204908.db\" --force --confirm I_KNOW",
+    "plan": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\chapter_cleanup_plan_20261108.json",
+    "semantics": "删除教材目录上不存在的旧样章（is_placeholder=1）及其全部题目、独占知识点；exams.chapter_ids 剔除占位章 id；教材真实章节/知识点/题目零删除。"
+  },
+  "stats": {
+    "before": {
+      "textbooks": 146,
+      "chapters": 618,
+      "knowledge_points": 537,
+      "questions": 957
+    },
+    "after": {
+      "textbooks": 146,
+      "chapters": 618,
+      "knowledge_points": 537,
+      "questions": 957
+    },
+    "delta": {
+      "textbooks": 0,
+      "chapters": 0,
+      "knowledge_points": 0,
+      "questions": 0
+    },
+    "chapters_deleted": 0,
+    "questions_deleted": 0,
+    "knowledge_points_deleted": 0,
+    "exam_refs_fixed": 0
+  },
+  "checks": {
+    "quick_check": "ok",
+    "foreign_key_violations": 0,
+    "orphan_question_chapter_refs": 0,
+    "orphan_question_kp_refs": 0,
+    "orphan_kp_parent_refs": 0,
+    "placeholder_chapters_left": 0,
+    "exam_chapter_refs_dangling": 0
+  },
+  "deleted": {
+    "chapters": [],
+    "question_ids": [],
+    "exclusive_point_ids": [],
+    "exclusive_section_ids": []
+  },
+  "exams_fixed": [
+    {
+      "exam_id": 1,
+      "title": "深圳市一年级数学期末真题（2025）",
+      "before": [
+        311,
+        4,
+        5,
+        6
+      ],
+      "removed_dead": [
+        4,
+        5,
+        6
+      ],
+      "after": [
+        307,
+        308,
+        309,
+        310,
+        311,
+        312
+      ],
+      "refilled_by_textbook": true,
+      "reason": "原范围指向的章节已失效，按该年级上册真实章节整册重挂"
+    },
+    {
+      "exam_id": 2,
+      "title": "深圳市一年级语文期末真题（2025）",
+      "before": [
+        153,
+        10,
+        11,
+        12
+      ],
+      "removed_dead": [
+        10,
+        11,
+        12
+      ],
+      "after": [
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160
+      ],
+      "refilled_by_textbook": true,
+      "reason": "原范围指向的章节已失效，按该年级上册真实章节整册重挂"
+    },
+    {
+      "exam_id": 3,
+      "title": "深圳市三年级数学期末真题（2024）",
+      "before": [
+        42,
+        43,
+        44
+      ],
+      "removed_dead": [
+        42,
+        43,
+        44
+      ],
+      "after": [
+        321,
+        322,
+        323,
+        324,
+        325,
+        326,
+        327,
+        328
+      ],
+      "refilled_by_textbook": true,
+      "reason": "原范围指向的章节已失效，按该年级上册真实章节整册重挂"
+    }
+  ]
+}

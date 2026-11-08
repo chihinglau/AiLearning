@@ -1,0 +1,479 @@
+{
+  "_meta": {
+    "kind": "chapter_drop_legacy",
+    "generated": "2026-11-08T20:47:03",
+    "tool": "chapter_drop_legacy.py（人工运维，--confirm I_KNOW）",
+    "database": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\ailearning_dev.db",
+    "backup": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\build\\backups\\ailearning-backup-20261108-204703.db",
+    "restore_hint": "python db_ops.py restore --backup \"D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\build\\backups\\ailearning-backup-20261108-204703.db\" --force --confirm I_KNOW",
+    "plan": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\chapter_cleanup_plan_20261108.json",
+    "semantics": "删除教材目录上不存在的旧样章（is_placeholder=1）及其全部题目、独占知识点；exams.chapter_ids 剔除占位章 id；教材真实章节/知识点/题目零删除。"
+  },
+  "stats": {
+    "before": {
+      "textbooks": 146,
+      "chapters": 642,
+      "knowledge_points": 598,
+      "questions": 1087
+    },
+    "after": {
+      "textbooks": 146,
+      "chapters": 618,
+      "knowledge_points": 537,
+      "questions": 957
+    },
+    "delta": {
+      "textbooks": 0,
+      "chapters": -24,
+      "knowledge_points": -61,
+      "questions": -130
+    },
+    "chapters_deleted": 24,
+    "questions_deleted": 130,
+    "knowledge_points_deleted": 61,
+    "exam_refs_fixed": 3
+  },
+  "checks": {
+    "quick_check": "ok",
+    "foreign_key_violations": 0,
+    "orphan_question_chapter_refs": 0,
+    "orphan_question_kp_refs": 0,
+    "orphan_kp_parent_refs": 0,
+    "placeholder_chapters_left": 0,
+    "exam_chapter_refs_dangling": 9
+  },
+  "deleted": {
+    "chapters": [
+      {
+        "id": 2,
+        "textbook_id": 1,
+        "grade": 1,
+        "name": "比较与位置",
+        "order_index": 9002
+      },
+      {
+        "id": 3,
+        "textbook_id": 1,
+        "grade": 1,
+        "name": "认识图形",
+        "order_index": 9003
+      },
+      {
+        "id": 7,
+        "textbook_id": 3,
+        "grade": 1,
+        "name": "汉语拼音",
+        "order_index": 9007
+      },
+      {
+        "id": 9,
+        "textbook_id": 3,
+        "grade": 1,
+        "name": "反义词与数量词",
+        "order_index": 9009
+      },
+      {
+        "id": 13,
+        "textbook_id": 5,
+        "grade": 1,
+        "name": "Greetings 问候",
+        "order_index": 9013
+      },
+      {
+        "id": 15,
+        "textbook_id": 5,
+        "grade": 1,
+        "name": "Numbers 1-10",
+        "order_index": 9015
+      },
+      {
+        "id": 21,
+        "textbook_id": 9,
+        "grade": 2,
+        "name": "乘法口诀（2-5）",
+        "order_index": 9021
+      },
+      {
+        "id": 22,
+        "textbook_id": 9,
+        "grade": 2,
+        "name": "元角分",
+        "order_index": 9022
+      },
+      {
+        "id": 26,
+        "textbook_id": 11,
+        "grade": 2,
+        "name": "多音字",
+        "order_index": 9026
+      },
+      {
+        "id": 27,
+        "textbook_id": 11,
+        "grade": 2,
+        "name": "量词与词语搭配",
+        "order_index": 9027
+      },
+      {
+        "id": 28,
+        "textbook_id": 11,
+        "grade": 2,
+        "name": "比喻句初步",
+        "order_index": 9028
+      },
+      {
+        "id": 33,
+        "textbook_id": 13,
+        "grade": 2,
+        "name": "Food 食物",
+        "order_index": 9033
+      },
+      {
+        "id": 34,
+        "textbook_id": 13,
+        "grade": 2,
+        "name": "Numbers 11-20",
+        "order_index": 9034
+      },
+      {
+        "id": 39,
+        "textbook_id": 17,
+        "grade": 3,
+        "name": "一位数乘多位数",
+        "order_index": 9039
+      },
+      {
+        "id": 40,
+        "textbook_id": 17,
+        "grade": 3,
+        "name": "周长",
+        "order_index": 9040
+      },
+      {
+        "id": 41,
+        "textbook_id": 17,
+        "grade": 3,
+        "name": "分数的初步认识",
+        "order_index": 9041
+      },
+      {
+        "id": 45,
+        "textbook_id": 19,
+        "grade": 3,
+        "name": "修改病句",
+        "order_index": 9045
+      },
+      {
+        "id": 46,
+        "textbook_id": 19,
+        "grade": 3,
+        "name": "关联词",
+        "order_index": 9046
+      },
+      {
+        "id": 47,
+        "textbook_id": 19,
+        "grade": 3,
+        "name": "古诗文积累",
+        "order_index": 9047
+      },
+      {
+        "id": 51,
+        "textbook_id": 21,
+        "grade": 3,
+        "name": "My school 学校场所",
+        "order_index": 9051
+      },
+      {
+        "id": 53,
+        "textbook_id": 21,
+        "grade": 3,
+        "name": "现在进行时初步",
+        "order_index": 9053
+      },
+      {
+        "id": 128,
+        "textbook_id": 33,
+        "grade": 5,
+        "name": "小数除法",
+        "order_index": 9128
+      },
+      {
+        "id": 122,
+        "textbook_id": 59,
+        "grade": 7,
+        "name": "第一章 地球和地图",
+        "order_index": 9122
+      },
+      {
+        "id": 126,
+        "textbook_id": 61,
+        "grade": 7,
+        "name": "第一单元 成长的节拍",
+        "order_index": 9126
+      }
+    ],
+    "question_ids": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      25,
+      26,
+      27,
+      28,
+      33,
+      34,
+      35,
+      36,
+      49,
+      50,
+      51,
+      52,
+      57,
+      58,
+      59,
+      60,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      205,
+      206,
+      207,
+      208,
+      213,
+      214,
+      215,
+      216,
+      621,
+      622,
+      623,
+      624,
+      625,
+      642,
+      643,
+      644,
+      645,
+      646,
+      685,
+      686,
+      687,
+      688,
+      689,
+      690,
+      691,
+      692,
+      693,
+      694,
+      695,
+      696,
+      697,
+      698,
+      699,
+      700,
+      701,
+      702,
+      721,
+      722,
+      723,
+      724,
+      725,
+      726,
+      727,
+      728,
+      729,
+      730,
+      731,
+      732,
+      733,
+      734,
+      735,
+      736,
+      737,
+      738
+    ],
+    "exclusive_point_ids": [
+      4,
+      6,
+      14,
+      18,
+      26,
+      30,
+      43,
+      45,
+      53,
+      55,
+      57,
+      67,
+      69,
+      80,
+      82,
+      84,
+      92,
+      94,
+      96,
+      104,
+      108,
+      318,
+      319,
+      320,
+      335,
+      336,
+      337,
+      348,
+      349,
+      350,
+      351,
+      352,
+      360,
+      361,
+      362,
+      363,
+      364
+    ],
+    "exclusive_section_ids": [
+      3,
+      5,
+      13,
+      17,
+      25,
+      29,
+      42,
+      44,
+      52,
+      54,
+      56,
+      66,
+      68,
+      79,
+      81,
+      83,
+      91,
+      93,
+      95,
+      103,
+      107,
+      317,
+      334,
+      359
+    ]
+  },
+  "exams_fixed": [
+    {
+      "exam_id": 1,
+      "before": [
+        311,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "removed": [
+        2,
+        3
+      ],
+      "after": [
+        311,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "exam_id": 2,
+      "before": [
+        7,
+        153,
+        9,
+        10,
+        11,
+        12
+      ],
+      "removed": [
+        7,
+        9
+      ],
+      "after": [
+        153,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "exam_id": 3,
+      "before": [
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "removed": [
+        39,
+        40,
+        41
+      ],
+      "after": [
+        42,
+        43,
+        44
+      ]
+    }
+  ]
+}

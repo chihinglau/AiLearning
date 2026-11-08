@@ -1,0 +1,578 @@
+{
+  "subject": "politics",
+  "grade": 8,
+  "version": "部编版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "诚实守信",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "友善待人",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "第六课 提升法治素养",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "树立法治观念",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "学会依法办事",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "诚实守信的要求",
+      "parent": "诚实守信",
+      "order_index": 1,
+      "weight": 1.2,
+      "explanation": "诚实守信是做人的基本要求，要求说老实话、做老实事、履行承诺；失信会损害个人信誉，也会给他人和带来实际影响带来损失。",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "友善待人的表现",
+      "parent": "友善待人",
+      "order_index": 2,
+      "weight": 1.1,
+      "explanation": "友善待人要求平等尊重他人、学会换位思考、不歧视他人，用文明友善的态度处理人际关系，做一个有道德的人。",
+      "prerequisites": [
+        "诚实守信的要求"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "法治观念的内涵",
+      "parent": "树立法治观念",
+      "order_index": 3,
+      "weight": 1.3,
+      "explanation": "法律是治国理政的基本方式，法律面前人人平等；树立法治观念就是要尊重法律、学习法律、遵守法律、运用法律。",
+      "prerequisites": [
+        "友善待人的表现"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "增强法治意识",
+      "parent": "第六课 提升法治素养",
+      "order_index": 4,
+      "weight": 1.1,
+      "explanation": "法治意识是现代社会的必备素养，要从小事做起学习法律知识、养成守法习惯，并用法律思维分析和解决问题。",
+      "prerequisites": [
+        "法治观念的内涵"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "依法办事的要求",
+      "parent": "学会依法办事",
+      "order_index": 5,
+      "weight": 1.2,
+      "explanation": "学会依法办事就是遇事找法、解决问题用法、化解矛盾靠法，遇到纠纷不意气用事，而是通过合法途径解决。",
+      "prerequisites": [
+        "增强法治意识"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "依法维权的途径",
+      "parent": "学会依法办事",
+      "order_index": 6,
+      "weight": 1.2,
+      "explanation": "合法权益受损时要依法维权，可通过协商、调解、投诉、申诉、诉讼等途径，并注意保存证据；不能用违法方式解决问题。",
+      "prerequisites": [
+        "依法办事的要求"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第二单元 维护社会秩序",
+      "order_index": 2,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "答应别人的事就要努力做到，这种行为体现的是（  ）",
+          "options": [
+            "诚实守信",
+            "不守信用",
+            "保护个人隐私",
+            "行使自由权利"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "言出必行是诚实守信的基本要求，教材把诚实守信作为做人的基本准则；其余三项与题干行为无关，故选 A。",
+          "difficulty": 4,
+          "knowledge_point": "诚实守信的要求",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "小樊答应周末帮同学复习，却因沉迷游戏忘了。这提醒我们（  ）",
+          "options": [
+            "要言出必行，失信会给自己和他人带来损失",
+            "失信只是小事，不必在意",
+            "可以随便找个借口推脱过去",
+            "以后干脆谁都不要答应"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "失信既损害个人信誉，也耽误同学的事，教材强调诚实守信要落实到行动；B、C、D 都是逃避责任的做法，故选 A。",
+          "difficulty": 3,
+          "knowledge_point": "诚实守信的要求",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "诚实守信是做人的（  ）要求，做诚信的人应当言必信、行必果。",
+          "answer": {
+            "value": "基本"
+          },
+          "analysis": "教材表述为诚实守信是做人的基本要求，题干空格处只能填基本，填重要或根本都不符合教材原义。",
+          "difficulty": 2,
+          "knowledge_point": "诚实守信的要求",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "为了不耽误朋友，答应的事可以不做，也不用作任何解释。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "随意失信违背诚实守信的要求，确有特殊情况应提前说明并协商，不能不打招呼就失约，故为错误。",
+          "difficulty": 2,
+          "knowledge_point": "诚实守信的要求",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列做法体现诚实守信的有（  ）",
+          "options": [
+            "如实向老师汇报自己的作业完成情况",
+            "考试时拒绝抄袭，坚持独立作答",
+            "答应父母周末做家务并按时做到",
+            "为了面子隐瞒考试失利的事实"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 如实汇报✓；B 拒绝抄袭✓；C 说到做到✓；D 隐瞒失利是失信表现✗。故 A、B、C 成立。",
+          "difficulty": 3,
+          "knowledge_point": "诚实守信的要求",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列做法体现友善待人的是（  ）",
+          "options": [
+            "与同学真诚交往，互相帮助",
+            "在背后议论同学的缺点",
+            "给同学起带有侮辱性的绰号",
+            "看到同学求助故意装作没看见"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "友善待人表现为真诚交往、平等尊重、乐于相助；其余三项都是不友善甚至伤害他人的行为，故选 A。",
+          "difficulty": 3,
+          "knowledge_point": "友善待人的表现",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "小丽发现同学因外貌被起外号取笑，她上前制止并陪在同学身边。这说明友善待人需要（  ）",
+          "options": [
+            "尊重他人、维护他人的尊严",
+            "事不关己、少惹麻烦",
+            "随大流、不要出头",
+            "看热闹、等人处理"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "制止嘲笑、陪伴同学正是尊重他人、维护他人尊严的表现；B、C、D 都选择了袖手旁观，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "友善待人的表现",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "友善待人要求我们平等尊重他人，学会（  ），不歧视他人。",
+          "answer": {
+            "value": "换位思考"
+          },
+          "analysis": "教材强调友善待人要多换位思考，设身处地理解他人，题干空格处只能是换位思考。",
+          "difficulty": 3,
+          "knowledge_point": "友善待人的表现",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "友善待人就是不敢得罪人、一味迁就别人。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "友善不等于无原则的迁就，真正的友善是平等尊重、讲求原则的善意，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "友善待人的表现",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "法律是（  ）的基本方式。",
+          "options": [
+            "治国理政",
+            "经济增长",
+            "城市建设",
+            "家庭教育"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "教材明确指出法律是治国理政的基本方式，这是树立法治观念的重要背景；其余三项与法律的定位无关，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "法治观念的内涵",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "法律面前人人平等意味着（  ）",
+          "options": [
+            "任何人都不能凌驾于法律之上",
+            "只有普通公民受到法律约束",
+            "违法者找人说说情就可以免责",
+            "法律只保护经济条件好的人"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "法律面前人人平等是法治的基本原则，任何组织和个人都不能凌驾于法律之上；B、C、D 都违背这一原则，故选 A。",
+          "difficulty": 3,
+          "knowledge_point": "法治观念的内涵",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "树立法治观念要求我们（  ）",
+          "options": [
+            "尊重法律、信仰法律",
+            "学习法律、掌握法律",
+            "自觉守法、依法办事",
+            "遇到纠纷就用暴力解决"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 尊重信仰法律✓；B 学习掌握法律✓；C 自觉守法依法办事✓；D 以暴制暴是违法行为✗。故 A、B、C 成立。",
+          "difficulty": 3,
+          "knowledge_point": "法治观念的内涵",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "我们要树立法治观念，做到尊法、学法、（  ）法、（  ）法。",
+          "answer": {
+            "value": [
+              "守",
+              "用"
+            ]
+          },
+          "analysis": "教材提出尊法、学法、守法、用法的要求，两空分别对应守法与用法，顺序颠倒或只答一字都不完整。",
+          "difficulty": 3,
+          "knowledge_point": "法治观念的内涵",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "增强法治意识，要求我们（  ）",
+          "options": [
+            "从小事做起学习法律知识，养成守法习惯",
+            "等成年以后再学习法律",
+            "只记住对自己有利的条文",
+            "遇到纠纷先动手再说"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "青少年要从小事做起学习法律、树立法治意识，把规则内化于心；B、C、D 都与法治素养的要求相悖，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "增强法治意识",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "学校开设法治教育课、组织学生参加模拟法庭，其直接目的是（  ）",
+          "options": [
+            "帮助学生树立法治意识，学会用法律保护自己",
+            "增加学生的课业负担",
+            "减少学生的课外活动",
+            "应付上级检查"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "模拟法庭让学生在情境中运用法律规则，核心是提升法治素养；其余四项都不是教育活动的目的，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "增强法治意识",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "青少年也可以成为法律的遵守者和捍卫者。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "未成年人同样是社会成员，要自觉遵守法律，并在力所能及的范围内维护法律尊严，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "增强法治意识",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "小强的表哥在网络游戏里认识一个陌生网友，被诱导充值后对方就消失了。小强认为这与他无关。请结合增强法治意识说明小强的想法是否正确，并提出三点建议。",
+          "answer": {
+            "value": "小强的想法不正确。网络是公共空间，青少年也是其中的一员，既要自己防范受骗，也有责任提醒身边人、协助维护网络秩序。建议一：从小学习网络安全和消费方面的法律知识，遇到要求充值、转账的链接一律不点，并及时告诉家长。建议二：发现类似骗局后保存聊天记录，通过平台举报并向公安机关反映。建议三：主动向同学和亲友宣传防诈骗常识，不做旁观者。"
+          },
+          "analysis": "评分要点：明确判断小强想法不正确并说明理由（2 分）；提出三条具体建议（每条 2 分）；每条都体现法治意识或责任担当（每条 1 分）；表达通顺（1 分）。",
+          "difficulty": 5,
+          "knowledge_point": "增强法治意识",
+          "tags": [
+            "情境应用",
+            "简答"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "遇事找法、解决问题靠法，这体现的是（  ）",
+          "options": [
+            "依法办事的要求",
+            "以牙还牙的私力救济",
+            "逃避应负的责任",
+            "人情关系优先的处事方式"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "教材强调学会依法办事，遇到纠纷通过合法途径解决，A 准确概括了这一要求；其余三项都不是规范做法，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "依法办事的要求",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "小明与同学发生争执，下列做法最恰当的是（  ）",
+          "options": [
+            "先冷静沟通，必要时通过老师、学校或法律途径解决",
+            "纠集人员报复对方",
+            "在网上曝光对方的隐私",
+            "直接动手推搡对方"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "教材要求发生纠纷时不意气用事，要寻求合法途径解决；B、C、D 既可能违法，也会激化矛盾，故选 A。",
+          "difficulty": 3,
+          "knowledge_point": "依法办事的要求",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "依法办事要求我们做到：遇事找法，解决问题（  ）法，化解矛盾靠（  ）。",
+          "answer": {
+            "value": [
+              "用",
+              "法"
+            ]
+          },
+          "analysis": "教材原话是遇事找法、解决问题靠法、化解矛盾靠法，本题两空分别对应用法与靠法，注意第二空填的是靠。",
+          "difficulty": 3,
+          "knowledge_point": "依法办事的要求",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列做法体现依法办事的有（  ）",
+          "options": [
+            "签订租房合同时约定双方权利义务",
+            "发生纠纷请人民调解委员会调解",
+            "遇到侵害及时报警并保存证据",
+            "找人私下报复对方出气"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 依法订立合同✓；B 依法调解✓；C 依法维权✓；D 私下报复是违法行为✗。故 A、B、C 成立。",
+          "difficulty": 4,
+          "knowledge_point": "依法办事的要求",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "当自己的合法权益受到侵害时，正确的做法是（  ）",
+          "options": [
+            "通过合法途径寻求帮助，如协商、调解、投诉、诉讼",
+            "用暴力手段自行解决",
+            "忍气吞声，放弃自己的权利",
+            "在网上散布不实信息抹黑对方"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "依法维权是教材明确主张的途径，协商、调解、投诉、诉讼都属于合法渠道；B 违法、C 放弃权利、D 侵权，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "依法维权的途径",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "小明网购后商家拒绝退款，他在维权时最关键的准备是（  ）",
+          "options": [
+            "保存订单、聊天记录、付款凭证等证据",
+            "组织网友在网上声讨商家",
+            "到商家门口聚众闹事",
+            "自认倒霉放弃维权"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "依法维权要树立证据意识，保留交易记录和凭证是维权的基础；B、C 可能违法，D 是放弃权利，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "依法维权的途径",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "在校园里被同学诬告偷了手机，最恰当的维权做法是（  ）",
+          "options": [
+            "保留相关证据，向老师和学校说明情况，必要时报警",
+            "强行搜查对方的书包把手机找回来",
+            "在班级群里逼对方当众下跪道歉",
+            "找校外人员去给对方一个教训"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "维权要走合法途径并注意保存证据，报告老师学校、必要时报警是规范做法；B 侵犯他人人身自由，C 羞辱他人，D 可能违法且危害自身安全，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "依法维权的途径",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳某中学八年级的小雨发现学校附近有人向学生兜售不良出版物，对方还威胁说举报就让她没法在学校混。小雨应该怎么办？请结合依法维权的途径写出三条做法并说明理由。",
+          "answer": {
+            "value": "第一，不购买这类出版物，并劝阻同学不要购买，避免不良内容在校园传播。第二，把所见情况告诉家长和老师，请学校出面联系公安、文化市场管理部门查处。第三，如果不愿当面反映，可以通过举报电话、信箱等正规渠道举报，同时注意保留证据，如对方宣传品、聊天记录。第四，不与对方发生正面冲突，注意人身安全。理由是合法权益受损要通过协商、调解、投诉、举报、诉讼等合法途径解决，用违法或暴力方式维权既伤自己也可能让自己陷入违法境地。"
+          },
+          "analysis": "评分要点：写出三条以上具体做法（每条 2 分）；每条都能联系依法维权的合法途径（每条 1 分）；体现保存证据与自我保护意识（2 分）；表达通顺（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "依法维权的途径",
+          "tags": [
+            "情境应用",
+            "简答"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "小周的杂货店是新开的，隔壁老店老板对小周说：把进货价压低一点，客人只看价格不会知道进货价，到时候一起赚钱。小周应该怎么办？请结合诚实守信的要求说明理由并写出两条做法。",
+          "answer": {
+            "value": "小周不应该接受这个建议。压低进货价而对顾客隐瞒实情，是以虚假信息牟利，属于失信行为；诚实守信是做人的基本要求，失信会损害个人信誉，也会给顾客带来损失。做法一，坚持明码标价，如实标明进货渠道和商品价格，不做虚假宣传，用信誉积累回头客。做法二，把老店老板的建议和顾客的真实需求如实告诉对方，也可以向市场监管部门咨询合规做法，用正当竞争而不是弄虚作假来赢得顾客。"
+          },
+          "analysis": "评分要点：明确表示不接受并指出这是失信行为（2 分）；说明诚实守信的要求与失信后果（2 分）；写出两条具体做法（每条 2 分）；表达通顺（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "诚实守信的要求",
+          "tags": [
+            "情境应用",
+            "简答"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

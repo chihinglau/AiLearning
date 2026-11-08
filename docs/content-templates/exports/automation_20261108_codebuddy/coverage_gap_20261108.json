@@ -1,0 +1,4761 @@
+{
+  "_meta": {
+    "kind": "coverage_gap",
+    "generated": "2026-11-08T22:13:03",
+    "tool": "coverage_gap.py（只读）",
+    "database": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\ailearning_dev.db",
+    "purpose": "教材覆盖缺口清单：库里哪些教材真实章节还没有题。与 chapter_audit.py 分工——后者管「干不干净」（占位/撞号），本脚本管「齐不齐」（覆盖）",
+    "criteria": "官方章节骨架口径（baseline/_skeleton_first|_skeleton）；学期口径 semester=first",
+    "semantics": "empty_textbooks = 整册 0 题（建议进待重跑队列，不要在覆盖台账里显示成已完成）；empty_chapters = 逐个 0 题的官方章",
+    "note": "「占位 0 / 撞号 0」说明库干净，**不等于**教材覆盖齐了——两件事分开看"
+  },
+  "summary": {
+    "textbooks": 73,
+    "empty_textbooks": 2,
+    "partial_textbooks": 44,
+    "textbooks_without_skeleton": 27,
+    "official_chapters": 307,
+    "chapters_with_questions": 53,
+    "empty_chapters": 254,
+    "questions": 957,
+    "by_subject": {
+      "biology": {
+        "books": 5,
+        "empty_books": 0,
+        "chapters": 15,
+        "empty_chapters": 10,
+        "questions": 44
+      },
+      "chemistry": {
+        "books": 4,
+        "empty_books": 0,
+        "chapters": 7,
+        "empty_chapters": 6,
+        "questions": 22
+      },
+      "chinese": {
+        "books": 12,
+        "empty_books": 0,
+        "chapters": 66,
+        "empty_chapters": 56,
+        "questions": 208
+      },
+      "english": {
+        "books": 12,
+        "empty_books": 0,
+        "chapters": 60,
+        "empty_chapters": 48,
+        "questions": 200
+      },
+      "geography": {
+        "books": 5,
+        "empty_books": 0,
+        "chapters": 10,
+        "empty_chapters": 8,
+        "questions": 40
+      },
+      "history": {
+        "books": 6,
+        "empty_books": 0,
+        "chapters": 18,
+        "empty_chapters": 15,
+        "questions": 64
+      },
+      "math": {
+        "books": 12,
+        "empty_books": 2,
+        "chapters": 79,
+        "empty_chapters": 71,
+        "questions": 164
+      },
+      "physics": {
+        "books": 5,
+        "empty_books": 0,
+        "chapters": 16,
+        "empty_chapters": 13,
+        "questions": 43
+      },
+      "politics": {
+        "books": 12,
+        "empty_books": 0,
+        "chapters": 36,
+        "empty_chapters": 27,
+        "questions": 172
+      }
+    }
+  },
+  "empty_textbooks": [
+    {
+      "textbook_id": 17,
+      "subject": "math",
+      "grade": 3,
+      "semester": "first",
+      "version": "北师大版",
+      "official_chapters": 8,
+      "questions": 0,
+      "action": "待重跑：旧版内容已按授权删除，需教研按新教材目录重新出题"
+    },
+    {
+      "textbook_id": 33,
+      "subject": "math",
+      "grade": 5,
+      "semester": "first",
+      "version": "北师大版",
+      "official_chapters": 12,
+      "questions": 0,
+      "action": "待重跑：旧版内容已按授权删除，需教研按新教材目录重新出题"
+    }
+  ],
+  "rerun_queue": [
+    {
+      "subject": "math",
+      "grade": 3,
+      "semester": "first",
+      "registered_reason": "占位章节清理按用户授权「旧版数据删掉」整章删除旧样章「一位数乘多位数」（库内 22 题 + 6 个独占知识点），该册上册现为 0 题 / 8 章全空",
+      "registered_questions": 0,
+      "actual_questions": 0,
+      "actual_empty_chapters": 8,
+      "consistent": true,
+      "note": "登记待重跑"
+    },
+    {
+      "subject": "math",
+      "grade": 5,
+      "semester": "first",
+      "registered_reason": "同理：旧样章「小数除法」（库内 18 题 + 6 个独占知识点）整章删除，该册上册现为 0 题 / 12 章全空",
+      "registered_questions": 0,
+      "actual_questions": 0,
+      "actual_empty_chapters": 12,
+      "consistent": true,
+      "note": "登记待重跑"
+    }
+  ],
+  "empty_chapters": [
+    {
+      "subject": "biology",
+      "grade": 7,
+      "semester": "first",
+      "chapter_id": 136,
+      "name": "第二单元 多种多样的生物",
+      "order_index": 5
+    },
+    {
+      "subject": "biology",
+      "grade": 7,
+      "semester": "first",
+      "chapter_id": 137,
+      "name": "第一章 藻类与植物的类群",
+      "order_index": 6
+    },
+    {
+      "subject": "biology",
+      "grade": 7,
+      "semester": "first",
+      "chapter_id": 138,
+      "name": "第二章 动物的类群",
+      "order_index": 7
+    },
+    {
+      "subject": "biology",
+      "grade": 7,
+      "semester": "first",
+      "chapter_id": 139,
+      "name": "第三章 微生物",
+      "order_index": 8
+    },
+    {
+      "subject": "biology",
+      "grade": 7,
+      "semester": "first",
+      "chapter_id": 140,
+      "name": "第四章 生物分类的方法",
+      "order_index": 9
+    },
+    {
+      "subject": "biology",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 142,
+      "name": "第六章 人体生命活动的调节",
+      "order_index": 2
+    },
+    {
+      "subject": "biology",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 143,
+      "name": "第七章 健康地生活",
+      "order_index": 3
+    },
+    {
+      "subject": "biology",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 144,
+      "name": "第五单元 生物与环境",
+      "order_index": 4
+    },
+    {
+      "subject": "biology",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 145,
+      "name": "第一章 生态系统",
+      "order_index": 5
+    },
+    {
+      "subject": "biology",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 146,
+      "name": "第二章 生态安全",
+      "order_index": 6
+    },
+    {
+      "subject": "chemistry",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 147,
+      "name": "第二单元 空气和氧气",
+      "order_index": 2
+    },
+    {
+      "subject": "chemistry",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 148,
+      "name": "第三单元 物质构成的奥秘",
+      "order_index": 3
+    },
+    {
+      "subject": "chemistry",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 149,
+      "name": "第四单元 自然界的水",
+      "order_index": 4
+    },
+    {
+      "subject": "chemistry",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 150,
+      "name": "第五单元 化学反应的定量关系",
+      "order_index": 5
+    },
+    {
+      "subject": "chemistry",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 151,
+      "name": "第六单元 碳和碳的氧化物",
+      "order_index": 6
+    },
+    {
+      "subject": "chemistry",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 152,
+      "name": "第七单元 能源的合理利用与开发",
+      "order_index": 7
+    },
+    {
+      "subject": "chinese",
+      "grade": 1,
+      "semester": "first",
+      "chapter_id": 154,
+      "name": "第二单元 汉语拼音",
+      "order_index": 2
+    },
+    {
+      "subject": "chinese",
+      "grade": 1,
+      "semester": "first",
+      "chapter_id": 155,
+      "name": "第三单元 汉语拼音",
+      "order_index": 3
+    },
+    {
+      "subject": "chinese",
+      "grade": 1,
+      "semester": "first",
+      "chapter_id": 157,
+      "name": "第五单元 阅读",
+      "order_index": 5
+    },
+    {
+      "subject": "chinese",
+      "grade": 1,
+      "semester": "first",
+      "chapter_id": 158,
+      "name": "第六单元 识字",
+      "order_index": 6
+    },
+    {
+      "subject": "chinese",
+      "grade": 1,
+      "semester": "first",
+      "chapter_id": 159,
+      "name": "第七单元 阅读",
+      "order_index": 7
+    },
+    {
+      "subject": "chinese",
+      "grade": 1,
+      "semester": "first",
+      "chapter_id": 160,
+      "name": "第八单元 阅读",
+      "order_index": 8
+    },
+    {
+      "subject": "chinese",
+      "grade": 2,
+      "semester": "first",
+      "chapter_id": 162,
+      "name": "第二单元 识字",
+      "order_index": 2
+    },
+    {
+      "subject": "chinese",
+      "grade": 2,
+      "semester": "first",
+      "chapter_id": 163,
+      "name": "第三单元 阅读",
+      "order_index": 3
+    },
+    {
+      "subject": "chinese",
+      "grade": 2,
+      "semester": "first",
+      "chapter_id": 164,
+      "name": "第四单元 阅读",
+      "order_index": 4
+    },
+    {
+      "subject": "chinese",
+      "grade": 2,
+      "semester": "first",
+      "chapter_id": 165,
+      "name": "第五单元 阅读",
+      "order_index": 5
+    },
+    {
+      "subject": "chinese",
+      "grade": 2,
+      "semester": "first",
+      "chapter_id": 166,
+      "name": "第六单元 阅读",
+      "order_index": 6
+    },
+    {
+      "subject": "chinese",
+      "grade": 2,
+      "semester": "first",
+      "chapter_id": 167,
+      "name": "第七单元 阅读",
+      "order_index": 7
+    },
+    {
+      "subject": "chinese",
+      "grade": 2,
+      "semester": "first",
+      "chapter_id": 168,
+      "name": "第八单元 阅读",
+      "order_index": 8
+    },
+    {
+      "subject": "chinese",
+      "grade": 3,
+      "semester": "first",
+      "chapter_id": 170,
+      "name": "第二单元",
+      "order_index": 2
+    },
+    {
+      "subject": "chinese",
+      "grade": 3,
+      "semester": "first",
+      "chapter_id": 171,
+      "name": "第三单元",
+      "order_index": 3
+    },
+    {
+      "subject": "chinese",
+      "grade": 3,
+      "semester": "first",
+      "chapter_id": 172,
+      "name": "第四单元",
+      "order_index": 4
+    },
+    {
+      "subject": "chinese",
+      "grade": 3,
+      "semester": "first",
+      "chapter_id": 173,
+      "name": "第五单元",
+      "order_index": 5
+    },
+    {
+      "subject": "chinese",
+      "grade": 3,
+      "semester": "first",
+      "chapter_id": 174,
+      "name": "第六单元",
+      "order_index": 6
+    },
+    {
+      "subject": "chinese",
+      "grade": 3,
+      "semester": "first",
+      "chapter_id": 175,
+      "name": "第七单元",
+      "order_index": 7
+    },
+    {
+      "subject": "chinese",
+      "grade": 3,
+      "semester": "first",
+      "chapter_id": 176,
+      "name": "第八单元",
+      "order_index": 8
+    },
+    {
+      "subject": "chinese",
+      "grade": 4,
+      "semester": "first",
+      "chapter_id": 178,
+      "name": "第二单元",
+      "order_index": 2
+    },
+    {
+      "subject": "chinese",
+      "grade": 4,
+      "semester": "first",
+      "chapter_id": 179,
+      "name": "第三单元",
+      "order_index": 3
+    },
+    {
+      "subject": "chinese",
+      "grade": 4,
+      "semester": "first",
+      "chapter_id": 180,
+      "name": "第四单元",
+      "order_index": 4
+    },
+    {
+      "subject": "chinese",
+      "grade": 4,
+      "semester": "first",
+      "chapter_id": 181,
+      "name": "第五单元",
+      "order_index": 5
+    },
+    {
+      "subject": "chinese",
+      "grade": 4,
+      "semester": "first",
+      "chapter_id": 182,
+      "name": "第六单元",
+      "order_index": 6
+    },
+    {
+      "subject": "chinese",
+      "grade": 4,
+      "semester": "first",
+      "chapter_id": 183,
+      "name": "第七单元",
+      "order_index": 7
+    },
+    {
+      "subject": "chinese",
+      "grade": 4,
+      "semester": "first",
+      "chapter_id": 184,
+      "name": "第八单元",
+      "order_index": 8
+    },
+    {
+      "subject": "chinese",
+      "grade": 5,
+      "semester": "first",
+      "chapter_id": 186,
+      "name": "第二单元",
+      "order_index": 2
+    },
+    {
+      "subject": "chinese",
+      "grade": 5,
+      "semester": "first",
+      "chapter_id": 187,
+      "name": "第三单元",
+      "order_index": 3
+    },
+    {
+      "subject": "chinese",
+      "grade": 5,
+      "semester": "first",
+      "chapter_id": 188,
+      "name": "第四单元",
+      "order_index": 4
+    },
+    {
+      "subject": "chinese",
+      "grade": 5,
+      "semester": "first",
+      "chapter_id": 189,
+      "name": "第五单元",
+      "order_index": 5
+    },
+    {
+      "subject": "chinese",
+      "grade": 5,
+      "semester": "first",
+      "chapter_id": 190,
+      "name": "第六单元",
+      "order_index": 6
+    },
+    {
+      "subject": "chinese",
+      "grade": 5,
+      "semester": "first",
+      "chapter_id": 191,
+      "name": "第七单元",
+      "order_index": 7
+    },
+    {
+      "subject": "chinese",
+      "grade": 5,
+      "semester": "first",
+      "chapter_id": 192,
+      "name": "第八单元",
+      "order_index": 8
+    },
+    {
+      "subject": "chinese",
+      "grade": 6,
+      "semester": "first",
+      "chapter_id": 194,
+      "name": "第二单元",
+      "order_index": 2
+    },
+    {
+      "subject": "chinese",
+      "grade": 6,
+      "semester": "first",
+      "chapter_id": 195,
+      "name": "第三单元",
+      "order_index": 3
+    },
+    {
+      "subject": "chinese",
+      "grade": 6,
+      "semester": "first",
+      "chapter_id": 196,
+      "name": "第四单元",
+      "order_index": 4
+    },
+    {
+      "subject": "chinese",
+      "grade": 6,
+      "semester": "first",
+      "chapter_id": 197,
+      "name": "第五单元",
+      "order_index": 5
+    },
+    {
+      "subject": "chinese",
+      "grade": 6,
+      "semester": "first",
+      "chapter_id": 198,
+      "name": "第六单元",
+      "order_index": 6
+    },
+    {
+      "subject": "chinese",
+      "grade": 6,
+      "semester": "first",
+      "chapter_id": 199,
+      "name": "第七单元",
+      "order_index": 7
+    },
+    {
+      "subject": "chinese",
+      "grade": 6,
+      "semester": "first",
+      "chapter_id": 200,
+      "name": "第八单元",
+      "order_index": 8
+    },
+    {
+      "subject": "chinese",
+      "grade": 7,
+      "semester": "first",
+      "chapter_id": 202,
+      "name": "第二单元",
+      "order_index": 2
+    },
+    {
+      "subject": "chinese",
+      "grade": 7,
+      "semester": "first",
+      "chapter_id": 203,
+      "name": "第三单元",
+      "order_index": 3
+    },
+    {
+      "subject": "chinese",
+      "grade": 7,
+      "semester": "first",
+      "chapter_id": 204,
+      "name": "第四单元",
+      "order_index": 4
+    },
+    {
+      "subject": "chinese",
+      "grade": 7,
+      "semester": "first",
+      "chapter_id": 205,
+      "name": "第五单元 活动 探究",
+      "order_index": 5
+    },
+    {
+      "subject": "chinese",
+      "grade": 7,
+      "semester": "first",
+      "chapter_id": 206,
+      "name": "第六单元",
+      "order_index": 6
+    },
+    {
+      "subject": "chinese",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 208,
+      "name": "第二单元",
+      "order_index": 2
+    },
+    {
+      "subject": "chinese",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 209,
+      "name": "第三单元",
+      "order_index": 3
+    },
+    {
+      "subject": "chinese",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 210,
+      "name": "第四单元",
+      "order_index": 4
+    },
+    {
+      "subject": "chinese",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 211,
+      "name": "第五单元",
+      "order_index": 5
+    },
+    {
+      "subject": "chinese",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 212,
+      "name": "第六单元",
+      "order_index": 6
+    },
+    {
+      "subject": "chinese",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 214,
+      "name": "第二单元",
+      "order_index": 2
+    },
+    {
+      "subject": "chinese",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 215,
+      "name": "第三单元",
+      "order_index": 3
+    },
+    {
+      "subject": "chinese",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 216,
+      "name": "第四单元",
+      "order_index": 4
+    },
+    {
+      "subject": "chinese",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 217,
+      "name": "第五单元",
+      "order_index": 5
+    },
+    {
+      "subject": "chinese",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 218,
+      "name": "第六单元",
+      "order_index": 6
+    },
+    {
+      "subject": "english",
+      "grade": 1,
+      "semester": "first",
+      "chapter_id": 220,
+      "name": "Unit 2 How are you today?",
+      "order_index": 2
+    },
+    {
+      "subject": "english",
+      "grade": 1,
+      "semester": "first",
+      "chapter_id": 221,
+      "name": "Unit 3 What do you take to school?",
+      "order_index": 3
+    },
+    {
+      "subject": "english",
+      "grade": 1,
+      "semester": "first",
+      "chapter_id": 222,
+      "name": "Unit 4 What can you do?",
+      "order_index": 4
+    },
+    {
+      "subject": "english",
+      "grade": 1,
+      "semester": "first",
+      "chapter_id": 223,
+      "name": "Unit 5 What is your favourite animal?",
+      "order_index": 5
+    },
+    {
+      "subject": "english",
+      "grade": 2,
+      "semester": "first",
+      "chapter_id": 227,
+      "name": "Unit 3 What is your favourite toy?",
+      "order_index": 3
+    },
+    {
+      "subject": "english",
+      "grade": 2,
+      "semester": "first",
+      "chapter_id": 228,
+      "name": "Unit 4 What is around your home?",
+      "order_index": 4
+    },
+    {
+      "subject": "english",
+      "grade": 2,
+      "semester": "first",
+      "chapter_id": 229,
+      "name": "Unit 5 What do you like about farms?",
+      "order_index": 5
+    },
+    {
+      "subject": "english",
+      "grade": 2,
+      "semester": "first",
+      "chapter_id": 230,
+      "name": "Unit 6 How do people celebrate the Mid-Autumn Festival?",
+      "order_index": 6
+    },
+    {
+      "subject": "english",
+      "grade": 3,
+      "semester": "first",
+      "chapter_id": 232,
+      "name": "Unit 2 What's interesting about families?",
+      "order_index": 2
+    },
+    {
+      "subject": "english",
+      "grade": 3,
+      "semester": "first",
+      "chapter_id": 233,
+      "name": "Unit 3 What do we look like?",
+      "order_index": 3
+    },
+    {
+      "subject": "english",
+      "grade": 3,
+      "semester": "first",
+      "chapter_id": 234,
+      "name": "Unit 4 How do we have fun?",
+      "order_index": 4
+    },
+    {
+      "subject": "english",
+      "grade": 3,
+      "semester": "first",
+      "chapter_id": 235,
+      "name": "Unit 5 What do we eat?",
+      "order_index": 5
+    },
+    {
+      "subject": "english",
+      "grade": 3,
+      "semester": "first",
+      "chapter_id": 236,
+      "name": "Unit 6 What do we like about small animals?",
+      "order_index": 6
+    },
+    {
+      "subject": "english",
+      "grade": 3,
+      "semester": "first",
+      "chapter_id": 238,
+      "name": "Unit 8 Why do we like birthdays?",
+      "order_index": 8
+    },
+    {
+      "subject": "english",
+      "grade": 4,
+      "semester": "first",
+      "chapter_id": 240,
+      "name": "Unit 2 Where do animals live?",
+      "order_index": 2
+    },
+    {
+      "subject": "english",
+      "grade": 4,
+      "semester": "first",
+      "chapter_id": 241,
+      "name": "Unit 3 How do we use numbers?",
+      "order_index": 3
+    },
+    {
+      "subject": "english",
+      "grade": 4,
+      "semester": "first",
+      "chapter_id": 242,
+      "name": "Unit 4 What do we buy?",
+      "order_index": 4
+    },
+    {
+      "subject": "english",
+      "grade": 4,
+      "semester": "first",
+      "chapter_id": 243,
+      "name": "Unit 5 How are the seasons different?",
+      "order_index": 5
+    },
+    {
+      "subject": "english",
+      "grade": 4,
+      "semester": "first",
+      "chapter_id": 244,
+      "name": "Unit 6 What's amazing about plants?",
+      "order_index": 6
+    },
+    {
+      "subject": "english",
+      "grade": 4,
+      "semester": "first",
+      "chapter_id": 245,
+      "name": "Unit 7 How do we keep safe on the road?",
+      "order_index": 7
+    },
+    {
+      "subject": "english",
+      "grade": 4,
+      "semester": "first",
+      "chapter_id": 246,
+      "name": "Unit 8 What do our grandparents do?",
+      "order_index": 8
+    },
+    {
+      "subject": "english",
+      "grade": 5,
+      "semester": "first",
+      "chapter_id": 248,
+      "name": "Unit 2 How do we stay healthy?",
+      "order_index": 2
+    },
+    {
+      "subject": "english",
+      "grade": 5,
+      "semester": "first",
+      "chapter_id": 249,
+      "name": "Unit 3 What do you know about different countries?",
+      "order_index": 3
+    },
+    {
+      "subject": "english",
+      "grade": 5,
+      "semester": "first",
+      "chapter_id": 250,
+      "name": "Unit 4 What's interesting about holidays?",
+      "order_index": 4
+    },
+    {
+      "subject": "english",
+      "grade": 5,
+      "semester": "first",
+      "chapter_id": 251,
+      "name": "Unit 5 What are living things?",
+      "order_index": 5
+    },
+    {
+      "subject": "english",
+      "grade": 5,
+      "semester": "first",
+      "chapter_id": 252,
+      "name": "Unit 6 Why should we take care of the Earth?",
+      "order_index": 6
+    },
+    {
+      "subject": "english",
+      "grade": 5,
+      "semester": "first",
+      "chapter_id": 253,
+      "name": "Unit 7 How do we celebrate festivals?",
+      "order_index": 7
+    },
+    {
+      "subject": "english",
+      "grade": 5,
+      "semester": "first",
+      "chapter_id": 254,
+      "name": "Unit 8 How does music make us feel?",
+      "order_index": 8
+    },
+    {
+      "subject": "english",
+      "grade": 6,
+      "semester": "first",
+      "chapter_id": 256,
+      "name": "Unit 2 Why do we make art?",
+      "order_index": 2
+    },
+    {
+      "subject": "english",
+      "grade": 6,
+      "semester": "first",
+      "chapter_id": 257,
+      "name": "Unit 3 How should we protect ourselves?",
+      "order_index": 3
+    },
+    {
+      "subject": "english",
+      "grade": 6,
+      "semester": "first",
+      "chapter_id": 258,
+      "name": "Unit 4 What makes things move?",
+      "order_index": 4
+    },
+    {
+      "subject": "english",
+      "grade": 6,
+      "semester": "first",
+      "chapter_id": 259,
+      "name": "Unit 5 How do inventions change our lives?",
+      "order_index": 5
+    },
+    {
+      "subject": "english",
+      "grade": 6,
+      "semester": "first",
+      "chapter_id": 260,
+      "name": "Unit 6 What is a city?",
+      "order_index": 6
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "semester": "first",
+      "chapter_id": 262,
+      "name": "Unit 2 Strong mind",
+      "order_index": 2
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "semester": "first",
+      "chapter_id": 263,
+      "name": "Unit 3 Jobs",
+      "order_index": 3
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "semester": "first",
+      "chapter_id": 264,
+      "name": "Unit 4 Smart home",
+      "order_index": 4
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "semester": "first",
+      "chapter_id": 265,
+      "name": "Unit 5 Films",
+      "order_index": 5
+    },
+    {
+      "subject": "english",
+      "grade": 7,
+      "semester": "first",
+      "chapter_id": 266,
+      "name": "Unit 6 Mountains and rivers",
+      "order_index": 6
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 268,
+      "name": "Unit 2 Digital life",
+      "order_index": 2
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 269,
+      "name": "Unit 3 Curious minds",
+      "order_index": 3
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 270,
+      "name": "Unit 4 Then and now",
+      "order_index": 4
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 271,
+      "name": "Unit 5 Teamwork",
+      "order_index": 5
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 272,
+      "name": "Unit 6 Life in the future",
+      "order_index": 6
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 274,
+      "name": "Unit 2 People and their jobs",
+      "order_index": 2
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 275,
+      "name": "Unit 3 Travellers' tales",
+      "order_index": 3
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 276,
+      "name": "Unit 4 Folk customs",
+      "order_index": 4
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 277,
+      "name": "Unit 5 Buildings",
+      "order_index": 5
+    },
+    {
+      "subject": "english",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 278,
+      "name": "Unit 6 Pollution",
+      "order_index": 6
+    },
+    {
+      "subject": "geography",
+      "grade": 7,
+      "semester": "first",
+      "chapter_id": 280,
+      "name": "第二章 认识地球",
+      "order_index": 2
+    },
+    {
+      "subject": "geography",
+      "grade": 7,
+      "semester": "first",
+      "chapter_id": 281,
+      "name": "第三章 地球的面貌",
+      "order_index": 3
+    },
+    {
+      "subject": "geography",
+      "grade": 7,
+      "semester": "first",
+      "chapter_id": 282,
+      "name": "第四章 世界的居民与文化",
+      "order_index": 4
+    },
+    {
+      "subject": "geography",
+      "grade": 7,
+      "semester": "first",
+      "chapter_id": 283,
+      "name": "第五章 世界的气候",
+      "order_index": 5
+    },
+    {
+      "subject": "geography",
+      "grade": 7,
+      "semester": "first",
+      "chapter_id": 284,
+      "name": "第六章 世界的发展差异",
+      "order_index": 6
+    },
+    {
+      "subject": "geography",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 286,
+      "name": "第二章 中国的自然环境",
+      "order_index": 2
+    },
+    {
+      "subject": "geography",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 287,
+      "name": "第三章 中国的自然资源",
+      "order_index": 3
+    },
+    {
+      "subject": "geography",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 288,
+      "name": "第四章 中国的主要产业",
+      "order_index": 4
+    },
+    {
+      "subject": "history",
+      "grade": 7,
+      "semester": "first",
+      "chapter_id": 290,
+      "name": "第二单元 夏商周时期：奴隶制王朝的更替和向封建社会的过渡",
+      "order_index": 2
+    },
+    {
+      "subject": "history",
+      "grade": 7,
+      "semester": "first",
+      "chapter_id": 291,
+      "name": "第三单元 秦汉时期：统一多民族封建国家的建立和巩固",
+      "order_index": 3
+    },
+    {
+      "subject": "history",
+      "grade": 7,
+      "semester": "first",
+      "chapter_id": 292,
+      "name": "第四单元 三国两晋南北朝时期：政权分立与民族交融",
+      "order_index": 4
+    },
+    {
+      "subject": "history",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 294,
+      "name": "第二单元 早期现代化的初步探索和民族危机加剧",
+      "order_index": 2
+    },
+    {
+      "subject": "history",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 295,
+      "name": "第三单元 资产阶级民主革命与中华民国的建立",
+      "order_index": 3
+    },
+    {
+      "subject": "history",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 296,
+      "name": "第四单元 新民主主义革命的兴起",
+      "order_index": 4
+    },
+    {
+      "subject": "history",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 297,
+      "name": "第五单元 从国共合作到农村革命根据地的建立",
+      "order_index": 5
+    },
+    {
+      "subject": "history",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 298,
+      "name": "第六单元 中华民族的抗日战争",
+      "order_index": 6
+    },
+    {
+      "subject": "history",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 299,
+      "name": "第七单元 人民解放战争",
+      "order_index": 7
+    },
+    {
+      "subject": "history",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 301,
+      "name": "第二单元 古代欧洲文明",
+      "order_index": 2
+    },
+    {
+      "subject": "history",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 302,
+      "name": "第三单元 封建时代的欧洲",
+      "order_index": 3
+    },
+    {
+      "subject": "history",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 303,
+      "name": "第四单元 中古时期的亚洲、非洲和美洲",
+      "order_index": 4
+    },
+    {
+      "subject": "history",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 304,
+      "name": "第五单元 走向近代",
+      "order_index": 5
+    },
+    {
+      "subject": "history",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 305,
+      "name": "第六单元 资本主义制度的初步确立",
+      "order_index": 6
+    },
+    {
+      "subject": "history",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 306,
+      "name": "第七单元 第一次工业革命和马克思主义的诞生",
+      "order_index": 7
+    },
+    {
+      "subject": "math",
+      "grade": 1,
+      "semester": "first",
+      "chapter_id": 308,
+      "name": "第一单元 生活中的数",
+      "order_index": 2
+    },
+    {
+      "subject": "math",
+      "grade": 1,
+      "semester": "first",
+      "chapter_id": 309,
+      "name": "第二单元 5以内数加与减",
+      "order_index": 3
+    },
+    {
+      "subject": "math",
+      "grade": 1,
+      "semester": "first",
+      "chapter_id": 310,
+      "name": "第三单元 整理与分类",
+      "order_index": 4
+    },
+    {
+      "subject": "math",
+      "grade": 1,
+      "semester": "first",
+      "chapter_id": 312,
+      "name": "第五单元 有趣的立体图形",
+      "order_index": 6
+    },
+    {
+      "subject": "math",
+      "grade": 2,
+      "semester": "first",
+      "chapter_id": 314,
+      "name": "第二单元 测量（一）",
+      "order_index": 2
+    },
+    {
+      "subject": "math",
+      "grade": 2,
+      "semester": "first",
+      "chapter_id": 315,
+      "name": "第三单元 数一数与乘法",
+      "order_index": 3
+    },
+    {
+      "subject": "math",
+      "grade": 2,
+      "semester": "first",
+      "chapter_id": 316,
+      "name": "第四单元 乘法口诀（一）",
+      "order_index": 4
+    },
+    {
+      "subject": "math",
+      "grade": 2,
+      "semester": "first",
+      "chapter_id": 317,
+      "name": "第五单元 分一分与除法",
+      "order_index": 5
+    },
+    {
+      "subject": "math",
+      "grade": 2,
+      "semester": "first",
+      "chapter_id": 318,
+      "name": "第六单元 图形的运动（一）",
+      "order_index": 6
+    },
+    {
+      "subject": "math",
+      "grade": 2,
+      "semester": "first",
+      "chapter_id": 319,
+      "name": "第七单元 乘法口诀（二）",
+      "order_index": 7
+    },
+    {
+      "subject": "math",
+      "grade": 2,
+      "semester": "first",
+      "chapter_id": 320,
+      "name": "第八单元 乘除法的应用（一）",
+      "order_index": 8
+    },
+    {
+      "subject": "math",
+      "grade": 3,
+      "semester": "first",
+      "chapter_id": 321,
+      "name": "第一单元 混合运算",
+      "order_index": 1
+    },
+    {
+      "subject": "math",
+      "grade": 3,
+      "semester": "first",
+      "chapter_id": 322,
+      "name": "第二单元 测量（二）",
+      "order_index": 2
+    },
+    {
+      "subject": "math",
+      "grade": 3,
+      "semester": "first",
+      "chapter_id": 323,
+      "name": "第三单元 大数加与减（二）",
+      "order_index": 3
+    },
+    {
+      "subject": "math",
+      "grade": 3,
+      "semester": "first",
+      "chapter_id": 324,
+      "name": "第四单元 我们生活的空间（一）",
+      "order_index": 4
+    },
+    {
+      "subject": "math",
+      "grade": 3,
+      "semester": "first",
+      "chapter_id": 325,
+      "name": "第五单元 认识图形",
+      "order_index": 5
+    },
+    {
+      "subject": "math",
+      "grade": 3,
+      "semester": "first",
+      "chapter_id": 326,
+      "name": "第六单元 乘除法的应用（二）",
+      "order_index": 6
+    },
+    {
+      "subject": "math",
+      "grade": 3,
+      "semester": "first",
+      "chapter_id": 327,
+      "name": "第七单元 认识小数",
+      "order_index": 7
+    },
+    {
+      "subject": "math",
+      "grade": 3,
+      "semester": "first",
+      "chapter_id": 328,
+      "name": "第八单元 调查与记录",
+      "order_index": 8
+    },
+    {
+      "subject": "math",
+      "grade": 4,
+      "semester": "first",
+      "chapter_id": 330,
+      "name": "综合实践 编码",
+      "order_index": 2
+    },
+    {
+      "subject": "math",
+      "grade": 4,
+      "semester": "first",
+      "chapter_id": 331,
+      "name": "第二单元 线与角",
+      "order_index": 3
+    },
+    {
+      "subject": "math",
+      "grade": 4,
+      "semester": "first",
+      "chapter_id": 332,
+      "name": "第三单元 整数乘法（二）",
+      "order_index": 4
+    },
+    {
+      "subject": "math",
+      "grade": 4,
+      "semester": "first",
+      "chapter_id": 333,
+      "name": "第四单元 我们生活的空间（二）",
+      "order_index": 5
+    },
+    {
+      "subject": "math",
+      "grade": 4,
+      "semester": "first",
+      "chapter_id": 334,
+      "name": "第五单元 运算律",
+      "order_index": 6
+    },
+    {
+      "subject": "math",
+      "grade": 4,
+      "semester": "first",
+      "chapter_id": 335,
+      "name": "数学好玩 数图形的学问",
+      "order_index": 7
+    },
+    {
+      "subject": "math",
+      "grade": 4,
+      "semester": "first",
+      "chapter_id": 336,
+      "name": "第六单元 图形的奥秘",
+      "order_index": 8
+    },
+    {
+      "subject": "math",
+      "grade": 4,
+      "semester": "first",
+      "chapter_id": 337,
+      "name": "第七单元 运用数量关系解决问题",
+      "order_index": 9
+    },
+    {
+      "subject": "math",
+      "grade": 4,
+      "semester": "first",
+      "chapter_id": 338,
+      "name": "第八单元 数据的表示和分析（一）",
+      "order_index": 10
+    },
+    {
+      "subject": "math",
+      "grade": 4,
+      "semester": "first",
+      "chapter_id": 339,
+      "name": "综合实践 导航给的时间准吗",
+      "order_index": 11
+    },
+    {
+      "subject": "math",
+      "grade": 4,
+      "semester": "first",
+      "chapter_id": 340,
+      "name": "总复习",
+      "order_index": 12
+    },
+    {
+      "subject": "math",
+      "grade": 5,
+      "semester": "first",
+      "chapter_id": 341,
+      "name": "第一单元 小数的再认识和加减法",
+      "order_index": 1
+    },
+    {
+      "subject": "math",
+      "grade": 5,
+      "semester": "first",
+      "chapter_id": 342,
+      "name": "第二单元 三角形的再认识",
+      "order_index": 2
+    },
+    {
+      "subject": "math",
+      "grade": 5,
+      "semester": "first",
+      "chapter_id": 343,
+      "name": "综合实践 小小设计师",
+      "order_index": 3
+    },
+    {
+      "subject": "math",
+      "grade": 5,
+      "semester": "first",
+      "chapter_id": 344,
+      "name": "第三单元 小数乘法",
+      "order_index": 4
+    },
+    {
+      "subject": "math",
+      "grade": 5,
+      "semester": "first",
+      "chapter_id": 345,
+      "name": "第四单元 用字母表示（一）",
+      "order_index": 5
+    },
+    {
+      "subject": "math",
+      "grade": 5,
+      "semester": "first",
+      "chapter_id": 346,
+      "name": "第五单元 多边形的面积",
+      "order_index": 6
+    },
+    {
+      "subject": "math",
+      "grade": 5,
+      "semester": "first",
+      "chapter_id": 347,
+      "name": "数学好玩 鸡兔同笼",
+      "order_index": 7
+    },
+    {
+      "subject": "math",
+      "grade": 5,
+      "semester": "first",
+      "chapter_id": 348,
+      "name": "第六单元 图形的位置与运动（一）",
+      "order_index": 8
+    },
+    {
+      "subject": "math",
+      "grade": 5,
+      "semester": "first",
+      "chapter_id": 349,
+      "name": "第七单元 倍数与因数",
+      "order_index": 9
+    },
+    {
+      "subject": "math",
+      "grade": 5,
+      "semester": "first",
+      "chapter_id": 350,
+      "name": "第八单元 可能性",
+      "order_index": 10
+    },
+    {
+      "subject": "math",
+      "grade": 5,
+      "semester": "first",
+      "chapter_id": 351,
+      "name": "综合实践 多少落叶能铺满",
+      "order_index": 11
+    },
+    {
+      "subject": "math",
+      "grade": 5,
+      "semester": "first",
+      "chapter_id": 352,
+      "name": "总复习",
+      "order_index": 12
+    },
+    {
+      "subject": "math",
+      "grade": 6,
+      "semester": "first",
+      "chapter_id": 353,
+      "name": "第一单元 分数除法",
+      "order_index": 1
+    },
+    {
+      "subject": "math",
+      "grade": 6,
+      "semester": "first",
+      "chapter_id": 355,
+      "name": "第三单元 用字母表示（二）",
+      "order_index": 3
+    },
+    {
+      "subject": "math",
+      "grade": 6,
+      "semester": "first",
+      "chapter_id": 356,
+      "name": "综合实践 制订节水方案",
+      "order_index": 4
+    },
+    {
+      "subject": "math",
+      "grade": 6,
+      "semester": "first",
+      "chapter_id": 357,
+      "name": "第四单元 分数的应用",
+      "order_index": 5
+    },
+    {
+      "subject": "math",
+      "grade": 6,
+      "semester": "first",
+      "chapter_id": 358,
+      "name": "第五单元 比的认识",
+      "order_index": 6
+    },
+    {
+      "subject": "math",
+      "grade": 6,
+      "semester": "first",
+      "chapter_id": 359,
+      "name": "第六单元 确定位置",
+      "order_index": 7
+    },
+    {
+      "subject": "math",
+      "grade": 6,
+      "semester": "first",
+      "chapter_id": 360,
+      "name": "数学好玩 五子棋",
+      "order_index": 8
+    },
+    {
+      "subject": "math",
+      "grade": 6,
+      "semester": "first",
+      "chapter_id": 361,
+      "name": "第七单元 百分数的认识与应用（一）",
+      "order_index": 9
+    },
+    {
+      "subject": "math",
+      "grade": 6,
+      "semester": "first",
+      "chapter_id": 362,
+      "name": "第八单元 观察物体（二）",
+      "order_index": 10
+    },
+    {
+      "subject": "math",
+      "grade": 6,
+      "semester": "first",
+      "chapter_id": 363,
+      "name": "第九单元 数据的表示和分析（三）",
+      "order_index": 11
+    },
+    {
+      "subject": "math",
+      "grade": 6,
+      "semester": "first",
+      "chapter_id": 364,
+      "name": "综合实践 制订营养食谱",
+      "order_index": 12
+    },
+    {
+      "subject": "math",
+      "grade": 6,
+      "semester": "first",
+      "chapter_id": 365,
+      "name": "总复习",
+      "order_index": 13
+    },
+    {
+      "subject": "math",
+      "grade": 7,
+      "semester": "first",
+      "chapter_id": 367,
+      "name": "第二章 有理数及其运算",
+      "order_index": 2
+    },
+    {
+      "subject": "math",
+      "grade": 7,
+      "semester": "first",
+      "chapter_id": 368,
+      "name": "第三章 整式及其加减",
+      "order_index": 3
+    },
+    {
+      "subject": "math",
+      "grade": 7,
+      "semester": "first",
+      "chapter_id": 369,
+      "name": "第四章 基本平面图形",
+      "order_index": 4
+    },
+    {
+      "subject": "math",
+      "grade": 7,
+      "semester": "first",
+      "chapter_id": 370,
+      "name": "第五章 一元一次方程",
+      "order_index": 5
+    },
+    {
+      "subject": "math",
+      "grade": 7,
+      "semester": "first",
+      "chapter_id": 371,
+      "name": "第六章 数据的收集与整理",
+      "order_index": 6
+    },
+    {
+      "subject": "math",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 373,
+      "name": "第二章 实数",
+      "order_index": 2
+    },
+    {
+      "subject": "math",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 374,
+      "name": "第三章 位置与坐标",
+      "order_index": 3
+    },
+    {
+      "subject": "math",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 375,
+      "name": "第四章 一次函数",
+      "order_index": 4
+    },
+    {
+      "subject": "math",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 376,
+      "name": "第五章 二元一次方程组",
+      "order_index": 5
+    },
+    {
+      "subject": "math",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 377,
+      "name": "第六章 数据的分析",
+      "order_index": 6
+    },
+    {
+      "subject": "math",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 378,
+      "name": "第七章 证明",
+      "order_index": 7
+    },
+    {
+      "subject": "math",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 736,
+      "name": "第二章 一元二次方程",
+      "order_index": 2
+    },
+    {
+      "subject": "math",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 737,
+      "name": "第三章 图形的相似",
+      "order_index": 3
+    },
+    {
+      "subject": "math",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 738,
+      "name": "第四章 投影与视图",
+      "order_index": 4
+    },
+    {
+      "subject": "math",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 739,
+      "name": "第五章 二次函数",
+      "order_index": 5
+    },
+    {
+      "subject": "math",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 740,
+      "name": "第六章 概率的进一步认识",
+      "order_index": 6
+    },
+    {
+      "subject": "math",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 741,
+      "name": "综合与实践 池塘里有多少条鱼",
+      "order_index": 7
+    },
+    {
+      "subject": "physics",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 381,
+      "name": "第三章 物态变化",
+      "order_index": 3
+    },
+    {
+      "subject": "physics",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 382,
+      "name": "第四章 光现象",
+      "order_index": 4
+    },
+    {
+      "subject": "physics",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 383,
+      "name": "第五章 透镜及其应用",
+      "order_index": 5
+    },
+    {
+      "subject": "physics",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 384,
+      "name": "第六章 质量与密度",
+      "order_index": 6
+    },
+    {
+      "subject": "physics",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 386,
+      "name": "第十四章 内能的利用",
+      "order_index": 2
+    },
+    {
+      "subject": "physics",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 387,
+      "name": "第十五章 电流和电路",
+      "order_index": 3
+    },
+    {
+      "subject": "physics",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 388,
+      "name": "第十六章 电压 电阻",
+      "order_index": 4
+    },
+    {
+      "subject": "physics",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 389,
+      "name": "第十七章 欧姆定律",
+      "order_index": 5
+    },
+    {
+      "subject": "physics",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 390,
+      "name": "第十八章 电功率",
+      "order_index": 6
+    },
+    {
+      "subject": "physics",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 391,
+      "name": "第十九章 生活用电",
+      "order_index": 7
+    },
+    {
+      "subject": "physics",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 392,
+      "name": "第二十章 电与磁",
+      "order_index": 8
+    },
+    {
+      "subject": "physics",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 393,
+      "name": "第二十一章 电磁波及其应用",
+      "order_index": 9
+    },
+    {
+      "subject": "physics",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 394,
+      "name": "第二十二章 能源与可持续发展",
+      "order_index": 10
+    },
+    {
+      "subject": "politics",
+      "grade": 1,
+      "semester": "first",
+      "chapter_id": 396,
+      "name": "第二单元 过好校园生活",
+      "order_index": 2
+    },
+    {
+      "subject": "politics",
+      "grade": 1,
+      "semester": "first",
+      "chapter_id": 397,
+      "name": "第三单元 养成良好习惯",
+      "order_index": 3
+    },
+    {
+      "subject": "politics",
+      "grade": 1,
+      "semester": "first",
+      "chapter_id": 398,
+      "name": "第四单元 我们讲文明",
+      "order_index": 4
+    },
+    {
+      "subject": "politics",
+      "grade": 2,
+      "semester": "first",
+      "chapter_id": 400,
+      "name": "第二单元 我爱我们班",
+      "order_index": 2
+    },
+    {
+      "subject": "politics",
+      "grade": 2,
+      "semester": "first",
+      "chapter_id": 401,
+      "name": "第三单元 我的家乡美",
+      "order_index": 3
+    },
+    {
+      "subject": "politics",
+      "grade": 2,
+      "semester": "first",
+      "chapter_id": 402,
+      "name": "第四单元 我爱我们的祖国",
+      "order_index": 4
+    },
+    {
+      "subject": "politics",
+      "grade": 3,
+      "semester": "first",
+      "chapter_id": 404,
+      "name": "第二单元 爱科学 学科学",
+      "order_index": 2
+    },
+    {
+      "subject": "politics",
+      "grade": 3,
+      "semester": "first",
+      "chapter_id": 405,
+      "name": "第三单元 在集体中成长",
+      "order_index": 3
+    },
+    {
+      "subject": "politics",
+      "grade": 3,
+      "semester": "first",
+      "chapter_id": 406,
+      "name": "第四单元 公共生活靠大家",
+      "order_index": 4
+    },
+    {
+      "subject": "politics",
+      "grade": 4,
+      "semester": "first",
+      "chapter_id": 408,
+      "name": "第二单元 少年在成长",
+      "order_index": 2
+    },
+    {
+      "subject": "politics",
+      "grade": 4,
+      "semester": "first",
+      "chapter_id": 409,
+      "name": "第三单元 生活在信息社会",
+      "order_index": 3
+    },
+    {
+      "subject": "politics",
+      "grade": 4,
+      "semester": "first",
+      "chapter_id": 410,
+      "name": "第四单元 做文明的消费者",
+      "order_index": 4
+    },
+    {
+      "subject": "politics",
+      "grade": 5,
+      "semester": "first",
+      "chapter_id": 412,
+      "name": "第二单元 建设社会主义新中国",
+      "order_index": 2
+    },
+    {
+      "subject": "politics",
+      "grade": 5,
+      "semester": "first",
+      "chapter_id": 413,
+      "name": "第三单元 进行改革开放",
+      "order_index": 3
+    },
+    {
+      "subject": "politics",
+      "grade": 5,
+      "semester": "first",
+      "chapter_id": 414,
+      "name": "第四单元 开创新时代",
+      "order_index": 4
+    },
+    {
+      "subject": "politics",
+      "grade": 6,
+      "semester": "first",
+      "chapter_id": 416,
+      "name": "第二单元 公民与国家",
+      "order_index": 2
+    },
+    {
+      "subject": "politics",
+      "grade": 6,
+      "semester": "first",
+      "chapter_id": 417,
+      "name": "第三单元 我们受特殊保护",
+      "order_index": 3
+    },
+    {
+      "subject": "politics",
+      "grade": 6,
+      "semester": "first",
+      "chapter_id": 418,
+      "name": "第四单元 知法守法 依法维权",
+      "order_index": 4
+    },
+    {
+      "subject": "politics",
+      "grade": 7,
+      "semester": "first",
+      "chapter_id": 420,
+      "name": "第二单元 成长的时空",
+      "order_index": 2
+    },
+    {
+      "subject": "politics",
+      "grade": 7,
+      "semester": "first",
+      "chapter_id": 421,
+      "name": "第三单元 珍爱我们的生命",
+      "order_index": 3
+    },
+    {
+      "subject": "politics",
+      "grade": 7,
+      "semester": "first",
+      "chapter_id": 422,
+      "name": "第四单元 追求美好人生",
+      "order_index": 4
+    },
+    {
+      "subject": "politics",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 424,
+      "name": "第二单元 维护社会秩序",
+      "order_index": 2
+    },
+    {
+      "subject": "politics",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 425,
+      "name": "第三单元 勇担社会责任",
+      "order_index": 3
+    },
+    {
+      "subject": "politics",
+      "grade": 8,
+      "semester": "first",
+      "chapter_id": 426,
+      "name": "第四单元 维护国家利益",
+      "order_index": 4
+    },
+    {
+      "subject": "politics",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 428,
+      "name": "第二单元 进入新时代",
+      "order_index": 2
+    },
+    {
+      "subject": "politics",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 429,
+      "name": "第三单元 奋进新征程",
+      "order_index": 3
+    },
+    {
+      "subject": "politics",
+      "grade": 9,
+      "semester": "first",
+      "chapter_id": 430,
+      "name": "第四单元 共圆中国梦",
+      "order_index": 4
+    }
+  ],
+  "textbooks": [
+    {
+      "textbook_id": 55,
+      "subject": "biology",
+      "grade": 7,
+      "semester": "first",
+      "version": "人教版",
+      "official_chapters": 9,
+      "chapters_with_questions": 4,
+      "empty_chapters": 5,
+      "questions": 25,
+      "knowledge_points": 108,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 136,
+          "name": "第二单元 多种多样的生物",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 137,
+          "name": "第一章 藻类与植物的类群",
+          "order_index": 6,
+          "questions": 0
+        },
+        {
+          "id": 138,
+          "name": "第二章 动物的类群",
+          "order_index": 7,
+          "questions": 0
+        },
+        {
+          "id": 139,
+          "name": "第三章 微生物",
+          "order_index": 8,
+          "questions": 0
+        },
+        {
+          "id": 140,
+          "name": "第四章 生物分类的方法",
+          "order_index": 9,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 71,
+      "subject": "biology",
+      "grade": 8,
+      "semester": "first",
+      "version": "人教版",
+      "official_chapters": 6,
+      "chapters_with_questions": 1,
+      "empty_chapters": 5,
+      "questions": 19,
+      "knowledge_points": 48,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 142,
+          "name": "第六章 人体生命活动的调节",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 143,
+          "name": "第七章 健康地生活",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 144,
+          "name": "第五单元 生物与环境",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 145,
+          "name": "第一章 生态系统",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 146,
+          "name": "第二章 生态安全",
+          "order_index": 6,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 103,
+      "subject": "biology",
+      "grade": 10,
+      "semester": "first",
+      "version": "人教版",
+      "official_chapters": 0,
+      "chapters_with_questions": 0,
+      "empty_chapters": 0,
+      "questions": 0,
+      "knowledge_points": 0,
+      "status": "no_skeleton",
+      "empty_chapter_detail": []
+    },
+    {
+      "textbook_id": 121,
+      "subject": "biology",
+      "grade": 11,
+      "semester": "first",
+      "version": "人教版",
+      "official_chapters": 0,
+      "chapters_with_questions": 0,
+      "empty_chapters": 0,
+      "questions": 0,
+      "knowledge_points": 0,
+      "status": "no_skeleton",
+      "empty_chapter_detail": []
+    },
+    {
+      "textbook_id": 139,
+      "subject": "biology",
+      "grade": 12,
+      "semester": "first",
+      "version": "人教版",
+      "official_chapters": 0,
+      "chapters_with_questions": 0,
+      "empty_chapters": 0,
+      "questions": 0,
+      "knowledge_points": 0,
+      "status": "no_skeleton",
+      "empty_chapter_detail": []
+    },
+    {
+      "textbook_id": 87,
+      "subject": "chemistry",
+      "grade": 9,
+      "semester": "first",
+      "version": "人教版",
+      "official_chapters": 7,
+      "chapters_with_questions": 1,
+      "empty_chapters": 6,
+      "questions": 22,
+      "knowledge_points": 84,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 147,
+          "name": "第二单元 空气和氧气",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 148,
+          "name": "第三单元 物质构成的奥秘",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 149,
+          "name": "第四单元 自然界的水",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 150,
+          "name": "第五单元 化学反应的定量关系",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 151,
+          "name": "第六单元 碳和碳的氧化物",
+          "order_index": 6,
+          "questions": 0
+        },
+        {
+          "id": 152,
+          "name": "第七单元 能源的合理利用与开发",
+          "order_index": 7,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 101,
+      "subject": "chemistry",
+      "grade": 10,
+      "semester": "first",
+      "version": "人教版",
+      "official_chapters": 0,
+      "chapters_with_questions": 0,
+      "empty_chapters": 0,
+      "questions": 0,
+      "knowledge_points": 0,
+      "status": "no_skeleton",
+      "empty_chapter_detail": []
+    },
+    {
+      "textbook_id": 119,
+      "subject": "chemistry",
+      "grade": 11,
+      "semester": "first",
+      "version": "人教版",
+      "official_chapters": 0,
+      "chapters_with_questions": 0,
+      "empty_chapters": 0,
+      "questions": 0,
+      "knowledge_points": 0,
+      "status": "no_skeleton",
+      "empty_chapter_detail": []
+    },
+    {
+      "textbook_id": 137,
+      "subject": "chemistry",
+      "grade": 12,
+      "semester": "first",
+      "version": "人教版",
+      "official_chapters": 0,
+      "chapters_with_questions": 0,
+      "empty_chapters": 0,
+      "questions": 0,
+      "knowledge_points": 0,
+      "status": "no_skeleton",
+      "empty_chapter_detail": []
+    },
+    {
+      "textbook_id": 3,
+      "subject": "chinese",
+      "grade": 1,
+      "semester": "first",
+      "version": "人教版",
+      "official_chapters": 8,
+      "chapters_with_questions": 2,
+      "empty_chapters": 6,
+      "questions": 48,
+      "knowledge_points": 184,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 154,
+          "name": "第二单元 汉语拼音",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 155,
+          "name": "第三单元 汉语拼音",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 157,
+          "name": "第五单元 阅读",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 158,
+          "name": "第六单元 识字",
+          "order_index": 6,
+          "questions": 0
+        },
+        {
+          "id": 159,
+          "name": "第七单元 阅读",
+          "order_index": 7,
+          "questions": 0
+        },
+        {
+          "id": 160,
+          "name": "第八单元 阅读",
+          "order_index": 8,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 11,
+      "subject": "chinese",
+      "grade": 2,
+      "semester": "first",
+      "version": "人教版",
+      "official_chapters": 8,
+      "chapters_with_questions": 1,
+      "empty_chapters": 7,
+      "questions": 20,
+      "knowledge_points": 96,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 162,
+          "name": "第二单元 识字",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 163,
+          "name": "第三单元 阅读",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 164,
+          "name": "第四单元 阅读",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 165,
+          "name": "第五单元 阅读",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 166,
+          "name": "第六单元 阅读",
+          "order_index": 6,
+          "questions": 0
+        },
+        {
+          "id": 167,
+          "name": "第七单元 阅读",
+          "order_index": 7,
+          "questions": 0
+        },
+        {
+          "id": 168,
+          "name": "第八单元 阅读",
+          "order_index": 8,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 19,
+      "subject": "chinese",
+      "grade": 3,
+      "semester": "first",
+      "version": "人教版",
+      "official_chapters": 8,
+      "chapters_with_questions": 1,
+      "empty_chapters": 7,
+      "questions": 20,
+      "knowledge_points": 96,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 170,
+          "name": "第二单元",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 171,
+          "name": "第三单元",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 172,
+          "name": "第四单元",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 173,
+          "name": "第五单元",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 174,
+          "name": "第六单元",
+          "order_index": 6,
+          "questions": 0
+        },
+        {
+          "id": 175,
+          "name": "第七单元",
+          "order_index": 7,
+          "questions": 0
+        },
+        {
+          "id": 176,
+          "name": "第八单元",
+          "order_index": 8,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 27,
+      "subject": "chinese",
+      "grade": 4,
+      "semester": "first",
+      "version": "人教版",
+      "official_chapters": 8,
+      "chapters_with_questions": 1,
+      "empty_chapters": 7,
+      "questions": 20,
+      "knowledge_points": 72,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 178,
+          "name": "第二单元",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 179,
+          "name": "第三单元",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 180,
+          "name": "第四单元",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 181,
+          "name": "第五单元",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 182,
+          "name": "第六单元",
+          "order_index": 6,
+          "questions": 0
+        },
+        {
+          "id": 183,
+          "name": "第七单元",
+          "order_index": 7,
+          "questions": 0
+        },
+        {
+          "id": 184,
+          "name": "第八单元",
+          "order_index": 8,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 35,
+      "subject": "chinese",
+      "grade": 5,
+      "semester": "first",
+      "version": "人教版",
+      "official_chapters": 8,
+      "chapters_with_questions": 1,
+      "empty_chapters": 7,
+      "questions": 20,
+      "knowledge_points": 72,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 186,
+          "name": "第二单元",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 187,
+          "name": "第三单元",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 188,
+          "name": "第四单元",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 189,
+          "name": "第五单元",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 190,
+          "name": "第六单元",
+          "order_index": 6,
+          "questions": 0
+        },
+        {
+          "id": 191,
+          "name": "第七单元",
+          "order_index": 7,
+          "questions": 0
+        },
+        {
+          "id": 192,
+          "name": "第八单元",
+          "order_index": 8,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 43,
+      "subject": "chinese",
+      "grade": 6,
+      "semester": "first",
+      "version": "人教版",
+      "official_chapters": 8,
+      "chapters_with_questions": 1,
+      "empty_chapters": 7,
+      "questions": 20,
+      "knowledge_points": 72,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 194,
+          "name": "第二单元",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 195,
+          "name": "第三单元",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 196,
+          "name": "第四单元",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 197,
+          "name": "第五单元",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 198,
+          "name": "第六单元",
+          "order_index": 6,
+          "questions": 0
+        },
+        {
+          "id": 199,
+          "name": "第七单元",
+          "order_index": 7,
+          "questions": 0
+        },
+        {
+          "id": 200,
+          "name": "第八单元",
+          "order_index": 8,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 49,
+      "subject": "chinese",
+      "grade": 7,
+      "semester": "first",
+      "version": "人教版",
+      "official_chapters": 6,
+      "chapters_with_questions": 1,
+      "empty_chapters": 5,
+      "questions": 20,
+      "knowledge_points": 54,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 202,
+          "name": "第二单元",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 203,
+          "name": "第三单元",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 204,
+          "name": "第四单元",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 205,
+          "name": "第五单元 活动 探究",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 206,
+          "name": "第六单元",
+          "order_index": 6,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 63,
+      "subject": "chinese",
+      "grade": 8,
+      "semester": "first",
+      "version": "人教版",
+      "official_chapters": 6,
+      "chapters_with_questions": 1,
+      "empty_chapters": 5,
+      "questions": 20,
+      "knowledge_points": 54,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 208,
+          "name": "第二单元",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 209,
+          "name": "第三单元",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 210,
+          "name": "第四单元",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 211,
+          "name": "第五单元",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 212,
+          "name": "第六单元",
+          "order_index": 6,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 79,
+      "subject": "chinese",
+      "grade": 9,
+      "semester": "first",
+      "version": "人教版",
+      "official_chapters": 6,
+      "chapters_with_questions": 1,
+      "empty_chapters": 5,
+      "questions": 20,
+      "knowledge_points": 54,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 214,
+          "name": "第二单元",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 215,
+          "name": "第三单元",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 216,
+          "name": "第四单元",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 217,
+          "name": "第五单元",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 218,
+          "name": "第六单元",
+          "order_index": 6,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 93,
+      "subject": "chinese",
+      "grade": 10,
+      "semester": "first",
+      "version": "人教版",
+      "official_chapters": 0,
+      "chapters_with_questions": 0,
+      "empty_chapters": 0,
+      "questions": 0,
+      "knowledge_points": 0,
+      "status": "no_skeleton",
+      "empty_chapter_detail": []
+    },
+    {
+      "textbook_id": 111,
+      "subject": "chinese",
+      "grade": 11,
+      "semester": "first",
+      "version": "人教版",
+      "official_chapters": 0,
+      "chapters_with_questions": 0,
+      "empty_chapters": 0,
+      "questions": 0,
+      "knowledge_points": 0,
+      "status": "no_skeleton",
+      "empty_chapter_detail": []
+    },
+    {
+      "textbook_id": 129,
+      "subject": "chinese",
+      "grade": 12,
+      "semester": "first",
+      "version": "人教版",
+      "official_chapters": 0,
+      "chapters_with_questions": 0,
+      "empty_chapters": 0,
+      "questions": 0,
+      "knowledge_points": 0,
+      "status": "no_skeleton",
+      "empty_chapter_detail": []
+    },
+    {
+      "textbook_id": 5,
+      "subject": "english",
+      "grade": 1,
+      "semester": "first",
+      "version": "牛津深圳版",
+      "official_chapters": 6,
+      "chapters_with_questions": 2,
+      "empty_chapters": 4,
+      "questions": 47,
+      "knowledge_points": 144,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 220,
+          "name": "Unit 2 How are you today?",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 221,
+          "name": "Unit 3 What do you take to school?",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 222,
+          "name": "Unit 4 What can you do?",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 223,
+          "name": "Unit 5 What is your favourite animal?",
+          "order_index": 5,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 13,
+      "subject": "english",
+      "grade": 2,
+      "semester": "first",
+      "version": "牛津深圳版",
+      "official_chapters": 6,
+      "chapters_with_questions": 2,
+      "empty_chapters": 4,
+      "questions": 23,
+      "knowledge_points": 78,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 227,
+          "name": "Unit 3 What is your favourite toy?",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 228,
+          "name": "Unit 4 What is around your home?",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 229,
+          "name": "Unit 5 What do you like about farms?",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 230,
+          "name": "Unit 6 How do people celebrate the Mid-Autumn Festival?",
+          "order_index": 6,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 21,
+      "subject": "english",
+      "grade": 3,
+      "semester": "first",
+      "version": "牛津深圳版",
+      "official_chapters": 8,
+      "chapters_with_questions": 2,
+      "empty_chapters": 6,
+      "questions": 22,
+      "knowledge_points": 104,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 232,
+          "name": "Unit 2 What's interesting about families?",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 233,
+          "name": "Unit 3 What do we look like?",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 234,
+          "name": "Unit 4 How do we have fun?",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 235,
+          "name": "Unit 5 What do we eat?",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 236,
+          "name": "Unit 6 What do we like about small animals?",
+          "order_index": 6,
+          "questions": 0
+        },
+        {
+          "id": 238,
+          "name": "Unit 8 Why do we like birthdays?",
+          "order_index": 8,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 29,
+      "subject": "english",
+      "grade": 4,
+      "semester": "first",
+      "version": "牛津深圳版",
+      "official_chapters": 8,
+      "chapters_with_questions": 1,
+      "empty_chapters": 7,
+      "questions": 18,
+      "knowledge_points": 64,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 240,
+          "name": "Unit 2 Where do animals live?",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 241,
+          "name": "Unit 3 How do we use numbers?",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 242,
+          "name": "Unit 4 What do we buy?",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 243,
+          "name": "Unit 5 How are the seasons different?",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 244,
+          "name": "Unit 6 What's amazing about plants?",
+          "order_index": 6,
+          "questions": 0
+        },
+        {
+          "id": 245,
+          "name": "Unit 7 How do we keep safe on the road?",
+          "order_index": 7,
+          "questions": 0
+        },
+        {
+          "id": 246,
+          "name": "Unit 8 What do our grandparents do?",
+          "order_index": 8,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 37,
+      "subject": "english",
+      "grade": 5,
+      "semester": "first",
+      "version": "牛津深圳版",
+      "official_chapters": 8,
+      "chapters_with_questions": 1,
+      "empty_chapters": 7,
+      "questions": 18,
+      "knowledge_points": 64,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 248,
+          "name": "Unit 2 How do we stay healthy?",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 249,
+          "name": "Unit 3 What do you know about different countries?",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 250,
+          "name": "Unit 4 What's interesting about holidays?",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 251,
+          "name": "Unit 5 What are living things?",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 252,
+          "name": "Unit 6 Why should we take care of the Earth?",
+          "order_index": 6,
+          "questions": 0
+        },
+        {
+          "id": 253,
+          "name": "Unit 7 How do we celebrate festivals?",
+          "order_index": 7,
+          "questions": 0
+        },
+        {
+          "id": 254,
+          "name": "Unit 8 How does music make us feel?",
+          "order_index": 8,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 45,
+      "subject": "english",
+      "grade": 6,
+      "semester": "first",
+      "version": "牛津深圳版",
+      "official_chapters": 6,
+      "chapters_with_questions": 1,
+      "empty_chapters": 5,
+      "questions": 18,
+      "knowledge_points": 48,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 256,
+          "name": "Unit 2 Why do we make art?",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 257,
+          "name": "Unit 3 How should we protect ourselves?",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 258,
+          "name": "Unit 4 What makes things move?",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 259,
+          "name": "Unit 5 How do inventions change our lives?",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 260,
+          "name": "Unit 6 What is a city?",
+          "order_index": 6,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 53,
+      "subject": "english",
+      "grade": 7,
+      "semester": "first",
+      "version": "牛津深圳版",
+      "official_chapters": 6,
+      "chapters_with_questions": 1,
+      "empty_chapters": 5,
+      "questions": 18,
+      "knowledge_points": 48,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 262,
+          "name": "Unit 2 Strong mind",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 263,
+          "name": "Unit 3 Jobs",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 264,
+          "name": "Unit 4 Smart home",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 265,
+          "name": "Unit 5 Films",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 266,
+          "name": "Unit 6 Mountains and rivers",
+          "order_index": 6,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 67,
+      "subject": "english",
+      "grade": 8,
+      "semester": "first",
+      "version": "牛津深圳版",
+      "official_chapters": 6,
+      "chapters_with_questions": 1,
+      "empty_chapters": 5,
+      "questions": 18,
+      "knowledge_points": 48,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 268,
+          "name": "Unit 2 Digital life",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 269,
+          "name": "Unit 3 Curious minds",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 270,
+          "name": "Unit 4 Then and now",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 271,
+          "name": "Unit 5 Teamwork",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 272,
+          "name": "Unit 6 Life in the future",
+          "order_index": 6,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 83,
+      "subject": "english",
+      "grade": 9,
+      "semester": "first",
+      "version": "牛津深圳版",
+      "official_chapters": 6,
+      "chapters_with_questions": 1,
+      "empty_chapters": 5,
+      "questions": 18,
+      "knowledge_points": 48,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 274,
+          "name": "Unit 2 People and their jobs",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 275,
+          "name": "Unit 3 Travellers' tales",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 276,
+          "name": "Unit 4 Folk customs",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 277,
+          "name": "Unit 5 Buildings",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 278,
+          "name": "Unit 6 Pollution",
+          "order_index": 6,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 97,
+      "subject": "english",
+      "grade": 10,
+      "semester": "first",
+      "version": "外研版",
+      "official_chapters": 0,
+      "chapters_with_questions": 0,
+      "empty_chapters": 0,
+      "questions": 0,
+      "knowledge_points": 0,
+      "status": "no_skeleton",
+      "empty_chapter_detail": []
+    },
+    {
+      "textbook_id": 115,
+      "subject": "english",
+      "grade": 11,
+      "semester": "first",
+      "version": "外研版",
+      "official_chapters": 0,
+      "chapters_with_questions": 0,
+      "empty_chapters": 0,
+      "questions": 0,
+      "knowledge_points": 0,
+      "status": "no_skeleton",
+      "empty_chapter_detail": []
+    },
+    {
+      "textbook_id": 133,
+      "subject": "english",
+      "grade": 12,
+      "semester": "first",
+      "version": "外研版",
+      "official_chapters": 0,
+      "chapters_with_questions": 0,
+      "empty_chapters": 0,
+      "questions": 0,
+      "knowledge_points": 0,
+      "status": "no_skeleton",
+      "empty_chapter_detail": []
+    },
+    {
+      "textbook_id": 59,
+      "subject": "geography",
+      "grade": 7,
+      "semester": "first",
+      "version": "湘教版",
+      "official_chapters": 6,
+      "chapters_with_questions": 1,
+      "empty_chapters": 5,
+      "questions": 18,
+      "knowledge_points": 48,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 280,
+          "name": "第二章 认识地球",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 281,
+          "name": "第三章 地球的面貌",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 282,
+          "name": "第四章 世界的居民与文化",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 283,
+          "name": "第五章 世界的气候",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 284,
+          "name": "第六章 世界的发展差异",
+          "order_index": 6,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 75,
+      "subject": "geography",
+      "grade": 8,
+      "semester": "first",
+      "version": "湘教版",
+      "official_chapters": 4,
+      "chapters_with_questions": 1,
+      "empty_chapters": 3,
+      "questions": 22,
+      "knowledge_points": 32,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 286,
+          "name": "第二章 中国的自然环境",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 287,
+          "name": "第三章 中国的自然资源",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 288,
+          "name": "第四章 中国的主要产业",
+          "order_index": 4,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 107,
+      "subject": "geography",
+      "grade": 10,
+      "semester": "first",
+      "version": "人教版",
+      "official_chapters": 0,
+      "chapters_with_questions": 0,
+      "empty_chapters": 0,
+      "questions": 0,
+      "knowledge_points": 0,
+      "status": "no_skeleton",
+      "empty_chapter_detail": []
+    },
+    {
+      "textbook_id": 125,
+      "subject": "geography",
+      "grade": 11,
+      "semester": "first",
+      "version": "人教版",
+      "official_chapters": 0,
+      "chapters_with_questions": 0,
+      "empty_chapters": 0,
+      "questions": 0,
+      "knowledge_points": 0,
+      "status": "no_skeleton",
+      "empty_chapter_detail": []
+    },
+    {
+      "textbook_id": 143,
+      "subject": "geography",
+      "grade": 12,
+      "semester": "first",
+      "version": "人教版",
+      "official_chapters": 0,
+      "chapters_with_questions": 0,
+      "empty_chapters": 0,
+      "questions": 0,
+      "knowledge_points": 0,
+      "status": "no_skeleton",
+      "empty_chapter_detail": []
+    },
+    {
+      "textbook_id": 57,
+      "subject": "history",
+      "grade": 7,
+      "semester": "first",
+      "version": "部编版",
+      "official_chapters": 4,
+      "chapters_with_questions": 1,
+      "empty_chapters": 3,
+      "questions": 25,
+      "knowledge_points": 48,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 290,
+          "name": "第二单元 夏商周时期：奴隶制王朝的更替和向封建社会的过渡",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 291,
+          "name": "第三单元 秦汉时期：统一多民族封建国家的建立和巩固",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 292,
+          "name": "第四单元 三国两晋南北朝时期：政权分立与民族交融",
+          "order_index": 4,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 73,
+      "subject": "history",
+      "grade": 8,
+      "semester": "first",
+      "version": "部编版",
+      "official_chapters": 7,
+      "chapters_with_questions": 1,
+      "empty_chapters": 6,
+      "questions": 19,
+      "knowledge_points": 56,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 294,
+          "name": "第二单元 早期现代化的初步探索和民族危机加剧",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 295,
+          "name": "第三单元 资产阶级民主革命与中华民国的建立",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 296,
+          "name": "第四单元 新民主主义革命的兴起",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 297,
+          "name": "第五单元 从国共合作到农村革命根据地的建立",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 298,
+          "name": "第六单元 中华民族的抗日战争",
+          "order_index": 6,
+          "questions": 0
+        },
+        {
+          "id": 299,
+          "name": "第七单元 人民解放战争",
+          "order_index": 7,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 89,
+      "subject": "history",
+      "grade": 9,
+      "semester": "first",
+      "version": "部编版",
+      "official_chapters": 7,
+      "chapters_with_questions": 1,
+      "empty_chapters": 6,
+      "questions": 20,
+      "knowledge_points": 56,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 301,
+          "name": "第二单元 古代欧洲文明",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 302,
+          "name": "第三单元 封建时代的欧洲",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 303,
+          "name": "第四单元 中古时期的亚洲、非洲和美洲",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 304,
+          "name": "第五单元 走向近代",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 305,
+          "name": "第六单元 资本主义制度的初步确立",
+          "order_index": 6,
+          "questions": 0
+        },
+        {
+          "id": 306,
+          "name": "第七单元 第一次工业革命和马克思主义的诞生",
+          "order_index": 7,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 105,
+      "subject": "history",
+      "grade": 10,
+      "semester": "first",
+      "version": "部编版",
+      "official_chapters": 0,
+      "chapters_with_questions": 0,
+      "empty_chapters": 0,
+      "questions": 0,
+      "knowledge_points": 0,
+      "status": "no_skeleton",
+      "empty_chapter_detail": []
+    },
+    {
+      "textbook_id": 123,
+      "subject": "history",
+      "grade": 11,
+      "semester": "first",
+      "version": "部编版",
+      "official_chapters": 0,
+      "chapters_with_questions": 0,
+      "empty_chapters": 0,
+      "questions": 0,
+      "knowledge_points": 0,
+      "status": "no_skeleton",
+      "empty_chapter_detail": []
+    },
+    {
+      "textbook_id": 141,
+      "subject": "history",
+      "grade": 12,
+      "semester": "first",
+      "version": "部编版",
+      "official_chapters": 0,
+      "chapters_with_questions": 0,
+      "empty_chapters": 0,
+      "questions": 0,
+      "knowledge_points": 0,
+      "status": "no_skeleton",
+      "empty_chapter_detail": []
+    },
+    {
+      "textbook_id": 1,
+      "subject": "math",
+      "grade": 1,
+      "semester": "first",
+      "version": "北师大版",
+      "official_chapters": 6,
+      "chapters_with_questions": 2,
+      "empty_chapters": 4,
+      "questions": 48,
+      "knowledge_points": 138,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 308,
+          "name": "第一单元 生活中的数",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 309,
+          "name": "第二单元 5以内数加与减",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 310,
+          "name": "第三单元 整理与分类",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 312,
+          "name": "第五单元 有趣的立体图形",
+          "order_index": 6,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 9,
+      "subject": "math",
+      "grade": 2,
+      "semester": "first",
+      "version": "北师大版",
+      "official_chapters": 8,
+      "chapters_with_questions": 1,
+      "empty_chapters": 7,
+      "questions": 22,
+      "knowledge_points": 104,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 314,
+          "name": "第二单元 测量（一）",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 315,
+          "name": "第三单元 数一数与乘法",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 316,
+          "name": "第四单元 乘法口诀（一）",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 317,
+          "name": "第五单元 分一分与除法",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 318,
+          "name": "第六单元 图形的运动（一）",
+          "order_index": 6,
+          "questions": 0
+        },
+        {
+          "id": 319,
+          "name": "第七单元 乘法口诀（二）",
+          "order_index": 7,
+          "questions": 0
+        },
+        {
+          "id": 320,
+          "name": "第八单元 乘除法的应用（一）",
+          "order_index": 8,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 17,
+      "subject": "math",
+      "grade": 3,
+      "semester": "first",
+      "version": "北师大版",
+      "official_chapters": 8,
+      "chapters_with_questions": 0,
+      "empty_chapters": 8,
+      "questions": 0,
+      "knowledge_points": 48,
+      "status": "empty",
+      "empty_chapter_detail": [
+        {
+          "id": 321,
+          "name": "第一单元 混合运算",
+          "order_index": 1,
+          "questions": 0
+        },
+        {
+          "id": 322,
+          "name": "第二单元 测量（二）",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 323,
+          "name": "第三单元 大数加与减（二）",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 324,
+          "name": "第四单元 我们生活的空间（一）",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 325,
+          "name": "第五单元 认识图形",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 326,
+          "name": "第六单元 乘除法的应用（二）",
+          "order_index": 6,
+          "questions": 0
+        },
+        {
+          "id": 327,
+          "name": "第七单元 认识小数",
+          "order_index": 7,
+          "questions": 0
+        },
+        {
+          "id": 328,
+          "name": "第八单元 调查与记录",
+          "order_index": 8,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 25,
+      "subject": "math",
+      "grade": 4,
+      "semester": "first",
+      "version": "北师大版",
+      "official_chapters": 12,
+      "chapters_with_questions": 1,
+      "empty_chapters": 11,
+      "questions": 18,
+      "knowledge_points": 108,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 330,
+          "name": "综合实践 编码",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 331,
+          "name": "第二单元 线与角",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 332,
+          "name": "第三单元 整数乘法（二）",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 333,
+          "name": "第四单元 我们生活的空间（二）",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 334,
+          "name": "第五单元 运算律",
+          "order_index": 6,
+          "questions": 0
+        },
+        {
+          "id": 335,
+          "name": "数学好玩 数图形的学问",
+          "order_index": 7,
+          "questions": 0
+        },
+        {
+          "id": 336,
+          "name": "第六单元 图形的奥秘",
+          "order_index": 8,
+          "questions": 0
+        },
+        {
+          "id": 337,
+          "name": "第七单元 运用数量关系解决问题",
+          "order_index": 9,
+          "questions": 0
+        },
+        {
+          "id": 338,
+          "name": "第八单元 数据的表示和分析（一）",
+          "order_index": 10,
+          "questions": 0
+        },
+        {
+          "id": 339,
+          "name": "综合实践 导航给的时间准吗",
+          "order_index": 11,
+          "questions": 0
+        },
+        {
+          "id": 340,
+          "name": "总复习",
+          "order_index": 12,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 33,
+      "subject": "math",
+      "grade": 5,
+      "semester": "first",
+      "version": "北师大版",
+      "official_chapters": 12,
+      "chapters_with_questions": 0,
+      "empty_chapters": 12,
+      "questions": 0,
+      "knowledge_points": 36,
+      "status": "empty",
+      "empty_chapter_detail": [
+        {
+          "id": 341,
+          "name": "第一单元 小数的再认识和加减法",
+          "order_index": 1,
+          "questions": 0
+        },
+        {
+          "id": 342,
+          "name": "第二单元 三角形的再认识",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 343,
+          "name": "综合实践 小小设计师",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 344,
+          "name": "第三单元 小数乘法",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 345,
+          "name": "第四单元 用字母表示（一）",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 346,
+          "name": "第五单元 多边形的面积",
+          "order_index": 6,
+          "questions": 0
+        },
+        {
+          "id": 347,
+          "name": "数学好玩 鸡兔同笼",
+          "order_index": 7,
+          "questions": 0
+        },
+        {
+          "id": 348,
+          "name": "第六单元 图形的位置与运动（一）",
+          "order_index": 8,
+          "questions": 0
+        },
+        {
+          "id": 349,
+          "name": "第七单元 倍数与因数",
+          "order_index": 9,
+          "questions": 0
+        },
+        {
+          "id": 350,
+          "name": "第八单元 可能性",
+          "order_index": 10,
+          "questions": 0
+        },
+        {
+          "id": 351,
+          "name": "综合实践 多少落叶能铺满",
+          "order_index": 11,
+          "questions": 0
+        },
+        {
+          "id": 352,
+          "name": "总复习",
+          "order_index": 12,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 41,
+      "subject": "math",
+      "grade": 6,
+      "semester": "first",
+      "version": "北师大版",
+      "official_chapters": 13,
+      "chapters_with_questions": 1,
+      "empty_chapters": 12,
+      "questions": 18,
+      "knowledge_points": 117,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 353,
+          "name": "第一单元 分数除法",
+          "order_index": 1,
+          "questions": 0
+        },
+        {
+          "id": 355,
+          "name": "第三单元 用字母表示（二）",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 356,
+          "name": "综合实践 制订节水方案",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 357,
+          "name": "第四单元 分数的应用",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 358,
+          "name": "第五单元 比的认识",
+          "order_index": 6,
+          "questions": 0
+        },
+        {
+          "id": 359,
+          "name": "第六单元 确定位置",
+          "order_index": 7,
+          "questions": 0
+        },
+        {
+          "id": 360,
+          "name": "数学好玩 五子棋",
+          "order_index": 8,
+          "questions": 0
+        },
+        {
+          "id": 361,
+          "name": "第七单元 百分数的认识与应用（一）",
+          "order_index": 9,
+          "questions": 0
+        },
+        {
+          "id": 362,
+          "name": "第八单元 观察物体（二）",
+          "order_index": 10,
+          "questions": 0
+        },
+        {
+          "id": 363,
+          "name": "第九单元 数据的表示和分析（三）",
+          "order_index": 11,
+          "questions": 0
+        },
+        {
+          "id": 364,
+          "name": "综合实践 制订营养食谱",
+          "order_index": 12,
+          "questions": 0
+        },
+        {
+          "id": 365,
+          "name": "总复习",
+          "order_index": 13,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 51,
+      "subject": "math",
+      "grade": 7,
+      "semester": "first",
+      "version": "北师大版",
+      "official_chapters": 6,
+      "chapters_with_questions": 1,
+      "empty_chapters": 5,
+      "questions": 18,
+      "knowledge_points": 54,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 367,
+          "name": "第二章 有理数及其运算",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 368,
+          "name": "第三章 整式及其加减",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 369,
+          "name": "第四章 基本平面图形",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 370,
+          "name": "第五章 一元一次方程",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 371,
+          "name": "第六章 数据的收集与整理",
+          "order_index": 6,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 65,
+      "subject": "math",
+      "grade": 8,
+      "semester": "first",
+      "version": "北师大版",
+      "official_chapters": 7,
+      "chapters_with_questions": 1,
+      "empty_chapters": 6,
+      "questions": 20,
+      "knowledge_points": 63,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 373,
+          "name": "第二章 实数",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 374,
+          "name": "第三章 位置与坐标",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 375,
+          "name": "第四章 一次函数",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 376,
+          "name": "第五章 二元一次方程组",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 377,
+          "name": "第六章 数据的分析",
+          "order_index": 6,
+          "questions": 0
+        },
+        {
+          "id": 378,
+          "name": "第七章 证明",
+          "order_index": 7,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 81,
+      "subject": "math",
+      "grade": 9,
+      "semester": "first",
+      "version": "北师大版",
+      "official_chapters": 7,
+      "chapters_with_questions": 1,
+      "empty_chapters": 6,
+      "questions": 20,
+      "knowledge_points": 56,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 736,
+          "name": "第二章 一元二次方程",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 737,
+          "name": "第三章 图形的相似",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 738,
+          "name": "第四章 投影与视图",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 739,
+          "name": "第五章 二次函数",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 740,
+          "name": "第六章 概率的进一步认识",
+          "order_index": 6,
+          "questions": 0
+        },
+        {
+          "id": 741,
+          "name": "综合与实践 池塘里有多少条鱼",
+          "order_index": 7,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 95,
+      "subject": "math",
+      "grade": 10,
+      "semester": "first",
+      "version": "人教版A版",
+      "official_chapters": 0,
+      "chapters_with_questions": 0,
+      "empty_chapters": 0,
+      "questions": 0,
+      "knowledge_points": 0,
+      "status": "no_skeleton",
+      "empty_chapter_detail": []
+    },
+    {
+      "textbook_id": 113,
+      "subject": "math",
+      "grade": 11,
+      "semester": "first",
+      "version": "人教版A版",
+      "official_chapters": 0,
+      "chapters_with_questions": 0,
+      "empty_chapters": 0,
+      "questions": 0,
+      "knowledge_points": 0,
+      "status": "no_skeleton",
+      "empty_chapter_detail": []
+    },
+    {
+      "textbook_id": 131,
+      "subject": "math",
+      "grade": 12,
+      "semester": "first",
+      "version": "人教版A版",
+      "official_chapters": 0,
+      "chapters_with_questions": 0,
+      "empty_chapters": 0,
+      "questions": 0,
+      "knowledge_points": 0,
+      "status": "no_skeleton",
+      "empty_chapter_detail": []
+    },
+    {
+      "textbook_id": 69,
+      "subject": "physics",
+      "grade": 8,
+      "semester": "first",
+      "version": "人教版",
+      "official_chapters": 6,
+      "chapters_with_questions": 2,
+      "empty_chapters": 4,
+      "questions": 25,
+      "knowledge_points": 72,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 381,
+          "name": "第三章 物态变化",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 382,
+          "name": "第四章 光现象",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 383,
+          "name": "第五章 透镜及其应用",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 384,
+          "name": "第六章 质量与密度",
+          "order_index": 6,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 85,
+      "subject": "physics",
+      "grade": 9,
+      "semester": "first",
+      "version": "人教版",
+      "official_chapters": 10,
+      "chapters_with_questions": 1,
+      "empty_chapters": 9,
+      "questions": 18,
+      "knowledge_points": 80,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 386,
+          "name": "第十四章 内能的利用",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 387,
+          "name": "第十五章 电流和电路",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 388,
+          "name": "第十六章 电压 电阻",
+          "order_index": 4,
+          "questions": 0
+        },
+        {
+          "id": 389,
+          "name": "第十七章 欧姆定律",
+          "order_index": 5,
+          "questions": 0
+        },
+        {
+          "id": 390,
+          "name": "第十八章 电功率",
+          "order_index": 6,
+          "questions": 0
+        },
+        {
+          "id": 391,
+          "name": "第十九章 生活用电",
+          "order_index": 7,
+          "questions": 0
+        },
+        {
+          "id": 392,
+          "name": "第二十章 电与磁",
+          "order_index": 8,
+          "questions": 0
+        },
+        {
+          "id": 393,
+          "name": "第二十一章 电磁波及其应用",
+          "order_index": 9,
+          "questions": 0
+        },
+        {
+          "id": 394,
+          "name": "第二十二章 能源与可持续发展",
+          "order_index": 10,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 99,
+      "subject": "physics",
+      "grade": 10,
+      "semester": "first",
+      "version": "人教版",
+      "official_chapters": 0,
+      "chapters_with_questions": 0,
+      "empty_chapters": 0,
+      "questions": 0,
+      "knowledge_points": 0,
+      "status": "no_skeleton",
+      "empty_chapter_detail": []
+    },
+    {
+      "textbook_id": 117,
+      "subject": "physics",
+      "grade": 11,
+      "semester": "first",
+      "version": "人教版",
+      "official_chapters": 0,
+      "chapters_with_questions": 0,
+      "empty_chapters": 0,
+      "questions": 0,
+      "knowledge_points": 0,
+      "status": "no_skeleton",
+      "empty_chapter_detail": []
+    },
+    {
+      "textbook_id": 135,
+      "subject": "physics",
+      "grade": 12,
+      "semester": "first",
+      "version": "人教版",
+      "official_chapters": 0,
+      "chapters_with_questions": 0,
+      "empty_chapters": 0,
+      "questions": 0,
+      "knowledge_points": 0,
+      "status": "no_skeleton",
+      "empty_chapter_detail": []
+    },
+    {
+      "textbook_id": 7,
+      "subject": "politics",
+      "grade": 1,
+      "semester": "first",
+      "version": "部编版",
+      "official_chapters": 4,
+      "chapters_with_questions": 1,
+      "empty_chapters": 3,
+      "questions": 20,
+      "knowledge_points": 32,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 396,
+          "name": "第二单元 过好校园生活",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 397,
+          "name": "第三单元 养成良好习惯",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 398,
+          "name": "第四单元 我们讲文明",
+          "order_index": 4,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 15,
+      "subject": "politics",
+      "grade": 2,
+      "semester": "first",
+      "version": "部编版",
+      "official_chapters": 4,
+      "chapters_with_questions": 1,
+      "empty_chapters": 3,
+      "questions": 19,
+      "knowledge_points": 32,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 400,
+          "name": "第二单元 我爱我们班",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 401,
+          "name": "第三单元 我的家乡美",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 402,
+          "name": "第四单元 我爱我们的祖国",
+          "order_index": 4,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 23,
+      "subject": "politics",
+      "grade": 3,
+      "semester": "first",
+      "version": "部编版",
+      "official_chapters": 4,
+      "chapters_with_questions": 1,
+      "empty_chapters": 3,
+      "questions": 20,
+      "knowledge_points": 32,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 404,
+          "name": "第二单元 爱科学 学科学",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 405,
+          "name": "第三单元 在集体中成长",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 406,
+          "name": "第四单元 公共生活靠大家",
+          "order_index": 4,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 31,
+      "subject": "politics",
+      "grade": 4,
+      "semester": "first",
+      "version": "部编版",
+      "official_chapters": 4,
+      "chapters_with_questions": 1,
+      "empty_chapters": 3,
+      "questions": 19,
+      "knowledge_points": 32,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 408,
+          "name": "第二单元 少年在成长",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 409,
+          "name": "第三单元 生活在信息社会",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 410,
+          "name": "第四单元 做文明的消费者",
+          "order_index": 4,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 39,
+      "subject": "politics",
+      "grade": 5,
+      "semester": "first",
+      "version": "部编版",
+      "official_chapters": 4,
+      "chapters_with_questions": 1,
+      "empty_chapters": 3,
+      "questions": 19,
+      "knowledge_points": 32,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 412,
+          "name": "第二单元 建设社会主义新中国",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 413,
+          "name": "第三单元 进行改革开放",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 414,
+          "name": "第四单元 开创新时代",
+          "order_index": 4,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 47,
+      "subject": "politics",
+      "grade": 6,
+      "semester": "first",
+      "version": "部编版",
+      "official_chapters": 4,
+      "chapters_with_questions": 1,
+      "empty_chapters": 3,
+      "questions": 18,
+      "knowledge_points": 32,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 416,
+          "name": "第二单元 公民与国家",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 417,
+          "name": "第三单元 我们受特殊保护",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 418,
+          "name": "第四单元 知法守法 依法维权",
+          "order_index": 4,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 61,
+      "subject": "politics",
+      "grade": 7,
+      "semester": "first",
+      "version": "部编版",
+      "official_chapters": 4,
+      "chapters_with_questions": 1,
+      "empty_chapters": 3,
+      "questions": 19,
+      "knowledge_points": 32,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 420,
+          "name": "第二单元 成长的时空",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 421,
+          "name": "第三单元 珍爱我们的生命",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 422,
+          "name": "第四单元 追求美好人生",
+          "order_index": 4,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 77,
+      "subject": "politics",
+      "grade": 8,
+      "semester": "first",
+      "version": "部编版",
+      "official_chapters": 4,
+      "chapters_with_questions": 1,
+      "empty_chapters": 3,
+      "questions": 20,
+      "knowledge_points": 32,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 424,
+          "name": "第二单元 维护社会秩序",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 425,
+          "name": "第三单元 勇担社会责任",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 426,
+          "name": "第四单元 维护国家利益",
+          "order_index": 4,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 91,
+      "subject": "politics",
+      "grade": 9,
+      "semester": "first",
+      "version": "部编版",
+      "official_chapters": 4,
+      "chapters_with_questions": 1,
+      "empty_chapters": 3,
+      "questions": 18,
+      "knowledge_points": 32,
+      "status": "partial",
+      "empty_chapter_detail": [
+        {
+          "id": 428,
+          "name": "第二单元 进入新时代",
+          "order_index": 2,
+          "questions": 0
+        },
+        {
+          "id": 429,
+          "name": "第三单元 奋进新征程",
+          "order_index": 3,
+          "questions": 0
+        },
+        {
+          "id": 430,
+          "name": "第四单元 共圆中国梦",
+          "order_index": 4,
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "textbook_id": 109,
+      "subject": "politics",
+      "grade": 10,
+      "semester": "first",
+      "version": "部编版",
+      "official_chapters": 0,
+      "chapters_with_questions": 0,
+      "empty_chapters": 0,
+      "questions": 0,
+      "knowledge_points": 0,
+      "status": "no_skeleton",
+      "empty_chapter_detail": []
+    },
+    {
+      "textbook_id": 127,
+      "subject": "politics",
+      "grade": 11,
+      "semester": "first",
+      "version": "部编版",
+      "official_chapters": 0,
+      "chapters_with_questions": 0,
+      "empty_chapters": 0,
+      "questions": 0,
+      "knowledge_points": 0,
+      "status": "no_skeleton",
+      "empty_chapter_detail": []
+    },
+    {
+      "textbook_id": 145,
+      "subject": "politics",
+      "grade": 12,
+      "semester": "first",
+      "version": "部编版",
+      "official_chapters": 0,
+      "chapters_with_questions": 0,
+      "empty_chapters": 0,
+      "questions": 0,
+      "knowledge_points": 0,
+      "status": "no_skeleton",
+      "empty_chapter_detail": []
+    }
+  ]
+}

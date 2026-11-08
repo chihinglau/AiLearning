@@ -1,11 +1,12 @@
 """导入教研题库 / 知识库模板。
 
 用法（在 backend 目录执行）：
-    .venv\\Scripts\\python.exe -m scripts.import_content --path ..\\docs\\content-templates\\math.json
+    .venv\\Scripts\\python.exe -m scripts.import_content --path ..\\docs\\content-templates\\templates\\math.json
+    .venv\\Scripts\\python.exe -m scripts.import_content --path ..\\docs\\content-templates\\daily ^
+        --pattern "*_20261107.json" --manifest ..\\docs\\content-templates\\_import-manifest.json
     .venv\\Scripts\\python.exe -m scripts.import_content --path ..\\docs\\content-templates --dry-run
-    .venv\\Scripts\\python.exe -m scripts.import_content --path ..\\docs\\content-templates ^
-        --pattern "math_g*_first_*.json" --manifest ..\\docs\\content-templates\\_import-manifest.json
 
+manifest 会记录目标库（settings.database_url）；换库或重建库后旧记录自动作废。
 模板规范见 docs/content-templates/README.md。
 """
 
@@ -18,8 +19,9 @@ import json
 from datetime import datetime
 from pathlib import Path
 
+from app.core.config import settings
 from app.db.session import SessionLocal
-from app.services.content_import import import_document, load_document
+from app.services.content_import import content_sha256, import_document, load_document
 
 
 def _collect_files(path: Path, pattern: str) -> list[Path]:
@@ -45,11 +47,17 @@ def _sha256(path: Path) -> str:
 
 
 def _load_manifest(path: Path | None) -> dict:
+    database = settings.database_url
     if path is None or not path.is_file():
-        return {"version": 1, "files": {}}
+        return {"version": 1, "database": database, "files": {}}
     data = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(data.get("files"), dict):
         data["files"] = {}
+    recorded = data.get("database")
+    if recorded and recorded != database:
+        print(f"manifest 记录的目标库为 {recorded}，当前为 {database}，旧导入记录全部作废")
+        data["files"] = {}
+    data["database"] = database
     return data
 
 
@@ -92,8 +100,11 @@ def main() -> int:
                 not args.dry_run
                 and not args.overwrite
                 and entry
-                and entry.get("sha256") == digest
                 and entry.get("status") == "ok"
+                and (
+                    entry.get("current_file_sha256") == digest
+                    or entry.get("sha256") == digest          # 旧版 manifest 兼容
+                )
             ):
                 print(f"{label}: 已导入且文件未变，跳过（manifest）")
                 continue
@@ -107,8 +118,30 @@ def main() -> int:
                     f"，题目 +{report['questions_created']}"
                     f"，跳过重复 {report['questions_skipped']}"
                 )
+                if report.get("legacy_file"):
+                    print(
+                        "    [legacy] 该文件带 `_legacy` 标记（占位章节清理前的旧样章内容）："
+                        "重导时按 chapter_aliases.json 处理，不会把旧版数据写回库"
+                    )
+                if report.get("chapters_discarded") or report.get("questions_discarded"):
+                    detail = "、".join(report.get("discarded_detail") or []) or "-"
+                    print(
+                        f"    已丢弃（旧版数据，不入库）：{data.get('subject')} g{data.get('grade')}"
+                        f" · {report.get('questions_discarded', 0)} 题"
+                        f" · 章 {report.get('chapters_discarded', 0)}"
+                        f" · 知识点 {report.get('knowledge_discarded', 0)}"
+                        f" · [{detail}]"
+                    )
                 manifest["files"][label] = {
-                    "sha256": digest,
+                    # 三列语义（2026-11-08 第十一轮整改）：
+                    #   imported_sha256      导入当刻的字节 sha，**永不改写**
+                    #   current_file_sha256  盘上现值
+                    #   imported_content_sha256 导入当刻「剔除元数据键后」的内容哈希
+                    # 判定「已入库」用：字节一致 → 未变更；字节不一致但内容哈希一致
+                    # → 仅元数据变更（如打 legacy 标记），仍算已入库；否则 → 文件已变更、未重导。
+                    "imported_sha256": digest,
+                    "current_file_sha256": digest,
+                    "imported_content_sha256": content_sha256(data),
                     "status": "ok",
                     "report": report,
                     "imported_at": datetime.now().astimezone().isoformat(
@@ -119,7 +152,8 @@ def main() -> int:
                 session.rollback()
                 failed += 1
                 manifest["files"][label] = {
-                    "sha256": digest,
+                    "imported_sha256": digest,
+                    "current_file_sha256": digest,
                     "status": "failed",
                     "error": str(exc),
                 }

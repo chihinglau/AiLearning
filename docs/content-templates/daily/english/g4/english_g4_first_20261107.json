@@ -1,0 +1,311 @@
+{
+  "subject": "english",
+  "grade": 4,
+  "version": "牛津深圳版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "Unit 1 Where do people live?",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "Home words 住所词汇",
+      "parent": "Unit 1 Where do people live?",
+      "order_index": 1,
+      "explanation": "house 独栋房子、flat 公寓、village 村庄、town 小镇、city 城市；city 与 village 是规模的两端。",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "Where do you live 问答",
+      "parent": "Unit 1 Where do people live?",
+      "order_index": 2,
+      "explanation": "问：Where do you live? 答：I live in + 城市/国家，或 I live in a flat in Shenzhen. 注意 in 用于大地方，at 用于具体门牌。",
+      "prerequisites": [
+        "Home words 住所词汇"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "There is 与 There are",
+      "parent": "Unit 1 Where do people live?",
+      "order_index": 3,
+      "explanation": "单数用 There is a…，复数用 There are some…；否定 There isn't / There aren't。",
+      "prerequisites": [
+        "Where do you live 问答"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "介词 in on at 表地点",
+      "parent": "Unit 1 Where do people live?",
+      "order_index": 4,
+      "explanation": "in 大范围（城市、国家、房间内部）、on 表面（road、floor）、at 具体点（at No. 8、at the bus stop）。",
+      "prerequisites": [
+        "There is 与 There are"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "Unit 1 Where do people live?",
+      "order_index": 1,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「公寓」的英文是（  ）",
+          "options": [
+            "flat",
+            "house",
+            "village",
+            "city"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "flat 是公寓；house 是独栋房子，village 是村庄，city 是城市，都不是公寓。",
+          "difficulty": 1,
+          "knowledge_point": "Home words 住所词汇",
+          "tags": [
+            "词汇"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "— Where do you live? — I live （  ） Shenzhen.",
+          "options": [
+            "in",
+            "at",
+            "on",
+            "to"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "城市是大范围，用 in；at 用于具体地点（如 at the bus stop），on 用于表面，to 表方向。",
+          "difficulty": 1,
+          "knowledge_point": "介词 in on at 表地点"
+        },
+        {
+          "q_type": "fill",
+          "stem": "There （  ） two bedrooms in my flat.",
+          "answer": {
+            "value": "are"
+          },
+          "analysis": "two bedrooms 是复数，用 There are；写 is 则与复数主语不一致。",
+          "difficulty": 2,
+          "knowledge_point": "There is 与 There are"
+        },
+        {
+          "q_type": "judge",
+          "stem": "a village 比 a city 大。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "village 是村庄，city 是城市，城市规模远大于村庄，所以说法错误。",
+          "difficulty": 1,
+          "knowledge_point": "Home words 住所词汇"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面哪句正确？（  ）",
+          "options": [
+            "There is a park near my home.",
+            "There are a park near my home.",
+            "There is two parks near my home.",
+            "There have a park near my home."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "a park 是单数，用 There is，A 正确；B 用 are 与单数不符；C 用 is 与复数不符；D 英语不用 There have。",
+          "difficulty": 2,
+          "knowledge_point": "There is 与 There are"
+        },
+        {
+          "q_type": "fill",
+          "stem": "I live （  ） a small village. （填介词）",
+          "answer": {
+            "value": "in"
+          },
+          "analysis": "村庄属于一个范围，用 in；不能因为「小」就用 at，at 用于具体点位。",
+          "difficulty": 2,
+          "knowledge_point": "介词 in on at 表地点"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列单词中，表示居住地类型的有（  ）",
+          "options": [
+            "flat",
+            "village",
+            "kitchen",
+            "town"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A flat 公寓 ✓；B village 村庄 ✓；C kitchen 厨房，是房间不是居住地类型 ✗；D town 小镇 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Home words 住所词汇",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "There aren't any shops in my village. 是否定句，意思是我村里没有商店。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "aren't 是 are not 的缩写，any 用于否定句，整句意为「我村里没有商店」，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "There is 与 There are"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「我家住在八号楼」用哪个介词？（  ）",
+          "options": [
+            "at",
+            "in",
+            "on",
+            "for"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "具体门牌或楼号是「点位」，用 at（at Building 8）；in 是大范围，on 是表面。",
+          "difficulty": 3,
+          "knowledge_point": "介词 in on at 表地点"
+        },
+        {
+          "q_type": "fill",
+          "stem": "— Where （  ） your grandparents live? — They live in a town.",
+          "answer": {
+            "value": "do"
+          },
+          "analysis": "主语 your grandparents 是复数，疑问句用 do；用 does 则与复数主语不一致。",
+          "difficulty": 2,
+          "knowledge_point": "Where do you live 问答"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于 I live in a flat in Shenzhen. 说法正确的有（  ）",
+          "options": [
+            "第一个 in 表示住在公寓里",
+            "第二个 in 表示在深圳这个范围内",
+            "flat 是公寓",
+            "这句是在问别人住哪里"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 第一个 in 表内部 ✓；B 第二个 in 表范围 ✓；C flat 是公寓 ✓；D 这是陈述句，不是疑问句 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Where do you live 问答",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "回答 Where does he live? 可以说 He lives in a house.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "问句用 does he，答句主语 he 后动词加 s（lives），答法与问句一致，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "Where do you live 问答"
+        },
+        {
+          "q_type": "choice",
+          "stem": "My home is （  ） the third floor.",
+          "options": [
+            "on",
+            "in",
+            "at",
+            "to"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "楼层是「表面」，用 on（on the third floor）；in 表内部，at 表具体点，to 表方向。",
+          "difficulty": 3,
+          "knowledge_point": "介词 in on at 表地点"
+        },
+        {
+          "q_type": "fill",
+          "stem": "There （  ） a kitchen, two bedrooms and a bathroom in my flat.",
+          "answer": {
+            "value": "is"
+          },
+          "analysis": "There be 句型就近原则：紧跟的是 a kitchen（单数），所以用 is；写 are 会与最近的主语不一致。",
+          "difficulty": 4,
+          "knowledge_point": "There is 与 There are"
+        },
+        {
+          "q_type": "judge",
+          "stem": "There be 句型中，be 动词的形式要与后面最近的名词一致。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "这就是「就近原则」：There is a book and two pens. 用 is，因为最近的是 a book。",
+          "difficulty": 4,
+          "knowledge_point": "There is 与 There are"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用英语写两句话介绍你的家：一句用 I live in…，一句用 There is/There are…",
+          "answer": {
+            "value": "I live in a flat in Shenzhen. There are three bedrooms and a big kitchen in it."
+          },
+          "analysis": "参考示例见答案。评分要点：①用 I live in…（1 分）；②用 There is 或 There are 且与所接名词数量一致（2 分）；③地点介词正确（1 分）；④大小写与标点（1 分）。There is 后接复数名词不得分。",
+          "difficulty": 4,
+          "knowledge_point": "There is 与 There are",
+          "tags": [
+            "写作"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "把对话补全并译成中文：A: Where do you （  ）? B: I live in a small （  ） near the sea.",
+          "answer": {
+            "value": "live；village。译文：A：你住在哪里？B：我住在海边的一个小村庄里。"
+          },
+          "analysis": "参考答案：live；village（填 town 也可，但 near the sea 更常见于 village）。译文见答案。评分要点：①两空正确（2 分）；②译文准确（2 分）；③大小写与标点（1 分）。第二空填 city 与 small 矛盾。",
+          "difficulty": 5,
+          "knowledge_point": "Where do you live 问答",
+          "tags": [
+            "补全对话",
+            "翻译"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「深圳是一座大城市」的英文是（  ）",
+          "options": [
+            "Shenzhen is a big city.",
+            "Shenzhen is a big village.",
+            "Shenzhen is a big flat.",
+            "Shenzhen is a big house."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "深圳是城市，用 city；village 是村庄，flat 是公寓，house 是房子，三者都不是城市。",
+          "difficulty": 3,
+          "knowledge_point": "Home words 住所词汇"
+        }
+      ]
+    }
+  ]
+}

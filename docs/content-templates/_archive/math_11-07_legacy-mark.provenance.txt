@@ -1,0 +1,29 @@
+生成时间：2026-11-08T21:21:48
+用途：占位章节清理后，给 11-07 的 8 份 math JSON 打 `_legacy` 标记。
+改了什么：**只加顶层 `_legacy` / `_legacy_note` 两个键**，章节名 / 知识点 / 题目一字未改。
+为什么改：清理后这 8 份文件的章节名在库里 0 条命中，重导会静默归位或静默丢弃，文件上看不出来。
+配套动作：`_import-manifest.json` 里这 8 条的 sha256 已同步更新（否则校验器把「sha 与导入期不一致」当新版本、从严报重名错误，11-07 批次假红）。
+
+逐份明细（sha / 字节 / 原章节名）：
+  - daily/math/g1/math_g1_first_20261107.json：sha e9e0ff5d75e99734ce467221712bbf28f7d7278a179a1048842ab11591ecbae8 → 724ba252d4c7ccc4d6749b671be36260e7ae7a9415ee40e4d25f0f4f7cccbc9f，11682 → 16825 字节，章节 ['10以内加减法']
+    改前副本：_archive/math_g1_first_20261107.pre-legacy-mark.json
+  - daily/math/g2/math_g2_first_20261107.json：sha 573f38b58054c4e79d37fe2730d94985453867cc9a816aca3f4718dd4f399e80 → 69f815ac89222a64531129f2bb58129fdc86f96444f831b5c82da645a44ff7b1，10267 → 14979 字节，章节 ['100以内加减法']
+    改前副本：_archive/math_g2_first_20261107.pre-legacy-mark.json
+  - daily/math/g3/math_g3_first_20261107.json：sha 78c2e2b6b26910e82ff91dc8bdee7a6d7a23a8a21f429b91c359d79ceaa98495 → 33149880e395537df830864852918d2f2020c6ddd60456da25e7f4b9ca797b92，10245 → 15043 字节，章节 ['一位数乘多位数']
+    改前副本：_archive/math_g3_first_20261107.pre-legacy-mark.json
+  - daily/math/g4/math_g4_first_20261107.json：sha 404c0e8453735d670e53f636ef87fb050d45d457873bb1eaf401cd6a8b2b7540 → bc5b358bbfcbb2c36682b845a218284e4f2e577c67c1b1c5a990a4dfa0909bbb，10625 → 15413 字节，章节 ['认识更大的数']
+    改前副本：_archive/math_g4_first_20261107.pre-legacy-mark.json
+  - daily/math/g5/math_g5_first_20261107.json：sha 707a5108674ebf30cf6e0ba26f318f3d170a2f75ad7e046ae9934c074e8b557d → 96d096a5494e7eba88366365230e610ad45f69636646932746dbb876d7933354，9599 → 14373 字节，章节 ['小数除法']
+    改前副本：_archive/math_g5_first_20261107.pre-legacy-mark.json
+  - daily/math/g6/math_g6_first_20261107.json：sha f82dd460dd033881d5968771666200a10a7a067b4c3398abe8a88cc1af3e876f → d5335d19ff652db93291b4959ce4d6aa17c23077da32feaa5dc1206976d45fa5，10341 → 15149 字节，章节 ['圆']
+    改前副本：_archive/math_g6_first_20261107.pre-legacy-mark.json
+  - daily/math/g7/math_g7_first_20261107.json：sha 184e1356925a1a39b918c0200df2e9cb4c9187ee3d6a773ccdb5e06a9befc7fc → 1bf2cfc7c7a37f3adc346c6c2d556daa51b8228faa27e78e67e8e08731361282，11031 → 15799 字节，章节 ['丰富的图形世界']
+    改前副本：_archive/math_g7_first_20261107.pre-legacy-mark.json
+  - daily/math/g8/math_g8_first_20261107.json：sha 5203a5fdd6699cc59c6b62a315bec995f506ea8b1a54dbecd257834a61a3fc91 → 5518b1422f58b35a8fae30a2443ddd0f7b6899f9ddd7fb1822effcfc4abb9eb1，15607 → 17508 字节，章节 ['勾股定理']
+    改前副本：_archive/math_g8_first_20261107.pre-legacy-mark.json
+
+补记（2026-11-08 22:3x，第十二轮评审整改）：
+  本地复跑 `mark_legacy_json.py` 时发现该脚本会**无条件重写本文件**，而这次 8 份都已标记、
+  `touched` 为空，于是「逐份明细」被写成空段落、原内容被覆盖。已修脚本（无变更即不落盘、
+  落盘走 `write_if_changed`），并按 21:21:48 原文**逐行还原**本文件；还原后与原文一致。
+  教训：凡是「留痕文件」的写入，必须只在本次确实产生变更时发生，且写盘前比字节。

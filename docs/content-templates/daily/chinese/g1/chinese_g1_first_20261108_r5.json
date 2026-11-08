@@ -1,0 +1,660 @@
+{
+  "subject": "chinese",
+  "grade": 1,
+  "version": "人教版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "10 ɑi ei ui",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "11 ɑo ou iu",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "12 ie üe er",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "13 ɑn en in un ün",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "14 ɑng eng ing ong",
+      "order_index": 5
+    },
+    {
+      "node_type": "section",
+      "name": "语文园地四",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "ɑi ei ui的拼读",
+      "parent": "10 ɑi ei ui",
+      "order_index": 1,
+      "weight": 1.2,
+      "explanation": "ɑi ei ui 都是复韵母，由两个字母组成，一口气读出来。标调要跟着标调歌走：有 ɑ 别放过，没 ɑ 找 o e，i u 并列标在后。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "ɑo ou iu的拼读",
+      "parent": "11 ɑo ou iu",
+      "order_index": 2,
+      "weight": 1.2,
+      "explanation": "ɑo ou iu 也是复韵母。i u 并列时标调标在后面那个字母上，所以 niú 标在 i 上，liù 标在 u 上，这是最容易混的一处。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "ɑi ei ui的拼读"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "ie üe er的拼读",
+      "parent": "12 ie üe er",
+      "order_index": 3,
+      "weight": 1.2,
+      "explanation": "ie üe 是复韵母，er 是特殊韵母，可以单独成一个音节。ie 与 ei、ui 与 iu 两组形近复韵母，要看字母顺序才能读准。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "ɑo ou iu的拼读"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "前鼻韵母的拼读",
+      "parent": "13 ɑn en in un ün",
+      "order_index": 4,
+      "weight": 1.2,
+      "explanation": "ɑn en in un ün 是前鼻韵母，读的时候舌尖抵住上牙床，声音从前鼻收住。ü 与 j q x 相拼要去两点，与 n、l 相拼要保留两点。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "ie üe er的拼读"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "后鼻韵母的拼读",
+      "parent": "14 ɑng eng ing ong",
+      "order_index": 5,
+      "weight": 1.2,
+      "explanation": "ɑng eng ing ong 是后鼻韵母，读的时候舌根抬起抵住软腭。分清 an 与 ang、en 与 eng、in 与 ing，是这一课最大的易错点。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "前鼻韵母的拼读"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "时间词语与标调歌",
+      "parent": "语文园地四",
+      "order_index": 6,
+      "weight": 1.3,
+      "explanation": "语文园地四要积累表示时间的词语，按「时、日、月、年」的顺序排列；同时巩固标调歌，区分 ie 与 ei、ui 与 iu，并背下《悯农（其二）》。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "后鼻韵母的拼读"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第四单元 汉语拼音",
+      "order_index": 4,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「ɑi」「ei」「ui」这三个韵母的共同点是（  ）",
+          "options": [
+            "都是复韵母，由两个字母组成",
+            "都是单韵母，只占一个音",
+            "都是整体认读音节，不用拼",
+            "都要用 ü 上面的两点"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "ɑi ei ui 都由两个字母组成、一口气读出来，属于复韵母，选 A；单韵母只有 ɑ o e i u ü 六个 ✗；整体认读音节不用拼 ✗；两点是 ü 的特征 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "ɑi ei ui的拼读",
+          "tags": [
+            "复韵母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面音节中，声调标在 ɑ 上的一项是（  ）",
+          "options": [
+            "hǎi",
+            "hēi",
+            "huī",
+            "héi"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "标调歌说「有 ɑ 别放过」，hǎi 里有 ɑ，调号就标在 ɑ 上，选 A；hēi 的调号标在 e 上 ✗；huī 标在 u 上 ✗；héi 里的 e 不标调 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "ɑi ei ui的拼读",
+          "tags": [
+            "标调"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "单韵母只有一个字母，复韵母由两个字母连起来，一口气读出来。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "复韵母由两个字母组成，前一个音轻短、后一个音重，两个音连着一口气读出，如 ɑi、ei、ui，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "ɑi ei ui的拼读",
+          "tags": [
+            "复韵母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "标调歌是：「有 ɑ 别放过，没 ɑ 找 o e，（  ）」。",
+          "answer": {
+            "value": "i u 并列标在后"
+          },
+          "analysis": "标调歌的后两句是「i u 并列标在后，单个韵母不用说」，说的是 i 和 u 挨在一起时调号写在后面那个字母上，所以填「i u 并列标在后」。",
+          "difficulty": 3,
+          "knowledge_point": "ɑi ei ui的拼读",
+          "tags": [
+            "标调"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "音节「niú」里的声调应该标在哪个字母上？",
+          "options": [
+            "i",
+            "u",
+            "n",
+            "ɑ"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "niú 由 i 和 u 并列组成，按标调歌「i u 并列标在后」，调号要标在后面的 i 上，选 A；标在 u 上就错成了 niù ✗。",
+          "difficulty": 2,
+          "knowledge_point": "ɑo ou iu的拼读",
+          "tags": [
+            "标调"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面三个音节中，读出来是「小」的是（  ）",
+          "options": [
+            "xiǎo",
+            "shǎo",
+            "zhǎo"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「小」拼作 xiǎo，x 是声母、iǎo 是复韵母，选 A；shǎo 的声母是 sh，读音偏「少」；zhǎo 读「找」，都要靠声母区分。",
+          "difficulty": 2,
+          "knowledge_point": "ɑo ou iu的拼读",
+          "tags": [
+            "拼读"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "音节「liù」和「niú」都是由 i 和 u 拼成的，标调时调号都标在 u 上。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "liù 读「六」，调号标在 u 上；niú 读「牛」，i u 并列标在后，调号标在 i 上。两句说成一样是错的，答案 F。",
+          "difficulty": 3,
+          "knowledge_point": "ɑo ou iu的拼读",
+          "tags": [
+            "辨析"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面音节中，属于三拼音节的有（  ）",
+          "options": [
+            "jiao",
+            "guang",
+            "hao",
+            "xiong"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A jiao 是 j 加介母 i 加韵母 ao，三音节 ✓；B guang 是 g 加 uang，三音节 ✓；C hao 只有声母加韵母，是两拼音节 ✗；D xiong 是 x 加 iong，三音节 ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "ɑo ou iu的拼读",
+          "tags": [
+            "多选",
+            "音节"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "韵母「er」在拼音里比较特别，它可以（  ）",
+          "options": [
+            "单独成为一个音节，比如「儿」读作 er",
+            "和声母相拼才成音节",
+            "标调时必须去掉上面的两点",
+            "只能和 j q x 相拼"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "er 是特殊韵母，本身就能成一个音节，选 A；它不靠声母相拼 ✗；去掉两点是 ü 的规则 ✗；er 不与 j q x 相拼 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "ie üe er的拼读",
+          "tags": [
+            "特殊韵母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「叶」这个字的正确拼音是（  ）",
+          "options": [
+            "yè",
+            "yě",
+            "yē",
+            "yuè"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「叶」读第四声，ye 是整体认读音节，写成 yè，选 A；yě 是「也」✗；yē 是「椰」✗；yuè 是「月」✗。",
+          "difficulty": 2,
+          "knowledge_point": "ie üe er的拼读",
+          "tags": [
+            "拼写"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「ie」和「ei」读音很相近，区别在于 ie 是 i 在前，ei 是 e 在前。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "ie 由 i 和 e 组成，ei 由 e 和 i 组成，字母顺序不同读音就不同，所以说法正确；读的时候要一个字母一个字母看清楚。",
+          "difficulty": 3,
+          "knowledge_point": "ie üe er的拼读",
+          "tags": [
+            "辨析"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "儿歌《月儿弯弯》里唱：「月儿弯弯挂蓝天，（  ）」。",
+          "answer": {
+            "value": "小溪弯弯出青山"
+          },
+          "analysis": "儿歌《月儿弯弯》的原句是「月儿弯弯挂蓝天，小溪弯弯出青山。大河弯弯流入海，山路弯弯到校园」，所以填「小溪弯弯出青山」。",
+          "difficulty": 2,
+          "knowledge_point": "ie üe er的拼读",
+          "tags": [
+            "朗读背诵"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "前鼻韵母 ɑn en in un ün 读的时候，舌尖都要（  ）",
+          "options": [
+            "抵住上牙床",
+            "抬起抵住软腭",
+            "翘起来抵住上齿龈",
+            "平放在下牙齿后面"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "前鼻韵母的收音在舌尖，舌尖要抵住上牙床，选 A；舌根抬起是后鼻韵母 ✗；翘起舌尖是 zh ch sh r ✗；平放下齿背是 z c s ✗。",
+          "difficulty": 2,
+          "knowledge_point": "前鼻韵母的拼读",
+          "tags": [
+            "前鼻韵母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「n」和「ng」的区别是（  ）",
+          "options": [
+            "n 是前鼻音，ng 是后鼻音",
+            "n 要送气，ng 不送气",
+            "n 是单音节，ng 是双音节",
+            "n 有两点，ng 没有两点"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "n 的收音在舌尖，是前鼻音；ng 的收音在舌根，是后鼻音，选 A；n 不送气 ✗；n、ng 单独都能成音节 ✗；两点是 ü 的特征 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "前鼻韵母的拼读",
+          "tags": [
+            "前鼻韵母",
+            "后鼻韵母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「in」和「ing」都是前鼻韵母，读音也完全相同。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "in 是前鼻韵母，ing 是后鼻韵母，两者收音位置不同、读音有区别，说法错误，答案 F。",
+          "difficulty": 2,
+          "knowledge_point": "前鼻韵母的拼读",
+          "tags": [
+            "辨析"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "儿歌《家》里唱：「蓝天是白云的家，（  ）」。",
+          "answer": {
+            "value": "树林是小鸟的家"
+          },
+          "analysis": "儿歌《家》的原句是「蓝天是白云的家，树林是小鸟的家，小河是鱼儿的家，泥土是种子的家」，所以填「树林是小鸟的家」。",
+          "difficulty": 3,
+          "knowledge_point": "前鼻韵母的拼读",
+          "tags": [
+            "朗读背诵"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "后鼻韵母 ɑng eng ing ong 的共同特点是（  ）",
+          "options": [
+            "收音时舌根抬起抵住软腭",
+            "收音时舌尖抵住上牙床",
+            "发音时嘴唇要撮圆",
+            "都是整体认读音节"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "后鼻韵母的鼻音收在舌根，舌根要抬起抵住软腭，选 A；舌尖抵上牙床是前鼻韵母 ✗；撮圆嘴唇是 u ü ✗；ang eng ing ong 都要拼读 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "后鼻韵母的拼读",
+          "tags": [
+            "后鼻韵母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「fēng」（风）和「fěn」（粉）读起来不一样，原因是（  ）",
+          "options": [
+            "feng 是后鼻音，fen 是前鼻音",
+            "feng 要送气，fen 不送气",
+            "feng 是单音节，fen 是双音节",
+            "feng 的声母不同"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "两个音节的声母都是 f，区别在韵母：eng 是后鼻韵母、en 是前鼻韵母，选 A；f 都不送气 ✗；两个都是两拼音节 ✗；声母相同 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "后鼻韵母的拼读",
+          "tags": [
+            "辨析"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面音节中，韵母是后鼻韵母的有（  ）",
+          "options": [
+            "yáng",
+            "xīng",
+            "méng",
+            "shān"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A yáng 的韵母是 ang，后鼻韵母 ✓；B xīng 的韵母是 ing，后鼻韵母 ✓；C méng 的韵母是 eng，后鼻韵母 ✓；D shān 的韵母是 an，前鼻韵母 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "后鼻韵母的拼读",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "音节「zhōng」的韵母是（  ）。",
+          "answer": {
+            "value": "ong"
+          },
+          "analysis": "zhōng 由声母 zh 和韵母 ong 组成，ong 是后鼻韵母；声母 zh 不能算进韵母里，所以填「ong」。",
+          "difficulty": 4,
+          "knowledge_point": "后鼻韵母的拼读",
+          "tags": [
+            "拼读"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面词语中，表示时间的有（  ）",
+          "options": [
+            "昨天",
+            "今天",
+            "明年",
+            "青山"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 昨天表示时间 ✓；B 今天表示时间 ✓；C 明年表示时间 ✓；D 青山是景物，不是时间 ✗。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "时间词语与标调歌",
+          "tags": [
+            "多选",
+            "字词积累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「昨天」「今天」「明天」这三个词是按什么顺序排列的？",
+          "options": [
+            "时间先后的顺序",
+            "字数的多少",
+            "声调的高低",
+            "笔画的长短"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "这三个词讲的是同一天里的前后次序，按时间先后排开，选 A；三个词都是两个字，字数一样 ✗；它们讲的是日子，不是调子 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "时间词语与标调歌",
+          "tags": [
+            "字词积累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「上个月」「这个月」「下个月」这一组词里，「这个月」排在中间。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "这一组词以「这个月」为中心，上个月在前、下个月在后，「这个月」正好在中间，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "时间词语与标调歌",
+          "tags": [
+            "字词积累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "语文园地四「日积月累」的《悯农（其二）》的作者是（  ）",
+          "options": [
+            "唐代的李绅",
+            "唐代的王维",
+            "唐代的骆宾王",
+            "宋代的苏轼"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "《悯农（其二）》是唐代诗人李绅的作品，选 A；王维写的是《画》✗；骆宾王写的是《咏鹅》✗；苏轼是宋代 ✗。",
+          "difficulty": 4,
+          "knowledge_point": "时间词语与标调歌",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "《悯农（其二）》里说：「谁知盘中餐，（  ）」。",
+          "answer": {
+            "value": "粒粒皆辛苦"
+          },
+          "analysis": "《悯农（其二）》的后两句是「谁知盘中餐，粒粒皆辛苦」，说的是碗里的每一粒米都来得辛苦，所以填「粒粒皆辛苦」。",
+          "difficulty": 4,
+          "knowledge_point": "时间词语与标调歌",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "学校组织秋游，定在明天上午八点。请你用今天学的时间词语，写一句话通知同学（要写完整，不要只写词语）。",
+          "answer": {
+            "value": "明天上午八点，我们班去秋游，请大家带好水壶。"
+          },
+          "analysis": "评分要点：①用上「明天」「上午」这类表示时间的词语（2 分）；②句子完整、意思清楚（1 分）；③标点使用正确（1 分）。只写「明天上午八点」而没有完整句子的扣 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "时间词语与标调歌",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳有不少快餐店使用一次性筷子。请你想一想，用《悯农（其二）》的道理，写一句劝同学爱惜粮食、不浪费的话。",
+          "answer": {
+            "value": "谁知盘中餐，粒粒皆辛苦。我们吃饭不要剩饭，浪费的每一粒米都是农民伯伯辛苦种出来的。"
+          },
+          "analysis": "评分要点：①用上《悯农（其二）》的意思或原句（2 分）；②劝说的内容具体、句子完整（1 分）；③语气礼貌、标点正确（1 分）。只写「要爱惜粮食」而没有道理的扣分。",
+          "difficulty": 5,
+          "knowledge_point": "时间词语与标调歌",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

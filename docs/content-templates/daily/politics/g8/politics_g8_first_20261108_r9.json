@@ -1,0 +1,539 @@
+{
+  "subject": "politics",
+  "grade": 8,
+  "version": "部编版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "全面推进国防和军队现代化",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "第十二课 树立总体国家安全观",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "认识国家安全",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "维护国家安全",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "国防和军队现代化",
+      "parent": "全面推进国防和军队现代化",
+      "order_index": 1,
+      "weight": 1.1,
+      "explanation": "全面推进国防和军队现代化，要坚持政治建军、改革强军、科技强军、人才强军，走中国特色强军之路，把人民军队建设成为世界一流军队。",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "总体国家安全观的内涵",
+      "parent": "第十二课 树立总体国家安全观",
+      "order_index": 2,
+      "weight": 1.3,
+      "explanation": "总体国家安全观是新时代国家安全工作的根本遵循，坚持以人民安全为宗旨，统筹传统安全和非传统安全，走中国特色国家安全道路。",
+      "prerequisites": [
+        "国防和军队现代化"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "国家安全的作用",
+      "parent": "认识国家安全",
+      "order_index": 3,
+      "weight": 1.2,
+      "explanation": "国家安全是安邦定国的重要基石，关系国家主权和领土完整、关系广大人民的根本利益，关系中华民族伟大复兴。",
+      "prerequisites": [
+        "总体国家安全观的内涵"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "维护国家安全的要求",
+      "parent": "维护国家安全",
+      "order_index": 4,
+      "weight": 1.3,
+      "explanation": "维护国家安全要树立总体国家安全观、增强国家安全意识，自觉履行维护国家安全的义务，共同构筑国家安全的人民防线。",
+      "prerequisites": [
+        "国家安全的作用"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "青少年维护国家安全",
+      "parent": "维护国家安全",
+      "order_index": 5,
+      "weight": 1.1,
+      "explanation": "青少年要树立国家安全意识、保守国家秘密，提高辨别能力，不信谣不传谣、不传播涉密信息，依法配合国家安全工作。",
+      "prerequisites": [
+        "维护国家安全的要求"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第四单元 维护国家利益",
+      "order_index": 4,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "全面推进国防和军队现代化，要坚持（  ）",
+          "options": [
+            "政治建军、改革强军、科技强军",
+            "压缩国防投入，把资源全部用于经济",
+            "只发展经济，不搞军队建设",
+            "照搬别国模式，不加改变"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "新时代推进强军建设要坚持政治建军、改革强军、科技强军、人才强军，走中国特色强军之路；B、C、D 都削弱国防建设，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "国防和军队现代化",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "新时代推进强国梦强军梦，正确的道路是（  ）",
+          "options": [
+            "中国特色强军之路",
+            "单纯追求装备数量的扩张",
+            "消极保守、只守不攻",
+            "完全依赖外部力量"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "教材强调要走中国特色强军之路，把人民军队建设成为世界一流军队；B、C、D 都违背强军方向，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "国防和军队现代化",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于全面推进国防和军队现代化，正确的有（  ）",
+          "options": [
+            "坚持政治建军",
+            "坚持改革强军",
+            "坚持科技强军、人才强军",
+            "认为国防现代化与青少年无关"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 政治建军✓；B 改革强军✓；C 科技强军人才强军✓；D 国防建设人人参与，与青少年密切相关✗。故 A、B、C 成立。",
+          "difficulty": 3,
+          "knowledge_point": "国防和军队现代化",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "推进国防和军队建设要走（  ）强军之路，把人民军队建设成为世界一流军队。",
+          "answer": {
+            "value": "中国特色"
+          },
+          "analysis": "教材的固定表述是走中国特色强军之路，把人民军队建设成为世界一流军队，题干空格处只能填中国特色。",
+          "difficulty": 3,
+          "knowledge_point": "国防和军队现代化",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳某中学的国防教育课上，同学们观看了无人机编队表演和军事体能训练。有同学说：这些高科技离我太远，我以后只想做科学家或网红。请你结合国防和军队现代化，帮他分析并提出三条建议。",
+          "answer": {
+            "value": "分析：这位同学把个人理想与国家需要对立起来，其实二者并不矛盾。全面推进国防和军队现代化，走中国特色强军之路，科技强军、人才强军都需要大量青年学子投身其中，个人理想完全可以融入强军实践。建议一：把国防科技、航天等职业方向纳入个人规划，争取到相关院校和岗位学习贡献。建议二：认真参加学校组织的国防教育、军事训练和体育锻炼，强健体魄、磨炼意志，为将来报效祖国打好基础。建议三：从现在做起关心国防建设，配合国防教育宣传，讲好真实故事，为强军路上的成就点赞。"
+          },
+          "analysis": "评分要点：指出认识误区并说明个人理想可融入强军实践（2 分）；三条具体建议（每条 2 分）；建议与强军现实紧密相关（每条 1 分）；表达通顺（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "国防和军队现代化",
+          "tags": [
+            "情境应用",
+            "简答"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "总体国家安全观是新时代我国国家安全工作的（  ）",
+          "options": [
+            "根本遵循",
+            "一般性工作要求",
+            "临时性的应对措施",
+            "对外宣传口号"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "教材指出总体国家安全观是新时代我国国家安全工作的根本遵循，是必须长期坚持的指导思想，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "总体国家安全观的内涵",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "总体国家安全观的核心是（  ）",
+          "options": [
+            "以人民安全为宗旨",
+            "以经济安全为根本",
+            "以军事安全为宗旨",
+            "以信息安全为宗旨"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "总体国家安全观坚持以人民安全为宗旨，把人民安全作为国家安全的最高目标；其余选项颠倒了宗旨与根本的定位，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "总体国家安全观的内涵",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于总体国家安全观，正确的有（  ）",
+          "options": [
+            "统筹兼顾传统安全和非传统安全",
+            "坚持以人民安全为宗旨",
+            "走中国特色国家安全道路",
+            "认为网络安全不属于国家安全的范畴"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 统筹传统与非传统安全✓；B 以人民安全为宗旨✓；C 走中国特色国家安全道路✓；D 网络安全是国家安全的重要组成部分✗。故 A、B、C 成立。",
+          "difficulty": 3,
+          "knowledge_point": "总体国家安全观的内涵",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "树立总体国家安全观，核心是坚持（  ）为宗旨，走中国特色国家安全道路。",
+          "answer": {
+            "value": "人民安全"
+          },
+          "analysis": "教材明确总体国家安全观坚持以人民安全为宗旨，题干空格处只能填人民安全。",
+          "difficulty": 3,
+          "knowledge_point": "总体国家安全观的内涵",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "某班同学在讨论网络安全时认为：网络安全只是网警的事，和国家安全没关系。请你结合总体国家安全观的内涵，帮他纠正这一认识，并写出两点理由。",
+          "answer": {
+            "value": "这个认识是片面的。总体国家安全观是新时代国家安全工作的根本遵循，坚持以人民安全为宗旨，并把人民安全作为国家安全的最高目标。理由一：网络安全直接关系个人信息、财产安全和正常生活秩序，网络谣言、网络诈骗背后往往涉及违法犯罪，损害的不只是个人权益，还可能危害社会公共利益乃至国家安全。理由二：树立总体国家安全观要求每个公民增强安全意识，把维护网络安全当作维护国家安全的一部分，自觉配合有关部门的工作。"
+          },
+          "analysis": "评分要点：判断该认识片面（1 分）；写出总体国家安全观的根本遵循与以人民安全为宗旨（2 分）；两点理由（每条 2 分）；表达通顺（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "总体国家安全观的内涵",
+          "tags": [
+            "情境应用",
+            "简答"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "国家安全是（  ）",
+          "options": [
+            "安邦定国的重要基石",
+            "只需要少数人关心的事",
+            "离中学生很远的东西",
+            "只指军事安全"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "教材强调国家安全是安邦定国的重要基石，其内涵包括政治、军事、经济、网络等多种安全；B、C、D 都缩小或否定了国家安全的意义，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "国家安全的作用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列做法中，直接体现维护国家安全的是（  ）",
+          "options": [
+            "发现有人偷拍军事设施照片并及时报告",
+            "把军事设施照片发到群里求点赞",
+            "帮陌生人拍摄港口设施照片",
+            "在网上猜测并传播军事新闻"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "及时报告偷拍军事设施的行为，是履行维护国家安全义务的体现；B、C、D 都会造成信息泄露、危害国家安全，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "国家安全的作用",
+          "tags": [
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于国家安全，正确的有（  ）",
+          "options": [
+            "国家安全关系国家主权和领土完整",
+            "国家安全关系广大人民的根本利益",
+            "国家安全关系中华民族伟大复兴",
+            "国家安全与青少年无关"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 关系主权领土✓；B 关系人民根本利益✓；C 关系民族复兴✓；D 国家安全人人有责，青少年同样要树立意识✗。故 A、B、C 成立。",
+          "difficulty": 3,
+          "knowledge_point": "国家安全的作用",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "国家安全是安邦定国的（  ），关系国家主权、领土完整和人民的根本利益。",
+          "answer": {
+            "value": "重要基石"
+          },
+          "analysis": "教材的固定表述是国家安全是安邦定国的重要基石，题干空格处只能是重要基石。",
+          "difficulty": 2,
+          "knowledge_point": "国家安全的作用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "总体国家安全观强调人民安全是国家安全的宗旨，青年学生同样要树立国家安全意识。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "以人民安全为宗旨包含每一位公民，青少年要树立国家安全意识、履行维护国家安全的义务，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "国家安全的作用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "维护国家安全，正确的做法是（  ）",
+          "options": [
+            "学习国家安全知识，增强国家安全意识",
+            "认为国家安全只是大人的事，与学生无关",
+            "只要不上网，就不会遇到安全问题",
+            "自己年龄还小，泄露一点也没什么"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "维护国家安全是每个公民的义务，要学习安全知识、增强意识；B、C 忽视个人责任，D 是典型的泄密念头，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "维护国家安全的要求",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "共同构筑国家安全的人民防线，需要（  ）",
+          "options": [
+            "每个人从自身做起，人人履行维护国家安全的义务",
+            "只靠专业机关去完成",
+            "只靠军队去完成",
+            "等别人去做与自己无关"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "教材提出要共同构筑国家安全的人民防线，强调人人尽责；B、C、D 都把责任推给他人或集体，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "维护国家安全的要求",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "为维护国家安全，青少年应当（  ）",
+          "options": [
+            "参加国家安全教育，接受相关培训",
+            "关注国家安全的新闻和形势",
+            "发现可疑情况及时向有关部门报告",
+            "传播未经证实的涉密信息"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 接受教育✓；B 关心安全形势✓；C 及时报告✓；D 传播涉密信息严重危害国家安全✗。故 A、B、C 成立。",
+          "difficulty": 3,
+          "knowledge_point": "维护国家安全的要求",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "小陈在网络群里看到有人转发一段标着绝密字样的文件截图，群里不少人说转发一下又不会怎样。请你结合维护国家安全的要求，写出小陈的三种正确做法并说明理由。",
+          "answer": {
+            "value": "第一，不下载、不保存、不转发这份标注绝密的文件截图，更不要转到其他群或上传网络平台，涉密信息一旦扩散会给国家安全造成损害。第二，劝阻群里的同学不要继续转发，并提醒大家注意保密要求。第三，把这一情况向家长、老师反映，或通过官方渠道向国家安全机关、保密部门举报，配合核查。理由是维护国家安全是每个公民的义务，国家安全是安邦定国的重要基石，我们既要增强安全意识，也要提高保密意识，做到不泄露、不扩散涉密信息。"
+          },
+          "analysis": "评分要点：三种做法（每条 2 分）；每条都体现保密意识与依法反映（每条 1 分）；说明公民维护国家安全的义务（2 分）；表达通顺（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "维护国家安全的要求",
+          "tags": [
+            "情境应用",
+            "简答"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "维护国家安全只是国家安全机关的事，青少年不需要参与。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "维护国家安全是每个公民的义务，要共同构筑国家安全的人民防线，青少年同样要树立意识、履行义务，故为错误。",
+          "difficulty": 3,
+          "knowledge_point": "维护国家安全的要求",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "作为青少年，维护国家安全最可行的做法是（  ）",
+          "options": [
+            "从小事做起，学习安全知识，不信谣不传谣",
+            "主动承担国家安全的全部责任",
+            "到边境地区拍摄敏感设施并发布",
+            "在网上质疑一切官方发布的信息"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "青少年要力所能及地维护国家安全，从学习安全知识、辨别信息做起；B 不切实际，C 危害国家安全，D 缺乏理性判断，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "青少年维护国家安全",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "青少年要做到：树立国家安全意识，保守（ ），不泄露涉密信息。",
+          "answer": {
+            "value": "国家秘密"
+          },
+          "analysis": "教材要求青少年增强保密意识、保守国家秘密，题干空格处只能填国家秘密。",
+          "difficulty": 3,
+          "knowledge_point": "青少年维护国家安全",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "青少年维护国家安全的表现有（  ）",
+          "options": [
+            "不在网络上传播未经证实的信息",
+            "对国家秘密和涉密信息保持敏感",
+            "依法配合国家安全工作",
+            "把涉密文件拍照发给同学交流"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 不传播不实信息✓；B 对涉密信息敏感✓；C 依法配合✓；D 传播涉密文件是泄密行为✗。故 A、B、C 成立。",
+          "difficulty": 3,
+          "knowledge_point": "青少年维护国家安全",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳某中学八年级的小林发现班级群里有人转发一段境外账号发布的、涉及我国海洋工程项目的视频，评论区已有大量转发并出现不实评论。请你结合青少年维护国家安全的知识，写出四条做法并说明理由。",
+          "answer": {
+            "value": "第一，不轻信、不转发，也不在评论区跟帖传播未经证实的信息，更不添油加醋地评论。第二，通过官方权威渠道核实内容，或向班主任和学校说明情况，请学校发布提醒。第三，主动私信劝阻同学停止转发，说明这类内容可能涉及国家安全，随意转发会带来风险。第四，把相关链接和页面保存记录，在家长陪同下向学校或有关部门报告，配合核查。理由是青少年是国家的未来，也是维护国家安全的重要力量，要树立国家安全意识、保守国家秘密、提高辨别能力，用实际行动共同构筑国家安全的人民防线。"
+          },
+          "analysis": "评分要点：四条做法（每条 2 分）；每条都体现不轻信不转发、依法反映（每条 1 分）；说明青少年维护国家安全的责任（2 分）；表达通顺（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "青少年维护国家安全",
+          "tags": [
+            "情境应用",
+            "简答"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

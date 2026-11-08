@@ -1,0 +1,533 @@
+{
+  "subject": "politics",
+  "grade": 8,
+  "version": "部编版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第四课 遵守社会规则",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "维护秩序靠规则",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "遵守规则",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "第五课 社会生活讲道德",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "文明有礼",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "社会规则的作用",
+      "parent": "维护秩序靠规则",
+      "order_index": 1,
+      "weight": 1.1,
+      "explanation": "规则明确人们的行为准则，为社会生活提供秩序；没有规则看似自由的生活会陷入混乱，规则限制的只是违反规则的行为。",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "规则的种类与特点",
+      "parent": "维护秩序靠规则",
+      "order_index": 2,
+      "weight": 1.1,
+      "explanation": "社会规则包括道德、纪律、法律等；法律由国家制定或认可，靠国家强制力保证实施，对全体社会成员具有约束力。",
+      "prerequisites": [
+        "社会规则的作用"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "自觉遵守规则",
+      "parent": "遵守规则",
+      "order_index": 3,
+      "weight": 1.2,
+      "explanation": "遵守规则要靠自觉，也要靠他律；从小事做起、树立规则意识、克服侥幸心理，对违反规则的行为要善意提醒、劝阻或如实反映。",
+      "prerequisites": [
+        "规则的种类与特点"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "文明有礼的要求",
+      "parent": "文明有礼",
+      "order_index": 4,
+      "weight": 1.0,
+      "explanation": "讲文明有礼是社会生活的准则，要求语言文明、行为得体、尊重他人；文明有节是中华民族传统美德在今天的体现。",
+      "prerequisites": [
+        "自觉遵守规则"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "公共秩序人人有责",
+      "parent": "第四课 遵守社会规则",
+      "order_index": 5,
+      "weight": 1.0,
+      "explanation": "公共场所的秩序需要所有社会成员共同维护；从我做起排队候车、遵守交通规则，并对不文明行为进行善意劝阻。",
+      "prerequisites": [
+        "文明有礼的要求"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第二单元 维护社会秩序",
+      "order_index": 2,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "交通规则、排队规则、考场规则等存在的根本意义是（  ）",
+          "options": [
+            "明确行为准则，维护社会秩序",
+            "限制人们追求自由",
+            "让社会生活变得枯燥乏味",
+            "保证每个人学习成绩一样"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "规则划定自由边界、明确行为准则，使社会生活有章可循；B、C、D 都误解了规则的目的，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "社会规则的作用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列现象中，属于社会规则发挥作用的是（  ）",
+          "options": [
+            "地铁车厢内乘客自觉排队候车，秩序井然",
+            "有人插队并与他人发生争吵",
+            "自习室里有人大声喧哗",
+            "考试时有人传递纸条作弊"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "自觉排队正是规则被自觉遵守的表现，体现了规则维护秩序的作用；其余三项都是规则被破坏的表现，故选 A。",
+          "difficulty": 3,
+          "knowledge_point": "社会规则的作用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "社会规则明确人们的行为准则，保证社会生活有序（  ）地进行。",
+          "answer": {
+            "value": "顺利"
+          },
+          "analysis": "教材强调规则使社会生活有序、顺利地进行，题干空格处与有序并列，应填顺利。",
+          "difficulty": 2,
+          "knowledge_point": "社会规则的作用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "没有规则的社会看似自由，实际上会陷入混乱。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "规则是社会生活有序进行的必要条件，缺少规则时人人各行其是，秩序无从谈起，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "社会规则的作用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于社会规则，下列认识正确的有（  ）",
+          "options": [
+            "规则是保障社会生活有序的需要",
+            "规则限制的只是违反规则的行为",
+            "规则对全体社会成员都有约束力",
+            "规则只约束成年人和有钱人"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 规则保障有序✓；B 规则保护合法自由✓；C 规则面前人人受约束✓；D 规则不因身份年龄而失效✗。故 A、B、C 成立。",
+          "difficulty": 3,
+          "knowledge_point": "社会规则的作用",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列属于法律规则的是（  ）",
+          "options": [
+            "全国人民代表大会制定的刑法",
+            "班级的日常公约",
+            "社区倡导的道德公约",
+            "学校公布的作息时间表"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "法律由国家制定或认可，刑法正属于此类；班级公约、社区道德公约属于道德规则，作息时间表属于纪律性管理要求，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "规则的种类与特点",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "法律区别于道德、纪律的最主要特征是（  ）",
+          "options": [
+            "靠国家强制力保证实施",
+            "由社会上多数人共同认可",
+            "完全依靠个人自觉遵守",
+            "主要靠舆论和自我约束维持"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "教材指出法律是由国家强制力保证实施的，这是法律与道德、纪律最显著的区别；B、C、D 都属于道德或自律的特征，故选 A。",
+          "difficulty": 3,
+          "knowledge_point": "规则的种类与特点",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于法律规则的特点，下列说法正确的有（  ）",
+          "options": [
+            "由国家制定或认可",
+            "由国家强制力保证实施",
+            "对全体社会成员具有约束力",
+            "主要靠个人自觉来维持"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 国家制定或认可✓；B 国家强制力保证实施✓；C 对全体成员有约束力✓；D 个人自觉是道德习惯的要求，法律有强制力保障✗。故 A、B、C 成立。",
+          "difficulty": 3,
+          "knowledge_point": "规则的种类与特点",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "社会规则包括道德、纪律和（  ）等，其中法律是由国家制定或认可的。",
+          "answer": {
+            "value": "法律"
+          },
+          "analysis": "教材把道德、纪律、法律列为社会规则的主要种类，题干空格处指第三类规则，只能填法律。",
+          "difficulty": 2,
+          "knowledge_point": "规则的种类与特点",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "小宁发现学校门口有人向学生兜售印有不良图案的卡片，还声称谁举报就找谁的麻烦。他可以怎么做？请结合规则的种类与特点说明理由。",
+          "answer": {
+            "value": "第一，不购买、不围观这类卡片，并向身边同学说明它的危害。第二，把情况告诉家长和老师，由学校向公安机关或市场监管部门反映。第三，如果自己不愿出头，可以通过匿名信箱、举报电话等正规渠道反映问题。第四，注意保护自己，不要与摊贩发生正面冲突。理由是这类行为违反法律和道德，损害青少年身心健康；法律是由国家强制力保证实施、对全体社会成员有约束力的规则，通过正规渠道举报正是用法律武器维护秩序。"
+          },
+          "analysis": "评分要点：写出三条以上具体做法（每条 2 分）；每条都能联系法律的强制性或道德要求说明理由（每条 1 分）；体现自我保护、不盲目冲动的安全意识（2 分）；表达通顺（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "规则的种类与特点",
+          "tags": [
+            "情境应用",
+            "简答"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列行为中，属于自觉遵守规则的是（  ）",
+          "options": [
+            "看到交通信号灯后停车让行",
+            "跟随人流不看信号抢先通过",
+            "考试时提前交卷抢占座位",
+            "乘电梯时堵在门口不让出空间"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "按信号灯通行是自觉遵守规则的表现；其余三项都是破坏规则、影响他人权益的行为，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "自觉遵守规则",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "小明第一次违反校规被处分，他没有找借口推脱，而是认真反思并保证不再犯。这种做法体现了（  ）",
+          "options": [
+            "正确对待违反规则的行为，规则意识在增强",
+            "存在很强的侥幸心理",
+            "对学校规则心存不满",
+            "缺乏自我约束能力"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "教材主张对违反规则的行为要正确对待、接受教育并改正，这正是小明反思改过的表现，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "自觉遵守规则",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "养成自觉遵守规则的习惯，要从（  ）做起，树立规则意识，克服侥幸心理。",
+          "answer": {
+            "value": "小事"
+          },
+          "analysis": "教材强调遵守规则要从身边小事做起，如遵守交通规则、公共场所秩序，题干空格处只能填小事。",
+          "difficulty": 3,
+          "knowledge_point": "自觉遵守规则",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "遵守规则既需要自觉，也需要他律和监督的外在约束。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "教材指出人们遵守规则要靠自觉，也要靠他律，把二者结合起来才能形成良好秩序，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "自觉遵守规则",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "面对违反规则的行为，正确的做法有（  ）",
+          "options": [
+            "善意提醒",
+            "劝阻并说明理由",
+            "如实向老师反映情况",
+            "嘲笑起哄羞辱当事人"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 善意提醒✓；B 劝阻说明理由✓；C 如实反映✓；D 嘲笑羞辱既伤人也破坏同学关系✗。故 A、B、C 成立。",
+          "difficulty": 4,
+          "knowledge_point": "自觉遵守规则",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列行为体现文明有礼的是（  ）",
+          "options": [
+            "与人交谈主动使用礼貌用语，尊重对方",
+            "在公共场所大声喧哗自顾自说话",
+            "对长辈指手画脚随意打断",
+            "用不文明语言发泄心中不满"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "语言文明、尊重他人是讲文明有礼的基本要求；其余三项都是不文明的表现，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "文明有礼的要求",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "有礼有节的中国传统美德在今天的表现是（  ）",
+          "options": [
+            "言谈举止谦恭得体、尊重他人",
+            "对谁都冷漠、不理不睬",
+            "只在网络上讲礼貌",
+            "对长辈使用流行的网络用语"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "文明有节强调内在的谦恭得体与对他人的尊重，在任何场合都应如此；B、C、D 都破坏了对他人的尊重，故选 A。",
+          "difficulty": 3,
+          "knowledge_point": "文明有礼的要求",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "讲文明有礼要求我们语言（  ），行为（  ），尊重他人。",
+          "answer": {
+            "value": [
+              "文明",
+              "得体"
+            ]
+          },
+          "analysis": "教材用语言文明、行为得体概括文明有礼的起码要求，两空分别对应文明与得体，顺序颠倒不算正确。",
+          "difficulty": 3,
+          "knowledge_point": "文明有礼的要求",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "讲文明有礼只是面子上的事，与实际生活无关。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "讲文明有礼是社会生活的准则，体现在每一次交往和处理事情的态度中，绝不是表面文章，故为错误。",
+          "difficulty": 2,
+          "knowledge_point": "文明有礼的要求",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "地铁车厢里一位乘客把手机外放，声音很大。车上有人提醒后，他却说大家都这样。请你结合文明有礼的要求，指出他的问题，并写出乘坐地铁时应遵守的三条文明礼仪。",
+          "answer": {
+            "value": "问题在于，他只顾个人方便，忽视公共场所秩序和他人的感受，缺少文明意识和对他人的尊重，这既不文明也无礼。文明礼仪一：手机调至静音或震动，不在车厢内外放声音。二：保持车厢内安静，不大声喧哗、不追逐打闹。三：遵守乘车规则，排队候车、先下后上、不倚靠车门。四：保持车厢清洁，不随地吐痰、乱扔垃圾。"
+          },
+          "analysis": "评分要点：准确指出其缺乏公共意识与尊重他人（2 分）；写出三条以上具体礼仪且表述文明得体（每条 2 分）；能联系公共场所秩序说明理由（2 分）；语言通顺（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "文明有礼的要求",
+          "tags": [
+            "情境应用",
+            "简答"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "在地铁站扶梯上，有人逆行、有人躺卧占用通道。这类现象说明（  ）",
+          "options": [
+            "维护公共秩序需要每位乘客共同遵守规则",
+            "公共秩序只与管理人员有关",
+            "这些行为属于个人自由，无可厚非",
+            "公共交通场所不需要任何秩序"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "公共秩序需要全体社会成员共同维护，逆行和躺卧既危险又妨碍他人；B、C、D 都把公共秩序的责任推给别人或予以否定，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "公共秩序人人有责",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "在公交车上看到有人插队，最恰当的做法是（  ）",
+          "options": [
+            "礼貌劝阻并说明规则，必要时向工作人员反映",
+            "跟着一起插队省得吃亏",
+            "拍视频发到网上嘲笑对方",
+            "视而不见，换一节车厢回避"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "面对违反规则的行为应善意提醒、劝阻或向工作人员反映，既维护秩序又不伤害他人；B、C、D 都不利于秩序维护，故选 A。",
+          "difficulty": 4,
+          "knowledge_point": "公共秩序人人有责",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "维护公共秩序，青少年可以（  ）",
+          "options": [
+            "自觉排队候车、不逆行",
+            "遵守交通信号",
+            "对不文明行为进行善意劝阻",
+            "起哄围观并拍摄视频传播"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 排队不逆行✓；B 遵守交通信号✓；C 善意劝阻✓；D 起哄拍摄传播既伤人又助长不文明✗。故 A、B、C 成立。",
+          "difficulty": 4,
+          "knowledge_point": "公共秩序人人有责",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳某地铁站早高峰，一名乘客逆行导致后续乘客大面积滞留，站台工作人员说逆行不只害了自己，还害了后面所有人。请结合公共秩序的知识，写出三条维护公共秩序的建议，并说明理由。",
+          "answer": {
+            "value": "建议一，从我做起严格遵守乘坐规则，排队候车、先下后上、不逆行不拥挤，用个人守规带动他人。建议二，看到逆行、插队等行为时进行善意劝阻，说明规则和可能造成的伤害，必要时请工作人员处理。建议三，配合车站开展文明乘车宣传，做文明乘车的小使者。理由是社会生活需要秩序，公共秩序由每个成员的行为共同构成，维护秩序人人有责，单个人的守规正是他人安全和顺畅的保障。"
+          },
+          "analysis": "评分要点：写出三条以上具体建议（每条 2 分）；每条都能联系公共秩序需要共同维护的原理（每条 1 分）；能结合案例说明个人行为与他人安全的关系（2 分）；表达通顺（1 分）。",
+          "difficulty": 5,
+          "knowledge_point": "公共秩序人人有责",
+          "tags": [
+            "情境应用",
+            "简答"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

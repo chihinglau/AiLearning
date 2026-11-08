@@ -48,3 +48,20 @@ docs/skill_github_repo_access.md
 *.iml
 .DS_Store
 Thumbs.db
+
+# === Local databases & backups ===
+*.db
+*.db-journal
+*.db.bak*
+
+# === Python caches ===
+__pycache__/
+*.pyc
+
+# === Agent / editor helper dirs ===
+.trae/
+.codebuddy/
+
+# === Content pipeline scratch ===
+docs/content-templates/_tmp_*
+docs/content-templates/__pycache__/

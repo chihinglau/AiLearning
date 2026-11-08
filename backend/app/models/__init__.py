@@ -2,6 +2,7 @@
 
 from app.db.base import Base
 from app.models.assignment import Assignment
+from app.models.auth_token import RefreshToken
 from app.models.content import Chapter, KnowledgePoint, Question, Textbook
 from app.models.content_report import ContentReport
 from app.models.content_review import ContentReview
@@ -22,6 +23,7 @@ from app.models.user import AuditLog, GradeHistory, ParentChildBinding, User
 
 __all__ = [
     "Base",
+    "RefreshToken",
     "User",
     "GradeHistory",
     "ParentChildBinding",

@@ -1,0 +1,657 @@
+{
+  "subject": "chinese",
+  "grade": 1,
+  "version": "人教版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "5 g k h",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "6 j q x",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "7 z c s",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "8 zh ch sh r",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "9 y w",
+      "order_index": 5
+    },
+    {
+      "node_type": "section",
+      "name": "语文园地三",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "声母gkh的发音",
+      "parent": "5 g k h",
+      "order_index": 1,
+      "weight": 1.0,
+      "explanation": "g k h 都是舌根音，发音时舌根抬起抵住软腭。g 与 k 口型相同，只差在送不送气，h 是摩擦音，气流从口腔出来。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "ü与jqx相拼去两点",
+      "parent": "6 j q x",
+      "order_index": 2,
+      "weight": 1.3,
+      "explanation": "j q x 是舌面音，j 不送气、q 送气、x 是摩擦音。小 ü 见了 j q x 要摘掉帽子，写作 ju qu xu，两点不能保留。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "平舌音zcs的发音",
+      "parent": "7 z c s",
+      "order_index": 3,
+      "weight": 1.1,
+      "explanation": "z c s 是平舌音，发音时舌头平放在下牙齿后面，舌尖抵住下齿背。c 要送气，z 不送气；s 从舌齿缝里送气。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "声母gkh的发音"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "翘舌音zhchshr的发音",
+      "parent": "8 zh ch sh r",
+      "order_index": 4,
+      "weight": 1.2,
+      "explanation": "zh ch sh r 是翘舌音，舌尖要翘起来抵住上齿龈后部，读音比 z c s 靠后。读绕口令「四是四，十是十」时要分清平舌与翘舌。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "平舌音zcs的发音"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "yw与整体认读音节",
+      "parent": "9 y w",
+      "order_index": 5,
+      "weight": 1.2,
+      "explanation": "y w 后面不加声母，直接和韵母组成整体认读音节，如 yi wu yu。ü 与 y 相拼要去两点写成 yu，不能写成 yü。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "ü与jqx相拼去两点"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "数字词语与绕口令",
+      "parent": "语文园地三",
+      "order_index": 6,
+      "weight": 1.1,
+      "explanation": "语文园地三日积月累收集了六个带数字的词语，绕口令「四是四，十是十」练平舌与翘舌，识字加油站要按课程表积累组词。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "翘舌音zhchshr的发音"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第三单元 汉语拼音",
+      "order_index": 3,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「g」「k」「h」这三个声母发音的时候，舌根都要（  ）",
+          "options": [
+            "抬起抵住软腭",
+            "平放在下牙齿后面",
+            "翘起来抵住上齿龈",
+            "轻轻碰住下嘴唇"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "g k h 都是舌根音，发音时舌根抬起抵住软腭，选 A；平放下牙齿后面是 z c s ✗；翘起舌尖是 zh ch sh r ✗；碰下嘴唇是 f ✗。",
+          "difficulty": 2,
+          "knowledge_point": "声母gkh的发音",
+          "tags": [
+            "声母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「g」和「k」这两个声母的主要区别是（  ）",
+          "options": [
+            "k 要送气，g 不送气",
+            "g 用舌尖发音，k 用舌根发音",
+            "g 是单音节，k 是双音节",
+            "g 有两点，k 没有两点"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "k 是舌根送气音，发音时有一股强气流冲出；g 是不送气音，只轻轻放开，选 A；两者都是舌根音 ✗；单双音节说的是音节数量 ✗；两点是 ü 的特征 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "声母gkh的发音",
+          "tags": [
+            "声母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「h」是舌根音，发音的时候气流是从口腔里出来的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "h 发音时舌根抬起抵住软腭，气流从口腔中间摩擦而出，所以是舌根音，说法正确；鼻音的气流才会从鼻腔出来。",
+          "difficulty": 2,
+          "knowledge_point": "声母gkh的发音",
+          "tags": [
+            "声母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "要分辨「g」和「k」，可以把手掌放在（  ）前面，读「k」时能感到一股气流冲过来。",
+          "answer": {
+            "value": [
+              "嘴前",
+              "嘴巴前"
+            ]
+          },
+          "analysis": "送气的音会把气流送出来，手掌放在嘴前能感到明显的冲击，k 送气而 g 不送气；所以填「嘴前」或「嘴巴前」。",
+          "difficulty": 3,
+          "knowledge_point": "声母gkh的发音",
+          "tags": [
+            "拼读"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「ü」和声母 j q x 相拼的时候，ü 上面的两点要去掉。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "小 ü 见了 j q x 就要摘掉帽子，写作 ju qu xu，这样既省去两点，又不至于和 lü nü 混起来，所以说法法正确。",
+          "difficulty": 2,
+          "knowledge_point": "ü与jqx相拼去两点",
+          "tags": [
+            "书写规则"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面音节中，ü 的两点省略得完全正确的一项是（  ）",
+          "options": [
+            "jú",
+            "jü",
+            "jù",
+            "jǚ"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "ü 与 j 相拼要去两点，标第二声写成 jú，选 A；jü 还留着两点 ✗；jù 调号写成了第四声 ✗；jǚ 多留了两点 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "ü与jqx相拼去两点",
+          "tags": [
+            "书写规则"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "小 ü 见了 j q x 就要摘掉帽子，这个「帽子」指的是 ü 上面的（  ）。",
+          "answer": {
+            "value": "两点"
+          },
+          "analysis": "「帽子」比作 ü 上面的两点，遇到 j q x 就要摘掉，所以写作 ju qu xu；遇到 n、l 相拼时两点反而要保留，填「两点」。",
+          "difficulty": 3,
+          "knowledge_point": "ü与jqx相拼去两点",
+          "tags": [
+            "书写规则"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面各组音节中，ü 都去掉两点的一组是（  ）",
+          "options": [
+            "ju qu xu",
+            "jü qü xü",
+            "ju qu xü",
+            "jü qu xu"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "ü 与 j q x 相拼一律去掉两点，所以是 ju qu xu，选 A；B 三个都留着两点 ✗；C 的 xü 多留两点 ✗；D 的 jü 多留两点 ✗。",
+          "difficulty": 4,
+          "knowledge_point": "ü与jqx相拼去两点",
+          "tags": [
+            "书写规则"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面音节中，属于整体认读音节的有（  ）",
+          "options": [
+            "yi",
+            "wu",
+            "ju",
+            "yuan"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A yi 是整体认读音节 ✓；B wu 是整体认读音节 ✓；C ju 是 j 与 ü 相拼的两拼音节 ✗；D yuan 是整体认读音节 ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "yw与整体认读音节",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「z」「c」「s」发音的时候，舌头应该（  ）",
+          "options": [
+            "平放在下牙齿后面，舌尖抵住下齿背",
+            "翘起来抵住上齿龈",
+            "抬起抵住软腭",
+            "轻轻碰住下嘴唇"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "z c s 是平舌音，舌头平放在下牙齿后面、舌尖抵住下齿背，选 A；翘起舌尖是 zh ch sh r ✗；舌根抬起是 g k h ✗；碰下唇是 f ✗。",
+          "difficulty": 2,
+          "knowledge_point": "平舌音zcs的发音",
+          "tags": [
+            "声母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「z」和「zh」读音最容易混，它们的主要区别在于（  ）",
+          "options": [
+            "舌尖是平放还是翘起来",
+            "要不要送气",
+            "嘴唇闭不闭",
+            "有没有两点"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "z 是平舌音、zh 是翘舌音，区别在舌尖的位置，选 A；zh 与 z 都不送气 ✗；嘴唇不参与这两个音 ✗；两点是 ü 的标志 ✗。",
+          "difficulty": 4,
+          "knowledge_point": "平舌音zcs的发音",
+          "tags": [
+            "辨音"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「c」和「q」都要送气，但 c 是平舌音，q 是舌面音。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "c 送气、q 也送气，这一点相同；c 的舌头平放抵下齿背，是平舌音，q 的舌面抬起抵硬腭，是舌面音，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "平舌音zcs的发音",
+          "tags": [
+            "声母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "声母「s」发音时，舌尖平放在下齿背后面，气流从（  ）的缝里送出来。",
+          "answer": {
+            "value": [
+              "牙齿缝",
+              "上下牙齿之间"
+            ]
+          },
+          "analysis": "s 是平舌擦音，舌尖抵住下齿背，气流从舌尖与牙齿之间的缝隙中挤出，所以填「牙齿缝」或「上下牙齿之间」。",
+          "difficulty": 3,
+          "knowledge_point": "平舌音zcs的发音",
+          "tags": [
+            "声母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「zh」「ch」「sh」「r」发音的时候，舌尖要（  ）",
+          "options": [
+            "翘起来抵住上齿龈后部",
+            "平放在下牙齿后面",
+            "抬起抵住软腭",
+            "碰住下嘴唇"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "翘舌音要把舌尖翘起来，抵住上齿龈后部，读音比平舌音靠后，选 A；平放下齿背是 z c s ✗；舌根抬起是 g k h ✗；碰下唇是 f ✗。",
+          "difficulty": 2,
+          "knowledge_point": "翘舌音zhchshr的发音",
+          "tags": [
+            "声母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "声母「r」的读音比「z」「c」「s」靠后，它属于翘舌音。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "r 发音时舌尖翘起抵住上齿龈后部，声音靠后，是翘舌音，说法正确；z c s 才是平舌音。",
+          "difficulty": 2,
+          "knowledge_point": "翘舌音zhchshr的发音",
+          "tags": [
+            "声母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "读绕口令「四是四，十是十」的时候，最容易读错的地方是（  ）",
+          "options": [
+            "s 和 sh 分不清",
+            "n 和 l 分不清",
+            "b 和 d 分不清",
+            "zh 和 z 分不清"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "绕口令里的「四」「十」都是平舌音 s，而 sh 是翘舌音，最容易混的就是 s 与 sh，选 A；n 与 l、b 与 d 在这段话里没出现 ✗。",
+          "difficulty": 4,
+          "knowledge_point": "翘舌音zhchshr的发音",
+          "tags": [
+            "绕口令"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面声母中，属于翘舌音的有（  ）",
+          "options": [
+            "zh",
+            "sh",
+            "z",
+            "r"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A zh 是翘舌音 ✓；B sh 是翘舌音 ✓；C z 是平舌音 ✗；D r 是翘舌音 ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "翘舌音zhchshr的发音",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "绕口令「四是四，十是十」里的「四」，拼写时应该写成（  ）。",
+          "answer": {
+            "value": "sì"
+          },
+          "analysis": "「四」是平舌音，韵母是 i，声母要写平舌的 s，再标上第四声，写作 sì；写成 shì 就变成翘舌音了。",
+          "difficulty": 4,
+          "knowledge_point": "翘舌音zhchshr的发音",
+          "tags": [
+            "拼写"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面一组音节中，全部属于整体认读音节的是（  ）",
+          "options": [
+            "yi wu yu",
+            "ba po mo",
+            "yi wu ju",
+            "zh chi shi"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "yi wu yu 都是整体认读音节，看到就能直接读出，选 A；ba po mo 是声母加韵母拼出来的 ✗；ju 是两拼音节 ✗；zh chi sh 是声母 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "yw与整体认读音节",
+          "tags": [
+            "整体认读音节"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「ü」和声母 y 相拼的时候，ü 上面的两点要去掉，写作 yu。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "ü 与 y 相拼同样要去掉两点，写成 yu，这样 yu 就成了整体认读音节；写成 yü 是错的，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "yw与整体认读音节",
+          "tags": [
+            "书写规则"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "声母「y」和「w」跟别的声母不一样，它们后面（  ）再加声母，直接和韵母组成整体认读音节。",
+          "answer": {
+            "value": "不能"
+          },
+          "analysis": "y w 后面不能再加声母，它们直接和韵母相拼就构成整体认读音节，如 yu、wei，所以填「不能」。",
+          "difficulty": 3,
+          "knowledge_point": "yw与整体认读音节",
+          "tags": [
+            "整体认读音节"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「y」「w」这两个声母和别的声母不同的地方是（  ）",
+          "options": [
+            "它们都直接和韵母组成整体认读音节",
+            "它们发音时都要卷舌",
+            "它们都比别的声母多两点",
+            "它们可以放在音节的最前面"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "y w 是整体认读音节里的两个声母，后面直接接韵母，选 A；卷舌的是 zh ch sh r ✗；两点是 ü 的特征 ✗；y w 后面本来就不能再加声母 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "yw与整体认读音节",
+          "tags": [
+            "整体认读音节"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面词语中，含有数字的有（  ）",
+          "options": [
+            "一模一样",
+            "三头六臂",
+            "五颜六色",
+            "绿油油"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 一模一样里有「一」 ✓；B 三头六臂里有「三」「六」 ✓；C 五颜六色里有「五」「六」 ✓；D 绿油油里没有数字 ✗。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "数字词语与绕口令",
+          "tags": [
+            "多选",
+            "字词积累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "语文园地三的「日积月累」一共列出了（  ）个带数字的词语。",
+          "answer": {
+            "value": "六"
+          },
+          "analysis": "日积月累里的词语是一模一样、一心一意、独一无二、三头六臂、五颜六色、十全十美，一共六个，所以填「六」。",
+          "difficulty": 3,
+          "knowledge_point": "数字词语与绕口令",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面各组词语中，全部用「识字加油站」的生字组成的是（  ）",
+          "options": [
+            "语文 算数 美术",
+            "午饭 文具 开会",
+            "晚饭 火车 大米",
+            "午餐 数字 书画"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "识字加油站的生字有午、语、文、数、美、术、写、会，A 中「语文」「算数」「美术」六个字全在其中，选 A；B 的「具」不在 ✗；C 的「饭」「车」「米」不在 ✗；D 的「餐」「字」「书」不在 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "数字词语与绕口令",
+          "tags": [
+            "字词积累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "学校要开运动会，班级按学号分组：第三组有十二人，第七组有十八人。请你用今天学的带数字的词语，把两个小组的人数说清楚，写一句完整的话。",
+          "answer": {
+            "value": "第三组有十二人，第七组有十八人。"
+          },
+          "analysis": "评分要点：①用上带数字的词语（三头六臂式的数字说法或直接写出「十二」「十八」均可）（2 分）；②句子完整、意思清楚（1 分）；③标点正确（1 分）。只写数字不成句不得分。",
+          "difficulty": 4,
+          "knowledge_point": "数字词语与绕口令",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳地铁报站时常要读出站名。请你用今天学的整体认读音节，给「yuè」和「wū」各组一个自己会读的词语，并把词语写下来。",
+          "answer": {
+            "value": "yuè 可以组成「月亮」，wū 可以组成「乌鸦」。"
+          },
+          "analysis": "评分要点：①两个音节各组成一个词语（2 分）；②词语要能读出来、写对（1 分）；③句子通顺（1 分）。写成「yüè」「wǔ」这类不合规则的写法扣分。",
+          "difficulty": 4,
+          "knowledge_point": "yw与整体认读音节",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

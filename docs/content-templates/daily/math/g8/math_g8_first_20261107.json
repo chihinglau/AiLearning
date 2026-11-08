@@ -1,0 +1,426 @@
+{
+  "_legacy": true,
+  "_legacy_note": "2026-11-07 试跑批次的旧样章内容：本文件的章节名在教材目录上不存在。占位章节清理（2026-11-08）后该章已迁移到教材真实章节或整章删除。重导本文件时导入层按 chapter_aliases.json 处理——aliases 重定向到教材真实章节、discard 整块丢弃——不会把旧版数据写回库。详见 docs/content-templates/exports/automation_20261108_codebuddy/05-占位章节清理立项.md",
+  "subject": "math",
+  "grade": 8,
+  "version": "北师大版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "node_type": "section",
+      "name": "勾股定理",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "勾股定理的内容",
+      "parent": "勾股定理",
+      "order_index": 1,
+      "explanation": "直角三角形两条直角边的平方和等于斜边的平方，即 a²+b²=c²（c 为斜边）。使用时先确认是直角三角形、并明确哪条边是斜边。",
+      "prerequisites": [],
+      "weight": 1.4
+    },
+    {
+      "node_type": "point",
+      "name": "已知两边求第三边",
+      "parent": "勾股定理",
+      "order_index": 2,
+      "explanation": "已知两条边求第三条边时先判断所求边是不是斜边：求斜边用平方和，求直角边用平方差。常见错误是无论求哪条边都相加。",
+      "prerequisites": [
+        "勾股定理的内容"
+      ],
+      "weight": 1.3
+    },
+    {
+      "node_type": "point",
+      "name": "勾股定理的逆定理",
+      "parent": "勾股定理",
+      "order_index": 3,
+      "explanation": "若三角形三边满足较短两边的平方和等于最长边的平方，则这个三角形是直角三角形，且最长边所对的角是直角。它是判定直角三角形的方法，与勾股定理的用途相反。",
+      "prerequisites": [
+        "勾股定理的内容"
+      ],
+      "weight": 1.2
+    },
+    {
+      "node_type": "point",
+      "name": "勾股数",
+      "parent": "勾股定理",
+      "order_index": 4,
+      "explanation": "能作为直角三角形三边长度的三个正整数叫勾股数，如 3、4、5 与 5、12、13。把一组勾股数同乘一个正整数，得到的仍是勾股数。",
+      "prerequisites": [
+        "勾股定理的逆定理"
+      ],
+      "weight": 1.0
+    },
+    {
+      "node_type": "point",
+      "name": "设未知数求边",
+      "parent": "勾股定理",
+      "order_index": 5,
+      "explanation": "当边长只给出关系（如斜边比直角边大 2）时，设其中一条边为 x，用勾股定理列方程求解，最后要检验结果是否符合边长大于 0。",
+      "prerequisites": [
+        "已知两边求第三边"
+      ],
+      "weight": 1.1
+    }
+  ],
+  "chapters": [
+    {
+      "name": "勾股定理",
+      "order_index": 1,
+      "summary": "直角三角形三边关系：勾股定理及其逆定理、勾股数、用方程求边。",
+      "questions": [
+        {
+          "source_type": "original",
+          "source_name": "自主命题",
+          "q_type": "choice",
+          "stem": "一个直角三角形的两条直角边长分别为 3 和 4，斜边长是（  ）",
+          "options": [
+            "5",
+            "6",
+            "7",
+            "25"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "斜边等于两直角边平方和的算术平方根：3²+4²=9+16=25，所以斜边为 5。选项 25 是斜边的平方，是常见错选。",
+          "difficulty": 1,
+          "knowledge_point": "勾股定理的内容",
+          "status": "published",
+          "tags": [
+            "勾股定理",
+            "求斜边"
+          ]
+        },
+        {
+          "source_type": "original",
+          "source_name": "自主命题",
+          "q_type": "fill",
+          "stem": "直角三角形的两条直角边长分别为 5 和 12，则斜边长为（  ）。",
+          "answer": {
+            "value": "13"
+          },
+          "analysis": "5²+12²=25+144=169，169 的算术平方根是 13，所以斜边长为 13。也可直接回忆 5、12、13 是常见勾股数。",
+          "difficulty": 2,
+          "knowledge_point": "勾股定理的内容",
+          "status": "published"
+        },
+        {
+          "source_type": "original",
+          "source_name": "自主命题",
+          "q_type": "judge",
+          "stem": "在直角三角形中，斜边一定是三条边中最长的边。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "直角三角形中直角所对的边是斜边，斜边的平方等于两直角边平方之和，因此斜边长度大于任一直角边，命题正确。",
+          "difficulty": 2,
+          "knowledge_point": "勾股定理的内容",
+          "status": "published"
+        },
+        {
+          "source_type": "original",
+          "source_name": "自主命题",
+          "q_type": "choice",
+          "stem": "一个直角三角形的斜边长为 10，一条直角边长为 6，另一条直角边长为（  ）",
+          "options": [
+            "4",
+            "6",
+            "8",
+            "16"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "求直角边用平方差：10²-6²=100-36=64，64 的算术平方根是 8。若误用平方和会得 136，选项中没有对应结果。",
+          "difficulty": 3,
+          "knowledge_point": "已知两边求第三边",
+          "status": "published"
+        },
+        {
+          "source_type": "original",
+          "source_name": "自主命题",
+          "q_type": "choice",
+          "stem": "等腰直角三角形的两条直角边长均为 1，则斜边长为（  ）",
+          "options": [
+            "1",
+            "2"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "斜边平方为 1²+1²=2，所以斜边长为 √2，约等于 1.414，介于 1 与 2 之间，因此不等于 2。",
+          "difficulty": 3,
+          "knowledge_point": "已知两边求第三边",
+          "status": "published"
+        },
+        {
+          "source_type": "original",
+          "source_name": "自主命题",
+          "q_type": "fill",
+          "stem": "直角三角形的两条直角边长都是 7，则斜边长的平方是（  ）。",
+          "answer": {
+            "value": "98"
+          },
+          "analysis": "斜边平方等于两直角边平方之和：7²+7²=49+49=98。题目问的是平方，不要再开方写成根号 98 的近似值。",
+          "difficulty": 2,
+          "knowledge_point": "已知两边求第三边",
+          "status": "published"
+        },
+        {
+          "source_type": "original",
+          "source_name": "自主命题",
+          "q_type": "answer",
+          "stem": "深圳地铁某站的检修人员用一架长 5 米的梯子斜靠在竖直墙面上，梯脚到墙根的距离为 3 米。求梯子顶端到地面的高度，并写出计算过程。",
+          "answer": {
+            "value": "设梯子顶端到地面的高度为 h 米。梯子、墙面、地面构成直角三角形，梯子长为斜边：h²+3²=5²，h²=25-9=16，h=4（米）。答：梯子顶端到地面的高度是 4 米。"
+          },
+          "analysis": "关键是把实际情境抽象成直角三角形：梯子为斜边，墙高与地面距离为两条直角边。用平方差求直角边，最后取算术平方根，并注意单位。",
+          "difficulty": 3,
+          "knowledge_point": "已知两边求第三边",
+          "status": "published",
+          "tags": [
+            "情境应用",
+            "求直角边"
+          ]
+        },
+        {
+          "source_type": "original",
+          "source_name": "自主命题",
+          "q_type": "multiple",
+          "stem": "下列各组数中，能作为直角三角形三边长度的有（  ）",
+          "options": [
+            "3、4、5",
+            "5、12、13",
+            "6、8、10",
+            "4、5、6"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "检验较短两边的平方和是否等于最长边的平方：3²+4²=25=5²；5²+12²=169=13²；6²+8²=100=10²，三组都成立。4²+5²=41≠36=6²，所以 D 不行。",
+          "difficulty": 4,
+          "knowledge_point": "勾股数",
+          "status": "published",
+          "tags": [
+            "多选",
+            "勾股数判断"
+          ]
+        },
+        {
+          "source_type": "original",
+          "source_name": "自主命题",
+          "q_type": "choice",
+          "stem": "三边长分别为 6、8、10 的三角形是（  ）",
+          "options": [
+            "锐角三角形",
+            "直角三角形",
+            "钝角三角形",
+            "无法确定"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "最长边为 10，其余两边平方和为 6²+8²=36+64=100=10²，满足勾股定理的逆定理，所以是直角三角形，直角在 10 所对的顶点处。",
+          "difficulty": 2,
+          "knowledge_point": "勾股定理的逆定理",
+          "status": "published"
+        },
+        {
+          "source_type": "original",
+          "source_name": "自主命题",
+          "q_type": "judge",
+          "stem": "若一个三角形的三边满足较短两边的平方和等于最长边的平方，则这个三角形是直角三角形。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "这正是勾股定理的逆定理的内容，它由边长关系判定三角形形状，与已知直角求边长的勾股定理方向相反，命题正确。",
+          "difficulty": 3,
+          "knowledge_point": "勾股定理的逆定理",
+          "status": "published"
+        },
+        {
+          "source_type": "original",
+          "source_name": "自主命题",
+          "q_type": "fill",
+          "stem": "三角形三边长分别为 5、12、13，则它最大内角的度数是（  ）度。",
+          "answer": {
+            "value": "90"
+          },
+          "analysis": "最长边 13 所对的角最大。因为 5²+12²=169=13²，由逆定理可知该三角形是直角三角形，所以最大内角为 90 度。",
+          "difficulty": 3,
+          "knowledge_point": "勾股定理的逆定理",
+          "status": "published"
+        },
+        {
+          "source_type": "original",
+          "source_name": "自主命题",
+          "q_type": "choice",
+          "stem": "下列三组线段中，不能围成直角三角形的是（  ）",
+          "options": [
+            "5、12、13",
+            "7、24、25",
+            "8、15、17",
+            "6、7、8"
+          ],
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "前三组都满足平方和关系：25+144=169、49+576=625、64+225=289；而 6²+7²=85≠64=8²，故 6、7、8 不能围成直角三角形。",
+          "difficulty": 3,
+          "knowledge_point": "勾股定理的逆定理",
+          "status": "published"
+        },
+        {
+          "source_type": "original",
+          "source_name": "自主命题",
+          "q_type": "choice",
+          "stem": "下列各组数中，是勾股数的是（  ）",
+          "options": [
+            "3、4、5",
+            "3、4、6",
+            "4、5、6",
+            "2、3、4"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "勾股数要求三个都是正整数且满足平方和关系。3²+4²=25=5²，符合；其余三组的平方和分别不等于最长边的平方，都不是勾股数。",
+          "difficulty": 2,
+          "knowledge_point": "勾股数",
+          "status": "published"
+        },
+        {
+          "source_type": "original",
+          "source_name": "自主命题",
+          "q_type": "fill",
+          "stem": "把勾股数 3、4、5 各乘以 3，得到的一组勾股数是 9、12 和（  ）。",
+          "answer": {
+            "value": "15"
+          },
+          "analysis": "勾股数同乘一个正整数后仍满足平方和关系：9²+12²=81+144=225=15²，所以缺的数是 15。这一性质可用于快速生成新的勾股数。",
+          "difficulty": 2,
+          "knowledge_point": "勾股数",
+          "status": "published"
+        },
+        {
+          "source_type": "original",
+          "source_name": "自主命题",
+          "q_type": "judge",
+          "stem": "任意三个正整数都能作为直角三角形的三边长。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "反例：2、3、4 满足 2²+3²=13≠16=4²，也不能满足三角形三边关系以外的平方和条件，因此不是勾股数，命题错误。",
+          "difficulty": 3,
+          "knowledge_point": "勾股数",
+          "status": "published"
+        },
+        {
+          "source_type": "original",
+          "source_name": "自主命题",
+          "q_type": "answer",
+          "stem": "请说明 5、12、13 为什么是一组勾股数，并写出判断过程。",
+          "answer": {
+            "value": "判断标准：三个正整数中，较短两边的平方和等于最长边的平方。计算 5²=25，12²=144，25+144=169，而 13²=169，两者相等；且 5、12、13 都是正整数，所以它们是一组勾股数，以它们为三边可围成直角三角形。"
+          },
+          "analysis": "评分要点：写出平方和计算（25+144=169）、写出最长边的平方（169）、说明两者相等且三数均为正整数，三点齐全得满分。只写结论不写计算过程最多得一半分。",
+          "difficulty": 3,
+          "knowledge_point": "勾股数",
+          "status": "published",
+          "tags": [
+            "说理题",
+            "评分要点"
+          ]
+        },
+        {
+          "source_type": "original",
+          "source_name": "自主命题",
+          "q_type": "choice",
+          "stem": "直角三角形的一条直角边长为 8，斜边比另一条直角边长 2，则另一条直角边长为（  ）",
+          "options": [
+            "6",
+            "10",
+            "15",
+            "17"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "设另一条直角边为 x，则斜边为 x+2。由勾股定理得 x²+8²=(x+2)²，展开得 x²+64=x²+4x+4，解得 4x=60，x=15，斜边为 17，符合边长关系。",
+          "difficulty": 4,
+          "knowledge_point": "设未知数求边",
+          "status": "published",
+          "tags": [
+            "方程思想"
+          ]
+        },
+        {
+          "source_type": "original",
+          "source_name": "自主命题",
+          "q_type": "fill",
+          "stem": "一个直角三角形的斜边长为 13，一条直角边长为 5，则另一条直角边长为（  ）。",
+          "answer": {
+            "value": "12"
+          },
+          "analysis": "已知斜边与一条直角边，求另一条直角边用平方差：13²-5²=169-25=144，144 的算术平方根为 12，与 5、12、13 构成勾股数一致。",
+          "difficulty": 2,
+          "knowledge_point": "设未知数求边",
+          "status": "published"
+        },
+        {
+          "source_type": "original",
+          "source_name": "自主命题",
+          "q_type": "multiple",
+          "stem": "关于勾股定理，下列说法正确的有（  ）",
+          "options": [
+            "只适用于直角三角形",
+            "两直角边的平方和等于斜边的平方",
+            "可用它已知两边求第三边",
+            "对任意三角形都成立"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "勾股定理的前提是直角三角形，内容是两直角边平方和等于斜边平方，用途是已知两边求第三边，所以 A、B、C 正确。钝角或锐角三角形不满足平方和关系，D 错误。",
+          "difficulty": 4,
+          "knowledge_point": "设未知数求边",
+          "status": "published",
+          "tags": [
+            "多选",
+            "概念辨析"
+          ]
+        },
+        {
+          "source_type": "original",
+          "source_name": "自主命题",
+          "q_type": "answer",
+          "stem": "一块三角形木板的两条直角边分别为 9 分米和 12 分米，木工要沿斜边锯开。求斜边的长度和这块木板的周长。",
+          "answer": {
+            "value": "斜边长为 √(9²+12²)=√(81+144)=√225=15（分米）。周长 = 9+12+15 = 36（分米）。答：斜边长 15 分米，周长 36 分米。"
+          },
+          "analysis": "评分要点：正确列式 9²+12²、算出 225、开方得 15 分米（3 分）；周长把三边相加得 36 分米（2 分）。只写斜边不写周长或漏单位要扣分。",
+          "difficulty": 5,
+          "knowledge_point": "勾股定理的内容",
+          "status": "published",
+          "tags": [
+            "情境应用",
+            "综合计算"
+          ]
+        }
+      ]
+    }
+  ]
+}

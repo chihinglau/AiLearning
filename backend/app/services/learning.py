@@ -32,7 +32,12 @@ def grade_answer(question: Question, user_answer: dict[str, Any]) -> bool:
     actual = user_answer.get("value")
     if expected is None or actual is None:
         return False
-    # answer.value 支持「可接受答案列表」（填空题多答案）
+    # 多选题：标准答案可能是列表或 "A|C" 形式，做整体等价比较。
+    if isinstance(expected, list) and isinstance(actual, list):
+        return normalize(actual) == normalize(expected)
+    if isinstance(actual, list):
+        return normalize(expected) == normalize(actual)
+    # 填空题：answer.value 支持「可接受答案列表」（多答案任意匹配）。
     if isinstance(expected, list):
         return any(normalize(actual) == normalize(ans) for ans in expected)
     return normalize(expected) == normalize(actual)

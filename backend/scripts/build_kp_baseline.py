@@ -5,8 +5,8 @@
     .venv\\Scripts\\python.exe -m scripts.build_kp_baseline --output-dir ..\\docs\\content-templates
 
 输出：
-    _knowledge-points-baseline_YYYYMMDD.json
-    _knowledge-points-baseline_YYYYMMDD.md
+    _knowledge-points-baseline_YYYYMMDD.json / .md   按日期归档
+    _knowledge-points-baseline_latest.json / .md     固定名，每日任务与自检只读它
 """
 
 from __future__ import annotations
@@ -148,6 +148,7 @@ def main() -> int:
     output = Path(args.output_dir)
     output.mkdir(parents=True, exist_ok=True)
     base = f"_knowledge-points-baseline_{args.date}"
+    latest = "_knowledge-points-baseline_latest"
     payload = {
         "_meta": {
             "generated": generated,
@@ -166,8 +167,15 @@ def main() -> int:
         _render_md(names, detail, generated=generated, source=source),
         encoding="utf-8",
     )
+    (output / f"{latest}.json").write_text(
+        json.dumps(payload, ensure_ascii=False, indent=1) + "\n", encoding="utf-8"
+    )
+    (output / f"{latest}.md").write_text(
+        _render_md(names, detail, generated=generated, source=source),
+        encoding="utf-8",
+    )
     print(
-        f"基线已生成：{output / base}.json / .md"
+        f"基线已生成：{output / base}.json / .md（同时更新 {latest}.json / .md）"
         f"（名称 {payload['_meta']['total_names']} 个，歧义 {ambiguous} 组）"
     )
     return 1 if ambiguous else 0

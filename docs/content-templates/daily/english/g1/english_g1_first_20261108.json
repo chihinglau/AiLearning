@@ -1,0 +1,335 @@
+{
+  "subject": "english",
+  "grade": 1,
+  "version": "牛津深圳版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "Unit 1 What is your family like? / Ready Go",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "Greetings: Hello and Hi",
+      "parent": "Unit 1 What is your family like? / Ready Go",
+      "order_index": 1,
+      "explanation": "Hello 与 Hi 都是见面时的问候语，Hi 更随意；早上还可用 Good morning。",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "Introducing yourself: I am",
+      "parent": "Unit 1 What is your family like? / Ready Go",
+      "order_index": 2,
+      "explanation": "用 I am + 名字 或 My name is + 名字 介绍自己；be 动词与 I 搭配时用 am。",
+      "prerequisites": [
+        "Greetings: Hello and Hi"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "Classroom instructions",
+      "parent": "Unit 1 What is your family like? / Ready Go",
+      "order_index": 3,
+      "explanation": "Stand up, please. / Sit down, please. / Open your book. 是课堂常用指令，加 please 更礼貌。",
+      "prerequisites": [
+        "Greetings: Hello and Hi"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "Letters Aa to Dd",
+      "parent": "Unit 1 What is your family like? / Ready Go",
+      "order_index": 4,
+      "explanation": "Aa、Bb、Cc、Dd 是字母表前四个字母，要能认读大写与小写并说出顺序。",
+      "prerequisites": [
+        "Introducing yourself: I am"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "Unit 1 What is your family like?",
+      "order_index": 1,
+      "summary": "Ready Go：问候、自我介绍、课堂指令与 Aa-Dd 认读。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "You meet your teacher in the morning. What can you say?",
+          "options": [
+            "Hello, Miss Li.",
+            "Good night.",
+            "Thank you, bye.",
+            "Sit down, please."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "见面问候用 Hello，选 A；B 是睡前道别，C 是道谢告别，D 是让学生坐下的课堂指令，都不用于见面打招呼。",
+          "difficulty": 1,
+          "knowledge_point": "Greetings: Hello and Hi"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which word is a greeting?",
+          "options": [
+            "Hello",
+            "Book",
+            "Desk",
+            "Pencil"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "Hello 是问候语，选 A；Book、Desk、Pencil 分别是书、课桌、铅笔，都是物品名称。",
+          "difficulty": 1,
+          "knowledge_point": "Greetings: Hello and Hi"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Hi is a friendly way to say hello.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "Hi 与 Hello 意思相同，语气更轻松，常用于同学之间，说法正确。",
+          "difficulty": 1,
+          "knowledge_point": "Greetings: Hello and Hi"
+        },
+        {
+          "q_type": "fill",
+          "stem": "Complete the short greeting with a two-letter word: ____! I am Kitty.",
+          "answer": {
+            "value": "Hi"
+          },
+          "analysis": "两个字母的问候词是 Hi；Hello 有五个字母，不符合题干的长度提示。",
+          "difficulty": 2,
+          "knowledge_point": "Greetings: Hello and Hi"
+        },
+        {
+          "q_type": "choice",
+          "stem": "I ____ Peter.",
+          "options": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "主语是 I 时 be 动词用 am，选 A；is 配第三人称单数，are 配 you / 复数，be 是原形不能直接作谓语。",
+          "difficulty": 2,
+          "knowledge_point": "Introducing yourself: I am"
+        },
+        {
+          "q_type": "judge",
+          "stem": "I am Sally. is a sentence you use to tell others your name.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "I am + 名字 就是自我介绍的常用句式，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "Introducing yourself: I am"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which sentences can you use to introduce yourself?",
+          "options": [
+            "I am Ben.",
+            "My name is Ann.",
+            "Sit down, please.",
+            "Hello, I am Tom."
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A I am Ben. 报出名字 ✓；B My name is Ann. 也是自我介绍 ✓；C Sit down, please. 是课堂指令，没有名字 ✗；D Hello, I am Tom. 先问候再报名 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 2,
+          "knowledge_point": "Introducing yourself: I am",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "Your teacher says: Stand up, please. What should you do?",
+          "options": [
+            "Stay on the chair",
+            "Stand on your feet",
+            "Open your book",
+            "Write your name"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "Stand up 意为起立，应站起来，选 B；A 是坐着不动，C、D 分别是打开书和写名字，是别的指令。",
+          "difficulty": 3,
+          "knowledge_point": "Classroom instructions"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Please sit down. is a polite classroom instruction.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "sit down 是让学生坐下，加 please 语气更礼貌，属于课堂指令，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "Classroom instructions"
+        },
+        {
+          "q_type": "fill",
+          "stem": "Complete the classroom instruction: ____ down, please.",
+          "answer": {
+            "value": "Sit"
+          },
+          "analysis": "Sit down 意为坐下，缺的是 Sit；词在句首要大写首字母，写 sit 也算意思正确但不符合句首书写规范。",
+          "difficulty": 3,
+          "knowledge_point": "Classroom instructions"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following are classroom instructions?",
+          "options": [
+            "Open your book.",
+            "Stand up, please.",
+            "I am fine.",
+            "Listen carefully."
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 打开书 ✓；B 请起立 ✓；C I am fine. 是回答近况的陈述句，不是指令 ✗；D 认真听 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Classroom instructions",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which letter comes right after Aa?",
+          "options": [
+            "Bb",
+            "Cc",
+            "Dd",
+            "Ee"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "字母表顺序是 Aa、Bb、Cc、Dd，Aa 后面紧接 Bb，选 A；Cc、Dd 隔了不止一位。",
+          "difficulty": 3,
+          "knowledge_point": "Letters Aa to Dd"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Aa, Bb, Cc, Dd are the first four letters in order.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "字母表前四位依次是 Aa、Bb、Cc、Dd，顺序正确，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "Letters Aa to Dd"
+        },
+        {
+          "q_type": "fill",
+          "stem": "Write the capital letter that starts the word Apple: ____.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "Apple 的首字母是 Aa，题目要求大写，故填 A；填小写 a 不符合「capital letter」的要求。",
+          "difficulty": 3,
+          "knowledge_point": "Letters Aa to Dd"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which words or phrases can greet people?",
+          "options": [
+            "Hello",
+            "Hi",
+            "Good morning",
+            "Pencil"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A Hello ✓；B Hi ✓；C Good morning 是早上问候 ✓；D Pencil 是文具名称，不能问候 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Greetings: Hello and Hi",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write two sentences: greet your new classmate, then tell him or her your name.",
+          "answer": {
+            "value": "Hello! I am Kitty."
+          },
+          "analysis": "参考答案包含问候与自我介绍。评分要点：①写出问候语 Hello / Hi（1 分）；②用 I am 或 My name is 写出名字（1 分）；③两句完整、顺序合理（1 分）；④拼写与标点正确（1 分）。只写单词不得分。",
+          "difficulty": 4,
+          "knowledge_point": "Introducing yourself: I am",
+          "tags": [
+            "写作"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Your teacher says: Open your book, please. Write two sentences: what you do, and one more classroom instruction you know.",
+          "answer": {
+            "value": "I open my book. Then I listen carefully."
+          },
+          "analysis": "评分要点：①写出听到指令后的动作 open the book（1 分）；②再写出一条真实课堂指令，如 Listen carefully / Stand up（1 分）；③两句英文完整、时态用一般现在时（1 分）；④拼写正确（1 分）。中文作答不得分。",
+          "difficulty": 4,
+          "knowledge_point": "Classroom instructions",
+          "tags": [
+            "情境应用"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write a short two-line dialogue between you and a new friend at school. Use a greeting, your name, and one classroom instruction.",
+          "answer": {
+            "value": "Kitty: Hello, I am Kitty. Ben: Hi, Kitty. Please sit down."
+          },
+          "analysis": "评分要点：①有问候语（1 分）；②有一处自我介绍含名字（1 分）；③含一条课堂指令且加 please 更礼貌（1 分）；④两行对话格式与拼写、标点正确（1 分）。三要素缺一扣对应分，写成单句不算对话。",
+          "difficulty": 5,
+          "knowledge_point": "Greetings: Hello and Hi",
+          "tags": [
+            "写作",
+            "综合运用"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "Put Dd, Bb, Aa, Cc in ABC order. Which letter is the THIRD one?",
+          "options": [
+            "Aa",
+            "Bb",
+            "Cc",
+            "Dd"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "字母顺序是 Aa, Bb, Cc, Dd；题目故意打乱，要先排序再数，第三个是 Cc。",
+          "difficulty": 3,
+          "knowledge_point": "Letters Aa to Dd"
+        }
+      ]
+    }
+  ]
+}

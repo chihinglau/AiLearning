@@ -1,0 +1,31 @@
+{
+  "schema": "subject-version-map/1",
+  "updated": "2026-11-09",
+  "note": "各科教材版本并不统一，校验器 --expect-version 必须按此表取值（或直接传 --version-map 自动解析）。来源：dev 库 textbooks.version 实值。",
+  "versions": {
+    "math": {
+      "default": "北师大版"
+    },
+    "chinese": {
+      "default": "人教版"
+    },
+    "english": {
+      "default": "牛津深圳版"
+    },
+    "politics": {
+      "default": "部编版"
+    },
+    "physics": {
+      "default": "人教版"
+    },
+    "biology": {
+      "default": "人教版"
+    },
+    "geography": {
+      "default": "湘教版"
+    },
+    "history": {
+      "default": "部编版"
+    }
+  }
+}

@@ -2,6 +2,8 @@ import 'package:ai_learning/core/errors/api_error_guide.dart';
 import 'package:ai_learning/core/models/org.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
+import 'package:ai_learning/core/theme/app_accents.dart';
+import 'package:ai_learning/widgets/accent_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -47,10 +49,7 @@ class _TeacherClassesPageState extends ConsumerState<TeacherClassesPage> {
   }
 
   void _openClass(ClassSummary item) {
-    final query = {
-      'name': item.name,
-      'grade': '${item.grade}',
-    };
+    final query = {'name': item.name, 'grade': '${item.grade}'};
     final uri = Uri(
       path: '/teacher/classes/${item.id}/stats',
       queryParameters: query,
@@ -61,12 +60,14 @@ class _TeacherClassesPageState extends ConsumerState<TeacherClassesPage> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final accents = AppAccents.of(context);
     return Scaffold(
       appBar: AppBar(
         title: const Text('教师中心'),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
-          onPressed: () => context.canPop() ? context.pop() : context.go('/shell'),
+          onPressed: () =>
+              context.canPop() ? context.pop() : context.go('/shell'),
         ),
       ),
       body: _loading
@@ -95,7 +96,9 @@ class _TeacherClassesPageState extends ConsumerState<TeacherClassesPage> {
                       ),
                     ),
                   ..._classes.map(
-                    (item) => Card(
+                    (item) => AccentCard(
+                      accent: accents.learn,
+                      margin: const EdgeInsets.only(bottom: 12),
                       child: ListTile(
                         leading: CircleAvatar(
                           backgroundColor: theme.colorScheme.primaryContainer,

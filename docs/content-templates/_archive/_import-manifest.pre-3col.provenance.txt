@@ -1,0 +1,62 @@
+生成时间：2026-11-08T22:03:22
+用途：把 _import-manifest.json 从单列 sha256 迁移到三列语义。
+为什么：上一轮打 _legacy 标记时把 8 条的 sha 就地刷成了当前文件版本，「已入库」的判据
+        被降级成「文件被登记过」——任何就地改写只要顺手刷 sha，校验器仍会说已入库。
+改了什么：每条加 imported_sha256（导入当刻，永不改写）/ current_file_sha256（盘上现值）
+        / imported_content_sha256（导入当刻剥元数据后的内容哈希）；删除旧的 sha256 键。
+        status / report / imported_at 等字段原样保留。
+配套：_validate_daily.py 的「已入库」判定改为三态（unchanged / meta_only / changed）；
+        backend/scripts/import_content.py 写入按三列落盘；db_ops.py 的待导入判定同步。
+
+改前副本：D:\ai\prj\trae\HuaWei\AiLearning\docs\content-templates\_archive\_import-manifest.pre-3col.json
+
+逐条明细：
+  - biology/g7/biology_g7_first_20261108.json            unchanged        当前文件（导入后未变更）
+  - biology/g8/biology_g8_first_20261108.json            unchanged        当前文件（导入后未变更）
+  - chemistry/g9/chemistry_g9_first_20261108.json        unchanged        当前文件（导入后未变更）
+  - chinese/g1/chinese_g1_first_20261107.json            unchanged        当前文件（导入后未变更）
+  - chinese/g2/chinese_g2_first_20261107.json            unchanged        当前文件（导入后未变更）
+  - chinese/g3/chinese_g3_first_20261107.json            unchanged        当前文件（导入后未变更）
+  - chinese/g4/chinese_g4_first_20261107.json            unchanged        当前文件（导入后未变更）
+  - chinese/g5/chinese_g5_first_20261107.json            unchanged        当前文件（导入后未变更）
+  - chinese/g6/chinese_g6_first_20261107.json            unchanged        当前文件（导入后未变更）
+  - chinese/g7/chinese_g7_first_20261107.json            unchanged        当前文件（导入后未变更）
+  - chinese/g8/chinese_g8_first_20261107.json            unchanged        当前文件（导入后未变更）
+  - chinese/g9/chinese_g9_first_20261107.json            unchanged        当前文件（导入后未变更）
+  - english/g1/english_g1_first_20261107.json            unchanged        当前文件（导入后未变更）
+  - english/g2/english_g2_first_20261107.json            unchanged        当前文件（导入后未变更）
+  - english/g3/english_g3_first_20261107.json            unchanged        当前文件（导入后未变更）
+  - english/g4/english_g4_first_20261107.json            unchanged        当前文件（导入后未变更）
+  - english/g5/english_g5_first_20261107.json            unchanged        当前文件（导入后未变更）
+  - english/g6/english_g6_first_20261107.json            unchanged        当前文件（导入后未变更）
+  - english/g7/english_g7_first_20261107.json            unchanged        当前文件（导入后未变更）
+  - english/g8/english_g8_first_20261107.json            unchanged        当前文件（导入后未变更）
+  - english/g9/english_g9_first_20261107.json            unchanged        当前文件（导入后未变更）
+  - geography/g7/geography_g7_first_20261108.json        unchanged        当前文件（导入后未变更）
+  - geography/g8/geography_g8_first_20261108.json        unchanged        当前文件（导入后未变更）
+  - history/g7/history_g7_first_20261108.json            unchanged        当前文件（导入后未变更）
+  - history/g8/history_g8_first_20261108.json            unchanged        当前文件（导入后未变更）
+  - history/g9/history_g9_first_20261108.json            unchanged        当前文件（导入后未变更）
+  - math/g1/math_g1_first_20261107.json                  legacy_meta_only legacy 标记前副本
+  - math/g2/math_g2_first_20261107.json                  legacy_meta_only legacy 标记前副本
+  - math/g3/math_g3_first_20261107.json                  legacy_meta_only legacy 标记前副本
+  - math/g4/math_g4_first_20261107.json                  legacy_meta_only legacy 标记前副本
+  - math/g5/math_g5_first_20261107.json                  legacy_meta_only legacy 标记前副本
+  - math/g6/math_g6_first_20261107.json                  legacy_meta_only legacy 标记前副本
+  - math/g7/math_g7_first_20261107.json                  legacy_meta_only legacy 标记前副本
+  - math/g8/math_g8_first_20261107.json                  legacy_meta_only legacy 标记前副本
+  - math/g9/math_g9_first_20261108.json                  unchanged        当前文件（导入后未变更）
+  - physics/g8/physics_g8_first_20261108.json            unchanged        当前文件（导入后未变更）
+  - physics/g9/physics_g9_first_20261108.json            unchanged        当前文件（导入后未变更）
+  - politics/g1/politics_g1_first_20261108.json          unchanged        当前文件（导入后未变更）
+  - politics/g2/politics_g2_first_20261108.json          unchanged        当前文件（导入后未变更）
+  - politics/g3/politics_g3_first_20261108.json          unchanged        当前文件（导入后未变更）
+  - politics/g4/politics_g4_first_20261108.json          unchanged        当前文件（导入后未变更）
+  - politics/g5/politics_g5_first_20261108.json          unchanged        当前文件（导入后未变更）
+  - politics/g6/politics_g6_first_20261108.json          unchanged        当前文件（导入后未变更）
+  - politics/g7/politics_g7_first_20261108.json          unchanged        当前文件（导入后未变更）
+  - politics/g8/politics_g8_first_20261108.json          unchanged        当前文件（导入后未变更）
+  - politics/g9/politics_g9_first_20261108.json          unchanged        当前文件（导入后未变更）
+  - chinese/g1/chinese_g1_first_20261108.json            unchanged        当前文件（导入后未变更）
+  - english/g1/english_g1_first_20261108.json            unchanged        当前文件（导入后未变更）
+  - math/g1/math_g1_first_20261108.json                  unchanged        当前文件（导入后未变更）

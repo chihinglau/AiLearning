@@ -1,0 +1,66 @@
+{
+  "batch_date": "20261108",
+  "database_url": "sqlite:///./ailearning_dev.db",
+  "database": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\ailearning_dev.db",
+  "backup": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\build\\backups\\ailearning-backup-20261108-092404.db",
+  "restore_hint": "Copy-Item -Force \"D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\build\\backups\\ailearning-backup-20261108-092404.db\" \"D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\ailearning_dev.db\"",
+  "files_total": 23,
+  "files_pending": 3,
+  "dry_run_rc": 0,
+  "import_rc": 0,
+  "stats_before": {
+    "textbooks": 146,
+    "chapters": 657,
+    "knowledge_points": 581,
+    "questions": 1004
+  },
+  "stats_after": {
+    "textbooks": 146,
+    "chapters": 657,
+    "knowledge_points": 596,
+    "questions": 1058
+  },
+  "stats_delta": {
+    "textbooks": 0,
+    "chapters": 0,
+    "knowledge_points": 15,
+    "questions": 54
+  },
+  "pending_verification": {
+    "chinese/g1/chinese_g1_first_20261108.json": {
+      "questions": 18,
+      "stems_in_db": 18
+    },
+    "english/g1/english_g1_first_20261108.json": {
+      "questions": 18,
+      "stems_in_db": 18
+    },
+    "math/g1/math_g1_first_20261108.json": {
+      "questions": 18,
+      "stems_in_db": 18
+    }
+  },
+  "all_new_stems_in_db": true,
+  "import_tail": [
+    "chinese/g1/chinese_g1_first_20261108.json: 教材已存在，章节 +0/~1，知识点 +5/~0，题目 +18，跳过重复 0",
+    "english/g1/english_g1_first_20261108.json: 教材已存在，章节 +0/~1，知识点 +5/~0，题目 +18，跳过重复 0",
+    "geography/g7/geography_g7_first_20261108.json: 已导入且文件未变，跳过（manifest）",
+    "geography/g8/geography_g8_first_20261108.json: 已导入且文件未变，跳过（manifest）",
+    "history/g7/history_g7_first_20261108.json: 已导入且文件未变，跳过（manifest）",
+    "history/g8/history_g8_first_20261108.json: 已导入且文件未变，跳过（manifest）",
+    "history/g9/history_g9_first_20261108.json: 已导入且文件未变，跳过（manifest）",
+    "math/g1/math_g1_first_20261108.json: 教材已存在，章节 +0/~1，知识点 +5/~0，题目 +18，跳过重复 0",
+    "math/g9/math_g9_first_20261108.json: 已导入且文件未变，跳过（manifest）",
+    "physics/g8/physics_g8_first_20261108.json: 已导入且文件未变，跳过（manifest）",
+    "physics/g9/physics_g9_first_20261108.json: 已导入且文件未变，跳过（manifest）",
+    "politics/g1/politics_g1_first_20261108.json: 已导入且文件未变，跳过（manifest）",
+    "politics/g2/politics_g2_first_20261108.json: 已导入且文件未变，跳过（manifest）",
+    "politics/g3/politics_g3_first_20261108.json: 已导入且文件未变，跳过（manifest）",
+    "politics/g4/politics_g4_first_20261108.json: 已导入且文件未变，跳过（manifest）",
+    "politics/g5/politics_g5_first_20261108.json: 已导入且文件未变，跳过（manifest）",
+    "politics/g6/politics_g6_first_20261108.json: 已导入且文件未变，跳过（manifest）",
+    "politics/g7/politics_g7_first_20261108.json: 已导入且文件未变，跳过（manifest）",
+    "politics/g8/politics_g8_first_20261108.json: 已导入且文件未变，跳过（manifest）",
+    "politics/g9/politics_g9_first_20261108.json: 已导入且文件未变，跳过（manifest）"
+  ]
+}

@@ -1,0 +1,333 @@
+{
+  "subject": "physics",
+  "grade": 8,
+  "version": "人教版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第一节 长度和时间的测量",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "长度的单位与换算",
+      "parent": "第一节 长度和时间的测量",
+      "order_index": 1,
+      "explanation": "国际单位制中长度的基本单位是米（m）；1 km = 1000 m，1 m = 100 cm，1 cm = 10 mm，1 mm = 1000 μm。",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "刻度尺的正确使用",
+      "parent": "第一节 长度和时间的测量",
+      "order_index": 2,
+      "explanation": "使用刻度尺要做到：选合适量程与分度值、零刻度线对准被测物体一端、尺边与被测长度平行、视线正对刻度、读数估读到分度值的下一位并记单位。",
+      "prerequisites": [
+        "长度的单位与换算"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "时间的测量",
+      "parent": "第一节 长度和时间的测量",
+      "order_index": 3,
+      "explanation": "时间的基本单位是秒（s）；1 h = 60 min = 3600 s；常用停表（秒表）测量时间，读数时先读分再读秒。",
+      "prerequisites": [
+        "刻度尺的正确使用"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "误差与错误",
+      "parent": "第一节 长度和时间的测量",
+      "order_index": 4,
+      "explanation": "误差是测量值与真实值之间的差异，由测量工具、方法、读数等因素造成，不可避免；多次测量取平均值可以减小误差。错误是操作不当造成的，可以避免。",
+      "prerequisites": [
+        "时间的测量"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一章 机械运动",
+      "order_index": 1,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "国际单位制中长度的基本单位是（  ）",
+          "options": [
+            "米",
+            "厘米",
+            "千米",
+            "毫米"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "国际单位制规定长度的基本单位为米（m），厘米、千米、毫米都是米的导出单位。",
+          "difficulty": 1,
+          "knowledge_point": "长度的单位与换算"
+        },
+        {
+          "q_type": "choice",
+          "stem": "用刻度尺测出一支新铅笔的长度记为 17.50 cm，这把刻度尺的分度值是（  ）",
+          "options": [
+            "1 mm",
+            "1 cm",
+            "0.1 mm",
+            "1 dm"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "读数 17.50 cm 的最后一位是估读位，倒数第二位「5」所在位为 0.1 cm = 1 mm，故分度值为 1 mm。",
+          "difficulty": 3,
+          "knowledge_point": "刻度尺的正确使用"
+        },
+        {
+          "q_type": "fill",
+          "stem": "3.5 m = （  ）cm。",
+          "answer": {
+            "value": "350"
+          },
+          "analysis": "1 m = 100 cm，换算时数值乘 100：3.5 × 100 = 350，所以 3.5 m = 350 cm。",
+          "difficulty": 2,
+          "knowledge_point": "长度的单位与换算"
+        },
+        {
+          "q_type": "judge",
+          "stem": "多次测量取平均值可以减小误差。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "多次测量取平均能抵消部分偶然因素，使结果更接近真实值；这是减小误差的常用方法。",
+          "difficulty": 2,
+          "knowledge_point": "误差与错误"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列记录结果中，错误的是（  ）",
+          "options": [
+            "课本宽 18.5",
+            "课桌高 0.75 m",
+            "铅笔长 175 mm",
+            "教室长 8.5 m"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "物理量记录必须带单位，只有数字没有单位的记录不规范，A 缺失单位。",
+          "difficulty": 2,
+          "knowledge_point": "刻度尺的正确使用"
+        },
+        {
+          "q_type": "fill",
+          "stem": "1 h = （  ）s。",
+          "answer": {
+            "value": "3600"
+          },
+          "analysis": "1 h = 60 min，1 min = 60 s，所以换算成秒要连乘两次：60 × 60 = 3600，即 1 h = 3600 s。",
+          "difficulty": 2,
+          "knowledge_point": "时间的测量"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "使用刻度尺测量长度时，下列做法正确的有（  ）",
+          "options": [
+            "零刻度线对准被测物体的一端",
+            "视线正对刻度线",
+            "读数时估读到分度值的下一位",
+            "把尺子斜放在物体上测量"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 对准零刻度 ✓；B 视线正对可避免视差 ✓；C 估读一位是规范要求 ✓；D 尺应平行放置，斜放会使读数偏大 ✗。故 A、B、C 成立。",
+          "difficulty": 3,
+          "knowledge_point": "刻度尺的正确使用",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "误差就是错误，只要测量仔细就可以完全消除。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "误差源于工具、方法和读数等客观因素，只能减小不能消除；错误由操作或记录不当造成，可以避免。",
+          "difficulty": 3,
+          "knowledge_point": "误差与错误"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列属于时间单位的是（  ）",
+          "options": [
+            "秒",
+            "米",
+            "千克",
+            "摄氏度"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "秒是时间的基本单位；米是长度、千克是质量、摄氏度是温度的单位。",
+          "difficulty": 1,
+          "knowledge_point": "时间的测量"
+        },
+        {
+          "q_type": "fill",
+          "stem": "测量值与真实值之间的差异叫做（  ）。",
+          "answer": {
+            "value": "误差"
+          },
+          "analysis": "误差的定义即测量值与真实值之差，它不可避免，只能通过改进方法减小。",
+          "difficulty": 1,
+          "knowledge_point": "误差与错误"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列可以减小误差的做法有（  ）",
+          "options": [
+            "选用更精密的测量工具",
+            "改进测量方法",
+            "多次测量取平均值",
+            "把测量结果随意改小"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A、B、C 都是减小误差的正当方法；D 属于伪造数据，不是减小误差 ✗。故 A、B、C 成立。",
+          "difficulty": 3,
+          "knowledge_point": "误差与错误",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "用停表测时间时，应先读小表盘的分，再读大表盘的秒。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "停表大小表盘需配合读数：小表盘指示分钟，大表盘指示秒，先分后秒才不会读错。",
+          "difficulty": 3,
+          "knowledge_point": "时间的测量"
+        },
+        {
+          "q_type": "choice",
+          "stem": "某同学四次测得同一物体长度分别为 12.34 cm、12.36 cm、12.35 cm、12.75 cm，其中最可能错误的数据是（  ）",
+          "options": [
+            "12.75 cm",
+            "12.34 cm",
+            "12.36 cm",
+            "12.35 cm"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "其余三次集中在 12.34~12.36 cm，12.75 cm 偏离近 0.4 cm，明显超出合理误差范围，属记录或操作错误。",
+          "difficulty": 3,
+          "knowledge_point": "误差与错误"
+        },
+        {
+          "q_type": "fill",
+          "stem": "1 mm = （  ）μm。",
+          "answer": {
+            "value": "1000"
+          },
+          "analysis": "1 m = 1000 mm，1 mm = 1000 μm，毫米到微米按千进制递进：1 × 1000 = 1000，所以 1 mm = 1000 μm。",
+          "difficulty": 2,
+          "knowledge_point": "长度的单位与换算"
+        },
+        {
+          "q_type": "judge",
+          "stem": "零刻度线磨损的刻度尺必须丢弃，不能再用。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "零刻度线磨损时可从其他整数刻度线量起，用两端读数之差求长度，仍能准确测量。",
+          "difficulty": 3,
+          "knowledge_point": "刻度尺的正确使用"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用刻度尺测量物理课本的宽度，请写出三条操作要点。",
+          "answer": {
+            "value": "第一，选择量程合适、分度值为 1 mm 的刻度尺。第二，尺边与课本宽度平行，零刻度线对准一端，视线正对刻度线。第三，读数估读到分度值的下一位，并注明单位，如 18.50 cm。"
+          },
+          "analysis": "参考示例见答案。评分要点：选尺（2 分）；放尺与视线（2 分）；估读并带单位（2 分）。只写「量一下」不得分。",
+          "difficulty": 4,
+          "knowledge_point": "刻度尺的正确使用",
+          "tags": [
+            "简答"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "小明三次测得同一支笔的长度分别是 15.2 cm、15.3 cm、15.25 cm，他认为 15.25 cm 最准确。请判断这种说法是否正确并说明理由。",
+          "answer": {
+            "value": "说法不正确。三次读数应估读到同一分度值的下一位，15.2 cm 与 15.3 cm 只估读到 0.1 cm，而 15.25 cm 估读到 0.01 cm，估读位数不一致，说明所用刻度尺或记录不规范。应统一用同一把尺、按同一分度值估读后再取平均值，如 15.2 cm、15.3 cm、15.3 cm 取平均约 15.27 cm，并保留到与读数相同的位数。"
+          },
+          "analysis": "参考示例见答案。评分要点：指出估读位数不一致（2 分）；说明应统一工具与记录（2 分）；给出取平均值的正确做法（1 分）。只答「不对」不得分。",
+          "difficulty": 5,
+          "knowledge_point": "误差与错误",
+          "tags": [
+            "情境应用"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "用同一把刻度尺多次测量同一长度，读数略有不同，其主要原因是（  ）",
+          "options": [
+            "存在误差",
+            "刻度尺坏了",
+            "物体长度在变化",
+            "单位用错了"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "估读带来的差异属于误差，是正常现象；工具损坏、物体变化、单位错误则属于错误。",
+          "difficulty": 2,
+          "knowledge_point": "误差与错误"
+        },
+        {
+          "q_type": "choice",
+          "stem": "某同学测得课桌宽 0.6 m，换算成 cm 应写为（  ）。",
+          "options": [
+            "60 cm",
+            "6 cm",
+            "0.006 cm",
+            "600 cm"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "1 m = 100 cm，0.6 × 100 = 60 cm；换算要乘进率，不能只改单位符号。",
+          "difficulty": 3,
+          "knowledge_point": "长度的单位与换算"
+        },
+        {
+          "q_type": "fill",
+          "stem": "停表小表盘指针在 2 min 与 3 min 之间、大表盘指 15 s，读数为 2 min （  ）s。",
+          "answer": {
+            "value": "15"
+          },
+          "analysis": "停表先读小盘分钟数，再读大盘秒数；小盘指针在 2 min 与 3 min 之间且未过半格，大盘读 0~30 s 这一圈，指针指 15 s，故秒数为 15 s。换算成总秒数是 2 × 60 + 15 = 135 s。",
+          "difficulty": 4,
+          "knowledge_point": "时间的测量"
+        }
+      ]
+    }
+  ]
+}

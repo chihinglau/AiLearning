@@ -31,6 +31,54 @@ void main() {
       expect(node.masteryBand, 'weak');
       expect(node.bandLabel, '薄弱');
     });
+
+    test('去重后缀在展示层折叠为「· 要点」', () {
+      KnowledgeNode node(String name) =>
+          KnowledgeNode(id: 1, subject: 'math', name: name);
+
+      expect(node('10以内加减法').displayName, '10以内加减法');
+      expect(node('10以内加减法（要点）').displayName, '10以内加减法 · 要点');
+      expect(node('汉语拼音（要点2）').displayName, '汉语拼音 · 要点2');
+      expect(node('10以内加减法（要点）').isFoldedVariantOf('10以内加减法'), isTrue);
+      expect(node('汉语拼音（要点2）').isFoldedVariantOf('识字与写字'), isFalse);
+      expect(node('10以内加法').isFoldedVariantOf('10以内加减法'), isFalse);
+    });
+  });
+
+  group('UnitDetail 同主题折叠', () {
+    const section = UnitSection(id: 1, name: '10以内加减法', orderIndex: 1);
+    const summary = UnitSummary(
+      id: 11,
+      textbookId: 1,
+      grade: 1,
+      name: '第一单元',
+      orderIndex: 1,
+    );
+    const detail = UnitDetail(
+      unit: summary,
+      sections: [section],
+      knowledgePoints: [
+        KnowledgeNode(
+          id: 2,
+          subject: 'math',
+          name: '10以内加减法（要点）',
+          parentId: 1,
+          orderIndex: 1,
+        ),
+        KnowledgeNode(
+          id: 3,
+          subject: 'math',
+          name: '10以内加法',
+          parentId: 1,
+          orderIndex: 2,
+        ),
+      ],
+    );
+
+    test('与节同主题的「（要点）」节点折叠，其余知识点保留在节内', () {
+      expect(detail.foldedNodeOfSection(section)?.id, 2);
+      expect(detail.visibleNodesOfSection(section).single.id, 3);
+    });
   });
 
   group('ChapterTree', () {

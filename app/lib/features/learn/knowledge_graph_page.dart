@@ -4,6 +4,7 @@ import 'package:ai_learning/core/errors/api_error_guide.dart';
 import 'package:ai_learning/core/models/learn.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
+import 'package:ai_learning/features/learn/widgets/offline_banner.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -27,6 +28,7 @@ class _KnowledgeGraphPageState extends ConsumerState<KnowledgeGraphPage> {
   List<UnitDetail> _units = const [];
   int? _unitFilter;
   bool _loading = true;
+  bool _offline = false;
   String? _error;
 
   @override
@@ -50,12 +52,30 @@ class _KnowledgeGraphPageState extends ConsumerState<KnowledgeGraphPage> {
       setState(() {
         _units = details;
         _unitFilter = null;
+        _offline = false;
         _loading = false;
       });
     } on ApiException catch (error) {
       if (!mounted) return;
+      List<UnitDetail> local = const [];
+      if (error.statusCode == null) {
+        final offline = ref.read(offlineLearnServiceProvider);
+        final offlineUnits = await offline.units(widget.textbookId);
+        final details = await Future.wait(
+          offlineUnits.map((unit) => offline.unitDetail(unit.id)),
+        );
+        local = details.whereType<UnitDetail>().toList();
+      }
+      if (!mounted) return;
       setState(() {
-        _error = ApiErrorGuide.from(error).message;
+        if (local.isNotEmpty) {
+          _units = local;
+          _unitFilter = null;
+          _offline = true;
+          _error = null;
+        } else {
+          _error = ApiErrorGuide.from(error).message;
+        }
         _loading = false;
       });
     }
@@ -104,6 +124,11 @@ class _KnowledgeGraphPageState extends ConsumerState<KnowledgeGraphPage> {
     }
     return Column(
       children: [
+        if (_offline)
+          const Padding(
+            padding: EdgeInsets.fromLTRB(16, 12, 16, 0),
+            child: OfflineBanner(),
+          ),
         Padding(
           padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
           child: SingleChildScrollView(
@@ -300,7 +325,7 @@ class _GraphNodeCard extends StatelessWidget {
                 children: [
                   Expanded(
                     child: Text(
-                      node.name,
+                      node.displayName,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: theme.textTheme.labelLarge?.copyWith(

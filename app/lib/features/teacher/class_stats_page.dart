@@ -2,6 +2,8 @@ import 'package:ai_learning/core/errors/api_error_guide.dart';
 import 'package:ai_learning/core/models/org.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
+import 'package:ai_learning/core/theme/app_accents.dart';
+import 'package:ai_learning/widgets/accent_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -60,6 +62,7 @@ class _ClassStatsPageState extends ConsumerState<ClassStatsPage> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final accents = AppAccents.of(context);
     final stats = _stats;
     return Scaffold(
       appBar: AppBar(
@@ -91,21 +94,19 @@ class _ClassStatsPageState extends ConsumerState<ClassStatsPage> {
                       ),
                     ),
                   if (stats != null) ...[
-                    Card(
-                      color: theme.colorScheme.primaryContainer,
-                      child: Padding(
-                        padding: const EdgeInsets.all(16),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(stats.label, style: theme.textTheme.titleMedium),
-                            const SizedBox(height: 4),
-                            Text(
-                              '${stats.subjectLabel} · 仅展示班级聚合数据，不含学生个人信息',
-                              style: theme.textTheme.bodySmall,
-                            ),
-                          ],
-                        ),
+                    AccentCard(
+                      accent: accents.learn,
+                      padding: const EdgeInsets.all(16),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(stats.label, style: theme.textTheme.titleMedium),
+                          const SizedBox(height: 4),
+                          Text(
+                            '${stats.subjectLabel} · 仅展示班级聚合数据，不含学生个人信息',
+                            style: theme.textTheme.bodySmall,
+                          ),
+                        ],
                       ),
                     ),
                     const SizedBox(height: 12),
@@ -115,13 +116,13 @@ class _ClassStatsPageState extends ConsumerState<ClassStatsPage> {
                           icon: Icons.groups_outlined,
                           value: '${stats.studentCount}',
                           label: '学生数',
-                          color: Colors.blue,
+                          accent: accents.learn,
                         ),
                         _StatCard(
                           icon: Icons.online_prediction,
                           value: '${stats.activeStudentCount}',
                           label: '近7日活跃',
-                          color: Colors.teal,
+                          accent: accents.practice,
                         ),
                       ],
                     ),
@@ -131,50 +132,52 @@ class _ClassStatsPageState extends ConsumerState<ClassStatsPage> {
                           icon: Icons.verified_outlined,
                           value: stats.accuracyPercent,
                           label: '正确率',
-                          color: Colors.green,
+                          accent: accents.exam,
                         ),
                         _StatCard(
                           icon: Icons.insights,
                           value: stats.avgMasteryText,
                           label: '平均掌握度',
-                          color: Colors.deepOrange,
+                          accent: accents.assignment,
                         ),
                       ],
                     ),
                     const SizedBox(height: 8),
-                    Card(
-                      child: Padding(
-                        padding: const EdgeInsets.all(16),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text('近 7 日提交率', style: theme.textTheme.titleSmall),
-                                Text(
-                                  stats.submissionRatePercent,
-                                  style: theme.textTheme.titleSmall?.copyWith(
-                                    color: theme.colorScheme.primary,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(height: 8),
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(4),
-                              child: LinearProgressIndicator(
-                                value: stats.submissionRate.clamp(0, 1),
-                                minHeight: 8,
+                    AccentCard(
+                      accent: accents.practice,
+                      padding: const EdgeInsets.all(16),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                '近 7 日提交率',
+                                style: theme.textTheme.titleSmall,
                               ),
+                              Text(
+                                stats.submissionRatePercent,
+                                style: theme.textTheme.titleSmall?.copyWith(
+                                  color: theme.colorScheme.primary,
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 8),
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(4),
+                            child: LinearProgressIndicator(
+                              value: stats.submissionRate.clamp(0, 1),
+                              minHeight: 8,
                             ),
-                            const SizedBox(height: 8),
-                            Text(
-                              '累计答题 ${stats.totalAnswered} 道',
-                              style: theme.textTheme.bodySmall,
-                            ),
-                          ],
-                        ),
+                          ),
+                          const SizedBox(height: 8),
+                          Text(
+                            '累计答题 ${stats.totalAnswered} 道',
+                            style: theme.textTheme.bodySmall,
+                          ),
+                        ],
                       ),
                     ),
                     const SizedBox(height: 8),
@@ -189,7 +192,9 @@ class _ClassStatsPageState extends ConsumerState<ClassStatsPage> {
                       )
                     else
                       ...stats.weakPoints.map(
-                        (point) => Card(
+                        (point) => AccentCard(
+                          accent: accents.assignment,
+                          margin: const EdgeInsets.only(bottom: 12),
                           child: ListTile(
                             leading: CircleAvatar(
                               backgroundColor: theme.colorScheme.errorContainer,
@@ -198,10 +203,10 @@ class _ClassStatsPageState extends ConsumerState<ClassStatsPage> {
                                 style: theme.textTheme.labelMedium,
                               ),
                             ),
-                            title: Text('${point.subjectLabel} · ${point.name}'),
-                            subtitle: Text(
-                              '班级平均掌握度 ${point.avgMastery}',
+                            title: Text(
+                              '${point.subjectLabel} · ${point.name}',
                             ),
+                            subtitle: Text('班级平均掌握度 ${point.avgMastery}'),
                           ),
                         ),
                       ),
@@ -218,33 +223,34 @@ class _StatCard extends StatelessWidget {
     required this.icon,
     required this.value,
     required this.label,
-    required this.color,
+    required this.accent,
   });
 
   final IconData icon;
   final String value;
   final String label;
-  final Color color;
+  final Color accent;
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return Expanded(
-      child: Card(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
-          child: Column(
-            children: [
-              Icon(icon, color: color),
-              const SizedBox(height: 6),
-              Text(
-                value,
-                style: theme.textTheme.titleLarge
-                    ?.copyWith(fontWeight: FontWeight.bold),
+      child: AccentCard(
+        accent: accent,
+        margin: const EdgeInsets.all(4),
+        padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
+        child: Column(
+          children: [
+            Icon(icon, color: accent),
+            const SizedBox(height: 6),
+            Text(
+              value,
+              style: theme.textTheme.titleLarge?.copyWith(
+                fontWeight: FontWeight.bold,
               ),
-              Text(label, style: theme.textTheme.labelSmall),
-            ],
-          ),
+            ),
+            Text(label, style: theme.textTheme.labelSmall),
+          ],
         ),
       ),
     );

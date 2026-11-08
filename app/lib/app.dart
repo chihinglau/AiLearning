@@ -6,6 +6,7 @@ import 'package:ai_learning/features/assignment/assignment_detail_page.dart';
 import 'package:ai_learning/features/assignment/assignment_grading_page.dart';
 import 'package:ai_learning/features/assignment/assignment_list_page.dart';
 import 'package:ai_learning/features/auth/login_page.dart';
+import 'package:ai_learning/features/boot/boot_page.dart';
 import 'package:ai_learning/features/common/permission_gate.dart';
 import 'package:ai_learning/features/content/content_report_page.dart';
 import 'package:ai_learning/features/content/content_review_page.dart';
@@ -38,14 +39,14 @@ import 'package:go_router/go_router.dart';
 
 final routerProvider = Provider<GoRouter>((ref) {
   return GoRouter(
-    initialLocation: '/login',
+    initialLocation: '/boot',
     redirect: (context, state) {
       final location = state.matchedLocation;
       final user = ref.read(currentUserProvider);
       if (user == null) {
-        return location == '/login' ? null : '/login';
+        return location == '/login' || location == '/boot' ? null : '/login';
       }
-      if (location == '/login') return null;
+      if (location == '/login' || location == '/boot') return null;
       // R-03：政策版本升高后强制先重新同意。
       if (user.needsReconsent &&
           location != '/consent' &&
@@ -61,16 +62,16 @@ final routerProvider = Provider<GoRouter>((ref) {
           location != '/consent') {
         return '/onboarding';
       }
-      if (status == OnboardingStatus.completed && location == '/onboarding') {
+      if (status == OnboardingStatus.completed &&
+          location == '/onboarding' &&
+          state.uri.queryParameters['edit'] != '1') {
         return '/shell';
       }
       return null;
     },
     routes: [
-      GoRoute(
-        path: '/login',
-        builder: (context, state) => const LoginPage(),
-      ),
+      GoRoute(path: '/boot', builder: (context, state) => const BootPage()),
+      GoRoute(path: '/login', builder: (context, state) => const LoginPage()),
       GoRoute(
         path: '/gate',
         builder: (context, state) => const EntryGatePage(),
@@ -89,10 +90,7 @@ final routerProvider = Provider<GoRouter>((ref) {
         builder: (context, state) => const AccountSecurityPage(),
       ),
       // R-06：关于页（备案号/软著登记号/法务入口）。
-      GoRoute(
-        path: '/about',
-        builder: (context, state) => const AboutPage(),
-      ),
+      GoRoute(path: '/about', builder: (context, state) => const AboutPage()),
       // R-07：内容举报入口。
       GoRoute(
         path: '/content/report',
@@ -100,7 +98,8 @@ final routerProvider = Provider<GoRouter>((ref) {
       ),
       GoRoute(
         path: '/legal/privacy',
-        builder: (context, state) => const LegalDocumentPage(docType: 'privacy'),
+        builder: (context, state) =>
+            const LegalDocumentPage(docType: 'privacy'),
       ),
       GoRoute(
         path: '/legal/terms',
@@ -141,7 +140,9 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/exam/report/:attemptId',
         builder: (context, state) {
-          final attemptId = int.tryParse(state.pathParameters['attemptId'] ?? '');
+          final attemptId = int.tryParse(
+            state.pathParameters['attemptId'] ?? '',
+          );
           if (attemptId == null) return const ExamListPage();
           return PermissionGate(
             anyOf: const ['learn:exam:report:self'],
@@ -212,8 +213,9 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/assignments/:assignmentId/grading',
         builder: (context, state) {
-          final assignmentId =
-              int.tryParse(state.pathParameters['assignmentId'] ?? '');
+          final assignmentId = int.tryParse(
+            state.pathParameters['assignmentId'] ?? '',
+          );
           if (assignmentId == null) return const AssignmentListPage();
           return PermissionGate(
             anyOf: const ['learn:exam:grade'],
@@ -224,8 +226,9 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/assignments/:assignmentId',
         builder: (context, state) {
-          final assignmentId =
-              int.tryParse(state.pathParameters['assignmentId'] ?? '');
+          final assignmentId = int.tryParse(
+            state.pathParameters['assignmentId'] ?? '',
+          );
           if (assignmentId == null) return const AssignmentListPage();
           return PermissionGate(
             anyOf: const ['learn:exam:take', 'learn:assignment:create'],
@@ -252,7 +255,9 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/knowledge/:textbookId/graph',
         builder: (context, state) {
-          final textbookId = int.tryParse(state.pathParameters['textbookId'] ?? '');
+          final textbookId = int.tryParse(
+            state.pathParameters['textbookId'] ?? '',
+          );
           if (textbookId == null) return const AppShell();
           return PermissionGate(
             anyOf: const ['learn:kp:study'],
@@ -266,7 +271,9 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/knowledge/:textbookId',
         builder: (context, state) {
-          final textbookId = int.tryParse(state.pathParameters['textbookId'] ?? '');
+          final textbookId = int.tryParse(
+            state.pathParameters['textbookId'] ?? '',
+          );
           if (textbookId == null) {
             return const AppShell();
           }
@@ -275,8 +282,9 @@ final routerProvider = Provider<GoRouter>((ref) {
             child: KnowledgePage(
               textbookId: textbookId,
               textbookName: state.uri.queryParameters['name'] ?? '知识点',
-              initialChapterId:
-                  int.tryParse(state.uri.queryParameters['chapter'] ?? ''),
+              initialChapterId: int.tryParse(
+                state.uri.queryParameters['chapter'] ?? '',
+              ),
             ),
           );
         },
@@ -284,7 +292,9 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/unit/:chapterId',
         builder: (context, state) {
-          final chapterId = int.tryParse(state.pathParameters['chapterId'] ?? '');
+          final chapterId = int.tryParse(
+            state.pathParameters['chapterId'] ?? '',
+          );
           if (chapterId == null) return const AppShell();
           final query = state.uri.queryParameters;
           return PermissionGate(
@@ -364,7 +374,9 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/practice/:chapterId',
         builder: (context, state) {
-          final chapterId = int.tryParse(state.pathParameters['chapterId'] ?? '');
+          final chapterId = int.tryParse(
+            state.pathParameters['chapterId'] ?? '',
+          );
           final name = state.uri.queryParameters['name'] ?? '同步练习';
           if (chapterId == null) {
             return const LoginPage();

@@ -1,0 +1,437 @@
+{
+  "subject": "english",
+  "grade": 8,
+  "version": "牛津深圳版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "Unit 1 Water / A Facts about water",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 1 Water / B Water in everyday life",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 1 Water / C The land of little water",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 1 Water / D Water protection",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 1 Water / E Our water use in a day",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "Water facts 水的常识",
+      "parent": "Unit 1 Water / A Facts about water",
+      "order_index": 1,
+      "explanation": "本板块要求读懂关于水的常识性数据：地球表面约七成被水覆盖，海水多于淡水，水有固、液、气三态。读数据要看清 about 这类模糊限定词，别把约数当成精确值。",
+      "prerequisites": [],
+      "weight": 1.1,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Passive voice 被动语态进阶",
+      "parent": "Unit 1 Water / B Water in everyday life",
+      "order_index": 2,
+      "explanation": "本板块在 be used to do 的基础上扩展被动语态：be used for doing、can be + 过去分词、was + 过去分词。判断依据只有一条——动作的承受者是不是主语。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Water shortage 缺水状况",
+      "parent": "Unit 1 Water / C The land of little water",
+      "order_index": 3,
+      "explanation": "本板块训练读懂缺水题材的短文：缺水的原因是降水少、水体污染和浪费水，解决办法是开源节流。答题只能依据原文信息推断，不能凭常识臆造。",
+      "prerequisites": ["Water facts 水的常识"],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Modals for advice 情态动词建议",
+      "parent": "Unit 1 Water / D Water protection",
+      "order_index": 4,
+      "explanation": "本板块用 should、can、may、had better 提节水建议：should 表建议、may 表许可、can 表可能与能力，它们后面一律接动词原形，否定式直接把 not 放在情态动词后面。",
+      "prerequisites": ["Passive voice 被动语态进阶"],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Water data 用水数据",
+      "parent": "Unit 1 Water / E Our water use in a day",
+      "order_index": 5,
+      "explanation": "本板块把一天的用水变成可以计算和记录的数据：家庭用水各项相加用加法，单位用水乘次数用乘法。计算题要写清算式，结论后面必须跟得上依据。",
+      "prerequisites": ["Water shortage 缺水状况", "Modals for advice 情态动词建议"],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "Unit 1 Water",
+      "order_index": 1,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Which of the following is true about water on Earth?",
+          "options": [
+            "About 70% of the Earth's surface is covered by water.",
+            "Most of the water on Earth is fresh water.",
+            "Water covers about 30% of the Earth's surface.",
+            "There is no water in the seas and the rivers."
+          ],
+          "answer": { "value": "A" },
+          "analysis": "地球表面约七成被水覆盖，所以选 A；B 错在大部分水是海水，淡水只占很小一部分；C 把七成写成了三成；D 与海洋河流的存在自相矛盾。读数据类选项要看清 about 这类模糊限定词。",
+          "difficulty": 1,
+          "knowledge_point": "Water facts 水的常识",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "Most of the water on Earth is ______ water, and only a small part of it is fresh water. (fresh/salt)",
+          "answer": { "value": "salt" },
+          "analysis": "地球上绝大部分水是咸水，淡水只占很小一部分，所以填 salt；填 fresh 就把两类水的比例弄反了。看到 most of 与 only a small part 的对比，就要让两组词一一对应起来。",
+          "difficulty": 2,
+          "knowledge_point": "Water facts 水的常识",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Fresh water and salt water can both be drunk directly.",
+          "answer": { "value": "F" },
+          "analysis": "海水等咸水含有大量盐分，不能直接饮用；只有经过处理的淡水才可以饮用，所以说法错误。判断这类题要抓住 directly 这个词：处理后的水确实能喝，但它已经不再是原来的盐水了。",
+          "difficulty": 2,
+          "knowledge_point": "Water facts 水的常识",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following are true about water?",
+          "options": [
+            "Water can exist as a solid, a liquid and a gas.",
+            "Fresh water freezes at 0°C.",
+            "Salt water freezes at a higher temperature than fresh water.",
+            "Plants will die if they get no water for a long time."
+          ],
+          "answer": { "value": ["A", "B", "D"] },
+          "analysis": "A 水有固态、液态、气态三态 ✓；B 淡水在 0℃ 结冰 ✓；C 盐水的凝固点比淡水低，而不是更高 ✗；D 植物长期缺水会死亡 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Water facts 水的常识",
+          "tags": ["多选"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "You are making a poster for the school Science Week. Write two sentences in English to describe two facts about water on Earth.",
+          "answer": { "value": "About 70% of the Earth's surface is covered by water. Most of the water on Earth is salt water, and only a small part of it is fresh water." },
+          "analysis": "参考示例见答案。评分要点：①两句都是关于水的客观事实（2 分）；②用上 about 70% 一类的数据表达（1 分）；③事实准确、句间不矛盾（2 分）；④书写规范、句末有标点（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Water facts 水的常识",
+          "tags": ["写作"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Water ______ to make paper in that factory.",
+          "options": ["is used", "uses", "used", "is using"],
+          "answer": { "value": "A" },
+          "analysis": "主语 Water 是动作 make paper 的承受者，要用被动语态 is used，所以选 A；uses 是主动语态，主语应是工厂；used 缺 be 动词；is using 是现在进行时的主动结构。判断主动还是被动只看「谁承受动作」。",
+          "difficulty": 2,
+          "knowledge_point": "Passive voice 被动语态进阶",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which sentence is correct?",
+          "options": [
+            "Water can be used to clean the floor.",
+            "Water can be used for clean the floor.",
+            "Water can be used cleaning the floor.",
+            "Water can use to clean the floor."
+          ],
+          "answer": { "value": "A" },
+          "analysis": "情态动词 can 后面接动词原形，被动语态的结构是 can be + 过去分词，所以选 A；B 用了原形 clean，应改为 cleaning；C 缺 be 动词；D 把被动语态写成了主动语态。",
+          "difficulty": 3,
+          "knowledge_point": "Passive voice 被动语态进阶",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「Water is used for washing clothes」和「Water is used to wash clothes」意思基本相同。",
+          "answer": { "value": "T" },
+          "analysis": "be used for doing 与 be used to do 都表示用途，意思基本相同，可以互换，所以说法正确。区别只在搭配：for 后面用动名词，to 后面用动词原形。",
+          "difficulty": 3,
+          "knowledge_point": "Passive voice 被动语态进阶",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "This kind of water ______ (use) for washing cars in the car park.",
+          "answer": { "value": "is used" },
+          "analysis": "空格处要填谓语动词，且 water 是 wash cars 的承受者，用被动语态 is used；写成 used 缺 be 动词，写成 are used 也不行，因为 water 不可数、看作单数。",
+          "difficulty": 3,
+          "knowledge_point": "Passive voice 被动语态进阶",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following sentences are passive?",
+          "options": [
+            "The water was boiled in the kitchen.",
+            "Many people drink water every day.",
+            "The river was polluted last year.",
+            "He turned off the tap."
+          ],
+          "answer": { "value": ["A", "C"] },
+          "analysis": "A 水是 boils 的承受者，was boiled 属于被动语态 ✓；B 主语 people 是动作的发出者，是主动语态 ✗；C 河流是污染的承受者，was polluted 属于被动语态 ✓；D 主语 He 是动作的发出者，是主动语态 ✗。故 A、C 成立，B、D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "Passive voice 被动语态进阶",
+          "tags": ["多选"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Lin Tao lives in a town in the north of China. It rains little there, and the rivers are often dry in winter. What is the biggest problem for the people there?",
+          "options": [
+            "They do not have enough water.",
+            "They do not have enough food.",
+            "They cannot find a good job.",
+            "They cannot go to school."
+          ],
+          "answer": { "value": "A" },
+          "analysis": "材料说降水少、河流常干，指向的就是缺水问题，所以选 A；其余三项在材料里都没有任何依据。做材料题只能依据原文信息推断，不能凭常识臆造。",
+          "difficulty": 3,
+          "knowledge_point": "Water shortage 缺水状况",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "A water shortage means that there is not enough clean water for people to use.",
+          "answer": { "value": "T" },
+          "analysis": "water shortage 就是水资源短缺，即没有足够的清洁水供人们使用，所以说法正确。判断这类词义题要把句中的解释与词本身一一对上。",
+          "difficulty": 2,
+          "knowledge_point": "Water shortage 缺水状况",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which is the best way for a city with little water to solve the problem?",
+          "options": [
+            "Recycle water and get water from other places.",
+            "Build more factories in the city.",
+            "Grow more food in the city.",
+            "Buy more cars for the city."
+          ],
+          "answer": { "value": "A" },
+          "analysis": "缺水城市的主要出路是节流与开源，即回收再利用水、从外地调水，所以选 A；建工厂、增粮食、买汽车都跟缺水问题没有直接关系。做措施类题要看它能不能真正缓解缺水。",
+          "difficulty": 3,
+          "knowledge_point": "Water shortage 缺水状况",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "What are the causes of a water shortage?",
+          "options": [
+            "Too little rain in a place.",
+            "Pollution in rivers and lakes.",
+            "Wasting water every day.",
+            "Too many fish in the river."
+          ],
+          "answer": { "value": ["A", "B", "C"] },
+          "analysis": "A 降水少直接导致水资源不足 ✓；B 水体被污染后可用的清洁水变少 ✓；C 浪费水让本来有限的水不够用 ✓；D 鱼多不会让水量减少，也不影响水质 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Water shortage 缺水状况",
+          "tags": ["多选"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Shenzhen is a city with a serious water shortage. Write three suggestions in English to help the city save water. Use at least one modal verb (can/should/may) in each suggestion.",
+          "answer": { "value": "1. We should turn off the tap when we brush our teeth. 2. We can reuse the water from washing vegetables to water the plants. 3. We may ask our families to take shorter showers." },
+          "analysis": "参考示例见答案。评分要点：①三条建议具体可行、都与节水有关（每条 1 分，共 3 分）；②每条用上 can、should 或 may，且后面接动词原形（2 分）；③句子完整，大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Water shortage 缺水状况",
+          "tags": ["写作", "情境应用"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "You ______ waste water when you wash the dishes.",
+          "options": ["should not", "should not to", "not should", "doesn't should"],
+          "answer": { "value": "A" },
+          "analysis": "should 表示建议「应该」，否定式是 should not，后面接动词原形 waste，所以选 A；should 后不能直接加 to；否定词也不能放在 should 之前；doesn't 与情态动词不能连用。",
+          "difficulty": 2,
+          "knowledge_point": "Modals for advice 情态动词建议",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "We ______ use a bucket to catch the water when we wash vegetables.",
+          "options": ["can", "can to", "canned", "are can"],
+          "answer": { "value": "A" },
+          "analysis": "can 表示「能够」，后面直接接动词原形 use，所以选 A；can 后加 to 是错的；canned 是过去式或形容词；can 没有 are 这种形式，情态动词前不能再加别的助动词。",
+          "difficulty": 2,
+          "knowledge_point": "Modals for advice 情态动词建议",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「You may take a short shower」的意思是说话人允许对方洗短一点的淋浴。",
+          "answer": { "value": "T" },
+          "analysis": "may 常用来表示许可或可能，may take a short shower 就是「你可以洗短一点的淋浴」，表示允许，所以说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "Modals for advice 情态动词建议",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "To save water, we ______ (take) shorter showers. Use the correct form of the verb.",
+          "answer": { "value": "should take" },
+          "analysis": "句子是在提建议，用 should + 动词原形；take 已经给出原形，所以填 should take。只填 take 缺少情态动词，填 should taken 用了过去式，两者都不合语法。",
+          "difficulty": 3,
+          "knowledge_point": "Modals for advice 情态动词建议",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following are correct ways of giving advice about water?",
+          "options": [
+            "You had better turn off the tap.",
+            "You should wash the car less often.",
+            "You'd better not waste water.",
+            "You must to clean the tap every day."
+          ],
+          "answer": { "value": ["A", "B", "C"] },
+          "analysis": "A had better 后接动词原形，是给建议 ✓；B should 后接动词原形，是正确的节水建议 ✓；C had better not 后接动词原形 ✓；D must 后接动词原形，must to 的结构错误 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Modals for advice 情态动词建议",
+          "tags": ["多选"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "A family uses 120 litres of water for washing, 30 litres for cooking and 50 litres for cleaning every day. How much water do they use for these three things altogether?",
+          "options": ["170 litres", "200 litres", "220 litres", "260 litres"],
+          "answer": { "value": "B" },
+          "analysis": "120+30+50=200，三项一共用水 200 升，所以选 B；只把 washing 和 cleaning 相加会漏掉 cooking，算成 170 升；220 升与 260 升都是某一项加错了。做数据题要把每一项都加进去，只加一次。",
+          "difficulty": 2,
+          "knowledge_point": "Water data 用水数据",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "One shower uses about 40 litres of water. Five showers like that use ______ litres.",
+          "answer": { "value": "200" },
+          "analysis": "40×5=200，五次淋浴大约用 200 升水，所以填 200；这里是乘法，每多洗一次就多用 40 升，不能把次数当成加数。",
+          "difficulty": 2,
+          "knowledge_point": "Water data 用水数据",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "A tap that drips once a second can waste a lot of water in one day.",
+          "answer": { "value": "T" },
+          "analysis": "滴水的龙头每一秒漏一滴，一天下来会漏掉大量水，所以说法正确。判断这类题要抓住 a lot of 这个程度词，不能因为「只是一滴水」就认为可以忽略。",
+          "difficulty": 3,
+          "knowledge_point": "Water data 用水数据",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following are good ways to find out how much water your family uses at home?",
+          "options": [
+            "Read the water meter at the beginning and the end of a week.",
+            "Write down how many minutes your shower runs.",
+            "Count how many times the tap is opened each day.",
+            "Guess the amount of water without writing anything down."
+          ],
+          "answer": { "value": ["A", "B", "C"] },
+          "analysis": "A 查水表能得到真实数据 ✓；B 记录洗澡时长便于推算水量 ✓；C 统计开水龙头次数能反映浪费情况 ✓；D 只靠猜没有依据，不是记录水量的办法 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Water data 用水数据",
+          "tags": ["多选"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Your class is doing a project on how much water we use in a day. Make a short plan in English with three parts: what you will record, how you will record it, and one way to save water.",
+          "answer": { "value": "We will record how long the shower runs, how many times the tap is opened and how much water the washing machine uses. We will write the numbers in a table every evening for one week. Then we can take shorter showers and turn off the tap while brushing our teeth." },
+          "analysis": "参考示例见答案。评分要点：①三部分齐全——记录什么、怎么记录、如何节水（每部分 1 分，共 3 分）；②记录内容具体，动词与将来表达用得正确（2 分）；③句子之间有简单衔接（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 5,
+          "knowledge_point": "Water data 用水数据",
+          "tags": ["写作", "情境应用"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

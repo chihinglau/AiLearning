@@ -1,3 +1,5 @@
+import hashlib
+import secrets
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from typing import Any, Optional
@@ -32,6 +34,15 @@ def create_access_token(
     )
     payload: dict[str, Any] = {"sub": subject, "ver": token_version, "exp": expire}
     return jwt.encode(payload, settings.jwt_secret, algorithm=settings.jwt_algorithm)
+
+
+def generate_refresh_token() -> str:
+    """生成高熵不透明刷新令牌，仅把摘要落库。"""
+    return secrets.token_urlsafe(43)
+
+
+def hash_refresh_token(token: str) -> str:
+    return hashlib.sha256(token.encode("utf-8")).hexdigest()
 
 
 def decode_access_token(token: str) -> Optional[TokenData]:

@@ -1,13 +1,17 @@
 import 'dart:async';
 import 'dart:convert';
+import 'dart:math';
 
 import 'package:ai_learning/core/errors/api_error_guide.dart';
 import 'package:ai_learning/core/models/content.dart';
 import 'package:ai_learning/core/models/learn.dart';
 import 'package:ai_learning/core/models/practice_session.dart';
+import 'package:ai_learning/core/offline/offline_grader.dart';
+import 'package:ai_learning/core/offline/offline_learn_store.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
 import 'package:ai_learning/core/services/learn_service.dart';
+import 'package:ai_learning/features/learn/widgets/offline_banner.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -72,6 +76,7 @@ class _SessionPageState extends ConsumerState<SessionPage> {
   bool _loading = true;
   bool _submitting = false;
   bool _finished = false;
+  bool _offline = false;
   String? _error;
   DateTime _startedAt = DateTime.now();
 
@@ -106,6 +111,7 @@ class _SessionPageState extends ConsumerState<SessionPage> {
       _selectedKey = null;
       _selectedKeys.clear();
       _result = null;
+      _offline = false;
     });
     if (newSeed) {
       _resumeId = null;
@@ -134,11 +140,115 @@ class _SessionPageState extends ConsumerState<SessionPage> {
       }
     } on ApiException catch (error) {
       if (!mounted) return;
+      // 断网时从整册离线包本地组卷。
+      if (error.statusCode == null && await _loadOffline()) return;
+      if (!mounted) return;
       setState(() {
         _error = ApiErrorGuide.from(error).message;
         _loading = false;
       });
     }
+  }
+
+  Future<bool> _loadOffline() async {
+    if (_resumeId != null || widget.reviewMode) return false;
+    final service = ref.read(offlineLearnServiceProvider);
+    final ids = <int>[];
+    var questions = <Question>[];
+
+    switch (widget.scopeType) {
+      case 'kp':
+        for (final id in widget.scopeIds) {
+          final batch = await service.questions(knowledgePointId: id);
+          for (final question in batch) {
+            if (!ids.contains(question.id)) {
+              ids.add(question.id);
+              questions.add(question);
+            }
+          }
+        }
+      case 'chapter':
+        for (final id in widget.scopeIds) {
+          final batch = await service.questions(chapterId: id);
+          for (final question in batch) {
+            if (!ids.contains(question.id)) {
+              ids.add(question.id);
+              questions.add(question);
+            }
+          }
+        }
+      default:
+        questions = await service.questions(
+          knowledgePointId: widget.knowledgePointId,
+          chapterId: widget.chapterId,
+          subject: widget.subject,
+        );
+    }
+
+    if (questions.isEmpty) return false;
+    if (widget.qTypes.isNotEmpty) {
+      questions = questions
+          .where((question) => widget.qTypes.contains(question.qType))
+          .toList();
+    }
+    if (questions.isEmpty) return false;
+
+    final seed = _seed ??
+        DateTime.now().microsecondsSinceEpoch.remainder(1 << 31);
+    questions.shuffle(Random(seed));
+    final selected = questions.take(widget.count).toList();
+    if (!mounted) return false;
+    setState(() {
+      _questions = selected;
+      _seed = seed;
+      _offline = true;
+      _loading = false;
+      _startedAt = DateTime.now();
+    });
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text('离线模式：已从本机题库组卷，答题将联网后同步')),
+    );
+    return true;
+  }
+
+  String _offlineClientKey() {
+    final random = Random();
+    return '${DateTime.now().microsecondsSinceEpoch}-'
+        '${random.nextInt(1 << 32)}';
+  }
+
+  Future<void> _submitOffline(
+    Question question,
+    Map<String, dynamic> userAnswer,
+    int durationMs,
+  ) async {
+    final isCorrect = OfflineGrader.grade(question, userAnswer);
+    if (isCorrect == null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('离线包缺少该题答案，请联网后再作答')),
+      );
+      return;
+    }
+    await ref.read(offlineLearnServiceProvider).enqueueAttempt(
+          OfflineAttemptEntry(
+            clientKey: _offlineClientKey(),
+            questionId: question.id,
+            userAnswer: userAnswer,
+            answeredAt: DateTime.now(),
+            durationMs: durationMs,
+            source: _source,
+          ),
+        );
+    if (!mounted) return;
+    setState(() {
+      _result = LearnSubmitResult(
+        isCorrect: isCorrect,
+        correctAnswer: question.answer ?? const {},
+        analysis: question.analysis,
+      );
+      _answeredCount += 1;
+      if (isCorrect) _correctCount += 1;
+    });
   }
 
   Future<void> _resume(LearnService service, int sessionId) async {
@@ -284,11 +394,20 @@ class _SessionPageState extends ConsumerState<SessionPage> {
     }
 
     setState(() => _submitting = true);
+    final durationMs = DateTime.now().difference(_startedAt).inMilliseconds;
+    if (_offline) {
+      try {
+        await _submitOffline(question, userAnswer, durationMs);
+      } finally {
+        if (mounted) setState(() => _submitting = false);
+      }
+      return;
+    }
     try {
       final result = await ref.read(learnServiceProvider).submit(
             questionId: question.id,
             userAnswer: userAnswer,
-            durationMs: DateTime.now().difference(_startedAt).inMilliseconds,
+            durationMs: durationMs,
             sessionId: _sessionId,
             source: _source,
           );
@@ -328,6 +447,14 @@ class _SessionPageState extends ConsumerState<SessionPage> {
     if (sessionId == null) {
       setState(() => _finished = true);
       await _clearRememberedSession();
+      if (_offline) {
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text('离线答题已保存，联网后将自动同步')),
+          );
+        }
+        unawaited(ref.read(offlineLearnSyncProvider).sync());
+      }
       return;
     }
     try {
@@ -361,7 +488,18 @@ class _SessionPageState extends ConsumerState<SessionPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(widget.title)),
+      appBar: AppBar(
+        title: Text(widget.title),
+        bottom: _offline
+            ? const PreferredSize(
+                preferredSize: Size.fromHeight(64),
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(16, 0, 16, 0),
+                  child: OfflineBanner(message: '离线练习中，答题记录联网后自动同步'),
+                ),
+              )
+            : null,
+      ),
       body: _buildBody(context),
     );
   }

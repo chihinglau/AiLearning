@@ -3,6 +3,8 @@ import 'package:ai_learning/core/errors/api_error_guide.dart';
 import 'package:ai_learning/core/models/exam.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
+import 'package:ai_learning/core/theme/app_accents.dart';
+import 'package:ai_learning/widgets/accent_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -79,9 +81,9 @@ class _ExamListPageState extends ConsumerState<ExamListPage> {
 
   void _open(ExamSummary exam) {
     if (exam.category != 'completed' && !exam.windowOpen) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('${exam.windowLabel}，暂不可进入考试')),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text('${exam.windowLabel}，暂不可进入考试')));
       return;
     }
     switch (exam.category) {
@@ -203,109 +205,100 @@ class _ExamCard extends StatelessWidget {
     final actionLabel = isDone
         ? '查看报告'
         : blocked
-            ? exam.windowLabel
-            : isDoing
-                ? '继续考试'
-                : '开始考试';
-    final actionColor =
-        blocked ? theme.disabledColor : theme.colorScheme.primary;
+        ? exam.windowLabel
+        : isDoing
+        ? '继续考试'
+        : '开始考试';
+    final actionColor = blocked
+        ? theme.disabledColor
+        : theme.colorScheme.primary;
+    final accents = AppAccents.of(context);
     final statusColor = switch (exam.category) {
-      'completed' => Colors.green.shade700,
-      'in_progress' => Colors.orange.shade700,
-      _ => theme.colorScheme.primary,
+      'completed' => accents.learn,
+      'in_progress' => accents.exam,
+      _ => accents.exam,
     };
 
-    return Card(
-      child: InkWell(
-        borderRadius: BorderRadius.circular(12),
-        onTap: onTap,
-        child: Padding(
-          padding: const EdgeInsets.all(16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+    return AccentCard(
+      accent: isDone ? accents.learn : accents.exam,
+      onTap: onTap,
+      padding: const EdgeInsets.all(16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
             children: [
-              Row(
-                children: [
-                  Expanded(
-                    child: Text(
-                      exam.title,
-                      style: theme.textTheme.titleMedium?.copyWith(
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
+              Expanded(
+                child: Text(
+                  exam.title,
+                  style: theme.textTheme.titleMedium?.copyWith(
+                    fontWeight: FontWeight.w600,
                   ),
-                  Container(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 10,
-                      vertical: 4,
-                    ),
-                    decoration: BoxDecoration(
-                      color: statusColor.withValues(alpha: 0.08),
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(
-                        color: statusColor.withValues(alpha: 0.4),
-                      ),
-                    ),
-                    child: Text(
-                      exam.category == 'completed'
-                          ? '已完成'
-                          : exam.category == 'in_progress'
-                              ? '进行中'
-                              : '待考',
-                      style: TextStyle(color: statusColor, fontSize: 12),
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 6),
-              Text(
-                '${exam.typeLabel} · ${Subject.fromCode(exam.subject).label}'
-                '${exam.year == null ? '' : ' · ${exam.year} 学年'}'
-                ' · ${exam.questionCount} 题 · 满分 ${exam.totalScore}',
-                style: theme.textTheme.bodySmall,
-              ),
-              const SizedBox(height: 2),
-              Text(
-                '限时 ${exam.timeLimitMin} 分钟',
-                style: theme.textTheme.bodySmall,
-              ),
-              if (exam.windowRange != null) ...[
-                const SizedBox(height: 2),
-                Text(
-                  '考试窗口 ${exam.windowRange}'
-                  '${exam.windowState == 'open' ? '（开放中）' : ''}',
-                  style: theme.textTheme.bodySmall,
                 ),
-              ],
-              if (attempt != null) ...[
-                const SizedBox(height: 8),
-                Text(
-                  isDoing
-                      ? '剩余 ${_durationLabel(attempt.remainingSeconds)}，点击继续作答'
-                      : '得分 ${_scoreLabel(attempt)} / ${exam.totalScore}'
-                          '${attempt.status == 'grading' ? ' · 待批改' : ''}',
-                  style: theme.textTheme.bodySmall,
+              ),
+              Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 10,
+                  vertical: 4,
                 ),
-              ],
-              const SizedBox(height: 10),
-              Row(
-                children: [
-                  Text(
-                    actionLabel,
-                    style: theme.textTheme.labelLarge?.copyWith(
-                      color: actionColor,
-                    ),
-                  ),
-                  const Spacer(),
-                  Icon(
-                    isDone ? Icons.chevron_right : Icons.play_arrow_rounded,
-                    color: actionColor,
-                  ),
-                ],
+                decoration: BoxDecoration(
+                  color: statusColor.withValues(alpha: 0.08),
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(color: statusColor.withValues(alpha: 0.4)),
+                ),
+                child: Text(
+                  exam.category == 'completed'
+                      ? '已完成'
+                      : exam.category == 'in_progress'
+                      ? '进行中'
+                      : '待考',
+                  style: TextStyle(color: statusColor, fontSize: 12),
+                ),
               ),
             ],
           ),
-        ),
+          const SizedBox(height: 6),
+          Text(
+            '${exam.typeLabel} · ${Subject.fromCode(exam.subject).label}'
+            '${exam.year == null ? '' : ' · ${exam.year} 学年'}'
+            ' · ${exam.questionCount} 题 · 满分 ${exam.totalScore}',
+            style: theme.textTheme.bodySmall,
+          ),
+          const SizedBox(height: 2),
+          Text('限时 ${exam.timeLimitMin} 分钟', style: theme.textTheme.bodySmall),
+          if (exam.windowRange != null) ...[
+            const SizedBox(height: 2),
+            Text(
+              '考试窗口 ${exam.windowRange}'
+              '${exam.windowState == 'open' ? '（开放中）' : ''}',
+              style: theme.textTheme.bodySmall,
+            ),
+          ],
+          if (attempt != null) ...[
+            const SizedBox(height: 8),
+            Text(
+              isDoing
+                  ? '剩余 ${_durationLabel(attempt.remainingSeconds)}，点击继续作答'
+                  : '得分 ${_scoreLabel(attempt)} / ${exam.totalScore}'
+                        '${attempt.status == 'grading' ? ' · 待批改' : ''}',
+              style: theme.textTheme.bodySmall,
+            ),
+          ],
+          const SizedBox(height: 10),
+          Row(
+            children: [
+              Text(
+                actionLabel,
+                style: theme.textTheme.labelLarge?.copyWith(color: actionColor),
+              ),
+              const Spacer(),
+              Icon(
+                isDone ? Icons.chevron_right : Icons.play_arrow_rounded,
+                color: actionColor,
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
@@ -345,8 +338,7 @@ class _EmptyState extends StatelessWidget {
             style: theme.textTheme.titleMedium,
           ),
           const SizedBox(height: 4),
-          Text('完成教材学习后，老师会为你安排单元测与期中期末。',
-              style: theme.textTheme.bodySmall),
+          Text('完成教材学习后，老师会为你安排单元测与期中期末。', style: theme.textTheme.bodySmall),
         ],
       ),
     );

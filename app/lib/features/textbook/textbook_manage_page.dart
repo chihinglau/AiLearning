@@ -4,6 +4,8 @@ import 'package:ai_learning/core/models/content.dart';
 import 'package:ai_learning/core/models/textbook_binding.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
+import 'package:ai_learning/core/theme/app_accents.dart';
+import 'package:ai_learning/widgets/accent_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -47,7 +49,9 @@ class _TextbookManagePageState extends ConsumerState<TextbookManagePage> {
     });
     try {
       final bindings = await ref.read(textbookServiceProvider).listBindings();
-      final recommendation = await ref.read(textbookServiceProvider).recommend();
+      final recommendation = await ref
+          .read(textbookServiceProvider)
+          .recommend();
       if (!mounted) return;
       setState(() {
         _bindings = bindings;
@@ -72,7 +76,8 @@ class _TextbookManagePageState extends ConsumerState<TextbookManagePage> {
   /// 可管理学科：推荐学科在前，已绑定学科补全。
   List<String> get _subjects {
     final list = <String>[];
-    for (final item in _recommendation?.subjects ?? const <RecommendedSubject>[]) {
+    for (final item
+        in _recommendation?.subjects ?? const <RecommendedSubject>[]) {
       if (!list.contains(item.subject)) list.add(item.subject);
     }
     for (final binding in _bindings) {
@@ -89,15 +94,17 @@ class _TextbookManagePageState extends ConsumerState<TextbookManagePage> {
       _error = null;
     });
     try {
-      final textbooks =
-          await ref.read(contentServiceProvider).textbooks(subject: subject);
+      final textbooks = await ref
+          .read(contentServiceProvider)
+          .textbooks(subject: subject);
       if (!mounted) return;
       setState(() {
-        _candidates = textbooks.where((item) => item.semester == _semester).toList()
-          ..sort((a, b) {
-            final byGrade = a.grade.compareTo(b.grade);
-            return byGrade != 0 ? byGrade : a.version.compareTo(b.version);
-          });
+        _candidates =
+            textbooks.where((item) => item.semester == _semester).toList()
+              ..sort((a, b) {
+                final byGrade = a.grade.compareTo(b.grade);
+                return byGrade != 0 ? byGrade : a.version.compareTo(b.version);
+              });
         _loadingCandidates = false;
       });
     } on ApiException catch (error) {
@@ -141,7 +148,8 @@ class _TextbookManagePageState extends ConsumerState<TextbookManagePage> {
   }
 
   int? get _recommendedId {
-    for (final item in _recommendation?.subjects ?? const <RecommendedSubject>[]) {
+    for (final item
+        in _recommendation?.subjects ?? const <RecommendedSubject>[]) {
       if (item.subject == _subject) return item.textbookId;
     }
     return null;
@@ -180,7 +188,8 @@ class _TextbookManagePageState extends ConsumerState<TextbookManagePage> {
     if (user?.grade != null && textbook.grade != user!.grade) {
       final confirmed = await _confirm(
         title: '确认使用该教材？',
-        content: '所选教材为 ${textbook.grade} 年级，与你的 ${user.grade} 年级不一致，'
+        content:
+            '所选教材为 ${textbook.grade} 年级，与你的 ${user.grade} 年级不一致，'
             '仅建议在补课或预习场景下使用。',
         confirmLabel: '确认使用',
       );
@@ -197,9 +206,9 @@ class _TextbookManagePageState extends ConsumerState<TextbookManagePage> {
       await _reloadBindings();
       if (!mounted) return;
       setState(() => _submitting = false);
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('已切换为 ${textbook.displayName}')),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text('已切换为 ${textbook.displayName}')));
     } on ApiException catch (error) {
       if (!mounted) return;
       setState(() {
@@ -226,9 +235,9 @@ class _TextbookManagePageState extends ConsumerState<TextbookManagePage> {
       await _reloadBindings();
       if (!mounted) return;
       setState(() => _submitting = false);
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('已解绑该教材')),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(const SnackBar(content: Text('已解绑该教材')));
     } on ApiException catch (error) {
       if (!mounted) return;
       setState(() {
@@ -388,17 +397,17 @@ class _CurrentBindingCard extends StatelessWidget {
     final theme = Theme.of(context);
     final current = binding;
     if (current == null) {
-      return Card(
-        child: Padding(
-          padding: const EdgeInsets.all(16),
-          child: Text(
-            '该学科本学期尚未绑定教材，请选择下方版本使用。',
-            style: theme.textTheme.bodyMedium,
-          ),
+      return AccentCard(
+        accent: AppAccents.of(context).learn,
+        padding: const EdgeInsets.all(16),
+        child: Text(
+          '该学科本学期尚未绑定教材，请选择下方版本使用。',
+          style: theme.textTheme.bodyMedium,
         ),
       );
     }
-    return Card(
+    return AccentCard(
+      accent: AppAccents.of(context).learn,
       child: ListTile(
         leading: CircleAvatar(
           backgroundColor: theme.colorScheme.primaryContainer,
@@ -448,8 +457,9 @@ class _VersionTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    return Card(
-      color: _isCurrent ? theme.colorScheme.primaryContainer : null,
+    final accents = AppAccents.of(context);
+    return AccentCard(
+      accent: _isCurrent ? accents.learn : accents.practice,
       child: ListTile(
         title: Wrap(
           spacing: 6,
@@ -487,7 +497,7 @@ class _Badge extends StatelessWidget {
     final color = switch (tone) {
       _BadgeTone.primary => theme.colorScheme.primary,
       _BadgeTone.error => theme.colorScheme.error,
-      _BadgeTone.success => Colors.green.shade700,
+      _BadgeTone.success => AppAccents.of(context).learn,
     };
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),

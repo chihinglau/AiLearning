@@ -3,6 +3,7 @@ import 'package:ai_learning/core/models/learn.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
 import 'package:ai_learning/features/learn/mastery_ring.dart';
+import 'package:ai_learning/features/learn/widgets/offline_banner.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -22,6 +23,7 @@ class _KpDetailPageState extends ConsumerState<KpDetailPage> {
   List<KpExample> _examples = const [];
   bool _loading = true;
   bool _marking = false;
+  bool _offline = false;
   String? _error;
 
   @override
@@ -44,12 +46,27 @@ class _KpDetailPageState extends ConsumerState<KpDetailPage> {
       setState(() {
         _detail = detail;
         _examples = examples;
+        _offline = false;
         _loading = false;
       });
     } on ApiException catch (error) {
       if (!mounted) return;
+      final service = ref.read(offlineLearnServiceProvider);
+      final localDetail =
+          error.statusCode == null ? await service.kpDetail(widget.kpId) : null;
+      final localExamples = error.statusCode == null
+          ? await service.kpExamples(widget.kpId)
+          : const <KpExample>[];
+      if (!mounted) return;
       setState(() {
-        _error = ApiErrorGuide.from(error).message;
+        if (localDetail != null) {
+          _detail = localDetail;
+          _examples = localExamples;
+          _offline = true;
+          _error = null;
+        } else {
+          _error = ApiErrorGuide.from(error).message;
+        }
         _loading = false;
       });
     }
@@ -57,6 +74,12 @@ class _KpDetailPageState extends ConsumerState<KpDetailPage> {
 
   Future<void> _markRead() async {
     if (_marking || _detail == null) return;
+    if (_offline) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('离线模式：联网后可标记为已阅读')),
+      );
+      return;
+    }
     setState(() => _marking = true);
     try {
       final state = await ref.read(learnServiceProvider).markKpRead(widget.kpId);
@@ -109,7 +132,7 @@ class _KpDetailPageState extends ConsumerState<KpDetailPage> {
     if (detail == null) return;
     context.push(
       '/practice/config?scope=kp&ids=${detail.id}'
-      '&title=${Uri.encodeComponent(detail.name)}',
+      '&title=${Uri.encodeComponent(detail.displayName)}',
     );
   }
 
@@ -117,7 +140,7 @@ class _KpDetailPageState extends ConsumerState<KpDetailPage> {
   Widget build(BuildContext context) {
     final detail = _detail;
     return Scaffold(
-      appBar: AppBar(title: Text(detail?.name ?? '知识点')),
+      appBar: AppBar(title: Text(detail?.displayName ?? '知识点')),
       body: _buildBody(context),
       bottomNavigationBar: detail == null
           ? null
@@ -173,6 +196,7 @@ class _KpDetailPageState extends ConsumerState<KpDetailPage> {
       child: ListView(
         padding: const EdgeInsets.all(16),
         children: [
+          if (_offline) const OfflineBanner(),
           Card(
             child: Padding(
               padding: const EdgeInsets.all(14),
@@ -253,7 +277,7 @@ class _KpDetailPageState extends ConsumerState<KpDetailPage> {
                                     : 'weak',
                       ),
                     ),
-                    label: Text(prerequisite.name),
+                    label: Text(prerequisite.displayName),
                     onPressed: () => _openPrerequisite(prerequisite),
                   ),
               ],

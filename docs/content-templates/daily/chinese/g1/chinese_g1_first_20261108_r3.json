@@ -1,0 +1,671 @@
+{
+  "subject": "chinese",
+  "grade": 1,
+  "version": "人教版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "1 ɑ o e",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "2 i u ü",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "3 b p m f",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "4 d t n l",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "语文园地二",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "单韵母的发音",
+      "parent": "1 ɑ o e",
+      "order_index": 1,
+      "weight": 1.3,
+      "explanation": "ɑ o e 是三个最简单的单韵母，发音时嘴形和舌位保持不变，统称单韵母。ɑ 嘴张最大，o 嘴唇收圆，e 嘴角向两边展开。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "ü的两点省略规则",
+      "parent": "2 i u ü",
+      "order_index": 2,
+      "weight": 1.2,
+      "explanation": "ü 上面的两点是它区别于 u 的标志，单独成音节或与 n、l 相拼时两点必须保留；i 标调时要先抹掉上面的点，才好写调号。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "单韵母的发音"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "双唇音与唇齿音",
+      "parent": "3 b p m f",
+      "order_index": 3,
+      "weight": 1.0,
+      "explanation": "b p m 是双唇音，发音时双唇开合；f 是唇齿音，上牙轻碰下唇。p 与 b 口型相同，区别只在送不送气。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "单韵母的发音"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "dtnl的拼读要领",
+      "parent": "4 d t n l",
+      "order_index": 4,
+      "weight": 1.0,
+      "explanation": "d t n l 都是舌尖抵上牙床的音，d 与 t 差在不送气，n 是鼻音、l 是边音，气流走的通道不同。h 与 f 的区别要靠口型判断。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "双唇音与唇齿音"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "音节拼读与字词积累",
+      "parent": "语文园地二",
+      "order_index": 5,
+      "weight": 1.1,
+      "explanation": "两拼音节拼读要「前音轻短后音重，两音相连碰一碰」；ɑ o e 开头的音节跟在别的音节后面时要用隔音符号隔开；语文园地二的日积月累是《画》，还要积累反义词、间架结构和用字写话。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "ü的两点省略规则"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第二单元 汉语拼音",
+      "order_index": 2,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「ɑ」「o」「e」这三个单韵母里，发音时嘴巴张得最大的是（  ）",
+          "options": [
+            "ɑ",
+            "o",
+            "e",
+            "i"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "ɑ 发音时双唇张到最大、舌头放平，声音最响亮，所以选 A；o 的嘴唇要收圆，声音比 ɑ 小；e 的嘴角向两边展开；i 是上齿轻碰上齿龈的细音。",
+          "difficulty": 1,
+          "knowledge_point": "单韵母的发音",
+          "tags": [
+            "单韵母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "单韵母发音的时候，嘴形和舌位都不发生变化，所以又叫「单韵母」。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「单」指只含一个音，ɑ o e 发音时口形舌位保持不变，这正是它与复韵母（口形有变化）的区别所在，所以说法正确。",
+          "difficulty": 1,
+          "knowledge_point": "单韵母的发音",
+          "tags": [
+            "单韵母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面哪一个是单韵母？",
+          "options": [
+            "ɑ",
+            "bɑ",
+            "ɑi",
+            "hɑo"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "ɑ 只由一个元音字母构成，是单韵母，选 A；bɑ 是声母 b 与韵母 ɑ 拼成的两拼音节；ɑi 由 ɑ 和 i 两个韵母组成，是复韵母；hɑo 是三拼音节。",
+          "difficulty": 2,
+          "knowledge_point": "单韵母的发音",
+          "tags": [
+            "单韵母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面这些字母中，属于单韵母的有（  ）",
+          "options": [
+            "ɑ",
+            "o",
+            "zh",
+            "ɑi"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "A ɑ 是单韵母 ✓；B o 是单韵母 ✓；C zh 是声母，不是韵母 ✗；D ɑi 是复韵母 ✗。所以选 A、B。",
+          "difficulty": 3,
+          "knowledge_point": "单韵母的发音",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "在四线三格里写单韵母「e」时，字母要写在（  ）格里。",
+          "answer": {
+            "value": "中间格"
+          },
+          "analysis": "四线三格一共三格，单韵母 ɑ o e 都写在中间格里，不能顶到上面一格、也不能掉到下面一格，所以填「中间格」。",
+          "difficulty": 3,
+          "knowledge_point": "单韵母的发音",
+          "tags": [
+            "书写"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "单韵母「ü」单独写成一个音节时，它上面的两点一定要写出来。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "ü 上面的两点是它区别于 u 的标志，单独成音节时两点必须写出来，漏写两点就变成了 u，所以说法法正确。",
+          "difficulty": 2,
+          "knowledge_point": "ü的两点省略规则",
+          "tags": [
+            "书写规则"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面音节中，「ü」上面两点的写法完全正确的一项是（  ）",
+          "options": [
+            "lǘ",
+            "lü",
+            "lù",
+            "lǔ"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "ü 与 l 相拼时两点要保留，再标上第二声调号写成 lǘ，选 A；lü 漏了调号 ✗；lù 把两点去掉 ✗；lǔ 用了第三声调号 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "ü的两点省略规则",
+          "tags": [
+            "书写规则"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "韵母「i」标调的时候，i 上面的点要先（  ），写成 ī í ǐ ì。",
+          "answer": {
+            "value": "去掉"
+          },
+          "analysis": "单韵母 i 标调时要把上面的点抹掉，写成 ī í ǐ ì，调号才能安在一横上；不抹点就写不出这四个调号，所以填「去掉」。",
+          "difficulty": 3,
+          "knowledge_point": "ü的两点省略规则",
+          "tags": [
+            "标调"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「ü」和「u」在读音上的主要区别是（  ）",
+          "options": [
+            "ü 的嘴唇比 u 撮得更圆",
+            "u 比 ü 多两点",
+            "ü 和 u 读起来完全一样",
+            "ü 没有一竖，只写两点"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "ü 的口型比 u 更小更圆，靠拢的两点表示撮口，选 A；多两点的是 ü 而不是 u ✗；u 与 ü 读音并不相同 ✗；ü 除了两点还有一竖 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "ü的两点省略规则",
+          "tags": [
+            "发音"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "声母「b」发音的时候，双唇应该（  ）",
+          "options": [
+            "轻轻闭合，再让气流冲开",
+            "张开大口，让气流自由出来",
+            "舌尖抵住上牙床",
+            "嘴唇不动，只用喉咙发声"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "b 是双唇不送气音，发音时双唇轻轻闭合，然后气流把嘴唇冲开，选 A；张大嘴是发元音的口型 ✗；舌尖抵上牙床是 d t n l ✗；不用嘴形发音就成不了音 ✗。",
+          "difficulty": 1,
+          "knowledge_point": "双唇音与唇齿音",
+          "tags": [
+            "声母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「p」和「b」这两个声母的主要区别是（  ）",
+          "options": [
+            "p 要送气，b 不送气",
+            "p 用舌尖发音，b 用嘴唇发音",
+            "p 是单音节，b 是双音节",
+            "p 有两点，b 没有两点"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "p 是双唇送气音，发音时要把一股强气流送出去；b 是不送气音，只轻轻冲开，选 A；两者都是双唇音，舌头不参与 ✗；单双音节说的是音节数量 ✗；两点是 ü 的特征 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "双唇音与唇齿音",
+          "tags": [
+            "声母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "声母「f」是唇齿音，发音时上牙轻轻接触下嘴唇。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "f 发音时上齿轻碰下唇，气流从齿缝中挤出，所以属于唇齿音，说法正确；它和 b p m 这类双唇音的口型明显不同。",
+          "difficulty": 2,
+          "knowledge_point": "双唇音与唇齿音",
+          "tags": [
+            "声母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面这些声母里，发音时嘴唇或牙齿必须参与动作的有（  ）",
+          "options": [
+            "b",
+            "f",
+            "h",
+            "k"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "A b 是双唇音，双唇要闭合 ✓；B f 是唇齿音，上牙要碰下唇 ✓；C h 是舌根音，嘴形不动、只用舌根 ✗；D k 也是舌根音 ✗。所以选 A、B。",
+          "difficulty": 3,
+          "knowledge_point": "双唇音与唇齿音",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "声母「m」发音时，气流是从（  ）里出来的，所以它叫鼻音。",
+          "answer": {
+            "value": "鼻子"
+          },
+          "analysis": "m 发音时双唇闭合，气流从鼻腔出来，所以叫鼻音，填「鼻子」；边音 l 才是气流从舌头两边出来。",
+          "difficulty": 2,
+          "knowledge_point": "双唇音与唇齿音",
+          "tags": [
+            "声母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「d」「t」「n」「l」发音的时候，舌尖都要抵住（  ）",
+          "options": [
+            "上牙床",
+            "下嘴唇",
+            "舌根",
+            "上下牙齿中间"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "d t n l 都是舌尖抵住上牙床（上齿龈）发出的音，所以选 A；下唇是 f 的位置 ✗；舌根是 g k h 的位置 ✗；牙齿中间发不出这四个音 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "dtnl的拼读要领",
+          "tags": [
+            "声母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「l」和「n」这两个声母的主要区别是（  ）",
+          "options": [
+            "l 的气流从舌头两边出来，n 的气流从鼻子出来",
+            "l 是双唇音，n 是唇齿音",
+            "l 用舌尖发音，n 用舌根发音",
+            "l 要送气，n 不送气"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "l 是边音，气流从舌头两边出来；n 是鼻音，气流从鼻腔出来，选 A；d t n l 都是舌尖抵上牙床的音 ✗；l 不送气 ✗。",
+          "difficulty": 4,
+          "knowledge_point": "dtnl的拼读要领",
+          "tags": [
+            "声母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「d」和「t」都是舌尖抵上牙床的音，区别在于「t」要送气、「d」不送气。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "d 是不送气的舌尖音，t 是送气的舌尖音，两者口型位置相同、只差气流强弱，所以说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "dtnl的拼读要领",
+          "tags": [
+            "声母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "声母「h」是舌根音，发音的时候舌根要抬起抵住（  ）。",
+          "answer": {
+            "value": "软腭"
+          },
+          "analysis": "h 发音时舌根抬起抵住软腭，气流从口腔出来；f 是唇齿音，上牙碰下唇，两者口型完全不同，所以填「软腭」。",
+          "difficulty": 3,
+          "knowledge_point": "dtnl的拼读要领",
+          "tags": [
+            "声母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "要分清「f」和「h」，下面哪种做法最可靠？",
+          "options": [
+            "看口型：上牙碰下唇，还是舌根抬起",
+            "看音节里有没有两点",
+            "只听老师读一遍就牢牢记住",
+            "把两个音节写成同一个样子"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "f 是上牙碰下唇的唇齿音，h 是舌根抬起抵软腭的舌根音，口型差别明显，看口型判断最可靠，选 A；两点是 ü 的标志 ✗；只听一次容易混 ✗；写成一样更分不清 ✗。",
+          "difficulty": 4,
+          "knowledge_point": "dtnl的拼读要领",
+          "tags": [
+            "辨音"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "拼读两拼音节要记住口诀：「前音轻短后音重，（  ）」。",
+          "answer": {
+            "value": "两音相连碰一碰"
+          },
+          "analysis": "两拼音节的拼读口诀是「前音轻短后音重，两音相连碰一碰」，读的时候两个音要快速连起来、中间不能断开，所以填「两音相连碰一碰」。",
+          "difficulty": 2,
+          "knowledge_point": "音节拼读与字词积累",
+          "tags": [
+            "拼读"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「皮袄」的拼音写作 pí'ǎo，中间那个小符号是（  ）",
+          "options": [
+            "隔音符号，用来把两个音节分开",
+            "声调符号，要写在 ɑ 的左上方",
+            "字母 o 的另一种写法",
+            "ü 上面的两点"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "ɑ o e 开头的音节跟在另一个音节后面时，两个音节容易混在一起，要用隔音符号「'」隔开，所以 pí'ǎo 中间要加它，选 A；声调号写在韵母上，不是加在字母左边 ✗；它不是字母 ✗；两点是 ü 的特征 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "音节拼读与字词积累",
+          "tags": [
+            "拼写规则"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面词语的拼音中，需要加隔音符号的有（  ）",
+          "options": [
+            "西安（xī'ān）",
+            "皮袄（pí'ǎo）",
+            "妈妈（mā ma）",
+            "弟弟（dì di）"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "A 西安的后一个音节以 ɑ 开头，容易和前面的音节混在一起，要加隔音符号 ✓；B 皮袄的后一个音节以 ɑ 开头，也要加隔音符号 ✓；C 妈妈的两个音节都是声母加韵母，不会混淆，不用加 ✗；D 弟弟也是两个独立音节，不用加 ✗。所以选 A、B。",
+          "difficulty": 3,
+          "knowledge_point": "音节拼读与字词积累",
+          "tags": [
+            "多选",
+            "拼写规则"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "语文园地二「日积月累」里《画》的作者是（  ）",
+          "options": [
+            "唐代的王维",
+            "唐代的李白",
+            "宋代的苏轼",
+            "唐代的骆宾王"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "语文园地二的日积月累是《画》，作者是唐代诗人王维，选 A；李白写的是《古朗月行》✗；苏轼是宋代诗人 ✗；骆宾王写的是《咏鹅》✗。",
+          "difficulty": 3,
+          "knowledge_point": "音节拼读与字词积累",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《画》里「远看山有色，近听水无声」写出了山水的什么特点？",
+          "options": [
+            "远看有颜色，走近却听不到水声",
+            "山上有颜色，水里一点声音也没有",
+            "远看没有颜色，近听才有水声",
+            "山水都很吵闹，看不清颜色"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "前两句写「远看」与「近听」的差别：远看山有颜色，靠近了却听不到水声，选 A；后两句「春去花还在，人来鸟不惊」写的是花鸟依旧 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "音节拼读与字词积累",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面词语中，互为反义词的一组有（  ）",
+          "options": [
+            "上—下",
+            "高—矮",
+            "多—多",
+            "前—后"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 上和下方向相反 ✓；B 高和矮相反 ✓；C 多和多意思相同，不是反义词 ✗；D 前和后相反 ✓。所以选 A、B、D。",
+          "difficulty": 2,
+          "knowledge_point": "音节拼读与字词积累",
+          "tags": [
+            "字词积累",
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面四个字中，属于左右结构的是（  ）",
+          "options": [
+            "妈",
+            "花",
+            "草",
+            "书"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「妈」是女字旁加马，左右结构，选 A；花、草都是上下结构 ✗；书是独体字 ✗。写左右结构字时要左右分清、两边不挤在一起。",
+          "difficulty": 4,
+          "knowledge_point": "音节拼读与字词积累",
+          "tags": [
+            "间架结构"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳地铁站的站名牌上既有汉字，也有拼音。请你用学过的字词，给同学写一句在地铁里需要注意安全的话（要写成完整的一句话）。",
+          "answer": {
+            "value": "过马路要走人行横道，红灯停，绿灯行。"
+          },
+          "analysis": "评分要点：①用上学过的字词（1 分）；②句子完整、意思清楚（2 分）；③标点使用正确（1 分）。只罗列词语而不写成完整句子的，不得分。",
+          "difficulty": 4,
+          "knowledge_point": "音节拼读与字词积累",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "台风天，学校要在班级群里发一则通知：明天不上课，请家长留意。下面这句话里，哪些字写错了？请抄写正确的写法，并照着通知的口气补上一句话。\n明天不上课，请大家注意安按。",
+          "answer": {
+            "value": "「按」字写错了，应改成「全」，正确写法是「明天不上课，请大家注意安全。」补上一句可以写：明天在家复习课文，注意添衣保暖。"
+          },
+          "analysis": "评分要点：①找出错字「按」并改成「全」（2 分）；②抄写句子时标点正确（1 分）；③补写的句子符合通知口气、意思完整（1 分）。只指出错字不补写句子扣分。",
+          "difficulty": 5,
+          "knowledge_point": "音节拼读与字词积累",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

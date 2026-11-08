@@ -1,6 +1,8 @@
 import 'package:ai_learning/core/models/user.dart';
 import 'package:ai_learning/core/offline/offline_exam_store.dart';
 import 'package:ai_learning/core/offline/offline_exam_sync.dart';
+import 'package:ai_learning/core/offline/offline_learn_store.dart';
+import 'package:ai_learning/core/offline/offline_learn_sync.dart';
 import 'package:ai_learning/core/services/api_client.dart';
 import 'package:ai_learning/core/services/app_info_service.dart';
 import 'package:ai_learning/core/services/ai_service.dart';
@@ -14,6 +16,7 @@ import 'package:ai_learning/core/services/exam_service.dart';
 import 'package:ai_learning/core/services/family_service.dart';
 import 'package:ai_learning/core/services/learn_service.dart';
 import 'package:ai_learning/core/services/legal_service.dart';
+import 'package:ai_learning/core/services/offline_learn_service.dart';
 import 'package:ai_learning/core/services/org_service.dart';
 import 'package:ai_learning/core/services/rbac_service.dart';
 import 'package:ai_learning/core/services/textbook_service.dart';
@@ -34,18 +37,44 @@ final platformPalProvider = Provider<PlatformPal>(
 final apiClientProvider = Provider<ApiClient>((ref) => ApiClient());
 
 final authServiceProvider = Provider<AuthService>((ref) {
-  return AuthService(
-    ref.watch(apiClientProvider),
-    ref.watch(platformPalProvider).storage,
-  );
+  final api = ref.watch(apiClientProvider);
+  final auth = AuthService(api, ref.watch(platformPalProvider).storage);
+  // refresh 明确失效时清理本地登录态，路由随 currentUser 变化回到登录页。
+  api.onSessionExpired = () async {
+    await auth.clearSession();
+    ref.read(currentUserProvider.notifier).state = null;
+    ref.read(onboardingStatusProvider.notifier).state = OnboardingStatus.unknown;
+  };
+  return auth;
 });
 
 final contentServiceProvider = Provider<ContentService>((ref) {
   return ContentService(ref.watch(apiClientProvider));
 });
 
+final offlineLearnStoreProvider = Provider<OfflineLearnStore>((ref) {
+  return HiveOfflineLearnStore();
+});
+
+final offlineLearnServiceProvider = Provider<OfflineLearnService>((ref) {
+  return OfflineLearnService(
+    ref.watch(apiClientProvider),
+    ref.watch(offlineLearnStoreProvider),
+  );
+});
+
+final offlineLearnSyncProvider = Provider<OfflineLearnSync>((ref) {
+  return OfflineLearnSync(
+    ref.watch(apiClientProvider),
+    ref.watch(offlineLearnStoreProvider),
+  );
+});
+
 final learnServiceProvider = Provider<LearnService>((ref) {
-  return LearnService(ref.watch(apiClientProvider));
+  return LearnService(
+    ref.watch(apiClientProvider),
+    offline: ref.watch(offlineLearnServiceProvider),
+  );
 });
 
 final textbookServiceProvider = Provider<TextbookService>((ref) {

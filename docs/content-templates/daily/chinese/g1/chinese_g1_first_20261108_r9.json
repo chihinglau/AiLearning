@@ -1,0 +1,614 @@
+{
+  "subject": "chinese",
+  "grade": 1,
+  "version": "人教版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "8 比尾巴",
+      "order_index": 1
+    },
+    {
+    "node_type": "section",
+    "name": "9 乌鸦喝水",
+    "order_index": 2
+    },
+    {
+    "node_type": "section",
+    "name": "10 雨点儿",
+    "order_index": 3
+    },
+    {
+    "node_type": "section",
+    "name": "语文园地八",
+    "order_index": 4
+    },
+    {
+    "node_type": "point",
+    "name": "比尾巴的动物特征",
+    "parent": "8 比尾巴",
+    "order_index": 1,
+    "weight": 1.2,
+    "explanation": "《比尾巴》用问答的儿歌形式写小动物的尾巴：猴子的尾巴长，兔子的尾巴短，松鼠的尾巴好像一把伞，公鸡的尾巴弯，鸭子的尾巴扁，孔雀的尾巴最好看。",
+    "source_type": "original",
+    "source_name": "教研组自编",
+    "prerequisites": []
+    },
+    {
+    "node_type": "point",
+    "name": "乌鸦喝水的办法与道理",
+    "parent": "9 乌鸦喝水",
+    "order_index": 2,
+    "weight": 1.3,
+    "explanation": "《乌鸦喝水》讲乌鸦口渴找到瓶子，瓶口小水又少，它把石子一颗一颗放进瓶里，水升高后喝到了水。故事告诉我们遇到困难要动脑筋想办法。",
+    "source_type": "original",
+    "source_name": "教研组自编",
+    "prerequisites": [
+      "比尾巴的动物特征"
+    ]
+    },
+    {
+    "node_type": "point",
+    "name": "雨点儿的大小与去向",
+    "parent": "10 雨点儿",
+    "order_index": 3,
+    "weight": 1.2,
+    "explanation": "《雨点儿》写数不清的雨点儿从云彩里飘落下来：大雨点儿要去有田有池子的地方，小雨点儿要去有花有草的地方。「沙沙沙」写出雨落下的轻声。",
+    "source_type": "original",
+    "source_name": "教研组自编",
+    "prerequisites": [
+      "乌鸦喝水的办法与道理"
+    ]
+    },
+    {
+    "node_type": "point",
+    "name": "风的古诗与写祝福语",
+    "parent": "语文园地八",
+    "order_index": 4,
+    "weight": 1.2,
+    "explanation": "语文园地八要背唐代李峤的《风》：解落三秋叶，能开二月花，过江千尺浪，入竹万竿斜；还要会写祝福语，称呼后打冒号，祝福写在下一行空两格。",
+    "source_type": "original",
+    "source_name": "教研组自编",
+    "prerequisites": []
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第八单元 阅读",
+      "order_index": 8,
+      "questions": [
+        {
+          "q_type": "multiple",
+          "stem": "下面动物与尾巴特点的对应，正确的有（  ）",
+          "options": [
+            "猴子的尾巴长",
+            "兔子的尾巴短",
+            "松鼠的尾巴好像一把伞",
+            "鸭子的尾巴弯"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 猴子的尾巴长 ✓；B 兔子的尾巴短 ✓；C 松鼠的尾巴好像一把伞 ✓；D 鸭子的尾巴是扁的，不是弯的 ✗。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "比尾巴的动物特征",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《比尾巴》里问「谁的尾巴弯」，回答的是（  ）",
+          "options": [
+            "公鸡",
+            "鸭子",
+            "孔雀",
+            "松鼠"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文写「公鸡的尾巴弯。鸭子的尾巴扁。孔雀的尾巴最好看」，所以是公鸡，选 A；松鼠的尾巴好像一把伞 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "比尾巴的动物特征",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "《比尾巴》里说：「谁的尾巴扁，（  ）」。",
+          "answer": {
+            "value": "鸭子的尾巴扁"
+          },
+          "analysis": "课文原句是「鸭子的尾巴扁」，写的是鸭子扁扁的尾巴，所以填「鸭子的尾巴扁」。",
+          "difficulty": 2,
+          "knowledge_point": "比尾巴的动物特征",
+          "tags": [
+            "朗读背诵"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《比尾巴》用一问一答的句子，写出了好几种小动物尾巴的样子。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "课文先问「谁的尾巴长？谁的尾巴短？」，再一句一句回答，读起来像儿歌一样有节奏，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "比尾巴的动物特征",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《比尾巴》里「好像一把伞」形容的是（  ）的尾巴",
+          "options": [
+            "松鼠",
+            "猴子",
+            "兔子",
+            "孔雀"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文写「松鼠的尾巴好像一把伞」，伞是蓬蓬的、松鼠尾巴也是蓬蓬的，选 A；其他三个动物都不是 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "比尾巴的动物特征",
+          "tags": [
+            "字词"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "学完《比尾巴》，请你用「谁的尾巴……？」的句式，向同学介绍一种小动物的尾巴。",
+          "answer": {
+            "value": "谁的尾巴最短？小狗的尾巴最短。小狗高兴的时候，尾巴摇来摇去，像一把小扇子。"
+          },
+          "analysis": "评分要点：①用上「谁的尾巴……」的问句格式（2 分）；②说出一种小动物尾巴的样子（1 分）；③句子完整、标点正确（1 分）。只写「小狗的尾巴短」而没有用问句格式扣 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "比尾巴的动物特征",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《乌鸦喝水》里，乌鸦找到瓶子后发现（  ）",
+          "options": [
+            "瓶口小，里面的水又少",
+            "瓶口很大，水满满的",
+            "瓶子破了，一点水也没有",
+            "瓶子被树叶盖住了"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文写乌鸦口渴找到瓶子，可是瓶口小、水又少，喝不到水，选 A；水满或瓶子破都用不上想办法的办法 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "乌鸦喝水的办法与道理",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些是《乌鸦喝水》里乌鸦做的事？（  ）",
+          "options": [
+            "把石子一颗一颗放进瓶子里",
+            "把石子放进去以后喝到了水",
+            "把瓶子打碎了",
+            "用翅膀把水舀出来"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "A 乌鸦把石子一颗一颗放进瓶里 ✓；B 水升高后乌鸦喝到了水 ✓；C 课文没有打碎瓶子 ✗；D 也没有用翅膀舀水 ✗。所以选 A、B。",
+          "difficulty": 2,
+          "knowledge_point": "乌鸦喝水的办法与道理",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "乌鸦把石子放进瓶子里以后，瓶里的水就（  ）上来了。",
+          "answer": {
+            "value": "升高"
+          },
+          "analysis": "石子沉到瓶底占了地方，水就被挤得升高了，乌鸦这才喝到水，所以填「升高」。",
+          "difficulty": 3,
+          "knowledge_point": "乌鸦喝水的办法与道理",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "乌鸦最后能喝到水，是因为（  ）",
+          "options": [
+            "石子占了地方，把水挤得升高了",
+            "太阳把水晒热了",
+            "风把水吹到了瓶口",
+            "瓶子自己裂开了"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "瓶口小水又少，石子沉下去占了空间，水位就升高，乌鸦喝着水，选 A；晒热、吹风、裂开课文都没写 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "乌鸦喝水的办法与道理",
+          "tags": [
+            "道理"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《乌鸦喝水》告诉我们，遇到困难的时候要肯动脑筋、想办法。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "乌鸦没有放弃，也没有去破坏瓶子，而是想出放石子的办法，说明遇到困难要开动脑筋，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "乌鸦喝水的办法与道理",
+          "tags": [
+            "体会道理"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "《乌鸦喝水》里的「办」字，可以组成词语（  ）。",
+          "answer": {
+            "value": "办法"
+          },
+          "analysis": "「办」可以组成「办法」，课文里乌鸦想出的主意就是一种办法，所以填「办法」。",
+          "difficulty": 2,
+          "knowledge_point": "乌鸦喝水的办法与道理",
+          "tags": [
+            "组词"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面做法中，最像乌鸦喝水时动脑筋的是（  ）",
+          "options": [
+            "水少够不着时，先想办法把水位升高",
+            "够不着就算了，回家去",
+            "使劲把瓶子推倒",
+            "大声喊人来帮忙抬瓶子"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "乌鸦是自己想办法把水位升高，选 A；放弃 ✗；推倒瓶子不是课文里的办法 ✗；课文里乌鸦没有叫人 ✗。",
+          "difficulty": 4,
+          "knowledge_point": "乌鸦喝水的办法与道理",
+          "tags": [
+            "联系生活"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳有些公园放了大水桶接雨水浇花。请你想一想：除了放石子，你还能想出什么办法，让瓶子里的水升高？写一句话说明理由。",
+          "answer": {
+            "value": "还可以把瓶子斜靠在树桩上，让雨水慢慢流进瓶口更多的位置；也可以换一个口大一些的瓶子，装的水就多了。"
+          },
+          "analysis": "评分要点：①能提出一个动脑筋的具体办法（2 分）；②说清楚为什么这个办法能让水升高（1 分）；③句子完整、标点正确（1 分）。只写「把水多倒点」而没有理由扣分。",
+          "difficulty": 4,
+          "knowledge_point": "乌鸦喝水的办法与道理",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《雨点儿》里，大雨点儿要去的地方是（  ）",
+          "options": [
+            "有田有池子的地方",
+            "有花有草的地方",
+            "又高又远的山顶",
+            "热闹的城市里"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文写大雨点儿说「我要去有田有池子的地方」，选 A；小雨点儿才去有花有草的地方 ✗；山顶和城市课文都没写 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "雨点儿的大小与去向",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "《雨点儿》里，大雨点儿说它要去有田有（  ）的地方。",
+          "answer": {
+            "value": "池子"
+          },
+          "analysis": "课文原句是「我要去有田有池子的地方」，田里种庄稼，池子里养鱼，所以填「池子」。",
+          "difficulty": 2,
+          "knowledge_point": "雨点儿的大小与去向",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于《雨点儿》，下面说法正确的有（  ）",
+          "options": [
+            "雨点儿是从云彩里飘落下来的",
+            "大雨点儿要去有田有池子的地方",
+            "小雨点儿跟着大雨点儿一起来了到有花有草的地方",
+            "雨点儿只会落在屋顶上"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 课文写「数不清的雨点儿，从云彩里飘落下来」✓；B 大雨点儿去有田有池子的地方 ✓；C 小雨点儿跟着大雨点儿来到有花有草的地方 ✓；D 课文没有说只落在屋顶上 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "雨点儿的大小与去向",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《雨点儿》里的「沙沙沙」，写的是雨点轻轻落下来的声音。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「沙沙沙」是拟声词，写雨点落在地上、落在花草上的轻声，和「数不清的雨点儿」连起来读，像轻柔的儿歌，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "雨点儿的大小与去向",
+          "tags": [
+            "朗读"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "从《雨点儿》里可以知道，小雨点儿最后落在（  ）",
+          "options": [
+            "有花有草的地方，把花儿浇得更红艳艳",
+            "又高又远的山顶上",
+            "城市的马路上",
+            "干枯的沙漠里"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文写小雨点儿跟着大雨点儿来到有花有草的地方，「沙沙沙」把花儿浇得红艳艳，选 A；其他三项课文都没有写到 ✗。",
+          "difficulty": 4,
+          "knowledge_point": "雨点儿的大小与去向",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳的台风天常有大雨。请你用《雨点儿》里的一个词语（比如「云彩」「飘落」），写一句描写雨点的话。",
+          "answer": {
+            "value": "乌云里飘落下来数不清的雨点儿，落在我的雨伞上，响得沙沙沙。"
+          },
+          "analysis": "评分要点：①用上《雨点儿》里的词语至少一个（2 分）；②写出雨点飘落的画面（1 分）；③句子完整、标点正确（1 分）。只写词语不成句不得分。",
+          "difficulty": 4,
+          "knowledge_point": "雨点儿的大小与去向",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "语文园地八「日积月累」里《风》的作者是唐代的（  ）。",
+          "answer": {
+            "value": "李峤"
+          },
+          "analysis": "《风》是唐代诗人李峤写的，所以填「李峤」；朗读时「解落三秋叶」的「解」读 jiè，指能够。",
+          "difficulty": 2,
+          "knowledge_point": "风的古诗与写祝福语",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "《风》里说：「解落三秋叶，（  ）」。",
+          "answer": {
+            "value": "能开二月花"
+          },
+          "analysis": "《风》的原句是「解落三秋叶，能开二月花。过江千尺浪，入竹万竿斜」，写风能吹落秋叶、催开春花，所以填「能开二月花」。",
+          "difficulty": 3,
+          "knowledge_point": "风的古诗与写祝福语",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《风》里「过江千尺浪，入竹万竿斜」，写出了风的（  ）",
+          "options": [
+            "很大的力量",
+            "很小的声音",
+            "很长的绳子",
+            "很矮的竹子"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "风一过江就掀起千尺高的浪，一进竹林就把万竿竹子吹斜，写的是风力气大，选 A；后三项都和诗意相反 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "风的古诗与写祝福语",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面出自语文园地八「日积月累」的有（  ）",
+          "options": [
+            "解落三秋叶，能开二月花",
+            "过江千尺浪，入竹万竿斜",
+            "众人一条心，黄土变成金",
+            "锄禾日当午，汗滴禾下土"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 解落三秋叶，能开二月花出自《风》✓；B 过江千尺浪，入竹万竿斜出自《风》✓；C 众人一条心，黄土变成金也是园地八日积月累 ✓；D 锄禾日当午出自语文园地四的《悯农》✗。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "风的古诗与写祝福语",
+          "tags": [
+            "多选",
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "写祝福语的时候，称呼的后面应该（  ）",
+          "options": [
+            "打冒号",
+            "打问号",
+            "写句号",
+            "什么都不用写"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "书信的格式是：称呼写在第一行，称呼后面打冒号，祝福的话写在下一行并空两格，所以选 A。",
+          "difficulty": 3,
+          "knowledge_point": "风的古诗与写祝福语",
+          "tags": [
+            "语文实践"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "写祝福语的时候，祝福的话要写在称呼的下一行，并且（  ）。",
+          "answer": {
+            "value": "空两格"
+          },
+          "analysis": "语文园地八的字词句运用要求：称呼后面打冒号，祝福的话写在称呼的下一行，空两格，名字和日期写在右下角，所以填「空两格」。",
+          "difficulty": 3,
+          "knowledge_point": "风的古诗与写祝福语",
+          "tags": [
+            "语文实践"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "新年快到了。请你给爸爸妈妈写一句祝福的话（要有称呼、冒号，祝福语写在下一行并空两格）。",
+          "answer": {
+            "value": "爸爸妈妈：\n　　祝你们新年快乐，身体健康，工作顺利！"
+          },
+          "analysis": "评分要点：①写上称呼并在后面打冒号（2 分）；②祝福语写在下一行并空两格（1 分）；③祝福语内容具体、语气礼貌（1 分）。没有称呼或没打冒号的扣分。",
+          "difficulty": 4,
+          "knowledge_point": "风的古诗与写祝福语",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+来源：english_g1_first_20261107.json 的改前副本（第七轮 remap 之前）
+生成方式：对 2026-11-08 18:25 的两处改写做逐字逆操作（bytes 级，保留 CRLF）
+  ① knowledge 块：3 个板块复合名 → 整单元 `Unit 1 What is your family like?`；
+     Letters 点由 `Alphabet order 字母表顺序` 还原为 `Letters 字母认读`
+  ② 3 道字母题的 knowledge_point 还原旧名
+sha256 = 382ab2b50f00e4ac62a17fb3e3f363938fb8583e5683a939583743c81a92aed1
+manifest 记录的导入期 sha256 = 382ab2b50f00e4ac62a17fb3e3f363938fb8583e5683a939583743c81a92aed1（一致：逐字节还原成功）

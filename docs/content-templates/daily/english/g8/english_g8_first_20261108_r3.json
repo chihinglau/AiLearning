@@ -1,0 +1,460 @@
+{
+  "subject": "english",
+  "grade": 8,
+  "version": "牛津深圳版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "Unit 2 Digital life / A Viewing and listening",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 2 Digital life / B Speaking",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 2 Digital life / C Reading & Grammar in use",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 2 Digital life / D Writing & Discovery",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 2 Digital life / E Project",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "Digital words 数字生活词汇",
+      "parent": "Unit 2 Digital life / A Viewing and listening",
+      "order_index": 1,
+      "explanation": "本板块积累数字生活的高频词汇：search engine、download、upload、device、screen、click、password 等。看听说题里往往先考词义，再考搭配，要按语境选词而不是凭中文直译。",
+      "prerequisites": [],
+      "weight": 1.1,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Views on digital life 数字生活观点",
+      "parent": "Unit 2 Digital life / B Speaking",
+      "order_index": 2,
+      "explanation": "本板块训练在讨论中表达观点与礼貌反对：I think / I believe / In my opinion 表明立场，I don't think so、I'm afraid I don't agree 委婉反对。think 后接 that 从句时从句要用陈述语序。",
+      "prerequisites": ["Digital words 数字生活词汇"],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Comparative adjectives 比较级最高级",
+      "parent": "Unit 2 Digital life / C Reading & Grammar in use",
+      "order_index": 3,
+      "explanation": "本板块讲形容词比较级与最高级：多音节词用 more／most 加形容词，单音节词加 -er／-est；比较对象用 than 连接。容易错在 more 与 -er 重复、比较级前再加 very。",
+      "prerequisites": ["Digital words 数字生活词汇"],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Email writing 邮件写作",
+      "parent": "Unit 2 Digital life / D Writing & Discovery",
+      "order_index": 4,
+      "explanation": "本板块写应用文邮件：称呼、开头问候、主体分段说理由、结尾致意与落款。主体用 because、so 说明原因与结果，用 also、however 补充与转折，让文章有条理。",
+      "prerequisites": ["Views on digital life 数字生活观点"],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Digital project 数字主题项目",
+      "parent": "Unit 2 Digital life / E Project",
+      "order_index": 5,
+      "explanation": "本板块做小组项目：先定计划、再分工、然后收集资料并展示，最后互评。分工要落实到具体任务与时间节点，成果要能上台讲给大家听。",
+      "prerequisites": ["Email writing 邮件写作"],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "Unit 2 Digital life",
+      "order_index": 2,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Which word means 'to get a file from the Internet onto your computer'?",
+          "options": ["download", "delete", "print", "search"],
+          "answer": { "value": "A" },
+          "analysis": "download 指把文件从网络下载到电脑，所以选 A；delete 是删除；print 是打印；search 是搜索，方向正好相反。记数字生活词汇要连同搭配一起记，不要只背中文。",
+          "difficulty": 1,
+          "knowledge_point": "Digital words 数字生活词汇",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "You can use a ______ engine to find information on the Internet.",
+          "answer": { "value": "search" },
+          "analysis": "查找网络信息的工具叫 search engine（搜索引擎），所以填 search；填 look 或 find 都不能与 engine 构成固定搭配。",
+          "difficulty": 2,
+          "knowledge_point": "Digital words 数字生活词汇",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "You can use a smart phone to check the weather and to book a bus ticket.",
+          "answer": { "value": "T" },
+          "analysis": "查天气和买公交车票都是手机常见的应用场景，所以说法正确。这类听说题的判断要落在句中提到的具体功能上。",
+          "difficulty": 2,
+          "knowledge_point": "Digital words 数字生活词汇",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following are things people often do with a smart phone?",
+          "options": [
+            "Sending messages to friends.",
+            "Taking photos.",
+            "Playing games.",
+            "Washing clothes."
+          ],
+          "answer": { "value": ["A", "B", "C"] },
+          "analysis": "A 发消息是手机的常见用途 ✓；B 拍照是手机的常见用途 ✓；C 玩手机游戏是手机的常见用途 ✓；D 洗衣服是洗衣机的功能，与手机无关 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Digital words 数字生活词汇",
+          "tags": ["多选"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write a short dialogue of four lines in English between two students, A and B. They talk about what they use their phones for.",
+          "answer": { "value": "A: What do you usually do with your phone? B: I use it to send messages and take photos. A: Do you play games on it? B: Yes, but only for ten minutes a day. A: I use mine to look up new words when I read." },
+          "analysis": "参考示例见答案。评分要点：①四轮对话，格式是 A: / B: 交替（2 分）；②至少说出三件用手机做的事，用词属于本单元词汇（2 分）；②问句与答语搭配得当（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Digital words 数字生活词汇",
+          "tags": ["写作"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which of the following sentences about giving an opinion is correct?",
+          "options": [
+            "I think mobile phones are useful for study.",
+            "I think mobile phones is useful for study.",
+            "I think mobile phones are use for study.",
+            "I thinks mobile phones are useful for study."
+          ],
+          "answer": { "value": "A" },
+          "analysis": "think 后接 that 从句，从句里 mobile phones 是复数，be 动词用 are，所以选 A；B 主谓不一致；C be 动词后面要跟形容词而不是原形 use；D think 在主语 I 后面不能加 -s。",
+          "difficulty": 2,
+          "knowledge_point": "Views on digital life 数字生活观点",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "I ______ (agree) with you that we should put our phones away in class.",
+          "answer": { "value": "agree" },
+          "analysis": "句中 already 给出了 agree 的各种形式，句子是一般现在时、主语是 I，所以填 agree；写成 agrees 或 agreed 都与主语和时态不符。",
+          "difficulty": 2,
+          "knowledge_point": "Views on digital life 数字生活观点",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「I don't think so」可以用来委婉地表示不同意对方的观点。",
+          "answer": { "value": "T" },
+          "analysis": "I don't think so 表示「我可不这么认为」，是英语中常用的礼貌反对方式，所以说法正确。注意它是省略句，完整形式是 I don't think so。",
+          "difficulty": 3,
+          "knowledge_point": "Views on digital life 数字生活观点",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Your friend says: 'We should ban all mobile phones at school.' How do you politely disagree?",
+          "options": [
+            "I'm afraid I don't agree. We can control our phones in class.",
+            "You're wrong. Phones are bad.",
+            "No, never. Stop talking about this.",
+            "That's a silly idea, and I don't care."
+          ],
+          "answer": { "value": "A" },
+          "analysis": "A 用 I'm afraid I don't agree 先缓和语气再说明理由，既礼貌又清楚，所以选 A；B、C、D 都带有指责或情绪，语气生硬，在讨论中不合适。",
+          "difficulty": 3,
+          "knowledge_point": "Views on digital life 数字生活观点",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following expressions can be used to give an opinion in a class discussion?",
+          "options": [
+            "In my opinion.",
+            "I believe that it is important.",
+            "From my point of view.",
+            "That doesn't matter to me at all."
+          ],
+          "answer": { "value": ["A", "B", "C"] },
+          "analysis": "A In my opinion 是标准的表明观点用语 ✓；B I believe that 引出看法 ✓；C From my point of view 同样表明立场 ✓；D 只是说「这与我无关」，并没有表达观点 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Views on digital life 数字生活观点",
+          "tags": ["多选"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Your class is discussing whether students should use mobile phones in class. Write your opinion in English in at least four sentences. Use two different expressions of opinion.",
+          "answer": { "value": "In my opinion, mobile phones are helpful for learning, but they should be put away when the teacher is talking. I believe that we can use them to look up new words after class. From my point of view, what matters is not the phone itself but how we use it. That is why I agree with the rule in our school." },
+          "analysis": "参考示例见答案。评分要点：①至少四句，内容完整表达立场（2 分）；②用上两种观点表达（如 In my opinion、I believe、From my point of view）（2 分）；③连接词使用正确，句子之间有逻辑（1 分）；④大小写、标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Views on digital life 数字生活观点",
+          "tags": ["写作"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which is the correct comparative form of the word 'useful'?",
+          "options": ["more useful", "usefuller", "most useful", "more usefully"],
+          "answer": { "value": "A" },
+          "analysis": "useful 是多音节词且以「辅音字母 + ful」结尾，比较级用 more 加形容词，所以选 A；usefuller 是生造的错误形式；most useful 是最高级；more usefully 是副词比较级，词性不对。",
+          "difficulty": 2,
+          "knowledge_point": "Comparative adjectives 比较级最高级",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which of the following sentences is grammatically correct?",
+          "options": [
+            "Mobile phones are more convenient than computers.",
+            "Mobile phones are convenient than computers.",
+            "Mobile phones more convenient than computers.",
+            "Mobile phones are more convenient than computer."
+          ],
+          "answer": { "value": "A" },
+          "analysis": "多音节形容词 convenient 的比较级是 more convenient，比较对象用 than 连接且要用复数 computers，所以选 A；B 漏掉 more；C 漏掉 be 动词 are；D 比较对象 computer 漏了复数 -s。",
+          "difficulty": 2,
+          "knowledge_point": "Comparative adjectives 比较级最高级",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "This app is ______ (useful) than that one for learning English.",
+          "answer": { "value": ["more useful"] },
+          "analysis": "空格在比较级位置，useful 是多音节词，要用 more 加形容词，即 more useful；than 说明是比较关系，句子缺 more 就成了原级。",
+          "difficulty": 3,
+          "knowledge_point": "Comparative adjectives 比较级最高级",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「the most useful app」的意思是「最有用的应用程序」。",
+          "answer": { "value": "T" },
+          "analysis": "多音节形容词的最高级用 most 加形容词，the most useful app 就是「最有用的应用程序」，所以说法正确。注意最高级前面一般要加 the。",
+          "difficulty": 3,
+          "knowledge_point": "Comparative adjectives 比较级最高级",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following sentences are correct?",
+          "options": [
+            "This is the cheapest phone in the shop.",
+            "This phone is cheaper than that one.",
+            "My phone is more cheaper than yours.",
+            "The screen is bigger than the screen of my old phone."
+          ],
+          "answer": { "value": ["A", "B", "D"] },
+          "analysis": "A cheap 是单音节词，最高级用 cheapest，前面加 the ✓；B cheap 的比较级是 cheaper ✓；D bigger 是 big 的正确比较级 ✓；C more cheaper 把两种比较级方式叠在一起，是双重比较错误 ✗。故 A、B、D 成立，C 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "Comparative adjectives 比较级最高级",
+          "tags": ["多选"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Your group is comparing two apps for a class project. Write three sentences in English to compare them, using at least two comparative forms.",
+          "answer": { "value": "The first app is more useful for learning words, because it has a bigger dictionary. The second app is cheaper than the first one. However, the second app is less convenient, so I think the first app is the best choice for our group." },
+          "analysis": "参考示例见答案。评分要点：①三句都在比较两款应用（2 分）；②至少两处比较级用对（more、cheaper、less、biggest 等）（2 分）；③比较对象齐全，用 than 或 in 引导（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Comparative adjectives 比较级最高级",
+          "tags": ["写作"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which is the best opening for an email to a friend?",
+          "options": [
+            "Hi Anna,",
+            "Dear Sir or Madam,",
+            "To whom it may concern,",
+            "Hello teacher,"
+          ],
+          "answer": { "value": "A" },
+          "analysis": "给朋友写邮件用熟悉的称呼 Hi Anna, 后面加逗号，所以选 A；Dear Sir or Madam 和 To whom it may concern 是写给陌生机构或老师的商务用语；Hello teacher 用于课堂当面称呼，不适合写在邮件里。",
+          "difficulty": 1,
+          "knowledge_point": "Email writing 邮件写作",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "In an email, we often use also, however and ______ to show reasons and results.",
+          "answer": { "value": "because" },
+          "analysis": "because 引出原因，also 与 however 分别表示补充和转折，because 与它们的语气一致，所以填 because；填 but 虽然也能表示转折，但和 also、however 搭配起来不如 because 能说明「原因与结果」。",
+          "difficulty": 2,
+          "knowledge_point": "Email writing 邮件写作",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "In a friendly email, we usually write 'Dear Anna,' with a comma after the name.",
+          "answer": { "value": "T" },
+          "analysis": "英语邮件称呼后习惯加逗号再另起一行写正文，所以说法正确。写作题里称呼后的标点是最容易丢分的小地方，要记牢。",
+          "difficulty": 2,
+          "knowledge_point": "Email writing 邮件写作",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following words are often used to show reasons and results in an email?",
+          "options": ["because", "so", "but", "however"],
+          "answer": { "value": ["A", "B"] },
+          "analysis": "A because 引出原因 ✓；B so 引出结果 ✓；C but 表示转折，不表示原因与结果 ✗；D however 也是转折连词，同样不表示因果 ✗。故 A、B 成立，C、D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Email writing 邮件写作",
+          "tags": ["多选"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Your English teacher asks you to write an email to a pen friend about the digital tools you use for study. Write at least five sentences. Include a greeting, two reasons and a sign-off.",
+          "answer": { "value": "Dear Tom, Thank you for your last email. I use my phone to look up new words and I take photos of the notes on the blackboard. I also use a search engine when I want to know more about a topic. In my opinion, these tools are useful because they save me time. Best wishes, Li Ming" },
+          "analysis": "参考示例见答案。评分要点：①有称呼与结尾致意，格式完整（2 分）；②主体至少两句并写出两条理由（2 分）；③用上 because、also、in my opinion 等连接与观点表达（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Email writing 邮件写作",
+          "tags": ["写作", "情境应用"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "What is the first step of a group project?",
+          "options": [
+            "Plan the work.",
+            "Present the result.",
+            "Collect the marks.",
+            "Copy the report."
+          ],
+          "answer": { "value": "A" },
+          "analysis": "做项目的第一步是制定计划，明确任务与时间，所以选 A；B 展示成果是最后一步；C 收集分数不是项目环节；D 抄袭报告既是错误的做法，也用词不通。",
+          "difficulty": 2,
+          "knowledge_point": "Digital project 数字主题项目",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "In a group project, each member should finish his or her own ______ (task) on time.",
+          "answer": { "value": "task" },
+          "analysis": "句意是「每个成员都应按时完成自己的任务」，task 指具体的分工任务，所以填 task；写成 jobs 语气不对，写成 task 的复数也与 own 单数搭配矛盾。",
+          "difficulty": 2,
+          "knowledge_point": "Digital project 数字主题项目",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "In a group project, everyone should do exactly the same job so that the work is fair.",
+          "answer": { "value": "F" },
+          "analysis": "项目分工要按每个人的能力与任务需要来定，让所有人做同一件事反而效率低下，所以说法错误。公平指的是任务明确、进度互相配合，不是工作内容完全相同。",
+          "difficulty": 3,
+          "knowledge_point": "Digital project 数字主题项目",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following are good habits in a group project?",
+          "options": [
+            "Keep a clear schedule for the work.",
+            "Tell your group when you cannot finish your part.",
+            "Copy other members' work without telling them.",
+            "Practise the presentation together."
+          ],
+          "answer": { "value": ["A", "B", "D"] },
+          "analysis": "A 制定清晰的时间表能保证进度 ✓；B 提前告知进度困难是负责任的做法 ✓；C 抄袭别人的成果既不诚信也拿不到真正的训练 ✗；D 一起排练展示能提高配合度 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Digital project 数字主题项目",
+          "tags": ["多选"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Your group is making a short presentation about how digital devices change our daily life. Write a plan in English with four steps, and say what each member should do.",
+          "answer": { "value": "First, we will discuss the topic and decide on the main points. Second, Wang Mei will search for information and write the facts. Third, Li Lei will design the pictures and the slides. Fourth, we will all practise the presentation on Monday and show it on Tuesday." },
+          "analysis": "参考示例见答案。评分要点：①四个步骤齐全、有先后顺序（2 分）；②每一步写清谁做什么，分工具体（2 分）；③用上 first、second、third 等顺序词（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Digital project 数字主题项目",
+          "tags": ["写作", "情境应用"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

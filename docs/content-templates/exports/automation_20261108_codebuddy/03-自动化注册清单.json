@@ -1,0 +1,286 @@
+{
+  "description": "把原导出包 9 条「每天 3 班」的 cron 任务映射成 CodeBuddy 自动化载荷（启用形态 B：02/12/21 点档；审阅稿，不可直接注册）",
+  "source": "../automation_20261108/01-九条任务全文可复制.md",
+  "tool": "automation_update（延迟工具，经 DeferExecuteTool 调用；mode=suggested create）——本轮及此前从未调用，且当前禁止调用",
+  "registration": {
+    "allowed": false,
+    "reason": "02/12 两班的 BYMINUTE 仍是 0/5/…/40，与原文 9 条 cron 完全同分钟；两套调度不得同时 ACTIVE，因此在停用原文 cron 之前，载荷自身不具备可直接注册的条件。",
+    "enablement_decision": {
+      "status": "已选定 B（用户 2026-11-08 拍板）：27 条全留，原 22 点班前移到 21 点档",
+      "selected": "B",
+      "options": [
+        {
+          "id": "A",
+          "payload_count": 9,
+          "selected": false,
+          "detail": "CodeBuddy 侧只保留 02 点班（9 条载荷），12/22 两班继续由原文 cron 承担"
+        },
+        {
+          "id": "B",
+          "payload_count": 27,
+          "selected": true,
+          "detail": "27 条全留，21 点档晚班 21:30-21:38 每学科 1 分钟错峰，避开 23:30 停手规则"
+        }
+      ],
+      "schedule": {
+        "02": "BYHOUR=2;BYMINUTE=0/5/…/40（各学科原分钟）",
+        "12": "BYHOUR=12;BYMINUTE=0/5/…/40（各学科原分钟）",
+        "21": "BYHOUR=21;BYMINUTE=30..38（按学科顺序每分钟一条）"
+      },
+      "blocking": "形态已定但尚未启用：必须先停用原文 9 条 cron，逐条复核 RRULE / cwds / prompt，再把 status 从 PAUSED 改为 ACTIVE。在此之前 registration.allowed 恒为 False，禁止把本文件喂给 automation_update"
+    },
+    "prerequisites": [
+      "停用原文 9 条 cron（两套调度不得同时 ACTIVE）",
+      "逐条复核 27 条 RRULE 的 BYHOUR / BYMINUTE、cwds 与 prompt",
+      "把 status 从 PAUSED 改为 ACTIVE"
+    ],
+    "note": "本文件仅供审阅与留痕；02/12 两班照现状直接喂给 automation_update 仍会同分钟对撞。"
+  },
+  "note": "⚠️ 不可直接注册。RRULE 只用单个 BYHOUR（多值 BYHOUR 未验证），所以 9 学科 × 3 班次 = 27 条。status 全部 PAUSED，与原文「当前状态：已停止」一致；本次及此前从未调用 automation_update 实际注册。第五轮 D 用户选 B：02/12 两班 BYMINUTE = tasks.json 的 minute 原值（rrule_minute_offset=0）；原 22 点班前移到 21 点档，BYMINUTE=30..38 按学科顺序每分钟一条（21:30-21:59 只剩 30 分钟，放不下 9×5 分钟错峰；各学科有独立锁文件，1 分钟错峰不触发同科并行锁），距「最迟 23:30 停手」≥1h52m，原冲突解除。不再使用「整条 RRULE BYHOUR +1」方案。启用前先停用另一侧调度并逐条复核，禁止两套调度同时 ACTIVE；保持不注册，避免产生计划外副作用。",
+  "count": 27,
+  "payloads": [
+    {
+      "mode": "suggested create",
+      "name": "数学1-9上每日教研-02点班",
+      "prompt": "执行每日教研：学科=math（数学），版本=北师大版，学期=first，年级=1,2,3,4,5,6,7,8,9，班次=02（首跑·进攻班）。先读 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\01-主提示词.md 全文并严格照办；参数以 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\tasks.json 为准，BATCH_DATE 取触发当天日期（Asia/Shanghai）。用 D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/exports/automation_20261108_codebuddy/_run_daily.py 的 plan/lock/context/validate/commit/finish 完成闭环。只产出 JSON 与台账/日志，不导入、不连库、不改已有文件、不读写其他学科文件。【生成期约束】出题阶段就按每知识点 ≥4 题、难度 1-2/3/4-5 ≈ 40/40/20（±15pp）设计；题目难度由题目本身决定，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例，禁止用一次性补丁脚本改写已通过自检的 JSON。【硬约束】禁止调用 db_ops.py / ops.*，禁止执行任何入库或回退动作（run_all.* 已无入库 Action，ops.* 需人工显式 -Date + -ConfirmToken I_KNOW，另需运行时一次性 6 位交互确认码，示例/提示词均无法代填），禁止执行 ledger-sync / log-sync（人工运维命令）；_run_daily.py 已无 import/restore 子命令。",
+      "scheduleType": "recurring",
+      "rrule": "FREQ=DAILY;BYHOUR=2;BYMINUTE=0",
+      "cwds": "D:/ai/prj/trae/HuaWei/AiLearning",
+      "status": "PAUSED"
+    },
+    {
+      "mode": "suggested create",
+      "name": "数学1-9上每日教研-12点班",
+      "prompt": "执行每日教研：学科=math（数学），版本=北师大版，学期=first，年级=1,2,3,4,5,6,7,8,9，班次=12（补漏班）。先读 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\01-主提示词.md 全文并严格照办；参数以 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\tasks.json 为准，BATCH_DATE 取触发当天日期（Asia/Shanghai）。用 D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/exports/automation_20261108_codebuddy/_run_daily.py 的 plan/lock/context/validate/commit/finish 完成闭环。只产出 JSON 与台账/日志，不导入、不连库、不改已有文件、不读写其他学科文件。【生成期约束】出题阶段就按每知识点 ≥4 题、难度 1-2/3/4-5 ≈ 40/40/20（±15pp）设计；题目难度由题目本身决定，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例，禁止用一次性补丁脚本改写已通过自检的 JSON。【硬约束】禁止调用 db_ops.py / ops.*，禁止执行任何入库或回退动作（run_all.* 已无入库 Action，ops.* 需人工显式 -Date + -ConfirmToken I_KNOW，另需运行时一次性 6 位交互确认码，示例/提示词均无法代填），禁止执行 ledger-sync / log-sync（人工运维命令）；_run_daily.py 已无 import/restore 子命令。",
+      "scheduleType": "recurring",
+      "rrule": "FREQ=DAILY;BYHOUR=12;BYMINUTE=0",
+      "cwds": "D:/ai/prj/trae/HuaWei/AiLearning",
+      "status": "PAUSED"
+    },
+    {
+      "mode": "suggested create",
+      "name": "数学1-9上每日教研-21点班",
+      "prompt": "执行每日教研：学科=math（数学），版本=北师大版，学期=first，年级=1,2,3,4,5,6,7,8,9，班次=22（补漏班·前移至21:30）。先读 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\01-主提示词.md 全文并严格照办；参数以 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\tasks.json 为准，BATCH_DATE 取触发当天日期（Asia/Shanghai）。用 D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/exports/automation_20261108_codebuddy/_run_daily.py 的 plan/lock/context/validate/commit/finish 完成闭环。只产出 JSON 与台账/日志，不导入、不连库、不改已有文件、不读写其他学科文件。【生成期约束】出题阶段就按每知识点 ≥4 题、难度 1-2/3/4-5 ≈ 40/40/20（±15pp）设计；题目难度由题目本身决定，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例，禁止用一次性补丁脚本改写已通过自检的 JSON。【硬约束】禁止调用 db_ops.py / ops.*，禁止执行任何入库或回退动作（run_all.* 已无入库 Action，ops.* 需人工显式 -Date + -ConfirmToken I_KNOW，另需运行时一次性 6 位交互确认码，示例/提示词均无法代填），禁止执行 ledger-sync / log-sync（人工运维命令）；_run_daily.py 已无 import/restore 子命令。",
+      "scheduleType": "recurring",
+      "rrule": "FREQ=DAILY;BYHOUR=21;BYMINUTE=30",
+      "cwds": "D:/ai/prj/trae/HuaWei/AiLearning",
+      "status": "PAUSED"
+    },
+    {
+      "mode": "suggested create",
+      "name": "语文1-9上每日教研-02点班",
+      "prompt": "执行每日教研：学科=chinese（语文），版本=人教版，学期=first，年级=1,2,3,4,5,6,7,8,9，班次=02（首跑·进攻班）。先读 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\01-主提示词.md 全文并严格照办；参数以 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\tasks.json 为准，BATCH_DATE 取触发当天日期（Asia/Shanghai）。用 D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/exports/automation_20261108_codebuddy/_run_daily.py 的 plan/lock/context/validate/commit/finish 完成闭环。只产出 JSON 与台账/日志，不导入、不连库、不改已有文件、不读写其他学科文件。【生成期约束】出题阶段就按每知识点 ≥4 题、难度 1-2/3/4-5 ≈ 40/40/20（±15pp）设计；题目难度由题目本身决定，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例，禁止用一次性补丁脚本改写已通过自检的 JSON。【硬约束】禁止调用 db_ops.py / ops.*，禁止执行任何入库或回退动作（run_all.* 已无入库 Action，ops.* 需人工显式 -Date + -ConfirmToken I_KNOW，另需运行时一次性 6 位交互确认码，示例/提示词均无法代填），禁止执行 ledger-sync / log-sync（人工运维命令）；_run_daily.py 已无 import/restore 子命令。",
+      "scheduleType": "recurring",
+      "rrule": "FREQ=DAILY;BYHOUR=2;BYMINUTE=5",
+      "cwds": "D:/ai/prj/trae/HuaWei/AiLearning",
+      "status": "PAUSED"
+    },
+    {
+      "mode": "suggested create",
+      "name": "语文1-9上每日教研-12点班",
+      "prompt": "执行每日教研：学科=chinese（语文），版本=人教版，学期=first，年级=1,2,3,4,5,6,7,8,9，班次=12（补漏班）。先读 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\01-主提示词.md 全文并严格照办；参数以 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\tasks.json 为准，BATCH_DATE 取触发当天日期（Asia/Shanghai）。用 D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/exports/automation_20261108_codebuddy/_run_daily.py 的 plan/lock/context/validate/commit/finish 完成闭环。只产出 JSON 与台账/日志，不导入、不连库、不改已有文件、不读写其他学科文件。【生成期约束】出题阶段就按每知识点 ≥4 题、难度 1-2/3/4-5 ≈ 40/40/20（±15pp）设计；题目难度由题目本身决定，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例，禁止用一次性补丁脚本改写已通过自检的 JSON。【硬约束】禁止调用 db_ops.py / ops.*，禁止执行任何入库或回退动作（run_all.* 已无入库 Action，ops.* 需人工显式 -Date + -ConfirmToken I_KNOW，另需运行时一次性 6 位交互确认码，示例/提示词均无法代填），禁止执行 ledger-sync / log-sync（人工运维命令）；_run_daily.py 已无 import/restore 子命令。",
+      "scheduleType": "recurring",
+      "rrule": "FREQ=DAILY;BYHOUR=12;BYMINUTE=5",
+      "cwds": "D:/ai/prj/trae/HuaWei/AiLearning",
+      "status": "PAUSED"
+    },
+    {
+      "mode": "suggested create",
+      "name": "语文1-9上每日教研-21点班",
+      "prompt": "执行每日教研：学科=chinese（语文），版本=人教版，学期=first，年级=1,2,3,4,5,6,7,8,9，班次=22（补漏班·前移至21:30）。先读 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\01-主提示词.md 全文并严格照办；参数以 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\tasks.json 为准，BATCH_DATE 取触发当天日期（Asia/Shanghai）。用 D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/exports/automation_20261108_codebuddy/_run_daily.py 的 plan/lock/context/validate/commit/finish 完成闭环。只产出 JSON 与台账/日志，不导入、不连库、不改已有文件、不读写其他学科文件。【生成期约束】出题阶段就按每知识点 ≥4 题、难度 1-2/3/4-5 ≈ 40/40/20（±15pp）设计；题目难度由题目本身决定，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例，禁止用一次性补丁脚本改写已通过自检的 JSON。【硬约束】禁止调用 db_ops.py / ops.*，禁止执行任何入库或回退动作（run_all.* 已无入库 Action，ops.* 需人工显式 -Date + -ConfirmToken I_KNOW，另需运行时一次性 6 位交互确认码，示例/提示词均无法代填），禁止执行 ledger-sync / log-sync（人工运维命令）；_run_daily.py 已无 import/restore 子命令。",
+      "scheduleType": "recurring",
+      "rrule": "FREQ=DAILY;BYHOUR=21;BYMINUTE=31",
+      "cwds": "D:/ai/prj/trae/HuaWei/AiLearning",
+      "status": "PAUSED"
+    },
+    {
+      "mode": "suggested create",
+      "name": "英语1-9上每日教研-02点班",
+      "prompt": "执行每日教研：学科=english（英语），版本=牛津深圳版，学期=first，年级=1,2,3,4,5,6,7,8,9，班次=02（首跑·进攻班）。先读 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\01-主提示词.md 全文并严格照办；参数以 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\tasks.json 为准，BATCH_DATE 取触发当天日期（Asia/Shanghai）。用 D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/exports/automation_20261108_codebuddy/_run_daily.py 的 plan/lock/context/validate/commit/finish 完成闭环。只产出 JSON 与台账/日志，不导入、不连库、不改已有文件、不读写其他学科文件。【生成期约束】出题阶段就按每知识点 ≥4 题、难度 1-2/3/4-5 ≈ 40/40/20（±15pp）设计；题目难度由题目本身决定，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例，禁止用一次性补丁脚本改写已通过自检的 JSON。【英语 section 命名】英语按课时板块推进时，knowledge 的 section 必须写「Unit N 标题 / 板块」复合名，point 的 parent 与它一致，chapters[].name 仍是完整单元名；Ready Go / Story 这类纯板块名在多个单元重复，_validate_daily.py 按 (单元,板块) 二元组校验并判 error。整单元首跑的历史节点允许保留单元名（不编造板块）。台账/日志的下一节计划用复合名；大纲只有单元名、没有课时板块的年级（如 g9）沿用单元名，不拼成重复的复合名。【硬约束】禁止调用 db_ops.py / ops.*，禁止执行任何入库或回退动作（run_all.* 已无入库 Action，ops.* 需人工显式 -Date + -ConfirmToken I_KNOW，另需运行时一次性 6 位交互确认码，示例/提示词均无法代填），禁止执行 ledger-sync / log-sync（人工运维命令）；_run_daily.py 已无 import/restore 子命令。",
+      "scheduleType": "recurring",
+      "rrule": "FREQ=DAILY;BYHOUR=2;BYMINUTE=10",
+      "cwds": "D:/ai/prj/trae/HuaWei/AiLearning",
+      "status": "PAUSED"
+    },
+    {
+      "mode": "suggested create",
+      "name": "英语1-9上每日教研-12点班",
+      "prompt": "执行每日教研：学科=english（英语），版本=牛津深圳版，学期=first，年级=1,2,3,4,5,6,7,8,9，班次=12（补漏班）。先读 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\01-主提示词.md 全文并严格照办；参数以 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\tasks.json 为准，BATCH_DATE 取触发当天日期（Asia/Shanghai）。用 D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/exports/automation_20261108_codebuddy/_run_daily.py 的 plan/lock/context/validate/commit/finish 完成闭环。只产出 JSON 与台账/日志，不导入、不连库、不改已有文件、不读写其他学科文件。【生成期约束】出题阶段就按每知识点 ≥4 题、难度 1-2/3/4-5 ≈ 40/40/20（±15pp）设计；题目难度由题目本身决定，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例，禁止用一次性补丁脚本改写已通过自检的 JSON。【英语 section 命名】英语按课时板块推进时，knowledge 的 section 必须写「Unit N 标题 / 板块」复合名，point 的 parent 与它一致，chapters[].name 仍是完整单元名；Ready Go / Story 这类纯板块名在多个单元重复，_validate_daily.py 按 (单元,板块) 二元组校验并判 error。整单元首跑的历史节点允许保留单元名（不编造板块）。台账/日志的下一节计划用复合名；大纲只有单元名、没有课时板块的年级（如 g9）沿用单元名，不拼成重复的复合名。【硬约束】禁止调用 db_ops.py / ops.*，禁止执行任何入库或回退动作（run_all.* 已无入库 Action，ops.* 需人工显式 -Date + -ConfirmToken I_KNOW，另需运行时一次性 6 位交互确认码，示例/提示词均无法代填），禁止执行 ledger-sync / log-sync（人工运维命令）；_run_daily.py 已无 import/restore 子命令。",
+      "scheduleType": "recurring",
+      "rrule": "FREQ=DAILY;BYHOUR=12;BYMINUTE=10",
+      "cwds": "D:/ai/prj/trae/HuaWei/AiLearning",
+      "status": "PAUSED"
+    },
+    {
+      "mode": "suggested create",
+      "name": "英语1-9上每日教研-21点班",
+      "prompt": "执行每日教研：学科=english（英语），版本=牛津深圳版，学期=first，年级=1,2,3,4,5,6,7,8,9，班次=22（补漏班·前移至21:30）。先读 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\01-主提示词.md 全文并严格照办；参数以 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\tasks.json 为准，BATCH_DATE 取触发当天日期（Asia/Shanghai）。用 D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/exports/automation_20261108_codebuddy/_run_daily.py 的 plan/lock/context/validate/commit/finish 完成闭环。只产出 JSON 与台账/日志，不导入、不连库、不改已有文件、不读写其他学科文件。【生成期约束】出题阶段就按每知识点 ≥4 题、难度 1-2/3/4-5 ≈ 40/40/20（±15pp）设计；题目难度由题目本身决定，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例，禁止用一次性补丁脚本改写已通过自检的 JSON。【英语 section 命名】英语按课时板块推进时，knowledge 的 section 必须写「Unit N 标题 / 板块」复合名，point 的 parent 与它一致，chapters[].name 仍是完整单元名；Ready Go / Story 这类纯板块名在多个单元重复，_validate_daily.py 按 (单元,板块) 二元组校验并判 error。整单元首跑的历史节点允许保留单元名（不编造板块）。台账/日志的下一节计划用复合名；大纲只有单元名、没有课时板块的年级（如 g9）沿用单元名，不拼成重复的复合名。【硬约束】禁止调用 db_ops.py / ops.*，禁止执行任何入库或回退动作（run_all.* 已无入库 Action，ops.* 需人工显式 -Date + -ConfirmToken I_KNOW，另需运行时一次性 6 位交互确认码，示例/提示词均无法代填），禁止执行 ledger-sync / log-sync（人工运维命令）；_run_daily.py 已无 import/restore 子命令。",
+      "scheduleType": "recurring",
+      "rrule": "FREQ=DAILY;BYHOUR=21;BYMINUTE=32",
+      "cwds": "D:/ai/prj/trae/HuaWei/AiLearning",
+      "status": "PAUSED"
+    },
+    {
+      "mode": "suggested create",
+      "name": "道法1-9上每日教研-02点班",
+      "prompt": "执行每日教研：学科=politics（道德与法治），版本=部编版，学期=first，年级=1,2,3,4,5,6,7,8,9，班次=02（首跑·进攻班）。先读 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\01-主提示词.md 全文并严格照办；参数以 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\tasks.json 为准，BATCH_DATE 取触发当天日期（Asia/Shanghai）。用 D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/exports/automation_20261108_codebuddy/_run_daily.py 的 plan/lock/context/validate/commit/finish 完成闭环。只产出 JSON 与台账/日志，不导入、不连库、不改已有文件、不读写其他学科文件。【生成期约束】出题阶段就按每知识点 ≥4 题、难度 1-2/3/4-5 ≈ 40/40/20（±15pp）设计；题目难度由题目本身决定，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例，禁止用一次性补丁脚本改写已通过自检的 JSON。【硬约束】禁止调用 db_ops.py / ops.*，禁止执行任何入库或回退动作（run_all.* 已无入库 Action，ops.* 需人工显式 -Date + -ConfirmToken I_KNOW，另需运行时一次性 6 位交互确认码，示例/提示词均无法代填），禁止执行 ledger-sync / log-sync（人工运维命令）；_run_daily.py 已无 import/restore 子命令。",
+      "scheduleType": "recurring",
+      "rrule": "FREQ=DAILY;BYHOUR=2;BYMINUTE=15",
+      "cwds": "D:/ai/prj/trae/HuaWei/AiLearning",
+      "status": "PAUSED"
+    },
+    {
+      "mode": "suggested create",
+      "name": "道法1-9上每日教研-12点班",
+      "prompt": "执行每日教研：学科=politics（道德与法治），版本=部编版，学期=first，年级=1,2,3,4,5,6,7,8,9，班次=12（补漏班）。先读 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\01-主提示词.md 全文并严格照办；参数以 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\tasks.json 为准，BATCH_DATE 取触发当天日期（Asia/Shanghai）。用 D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/exports/automation_20261108_codebuddy/_run_daily.py 的 plan/lock/context/validate/commit/finish 完成闭环。只产出 JSON 与台账/日志，不导入、不连库、不改已有文件、不读写其他学科文件。【生成期约束】出题阶段就按每知识点 ≥4 题、难度 1-2/3/4-5 ≈ 40/40/20（±15pp）设计；题目难度由题目本身决定，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例，禁止用一次性补丁脚本改写已通过自检的 JSON。【硬约束】禁止调用 db_ops.py / ops.*，禁止执行任何入库或回退动作（run_all.* 已无入库 Action，ops.* 需人工显式 -Date + -ConfirmToken I_KNOW，另需运行时一次性 6 位交互确认码，示例/提示词均无法代填），禁止执行 ledger-sync / log-sync（人工运维命令）；_run_daily.py 已无 import/restore 子命令。",
+      "scheduleType": "recurring",
+      "rrule": "FREQ=DAILY;BYHOUR=12;BYMINUTE=15",
+      "cwds": "D:/ai/prj/trae/HuaWei/AiLearning",
+      "status": "PAUSED"
+    },
+    {
+      "mode": "suggested create",
+      "name": "道法1-9上每日教研-21点班",
+      "prompt": "执行每日教研：学科=politics（道德与法治），版本=部编版，学期=first，年级=1,2,3,4,5,6,7,8,9，班次=22（补漏班·前移至21:30）。先读 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\01-主提示词.md 全文并严格照办；参数以 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\tasks.json 为准，BATCH_DATE 取触发当天日期（Asia/Shanghai）。用 D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/exports/automation_20261108_codebuddy/_run_daily.py 的 plan/lock/context/validate/commit/finish 完成闭环。只产出 JSON 与台账/日志，不导入、不连库、不改已有文件、不读写其他学科文件。【生成期约束】出题阶段就按每知识点 ≥4 题、难度 1-2/3/4-5 ≈ 40/40/20（±15pp）设计；题目难度由题目本身决定，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例，禁止用一次性补丁脚本改写已通过自检的 JSON。【硬约束】禁止调用 db_ops.py / ops.*，禁止执行任何入库或回退动作（run_all.* 已无入库 Action，ops.* 需人工显式 -Date + -ConfirmToken I_KNOW，另需运行时一次性 6 位交互确认码，示例/提示词均无法代填），禁止执行 ledger-sync / log-sync（人工运维命令）；_run_daily.py 已无 import/restore 子命令。",
+      "scheduleType": "recurring",
+      "rrule": "FREQ=DAILY;BYHOUR=21;BYMINUTE=33",
+      "cwds": "D:/ai/prj/trae/HuaWei/AiLearning",
+      "status": "PAUSED"
+    },
+    {
+      "mode": "suggested create",
+      "name": "物理8-9上每日教研-02点班",
+      "prompt": "执行每日教研：学科=physics（物理），版本=人教版，学期=first，年级=8,9，班次=02（首跑·进攻班）。先读 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\01-主提示词.md 全文并严格照办；参数以 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\tasks.json 为准，BATCH_DATE 取触发当天日期（Asia/Shanghai）。用 D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/exports/automation_20261108_codebuddy/_run_daily.py 的 plan/lock/context/validate/commit/finish 完成闭环。只产出 JSON 与台账/日志，不导入、不连库、不改已有文件、不读写其他学科文件。【生成期约束】出题阶段就按每知识点 ≥4 题、难度 1-2/3/4-5 ≈ 40/40/20（±15pp）设计；题目难度由题目本身决定，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例，禁止用一次性补丁脚本改写已通过自检的 JSON。【硬约束】禁止调用 db_ops.py / ops.*，禁止执行任何入库或回退动作（run_all.* 已无入库 Action，ops.* 需人工显式 -Date + -ConfirmToken I_KNOW，另需运行时一次性 6 位交互确认码，示例/提示词均无法代填），禁止执行 ledger-sync / log-sync（人工运维命令）；_run_daily.py 已无 import/restore 子命令。",
+      "scheduleType": "recurring",
+      "rrule": "FREQ=DAILY;BYHOUR=2;BYMINUTE=20",
+      "cwds": "D:/ai/prj/trae/HuaWei/AiLearning",
+      "status": "PAUSED"
+    },
+    {
+      "mode": "suggested create",
+      "name": "物理8-9上每日教研-12点班",
+      "prompt": "执行每日教研：学科=physics（物理），版本=人教版，学期=first，年级=8,9，班次=12（补漏班）。先读 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\01-主提示词.md 全文并严格照办；参数以 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\tasks.json 为准，BATCH_DATE 取触发当天日期（Asia/Shanghai）。用 D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/exports/automation_20261108_codebuddy/_run_daily.py 的 plan/lock/context/validate/commit/finish 完成闭环。只产出 JSON 与台账/日志，不导入、不连库、不改已有文件、不读写其他学科文件。【生成期约束】出题阶段就按每知识点 ≥4 题、难度 1-2/3/4-5 ≈ 40/40/20（±15pp）设计；题目难度由题目本身决定，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例，禁止用一次性补丁脚本改写已通过自检的 JSON。【硬约束】禁止调用 db_ops.py / ops.*，禁止执行任何入库或回退动作（run_all.* 已无入库 Action，ops.* 需人工显式 -Date + -ConfirmToken I_KNOW，另需运行时一次性 6 位交互确认码，示例/提示词均无法代填），禁止执行 ledger-sync / log-sync（人工运维命令）；_run_daily.py 已无 import/restore 子命令。",
+      "scheduleType": "recurring",
+      "rrule": "FREQ=DAILY;BYHOUR=12;BYMINUTE=20",
+      "cwds": "D:/ai/prj/trae/HuaWei/AiLearning",
+      "status": "PAUSED"
+    },
+    {
+      "mode": "suggested create",
+      "name": "物理8-9上每日教研-21点班",
+      "prompt": "执行每日教研：学科=physics（物理），版本=人教版，学期=first，年级=8,9，班次=22（补漏班·前移至21:30）。先读 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\01-主提示词.md 全文并严格照办；参数以 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\tasks.json 为准，BATCH_DATE 取触发当天日期（Asia/Shanghai）。用 D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/exports/automation_20261108_codebuddy/_run_daily.py 的 plan/lock/context/validate/commit/finish 完成闭环。只产出 JSON 与台账/日志，不导入、不连库、不改已有文件、不读写其他学科文件。【生成期约束】出题阶段就按每知识点 ≥4 题、难度 1-2/3/4-5 ≈ 40/40/20（±15pp）设计；题目难度由题目本身决定，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例，禁止用一次性补丁脚本改写已通过自检的 JSON。【硬约束】禁止调用 db_ops.py / ops.*，禁止执行任何入库或回退动作（run_all.* 已无入库 Action，ops.* 需人工显式 -Date + -ConfirmToken I_KNOW，另需运行时一次性 6 位交互确认码，示例/提示词均无法代填），禁止执行 ledger-sync / log-sync（人工运维命令）；_run_daily.py 已无 import/restore 子命令。",
+      "scheduleType": "recurring",
+      "rrule": "FREQ=DAILY;BYHOUR=21;BYMINUTE=34",
+      "cwds": "D:/ai/prj/trae/HuaWei/AiLearning",
+      "status": "PAUSED"
+    },
+    {
+      "mode": "suggested create",
+      "name": "化学9上每日教研-02点班",
+      "prompt": "执行每日教研：学科=chemistry（化学），版本=人教版，学期=first，年级=9，班次=02（首跑·进攻班）。先读 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\01-主提示词.md 全文并严格照办；参数以 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\tasks.json 为准，BATCH_DATE 取触发当天日期（Asia/Shanghai）。用 D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/exports/automation_20261108_codebuddy/_run_daily.py 的 plan/lock/context/validate/commit/finish 完成闭环。只产出 JSON 与台账/日志，不导入、不连库、不改已有文件、不读写其他学科文件。【生成期约束】出题阶段就按每知识点 ≥4 题、难度 1-2/3/4-5 ≈ 40/40/20（±15pp）设计；题目难度由题目本身决定，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例，禁止用一次性补丁脚本改写已通过自检的 JSON。【硬约束】禁止调用 db_ops.py / ops.*，禁止执行任何入库或回退动作（run_all.* 已无入库 Action，ops.* 需人工显式 -Date + -ConfirmToken I_KNOW，另需运行时一次性 6 位交互确认码，示例/提示词均无法代填），禁止执行 ledger-sync / log-sync（人工运维命令）；_run_daily.py 已无 import/restore 子命令。",
+      "scheduleType": "recurring",
+      "rrule": "FREQ=DAILY;BYHOUR=2;BYMINUTE=25",
+      "cwds": "D:/ai/prj/trae/HuaWei/AiLearning",
+      "status": "PAUSED"
+    },
+    {
+      "mode": "suggested create",
+      "name": "化学9上每日教研-12点班",
+      "prompt": "执行每日教研：学科=chemistry（化学），版本=人教版，学期=first，年级=9，班次=12（补漏班）。先读 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\01-主提示词.md 全文并严格照办；参数以 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\tasks.json 为准，BATCH_DATE 取触发当天日期（Asia/Shanghai）。用 D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/exports/automation_20261108_codebuddy/_run_daily.py 的 plan/lock/context/validate/commit/finish 完成闭环。只产出 JSON 与台账/日志，不导入、不连库、不改已有文件、不读写其他学科文件。【生成期约束】出题阶段就按每知识点 ≥4 题、难度 1-2/3/4-5 ≈ 40/40/20（±15pp）设计；题目难度由题目本身决定，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例，禁止用一次性补丁脚本改写已通过自检的 JSON。【硬约束】禁止调用 db_ops.py / ops.*，禁止执行任何入库或回退动作（run_all.* 已无入库 Action，ops.* 需人工显式 -Date + -ConfirmToken I_KNOW，另需运行时一次性 6 位交互确认码，示例/提示词均无法代填），禁止执行 ledger-sync / log-sync（人工运维命令）；_run_daily.py 已无 import/restore 子命令。",
+      "scheduleType": "recurring",
+      "rrule": "FREQ=DAILY;BYHOUR=12;BYMINUTE=25",
+      "cwds": "D:/ai/prj/trae/HuaWei/AiLearning",
+      "status": "PAUSED"
+    },
+    {
+      "mode": "suggested create",
+      "name": "化学9上每日教研-21点班",
+      "prompt": "执行每日教研：学科=chemistry（化学），版本=人教版，学期=first，年级=9，班次=22（补漏班·前移至21:30）。先读 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\01-主提示词.md 全文并严格照办；参数以 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\tasks.json 为准，BATCH_DATE 取触发当天日期（Asia/Shanghai）。用 D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/exports/automation_20261108_codebuddy/_run_daily.py 的 plan/lock/context/validate/commit/finish 完成闭环。只产出 JSON 与台账/日志，不导入、不连库、不改已有文件、不读写其他学科文件。【生成期约束】出题阶段就按每知识点 ≥4 题、难度 1-2/3/4-5 ≈ 40/40/20（±15pp）设计；题目难度由题目本身决定，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例，禁止用一次性补丁脚本改写已通过自检的 JSON。【硬约束】禁止调用 db_ops.py / ops.*，禁止执行任何入库或回退动作（run_all.* 已无入库 Action，ops.* 需人工显式 -Date + -ConfirmToken I_KNOW，另需运行时一次性 6 位交互确认码，示例/提示词均无法代填），禁止执行 ledger-sync / log-sync（人工运维命令）；_run_daily.py 已无 import/restore 子命令。",
+      "scheduleType": "recurring",
+      "rrule": "FREQ=DAILY;BYHOUR=21;BYMINUTE=35",
+      "cwds": "D:/ai/prj/trae/HuaWei/AiLearning",
+      "status": "PAUSED"
+    },
+    {
+      "mode": "suggested create",
+      "name": "生物7-8上每日教研-02点班",
+      "prompt": "执行每日教研：学科=biology（生物），版本=人教版，学期=first，年级=7,8，班次=02（首跑·进攻班）。先读 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\01-主提示词.md 全文并严格照办；参数以 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\tasks.json 为准，BATCH_DATE 取触发当天日期（Asia/Shanghai）。用 D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/exports/automation_20261108_codebuddy/_run_daily.py 的 plan/lock/context/validate/commit/finish 完成闭环。只产出 JSON 与台账/日志，不导入、不连库、不改已有文件、不读写其他学科文件。【生成期约束】出题阶段就按每知识点 ≥4 题、难度 1-2/3/4-5 ≈ 40/40/20（±15pp）设计；题目难度由题目本身决定，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例，禁止用一次性补丁脚本改写已通过自检的 JSON。【硬约束】禁止调用 db_ops.py / ops.*，禁止执行任何入库或回退动作（run_all.* 已无入库 Action，ops.* 需人工显式 -Date + -ConfirmToken I_KNOW，另需运行时一次性 6 位交互确认码，示例/提示词均无法代填），禁止执行 ledger-sync / log-sync（人工运维命令）；_run_daily.py 已无 import/restore 子命令。",
+      "scheduleType": "recurring",
+      "rrule": "FREQ=DAILY;BYHOUR=2;BYMINUTE=30",
+      "cwds": "D:/ai/prj/trae/HuaWei/AiLearning",
+      "status": "PAUSED"
+    },
+    {
+      "mode": "suggested create",
+      "name": "生物7-8上每日教研-12点班",
+      "prompt": "执行每日教研：学科=biology（生物），版本=人教版，学期=first，年级=7,8，班次=12（补漏班）。先读 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\01-主提示词.md 全文并严格照办；参数以 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\tasks.json 为准，BATCH_DATE 取触发当天日期（Asia/Shanghai）。用 D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/exports/automation_20261108_codebuddy/_run_daily.py 的 plan/lock/context/validate/commit/finish 完成闭环。只产出 JSON 与台账/日志，不导入、不连库、不改已有文件、不读写其他学科文件。【生成期约束】出题阶段就按每知识点 ≥4 题、难度 1-2/3/4-5 ≈ 40/40/20（±15pp）设计；题目难度由题目本身决定，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例，禁止用一次性补丁脚本改写已通过自检的 JSON。【硬约束】禁止调用 db_ops.py / ops.*，禁止执行任何入库或回退动作（run_all.* 已无入库 Action，ops.* 需人工显式 -Date + -ConfirmToken I_KNOW，另需运行时一次性 6 位交互确认码，示例/提示词均无法代填），禁止执行 ledger-sync / log-sync（人工运维命令）；_run_daily.py 已无 import/restore 子命令。",
+      "scheduleType": "recurring",
+      "rrule": "FREQ=DAILY;BYHOUR=12;BYMINUTE=30",
+      "cwds": "D:/ai/prj/trae/HuaWei/AiLearning",
+      "status": "PAUSED"
+    },
+    {
+      "mode": "suggested create",
+      "name": "生物7-8上每日教研-21点班",
+      "prompt": "执行每日教研：学科=biology（生物），版本=人教版，学期=first，年级=7,8，班次=22（补漏班·前移至21:30）。先读 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\01-主提示词.md 全文并严格照办；参数以 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\tasks.json 为准，BATCH_DATE 取触发当天日期（Asia/Shanghai）。用 D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/exports/automation_20261108_codebuddy/_run_daily.py 的 plan/lock/context/validate/commit/finish 完成闭环。只产出 JSON 与台账/日志，不导入、不连库、不改已有文件、不读写其他学科文件。【生成期约束】出题阶段就按每知识点 ≥4 题、难度 1-2/3/4-5 ≈ 40/40/20（±15pp）设计；题目难度由题目本身决定，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例，禁止用一次性补丁脚本改写已通过自检的 JSON。【硬约束】禁止调用 db_ops.py / ops.*，禁止执行任何入库或回退动作（run_all.* 已无入库 Action，ops.* 需人工显式 -Date + -ConfirmToken I_KNOW，另需运行时一次性 6 位交互确认码，示例/提示词均无法代填），禁止执行 ledger-sync / log-sync（人工运维命令）；_run_daily.py 已无 import/restore 子命令。",
+      "scheduleType": "recurring",
+      "rrule": "FREQ=DAILY;BYHOUR=21;BYMINUTE=36",
+      "cwds": "D:/ai/prj/trae/HuaWei/AiLearning",
+      "status": "PAUSED"
+    },
+    {
+      "mode": "suggested create",
+      "name": "历史7-9上每日教研-02点班",
+      "prompt": "执行每日教研：学科=history（历史），版本=部编版，学期=first，年级=7,8,9，班次=02（首跑·进攻班）。先读 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\01-主提示词.md 全文并严格照办；参数以 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\tasks.json 为准，BATCH_DATE 取触发当天日期（Asia/Shanghai）。用 D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/exports/automation_20261108_codebuddy/_run_daily.py 的 plan/lock/context/validate/commit/finish 完成闭环。只产出 JSON 与台账/日志，不导入、不连库、不改已有文件、不读写其他学科文件。【生成期约束】出题阶段就按每知识点 ≥4 题、难度 1-2/3/4-5 ≈ 40/40/20（±15pp）设计；题目难度由题目本身决定，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例，禁止用一次性补丁脚本改写已通过自检的 JSON。【硬约束】禁止调用 db_ops.py / ops.*，禁止执行任何入库或回退动作（run_all.* 已无入库 Action，ops.* 需人工显式 -Date + -ConfirmToken I_KNOW，另需运行时一次性 6 位交互确认码，示例/提示词均无法代填），禁止执行 ledger-sync / log-sync（人工运维命令）；_run_daily.py 已无 import/restore 子命令。",
+      "scheduleType": "recurring",
+      "rrule": "FREQ=DAILY;BYHOUR=2;BYMINUTE=35",
+      "cwds": "D:/ai/prj/trae/HuaWei/AiLearning",
+      "status": "PAUSED"
+    },
+    {
+      "mode": "suggested create",
+      "name": "历史7-9上每日教研-12点班",
+      "prompt": "执行每日教研：学科=history（历史），版本=部编版，学期=first，年级=7,8,9，班次=12（补漏班）。先读 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\01-主提示词.md 全文并严格照办；参数以 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\tasks.json 为准，BATCH_DATE 取触发当天日期（Asia/Shanghai）。用 D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/exports/automation_20261108_codebuddy/_run_daily.py 的 plan/lock/context/validate/commit/finish 完成闭环。只产出 JSON 与台账/日志，不导入、不连库、不改已有文件、不读写其他学科文件。【生成期约束】出题阶段就按每知识点 ≥4 题、难度 1-2/3/4-5 ≈ 40/40/20（±15pp）设计；题目难度由题目本身决定，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例，禁止用一次性补丁脚本改写已通过自检的 JSON。【硬约束】禁止调用 db_ops.py / ops.*，禁止执行任何入库或回退动作（run_all.* 已无入库 Action，ops.* 需人工显式 -Date + -ConfirmToken I_KNOW，另需运行时一次性 6 位交互确认码，示例/提示词均无法代填），禁止执行 ledger-sync / log-sync（人工运维命令）；_run_daily.py 已无 import/restore 子命令。",
+      "scheduleType": "recurring",
+      "rrule": "FREQ=DAILY;BYHOUR=12;BYMINUTE=35",
+      "cwds": "D:/ai/prj/trae/HuaWei/AiLearning",
+      "status": "PAUSED"
+    },
+    {
+      "mode": "suggested create",
+      "name": "历史7-9上每日教研-21点班",
+      "prompt": "执行每日教研：学科=history（历史），版本=部编版，学期=first，年级=7,8,9，班次=22（补漏班·前移至21:30）。先读 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\01-主提示词.md 全文并严格照办；参数以 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\tasks.json 为准，BATCH_DATE 取触发当天日期（Asia/Shanghai）。用 D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/exports/automation_20261108_codebuddy/_run_daily.py 的 plan/lock/context/validate/commit/finish 完成闭环。只产出 JSON 与台账/日志，不导入、不连库、不改已有文件、不读写其他学科文件。【生成期约束】出题阶段就按每知识点 ≥4 题、难度 1-2/3/4-5 ≈ 40/40/20（±15pp）设计；题目难度由题目本身决定，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例，禁止用一次性补丁脚本改写已通过自检的 JSON。【硬约束】禁止调用 db_ops.py / ops.*，禁止执行任何入库或回退动作（run_all.* 已无入库 Action，ops.* 需人工显式 -Date + -ConfirmToken I_KNOW，另需运行时一次性 6 位交互确认码，示例/提示词均无法代填），禁止执行 ledger-sync / log-sync（人工运维命令）；_run_daily.py 已无 import/restore 子命令。",
+      "scheduleType": "recurring",
+      "rrule": "FREQ=DAILY;BYHOUR=21;BYMINUTE=37",
+      "cwds": "D:/ai/prj/trae/HuaWei/AiLearning",
+      "status": "PAUSED"
+    },
+    {
+      "mode": "suggested create",
+      "name": "地理7-8上每日教研-02点班",
+      "prompt": "执行每日教研：学科=geography（地理），版本=湘教版，学期=first，年级=7,8，班次=02（首跑·进攻班）。先读 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\01-主提示词.md 全文并严格照办；参数以 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\tasks.json 为准，BATCH_DATE 取触发当天日期（Asia/Shanghai）。用 D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/exports/automation_20261108_codebuddy/_run_daily.py 的 plan/lock/context/validate/commit/finish 完成闭环。只产出 JSON 与台账/日志，不导入、不连库、不改已有文件、不读写其他学科文件。【生成期约束】出题阶段就按每知识点 ≥4 题、难度 1-2/3/4-5 ≈ 40/40/20（±15pp）设计；题目难度由题目本身决定，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例，禁止用一次性补丁脚本改写已通过自检的 JSON。【硬约束】禁止调用 db_ops.py / ops.*，禁止执行任何入库或回退动作（run_all.* 已无入库 Action，ops.* 需人工显式 -Date + -ConfirmToken I_KNOW，另需运行时一次性 6 位交互确认码，示例/提示词均无法代填），禁止执行 ledger-sync / log-sync（人工运维命令）；_run_daily.py 已无 import/restore 子命令。",
+      "scheduleType": "recurring",
+      "rrule": "FREQ=DAILY;BYHOUR=2;BYMINUTE=40",
+      "cwds": "D:/ai/prj/trae/HuaWei/AiLearning",
+      "status": "PAUSED"
+    },
+    {
+      "mode": "suggested create",
+      "name": "地理7-8上每日教研-12点班",
+      "prompt": "执行每日教研：学科=geography（地理），版本=湘教版，学期=first，年级=7,8，班次=12（补漏班）。先读 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\01-主提示词.md 全文并严格照办；参数以 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\tasks.json 为准，BATCH_DATE 取触发当天日期（Asia/Shanghai）。用 D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/exports/automation_20261108_codebuddy/_run_daily.py 的 plan/lock/context/validate/commit/finish 完成闭环。只产出 JSON 与台账/日志，不导入、不连库、不改已有文件、不读写其他学科文件。【生成期约束】出题阶段就按每知识点 ≥4 题、难度 1-2/3/4-5 ≈ 40/40/20（±15pp）设计；题目难度由题目本身决定，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例，禁止用一次性补丁脚本改写已通过自检的 JSON。【硬约束】禁止调用 db_ops.py / ops.*，禁止执行任何入库或回退动作（run_all.* 已无入库 Action，ops.* 需人工显式 -Date + -ConfirmToken I_KNOW，另需运行时一次性 6 位交互确认码，示例/提示词均无法代填），禁止执行 ledger-sync / log-sync（人工运维命令）；_run_daily.py 已无 import/restore 子命令。",
+      "scheduleType": "recurring",
+      "rrule": "FREQ=DAILY;BYHOUR=12;BYMINUTE=40",
+      "cwds": "D:/ai/prj/trae/HuaWei/AiLearning",
+      "status": "PAUSED"
+    },
+    {
+      "mode": "suggested create",
+      "name": "地理7-8上每日教研-21点班",
+      "prompt": "执行每日教研：学科=geography（地理），版本=湘教版，学期=first，年级=7,8，班次=22（补漏班·前移至21:30）。先读 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\01-主提示词.md 全文并严格照办；参数以 D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\tasks.json 为准，BATCH_DATE 取触发当天日期（Asia/Shanghai）。用 D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/exports/automation_20261108_codebuddy/_run_daily.py 的 plan/lock/context/validate/commit/finish 完成闭环。只产出 JSON 与台账/日志，不导入、不连库、不改已有文件、不读写其他学科文件。【生成期约束】出题阶段就按每知识点 ≥4 题、难度 1-2/3/4-5 ≈ 40/40/20（±15pp）设计；题目难度由题目本身决定，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例，禁止用一次性补丁脚本改写已通过自检的 JSON。【硬约束】禁止调用 db_ops.py / ops.*，禁止执行任何入库或回退动作（run_all.* 已无入库 Action，ops.* 需人工显式 -Date + -ConfirmToken I_KNOW，另需运行时一次性 6 位交互确认码，示例/提示词均无法代填），禁止执行 ledger-sync / log-sync（人工运维命令）；_run_daily.py 已无 import/restore 子命令。",
+      "scheduleType": "recurring",
+      "rrule": "FREQ=DAILY;BYHOUR=21;BYMINUTE=38",
+      "cwds": "D:/ai/prj/trae/HuaWei/AiLearning",
+      "status": "PAUSED"
+    }
+  ]
+}

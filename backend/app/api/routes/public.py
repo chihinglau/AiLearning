@@ -29,7 +29,11 @@ def list_textbooks(
 def list_chapters(
     textbook_id: int, db: Session = Depends(get_db)
 ) -> List[Chapter]:
-    stmt = select(Chapter).where(Chapter.textbook_id == textbook_id)
+    # 占位章节（历史占位/旧样章）不对外暴露：教材目录只出现教材真实章节
+    stmt = select(Chapter).where(
+        Chapter.textbook_id == textbook_id,
+        Chapter.is_placeholder == 0,
+    )
     return list(db.scalars(stmt.order_by(Chapter.order_index, Chapter.id)))
 
 

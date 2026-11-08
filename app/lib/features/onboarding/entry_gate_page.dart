@@ -30,7 +30,7 @@ class _EntryGatePageState extends ConsumerState<EntryGatePage> {
       return;
     }
     if (!user.isStudent) {
-      _complete();
+      await _complete();
       return;
     }
     setState(() {
@@ -46,12 +46,25 @@ class _EntryGatePageState extends ConsumerState<EntryGatePage> {
         required = recommendation.subjects.isNotEmpty;
       }
       if (!mounted) return;
+      await ref
+          .read(authServiceProvider)
+          .writeOnboardingStatus(required ? 'required' : 'completed');
+      if (!mounted) return;
       ref.read(onboardingStatusProvider.notifier).state = required
           ? OnboardingStatus.required
           : OnboardingStatus.completed;
       context.go(required ? '/onboarding' : '/shell');
     } on ApiException catch (error) {
       if (!mounted) return;
+      // 断网时沿用上次完成的引导状态，直接进入离线可用首页。
+      if (error.statusCode == null) {
+        final cached = await ref.read(authServiceProvider).readOnboardingStatus();
+        if (!mounted) return;
+        if (cached == 'completed') {
+          await _complete();
+          return;
+        }
+      }
       setState(() {
         _loading = false;
         _error = ApiErrorGuide.from(error).message;
@@ -59,7 +72,8 @@ class _EntryGatePageState extends ConsumerState<EntryGatePage> {
     }
   }
 
-  void _complete() {
+  Future<void> _complete() async {
+    await ref.read(authServiceProvider).writeOnboardingStatus('completed');
     ref.read(onboardingStatusProvider.notifier).state =
         OnboardingStatus.completed;
     if (mounted) context.go('/shell');

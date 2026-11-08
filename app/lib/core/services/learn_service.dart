@@ -2,11 +2,13 @@ import 'package:ai_learning/core/models/content.dart';
 import 'package:ai_learning/core/models/learn.dart';
 import 'package:ai_learning/core/models/practice_session.dart';
 import 'package:ai_learning/core/services/api_client.dart';
+import 'package:ai_learning/core/services/offline_learn_service.dart';
 
 class LearnService {
-  LearnService(this._api);
+  LearnService(this._api, {OfflineLearnService? offline}) : _offline = offline;
 
   final ApiClient _api;
+  final OfflineLearnService? _offline;
 
   /// 章 → 知识点树（带个人掌握度）。
   Future<List<ChapterTree>> knowledgeTree(int textbookId) async {
@@ -125,6 +127,10 @@ class LearnService {
         'subject': ?subject,
       },
     );
+    // 仅缓存全量列表，科目筛选结果不做覆盖。
+    if (subject == null) {
+      await _offline?.cacheWrongQuestions(status, data);
+    }
     return data
         .map((item) => WrongQuestionItem.fromJson(item as Map<String, dynamic>))
         .toList();
@@ -151,6 +157,8 @@ class LearnService {
   /// 学习首页聚合（仅学生；非学生返回 403 NOT_STUDENT）。
   Future<HomeData> home() async {
     final data = await _api.getJson('/api/learn/home');
+    // 缓存首页聚合，断网时仍可进入教材与离线内容。
+    await _offline?.cacheHome(data);
     return HomeData.fromJson(data);
   }
 
@@ -160,6 +168,10 @@ class LearnService {
       '/api/learn/stats',
       query: {'student_id': ?studentId},
     );
+    // 只缓存本人统计，家长/教师查看他人数据不落本机。
+    if (studentId == null) {
+      await _offline?.cacheStats(data);
+    }
     return LearnStats.fromJson(data);
   }
 

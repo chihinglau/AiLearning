@@ -5,6 +5,8 @@ import 'package:ai_learning/core/models/ai.dart';
 import 'package:ai_learning/core/models/exam.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
+import 'package:ai_learning/core/theme/app_accents.dart';
+import 'package:ai_learning/widgets/accent_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -39,7 +41,9 @@ class _ExamReportPageState extends ConsumerState<ExamReportPage> {
       _error = null;
     });
     try {
-      final report = await ref.read(examServiceProvider).report(widget.attemptId);
+      final report = await ref
+          .read(examServiceProvider)
+          .report(widget.attemptId);
       if (!mounted) return;
       setState(() {
         _report = report;
@@ -112,15 +116,14 @@ class _ExamReportPageState extends ConsumerState<ExamReportPage> {
     }
     setState(() => _submitting = true);
     try {
-      await ref.read(examServiceProvider).selfAssess(
-        widget.attemptId,
-        Map<int, double>.of(_scores),
-      );
+      await ref
+          .read(examServiceProvider)
+          .selfAssess(widget.attemptId, Map<int, double>.of(_scores));
       if (!mounted) return;
       setState(() => _submitting = false);
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('自评已提交，成绩与学情已更新')),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(const SnackBar(content: Text('自评已提交，成绩与学情已更新')));
       await _load();
     } on ApiException catch (error) {
       if (!mounted) return;
@@ -144,6 +147,7 @@ class _ExamReportPageState extends ConsumerState<ExamReportPage> {
       return const Center(child: CircularProgressIndicator());
     }
     final theme = Theme.of(context);
+    final accents = AppAccents.of(context);
     final report = _report;
     if (_error != null || report == null) {
       return Center(
@@ -172,73 +176,72 @@ class _ExamReportPageState extends ConsumerState<ExamReportPage> {
     return ListView(
       padding: const EdgeInsets.all(16),
       children: [
-        Card(
-          child: Padding(
-            padding: const EdgeInsets.all(20),
-            child: Column(
-              children: [
-                Text(report.examTitle, style: theme.textTheme.titleMedium),
-                const SizedBox(height: 12),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.baseline,
-                  textBaseline: TextBaseline.alphabetic,
-                  children: [
-                    Text(
-                      score.round().toString(),
-                      style: theme.textTheme.displaySmall?.copyWith(
-                        fontWeight: FontWeight.bold,
-                        color: theme.colorScheme.primary,
-                      ),
+        AccentCard(
+          accent: accents.exam,
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            children: [
+              Text(report.examTitle, style: theme.textTheme.titleMedium),
+              const SizedBox(height: 12),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.baseline,
+                textBaseline: TextBaseline.alphabetic,
+                children: [
+                  Text(
+                    score.round().toString(),
+                    style: theme.textTheme.displaySmall?.copyWith(
+                      fontWeight: FontWeight.bold,
+                      color: theme.colorScheme.primary,
                     ),
-                    Text(
-                      ' / ${report.fullScore.round()} 分',
-                      style: theme.textTheme.titleMedium,
-                    ),
-                  ],
-                ),
+                  ),
+                  Text(
+                    ' / ${report.fullScore.round()} 分',
+                    style: theme.textTheme.titleMedium,
+                  ),
+                ],
+              ),
+              const SizedBox(height: 4),
+              Text(
+                '得分率 ${(rate * 100).round()}%'
+                '${report.status == 'grading' ? ' · 主观题待批改' : ''}',
+                style: theme.textTheme.bodySmall,
+              ),
+              if (report.classAverage.available &&
+                  report.classAverage.averageScore != null) ...[
                 const SizedBox(height: 4),
                 Text(
-                  '得分率 ${(rate * 100).round()}%'
-                  '${report.status == 'grading' ? ' · 主观题待批改' : ''}',
+                  '班级平均 ${report.classAverage.averageScore!.round()} 分'
+                  ' · ${report.classAverage.studentCount} 人参与',
                   style: theme.textTheme.bodySmall,
                 ),
-                if (report.classAverage.available &&
-                    report.classAverage.averageScore != null) ...[
-                  const SizedBox(height: 4),
+                if (report.classAverage.averageRate != null)
                   Text(
-                    '班级平均 ${report.classAverage.averageScore!.round()} 分'
-                    ' · ${report.classAverage.studentCount} 人参与',
-                    style: theme.textTheme.bodySmall,
+                    _compareWithClass(rate, report.classAverage.averageRate!),
+                    style: theme.textTheme.bodySmall?.copyWith(
+                      color: rate >= report.classAverage.averageRate!
+                          ? accents.learn
+                          : theme.colorScheme.error,
+                    ),
                   ),
-                  if (report.classAverage.averageRate != null)
-                    Text(
-                      _compareWithClass(
-                        rate,
-                        report.classAverage.averageRate!,
-                      ),
-                      style: theme.textTheme.bodySmall?.copyWith(
-                        color: rate >= report.classAverage.averageRate!
-                            ? Colors.green.shade700
-                            : theme.colorScheme.error,
-                      ),
-                    ),
-                ],
-                const SizedBox(height: 16),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    _Stat(label: '正确率', value: '${(report.accuracy * 100).round()}%'),
-                    _Stat(
-                      label: '答对',
-                      value: '${report.correctCount}/${report.questionCount}',
-                    ),
-                    _Stat(label: '已答', value: '${report.answeredCount}'),
-                    _Stat(label: '用时', value: _durationLabel(report.durationMs)),
-                  ],
-                ),
               ],
-            ),
+              const SizedBox(height: 16),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  _Stat(
+                    label: '正确率',
+                    value: '${(report.accuracy * 100).round()}%',
+                  ),
+                  _Stat(
+                    label: '答对',
+                    value: '${report.correctCount}/${report.questionCount}',
+                  ),
+                  _Stat(label: '已答', value: '${report.answeredCount}'),
+                  _Stat(label: '用时', value: _durationLabel(report.durationMs)),
+                ],
+              ),
+            ],
           ),
         ),
         const SizedBox(height: 16),
@@ -267,7 +270,8 @@ class _ExamReportPageState extends ConsumerState<ExamReportPage> {
         ],
         _SectionTitle('题型得分'),
         const SizedBox(height: 8),
-        Card(
+        AccentCard(
+          accent: accents.practice,
           child: Column(
             children: [
               for (final stat in report.typeStats)
@@ -291,7 +295,8 @@ class _ExamReportPageState extends ConsumerState<ExamReportPage> {
           const SizedBox(height: 16),
           _SectionTitle('知识点表现'),
           const SizedBox(height: 8),
-          Card(
+          AccentCard(
+            accent: accents.learn,
             child: Column(
               children: [
                 for (final stat in report.kpStats)
@@ -301,7 +306,9 @@ class _ExamReportPageState extends ConsumerState<ExamReportPage> {
                       stat.name,
                       style: stat.knowledgePointId == null
                           ? null
-                          : const TextStyle(decoration: TextDecoration.underline),
+                          : const TextStyle(
+                              decoration: TextDecoration.underline,
+                            ),
                     ),
                     subtitle: Text(
                       '答对 ${stat.correct}/${stat.questionCount}'
@@ -311,7 +318,7 @@ class _ExamReportPageState extends ConsumerState<ExamReportPage> {
                       '${(stat.scoreRate * 100).round()}%',
                       style: theme.textTheme.titleSmall?.copyWith(
                         color: stat.scoreRate >= 0.6
-                            ? Colors.green.shade700
+                            ? accents.learn
                             : theme.colorScheme.error,
                       ),
                     ),
@@ -327,32 +334,28 @@ class _ExamReportPageState extends ConsumerState<ExamReportPage> {
           const SizedBox(height: 16),
           _SectionTitle('能力维度'),
           const SizedBox(height: 4),
-          Text(
-            '按题型聚合的理解、计算、应用与分析表现',
-            style: theme.textTheme.bodySmall,
-          ),
+          Text('按题型聚合的理解、计算、应用与分析表现', style: theme.textTheme.bodySmall),
           const SizedBox(height: 8),
-          Card(
-            child: Padding(
-              padding: const EdgeInsets.all(12),
-              child: Column(
-                children: [
-                  if (report.abilityStats.length >= 3)
-                    SizedBox(
-                      height: 220,
-                      child: _AbilityRadar(stats: report.abilityStats),
-                    ),
-                  Wrap(
-                    spacing: 12,
-                    runSpacing: 6,
-                    alignment: WrapAlignment.center,
-                    children: [
-                      for (final stat in report.abilityStats)
-                        _AbilityChip(stat: stat),
-                    ],
+          AccentCard(
+            accent: accents.exam,
+            padding: const EdgeInsets.all(12),
+            child: Column(
+              children: [
+                if (report.abilityStats.length >= 3)
+                  SizedBox(
+                    height: 220,
+                    child: _AbilityRadar(stats: report.abilityStats),
                   ),
-                ],
-              ),
+                Wrap(
+                  spacing: 12,
+                  runSpacing: 6,
+                  alignment: WrapAlignment.center,
+                  children: [
+                    for (final stat in report.abilityStats)
+                      _AbilityChip(stat: stat),
+                  ],
+                ),
+              ],
             ),
           ),
         ],
@@ -364,12 +367,13 @@ class _ExamReportPageState extends ConsumerState<ExamReportPage> {
             _trendSummary(report.trend),
             style: theme.textTheme.bodySmall?.copyWith(
               color: (report.trend.deltaRate ?? 0) >= 0
-                  ? Colors.green.shade700
+                  ? accents.learn
                   : theme.colorScheme.error,
             ),
           ),
           const SizedBox(height: 8),
-          Card(
+          AccentCard(
+            accent: accents.learn,
             child: Column(
               children: [
                 for (final point in report.trend.points)
@@ -399,9 +403,15 @@ class _ExamReportPageState extends ConsumerState<ExamReportPage> {
           _SectionTitle('错题清单（${report.wrongQuestions.length}）'),
           const SizedBox(height: 8),
           for (final item in report.wrongQuestions)
-            Card(
+            AccentCard(
+              accent: accents.assignment,
+              margin: const EdgeInsets.only(bottom: 8),
               child: ExpansionTile(
-                title: Text(item.stem, maxLines: 2, overflow: TextOverflow.ellipsis),
+                title: Text(
+                  item.stem,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
                 subtitle: Text(
                   '${_typeLabel(item.qType)} · 得分 ${item.score.round()}/${item.fullScore.round()}',
                 ),
@@ -439,7 +449,9 @@ class _ExamReportPageState extends ConsumerState<ExamReportPage> {
                             ? const SizedBox(
                                 width: 14,
                                 height: 14,
-                                child: CircularProgressIndicator(strokeWidth: 2),
+                                child: CircularProgressIndicator(
+                                  strokeWidth: 2,
+                                ),
                               )
                             : const Icon(Icons.auto_awesome, size: 16),
                         label: const Text('AI 讲解'),
@@ -518,9 +530,8 @@ class _ExamReportPageState extends ConsumerState<ExamReportPage> {
                     label: '${value.round()} 分',
                     onChanged: _submitting
                         ? null
-                        : (next) => setState(
-                            () => _scores[item.questionId] = next,
-                          ),
+                        : (next) =>
+                              setState(() => _scores[item.questionId] = next),
                   ),
                 ),
                 Text('${value.round()} / ${item.fullScore.round()}'),
@@ -645,8 +656,9 @@ class _AIExplainSheet extends StatelessWidget {
               const SizedBox(height: 8),
               Text(
                 'AI 讲解仅供参考，请以老师和教材为准',
-                style: theme.textTheme.bodySmall
-                    ?.copyWith(color: theme.colorScheme.outline),
+                style: theme.textTheme.bodySmall?.copyWith(
+                  color: theme.colorScheme.outline,
+                ),
               ),
               const SizedBox(height: 16),
               Align(
@@ -698,7 +710,7 @@ class _AbilityChip extends StatelessWidget {
     final theme = Theme.of(context);
     final rate = (stat.scoreRate * 100).round();
     final color = stat.scoreRate >= 0.6
-        ? Colors.green.shade700
+        ? AppAccents.of(context).learn
         : theme.colorScheme.error;
     return Text(
       '${stat.label} $rate%',
@@ -756,7 +768,10 @@ class _AbilityRadarPainter extends CustomPainter {
     Offset pointAt(int index, double ratio) {
       final angle = start + step * index;
       return center +
-          Offset(math.cos(angle) * radius * ratio, math.sin(angle) * radius * ratio);
+          Offset(
+            math.cos(angle) * radius * ratio,
+            math.sin(angle) * radius * ratio,
+          );
     }
 
     final gridPaint = Paint()
@@ -764,8 +779,7 @@ class _AbilityRadarPainter extends CustomPainter {
       ..style = PaintingStyle.stroke
       ..strokeWidth = 1;
     for (final ratio in const [0.25, 0.5, 0.75, 1.0]) {
-      final path = Path()
-        ..moveTo(pointAt(0, ratio).dx, pointAt(0, ratio).dy);
+      final path = Path()..moveTo(pointAt(0, ratio).dx, pointAt(0, ratio).dy);
       for (var i = 1; i < count; i++) {
         final point = pointAt(i, ratio);
         path.lineTo(point.dx, point.dy);
@@ -812,7 +826,8 @@ class _AbilityRadarPainter extends CustomPainter {
       final position = pointAt(i, 1.0);
       labelPainter.paint(
         canvas,
-        position + Offset(0, i == 0 ? -labelPainter.height - 8 : 8) -
+        position +
+            Offset(0, i == 0 ? -labelPainter.height - 8 : 8) -
             Offset(labelPainter.width / 2, 0),
       );
     }

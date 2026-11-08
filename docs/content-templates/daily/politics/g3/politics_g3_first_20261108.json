@@ -1,0 +1,333 @@
+{
+  "subject": "politics",
+  "grade": 3,
+  "version": "部编版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第1课 学习伴我成长",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "学习的意义",
+      "parent": "第1课 学习伴我成长",
+      "order_index": 1,
+      "explanation": "学习让人增长本领、开阔眼界、学会与人相处，是从出生就开始、伴随一生的事。",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "学习的多种途径",
+      "parent": "第1课 学习伴我成长",
+      "order_index": 2,
+      "explanation": "不只课堂是学习：读书、做事、观察、请教别人、动手实践都能学到东西。",
+      "prerequisites": [
+        "学习的意义"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "良好的学习习惯",
+      "parent": "第1课 学习伴我成长",
+      "order_index": 3,
+      "explanation": "课前预习、专心听讲、按时完成作业、及时复习、整理错题，都是能坚持就见效的习惯。",
+      "prerequisites": [
+        "学习的多种途径"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "遇到困难会求助",
+      "parent": "第1课 学习伴我成长",
+      "order_index": 4,
+      "explanation": "遇到不会的题先自己想一想，仍不明白就问老师、同学或家长；求助不是无能，放弃才是。",
+      "prerequisites": [
+        "良好的学习习惯"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一单元 做学习的主人",
+      "order_index": 1,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「学习」这件事开始于（  ）",
+          "options": [
+            "出生以后",
+            "上小学以后",
+            "上中学以后",
+            "工作以后"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "学说话、学走路就是最早的学习，学习从出生开始，不只发生在学校里。",
+          "difficulty": 1,
+          "knowledge_point": "学习的意义"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列不属于学习途径的是（  ）",
+          "options": [
+            "向老师请教",
+            "读课外书",
+            "动手做实验",
+            "整天躺着发呆"
+          ],
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "请教、阅读、实验都能获得新知识；发呆既不投入也不产生新的认识，不是学习途径。",
+          "difficulty": 2,
+          "knowledge_point": "学习的多种途径"
+        },
+        {
+          "q_type": "fill",
+          "stem": "上课时要专心（  ），跟着老师的思路走。",
+          "answer": {
+            "value": "听讲"
+          },
+          "analysis": "专心听讲是课堂学习的关键环节，走神会漏掉讲解要点，事后要花更多时间补。",
+          "difficulty": 1,
+          "knowledge_point": "良好的学习习惯"
+        },
+        {
+          "q_type": "judge",
+          "stem": "遇到不会做的题，先自己想一想，再向别人请教，是好习惯。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "先独立思考能锻炼思维，再求助能补齐盲点，两者结合效率最高，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "遇到困难会求助"
+        },
+        {
+          "q_type": "choice",
+          "stem": "作业发回来发现错题，最好的做法是（  ）",
+          "options": [
+            "弄懂错因并订正",
+            "把错题擦掉",
+            "直接抄答案",
+            "不管它"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "订正的前提是弄懂错因，这样同类题不再错；擦掉、抄答案、不管都失去了改进机会。",
+          "difficulty": 2,
+          "knowledge_point": "良好的学习习惯"
+        },
+        {
+          "q_type": "fill",
+          "stem": "学习中遇到困难时，可以向老师、家长或（  ）请教。",
+          "answer": {
+            "value": "同学"
+          },
+          "analysis": "同学之间互相讲解也是有效求助方式，同龄人的解释有时更容易听懂。",
+          "difficulty": 1,
+          "knowledge_point": "遇到困难会求助"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列属于良好学习习惯的有（  ）",
+          "options": [
+            "课前预习",
+            "按时完成作业",
+            "把错题整理成册",
+            "上课偷偷玩文具"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 预习 ✓；B 按时完成作业 ✓；C 整理错题 ✓；D 上课玩文具会分散注意力，不是好习惯 ✗。故 A、B、C 成立。",
+          "difficulty": 3,
+          "knowledge_point": "良好的学习习惯",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "只有在教室里才叫学习。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "读书、劳动、参观、向他人请教都是学习，学习的场所和方式很多，不限于教室。",
+          "difficulty": 2,
+          "knowledge_point": "学习的多种途径"
+        },
+        {
+          "q_type": "choice",
+          "stem": "同学问你一道你也不会的题，合适的回应是（  ）",
+          "options": [
+            "我们一起想想，或者去问老师",
+            "我不会，你别问我",
+            "随便编一个答案给他",
+            "把我的答案直接给他抄"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "共同思考或一起求助既解决问题又不误导对方；拒绝、编答案、给抄都不负责任。",
+          "difficulty": 2,
+          "knowledge_point": "遇到困难会求助"
+        },
+        {
+          "q_type": "fill",
+          "stem": "每天睡前把当天学的内容回想一遍，这种习惯叫及时（  ）。",
+          "answer": {
+            "value": "复习"
+          },
+          "analysis": "及时复习能巩固记忆，比考前集中突击效果更好。",
+          "difficulty": 3,
+          "knowledge_point": "良好的学习习惯"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于学习，说法正确的有（  ）",
+          "options": [
+            "学习能增长本领",
+            "学习是一辈子的事",
+            "学习只能靠死记硬背",
+            "向别人请教也是学习"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 学习增长本领 ✓；B 学习终身进行 ✓；C 学习还包括理解、实践、思考，不只死记 ✗；D 请教是学习途径 ✓。故 A、B、D 成立。",
+          "difficulty": 3,
+          "knowledge_point": "学习的意义",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "求助说明自己能力差，会被人看不起。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "求助是解决问题的正常方式，能把问题弄懂才是有能力；硬撑不问反而耽误学习。",
+          "difficulty": 2,
+          "knowledge_point": "遇到困难会求助"
+        },
+        {
+          "q_type": "choice",
+          "stem": "预习的主要作用是（  ）",
+          "options": [
+            "提前知道要学什么，听课时更有重点",
+            "把作业提前写完",
+            "让老师少讲一点",
+            "代替上课听讲"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "预习能标记不懂的地方，听课时注意力更集中；它不能代替上课，也不是提前写作业。",
+          "difficulty": 3,
+          "knowledge_point": "良好的学习习惯"
+        },
+        {
+          "q_type": "fill",
+          "stem": "做错的题要弄清错在哪里，这种题叫做（  ）题。",
+          "answer": {
+            "value": "错"
+          },
+          "analysis": "错题是最有价值的复习材料，反复出错的地方往往就是知识漏洞。",
+          "difficulty": 3,
+          "knowledge_point": "良好的学习习惯"
+        },
+        {
+          "q_type": "judge",
+          "stem": "做家务、学做饭也属于学习。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "生活技能通过实践获得，正属于「在做中学」，说法正确。",
+          "difficulty": 1,
+          "knowledge_point": "学习的多种途径"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出你的一条学习好习惯，并说明它给你带来的好处。",
+          "answer": {
+            "value": "我每天写完作业会用十分钟整理错题。这样考试前复习时能直接看错题，知道自己容易错在哪里，节省了很多时间。"
+          },
+          "analysis": "参考示例见答案。评分要点：①写出一条具体习惯（2 分）；②说明切实的好处（2 分）；③语句通顺、标点正确（1 分）。只写习惯不写好处最多得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "良好的学习习惯",
+          "tags": [
+            "简答"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "小明做题一遇到不会就问同桌答案，成绩一直上不去。请指出他的问题，并给他两条改进建议。",
+          "answer": {
+            "value": "问题：他不先独立思考，直接要答案，学不到方法。建议一：先自己想五分钟，标出卡住的地方；建议二：把不会的题集中起来问老师，问清思路而不是只要答案。"
+          },
+          "analysis": "参考答案见答案。评分要点：指出问题（2 分，要点明「缺思考、只要答案」）；两条建议各 2 分，需具体；建议须指向「先思考」「问思路」才算合格。",
+          "difficulty": 5,
+          "knowledge_point": "遇到困难会求助",
+          "tags": [
+            "情境应用"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面的说法，最能体现「学习伴我成长」的是（  ）",
+          "options": [
+            "从学走路到学知识，每个阶段都在学习",
+            "学习只是学生阶段的任务",
+            "毕业后就不用学习了",
+            "学习只发生在课堂上"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "题干强调「伴我成长」，即从幼年到成年持续学习；其余三项都把学习限定在某一段或某一处。",
+          "difficulty": 3,
+          "knowledge_point": "学习的意义"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面哪件事最能说明「学习让生活更方便」？（  ）",
+          "options": [
+            "学会看公交站牌后能自己坐车",
+            "把课文背得滚瓜烂熟",
+            "每天写很多作业",
+            "考试得了满分"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "学习的意义在于解决真实问题；会看站牌并独立出行是迁移应用，其余仍停留在记忆或分数上。",
+          "difficulty": 4,
+          "knowledge_point": "学习的意义"
+        },
+        {
+          "q_type": "judge",
+          "stem": "跟奶奶学包饺子、在科技馆看展，都能学到课本以外的知识。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "学习不只在教室，生活中的请教、参观、实践都是途径，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "学习的多种途径"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,449 @@
+{
+  "_legacy": true,
+  "_legacy_note": "2026-11-07 试跑批次的旧样章内容：本文件的章节名在教材目录上不存在。占位章节清理（2026-11-08）后该章已迁移到教材真实章节或整章删除。重导本文件时导入层按 chapter_aliases.json 处理——aliases 重定向到教材真实章节、discard 整块丢弃——不会把旧版数据写回库。详见 docs/content-templates/exports/automation_20261108_codebuddy/05-占位章节清理立项.md",
+  "subject": "math",
+  "grade": 4,
+  "version": "北师大版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "认识更大的数",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "计数单位与数位顺序",
+      "parent": "认识更大的数",
+      "order_index": 1,
+      "weight": 1.0,
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "explanation": "个、十、百、千、万、十万、百万、千万、亿，每相邻两个计数单位之间的进率是 10。从个位起第几位就对应哪个数位。",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "大数的读法与写法",
+      "parent": "认识更大的数",
+      "order_index": 2,
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "explanation": "读数从高位起，按级读并加“万”“亿”；每级末尾的 0 不读，中间连续的 0 只读一个。写数时按级占位，缺的数位用 0 补。",
+      "prerequisites": [
+        "计数单位与数位顺序"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "大数的大小比较",
+      "parent": "认识更大的数",
+      "order_index": 3,
+      "weight": 1.1,
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "explanation": "位数不同时，位数多的数大；位数相同时从最高位开始逐位比，哪一位大就哪个数大。",
+      "prerequisites": [
+        "计数单位与数位顺序"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "用万或亿作单位改写",
+      "parent": "认识更大的数",
+      "order_index": 4,
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "explanation": "改写成用万作单位，去掉末尾 4 个 0 再写“万”字；用亿作单位去掉末尾 8 个 0。改写只是换写法，数的大小不变，用等号连接。",
+      "prerequisites": [
+        "大数的读法与写法"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "近似数与四舍五入",
+      "parent": "认识更大的数",
+      "order_index": 5,
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "explanation": "四舍五入到某一位，就看它后面一位：满 5 进 1，不满 5 舍去。近似数用约等号连接，表示大约是多少。",
+      "prerequisites": [
+        "用万或亿作单位改写"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "认识更大的数",
+      "order_index": 2,
+      "questions": [
+        {
+          "q_type": "fill",
+          "stem": "10 个一万是（  ）。",
+          "answer": {
+            "value": "十万"
+          },
+          "analysis": "相邻两个计数单位之间的进率是 10，10 个一万就是十万。",
+          "difficulty": 1,
+          "knowledge_point": "计数单位与数位顺序",
+          "tags": [
+            "计数单位",
+            "填空"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "从个位起，第五位是（  ）位。",
+          "options": [
+            "万",
+            "十万",
+            "千",
+            "百万"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "按个、十、百、千、万的顺序数，第五位是万位。",
+          "difficulty": 1,
+          "knowledge_point": "计数单位与数位顺序",
+          "tags": [
+            "数位顺序",
+            "基础"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "3050000 读作（  ）。",
+          "options": [
+            "三百零五万",
+            "三千零五十万",
+            "三百五十万",
+            "三百零五"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "分级：305|0000，万级是 305 读三百零五，个级全是 0 不读，合起来读三百零五万。",
+          "difficulty": 1,
+          "knowledge_point": "大数的读法与写法",
+          "tags": [
+            "读数",
+            "分级"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "读数时，每级末尾的 0 都不读。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "如 3050000 中个级四个 0 都在末尾，全部不读；只有级中间的 0 才读作“零”。",
+          "difficulty": 2,
+          "knowledge_point": "大数的读法与写法",
+          "tags": [
+            "判断",
+            "读数规则"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "六千零四十万 写作（  ）。",
+          "answer": {
+            "value": "60400000"
+          },
+          "analysis": "万级是 6040，个级 4 位全补 0，写作 60400000。缺位一定要用 0 占位，不能省。",
+          "difficulty": 2,
+          "knowledge_point": "大数的读法与写法",
+          "tags": [
+            "写数",
+            "补0"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面各数中最大的是（  ）。",
+          "options": [
+            "999999",
+            "1000000",
+            "998000",
+            "1010000"
+          ],
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "1010000 是七位数，其余是六位数，位数多的数最大。",
+          "difficulty": 2,
+          "knowledge_point": "大数的大小比较",
+          "tags": [
+            "比较大小",
+            "位数"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "位数多的数一定比位数少的数大。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "最小的一千万也比最大的九百万大，所以先看位数是最高效的判断方法。",
+          "difficulty": 3,
+          "knowledge_point": "大数的大小比较",
+          "tags": [
+            "判断",
+            "比较大小"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "360000 改写成用万作单位的数是（  ）万。",
+          "answer": {
+            "value": "36"
+          },
+          "analysis": "去掉末尾 4 个 0，360000=36 万。改写前后大小不变，用等号连接。",
+          "difficulty": 3,
+          "knowledge_point": "用万或亿作单位改写",
+          "tags": [
+            "改写",
+            "万"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "120000000 用亿作单位是（  ）。",
+          "options": [
+            "1.2 亿",
+            "12 亿",
+            "0.12 亿",
+            "120 亿"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "去掉末尾 8 个 0 得 1.2，所以是 1.2 亿。",
+          "difficulty": 3,
+          "knowledge_point": "用万或亿作单位改写",
+          "tags": [
+            "改写",
+            "亿"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面改写正确的有（  ）。",
+          "options": [
+            "50000=5 万",
+            "300000000=3 亿",
+            "860000=86 万",
+            "1200000=1.2 万"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "50000 去掉 4 个 0 得 5 万；300000000 去掉 8 个 0 得 3 亿；860000 去掉 4 个 0 得 86 万。1200000 去掉 4 个 0 应是 120 万，不是 1.2 万。",
+          "difficulty": 3,
+          "knowledge_point": "用万或亿作单位改写",
+          "tags": [
+            "多选",
+            "改写"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "把 860000 改写成 86 万后，这个数变大了。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "改写只是换个单位写法，数值没有变化，所以用等号而不是大于号。",
+          "difficulty": 2,
+          "knowledge_point": "用万或亿作单位改写",
+          "tags": [
+            "判断",
+            "易错点"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "把 38420 四舍五入到万位，约是（  ）。",
+          "options": [
+            "4 万",
+            "3 万",
+            "3.8 万",
+            "38 万"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "万位是 3，看千位 8，满 5 进 1，得 4 万。",
+          "difficulty": 3,
+          "knowledge_point": "近似数与四舍五入",
+          "tags": [
+            "四舍五入",
+            "近似数"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "29999 四舍五入到万位约是（  ）。",
+          "answer": {
+            "value": "3万"
+          },
+          "analysis": "万位是 2，千位是 9，满 5 进 1，2 万变成 3 万，写作 30000。",
+          "difficulty": 3,
+          "knowledge_point": "近似数与四舍五入",
+          "tags": [
+            "四舍五入",
+            "进位"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面各数四舍五入到万位得 5 万的有（  ）。",
+          "options": [
+            "45000",
+            "54999",
+            "44000",
+            "46200"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "看千位：45000 千位 5 进 1 得 5 万；54999 千位 4 舍去得 5 万；46200 千位 6 进 1 得 5 万；44000 千位 4 舍去得 4 万。",
+          "difficulty": 4,
+          "knowledge_point": "近似数与四舍五入",
+          "tags": [
+            "多选",
+            "四舍五入"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "用 3、5、0、0 四张数字卡片组成最大的四位数是（  ）。",
+          "options": [
+            "5300",
+            "5030",
+            "3500",
+            "5003"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "把大的数字放高位：5、3、0、0 从高到低排列得 5300。",
+          "difficulty": 4,
+          "knowledge_point": "大数的大小比较",
+          "tags": [
+            "组数",
+            "比较大小"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出 40050007 的读法，并说明读数时哪些 0 不读。",
+          "answer": {
+            "value": "读作四千零五万零七。分级为 4005|0007：万级 4005 读四千零五，个级 0007 读零七；万级中间的 0 读一个零，个级前面的 0 读一个零，末尾没有 0 可省。"
+          },
+          "analysis": "评分要点：读法正确 1 分，能指出分级位置 0.5 分，说清“中间连续 0 只读一个”0.5 分。",
+          "difficulty": 4,
+          "knowledge_point": "大数的读法与写法",
+          "tags": [
+            "主观题",
+            "读数"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "一个数四舍五入到万位是 8 万，这个数最大是多少？最小是多少？",
+          "answer": {
+            "value": "最大是 84999，最小是 75000。因为要舍到 8 万，千位最大取 4、后面全取 9；要进到 8 万，原数应落在 7 万 5 千以上，千位最小取 5、后面全取 0。"
+          },
+          "analysis": "评分要点：最大值 1 分、最小值 1 分、说明理由 1 分。这是逆向思考题，只看数字不给理由要扣分。",
+          "difficulty": 5,
+          "knowledge_point": "近似数与四舍五入",
+          "tags": [
+            "主观题",
+            "逆向思考"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用 0、0、6、8、9 五张卡片组成五位数：①最大的数；②最小的数；③只读一个零的数（写一个即可）。",
+          "answer": {
+            "value": "①98600；②60089（0 不能放首位，所以最小是 6 开头）；③60089 读作六万零八十九，只读一个零（答案不唯一，如 60809、90068 等）。"
+          },
+          "analysis": "评分要点：最大数 1 分，最小数 1 分（必须指出 0 不能放首位），只读一个零的数 1 分。",
+          "difficulty": 5,
+          "knowledge_point": "大数的读法与写法",
+          "tags": [
+            "主观题",
+            "组数",
+            "读数"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

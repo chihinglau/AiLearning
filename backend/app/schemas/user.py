@@ -67,6 +67,13 @@ class GradeChangeOut(BaseModel):
 class TokenOut(BaseModel):
     access_token: str
     token_type: str = "bearer"
+    # 兼容旧客户端：refresh_token 可能为空，expires_in 为 access token 有效秒数。
+    refresh_token: Optional[str] = None
+    expires_in: int = 0
+
+
+class RefreshTokenIn(BaseModel):
+    refresh_token: str = Field(min_length=1, max_length=200)
 
 
 class AdminUserOut(BaseModel):

@@ -1,0 +1,67 @@
+{
+  "batch_date": "20261108",
+  "database_url": "sqlite:///./ailearning_dev.db",
+  "database": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\ailearning_dev.db",
+  "backup": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\build\\backups\\ailearning-backup-20261108-142124.db",
+  "restore_hint": "Copy-Item -Force \"D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\build\\backups\\ailearning-backup-20261108-142124.db\" \"D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\ailearning_dev.db\"",
+  "files_total": 23,
+  "files_pending": 3,
+  "overwrite": true,
+  "dry_run_rc": 0,
+  "import_rc": 0,
+  "stats_before": {
+    "textbooks": 146,
+    "chapters": 657,
+    "knowledge_points": 596,
+    "questions": 1086
+  },
+  "stats_after": {
+    "textbooks": 146,
+    "chapters": 657,
+    "knowledge_points": 596,
+    "questions": 1086
+  },
+  "stats_delta": {
+    "textbooks": 0,
+    "chapters": 0,
+    "knowledge_points": 0,
+    "questions": 0
+  },
+  "pending_verification": {
+    "english/g1/english_g1_first_20261108.json": {
+      "questions": 19,
+      "stems_in_db": 19
+    },
+    "geography/g8/geography_g8_first_20261108.json": {
+      "questions": 22,
+      "stems_in_db": 22
+    },
+    "physics/g8/physics_g8_first_20261108.json": {
+      "questions": 20,
+      "stems_in_db": 20
+    }
+  },
+  "all_new_stems_in_db": true,
+  "import_tail": [
+    "chinese/g1/chinese_g1_first_20261108.json: 教材已存在，章节 +0/~1，知识点 +0/~5，题目 +0，跳过重复 19",
+    "english/g1/english_g1_first_20261108.json: 教材已存在，章节 +0/~1，知识点 +0/~5，题目 +0，跳过重复 19",
+    "geography/g7/geography_g7_first_20261108.json: 教材已存在，章节 +0/~1，知识点 +0/~5，题目 +0，跳过重复 18",
+    "geography/g8/geography_g8_first_20261108.json: 教材已存在，章节 +0/~1，知识点 +0/~5，题目 +0，跳过重复 22",
+    "history/g7/history_g7_first_20261108.json: 教材已存在，章节 +0/~1，知识点 +0/~5，题目 +0，跳过重复 20",
+    "history/g8/history_g8_first_20261108.json: 教材已存在，章节 +0/~1，知识点 +0/~5，题目 +0，跳过重复 19",
+    "history/g9/history_g9_first_20261108.json: 教材已存在，章节 +0/~1，知识点 +0/~5，题目 +0，跳过重复 20",
+    "math/g1/math_g1_first_20261108.json: 教材已存在，章节 +0/~1，知识点 +0/~5，题目 +0，跳过重复 18",
+    "math/g9/math_g9_first_20261108.json: 教材已存在，章节 +0/~1，知识点 +0/~5，题目 +0，跳过重复 20",
+    "physics/g8/physics_g8_first_20261108.json: 教材已存在，章节 +0/~1，知识点 +0/~5，题目 +0，跳过重复 20",
+    "physics/g9/physics_g9_first_20261108.json: 教材已存在，章节 +0/~1，知识点 +0/~5，题目 +0，跳过重复 18",
+    "politics/g1/politics_g1_first_20261108.json: 教材已存在，章节 +0/~1，知识点 +0/~5，题目 +0，跳过重复 20",
+    "politics/g2/politics_g2_first_20261108.json: 教材已存在，章节 +0/~1，知识点 +0/~5，题目 +0，跳过重复 19",
+    "politics/g3/politics_g3_first_20261108.json: 教材已存在，章节 +0/~1，知识点 +0/~5，题目 +0，跳过重复 20",
+    "politics/g4/politics_g4_first_20261108.json: 教材已存在，章节 +0/~1，知识点 +0/~5，题目 +0，跳过重复 19",
+    "politics/g5/politics_g5_first_20261108.json: 教材已存在，章节 +0/~1，知识点 +0/~5，题目 +0，跳过重复 19",
+    "politics/g6/politics_g6_first_20261108.json: 教材已存在，章节 +0/~1，知识点 +0/~5，题目 +0，跳过重复 18",
+    "politics/g7/politics_g7_first_20261108.json: 教材已存在，章节 +0/~1，知识点 +0/~5，题目 +0，跳过重复 19",
+    "politics/g8/politics_g8_first_20261108.json: 教材已存在，章节 +0/~1，知识点 +0/~5，题目 +0，跳过重复 20",
+    "politics/g9/politics_g9_first_20261108.json: 教材已存在，章节 +0/~1，知识点 +0/~5，题目 +0，跳过重复 18"
+  ]
+}

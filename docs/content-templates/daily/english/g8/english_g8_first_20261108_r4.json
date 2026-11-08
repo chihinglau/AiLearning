@@ -1,0 +1,436 @@
+{
+  "subject": "english",
+  "grade": 8,
+  "version": "牛津深圳版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "Unit 3 Curious minds / A Viewing and listening",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 3 Curious minds / B Speaking",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 3 Curious minds / C Reading & Grammar in use",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 3 Curious minds / D Writing & Discovery",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 3 Curious minds / E Project",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "Science words 科学探究词汇",
+      "parent": "Unit 3 Curious minds / A Viewing and listening",
+      "order_index": 1,
+      "explanation": "本板块积累科学探究的核心词汇：question、method、data、result、hypothesis、record、observe。听到或读到一段实验介绍时，要能抓住「问题—方法—数据—结论」这条线索，而不是抓住个别生词。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Asking questions 提问句型",
+      "parent": "Unit 3 Curious minds / B Speaking",
+      "order_index": 2,
+      "explanation": "本板块训练提问的构成与礼貌程度：特殊疑问词加助动词加主语加动词原形；向人打听信息要用 Could you tell me…?、Would you mind…? 等委婉说法。",
+      "prerequisites": ["Science words 科学探究词汇"],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Past simple 过去式运用",
+      "parent": "Unit 3 Curious minds / C Reading & Grammar in use",
+      "order_index": 3,
+      "explanation": "本板块讲一般过去时：规则动词加 -ed，不规则动词要背（find—found、do—did、make—made）；否定与疑问要借助 did，后面的动词回到原形。",
+      "prerequisites": ["Asking questions 提问句型"],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Report writing 探究报告写作",
+      "parent": "Unit 3 Curious minds / D Writing & Discovery",
+      "order_index": 4,
+      "explanation": "本板块写探究报告：按「问题—方法—结果—结论」四段组织，结果部分用数据说话，结论部分用 so、because 说明因果。报告要客观，不写夸张的形容词。",
+      "prerequisites": ["Past simple 过去式运用"],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Science project 科学探究项目",
+      "parent": "Unit 3 Curious minds / E Project",
+      "order_index": 5,
+      "explanation": "本板块组织科学探究小组项目：先定问题与假设，再分工做实验、记录数据，最后整理结果并展示。数据要记进表格，异常情况也要写下来，不能只记成功的那次。",
+      "prerequisites": ["Report writing 探究报告写作"],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "Unit 3 Curious minds",
+      "order_index": 3,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "What does a scientist do during an experiment?",
+          "options": [
+            "He or she observes the result and records the data.",
+            "He or she buys some new clothes.",
+            "He or she watches a film in the cinema.",
+            "He or she plays football with his or her friends."
+          ],
+          "answer": { "value": "A" },
+          "analysis": "科学实验的核心动作是观察并记录数据，所以选 A；买衣服、看电影、踢足球都不属于实验步骤。做听看类题时要抓住动作与实验场景的搭配。",
+          "difficulty": 1,
+          "knowledge_point": "Science words 科学探究词汇",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "Scientists must be ______ (careful) when they record the data in an experiment.",
+          "answer": { "value": "careful" },
+          "analysis": "be 动词后面要接形容词，所以用 careful；carefully 是副词，不能直接跟在 be 后面。这一空同时考查词性与句法位置两个点。",
+          "difficulty": 2,
+          "knowledge_point": "Science words 科学探究词汇",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "A hypothesis is a possible answer that you can test in an experiment.",
+          "answer": { "value": "T" },
+          "analysis": "hypothesis 就是「假设」，即一个可以被实验检验的可能答案，所以说法正确。记住 hypothesis（名词）— hypothesize（动词）这条词形链。",
+          "difficulty": 2,
+          "knowledge_point": "Science words 科学探究词汇",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following are parts of a science experiment?",
+          "options": [
+            "A question to find out.",
+            "A test or a method.",
+            "Data or results.",
+            "A new schoolbag."
+          ],
+          "answer": { "value": ["A", "B", "C"] },
+          "analysis": "A 实验要先有问题 ✓；B 要有测试或方法 ✓；C 要有数据或结果 ✓；D 新书包是文具，与实验环节无关 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Science words 科学探究词汇",
+          "tags": ["多选"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "You did a simple experiment at home with ice in a cup. Write three sentences in English about it: what you wanted to find out, what you did, and what you found.",
+          "answer": { "value": "I wanted to find out how long a piece of ice takes to melt in a warm classroom. I put the ice in a cup and wrote down the time every five minutes. I found that the ice melted in about twenty minutes, and the warm classroom made it melt faster than in the fridge." },
+          "analysis": "参考示例见答案。评分要点：①三部分齐全——想知道什么、怎么做的、发现什么（2 分）；②用上本单元的实验词汇（2 分）；③句子之间有顺序衔接（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 3,
+          "knowledge_point": "Science words 科学探究词汇",
+          "tags": ["写作"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which question is used to ask about the reason of something?",
+          "options": [
+            "Why did the plant grow faster?",
+            "How many leaves did it have?",
+            "When did you put it on the desk?",
+            "Where did you buy the seeds?"
+          ],
+          "answer": { "value": "A" },
+          "analysis": "问原因用疑问词 why，所以选 A；how many 问数量，when 问时间，where 问地点。抓住疑问词与句子所问信息的对应关系是本题的关键。",
+          "difficulty": 2,
+          "knowledge_point": "Asking questions 提问句型",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which of the following sentences is a correct question?",
+          "options": [
+            "What did you find in the experiment?",
+            "What you did find in the experiment?",
+            "What did you found in the experiment?",
+            "What did you find in the experiment yesterday?"
+          ],
+          "answer": { "value": "A" },
+          "analysis": "疑问句要有助动词 did 加主语 you 加动词原形 find，所以选 A；B 缺助动词；C 在 did 之后又用过去式 found，是双重过去式错误；D 加了时间状语也救不了 C 的语法错误。",
+          "difficulty": 2,
+          "knowledge_point": "Asking questions 提问句型",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "Complete the question: How ______ the colour of the paper change after you put it in the sun? (did)",
+          "answer": { "value": "did" },
+          "analysis": "特殊疑问句 How 后面先放助动词，主语 the colour 是第三人称单数，过去时用 did 再加动词原形 change，所以填 did。",
+          "difficulty": 3,
+          "knowledge_point": "Asking questions 提问句型",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "In English questions, the helping verb (do, does, did) usually comes before the main verb.",
+          "answer": { "value": "T" },
+          "analysis": "英语的疑问句要把助动词 do、does、did 提到主语之前，主句动词回到原形，所以说法正确。这是构造疑问句最容易出错的一步。",
+          "difficulty": 3,
+          "knowledge_point": "Asking questions 提问句型",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Your group is going to ask a scientist some questions after his talk. Write four questions in English about his work.",
+          "answer": { "value": "1. What did you want to find out in your first experiment? 2. How long did it take you to collect the data? 3. Why did you choose this way to test your idea? 4. What would you like to try next?" },
+          "analysis": "参考示例见答案。评分要点：①四个问句，疑问词不重复（2 分）；②问句结构正确，助动词与动词形式搭配无误（2 分）；③问题与科学探究有关（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Asking questions 提问句型",
+          "tags": ["写作", "情境应用"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Last week our class ______ a small experiment about plants.",
+          "options": ["did", "does", "did done", "doing"],
+          "answer": { "value": "A" },
+          "analysis": "last week 说明是过去的事，一般过去时用 did 加动词原形 do，所以选 A；does 是一般现在时；did done 是多余的，do 的过去式本身就是 did；doing 不能单独作谓语。",
+          "difficulty": 2,
+          "knowledge_point": "Past simple 过去式运用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "The scientist ______ the water three times yesterday.",
+          "options": ["boiled", "boil", "boils", "boiling"],
+          "answer": { "value": "A" },
+          "analysis": "yesterday 是过去时间标志，动词要用过去式 boiled，所以选 A；boil 是原形，boils 是第三人称单数，boiling 是动名词，都不能直接作这个句子的谓语。",
+          "difficulty": 2,
+          "knowledge_point": "Past simple 过去式运用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "He ______ (find) a new way to make clean water last year.",
+          "answer": { "value": "found" },
+          "analysis": "last year 表明是过去的事，find 是不规则动词，过去式是 found，所以填 found；写成 find 或 finds 都与时间状语不符。",
+          "difficulty": 3,
+          "knowledge_point": "Past simple 过去式运用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following sentences are in the past simple?",
+          "options": [
+            "We watched a documentary last night.",
+            "She is doing her homework now.",
+            "They went to the science museum yesterday.",
+            "I will call you tomorrow."
+          ],
+          "answer": { "value": ["A", "C"] },
+          "analysis": "A last night 是过去时间，watched 是过去式 ✓；B is doing 是现在进行时 ✗；C yesterday 是过去时间，went 是 go 的过去式 ✓；D will call 是将来时 ✗。故 A、C 成立，B、D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "Past simple 过去式运用",
+          "tags": ["多选"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write five sentences in English about what you and your classmates did during a science project last week. Use the past simple tense.",
+          "answer": { "value": "Last week our group did a project about clean water. We first made a plan and divided the work into four parts. I searched for information and wrote it in a notebook. We tested the filter three times and recorded the data. Finally, we showed our results to the whole class and the teacher was pleased with our work." },
+          "analysis": "参考示例见答案。评分要点：①五句话都讲过去发生的事（2 分）；②动词过去式使用正确，规则动词加 -ed、不规则动词用过去式（2 分）；③时间状语与时态一致（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Past simple 过去式运用",
+          "tags": ["写作", "情境应用"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which is the first part of a short science report?",
+          "options": [
+            "The question we wanted to answer.",
+            "The name of a popular song.",
+            "A shopping list for the lab.",
+            "The phone number of the lab."
+          ],
+          "answer": { "value": "A" },
+          "analysis": "报告的顺序是「问题—方法—结果—结论」，第一部分就是写清楚要研究的问题，所以选 A；歌名、购物清单、电话号码都不属于报告结构。",
+          "difficulty": 2,
+          "knowledge_point": "Report writing 探究报告写作",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "A short science report usually has four parts: the question, the method, the ______ and the conclusion.",
+          "answer": { "value": ["results", "result"] },
+          "analysis": "报告在方法之后要摆出实验的结果，再写结论，所以填 results（写成 result 也可接受）。四个部分要按顺序出现，不能把结论写在结果前面。",
+          "difficulty": 3,
+          "knowledge_point": "Report writing 探究报告写作",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "A science report must be based on facts and data instead of personal feelings.",
+          "answer": { "value": "T" },
+          "analysis": "科学报告要客观，用事实和数据说话，不能只写个人感受，所以说法正确。写作时少用 very good、amazing 这类主观形容词。",
+          "difficulty": 3,
+          "knowledge_point": "Report writing 探究报告写作",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following can be put in the 'method' part of a report?",
+          "options": [
+            "How we tested the idea.",
+            "The data we collected.",
+            "The steps we followed one by one.",
+            "The name of our school."
+          ],
+          "answer": { "value": ["A", "C"] },
+          "analysis": "A method 讲「怎么测试」，属于方法部分 ✓；C 一步一步的做法也属于方法部分 ✓；B 数据属于结果部分 ✗；D 学校名称与实验方法无关 ✗。故 A、C 成立，B、D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "Report writing 探究报告写作",
+          "tags": ["多选"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write a short science report in English (about 80 words) on an experiment your group did. Include the question, the method, the results and the conclusion.",
+          "answer": { "value": "We wanted to find out which material makes a better filter for dirty water. We cut three pieces of cloth, filled three cups with the same amount of dirty water and poured the water through each cloth. After ten minutes, the cup with the cotton cloth was the clearest. So we concluded that cotton cloth is the best filter for our class project." },
+          "analysis": "参考示例见答案。评分要点：①四个部分齐全且顺序正确（2 分）；②方法部分写清步骤，结果部分有数据（2 分）；③用上 so、because 等词说明结论（1 分）；④时态正确、大小写与标点规范（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Report writing 探究报告写作",
+          "tags": ["写作", "情境应用"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "What should a group do before starting a science project?",
+          "options": [
+            "Make a plan and divide the work.",
+            "Wait for the teacher to do everything.",
+            "Copy the results from another group.",
+            "Choose the easiest topic and stop there."
+          ],
+          "answer": { "value": "A" },
+          "analysis": "开工前要先定计划并把任务分到人，否则后面容易乱，所以选 A；B 放弃了学生自己的探究；C 是抄袭行为；D 只挑容易的题就停下，探究没有深度。",
+          "difficulty": 2,
+          "knowledge_point": "Science project 科学探究项目",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "In a science project, we should record the data in a ______ so that everyone can see it clearly.",
+          "answer": { "value": "table" },
+          "analysis": "用表格记录数据一目了然，也方便比较，所以填 table；写成 book 或 paper 都强调载体而不是记录方式。",
+          "difficulty": 2,
+          "knowledge_point": "Science project 科学探究项目",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "All the members of a project group should check each other's results before the presentation.",
+          "answer": { "value": "T" },
+          "analysis": "展示前互相检查数据和方法能及时发现错误，是小组合作中很重要的习惯，所以说法正确。互查的目的不是挑错，而是让报告更可靠。",
+          "difficulty": 3,
+          "knowledge_point": "Science project 科学探究项目",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following are useful things to do in a science project group?",
+          "options": [
+            "Check each step of the experiment.",
+            "Take photos of the experiment.",
+            "Let one member do all the work.",
+            "Talk about what went wrong and why."
+          ],
+          "answer": { "value": ["A", "B", "D"] },
+          "analysis": "A 检查每一步能保证方法可靠 ✓；B 拍实验照片是很好的过程记录 ✓；C 让一个人包干会让其他人失去探究机会 ✗；D 讨论出错原因正是探究的核心价值 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Science project 科学探究项目",
+          "tags": ["多选"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Your group is doing a project on how to make our classroom cleaner. Write a plan in English with four steps and say what each member should do.",
+          "answer": { "value": "First, we will look around the classroom and list the things that make it dirty. Second, Li Mei will check how much water and paper we use every day. Third, Zhang Wei will look for rubbish on the floor and write down what we can recycle. Fourth, we will put our ideas on a poster and show it to our teacher on Friday." },
+          "analysis": "参考示例见答案。评分要点：①四个步骤清楚、有先后顺序（2 分）；②每一步都写明谁负责，分工具体（2 分）；③用上 first、second、third 等顺序词（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Science project 科学探究项目",
+          "tags": ["写作", "情境应用"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

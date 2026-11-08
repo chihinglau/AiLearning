@@ -1,0 +1,547 @@
+{
+  "_meta": {
+    "kind": "chapter_cleanup_stage1",
+    "generated": "2026-11-08T20:09:23",
+    "tool": "chapter_cleanup.py（人工运维，--confirm I_KNOW）",
+    "database": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\ailearning_dev.db",
+    "backup": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\build\\backups\\ailearning-backup-20261108-200922.db",
+    "plan": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\chapter_cleanup_plan_20261108.json",
+    "restore_hint": "python db_ops.py restore --backup \"D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\build\\backups\\ailearning-backup-20261108-200922.db\" --force --confirm I_KNOW",
+    "semantics": "R-A/R-B 旧样章：题目迁移到教材真实章节后删除旧章；R-C 旧样章：题目原地保留 + is_placeholder=1 + order_index 沉底；教材真实章节 order_index 回写官方章节骨架序。题目零删除。"
+  },
+  "stats": {
+    "before": {
+      "textbooks": 146,
+      "chapters": 657,
+      "knowledge_points": 598,
+      "questions": 1087
+    },
+    "after": {
+      "textbooks": 146,
+      "chapters": 642,
+      "knowledge_points": 598,
+      "questions": 1087
+    },
+    "delta": {
+      "textbooks": 0,
+      "chapters": -15,
+      "knowledge_points": 0,
+      "questions": 0
+    },
+    "chapters_deleted": 15,
+    "chapters_marked_placeholder": 24,
+    "questions_moved": 167,
+    "order_index_fixed": 2
+  },
+  "checks": {
+    "quick_check": "ok",
+    "foreign_key_violations": 0,
+    "orphan_question_chapter_refs": 0,
+    "placeholder_chapters_left": 24,
+    "order_index_conflicts_left": [],
+    "questions_preserved": true
+  },
+  "migrated": [
+    {
+      "legacy_chapter_id": 1,
+      "legacy_chapter": "10以内加减法",
+      "target_chapter_id": 311,
+      "target_chapter": "第四单元 10以内数加与减",
+      "subject": "math",
+      "grade": 1,
+      "semester": "first",
+      "rule": "R-B",
+      "questions_moved": 24,
+      "per_question_overrides": {},
+      "evidence": "g1 官方骨架中只有「第二单元 5以内数加与减」与「第四单元 10以内数加与减」两个加减单元；旧样章名明确是 10 以内，24 道题（3+2、9-4、10-3-2、数的分与合(10以内)）全部为 10 以内，故归第四单元。"
+    },
+    {
+      "legacy_chapter_id": 124,
+      "legacy_chapter": "加与减（一）",
+      "target_chapter_id": 311,
+      "target_chapter": "第四单元 10以内数加与减",
+      "subject": "math",
+      "grade": 1,
+      "semester": "first",
+      "rule": "R-B",
+      "questions_moved": 6,
+      "per_question_overrides": {},
+      "evidence": "该章 6 道题的知识点父节名即「10以内数的认识与加减法」，题目为 3+4、5+2、8-3 等 10 以内加减，与「第四单元 10以内数加与减」一致。"
+    },
+    {
+      "legacy_chapter_id": 20,
+      "legacy_chapter": "100以内加减法",
+      "target_chapter_id": 313,
+      "target_chapter": "第一单元 100以内数加与减（二）",
+      "subject": "math",
+      "grade": 2,
+      "semester": "first",
+      "rule": "R-B",
+      "questions_moved": 22,
+      "per_question_overrides": {},
+      "evidence": "g2 官方骨架里唯一的加减单元是「第一单元 100以内数加与减（二）」；22 道题（23+15、50-19、36+29、58+7 竖式）全部是 100 以内加减。"
+    },
+    {
+      "legacy_chapter_id": 127,
+      "legacy_chapter": "认识更大的数",
+      "target_chapter_id": 329,
+      "target_chapter": "第一单元 认识更大的数",
+      "subject": "math",
+      "grade": 4,
+      "semester": "first",
+      "rule": "R-A",
+      "questions_moved": 18,
+      "per_question_overrides": {},
+      "evidence": "剥前缀后核心名「认识更大的数」，在 g4 官方骨架中唯一命中「第一单元 认识更大的数」；18 道题（计数单位/读法写法/改写/近似数）正是该单元内容。"
+    },
+    {
+      "legacy_chapter_id": 129,
+      "legacy_chapter": "圆",
+      "target_chapter_id": 354,
+      "target_chapter": "第二单元 圆",
+      "subject": "math",
+      "grade": 6,
+      "semester": "first",
+      "rule": "R-A",
+      "questions_moved": 18,
+      "per_question_overrides": {},
+      "evidence": "剥前缀后核心名「圆」，在 g6 官方骨架中唯一命中「第二单元 圆」；18 道题（圆的认识/周长/面积/圆环）正是该单元内容。"
+    },
+    {
+      "legacy_chapter_id": 130,
+      "legacy_chapter": "丰富的图形世界",
+      "target_chapter_id": 366,
+      "target_chapter": "第一章 丰富的图形世界",
+      "subject": "math",
+      "grade": 7,
+      "semester": "first",
+      "rule": "R-A",
+      "questions_moved": 18,
+      "per_question_overrides": {},
+      "evidence": "剥前缀后核心名「丰富的图形世界」，在 g7 官方骨架中唯一命中「第一章 丰富的图形世界」。"
+    },
+    {
+      "legacy_chapter_id": 131,
+      "legacy_chapter": "勾股定理",
+      "target_chapter_id": 372,
+      "target_chapter": "第一章 勾股定理",
+      "subject": "math",
+      "grade": 8,
+      "semester": "first",
+      "rule": "R-A",
+      "questions_moved": 20,
+      "per_question_overrides": {},
+      "evidence": "剥前缀后核心名「勾股定理」，在 g8 官方骨架中唯一命中「第一章 勾股定理」；20 道题（勾股定理内容/逆定理/勾股数）正是该章内容。"
+    },
+    {
+      "legacy_chapter_id": 125,
+      "legacy_chapter": "第一章 声现象",
+      "target_chapter_id": 380,
+      "target_chapter": "第二章 声现象",
+      "subject": "physics",
+      "grade": 8,
+      "semester": "first",
+      "rule": "R-A",
+      "questions_moved": 5,
+      "per_question_overrides": {},
+      "evidence": "剥前缀后核心名「声现象」，在 g8 官方骨架中唯一命中「第二章 声现象」（人教版八上第二章即声现象）；5 道题（声音的产生/传播/特性）正是该章内容。"
+    },
+    {
+      "legacy_chapter_id": 119,
+      "legacy_chapter": "第一单元 第一章 认识生物",
+      "target_chapter_id": 133,
+      "target_chapter": "第一章 认识生物",
+      "subject": "biology",
+      "grade": 7,
+      "semester": "first",
+      "rule": "R-A",
+      "questions_moved": 5,
+      "per_question_overrides": {
+        "602": "第二章 认识细胞",
+        "604": "第二章 认识细胞",
+        "605": "第三章 从细胞到生物体"
+      },
+      "evidence": "剥两级前缀后核心名「认识生物」，在 g7 官方骨架中唯一命中「第一章 认识生物」；逐题按知识点名对齐官方节名：生物的基本特征→第一章（第二节 生物的特征）、细胞的结构→第二章认识细胞（第二节 植物细胞/第三节 动物细胞）、细胞的生活→第三章从细胞到生物体（第一节 细胞的生活）。"
+    },
+    {
+      "legacy_chapter_id": 8,
+      "legacy_chapter": "识字（一）",
+      "target_chapter_id": 153,
+      "target_chapter": "第一单元 识字",
+      "subject": "chinese",
+      "grade": 1,
+      "semester": "first",
+      "rule": "R-B",
+      "questions_moved": 9,
+      "per_question_overrides": {
+        "614": "第四单元 汉语拼音"
+      },
+      "evidence": "旧样章名「识字（一）」即人教版一上第一单元「识字」，g1 官方骨架第 1 行即「第一单元 识字」；8 道题为天地人、日月山川、金木水火土识字内容。"
+    },
+    {
+      "legacy_chapter_id": 123,
+      "legacy_chapter": "第一单元 史前时期：中国境内早期人类与文明的起源",
+      "target_chapter_id": 289,
+      "target_chapter": "第一单元 史前时期：原始社会与中华文明的起源",
+      "subject": "history",
+      "grade": 7,
+      "semester": "first",
+      "rule": "R-B",
+      "questions_moved": 5,
+      "per_question_overrides": {},
+      "evidence": "单元序号一致（第一单元）、主题前缀一致（史前时期：）；5 道题（中国境内最早古人类、半坡与河姆渡原始农耕）正是新版第一单元「史前时期：原始社会与中华文明的起源」的内容。"
+    },
+    {
+      "legacy_chapter_id": 121,
+      "legacy_chapter": "Unit 1 Hello",
+      "target_chapter_id": 219,
+      "target_chapter": "Unit 1 What is your family like?",
+      "subject": "english",
+      "grade": 1,
+      "semester": "first",
+      "rule": "R-B",
+      "questions_moved": 5,
+      "per_question_overrides": {},
+      "evidence": "单元序号一致（Unit 1），g1 官方骨架中唯一 Unit 1 为「Unit 1 What is your family like?」。注意：5 道题内容为 Greetings/Numbers，与新版 Unit 1 主题不完全一致，已列入阶段 2 待教研重写清单。"
+    },
+    {
+      "legacy_chapter_id": 14,
+      "legacy_chapter": "Colours 颜色",
+      "target_chapter_id": 224,
+      "target_chapter": "Unit 6 What colours can you see?",
+      "subject": "english",
+      "grade": 1,
+      "semester": "first",
+      "rule": "R-B",
+      "questions_moved": 4,
+      "per_question_overrides": {},
+      "evidence": "g1 官方骨架 6 个单元中只有「Unit 6 What colours can you see?」含 colours 关键词，与旧样章名唯一命中；4 道题均为颜色词汇题。"
+    },
+    {
+      "legacy_chapter_id": 32,
+      "legacy_chapter": "My family 家庭成员",
+      "target_chapter_id": 226,
+      "target_chapter": "Unit 2 What do you like about your family?",
+      "subject": "english",
+      "grade": 2,
+      "semester": "first",
+      "rule": "R-B",
+      "questions_moved": 4,
+      "per_question_overrides": {},
+      "evidence": "g2 官方骨架 6 个单元中只有「Unit 2 What do you like about your family?」含 family 关键词，与旧样章名唯一命中；4 道题为家庭成员词汇题。"
+    },
+    {
+      "legacy_chapter_id": 52,
+      "legacy_chapter": "Weather 天气",
+      "target_chapter_id": 237,
+      "target_chapter": "Unit 7 What do we know about weather?",
+      "subject": "english",
+      "grade": 3,
+      "semester": "first",
+      "rule": "R-B",
+      "questions_moved": 4,
+      "per_question_overrides": {},
+      "evidence": "g3 官方骨架 8 个单元中只有「Unit 7 What do we know about weather?」含 weather 关键词，与旧样章名唯一命中；4 道题均为天气词汇/句型题。"
+    }
+  ],
+  "deleted_chapters": [
+    {
+      "chapter_id": 1,
+      "name": "10以内加减法",
+      "order_index_before": 1,
+      "questions_moved_to": 311
+    },
+    {
+      "chapter_id": 124,
+      "name": "加与减（一）",
+      "order_index_before": 3,
+      "questions_moved_to": 311
+    },
+    {
+      "chapter_id": 20,
+      "name": "100以内加减法",
+      "order_index_before": 1,
+      "questions_moved_to": 313
+    },
+    {
+      "chapter_id": 127,
+      "name": "认识更大的数",
+      "order_index_before": 2,
+      "questions_moved_to": 329
+    },
+    {
+      "chapter_id": 129,
+      "name": "圆",
+      "order_index_before": 2,
+      "questions_moved_to": 354
+    },
+    {
+      "chapter_id": 130,
+      "name": "丰富的图形世界",
+      "order_index_before": 2,
+      "questions_moved_to": 366
+    },
+    {
+      "chapter_id": 131,
+      "name": "勾股定理",
+      "order_index_before": 1,
+      "questions_moved_to": 372
+    },
+    {
+      "chapter_id": 125,
+      "name": "第一章 声现象",
+      "order_index_before": 1,
+      "questions_moved_to": 380
+    },
+    {
+      "chapter_id": 119,
+      "name": "第一单元 第一章 认识生物",
+      "order_index_before": 1,
+      "questions_moved_to": 133
+    },
+    {
+      "chapter_id": 8,
+      "name": "识字（一）",
+      "order_index_before": 1,
+      "questions_moved_to": 153
+    },
+    {
+      "chapter_id": 123,
+      "name": "第一单元 史前时期：中国境内早期人类与文明的起源",
+      "order_index_before": 1,
+      "questions_moved_to": 289
+    },
+    {
+      "chapter_id": 121,
+      "name": "Unit 1 Hello",
+      "order_index_before": 1,
+      "questions_moved_to": 219
+    },
+    {
+      "chapter_id": 14,
+      "name": "Colours 颜色",
+      "order_index_before": 2,
+      "questions_moved_to": 224
+    },
+    {
+      "chapter_id": 32,
+      "name": "My family 家庭成员",
+      "order_index_before": 1,
+      "questions_moved_to": 226
+    },
+    {
+      "chapter_id": 52,
+      "name": "Weather 天气",
+      "order_index_before": 2,
+      "questions_moved_to": 237
+    }
+  ],
+  "marked_chapters": [
+    {
+      "chapter_id": 7,
+      "name": "汉语拼音",
+      "questions": 4,
+      "note": "R-C 保留：g1 官方第二/三/四单元的章名都叫「汉语拼音」，旧样章只有裸名，无法唯一定位；4 道题横跨声母/单韵母（第二单元）与整体认读音节（第四单元）。 建议：拆挂：声母、单韵母、声调 → 第二单元 汉语拼音；整体认读音节 → 第四单元 汉语拼音。"
+    },
+    {
+      "chapter_id": 9,
+      "name": "反义词与数量词",
+      "questions": 4,
+      "note": "R-C 保留：旧版语文知识专题，g1 官方 8 个单元里没有对应单元。 建议：并入第一单元 识字（字词），或保留为跨单元专项练习。"
+    },
+    {
+      "chapter_id": 26,
+      "name": "多音字",
+      "questions": 4,
+      "note": "R-C 保留：旧版字词专题，g2 官方 8 个单元里没有对应单元。 建议：并入第二单元 识字，或保留为专项。"
+    },
+    {
+      "chapter_id": 27,
+      "name": "量词与词语搭配",
+      "questions": 4,
+      "note": "R-C 保留：旧版字词专题，g2 官方 8 个单元里没有对应单元。 建议：并入第二单元 识字，或保留为专项。"
+    },
+    {
+      "chapter_id": 28,
+      "name": "比喻句初步",
+      "questions": 4,
+      "note": "R-C 保留：旧版修辞专题，g2 官方单元全是阅读单元，没有修辞单元。 建议：并入第三/第四单元 阅读 的语言理解，或保留为专项。"
+    },
+    {
+      "chapter_id": 45,
+      "name": "修改病句",
+      "questions": 4,
+      "note": "R-C 保留：旧版句子练习专题，g3 官方单元为主题单元，没有对应单元。 建议：并入第三单元（需按单元主题确认），或保留为专项。"
+    },
+    {
+      "chapter_id": 46,
+      "name": "关联词",
+      "questions": 4,
+      "note": "R-C 保留：旧版句子练习专题，g3 官方单元为主题单元，没有对应单元。 建议：并入第三单元（需按单元主题确认），或保留为专项。"
+    },
+    {
+      "chapter_id": 47,
+      "name": "古诗文积累",
+      "questions": 4,
+      "note": "R-C 保留：旧版积累专题；g3 官方单元是主题单元，没有独立古诗文单元。 建议：按课文逐课归入对应单元（需教研逐题判断），暂保留。"
+    },
+    {
+      "chapter_id": 13,
+      "name": "Greetings 问候",
+      "questions": 4,
+      "note": "R-C 保留：旧版单元名；牛津深圳版 g1 没有独立 greetings 单元，greetings 散在 Unit 1 的板块里。 建议：并入 Unit 1 What is your family like?（需确认板块归属）。"
+    },
+    {
+      "chapter_id": 15,
+      "name": "Numbers 1-10",
+      "questions": 4,
+      "note": "R-C 保留：g1 官方 6 个单元里没有数字主题单元。 建议：并入 Unit 3 What do you take to school?（含数字问答），或保留为专项。"
+    },
+    {
+      "chapter_id": 33,
+      "name": "Food 食物",
+      "questions": 4,
+      "note": "R-C 保留：g2 官方 6 个单元名里没有 food 关键词。 建议：并入 Unit 5 What do you like about farms?（食物词汇所在）。"
+    },
+    {
+      "chapter_id": 34,
+      "name": "Numbers 11-20",
+      "questions": 4,
+      "note": "R-C 保留：g2 官方 6 个单元里没有数字主题单元。 建议：并入 Unit 3 What is your favourite toy?（含数量表达），或保留为专项。"
+    },
+    {
+      "chapter_id": 51,
+      "name": "My school 学校场所",
+      "questions": 4,
+      "note": "R-C 保留：g3 官方 8 个单元名里没有 school 关键词。 建议：并入 Unit 4 What is around your home?（场所词汇）。"
+    },
+    {
+      "chapter_id": 53,
+      "name": "现在进行时初步",
+      "questions": 4,
+      "note": "R-C 保留：语法专题名，不是教材单元名。 建议：并入 Unit 1 How do we feel?（现在进行时语法点所在）。"
+    },
+    {
+      "chapter_id": 122,
+      "name": "第一章 地球和地图",
+      "questions": 5,
+      "note": "R-C 保留：湘教版旧版第一章名；新版第一章为「让我们走进地理」。5 道题（地球的形状与大小、经纬网、地图的阅读）落在新版第一章第二节「地球与地球仪」附近，但「经纬网」「地图的阅读」是否属该章需确认。 建议：并入 第一章 让我们走进地理（需确认经纬网/地图的阅读的节归属）。"
+    },
+    {
+      "chapter_id": 126,
+      "name": "第一单元 成长的节拍",
+      "questions": 5,
+      "note": "R-C 保留：旧版单元名；新版第一单元为「少年有梦」。5 道题（中学时代、学习伴成长、认识自我）内容更贴近新版第二单元「成长的时空」，与第一单元不完全对应。 建议：业务在「第一单元 少年有梦」与「第二单元 成长的时空」之间确认。"
+    },
+    {
+      "chapter_id": 2,
+      "name": "比较与位置",
+      "questions": 4,
+      "note": "R-C 保留：旧版单元名，g1 官方 6 章里没有同名的单元。 建议：并入 第一单元 生活中的数（比多少、上下左右）。"
+    },
+    {
+      "chapter_id": 3,
+      "name": "认识图形",
+      "questions": 4,
+      "note": "R-C 保留：旧版单元名，g1 官方 6 章里没有同名的单元。 建议：并入 第五单元 有趣的立体图形（题目为球/正方体/易拉罐/长方体面数，均为立体图形）。"
+    },
+    {
+      "chapter_id": 21,
+      "name": "乘法口诀（2-5）",
+      "questions": 4,
+      "note": "R-C 保留：g2 官方有「第四单元 乘法口诀（一）」与「第七单元 乘法口诀（二）」两个乘法口诀单元，旧样章名自带「2-5」但官方骨架未展开到节，无法机械判定「一」对应 2~5 还是 6~9。 建议：并入 第四单元 乘法口诀（一）——需确认教材中「乘法口诀（一）」覆盖 2~5。"
+    },
+    {
+      "chapter_id": 22,
+      "name": "元角分",
+      "questions": 4,
+      "note": "R-C 保留：g2 官方 8 个单元里没有人民币单元。 建议：并入 第三单元 数一数与乘法，或保留为专项。"
+    },
+    {
+      "chapter_id": 39,
+      "name": "一位数乘多位数",
+      "questions": 22,
+      "note": "R-C 保留：北师大版三上目录没有笔算乘法单元（第六单元为「乘除法的应用（二）」）；22 道题是旧人教版口径。 建议：改挂下册对应单元，或降级为跨年级专项练习。"
+    },
+    {
+      "chapter_id": 40,
+      "name": "周长",
+      "questions": 4,
+      "note": "R-C 保留：旧版节名，g3 官方只到单元级（大纲该章节列为「—」）。 建议：并入 第二单元 测量（二）。"
+    },
+    {
+      "chapter_id": 41,
+      "name": "分数的初步认识",
+      "questions": 4,
+      "note": "R-C 保留：北师大版三上目录没有分数单元。 建议：改挂下册对应单元，或保留为专项。"
+    },
+    {
+      "chapter_id": 128,
+      "name": "小数除法",
+      "questions": 18,
+      "note": "R-C 保留：北师大版五上目录没有小数除法单元（在五下第四单元）；18 道题是旧教材口径。 建议：改挂 math g5 下册第四单元 小数除法，或降级为跨年级专项练习。"
+    }
+  ],
+  "order_index_fixed": [
+    {
+      "chapter_id": 141,
+      "name": "第四单元 人体生理与健康（二）",
+      "from": 4,
+      "to": 1,
+      "subject": "biology",
+      "grade": 8,
+      "semester": "first"
+    },
+    {
+      "chapter_id": 385,
+      "name": "第十三章 内能",
+      "from": 13,
+      "to": 1,
+      "subject": "physics",
+      "grade": 9,
+      "semester": "first"
+    }
+  ],
+  "exams_chapter_ids_fixed": [
+    {
+      "exam_id": 1,
+      "title": "深圳市一年级数学期末真题（2025）",
+      "from": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "to": [
+        311,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "exam_id": 2,
+      "title": "深圳市一年级语文期末真题（2025）",
+      "from": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "to": [
+        7,
+        153,
+        9,
+        10,
+        11,
+        12
+      ]
+    }
+  ]
+}

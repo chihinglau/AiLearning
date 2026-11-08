@@ -1,0 +1,315 @@
+{
+  "subject": "english",
+  "grade": 3,
+  "version": "牛津深圳版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "Unit 1 How do we feel?",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "Feeling words 情绪形容词",
+      "parent": "Unit 1 How do we feel?",
+      "order_index": 1,
+      "explanation": "happy 高兴、sad 难过、angry 生气、tired 累、scared 害怕、excited 兴奋，都是描述感受的形容词。",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "How do you feel 问答",
+      "parent": "Unit 1 How do we feel?",
+      "order_index": 2,
+      "explanation": "问感受用 How do you feel? 回答用 I feel + 形容词；问他人用 How does he/she feel?",
+      "prerequisites": [
+        "Feeling words 情绪形容词"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "Why because 说明原因",
+      "parent": "Unit 1 How do we feel?",
+      "order_index": 3,
+      "explanation": "问原因用 Why are you sad? 回答用 Because…，because 后面接一个完整的句子说明理由。",
+      "prerequisites": [
+        "How do you feel 问答"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "he she feels 第三人称",
+      "parent": "Unit 1 How do we feel?",
+      "order_index": 4,
+      "explanation": "主语是 he/she 时，动词 feel 要加 s：He feels tired. She feels happy. 不要写成 He feel tired.",
+      "prerequisites": [
+        "Why because 说明原因"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "Unit 1 How do we feel?",
+      "order_index": 1,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「生气」的英文是（  ）",
+          "options": [
+            "angry",
+            "happy",
+            "tired",
+            "scared"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "angry 是生气；happy 高兴、tired 累、scared 害怕，都不是「生气」。",
+          "difficulty": 1,
+          "knowledge_point": "Feeling words 情绪形容词",
+          "tags": [
+            "词汇"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "— How do you feel? — （  ） happy.",
+          "options": [
+            "I feel",
+            "I feels",
+            "He feel",
+            "I feeling"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "主语 I 后用动词原形 feel，故 I feel happy；I feels 加了 s（主语非第三人称单数），He feel 人称不符，I feeling 缺 be 动词。",
+          "difficulty": 1,
+          "knowledge_point": "How do you feel 问答"
+        },
+        {
+          "q_type": "fill",
+          "stem": "— How do you feel? — I feel （  ）. I want to sleep.",
+          "answer": {
+            "value": "tired"
+          },
+          "analysis": "后句说想睡觉，说明很累，故填 tired；填 excited 或 happy 与「想睡觉」不符。",
+          "difficulty": 1,
+          "knowledge_point": "How do you feel 问答"
+        },
+        {
+          "q_type": "judge",
+          "stem": "He feel tired. 这句话语法正确。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "主语 he 是第三人称单数，动词要加 s，应为 He feels tired.，所以原句错误。",
+          "difficulty": 2,
+          "knowledge_point": "he she feels 第三人称"
+        },
+        {
+          "q_type": "choice",
+          "stem": "— Why are you sad? — （  ） I lost my book.",
+          "options": [
+            "Because",
+            "So",
+            "And",
+            "But"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "问原因用 Why，回答用 Because 引出理由；So 表结果，And、But 表并列或转折，都不能回答原因。",
+          "difficulty": 2,
+          "knowledge_point": "Why because 说明原因"
+        },
+        {
+          "q_type": "fill",
+          "stem": "She （  ） happy today, because it is her birthday.",
+          "answer": {
+            "value": "feels"
+          },
+          "analysis": "主语 She 是第三人称单数，feel 要加 s 变成 feels；写 feel 则主谓不一致。",
+          "difficulty": 3,
+          "knowledge_point": "he she feels 第三人称"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列单词中，表示情绪或感受的有（  ）",
+          "options": [
+            "happy",
+            "angry",
+            "apple",
+            "scared"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A happy 高兴 ✓；B angry 生气 ✓；C apple 是苹果，属于食物 ✗；D scared 害怕 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Feeling words 情绪形容词",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "回答 How does she feel? 可以用 She feels excited.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "问句用 does she，答句主语 she 后动词加 s（feels），答法与问句人称、时态一致，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "he she feels 第三人称"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面哪句搭配最合理？（  ）",
+          "options": [
+            "I feel scared, because there is a big dog.",
+            "I feel happy, because I lost my pen.",
+            "I feel tired, because I just woke up.",
+            "I feel angry, because my friend gave me a gift."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "大狗让人害怕，A 因果合理；B 丢笔却高兴、C 刚睡醒却累、D 收到礼物却生气，三句因果都说不通。",
+          "difficulty": 3,
+          "knowledge_point": "Why because 说明原因",
+          "tags": [
+            "逻辑搭配"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "— Why （  ） he angry? — Because his toy is broken.",
+          "answer": {
+            "value": "is"
+          },
+          "analysis": "形容词 angry 前要用 be 动词，主语 he 用 is，所以填 is；填 does 后面就不能直接跟 angry。",
+          "difficulty": 3,
+          "knowledge_point": "Why because 说明原因"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列关于本单元句型的说法，正确的有（  ）",
+          "options": [
+            "问感受用 How do you feel?",
+            "回答感受用 I feel + 形容词",
+            "主语是 he 时动词 feel 要加 s",
+            "问原因用 What are you?"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 问感受的固定句型 ✓；B I feel + 形容词是标准答法 ✓；C 第三人称单数加 s ✓；D 问原因用 Why，不用 What are you ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "How do you feel 问答",
+          "tags": [
+            "多选",
+            "句型"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "because 后面不能单独跟一个词，要跟完整的句子。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "because 是连词，引导原因状语从句，必须接主谓结构（如 because I lost my book），只跟一个名词不符合语法。",
+          "difficulty": 3,
+          "knowledge_point": "Why because 说明原因"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「他今天很兴奋」的英文是（  ）",
+          "options": [
+            "He feels excited today.",
+            "He feel excited today.",
+            "He is feel excited today.",
+            "He excited today."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "主语 he 第三人称单数，feel 加 s，A 正确；B 缺 s，C is feel 重复用动词，D 没有谓语动词。",
+          "difficulty": 2,
+          "knowledge_point": "he she feels 第三人称"
+        },
+        {
+          "q_type": "fill",
+          "stem": "— How do you feel? — I feel （  ）, because I have no friends here.",
+          "answer": {
+            "value": "sad"
+          },
+          "analysis": "「在这里没有朋友」通常带来难过，填 sad 或 lonely 都合理；填 happy 与原因矛盾。",
+          "difficulty": 4,
+          "knowledge_point": "Why because 说明原因"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用英语写两句话：一句说你的感受，一句用 because 说明原因。",
+          "answer": {
+            "value": "I feel tired, because I played football after school."
+          },
+          "analysis": "参考示例：I feel tired, because I played football after school. 评分要点：①第一句用 I feel + 形容词（1 分）；②第二句或同一句用 because 说明原因（2 分）；③因果合理（1 分）；④大小写与标点（1 分）。只用 because 却没说感受不得分。",
+          "difficulty": 4,
+          "knowledge_point": "Why because 说明原因",
+          "tags": [
+            "写作"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "把对话补全并译成中文：A: How does Tom （  ）? B: He feels （  ）, because he won the game.",
+          "answer": {
+            "value": "feel；excited。译文：A：汤姆感觉怎么样？B：他感到兴奋，因为他赢了比赛。"
+          },
+          "analysis": "参考答案：第一空 feel（does 后接动词原形）；第二空 excited（赢了比赛所以兴奋，填 happy 也说得通，但 excited 更贴合）。译文见答案。评分要点：①两空正确（2 分）；②译文准确（2 分）；③大小写与标点（1 分）。第一空填 feels 则与 does 重复。",
+          "difficulty": 5,
+          "knowledge_point": "he she feels 第三人称",
+          "tags": [
+            "补全对话",
+            "翻译"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "— How does Lily feel? — She （  ） tired.",
+          "options": [
+            "feels",
+            "feel",
+            "is feel",
+            "feeling"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "主语 She 是第三人称单数，feel 要加 s，故 feels；feel 缺 s，is feel 重复动词，feeling 不能单独作谓语。",
+          "difficulty": 2,
+          "knowledge_point": "he she feels 第三人称"
+        },
+        {
+          "q_type": "fill",
+          "stem": "— Why is she happy? — （  ） she got a new bike.",
+          "answer": {
+            "value": "Because"
+          },
+          "analysis": "问原因 Why，答句用 Because 引导原因从句；写 So 会把因果关系颠倒。",
+          "difficulty": 4,
+          "knowledge_point": "Why because 说明原因"
+        }
+      ]
+    }
+  ]
+}

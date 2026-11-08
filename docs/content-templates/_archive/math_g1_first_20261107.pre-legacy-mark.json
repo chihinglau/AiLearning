@@ -1,0 +1,42 @@
+{
+ "subject": "math",
+ "grade": 1,
+ "version": "北师大版",
+ "semester": "first",
+ "knowledge": [
+  {"node_type": "section", "name": "10以内加减法", "order_index": 1},
+  {"node_type": "point", "name": "数的分与合（10以内）", "parent": "10以内加减法", "order_index": 1, "weight": 1.2, "source_type": "original", "source_name": "教研组自编", "explanation": "把一个数拆成两部分（分成），或把两部分合起来（合成）。先会分 10 以内各数，加减法的口算才有依据：算 8+5 时把 5 分成 2 和 3，先凑成 10。", "prerequisites": []},
+  {"node_type": "point", "name": "一图四式", "parent": "10以内加减法", "order_index": 2, "weight": 1.1, "source_type": "original", "source_name": "教研组自编", "explanation": "同一幅图（两部分合起来）可以写出两道加法、两道减法共四个算式。加法把两部分合起来，减法从总数里去掉一部分，四个算式说的是同一件事。", "prerequisites": ["数的分与合（10以内）"]},
+  {"node_type": "point", "name": "连加与连减", "parent": "10以内加减法", "order_index": 3, "weight": 1.2, "source_type": "original", "source_name": "教研组自编", "explanation": "三个数依次相加或依次相减，按从左往右的顺序一步一步算，每一步的结果再参与下一步。常错点是把中间结果丢掉，直接心算总数。", "prerequisites": []},
+  {"node_type": "point", "name": "加减混合", "parent": "10以内加减法", "order_index": 4, "weight": 1.1, "source_type": "original", "source_name": "教研组自编", "explanation": "一个算式里既有加又有减，没有括号时从左往右依次计算。先看清第二个符号是加还是减，再决定下一步是合起来还是去掉。", "prerequisites": ["连加与连减"]},
+  {"node_type": "point", "name": "求未知加数", "parent": "10以内加减法", "order_index": 5, "weight": 1.3, "source_type": "original", "source_name": "教研组自编", "explanation": "括号里缺一个数时，用与它相反的运算去找：加法算式缺加数，就用和减去另一个加数；减法算式缺被减数，就用差加上减数。", "prerequisites": ["数的分与合（10以内）"]}
+ ],
+ "chapters": [
+  {
+   "name": "10以内加减法",
+   "order_index": 1,
+   "questions": [
+    {"q_type": "choice", "stem": "10 可以分成 6 和几？", "options": ["3", "4", "5", "6"], "answer": {"value": "B"}, "analysis": "6 再数 4 个就凑满 10，所以 10 分成 6 和 4。也可以想 10-6=4。", "difficulty": 1, "knowledge_point": "数的分与合（10以内）", "tags": ["数的分与合", "10以内"], "source_type": "original", "source_name": "自主命题", "status": "published"},
+    {"q_type": "choice", "stem": "下面哪个算式的得数是 10？", "options": ["6+3", "4+5", "8+2", "7+2"], "answer": {"value": "C"}, "analysis": "6+3=9，4+5=9，8+2=10，7+2=9，只有 8+2 的得数是 10。", "difficulty": 1, "knowledge_point": "10以内加法", "tags": ["口算", "10以内"], "source_type": "original", "source_name": "自主命题", "status": "published"},
+    {"q_type": "fill", "stem": "7 可以分成 3 和（  ）。", "answer": {"value": "4"}, "analysis": "7 去掉 3 还剩 4，所以 7 分成 3 和 4；也可以想 3 再添 4 就是 7。", "difficulty": 1, "knowledge_point": "数的分与合（10以内）", "tags": ["数的分与合", "填空"], "source_type": "original", "source_name": "自主命题", "status": "published"},
+    {"q_type": "judge", "stem": "把 8 分成 4 和 4，两份同样多。", "answer": {"value": "T"}, "analysis": "4 和 4 合起来正好是 8，而且两份一样多，这是 8 的一半。", "difficulty": 2, "knowledge_point": "数的分与合（10以内）", "tags": ["判断", "数的分与合"], "source_type": "original", "source_name": "自主命题", "status": "published"},
+    {"q_type": "choice", "stem": "由 3+5=8 可以写出四个算式，下面哪个算式是不正确的？", "options": ["5+3=8", "8-3=5", "8-5=3", "8+3=5"], "answer": {"value": "D"}, "analysis": "两部分合起来是 8，交换后 5+3 还是 8；从 8 里去掉 3 得 5，去掉 5 得 3。8+3=5 把总数和被减数弄反了。", "difficulty": 1, "knowledge_point": "一图四式", "tags": ["一图四式", "加减关系"], "source_type": "original", "source_name": "自主命题", "status": "published"},
+    {"q_type": "fill", "stem": "在算式 8-5=3 中，被减数是（  ）。", "answer": {"value": "8"}, "analysis": "减号前面的数是总数，叫被减数；减号后面的 5 是减数，等号后面的 3 是差。", "difficulty": 2, "knowledge_point": "一图四式", "tags": ["减法各部分", "填空"], "source_type": "original", "source_name": "自主命题", "status": "published"},
+    {"q_type": "multiple", "stem": "由 2+6=8 能写出的算式有（  ）。", "options": ["6+2=8", "8-2=6", "8-6=2", "2+8=6"], "answer": {"value": ["A", "B", "C"]}, "analysis": "交换两个加数得 6+2=8；从总数 8 里去掉 2 得 6，去掉 6 得 2。2+8=6 是把总数当成了加数，不对。", "difficulty": 4, "knowledge_point": "一图四式", "tags": ["多选", "一图四式"], "source_type": "original", "source_name": "自主命题", "status": "published"},
+    {"q_type": "answer", "stem": "用小棒摆一摆：左边放 4 根，右边放 5 根。请写出两道加法算式和两道减法算式，并说明每道算式表示的意思。", "answer": {"value": "4+5=9；5+4=9；9-4=5；9-5=4。4+5=9 表示两部分合起来一共 9 根；5+4=9 表示交换两部分结果不变；9-4=5 表示从 9 根里去掉 4 根还剩 5 根；9-5=4 表示从 9 根里去掉 5 根还剩 4 根。"}, "analysis": "评分要点：四道算式各 0.5 分；能说清两道加法表示合并、两道减法表示去掉各 1 分。只看算式不解释意思最多得一半分。", "difficulty": 5, "knowledge_point": "一图四式", "tags": ["主观题", "一图四式", "解决问题"], "source_type": "original", "source_name": "自主命题", "status": "published"},
+    {"q_type": "choice", "stem": "2+3+4 等于几？", "options": ["8", "9", "10", "7"], "answer": {"value": "B"}, "analysis": "先算 2+3=5，再算 5+4=9。也可以先算 3+4=7，再算 2+7=9。", "difficulty": 2, "knowledge_point": "连加与连减", "tags": ["连加", "口算"], "source_type": "original", "source_name": "自主命题", "status": "published"},
+    {"q_type": "fill", "stem": "10-3-2=（  ）。", "answer": {"value": "5"}, "analysis": "先算 10-3=7，再算 7-2=5。注意第二步要用 7 去减，不能用 10 直接减 2。", "difficulty": 3, "knowledge_point": "连加与连减", "tags": ["连减", "易错点"], "source_type": "original", "source_name": "自主命题", "status": "published"},
+    {"q_type": "judge", "stem": "3+4+2 与 3+2+4 的计算结果相同。", "answer": {"value": "T"}, "analysis": "3+4+2=9，3+2+4=9。连加的算式里，只要每个数都还在，先加哪两个，最后的结果都一样。", "difficulty": 3, "knowledge_point": "连加与连减", "tags": ["判断", "连加"], "source_type": "original", "source_name": "自主命题", "status": "published"},
+    {"q_type": "choice", "stem": "小红有 10 元，先花 4 元买一支笔，再花 3 元买一个本子。她还剩多少元？", "options": ["3 元", "4 元", "2 元", "5 元"], "answer": {"value": "A"}, "analysis": "连续花掉两次，用连减：10-4=6，6-3=3，所以还剩 3 元。也可先算共花 4+3=7 元，10-7=3 元。", "difficulty": 3, "knowledge_point": "连加与连减", "tags": ["解决问题", "连减"], "source_type": "original", "source_name": "自主命题", "status": "published"},
+    {"q_type": "choice", "stem": "8-3+2 等于几？", "options": ["5", "7", "8", "9"], "answer": {"value": "B"}, "analysis": "从左往右算：先 8-3=5，再 5+2=7。若先算 3+2=5 再算 8-5=3，就错了，因为没有括号不能先算后面的加法。", "difficulty": 3, "knowledge_point": "加减混合", "tags": ["混合运算", "运算顺序"], "source_type": "original", "source_name": "自主命题", "status": "published"},
+    {"q_type": "fill", "stem": "6+4-5=（  ）。", "answer": {"value": "5"}, "analysis": "先算 6+4=10，再算 10-5=5。中间结果 10 要写清楚，不要直接心算成 5。", "difficulty": 3, "knowledge_point": "加减混合", "tags": ["混合运算", "填空"], "source_type": "original", "source_name": "自主命题", "status": "published"},
+    {"q_type": "multiple", "stem": "下面算式中，得数是 6 的有（  ）。", "options": ["10-4", "3+3", "9-3+2", "5+3-2"], "answer": {"value": ["A", "B", "D"]}, "analysis": "10-4=6；3+3=6；9-3+2=8；5+3-2=6。所以 A、B、D 都对。", "difficulty": 3, "knowledge_point": "加减混合", "tags": ["多选", "口算"], "source_type": "original", "source_name": "自主命题", "status": "published"},
+    {"q_type": "judge", "stem": "没有括号的加减混合算式，要按从左往右的顺序计算。", "answer": {"value": "T"}, "analysis": "例如 9-5+3，先算 9-5=4，再算 4+3=7。顺序颠倒会得到 9-8=1，结果就错了。", "difficulty": 3, "knowledge_point": "加减混合", "tags": ["判断", "运算顺序"], "source_type": "original", "source_name": "自主命题", "status": "published"},
+    {"q_type": "choice", "stem": "4+（  ）=9，括号里应填几？", "options": ["3", "4", "5", "6"], "answer": {"value": "C"}, "analysis": "总数 9 里已经有了 4，缺的就是 9-4=5。检查一下：4+5=9，对。", "difficulty": 3, "knowledge_point": "求未知加数", "tags": ["求未知加数", "逆向思考"], "source_type": "original", "source_name": "自主命题", "status": "published"},
+    {"q_type": "answer", "stem": "（  ）-3=5，括号里应填几？请说清你是怎么想的。", "answer": {"value": "填 8。想法：差是 5，减数是 3，被减数等于差加回减数，5+3=8；检查 8-3=5，正确。"}, "analysis": "评分要点：答案 8 得 1 分；说出 5+3=8 的理由得 1 分；有验算这一步再加 0.5 分。只写 8 不写想法最多得一半分。", "difficulty": 2, "knowledge_point": "求未知加数", "tags": ["主观题", "逆向思考"], "source_type": "original", "source_name": "自主命题", "status": "published"},
+    {"q_type": "answer", "stem": "小明有 8 张卡片，送给同桌一些后还剩 3 张。送给同桌多少张？请写出算式，并用一道加法算式检查。", "answer": {"value": "8-3=5（张）。检查：5+3=8，说明送出 5 张后正好剩 3 张，答案正确。"}, "analysis": "评分要点：算式 8-3=5 得 1 分，写清单位得 0.5 分，用 5+3=8 验算得 1 分。易错点：把减法错写成加法 8+3=11。", "difficulty": 5, "knowledge_point": "加减法应用", "tags": ["解决问题", "验算"], "source_type": "original", "source_name": "自主命题", "status": "published"},
+    {"q_type": "answer", "stem": "妈妈买了 10 个橘子，第一天吃掉 3 个，第二天吃掉 2 个。还剩多少个？请用两种方法计算，并比较结果。", "answer": {"value": "方法一（连减）：10-3=7，7-2=5，剩 5 个。方法二（先求共吃掉）：3+2=5，10-5=5，也剩 5 个。两种方法结果相同，都是 5 个。"}, "analysis": "评分要点：两种方法各 1 分，比较结果得 0.5 分。方法二体现“先合后减”的思路，能说明孩子真的理解题意，而不只是会算。", "difficulty": 5, "knowledge_point": "连加与连减", "tags": ["主观题", "解决问题", "一题多解"], "source_type": "original", "source_name": "自主命题", "status": "published"}
+   ]
+  }
+ ]
+}

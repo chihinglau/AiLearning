@@ -371,7 +371,7 @@ FeatureCard(
 | 学习首页欢迎卡 | 保持品牌 `primaryContainer`，作为唯一视觉锚点 |
 | 学习首页推荐卡 | 整卡保持中性，仅类型标签/图标使用 accent |
 | 知识点/目录页 | 复用同一 token；现有 `withValues(alpha:0.12)` 标签与卡片统一透明度 |
-| 考试/作业列表 | 状态标签使用对应 accent，列表卡片底色保持中性，避免整页染色 |
+| 考试/作业列表 | 状态标签使用对应 accent；2026-11-08 起列表项改用 `AccentCard` 淡彩底（见 3.7） |
 
 非目标：不做全站随机多色、不做饱和糖果色大面积铺底、不做渐变/发光卡片、不修改品牌主色体系。
 
@@ -402,6 +402,216 @@ accent token 通过 `ThemeExtension` 下发，页面不得硬编码色值。
 | 回归 | `dart analyze lib test` 0 issues；`flutter test` 88 passed（新增 `feature_card_test.dart` 4 例） |
 | 真机 | OXF-AN10 学生账号登录后首页确认青绿/琥珀/玫红三色入口卡正常，文案与图标完整；「继续练习」按“存在未完成会话”条件显示 |
 | 推广 | 暂不推广到知识点/考试/作业列表；如需推广，先登记 CR 并按本规范复用 token，不新增卡片样式 |
+
+---
+
+### 3.7 统一淡彩卡片：AccentCard（2026-11-08 追加）
+
+> 背景：3.6 只在学习首页试点 `FeatureCard`，练习、考试、作业、家长/教师中心等页面仍是白卡，重点信息不突出。本次新增更轻量的通用容器 `AccentCard`，把同一套四色语义推广到列表项与重点信息块，并修正 3.6.4 中「列表卡片底色保持中性」的旧约定。
+
+#### 3.7.1 与 FeatureCard 的分工
+
+| 组件 | 定位 | 典型场景 |
+|---|---|---|
+| `FeatureCard` | 功能入口大卡，固定「图标 + 标题 + 副标题 + 可选进度」结构 | 学习首页四个主入口、推荐学习卡 |
+| `AccentCard` | 通用淡彩容器，内部可放 `ListTile`、`Row`、`Column` 等任意内容 | 考试/作业列表项、统计块、状态提醒、教材版本项 |
+
+两者共享 `AppAccents` Token 与同一套选色规则，禁止页面各自定义新的卡片样式。
+
+#### 3.7.2 组件 API 与视觉参数
+
+`app/lib/widgets/accent_card.dart`：
+
+```dart
+AccentCard(
+  accent: AppAccents.of(context).exam,
+  padding: const EdgeInsets.all(14), // 默认值
+  margin: EdgeInsets.zero,           // 默认值
+  onTap: onTap,                      // 为空时不包 InkWell
+  child: ListTile(...),
+)
+```
+
+| 参数 | 规范 |
+|---|---|
+| 底色 | `Color.alphaBlend(accent.withValues(alpha: 0.09), colorScheme.surface)` |
+| 描边 | `accent.withValues(alpha: 0.26)`，宽度 1 |
+| 圆角 | 16 |
+| 内边距 | 默认 `EdgeInsets.all(14)`；消息类可用 16 |
+| 阴影/渐变 | 无（elevation 0、透明 Material）；禁止发光与彩色阴影 |
+| 交互 | 仅 `onTap != null` 时包 `InkWell`，水波纹使用主题默认色 |
+| 对比度 | accent 只用于图标、标题、状态标签；正文保持中性色，accent 文本在 9% 淡彩底上仍需 ≥4.5:1 |
+
+#### 3.7.3 语义选色规则
+
+| 场景 | accent | 说明 |
+|---|---|---|
+| 学习、知识点、教材、学情概览 | `learn` | 绿色，代表掌握与成长 |
+| 练习、组卷、答题反馈（正确） | `practice` | 紫色，代表刻意练习 |
+| 考试、待考、进行中、成绩、真题、批改中 | `exam` | 橙色，代表考核与节点 |
+| 作业、待办、错题、到期复习、待提交 | `assignment` | 玫红，代表任务与提醒 |
+| 已完成 / 已消灭 / 使用中 | `learn` | 完成态统一收敛到 learn |
+| 掌握度、薄弱知识点 | 节点 `bandColor` | 沿用知识图谱分级色，不在本方案内重定义 |
+| 错误、失败、危险操作 | `colorScheme.error` | 仅用于错误反馈，不占用四色语义 |
+| 禁用 | `colorScheme.disabledColor` | 按钮/操作文字，不改变卡片底色 |
+
+约束：
+
+1. 一卡一色，禁止一卡内出现两种 accent 底色；状态变化时整卡 accent 随之切换。
+2. 同屏 accent 种类 ≤3；列表页若超过，说明信息层级需要重新梳理，而不是继续加色。
+3. 所有颜色必须来自 `AppAccents.of(context)` 或主题 `ColorScheme`，页面禁止出现 `Colors.blue`、`Color(0xFF...)` 等硬编码。
+4. 颜色不得是唯一区分手段：卡片内必须保留图标、标题或状态文案。
+
+#### 3.7.4 页面应用矩阵
+
+| 页面 | 着色区块 | accent |
+|---|---|---|
+| `features/learn/learn_page.dart` | 今日计划、继续学习、教材条目、章节列表 | learn |
+| `features/mistakes/mistakes_page.dart` | 到期复习提醒 → exam；错题卡 → assignment；学科标签按学科色 | exam / assignment |
+| `features/profile/profile_page.dart` | 四宫格统计四色；薄弱点按 `bandColor`；菜单入口按功能语义 | 四色 |
+| `features/knowledge/knowledge_page.dart` | 单元卡（按掌握度）、高亮单元 | `bandColor` / learn |
+| `features/knowledge/unit_page.dart` | 知识点卡（按掌握度） | `bandColor` |
+| `features/exam/exam_list_page.dart` | 待考/进行中 → exam；已完成 → learn；状态标签与卡片同色 | exam / learn |
+| `features/exam/past_paper_page.dart` | 真题列表项 | exam |
+| `features/exam/exam_report_page.dart` | 总分块 → exam；题型得分 → practice；知识点表现与趋势 → learn；能力维度 → exam；错题清单 → assignment | 四色 |
+| `features/practice/practice_config_page.dart` | 组卷预览、即时反馈说明 | practice |
+| `features/practice/practice_page.dart` | 答题结果反馈（正确 → learn，错误 → error） | learn / error |
+| `features/assignment/assignment_list_page.dart` | 待提交 → assignment；批改中 → exam；已完成 → learn | assignment / exam / learn |
+| `features/teacher/teacher_classes_page.dart` | 班级列表项 | learn |
+| `features/teacher/class_stats_page.dart` | 班级概览 → learn；四宫格四色；提交情况 → practice；薄弱点 → assignment | 四色 |
+| `features/family/parent_children_page.dart` | 孩子概览 → learn；四宫格四色；薄弱点 → `bandColor` | 四色 |
+| `features/textbook/textbook_manage_page.dart` | 当前教材 → learn；其他版本 → practice；「使用中」徽标 → learn | learn / practice |
+
+#### 3.7.5 不适用范围
+
+以下区域保持原有中性/品牌样式，不套 `AccentCard`：
+
+- 表单输入、筛选 Chip、分段选择器（避免颜色干扰操作判断）。
+- 对话框、底部弹层、协议正文、法律说明。
+- 错误状态卡、空状态卡、加载占位。
+- 品牌欢迎区、主 CTA（继续使用品牌蓝 `#1E6FD9` 与 `primaryContainer`）。
+- 主观题自评、家长控制等交互表单卡。
+
+#### 3.7.6 主题与暗色适配
+
+`AccentCard` 的底色基于 `colorScheme.surface` 做 `alphaBlend`，不写死白色，因此切换到暗色主题或自定义背景时自动适配，无需像 3.6.5 那样单独计算暗色公式。`AppAccents` 通过 `ThemeExtension` 注册且实现 `lerp`，主题切换时 accent 可平滑过渡；页面仍不得直接持有色值常量。
+
+#### 3.7.7 验收与实施状态（2026-11-08）
+
+| 项 | 结果 |
+|---|---|
+| 代码 | `widgets/accent_card.dart` 新增；15 个页面完成改造（见 3.7.4） |
+| 静态检查 | `dart format` 通过；`flutter analyze` 0 issues |
+| 测试 | `flutter test` 109 passed（含 exam/assignment/practice 相关组件测试） |
+| 真机 | OXF-AN10 学生账号重新登录后核对：首页今日计划/教材/章节为 learn 绿，考试中心为 exam 橙，班级作业为 assignment 玫红；我的页四宫格四色；教材管理当前教材/使用中为 learn、其他版本为 practice；错题本到期提醒为 exam、错题卡为 assignment |
+| 待补验 | 设备库当前学生无考试数据，考试列表卡片需有考试后复验；家长中心、教师中心需对应角色账号实机核对 |
+
+回归要求：后续新增列表或重点信息块时，先在本节 3.7.3/3.7.4 登记语义与 accent，再复用 `AccentCard`；不得在页面内复制卡片装饰代码。
+
+---
+
+### 3.8 年级设置入口（2026-11-08 追加）
+
+> 背景：此前修改年级只能在首次登录的三步引导页完成。引导完成后「我的」页没有任何入口，且 `/onboarding` 会被路由 redirect 弹回首页，用户实际无法再调整年级。后端 `PUT /api/users/me/grade` 与 `user:grade:change` 权限早已就绪，本次补齐 App 入口与编辑态。
+
+#### 3.8.1 入口与可见性
+
+| 项 | 规则 |
+|---|---|
+| 位置 | 我的页 →「年级设置」，位于「教材管理」之前 |
+| 可见性 | 仅 `student` 角色显示；教师、家长账号不显示 |
+| 卡片样式 | `AccentCard(accent: practice)`，副标题「当前 X 年级 · 每学期可修改 1 次」 |
+| 路由 | `context.push('/onboarding?edit=1')` |
+
+#### 3.8.2 交互流程
+
+```text
+我的页「年级设置」
+  → 编辑页（预选当前学段/年级）
+  → 选择新学段/年级
+  → 点击「保存并重新登录」
+  → 后端首次返回 428 CONFIRM_REQUIRED（影响说明 + confirm_token）
+  → 用户确认影响
+  → 携带 confirm_token 再次提交
+  → 成功（后端作废旧 Token）
+  → App 主动登出并跳转登录页
+  → 重新登录后按新年级生效
+```
+
+关键点：
+
+1. 首次提交不直接改库，必须经过影响确认（跨学段时重点提示学科/教材变化）。
+2. 修改成功即触发 `bump_token_version`，当前 access/refresh token 全部失效，因此**必须重新登录**，不做「静默续期」。
+3. 编辑态不执行 `autoBind`（避免用推荐教材覆盖用户手动选择），教材由用户在「教材管理」中确认；后端返回 `textbook_rebind_required=true` 作为依据。
+
+#### 3.8.3 页面规格
+
+| 区域 | 规格 |
+|---|---|
+| 标题 | 「年级设置」（普通引导仍为「完善学习信息」） |
+| 返回 | 左上角返回箭头，返回「我的」页 |
+| 进度条 / 步骤指示 | 编辑态隐藏，不展示「第 X 步 / 共 3 步」 |
+| 内容 | 单页纵向排列：学段卡（小学/初中/高中）+ 年级网格（当前年级选中） |
+| 辅助说明 | 「修改后将按新年级重新推荐教材，历史学情保留；保存后需重新登录以刷新权限。」 |
+| 主按钮 | 全宽 `FilledButton`，文案「保存并重新登录」，提交中显示 loading 并禁用 |
+| 错误提示 | 显示在按钮上方，使用 `colorScheme.error` |
+| 年级未变化 | 本地直接 SnackBar 提示「年级未变化」，不发起请求 |
+
+#### 3.8.4 路由与状态处理
+
+| 项 | 处理 |
+|---|---|
+| 路由复用 | 复用 `/onboarding`，通过 `?edit=1` 区分编辑态，不新增 `/grade` 路由 |
+| redirect 放行 | 仅当 `onboardingStatus == completed`、`location == /onboarding` 且 `edit != 1` 时弹回 `/shell`；`edit=1` 允许进入 |
+| 引导未完成 | 仍强制进入普通三步引导，编辑入口不可达 |
+| 编辑态副作用 | 不写入 onboarding 完成状态、不调用教材 `autoBind`、成功后清理本地登录态 |
+| 登出 | 调用 `AuthService.logout()` 并清空 `currentUserProvider`，随后 `context.go('/login')` |
+
+#### 3.8.5 后端契约（已存在，本次仅接入）
+
+| 项 | 内容 |
+|---|---|
+| 接口 | `PUT /api/users/me/grade`，Body `{ grade, confirm_token? }` |
+| 权限 | `user:grade:change`，且角色必须为 `student` |
+| 频率限制 | 每学期（`semester_start(now)` 起）`source=self` 仅允许 1 次 |
+| 首次返回 | `428 CONFIRM_REQUIRED`，含 `impact`（`cross_stage`、`textbook_rebind_required`、`message`）与 `confirm_token` |
+| 成功返回 | `200 { grade, stage, grade_group, cross_stage, textbook_rebind_required, reauth_required: true, token_version }` |
+| 常见错误 | `409 GRADE_CHANGE_LIMIT`、`422 GRADE_UNCHANGED`、`422 CONFIRM_INVALID`、`403 NOT_STUDENT` |
+| 副作用 | 写 `GradeHistory(source=self)`、审计 `user.grade.change`、`bump_token_version` 使旧 Token 与 refresh token 全部失效 |
+
+#### 3.8.6 异常与边界
+
+1. 确认弹窗取消：停留在编辑页，不产生任何变更。
+2. 额度已用完：透出后端文案「每学期仅可自助修改 1 次，如需调整请联系客服或校管」。
+3. 跨学段修改：确认弹窗重点说明学科与教材范围变化，历史学情保留。
+4. 确认令牌过期/失效：提示重新发起修改，由用户再次点击保存。
+5. 修改成功但登出接口报错：`AuthService.logout()` 已捕获 ApiException 并继续本地清理凭据，保证不会残留失效 Token。
+
+#### 3.8.7 非目标与已知限制
+
+- 不提供教师/家长代改入口，也不做批量换年级。
+- 编辑态不做教材自动重绑；用户需在「教材管理」按新年级确认版本。
+- 不新增独立年级页面，避免与引导页逻辑重复；后续若引导步骤继续增加，再抽独立 `GradeSettingPage`。
+- 历史学情按用户维度保留，不提供跨账号迁移。
+
+#### 3.8.8 涉及文件与验收
+
+| 文件 | 改动 |
+|---|---|
+| `lib/features/profile/profile_page.dart` | 学生可见的「年级设置」AccentCard 入口 |
+| `lib/features/onboarding/onboarding_page.dart` | 新增 `edit` 编辑态、`_saveEdit`、`reauth` 后登出跳转 |
+| `lib/app.dart` | redirect 放行 `/onboarding?edit=1` |
+| `lib/core/services/user_service.dart` | 复用既有 `changeGrade`（428 确认令牌流程），无需改动 |
+
+验收记录（2026-11-08）：
+
+| 项 | 结果 |
+|---|---|
+| 静态检查 | `dart format` 通过；`flutter analyze` 0 issues |
+| 测试 | `flutter test` 109 项全部通过 |
+| 构建 | release APK 构建并覆盖安装成功 |
+| 真机 | 「我的」页可见年级设置入口；进入后标题、返回、学段选中、年级选中、说明文案与「保存并重新登录」按钮均正常 |
+| 数据保护 | 未实际提交修改，避免消耗测试账号本学期仅 1 次的修改额度；提交流程由后端既有测试覆盖 |
 
 ---
 

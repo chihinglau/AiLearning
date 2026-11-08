@@ -69,19 +69,19 @@
 
 ## 导入
 
-> 目标库由 `DATABASE_URL` 决定：默认 `ailearning_dev.db`，真机联调使用 `ailearning_device.db`。两库已于 2026-11-07 升级到 head 并统一教材版本字符串（146 本教材 / 126 章 / 337 知识点 / 646 题），执行前请确认环境变量指向哪个库。
+> 目标库由 `DATABASE_URL` 决定：默认 `ailearning_dev.db`，真机联调使用 `ailearning_device.db`。两库已于 2026-11-07 统一升级到 head 与教材版本字符串（基线 146 教材 / 126 章 / 337 知识点 / 646 题）；11-08 批次入库后 **dev 为 657 章 / 581 知识点 / 1004 题、同名 0 组**（章节数含 11-07 的教材目录导入），device 仍停在基线量，需要时对 device 重跑同一批导入。
 
-在 `backend` 目录执行（先 `alembic upgrade head`）：
+在 `backend` 目录执行（先 `alembic upgrade head`）。目录约定：`templates/` 学科模板、`daily/<subject>/g<grade>/` 每日产出、`baseline/` 基线快照、`ledger/` 台账、`logs/` 运行日志。
 
 ```powershell
-.venv\Scripts\python.exe -m scripts.import_content --path ..\docs\content-templates\math.json
-.venv\Scripts\python.exe -m scripts.import_content --path ..\docs\content-templates --dry-run
+.venv\Scripts\python.exe -m scripts.import_content --path ..\docs\content-templates\templates\math.json
+.venv\Scripts\python.exe -m scripts.import_content --path ..\docs\content-templates\templates --dry-run
 ```
 
 - 默认幂等：同章节、同题干、同题型已存在则跳过；加 `--overwrite` 覆盖题面/答案/解析。
 - 批量：`--path` 传目录时递归读取所有 `*.json`（跳过文件名以 `_` 开头的模板），可一次导入多学科、多年级文件。
 - 过滤：`--pattern "math_g*_first_*.json"` 只导入匹配的当日文件，不影响其他模板。
-- 清单：`--manifest _import-manifest.json` 记录文件 hash、计数与状态；相同文件再次运行自动跳过。
+- 清单：`--manifest ..\docs\content-templates\_import-manifest.json` 记录文件 hash、计数、状态与目标库；相同文件再次运行自动跳过，换库或重建库后旧记录自动作废。
 - 事务：每个文件独立提交，单个文件校验/导入失败不影响同批其他文件（命令最终返回码为 1，列出失败文件）。
 - `--dry-run` 只校验、统计并回滚，不写库；失败会指出文件与具体条目。
 - 一个文件只对应「一个学科 + 一个年级 + 一个教材版本 + 一个学期」，不同年级/版本请拆分为多个文件。
@@ -89,26 +89,30 @@
 
 ### 每日自动化入库
 
-每日教研产出的 JSON 按以下顺序入库（目标库先确认）：
+每日教研产出的 JSON 放在 `daily\<subject>\g<grade>\`，按以下五步入库（目标库先确认）：
 
 ```powershell
-# 1) 离线自检（不连库）
-python ..\docs\content-templates\_validate_daily.py ..\docs\content-templates\math_g8_first_20261108.json `
-  --kp-baseline ..\docs\content-templates\_knowledge-points-baseline_20261107.json
+# 0) 备份目标库（建议；防 upsert 覆盖旧讲解，默认写 backend\build\backups）
+.venv\Scripts\python.exe -m scripts.db_backup
+
+# 1) 离线自检（不连库；基线读 latest 固定名，不要写死日期）
+python ..\docs\content-templates\_validate_daily.py ..\docs\content-templates\daily `
+  --kp-baseline ..\docs\content-templates\baseline\_knowledge-points-baseline_latest.json
 
 # 2) 服务端试跑，只针对当日文件
-.venv\Scripts\python.exe -m scripts.import_content --path ..\docs\content-templates `
-  --pattern "math_g*_first_*.json" --dry-run
+.venv\Scripts\python.exe -m scripts.import_content --path ..\docs\content-templates\daily `
+  --pattern "*_20261107.json" --dry-run
 
 # 3) 正式导入并写清单（逐文件事务）
-.venv\Scripts\python.exe -m scripts.import_content --path ..\docs\content-templates `
-  --pattern "math_g*_first_*.json" --manifest ..\docs\content-templates\_import-manifest.json
+.venv\Scripts\python.exe -m scripts.import_content --path ..\docs\content-templates\daily `
+  --pattern "*_20261107.json" --manifest ..\docs\content-templates\_import-manifest.json
 
-# 4) 导入后重建知识点基线（只读查库）
-.venv\Scripts\python.exe -m scripts.build_kp_baseline
+# 4) 导入后重建两份基线（只读查库，同时覆盖 _latest）
+.venv\Scripts\python.exe -m scripts.build_kp_baseline --output-dir ..\docs\content-templates\baseline
+.venv\Scripts\python.exe -m scripts.build_chapters_baseline --output-dir ..\docs\content-templates\baseline
 ```
 
-失败文件会记录为 `failed`，修复 JSON 后重跑即可；已成功的文件由清单跳过。
+失败文件会记录为 `failed`，修复 JSON 后重跑即可；已成功的文件由清单跳过。基线文件名带日期的是归档，**任务与自检只读 `_latest`**；重建库后 manifest 会自动作废旧记录。
 
 ## 顶层结构
 

@@ -1,0 +1,550 @@
+{
+  "subject": "politics",
+  "grade": 8,
+  "version": "部编版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第七课 追求自由平等",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "珍视自由",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "践行平等",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "第八课 维护公平正义",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "坚守公平",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "自由平等的价值",
+      "parent": "第七课 追求自由平等",
+      "order_index": 1,
+      "weight": 1.2,
+      "explanation": "自由、平等是社会主义核心价值观的重要价值追求，也是人类社会的美好追求，是社会进步的重要标识。",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "自由与规则的关系",
+      "parent": "珍视自由",
+      "order_index": 2,
+      "weight": 1.2,
+      "explanation": "自由不是为所欲为，它受法律、道德、纪律等条件的约束；自由与规则密不可分，规则划定自由的边界。",
+      "prerequisites": [
+        "自由平等的价值"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "平等的内涵",
+      "parent": "践行平等",
+      "order_index": 3,
+      "weight": 1.2,
+      "explanation": "平等在法律上体现为公民在法律面前的一律平等，其价值取向是不断实现实质平等；包含权利平等、机会平等和规则平等。",
+      "prerequisites": [
+        "自由与规则的关系"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "践行平等的要求",
+      "parent": "践行平等",
+      "order_index": 4,
+      "weight": 1.1,
+      "explanation": "践行平等要求反对歧视与特权，依法保障平等权利、促进机会均等，让每个人都有平等参与和发展的机会。",
+      "prerequisites": [
+        "平等的内涵"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "公平的内涵",
+      "parent": "坚守公平",
+      "order_index": 5,
+      "weight": 1.2,
+      "explanation": "公平是相对的，公平体现为权利平等、机会平等、规则平等和救济公平；公平的推进需要相应的制度与条件。",
+      "prerequisites": [
+        "践行平等的要求"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "维护公平正义的要求",
+      "parent": "第八课 维护公平正义",
+      "order_index": 6,
+      "weight": 1.1,
+      "explanation": "公平正义是社会的基本价值追求，维护它需要每个公民敢于坚持原则、通过合法途径反映问题，也需要制度的保障。",
+      "prerequisites": [
+        "公平的内涵"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第三单元 勇担社会责任",
+      "order_index": 3,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "关于自由、平等的价值，正确的是（  ）",
+          "options": [
+            "是人类社会的美好追求，是社会进步的重要标识",
+            "只是少数人的奢侈品，与中学生无关",
+            "只写在法律条文里，与实际行动无关",
+            "只属于成年人，青少年不应过问"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "教材把自由、平等视为社会主义核心价值观的重要价值追求和人类社会的美好追求，缺失都会影响社会进步，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "自由平等的价值",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "学校允许学生按兴趣选择社团，并给每个学生提供参加校园辩论赛的机会。这最直接体现的是（  ）",
+          "options": [
+            "追求自由平等",
+            "追求个人名利",
+            "取消学校纪律",
+            "放任自由发展"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "学生按兴趣选择社团体现自由，给每个学生同样的参赛机会体现平等，二者共同指向自由平等，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "自由平等的价值",
+          "tags": [
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "自由、平等是（  ）核心价值观的重要价值追求。",
+          "answer": {
+            "value": "社会主义"
+          },
+          "analysis": "社会主义核心价值观在国家、社会、公民三个层面都包含自由、平等的要求，题干空格处只能填社会主义。",
+          "difficulty": 2,
+          "knowledge_point": "自由平等的价值",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "坚持国家利益至上、追求自由平等，是公民应有的价值选择。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "自由平等是社会主义核心价值观的内在要求，也是当代中国公民应有的价值追求，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "自由平等的价值",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列对自由与规则关系的理解正确的是（  ）",
+          "options": [
+            "自由不是为所欲为，它受法律、道德、纪律等约束",
+            "自由与规则互不相干，各行其是",
+            "有了自由就不再需要任何规则",
+            "规则只约束别人的自由，与我无关"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "教材明确指出自由不是为所欲为，它受法律、道德、纪律等条件约束，自由与规则密不可分；B、C、D 都割裂了二者关系，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "自由与规则的关系",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "小周想办生日聚会，同学建议他请二十多位同学到楼道里唱卡拉OK，说在自己家想怎样就怎样。请你结合自由与规则的关系，帮他分析并提出两条建议。",
+          "answer": {
+            "value": "分析：在自己家里请同学聚会本身并不违法，但到楼道里占用公共空间、深夜扰民，就越过了自由的边界。自由不是为所欲为，它受法律、道德、纪律和小区管理规则的约束，行使自由不能损害他人合法权益和公共利益。建议一：把聚会安排在自己家中，控制人数和音量，遵守小区作息规定，不影响邻居休息。建议二：改到学校附近的正规活动场所或公园举行，人数控制在可管理范围，费用可以大家分担。"
+          },
+          "analysis": "评分要点：指出自由有边界、行使自由不能损害他人合法权益（2 分）；两条具体建议（每条 2 分）；建议能说明不扰民、不占用公共空间的理由（2 分）；表达通顺（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "自由与规则的关系",
+          "tags": [
+            "情境应用",
+            "简答"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于自由与规则的关系，正确的有（  ）",
+          "options": [
+            "自由与规则密不可分",
+            "自由要受到法律的约束",
+            "社会规则划定了自由的边界",
+            "只要不违法，损害他人名誉也可以"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 自由与规则密不可分✓；B 自由受法律约束✓；C 规则划定自由边界✓；D 损害他人名誉既违法又失德✗。故 A、B、C 成立。",
+          "difficulty": 3,
+          "knowledge_point": "自由与规则的关系",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "自由不是为所欲为，它受（ ）、（ ）、纪律等条件的约束。",
+          "answer": {
+            "value": [
+              "法律",
+              "道德"
+            ]
+          },
+          "analysis": "教材的固定表述是自由受法律、道德、纪律等条件约束，两空分别对应法律与道德，顺序颠倒或填入纪律都不符合原文。",
+          "difficulty": 3,
+          "knowledge_point": "自由与规则的关系",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "平等在法律上体现为（  ）",
+          "options": [
+            "公民在法律面前一律平等",
+            "每个人获得的好处完全相同",
+            "每个人从事的职业都一样",
+            "每个人的收入完全相同"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "教材指出平等在法律上体现为公民在法律面前的一律平等，这是机会平等和规则平等的基础；B、C、D 都把平等曲解为结果上的绝对平均，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "平等的内涵",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "教材所说的平等，其价值取向是（  ）",
+          "options": [
+            "不断实现实质平等",
+            "追求结果的完全平均",
+            "维持现有差距一成不变",
+            "只强调机会完全一致"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "平等在法律上体现为一律平等，其价值取向是不断实现实质公平，即让每个人实际都能获得平等的发展机会，故选 A。",
+          "difficulty": 3,
+          "knowledge_point": "平等的内涵",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列关于平等的理解正确的有（  ）",
+          "options": [
+            "平等要求尊重和保持权利平等",
+            "平等要求机会平等",
+            "平等要求规则平等",
+            "平等意味着所有人的需要都得到同样满足"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 权利平等✓；B 机会平等✓；C 规则平等✓；D 需要具有差异，平等不等于需要同样满足✗。故 A、B、C 成立。",
+          "difficulty": 3,
+          "knowledge_point": "平等的内涵",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "平等在法律上体现为公民在法律面前的（  ），其价值取向是不断实现（  ）平等。",
+          "answer": {
+            "value": [
+              "一律",
+              "实质"
+            ]
+          },
+          "analysis": "教材原话是平等在法律上体现为公民在法律面前的一律平等，其价值取向是不断实现实质平等，两空分别对应一律与实质。",
+          "difficulty": 2,
+          "knowledge_point": "平等的内涵",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "班里分组做探究报告，有同学建议成绩好的四个人一组、成绩差的四个人一组。请结合践行平等的要求，指出这一建议的问题，并提出两条改进建议。",
+          "answer": {
+            "value": "问题：这种分组把人按成绩贴上标签，实质上剥夺了部分同学平等参与、平等展示的机会，违背了机会平等和规则平等的要求。建议一：混合编组，把不同水平的同学交叉搭配，让每人都能承担不同角色、在合作中锻炼能力。建议二：制定公开透明的分工与评价标准，按标准记录每个人的贡献，避免以成绩标签代替评价。"
+          },
+          "analysis": "评分要点：指出分组方式违背机会平等与规则平等（2 分）；两条具体建议（每条 2 分）；建议能说明如何保障每个学生的平等参与（2 分）；表达通顺（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "践行平等的要求",
+          "tags": [
+            "情境应用",
+            "简答"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列做法体现践行平等的是（  ）",
+          "options": [
+            "主动邀请残障同学一起参加班级活动，不另眼相看",
+            "拒绝与成绩落后的同学合作",
+            "公开嘲笑方言口音重的同学",
+            "排挤部分同学以保证自己入选"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "邀请残障同学共同参与体现平等尊重；B、C、D 都属于歧视或排挤他人，违背了平等的要求，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "践行平等的要求",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "某些学校在招收社团成员时设置不合理的身高、性别条件，这种做法（  ）",
+          "options": [
+            "违背了平等的要求，属于歧视",
+            "充分体现平等",
+            "有利于选拔人才，无可厚非",
+            "与教育公平毫无关系"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "以与能力无关的身高、性别作为门槛，是制造不平等、构成歧视；B、C、D 都为歧视行为开脱，故选 A。",
+          "difficulty": 3,
+          "knowledge_point": "践行平等的要求",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "践行平等，青少年可以（  ）",
+          "options": [
+            "反对歧视",
+            "依法保障平等权利",
+            "促进机会均等",
+            "嘲笑有缺陷的同学以显示自己优越"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 反对歧视✓；B 依法保障平等权利✓；C 促进机会均等✓；D 嘲笑他人缺陷本身就是歧视✗。故 A、B、C 成立。",
+          "difficulty": 3,
+          "knowledge_point": "践行平等的要求",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列对公平的理解正确的是（  ）",
+          "options": [
+            "公平是相对的，体现为权利平等、机会平等、规则平等和救济公平",
+            "公平就是平均分配，一视同仁",
+            "公平是永恒不变的绝对标准",
+            "公平只看结果，不看规则"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "教材指出公平是相对的，公平体现为权利平等、机会平等、规则平等和救济公平；B、C、D 都把公平绝对化或片面化，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "公平的内涵",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "同一场比赛中，裁判对所有选手适用同一套规则，这体现的公平是（  ）",
+          "options": [
+            "规则公平",
+            "机会公平",
+            "权利公平",
+            "救济公平"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "同一套规则适用于所有选手，指的是规则面前一视同仁，属于规则公平；机会公平强调同样的起点，救济公平强调事后纠正，故选 A。",
+          "difficulty": 3,
+          "knowledge_point": "公平的内涵",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "公平体现为权利平等、机会平等、规则平等和（  ）公平。",
+          "answer": {
+            "value": "救济"
+          },
+          "analysis": "教材列出公平体现为权利平等、机会平等、规则公平和救济公平四项，题干空格处是最后一项，只能填救济。",
+          "difficulty": 3,
+          "knowledge_point": "公平的内涵",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "公平是相对的，公平的实现需要相应的制度和条件。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "教材强调公平是相对的，要靠制度和条件来保障和推进，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "公平的内涵",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "维护公平正义，需要（  ）",
+          "options": [
+            "每个公民主动承担，同时有制度保障",
+            "只靠政府部门的努力",
+            "只靠个人自觉，与制度无关",
+            "等待社会自己解决"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "教材指出维护公平正义既需要制度保障，也需要每个公民积极参与，两者缺一不可；B、C、D 都把责任推给一方，故选 A。",
+          "difficulty": 3,
+          "knowledge_point": "维护公平正义的要求",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "小陈发现校园评优公示的名单与事先公布的评分标准对不上，有人劝他别多管闲事。请结合维护公平正义的要求，写出三种正确做法并说明理由。",
+          "answer": {
+            "value": "做法一：冷静核对评分标准和公示结果，保留相关资料，向负责评选的老师说明情况，请学校复核并公开说明理由。做法二：如果学校不予纠正，可以通过正规渠道向主管部门或学校监督机构反映，既不放弃也不纠缠。做法三：就事论事地与同学交流，提醒大家用合法方式维权，不传播未经核实的内容，不攻击相关同学。理由是公平正义是社会的基本价值追求，维护它需要每个公民敢于坚持原则、通过合法途径推动问题解决；对不公要敢于批评抵制，但不能用造谣、报复等违法方式。"
+          },
+          "analysis": "评分要点：三种做法（每条 2 分）；每条都体现依法、理性维权（每条 1 分）；说明公平正义的价值与个人责任（2 分）；表达通顺（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "维护公平正义的要求",
+          "tags": [
+            "情境应用",
+            "简答"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "维护公平正义，正确的做法有（  ）",
+          "options": [
+            "对不公现象敢于批评和抵制",
+            "通过合法途径反映问题",
+            "推动并落实公平制度",
+            "造谣诬陷打击对方"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 敢于批评抵制✓；B 合法途径反映✓；C 推动公平制度✓；D 造谣诬陷是违法行为✗。故 A、B、C 成立。",
+          "difficulty": 4,
+          "knowledge_point": "维护公平正义的要求",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "维护公平正义只是国家的事，普通公民没有必要参与。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "教材强调维护公平正义是每个公民的责任，公民要敢于同破坏公平正义的行为作斗争，故为错误。",
+          "difficulty": 3,
+          "knowledge_point": "维护公平正义的要求",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

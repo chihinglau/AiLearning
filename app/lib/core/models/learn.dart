@@ -1,6 +1,16 @@
 import 'package:ai_learning/core/constants/app_constants.dart';
 import 'package:flutter/material.dart';
 
+/// 去重方案给同名 point 加了「（要点）」/「（要点N）」后缀。
+/// 展示层去掉后缀，改为「名称 · 要点」，避免与所属节同名。
+String displayKnowledgeName(String raw) {
+  final match = RegExp(r'（要点(\d*)）$').firstMatch(raw);
+  if (match == null) return raw;
+  final base = raw.substring(0, match.start).trim();
+  final index = match.group(1) ?? '';
+  return index.isEmpty ? '$base · 要点' : '$base · 要点$index';
+}
+
 /// 知识点树节点（章 → 知识点，挂个人掌握度）。
 class KnowledgeNode {
   const KnowledgeNode({
@@ -38,6 +48,15 @@ class KnowledgeNode {
   final DateTime? lastStudiedAt;
 
   String get subjectLabel => Subject.fromCode(subject).label;
+
+  /// 展示名：去重后缀转为「名称 · 要点」，不与所属节标题重复。
+  String get displayName => displayKnowledgeName(name);
+
+  /// 是否为与所属节同主题的「（要点）」派生节点（同主题两层记录，展示时折叠）。
+  bool isFoldedVariantOf(String sectionName) {
+    if (nodeType != 'point' || !name.startsWith(sectionName)) return false;
+    return RegExp(r'^（要点(\d*)）$').hasMatch(name.substring(sectionName.length));
+  }
 
   String get bandLabel {
     switch (masteryBand) {
@@ -622,6 +641,22 @@ class UnitDetail {
       ..sort((a, b) => a.orderIndex.compareTo(b.orderIndex));
   }
 
+  /// 与节同主题的「（要点）」派生节点：折叠进节卡片，不再单独占一层。
+  KnowledgeNode? foldedNodeOfSection(UnitSection section) {
+    for (final node in nodesOfSection(section.id)) {
+      if (node.isFoldedVariantOf(section.name)) return node;
+    }
+    return null;
+  }
+
+  /// 节卡片内除折叠节点外的常规知识点。
+  List<KnowledgeNode> visibleNodesOfSection(UnitSection section) {
+    final folded = foldedNodeOfSection(section);
+    return nodesOfSection(
+      section.id,
+    ).where((node) => node.id != folded?.id).toList();
+  }
+
   factory UnitDetail.fromJson(Map<String, dynamic> json) {
     return UnitDetail(
       unit: UnitSummary.fromJson(
@@ -650,6 +685,8 @@ class KpBrief {
   final String name;
   final String subject;
   final double masteryScore;
+
+  String get displayName => displayKnowledgeName(name);
 
   factory KpBrief.fromJson(Map<String, dynamic> json) {
     return KpBrief(
@@ -702,6 +739,8 @@ class KpDetail {
   Color get bandColor => masteryBandColor(masteryBand);
 
   String get bandLabelText => masteryBandLabel(masteryBand);
+
+  String get displayName => displayKnowledgeName(name);
 
   factory KpDetail.fromJson(Map<String, dynamic> json) {
     return KpDetail(

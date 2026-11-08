@@ -1,0 +1,534 @@
+{
+  "subject": "politics",
+  "grade": 8,
+  "version": "部编版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第十课 国家利益至上",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "国家利益高于一切",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "捍卫国家利益",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "第十一课 军强才能国安",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "党和人民信赖的英雄军队",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "国家利益至上的内涵",
+      "parent": "第十课 国家利益至上",
+      "order_index": 1,
+      "weight": 1.2,
+      "explanation": "国家利益是国家的生存和发展的根本，包括国家的安全、荣誉和利益；坚持国家利益至上是公民应有的价值选择。",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "个人利益服从国家利益",
+      "parent": "国家利益高于一切",
+      "order_index": 2,
+      "weight": 1.2,
+      "explanation": "当个人利益与国家利益发生冲突时，个人利益要服从国家利益；二者根本上是一致的，个人理想可以与国家利益相结合。",
+      "prerequisites": [
+        "国家利益至上的内涵"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "捍卫国家利益的要求",
+      "parent": "捍卫国家利益",
+      "order_index": 3,
+      "weight": 1.3,
+      "explanation": "捍卫国家利益要求我们树立总体国家安全观、增强国家安全意识，自觉履行维护国家安全的义务，坚持国家利益至上不动摇。",
+      "prerequisites": [
+        "个人利益服从国家利益"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "国防军队与国家安全",
+      "parent": "第十一课 军强才能国安",
+      "order_index": 4,
+      "weight": 1.2,
+      "explanation": "国无防不立、民无兵不安；军队是保卫祖国、维护和平的坚强柱石，推进国防和军队现代化是国家安全的重要保障。",
+      "prerequisites": [
+        "捍卫国家利益的要求"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "人民军队的鲜明特色",
+      "parent": "党和人民信赖的英雄军队",
+      "order_index": 5,
+      "weight": 1.1,
+      "explanation": "人民军队坚持听党指挥这个永远不变的军魂，能打胜仗、作风优良，与人民同呼吸、共命运，是党和人民信赖的英雄军队。",
+      "prerequisites": [
+        "国防军队与国家安全"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第四单元 维护国家利益",
+      "order_index": 4,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "（  ）是国家的生存和发展的根本。",
+          "options": [
+            "国家利益",
+            "个人奖金",
+            "家庭财产",
+            "同学之间的友谊"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "教材明确指出国家利益是国家的生存和发展的根本；其余三项都属于个人或小范围的利益，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "国家利益至上的内涵",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列属于国家利益范畴的是（  ）",
+          "options": [
+            "国家安全、国家荣誉",
+            "自己的零花钱",
+            "朋友之间的友情",
+            "班级卫生评比的名次"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "国家利益涵盖国家的安全、荣誉和整体利益；B、C、D 都属于个人或小集体层面的利益，故选 A。",
+          "difficulty": 3,
+          "knowledge_point": "国家利益至上的内涵",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "坚持国家利益至上，要求我们在国家利益与个人利益发生冲突时，把（  ）放在首位。",
+          "answer": {
+            "value": "国家利益"
+          },
+          "analysis": "教材指出无论何时何地，都必须把国家利益放在首位，题干空格处只能是国家利益。",
+          "difficulty": 2,
+          "knowledge_point": "国家利益至上的内涵",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "坚持国家利益至上，是公民应有的价值选择。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "教材把坚持国家利益至上作为公民应当树立的价值取向，并与个人理想和国家需要结合起来，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "国家利益至上的内涵",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "当个人利益与国家利益发生冲突时，正确做法是（  ）",
+          "options": [
+            "个人利益服从国家利益",
+            "国家利益服从个人利益",
+            "两者各让一半、看谁需要",
+            "谁声音大就听谁的"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "教材明确指出国家利益至上，当二者冲突时个人利益要服从国家利益；B、C、D 都颠倒了国家与个人的关系，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "个人利益服从国家利益",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "小陈想报考家乡的航天企业，父母却希望他去待遇更好的城市工作。他的选择说明（  ）",
+          "options": [
+            "个人理想可以与国家利益相结合，个人利益与国家利益并不总是冲突",
+            "个人利益与国家利益必然冲突",
+            "国家利益完全不考虑个人发展",
+            "应当只按父母的意思安排人生"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "到家乡航天企业工作既实现个人理想又服务国家建设，说明二者可以统一；B、C、D 都把二者对立起来，故选 A。",
+          "difficulty": 3,
+          "knowledge_point": "个人利益服从国家利益",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于个人利益与国家利益的关系，正确的有（  ）",
+          "options": [
+            "二者之间可能存在冲突",
+            "发生冲突时个人利益服从国家利益",
+            "国家利益与个人利益在根本上是一致的",
+            "个人利益永远高于国家利益"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 可能冲突✓；B 冲突时服从✓；C 根本上一致✓；D 把国家利益置于个人利益之上才是教材要求✗。故 A、B、C 成立。",
+          "difficulty": 3,
+          "knowledge_point": "个人利益服从国家利益",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "个人利益与国家利益在根本上是一致的，国家还通过制定相关政策来保障（  ）。",
+          "answer": {
+            "value": "个人利益"
+          },
+          "analysis": "教材指出国家制定相关政策，尽可能实现个人利益与国家利益的一致，题干空格处指个人利益。",
+          "difficulty": 3,
+          "knowledge_point": "个人利益服从国家利益",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳某中学毕业生小吴收到国家重大工程科研单位的录取通知，同时拿到一份高薪企业的职位。父母希望他选择待遇好的岗位，认为个人的事最重要。请你结合个人利益与国家利益的关系，帮他分析并提出三条建议。",
+          "answer": {
+            "value": "分析：两份工作都能实现个人价值，但到国家重大工程科研单位工作能直接服务国家建设，个人理想完全可以与国家利益结合起来，个人利益与国家利益在根本上是一致的。建议一：珍惜国家培养和提供的平台，把个人理想融入国家需要，优先考虑科研单位。建议二：无论最终选择哪一份工作，都立足岗位、踏实奉献，在岗位上为国家和深圳的发展出力。建议三：耐心向父母说明个人发展离不开国家发展，用事实和责任沟通，理解父母对收入和生活的关心。"
+          },
+          "analysis": "评分要点：说明个人利益与国家利益根本上的一致性（2 分）；指出冲突时个人利益服从国家利益（2 分）；三条具体建议（每条 2 分）；表达通顺（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "个人利益服从国家利益",
+          "tags": [
+            "情境应用",
+            "简答"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "增强国家安全意识，正确的做法是（  ）",
+          "options": [
+            "关心国家安全信息，学习安全知识，自觉维护国家安全",
+            "把涉密文件拍照转发给同学讨论",
+            "认为国家安全是国家的事，与学生无关",
+            "只在国家安全教育日关心一次"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "维护国家安全是每个公民的义务，应在日常中持续学习安全知识、提高意识；B 泄密、C 冷漠、D 临时应付都不可取，故选 A。",
+          "difficulty": 3,
+          "knowledge_point": "捍卫国家利益的要求",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "发现有人在网上散布损害国家尊严的谣言，正确的做法是（  ）",
+          "options": [
+            "不信谣、不传谣，并向官方平台举报",
+            "转发到群里让更多人一起批判",
+            "跟着起哄辱骂发布者",
+            "添油加醋地评论后再转发"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "对谣言做到不信不传，并向官方平台举报，是理性爱国、维护国家利益的做法；B、C、D 都在扩散不实信息，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "捍卫国家利益的要求",
+          "tags": [
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "维护国家安全，青少年可以（  ）",
+          "options": [
+            "树立国家安全意识",
+            "保守国家秘密，不泄露涉密信息",
+            "遇到危害国家安全的行为及时报告",
+            "在网络群里讨论未经证实的涉密传闻"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 树立安全意识✓；B 保守国家秘密✓；C 及时报告✓；D 讨论未经证实的涉密传闻极易造成泄密✗。故 A、B、C 成立。",
+          "difficulty": 3,
+          "knowledge_point": "捍卫国家利益的要求",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "国家安全是安邦定国的重要基石，与每个公民的生活息息相关。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "教材强调国家安全是安邦定国的重要基石，国家安全与每个人休戚相关，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "捍卫国家利益的要求",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "小何在网络上看到一段境外发布的视频，声称我国某项航天技术落后国外三十年，配文引发大量转发和质疑。请你结合捍卫国家利益的要求，写出三条做法并说明理由。",
+          "answer": {
+            "value": "第一，不轻信、不转发，不把未经证实的信息当作事实传播，更不添油加醋。第二，通过官方平台核实信息，或向学校和有关部门反映，请权威渠道发布准确解读。第三，把看到的可疑内容保存证据后向学校或有关部门举报，配合核查。第四，在班级讨论中帮助同学辨别信息真伪，用理性态度维护国家荣誉。理由是维护国家安全是每个公民的责任，坚持国家利益至上要求我们增强国家安全意识、自觉维护国家安全；不实信息传播会损害国家利益。"
+          },
+          "analysis": "评分要点：三条做法（每条 2 分）；每条都体现不轻信不转发、依法反映（每条 1 分）；说明维护国家安全是公民责任与国家利益至上的要求（2 分）；表达通顺（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "捍卫国家利益的要求",
+          "tags": [
+            "情境应用",
+            "简答"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "国无防不立、民无兵不安，这说明（  ）",
+          "options": [
+            "国防和军队建设直接关系国家安全大局",
+            "军队与普通人的生活毫无关系",
+            "国防建设就是花钱买平安，投入越多越好",
+            "处在和平年代就不需要军队"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "教材用国无防不立、民无兵不安强调国防和军队建设的重要地位；B、C、D 都忽视了国防建设的战略意义，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "国防军队与国家安全",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "人民军队是我国国家安全的重要保障，其根本任务是（  ）",
+          "options": [
+            "保卫祖国，维护国家安全",
+            "参与商业经营，自负盈亏",
+            "代替国家机关行使执法权",
+            "包办所有社会救助事务"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "人民军队的根本任务是保卫祖国、维护国家安全；B、C、D 都误解了军队的性质和职能边界，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "国防军队与国家安全",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "军队是保卫祖国、维护和平的坚强（  ），推进国防和军队（  ）是国家安全的重要保障。",
+          "answer": {
+            "value": [
+              "柱石",
+              "现代化"
+            ]
+          },
+          "analysis": "教材原句是军队是保卫祖国、维护和平的坚强柱石，并强调推进国防和军队现代化，两空分别对应柱石与现代化。",
+          "difficulty": 3,
+          "knowledge_point": "国防军队与国家安全",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于国防和军队建设，正确的有（  ）",
+          "options": [
+            "坚持政治建军、改革强军",
+            "坚持科技强军、人才强军",
+            "走中国特色强军之路，提高军队现代化水平",
+            "认为国防现代化与青少年无关"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 政治建军改革强军✓；B 科技强军人才强军✓；C 中国特色强军之路✓；D 国防建设人人有责，与青少年有关✗。故 A、B、C 成立。",
+          "difficulty": 4,
+          "knowledge_point": "国防军队与国家安全",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳某中学组织学生参观驻军部队和国防教育基地，有同学在活动后说：国家这么和平，军队离我很远，军强才能国安与我没关系。请你结合国防军队与国家安全的知识，帮他纠正这一认识，并写出三点感想。",
+          "answer": {
+            "value": "这个认识是片面的。和平不是自然而来的，和平环境正是国防和军队建设成果的保障；国无防不立、民无兵不安，国防和军队建设直接关系国家安全大局，与每个公民的生活息息相关。感想一：人民军队听党指挥、能打胜仗、作风优良，是党和人民信赖的英雄军队，我们应自觉拥军优属、关爱退役军人。感想二：国防建设依靠人民，我们可以在学习和生活中关注国防知识、参加国防教育，增强国防意识。感想三：珍惜今天的学习条件，把个人理想与国家需要结合起来，将来为国防和现代化建设贡献力量。"
+          },
+          "analysis": "评分要点：指出认识片面并说明和平与国防建设的关系（2 分）；三点感想（每条 2 分）；每条都能联系国防军队与国家安全（每条 1 分）；表达通顺（1 分）。",
+          "difficulty": 5,
+          "knowledge_point": "国防军队与国家安全",
+          "tags": [
+            "情境应用",
+            "简答"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "人民军队永远不变的军魂是（  ）",
+          "options": [
+            "听党指挥",
+            "武器装备先进",
+            "训练时间长",
+            "编制规模庞大"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "教材明确指出听党指挥是人民军队永远不变的军魂，这是人民军队的本质属性；其余三项是建设成就而非军魂，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "人民军队的鲜明特色",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "人民军队坚持（  ）、能打胜仗、作风优良，是党和人民信赖的英雄军队。",
+          "answer": {
+            "value": "听党指挥"
+          },
+          "analysis": "教材把听党指挥、能打胜仗、作风优良并列为人民军队的鲜明特色，题干空格处是听党指挥。",
+          "difficulty": 3,
+          "knowledge_point": "人民军队的鲜明特色",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "人民军队的鲜明特色包括（  ）",
+          "options": [
+            "听党指挥",
+            "能打胜仗",
+            "作风优良",
+            "把个人利益放在第一位"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 听党指挥✓；B 能打胜仗✓；C 作风优良✓；D 人民军队把党和人民利益放在首位✗。故 A、B、C 成立。",
+          "difficulty": 3,
+          "knowledge_point": "人民军队的鲜明特色",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "人民军队来自人民、服务人民，与人民同呼吸、共命运。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "人民军队的根基在人民、血脉在人民，与人民同呼吸、共命运是其一贯传统，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "人民军队的鲜明特色",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "台风来袭前，驻深圳某部队官兵连续转移安置群众，台风过后又投入道路抢修。小林在新闻里看到后说：他们才是最可爱的人。请你结合人民军队的鲜明特色，说明小林的认识为什么是正确的。",
+          "answer": {
+            "value": "小林的认识是正确的。人民军队坚持听党指挥这个永远不变的军魂，能打胜仗、作风优良，在急难险重任务面前冲锋在前，是党和人民信赖的英雄军队。台风前连夜转移安置群众、台风过后抢修道路，正是在危急关头践行能打胜仗、作风优良的要求，体现了人民军队与人民同呼吸、共命运。也正因为有这样一支军队，全国人民才能安心生产生活。学习上我们同样要听从学校和老师的安排，把敢打硬仗、作风优良的精神带到学习中。"
+          },
+          "analysis": "评分要点：判断正确并说明理由（2 分）；把台风中的表现与能打胜仗、作风优良对应起来（2 分）；联系个人学习生活落实作风优良（2 分）；表达通顺（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "人民军队的鲜明特色",
+          "tags": [
+            "情境应用",
+            "简答"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

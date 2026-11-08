@@ -1,0 +1,31 @@
+生成时间：2026-11-08T22:2x（第十二轮评审整改，用户指示「你来修改改吧」）
+用途：把 `exports/automation_20261108/_validate_daily.py` 的那份 **冻结快照** 挪到 `_archive/`，并用内容根的现行版覆盖包内副本。
+
+为什么改（第十一轮评审 A 项）：
+- 这份 719 行的副本顶部自己写着「⚠️ 冻结快照，不再生效，勿直接调用」，但同目录 `00-导入说明.md` 第 12 行
+  仍写「逐年级自检脚本，query 里每条都要调用它」，包内两句话互相打架；
+- `exports/automation_20261108/` 是给「手动导入到其他主机 / 手机」用的交付包，
+  带一份不认 `_legacy`、且用已废弃单列 sha 的旧校验器出门，换机后会把 11-07 legacy 批次判成假红；
+- `00-CodeBuddy执行说明.md` 第 392 行原写「内容根与导出副本的 `_validate_daily.py` 亦相同」，
+  与实际不符（39027 B / 832 行 vs 32626 B / 719 行，207 行差异）——文档声称与事实不符，本轮一并改正。
+
+改后状态：
+- `exports/automation_20261108/_validate_daily.py` = 内容根现行版的**逐字节副本**（sha256 相同），
+  `00-CodeBuddy执行说明.md` 第 392 行的「相同」重新成立；
+- 旧冻结快照留在本文件（`_archive/_validate_daily.frozen-20261108-2214.py`，只作历史留痕，勿直接调用）。
+
+逐份明细：
+- 冻结快照（改前，原位置 exports/automation_20261108/_validate_daily.py）：
+  size 32626 B / 719 行，sha256 20160bf4942b89ef（完整值见下）
+- 现行版（内容根 docs/content-templates/_validate_daily.py）：
+  size 39027 B / 832 行，sha256 c9d80e7c（完整值见下）
+- 与现行版差异：207 行（其中 239 行 unified diff，含换行对齐）
+
+完整哈希：
+  冻结快照 sha256 = 20160bf4942b89ef9c9ef1a02b4eec23f7dfbc08a78b5ab1ea7bd989a0ffe441
+  现行版   sha256 = c9d80e7cc6404c84a8877c5e73e86a9221e7c89f85c17ef916bb2a7acfa20391
+（可复核：Get-FileHash -Algorithm SHA256 对 _archive/_validate_daily.frozen-20261108-2214.py
+  与 docs/content-templates/_validate_daily.py）
+
+注意：包内副本所在目录没有 `baseline/` 与 `_import-manifest.json`，直接在那里跑会丢掉
+大纲范围校验与「已入库」三态判定；自检仍必须用**目标机内容根**下的那份（换机后即本包拷过去的那份）。

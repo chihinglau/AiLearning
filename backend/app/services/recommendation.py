@@ -66,7 +66,10 @@ def _current_chapter(
         return None
     return db.scalar(
         select(Chapter)
-        .where(Chapter.textbook_id.in_(textbook_ids))
+        .where(
+            Chapter.textbook_id.in_(textbook_ids),
+            Chapter.is_placeholder == 0,  # 占位/旧样章不参与单元推荐
+        )
         .order_by(Chapter.textbook_id, Chapter.order_index, Chapter.id)
         .limit(1)
     )
@@ -157,7 +160,10 @@ def _next_chapter(
     chapters = list(
         db.scalars(
             select(Chapter)
-            .where(Chapter.textbook_id.in_(textbook_ids))
+            .where(
+                Chapter.textbook_id.in_(textbook_ids),
+                Chapter.is_placeholder == 0,  # 占位/旧样章不参与单元推荐
+            )
             .order_by(Chapter.textbook_id, Chapter.order_index, Chapter.id)
         )
     )
@@ -170,7 +176,10 @@ def _progress_recommendation(
     chapters = list(
         db.scalars(
             select(Chapter)
-            .where(Chapter.textbook_id.in_(textbook_ids))
+            .where(
+                Chapter.textbook_id.in_(textbook_ids),
+                Chapter.is_placeholder == 0,  # 占位/旧样章不参与单元推荐
+            )
             .order_by(Chapter.textbook_id, Chapter.order_index, Chapter.id)
         )
     )

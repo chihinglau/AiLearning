@@ -1,0 +1,317 @@
+{
+  "subject": "politics",
+  "grade": 2,
+  "version": "部编版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第1课 假期有收获",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "假期的收获",
+      "parent": "第1课 假期有收获",
+      "order_index": 1,
+      "explanation": "假期里学到的新本领、读过的书、去过的地方、帮家里做的事，都是可以拿来分享的收获。",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "合理安排假期时间",
+      "parent": "第1课 假期有收获",
+      "order_index": 2,
+      "explanation": "把学习、运动、休息、家务安排开，既不放纵也不只顾写作业，假期才过得充实。",
+      "prerequisites": [
+        "假期的收获"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "假期安全",
+      "parent": "第1课 假期有收获",
+      "order_index": 3,
+      "explanation": "不独自去河边游泳、外出告知家长去处、乘车系安全带、不给陌生人开门，是假期最基本的四条安全常识。",
+      "prerequisites": [
+        "合理安排假期时间"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "分享与倾听",
+      "parent": "第1课 假期有收获",
+      "order_index": 4,
+      "explanation": "分享假期经历时要说清楚时间、地点、做了什么；别人分享时要认真听、不打断、可以提问。",
+      "prerequisites": [
+        "假期安全"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一单元 过好节假日",
+      "order_index": 1,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "假期里学会了游泳，这属于（  ）",
+          "options": [
+            "假期收获",
+            "假期负担",
+            "浪费时间",
+            "与学习无关"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "学会新本领是假期里的成长收获；游泳既是技能也是安全能力，不是负担或浪费。",
+          "difficulty": 1,
+          "knowledge_point": "假期的收获"
+        },
+        {
+          "q_type": "choice",
+          "stem": "假期里最合理的安排是（  ）",
+          "options": [
+            "每天只玩不学习",
+            "学习、运动、休息都有安排",
+            "天天熬夜看电视",
+            "把作业全留到最后一天"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "学习、运动、休息兼顾才均衡；只玩、熬夜、赶作业都不利于身心和习惯。",
+          "difficulty": 2,
+          "knowledge_point": "合理安排假期时间"
+        },
+        {
+          "q_type": "fill",
+          "stem": "假期去游泳，一定要有（  ）陪同，不能独自下水。",
+          "answer": {
+            "value": "大人"
+          },
+          "analysis": "未成年人游泳必须有成年人陪同，独自下水极易发生溺水，这是防溺水的核心要求。",
+          "difficulty": 1,
+          "knowledge_point": "假期安全"
+        },
+        {
+          "q_type": "judge",
+          "stem": "外出玩耍前告诉家长去哪里、和谁去、什么时候回来，是安全的做法。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "告知行踪能让家长在发生意外时及时找到你，是基本的安全习惯，说法正确。",
+          "difficulty": 1,
+          "knowledge_point": "假期安全"
+        },
+        {
+          "q_type": "choice",
+          "stem": "同学分享假期见闻时，你应该（  ）",
+          "options": [
+            "认真听，适当提问",
+            "打断他讲自己的事",
+            "低头玩手机",
+            "笑他讲得不好"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "倾听是尊重，提问能让交流更深入；打断、走神、嘲笑都会让对方不愿再分享。",
+          "difficulty": 2,
+          "knowledge_point": "分享与倾听"
+        },
+        {
+          "q_type": "fill",
+          "stem": "分享假期经历时，说清楚时间、地点和（  ）了什么，别人才能听明白。",
+          "answer": {
+            "value": "做"
+          },
+          "analysis": "时间、地点、事件三要素齐全，讲述才完整；填「做」最贴合「做了什么」的表达。",
+          "difficulty": 3,
+          "knowledge_point": "分享与倾听"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列属于假期收获的有（  ）",
+          "options": [
+            "学会做一道菜",
+            "读完一本课外书",
+            "每天睡到中午",
+            "参观了一个博物馆"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 学做菜是生活本领 ✓；B 读完课外书是阅读收获 ✓；C 长期睡到中午是作息混乱，不是收获 ✗；D 参观博物馆增长见识 ✓。故 A、B、D 成立。",
+          "difficulty": 4,
+          "knowledge_point": "假期的收获",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "假期作业可以全部留到开学前一天再写。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "集中赶作业质量低、易遗漏，还打乱作息；分散完成才符合合理安排时间的要求。",
+          "difficulty": 2,
+          "knowledge_point": "合理安排假期时间"
+        },
+        {
+          "q_type": "choice",
+          "stem": "陌生人敲门说「我是你爸爸的同事，开门让我进去」，正确做法是（  ）",
+          "options": [
+            "不开门，先打电话问家长",
+            "立刻开门",
+            "开门请他进屋坐",
+            "把门打开一条缝让他进来"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "无法核实身份时不能开门，应先用电话向家长确认；开门或放人进来都可能带来危险。",
+          "difficulty": 3,
+          "knowledge_point": "假期安全"
+        },
+        {
+          "q_type": "fill",
+          "stem": "乘坐汽车时要系好（  ），不要把头伸出窗外。",
+          "answer": {
+            "value": "安全带"
+          },
+          "analysis": "安全带能在急刹车时固定身体，是最有效的乘车保护措施。",
+          "difficulty": 3,
+          "knowledge_point": "假期安全"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于假期安排，说法正确的有（  ）",
+          "options": [
+            "学习、运动、休息要兼顾",
+            "可以给自己定一个小目标",
+            "假期就应当完全不做任何安排",
+            "每天固定时间完成一点作业"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 三者兼顾 ✓；B 定小目标有助于坚持 ✓；C 完全无安排容易放任 ✗；D 分散完成作业 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "合理安排假期时间",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "别人分享时插话讲自己的经历，说明自己更积极。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "频繁插话打断别人是不尊重对方的表现，积极不等于抢话，应先听完再表达。",
+          "difficulty": 2,
+          "knowledge_point": "分享与倾听"
+        },
+        {
+          "q_type": "choice",
+          "stem": "假期里想学一项新本领，最合适的做法是（  ）",
+          "options": [
+            "定小目标、每天练一点",
+            "今天想起就练三小时，之后不练",
+            "等别人都学会了再说",
+            "只看视频不动手"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "技能靠持续练习积累，小目标加每日坚持最有效；突击、观望、只看不做都学不会。",
+          "difficulty": 2,
+          "knowledge_point": "假期的收获"
+        },
+        {
+          "q_type": "fill",
+          "stem": "假期里帮家里做力所能及的事，比如收拾自己的（  ），也是成长。",
+          "answer": {
+            "value": "房间"
+          },
+          "analysis": "收拾房间、整理书桌是孩子能独立完成的家务，体现责任感；答案也可以是「玩具」「书桌」。",
+          "difficulty": 3,
+          "knowledge_point": "假期的收获"
+        },
+        {
+          "q_type": "judge",
+          "stem": "假期安全只需要注意水边，其他方面不用管。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "交通、用电、陌生人、饮食都存在风险，安全是多方位的，不能只盯着水边。",
+          "difficulty": 2,
+          "knowledge_point": "假期安全"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写三句话介绍你的一个假期收获：做了什么、怎么做的、收获是什么。",
+          "answer": {
+            "value": "暑假我学会了骑自行车。每天傍晚爸爸陪我在小区练习半小时，摔了几次我也坚持下来。现在我能自己骑一圈，我觉得很自豪。"
+          },
+          "analysis": "参考示例见答案。评分要点：①写出做了什么（1 分）；②写出过程或方法（1 分）；③写出收获或感受（1 分）；④语句通顺、标点正确（1 分）。只写「我学会了骑车」一句不得满分。",
+          "difficulty": 4,
+          "knowledge_point": "假期的收获",
+          "tags": [
+            "简答"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "给同学提两条假期安全建议，每条要具体、可做到。",
+          "answer": {
+            "value": "第一条：不到没有大人看护的河边、水库边玩耍。第二条：外出前告诉家长去哪里、和谁在一起、什么时候回来。"
+          },
+          "analysis": "参考示例见答案。评分要点：每条建议 2 分，需具体可操作；只写「注意安全」这种笼统说法各扣 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "假期安全",
+          "tags": [
+            "情境应用"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列做法中，最有利于开学后进入状态的是（  ）",
+          "options": [
+            "开学前一周逐步调整作息",
+            "开学前一晚熬夜补作业",
+            "开学当天才开始找书包",
+            "假期最后一天通宵看电视"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "提前调整作息能让身体适应上学节奏；熬夜、临时找书包、通宵都会让开学第一天状态很差。",
+          "difficulty": 3,
+          "knowledge_point": "合理安排假期时间"
+        },
+        {
+          "q_type": "fill",
+          "stem": "同学讲完假期见闻后，先说一句自己听懂了什么，再提问题，这叫认真（  ）。",
+          "answer": {
+            "value": "倾听"
+          },
+          "analysis": "倾听是先理解对方再表达自己；插话、抢话都不算倾听。",
+          "difficulty": 3,
+          "knowledge_point": "分享与倾听"
+        }
+      ]
+    }
+  ]
+}

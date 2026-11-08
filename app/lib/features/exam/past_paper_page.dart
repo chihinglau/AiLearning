@@ -2,6 +2,8 @@ import 'package:ai_learning/core/errors/api_error_guide.dart';
 import 'package:ai_learning/core/models/exam.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
+import 'package:ai_learning/core/theme/app_accents.dart';
+import 'package:ai_learning/widgets/accent_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -40,9 +42,9 @@ class _PastPaperPageState extends ConsumerState<PastPaperPage> {
       _error = null;
     });
     try {
-      final items = await ref.read(examServiceProvider).pastPapers(
-            subject: _subject == 'all' ? null : _subject,
-          );
+      final items = await ref
+          .read(examServiceProvider)
+          .pastPapers(subject: _subject == 'all' ? null : _subject);
       if (!mounted) return;
       setState(() {
         _items = items;
@@ -75,9 +77,9 @@ class _PastPaperPageState extends ConsumerState<PastPaperPage> {
 
   void _start(ExamSummary paper) {
     if (!paper.windowOpen) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('${paper.windowLabel}，暂不可进入真题')),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text('${paper.windowLabel}，暂不可进入真题')));
       return;
     }
     context.push('/exam/${paper.id}');
@@ -210,57 +212,56 @@ class _PastPaperCard extends StatelessWidget {
       if (paper.year != null) '${paper.year} 年',
       if (paper.region != null && paper.region!.isNotEmpty) paper.region!,
     ];
-    return Card(
-      child: InkWell(
-        borderRadius: BorderRadius.circular(12),
-        onTap: onTap,
-        child: Padding(
-          padding: const EdgeInsets.all(16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+    return AccentCard(
+      accent: AppAccents.of(context).exam,
+      onTap: onTap,
+      padding: const EdgeInsets.all(16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            paper.title,
+            style: theme.textTheme.titleMedium?.copyWith(
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+          const SizedBox(height: 6),
+          Text(meta.join(' · '), style: theme.textTheme.bodySmall),
+          const SizedBox(height: 2),
+          Text(
+            '${paper.questionCount} 题 · 满分 ${paper.totalScore}'
+            ' · 限时 ${paper.timeLimitMin} 分钟',
+            style: theme.textTheme.bodySmall,
+          ),
+          if (paper.windowRange != null) ...[
+            const SizedBox(height: 2),
+            Text(
+              '开放时间 ${paper.windowRange}'
+              '${paper.windowState == 'open' ? '（开放中）' : ''}',
+              style: theme.textTheme.bodySmall,
+            ),
+          ],
+          const SizedBox(height: 10),
+          Row(
             children: [
               Text(
-                paper.title,
-                style: theme.textTheme.titleMedium
-                    ?.copyWith(fontWeight: FontWeight.w600),
-              ),
-              const SizedBox(height: 6),
-              Text(meta.join(' · '), style: theme.textTheme.bodySmall),
-              const SizedBox(height: 2),
-              Text(
-                '${paper.questionCount} 题 · 满分 ${paper.totalScore}'
-                ' · 限时 ${paper.timeLimitMin} 分钟',
-                style: theme.textTheme.bodySmall,
-              ),
-              if (paper.windowRange != null) ...[
-                const SizedBox(height: 2),
-                Text(
-                  '开放时间 ${paper.windowRange}'
-                  '${paper.windowState == 'open' ? '（开放中）' : ''}',
-                  style: theme.textTheme.bodySmall,
+                blocked ? paper.windowLabel : '开始模考',
+                style: theme.textTheme.labelLarge?.copyWith(
+                  color: blocked
+                      ? theme.disabledColor
+                      : theme.colorScheme.primary,
                 ),
-              ],
-              const SizedBox(height: 10),
-              Row(
-                children: [
-                  Text(
-                    blocked ? paper.windowLabel : '开始模考',
-                    style: theme.textTheme.labelLarge?.copyWith(
-                      color: blocked
-                          ? theme.disabledColor
-                          : theme.colorScheme.primary,
-                    ),
-                  ),
-                  const Spacer(),
-                  Icon(
-                    Icons.play_arrow_rounded,
-                    color: blocked ? theme.disabledColor : theme.colorScheme.primary,
-                  ),
-                ],
+              ),
+              const Spacer(),
+              Icon(
+                Icons.play_arrow_rounded,
+                color: blocked
+                    ? theme.disabledColor
+                    : theme.colorScheme.primary,
               ),
             ],
           ),
-        ),
+        ],
       ),
     );
   }

@@ -1,0 +1,333 @@
+{
+  "subject": "politics",
+  "grade": 1,
+  "version": "部编版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第1课 开开心心上学去",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "上学的准备",
+      "parent": "第1课 开开心心上学去",
+      "order_index": 1,
+      "explanation": "上学前要整理书包、带齐学习用品、按时出门，自己的事情自己做。",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "认识新校园",
+      "parent": "第1课 开开心心上学去",
+      "order_index": 2,
+      "explanation": "教室、操场、图书室、卫生间各有用途，知道在哪里、做什么，才能安心上学。",
+      "prerequisites": [
+        "上学的准备"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "校园安全与秩序",
+      "parent": "第1课 开开心心上学去",
+      "order_index": 3,
+      "explanation": "上下楼梯靠右慢行、不追跑打闹、按老师要求排队，是校园里最基本的安全规则。",
+      "prerequisites": [
+        "认识新校园"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "和老师同学相处",
+      "parent": "第1课 开开心心上学去",
+      "order_index": 4,
+      "explanation": "见到老师主动问好，和同学一起玩要轮流、会说「请」「谢谢」「对不起」。",
+      "prerequisites": [
+        "校园安全与秩序"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一单元 我是小学生啦",
+      "order_index": 1,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "上学前，书包应该由谁整理？",
+          "options": [
+            "自己整理",
+            "全部让爸爸妈妈整理",
+            "让同学帮忙",
+            "不用整理"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "整理书包是小学生自己能做的事，应自己完成；长期让别人代做，会养成依赖习惯。",
+          "difficulty": 1,
+          "knowledge_point": "上学的准备"
+        },
+        {
+          "q_type": "choice",
+          "stem": "上课时想去厕所，应该怎么做？",
+          "options": [
+            "举手告诉老师",
+            "自己悄悄跑出去",
+            "大声喊叫",
+            "忍着不说"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课堂有秩序，离开教室要先举手征得老师同意；悄悄跑出或大声喊叫都会影响上课，忍着不说可能影响身体。",
+          "difficulty": 3,
+          "knowledge_point": "校园安全与秩序"
+        },
+        {
+          "q_type": "fill",
+          "stem": "上下楼梯时，我们要靠（  ）行走，不追跑打闹。",
+          "answer": {
+            "value": "右"
+          },
+          "analysis": "校园通行规则是靠右慢行，为对向的人留出通道；靠左会与下楼的人相撞。",
+          "difficulty": 1,
+          "knowledge_point": "校园安全与秩序"
+        },
+        {
+          "q_type": "judge",
+          "stem": "在学校里，图书室是用来看书、借书的地方。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "图书室的功能就是阅读与借阅，保持安静、爱护书籍是那里的规矩，说法正确。",
+          "difficulty": 1,
+          "knowledge_point": "认识新校园"
+        },
+        {
+          "q_type": "choice",
+          "stem": "见到老师时，最合适的做法是（  ）",
+          "options": [
+            "主动问好",
+            "低头快走",
+            "装作没看见",
+            "躲到同学身后"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "主动问好是基本的礼貌；躲避或装作没看见会让人觉得不尊重。",
+          "difficulty": 2,
+          "knowledge_point": "和老师同学相处"
+        },
+        {
+          "q_type": "fill",
+          "stem": "同学把橡皮借给你，你应该说「（  ）」。",
+          "answer": {
+            "value": "谢谢"
+          },
+          "analysis": "得到别人帮助要说谢谢；道谢是最基本的礼貌用语。",
+          "difficulty": 1,
+          "knowledge_point": "和老师同学相处"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列做法中，属于「自己的事情自己做」的有（  ）",
+          "options": [
+            "自己整理书包",
+            "自己系鞋带",
+            "让家长喂饭",
+            "自己收拾文具"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 整理书包 ✓；B 系鞋带 ✓；C 已经会自己吃饭还让家长喂，属于依赖 ✗；D 收拾文具 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "上学的准备",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "在走廊里追跑打闹很危险，容易撞到同学。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "走廊人多、地面可能有水，追跑容易摔倒或相撞，所以学校要求慢行不追跑。",
+          "difficulty": 2,
+          "knowledge_point": "校园安全与秩序"
+        },
+        {
+          "q_type": "choice",
+          "stem": "和同学一起玩玩具时，正确的做法是（  ）",
+          "options": [
+            "轮流玩",
+            "抢过来自己玩",
+            "藏起来不给别人",
+            "哭了才让"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "轮流是公平的游戏规则；抢夺、藏玩具会让同伴无法参与，也不利于相处。",
+          "difficulty": 2,
+          "knowledge_point": "和老师同学相处"
+        },
+        {
+          "q_type": "fill",
+          "stem": "我不小心把同学的铅笔碰到地上，应该说「（  ）」。",
+          "answer": {
+            "value": "对不起"
+          },
+          "analysis": "影响到别人要道歉，用「对不起」；说「谢谢」是道谢，语境不对。",
+          "difficulty": 3,
+          "knowledge_point": "和老师同学相处"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列属于校园安全规则的有（  ）",
+          "options": [
+            "上下楼梯靠右走",
+            "不在教室里追跑",
+            "排队接水",
+            "从楼梯扶手滑下来"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 靠右走 ✓；B 教室不追跑 ✓；C 排队接水避免拥挤烫伤 ✓；D 滑扶手极易摔伤，不是安全规则 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "校园安全与秩序",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "上学迟到了，应该悄悄从后门溜进教室，不用说明。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "迟到应主动向老师说明原因并表示歉意；偷偷溜进教室既不合课堂秩序，也不诚实。",
+          "difficulty": 2,
+          "knowledge_point": "校园安全与秩序"
+        },
+        {
+          "q_type": "choice",
+          "stem": "想借同学的绘本看，最合适的说法是（  ）",
+          "options": [
+            "请借我看一下好吗？",
+            "把书给我。",
+            "我先拿走了。",
+            "你不给我就不跟你玩。"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "请求用「请……好吗？」更礼貌；命令式和威胁式说法都不尊重对方。",
+          "difficulty": 2,
+          "knowledge_point": "和老师同学相处"
+        },
+        {
+          "q_type": "fill",
+          "stem": "上课发言前要先（  ），得到老师同意再说。",
+          "answer": {
+            "value": "举手"
+          },
+          "analysis": "举手是课堂发言的信号，能让老师安排发言顺序，避免多人同时说话。",
+          "difficulty": 3,
+          "knowledge_point": "校园安全与秩序"
+        },
+        {
+          "q_type": "judge",
+          "stem": "学校里的每一处场所都有自己的用途，不能随意乱用。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "教室上课、操场活动、图书室阅读，各场所功能不同，乱用会妨碍他人，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "认识新校园"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写两句话：第一句写出你每天上学前会做的一件准备，第二句写出你在校园里要遵守的一条规则。",
+          "answer": {
+            "value": "我每天上学前自己整理书包。在校园里我上下楼梯靠右慢行。"
+          },
+          "analysis": "参考示例见答案。评分要点：①写出具体的上学准备（1 分）；②写出具体的一条校园规则（1 分）；③句子通顺（1 分）；④书写与标点（1 分）。只写词语不成句不得分。",
+          "difficulty": 4,
+          "knowledge_point": "上学的准备",
+          "tags": [
+            "简答"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "小刚第一天上学，找不到教室，很着急。请你给他两条建议。",
+          "answer": {
+            "value": "可以先看教室门上的班级牌，也可以问老师或高年级同学。"
+          },
+          "analysis": "参考答案给出两条可操作做法：①看班级牌／校园指示牌；②礼貌地向老师或同学询问。评分要点：每条建议 2 分，需具体可操作；只说「别着急」不得分。",
+          "difficulty": 4,
+          "knowledge_point": "认识新校园",
+          "tags": [
+            "情境应用"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列行为中，最能让新同学感到温暖的是（  ）",
+          "options": [
+            "主动介绍自己并带他熟悉教室",
+            "只跟原来的朋友玩",
+            "笑他找不到座位",
+            "让他自己看着办"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "主动介绍、带路能帮新同学尽快适应；取笑或不管不顾会让对方更紧张。",
+          "difficulty": 3,
+          "knowledge_point": "和老师同学相处"
+        },
+        {
+          "q_type": "judge",
+          "stem": "前一天晚上按课程表把课本放进书包，可以避免第二天忘带学习用品。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "按课程表提前整理是「自己的事情自己做」的具体做法，能减少忘带，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "上学的准备"
+        },
+        {
+          "q_type": "choice",
+          "stem": "想知道学校医务室在哪里，最合适的做法是（  ）。",
+          "options": [
+            "看校园平面图或问老师",
+            "随便找一间教室闯进去问",
+            "下课自己跑到校外找",
+            "等真的生病时再说"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "认识校园要借助平面图、指示牌或询问老师，既快又安全；随意乱走或拖到需要时才找都不合适。",
+          "difficulty": 3,
+          "knowledge_point": "认识新校园"
+        }
+      ]
+    }
+  ]
+}

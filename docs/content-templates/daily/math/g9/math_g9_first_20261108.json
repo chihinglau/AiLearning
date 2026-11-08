@@ -1,0 +1,333 @@
+{
+  "subject": "math",
+  "grade": 9,
+  "version": "北师大版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "2.菱形的性质与判定",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "菱形的定义",
+      "parent": "2.菱形的性质与判定",
+      "order_index": 1,
+      "explanation": "有一组邻边相等的平行四边形叫做菱形；菱形既是平行四边形，又具有四边相等的特殊性。",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "菱形的性质",
+      "parent": "2.菱形的性质与判定",
+      "order_index": 2,
+      "explanation": "菱形的四条边都相等；对角线互相垂直平分，且每条对角线平分一组对角；菱形是轴对称图形，两条对角线所在直线是对称轴。",
+      "prerequisites": [
+        "菱形的定义"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "菱形的面积计算",
+      "parent": "2.菱形的性质与判定",
+      "order_index": 3,
+      "explanation": "菱形面积等于两条对角线乘积的一半，即 S = (1/2)·d₁·d₂；也可用底乘高计算。",
+      "prerequisites": [
+        "菱形的性质"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "菱形的判定",
+      "parent": "2.菱形的性质与判定",
+      "order_index": 4,
+      "explanation": "一组邻边相等的平行四边形是菱形；对角线互相垂直的平行四边形是菱形；四条边都相等的四边形是菱形。",
+      "prerequisites": [
+        "菱形的面积计算"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一章 特殊平行四边形",
+      "order_index": 1,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "下列四边形中，一定是菱形的是（  ）",
+          "options": [
+            "四边都相等的四边形",
+            "对角线相等的平行四边形",
+            "有一个角是直角的平行四边形",
+            "对角线互相平分的四边形"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "四边相等能推出是菱形；对角线相等的平行四边形是矩形，有一个直角的平行四边形是矩形，对角线互相平分只能说明是平行四边形。",
+          "difficulty": 2,
+          "knowledge_point": "菱形的判定"
+        },
+        {
+          "q_type": "choice",
+          "stem": "菱形的两条对角线分别为 6 和 8，则它的面积是（  ）",
+          "options": [
+            "24",
+            "48",
+            "12",
+            "14"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "S = (1/2)·d₁·d₂ = (1/2) × 6 × 8 = 24。",
+          "difficulty": 2,
+          "knowledge_point": "菱形的面积计算"
+        },
+        {
+          "q_type": "fill",
+          "stem": "菱形的四条边都（  ）。",
+          "answer": {
+            "value": "相等"
+          },
+          "analysis": "菱形最核心的性质就是四边相等，由「一组邻边相等的平行四边形」可直接推出。",
+          "difficulty": 1,
+          "knowledge_point": "菱形的性质"
+        },
+        {
+          "q_type": "judge",
+          "stem": "菱形的对角线互相垂直平分。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "菱形对角线不仅互相平分（平行四边形的性质），还互相垂直，这是区别于一般平行四边形的关键。",
+          "difficulty": 2,
+          "knowledge_point": "菱形的性质"
+        },
+        {
+          "q_type": "choice",
+          "stem": "菱形的对角线长分别为 6 和 8，则它的边长是（  ）",
+          "options": [
+            "5",
+            "4",
+            "3",
+            "10"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "对角线互相垂直平分，把菱形分成四个直角三角形，直角边为 3 和 4，边长 = √(3² + 4²) = 5。",
+          "difficulty": 4,
+          "knowledge_point": "菱形的面积计算"
+        },
+        {
+          "q_type": "fill",
+          "stem": "有一组邻边相等的（  ）形叫做菱形。",
+          "answer": {
+            "value": "平行四边"
+          },
+          "analysis": "菱形的定义必须落在「平行四边形」这一前提上，仅四边相等的四边形虽也是菱形，但定义表述如此。",
+          "difficulty": 2,
+          "knowledge_point": "菱形的定义"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列条件中，能判定平行四边形是菱形的有（  ）",
+          "options": [
+            "一组邻边相等",
+            "对角线互相垂直",
+            "对角线相等",
+            "四条边都相等"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 定义法 ✓；B 对角线垂直的平行四边形是菱形 ✓；C 对角线相等推出的是矩形 ✗；D 四边相等 ✓。故 A、B、D 成立。",
+          "difficulty": 3,
+          "knowledge_point": "菱形的判定",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "菱形的对角线把菱形分成四个全等的直角三角形。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "对角线互相垂直平分，四个小三角形的直角边分别相等，故四个三角形全等（SSS 或 SAS）。",
+          "difficulty": 3,
+          "knowledge_point": "菱形的性质"
+        },
+        {
+          "q_type": "choice",
+          "stem": "菱形的一个内角为 60°，边长为 4，则较短的对角线长为（  ）",
+          "options": [
+            "4",
+            "2",
+            "8",
+            "4√3"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "60° 角所对的对角线把菱形分成两个等边三角形，故短对角线长等于边长 4。",
+          "difficulty": 3,
+          "knowledge_point": "菱形的性质"
+        },
+        {
+          "q_type": "fill",
+          "stem": "菱形的面积等于两条对角线乘积的（  ）。",
+          "answer": {
+            "value": "一半"
+          },
+          "analysis": "S = (1/2)·d₁·d₂，因为对角线把菱形分成四个直角三角形，每个面积是 (1/4)d₁d₂。",
+          "difficulty": 2,
+          "knowledge_point": "菱形的面积计算"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于菱形，说法正确的有（  ）",
+          "options": [
+            "四条边相等",
+            "对角线互相垂直",
+            "是轴对称图形",
+            "四个角都是直角"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A、B、C 都是菱形性质；D 四角为直角的是正方形／矩形，菱形一般不具备 ✗。故 A、B、C 成立。",
+          "difficulty": 3,
+          "knowledge_point": "菱形的性质",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "菱形的对角线相等。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "菱形对角线互相垂直但不一定相等；对角线相等的菱形实际上是正方形。",
+          "difficulty": 2,
+          "knowledge_point": "菱形的性质"
+        },
+        {
+          "q_type": "choice",
+          "stem": "菱形 ABCD 中，∠BAD = 120°，则 ∠ABC = （  ）",
+          "options": [
+            "60°",
+            "120°",
+            "30°",
+            "90°"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "菱形是平行四边形，邻角互补：∠ABC = 180° − 120° = 60°。",
+          "difficulty": 2,
+          "knowledge_point": "菱形的定义"
+        },
+        {
+          "q_type": "fill",
+          "stem": "若平行四边形的一组（  ）边相等，则它是菱形。",
+          "answer": {
+            "value": "邻"
+          },
+          "analysis": "「邻边」而非「对边」：平行四边形对边本来就相等，只有邻边相等才有特殊性。",
+          "difficulty": 2,
+          "knowledge_point": "菱形的判定"
+        },
+        {
+          "q_type": "judge",
+          "stem": "四条边都相等的四边形一定是菱形。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "四边相等的四边形两组对边分别相等，先得平行四边形，再据定义即为菱形。",
+          "difficulty": 2,
+          "knowledge_point": "菱形的判定"
+        },
+        {
+          "q_type": "answer",
+          "stem": "已知菱形的边长为 5，一条对角线长为 8，求另一条对角线的长度与菱形的面积。",
+          "answer": {
+            "value": "设两条对角线分别为 8 和 d。对角线互相垂直平分，边长、半对角线构成直角三角形：(8/2)² + (d/2)² = 5²，即 16 + d²/4 = 25，d²/4 = 9，d/2 = 3，d = 6。面积 S = (1/2) × 8 × 6 = 24。"
+          },
+          "analysis": "评分要点：利用对角线垂直平分建立直角三角形关系（2 分）；解得 d = 6（2 分）；面积 24（2 分）。未说明直角三角形关系直接写答案扣 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "菱形的面积计算",
+          "tags": [
+            "计算题"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "平行四边形 ABCD 的对角线 AC、BD 相交于点 O，AC ⊥ BD。请判断 ABCD 是否为菱形，并写出完整理由。",
+          "answer": {
+            "value": "ABCD 是菱形。理由：四边形 ABCD 是平行四边形，所以 OA = OC，OB = OD。又 AC ⊥ BD，即 AC 是 BD 的垂直平分线，所以 AB = AD（垂直平分线上的点到线段两端距离相等）。平行四边形 ABCD 中有一组邻边相等，故它是菱形。"
+          },
+          "analysis": "评分要点：写出 OA = OC、OB = OD（2 分）；由垂直平分线得 AB = AD（2 分）；用「一组邻边相等的平行四边形是菱形」作结（2 分）。遗漏平行四边形前提扣 1 分。",
+          "difficulty": 5,
+          "knowledge_point": "菱形的判定",
+          "tags": [
+            "证明题"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列图形中，既是轴对称图形又是中心对称图形的是（  ）",
+          "options": [
+            "菱形",
+            "等边三角形",
+            "等腰梯形",
+            "一般平行四边形"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "菱形关于两条对角线对称，也关于对角线的交点中心对称；等边三角形、等腰梯形只有轴对称，一般平行四边形只有中心对称。",
+          "difficulty": 3,
+          "knowledge_point": "菱形的性质"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列条件中，能判定一个平行四边形是菱形的是（  ）。",
+          "options": [
+            "有一组邻边相等",
+            "有一个角是直角",
+            "两条对角线相等",
+            "两条对角线互相平分"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "菱形定义是「有一组邻边相等的平行四边形」；有一个角是直角、对角线相等判定的是矩形，对角线互相平分是平行四边形本身已有的性质。",
+          "difficulty": 4,
+          "knowledge_point": "菱形的定义"
+        },
+        {
+          "q_type": "judge",
+          "stem": "菱形一定是平行四边形，但平行四边形不一定是菱形。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "菱形是附加了「邻边相等」条件的特殊平行四边形；普通平行四边形邻边未必相等，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "菱形的定义"
+        }
+      ]
+    }
+  ]
+}

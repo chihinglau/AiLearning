@@ -22,16 +22,34 @@ class ApiException implements Exception {
   String toString() => message;
 }
 
+/// 双 Token 组合：access 短效 + refresh 长效。
+class AuthTokens {
+  const AuthTokens({required this.accessToken, required this.refreshToken});
+
+  final String accessToken;
+  final String refreshToken;
+
+  factory AuthTokens.fromJson(Map<String, dynamic> json) {
+    return AuthTokens(
+      accessToken: json['access_token'] as String? ?? '',
+      refreshToken: json['refresh_token'] as String? ?? '',
+    );
+  }
+}
+
+typedef TokenRefreshCallback = Future<AuthTokens?> Function(String refreshToken);
+
 class ApiClient {
-  ApiClient({String baseUrl = AppConfig.apiBaseUrl})
-      : _dio = Dio(
-          BaseOptions(
-            baseUrl: baseUrl,
-            connectTimeout: const Duration(seconds: 10),
-            receiveTimeout: const Duration(seconds: 15),
-            contentType: Headers.jsonContentType,
-          ),
-        ) {
+  ApiClient({String baseUrl = AppConfig.apiBaseUrl, Dio? dio})
+      : _dio = dio ??
+            Dio(
+              BaseOptions(
+                baseUrl: baseUrl,
+                connectTimeout: const Duration(seconds: 10),
+                receiveTimeout: const Duration(seconds: 15),
+                contentType: Headers.jsonContentType,
+              ),
+            ) {
     _dio.interceptors.add(
       InterceptorsWrapper(
         onRequest: (options, handler) {
@@ -41,15 +59,89 @@ class ApiClient {
           }
           handler.next(options);
         },
+        onError: (error, handler) async {
+          if (_shouldRefresh(error)) {
+            final refreshed = await _tryRefresh();
+            if (refreshed) {
+              final options = error.requestOptions;
+              options.extra['retried'] = true;
+              final token = _token;
+              if (token != null && token.isNotEmpty) {
+                options.headers['Authorization'] = 'Bearer $token';
+              }
+              try {
+                final response = await _dio.fetch<dynamic>(options);
+                return handler.resolve(response);
+              } on DioException catch (retryError) {
+                return handler.next(retryError);
+              }
+            }
+          }
+          handler.next(error);
+        },
       ),
     );
   }
 
   final Dio _dio;
   String? _token;
+  String? _refreshToken;
+
+  /// 由 AuthService 注入：用 refresh token 换新双 Token。
+  TokenRefreshCallback? onRefresh;
+
+  /// 刷新明确失败（401）时回调，用于清理登录态；网络错误不触发。
+  Future<void> Function()? onSessionExpired;
+
+  Future<bool>? _refreshing;
 
   void setToken(String? token) {
     _token = token;
+  }
+
+  void setTokens({String? access, String? refresh}) {
+    _token = access;
+    _refreshToken = refresh;
+  }
+
+  bool _shouldRefresh(DioException error) {
+    if (error.response?.statusCode != 401) return false;
+    if (error.requestOptions.extra['retried'] == true) return false;
+    final path = error.requestOptions.path;
+    return !path.contains('/api/auth/login') &&
+        !path.contains('/api/auth/refresh') &&
+        !path.contains('/api/auth/logout');
+  }
+
+  /// 并发 401 共享同一次刷新（单飞）。
+  Future<bool> _tryRefresh() {
+    return _refreshing ??= _doRefresh().whenComplete(() => _refreshing = null);
+  }
+
+  Future<bool> _doRefresh() async {
+    final refresh = _refreshToken;
+    final callback = onRefresh;
+    if (refresh == null || refresh.isEmpty || callback == null) {
+      return false;
+    }
+    try {
+      final tokens = await callback(refresh);
+      if (tokens == null ||
+          tokens.accessToken.isEmpty ||
+          tokens.refreshToken.isEmpty) {
+        return false;
+      }
+      setTokens(access: tokens.accessToken, refresh: tokens.refreshToken);
+      return true;
+    } on ApiException catch (error) {
+      // 只有明确的 401 才判定会话失效；断网/5xx 保留本地登录态。
+      if (error.statusCode == 401) {
+        await onSessionExpired?.call();
+      }
+      return false;
+    } catch (_) {
+      return false;
+    }
   }
 
   Future<Map<String, dynamic>> getJson(

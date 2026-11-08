@@ -13,6 +13,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 from pathlib import Path
 from typing import Any
@@ -21,6 +22,49 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.models.content import Chapter, KnowledgePoint, Question, Textbook
+
+# 占位章节别名表（2026-11-08 占位章节清理立项 · 阶段 3/4）
+# 由 docs/content-templates/exports/automation_20261108_codebuddy/chapter_cleanup.py 生成，
+# 与 chapter_cleanup_plan_20261108.json 同源。
+# - aliases：旧样章名 → 教材真实章节名；旧 JSON 重导时章节落到真实章节，不重建占位章。
+# - discard：旧版数据章名（教材目录上不存在的那批）；旧 JSON 重导时整章丢弃：
+#   不建章、不挂题、不建对应知识点，避免已删除的旧版内容复活。
+_ALIAS_PATH = Path(__file__).with_name("chapter_aliases.json")
+_ALIAS_CACHE: dict[str, dict[tuple[str, int, str, str], Any]] | None = None
+PLACEHOLDER_SINK_BASE = 9000
+
+# 纯元数据键：不参与内容比对。文件只加这些键 → 视为「同一份内容的不同标注」，
+# 仍然是「已入库」；改了别的键 → 才是「文件已变更、未重导」。
+# 注意：docs/content-templates/_validate_daily.py 有一份同实现，改这里要同步改那里。
+METADATA_KEYS = ("_legacy", "_legacy_note")
+
+
+def content_sha256(doc: dict) -> str:
+    """文档的**内容**哈希：剔除元数据键后按规范 JSON 序列化再哈希。
+
+    用于区分「仅元数据变更（如打 legacy 标记）」与「内容变更（真要重导）」。
+    """
+    payload = {k: v for k, v in doc.items() if k not in METADATA_KEYS}
+    blob = json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+    return hashlib.sha256(blob.encode("utf-8")).hexdigest()
+
+
+def _alias_tables() -> dict[str, dict[tuple[str, int, str, str], Any]]:
+    global _ALIAS_CACHE
+    if _ALIAS_CACHE is None:
+        try:
+            raw = json.loads(_ALIAS_PATH.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            raw = {}
+        table: dict[str, dict[tuple[str, int, str, str], Any]] = {"alias": {}, "discard": {}}
+        for row in raw.get("aliases") or []:
+            key = (row["subject"], int(row["grade"]), row["semester"], row["legacy"])
+            table["alias"][key] = row["canonical"]
+        for row in (raw.get("discard") or raw.get("placeholders") or []):
+            key = (row["subject"], int(row["grade"]), row["semester"], row["name"])
+            table["discard"][key] = row
+        _ALIAS_CACHE = table
+    return _ALIAS_CACHE
 
 SUBJECTS = {
     "chinese": "语文",
@@ -211,11 +255,27 @@ def import_document(db: Session, data: dict[str, Any], *, overwrite: bool = Fals
         db.add(textbook)
         db.flush()
 
-    chapter_map: dict[str, Chapter] = {}
+    chapter_map: dict[str, Chapter | None] = {}
     chapters_created = 0
     chapters_updated = 0
+    chapters_discarded = 0
+    questions_discarded = 0
+    knowledge_discarded = 0
+    discarded_detail: list[str] = []
+    tables = _alias_tables()
     for chapter in data["chapters"]:
-        name = str(chapter["name"]).strip()
+        raw_name = str(chapter["name"]).strip()
+        alias_key = (subject, grade, semester, raw_name)
+        # 旧样章名 → 教材真实章节名；旧版数据章名 → 整章丢弃（不建章、不挂题）
+        canonical = tables["alias"].get(alias_key)
+        discarded = tables["discard"].get(alias_key)
+        if discarded is not None:
+            chapter_map[raw_name] = None
+            chapters_discarded += 1
+            questions_discarded += len(chapter.get("questions") or [])
+            discarded_detail.append(raw_name)
+            continue
+        name = canonical or raw_name
         row = db.scalar(
             select(Chapter).where(
                 Chapter.textbook_id == textbook.id, Chapter.name == name
@@ -230,13 +290,19 @@ def import_document(db: Session, data: dict[str, Any], *, overwrite: bool = Fals
                 summary=chapter.get("summary"),
             )
             db.add(row)
+            db.flush()
             chapters_created += 1
         else:
-            row.order_index = int(chapter.get("order_index", row.order_index))
-            if chapter.get("summary"):
-                row.summary = chapter["summary"]
+            if canonical is not None:
+                # 旧 JSON 重定向到教材真实章节：**不**用旧 JSON 的序号覆盖教材目录序
+                if chapter.get("summary"):
+                    row.summary = chapter["summary"]
+            else:
+                row.order_index = int(chapter.get("order_index", row.order_index))
+                if chapter.get("summary"):
+                    row.summary = chapter["summary"]
             chapters_updated += 1
-        chapter_map[name] = row
+        chapter_map[raw_name] = row
     db.flush()
 
     section_map: dict[str, KnowledgePoint] = {}
@@ -251,10 +317,15 @@ def import_document(db: Session, data: dict[str, Any], *, overwrite: bool = Fals
     )
     kp_created = 0
     kp_updated = 0
-    for item in data["knowledge"]:
+    for item in data.get("knowledge") or []:
         node_type = item.get("node_type", "point")
         item_name = item["name"]
         if node_type == "section":
+            # 旧版数据板块：整块丢弃，不重建知识点（避免删掉的旧版内容复活）
+            if (subject, grade, semester, str(item_name).strip()) in tables["discard"]:
+                knowledge_discarded += 1
+                discarded_detail.append(str(item_name).strip())
+                continue
             row = db.scalar(
                 select(KnowledgePoint).where(
                     KnowledgePoint.subject == subject,
@@ -265,7 +336,12 @@ def import_document(db: Session, data: dict[str, Any], *, overwrite: bool = Fals
                 )
             )
         else:
-            parent = section_map[str(item["parent"]).strip()]
+            parent_name = str(item["parent"]).strip()
+            if (subject, grade, semester, parent_name) in tables["discard"]:
+                knowledge_discarded += 1
+                discarded_detail.append(parent_name)
+                continue
+            parent = section_map[parent_name]
             row = db.scalar(
                 select(KnowledgePoint).where(
                     KnowledgePoint.parent_id == parent.id,
@@ -333,8 +409,16 @@ def import_document(db: Session, data: dict[str, Any], *, overwrite: bool = Fals
             point_map[item["name"]] = row
 
     # 前置知识按名称回填（仅解析本文件内引用）
-    for item in data["knowledge"]:
+    discarded_names = {
+        str(row.get("name") or "").strip() for row in tables["discard"].values()
+    }
+    for item in data.get("knowledge") or []:
         if item.get("node_type", "point") != "point":
+            continue
+        item_name = str(item["name"]).strip()
+        parent_name = str(item.get("parent") or "").strip()
+        if item_name in discarded_names or parent_name in discarded_names:
+            # 该 point 随旧版数据（父板块在丢弃名单里）一起丢弃，不解析前置关系
             continue
         names = [str(name).strip() for name in item.get("prerequisites") or []]
         if not names:
@@ -343,16 +427,23 @@ def import_document(db: Session, data: dict[str, Any], *, overwrite: bool = Fals
         for name in names:
             target = point_map.get(name) or section_map.get(name)
             if target is None:
+                if name in discarded_names:
+                    # 前置知识属于旧版数据（已丢弃），跳过这条前置关系，不报错
+                    continue
                 raise ValueError(
                     f"知识点「{item['name']}」的前置知识「{name}」未在同文件 knowledge 中定义"
                 )
             ids.append(target.id)
-        point_map[item["name"]].prerequisites = ids
+        if item_name in point_map:
+            point_map[item_name].prerequisites = ids
 
     questions_created = 0
     questions_skipped = 0
     for chapter_data in data["chapters"]:
         chapter = chapter_map[str(chapter_data["name"]).strip()]
+        if chapter is None:
+            # 旧版数据章：已整章丢弃（含其题目），不再挂载
+            continue
         existing_rows = list(
             db.scalars(select(Question).where(Question.chapter_id == chapter.id))
         )
@@ -408,10 +499,15 @@ def import_document(db: Session, data: dict[str, Any], *, overwrite: bool = Fals
         "textbook_created": int(textbook_created),
         "chapters_created": chapters_created,
         "chapters_updated": chapters_updated,
+        "chapters_discarded": chapters_discarded,
         "knowledge_created": kp_created,
         "knowledge_updated": kp_updated,
+        "knowledge_discarded": knowledge_discarded,
         "questions_created": questions_created,
         "questions_skipped": questions_skipped,
+        "questions_discarded": questions_discarded,
+        "discarded_detail": list(dict.fromkeys(discarded_detail)),
+        "legacy_file": bool(data.get("_legacy")),
     }
 
 

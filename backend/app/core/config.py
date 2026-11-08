@@ -22,6 +22,8 @@ class Settings(BaseSettings):
     jwt_secret: str = "change-me-in-production"
     jwt_algorithm: str = "HS256"
     access_token_expire_minutes: int = 120
+    # 离线优先：refresh token 长效 30 天，App 可长期免登录并在此期间自动续期。
+    refresh_token_expire_days: int = 30
 
     study_curfew_start: int = 22
     study_curfew_end: int = 6
@@ -58,6 +60,10 @@ class Settings(BaseSettings):
     ai_max_input_chars: int = 300
     ai_max_output_chars: int = 1200
     ai_rate_limit_per_hour: int = 20
+
+    # 离线整册下载上限：超过后提示联系管理员或改用单元范围。
+    bundle_max_questions: int = 1500
+    bundle_max_bytes: int = 8 * 1024 * 1024
 
     @property
     def is_production(self) -> bool:

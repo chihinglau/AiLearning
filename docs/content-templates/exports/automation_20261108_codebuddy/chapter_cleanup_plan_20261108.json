@@ -1,0 +1,462 @@
+{
+  "_meta": {
+    "kind": "chapter_cleanup_plan",
+    "generated": "2026-11-08",
+    "purpose": "占位章节清理立项 · 阶段 1 判定表（机器可读，唯一事实来源）",
+    "baseline": "docs/content-templates/baseline/_skeleton_first/chapters_<subject>_g<N>_first_20261107.json（官方章节骨架）",
+    "scope": "46 册上册教材 / 657 章 / 1087 题；本表覆盖其中 39 个旧样章",
+    "rules": {
+      "R-A": "核心名匹配：旧样章名剥掉「第N单元/第N章/Unit N/第N课」前缀后，与该册某个官方章剥同样前缀后的名字完全相同，且在官方章中唯一命中",
+      "R-B": "显式映射：依据可复核（官方骨架名 / 章节序号 / 大纲节名 / 题目内容自证），逐条写明",
+      "R-C": "保留待确认：新教材目录无对应单元或归属有歧义 → 题目原地保留 + is_placeholder=1 + 沉底"
+    },
+    "stats": {
+      "legacy_chapters_total": 39,
+      "legacy_questions_total": 297,
+      "migrate_chapters": 15,
+      "migrate_questions": 167,
+      "keep_marked_chapters": 24,
+      "keep_marked_questions": 130
+    }
+  },
+  "migrate": [
+    {
+      "subject": "math",
+      "grade": 1,
+      "semester": "first",
+      "legacy": "10以内加减法",
+      "target": "第四单元 10以内数加与减",
+      "rule": "R-B",
+      "evidence": "g1 官方骨架中只有「第二单元 5以内数加与减」与「第四单元 10以内数加与减」两个加减单元；旧样章名明确是 10 以内，24 道题（3+2、9-4、10-3-2、数的分与合(10以内)）全部为 10 以内，故归第四单元。",
+      "question_overrides": []
+    },
+    {
+      "subject": "math",
+      "grade": 1,
+      "semester": "first",
+      "legacy": "加与减（一）",
+      "target": "第四单元 10以内数加与减",
+      "rule": "R-B",
+      "evidence": "该章 6 道题的知识点父节名即「10以内数的认识与加减法」，题目为 3+4、5+2、8-3 等 10 以内加减，与「第四单元 10以内数加与减」一致。",
+      "question_overrides": []
+    },
+    {
+      "subject": "math",
+      "grade": 2,
+      "semester": "first",
+      "legacy": "100以内加减法",
+      "target": "第一单元 100以内数加与减（二）",
+      "rule": "R-B",
+      "evidence": "g2 官方骨架里唯一的加减单元是「第一单元 100以内数加与减（二）」；22 道题（23+15、50-19、36+29、58+7 竖式）全部是 100 以内加减。",
+      "question_overrides": []
+    },
+    {
+      "subject": "math",
+      "grade": 4,
+      "semester": "first",
+      "legacy": "认识更大的数",
+      "target": "第一单元 认识更大的数",
+      "rule": "R-A",
+      "evidence": "剥前缀后核心名「认识更大的数」，在 g4 官方骨架中唯一命中「第一单元 认识更大的数」；18 道题（计数单位/读法写法/改写/近似数）正是该单元内容。",
+      "question_overrides": []
+    },
+    {
+      "subject": "math",
+      "grade": 6,
+      "semester": "first",
+      "legacy": "圆",
+      "target": "第二单元 圆",
+      "rule": "R-A",
+      "evidence": "剥前缀后核心名「圆」，在 g6 官方骨架中唯一命中「第二单元 圆」；18 道题（圆的认识/周长/面积/圆环）正是该单元内容。",
+      "question_overrides": []
+    },
+    {
+      "subject": "math",
+      "grade": 7,
+      "semester": "first",
+      "legacy": "丰富的图形世界",
+      "target": "第一章 丰富的图形世界",
+      "rule": "R-A",
+      "evidence": "剥前缀后核心名「丰富的图形世界」，在 g7 官方骨架中唯一命中「第一章 丰富的图形世界」。",
+      "question_overrides": []
+    },
+    {
+      "subject": "math",
+      "grade": 8,
+      "semester": "first",
+      "legacy": "勾股定理",
+      "target": "第一章 勾股定理",
+      "rule": "R-A",
+      "evidence": "剥前缀后核心名「勾股定理」，在 g8 官方骨架中唯一命中「第一章 勾股定理」；20 道题（勾股定理内容/逆定理/勾股数）正是该章内容。",
+      "question_overrides": []
+    },
+    {
+      "subject": "physics",
+      "grade": 8,
+      "semester": "first",
+      "legacy": "第一章 声现象",
+      "target": "第二章 声现象",
+      "rule": "R-A",
+      "evidence": "剥前缀后核心名「声现象」，在 g8 官方骨架中唯一命中「第二章 声现象」（人教版八上第二章即声现象）；5 道题（声音的产生/传播/特性）正是该章内容。",
+      "question_overrides": []
+    },
+    {
+      "subject": "biology",
+      "grade": 7,
+      "semester": "first",
+      "legacy": "第一单元 第一章 认识生物",
+      "target": "第一章 认识生物",
+      "rule": "R-A",
+      "evidence": "剥两级前缀后核心名「认识生物」，在 g7 官方骨架中唯一命中「第一章 认识生物」；逐题按知识点名对齐官方节名：生物的基本特征→第一章（第二节 生物的特征）、细胞的结构→第二章认识细胞（第二节 植物细胞/第三节 动物细胞）、细胞的生活→第三章从细胞到生物体（第一节 细胞的生活）。",
+      "question_overrides": [
+        {
+          "question_id": 602,
+          "target": "第二章 认识细胞",
+          "evidence": "知识点「细胞的结构」对应官方第二章认识细胞的「第二节 植物细胞 / 第三节 动物细胞」。"
+        },
+        {
+          "question_id": 604,
+          "target": "第二章 认识细胞",
+          "evidence": "同上（植物细胞有而动物细胞没有的结构）。"
+        },
+        {
+          "question_id": 605,
+          "target": "第三章 从细胞到生物体",
+          "evidence": "知识点「细胞的生活」对应官方第三章的「第一节 细胞的生活」。"
+        }
+      ]
+    },
+    {
+      "subject": "chinese",
+      "grade": 1,
+      "semester": "first",
+      "legacy": "识字（一）",
+      "target": "第一单元 识字",
+      "rule": "R-B",
+      "evidence": "旧样章名「识字（一）」即人教版一上第一单元「识字」，g1 官方骨架第 1 行即「第一单元 识字」；8 道题为天地人、日月山川、金木水火土识字内容。",
+      "question_overrides": [
+        {
+          "question_id": 614,
+          "target": "第四单元 汉语拼音",
+          "evidence": "该题考「整体认读音节」，属人教版一上第四单元 汉语拼音，不属识字课。"
+        }
+      ]
+    },
+    {
+      "subject": "history",
+      "grade": 7,
+      "semester": "first",
+      "legacy": "第一单元 史前时期：中国境内早期人类与文明的起源",
+      "target": "第一单元 史前时期：原始社会与中华文明的起源",
+      "rule": "R-B",
+      "evidence": "单元序号一致（第一单元）、主题前缀一致（史前时期：）；5 道题（中国境内最早古人类、半坡与河姆渡原始农耕）正是新版第一单元「史前时期：原始社会与中华文明的起源」的内容。",
+      "question_overrides": []
+    },
+    {
+      "subject": "english",
+      "grade": 1,
+      "semester": "first",
+      "legacy": "Unit 1 Hello",
+      "target": "Unit 1 What is your family like?",
+      "rule": "R-B",
+      "evidence": "单元序号一致（Unit 1），g1 官方骨架中唯一 Unit 1 为「Unit 1 What is your family like?」。注意：5 道题内容为 Greetings/Numbers，与新版 Unit 1 主题不完全一致，已列入阶段 2 待教研重写清单。",
+      "question_overrides": []
+    },
+    {
+      "subject": "english",
+      "grade": 1,
+      "semester": "first",
+      "legacy": "Colours 颜色",
+      "target": "Unit 6 What colours can you see?",
+      "rule": "R-B",
+      "evidence": "g1 官方骨架 6 个单元中只有「Unit 6 What colours can you see?」含 colours 关键词，与旧样章名唯一命中；4 道题均为颜色词汇题。",
+      "question_overrides": []
+    },
+    {
+      "subject": "english",
+      "grade": 2,
+      "semester": "first",
+      "legacy": "My family 家庭成员",
+      "target": "Unit 2 What do you like about your family?",
+      "rule": "R-B",
+      "evidence": "g2 官方骨架 6 个单元中只有「Unit 2 What do you like about your family?」含 family 关键词，与旧样章名唯一命中；4 道题为家庭成员词汇题。",
+      "question_overrides": []
+    },
+    {
+      "subject": "english",
+      "grade": 3,
+      "semester": "first",
+      "legacy": "Weather 天气",
+      "target": "Unit 7 What do we know about weather?",
+      "rule": "R-B",
+      "evidence": "g3 官方骨架 8 个单元中只有「Unit 7 What do we know about weather?」含 weather 关键词，与旧样章名唯一命中；4 道题均为天气词汇/句型题。",
+      "question_overrides": []
+    }
+  ],
+  "keep_marked": [
+    {
+      "subject": "chinese",
+      "grade": 1,
+      "semester": "first",
+      "name": "汉语拼音",
+      "reason": "g1 官方第二/三/四单元的章名都叫「汉语拼音」，旧样章只有裸名，无法唯一定位；4 道题横跨声母/单韵母（第二单元）与整体认读音节（第四单元）。",
+      "suggestion": "拆挂：声母、单韵母、声调 → 第二单元 汉语拼音；整体认读音节 → 第四单元 汉语拼音。",
+      "section_names": [
+        "汉语拼音"
+      ]
+    },
+    {
+      "subject": "chinese",
+      "grade": 1,
+      "semester": "first",
+      "name": "反义词与数量词",
+      "reason": "旧版语文知识专题，g1 官方 8 个单元里没有对应单元。",
+      "suggestion": "并入第一单元 识字（字词），或保留为跨单元专项练习。",
+      "section_names": [
+        "反义词与数量词"
+      ]
+    },
+    {
+      "subject": "chinese",
+      "grade": 2,
+      "semester": "first",
+      "name": "多音字",
+      "reason": "旧版字词专题，g2 官方 8 个单元里没有对应单元。",
+      "suggestion": "并入第二单元 识字，或保留为专项。",
+      "section_names": [
+        "多音字"
+      ]
+    },
+    {
+      "subject": "chinese",
+      "grade": 2,
+      "semester": "first",
+      "name": "量词与词语搭配",
+      "reason": "旧版字词专题，g2 官方 8 个单元里没有对应单元。",
+      "suggestion": "并入第二单元 识字，或保留为专项。",
+      "section_names": [
+        "量词与词语搭配"
+      ]
+    },
+    {
+      "subject": "chinese",
+      "grade": 2,
+      "semester": "first",
+      "name": "比喻句初步",
+      "reason": "旧版修辞专题，g2 官方单元全是阅读单元，没有修辞单元。",
+      "suggestion": "并入第三/第四单元 阅读 的语言理解，或保留为专项。",
+      "section_names": [
+        "比喻句初步"
+      ]
+    },
+    {
+      "subject": "chinese",
+      "grade": 3,
+      "semester": "first",
+      "name": "修改病句",
+      "reason": "旧版句子练习专题，g3 官方单元为主题单元，没有对应单元。",
+      "suggestion": "并入第三单元（需按单元主题确认），或保留为专项。",
+      "section_names": [
+        "修改病句"
+      ]
+    },
+    {
+      "subject": "chinese",
+      "grade": 3,
+      "semester": "first",
+      "name": "关联词",
+      "reason": "旧版句子练习专题，g3 官方单元为主题单元，没有对应单元。",
+      "suggestion": "并入第三单元（需按单元主题确认），或保留为专项。",
+      "section_names": [
+        "关联词"
+      ]
+    },
+    {
+      "subject": "chinese",
+      "grade": 3,
+      "semester": "first",
+      "name": "古诗文积累",
+      "reason": "旧版积累专题；g3 官方单元是主题单元，没有独立古诗文单元。",
+      "suggestion": "按课文逐课归入对应单元（需教研逐题判断），暂保留。",
+      "section_names": [
+        "古诗文积累"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 1,
+      "semester": "first",
+      "name": "Greetings 问候",
+      "reason": "旧版单元名；牛津深圳版 g1 没有独立 greetings 单元，greetings 散在 Unit 1 的板块里。",
+      "suggestion": "并入 Unit 1 What is your family like?（需确认板块归属）。",
+      "section_names": [
+        "Greetings 问候"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 1,
+      "semester": "first",
+      "name": "Numbers 1-10",
+      "reason": "g1 官方 6 个单元里没有数字主题单元。",
+      "suggestion": "并入 Unit 3 What do you take to school?（含数字问答），或保留为专项。",
+      "section_names": [
+        "Numbers 1-10"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 2,
+      "semester": "first",
+      "name": "Food 食物",
+      "reason": "g2 官方 6 个单元名里没有 food 关键词。",
+      "suggestion": "并入 Unit 5 What do you like about farms?（食物词汇所在）。",
+      "section_names": [
+        "Food 食物"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 2,
+      "semester": "first",
+      "name": "Numbers 11-20",
+      "reason": "g2 官方 6 个单元里没有数字主题单元。",
+      "suggestion": "并入 Unit 3 What is your favourite toy?（含数量表达），或保留为专项。",
+      "section_names": [
+        "Numbers 11-20"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 3,
+      "semester": "first",
+      "name": "My school 学校场所",
+      "reason": "g3 官方 8 个单元名里没有 school 关键词。",
+      "suggestion": "并入 Unit 4 What is around your home?（场所词汇）。",
+      "section_names": [
+        "My school 学校场所"
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 3,
+      "semester": "first",
+      "name": "现在进行时初步",
+      "reason": "语法专题名，不是教材单元名。",
+      "suggestion": "并入 Unit 1 How do we feel?（现在进行时语法点所在）。",
+      "section_names": [
+        "现在进行时初步"
+      ]
+    },
+    {
+      "subject": "geography",
+      "grade": 7,
+      "semester": "first",
+      "name": "第一章 地球和地图",
+      "reason": "湘教版旧版第一章名；新版第一章为「让我们走进地理」。5 道题（地球的形状与大小、经纬网、地图的阅读）落在新版第一章第二节「地球与地球仪」附近，但「经纬网」「地图的阅读」是否属该章需确认。",
+      "suggestion": "并入 第一章 让我们走进地理（需确认经纬网/地图的阅读的节归属）。",
+      "section_names": [
+        "地球与地图"
+      ]
+    },
+    {
+      "subject": "politics",
+      "grade": 7,
+      "semester": "first",
+      "name": "第一单元 成长的节拍",
+      "reason": "旧版单元名；新版第一单元为「少年有梦」。5 道题（中学时代、学习伴成长、认识自我）内容更贴近新版第二单元「成长的时空」，与第一单元不完全对应。",
+      "suggestion": "业务在「第一单元 少年有梦」与「第二单元 成长的时空」之间确认。",
+      "section_names": [
+        "成长的节拍"
+      ]
+    },
+    {
+      "subject": "math",
+      "grade": 1,
+      "semester": "first",
+      "name": "比较与位置",
+      "reason": "旧版单元名，g1 官方 6 章里没有同名的单元。",
+      "suggestion": "并入 第一单元 生活中的数（比多少、上下左右）。",
+      "section_names": [
+        "比较与位置"
+      ]
+    },
+    {
+      "subject": "math",
+      "grade": 1,
+      "semester": "first",
+      "name": "认识图形",
+      "reason": "旧版单元名，g1 官方 6 章里没有同名的单元。",
+      "suggestion": "并入 第五单元 有趣的立体图形（题目为球/正方体/易拉罐/长方体面数，均为立体图形）。",
+      "section_names": [
+        "认识图形"
+      ]
+    },
+    {
+      "subject": "math",
+      "grade": 2,
+      "semester": "first",
+      "name": "乘法口诀（2-5）",
+      "reason": "g2 官方有「第四单元 乘法口诀（一）」与「第七单元 乘法口诀（二）」两个乘法口诀单元，旧样章名自带「2-5」但官方骨架未展开到节，无法机械判定「一」对应 2~5 还是 6~9。",
+      "suggestion": "并入 第四单元 乘法口诀（一）——需确认教材中「乘法口诀（一）」覆盖 2~5。",
+      "section_names": [
+        "乘法口诀（2-5）"
+      ]
+    },
+    {
+      "subject": "math",
+      "grade": 2,
+      "semester": "first",
+      "name": "元角分",
+      "reason": "g2 官方 8 个单元里没有人民币单元。",
+      "suggestion": "并入 第三单元 数一数与乘法，或保留为专项。",
+      "section_names": [
+        "元角分"
+      ]
+    },
+    {
+      "subject": "math",
+      "grade": 3,
+      "semester": "first",
+      "name": "一位数乘多位数",
+      "reason": "北师大版三上目录没有笔算乘法单元（第六单元为「乘除法的应用（二）」）；22 道题是旧人教版口径。",
+      "suggestion": "改挂下册对应单元，或降级为跨年级专项练习。",
+      "section_names": [
+        "一位数乘多位数"
+      ]
+    },
+    {
+      "subject": "math",
+      "grade": 3,
+      "semester": "first",
+      "name": "周长",
+      "reason": "旧版节名，g3 官方只到单元级（大纲该章节列为「—」）。",
+      "suggestion": "并入 第二单元 测量（二）。",
+      "section_names": [
+        "周长"
+      ]
+    },
+    {
+      "subject": "math",
+      "grade": 3,
+      "semester": "first",
+      "name": "分数的初步认识",
+      "reason": "北师大版三上目录没有分数单元。",
+      "suggestion": "改挂下册对应单元，或保留为专项。",
+      "section_names": [
+        "分数的初步认识"
+      ]
+    },
+    {
+      "subject": "math",
+      "grade": 5,
+      "semester": "first",
+      "name": "小数除法",
+      "reason": "北师大版五上目录没有小数除法单元（在五下第四单元）；18 道题是旧教材口径。",
+      "suggestion": "改挂 math g5 下册第四单元 小数除法，或降级为跨年级专项练习。",
+      "section_names": [
+        "小数除法"
+      ]
+    }
+  ]
+}

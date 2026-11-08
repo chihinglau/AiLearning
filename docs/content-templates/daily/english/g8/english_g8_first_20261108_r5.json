@@ -1,0 +1,455 @@
+{
+  "subject": "english",
+  "grade": 8,
+  "version": "牛津深圳版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "Unit 4 Then and now / A Viewing and listening",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 4 Then and now / B Speaking",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 4 Then and now / C Reading & Grammar in use",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 4 Then and now / D Writing & Discovery",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 4 Then and now / E Project",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "Then and now 今昔对比词汇",
+      "parent": "Unit 4 Then and now / A Viewing and listening",
+      "order_index": 1,
+      "explanation": "本板块积累表示时间与变化的词：in the past、long ago、decades ago、nowadays、since、for、change、develop。听力材料常按「过去—现在」两段展开，听时要在心里给两段各画一条时间线。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Talking about change 变化口语表达",
+      "parent": "Unit 4 Then and now / B Speaking",
+      "order_index": 2,
+      "explanation": "本板块练口语讲变化：used to + 动词原形讲过去的习惯，nowadays、these days 讲现在，比较用 more...than、not as...as、the same as。口语中先说现在再说过去更自然。",
+      "prerequisites": ["Then and now 今昔对比词汇"],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Past and present 对比时态",
+      "parent": "Unit 4 Then and now / C Reading & Grammar in use",
+      "order_index": 3,
+      "explanation": "本板块在同一段材料里对比一般过去时与一般现在时：yesterday、ten years ago、in 2019 用过去时，nowadays、every day、today 用现在时。否定过去时借助 did，动词要回到原形。",
+      "prerequisites": ["Talking about change 变化口语表达"],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Story writing 变化叙事写作",
+      "parent": "Unit 4 Then and now / D Writing & Discovery",
+      "order_index": 4,
+      "explanation": "本板块写「过去与现在」的短文：按时间顺序写，用 at first、then、now、finally 把线索串起来；叙事用过去时，说现在的情况用现在时，两种时态切换要清楚。",
+      "prerequisites": ["Past and present 对比时态"],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Change project 变化主题项目",
+      "parent": "Unit 4 Then and now / E Project",
+      "order_index": 5,
+      "explanation": "本板块做「Then and Now」项目：采访长辈、收集老照片、把同一件事的过去与现在排成时间线，再做成墙报展示。采访要提前列好问题，展示会要分工。",
+      "prerequisites": ["Story writing 变化叙事写作"],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "Unit 4 Then and now",
+      "order_index": 4,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Which word means 'at the present time, these days'?",
+          "options": ["nowadays", "long ago", "already", "ever"],
+          "answer": { "value": "A" },
+          "analysis": "nowadays 意为「如今、现今」，所以选 A；long ago 表示很久以前，already 表示「已经」，ever 表示「曾经、究竟」，三个词都不表示现在。",
+          "difficulty": 1,
+          "knowledge_point": "Then and now 今昔对比词汇",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "Twenty years ago, people ______ (send) letters to keep in touch with their friends.",
+          "answer": { "value": "sent" },
+          "analysis": "twenty years ago 是过去时间，动词用过去式 sent，所以填 sent；写成 send 或 sends 都与时间状语冲突。",
+          "difficulty": 2,
+          "knowledge_point": "Then and now 今昔对比词汇",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "We usually use 'since' with a point of time and 'for' with a length of time.",
+          "answer": { "value": "T" },
+          "analysis": "since 接时间点，for 接一段时间，所以说法正确。做题时看到 since 后面是 2019、for 后面是 three years 就能立刻判断搭配是否正确。",
+          "difficulty": 2,
+          "knowledge_point": "Then and now 今昔对比词汇",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following describe life in the past?",
+          "options": [
+            "People wrote letters by hand.",
+            "People bought music in shops.",
+            "People washed their clothes by hand.",
+            "People used to send photos on the Internet."
+          ],
+          "answer": { "value": ["A", "B", "C"] },
+          "analysis": "A 手写书信是过去的生活 ✓；B 在商店买音乐是过去的方式 ✓；C 手洗衣服是过去常见的情形 ✓；D 用互联网传照片是现在的事，不属于过去 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Then and now 今昔对比词汇",
+          "tags": ["多选"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write three sentences in English about how your grandparents' life was different from yours. Use the past simple tense.",
+          "answer": { "value": "My grandmother went to school on foot when she was a girl. My grandfather did not have a mobile phone, and he wrote letters to his friends. Nowadays I take the metro to school and I send messages to my classmates every day." },
+          "analysis": "参考示例见答案。评分要点：①三句话都写清今昔的不同（2 分）；②讲过去的事用过去式，讲现在用现在式，时态切换正确（2 分）；③用上 used to、nowadays 等本单元表达（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 3,
+          "knowledge_point": "Then and now 今昔对比词汇",
+          "tags": ["写作"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which of the following sentences about the past is correct?",
+          "options": [
+            "My grandmother used to walk to school every day.",
+            "My grandmother used to walking to school every day.",
+            "My grandmother use to walk to school every day.",
+            "My grandmother used walk to school every day."
+          ],
+          "answer": { "value": "A" },
+          "analysis": "used to 表示过去的习惯，后面接动词原形，所以选 A；B 后面用了动名词；C 的 used 少了 to；D 少了 to 并且没有原形 walk。",
+          "difficulty": 2,
+          "knowledge_point": "Talking about change 变化口语表达",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which sentence compares the past with the present in a correct way?",
+          "options": [
+            "Life is different from what it used to be.",
+            "Life is different from what it use to be.",
+            "Life is different from what it used to being.",
+            "Life is different what it used to be."
+          ],
+          "answer": { "value": "A" },
+          "analysis": "what it used to be 是固定结构，意为「过去的样子」，所以选 A；B 少了 to；C 把 be 变成 being；D 少了介词 from，结构不完整。",
+          "difficulty": 2,
+          "knowledge_point": "Talking about change 变化口语表达",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "Ten years ago, people ______ (not use) mobile phones at all.",
+          "answer": { "value": ["did not use", "didn't use"] },
+          "analysis": "过去时的否定要用 did 加 not 再加动词原形，即 did not use（didn't use 也可）；写成 didn't used 或 didn't uses 都是错的，因为 did 之后动词必须回到原形。",
+          "difficulty": 3,
+          "knowledge_point": "Talking about change 变化口语表达",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「My grandpa often went to work by bus in the past」是用过去时描述过去经常发生的动作。",
+          "answer": { "value": "T" },
+          "analysis": "in the past 表明是过去的情况，went 用的是过去式，often 强调动作的经常性，所以说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "Talking about change 变化口语表达",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following expressions can be used to describe a change in time?",
+          "options": ["in the past", "nowadays", "a bit", "used to"],
+          "answer": { "value": ["A", "B", "D"] },
+          "analysis": "A in the past 指向过去 ✓；B nowadays 指向现在 ✓；C a bit 是程度副词，不表示时间变化 ✗；D used to 表示过去的习惯 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Talking about change 变化口语表达",
+          "tags": ["多选"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Your English teacher asks you to talk for one minute about how your city has changed in the last ten years. Write four or five sentences in English.",
+          "answer": { "value": "Ten years ago, most families in Shenzhen did not have a car. Now people take the metro every day, and the metro lines reach almost every corner of the city. My mother used to queue at the bus stop for half an hour, but now the bus card works with her phone. In my opinion, the city is much more convenient now than it used to be." },
+          "analysis": "参考示例见答案。评分要点：①四到五句，内容围绕城市变化（2 分）；②过去用过去时、现在用现在时，时态切换正确（2 分）；③用上 used to、nowadays、than 等表达（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Talking about change 变化口语表达",
+          "tags": ["写作", "情境应用"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which of the following sentences about last week is correct?",
+          "options": [
+            "We didn't have smartphones ten years ago.",
+            "We didn't had smartphones ten years ago.",
+            "We don't have smartphones ten years ago.",
+            "We didn't has smartphones ten years ago."
+          ],
+          "answer": { "value": "A" },
+          "analysis": "过去时的否定句要用 did not 加动词原形 have，所以选 A；B 在 did 之后用了过去式 had；C 的 don't 表示现在，与 ten years ago 不搭配；D 同样在 did 之后用了第三人称单数 has。",
+          "difficulty": 2,
+          "knowledge_point": "Past and present 对比时态",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "My sister ______ to Shenzhen Primary School in 2019, and she still studies there now.",
+          "options": ["came", "comes", "come", "is coming"],
+          "answer": { "value": "A" },
+          "analysis": "in 2019 表明是过去发生的事，用过去式 came，所以选 A；comes 是一般现在时，与 in 2019 不搭配；come 是原形；is coming 表示正在发生，与 now 无关。",
+          "difficulty": 2,
+          "knowledge_point": "Past and present 对比时态",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "Ten years ago, Shenzhen ______ (have) very few metro lines, but now the network is much larger.",
+          "answer": { "value": "had" },
+          "analysis": "ten years ago 是过去时间，have 的过去式是 had，所以填 had；写成 have 或 has 都表示现在，与句意不符。",
+          "difficulty": 3,
+          "knowledge_point": "Past and present 对比时态",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Time words like 'yesterday', 'in 2019' and 'last year' usually signal the past simple tense.",
+          "answer": { "value": "T" },
+          "analysis": "这些时间状语都指向过去，常与一般过去时连用，所以说法正确。读长句时先圈时间状语，就能大致定下该用哪个时态。",
+          "difficulty": 3,
+          "knowledge_point": "Past and present 对比时态",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following sentences use the past simple tense?",
+          "options": [
+            "The first metro line opened in 2004.",
+            "The metro runs every five minutes.",
+            "I took the metro to school yesterday.",
+            "My father works in a hospital."
+          ],
+          "answer": { "value": ["A", "C"] },
+          "analysis": "A in 2004 是过去时间，opened 是过去式 ✓；B every five minutes 表示现在的规律，用一般现在时 ✗；C yesterday 是过去时间，took 是过去式 ✓；D works 是一般现在时 ✗。故 A、C 成立，B、D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "Past and present 对比时态",
+          "tags": ["多选"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which is the best linker for the last step of a story?",
+          "options": ["finally", "because", "but", "so"],
+          "answer": { "value": "A" },
+          "analysis": "finally 表示最后一步，与故事的时间顺序吻合，所以选 A；because 表示原因，but 表示转折，so 表示结果，都不能表示顺序。",
+          "difficulty": 2,
+          "knowledge_point": "Story writing 变化叙事写作",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which sentence describes a change correctly?",
+          "options": [
+            "Before 2010, most families in Shenzhen did not have a car.",
+            "Before 2010, most families in Shenzhen didn't has a car.",
+            "Before 2010, most families in Shenzhen not have a car.",
+            "Before 2010, most families in Shenzhen don't have a car."
+          ],
+          "answer": { "value": "A" },
+          "analysis": "过去时的否定句用 did not 加动词原形 have，所以选 A；B 在 didn't 之后用了 has；C 少了助动词 did；D 的 don't 表示现在，与 Before 2010 不搭配。",
+          "difficulty": 2,
+          "knowledge_point": "Story writing 变化叙事写作",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "In the past, people ______ (write) letters to their friends. Now they send messages on the Internet.",
+          "answer": { "value": "wrote" },
+          "analysis": "in the past 表明是过去的事，write 的过去式是不规则形式 wrote，所以填 wrote；写成 writed 是把规则变化套错到不规则动词上。",
+          "difficulty": 3,
+          "knowledge_point": "Story writing 变化叙事写作",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "In a story about changes, we should put events in time order and use linkers like then, at first and finally.",
+          "answer": { "value": "T" },
+          "analysis": "写变化类短文要按时间顺序叙述，并用 then、at first、finally 等连接词让读者跟得上，所以说法正确。这类文章的采分点往往就是顺序词。",
+          "difficulty": 3,
+          "knowledge_point": "Story writing 变化叙事写作",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which linkers can show the order of time in a story?",
+          "options": ["at first", "then", "finally", "because"],
+          "answer": { "value": ["A", "B", "C"] },
+          "analysis": "A at first 表示最初 ✓；B then 表示接下来 ✓；C finally 表示最后 ✓；D because 表示原因，不表示时间先后 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Story writing 变化叙事写作",
+          "tags": ["多选"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write a short paragraph (about 60 words) in English about how the way people travel in Shenzhen has changed in the last ten years. Use at least three time linkers.",
+          "answer": { "value": "Ten years ago, most people in Shenzhen travelled by bus and car. At first, the traffic was heavy in the morning and many people were late for work. Then the metro lines were built one by one. Now people can take the metro to almost every corner of the city. Finally, people also use shared bikes for the last one or two kilometres, and the streets are much cleaner than before." },
+          "analysis": "参考示例见答案。评分要点：①写清过去与现在的不同，内容具体（2 分）；②至少用上三个时间顺序词（如 ten years ago、at first、then、now、finally）（2 分）；③时态切换正确（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Story writing 变化叙事写作",
+          "tags": ["写作", "情境应用"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Your group wants to find out how life has changed. What is the best first step?",
+          "options": [
+            "Decide what to ask and who to interview.",
+            "Write the poster first.",
+            "Take photos of old things.",
+            "Copy a poster from the Internet."
+          ],
+          "answer": { "value": "A" },
+          "analysis": "项目要先明确研究内容和采访对象，才能有针对性地收集材料，所以选 A；B 没材料就做海报；C 是收集材料中的一步，不是第一步；D 抄袭不可取。",
+          "difficulty": 2,
+          "knowledge_point": "Change project 变化主题项目",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "To show the change clearly, our group will make a ______ of important events in the past and today.",
+          "answer": { "value": "timeline" },
+          "analysis": "把过去和今天的重要事件按时间排成一条线，叫 timeline（时间线），所以填 timeline；写成 photograph 或 poster 都只是材料而不是排列方式。",
+          "difficulty": 2,
+          "knowledge_point": "Change project 变化主题项目",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "When your group interviews old people, you should write down their answers carefully.",
+          "answer": { "value": "T" },
+          "analysis": "访谈的第一手材料来自被访者的回答，认真记录才能保证项目内容真实，所以说法正确。采访时边听边记要点，是信息类任务的基本功。",
+          "difficulty": 3,
+          "knowledge_point": "Change project 变化主题项目",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following are good ideas for a 'Then and Now' project?",
+          "options": [
+            "Interview a grandparent.",
+            "Collect old photos from family members.",
+            "Compare the same thing in the past and now.",
+            "Only use pictures found on the Internet."
+          ],
+          "answer": { "value": ["A", "B", "C"] },
+          "analysis": "A 采访长辈能得到真实的第一手口述 ✓；B 收集老照片是典型的对比材料 ✓；C 就同一件事比较过去与现在才能看出变化 ✓；D 只用网络图片缺少本地真实材料 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Change project 变化主题项目",
+          "tags": ["多选"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Your group is making a 'Then and Now' wall poster for the school open day. Write a plan in English with four steps.",
+          "answer": { "value": "First, we will decide which three topics to show, such as transport, communication and school life. Then we will interview our grandparents and grandparents of our classmates and write down their stories. Third, we will collect old photos and put them on a timeline together with today's photos. Finally, we will design the poster, check the spelling and show it at the open day." },
+          "analysis": "参考示例见答案。评分要点：①四个步骤齐全、顺序合理（2 分）；②每一步写清做什么、谁来做（2 分）；③用上 first、then、third、finally 等顺序词（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Change project 变化主题项目",
+          "tags": ["写作", "情境应用"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

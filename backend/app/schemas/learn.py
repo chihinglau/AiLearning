@@ -308,3 +308,62 @@ class HomeOut(BaseModel):
     recommendation: HomeRecommendation
     pending_exams: list[dict[str, Any]] = []
 
+
+class QuestionBundleOut(BaseModel):
+    """离线整册下载题目：含答案与解析，供本地即时判分。"""
+
+    id: int
+    chapter_id: int
+    knowledge_point_id: Optional[int] = None
+    subject: str
+    q_type: str
+    content: dict[str, Any]
+    options: Optional[list[dict[str, Any]]] = None
+    answer: dict[str, Any]
+    analysis: Optional[str] = None
+    difficulty: int = 3
+    tags: Optional[list[str]] = None
+
+
+class BundleCountsOut(BaseModel):
+    units: int
+    knowledge_points: int
+    questions: int
+
+
+class TextbookBundleOut(BaseModel):
+    textbook: dict[str, Any]
+    units: list[UnitOut] = []
+    unit_details: dict[str, UnitDetailOut] = {}
+    kp_details: dict[str, KpDetailOut] = {}
+    questions: list[QuestionBundleOut] = []
+    counts: BundleCountsOut
+    pack_version: str
+    generated_at: datetime
+
+
+class OfflineAttemptItemIn(BaseModel):
+    client_key: str = Field(min_length=1, max_length=64)
+    question_id: int
+    user_answer: dict[str, Any]
+    duration_ms: int = Field(default=0, ge=0)
+    answered_at: Optional[datetime] = None
+    source: str = Field(default="practice", pattern=r"^(practice|review|exam)$")
+
+
+class OfflineAttemptsIn(BaseModel):
+    items: list[OfflineAttemptItemIn] = Field(default_factory=list, max_length=200)
+
+
+class OfflineAttemptOut(BaseModel):
+    client_key: str
+    is_correct: Optional[bool] = None
+    correct_answer: Optional[dict[str, Any]] = None
+    analysis: Optional[str] = None
+    mastery_score: Optional[float] = None
+    skipped: bool = False
+
+
+class OfflineAttemptsOut(BaseModel):
+    results: list[OfflineAttemptOut] = []
+

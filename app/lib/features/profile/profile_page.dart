@@ -4,6 +4,9 @@ import 'package:ai_learning/core/models/learn.dart';
 import 'package:ai_learning/core/models/user.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
+import 'package:ai_learning/core/theme/app_accents.dart';
+import 'package:ai_learning/features/learn/widgets/offline_banner.dart';
+import 'package:ai_learning/widgets/accent_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -18,6 +21,7 @@ class ProfilePage extends ConsumerStatefulWidget {
 class _ProfilePageState extends ConsumerState<ProfilePage> {
   LearnStats? _stats;
   bool _loading = true;
+  bool _offline = false;
   String? _error;
 
   @override
@@ -45,12 +49,24 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
       if (!mounted) return;
       setState(() {
         _stats = stats;
+        _offline = false;
         _loading = false;
       });
     } on ApiException catch (error) {
       if (!mounted) return;
+      // 断网时回退到最近一次同步的学情统计。
+      final cached = error.statusCode == null
+          ? await ref.read(offlineLearnServiceProvider).cachedStats()
+          : null;
+      if (!mounted) return;
       setState(() {
-        _error = ApiErrorGuide.from(error).message;
+        if (cached != null) {
+          _stats = cached;
+          _offline = true;
+          _error = null;
+        } else {
+          _error = ApiErrorGuide.from(error).message;
+        }
         _loading = false;
       });
     }
@@ -111,7 +127,11 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                           CircleAvatar(
                             radius: 28,
                             backgroundColor: theme.colorScheme.primary,
-                            child: const Icon(Icons.person, color: Colors.white, size: 32),
+                            child: const Icon(
+                              Icons.person,
+                              color: Colors.white,
+                              size: 32,
+                            ),
                           ),
                           const SizedBox(width: 16),
                           Expanded(
@@ -126,12 +146,15 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                                 Text(
                                   user?.isStudent == true
                                       ? (user?.grade != null
-                                          ? '${user!.grade} 年级在读'
-                                          : '深圳学生')
+                                            ? '${user!.grade} 年级在读'
+                                            : '深圳学生')
                                       : _roleLabel(user?.role),
                                   style: theme.textTheme.bodySmall,
                                 ),
-                                Text(user?.phone ?? '', style: theme.textTheme.bodySmall),
+                                Text(
+                                  user?.phone ?? '',
+                                  style: theme.textTheme.bodySmall,
+                                ),
                               ],
                             ),
                           ),
@@ -140,8 +163,13 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                     ),
                   ),
                   const SizedBox(height: 16),
+                  if (_offline)
+                    const OfflineBanner(message: '离线模式，显示最近一次同步的学情统计'),
                   if (_error != null)
-                    Text(_error!, style: TextStyle(color: theme.colorScheme.error)),
+                    Text(
+                      _error!,
+                      style: TextStyle(color: theme.colorScheme.error),
+                    ),
                   if (_stats != null) ...[
                     Row(
                       children: [
@@ -149,13 +177,13 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                           icon: Icons.local_fire_department_outlined,
                           value: '${_stats!.streakDays}',
                           label: '连续学习(天)',
-                          color: Colors.deepOrange,
+                          color: AppAccents.of(context).exam,
                         ),
                         _StatCard(
                           icon: Icons.edit_note,
                           value: '${_stats!.totalAnswered}',
                           label: '累计答题',
-                          color: Colors.blue,
+                          color: AppAccents.of(context).practice,
                         ),
                       ],
                     ),
@@ -165,13 +193,13 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                           icon: Icons.verified_outlined,
                           value: _stats!.accuracyPercent,
                           label: '总正确率',
-                          color: Colors.green,
+                          color: AppAccents.of(context).learn,
                         ),
                         _StatCard(
                           icon: Icons.bookmark_border,
                           value: '${_stats!.activeWrongCount}',
                           label: '待消灭错题',
-                          color: Colors.redAccent,
+                          color: AppAccents.of(context).assignment,
                         ),
                       ],
                     ),
@@ -179,22 +207,28 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                     Text('薄弱知识点 Top3', style: theme.textTheme.titleMedium),
                     const SizedBox(height: 8),
                     if (_stats!.weakPoints.isEmpty)
-                      Card(
-                        child: Padding(
-                          padding: const EdgeInsets.all(16),
-                          child: Text(
-                            _stats!.totalAnswered == 0
-                                ? '还没有答题记录，去「学习」里练一练吧。'
-                                : '掌握度都在 70 分以上，暂无薄弱知识点，继续保持！',
-                            style: theme.textTheme.bodyMedium,
-                          ),
+                      AccentCard(
+                        accent: AppAccents.of(context).learn,
+                        padding: const EdgeInsets.all(16),
+                        child: Text(
+                          _stats!.totalAnswered == 0
+                              ? '还没有答题记录，去「学习」里练一练吧。'
+                              : '掌握度都在 70 分以上，暂无薄弱知识点，继续保持！',
+                          style: theme.textTheme.bodyMedium,
                         ),
                       )
                     else
                       ..._stats!.weakPoints.map(
-                        (node) => Card(
+                        (node) => AccentCard(
+                          accent: node.bandColor,
+                          margin: const EdgeInsets.only(bottom: 8),
+                          padding: EdgeInsets.zero,
                           child: ListTile(
-                            leading: Icon(Icons.circle, size: 12, color: node.bandColor),
+                            leading: Icon(
+                              Icons.circle,
+                              size: 12,
+                              color: node.bandColor,
+                            ),
                             title: Text('${node.subjectLabel} · ${node.name}'),
                             subtitle: Text(
                               node.explanation ?? '',
@@ -203,8 +237,9 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                             ),
                             trailing: Text(
                               '${node.masteryScore.round()}',
-                              style: theme.textTheme.titleMedium
-                                  ?.copyWith(color: node.bandColor),
+                              style: theme.textTheme.titleMedium?.copyWith(
+                                color: node.bandColor,
+                              ),
                             ),
                           ),
                         ),
@@ -212,7 +247,25 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                   ],
                   const SizedBox(height: 24),
                   if (user?.isStudent == true) ...[
-                    Card(
+                    AccentCard(
+                      accent: AppAccents.of(context).practice,
+                      padding: EdgeInsets.zero,
+                      child: ListTile(
+                        leading: const Icon(Icons.school_outlined),
+                        title: const Text('年级设置'),
+                        subtitle: Text(
+                          user?.grade != null
+                              ? '当前 ${user!.grade} 年级 · 每学期可修改 1 次'
+                              : '设置当前年级',
+                        ),
+                        trailing: const Icon(Icons.chevron_right),
+                        onTap: () => context.push('/onboarding?edit=1'),
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    AccentCard(
+                      accent: AppAccents.of(context).learn,
+                      padding: EdgeInsets.zero,
                       child: ListTile(
                         leading: const Icon(Icons.menu_book_outlined),
                         title: const Text('教材管理'),
@@ -223,8 +276,11 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                     ),
                     const SizedBox(height: 16),
                   ],
-                  if (user?.hasPermission('learn:stats:child:read') == true) ...[
-                    Card(
+                  if (user?.hasPermission('learn:stats:child:read') ==
+                      true) ...[
+                    AccentCard(
+                      accent: AppAccents.of(context).assignment,
+                      padding: EdgeInsets.zero,
                       child: ListTile(
                         leading: const Icon(Icons.family_restroom),
                         title: const Text('家长中心'),
@@ -235,8 +291,11 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                     ),
                     const SizedBox(height: 16),
                   ],
-                  if (user?.hasPermission('learn:stats:class:read') == true) ...[
-                    Card(
+                  if (user?.hasPermission('learn:stats:class:read') ==
+                      true) ...[
+                    AccentCard(
+                      accent: AppAccents.of(context).practice,
+                      padding: EdgeInsets.zero,
                       child: ListTile(
                         leading: const Icon(Icons.co_present_outlined),
                         title: const Text('教师中心'),
@@ -247,8 +306,11 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                     ),
                     const SizedBox(height: 16),
                   ],
-                  if (user?.hasPermission('learn:assignment:create') == true) ...[
-                    Card(
+                  if (user?.hasPermission('learn:assignment:create') ==
+                      true) ...[
+                    AccentCard(
+                      accent: AppAccents.of(context).exam,
+                      padding: EdgeInsets.zero,
                       child: ListTile(
                         leading: const Icon(Icons.edit_document),
                         title: const Text('班级作业'),
@@ -260,7 +322,9 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                     const SizedBox(height: 16),
                   ],
                   if (_canReviewContent(user)) ...[
-                    Card(
+                    AccentCard(
+                      accent: AppAccents.of(context).assignment,
+                      padding: EdgeInsets.zero,
                       child: ListTile(
                         leading: const Icon(Icons.fact_check_outlined),
                         title: const Text('内容审核'),
@@ -272,9 +336,13 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                     const SizedBox(height: 16),
                   ],
                   if (user?.hasPermission('system:config:write') == true) ...[
-                    Card(
+                    AccentCard(
+                      accent: AppAccents.of(context).practice,
+                      padding: EdgeInsets.zero,
                       child: ListTile(
-                        leading: const Icon(Icons.admin_panel_settings_outlined),
+                        leading: const Icon(
+                          Icons.admin_panel_settings_outlined,
+                        ),
                         title: const Text('权限配置'),
                         subtitle: const Text('按角色查看与调整权限点（超级管理员）'),
                         trailing: const Icon(Icons.chevron_right),
@@ -285,7 +353,9 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                   ],
                   const SizedBox(height: 16),
                   // R-04：账号与安全（时长状态、数据导出、账号注销）。
-                  Card(
+                  AccentCard(
+                    accent: AppAccents.of(context).exam,
+                    padding: EdgeInsets.zero,
                     child: ListTile(
                       leading: const Icon(Icons.security_outlined),
                       title: const Text('账号与安全'),
@@ -403,17 +473,21 @@ class _StatCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return Expanded(
-      child: Card(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
-          child: Column(
-            children: [
-              Icon(icon, color: color),
-              const SizedBox(height: 6),
-              Text(value, style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
-              Text(label, style: theme.textTheme.labelSmall),
-            ],
-          ),
+      child: AccentCard(
+        accent: color,
+        padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
+        child: Column(
+          children: [
+            Icon(icon, color: color),
+            const SizedBox(height: 6),
+            Text(
+              value,
+              style: theme.textTheme.titleLarge?.copyWith(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Text(label, style: theme.textTheme.labelSmall),
+          ],
         ),
       ),
     );

@@ -1,0 +1,308 @@
+{
+  "subject": "english",
+  "grade": 6,
+  "version": "牛津深圳版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "Unit 1 Why do people move to new places?",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "Moving reasons 搬迁原因词",
+      "parent": "Unit 1 Why do people move to new places?",
+      "order_index": 1,
+      "explanation": "for a better job、for their children's study、to be near family、because of the weather，这些短语是课文归纳的主要搬迁原因。",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "Why did 过去时问答",
+      "parent": "Unit 1 Why do people move to new places?",
+      "order_index": 2,
+      "explanation": "描述已发生的搬迁用一般过去时：Why did they move here? They moved here last year. did 后动词用原形。",
+      "prerequisites": [
+        "Moving reasons 搬迁原因词"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "because 与 so 连接因果",
+      "parent": "Unit 1 Why do people move to new places?",
+      "order_index": 3,
+      "explanation": "because 表原因（后接句子），so 表结果；同一句中 because 与 so 不能同时使用。",
+      "prerequisites": [
+        "Why did 过去时问答"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "move to 与 move in",
+      "parent": "Unit 1 Why do people move to new places?",
+      "order_index": 4,
+      "explanation": "move to + 城市/国家表示搬到某地；move in 表示搬进某处（move in next week）。不要写成 move in Shenzhen。",
+      "prerequisites": [
+        "because 与 so 连接因果"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "Unit 1 Why do people move to new places?",
+      "order_index": 1,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「搬到一个新城市」的英文是（  ）",
+          "options": [
+            "move to a new city",
+            "move in a new city",
+            "move a new city",
+            "move at a new city"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "搬到某地用 move to；move in 表示搬进某处，move 后缺介词，move at 搭配错误。",
+          "difficulty": 1,
+          "knowledge_point": "move to 与 move in"
+        },
+        {
+          "q_type": "choice",
+          "stem": "— Why did they move here? — （  ） they wanted a better job.",
+          "options": [
+            "Because",
+            "So",
+            "But",
+            "Or"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "回答 Why 用 Because 引出原因；So 表结果，But 表转折，Or 表选择。",
+          "difficulty": 1,
+          "knowledge_point": "because 与 so 连接因果"
+        },
+        {
+          "q_type": "fill",
+          "stem": "They （  ） （move） to Shenzhen two years ago.",
+          "answer": {
+            "value": "moved"
+          },
+          "analysis": "two years ago 是过去时间标志，move 用过去式 moved；写 move 则时态不符。",
+          "difficulty": 2,
+          "knowledge_point": "Why did 过去时问答"
+        },
+        {
+          "q_type": "judge",
+          "stem": "同一句话里 because 和 so 不能同时使用。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "汉语说「因为……所以……」，英语只保留一个连词：Because he was ill, he stayed home. 或 He was ill, so he stayed home.，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "because 与 so 连接因果"
+        },
+        {
+          "q_type": "choice",
+          "stem": "— （  ） did your family move to this city? — For a better job.",
+          "options": [
+            "Why",
+            "When",
+            "Where",
+            "Who"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "答语说明原因，所以问句用 Why；When 问时间，Where 问地点，Who 问人。",
+          "difficulty": 1,
+          "knowledge_point": "Why did 过去时问答"
+        },
+        {
+          "q_type": "fill",
+          "stem": "— Why （  ） he move to Beijing? — Because his father found a job there.",
+          "answer": {
+            "value": "did"
+          },
+          "analysis": "一般过去时的特殊疑问句用 did + 主语 + 动词原形，所以填 did；填 does 则时态变成现在时。",
+          "difficulty": 3,
+          "knowledge_point": "Why did 过去时问答"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列属于人们搬家的常见原因的有（  ）",
+          "options": [
+            "for a better job",
+            "for their children's study",
+            "to be near family",
+            "to forget how to read"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 为了更好的工作 ✓；B 为了孩子上学 ✓；C 为了离家人近 ✓；D「为了忘记怎么读书」不合常理 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Moving reasons 搬迁原因词",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "They moved here last year. 表示他们去年搬到这里，是过去发生的事。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "last year 是过去时间，动词用 moved，句子描述过去发生的事，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "Why did 过去时问答"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面哪句正确？（  ）",
+          "options": [
+            "Because it was quiet, they moved to the countryside.",
+            "Because it was quiet, so they moved to the countryside.",
+            "It was quiet because so they moved.",
+            "They moved because so it was quiet."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "A 只用 because，正确；B 同时用 because 和 so 重复；C、D 语序与搭配都错误。",
+          "difficulty": 3,
+          "knowledge_point": "because 与 so 连接因果"
+        },
+        {
+          "q_type": "fill",
+          "stem": "We will （  ） （move） into our new flat next Monday.",
+          "answer": {
+            "value": "move"
+          },
+          "analysis": "next Monday 表示将来，will 后接动词原形 move；move in 表示搬进，与 into 连用也常见。",
+          "difficulty": 3,
+          "knowledge_point": "move to 与 move in"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于一般过去时的特殊疑问句，说法正确的有（  ）",
+          "options": [
+            "用 did 构成疑问",
+            "did 后面的动词用原形",
+            "主语是 he 时用 does",
+            "时间状语常用 last year、two years ago"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 过去时疑问用 did ✓；B did 后动词还原 ✓；C 过去时不论主语人称都用 did，不用 does ✗；D 过去时间状语常见 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "Why did 过去时问答",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "move in Shenzhen 是正确的表达。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "搬到某城市用 move to Shenzhen；move in 后面不接城市，应说 move in（搬进某处）。",
+          "difficulty": 3,
+          "knowledge_point": "move to 与 move in"
+        },
+        {
+          "q_type": "choice",
+          "stem": "— Why do people move to big cities? — （  ） there are more jobs.",
+          "options": [
+            "Because",
+            "So",
+            "Although",
+            "If"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "答语解释原因，用 Because；So 表结果，Although 表让步，If 表条件。",
+          "difficulty": 2,
+          "knowledge_point": "because 与 so 连接因果"
+        },
+        {
+          "q_type": "fill",
+          "stem": "His family （  ） （move） to a small town because the air there is clean.",
+          "answer": {
+            "value": "moved"
+          },
+          "analysis": "句中说明已发生的搬迁，用过去式 moved；写 moves 则时态为现在时，与语境不符。",
+          "difficulty": 3,
+          "knowledge_point": "Why did 过去时问答"
+        },
+        {
+          "q_type": "judge",
+          "stem": "so 后面接的是原因，because 后面接的是结果。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "说反了：because 后面接原因，so 后面接结果，所以原句错误。",
+          "difficulty": 3,
+          "knowledge_point": "because 与 so 连接因果"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用英语写两句话，说明一个家庭搬家的原因和结果，要求用上 because 或 so。",
+          "answer": {
+            "value": "The family moved to Shenzhen because the father found a better job there. So the children went to a new school."
+          },
+          "analysis": "参考示例见答案。评分要点：①写出原因（1 分）；②写出结果（1 分）；③because 或 so 使用正确、不同时出现（2 分）；④时态用过去式（1 分）；⑤大小写与标点（1 分）。同句 both because and so 不得分。",
+          "difficulty": 4,
+          "knowledge_point": "because 与 so 连接因果",
+          "tags": [
+            "写作"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "把对话补全并译成中文：A: （  ） did your family move here? B: We moved here （  ） my mother got a new job.",
+          "answer": {
+            "value": "Why；because。译文：A：你们家为什么搬到这里？B：我们搬到这里，因为我妈妈找到了新工作。"
+          },
+          "analysis": "参考答案：第一空 Why（问原因）；第二空 because（引出原因）。译文见答案。评分要点：①两空正确（2 分）；②译文准确（2 分）；③大小写与标点（1 分）。第二空填 so 则因果颠倒。",
+          "difficulty": 5,
+          "knowledge_point": "Why did 过去时问答",
+          "tags": [
+            "补全对话",
+            "翻译"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「他们三年前搬到了上海」的英文是（  ）",
+          "options": [
+            "They moved to Shanghai three years ago.",
+            "They move to Shanghai three years ago.",
+            "They moved in Shanghai three years ago.",
+            "They are moving to Shanghai three years ago."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "three years ago 要求过去式 moved to，A 正确；B 时态错，C 介词错（应用 to），D 现在进行时与过去时间矛盾。",
+          "difficulty": 4,
+          "knowledge_point": "move to 与 move in"
+        }
+      ]
+    }
+  ]
+}

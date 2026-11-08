@@ -3,6 +3,8 @@ import 'package:ai_learning/core/models/family.dart';
 import 'package:ai_learning/core/models/learn.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
+import 'package:ai_learning/core/theme/app_accents.dart';
+import 'package:ai_learning/widgets/accent_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -25,8 +27,9 @@ class _ParentChildrenPageState extends ConsumerState<ParentChildrenPage> {
   int _dailyLimit = 120;
   bool _teenMode = false;
 
-  FamilyChild? get _child =>
-      _children.isEmpty ? null : _children[_selected.clamp(0, _children.length - 1)];
+  FamilyChild? get _child => _children.isEmpty
+      ? null
+      : _children[_selected.clamp(0, _children.length - 1)];
 
   @override
   void initState() {
@@ -104,7 +107,9 @@ class _ParentChildrenPageState extends ConsumerState<ParentChildrenPage> {
       _error = null;
     });
     try {
-      final updated = await ref.read(familyServiceProvider).updateControls(
+      final updated = await ref
+          .read(familyServiceProvider)
+          .updateControls(
             child.id,
             dailyLimitMinutes: _dailyLimit,
             teenMode: _teenMode,
@@ -114,9 +119,9 @@ class _ParentChildrenPageState extends ConsumerState<ParentChildrenPage> {
         _children[_selected] = updated;
         _saving = false;
       });
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('已保存家长设置')),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(const SnackBar(content: Text('已保存家长设置')));
     } on ApiException catch (error) {
       if (!mounted) return;
       setState(() {
@@ -129,13 +134,15 @@ class _ParentChildrenPageState extends ConsumerState<ParentChildrenPage> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final accents = AppAccents.of(context);
     final child = _child;
     return Scaffold(
       appBar: AppBar(
         title: const Text('家长中心'),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
-          onPressed: () => context.canPop() ? context.pop() : context.go('/shell'),
+          onPressed: () =>
+              context.canPop() ? context.pop() : context.go('/shell'),
         ),
       ),
       body: RefreshIndicator(
@@ -179,38 +186,44 @@ class _ParentChildrenPageState extends ConsumerState<ParentChildrenPage> {
               const SizedBox(height: 12),
             ],
             if (child != null) ...[
-              Card(
-                color: theme.colorScheme.primaryContainer,
-                child: Padding(
-                  padding: const EdgeInsets.all(16),
-                  child: Row(
-                    children: [
-                      CircleAvatar(
-                        radius: 24,
-                        backgroundColor: theme.colorScheme.primary,
-                        child: const Icon(Icons.child_care, color: Colors.white),
+              AccentCard(
+                accent: accents.learn,
+                padding: const EdgeInsets.all(16),
+                child: Row(
+                  children: [
+                    CircleAvatar(
+                      radius: 24,
+                      backgroundColor: theme.colorScheme.primary,
+                      child: const Icon(Icons.child_care, color: Colors.white),
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            child.nickname,
+                            style: theme.textTheme.titleMedium,
+                          ),
+                          const SizedBox(height: 2),
+                          Text(
+                            child.gradeLabel,
+                            style: theme.textTheme.bodySmall,
+                          ),
+                        ],
                       ),
-                      const SizedBox(width: 12),
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(child.nickname, style: theme.textTheme.titleMedium),
-                            const SizedBox(height: 2),
-                            Text(child.gradeLabel, style: theme.textTheme.bodySmall),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
               const SizedBox(height: 12),
               if (_loading)
-                const Center(child: Padding(
-                  padding: EdgeInsets.all(24),
-                  child: CircularProgressIndicator(),
-                ))
+                const Center(
+                  child: Padding(
+                    padding: EdgeInsets.all(24),
+                    child: CircularProgressIndicator(),
+                  ),
+                )
               else if (_stats != null) ...[
                 Row(
                   children: [
@@ -218,13 +231,13 @@ class _ParentChildrenPageState extends ConsumerState<ParentChildrenPage> {
                       icon: Icons.local_fire_department_outlined,
                       value: '${_stats!.streakDays}',
                       label: '连续学习(天)',
-                      color: Colors.deepOrange,
+                      accent: accents.exam,
                     ),
                     _StatCard(
                       icon: Icons.edit_note,
                       value: '${_stats!.totalAnswered}',
                       label: '累计答题',
-                      color: Colors.blue,
+                      accent: accents.practice,
                     ),
                   ],
                 ),
@@ -234,13 +247,13 @@ class _ParentChildrenPageState extends ConsumerState<ParentChildrenPage> {
                       icon: Icons.verified_outlined,
                       value: _stats!.accuracyPercent,
                       label: '正确率',
-                      color: Colors.green,
+                      accent: accents.learn,
                     ),
                     _StatCard(
                       icon: Icons.bookmark_border,
                       value: '${_stats!.activeWrongCount}',
                       label: '待消灭错题',
-                      color: Colors.redAccent,
+                      accent: accents.assignment,
                     ),
                   ],
                 ),
@@ -255,8 +268,12 @@ class _ParentChildrenPageState extends ConsumerState<ParentChildrenPage> {
                     ),
                   )
                 else
-                  ..._stats!.weakPoints.take(3).map(
-                        (node) => Card(
+                  ..._stats!.weakPoints
+                      .take(3)
+                      .map(
+                        (node) => AccentCard(
+                          accent: node.bandColor,
+                          margin: const EdgeInsets.only(bottom: 12),
                           child: ListTile(
                             leading: Icon(
                               Icons.circle,
@@ -291,8 +308,8 @@ class _ParentChildrenPageState extends ConsumerState<ParentChildrenPage> {
                         onChanged: _saving
                             ? null
                             : (value) => setState(
-                                  () => _dailyLimit = (value / 30).round() * 30,
-                                ),
+                                () => _dailyLimit = (value / 30).round() * 30,
+                              ),
                       ),
                       SwitchListTile(
                         contentPadding: EdgeInsets.zero,
@@ -312,7 +329,9 @@ class _ParentChildrenPageState extends ConsumerState<ParentChildrenPage> {
                               ? const SizedBox(
                                   width: 16,
                                   height: 16,
-                                  child: CircularProgressIndicator(strokeWidth: 2),
+                                  child: CircularProgressIndicator(
+                                    strokeWidth: 2,
+                                  ),
                                 )
                               : const Icon(Icons.save_outlined),
                           label: const Text('保存设置'),
@@ -335,33 +354,34 @@ class _StatCard extends StatelessWidget {
     required this.icon,
     required this.value,
     required this.label,
-    required this.color,
+    required this.accent,
   });
 
   final IconData icon;
   final String value;
   final String label;
-  final Color color;
+  final Color accent;
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return Expanded(
-      child: Card(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
-          child: Column(
-            children: [
-              Icon(icon, color: color),
-              const SizedBox(height: 6),
-              Text(
-                value,
-                style: theme.textTheme.titleLarge
-                    ?.copyWith(fontWeight: FontWeight.bold),
+      child: AccentCard(
+        accent: accent,
+        margin: const EdgeInsets.all(4),
+        padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
+        child: Column(
+          children: [
+            Icon(icon, color: accent),
+            const SizedBox(height: 6),
+            Text(
+              value,
+              style: theme.textTheme.titleLarge?.copyWith(
+                fontWeight: FontWeight.bold,
               ),
-              Text(label, style: theme.textTheme.labelSmall),
-            ],
-          ),
+            ),
+            Text(label, style: theme.textTheme.labelSmall),
+          ],
         ),
       ),
     );

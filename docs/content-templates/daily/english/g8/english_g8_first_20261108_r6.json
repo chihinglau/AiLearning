@@ -1,0 +1,465 @@
+{
+  "subject": "english",
+  "grade": 8,
+  "version": "牛津深圳版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "Unit 5 Teamwork / A Viewing and listening",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 5 Teamwork / B Speaking",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 5 Teamwork / C Reading & Grammar in use",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 5 Teamwork / D Writing & Discovery",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 5 Teamwork / E Project",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "Teamwork words 团队合作词汇",
+      "parent": "Unit 5 Teamwork / A Viewing and listening",
+      "order_index": 1,
+      "explanation": "本板块积累合作类词汇：team、member、share、cooperate、effort、duty、support、encourage。看听说材料时要抓住「谁做了什么、遇到困难怎么办」两条线索，而不是记住孤立单词。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Making suggestions 建议句型",
+      "parent": "Unit 5 Teamwork / B Speaking",
+      "order_index": 2,
+      "explanation": "本板块学提建议的三种句型：Why don't we + 动词原形？、Let's + 动词原形、How about + 动名词？另外 Shall we...? 也可以。句型后面一个接动词原形，一个接动名词，不能混用。",
+      "prerequisites": ["Teamwork words 团队合作词汇"],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Linking words 连接词运用",
+      "parent": "Unit 5 Teamwork / C Reading & Grammar in use",
+      "order_index": 3,
+      "explanation": "本板块梳理连接词：because 与 so 表因果，but 与 however 表转折，although 表让步。读长句时先找连接词就能看出分句关系；写句子时 although 和 but 不能同时出现在一句里。",
+      "prerequisites": ["Making suggestions 建议句型"],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Writing a proposal 方案写作",
+      "parent": "Unit 5 Teamwork / D Writing & Discovery",
+      "order_index": 4,
+      "explanation": "本板块写申请与方案：开头点明目的（We are writing to...），主体写目标、步骤和理由，结尾提出明确请求。理由用 because 支撑，请求要具体可执行，不能只说「请帮帮忙」。",
+      "prerequisites": ["Linking words 连接词运用"],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Team project 小组协作项目",
+      "parent": "Unit 5 Teamwork / E Project",
+      "order_index": 5,
+      "explanation": "本板块做小组协作项目：定目标、分工、定进度，中途出问题时先沟通再调整分工，结束后开短会总结优点与不足。评价项目时看的是配合过程，不只是最后的结果。",
+      "prerequisites": ["Writing a proposal 方案写作"],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "Unit 5 Teamwork",
+      "order_index": 5,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "What should a team member do when the work is too much for one person?",
+          "options": [
+            "He or she shares the work with the other members.",
+            "He or she waits for the teacher to do it.",
+            "He or she keeps the work to himself or herself.",
+            "He or she gives up the work at once."
+          ],
+          "answer": { "value": "A" },
+          "analysis": "团队的意义就在于分担任务，所以选 A；B 等老师不是合作的态度；C 独自扛下全部任务会让其他人失去参与；D 轻易放弃同样违背合作精神。",
+          "difficulty": 1,
+          "knowledge_point": "Teamwork words 团队合作词汇",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "In a team, each member must take part in the work and ______ (share) the duties with others.",
+          "answer": { "value": "share" },
+          "analysis": "括号里给出动词原形，句子用情态动词 must，后面要接动词原形，所以填 share；写成 shares 或 shared 都会破坏 must + 原形的结构。",
+          "difficulty": 2,
+          "knowledge_point": "Teamwork words 团队合作词汇",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "A good team member can say 'Sorry, I can't finish this today' when he or she has to deal with another job.",
+          "answer": { "value": "T" },
+          "analysis": "及时说明自己无法按时完成，反而方便组员重新安排分工，是负责任的做法，所以说法正确。隐瞒进度才会真正拖慢整个团队。",
+          "difficulty": 2,
+          "knowledge_point": "Teamwork words 团队合作词汇",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following show team spirit?",
+          "options": [
+            "Helping a member who is behind.",
+            "Sharing your notes with the group.",
+            "Doing all the work yourself.",
+            "Encouraging a shy member to speak."
+          ],
+          "answer": { "value": ["A", "B", "D"] },
+          "analysis": "A 帮落后的成员是合作的表现 ✓；B 分享笔记让全组受益 ✓；C 全部自己做既让同伴闲着也让自己过载 ✗；D 鼓励腼腆的成员开口是团队精神 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Teamwork words 团队合作词汇",
+          "tags": ["多选"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write a short paragraph (about 50 words) in English about a time when you worked with your classmates on a group task. Say what the group did and what you learned.",
+          "answer": { "value": "Last term our group made a poster about water saving for the school open day. We divided the work into four parts, and I was in charge of collecting the pictures. One member was ill that week, so we shared her work as well. I learned that a good team is not only about working hard, but also about talking to each other." },
+          "analysis": "参考示例见答案。评分要点：①内容具体，写清小组做了什么、自己负责什么（2 分）；②用上 share、divide、in charge of 等合作词汇（2 分）；③有一句写学到的道理（1 分）；④时态与标点正确（1 分）。",
+          "difficulty": 3,
+          "knowledge_point": "Teamwork words 团队合作词汇",
+          "tags": ["写作"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which sentence is the best way to make a suggestion to your group?",
+          "options": [
+            "Why don't we divide the work into three parts?",
+            "You must divide the work into three parts.",
+            "Divide the work into three parts, please.",
+            "Did you divide the work into three parts?"
+          ],
+          "answer": { "value": "A" },
+          "analysis": "Why don't we...? 是英语中最常用、最礼貌的提建议句型，后面接动词原形，所以选 A；B 用了 must 变成命令；C 是祈使句，显得生硬；D 是疑问句，根本没有提建议。",
+          "difficulty": 2,
+          "knowledge_point": "Making suggestions 建议句型",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which of the following sentences about making a suggestion is correct?",
+          "options": [
+            "How about meeting at 3 p.m.?",
+            "How about to meeting at 3 p.m.?",
+            "How about we meeting at 3 p.m.?",
+            "How about meeting on 3 p.m.?"
+          ],
+          "answer": { "value": "A" },
+          "analysis": "How about 后面接动名词 meeting，所以选 A；B 中 to 后面不能接动名词；C 中 we 后面要跟动词原形 meet；D 中具体钟点要用 at，不用 on。",
+          "difficulty": 2,
+          "knowledge_point": "Making suggestions 建议句型",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "Let's ______ (divide) the work into three parts and give each member one part.",
+          "answer": { "value": "divide" },
+          "analysis": "Let's 后面必须接动词原形，所以填 divide；写成 divides 或 divided 都违反了 Let's + 原形的结构。这是提建议句型里最常考的一点。",
+          "difficulty": 3,
+          "knowledge_point": "Making suggestions 建议句型",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「Shall we start now?」可以用来向同伴提出建议。",
+          "answer": { "value": "T" },
+          "analysis": "Shall we...? 是询问对方意见、进而提出建议的句型，所以说法正确。回答时可以说 Yes, let's. 或 Sorry, not now.",
+          "difficulty": 3,
+          "knowledge_point": "Making suggestions 建议句型",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following are ways of making suggestions?",
+          "options": ["Why don't we...?", "Let's...", "How about...?", "How much...?"],
+          "answer": { "value": ["A", "B", "C"] },
+          "analysis": "A Why don't we...? 是提建议句型 ✓；B Let's... 是提建议句型 ✓；C How about...? 是提建议句型 ✓；D How much...? 是问数量或价格的疑问句，不是提建议 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Making suggestions 建议句型",
+          "tags": ["多选"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Your group has to finish a poster in one week. Make three suggestions in English about how to divide the work, using 'Why don't we...?', 'Let's...' and 'How about...?'.",
+          "answer": { "value": "Why don't we divide the poster into four parts, one for each member? Let's set the deadline on Friday afternoon, so that we have time to check the spelling. How about meeting on Tuesday after school to look at what we have done so far?" },
+          "analysis": "参考示例见答案。评分要点：①三条建议分别用上三个指定句型（2 分）；②每条建议后面动词形式正确（原形或动名词）（2 分）；③建议内容具体、与分工和进度有关（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Making suggestions 建议句型",
+          "tags": ["写作", "情境应用"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which linker shows a reason?",
+          "options": ["because", "so", "but", "however"],
+          "answer": { "value": "A" },
+          "analysis": "because 引出原因，所以选 A；so 引出结果；but 表示转折；however 也是转折。四种连接词语气不同，用错会让句意跑偏。",
+          "difficulty": 2,
+          "knowledge_point": "Linking words 连接词运用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which of the following sentences about a team is correct?",
+          "options": [
+            "Although the task was difficult, we finished it on time.",
+            "Although the task was difficult, but we finished it on time.",
+            "Although the task was difficult, so we finished it on time.",
+            "Although the task was difficult, however we finished it on time."
+          ],
+          "answer": { "value": "A" },
+          "analysis": "although 已经表示「虽然」，后面不能再用 but，所以选 A；B、C、D 都把两个连接词叠在一起，是典型的「双连词」错误。中文里「虽然……但是……」能连用，英文不可以。",
+          "difficulty": 2,
+          "knowledge_point": "Linking words 连接词运用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "______ the rain was heavy, the football match still started on time.",
+          "answer": { "value": ["Although", "Though"] },
+          "analysis": "空格在句首，后面是「虽然……但是」的让步关系，用 Although 或 Though 都可以；如果句首不用连接词，句末就得用 but，两种写法不能同时出现。",
+          "difficulty": 3,
+          "knowledge_point": "Linking words 连接词运用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "We cannot use 'although' and 'but' together in the same sentence.",
+          "answer": { "value": "T" },
+          "analysis": "英语中 although 和 but 只能保留一个，否则就是重复表达让步关系，所以说法正确。这是中国学生最常见的错误之一，写作时要特别检查。",
+          "difficulty": 3,
+          "knowledge_point": "Linking words 连接词运用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following linkers can be used to show a contrast?",
+          "options": ["but", "however", "because", "so"],
+          "answer": { "value": ["A", "B"] },
+          "analysis": "A but 表示转折 ✓；B however 也是表示转折的副词 ✓；C because 表示原因 ✗；D so 表示结果 ✗。故 A、B 成立，C、D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "Linking words 连接词运用",
+          "tags": ["多选"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which sentence should come first in the body of a proposal?",
+          "options": [
+            "We need two more days because the data is not ready.",
+            "Thank you for your letter of last Monday.",
+            "Best wishes to you and your family.",
+            "Dear Sir or Madam, I am writing to you today."
+          ],
+          "answer": { "value": "A" },
+          "analysis": "方案的主体要先说明需求与理由，所以选 A；B 是开头后的客套话，C 是结尾致意，D 属于称呼部分，都不能放在主体第一句。",
+          "difficulty": 2,
+          "knowledge_point": "Writing a proposal 方案写作",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which is the best opening sentence for a proposal to your teacher?",
+          "options": [
+            "We are writing to ask for one more week to finish our poster.",
+            "Poster.",
+            "Hello.",
+            "Yesterday we had a class meeting."
+          ],
+          "answer": { "value": "A" },
+          "analysis": "方案开头要点明写作目的，We are writing to... 是最常用的句式，所以选 A；B 只是一个词，C 太随意，D 是背景交代，都不适合做第一句。",
+          "difficulty": 2,
+          "knowledge_point": "Writing a proposal 方案写作",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "We would like to ask for one more week, ______ the data is not ready yet.",
+          "answer": { "value": ["because", "since"] },
+          "analysis": "空格前后是原因关系，用 because 或 since 都可以；填 but 或 however 就变成了转折，与句意不符。写方案时每条理由都要用连接词把它和请求连起来。",
+          "difficulty": 3,
+          "knowledge_point": "Writing a proposal 方案写作",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "In a proposal we should give reasons and make clear requests instead of only saying what we want.",
+          "answer": { "value": "T" },
+          "analysis": "只有要求没有理由的方案很难被接受，写清理由并提出具体请求是方案的基本要求，所以说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "Writing a proposal 方案写作",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following are parts of a short proposal?",
+          "options": [
+            "The aim of the project.",
+            "The steps of the plan.",
+            "The reasons for the request.",
+            "The price list of the poster company."
+          ],
+          "answer": { "value": ["A", "B", "C"] },
+          "analysis": "A 写清项目目标是方案的必要部分 ✓；B 具体步骤让方案可执行 ✓；C 说明理由才能支撑请求 ✓；D 印刷公司的价目表与学生方案无关 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Writing a proposal 方案写作",
+          "tags": ["多选"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write a short proposal (about 60 words) in English to your teacher. Your group needs one more day to finish the science poster. Give two reasons and make your request clear.",
+          "answer": { "value": "We are writing to ask for one more day to finish our science poster. The data from our second test is not ready, because one of our group members was absent last Thursday. We also need to check all the numbers and draw the final picture. If we get one more day, we can finish the poster on Monday and print it in time for the open day." },
+          "analysis": "参考示例见答案。评分要点：①开头点明目的与请求（2 分）；②给出两条理由，并用 because 等连接词衔接（2 分）；③结尾说明完成时间，语言正式得体（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Writing a proposal 方案写作",
+          "tags": ["写作", "情境应用"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "What should you do first when a group member does not finish his or her part?",
+          "options": [
+            "Talk to him or her and find out the reason.",
+            "Do the work for him or her without a word.",
+            "Tell the teacher at once.",
+            "Say nothing and wait for the deadline."
+          ],
+          "answer": { "value": "A" },
+          "analysis": "同组成员没完成任务，先沟通了解原因、再一起调整分工，是成熟的合作做法，所以选 A；B 悄悄替人做既伤效率也伤关系；C 一上来就告状解决不了问题；D 拖到截止时间只会更糟。",
+          "difficulty": 2,
+          "knowledge_point": "Team project 小组协作项目",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "After finishing the project, our group will have a short ______ to talk about what went well and what to improve.",
+          "answer": { "value": ["meeting", "review"] },
+          "analysis": "项目结束后开一次短会（meeting）来总结经验与不足，review 也有「回顾」的意思，都能放在 a short 后面；写成 class 或 lesson 则与总结无关。",
+          "difficulty": 2,
+          "knowledge_point": "Team project 小组协作项目",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "In a good team, members talk about problems openly instead of complaining behind others' backs.",
+          "answer": { "value": "T" },
+          "analysis": "有问题摆到桌面上解决，才能真正推进项目；背后抱怨只会让误会越积越多，所以说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "Team project 小组协作项目",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following are good ways to solve a problem in a group?",
+          "options": [
+            "Talk about the problem calmly.",
+            "Find out the reason of the problem.",
+            "Everyone blames the member who came late.",
+            "Change the plan and share the work again."
+          ],
+          "answer": { "value": ["A", "B", "D"] },
+          "analysis": "A 冷静沟通是解决问题的前提 ✓；B 找到原因才能对症下药 ✓；C 一味责怪迟到的人解决不了问题，还会破坏关系 ✗；D 调整计划并重新分工是有效的补救 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Team project 小组协作项目",
+          "tags": ["多选"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Your group has to make a short video about teamwork in your school. Write a plan in English with four steps and say what each member should do.",
+          "answer": { "value": "First, we will decide the story of the video and write a short script. Second, Chen Jie will be the camera man and Li Na will take the photos of our work. Third, Zhang Wei will collect the old sports shoes for the poster. Finally, we will edit the video together and show it to our class on Friday." },
+          "analysis": "参考示例见答案。评分要点：①四个步骤清楚、有先后顺序（2 分）；②每一步写明谁负责，分工具体（2 分）；③用上 first、second、third、finally 等顺序词（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Team project 小组协作项目",
+          "tags": ["写作", "情境应用"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

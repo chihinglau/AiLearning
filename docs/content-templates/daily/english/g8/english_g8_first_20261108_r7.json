@@ -1,0 +1,460 @@
+{
+  "subject": "english",
+  "grade": 8,
+  "version": "牛津深圳版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "Unit 6 Life in the future / A Viewing and listening",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 6 Life in the future / B Speaking",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 6 Life in the future / C Reading & Grammar in use",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 6 Life in the future / D Writing & Discovery",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 6 Life in the future / E Project",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "Future words 未来生活词汇",
+      "parent": "Unit 6 Life in the future / A Viewing and listening",
+      "order_index": 1,
+      "explanation": "本板块积累科幻与未来生活的核心词汇：robot、space、driverless、smart home、imagine、predict、astronaut。看图或听介绍时先判断是「已有的科技」还是「作者的想象」，想象部分常用情态动词，语气更不确定。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Imagining the future 未来设想口语",
+      "parent": "Unit 6 Life in the future / B Speaking",
+      "order_index": 2,
+      "explanation": "本板块练用英语谈未来：I think...、Maybe...、It's possible that...、I hope...。谈未来多用推测语气（may、might、perhaps），不要把猜测说成已经发生的事实。",
+      "prerequisites": ["Future words 未来生活词汇"],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Future forms 将来时态",
+      "parent": "Unit 6 Life in the future / C Reading & Grammar in use",
+      "order_index": 3,
+      "explanation": "本板块区分三种将来表达：will 表示单纯的将来预测，be going to 表示已有打算或有迹象的预测，现在进行时表示已经安排好的将来。be going to 和 will 后面都接动词原形。",
+      "prerequisites": ["Imagining the future 未来设想口语"],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Letter to the future 写给未来的信",
+      "parent": "Unit 6 Life in the future / D Writing & Discovery",
+      "order_index": 4,
+      "explanation": "本板块写给十年后自己的信：开头称呼，中段写今天的生活和今后的愿望，结尾落款。信里多用 I hope...、I wonder... 这类表达愿望与想象的句子，语气要真诚。",
+      "prerequisites": ["Future forms 将来时态"],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Future project 未来主题项目",
+      "parent": "Unit 6 Life in the future / E Project",
+      "order_index": 5,
+      "explanation": "本板块做「未来校园」项目：先用问卷调查同学的愿望，再整理数据、画图、做海报，最后展示。调查结果要用数据说话，展示时每个成员都要有话说。",
+      "prerequisites": ["Letter to the future 写给未来的信"],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "Unit 6 Life in the future",
+      "order_index": 6,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Which word means 'a car that can drive without a person driving it'?",
+          "options": ["driverless car", "ancient car", "heavy truck", "old bike"],
+          "answer": { "value": "A" },
+          "analysis": "driverless 就是「无人驾驶」，car 是汽车，合起来指可以自己行驶的汽车，所以选 A；ancient 是古老的，heavy truck 是重型卡车，old bike 是旧自行车，都与「无人驾驶」无关。",
+          "difficulty": 1,
+          "knowledge_point": "Future words 未来生活词汇",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "In the future, robots will do many ______ (job) for us, such as cleaning and cooking.",
+          "answer": { "value": "jobs" },
+          "analysis": "many 后面要接可数名词的复数形式，所以填 jobs；写成 job 就变成「许多个职业」，与 cleaning and cooking 这两项任务对不上。",
+          "difficulty": 2,
+          "knowledge_point": "Future words 未来生活词汇",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "People in the future may live in smart homes where the lights turn on by themselves.",
+          "answer": { "value": "T" },
+          "analysis": "智能家居里灯光自动亮起是常见的未来设想，句中用了 may 表示推测，所以说法正确。听到 may、might 时要意识到这是作者的想法而非事实。",
+          "difficulty": 2,
+          "knowledge_point": "Future words 未来生活词汇",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following may be true in the future?",
+          "options": [
+            "Robots will clean our homes.",
+            "People will travel to other planets.",
+            "Students will study only with paper books.",
+            "Cars will drive themselves on the roads."
+          ],
+          "answer": { "value": ["A", "B", "D"] },
+          "analysis": "A 机器人做家务是常见的未来设想 ✓；B 去其他星球旅行是科幻作品中的设想 ✓；C 只用纸质书学习与技术发展方向相反 ✗；D 汽车自动行驶已在部分城市试点 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Future words 未来生活词汇",
+          "tags": ["多选"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write three English sentences about life in the future. Use at least two words from this unit, such as robot, space or driverless.",
+          "answer": { "value": "In the future, robots may do most of the housework for us. People will travel to other planets, and some students may study in space. I think driverless cars will be common on the roads, so we can do more reading on the way to school." },
+          "analysis": "参考示例见答案。评分要点：①三句话都谈未来生活，内容合理（2 分）；②用上至少两个本单元词汇（2 分）；③用 I think、may、will 等表达推测与可能（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 3,
+          "knowledge_point": "Future words 未来生活词汇",
+          "tags": ["写作"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which sentence is used to guess about the future?",
+          "options": [
+            "In the future, people may live on the moon.",
+            "In the past, people lived on the moon.",
+            "Now people live on the moon.",
+            "Yesterday people lived on the moon."
+          ],
+          "answer": { "value": "A" },
+          "analysis": "in the future 加上 may 表示对未来的猜测，所以选 A；B、D 用过去时讲过去，C 用现在时讲现在，都不是谈未来。",
+          "difficulty": 2,
+          "knowledge_point": "Imagining the future 未来设想口语",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which of the following sentences about the future is correct?",
+          "options": [
+            "I think robots will do the housework for us.",
+            "I think robots will do the housework to us.",
+            "I think robots do the housework for us.",
+            "I think robots will doing the housework for us."
+          ],
+          "answer": { "value": "A" },
+          "analysis": "will 后面接动词原形 do，介词用 for 表示「替我们做」，所以选 A；B 介词用错；C 少了表示将来的 will；D 在 will 之后用了动名词 doing。",
+          "difficulty": 2,
+          "knowledge_point": "Imagining the future 未来设想口语",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "It's ______ (possible) that people will travel to Mars in the future.",
+          "answer": { "value": "possible" },
+          "analysis": "It's + 形容词 + that 从句是常用结构，所以填 possible；写成 possibly 就不搭配了，副词不能跟在 be 动词后面作表语。",
+          "difficulty": 3,
+          "knowledge_point": "Imagining the future 未来设想口语",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「Maybe we will live on Mars one day」can be used to talk about a guess about the future.",
+          "answer": { "value": "T" },
+          "analysis": "Maybe 表示不确定的推测，用来谈未来的猜想正合适，所以说法正确。谈未来时多用这类语气词，比用肯定句更准确。",
+          "difficulty": 3,
+          "knowledge_point": "Imagining the future 未来设想口语",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following expressions can be used to talk about the future?",
+          "options": ["in the future", "one day", "maybe", "yesterday"],
+          "answer": { "value": ["A", "B", "C"] },
+          "analysis": "A in the future 指向未来 ✓；B one day 指将来某一天 ✓；C maybe 是谈未来时的推测词 ✓；D yesterday 指过去 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Imagining the future 未来设想口语",
+          "tags": ["多选"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Your teacher asks you to imagine your life in twenty years and give a short speech. Write five sentences in English.",
+          "answer": { "value": "In twenty years, I think my life will be quite different. I hope I will be working as a robot engineer in a smart factory near Shenzhen. Maybe I will live in a small flat with a robot that does the housework. I am not sure whether we will travel to the moon for a holiday, but it may be possible. Anyway, I will not forget my friends from Middle School." },
+          "analysis": "参考示例见答案。评分要点：①五句话围绕二十年后的生活展开（2 分）；②用上 I think、I hope、Maybe、I'm not sure 等推测与愿望表达（2 分）；③将来表达时态正确（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Imagining the future 未来设想口语",
+          "tags": ["写作", "情境应用"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Look at the dark clouds! It ______ rain soon.",
+          "options": ["is going to", "is", "was", "will to"],
+          "answer": { "value": "A" },
+          "analysis": "看到乌云是有迹象的预测，用 be going to，所以选 A；is 是一般现在时，was 是过去时，will to 结构根本不成立。",
+          "difficulty": 2,
+          "knowledge_point": "Future forms 将来时态",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "We ______ a party next Friday. Everything is ready.",
+          "options": ["are having", "have", "had", "will"],
+          "answer": { "value": "A" },
+          "analysis": "已安排好的将来计划用现在进行时，所以选 A；have 不能直接表示已定下的将来安排，had 是过去式，will 后面还要接动词原形。",
+          "difficulty": 2,
+          "knowledge_point": "Future forms 将来时态",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "I think robots ______ (change) many people's lives in the next twenty years.",
+          "answer": { "value": "will change" },
+          "analysis": "主句 I think 后面的宾语从句用 will + 动词原形表示未来的预测，所以填 will change；写成 will changes 或 changing 都不对。",
+          "difficulty": 3,
+          "knowledge_point": "Future forms 将来时态",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "We usually use 'be going to' when we have already made a plan or decided to do something.",
+          "answer": { "value": "T" },
+          "analysis": "be going to 表示「打算做某事」或「根据迹象判断即将发生」，已有计划时用它正合适，所以说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "Future forms 将来时态",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following sentences are grammatically correct?",
+          "options": [
+            "I am going to visit my grandparents this weekend.",
+            "Look! The children are running towards the school bus.",
+            "I'm meeting my cousin at the station tomorrow.",
+            "He is going to buys a new phone."
+          ],
+          "answer": { "value": ["A", "B", "C"] },
+          "analysis": "A be going to 表示已打算去看祖父母 ✓；B 现在进行时表示此刻正在发生的动作 ✓；C 现在进行时表示已安排好的将来 ✓；D be going to 后面要用动词原形 buy，不能用 buys ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "Future forms 将来时态",
+          "tags": ["多选"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which is the best opening for a letter to your future self?",
+          "options": [
+            "Dear Jack,",
+            "Dear Mr. Smith,",
+            "To whom it may concern,",
+            "Attention, please."
+          ],
+          "answer": { "value": "A" },
+          "analysis": "写给十年后的自己，称呼用 Dear 加自己的名字，所以选 A；Dear Mr. Smith 是写给老师的，To whom it may concern 是公函用语，Attention, please 是通知用语，都不合适。",
+          "difficulty": 2,
+          "knowledge_point": "Letter to the future 写给未来的信",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which sentence is suitable in a letter to your future self?",
+          "options": [
+            "I hope that in ten years you are still in touch with your old friends.",
+            "I hope that you will pay this bill before Friday.",
+            "We demand a reply within three working days.",
+            "Attention: the office will be closed next Monday."
+          ],
+          "answer": { "value": "A" },
+          "analysis": "写给未来的自己要表达心愿与牵挂，所以选 A；B 是催款的口吻，C 是公函的强硬要求，D 是通知，三者都不适合私人信件。",
+          "difficulty": 2,
+          "knowledge_point": "Letter to the future 写给未来的信",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "I am writing this letter to tell you about my life today and my ______ for the future.",
+          "answer": { "value": ["wish", "wishes"] },
+          "analysis": "这里说「我对未来的愿望」，wish 可数，写一个用 wish，写多个用 wishes，两种都对；写成 hoping 就不与 my 搭配了。",
+          "difficulty": 3,
+          "knowledge_point": "Letter to the future 写给未来的信",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "In a letter to your future self, we can use 'I hope...' and 'I wonder...' to talk about the future.",
+          "answer": { "value": "T" },
+          "analysis": "I hope... 表达愿望，I wonder... 表达想象与好奇，都是写给未来自己的信里常用的表达，所以说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "Letter to the future 写给未来的信",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following can be used in a letter to your future self?",
+          "options": [
+            "I hope you will...",
+            "I wonder whether...",
+            "Please find enclosed the money.",
+            "Dear Sir or Madam,"
+          ],
+          "answer": { "value": ["A", "B"] },
+          "analysis": "A I hope you will... 表达对未来的祝愿 ✓；B I wonder whether... 表达对未来的想象 ✓；C「随函附上款项」是商务信函用语 ✗；D 是公函称呼 ✗。故 A、B 成立，C、D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Letter to the future 写给未来的信",
+          "tags": ["多选"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write a short letter (about 70 words) in English to yourself ten years from now. Say what your life is like now and what you hope it will be like.",
+          "answer": { "value": "Dear Jack, I am writing to tell you about my life now and my hopes for the future. Today I am a student in Shenzhen and I spend most of my time in the classroom and on the football field. In ten years, I hope I am working as an engineer in a clean, green city. I also hope I still play football with my old friends. Best wishes, Jack" },
+          "analysis": "参考示例见答案。评分要点：①有称呼与落款，信件格式完整（2 分）；②写清现在的生活与对未来的愿望两部分（2 分）；③用上 I hope...、will 等未来表达，时态正确（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Letter to the future 写给未来的信",
+          "tags": ["写作", "情境应用"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Your group wants to design the school of the future. What is the best first step?",
+          "options": [
+            "Ask students what they want and collect their ideas.",
+            "Draw the new building first.",
+            "Copy a picture of a space school from the Internet.",
+            "Choose a nice name for the new school."
+          ],
+          "answer": { "value": "A" },
+          "analysis": "做任何设计都要先了解使用者的需求，先调查同学的愿望再动手，所以选 A；B 没有依据就画图；C 抄袭别人的设计；D 先取名字再定方案，顺序颠倒。",
+          "difficulty": 2,
+          "knowledge_point": "Future project 未来主题项目",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "In the project, we will use a ______ to ask our classmates about their ideas for the future.",
+          "answer": { "value": ["survey", "questionnaire"] },
+          "analysis": "用问卷（survey／questionnaire）来收集大家的意见，所以填 survey 或 questionnaire；写成 interview 不对，interview 指访谈，survey 指问卷调查。",
+          "difficulty": 2,
+          "knowledge_point": "Future project 未来主题项目",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "In a future project, the group should check the facts in the survey results before making a poster.",
+          "answer": { "value": "T" },
+          "analysis": "问卷数据必须核实后才能使用，否则海报上的信息可能失真，所以说法正确。数据类项目里，「核对」是最容易被忽略却最关键的一步。",
+          "difficulty": 3,
+          "knowledge_point": "Future project 未来主题项目",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which are good ways to show the results of a survey about the future of the school?",
+          "options": [
+            "A bar chart.",
+            "A poster with pictures.",
+            "A list of random names.",
+            "A short summary."
+          ],
+          "answer": { "value": ["A", "B", "D"] },
+          "analysis": "A 柱状图能把数据看得一目了然 ✓；B 带图片的海报适合展示 ✓；C 随机列出的姓名既没有顺序也不代表数据 ✗；D 简短的总结能把主要发现说清楚 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Future project 未来主题项目",
+          "tags": ["多选"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Your group is making a poster about the future of your school for the open day. Write a plan in English with four steps.",
+          "answer": { "value": "First, we will make a survey and ask our classmates which school facilities they hope to have. Second, we will count the answers and draw a bar chart with the results. Third, Zhang Wei will design the poster and Wang Mei will write the short summary. Finally, we will check the spelling and put up the poster on Friday." },
+          "analysis": "参考示例见答案。评分要点：①四个步骤齐全、顺序合理（2 分）；②每一步写清做什么、谁来做（2 分）；③用上 first、second、third、finally 等顺序词（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Future project 未来主题项目",
+          "tags": ["写作", "情境应用"],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

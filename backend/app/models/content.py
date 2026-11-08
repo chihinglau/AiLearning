@@ -35,6 +35,13 @@ class Chapter(Base):
     order_index: Mapped[int] = mapped_column(Integer, default=0)
     summary: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
     created_at: Mapped[datetime] = mapped_column(default=datetime.utcnow)
+    # 占位章节标记（2026-11-08 清理立项 a2b3c4d5e6f7）：
+    # 1 = 历史占位/旧样章（教材目录里没有的章节），app 端按教材目录过滤；
+    # 0 = 教材真实章节。placeholder_note 记录占位原因与归属建议。
+    is_placeholder: Mapped[int] = mapped_column(
+        Integer, default=0, server_default="0", nullable=False
+    )
+    placeholder_note: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
 
 
 class Question(Base):

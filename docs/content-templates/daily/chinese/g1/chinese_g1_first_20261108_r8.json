@@ -1,0 +1,591 @@
+{
+  "subject": "chinese",
+  "grade": 1,
+  "version": "人教版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "5 小小的船",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "6 影子",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "7 两件宝",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "语文园地七",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "小小的船的想象与朗读",
+      "parent": "5 小小的船",
+      "order_index": 1,
+      "weight": 1.2,
+      "explanation": "《小小的船》是一首儿歌：弯弯的月儿小小的船，我在小小的船里坐，只看见闪闪的星星蓝蓝的天。弯弯、小小、闪闪、蓝蓝都是叠词，读起来轻柔像唱歌。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "影子的方位与情谊",
+      "parent": "6 影子",
+      "order_index": 2,
+      "weight": 1.2,
+      "explanation": "《影子》写了前、后和左、右四组方位词，先说影子像小黑狗，又说影子是好朋友。影子跟着人动，是因为光被身体挡住，影子就落在身体的一侧。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "两件宝的手脑并用",
+      "parent": "7 两件宝",
+      "order_index": 3,
+      "weight": 1.3,
+      "explanation": "陶行知《两件宝》说人的两件宝是双手和大脑：双手会做工，大脑会思考；用手不用脑事情做不好，用脑不用手啥也办不到，用手又用脑才能有创造。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "影子的方位与情谊"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "谚语积累与道理",
+      "parent": "语文园地七",
+      "order_index": 4,
+      "weight": 1.1,
+      "explanation": "语文园地七日积月累是四句谚语：种瓜得瓜、种豆得豆，前人栽树、后人乘凉，千里之行、始于足下，百尺竿头、更进一步。识字加油站还要学会称称呼。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": []
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第七单元 阅读",
+      "order_index": 7,
+      "questions": [
+        {
+          "q_type": "fill",
+          "stem": "《小小的船》的第一句是「弯弯的月儿（  ）」。",
+          "answer": {
+            "value": "小小的船"
+          },
+          "analysis": "《小小的船》原文是「弯弯的月儿小小的船。小小的船儿两头尖」，所以填「小小的船」。",
+          "difficulty": 2,
+          "knowledge_point": "小小的船的想象与朗读",
+          "tags": [
+            "朗读背诵"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「小小的船儿两头尖」中的「尖」，写出了小船的什么特点？",
+          "options": [
+            "两头尖尖的形状",
+            "船身很高很重",
+            "船上坐着很多人",
+            "船在水里划得很快"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「两头尖」写的是小船形状两头尖尖，像一弯月亮，选 A；后三项课文里都没有写。",
+          "difficulty": 2,
+          "knowledge_point": "小小的船的想象与朗读",
+          "tags": [
+            "字词"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "《小小的船》里写到的景物有（  ）",
+          "options": [
+            "弯弯的月儿",
+            "闪闪的星星",
+            "蓝蓝的天",
+            "皑皑的白雪"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 弯弯的月儿出自《小小的船》✓；B 闪闪的星星出自《小小的船》✓；C 蓝蓝的天出自《小小的船》✓；D 皑皑的白雪课文里没有 ✗。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "小小的船的想象与朗读",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《小小的船》里用了「弯弯的」「小小的」「蓝蓝的」这样的叠词，读起来轻柔得像唱歌。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "叠词把景物写得又柔和又可爱，朗读时声音轻轻的、慢慢的，像摇篮曲，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "小小的船的想象与朗读",
+          "tags": [
+            "朗读"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "《小小的船》里说：「我在小小的船里坐，（  ）」。",
+          "answer": {
+            "value": "只看见闪闪的星星蓝蓝的天"
+          },
+          "analysis": "儿歌原文是「我在小小的船里坐，只看见闪闪的星星蓝蓝的天」，写的是坐在月亮船上看夜空的美丽，说法正确所以填这句。",
+          "difficulty": 3,
+          "knowledge_point": "小小的船的想象与朗读",
+          "tags": [
+            "朗读背诵"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「只看见闪闪的星星蓝蓝的天」这句话，写出了作者坐在小船上的什么感觉？",
+          "options": [
+            "安静又轻盈，像飘在夜空里",
+            "害怕，因为四周很黑",
+            "着急，因为船要翻了",
+            "生气，因为没有人陪"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「只看见」写出眼前只有星星和蓝天，人的心情是安静、轻松、像飘在空中，选 A；后三项和课文轻快的语气不符 ✗。",
+          "difficulty": 4,
+          "knowledge_point": "小小的船的想象与朗读",
+          "tags": [
+            "体会情感"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "晚上你抬头看月亮，觉得它像什么？请用《小小的船》里的叠词写一句话。",
+          "answer": {
+            "value": "弯弯的月儿像小小的船，我坐在船上数闪闪的星星。"
+          },
+          "analysis": "评分要点：①用上《小小的船》里的叠词至少一个（2 分）；②写出月亮和自己（或想象）的画面（1 分）；③句子完整、标点正确（1 分）。只写「像小船」两个字不得分。",
+          "difficulty": 4,
+          "knowledge_point": "小小的船的想象与朗读",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于《影子》，下面说法正确的有（  ）",
+          "options": [
+            "影子可以在人的前面，也可以在人的后面",
+            "课文把影子比作一条小黑狗",
+            "影子是「我」的好朋友",
+            "影子只会在左边，不会到右边"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 课文写「影子在前，影子在后」✓；B 课文写「就像一条小黑狗」✓；C 课文写「它是我的好朋友」✓；D 课文还写「影子在左，影子在右」✗。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "影子的方位与情谊",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《影子》里影子在左、在右，说明影子会（  ）",
+          "options": [
+            "跟着人一起移动",
+            "一直停在原地不动",
+            "越跑越快追不上人",
+            "只在下雨的时候出现"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "人在走，影子就一会儿在前、一会儿在后，方向也变来变去，说明影子跟着人一起移动，选 A；后面三项都和课文不符 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "影子的方位与情谊",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "《影子》里写：「影子常常跟着我，（  ）」。",
+          "answer": {
+            "value": "就像一条小黑狗"
+          },
+          "analysis": "课文原句是「影子在前，影子在后，影子常常跟着我，就像一条小黑狗」，这个比喻写出了影子跟着人跑的样子，所以填「就像一条小黑狗」。",
+          "difficulty": 3,
+          "knowledge_point": "影子的方位与情谊",
+          "tags": [
+            "朗读背诵"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《影子》这首课文里用到了「前、后」和「左、右」两组方位词。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "课文先写「影子在前，影子在后」，再写「影子在左，影子在右」，两组方位词都用上了，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "影子的方位与情谊",
+          "tags": [
+            "字词积累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "影子为什么会跟着人一起动？道理是（  ）",
+          "options": [
+            "光被身体挡住，影子就落在身体的一侧",
+            "影子是活的，会自己跟着人",
+            "影子被风吹着，所以跑得快",
+            "地上有一条影子在拖着你"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "光被身体挡住，照不到的地方就是影子，人一动，挡光的位置变了，影子也跟着变，选 A；影子没有生命 ✗；风和影子无关 ✗；影子不是活物 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "影子的方位与情谊",
+          "tags": [
+            "观察思考"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "放学路上，你看到自己的影子在前面。请你写两句话，说说影子和自己的位置关系。",
+          "answer": {
+            "value": "我的影子在前面，跟着我一步一步地走。我往前走，影子也往前走，就像一条小黑狗。"
+          },
+          "analysis": "评分要点：①写清楚影子和自己的位置关系（前、后、左、右）（2 分）；②写了两句完整的话（1 分）；③句子通顺、标点正确（1 分）。只写「影子在前面」一句扣分。",
+          "difficulty": 4,
+          "knowledge_point": "影子的方位与情谊",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《两件宝》里说的，人的两件宝是（  ）",
+          "options": [
+            "双手和大脑",
+            "书包和铅笔",
+            "钱和房子",
+            "力气和时间"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文开头就写「人有两件宝，双手和大脑」，选 A；书包、铅笔是文具 ✗；钱和房子不是课文说的 ✗；力气和时间课文没提 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "两件宝的手脑并用",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "《两件宝》里说：「人有两件宝，（  ）」。",
+          "answer": {
+            "value": "双手和大脑"
+          },
+          "analysis": "课文第一句是「人有两件宝，双手和大脑」，接着分别说双手会做工、大脑会思考，所以填「双手和大脑」。",
+          "difficulty": 3,
+          "knowledge_point": "两件宝的手脑并用",
+          "tags": [
+            "朗读背诵"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「双手会做工，大脑会思考」这句话把双手和大脑的什么说得最清楚？",
+          "options": [
+            "各自的本领",
+            "各自的颜色",
+            "各自的大小",
+            "各自的价格"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "做工是手的本领，思考是大脑的本领，这句话讲的是两者各有所长，选 A；颜色、大小、价格课文都没提 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "两件宝的手脑并用",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面说法中，符合《两件宝》意思的有（  ）",
+          "options": [
+            "用手不用脑，事情做不好",
+            "用脑不用手，啥也办不到",
+            "用手又用脑，才能有创造",
+            "两件宝指的是钱和房子"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 用手不用脑，事情做不好 ✓；B 用脑不用手，啥也办不到 ✓；C 用手又用脑，才能有创造 ✓；D 两件宝指双手和大脑，不是钱和房子 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "两件宝的手脑并用",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《两件宝》想告诉我们的道理是：手脑并用，才能有创造。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "课文最后一句「用手又用脑，才能有创造」就是全课的中心，说法正确；读完要能用生活中的事说明这个道理。",
+          "difficulty": 2,
+          "knowledge_point": "两件宝的手脑并用",
+          "tags": [
+            "体会道理"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "学了《两件宝》，下面哪种做法最符合课文的意思？",
+          "options": [
+            "动手做之前先动脑想清楚怎么做",
+            "先做出来再说，不用想",
+            "只要手快就行，别的都不管",
+            "等别人做好了，自己照着做"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文说大脑会思考、双手会做工，要用手又用脑，选 A；先做不想就是「用手不用脑」✗；只图快不管思考 ✗；照抄别人的更没有自己的创造 ✗。",
+          "difficulty": 4,
+          "knowledge_point": "两件宝的手脑并用",
+          "tags": [
+            "联系生活"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳的科创课上，同学们先动脑设计，再用小手把模型搭起来。请你写一句话，说说手和脑各起什么作用。",
+          "answer": {
+            "value": "大脑帮我们想出好办法，双手帮我们把想法做出来，手和脑一起用，才能做出新东西。"
+          },
+          "analysis": "评分要点：①写清脑负责思考、手负责做工（2 分）；②用上「用手又用脑」的意思（1 分）；③句子完整、标点正确（1 分）。只写「用手和脑一起」而没说清各自作用扣 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "两件宝的手脑并用",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "语文园地七「日积月累」里说：「种瓜得瓜，（  ）」。",
+          "answer": {
+            "value": "种豆得豆"
+          },
+          "analysis": "日积月累第一句是「种瓜得瓜，种豆得豆」，说的是种什么结什么，后一句是「种豆得豆」，所以填「种豆得豆」。",
+          "difficulty": 2,
+          "knowledge_point": "谚语积累与道理",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面句子中，出自语文园地七「日积月累」的有（  ）",
+          "options": [
+            "前人栽树，后人乘凉",
+            "千里之行，始于足下",
+            "百尺竿头，更进一步",
+            "一寸光阴一寸金"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 前人栽树，后人乘凉出自语文园地七 ✓；B 千里之行，始于足下出自语文园地七 ✓；C 百尺竿头，更进一步出自语文园地七 ✓；D 一寸光阴一寸金出自语文园地五 ✗。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "谚语积累与道理",
+          "tags": [
+            "多选",
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「千里之行，始于足下」这句话告诉我们（  ）",
+          "options": [
+            "再远的事情也要从第一步做起",
+            "走路比坐车快",
+            "路很长要走很久",
+            "脚比手更有用"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「千里之行」指远大的事，「始于足下」指从脚下的第一步开始，说的是做事要从第一步做起，选 A；后三项只抓住字面 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "谚语积累与道理",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "语文园地七「日积月累」里说：「前人栽树，（  ）」。",
+          "answer": {
+            "value": "后人乘凉"
+          },
+          "analysis": "日积月累第二句是「前人栽树，后人乘凉」，说的是前人付出、后人得益，所以填「后人乘凉」。",
+          "difficulty": 3,
+          "knowledge_point": "谚语积累与道理",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「百尺竿头，更进一步」的意思是取得成绩以后，还要向更高的目标努力。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "已经到了一百尺高，还要再往上爬一点，说的是不能满足于已有的成绩，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "谚语积累与道理",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "「前人栽树，后人乘凉」。请你想一想，自己准备为班级和同学做哪一件「让后人乘凉」的事，并写下来。",
+          "answer": {
+            "value": "我打算每天把教室的桌椅摆整齐，还把图书角整理好，让后来的同学一进教室就能看到整整齐齐的桌椅和排好的书。"
+          },
+          "analysis": "评分要点：①写出一件自己能为他人做的事（2 分）；②与「前人栽树，后人乘凉」的道理相合（1 分）；③句子完整、标点正确（1 分）。写成空话、没有具体做法扣分。",
+          "difficulty": 4,
+          "knowledge_point": "谚语积累与道理",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

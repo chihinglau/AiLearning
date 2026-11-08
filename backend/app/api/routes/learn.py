@@ -47,12 +47,17 @@ from app.schemas.learn import (
     UnitSectionOut,
     WrongQuestionOut,
     WrongReasonIn,
+    TextbookBundleOut,
+    OfflineAttemptsIn,
+    OfflineAttemptsOut,
+    OfflineAttemptOut,
 )
 from app.services import learning as engine
 from app.services import practice as practice_service
 from app.services import recommendation
 from app.services import study_state
 from app.services import textbook as textbook_service
+from app.services import textbook_bundle as bundle_service
 from app.services import wrong_reason as wrong_reason_service
 
 router = APIRouter(prefix="/learn", tags=["自适应学习"])
@@ -93,7 +98,10 @@ def knowledge_tree(
     chapters = list(
         db.scalars(
             select(Chapter)
-            .where(Chapter.textbook_id == textbook_id)
+            .where(
+                Chapter.textbook_id == textbook_id,
+                Chapter.is_placeholder == 0,  # 占位/旧样章不进教材目录视图
+            )
             .order_by(Chapter.order_index, Chapter.id)
         )
     )
@@ -285,6 +293,26 @@ def _unit_out(
     )
 
 
+@router.get("/textbook/{textbook_id}/bundle", response_model=TextbookBundleOut)
+def textbook_bundle(
+    textbook_id: int,
+    current: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+) -> TextbookBundleOut:
+    """整册离线包：目录、知识点详情与含答案解析的已发布题库。"""
+    try:
+        return bundle_service.build_textbook_bundle(db, textbook_id)
+    except LookupError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND, detail=str(exc)
+        ) from exc
+    except bundle_service.BundleTooLarge as exc:
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail={"code": "BUNDLE_TOO_LARGE", "message": str(exc)},
+        ) from exc
+
+
 @router.get("/textbook/{textbook_id}/units", response_model=list[UnitOut])
 def textbook_units(
     textbook_id: int,
@@ -297,7 +325,10 @@ def textbook_units(
     chapters = list(
         db.scalars(
             select(Chapter)
-            .where(Chapter.textbook_id == textbook_id)
+            .where(
+                Chapter.textbook_id == textbook_id,
+                Chapter.is_placeholder == 0,  # 占位/旧样章不进教材目录视图
+            )
             .order_by(Chapter.order_index, Chapter.id)
         )
     )
@@ -966,6 +997,96 @@ def submit(
         mastery_score=round(mastery_row.score, 1) if mastery_row else None,
         in_wrong_book=bool(wrong and wrong.status == "active"),
     )
+
+
+@router.post("/offline/attempts", response_model=OfflineAttemptsOut)
+def sync_offline_attempts(
+    payload: OfflineAttemptsIn,
+    current: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+) -> OfflineAttemptsOut:
+    """离线答题批量同步：按作答时间顺序入库，client_key 保证幂等。"""
+    now = datetime.utcnow()
+    ordered = sorted(
+        payload.items, key=lambda item: item.answered_at or now
+    )
+    results: list[OfflineAttemptOut] = []
+    touched_kps = False
+
+    for item in ordered:
+        existing = db.scalar(
+            select(StudentQuestionRecord).where(
+                StudentQuestionRecord.user_id == current.id,
+                StudentQuestionRecord.client_key == item.client_key,
+            )
+        )
+        question = db.get(Question, item.question_id)
+        if existing is not None:
+            results.append(
+                OfflineAttemptOut(
+                    client_key=item.client_key,
+                    is_correct=existing.is_correct,
+                    correct_answer=question.answer if question else None,
+                    analysis=question.analysis if question else None,
+                    skipped=True,
+                )
+            )
+            continue
+        if question is None:
+            results.append(
+                OfflineAttemptOut(client_key=item.client_key, skipped=True)
+            )
+            continue
+
+        is_correct = engine.grade_answer(question, item.user_answer)
+        record = StudentQuestionRecord(
+            user_id=current.id,
+            question_id=question.id,
+            is_correct=is_correct,
+            user_answer=item.user_answer,
+            duration_ms=max(0, item.duration_ms),
+            source=item.source,
+            client_key=item.client_key,
+            attempted_at=item.answered_at or now,
+        )
+        db.add(record)
+
+        mastery_row = engine.update_mastery(
+            db,
+            user_id=current.id,
+            knowledge_point_id=question.knowledge_point_id
+            or _kp_id_by_tag(db, question),
+            is_correct=is_correct,
+            source=item.source,
+        )
+        if mastery_row is not None and question.knowledge_point_id is not None:
+            study_state.mark(
+                db,
+                user_id=current.id,
+                kp_id=question.knowledge_point_id,
+                event="practice",
+                achieved=mastery_row.score >= 85,
+            )
+            touched_kps = True
+        engine.upsert_wrong_question(
+            db, user_id=current.id, question=question, is_correct=is_correct
+        )
+        results.append(
+            OfflineAttemptOut(
+                client_key=item.client_key,
+                is_correct=is_correct,
+                correct_answer=question.answer,
+                analysis=question.analysis,
+                mastery_score=round(mastery_row.score, 1) if mastery_row else None,
+                skipped=False,
+            )
+        )
+
+    db.flush()
+    db.commit()
+    if touched_kps:
+        cache.invalidate_user(current.id)
+    return OfflineAttemptsOut(results=results)
 
 
 def _kp_id_by_tag(db: Session, question: Question) -> Optional[int]:

@@ -1,0 +1,450 @@
+{
+  "_legacy": true,
+  "_legacy_note": "2026-11-07 试跑批次的旧样章内容：本文件的章节名在教材目录上不存在。占位章节清理（2026-11-08）后该章已迁移到教材真实章节或整章删除。重导本文件时导入层按 chapter_aliases.json 处理——aliases 重定向到教材真实章节、discard 整块丢弃——不会把旧版数据写回库。详见 docs/content-templates/exports/automation_20261108_codebuddy/05-占位章节清理立项.md",
+  "subject": "math",
+  "grade": 3,
+  "version": "北师大版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "一位数乘多位数",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "整十整百数乘一位数",
+      "parent": "一位数乘多位数",
+      "order_index": 1,
+      "weight": 1.0,
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "explanation": "先算前面的数相乘，再在积的末尾添上相应个数的 0。例如 20×3 先算 2×3=6，添 1 个 0 得 60。",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "一位数乘两位数的竖式",
+      "parent": "一位数乘多位数",
+      "order_index": 2,
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "explanation": "从个位乘起，哪一位乘得的积满几十就向前一位进几。乘完再把进位的数加上去，不要漏加。",
+      "prerequisites": [
+        "整十整百数乘一位数"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "一位数乘三位数（进位）",
+      "parent": "一位数乘多位数",
+      "order_index": 3,
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "explanation": "三位数乘一位数，仍是从个位乘起逐位向前，连续进位时要一位一位带过去，中间有 0 也要乘。",
+      "prerequisites": [
+        "一位数乘两位数的竖式"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "乘法估算",
+      "parent": "一位数乘多位数",
+      "order_index": 4,
+      "weight": 1.0,
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "explanation": "把多位数看成接近的整十、整百数再乘，用来判断“钱够不够、座位够不够”。判断够不够时要把数估大或估小到同一方向才有说服力。",
+      "prerequisites": [
+        "整十整百数乘一位数"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "乘加乘减混合",
+      "parent": "一位数乘多位数",
+      "order_index": 5,
+      "weight": 1.1,
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "explanation": "没有括号时先乘后加减。看到 24×3+15 要先算乘法，再把 15 加上；有括号要先算括号里的。",
+      "prerequisites": [
+        "一位数乘两位数的竖式"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "一位数乘多位数",
+      "order_index": 1,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "20×3 等于多少？",
+          "options": [
+            "60",
+            "23",
+            "6",
+            "63"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先算 2×3=6，20 末尾有 1 个 0，积也添 1 个 0，得 60。",
+          "difficulty": 1,
+          "knowledge_point": "整十整百数乘一位数",
+          "tags": [
+            "口算",
+            "整十数"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "300×2=（  ）。",
+          "answer": {
+            "value": "600"
+          },
+          "analysis": "3×2=6，300 末尾有两个 0，积添两个 0，得 600。",
+          "difficulty": 1,
+          "knowledge_point": "整十整百数乘一位数",
+          "tags": [
+            "口算",
+            "整百数"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "23×4 等于多少？",
+          "options": [
+            "82",
+            "92",
+            "86",
+            "94"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "3×4=12，写 2 进 1；2×4=8，加进位的 1 得 9，结果 92。",
+          "difficulty": 1,
+          "knowledge_point": "一位数乘两位数的竖式",
+          "tags": [
+            "竖式",
+            "进位"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "34×2=（  ）。",
+          "answer": {
+            "value": "68"
+          },
+          "analysis": "4×2=8，3×2=6，个位没有满十，不需要进位，得 68。",
+          "difficulty": 2,
+          "knowledge_point": "一位数乘两位数的竖式",
+          "tags": [
+            "竖式",
+            "不进位"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "计算 23×4 时，先算 3×4=12，个位写 2 向十位进 1，再算 2×4=8，加上进的 1 得 9，结果是 92。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "这就是进位乘法的正确步骤：先乘个位、满十进一，再乘十位并把进位加上。",
+          "difficulty": 2,
+          "knowledge_point": "一位数乘两位数的竖式",
+          "tags": [
+            "判断",
+            "算理"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "208×3 等于多少？",
+          "options": [
+            "624",
+            "604",
+            "684",
+            "602"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "8×3=24，写 4 进 2；0×3=0，加 2 得 2；2×3=6，结果 624。中间的 0 也要参与计算。",
+          "difficulty": 2,
+          "knowledge_point": "一位数乘三位数（进位）",
+          "tags": [
+            "竖式",
+            "中间有0"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "156×4=（  ）。",
+          "answer": {
+            "value": "624"
+          },
+          "analysis": "6×4=24 写 4 进 2；5×4=20 加进位 2 得 22，写 2 进 2；1×4=4 加进位 2 得 6，结果 624。",
+          "difficulty": 3,
+          "knowledge_point": "一位数乘三位数（进位）",
+          "tags": [
+            "竖式",
+            "连续进位"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "计算 400×5 时，先算 4×5=20，再在积的末尾添两个 0，得 2000。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "400 末尾有两个 0，积 20 后添两个 0 就是 2000。",
+          "difficulty": 3,
+          "knowledge_point": "整十整百数乘一位数",
+          "tags": [
+            "判断",
+            "算理"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "估算 39×6 时，下面说法正确的有（  ）。",
+          "options": [
+            "把 39 看成 40，40×6=240",
+            "实际结果比 240 小一些",
+            "实际结果比 240 大",
+            "估算结果就是准确结果"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "A 项 39 看成 40，40×6=240，成立；B 项实际 39×6=234，比 240 小，成立；C 项 234 并不比 240 大，不成立；D 项估算是近似值，不等于准确值，不成立。",
+          "difficulty": 3,
+          "knowledge_point": "乘法估算",
+          "tags": [
+            "多选",
+            "估算"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "每盒彩笔 48 元，买 5 盒大约需要多少钱？",
+          "options": [
+            "约 200 元",
+            "约 250 元",
+            "约 300 元",
+            "约 150 元"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "48 接近 50，50×5=250，所以大约 250 元；准确数是 48×5=240 元。",
+          "difficulty": 3,
+          "knowledge_point": "乘法估算",
+          "tags": [
+            "估算",
+            "解决问题"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "三位数乘一位数，积一定是四位数。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "如 100×1=100，积仍是三位数。只有三位数较大时积才可能到四位数。",
+          "difficulty": 2,
+          "knowledge_point": "一位数乘三位数（进位）",
+          "tags": [
+            "判断",
+            "易错点"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "24×3+15 等于多少？",
+          "options": [
+            "87",
+            "72",
+            "99",
+            "84"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先算乘法 24×3=72，再加 15 得 87。先加后乘会得到 117，是错的。",
+          "difficulty": 3,
+          "knowledge_point": "乘加乘减混合",
+          "tags": [
+            "混合运算",
+            "运算顺序"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "60-12×4=（  ）。",
+          "answer": {
+            "value": "12"
+          },
+          "analysis": "先算 12×4=48，再算 60-48=12。",
+          "difficulty": 3,
+          "knowledge_point": "乘加乘减混合",
+          "tags": [
+            "混合运算",
+            "填空"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面算式中结果等于 100 的有（  ）。",
+          "options": [
+            "25×4",
+            "80+20",
+            "120-20",
+            "15×6"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 项 25×4=100，成立；B 项 80+20=100，成立；C 项 120-20=100，成立；D 项 15×6=90，不等于 100，不成立。",
+          "difficulty": 4,
+          "knowledge_point": "乘加乘减混合",
+          "tags": [
+            "多选",
+            "口算"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "一个方阵每行 30 人，共 8 行，一共有多少人？",
+          "options": [
+            "240 人",
+            "210 人",
+            "180 人",
+            "270 人"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "30×8=240（人）。先算 3×8=24，再添 1 个 0。",
+          "difficulty": 4,
+          "knowledge_point": "整十整百数乘一位数",
+          "tags": [
+            "解决问题",
+            "整十数"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "学校买了 3 箱书，每箱 128 本。一共多少本？请用竖式计算。",
+          "answer": {
+            "value": "128×3=384（本）。竖式：8×3=24 写 4 进 2；2×3=6 加 2 得 8；1×3=3。所以共 384 本。"
+          },
+          "analysis": "评分要点：竖式数位对齐 0.5 分、进位正确 1 分、答案带单位 0.5 分。",
+          "difficulty": 4,
+          "knowledge_point": "一位数乘两位数的竖式",
+          "tags": [
+            "主观题",
+            "竖式",
+            "解决问题"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "妈妈带 500 元想买 4 个书包，每个 118 元。钱够吗？请先用估算说明，再算出准确总价。",
+          "answer": {
+            "value": "估算：118 接近 120，120×4=480，480<500，把价钱估大了还不超，说明够。准确数：118×4=472（元），472<500，够，还剩 28 元。"
+          },
+          "analysis": "评分要点：估算过程 1 分、说明“估大仍不超”1 分、准确计算 1 分。",
+          "difficulty": 5,
+          "knowledge_point": "乘法估算",
+          "tags": [
+            "主观题",
+            "估算",
+            "解决问题"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "一台机器每小时生产 208 个零件，连续工作 5 小时能生产多少个？",
+          "answer": {
+            "value": "208×5=1040（个）。8×5=40 写 0 进 4；0×5=0 加 4 得 4；2×5=10，结果 1040 个。"
+          },
+          "analysis": "评分要点：计算过程 1 分、进位处理 1 分、答案带单位 0.5 分。中间有 0 时容易漏乘，需重点看。",
+          "difficulty": 5,
+          "knowledge_point": "一位数乘三位数（进位）",
+          "tags": [
+            "主观题",
+            "竖式",
+            "解决问题"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

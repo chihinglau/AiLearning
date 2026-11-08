@@ -1,0 +1,762 @@
+{
+  "ailearning_dev.db": [
+    {
+      "id": 103,
+      "subject": "biology",
+      "grade": 10,
+      "version": "人教版",
+      "semester": "first"
+    },
+    {
+      "id": 104,
+      "subject": "biology",
+      "grade": 10,
+      "version": "人教版",
+      "semester": "second"
+    },
+    {
+      "id": 101,
+      "subject": "chemistry",
+      "grade": 10,
+      "version": "人教版",
+      "semester": "first"
+    },
+    {
+      "id": 102,
+      "subject": "chemistry",
+      "grade": 10,
+      "version": "人教版",
+      "semester": "second"
+    },
+    {
+      "id": 93,
+      "subject": "chinese",
+      "grade": 10,
+      "version": "人教版",
+      "semester": "first"
+    },
+    {
+      "id": 94,
+      "subject": "chinese",
+      "grade": 10,
+      "version": "人教版",
+      "semester": "second"
+    },
+    {
+      "id": 97,
+      "subject": "english",
+      "grade": 10,
+      "version": "外研版",
+      "semester": "first"
+    },
+    {
+      "id": 98,
+      "subject": "english",
+      "grade": 10,
+      "version": "外研版",
+      "semester": "second"
+    },
+    {
+      "id": 107,
+      "subject": "geography",
+      "grade": 10,
+      "version": "人教版",
+      "semester": "first"
+    },
+    {
+      "id": 108,
+      "subject": "geography",
+      "grade": 10,
+      "version": "人教版",
+      "semester": "second"
+    },
+    {
+      "id": 105,
+      "subject": "history",
+      "grade": 10,
+      "version": "部编版",
+      "semester": "first"
+    },
+    {
+      "id": 106,
+      "subject": "history",
+      "grade": 10,
+      "version": "部编版",
+      "semester": "second"
+    },
+    {
+      "id": 95,
+      "subject": "math",
+      "grade": 10,
+      "version": "人教版A版",
+      "semester": "first"
+    },
+    {
+      "id": 96,
+      "subject": "math",
+      "grade": 10,
+      "version": "人教版A版",
+      "semester": "second"
+    },
+    {
+      "id": 99,
+      "subject": "physics",
+      "grade": 10,
+      "version": "人教版",
+      "semester": "first"
+    },
+    {
+      "id": 100,
+      "subject": "physics",
+      "grade": 10,
+      "version": "人教版",
+      "semester": "second"
+    },
+    {
+      "id": 109,
+      "subject": "politics",
+      "grade": 10,
+      "version": "部编版",
+      "semester": "first"
+    },
+    {
+      "id": 110,
+      "subject": "politics",
+      "grade": 10,
+      "version": "部编版",
+      "semester": "second"
+    },
+    {
+      "id": 121,
+      "subject": "biology",
+      "grade": 11,
+      "version": "人教版",
+      "semester": "first"
+    },
+    {
+      "id": 122,
+      "subject": "biology",
+      "grade": 11,
+      "version": "人教版",
+      "semester": "second"
+    },
+    {
+      "id": 119,
+      "subject": "chemistry",
+      "grade": 11,
+      "version": "人教版",
+      "semester": "first"
+    },
+    {
+      "id": 120,
+      "subject": "chemistry",
+      "grade": 11,
+      "version": "人教版",
+      "semester": "second"
+    },
+    {
+      "id": 111,
+      "subject": "chinese",
+      "grade": 11,
+      "version": "人教版",
+      "semester": "first"
+    },
+    {
+      "id": 112,
+      "subject": "chinese",
+      "grade": 11,
+      "version": "人教版",
+      "semester": "second"
+    },
+    {
+      "id": 115,
+      "subject": "english",
+      "grade": 11,
+      "version": "外研版",
+      "semester": "first"
+    },
+    {
+      "id": 116,
+      "subject": "english",
+      "grade": 11,
+      "version": "外研版",
+      "semester": "second"
+    },
+    {
+      "id": 125,
+      "subject": "geography",
+      "grade": 11,
+      "version": "人教版",
+      "semester": "first"
+    },
+    {
+      "id": 126,
+      "subject": "geography",
+      "grade": 11,
+      "version": "人教版",
+      "semester": "second"
+    },
+    {
+      "id": 123,
+      "subject": "history",
+      "grade": 11,
+      "version": "部编版",
+      "semester": "first"
+    },
+    {
+      "id": 124,
+      "subject": "history",
+      "grade": 11,
+      "version": "部编版",
+      "semester": "second"
+    },
+    {
+      "id": 113,
+      "subject": "math",
+      "grade": 11,
+      "version": "人教版A版",
+      "semester": "first"
+    },
+    {
+      "id": 114,
+      "subject": "math",
+      "grade": 11,
+      "version": "人教版A版",
+      "semester": "second"
+    },
+    {
+      "id": 117,
+      "subject": "physics",
+      "grade": 11,
+      "version": "人教版",
+      "semester": "first"
+    },
+    {
+      "id": 118,
+      "subject": "physics",
+      "grade": 11,
+      "version": "人教版",
+      "semester": "second"
+    },
+    {
+      "id": 127,
+      "subject": "politics",
+      "grade": 11,
+      "version": "部编版",
+      "semester": "first"
+    },
+    {
+      "id": 128,
+      "subject": "politics",
+      "grade": 11,
+      "version": "部编版",
+      "semester": "second"
+    },
+    {
+      "id": 139,
+      "subject": "biology",
+      "grade": 12,
+      "version": "人教版",
+      "semester": "first"
+    },
+    {
+      "id": 140,
+      "subject": "biology",
+      "grade": 12,
+      "version": "人教版",
+      "semester": "second"
+    },
+    {
+      "id": 137,
+      "subject": "chemistry",
+      "grade": 12,
+      "version": "人教版",
+      "semester": "first"
+    },
+    {
+      "id": 138,
+      "subject": "chemistry",
+      "grade": 12,
+      "version": "人教版",
+      "semester": "second"
+    },
+    {
+      "id": 129,
+      "subject": "chinese",
+      "grade": 12,
+      "version": "人教版",
+      "semester": "first"
+    },
+    {
+      "id": 130,
+      "subject": "chinese",
+      "grade": 12,
+      "version": "人教版",
+      "semester": "second"
+    },
+    {
+      "id": 133,
+      "subject": "english",
+      "grade": 12,
+      "version": "外研版",
+      "semester": "first"
+    },
+    {
+      "id": 134,
+      "subject": "english",
+      "grade": 12,
+      "version": "外研版",
+      "semester": "second"
+    },
+    {
+      "id": 143,
+      "subject": "geography",
+      "grade": 12,
+      "version": "人教版",
+      "semester": "first"
+    },
+    {
+      "id": 144,
+      "subject": "geography",
+      "grade": 12,
+      "version": "人教版",
+      "semester": "second"
+    },
+    {
+      "id": 141,
+      "subject": "history",
+      "grade": 12,
+      "version": "部编版",
+      "semester": "first"
+    },
+    {
+      "id": 142,
+      "subject": "history",
+      "grade": 12,
+      "version": "部编版",
+      "semester": "second"
+    },
+    {
+      "id": 131,
+      "subject": "math",
+      "grade": 12,
+      "version": "人教版A版",
+      "semester": "first"
+    },
+    {
+      "id": 132,
+      "subject": "math",
+      "grade": 12,
+      "version": "人教版A版",
+      "semester": "second"
+    },
+    {
+      "id": 135,
+      "subject": "physics",
+      "grade": 12,
+      "version": "人教版",
+      "semester": "first"
+    },
+    {
+      "id": 136,
+      "subject": "physics",
+      "grade": 12,
+      "version": "人教版",
+      "semester": "second"
+    },
+    {
+      "id": 145,
+      "subject": "politics",
+      "grade": 12,
+      "version": "部编版",
+      "semester": "first"
+    },
+    {
+      "id": 146,
+      "subject": "politics",
+      "grade": 12,
+      "version": "部编版",
+      "semester": "second"
+    }
+  ],
+  "ailearning_device.db": [
+    {
+      "id": 91,
+      "subject": "biology",
+      "grade": 10,
+      "version": "人教版",
+      "semester": "first"
+    },
+    {
+      "id": 92,
+      "subject": "biology",
+      "grade": 10,
+      "version": "人教版",
+      "semester": "second"
+    },
+    {
+      "id": 89,
+      "subject": "chemistry",
+      "grade": 10,
+      "version": "人教版",
+      "semester": "first"
+    },
+    {
+      "id": 90,
+      "subject": "chemistry",
+      "grade": 10,
+      "version": "人教版",
+      "semester": "second"
+    },
+    {
+      "id": 81,
+      "subject": "chinese",
+      "grade": 10,
+      "version": "人教版",
+      "semester": "first"
+    },
+    {
+      "id": 82,
+      "subject": "chinese",
+      "grade": 10,
+      "version": "人教版",
+      "semester": "second"
+    },
+    {
+      "id": 85,
+      "subject": "english",
+      "grade": 10,
+      "version": "外研版",
+      "semester": "first"
+    },
+    {
+      "id": 86,
+      "subject": "english",
+      "grade": 10,
+      "version": "外研版",
+      "semester": "second"
+    },
+    {
+      "id": 95,
+      "subject": "geography",
+      "grade": 10,
+      "version": "人教版",
+      "semester": "first"
+    },
+    {
+      "id": 96,
+      "subject": "geography",
+      "grade": 10,
+      "version": "人教版",
+      "semester": "second"
+    },
+    {
+      "id": 93,
+      "subject": "history",
+      "grade": 10,
+      "version": "部编版",
+      "semester": "first"
+    },
+    {
+      "id": 94,
+      "subject": "history",
+      "grade": 10,
+      "version": "部编版",
+      "semester": "second"
+    },
+    {
+      "id": 83,
+      "subject": "math",
+      "grade": 10,
+      "version": "人教版A版",
+      "semester": "first"
+    },
+    {
+      "id": 84,
+      "subject": "math",
+      "grade": 10,
+      "version": "人教版A版",
+      "semester": "second"
+    },
+    {
+      "id": 87,
+      "subject": "physics",
+      "grade": 10,
+      "version": "人教版",
+      "semester": "first"
+    },
+    {
+      "id": 88,
+      "subject": "physics",
+      "grade": 10,
+      "version": "人教版",
+      "semester": "second"
+    },
+    {
+      "id": 97,
+      "subject": "politics",
+      "grade": 10,
+      "version": "部编版",
+      "semester": "first"
+    },
+    {
+      "id": 98,
+      "subject": "politics",
+      "grade": 10,
+      "version": "部编版",
+      "semester": "second"
+    },
+    {
+      "id": 109,
+      "subject": "biology",
+      "grade": 11,
+      "version": "人教版",
+      "semester": "first"
+    },
+    {
+      "id": 110,
+      "subject": "biology",
+      "grade": 11,
+      "version": "人教版",
+      "semester": "second"
+    },
+    {
+      "id": 107,
+      "subject": "chemistry",
+      "grade": 11,
+      "version": "人教版",
+      "semester": "first"
+    },
+    {
+      "id": 108,
+      "subject": "chemistry",
+      "grade": 11,
+      "version": "人教版",
+      "semester": "second"
+    },
+    {
+      "id": 99,
+      "subject": "chinese",
+      "grade": 11,
+      "version": "人教版",
+      "semester": "first"
+    },
+    {
+      "id": 100,
+      "subject": "chinese",
+      "grade": 11,
+      "version": "人教版",
+      "semester": "second"
+    },
+    {
+      "id": 103,
+      "subject": "english",
+      "grade": 11,
+      "version": "外研版",
+      "semester": "first"
+    },
+    {
+      "id": 104,
+      "subject": "english",
+      "grade": 11,
+      "version": "外研版",
+      "semester": "second"
+    },
+    {
+      "id": 113,
+      "subject": "geography",
+      "grade": 11,
+      "version": "人教版",
+      "semester": "first"
+    },
+    {
+      "id": 114,
+      "subject": "geography",
+      "grade": 11,
+      "version": "人教版",
+      "semester": "second"
+    },
+    {
+      "id": 111,
+      "subject": "history",
+      "grade": 11,
+      "version": "部编版",
+      "semester": "first"
+    },
+    {
+      "id": 112,
+      "subject": "history",
+      "grade": 11,
+      "version": "部编版",
+      "semester": "second"
+    },
+    {
+      "id": 101,
+      "subject": "math",
+      "grade": 11,
+      "version": "人教版A版",
+      "semester": "first"
+    },
+    {
+      "id": 102,
+      "subject": "math",
+      "grade": 11,
+      "version": "人教版A版",
+      "semester": "second"
+    },
+    {
+      "id": 105,
+      "subject": "physics",
+      "grade": 11,
+      "version": "人教版",
+      "semester": "first"
+    },
+    {
+      "id": 106,
+      "subject": "physics",
+      "grade": 11,
+      "version": "人教版",
+      "semester": "second"
+    },
+    {
+      "id": 115,
+      "subject": "politics",
+      "grade": 11,
+      "version": "部编版",
+      "semester": "first"
+    },
+    {
+      "id": 116,
+      "subject": "politics",
+      "grade": 11,
+      "version": "部编版",
+      "semester": "second"
+    },
+    {
+      "id": 127,
+      "subject": "biology",
+      "grade": 12,
+      "version": "人教版",
+      "semester": "first"
+    },
+    {
+      "id": 128,
+      "subject": "biology",
+      "grade": 12,
+      "version": "人教版",
+      "semester": "second"
+    },
+    {
+      "id": 125,
+      "subject": "chemistry",
+      "grade": 12,
+      "version": "人教版",
+      "semester": "first"
+    },
+    {
+      "id": 126,
+      "subject": "chemistry",
+      "grade": 12,
+      "version": "人教版",
+      "semester": "second"
+    },
+    {
+      "id": 117,
+      "subject": "chinese",
+      "grade": 12,
+      "version": "人教版",
+      "semester": "first"
+    },
+    {
+      "id": 118,
+      "subject": "chinese",
+      "grade": 12,
+      "version": "人教版",
+      "semester": "second"
+    },
+    {
+      "id": 121,
+      "subject": "english",
+      "grade": 12,
+      "version": "外研版",
+      "semester": "first"
+    },
+    {
+      "id": 122,
+      "subject": "english",
+      "grade": 12,
+      "version": "外研版",
+      "semester": "second"
+    },
+    {
+      "id": 131,
+      "subject": "geography",
+      "grade": 12,
+      "version": "人教版",
+      "semester": "first"
+    },
+    {
+      "id": 132,
+      "subject": "geography",
+      "grade": 12,
+      "version": "人教版",
+      "semester": "second"
+    },
+    {
+      "id": 129,
+      "subject": "history",
+      "grade": 12,
+      "version": "部编版",
+      "semester": "first"
+    },
+    {
+      "id": 130,
+      "subject": "history",
+      "grade": 12,
+      "version": "部编版",
+      "semester": "second"
+    },
+    {
+      "id": 119,
+      "subject": "math",
+      "grade": 12,
+      "version": "人教版A版",
+      "semester": "first"
+    },
+    {
+      "id": 120,
+      "subject": "math",
+      "grade": 12,
+      "version": "人教版A版",
+      "semester": "second"
+    },
+    {
+      "id": 123,
+      "subject": "physics",
+      "grade": 12,
+      "version": "人教版",
+      "semester": "first"
+    },
+    {
+      "id": 124,
+      "subject": "physics",
+      "grade": 12,
+      "version": "人教版",
+      "semester": "second"
+    },
+    {
+      "id": 133,
+      "subject": "politics",
+      "grade": 12,
+      "version": "部编版",
+      "semester": "first"
+    },
+    {
+      "id": 134,
+      "subject": "politics",
+      "grade": 12,
+      "version": "部编版",
+      "semester": "second"
+    }
+  ]
+}

@@ -1,9 +1,12 @@
 import 'dart:async';
 
 import 'package:ai_learning/core/errors/api_error_guide.dart';
+import 'package:ai_learning/core/models/content.dart';
 import 'package:ai_learning/core/models/practice_session.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
+import 'package:ai_learning/core/theme/app_accents.dart';
+import 'package:ai_learning/widgets/accent_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -61,14 +64,10 @@ class _PracticeConfigPageState extends ConsumerState<PracticeConfigPage> {
       _ScopeOption(widget.scopeType, widget.scopeIds, _scopeDefaultLabel),
     ];
     if (widget.scopeType == 'kp' && widget.chapterId != null) {
-      options.add(
-        _ScopeOption('chapter', [widget.chapterId!], '本单元'),
-      );
+      options.add(_ScopeOption('chapter', [widget.chapterId!], '本单元'));
     }
     if (widget.scopeType != 'textbook' && widget.textbookId != null) {
-      options.add(
-        _ScopeOption('textbook', [widget.textbookId!], '整册教材'),
-      );
+      options.add(_ScopeOption('textbook', [widget.textbookId!], '整册教材'));
     }
     return options;
   }
@@ -92,7 +91,9 @@ class _PracticeConfigPageState extends ConsumerState<PracticeConfigPage> {
       _error = null;
     });
     try {
-      final preview = await ref.read(learnServiceProvider).practicePreview(
+      final preview = await ref
+          .read(learnServiceProvider)
+          .practicePreview(
             scopeType: _scopeType,
             scopeIds: _scopeIds,
             count: _count,
@@ -108,11 +109,71 @@ class _PracticeConfigPageState extends ConsumerState<PracticeConfigPage> {
       });
     } on ApiException catch (error) {
       if (!mounted) return;
+      // 断网时用本机已下载题库生成预览。
+      if (error.statusCode == null) {
+        final local = await _offlinePreview();
+        if (!mounted) return;
+        if (local != null) {
+          setState(() {
+            _preview = local;
+            _loadingPreview = false;
+          });
+          return;
+        }
+      }
+      if (!mounted) return;
       setState(() {
         _error = ApiErrorGuide.from(error).message;
         _loadingPreview = false;
       });
     }
+  }
+
+  Future<PracticePreview?> _offlinePreview() async {
+    final service = ref.read(offlineLearnServiceProvider);
+    var questions = <Question>[];
+    switch (_scopeType) {
+      case 'kp':
+        for (final id in _scopeIds) {
+          questions.addAll(await service.questions(knowledgePointId: id));
+        }
+      case 'chapter':
+        for (final id in _scopeIds) {
+          questions.addAll(await service.questions(chapterId: id));
+        }
+      case 'textbook':
+        if (_scopeIds.isNotEmpty) {
+          questions = await service.questions(textbookId: _scopeIds.first);
+        }
+      default:
+        questions = await service.questions();
+    }
+    questions = questions
+        .where((question) => _qTypes.contains(question.qType))
+        .toList();
+    if (questions.isEmpty) return null;
+
+    final count = questions.length < _count ? questions.length : _count;
+    final mix = <String, int>{};
+    for (final question in questions) {
+      mix[question.qType] = (mix[question.qType] ?? 0) + 1;
+    }
+    final kpIds = questions
+        .map((question) => question.knowledgePointId)
+        .whereType<int>()
+        .toSet();
+    return PracticePreview(
+      count: count,
+      available: questions.length,
+      insufficient: questions.length < _count,
+      estimatedMinutes: (count * 1.5).ceil(),
+      kpCoverage: kpIds.isEmpty ? 0 : 1,
+      coveredKpCount: kpIds.length,
+      rangeKpCount: kpIds.length,
+      qTypeMix: mix,
+      dueReviewCount: 0,
+      seed: _seed ?? 0,
+    );
   }
 
   void _reloadPreviewSoon() {
@@ -137,6 +198,7 @@ class _PracticeConfigPageState extends ConsumerState<PracticeConfigPage> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final accents = AppAccents.of(context);
     return Scaffold(
       appBar: AppBar(title: const Text('练习配置')),
       body: ListView(
@@ -144,10 +206,7 @@ class _PracticeConfigPageState extends ConsumerState<PracticeConfigPage> {
         children: [
           Text(widget.title, style: theme.textTheme.titleLarge),
           const SizedBox(height: 4),
-          Text(
-            '先预览组卷结果，再开始练习；预览与实际题目一致。',
-            style: theme.textTheme.bodySmall,
-          ),
+          Text('先预览组卷结果，再开始练习；预览与实际题目一致。', style: theme.textTheme.bodySmall),
           const SizedBox(height: 20),
           _sectionTitle('练习模式'),
           const SizedBox(height: 8),
@@ -242,15 +301,13 @@ class _PracticeConfigPageState extends ConsumerState<PracticeConfigPage> {
             onRetry: _loadPreview,
           ),
           const SizedBox(height: 12),
-          Card(
+          AccentCard(
+            accent: accents.practice,
             child: ListTile(
               leading: const Icon(Icons.flash_on_outlined),
               title: const Text('解题反馈：每题即时'),
               subtitle: const Text('提交后立刻显示对错与解析；统一解析模式后续开放。'),
-              trailing: Text(
-                '固定',
-                style: theme.textTheme.labelSmall,
-              ),
+              trailing: Text('固定', style: theme.textTheme.labelSmall),
             ),
           ),
           const SizedBox(height: 24),
@@ -295,9 +352,11 @@ class _PreviewCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final accents = AppAccents.of(context);
     if (loading) {
-      return const Card(
-        child: SizedBox(
+      return AccentCard(
+        accent: accents.practice,
+        child: const SizedBox(
           height: 96,
           child: Center(child: CircularProgressIndicator()),
         ),
@@ -320,76 +379,77 @@ class _PreviewCard extends StatelessWidget {
     }
     final data = preview;
     if (data == null) return const SizedBox.shrink();
-    return Card(
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                Text(
-                  '${data.count} 题',
-                  style: theme.textTheme.headlineSmall?.copyWith(
-                    fontWeight: FontWeight.bold,
-                    color: theme.colorScheme.primary,
-                  ),
+    return AccentCard(
+      accent: accents.practice,
+      padding: const EdgeInsets.all(16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Text(
+                '${data.count} 题',
+                style: theme.textTheme.headlineSmall?.copyWith(
+                  fontWeight: FontWeight.bold,
+                  color: theme.colorScheme.primary,
                 ),
-                const SizedBox(width: 12),
-                Text(
-                  '预计 ${data.estimatedMinutes} 分钟',
-                  style: theme.textTheme.bodyMedium,
-                ),
-              ],
-            ),
+              ),
+              const SizedBox(width: 12),
+              Text(
+                '预计 ${data.estimatedMinutes} 分钟',
+                style: theme.textTheme.bodyMedium,
+              ),
+            ],
+          ),
+          const SizedBox(height: 8),
+          Text(
+            '知识点覆盖 ${data.coveredKpCount}/${data.rangeKpCount}'
+            '（${(data.kpCoverage * 100).round()}%）'
+            ' · 到期错题 ${data.dueReviewCount} 道',
+            style: theme.textTheme.bodySmall,
+          ),
+          if (data.insufficient) ...[
             const SizedBox(height: 8),
-            Text(
-              '知识点覆盖 ${data.coveredKpCount}/${data.rangeKpCount}'
-              '（${(data.kpCoverage * 100).round()}%）'
-              ' · 到期错题 ${data.dueReviewCount} 道',
-              style: theme.textTheme.bodySmall,
+            Container(
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                color: Colors.orange.withValues(alpha: 0.12),
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: Text(
+                '该范围可用题目仅 ${data.available} 道，实际将出 ${data.count} 道。',
+                style: theme.textTheme.bodySmall?.copyWith(
+                  color: Colors.orange,
+                ),
+              ),
             ),
-            if (data.insufficient) ...[
-              const SizedBox(height: 8),
-              Container(
-                padding: const EdgeInsets.all(8),
-                decoration: BoxDecoration(
-                  color: Colors.orange.withValues(alpha: 0.12),
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: Text(
-                  '该范围可用题目仅 ${data.available} 道，实际将出 ${data.count} 道。',
-                  style: theme.textTheme.bodySmall?.copyWith(color: Colors.orange),
-                ),
-              ),
-            ],
-            if (data.qTypeMix.isNotEmpty) ...[
-              const SizedBox(height: 10),
-              Wrap(
-                spacing: 6,
-                runSpacing: 6,
-                children: data.qTypeMix.entries
-                    .map(
-                      (entry) => Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 8,
-                          vertical: 3,
-                        ),
-                        decoration: BoxDecoration(
-                          color: theme.colorScheme.surfaceContainerHighest,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Text(
-                          '${_typeLabel(entry.key)} ${entry.value}',
-                          style: theme.textTheme.labelSmall,
-                        ),
-                      ),
-                    )
-                    .toList(),
-              ),
-            ],
           ],
-        ),
+          if (data.qTypeMix.isNotEmpty) ...[
+            const SizedBox(height: 10),
+            Wrap(
+              spacing: 6,
+              runSpacing: 6,
+              children: data.qTypeMix.entries
+                  .map(
+                    (entry) => Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 8,
+                        vertical: 3,
+                      ),
+                      decoration: BoxDecoration(
+                        color: theme.colorScheme.surfaceContainerHighest,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Text(
+                        '${_typeLabel(entry.key)} ${entry.value}',
+                        style: theme.textTheme.labelSmall,
+                      ),
+                    ),
+                  )
+                  .toList(),
+            ),
+          ],
+        ],
       ),
     );
   }

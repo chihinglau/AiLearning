@@ -1,0 +1,631 @@
+{
+  "subject": "chinese",
+  "grade": 1,
+  "version": "人教版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "1 秋天",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "2 江南",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "3 雪地里的小画家",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "4 四季",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "语文园地五",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "秋天的景色与朗读",
+      "parent": "1 秋天",
+      "order_index": 1,
+      "weight": 1.2,
+      "explanation": "《秋天》按「凉了、黄了、落下来」「天蓝、天高」「大雁南飞」的顺序写秋天的景。朗读要读出凉意和欢喜，语气轻快，「啊！秋天来了！」要读出惊喜。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "江南的背诵与字词",
+      "parent": "2 江南",
+      "order_index": 2,
+      "weight": 1.2,
+      "explanation": "《江南》是汉乐府民歌，写采莲和鱼戏莲叶的江南水乡。「何田田」写荷叶茂盛，「间」是中间，合起来就是鱼在莲叶中间游来游去。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "小画家的对应关系",
+      "parent": "3 雪地里的小画家",
+      "order_index": 3,
+      "weight": 1.2,
+      "explanation": "小鸡画竹叶、小狗画梅花、小鸭画枫叶、小马画月牙，四组对应要背牢。不用颜料不用笔，几步就成一幅画，写的是小动物用脚印在雪地上作画。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "四季的拟人与积累",
+      "parent": "4 四季",
+      "order_index": 4,
+      "weight": 1.2,
+      "explanation": "《四季》用拟人的写法：草芽、荷叶、谷穗、雪人都会说话，分别代表春夏秋冬。尖尖、圆圆、弯弯写形状，一挺、顽皮写动作和神态。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "惜时名言与写话",
+      "parent": "语文园地五",
+      "order_index": 5,
+      "weight": 1.1,
+      "explanation": "语文园地五日积月累是惜时名句：一年之计在于春，一日之计在于晨；一寸光阴一寸金，寸金难买寸光阴。会写字有女、开、关、先，组词时要注意意思用对。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "秋天的景色与朗读"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第五单元 阅读",
+      "order_index": 5,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "《秋天》里说，天气凉了以后，树叶（  ）",
+          "options": [
+            "黄了，一片片从树上落下来",
+            "还是绿的，一片片挂在树上",
+            "开满了粉色的小花",
+            "被雪盖得严严实实"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文原句是「天气凉了，树叶黄了，一片片叶子从树上落下来」，选 A；后三个选项写的是别的季节的样子，不合秋天的景。",
+          "difficulty": 1,
+          "knowledge_point": "秋天的景色与朗读",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《秋天》里说，一群大雁往南飞，一会儿排成个（  ）字。",
+          "options": [
+            "人",
+            "一",
+            "大",
+            "天"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文写大雁「一会儿排成个『人』字，一会儿排成个『一』字」，所以先排成「人」字，选 A；「一」字是后来排成的。",
+          "difficulty": 2,
+          "knowledge_point": "秋天的景色与朗读",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《秋天》里说天空「那么蓝，那么高」，这句话写出了秋天天空的特点。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「那么蓝，那么高」用两个「那么」写出秋天天空又蓝又高，朗读时声音要舒展、往上扬，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "秋天的景色与朗读",
+          "tags": [
+            "朗读"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面词语中，出自《秋天》的有（  ）",
+          "options": [
+            "一片片叶子",
+            "大雁往南飞",
+            "莲叶何田田",
+            "小鸡画竹叶"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "A 一片片叶子出自《秋天》✓；B 大雁往南飞出自《秋天》✓；C 莲叶何田田出自《江南》✗；D 小鸡画竹叶出自《雪地里的小画家》✗。所以选 A、B。",
+          "difficulty": 3,
+          "knowledge_point": "秋天的景色与朗读",
+          "tags": [
+            "多选",
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "《秋天》要求会写的字里，「大」字一共有（  ）画。",
+          "answer": {
+            "value": "三"
+          },
+          "analysis": "「大」的笔顺是横、撇、捺，一共三画，写的时候先写一横，再写一撇和一捺，撇捺要张开放匀，所以填「三」。",
+          "difficulty": 4,
+          "knowledge_point": "秋天的景色与朗读",
+          "tags": [
+            "笔顺"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "《江南》是一首（  ）乐府民歌，课文写的是江南采莲的景色。",
+          "answer": {
+            "value": "汉"
+          },
+          "analysis": "《江南》出自《汉乐府》，所以填「汉」；课文先写采莲时莲叶「何田田」，再写鱼在莲叶间东西南北地游。",
+          "difficulty": 2,
+          "knowledge_point": "江南的背诵与字词",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《江南》里「莲叶何田田」，这句话写的是（  ）",
+          "options": [
+            "荷叶又多又密的样子",
+            "荷叶上落着白雪",
+            "莲叶被鱼儿咬出了缺口",
+            "采莲人把荷叶摘回家"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「何田田」形容荷叶茂盛、连成一片，选 A；课文没有写落雪 ✗；鱼儿是戏莲叶，不是咬叶子 ✗；课文写的是采莲的场景，不写摘荷叶 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "江南的背诵与字词",
+          "tags": [
+            "字词"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《江南》里鱼儿玩闹的地方是（  ）",
+          "options": [
+            "莲叶间",
+            "石头缝里",
+            "沙滩上",
+            "小桥下面"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文说「鱼戏莲叶间」，鱼在莲叶中间游来游去，选 A；石头缝、沙滩、小桥下课文里都没有写。",
+          "difficulty": 3,
+          "knowledge_point": "江南的背诵与字词",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "《江南》里写到鱼儿游玩的方位词有（  ）",
+          "options": [
+            "东",
+            "西",
+            "南",
+            "上"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 东 ✓，课文有「鱼戏莲叶东」；B 西 ✓，课文有「鱼戏莲叶西」；C 南 ✓，课文有「鱼戏莲叶南」；D 上 ✗，课文写的是「鱼戏莲叶北」，没有「上」。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "江南的背诵与字词",
+          "tags": [
+            "多选",
+            "背诵"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "读一读《江南》，再用自己的话说一说：鱼儿在莲叶间是怎么玩闹的？",
+          "answer": {
+            "value": "鱼儿在莲叶中间游来游去，一会儿游到东边，一会儿游到西边，一会儿游到南边，一会儿游到北边，玩得可开心了。"
+          },
+          "analysis": "评分要点：①说出鱼儿是在莲叶间玩闹（1 分）；②能把东、西、南、北四个方位都用上（2 分）；③句子通顺完整（1 分）。只写「鱼儿在玩」不得分。",
+          "difficulty": 4,
+          "knowledge_point": "江南的背诵与字词",
+          "tags": [
+            "朗读背诵",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "雪地里的小画家画的图案，对应正确的有（  ）",
+          "options": [
+            "小鸡画竹叶",
+            "小狗画梅花",
+            "小鸭画枫叶",
+            "青蛙画荷花"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 小鸡画竹叶 ✓；B 小狗画梅花 ✓；C 小鸭画枫叶 ✓；D 青蛙在洞里睡着，没有参加画画 ✗。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "小画家的对应关系",
+          "tags": [
+            "多选",
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《雪地里的小画家》里，青蛙为什么没有参加画画？",
+          "options": [
+            "它在洞里睡着啦",
+            "它怕冷不敢出来",
+            "它去找小鱼玩了",
+            "它不会画竹叶和梅花"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文最后一句写「青蛙为什么没参加？它在洞里睡着啦」，选 A；课文没有说它怕冷 ✗；也没有写它去找小鱼 ✗；更不是不会画 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "小画家的对应关系",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《雪地里的小画家》里说，小鸡、小狗、小鸭、小马不用颜料也不用笔，几步就成了一幅画。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "课文原句是「不用颜料不用笔，几步就成一幅画」，说的是小动物用脚印在雪地上作画，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "小画家的对应关系",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "《雪地里的小画家》里说，青蛙「在洞里（  ）」啦。",
+          "answer": {
+            "value": "睡着"
+          },
+          "analysis": "课文原句是「青蛙为什么没参加？它在洞里睡着啦」，写青蛙在洞里睡大觉，所以填「睡着」。",
+          "difficulty": 3,
+          "knowledge_point": "小画家的对应关系",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "小画家们不用颜料不用笔，靠什么在雪地上画出图案？",
+          "options": [
+            "用脚踩、用身体在雪地上印出花纹",
+            "用树枝在雪上写字画画",
+            "用嘴叼着颜料涂出来",
+            "把画好的纸贴在雪地上"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文说不颜料不用笔、几步就成一幅画，小鸡的竹叶、小鸭的枫叶正像脚印踩出来的，选 A；用树枝与「几步就成」不合 ✗；用颜料与「不用颜料」矛盾 ✗；贴纸更不可能 ✗。",
+          "difficulty": 4,
+          "knowledge_point": "小画家的对应关系",
+          "tags": [
+            "想象"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《四季》里，草芽尖尖，它对（  ）说「我是春天」。",
+          "options": [
+            "小鸟",
+            "青蛙",
+            "燕子",
+            "雪人"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文写「草芽尖尖，他对小鸟说：『我是春天。』」，选 A；青蛙是荷叶的朋友 ✗；燕子是谷穗的朋友 ✗；雪人说的是冬天 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "四季的拟人与积累",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《四季》里，荷叶圆圆的，它告诉青蛙自己是（  ）",
+          "options": [
+            "夏天",
+            "春天",
+            "秋天",
+            "冬天"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文写「荷叶圆圆，他对青蛙说：『我是夏天。』」，选 A；春天是草芽 ✗；秋天是谷穗 ✗；冬天是雪人 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "四季的拟人与积累",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于《四季》，下面说法正确的有（  ）",
+          "options": [
+            "课文用了拟人的写法",
+            "谷穗弯弯，它说自己是是秋天",
+            "雪人大肚子一挺，很顽皮",
+            "草芽尖尖，代表的是冬天"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 草芽、荷叶、谷穗、雪人都会说话，是拟人 ✓；B 谷穗对燕子说「我是秋天」✓；C 雪人一挺、很顽皮 ✓；D 草芽说的是春天，不是冬天 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "四季的拟人与积累",
+          "tags": [
+            "多选",
+            "写法"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "《四季》里说雪人「他顽皮地说」，这样写用了（  ）的写法，让雪人像人一样会说话。",
+          "answer": {
+            "value": "拟人"
+          },
+          "analysis": "把物当作人来写、让它会说话，这叫拟人；《四季》整篇都用拟人写春夏秋冬，所以填「拟人」。",
+          "difficulty": 3,
+          "knowledge_point": "四季的拟人与积累",
+          "tags": [
+            "写法"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面词语中，是《四季》里用来写景物形状的有（  ）",
+          "options": [
+            "尖尖、圆圆、弯弯",
+            "顽皮、挺、大肚子",
+            "春天、夏天、秋天、冬天",
+            "小鸟、青蛙、燕子、雪人"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "尖尖写草芽、圆圆写荷叶、弯弯写谷穗，都是形状，选 A；顽皮、挺、大肚子写神态动作 ✗；四个词是季节 ✗；四个词是朋友 ✗。",
+          "difficulty": 4,
+          "knowledge_point": "四季的拟人与积累",
+          "tags": [
+            "字词积累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "语文园地五「日积月累」里说：「一年之计在于春，（  ）」。",
+          "answer": {
+            "value": "一日之计在于晨"
+          },
+          "analysis": "语文园地五日积月累是「一年之计在于春，一日之计在于晨。一寸光阴一寸金，寸金难买寸光阴」，所以填「一日之计在于晨」。",
+          "difficulty": 2,
+          "knowledge_point": "惜时名言与写话",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「一寸光阴一寸金」这句话的意思是（  ）",
+          "options": [
+            "时间非常宝贵，像黄金一样",
+            "买一寸金子要花一寸时间",
+            "金子比时间更值钱",
+            "要花钱才能买到时间"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "这句用金子来比喻时间，说的是时间像黄金一样珍贵，选 A；后三个选项都把意思弄反了。",
+          "difficulty": 3,
+          "knowledge_point": "惜时名言与写话",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面句子中，可以用来劝人珍惜时间的有（  ）",
+          "options": [
+            "一寸光阴一寸金",
+            "一年之计在于春",
+            "一日之计在于晨",
+            "对牛弹琴"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 一寸光阴一寸金讲时间宝贵 ✓；B 一年之计在于春讲抓住时机 ✓；C 一日之计在于晨讲珍惜早晨 ✓；D 对牛弹琴是讽刺白费口舌 ✗。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "惜时名言与写话",
+          "tags": [
+            "多选",
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「寸金难买寸光阴」的意思是，再多的金钱也买不到时间。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「寸金」指一点点金子，「寸光阴」指一点点时间，句子说时间比金子还难得，说法正确，所以要惜时。",
+          "difficulty": 3,
+          "knowledge_point": "惜时名言与写话",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳地铁早高峰的时间很宝贵。请你用今天积累的惜时名句，写一句劝同学珍惜时间的话。",
+          "answer": {
+            "value": "一寸光阴一寸金，寸金难买寸光阴。我们要珍惜每一分钟，上学不要迟到。"
+          },
+          "analysis": "评分要点：①用上日积月累中的惜时名句或它的意思（2 分）；②劝说的内容具体、句子完整（1 分）；③标点正确、语气友好（1 分）。只写「要珍惜时间」而没有名句或道理的扣分。",
+          "difficulty": 4,
+          "knowledge_point": "惜时名言与写话",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳的秋天也很好看：树叶黄了，大雁往南飞。请你从《秋天》里找出两个合适的词语，用它们写两句话，介绍深圳秋天的景色。",
+          "answer": {
+            "value": "深圳的秋天树叶金黄，一片片叶子落下来。天上的大雁往南飞，一会儿排成人字，一会儿排成一字。"
+          },
+          "analysis": "评分要点：①从《秋天》里找出并用上两个词语（2 分）；②写了两句完整的话（1 分）；②内容与深圳秋天的景色相符（1 分）；③标点正确（1 分）。只抄课文不给深圳的秋天扣分。",
+          "difficulty": 5,
+          "knowledge_point": "惜时名言与写话",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

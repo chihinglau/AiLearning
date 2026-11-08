@@ -3,12 +3,18 @@ import 'package:ai_learning/core/models/content.dart';
 import 'package:ai_learning/core/models/practice.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
+import 'package:ai_learning/core/theme/app_accents.dart';
+import 'package:ai_learning/widgets/accent_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 class PracticePage extends ConsumerStatefulWidget {
-  const PracticePage({super.key, required this.chapterId, required this.chapterName});
+  const PracticePage({
+    super.key,
+    required this.chapterId,
+    required this.chapterName,
+  });
 
   final int chapterId;
   final String chapterName;
@@ -72,7 +78,9 @@ class _PracticePageState extends ConsumerState<PracticePage> {
 
     setState(() => _submitting = true);
     try {
-      final result = await ref.read(contentServiceProvider).submitAnswer(
+      final result = await ref
+          .read(contentServiceProvider)
+          .submitAnswer(
             questionId: question.id,
             optionKey: key,
             durationMs: DateTime.now().difference(_startedAt).inMilliseconds,
@@ -136,7 +144,7 @@ class _PracticePageState extends ConsumerState<PracticePage> {
     }
     final question = _currentQuestion;
     if (question == null) {
-      return const Center(child: Text('暂无题目'));
+      return const _EmptyPracticeState();
     }
     return SingleChildScrollView(
       padding: const EdgeInsets.all(16),
@@ -180,7 +188,11 @@ class _PracticePageState extends ConsumerState<PracticePage> {
                   : const Text('提交答案'),
             )
           else
-            _FeedbackCard(result: _result!, onNext: _next, isLast: _index + 1 >= _questions.length),
+            _FeedbackCard(
+              result: _result!,
+              onNext: _next,
+              isLast: _index + 1 >= _questions.length,
+            ),
         ],
       ),
     );
@@ -194,11 +206,17 @@ class _PracticePageState extends ConsumerState<PracticePage> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(Icons.emoji_events_outlined, size: 72, color: theme.colorScheme.primary),
+            Icon(
+              Icons.emoji_events_outlined,
+              size: 72,
+              color: theme.colorScheme.primary,
+            ),
             const SizedBox(height: 16),
             Text(
               '本次练习完成',
-              style: theme.textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold),
+              style: theme.textTheme.headlineSmall?.copyWith(
+                fontWeight: FontWeight.bold,
+              ),
             ),
             const SizedBox(height: 8),
             Text('答对 $_correctCount / ${_questions.length} 题'),
@@ -207,10 +225,7 @@ class _PracticePageState extends ConsumerState<PracticePage> {
               onPressed: () => context.go('/home'),
               child: const Text('返回首页'),
             ),
-            TextButton(
-              onPressed: _loadQuestions,
-              child: const Text('再练一次'),
-            ),
+            TextButton(onPressed: _loadQuestions, child: const Text('再练一次')),
           ],
         ),
       ),
@@ -219,7 +234,11 @@ class _PracticePageState extends ConsumerState<PracticePage> {
 }
 
 class _FeedbackCard extends StatelessWidget {
-  const _FeedbackCard({required this.result, required this.onNext, required this.isLast});
+  const _FeedbackCard({
+    required this.result,
+    required this.onNext,
+    required this.isLast,
+  });
 
   final SubmitResult result;
   final VoidCallback onNext;
@@ -228,37 +247,67 @@ class _FeedbackCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final correctColor = result.isCorrect ? Colors.green.shade700 : theme.colorScheme.error;
-    return Card(
-      color: theme.colorScheme.surfaceContainerHighest,
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                Icon(
-                  result.isCorrect ? Icons.check_circle : Icons.cancel,
+    final accents = AppAccents.of(context);
+    final correctColor = result.isCorrect
+        ? accents.learn
+        : theme.colorScheme.error;
+    return AccentCard(
+      accent: correctColor,
+      padding: const EdgeInsets.all(16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Icon(
+                result.isCorrect ? Icons.check_circle : Icons.cancel,
+                color: correctColor,
+              ),
+              const SizedBox(width: 8),
+              Text(
+                result.isCorrect ? '回答正确' : '回答错误',
+                style: theme.textTheme.titleMedium?.copyWith(
                   color: correctColor,
                 ),
-                const SizedBox(width: 8),
-                Text(
-                  result.isCorrect ? '回答正确' : '回答错误',
-                  style: theme.textTheme.titleMedium?.copyWith(color: correctColor),
-                ),
-              ],
-            ),
-            const SizedBox(height: 8),
-            Text('正确答案：${result.correctAnswer['value'] ?? '-'}'),
-            if (result.analysis != null) ...[
-              const SizedBox(height: 8),
-              Text(result.analysis!, style: theme.textTheme.bodyMedium),
+              ),
             ],
-            const SizedBox(height: 12),
-            FilledButton(
-              onPressed: onNext,
-              child: Text(isLast ? '完成练习' : '下一题'),
+          ),
+          const SizedBox(height: 8),
+          Text('正确答案：${result.correctAnswer['value'] ?? '-'}'),
+          if (result.analysis != null) ...[
+            const SizedBox(height: 8),
+            Text(result.analysis!, style: theme.textTheme.bodyMedium),
+          ],
+          const SizedBox(height: 12),
+          FilledButton(onPressed: onNext, child: Text(isLast ? '完成练习' : '下一题')),
+        ],
+      ),
+    );
+  }
+}
+
+/// 空态：该知识点暂无题目（内容库覆盖缺口：教材真实章节已建但还没出题）。
+/// 不要退化成错误页或裸文本——用户看到的是「内容准备中」，不是「出错了」。
+class _EmptyPracticeState extends StatelessWidget {
+  const _EmptyPracticeState();
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(32),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(Icons.hourglass_empty, size: 44, color: theme.colorScheme.outline),
+            const SizedBox(height: 14),
+            Text('本节内容准备中', style: theme.textTheme.titleMedium),
+            const SizedBox(height: 6),
+            Text(
+              '该节暂无题目，教研内容正在补充中。可先返回教材目录浏览其它已更新的章节。',
+              textAlign: TextAlign.center,
+              style: theme.textTheme.bodySmall,
             ),
           ],
         ),

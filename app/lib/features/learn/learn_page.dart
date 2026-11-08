@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 
 import 'package:ai_learning/core/errors/api_error_guide.dart';
@@ -6,6 +7,8 @@ import 'package:ai_learning/core/models/learn.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
 import 'package:ai_learning/core/theme/app_accents.dart';
+import 'package:ai_learning/features/learn/widgets/offline_banner.dart';
+import 'package:ai_learning/widgets/accent_card.dart';
 import 'package:ai_learning/widgets/feature_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -37,6 +40,7 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
   HomeData? _home;
   _LastPractice? _lastPractice;
   bool _loading = true;
+  bool _offline = false;
   String? _error;
 
   @override
@@ -57,12 +61,27 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
       setState(() {
         _home = home;
         _lastPractice = lastPractice;
+        _offline = false;
         _loading = false;
       });
+      // 联网后顺带同步离线答题队列。
+      unawaited(ref.read(offlineLearnSyncProvider).sync());
     } on ApiException catch (error) {
       if (!mounted) return;
+      // 断网时使用上次缓存的首页，保证可进入已下载教材。
+      final cached = error.statusCode == null
+          ? await ref.read(offlineLearnServiceProvider).cachedHome()
+          : null;
+      if (!mounted) return;
       setState(() {
-        _error = ApiErrorGuide.from(error).message;
+        if (cached != null) {
+          _home = cached;
+          _lastPractice = null;
+          _offline = true;
+          _error = null;
+        } else {
+          _error = ApiErrorGuide.from(error).message;
+        }
         _loading = false;
       });
     }
@@ -105,7 +124,9 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
     }
     final textbook = home.textbookOf(item.subject);
     if (textbook != null) {
-      final chapter = item.chapterId == null ? '' : '&chapter=${item.chapterId}';
+      final chapter = item.chapterId == null
+          ? ''
+          : '&chapter=${item.chapterId}';
       context.push(
         '/knowledge/${textbook.textbookId}'
         '?name=${Uri.encodeComponent(textbook.subjectLabel)}$chapter',
@@ -159,7 +180,7 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
         final textbook = home.continueLearning == null
             ? (home.textbooks.isEmpty ? null : home.textbooks.first)
             : home.textbookOf(home.continueLearning!.subject) ??
-                (home.textbooks.isEmpty ? null : home.textbooks.first);
+                  (home.textbooks.isEmpty ? null : home.textbooks.first);
         if (textbook != null) {
           _openTextbook(textbook);
         } else {
@@ -182,6 +203,7 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
         child: ListView(
           padding: const EdgeInsets.all(16),
           children: [
+            if (_offline) const OfflineBanner(),
             _WelcomeHeader(
               nickname: user?.nickname ?? '',
               grade: _home?.grade ?? user?.grade,
@@ -260,15 +282,10 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
               if (_home!.needsBinding) ...[
                 _SectionTitle('教材推荐'),
                 const SizedBox(height: 4),
-                Text(
-                  '还没有绑定教材，先完成教材选择再开始学习',
-                  style: theme.textTheme.bodySmall,
-                ),
+                Text('还没有绑定教材，先完成教材选择再开始学习', style: theme.textTheme.bodySmall),
                 const SizedBox(height: 8),
                 if (_home!.recommended.isEmpty)
-                  const Card(
-                    child: ListTile(title: Text('暂无推荐教材')),
-                  )
+                  const Card(child: ListTile(title: Text('暂无推荐教材')))
                 else
                   for (final textbook in _home!.recommended)
                     _TextbookTile(
@@ -427,8 +444,9 @@ class _RecommendationCard extends StatelessWidget {
                   Text('下一步', style: theme.textTheme.labelSmall),
                   Text(
                     recommendation.reason,
-                    style: theme.textTheme.titleSmall
-                        ?.copyWith(fontWeight: FontWeight.w600),
+                    style: theme.textTheme.titleSmall?.copyWith(
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ],
               ),
@@ -466,37 +484,37 @@ class _TodayPlanCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 8),
-        child: Row(
-          children: [
-            Expanded(
-              child: _PlanStat(
-                icon: Icons.replay,
-                value: '${plan.dueReview}',
-                label: '到期复习',
-                onTap: onReview,
-              ),
+    final accents = AppAccents.of(context);
+    return AccentCard(
+      accent: accents.learn,
+      padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 8),
+      child: Row(
+        children: [
+          Expanded(
+            child: _PlanStat(
+              icon: Icons.replay,
+              value: '${plan.dueReview}',
+              label: '到期复习',
+              onTap: onReview,
             ),
-            Expanded(
-              child: _PlanStat(
-                icon: Icons.edit_note,
-                value: '${plan.practiceQuestions} 题',
-                label: '建议练习 · ${plan.practiceMinutes} 分钟',
-                onTap: onPractice,
-              ),
+          ),
+          Expanded(
+            child: _PlanStat(
+              icon: Icons.edit_note,
+              value: '${plan.practiceQuestions} 题',
+              label: '建议练习 · ${plan.practiceMinutes} 分钟',
+              onTap: onPractice,
             ),
-            Expanded(
-              child: _PlanStat(
-                icon: Icons.auto_awesome,
-                value: '${plan.newKpTarget} 个',
-                label: '新知识点',
-                onTap: null,
-              ),
+          ),
+          Expanded(
+            child: _PlanStat(
+              icon: Icons.auto_awesome,
+              value: '${plan.newKpTarget} 个',
+              label: '新知识点',
+              onTap: null,
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
@@ -529,8 +547,9 @@ class _PlanStat extends StatelessWidget {
             const SizedBox(height: 4),
             Text(
               value,
-              style: theme.textTheme.titleSmall
-                  ?.copyWith(fontWeight: FontWeight.bold),
+              style: theme.textTheme.titleSmall?.copyWith(
+                fontWeight: FontWeight.bold,
+              ),
             ),
             const SizedBox(height: 2),
             Text(
@@ -554,7 +573,9 @@ class _TextbookTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    return Card(
+    final accents = AppAccents.of(context);
+    return AccentCard(
+      accent: accents.learn,
       child: ListTile(
         leading: CircleAvatar(
           backgroundColor: theme.colorScheme.primaryContainer,
@@ -576,8 +597,9 @@ class _TextbookTile extends StatelessWidget {
                 ),
                 child: Text(
                   '年级不一致',
-                  style: theme.textTheme.labelSmall
-                      ?.copyWith(color: theme.colorScheme.error),
+                  style: theme.textTheme.labelSmall?.copyWith(
+                    color: theme.colorScheme.error,
+                  ),
                 ),
               ),
           ],
@@ -623,8 +645,9 @@ class _TextbookBrowseViewState extends ConsumerState<_TextbookBrowseView> {
     });
     try {
       final grade = ref.read(currentUserProvider)?.grade;
-      final textbooks =
-          await ref.read(contentServiceProvider).textbooks(grade: grade);
+      final textbooks = await ref
+          .read(contentServiceProvider)
+          .textbooks(grade: grade);
       if (!mounted) return;
       setState(() {
         _textbooks = textbooks;
@@ -650,8 +673,9 @@ class _TextbookBrowseViewState extends ConsumerState<_TextbookBrowseView> {
       _error = null;
     });
     try {
-      final chapters =
-          await ref.read(contentServiceProvider).chapters(textbook.id);
+      final chapters = await ref
+          .read(contentServiceProvider)
+          .chapters(textbook.id);
       if (!mounted) return;
       setState(() {
         _chapters = chapters;
@@ -669,6 +693,7 @@ class _TextbookBrowseViewState extends ConsumerState<_TextbookBrowseView> {
   @override
   Widget build(BuildContext context) {
     final user = ref.watch(currentUserProvider);
+    final accents = AppAccents.of(context);
     return Scaffold(
       appBar: AppBar(title: const Text('深爱学 · 学习')),
       body: RefreshIndicator(
@@ -732,12 +757,15 @@ class _TextbookBrowseViewState extends ConsumerState<_TextbookBrowseView> {
               )
             else
               ..._chapters.map(
-                (chapter) => Card(
+                (chapter) => AccentCard(
+                  accent: accents.learn,
+                  margin: const EdgeInsets.only(bottom: 8),
                   child: ListTile(
                     leading: const Icon(Icons.menu_book_outlined),
                     title: Text(chapter.name),
-                    subtitle:
-                        chapter.summary == null ? null : Text(chapter.summary!),
+                    subtitle: chapter.summary == null
+                        ? null
+                        : Text(chapter.summary!),
                     trailing: const Icon(Icons.chevron_right),
                     onTap: () {
                       final textbook = _selectedTextbook;

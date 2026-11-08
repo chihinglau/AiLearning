@@ -1,0 +1,665 @@
+{
+  "subject": "chinese",
+  "grade": 1,
+  "version": "人教版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "5 对韵歌",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "6 日月明",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "7 小书包",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "8 升国旗",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "语文园地六",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "对韵歌的对仗词语",
+      "parent": "5 对韵歌",
+      "order_index": 1,
+      "weight": 1.2,
+      "explanation": "《对韵歌》一句一韵，云对雨、雪对风、花对树、鸟对虫，读起来抑扬顿挫。对仗就是前后两个词意思相对、读音相配，背的时候一句一句连起来背最牢。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "会意字的组合规律",
+      "parent": "6 日月明",
+      "order_index": 2,
+      "weight": 1.3,
+      "explanation": "《日月明》学的是会意字：日+月=明、小+土=尘、人+人=从、人+人+人=众、又+又=双、木+木=林、木+木+木=森。记住部件的意思，字义就明白了。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "对韵歌的对仗词语"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "小书包的生字与笔顺",
+      "parent": "7 小书包",
+      "order_index": 3,
+      "weight": 1.1,
+      "explanation": "《小书包》的会写字是早、书、刀、尺、本。书写要按笔顺：刀两画，本五画；组词时量词要配对，一本书、一把刀、尺子要分清。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "升国旗的生字与朗读",
+      "parent": "8 升国旗",
+      "order_index": 4,
+      "weight": 1.1,
+      "explanation": "《升国旗》写的是升旗仪式：国歌声中国旗徐徐升起，迎风飘扬；向着国旗我们立正，望着国旗我们敬礼。朗读要有庄重感，会写字中、五、立、正要注意笔顺。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "方向词语与古朗月行",
+      "parent": "语文园地六",
+      "order_index": 5,
+      "weight": 1.1,
+      "explanation": "语文园地六要背《前后左右 东西南北》和《古朗月行（节选）》：早晨起来面向太阳，前面是东、后面是西、左面是北、右面是南；小时不识月，呼作白玉盘。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "升国旗的生字与朗读"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第六单元 识字",
+      "order_index": 6,
+      "questions": [
+        {
+          "q_type": "fill",
+          "stem": "《对韵歌》的第一句是「云对雨，（  ）」。",
+          "answer": {
+            "value": "雪对风"
+          },
+          "analysis": "《对韵歌》原文是「云对雨，雪对风，花对树，鸟对虫。山清对水秀，柳绿对桃红」，所以填「雪对风」。",
+          "difficulty": 2,
+          "knowledge_point": "对韵歌的对仗词语",
+          "tags": [
+            "朗读背诵"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《对韵歌》里「山清对水秀」这一句，写的是（  ）",
+          "options": [
+            "山水清秀的景色",
+            "天气变冷的样子",
+            "花儿开得很红",
+            "鸟儿飞得很高"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「山清」对「水秀」，写的是山明水秀的景色，选 A；后三项在《对韵歌》里都没有出现。",
+          "difficulty": 2,
+          "knowledge_point": "对韵歌的对仗词语",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面出自《对韵歌》的对子有（  ）",
+          "options": [
+            "花对树",
+            "鸟对虫",
+            "柳绿对桃红",
+            "白毛浮绿水"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 花对树出自《对韵歌》✓；B 鸟对虫出自《对韵歌》✓；C 柳绿对桃红出自《对韵歌》✓；D 白毛浮绿水出自《咏鹅》✗。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "对韵歌的对仗词语",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《对韵歌》里「云」和「雨」、「花」和「树」都是意思相对、读音相配的词。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "对韵歌的上下句意思相对：云对雨都是天气，花对树都是景物，读起来抑扬相对，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "对韵歌的对仗词语",
+          "tags": [
+            "对仗"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《对韵歌》全文共六句，最后一句是（  ）",
+          "options": [
+            "柳绿对桃红",
+            "山清对水秀",
+            "鸟对虫",
+            "云对雨"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "《对韵歌》的顺序是云对雨、雪对风、花对树、鸟对虫、山清对水秀、柳绿对桃红，最后一句是「柳绿对桃红」，选 A。",
+          "difficulty": 4,
+          "knowledge_point": "对韵歌的对仗词语",
+          "tags": [
+            "背诵"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "照着《对韵歌》的样子，自己编一句对子（如「天对地」），并把你的对子写下来。",
+          "answer": {
+            "value": "天对地，水对山，人对花。"
+          },
+          "analysis": "评分要点：①写出三个或两个意思相对的词（2 分）；②前后词字数相同、读起来顺口（1 分）；③字写得工整、句子完整（1 分）。像「太阳对月亮」这样只写一个词也可以。",
+          "difficulty": 4,
+          "knowledge_point": "对韵歌的对仗词语",
+          "tags": [
+            "语文实践",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面这些字，是由几个字组合成的会意字的有（  ）",
+          "options": [
+            "明",
+            "从",
+            "林",
+            "力"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 明是日+月组合 ✓；B 从是人+人组合 ✓；C 林是木+木组合 ✓；D 力是一个独体字，不能拆成几个字 ✗。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "会意字的组合规律",
+          "tags": [
+            "多选",
+            "识字方法"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「明」这个字是由（  ）组合成的，它的意思是（  ）",
+          "options": [
+            "日+月，太阳和月亮都很亮",
+            "日+月，表示早晨和晚上",
+            "口+月，表示说话",
+            "目+月，表示看东西"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「明」是日+月，太阳和月亮都能发光，合起来表示明亮，选 A；课文的题目《日月明》正是从这两个字说起 ✗；其他两项的部件不对 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "会意字的组合规律",
+          "tags": [
+            "识字方法"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「尘」这个字是由下面哪两个部件组合成的？",
+          "options": [
+            "小+土",
+            "人+土",
+            "日+月",
+            "木+木"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「尘」是「小」加「土」，细小的泥土就是灰尘，选 A；人+土、人+人 都不是 ✗；日+月是「明」✗；木+木是「林」✗。",
+          "difficulty": 2,
+          "knowledge_point": "会意字的组合规律",
+          "tags": [
+            "识字方法"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "「众」是由三个（  ）组合成的字，表示人很多。",
+          "answer": {
+            "value": "人"
+          },
+          "analysis": "一个「人」是单人，两个「人」组成「从」，三个「人」组成「众」，人越多字里部件越多，所以填「人」。",
+          "difficulty": 3,
+          "knowledge_point": "会意字的组合规律",
+          "tags": [
+            "识字方法"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「森」字比「林」字多了一个「木」，这说明（  ）",
+          "options": [
+            "树木比「林」更多",
+            "「森」比「林」少一个木",
+            "「林」字写错了",
+            "「森」和「林」读音一样"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "林是木+木，表示树多；森是木+木+木，树木更茂密，选 A；「森」比「林」多不是少 ✗；两个字都对 ✗；读音不同 ✗。",
+          "difficulty": 4,
+          "knowledge_point": "会意字的组合规律",
+          "tags": [
+            "识字方法"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「心」是象形字，字形像心脏的样子，所以不是两个部件组合成的字。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「心」是照着心脏的样子画出来的象形字，不能拆成两个字组合，所以这句话说得对；会意字才是几个部件合起来表意。",
+          "difficulty": 3,
+          "knowledge_point": "会意字的组合规律",
+          "tags": [
+            "识字方法"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面词语中，都含有《小书包》会写字「本」的有（  ）",
+          "options": [
+            "书本",
+            "本子",
+            "课本",
+            "太阳"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 书本里有「本」✓；B 本子里有「本」✓；C 课本里有「本」✓；D 太阳里没有「本」✗。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "小书包的生字与笔顺",
+          "tags": [
+            "多选",
+            "组词"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「刀」字一共有（  ）画",
+          "options": [
+            "两",
+            "三",
+            "四",
+            "五"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「刀」的笔顺是横折钩、撇，一共两画，选 A；把「刀」写成三画以上是笔画数记错 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "小书包的生字与笔顺",
+          "tags": [
+            "笔顺"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "「本」字的笔顺是横、竖、撇、捺、横，一共有（  ）画。",
+          "answer": {
+            "value": "五"
+          },
+          "analysis": "「本」先写木字的一横，再写竖、撇、捺，最后在下面加一横标出「本」字，一共五画，所以填「五」。",
+          "difficulty": 3,
+          "knowledge_point": "小书包的生字与笔顺",
+          "tags": [
+            "笔顺"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面哪个词语是用《小书包》的生字「早」组成的？",
+          "options": [
+            "早上",
+            "书本",
+            "尺子",
+            "刀子"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「早」可以组成「早上」，选 A；书本、尺子、刀子里没有「早」字 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "小书包的生字与笔顺",
+          "tags": [
+            "组词"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用《小书包》里学过的生字写一句话，说说你上学时书包里都装了些什么。",
+          "answer": {
+            "value": "我的书包里装着一本书、一把尺子和一把小刀，还有一个新本子。"
+          },
+          "analysis": "评分要点：①用上《小书包》的生字（书、本、刀、尺、早）至少两个（2 分）；②句子完整、意思清楚（1 分）；③量词搭配正确、标点正确（1 分）。只罗列词语不成句不得分。",
+          "difficulty": 4,
+          "knowledge_point": "小书包的生字与笔顺",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "升国旗的时候，我们对着国旗应该（  ）",
+          "options": [
+            "立正、敬礼",
+            "低头看书",
+            "边走边说笑",
+            "把手插进口袋"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文写「向着国旗，我们立正；望着国旗，我们敬礼」，这是升旗仪式的基本要求，选 A；后三项都不庄重 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "升国旗的生字与朗读",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "《升国旗》里写：「向着国旗，我们立正；望着国旗，我们（  ）」。",
+          "answer": {
+            "value": "敬礼"
+          },
+          "analysis": "课文原句是「向着国旗，我们立正；望着国旗，我们敬礼」，前后两个动作要对应，所以填「敬礼」。",
+          "difficulty": 2,
+          "knowledge_point": "升国旗的生字与朗读",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《升国旗》里写，国歌声中，国旗（  ）",
+          "options": [
+            "徐徐升起",
+            "慢慢降下",
+            "一动不动",
+            "被风吹跑了"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文写「国歌声中，徐徐升起」，选 A；课文写的是升起不是降下 ✗；更没有写旗被吹跑 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "升国旗的生字与朗读",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于《升国旗》，下面说法正确的有（  ）",
+          "options": [
+            "课文写的是五星红旗",
+            "升旗时要立正、敬礼",
+            "课文写国旗徐徐降下来",
+            "国歌声中国旗迎风飘扬"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 课文写「五星红旗，我们的国旗」✓；B 课文写立正、敬礼 ✓；C 课文写的是徐徐升起，不是降下 ✗；D 课文写「迎风飘扬，多么美丽」✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "升国旗的生字与朗读",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「五」字一共有四画，写的时候先写横，再写竖、横折，最后写横。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「五」的笔顺是横、竖、横折、横，一共四画，说法正确；数字「五」和「五」字笔画数不同，别数错了。",
+          "difficulty": 3,
+          "knowledge_point": "升国旗的生字与朗读",
+          "tags": [
+            "笔顺"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写一写你在学校参加升旗仪式时看到的情景（要用上「立正」「敬礼」这样的词）。",
+          "answer": {
+            "value": "升旗仪式开始了，国歌声响起来，国旗徐徐升起。我们排得整整齐齐，向着国旗立正，望着国旗敬礼。"
+          },
+          "analysis": "评分要点：①写清楚升旗时的情景（2 分）；②用上「立正」「敬礼」等词（1 分）；③句子完整、标点正确（1 分）。只写「我们去升旗了」不得分。",
+          "difficulty": 4,
+          "knowledge_point": "升国旗的生字与朗读",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "语文园地六「读一读，背一背」里说：「早晨起来，面向太阳。前面是东，后面是西。左面是北，（  ）」。",
+          "answer": {
+            "value": "右面是南"
+          },
+          "analysis": "这段儿歌是「早晨起来，面向太阳。前面是东，后面是西。左面是北，右面是南」，方向要对着记，别记反了，所以填「右面是南」。",
+          "difficulty": 2,
+          "knowledge_point": "方向词语与古朗月行",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "语文园地六「日积月累」的《古朗月行（节选）》的作者是（  ）",
+          "options": [
+            "唐代的李白",
+            "唐代的王维",
+            "唐代的李绅",
+            "宋代的苏轼"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "《古朗月行（节选）》是唐代诗人李白写的，选 A；王维写《画》✗；李绅写《悯农》✗；苏轼是宋代诗人 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "方向词语与古朗月行",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "《古朗月行（节选）》里说：「小时不识月，呼作（  ）」。",
+          "answer": {
+            "value": "白玉盘"
+          },
+          "analysis": "《古朗月行（节选）》原句是「小时不识月，呼作白玉盘。又疑瑶台镜，飞在青云端」，所以填「白玉盘」。",
+          "difficulty": 3,
+          "knowledge_point": "方向词语与古朗月行",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面《古朗月行（节选）》里的诗句，正确的有（  ）",
+          "options": [
+            "呼作白玉盘",
+            "飞在青云端",
+            "又疑瑶台镜",
+            "疑是地上霜"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 呼作白玉盘 ✓；B 飞在青云端 ✓；C 又疑瑶台镜 ✓；D 疑是地上霜是《静夜思》里的诗句 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "方向词语与古朗月行",
+          "tags": [
+            "多选",
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "早晨，你面向太阳站着。请你说一说自己的前面、后面、左面、右面分别是什么方向，再写一句完整的话。",
+          "answer": {
+            "value": "早晨我面向太阳站着，前面是东，后面是西，左面是北，右面是南。我迎着太阳大步向前走。"
+          },
+          "analysis": "评分要点：①四个方向都说对（2 分）；②用上「前面、后面、左面、右面」等词（1 分）；③写成完整的一句话、标点正确（1 分）。方向说错要扣分。",
+          "difficulty": 4,
+          "knowledge_point": "方向词语与古朗月行",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

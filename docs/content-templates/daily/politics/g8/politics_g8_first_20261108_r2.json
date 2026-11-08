@@ -1,0 +1,532 @@
+{
+  "subject": "politics",
+  "grade": 8,
+  "version": "部编版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "认识社会生活",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "我们都是社会的一员",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "第二课在社会中健康成长",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "人的社会化",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "养成亲社会行为",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "社会交往的变化",
+      "parent": "认识社会生活",
+      "order_index": 1,
+      "weight": 1.0,
+      "explanation": "随着年龄增长和活动范围扩大，我们的交往对象增多、交往内容更丰富、交往方式更自主，学会辨析、学会融入是适应的关键。",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "社会角色的承担",
+      "parent": "我们都是社会的一员",
+      "order_index": 2,
+      "weight": 1.1,
+      "explanation": "每个人的身份都是在社会关系中确定的，在家是子女、在校是学生、在社会上是公民；角色不同责任不同，要扮好角色、承担责任。",
+      "prerequisites": [
+        "社会交往的变化"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "人的社会化的含义",
+      "parent": "第二课在社会中健康成长",
+      "order_index": 3,
+      "weight": 1.2,
+      "explanation": "社会化是每个人由自然人转变为社会人的过程，伴随人的一生；学会做人、学会做事是社会化的核心要求，不能窄化为只适应学校。",
+      "prerequisites": [
+        "社会角色的承担"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "社会化的途径",
+      "parent": "人的社会化",
+      "order_index": 4,
+      "weight": 1.2,
+      "explanation": "家庭、学校、社会是个人社会化的主要途径，通过学习知识、掌握规则、参与实践，才能逐步具备参与社会生活、融入社会的能力。",
+      "prerequisites": [
+        "人的社会化的含义"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "摆脱冷漠与旁观",
+      "parent": "养成亲社会行为",
+      "order_index": 5,
+      "weight": 1.0,
+      "explanation": "养成亲社会行为要主动亲近社会、关心他人、与他人交往合作，克服事不关己的冷漠旁观心态，从小事做起、从现在做起。",
+      "prerequisites": [
+        "社会化的途径"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一单元走进社会生活",
+      "order_index": 1,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "随着我们年龄增长，交往的特点是（  ）",
+          "options": [
+            "交往对象越来越少",
+            "交往内容越来越单一",
+            "交往范围逐步扩大，交往方式更加多样",
+            "交往完全由家长安排"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "进入初中后，活动范围由家庭、学校扩展到社区和网络，交往对象增多、内容更丰富、方式更自主，A、B、D 都与事实不符，故选 C。",
+          "difficulty": 2,
+          "knowledge_point": "社会交往的变化",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "小林从只和班里同学玩，到加入学校机器人社团，还通过网络向全国青少年请教编程问题。这说明（  ）",
+          "options": [
+            "初中生已经不需要集体交往",
+            "我们的交往范围和方式在不断变化",
+            "网络交往可以完全替代现实交往",
+            "交往对象完全由兴趣决定"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "案例中社团交往与网络请教并存，说明交往的渠道和范围在扩展；网络不能取代现实交往，交往也不能只由兴趣决定，故选 B。",
+          "difficulty": 3,
+          "knowledge_point": "社会交往的变化",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "随着年龄增长，我们与他人交往的（  ）不断扩大，交往的内容和方式也日益丰富。",
+          "answer": {
+            "value": "范围"
+          },
+          "analysis": "教材指出进入初中后我们交往的范围扩大、内容增多、方式多样，题干空格对应范围，填对象或内容都与原文不符。",
+          "difficulty": 2,
+          "knowledge_point": "社会交往的变化",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "社会生活越复杂，我们越需要学会辨析，正确选择交往对象和交往方式。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "面对复杂的社会关系和多元的交往对象，只有学会辨析、明辨是非，才能建立健康的人际关系，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "社会交往的变化",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "初中生交往状况的变化表现在（  ）",
+          "options": [
+            "交往对象由少到多",
+            "交往内容由单一到丰富",
+            "交往方式线上线下并存",
+            "交往以自我为中心，无须顾及他人"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 交往对象增多✓；B 交往内容由单一到丰富✓；C 线上线下方式并存✓；D 交往须彼此尊重，不能只顾自己✗。故 A、B、C 成立。",
+          "difficulty": 3,
+          "knowledge_point": "社会交往的变化",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "在家里我们是子女，在学校我们是学生，在社会上我们是公民。这说明（  ）",
+          "options": [
+            "人的身份在不同社会关系中确定",
+            "人只能同时扮演一种角色",
+            "社会关系与角色毫不相干",
+            "角色一经形成就永远不变"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "教材指出人的身份是在社会关系中确定的，不同社会关系带来不同角色，故 A 正确；B、C、D 都割裂了角色与社会关系的联系。",
+          "difficulty": 2,
+          "knowledge_point": "社会角色的承担",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "小宇在班里是班干部，在家是女儿，在社区志愿服务队是队员。他拥有多种角色，是因为（  ）",
+          "options": [
+            "社会关系的多样性",
+            "血缘关系决定一切",
+            "学校的统一规定",
+            "自己的运气好"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "小宇分别处于班级、家庭、社区三组社会关系中，所以角色多样，根源在社会关系多样；血缘、规定、运气都解释不了角色多样。",
+          "difficulty": 3,
+          "knowledge_point": "社会角色的承担",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "周末参加社区志愿服务时，小宇看到一位老人摔倒在地，想上前搀扶却又担心被误解。请结合社会角色的观点，写出两条建议并说明理由。",
+          "answer": {
+            "value": "第一，先呼叫工作人员或拨打急救电话，让更有能力的人来处理，这是履行公民角色的责任。第二，在确保自身安全并征得老人同意后再搀扶扶起，这是尊重他人、扮演友善邻居角色的要求。第三，事后陪伴老人直到家人赶到，避免二次伤害，这是把角色责任落实到细节。"
+          },
+          "analysis": "评分要点：写出两条以上具体建议（每条 2 分）；每条都能落到角色与责任的对应关系（每条 1 分）；语言通顺、理由完整（2 分）。只写要热心助人而不分角色与理由，最多得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "社会角色的承担",
+          "tags": [
+            "情境应用",
+            "简答"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "人的身份不是天生的，而是在（  ）中确定的。",
+          "answer": {
+            "value": "社会关系"
+          },
+          "analysis": "教材原话是人的身份是在社会关系中确定的，所以只能填社会关系，填家庭或天生都不准确。",
+          "difficulty": 3,
+          "knowledge_point": "社会角色的承担",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "角色不同，承担的责任也不同，二者是相互对应的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "每种角色都包含相应的责任要求，角色越重要责任越大，角色与责任一致对应，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "社会角色的承担",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "从婴儿到成人，逐步学会做人、学会做事，这一过程叫（  ）",
+          "options": [
+            "社会化",
+            "个性化",
+            "游戏化",
+            "专业化"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "学会做人、学会做事正是教材对人的社会化的经典表述，其余三个词不是教材概念，故选 A。",
+          "difficulty": 1,
+          "knowledge_point": "人的社会化的含义",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "社会化的过程意味着（  ）",
+          "options": [
+            "人逐步成为社会生活中的人",
+            "人逐渐脱离社会生活",
+            "人只需适应家庭生活",
+            "人的能力发展就此停止"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "社会化就是人由自然人转变为社会人的过程，离不开社会生活；B、C 割裂人与社会，D 与社会化伴随一生的特点相反，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "人的社会化的含义",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于人的社会化，下列认识正确的有（  ）",
+          "options": [
+            "社会化伴随人的一生",
+            "社会化的内容就是学会做家务",
+            "只有在进入学校后才发生社会化",
+            "社会化需要学习社会规则与知识"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "D"
+            ]
+          },
+          "analysis": "A 社会化贯穿一生✓；B 社会化内涵远不止做家务✗；C 家庭生活本身就是社会化的起点✗；D 学习规则与知识是社会化的重要内容✓。故 A、D 成立。",
+          "difficulty": 3,
+          "knowledge_point": "人的社会化的含义",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "社会化的核心要求是学会（  ），学会（  ）。",
+          "answer": {
+            "value": [
+              "做人",
+              "做事"
+            ]
+          },
+          "analysis": "教材明确指出社会化就是逐步学会做人、学会做事，两空分别对应做人与做事，顺序颠倒或只答一项都不完整。",
+          "difficulty": 3,
+          "knowledge_point": "人的社会化的含义",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "人的社会化就是学会适应学校生活。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "学校只是社会化的重要场所之一，家庭和整个社会同样是途径，说法把社会化片面缩小为适应学校，故为错误。",
+          "difficulty": 3,
+          "knowledge_point": "人的社会化的含义",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "个人走向社会、实现社会化的主要途径是（  ）",
+          "options": [
+            "家庭、学校和社会",
+            "只有学校教育",
+            "完全依靠模仿",
+            "先天遗传"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "教材列出家庭、学校、社会三条主要途径，B 把途径单一化，C、D 与社会化靠后天学习的特点不符，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "社会化的途径",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "小周的爷爷退休后报名参加社区老年大学，学习使用智能手机和急救常识。这说明（  ）",
+          "options": [
+            "社会化只发生在青少年时期",
+            "社会化途径包括社会，任何年龄都要学习",
+            "学习就等于完成了社会化",
+            "社会化不需要实践"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "爷爷在社区学习中掌握新技能，属于通过社会途径继续社会化，说明社会化贯穿一生，故选 B。",
+          "difficulty": 3,
+          "knowledge_point": "社会化的途径",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列属于个人社会化途径的有（  ）",
+          "options": [
+            "家庭中的教养",
+            "学校中的学习",
+            "社会中的实践",
+            "一个人闭门独处、与社会隔绝"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 家庭教养✓；B 学校学习✓；C 社会实践✓；D 与社会隔绝恰恰阻断了社会化✗。故 A、B、C 成立。",
+          "difficulty": 4,
+          "knowledge_point": "社会化的途径",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "小陈成绩优异，但对班级事务和社区活动一概不参加，认为只要把书读好就够了。请结合社会化的途径指出他的认识误区，并提出三条改进建议。",
+          "answer": {
+            "value": "误区在于把社会化只等同于学校学习，把成绩当作唯一目标。社会化要通过家庭、学校、社会三条途径，走出校园、走进社会也是成长的一部分。建议一：积极参加班级和社团的集体活动，在与同学合作中学会分工与沟通。建议二：利用假期参加志愿服务或社会调查，在实践中了解社会、承担社会责任。建议三：主动与父母长辈交流，听取他们的经验，把书本知识与社会经验结合起来。"
+          },
+          "analysis": "评分要点：指出把社会化途径单一化的误区（2 分）；三条建议具体可行，分别对应集体活动、社会实践、家庭沟通（每条 2 分）；能联系亲社会行为或社会角色说明理由（2 分）。",
+          "difficulty": 4,
+          "knowledge_point": "社会化的途径",
+          "tags": [
+            "情境应用",
+            "简答"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "公交车上一位同学突然晕倒，有人起身让座并呼叫工作人员，其余乘客躲避观望。这种行为属于（  ）",
+          "options": [
+            "冷漠旁观",
+            "亲社会行为",
+            "违章行为",
+            "侵犯他人隐私"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "让座并主动呼叫工作人员是关心他人、服务社会的亲社会行为；躲避观望是冷漠旁观，让座不构成违章，故选 B。",
+          "difficulty": 3,
+          "knowledge_point": "摆脱冷漠与旁观",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "关爱他人要讲究方式方法，尊重对方意愿，不能替他人作主。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "亲近他人不是越俎代庖，尊重他人意愿、讲究方式是正确做法，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "摆脱冷漠与旁观",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "养成亲社会行为，我们可以（  ）",
+          "options": [
+            "主动关心社会发展",
+            "亲近他人、与他人交往合作",
+            "从身边小事做起",
+            "对别人的求助视而不见"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 关心社会✓；B 与人交往合作✓；C 从小事做起✓；D 冷漠旁观违背亲社会行为的要求✗。故 A、B、C 成立。",
+          "difficulty": 4,
+          "knowledge_point": "摆脱冷漠与旁观",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳地铁早高峰，一乘客身体不适晕倒，车厢里乘客围观却无人上前。请你结合亲社会行为的原理，说明可以怎样做，并简要说明理由。",
+          "answer": {
+            "value": "第一，立即按下车厢内的紧急呼叫装置通知工作人员和列车员，这既是最快最稳妥的办法，也是关心社会的体现。第二，在保证自身安全、不影响列车运行的前提下，主动疏散围观乘客、腾出空间，缩短救助时间。第三，不围观、不拍摄视频传播他人窘态，给当事人保留尊严。第四，若现场无人有把握急救，应立即拨打急救电话并有人陪同等候，不盲目施救。"
+          },
+          "analysis": "评分要点：至少三条具体做法且按可行性排序（每条 2 分）；每条都能联系亲社会行为或关爱他人的原理（每条 1 分）；体现不围观、不传播他人隐私的边界意识（2 分）；表达通顺（1 分）。",
+          "difficulty": 5,
+          "knowledge_point": "摆脱冷漠与旁观",
+          "tags": [
+            "情境应用",
+            "简答"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列做法最能体现亲近他人、与人交往合作的是（  ）",
+          "options": [
+            "与同学分工合作完成小组探究报告",
+            "独自在网络上打游戏",
+            "把小组任务推给别人",
+            "拒绝参加任何集体活动"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "分工合作完成探究报告既亲近他人又体现合作；B 是封闭的个体活动，C、D 则回避了交往与合作，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "摆脱冷漠与旁观",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

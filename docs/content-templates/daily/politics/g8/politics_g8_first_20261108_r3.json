@@ -1,0 +1,525 @@
+{
+  "subject": "politics",
+  "grade": 8,
+  "version": "部编版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第三课共建网络美好家园",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "网络改变世界",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "营造清朗空间",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "单元思考与行动",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "网络改变生活",
+      "parent": "网络改变世界",
+      "order_index": 1,
+      "weight": 1.0,
+      "explanation": "网络让信息传递快捷、透明度提升、交往方式多元，改变了我们的学习与生活方式；它也是一把双刃剑，要用好而不滥用。",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "网络的双重影响",
+      "parent": "网络改变世界",
+      "order_index": 2,
+      "weight": 1.1,
+      "explanation": "网络既开阔视野、共享信息，也带来信息真假难辨、网络沉迷等消极影响；青少年要学会甄别、合理安排上网时间。",
+      "prerequisites": [
+        "网络改变生活"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "传递正能量",
+      "parent": "营造清朗空间",
+      "order_index": 3,
+      "weight": 1.0,
+      "explanation": "正能量能给人以力量、让社会更温暖；上网要自觉抵制负能量，不造谣、不信谣、不传谣，理性表达、传递向上力量。",
+      "prerequisites": [
+        "网络的双重影响"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "网上交往的边界",
+      "parent": "营造清朗空间",
+      "order_index": 4,
+      "weight": 1.2,
+      "explanation": "网络交往具有虚拟性，慎重交友、保护个人隐私、防范网络诈骗、遵守法律与道德，是网上交往必须守住的边界。",
+      "prerequisites": [
+        "传递正能量"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "共建清朗网络空间",
+      "parent": "单元思考与行动",
+      "order_index": 5,
+      "weight": 1.0,
+      "explanation": "清朗的网络空间需要每个网民共同维护：从我做起文明上网、理性表达，举报违法违规信息，共同守住网络秩序。",
+      "prerequisites": [
+        "网上交往的边界"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一单元走进社会生活",
+      "order_index": 1,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "下列现象中，属于网络改变我们学习生活方式的是（  ）",
+          "options": [
+            "利用网络课程和在线答疑开展自主学习",
+            "在课堂上偷偷玩手机游戏",
+            "用网络聊天完全替代面对面交流",
+            "把作业交给同学代为完成"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "借助网络课程、在线答疑获取学习资源，是网络拓宽学习渠道的典型表现；其余三项都是不当使用网络的方式，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "网络改变生活",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "深圳某中学开设数字探究课，学生通过网络查找红树林监测数据并完成研究报告。这说明网络（  ）",
+          "options": [
+            "拓宽了学习和实践的渠道",
+            "使实地观察变得没有必要",
+            "可以取代真实的社会调查",
+            "只适合用来娱乐消遣"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "网上查资料与实地观察相结合，才是完整的研究学习，说明网络是拓展学习途径的工具而非替代，故选 A。",
+          "difficulty": 3,
+          "knowledge_point": "网络改变生活",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "网络使信息的传播更加（  ），也为每个人提供了展示自我、交流想法的平台。",
+          "answer": {
+            "value": "便捷"
+          },
+          "analysis": "教材强调网络使信息传递更加便捷、迅捷，把相隔千里的人联系起来，所以空格处应填便捷。",
+          "difficulty": 2,
+          "knowledge_point": "网络改变生活",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "网络既方便了人们的生活，也带来了新的问题。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "网络是一把双刃剑，积极作用与消极影响并存，这正是教材对网络的总体判断，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "网络改变生活",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "网络带来的积极影响有（  ）",
+          "options": [
+            "开阔视野、拓宽思路",
+            "便于查找学习资料",
+            "促进信息的交流与共享",
+            "让人可以随意编造消息传播"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 开阔视野✓；B 便于查资料✓；C 促进信息共享✓；D 编造消息破坏网络秩序，属消极影响✗。故 A、B、C 成立。",
+          "difficulty": 3,
+          "knowledge_point": "网络改变生活",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "面对鱼龙混杂、良莠不齐的网络信息，青少年应当（  ）",
+          "options": [
+            "学会甄别，不轻信、不盲从",
+            "看到什么就信什么",
+            "全部转发给同学扩散",
+            "只看内容不分辨真假"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "网络上虚假信息不少，要提高辨别能力，不轻信、不盲从、独立思考，B、C、D 都放弃了辨别这一关键环节，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "网络的双重影响",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "沉迷网络游戏给青少年带来的主要危害是（  ）",
+          "options": [
+            "影响学习、身心健康和正常的人际交往",
+            "让人变得更聪明更有创造力",
+            "让人拥有更多锻炼身体的时间",
+            "使人更愿意与家人交流"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "沉迷网络会挤占学习时间、损害身心健康、减少面对面交往，教材对此有明确提醒；其余选项的结论与事实相反，故选 A。",
+          "difficulty": 3,
+          "knowledge_point": "网络的双重影响",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "长时间沉迷网络游戏，会影响学习效率和身心健康。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "这是教材关于网络消极影响的原意表述，适度上网有益、沉迷则有害，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "网络的双重影响",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "青少年使用网络应做到（  ）",
+          "options": [
+            "学会甄别信息，不轻信盲从",
+            "合理安排上网时间",
+            "不沉迷于虚拟世界",
+            "随意转发未经证实的消息"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 甄别信息✓；B 合理安排时间✓；C 防止沉迷✓；D 随意转发不实消息会助长谣言✗。故 A、B、C 成立。",
+          "difficulty": 3,
+          "knowledge_point": "网络的双重影响",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳地铁官方账号发布一则路人接力帮助盲人过马路的视频，评论区有人说：这就是深圳的温度，深圳是个有爱的城市。请你说明传播正能量有什么意义，并说说怎样做一个传递正能量的人。",
+          "answer": {
+            "value": "意义一，正能量给人以希望和力量，能激励他人、服务社会，让社会更加温暖和谐。意义二，传递正能量有利于形成良好网络风尚，维护网络空间清朗。做法一，从转发助人为乐、诚实守信的真实故事做起，用善意的评论替代调侃。做法二，不转发未经证实的信息，不编造、不夸大，遇到谣言主动澄清。做法三，联系深圳志愿服务组织，参与地铁义工、路口劝导等力所能及的公益服务。"
+          },
+          "analysis": "评分要点：答出两点意义（每点 2 分）；提出三条具体做法且与传播正能量直接相关（每条 2 分）；能联系清朗网络空间或网络规则说明理由（2 分）；表达通顺（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "传递正能量",
+          "tags": [
+            "情境应用",
+            "简答"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "看到外卖小哥在暴雨中救起跌水儿童的视频，我们点赞、转发并送上祝福，这是（  ）",
+          "options": [
+            "传递正能量",
+            "传播低俗信息",
+            "恶意炒作",
+            "侵犯他人肖像权"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "点赞转发助人善举、给予鼓励，属于自觉传递正能量；B、C 与行为性质不符，正常的善举报道不构成侵犯肖像权，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "传递正能量",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "我们要自觉维护网络环境，做到不造谣、不信谣、不（  ）。",
+          "answer": {
+            "value": "传谣"
+          },
+          "analysis": "教材要求青少年不造谣、不信谣、不传谣，三者并列，题干空格处只能是传谣。",
+          "difficulty": 3,
+          "knowledge_point": "传递正能量",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "在网络上主动传播正能量，能让社会更温暖、网络空间更清朗。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "正能量能带来积极的社会影响，网络空间也因此更加清朗有序，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "传递正能量",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "网上交友时最应该做到的是（  ）",
+          "options": [
+            "慎重交友，保护个人隐私",
+            "主动把真实姓名和住址告诉对方",
+            "对方提出什么要求都先答应",
+            "刚加上好友就视频通话"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "网络交往具有虚拟性，慎重交友、保护隐私是基本要求；泄露信息、随意承诺都容易带来风险，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "网上交往的边界",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "小许轻信网络陌生人发来的中奖链接，填入了身份证号和银行卡号。这样做（  ）",
+          "options": [
+            "造成了个人信息泄露，应立即停止操作并报告家长、报警",
+            "说明网络很方便，值得多试几次",
+            "只要自己不说出去就没有风险",
+            "属于正常的抽奖活动，无须处理"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "填写身份证号和银行卡号属于泄露个人信息，中奖链接多为诈骗，应立即停止并告知家长、报警；B、C、D 都低估了风险，故选 A。",
+          "difficulty": 3,
+          "knowledge_point": "网上交往的边界",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "网上交往要遵守的规则有（  ）",
+          "options": [
+            "遵守法律法规",
+            "尊重他人人格",
+            "保护个人隐私",
+            "未经同意传播他人隐私照片"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 遵法守法✓；B 尊重他人✓；C 保护隐私✓；D 擅自传播他人隐私照片既不道德也可能违法✗。故 A、B、C 成立。",
+          "difficulty": 4,
+          "knowledge_point": "网上交往的边界",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "小美在游戏群里认识一位哥哥，对方多次询问她的家庭住址和父母电话，还劝她不要告诉家长，说这是大人不懂的乐趣。小美应该怎么做？请从网上交往的边界的角度说明理由。",
+          "answer": {
+            "value": "第一，不提供家庭住址、父母电话等敏感信息，保护自己和家人的安全。第二，把对方的异常要求告诉家长或老师，请大人帮助判断。第三，果断不再联系并举报该账号，不与对方私下解决。第四，如果对方继续骚扰，保留聊天记录，向平台和公安机关反映。理由是网络交往具有虚拟性，慎重交友、保护个人隐私、防范网络诈骗是网上交往的基本边界，隐瞒不告诉家长反而可能让风险扩大。"
+          },
+          "analysis": "评分要点：写出三条以上具体做法（每条 2 分）；每条都能联系慎重交友、保护隐私、防范诈骗等边界要求（每条 1 分）；说明不告诉家长的危害（2 分）。",
+          "difficulty": 4,
+          "knowledge_point": "网上交往的边界",
+          "tags": [
+            "情境应用",
+            "简答"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "作为中学生，参与网络生活的基本要求是（  ）",
+          "options": [
+            "遵守道德和法律，自觉传播正能量",
+            "想到什么就说什么，不必顾忌",
+            "为了博取关注可以夸大事实",
+            "只看不评论最安全省事"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "网络生活同样受道德和法律约束，遵守规则、传播正能量是基本要求；B、C 破坏网络秩序，D 则放弃了应尽的责任，故选 A。",
+          "difficulty": 3,
+          "knowledge_point": "共建清朗网络空间",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "共建清朗的网络空间，需要每个网民从（  ）做起，自觉履行维护网络秩序的责任。",
+          "answer": {
+            "value": "自己"
+          },
+          "analysis": "网络空间是社会生活的一部分，网民应从我做起、从现在做起，自觉履行责任，故空格处填自己。",
+          "difficulty": 3,
+          "knowledge_point": "共建清朗网络空间",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "遇到网络谣言，可以在官方平台举报，并提醒身边人不信谣、不传谣。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "举报谣言既是维护网络秩序的正当做法，也是用行动传播正能量，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "共建清朗网络空间",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "共建清朗网络空间，青少年可以（  ）",
+          "options": [
+            "文明上网、理性表达",
+            "举报违法违规信息",
+            "不制作、不传播不良信息",
+            "为博取关注编造虚假消息"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 文明理性上网✓；B 举报违法信息✓；C 拒绝制作传播不良信息✓；D 编造虚假消息既失德又可能违法✗。故 A、B、C 成立。",
+          "difficulty": 4,
+          "knowledge_point": "共建清朗网络空间",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "深圳某中学实行手机统一保管，上课期间手机交由班主任暂存，其直接目的是（  ）",
+          "options": [
+            "减少分散注意力，维护课堂秩序",
+            "禁止学生使用科学技术",
+            "对所有学生进行惩罚",
+            "提高手机的市场价格"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课堂秩序需要规则保障，统一保管手机是为了减少干扰，这是维护教学秩序的具体措施；B、C、D 都不是管理规则的初衷，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "共建清朗网络空间",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "你在班级群里看到一条未经证实的消息，说学校附近某路段将封闭施工，群里同学纷纷转发，有人已经准备改道。请结合共建清朗网络空间的知识，写出你的做法并说明理由。",
+          "answer": {
+            "value": "第一，不转发未经证实的消息，先在群里提醒同学暂缓传播，等待官方发布。第二，主动向学校或交警部门求证，确认真实信息后再在群里说明。第三，请班主任或家长在班级内核实，避免同学因谣言耽误行程。第四，不对消息加以调侃、添油加醋，也不截图外传。理由是网络信息良莠不齐，谣言扩散会干扰正常秩序，不造谣、不信谣、不传谣，是每个网民维护网络秩序的责任。"
+          },
+          "analysis": "评分要点：写出三条以上具体做法（每条 2 分）；每条都体现理性核实、不转发不实信息（每条 1 分）；能说明谣言扩散的危害或清朗网络空间的意义（2 分）；表达通顺（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "共建清朗网络空间",
+          "tags": [
+            "情境应用",
+            "简答"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "面对网络上与自己观点不同的评论，正确的做法是（  ）",
+          "options": [
+            "理性看待，不情绪化、不人身攻击",
+            "把所有反对者一律拉黑",
+            "组织同学围攻对方账号",
+            "转发到其他群里让人骂他"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "网络交往要理性，观点不同可以讨论，克制情绪、不攻击人格是应有姿态；B、C、D 都属不文明甚至违法行为，故选 A。",
+          "difficulty": 2,
+          "knowledge_point": "网络的双重影响",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

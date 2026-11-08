@@ -2,6 +2,8 @@ import 'package:ai_learning/core/errors/api_error_guide.dart';
 import 'package:ai_learning/core/models/assignment.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
+import 'package:ai_learning/core/theme/app_accents.dart';
+import 'package:ai_learning/widgets/accent_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -54,7 +56,8 @@ class _AssignmentListPageState extends ConsumerState<AssignmentListPage> {
 
   void _open(AssignmentInfo item) {
     final user = ref.read(currentUserProvider);
-    if (user?.hasPermission('learn:assignment:create') == true && item.myStatus == null) {
+    if (user?.hasPermission('learn:assignment:create') == true &&
+        item.myStatus == null) {
       context.push('/assignments/${item.id}');
       return;
     }
@@ -76,7 +79,8 @@ class _AssignmentListPageState extends ConsumerState<AssignmentListPage> {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final user = ref.watch(currentUserProvider);
-    final teacherView = user?.hasPermission('learn:assignment:create') == true &&
+    final teacherView =
+        user?.hasPermission('learn:assignment:create') == true &&
         user?.isStudent == false;
     return Scaffold(
       appBar: AppBar(
@@ -141,9 +145,7 @@ class _AssignmentListPageState extends ConsumerState<AssignmentListPage> {
                     ),
                     const SizedBox(height: 4),
                     Text(
-                      teacherView
-                          ? '点击右下角「布置作业」为班级统一组卷。'
-                          : '老师布置作业后会显示在这里。',
+                      teacherView ? '点击右下角「布置作业」为班级统一组卷。' : '老师布置作业后会显示在这里。',
                       style: theme.textTheme.bodySmall,
                       textAlign: TextAlign.center,
                     ),
@@ -180,85 +182,91 @@ class _AssignmentCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final accents = AppAccents.of(context);
     final accent = item.completed
-        ? Colors.green.shade700
+        ? accents.learn
         : item.grading
-            ? Colors.orange.shade700
-            : theme.colorScheme.primary;
+        ? accents.exam
+        : accents.assignment;
     final progress = item.studentCount == 0
         ? '0%'
         : '${(item.submittedCount * 100 / item.studentCount).round()}%';
-    return Card(
+    return AccentCard(
       key: ValueKey('assignment-card-${item.id}'),
-      child: InkWell(
-        borderRadius: BorderRadius.circular(12),
-        onTap: onTap,
-        child: Padding(
-          padding: const EdgeInsets.all(16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+      accent: accent,
+      onTap: onTap,
+      padding: const EdgeInsets.all(16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
             children: [
-              Row(
-                children: [
-                  Expanded(
-                    child: Text(
-                      item.title,
-                      style: theme.textTheme.titleMedium?.copyWith(
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
+              Expanded(
+                child: Text(
+                  item.title,
+                  style: theme.textTheme.titleMedium?.copyWith(
+                    fontWeight: FontWeight.w600,
                   ),
-                  Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                    decoration: BoxDecoration(
-                      color: accent.withValues(alpha: 0.08),
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(color: accent.withValues(alpha: 0.4)),
-                    ),
-                    child: Text(
-                      teacherView
-                          ? (item.pendingGrading > 0 ? '待批改 ${item.pendingGrading}' : '已批改')
-                          : item.myStatusLabel,
-                      style: TextStyle(color: accent, fontSize: 12),
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 6),
-              Text(
-                '${item.subjectLabel} · ${item.className}'
-                '${item.dueLabel == null ? '' : ' · 截止 ${item.dueLabel}'}',
-                style: theme.textTheme.bodySmall,
-              ),
-              const SizedBox(height: 6),
-              if (teacherView)
-                Text(
-                  '提交 ${item.submittedCount}/${item.studentCount} · 完成率 $progress',
-                  style: theme.textTheme.bodySmall,
-                )
-              else
-                Text(
-                  item.completed || item.grading
-                      ? '得分 ${item.myTotalScore == null ? '待批改' : item.myTotalScore!.round()}'
-                      : '满分待定 · 点击进入作答',
-                  style: theme.textTheme.bodySmall,
                 ),
-              const SizedBox(height: 10),
-              Row(
-                children: [
-                  Text(
-                    teacherView
-                        ? (item.pendingGrading > 0 ? '去批改' : '查看详情')
-                        : (item.completed ? '查看报告' : item.grading ? '查看作答' : '进入作业'),
-                    style: theme.textTheme.labelLarge?.copyWith(color: accent),
-                  ),
-                  const Spacer(),
-                  Icon(Icons.chevron_right, color: accent),
-                ],
+              ),
+              Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 10,
+                  vertical: 4,
+                ),
+                decoration: BoxDecoration(
+                  color: accent.withValues(alpha: 0.08),
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(color: accent.withValues(alpha: 0.4)),
+                ),
+                child: Text(
+                  teacherView
+                      ? (item.pendingGrading > 0
+                            ? '待批改 ${item.pendingGrading}'
+                            : '已批改')
+                      : item.myStatusLabel,
+                  style: TextStyle(color: accent, fontSize: 12),
+                ),
               ),
             ],
           ),
-        ),
+          const SizedBox(height: 6),
+          Text(
+            '${item.subjectLabel} · ${item.className}'
+            '${item.dueLabel == null ? '' : ' · 截止 ${item.dueLabel}'}',
+            style: theme.textTheme.bodySmall,
+          ),
+          const SizedBox(height: 6),
+          if (teacherView)
+            Text(
+              '提交 ${item.submittedCount}/${item.studentCount} · 完成率 $progress',
+              style: theme.textTheme.bodySmall,
+            )
+          else
+            Text(
+              item.completed || item.grading
+                  ? '得分 ${item.myTotalScore == null ? '待批改' : item.myTotalScore!.round()}'
+                  : '满分待定 · 点击进入作答',
+              style: theme.textTheme.bodySmall,
+            ),
+          const SizedBox(height: 10),
+          Row(
+            children: [
+              Text(
+                teacherView
+                    ? (item.pendingGrading > 0 ? '去批改' : '查看详情')
+                    : (item.completed
+                          ? '查看报告'
+                          : item.grading
+                          ? '查看作答'
+                          : '进入作业'),
+                style: theme.textTheme.labelLarge?.copyWith(color: accent),
+              ),
+              const Spacer(),
+              Icon(Icons.chevron_right, color: accent),
+            ],
+          ),
+        ],
       ),
     );
   }

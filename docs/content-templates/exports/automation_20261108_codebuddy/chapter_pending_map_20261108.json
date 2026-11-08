@@ -1,0 +1,2039 @@
+{
+  "_meta": {
+    "kind": "chapter_pending_map",
+    "generated": "2026-11-08T20:19:36",
+    "purpose": "占位章节清理立项 · 阶段 2：需教材判断的归属确认清单（只读产出，不改库）",
+    "source_plan": "chapter_cleanup_plan_20261108.json（keep_marked 段）",
+    "totals": {
+      "pending_chapters": 24,
+      "pending_questions": 130
+    },
+    "how_to_use": [
+      "1. 业务按 subject/grade/semester 挑出该归属的教材真实章节（candidate_official_chapters）；",
+      "2. 把结论回填到 chapter_cleanup_plan_20261108.json 的 migrate 段（rule 记 R-B、evidence 写依据）；",
+      "3. 重跑 chapter_cleanup.py --confirm I_KNOW，脚本按新判定表迁移并清掉该占位章。"
+    ]
+  },
+  "items": [
+    {
+      "subject": "chinese",
+      "subject_cn": "语文",
+      "grade": 1,
+      "semester": "first",
+      "textbook_version": "人教版",
+      "chapter_id": 7,
+      "chapter_name": "汉语拼音",
+      "current_state": {
+        "is_placeholder": 1,
+        "order_index": 9007,
+        "placeholder_note": "R-C 保留：g1 官方第二/三/四单元的章名都叫「汉语拼音」，旧样章只有裸名，无法唯一定位；4 道题横跨声母/单韵母（第二单元）与整体认读音节（第四单元）。 建议：拆挂：声母、单韵母、声调 → 第二单元 汉语拼音；整体认读音节 → 第四单元 汉语拼音。",
+        "questions": 4
+      },
+      "reason": "g1 官方第二/三/四单元的章名都叫「汉语拼音」，旧样章只有裸名，无法唯一定位；4 道题横跨声母/单韵母（第二单元）与整体认读音节（第四单元）。",
+      "suggestion": "拆挂：声母、单韵母、声调 → 第二单元 汉语拼音；整体认读音节 → 第四单元 汉语拼音。",
+      "risk": "旧专题与教材单元主题不对应；直接并入某单元会让该单元出现「主题外」题目。建议先保留为占位章，等教研出题替换后再挂载。",
+      "candidate_official_chapters": [
+        {
+          "name": "第一单元 识字",
+          "order_index": 1
+        },
+        {
+          "name": "第二单元 汉语拼音",
+          "order_index": 2
+        },
+        {
+          "name": "第三单元 汉语拼音",
+          "order_index": 3
+        },
+        {
+          "name": "第四单元 汉语拼音",
+          "order_index": 4
+        },
+        {
+          "name": "第五单元 阅读",
+          "order_index": 5
+        },
+        {
+          "name": "第六单元 识字",
+          "order_index": 6
+        },
+        {
+          "name": "第七单元 阅读",
+          "order_index": 7
+        },
+        {
+          "name": "第八单元 阅读",
+          "order_index": 8
+        }
+      ],
+      "questions": [
+        {
+          "id": 25,
+          "knowledge_point_chain": "汉语拼音（要点） > 汉语拼音",
+          "q_type": "choice",
+          "stem": "下面属于声母的是（ ）。"
+        },
+        {
+          "id": 26,
+          "knowledge_point_chain": "汉语拼音（要点） > 汉语拼音",
+          "q_type": "choice",
+          "stem": "“mā”的声调是第（ ）声。"
+        },
+        {
+          "id": 27,
+          "knowledge_point_chain": "汉语拼音（要点） > 汉语拼音",
+          "q_type": "judge",
+          "stem": "“yi、wu、yu”是整体认读音节。"
+        },
+        {
+          "id": 28,
+          "knowledge_point_chain": "汉语拼音（要点） > 汉语拼音",
+          "q_type": "fill",
+          "stem": "汉语拼音有（ ）个单韵母。（填数字）"
+        }
+      ]
+    },
+    {
+      "subject": "chinese",
+      "subject_cn": "语文",
+      "grade": 1,
+      "semester": "first",
+      "textbook_version": "人教版",
+      "chapter_id": 9,
+      "chapter_name": "反义词与数量词",
+      "current_state": {
+        "is_placeholder": 1,
+        "order_index": 9009,
+        "placeholder_note": "R-C 保留：旧版语文知识专题，g1 官方 8 个单元里没有对应单元。 建议：并入第一单元 识字（字词），或保留为跨单元专项练习。",
+        "questions": 4
+      },
+      "reason": "旧版语文知识专题，g1 官方 8 个单元里没有对应单元。",
+      "suggestion": "并入第一单元 识字（字词），或保留为跨单元专项练习。",
+      "risk": "旧专题与教材单元主题不对应；直接并入某单元会让该单元出现「主题外」题目。建议先保留为占位章，等教研出题替换后再挂载。",
+      "candidate_official_chapters": [
+        {
+          "name": "第一单元 识字",
+          "order_index": 1
+        },
+        {
+          "name": "第二单元 汉语拼音",
+          "order_index": 2
+        },
+        {
+          "name": "第三单元 汉语拼音",
+          "order_index": 3
+        },
+        {
+          "name": "第四单元 汉语拼音",
+          "order_index": 4
+        },
+        {
+          "name": "第五单元 阅读",
+          "order_index": 5
+        },
+        {
+          "name": "第六单元 识字",
+          "order_index": 6
+        },
+        {
+          "name": "第七单元 阅读",
+          "order_index": 7
+        },
+        {
+          "name": "第八单元 阅读",
+          "order_index": 8
+        }
+      ],
+      "questions": [
+        {
+          "id": 33,
+          "knowledge_point_chain": "反义词与数量词（要点） > 反义词与数量词",
+          "q_type": "choice",
+          "stem": "“大”的反义词是（ ）。"
+        },
+        {
+          "id": 34,
+          "knowledge_point_chain": "反义词与数量词（要点） > 反义词与数量词",
+          "q_type": "fill",
+          "stem": "一（ ）小鸟（填量词）"
+        },
+        {
+          "id": 35,
+          "knowledge_point_chain": "反义词与数量词（要点） > 反义词与数量词",
+          "q_type": "judge",
+          "stem": "“上”和“下”是一对反义词。"
+        },
+        {
+          "id": 36,
+          "knowledge_point_chain": "反义词与数量词（要点） > 反义词与数量词",
+          "q_type": "fill",
+          "stem": "一（ ）黄牛（填量词）"
+        }
+      ]
+    },
+    {
+      "subject": "chinese",
+      "subject_cn": "语文",
+      "grade": 2,
+      "semester": "first",
+      "textbook_version": "人教版",
+      "chapter_id": 26,
+      "chapter_name": "多音字",
+      "current_state": {
+        "is_placeholder": 1,
+        "order_index": 9026,
+        "placeholder_note": "R-C 保留：旧版字词专题，g2 官方 8 个单元里没有对应单元。 建议：并入第二单元 识字，或保留为专项。",
+        "questions": 4
+      },
+      "reason": "旧版字词专题，g2 官方 8 个单元里没有对应单元。",
+      "suggestion": "并入第二单元 识字，或保留为专项。",
+      "risk": "旧专题与教材单元主题不对应；直接并入某单元会让该单元出现「主题外」题目。建议先保留为占位章，等教研出题替换后再挂载。",
+      "candidate_official_chapters": [
+        {
+          "name": "第一单元 阅读",
+          "order_index": 1
+        },
+        {
+          "name": "第二单元 识字",
+          "order_index": 2
+        },
+        {
+          "name": "第三单元 阅读",
+          "order_index": 3
+        },
+        {
+          "name": "第四单元 阅读",
+          "order_index": 4
+        },
+        {
+          "name": "第五单元 阅读",
+          "order_index": 5
+        },
+        {
+          "name": "第六单元 阅读",
+          "order_index": 6
+        },
+        {
+          "name": "第七单元 阅读",
+          "order_index": 7
+        },
+        {
+          "name": "第八单元 阅读",
+          "order_index": 8
+        }
+      ],
+      "questions": [
+        {
+          "id": 103,
+          "knowledge_point_chain": "多音字（要点） > 多音字",
+          "q_type": "choice",
+          "stem": "“快乐”的“乐”读（ ）。"
+        },
+        {
+          "id": 104,
+          "knowledge_point_chain": "多音字（要点） > 多音字",
+          "q_type": "judge",
+          "stem": "“音乐”的“乐”读 yuè。"
+        },
+        {
+          "id": 105,
+          "knowledge_point_chain": "多音字（要点） > 多音字",
+          "q_type": "fill",
+          "stem": "“长大”的“长”读（ ）。（写拼音，不带声调）"
+        },
+        {
+          "id": 106,
+          "knowledge_point_chain": "多音字（要点） > 多音字",
+          "q_type": "choice",
+          "stem": "下面词语中“地”读 dì 的是（ ）。"
+        }
+      ]
+    },
+    {
+      "subject": "chinese",
+      "subject_cn": "语文",
+      "grade": 2,
+      "semester": "first",
+      "textbook_version": "人教版",
+      "chapter_id": 27,
+      "chapter_name": "量词与词语搭配",
+      "current_state": {
+        "is_placeholder": 1,
+        "order_index": 9027,
+        "placeholder_note": "R-C 保留：旧版字词专题，g2 官方 8 个单元里没有对应单元。 建议：并入第二单元 识字，或保留为专项。",
+        "questions": 4
+      },
+      "reason": "旧版字词专题，g2 官方 8 个单元里没有对应单元。",
+      "suggestion": "并入第二单元 识字，或保留为专项。",
+      "risk": "旧专题与教材单元主题不对应；直接并入某单元会让该单元出现「主题外」题目。建议先保留为占位章，等教研出题替换后再挂载。",
+      "candidate_official_chapters": [
+        {
+          "name": "第一单元 阅读",
+          "order_index": 1
+        },
+        {
+          "name": "第二单元 识字",
+          "order_index": 2
+        },
+        {
+          "name": "第三单元 阅读",
+          "order_index": 3
+        },
+        {
+          "name": "第四单元 阅读",
+          "order_index": 4
+        },
+        {
+          "name": "第五单元 阅读",
+          "order_index": 5
+        },
+        {
+          "name": "第六单元 阅读",
+          "order_index": 6
+        },
+        {
+          "name": "第七单元 阅读",
+          "order_index": 7
+        },
+        {
+          "name": "第八单元 阅读",
+          "order_index": 8
+        }
+      ],
+      "questions": [
+        {
+          "id": 107,
+          "knowledge_point_chain": "量词与词语搭配（要点） > 量词与词语搭配",
+          "q_type": "fill",
+          "stem": "一（ ）石桥（填量词）"
+        },
+        {
+          "id": 108,
+          "knowledge_point_chain": "量词与词语搭配（要点） > 量词与词语搭配",
+          "q_type": "choice",
+          "stem": "（ ）衣裳（填动词）"
+        },
+        {
+          "id": 109,
+          "knowledge_point_chain": "量词与词语搭配（要点） > 量词与词语搭配",
+          "q_type": "judge",
+          "stem": "“一群大雁、一艘轮船”的量词都用对了。"
+        },
+        {
+          "id": 110,
+          "knowledge_point_chain": "量词与词语搭配（要点） > 量词与词语搭配",
+          "q_type": "fill",
+          "stem": "一（ ）图画（填量词）"
+        }
+      ]
+    },
+    {
+      "subject": "chinese",
+      "subject_cn": "语文",
+      "grade": 2,
+      "semester": "first",
+      "textbook_version": "人教版",
+      "chapter_id": 28,
+      "chapter_name": "比喻句初步",
+      "current_state": {
+        "is_placeholder": 1,
+        "order_index": 9028,
+        "placeholder_note": "R-C 保留：旧版修辞专题，g2 官方单元全是阅读单元，没有修辞单元。 建议：并入第三/第四单元 阅读 的语言理解，或保留为专项。",
+        "questions": 4
+      },
+      "reason": "旧版修辞专题，g2 官方单元全是阅读单元，没有修辞单元。",
+      "suggestion": "并入第三/第四单元 阅读 的语言理解，或保留为专项。",
+      "risk": "旧专题与教材单元主题不对应；直接并入某单元会让该单元出现「主题外」题目。建议先保留为占位章，等教研出题替换后再挂载。",
+      "candidate_official_chapters": [
+        {
+          "name": "第一单元 阅读",
+          "order_index": 1
+        },
+        {
+          "name": "第二单元 识字",
+          "order_index": 2
+        },
+        {
+          "name": "第三单元 阅读",
+          "order_index": 3
+        },
+        {
+          "name": "第四单元 阅读",
+          "order_index": 4
+        },
+        {
+          "name": "第五单元 阅读",
+          "order_index": 5
+        },
+        {
+          "name": "第六单元 阅读",
+          "order_index": 6
+        },
+        {
+          "name": "第七单元 阅读",
+          "order_index": 7
+        },
+        {
+          "name": "第八单元 阅读",
+          "order_index": 8
+        }
+      ],
+      "questions": [
+        {
+          "id": 111,
+          "knowledge_point_chain": "比喻句初步（要点） > 比喻句初步",
+          "q_type": "choice",
+          "stem": "“弯弯的月亮像小船”把月亮比作（ ）。"
+        },
+        {
+          "id": 112,
+          "knowledge_point_chain": "比喻句初步（要点） > 比喻句初步",
+          "q_type": "judge",
+          "stem": "“小红长得像妈妈”是比喻句。"
+        },
+        {
+          "id": 113,
+          "knowledge_point_chain": "比喻句初步（要点） > 比喻句初步",
+          "q_type": "fill",
+          "stem": "比喻句常用的比喻词有“像、好像、仿佛、（ ）”等。（1字）"
+        },
+        {
+          "id": 114,
+          "knowledge_point_chain": "比喻句初步（要点） > 比喻句初步",
+          "q_type": "choice",
+          "stem": "“荷叶挨挨挤挤的，像碧绿的大圆盘”中喻体是（ ）。"
+        }
+      ]
+    },
+    {
+      "subject": "chinese",
+      "subject_cn": "语文",
+      "grade": 3,
+      "semester": "first",
+      "textbook_version": "人教版",
+      "chapter_id": 45,
+      "chapter_name": "修改病句",
+      "current_state": {
+        "is_placeholder": 1,
+        "order_index": 9045,
+        "placeholder_note": "R-C 保留：旧版句子练习专题，g3 官方单元为主题单元，没有对应单元。 建议：并入第三单元（需按单元主题确认），或保留为专项。",
+        "questions": 4
+      },
+      "reason": "旧版句子练习专题，g3 官方单元为主题单元，没有对应单元。",
+      "suggestion": "并入第三单元（需按单元主题确认），或保留为专项。",
+      "risk": "旧专题与教材单元主题不对应；直接并入某单元会让该单元出现「主题外」题目。建议先保留为占位章，等教研出题替换后再挂载。",
+      "candidate_official_chapters": [
+        {
+          "name": "第一单元",
+          "order_index": 1
+        },
+        {
+          "name": "第二单元",
+          "order_index": 2
+        },
+        {
+          "name": "第三单元",
+          "order_index": 3
+        },
+        {
+          "name": "第四单元",
+          "order_index": 4
+        },
+        {
+          "name": "第五单元",
+          "order_index": 5
+        },
+        {
+          "name": "第六单元",
+          "order_index": 6
+        },
+        {
+          "name": "第七单元",
+          "order_index": 7
+        },
+        {
+          "name": "第八单元",
+          "order_index": 8
+        }
+      ],
+      "questions": [
+        {
+          "id": 181,
+          "knowledge_point_chain": "修改病句（要点） > 修改病句",
+          "q_type": "choice",
+          "stem": "“我们要学习他助人为乐。”这句的病因是（ ）。"
+        },
+        {
+          "id": 182,
+          "knowledge_point_chain": "修改病句（要点） > 修改病句",
+          "q_type": "judge",
+          "stem": "“我忍不住不禁笑了起来”语义重复。"
+        },
+        {
+          "id": 183,
+          "knowledge_point_chain": "修改病句（要点） > 修改病句",
+          "q_type": "fill",
+          "stem": "修改病句：“上课了，都在认真听讲。”应在“都在”前加（ ）。（2字）"
+        },
+        {
+          "id": 184,
+          "knowledge_point_chain": "修改病句（要点） > 修改病句",
+          "q_type": "choice",
+          "stem": "“春天的杭州是个美丽的季节。”的病因是（ ）。"
+        }
+      ]
+    },
+    {
+      "subject": "chinese",
+      "subject_cn": "语文",
+      "grade": 3,
+      "semester": "first",
+      "textbook_version": "人教版",
+      "chapter_id": 46,
+      "chapter_name": "关联词",
+      "current_state": {
+        "is_placeholder": 1,
+        "order_index": 9046,
+        "placeholder_note": "R-C 保留：旧版句子练习专题，g3 官方单元为主题单元，没有对应单元。 建议：并入第三单元（需按单元主题确认），或保留为专项。",
+        "questions": 4
+      },
+      "reason": "旧版句子练习专题，g3 官方单元为主题单元，没有对应单元。",
+      "suggestion": "并入第三单元（需按单元主题确认），或保留为专项。",
+      "risk": "旧专题与教材单元主题不对应；直接并入某单元会让该单元出现「主题外」题目。建议先保留为占位章，等教研出题替换后再挂载。",
+      "candidate_official_chapters": [
+        {
+          "name": "第一单元",
+          "order_index": 1
+        },
+        {
+          "name": "第二单元",
+          "order_index": 2
+        },
+        {
+          "name": "第三单元",
+          "order_index": 3
+        },
+        {
+          "name": "第四单元",
+          "order_index": 4
+        },
+        {
+          "name": "第五单元",
+          "order_index": 5
+        },
+        {
+          "name": "第六单元",
+          "order_index": 6
+        },
+        {
+          "name": "第七单元",
+          "order_index": 7
+        },
+        {
+          "name": "第八单元",
+          "order_index": 8
+        }
+      ],
+      "questions": [
+        {
+          "id": 185,
+          "knowledge_point_chain": "关联词（要点） > 关联词",
+          "q_type": "choice",
+          "stem": "（ ）明天下雨，运动会（ ）改期。应填（ ）。"
+        },
+        {
+          "id": 186,
+          "knowledge_point_chain": "关联词（要点） > 关联词",
+          "q_type": "judge",
+          "stem": "“因为他刻苦训练，所以成绩提高很快。”关联词使用正确。"
+        },
+        {
+          "id": 187,
+          "knowledge_point_chain": "关联词（要点） > 关联词",
+          "q_type": "fill",
+          "stem": "表示转折关系常用“虽然……（ ）……”。（2字）"
+        },
+        {
+          "id": 188,
+          "knowledge_point_chain": "关联词（要点） > 关联词",
+          "q_type": "choice",
+          "stem": "“小红（ ）会唱歌，（ ）会跳舞。”应填（ ）。"
+        }
+      ]
+    },
+    {
+      "subject": "chinese",
+      "subject_cn": "语文",
+      "grade": 3,
+      "semester": "first",
+      "textbook_version": "人教版",
+      "chapter_id": 47,
+      "chapter_name": "古诗文积累",
+      "current_state": {
+        "is_placeholder": 1,
+        "order_index": 9047,
+        "placeholder_note": "R-C 保留：旧版积累专题；g3 官方单元是主题单元，没有独立古诗文单元。 建议：按课文逐课归入对应单元（需教研逐题判断），暂保留。",
+        "questions": 4
+      },
+      "reason": "旧版积累专题；g3 官方单元是主题单元，没有独立古诗文单元。",
+      "suggestion": "按课文逐课归入对应单元（需教研逐题判断），暂保留。",
+      "risk": "旧专题与教材单元主题不对应；直接并入某单元会让该单元出现「主题外」题目。建议先保留为占位章，等教研出题替换后再挂载。",
+      "candidate_official_chapters": [
+        {
+          "name": "第一单元",
+          "order_index": 1
+        },
+        {
+          "name": "第二单元",
+          "order_index": 2
+        },
+        {
+          "name": "第三单元",
+          "order_index": 3
+        },
+        {
+          "name": "第四单元",
+          "order_index": 4
+        },
+        {
+          "name": "第五单元",
+          "order_index": 5
+        },
+        {
+          "name": "第六单元",
+          "order_index": 6
+        },
+        {
+          "name": "第七单元",
+          "order_index": 7
+        },
+        {
+          "name": "第八单元",
+          "order_index": 8
+        }
+      ],
+      "questions": [
+        {
+          "id": 189,
+          "knowledge_point_chain": "古诗文积累（要点） > 古诗文积累",
+          "q_type": "fill",
+          "stem": "《所见》中“牧童骑（ ）牛”。"
+        },
+        {
+          "id": 190,
+          "knowledge_point_chain": "古诗文积累（要点） > 古诗文积累",
+          "q_type": "fill",
+          "stem": "“停车坐爱枫林晚，霜叶红于（ ）月花。”"
+        },
+        {
+          "id": 191,
+          "knowledge_point_chain": "古诗文积累（要点） > 古诗文积累",
+          "q_type": "judge",
+          "stem": "《夜书所见》的作者是宋代诗人叶绍翁。"
+        },
+        {
+          "id": 192,
+          "knowledge_point_chain": "古诗文积累（要点） > 古诗文积累",
+          "q_type": "choice",
+          "stem": "“知有儿童挑促织”中“促织”指（ ）。"
+        }
+      ]
+    },
+    {
+      "subject": "english",
+      "subject_cn": "英语",
+      "grade": 1,
+      "semester": "first",
+      "textbook_version": "牛津深圳版",
+      "chapter_id": 13,
+      "chapter_name": "Greetings 问候",
+      "current_state": {
+        "is_placeholder": 1,
+        "order_index": 9013,
+        "placeholder_note": "R-C 保留：旧版单元名；牛津深圳版 g1 没有独立 greetings 单元，greetings 散在 Unit 1 的板块里。 建议：并入 Unit 1 What is your family like?（需确认板块归属）。",
+        "questions": 4
+      },
+      "reason": "旧版单元名；牛津深圳版 g1 没有独立 greetings 单元，greetings 散在 Unit 1 的板块里。",
+      "suggestion": "并入 Unit 1 What is your family like?（需确认板块归属）。",
+      "risk": "旧单元与牛津深圳版单元主题不完全对应；并入后需教研重写题干，否则会与该单元考点重复或冲突。",
+      "candidate_official_chapters": [
+        {
+          "name": "Unit 1 What is your family like?",
+          "order_index": 1
+        },
+        {
+          "name": "Unit 2 How are you today?",
+          "order_index": 2
+        },
+        {
+          "name": "Unit 3 What do you take to school?",
+          "order_index": 3
+        },
+        {
+          "name": "Unit 4 What can you do?",
+          "order_index": 4
+        },
+        {
+          "name": "Unit 5 What is your favourite animal?",
+          "order_index": 5
+        },
+        {
+          "name": "Unit 6 What colours can you see?",
+          "order_index": 6
+        }
+      ],
+      "questions": [
+        {
+          "id": 49,
+          "knowledge_point_chain": "Greetings 问候（要点） > Greetings 问候",
+          "q_type": "choice",
+          "stem": "早上见到老师应说：（ ）"
+        },
+        {
+          "id": 50,
+          "knowledge_point_chain": "Greetings 问候（要点） > Greetings 问候",
+          "q_type": "fill",
+          "stem": "别人对你说 Hello，你应回答：（ ）（填一个单词）"
+        },
+        {
+          "id": 51,
+          "knowledge_point_chain": "Greetings 问候（要点） > Greetings 问候",
+          "q_type": "judge",
+          "stem": "“Goodbye”表示告别。"
+        },
+        {
+          "id": 52,
+          "knowledge_point_chain": "Greetings 问候（要点） > Greetings 问候",
+          "q_type": "choice",
+          "stem": "自我介绍名字时说：（ ）"
+        }
+      ]
+    },
+    {
+      "subject": "english",
+      "subject_cn": "英语",
+      "grade": 1,
+      "semester": "first",
+      "textbook_version": "牛津深圳版",
+      "chapter_id": 15,
+      "chapter_name": "Numbers 1-10",
+      "current_state": {
+        "is_placeholder": 1,
+        "order_index": 9015,
+        "placeholder_note": "R-C 保留：g1 官方 6 个单元里没有数字主题单元。 建议：并入 Unit 3 What do you take to school?（含数字问答），或保留为专项。",
+        "questions": 4
+      },
+      "reason": "g1 官方 6 个单元里没有数字主题单元。",
+      "suggestion": "并入 Unit 3 What do you take to school?（含数字问答），或保留为专项。",
+      "risk": "旧单元与牛津深圳版单元主题不完全对应；并入后需教研重写题干，否则会与该单元考点重复或冲突。",
+      "candidate_official_chapters": [
+        {
+          "name": "Unit 1 What is your family like?",
+          "order_index": 1
+        },
+        {
+          "name": "Unit 2 How are you today?",
+          "order_index": 2
+        },
+        {
+          "name": "Unit 3 What do you take to school?",
+          "order_index": 3
+        },
+        {
+          "name": "Unit 4 What can you do?",
+          "order_index": 4
+        },
+        {
+          "name": "Unit 5 What is your favourite animal?",
+          "order_index": 5
+        },
+        {
+          "name": "Unit 6 What colours can you see?",
+          "order_index": 6
+        }
+      ],
+      "questions": [
+        {
+          "id": 57,
+          "knowledge_point_chain": "Numbers 1-10（要点） > Numbers 1-10",
+          "q_type": "fill",
+          "stem": "“三”的英文是：（ ）"
+        },
+        {
+          "id": 58,
+          "knowledge_point_chain": "Numbers 1-10（要点） > Numbers 1-10",
+          "q_type": "choice",
+          "stem": "How many? 🍎🍎🍎 （ ）"
+        },
+        {
+          "id": 59,
+          "knowledge_point_chain": "Numbers 1-10（要点） > Numbers 1-10",
+          "q_type": "judge",
+          "stem": "“ten”表示数字 10。"
+        },
+        {
+          "id": 60,
+          "knowledge_point_chain": "Numbers 1-10（要点） > Numbers 1-10",
+          "q_type": "fill",
+          "stem": "2 + 3 = （ ）（写英文数词）"
+        }
+      ]
+    },
+    {
+      "subject": "english",
+      "subject_cn": "英语",
+      "grade": 2,
+      "semester": "first",
+      "textbook_version": "牛津深圳版",
+      "chapter_id": 33,
+      "chapter_name": "Food 食物",
+      "current_state": {
+        "is_placeholder": 1,
+        "order_index": 9033,
+        "placeholder_note": "R-C 保留：g2 官方 6 个单元名里没有 food 关键词。 建议：并入 Unit 5 What do you like about farms?（食物词汇所在）。",
+        "questions": 4
+      },
+      "reason": "g2 官方 6 个单元名里没有 food 关键词。",
+      "suggestion": "并入 Unit 5 What do you like about farms?（食物词汇所在）。",
+      "risk": "旧单元与牛津深圳版单元主题不完全对应；并入后需教研重写题干，否则会与该单元考点重复或冲突。",
+      "candidate_official_chapters": [
+        {
+          "name": "Unit 1 What can you do with your five senses?",
+          "order_index": 1
+        },
+        {
+          "name": "Unit 2 What do you like about your family?",
+          "order_index": 2
+        },
+        {
+          "name": "Unit 3 What is your favourite toy?",
+          "order_index": 3
+        },
+        {
+          "name": "Unit 4 What is around your home?",
+          "order_index": 4
+        },
+        {
+          "name": "Unit 5 What do you like about farms?",
+          "order_index": 5
+        },
+        {
+          "name": "Unit 6 How do people celebrate the Mid-Autumn Festival?",
+          "order_index": 6
+        }
+      ],
+      "questions": [
+        {
+          "id": 131,
+          "knowledge_point_chain": "Food 食物（要点） > Food 食物",
+          "q_type": "choice",
+          "stem": "早餐常喝的白色饮品是：（ ）"
+        },
+        {
+          "id": 132,
+          "knowledge_point_chain": "Food 食物（要点） > Food 食物",
+          "q_type": "fill",
+          "stem": "“鸡蛋”的英文是：（ ）"
+        },
+        {
+          "id": 133,
+          "knowledge_point_chain": "Food 食物（要点） > Food 食物",
+          "q_type": "judge",
+          "stem": "I like apples. 表示“我喜欢苹果”。"
+        },
+        {
+          "id": 134,
+          "knowledge_point_chain": "Food 食物（要点） > Food 食物",
+          "q_type": "choice",
+          "stem": "I don't like （ ）.（我不喜欢鱼）"
+        }
+      ]
+    },
+    {
+      "subject": "english",
+      "subject_cn": "英语",
+      "grade": 2,
+      "semester": "first",
+      "textbook_version": "牛津深圳版",
+      "chapter_id": 34,
+      "chapter_name": "Numbers 11-20",
+      "current_state": {
+        "is_placeholder": 1,
+        "order_index": 9034,
+        "placeholder_note": "R-C 保留：g2 官方 6 个单元里没有数字主题单元。 建议：并入 Unit 3 What is your favourite toy?（含数量表达），或保留为专项。",
+        "questions": 4
+      },
+      "reason": "g2 官方 6 个单元里没有数字主题单元。",
+      "suggestion": "并入 Unit 3 What is your favourite toy?（含数量表达），或保留为专项。",
+      "risk": "旧单元与牛津深圳版单元主题不完全对应；并入后需教研重写题干，否则会与该单元考点重复或冲突。",
+      "candidate_official_chapters": [
+        {
+          "name": "Unit 1 What can you do with your five senses?",
+          "order_index": 1
+        },
+        {
+          "name": "Unit 2 What do you like about your family?",
+          "order_index": 2
+        },
+        {
+          "name": "Unit 3 What is your favourite toy?",
+          "order_index": 3
+        },
+        {
+          "name": "Unit 4 What is around your home?",
+          "order_index": 4
+        },
+        {
+          "name": "Unit 5 What do you like about farms?",
+          "order_index": 5
+        },
+        {
+          "name": "Unit 6 How do people celebrate the Mid-Autumn Festival?",
+          "order_index": 6
+        }
+      ],
+      "questions": [
+        {
+          "id": 135,
+          "knowledge_point_chain": "Numbers 11-20（要点） > Numbers 11-20",
+          "q_type": "fill",
+          "stem": "“十五”的英文是：（ ）"
+        },
+        {
+          "id": 136,
+          "knowledge_point_chain": "Numbers 11-20（要点） > Numbers 11-20",
+          "q_type": "choice",
+          "stem": "12 的英文是：（ ）"
+        },
+        {
+          "id": 137,
+          "knowledge_point_chain": "Numbers 11-20（要点） > Numbers 11-20",
+          "q_type": "judge",
+          "stem": "“twenty”表示 20。"
+        },
+        {
+          "id": 138,
+          "knowledge_point_chain": "Numbers 11-20（要点） > Numbers 11-20",
+          "q_type": "fill",
+          "stem": "13 的英文是：（ ）"
+        }
+      ]
+    },
+    {
+      "subject": "english",
+      "subject_cn": "英语",
+      "grade": 3,
+      "semester": "first",
+      "textbook_version": "牛津深圳版",
+      "chapter_id": 51,
+      "chapter_name": "My school 学校场所",
+      "current_state": {
+        "is_placeholder": 1,
+        "order_index": 9051,
+        "placeholder_note": "R-C 保留：g3 官方 8 个单元名里没有 school 关键词。 建议：并入 Unit 4 What is around your home?（场所词汇）。",
+        "questions": 4
+      },
+      "reason": "g3 官方 8 个单元名里没有 school 关键词。",
+      "suggestion": "并入 Unit 4 What is around your home?（场所词汇）。",
+      "risk": "旧单元与牛津深圳版单元主题不完全对应；并入后需教研重写题干，否则会与该单元考点重复或冲突。",
+      "candidate_official_chapters": [
+        {
+          "name": "Unit 1 How do we feel?",
+          "order_index": 1
+        },
+        {
+          "name": "Unit 2 What's interesting about families?",
+          "order_index": 2
+        },
+        {
+          "name": "Unit 3 What do we look like?",
+          "order_index": 3
+        },
+        {
+          "name": "Unit 4 How do we have fun?",
+          "order_index": 4
+        },
+        {
+          "name": "Unit 5 What do we eat?",
+          "order_index": 5
+        },
+        {
+          "name": "Unit 6 What do we like about small animals?",
+          "order_index": 6
+        },
+        {
+          "name": "Unit 7 What do we know about weather?",
+          "order_index": 7
+        },
+        {
+          "name": "Unit 8 Why do we like birthdays?",
+          "order_index": 8
+        }
+      ],
+      "questions": [
+        {
+          "id": 205,
+          "knowledge_point_chain": "My school 学校场所（要点） > My school 学校场所",
+          "q_type": "choice",
+          "stem": "我们在（ ）里读书、借书。"
+        },
+        {
+          "id": 206,
+          "knowledge_point_chain": "My school 学校场所（要点） > My school 学校场所",
+          "q_type": "fill",
+          "stem": "“操场”的英文是：（ ）"
+        },
+        {
+          "id": 207,
+          "knowledge_point_chain": "My school 学校场所（要点） > My school 学校场所",
+          "q_type": "judge",
+          "stem": "classroom 的意思是教室。"
+        },
+        {
+          "id": 208,
+          "knowledge_point_chain": "My school 学校场所（要点） > My school 学校场所",
+          "q_type": "choice",
+          "stem": "We play football on the （ ）."
+        }
+      ]
+    },
+    {
+      "subject": "english",
+      "subject_cn": "英语",
+      "grade": 3,
+      "semester": "first",
+      "textbook_version": "牛津深圳版",
+      "chapter_id": 53,
+      "chapter_name": "现在进行时初步",
+      "current_state": {
+        "is_placeholder": 1,
+        "order_index": 9053,
+        "placeholder_note": "R-C 保留：语法专题名，不是教材单元名。 建议：并入 Unit 1 How do we feel?（现在进行时语法点所在）。",
+        "questions": 4
+      },
+      "reason": "语法专题名，不是教材单元名。",
+      "suggestion": "并入 Unit 1 How do we feel?（现在进行时语法点所在）。",
+      "risk": "旧单元与牛津深圳版单元主题不完全对应；并入后需教研重写题干，否则会与该单元考点重复或冲突。",
+      "candidate_official_chapters": [
+        {
+          "name": "Unit 1 How do we feel?",
+          "order_index": 1
+        },
+        {
+          "name": "Unit 2 What's interesting about families?",
+          "order_index": 2
+        },
+        {
+          "name": "Unit 3 What do we look like?",
+          "order_index": 3
+        },
+        {
+          "name": "Unit 4 How do we have fun?",
+          "order_index": 4
+        },
+        {
+          "name": "Unit 5 What do we eat?",
+          "order_index": 5
+        },
+        {
+          "name": "Unit 6 What do we like about small animals?",
+          "order_index": 6
+        },
+        {
+          "name": "Unit 7 What do we know about weather?",
+          "order_index": 7
+        },
+        {
+          "name": "Unit 8 Why do we like birthdays?",
+          "order_index": 8
+        }
+      ],
+      "questions": [
+        {
+          "id": 213,
+          "knowledge_point_chain": "现在进行时初步（要点） > 现在进行时初步",
+          "q_type": "choice",
+          "stem": "Look! The boy （ ） football."
+        },
+        {
+          "id": 214,
+          "knowledge_point_chain": "现在进行时初步（要点） > 现在进行时初步",
+          "q_type": "judge",
+          "stem": "“I am reading.”表示我正在看书。"
+        },
+        {
+          "id": 215,
+          "knowledge_point_chain": "现在进行时初步（要点） > 现在进行时初步",
+          "q_type": "fill",
+          "stem": "They are （ ）（swim）now. 填 swim 的 -ing 形式："
+        },
+        {
+          "id": 216,
+          "knowledge_point_chain": "现在进行时初步（要点） > 现在进行时初步",
+          "q_type": "choice",
+          "stem": "—What are you doing? —（ ）"
+        }
+      ]
+    },
+    {
+      "subject": "geography",
+      "subject_cn": "地理",
+      "grade": 7,
+      "semester": "first",
+      "textbook_version": "湘教版",
+      "chapter_id": 122,
+      "chapter_name": "第一章 地球和地图",
+      "current_state": {
+        "is_placeholder": 1,
+        "order_index": 9122,
+        "placeholder_note": "R-C 保留：湘教版旧版第一章名；新版第一章为「让我们走进地理」。5 道题（地球的形状与大小、经纬网、地图的阅读）落在新版第一章第二节「地球与地球仪」附近，但「经纬网」「地图的阅读」是否属该章需确认。 建议：并入 第一章 让我们走进地理（需确认经纬网/地图的阅读的节归属）。",
+        "questions": 5
+      },
+      "reason": "湘教版旧版第一章名；新版第一章为「让我们走进地理」。5 道题（地球的形状与大小、经纬网、地图的阅读）落在新版第一章第二节「地球与地球仪」附近，但「经纬网」「地图的阅读」是否属该章需确认。",
+      "suggestion": "并入 第一章 让我们走进地理（需确认经纬网/地图的阅读的节归属）。",
+      "risk": "旧版第一章与新版第一章主题范围不同；并入前需逐题确认落在哪一节。",
+      "candidate_official_chapters": [
+        {
+          "name": "第一章 让我们走进地理",
+          "order_index": 1
+        },
+        {
+          "name": "第二章 认识地球",
+          "order_index": 2
+        },
+        {
+          "name": "第三章 地球的面貌",
+          "order_index": 3
+        },
+        {
+          "name": "第四章 世界的居民与文化",
+          "order_index": 4
+        },
+        {
+          "name": "第五章 世界的气候",
+          "order_index": 5
+        },
+        {
+          "name": "第六章 世界的发展差异",
+          "order_index": 6
+        }
+      ],
+      "questions": [
+        {
+          "id": 621,
+          "knowledge_point_chain": "地球的形状与大小 > 地球与地图",
+          "q_type": "choice",
+          "stem": "地球的平均半径约为（ ）"
+        },
+        {
+          "id": 622,
+          "knowledge_point_chain": "经纬网 > 地球与地图",
+          "q_type": "fill",
+          "stem": "经线指示（ ）方向。"
+        },
+        {
+          "id": 623,
+          "knowledge_point_chain": "经纬网 > 地球与地图",
+          "q_type": "judge",
+          "stem": "赤道是最长的纬线。"
+        },
+        {
+          "id": 624,
+          "knowledge_point_chain": "地图的阅读 > 地球与地图",
+          "q_type": "multiple",
+          "stem": "地图的基本要素包括（ ）"
+        },
+        {
+          "id": 625,
+          "knowledge_point_chain": "地图的阅读 > 地球与地图",
+          "q_type": "answer",
+          "stem": "在比例尺为 1:50000 的地图上，量得甲、乙两地距离为 4 厘米，两地实际距离是多少千米？"
+        }
+      ]
+    },
+    {
+      "subject": "politics",
+      "subject_cn": "道德与法治",
+      "grade": 7,
+      "semester": "first",
+      "textbook_version": "部编版",
+      "chapter_id": 126,
+      "chapter_name": "第一单元 成长的节拍",
+      "current_state": {
+        "is_placeholder": 1,
+        "order_index": 9126,
+        "placeholder_note": "R-C 保留：旧版单元名；新版第一单元为「少年有梦」。5 道题（中学时代、学习伴成长、认识自我）内容更贴近新版第二单元「成长的时空」，与第一单元不完全对应。 建议：业务在「第一单元 少年有梦」与「第二单元 成长的时空」之间确认。",
+        "questions": 5
+      },
+      "reason": "旧版单元名；新版第一单元为「少年有梦」。5 道题（中学时代、学习伴成长、认识自我）内容更贴近新版第二单元「成长的时空」，与第一单元不完全对应。",
+      "suggestion": "业务在「第一单元 少年有梦」与「第二单元 成长的时空」之间确认。",
+      "risk": "需教研确认归属后再迁移；迁移前该章内容对用户不可见，但库内完整保留、可随时回挂。",
+      "candidate_official_chapters": [
+        {
+          "name": "第一单元 少年有梦",
+          "order_index": 1
+        },
+        {
+          "name": "第二单元 成长的时空",
+          "order_index": 2
+        },
+        {
+          "name": "第三单元 珍爱我们的生命",
+          "order_index": 3
+        },
+        {
+          "name": "第四单元 追求美好人生",
+          "order_index": 4
+        }
+      ],
+      "questions": [
+        {
+          "id": 642,
+          "knowledge_point_chain": "中学时代 > 成长的节拍",
+          "q_type": "choice",
+          "stem": "进入中学后，我们面对的新挑战不包括（ ）"
+        },
+        {
+          "id": 643,
+          "knowledge_point_chain": "学习伴成长 > 成长的节拍",
+          "q_type": "fill",
+          "stem": "学习不仅表现为接受和掌握，而且表现为（ ）、发现、体验和感悟。"
+        },
+        {
+          "id": 644,
+          "knowledge_point_chain": "中学时代 > 成长的节拍",
+          "q_type": "judge",
+          "stem": "中学时代是人生发展的一个新阶段。"
+        },
+        {
+          "id": 645,
+          "knowledge_point_chain": "认识自我 > 成长的节拍",
+          "q_type": "multiple",
+          "stem": "正确认识自己有助于（ ）"
+        },
+        {
+          "id": 646,
+          "knowledge_point_chain": "认识自我 > 成长的节拍",
+          "q_type": "answer",
+          "stem": "写出自己的两个优点和一个需要改进的方面，并说明改进方法。"
+        }
+      ]
+    },
+    {
+      "subject": "math",
+      "subject_cn": "数学",
+      "grade": 1,
+      "semester": "first",
+      "textbook_version": "北师大版",
+      "chapter_id": 2,
+      "chapter_name": "比较与位置",
+      "current_state": {
+        "is_placeholder": 1,
+        "order_index": 9002,
+        "placeholder_note": "R-C 保留：旧版单元名，g1 官方 6 章里没有同名的单元。 建议：并入 第一单元 生活中的数（比多少、上下左右）。",
+        "questions": 4
+      },
+      "reason": "旧版单元名，g1 官方 6 章里没有同名的单元。",
+      "suggestion": "并入 第一单元 生活中的数（比多少、上下左右）。",
+      "risk": "旧单元在新版教材目录里没有对应单元（多为下册或旧人教版口径）；强行并入会造成「教材里没有的知识点被算进该单元」。",
+      "candidate_official_chapters": [
+        {
+          "name": "开篇",
+          "order_index": 1
+        },
+        {
+          "name": "第一单元 生活中的数",
+          "order_index": 2
+        },
+        {
+          "name": "第二单元 5以内数加与减",
+          "order_index": 3
+        },
+        {
+          "name": "第三单元 整理与分类",
+          "order_index": 4
+        },
+        {
+          "name": "第四单元 10以内数加与减",
+          "order_index": 5
+        },
+        {
+          "name": "第五单元 有趣的立体图形",
+          "order_index": 6
+        }
+      ],
+      "questions": [
+        {
+          "id": 5,
+          "knowledge_point_chain": "比较与位置（要点） > 比较与位置",
+          "q_type": "judge",
+          "stem": "苹果比西瓜大。"
+        },
+        {
+          "id": 6,
+          "knowledge_point_chain": "比较与位置（要点） > 比较与位置",
+          "q_type": "choice",
+          "stem": "上下楼梯要靠（ ）行。"
+        },
+        {
+          "id": 7,
+          "knowledge_point_chain": "比较与位置（要点） > 比较与位置",
+          "q_type": "fill",
+          "stem": "比 5 多 2 的数是（ ）。"
+        },
+        {
+          "id": 8,
+          "knowledge_point_chain": "比较与位置（要点） > 比较与位置",
+          "q_type": "judge",
+          "stem": "小明的左手和右手是相对的。"
+        }
+      ]
+    },
+    {
+      "subject": "math",
+      "subject_cn": "数学",
+      "grade": 1,
+      "semester": "first",
+      "textbook_version": "北师大版",
+      "chapter_id": 3,
+      "chapter_name": "认识图形",
+      "current_state": {
+        "is_placeholder": 1,
+        "order_index": 9003,
+        "placeholder_note": "R-C 保留：旧版单元名，g1 官方 6 章里没有同名的单元。 建议：并入 第五单元 有趣的立体图形（题目为球/正方体/易拉罐/长方体面数，均为立体图形）。",
+        "questions": 4
+      },
+      "reason": "旧版单元名，g1 官方 6 章里没有同名的单元。",
+      "suggestion": "并入 第五单元 有趣的立体图形（题目为球/正方体/易拉罐/长方体面数，均为立体图形）。",
+      "risk": "旧单元在新版教材目录里没有对应单元（多为下册或旧人教版口径）；强行并入会造成「教材里没有的知识点被算进该单元」。",
+      "candidate_official_chapters": [
+        {
+          "name": "开篇",
+          "order_index": 1
+        },
+        {
+          "name": "第一单元 生活中的数",
+          "order_index": 2
+        },
+        {
+          "name": "第二单元 5以内数加与减",
+          "order_index": 3
+        },
+        {
+          "name": "第三单元 整理与分类",
+          "order_index": 4
+        },
+        {
+          "name": "第四单元 10以内数加与减",
+          "order_index": 5
+        },
+        {
+          "name": "第五单元 有趣的立体图形",
+          "order_index": 6
+        }
+      ],
+      "questions": [
+        {
+          "id": 9,
+          "knowledge_point_chain": "认识图形（要点） > 认识图形",
+          "q_type": "choice",
+          "stem": "下面形状像球的是（ ）。"
+        },
+        {
+          "id": 10,
+          "knowledge_point_chain": "认识图形（要点） > 认识图形",
+          "q_type": "judge",
+          "stem": "魔方的形状是正方体。"
+        },
+        {
+          "id": 11,
+          "knowledge_point_chain": "认识图形（要点） > 认识图形",
+          "q_type": "choice",
+          "stem": "易拉罐的形状像（ ）。"
+        },
+        {
+          "id": 12,
+          "knowledge_point_chain": "认识图形（要点） > 认识图形",
+          "q_type": "fill",
+          "stem": "长方体有（ ）个面。"
+        }
+      ]
+    },
+    {
+      "subject": "math",
+      "subject_cn": "数学",
+      "grade": 2,
+      "semester": "first",
+      "textbook_version": "北师大版",
+      "chapter_id": 21,
+      "chapter_name": "乘法口诀（2-5）",
+      "current_state": {
+        "is_placeholder": 1,
+        "order_index": 9021,
+        "placeholder_note": "R-C 保留：g2 官方有「第四单元 乘法口诀（一）」与「第七单元 乘法口诀（二）」两个乘法口诀单元，旧样章名自带「2-5」但官方骨架未展开到节，无法机械判定「一」对应 2~5 还是 6~9。 建议：并入 第四单元 乘法口诀（一）——需确认教材中「乘法口诀（一）」覆盖 2~5。",
+        "questions": 4
+      },
+      "reason": "g2 官方有「第四单元 乘法口诀（一）」与「第七单元 乘法口诀（二）」两个乘法口诀单元，旧样章名自带「2-5」但官方骨架未展开到节，无法机械判定「一」对应 2~5 还是 6~9。",
+      "suggestion": "并入 第四单元 乘法口诀（一）——需确认教材中「乘法口诀（一）」覆盖 2~5。",
+      "risk": "旧单元在新版教材目录里没有对应单元（多为下册或旧人教版口径）；强行并入会造成「教材里没有的知识点被算进该单元」。",
+      "candidate_official_chapters": [
+        {
+          "name": "第一单元 100以内数加与减（二）",
+          "order_index": 1
+        },
+        {
+          "name": "第二单元 测量（一）",
+          "order_index": 2
+        },
+        {
+          "name": "第三单元 数一数与乘法",
+          "order_index": 3
+        },
+        {
+          "name": "第四单元 乘法口诀（一）",
+          "order_index": 4
+        },
+        {
+          "name": "第五单元 分一分与除法",
+          "order_index": 5
+        },
+        {
+          "name": "第六单元 图形的运动（一）",
+          "order_index": 6
+        },
+        {
+          "name": "第七单元 乘法口诀（二）",
+          "order_index": 7
+        },
+        {
+          "name": "第八单元 乘除法的应用（一）",
+          "order_index": 8
+        }
+      ],
+      "questions": [
+        {
+          "id": 83,
+          "knowledge_point_chain": "乘法口诀（2-5）（要点） > 乘法口诀（2-5）",
+          "q_type": "fill",
+          "stem": "3 × 2 = （ ）"
+        },
+        {
+          "id": 84,
+          "knowledge_point_chain": "乘法口诀（2-5）（要点） > 乘法口诀（2-5）",
+          "q_type": "choice",
+          "stem": "4 × 4 = ?"
+        },
+        {
+          "id": 85,
+          "knowledge_point_chain": "乘法口诀（2-5）（要点） > 乘法口诀（2-5）",
+          "q_type": "fill",
+          "stem": "把 4 + 4 + 4 改写成乘法算式是 4 × （ ）。"
+        },
+        {
+          "id": 86,
+          "knowledge_point_chain": "乘法口诀（2-5）（要点） > 乘法口诀（2-5）",
+          "q_type": "judge",
+          "stem": "2 × 5 和 5 × 2 用同一句口诀。"
+        }
+      ]
+    },
+    {
+      "subject": "math",
+      "subject_cn": "数学",
+      "grade": 2,
+      "semester": "first",
+      "textbook_version": "北师大版",
+      "chapter_id": 22,
+      "chapter_name": "元角分",
+      "current_state": {
+        "is_placeholder": 1,
+        "order_index": 9022,
+        "placeholder_note": "R-C 保留：g2 官方 8 个单元里没有人民币单元。 建议：并入 第三单元 数一数与乘法，或保留为专项。",
+        "questions": 4
+      },
+      "reason": "g2 官方 8 个单元里没有人民币单元。",
+      "suggestion": "并入 第三单元 数一数与乘法，或保留为专项。",
+      "risk": "旧单元在新版教材目录里没有对应单元（多为下册或旧人教版口径）；强行并入会造成「教材里没有的知识点被算进该单元」。",
+      "candidate_official_chapters": [
+        {
+          "name": "第一单元 100以内数加与减（二）",
+          "order_index": 1
+        },
+        {
+          "name": "第二单元 测量（一）",
+          "order_index": 2
+        },
+        {
+          "name": "第三单元 数一数与乘法",
+          "order_index": 3
+        },
+        {
+          "name": "第四单元 乘法口诀（一）",
+          "order_index": 4
+        },
+        {
+          "name": "第五单元 分一分与除法",
+          "order_index": 5
+        },
+        {
+          "name": "第六单元 图形的运动（一）",
+          "order_index": 6
+        },
+        {
+          "name": "第七单元 乘法口诀（二）",
+          "order_index": 7
+        },
+        {
+          "name": "第八单元 乘除法的应用（一）",
+          "order_index": 8
+        }
+      ],
+      "questions": [
+        {
+          "id": 87,
+          "knowledge_point_chain": "元角分（要点） > 元角分",
+          "q_type": "fill",
+          "stem": "1 元 = （ ）角。"
+        },
+        {
+          "id": 88,
+          "knowledge_point_chain": "元角分（要点） > 元角分",
+          "q_type": "choice",
+          "stem": "一支铅笔 5 角，付 1 元应找回（ ）。"
+        },
+        {
+          "id": 89,
+          "knowledge_point_chain": "元角分（要点） > 元角分",
+          "q_type": "fill",
+          "stem": "1 角 = （ ）分。"
+        },
+        {
+          "id": 90,
+          "knowledge_point_chain": "元角分（要点） > 元角分",
+          "q_type": "judge",
+          "stem": "一张 10 元可以换 10 张 1 元。"
+        }
+      ]
+    },
+    {
+      "subject": "math",
+      "subject_cn": "数学",
+      "grade": 3,
+      "semester": "first",
+      "textbook_version": "北师大版",
+      "chapter_id": 39,
+      "chapter_name": "一位数乘多位数",
+      "current_state": {
+        "is_placeholder": 1,
+        "order_index": 9039,
+        "placeholder_note": "R-C 保留：北师大版三上目录没有笔算乘法单元（第六单元为「乘除法的应用（二）」）；22 道题是旧人教版口径。 建议：改挂下册对应单元，或降级为跨年级专项练习。",
+        "questions": 22
+      },
+      "reason": "北师大版三上目录没有笔算乘法单元（第六单元为「乘除法的应用（二）」）；22 道题是旧人教版口径。",
+      "suggestion": "改挂下册对应单元，或降级为跨年级专项练习。",
+      "risk": "旧单元在新版教材目录里没有对应单元（多为下册或旧人教版口径）；强行并入会造成「教材里没有的知识点被算进该单元」。",
+      "candidate_official_chapters": [
+        {
+          "name": "第一单元 混合运算",
+          "order_index": 1
+        },
+        {
+          "name": "第二单元 测量（二）",
+          "order_index": 2
+        },
+        {
+          "name": "第三单元 大数加与减（二）",
+          "order_index": 3
+        },
+        {
+          "name": "第四单元 我们生活的空间（一）",
+          "order_index": 4
+        },
+        {
+          "name": "第五单元 认识图形",
+          "order_index": 5
+        },
+        {
+          "name": "第六单元 乘除法的应用（二）",
+          "order_index": 6
+        },
+        {
+          "name": "第七单元 认识小数",
+          "order_index": 7
+        },
+        {
+          "name": "第八单元 调查与记录",
+          "order_index": 8
+        }
+      ],
+      "questions": [
+        {
+          "id": 157,
+          "knowledge_point_chain": "一位数乘多位数（要点） > 一位数乘多位数",
+          "q_type": "fill",
+          "stem": "12 × 3 = （ ）"
+        },
+        {
+          "id": 158,
+          "knowledge_point_chain": "一位数乘多位数（要点） > 一位数乘多位数",
+          "q_type": "choice",
+          "stem": "24 × 4 = ?"
+        },
+        {
+          "id": 159,
+          "knowledge_point_chain": "一位数乘多位数（要点） > 一位数乘多位数",
+          "q_type": "fill",
+          "stem": "0 和任何数相乘都得（ ）。"
+        },
+        {
+          "id": 160,
+          "knowledge_point_chain": "一位数乘多位数（要点） > 一位数乘多位数",
+          "q_type": "choice",
+          "stem": "一箱牛奶 24 盒，4 箱共（ ）盒。"
+        },
+        {
+          "id": 685,
+          "knowledge_point_chain": "整十整百数乘一位数 > 一位数乘多位数",
+          "q_type": "choice",
+          "stem": "20×3 等于多少？"
+        },
+        {
+          "id": 686,
+          "knowledge_point_chain": "整十整百数乘一位数 > 一位数乘多位数",
+          "q_type": "fill",
+          "stem": "300×2=（ ）。"
+        },
+        {
+          "id": 687,
+          "knowledge_point_chain": "一位数乘两位数的竖式 > 一位数乘多位数",
+          "q_type": "choice",
+          "stem": "23×4 等于多少？"
+        },
+        {
+          "id": 688,
+          "knowledge_point_chain": "一位数乘两位数的竖式 > 一位数乘多位数",
+          "q_type": "fill",
+          "stem": "34×2=（ ）。"
+        },
+        {
+          "id": 689,
+          "knowledge_point_chain": "一位数乘两位数的竖式 > 一位数乘多位数",
+          "q_type": "judge",
+          "stem": "计算 23×4 时，先算 3×4=12，个位写 2 向十位进 1，再算 2×4=8，加上进的 1 得 9，结果是 92。"
+        },
+        {
+          "id": 690,
+          "knowledge_point_chain": "一位数乘三位数（进位） > 一位数乘多位数",
+          "q_type": "choice",
+          "stem": "208×3 等于多少？"
+        },
+        {
+          "id": 691,
+          "knowledge_point_chain": "一位数乘三位数（进位） > 一位数乘多位数",
+          "q_type": "fill",
+          "stem": "156×4=（ ）。"
+        },
+        {
+          "id": 692,
+          "knowledge_point_chain": "整十整百数乘一位数 > 一位数乘多位数",
+          "q_type": "judge",
+          "stem": "计算 400×5 时，先算 4×5=20，再在积的末尾添两个 0，得 2000。"
+        },
+        {
+          "id": 693,
+          "knowledge_point_chain": "乘法估算 > 一位数乘多位数",
+          "q_type": "multiple",
+          "stem": "估算 39×6 时，下面说法正确的有（ ）。"
+        },
+        {
+          "id": 694,
+          "knowledge_point_chain": "乘法估算 > 一位数乘多位数",
+          "q_type": "choice",
+          "stem": "每盒彩笔 48 元，买 5 盒大约需要多少钱？"
+        },
+        {
+          "id": 695,
+          "knowledge_point_chain": "一位数乘三位数（进位） > 一位数乘多位数",
+          "q_type": "judge",
+          "stem": "三位数乘一位数，积一定是四位数。"
+        },
+        {
+          "id": 696,
+          "knowledge_point_chain": "乘加乘减混合 > 一位数乘多位数",
+          "q_type": "choice",
+          "stem": "24×3+15 等于多少？"
+        },
+        {
+          "id": 697,
+          "knowledge_point_chain": "乘加乘减混合 > 一位数乘多位数",
+          "q_type": "fill",
+          "stem": "60-12×4=（ ）。"
+        },
+        {
+          "id": 698,
+          "knowledge_point_chain": "乘加乘减混合 > 一位数乘多位数",
+          "q_type": "multiple",
+          "stem": "下面算式中结果等于 100 的有（ ）。"
+        },
+        {
+          "id": 699,
+          "knowledge_point_chain": "整十整百数乘一位数 > 一位数乘多位数",
+          "q_type": "choice",
+          "stem": "一个方阵每行 30 人，共 8 行，一共有多少人？"
+        },
+        {
+          "id": 700,
+          "knowledge_point_chain": "一位数乘两位数的竖式 > 一位数乘多位数",
+          "q_type": "answer",
+          "stem": "学校买了 3 箱书，每箱 128 本。一共多少本？请用竖式计算。"
+        },
+        {
+          "id": 701,
+          "knowledge_point_chain": "乘法估算 > 一位数乘多位数",
+          "q_type": "answer",
+          "stem": "妈妈带 500 元想买 4 个书包，每个 118 元。钱够吗？请先用估算说明，再算出准确总价。"
+        },
+        {
+          "id": 702,
+          "knowledge_point_chain": "一位数乘三位数（进位） > 一位数乘多位数",
+          "q_type": "answer",
+          "stem": "一台机器每小时生产 208 个零件，连续工作 5 小时能生产多少个？"
+        }
+      ]
+    },
+    {
+      "subject": "math",
+      "subject_cn": "数学",
+      "grade": 3,
+      "semester": "first",
+      "textbook_version": "北师大版",
+      "chapter_id": 40,
+      "chapter_name": "周长",
+      "current_state": {
+        "is_placeholder": 1,
+        "order_index": 9040,
+        "placeholder_note": "R-C 保留：旧版节名，g3 官方只到单元级（大纲该章节列为「—」）。 建议：并入 第二单元 测量（二）。",
+        "questions": 4
+      },
+      "reason": "旧版节名，g3 官方只到单元级（大纲该章节列为「—」）。",
+      "suggestion": "并入 第二单元 测量（二）。",
+      "risk": "旧单元在新版教材目录里没有对应单元（多为下册或旧人教版口径）；强行并入会造成「教材里没有的知识点被算进该单元」。",
+      "candidate_official_chapters": [
+        {
+          "name": "第一单元 混合运算",
+          "order_index": 1
+        },
+        {
+          "name": "第二单元 测量（二）",
+          "order_index": 2
+        },
+        {
+          "name": "第三单元 大数加与减（二）",
+          "order_index": 3
+        },
+        {
+          "name": "第四单元 我们生活的空间（一）",
+          "order_index": 4
+        },
+        {
+          "name": "第五单元 认识图形",
+          "order_index": 5
+        },
+        {
+          "name": "第六单元 乘除法的应用（二）",
+          "order_index": 6
+        },
+        {
+          "name": "第七单元 认识小数",
+          "order_index": 7
+        },
+        {
+          "name": "第八单元 调查与记录",
+          "order_index": 8
+        }
+      ],
+      "questions": [
+        {
+          "id": 161,
+          "knowledge_point_chain": "周长（要点） > 周长",
+          "q_type": "fill",
+          "stem": "长方形长 5 厘米、宽 3 厘米，周长是（ ）厘米。"
+        },
+        {
+          "id": 162,
+          "knowledge_point_chain": "周长（要点） > 周长",
+          "q_type": "fill",
+          "stem": "正方形边长 4 分米，周长是（ ）分米。"
+        },
+        {
+          "id": 163,
+          "knowledge_point_chain": "周长（要点） > 周长",
+          "q_type": "choice",
+          "stem": "绕操场跑一圈的长度就是操场的（ ）。"
+        },
+        {
+          "id": 164,
+          "knowledge_point_chain": "周长（要点） > 周长",
+          "q_type": "judge",
+          "stem": "周长相等的两个长方形，形状一定相同。"
+        }
+      ]
+    },
+    {
+      "subject": "math",
+      "subject_cn": "数学",
+      "grade": 3,
+      "semester": "first",
+      "textbook_version": "北师大版",
+      "chapter_id": 41,
+      "chapter_name": "分数的初步认识",
+      "current_state": {
+        "is_placeholder": 1,
+        "order_index": 9041,
+        "placeholder_note": "R-C 保留：北师大版三上目录没有分数单元。 建议：改挂下册对应单元，或保留为专项。",
+        "questions": 4
+      },
+      "reason": "北师大版三上目录没有分数单元。",
+      "suggestion": "改挂下册对应单元，或保留为专项。",
+      "risk": "旧单元在新版教材目录里没有对应单元（多为下册或旧人教版口径）；强行并入会造成「教材里没有的知识点被算进该单元」。",
+      "candidate_official_chapters": [
+        {
+          "name": "第一单元 混合运算",
+          "order_index": 1
+        },
+        {
+          "name": "第二单元 测量（二）",
+          "order_index": 2
+        },
+        {
+          "name": "第三单元 大数加与减（二）",
+          "order_index": 3
+        },
+        {
+          "name": "第四单元 我们生活的空间（一）",
+          "order_index": 4
+        },
+        {
+          "name": "第五单元 认识图形",
+          "order_index": 5
+        },
+        {
+          "name": "第六单元 乘除法的应用（二）",
+          "order_index": 6
+        },
+        {
+          "name": "第七单元 认识小数",
+          "order_index": 7
+        },
+        {
+          "name": "第八单元 调查与记录",
+          "order_index": 8
+        }
+      ],
+      "questions": [
+        {
+          "id": 165,
+          "knowledge_point_chain": "分数的初步认识（要点） > 分数的初步认识",
+          "q_type": "choice",
+          "stem": "把一个月饼平均分成 4 份，每份是它的（ ）。"
+        },
+        {
+          "id": 166,
+          "knowledge_point_chain": "分数的初步认识（要点） > 分数的初步认识",
+          "q_type": "judge",
+          "stem": "把一个西瓜分成 3 块，每块一定是它的 1/3。"
+        },
+        {
+          "id": 167,
+          "knowledge_point_chain": "分数的初步认识（要点） > 分数的初步认识",
+          "q_type": "fill",
+          "stem": "1/2 读作（ ）分之一。（填汉字）"
+        },
+        {
+          "id": 168,
+          "knowledge_point_chain": "分数的初步认识（要点） > 分数的初步认识",
+          "q_type": "choice",
+          "stem": "1/5 和 1/3 比较，（ ）大。"
+        }
+      ]
+    },
+    {
+      "subject": "math",
+      "subject_cn": "数学",
+      "grade": 5,
+      "semester": "first",
+      "textbook_version": "北师大版",
+      "chapter_id": 128,
+      "chapter_name": "小数除法",
+      "current_state": {
+        "is_placeholder": 1,
+        "order_index": 9128,
+        "placeholder_note": "R-C 保留：北师大版五上目录没有小数除法单元（在五下第四单元）；18 道题是旧教材口径。 建议：改挂 math g5 下册第四单元 小数除法，或降级为跨年级专项练习。",
+        "questions": 18
+      },
+      "reason": "北师大版五上目录没有小数除法单元（在五下第四单元）；18 道题是旧教材口径。",
+      "suggestion": "改挂 math g5 下册第四单元 小数除法，或降级为跨年级专项练习。",
+      "risk": "旧单元在新版教材目录里没有对应单元（多为下册或旧人教版口径）；强行并入会造成「教材里没有的知识点被算进该单元」。",
+      "candidate_official_chapters": [
+        {
+          "name": "第一单元 小数的再认识和加减法",
+          "order_index": 1
+        },
+        {
+          "name": "第二单元 三角形的再认识",
+          "order_index": 2
+        },
+        {
+          "name": "综合实践 小小设计师",
+          "order_index": 3
+        },
+        {
+          "name": "第三单元 小数乘法",
+          "order_index": 4
+        },
+        {
+          "name": "第四单元 用字母表示（一）",
+          "order_index": 5
+        },
+        {
+          "name": "第五单元 多边形的面积",
+          "order_index": 6
+        },
+        {
+          "name": "数学好玩 鸡兔同笼",
+          "order_index": 7
+        },
+        {
+          "name": "第六单元 图形的位置与运动（一）",
+          "order_index": 8
+        },
+        {
+          "name": "第七单元 倍数与因数",
+          "order_index": 9
+        },
+        {
+          "name": "第八单元 可能性",
+          "order_index": 10
+        },
+        {
+          "name": "综合实践 多少落叶能铺满",
+          "order_index": 11
+        },
+        {
+          "name": "总复习",
+          "order_index": 12
+        }
+      ],
+      "questions": [
+        {
+          "id": 721,
+          "knowledge_point_chain": "小数除以整数 > 小数除法",
+          "q_type": "fill",
+          "stem": "9.6÷3=（ ）。"
+        },
+        {
+          "id": 722,
+          "knowledge_point_chain": "小数除以整数 > 小数除法",
+          "q_type": "choice",
+          "stem": "7.2÷4 等于多少？"
+        },
+        {
+          "id": 723,
+          "knowledge_point_chain": "小数除以整数 > 小数除法",
+          "q_type": "judge",
+          "stem": "小数除以整数，商的小数点要和被除数的小数点对齐。"
+        },
+        {
+          "id": 724,
+          "knowledge_point_chain": "一个数除以小数 > 小数除法",
+          "q_type": "choice",
+          "stem": "1.2÷0.3 等于多少？"
+        },
+        {
+          "id": 725,
+          "knowledge_point_chain": "一个数除以小数 > 小数除法",
+          "q_type": "judge",
+          "stem": "计算 2.4÷0.6 时，把被除数和除数同时扩大 10 倍，变成 24÷6 计算，商不变。"
+        },
+        {
+          "id": 726,
+          "knowledge_point_chain": "一个数除以小数 > 小数除法",
+          "q_type": "fill",
+          "stem": "0.36÷0.9=（ ）。"
+        },
+        {
+          "id": 727,
+          "knowledge_point_chain": "一个数除以小数 > 小数除法",
+          "q_type": "choice",
+          "stem": "5.6÷0.7 等于多少？"
+        },
+        {
+          "id": 728,
+          "knowledge_point_chain": "商的近似数 > 小数除法",
+          "q_type": "fill",
+          "stem": "1÷3 保留两位小数约是（ ）。"
+        },
+        {
+          "id": 729,
+          "knowledge_point_chain": "商的近似数 > 小数除法",
+          "q_type": "choice",
+          "stem": "2.7÷1.1 保留一位小数约是（ ）。"
+        },
+        {
+          "id": 730,
+          "knowledge_point_chain": "循环小数 > 小数除法",
+          "q_type": "multiple",
+          "stem": "下面各数是循环小数的有（ ）。"
+        },
+        {
+          "id": 731,
+          "knowledge_point_chain": "循环小数 > 小数除法",
+          "q_type": "judge",
+          "stem": "0.777… 是循环小数，它的循环节是 7。"
+        },
+        {
+          "id": 732,
+          "knowledge_point_chain": "小数四则混合运算 > 小数除法",
+          "q_type": "choice",
+          "stem": "0.5+1.5÷0.5 等于多少？"
+        },
+        {
+          "id": 733,
+          "knowledge_point_chain": "小数四则混合运算 > 小数除法",
+          "q_type": "fill",
+          "stem": "(3.6-1.2)÷0.6=（ ）。"
+        },
+        {
+          "id": 734,
+          "knowledge_point_chain": "小数四则混合运算 > 小数除法",
+          "q_type": "multiple",
+          "stem": "下面算式结果等于 8 的有（ ）。"
+        },
+        {
+          "id": 735,
+          "knowledge_point_chain": "小数除以整数 > 小数除法",
+          "q_type": "choice",
+          "stem": "一根 8.4 米长的绳子平均分成 6 段，每段长多少米？"
+        },
+        {
+          "id": 736,
+          "knowledge_point_chain": "小数除以整数 > 小数除法",
+          "q_type": "answer",
+          "stem": "用竖式计算 12.6÷7。"
+        },
+        {
+          "id": 737,
+          "knowledge_point_chain": "商的近似数 > 小数除法",
+          "q_type": "answer",
+          "stem": "3.7÷0.9 的商用循环小数表示是多少？保留两位小数约是多少？"
+        },
+        {
+          "id": 738,
+          "knowledge_point_chain": "一个数除以小数 > 小数除法",
+          "q_type": "answer",
+          "stem": "有 0.75 千克糖果，每袋装 0.15 千克，能装几袋？"
+        }
+      ]
+    }
+  ]
+}

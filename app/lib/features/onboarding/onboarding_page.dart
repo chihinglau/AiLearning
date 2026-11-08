@@ -72,10 +72,9 @@ class _OnboardingPageState extends ConsumerState<OnboardingPage> {
         if (!mounted) return false;
         final confirmed = await _confirmImpact(outcome.impactMessage);
         if (!confirmed) return false;
-        outcome = await ref.read(userServiceProvider).changeGrade(
-          _grade,
-          confirmToken: outcome.confirmToken,
-        );
+        outcome = await ref
+            .read(userServiceProvider)
+            .changeGrade(_grade, confirmToken: outcome.confirmToken);
       }
       if (!mounted) return false;
       ref.read(currentUserProvider.notifier).state = user.copyWith(
@@ -97,8 +96,9 @@ class _OnboardingPageState extends ConsumerState<OnboardingPage> {
       _error = null;
     });
     try {
-      final recommendation =
-          await ref.read(textbookServiceProvider).recommend();
+      final recommendation = await ref
+          .read(textbookServiceProvider)
+          .recommend();
       if (!mounted) return;
       setState(() {
         _recommendation = recommendation;
@@ -140,6 +140,8 @@ class _OnboardingPageState extends ConsumerState<OnboardingPage> {
     try {
       await ref.read(textbookServiceProvider).autoBind();
       if (!mounted) return;
+      await ref.read(authServiceProvider).writeOnboardingStatus('completed');
+      if (!mounted) return;
       ref.read(onboardingStatusProvider.notifier).state =
           OnboardingStatus.completed;
       context.go('/shell');
@@ -152,6 +154,47 @@ class _OnboardingPageState extends ConsumerState<OnboardingPage> {
     }
   }
 
+  bool get _isEdit =>
+      GoRouterState.of(context).uri.queryParameters['edit'] == '1';
+
+  void _exit() {
+    if (context.canPop()) {
+      context.pop();
+    } else {
+      context.go('/shell');
+    }
+  }
+
+  Future<void> _saveEdit() async {
+    if (_submitting) return;
+    final user = ref.read(currentUserProvider);
+    if (user == null) return;
+    if (user.grade == _grade) {
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(const SnackBar(content: Text('年级未变化')));
+      return;
+    }
+    setState(() {
+      _submitting = true;
+      _error = null;
+    });
+    final applied = await _applyGradeIfNeeded();
+    if (!mounted) return;
+    if (!applied) {
+      setState(() => _submitting = false);
+      return;
+    }
+    // 后端修改年级会吊销旧 Token（reauth_required=true），需重新登录。
+    await ref.read(authServiceProvider).logout();
+    ref.read(currentUserProvider.notifier).state = null;
+    if (!mounted) return;
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(const SnackBar(content: Text('年级已更新，请重新登录后继续使用')));
+    context.go('/login');
+  }
+
   void _back() {
     if (_step == 0) return;
     setState(() => _step -= 1);
@@ -160,43 +203,64 @@ class _OnboardingPageState extends ConsumerState<OnboardingPage> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final isEdit = _isEdit;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('完善学习信息'),
+        title: Text(isEdit ? '年级设置' : '完善学习信息'),
         automaticallyImplyLeading: false,
+        leading: isEdit
+            ? IconButton(
+                icon: const Icon(Icons.arrow_back),
+                onPressed: _submitting ? null : _exit,
+              )
+            : null,
       ),
       body: SafeArea(
         child: Column(
           children: [
-            LinearProgressIndicator(value: (_step + 1) / 3),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(20, 12, 20, 0),
-              child: Row(
-                children: [
-                  Text(
-                    '第 ${_step + 1} 步 / 共 3 步',
-                    style: theme.textTheme.bodySmall,
-                  ),
-                  const Spacer(),
-                  Text(
-                    switch (_step) {
+            if (!isEdit) ...[
+              LinearProgressIndicator(value: (_step + 1) / 3),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(20, 12, 20, 0),
+                child: Row(
+                  children: [
+                    Text(
+                      '第 ${_step + 1} 步 / 共 3 步',
+                      style: theme.textTheme.bodySmall,
+                    ),
+                    const Spacer(),
+                    Text(switch (_step) {
                       0 => '选择学段',
                       1 => '选择年级',
                       _ => '确认教材',
-                    },
-                    style: theme.textTheme.titleSmall,
-                  ),
-                ],
+                    }, style: theme.textTheme.titleSmall),
+                  ],
+                ),
               ),
-            ),
+            ],
             Expanded(
               child: SingleChildScrollView(
                 padding: const EdgeInsets.all(20),
-                child: switch (_step) {
-                  0 => _buildStageStep(theme),
-                  1 => _buildGradeStep(theme),
-                  _ => _buildTextbookStep(theme),
-                },
+                child: isEdit
+                    ? Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          _buildStageStep(theme),
+                          const SizedBox(height: 24),
+                          _buildGradeStep(theme),
+                          const SizedBox(height: 16),
+                          Text(
+                            '修改后将按新年级重新推荐教材，历史学情保留；'
+                            '保存后需重新登录以刷新权限。',
+                            style: theme.textTheme.bodySmall,
+                          ),
+                        ],
+                      )
+                    : switch (_step) {
+                        0 => _buildStageStep(theme),
+                        1 => _buildGradeStep(theme),
+                        _ => _buildTextbookStep(theme),
+                      },
               ),
             ),
             if (_error != null)
@@ -211,24 +275,30 @@ class _OnboardingPageState extends ConsumerState<OnboardingPage> {
               padding: const EdgeInsets.all(20),
               child: Row(
                 children: [
-                  if (_step > 0)
+                  if (!isEdit && _step > 0)
                     OutlinedButton(
                       onPressed: _submitting ? null : _back,
                       child: const Text('上一步'),
                     ),
-                  if (_step > 0) const SizedBox(width: 12),
+                  if (!isEdit && _step > 0) const SizedBox(width: 12),
                   Expanded(
                     child: FilledButton(
                       onPressed: _submitting
                           ? null
-                          : (_step == 2 ? _finish : _next),
+                          : (isEdit
+                                ? _saveEdit
+                                : (_step == 2 ? _finish : _next)),
                       child: _submitting
                           ? const SizedBox(
                               width: 20,
                               height: 20,
                               child: CircularProgressIndicator(strokeWidth: 2),
                             )
-                          : Text(_step == 2 ? '完成并开始学习' : '下一步'),
+                          : Text(
+                              isEdit
+                                  ? '保存并重新登录'
+                                  : (_step == 2 ? '完成并开始学习' : '下一步'),
+                            ),
                     ),
                   ),
                 ],
@@ -246,22 +316,17 @@ class _OnboardingPageState extends ConsumerState<OnboardingPage> {
       children: [
         Text('你的学段', style: theme.textTheme.titleMedium),
         const SizedBox(height: 8),
-        Text(
-          '选择后可为你匹配对应年级的教材与练习范围',
-          style: theme.textTheme.bodySmall,
-        ),
+        Text('选择后可为你匹配对应年级的教材与练习范围', style: theme.textTheme.bodySmall),
         const SizedBox(height: 16),
         ...Stage.values.map(
           (stage) => Card(
             color: _stage == stage ? theme.colorScheme.primaryContainer : null,
             child: ListTile(
-              leading: Icon(
-                switch (stage) {
-                  Stage.primary => Icons.child_care_outlined,
-                  Stage.junior => Icons.school_outlined,
-                  Stage.senior => Icons.workspace_premium_outlined,
-                },
-              ),
+              leading: Icon(switch (stage) {
+                Stage.primary => Icons.child_care_outlined,
+                Stage.junior => Icons.school_outlined,
+                Stage.senior => Icons.workspace_premium_outlined,
+              }),
               title: Text(stage.label),
               subtitle: Text(
                 '${gradesForStage(stage).first} - ${gradesForStage(stage).last} 年级',
@@ -284,10 +349,7 @@ class _OnboardingPageState extends ConsumerState<OnboardingPage> {
       children: [
         Text('${_stage.label}年级', style: theme.textTheme.titleMedium),
         const SizedBox(height: 8),
-        Text(
-          '年级将用于教材推荐与学情统计，每学期仅可修改一次',
-          style: theme.textTheme.bodySmall,
-        ),
+        Text('年级将用于教材推荐与学情统计，每学期仅可修改一次', style: theme.textTheme.bodySmall),
         const SizedBox(height: 16),
         Wrap(
           spacing: 10,

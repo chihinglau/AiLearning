@@ -1,0 +1,7648 @@
+{
+  "_meta": {
+    "kind": "chapter_placeholder_audit",
+    "generated": "2026-11-08T21:12:16",
+    "tool": "chapter_audit.py（只读，骨架口径）",
+    "database": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\ailearning_dev.db",
+    "purpose": "库内章节 vs 官方章节骨架：占位/旧样章清单 + order_index 撞号 + 序一致性，供「教材占位章节清理」立项的回归巡检（本脚本不改库）",
+    "criteria": "基准 = baseline/_skeleton_first|_skeleton 的官方章节骨架；库内章节名不在骨架里 = 占位/旧样章（is_placeholder=1 为已清理标记）",
+    "semantics": "placeholder_unmarked 应为 0；order_index_conflicts 应为 0；order_index_mismatch 应为 0"
+  },
+  "summary": {
+    "textbooks": 146,
+    "chapters": 618,
+    "placeholder_marked": 0,
+    "placeholder_unmarked": 0,
+    "order_index_conflicts": 0,
+    "order_index_mismatch": 0,
+    "no_baseline_chapters": 0,
+    "by_subject": {
+      "biology": {
+        "textbooks": 10,
+        "chapters": 29,
+        "placeholder_marked": 0,
+        "placeholder_unmarked": 0,
+        "conflicts": 0,
+        "order_mismatch": 0
+      },
+      "chemistry": {
+        "textbooks": 8,
+        "chapters": 11,
+        "placeholder_marked": 0,
+        "placeholder_unmarked": 0,
+        "conflicts": 0,
+        "order_mismatch": 0
+      },
+      "chinese": {
+        "textbooks": 24,
+        "chapters": 130,
+        "placeholder_marked": 0,
+        "placeholder_unmarked": 0,
+        "conflicts": 0,
+        "order_mismatch": 0
+      },
+      "english": {
+        "textbooks": 24,
+        "chapters": 140,
+        "placeholder_marked": 0,
+        "placeholder_unmarked": 0,
+        "conflicts": 0,
+        "order_mismatch": 0
+      },
+      "geography": {
+        "textbooks": 10,
+        "chapters": 18,
+        "placeholder_marked": 0,
+        "placeholder_unmarked": 0,
+        "conflicts": 0,
+        "order_mismatch": 0
+      },
+      "history": {
+        "textbooks": 12,
+        "chapters": 34,
+        "placeholder_marked": 0,
+        "placeholder_unmarked": 0,
+        "conflicts": 0,
+        "order_mismatch": 0
+      },
+      "math": {
+        "textbooks": 24,
+        "chapters": 153,
+        "placeholder_marked": 0,
+        "placeholder_unmarked": 0,
+        "conflicts": 0,
+        "order_mismatch": 0
+      },
+      "physics": {
+        "textbooks": 10,
+        "chapters": 32,
+        "placeholder_marked": 0,
+        "placeholder_unmarked": 0,
+        "conflicts": 0,
+        "order_mismatch": 0
+      },
+      "politics": {
+        "textbooks": 24,
+        "chapters": 71,
+        "placeholder_marked": 0,
+        "placeholder_unmarked": 0,
+        "conflicts": 0,
+        "order_mismatch": 0
+      }
+    }
+  },
+  "textbooks": [
+    {
+      "textbook_id": 55,
+      "subject": "biology",
+      "grade": 7,
+      "semester": "first",
+      "official_chapters": 9,
+      "chapters": [
+        {
+          "id": 132,
+          "name": "第一单元 生物和细胞",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 20
+        },
+        {
+          "id": 133,
+          "name": "第一章 认识生物",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 2
+        },
+        {
+          "id": 134,
+          "name": "第二章 认识细胞",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 2
+        },
+        {
+          "id": 135,
+          "name": "第三章 从细胞到生物体",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 1
+        },
+        {
+          "id": 136,
+          "name": "第二单元 多种多样的生物",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 137,
+          "name": "第一章 藻类与植物的类群",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 138,
+          "name": "第二章 动物的类群",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 139,
+          "name": "第三章 微生物",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 140,
+          "name": "第四章 生物分类的方法",
+          "order_index": 9,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 56,
+      "subject": "biology",
+      "grade": 7,
+      "semester": "second",
+      "official_chapters": 9,
+      "chapters": [
+        {
+          "id": 431,
+          "name": "第三单元 植物的生活",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 432,
+          "name": "第一章 被子植物的一生",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 433,
+          "name": "第二章 植物体内的物质与能量变化",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 434,
+          "name": "第四单元 人体生理与健康(一)",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 435,
+          "name": "第一章 人的生殖和发育",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 436,
+          "name": "第二章 人体的营养",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 437,
+          "name": "第三章 人体的呼吸",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 438,
+          "name": "第四章 人体内物质的运输",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 439,
+          "name": "第五章 人体内废物的排出",
+          "order_index": 9,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 71,
+      "subject": "biology",
+      "grade": 8,
+      "semester": "first",
+      "official_chapters": 6,
+      "chapters": [
+        {
+          "id": 141,
+          "name": "第四单元 人体生理与健康（二）",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 19
+        },
+        {
+          "id": 142,
+          "name": "第六章 人体生命活动的调节",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 143,
+          "name": "第七章 健康地生活",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 144,
+          "name": "第五单元 生物与环境",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 145,
+          "name": "第一章 生态系统",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 146,
+          "name": "第二章 生态安全",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 72,
+      "subject": "biology",
+      "grade": 8,
+      "semester": "second",
+      "official_chapters": 5,
+      "chapters": [
+        {
+          "id": 440,
+          "name": "第六单元 生命的延续和发展",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 441,
+          "name": "第一章 生物的生殖",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 442,
+          "name": "第二章 生物的遗传与变异",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 443,
+          "name": "第三章 生物的进化",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 444,
+          "name": "第四章 生物多样性及其保护",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 103,
+      "subject": "biology",
+      "grade": 10,
+      "semester": "first",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 104,
+      "subject": "biology",
+      "grade": 10,
+      "semester": "second",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 121,
+      "subject": "biology",
+      "grade": 11,
+      "semester": "first",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 122,
+      "subject": "biology",
+      "grade": 11,
+      "semester": "second",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 139,
+      "subject": "biology",
+      "grade": 12,
+      "semester": "first",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 140,
+      "subject": "biology",
+      "grade": 12,
+      "semester": "second",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 87,
+      "subject": "chemistry",
+      "grade": 9,
+      "semester": "first",
+      "official_chapters": 7,
+      "chapters": [
+        {
+          "id": 120,
+          "name": "第一单元 走进化学世界",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 22
+        },
+        {
+          "id": 147,
+          "name": "第二单元 空气和氧气",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 148,
+          "name": "第三单元 物质构成的奥秘",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 149,
+          "name": "第四单元 自然界的水",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 150,
+          "name": "第五单元 化学反应的定量关系",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 151,
+          "name": "第六单元 碳和碳的氧化物",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 152,
+          "name": "第七单元 能源的合理利用与开发",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 88,
+      "subject": "chemistry",
+      "grade": 9,
+      "semester": "second",
+      "official_chapters": 4,
+      "chapters": [
+        {
+          "id": 445,
+          "name": "第八单元 金属和金属材料",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 446,
+          "name": "第九单元 溶液",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 447,
+          "name": "第十单元 常见的酸、碱、盐",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 448,
+          "name": "第十一单元 化学与社会",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 101,
+      "subject": "chemistry",
+      "grade": 10,
+      "semester": "first",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 102,
+      "subject": "chemistry",
+      "grade": 10,
+      "semester": "second",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 119,
+      "subject": "chemistry",
+      "grade": 11,
+      "semester": "first",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 120,
+      "subject": "chemistry",
+      "grade": 11,
+      "semester": "second",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 137,
+      "subject": "chemistry",
+      "grade": 12,
+      "semester": "first",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 138,
+      "subject": "chemistry",
+      "grade": 12,
+      "semester": "second",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 3,
+      "subject": "chinese",
+      "grade": 1,
+      "semester": "first",
+      "official_chapters": 8,
+      "chapters": [
+        {
+          "id": 153,
+          "name": "第一单元 识字",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 47
+        },
+        {
+          "id": 154,
+          "name": "第二单元 汉语拼音",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 155,
+          "name": "第三单元 汉语拼音",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 156,
+          "name": "第四单元 汉语拼音",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 1
+        },
+        {
+          "id": 157,
+          "name": "第五单元 阅读",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 158,
+          "name": "第六单元 识字",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 159,
+          "name": "第七单元 阅读",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 160,
+          "name": "第八单元 阅读",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 4,
+      "subject": "chinese",
+      "grade": 1,
+      "semester": "second",
+      "official_chapters": 8,
+      "chapters": [
+        {
+          "id": 449,
+          "name": "第一单元 识字",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 450,
+          "name": "第二单元 阅读",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 451,
+          "name": "第三单元 阅读",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 452,
+          "name": "第四单元 阅读",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 453,
+          "name": "第五单元 识字",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 454,
+          "name": "第六单元 阅读",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 455,
+          "name": "第七单元 阅读",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 456,
+          "name": "第八单元 阅读",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 11,
+      "subject": "chinese",
+      "grade": 2,
+      "semester": "first",
+      "official_chapters": 8,
+      "chapters": [
+        {
+          "id": 161,
+          "name": "第一单元 阅读",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 20
+        },
+        {
+          "id": 162,
+          "name": "第二单元 识字",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 163,
+          "name": "第三单元 阅读",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 164,
+          "name": "第四单元 阅读",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 165,
+          "name": "第五单元 阅读",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 166,
+          "name": "第六单元 阅读",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 167,
+          "name": "第七单元 阅读",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 168,
+          "name": "第八单元 阅读",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 12,
+      "subject": "chinese",
+      "grade": 2,
+      "semester": "second",
+      "official_chapters": 8,
+      "chapters": [
+        {
+          "id": 457,
+          "name": "第一单元",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 458,
+          "name": "第二单元",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 459,
+          "name": "第三单元",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 460,
+          "name": "第四单元",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 461,
+          "name": "第五单元",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 462,
+          "name": "第六单元",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 463,
+          "name": "第七单元",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 464,
+          "name": "第八单元",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 19,
+      "subject": "chinese",
+      "grade": 3,
+      "semester": "first",
+      "official_chapters": 8,
+      "chapters": [
+        {
+          "id": 169,
+          "name": "第一单元",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 20
+        },
+        {
+          "id": 170,
+          "name": "第二单元",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 171,
+          "name": "第三单元",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 172,
+          "name": "第四单元",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 173,
+          "name": "第五单元",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 174,
+          "name": "第六单元",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 175,
+          "name": "第七单元",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 176,
+          "name": "第八单元",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 20,
+      "subject": "chinese",
+      "grade": 3,
+      "semester": "second",
+      "official_chapters": 8,
+      "chapters": [
+        {
+          "id": 465,
+          "name": "第一单元",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 466,
+          "name": "第二单元",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 467,
+          "name": "第三单元",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 468,
+          "name": "第四单元",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 469,
+          "name": "第五单元",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 470,
+          "name": "第六单元",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 471,
+          "name": "第七单元",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 472,
+          "name": "第八单元",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 27,
+      "subject": "chinese",
+      "grade": 4,
+      "semester": "first",
+      "official_chapters": 8,
+      "chapters": [
+        {
+          "id": 177,
+          "name": "第一单元",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 20
+        },
+        {
+          "id": 178,
+          "name": "第二单元",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 179,
+          "name": "第三单元",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 180,
+          "name": "第四单元",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 181,
+          "name": "第五单元",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 182,
+          "name": "第六单元",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 183,
+          "name": "第七单元",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 184,
+          "name": "第八单元",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 28,
+      "subject": "chinese",
+      "grade": 4,
+      "semester": "second",
+      "official_chapters": 8,
+      "chapters": [
+        {
+          "id": 473,
+          "name": "第一单元",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 474,
+          "name": "第二单元",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 475,
+          "name": "第三单元",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 476,
+          "name": "第四单元",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 477,
+          "name": "第五单元",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 478,
+          "name": "第六单元",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 479,
+          "name": "第七单元",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 480,
+          "name": "第八单元",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 35,
+      "subject": "chinese",
+      "grade": 5,
+      "semester": "first",
+      "official_chapters": 8,
+      "chapters": [
+        {
+          "id": 185,
+          "name": "第一单元",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 20
+        },
+        {
+          "id": 186,
+          "name": "第二单元",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 187,
+          "name": "第三单元",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 188,
+          "name": "第四单元",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 189,
+          "name": "第五单元",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 190,
+          "name": "第六单元",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 191,
+          "name": "第七单元",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 192,
+          "name": "第八单元",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 36,
+      "subject": "chinese",
+      "grade": 5,
+      "semester": "second",
+      "official_chapters": 8,
+      "chapters": [
+        {
+          "id": 481,
+          "name": "第一单元",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 482,
+          "name": "第二单元",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 483,
+          "name": "第三单元",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 484,
+          "name": "第四单元",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 485,
+          "name": "第五单元",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 486,
+          "name": "第六单元",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 487,
+          "name": "第七单元",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 488,
+          "name": "第八单元",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 43,
+      "subject": "chinese",
+      "grade": 6,
+      "semester": "first",
+      "official_chapters": 8,
+      "chapters": [
+        {
+          "id": 193,
+          "name": "第一单元",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 20
+        },
+        {
+          "id": 194,
+          "name": "第二单元",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 195,
+          "name": "第三单元",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 196,
+          "name": "第四单元",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 197,
+          "name": "第五单元",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 198,
+          "name": "第六单元",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 199,
+          "name": "第七单元",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 200,
+          "name": "第八单元",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 44,
+      "subject": "chinese",
+      "grade": 6,
+      "semester": "second",
+      "official_chapters": 6,
+      "chapters": [
+        {
+          "id": 489,
+          "name": "第一单元",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 490,
+          "name": "第二单元",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 491,
+          "name": "第三单元",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 492,
+          "name": "第四单元",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 493,
+          "name": "第五单元",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 494,
+          "name": "第六单元",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 49,
+      "subject": "chinese",
+      "grade": 7,
+      "semester": "first",
+      "official_chapters": 6,
+      "chapters": [
+        {
+          "id": 201,
+          "name": "第一单元",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 20
+        },
+        {
+          "id": 202,
+          "name": "第二单元",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 203,
+          "name": "第三单元",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 204,
+          "name": "第四单元",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 205,
+          "name": "第五单元 活动 探究",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 206,
+          "name": "第六单元",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 50,
+      "subject": "chinese",
+      "grade": 7,
+      "semester": "second",
+      "official_chapters": 6,
+      "chapters": [
+        {
+          "id": 495,
+          "name": "第一单元",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 496,
+          "name": "第二单元",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 497,
+          "name": "第三单元",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 498,
+          "name": "第四单元",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 499,
+          "name": "第五单元",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 500,
+          "name": "第六单元",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 63,
+      "subject": "chinese",
+      "grade": 8,
+      "semester": "first",
+      "official_chapters": 6,
+      "chapters": [
+        {
+          "id": 207,
+          "name": "第一单元 活动 探究",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 20
+        },
+        {
+          "id": 208,
+          "name": "第二单元",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 209,
+          "name": "第三单元",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 210,
+          "name": "第四单元",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 211,
+          "name": "第五单元",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 212,
+          "name": "第六单元",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 64,
+      "subject": "chinese",
+      "grade": 8,
+      "semester": "second",
+      "official_chapters": 6,
+      "chapters": [
+        {
+          "id": 501,
+          "name": "第一单元",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 502,
+          "name": "第二单元",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 503,
+          "name": "第三单元",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 504,
+          "name": "第四单元",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 505,
+          "name": "第五单元",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 506,
+          "name": "第六单元",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 79,
+      "subject": "chinese",
+      "grade": 9,
+      "semester": "first",
+      "official_chapters": 6,
+      "chapters": [
+        {
+          "id": 213,
+          "name": "第一单元",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 20
+        },
+        {
+          "id": 214,
+          "name": "第二单元",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 215,
+          "name": "第三单元",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 216,
+          "name": "第四单元",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 217,
+          "name": "第五单元",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 218,
+          "name": "第六单元",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 80,
+      "subject": "chinese",
+      "grade": 9,
+      "semester": "second",
+      "official_chapters": 6,
+      "chapters": [
+        {
+          "id": 507,
+          "name": "第一单元",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 508,
+          "name": "第二单元",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 509,
+          "name": "第三单元",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 510,
+          "name": "第四单元",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 511,
+          "name": "第五单元 活动?探究",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 512,
+          "name": "第六单元",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 93,
+      "subject": "chinese",
+      "grade": 10,
+      "semester": "first",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 94,
+      "subject": "chinese",
+      "grade": 10,
+      "semester": "second",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 111,
+      "subject": "chinese",
+      "grade": 11,
+      "semester": "first",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 112,
+      "subject": "chinese",
+      "grade": 11,
+      "semester": "second",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 129,
+      "subject": "chinese",
+      "grade": 12,
+      "semester": "first",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 130,
+      "subject": "chinese",
+      "grade": 12,
+      "semester": "second",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 5,
+      "subject": "english",
+      "grade": 1,
+      "semester": "first",
+      "official_chapters": 6,
+      "chapters": [
+        {
+          "id": 219,
+          "name": "Unit 1 What is your family like?",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 43
+        },
+        {
+          "id": 220,
+          "name": "Unit 2 How are you today?",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 221,
+          "name": "Unit 3 What do you take to school?",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 222,
+          "name": "Unit 4 What can you do?",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 223,
+          "name": "Unit 5 What is your favourite animal?",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 224,
+          "name": "Unit 6 What colours can you see?",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 4
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 6,
+      "subject": "english",
+      "grade": 1,
+      "semester": "second",
+      "official_chapters": 12,
+      "chapters": [
+        {
+          "id": 513,
+          "name": "Unit 1 Look and see",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 514,
+          "name": "Unit 2 Listen and hear",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 515,
+          "name": "Unit 3 Taste and smell",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 516,
+          "name": "Unit 4 Toys I like",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 517,
+          "name": "Unit 5 Food I like",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 518,
+          "name": "Unit 6 Drinks I like",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 519,
+          "name": "Unit 7 Seasons",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 520,
+          "name": "Unit 8 Weather",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 521,
+          "name": "Unit 9 Clothes",
+          "order_index": 9,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 522,
+          "name": "Unit 10 Activities",
+          "order_index": 10,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 523,
+          "name": "Unit 11 New Year's Day",
+          "order_index": 11,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 524,
+          "name": "Unit 12 A boy and a wolf",
+          "order_index": 12,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 13,
+      "subject": "english",
+      "grade": 2,
+      "semester": "first",
+      "official_chapters": 6,
+      "chapters": [
+        {
+          "id": 225,
+          "name": "Unit 1 What can you do with your five senses?",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 19
+        },
+        {
+          "id": 226,
+          "name": "Unit 2 What do you like about your family?",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 4
+        },
+        {
+          "id": 227,
+          "name": "Unit 3 What is your favourite toy?",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 228,
+          "name": "Unit 4 What is around your home?",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 229,
+          "name": "Unit 5 What do you like about farms?",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 230,
+          "name": "Unit 6 How do people celebrate the Mid-Autumn Festival?",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 14,
+      "subject": "english",
+      "grade": 2,
+      "semester": "second",
+      "official_chapters": 9,
+      "chapters": [
+        {
+          "id": 525,
+          "name": "Unit 1 Farm animals",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 526,
+          "name": "Unit 2 In the circus",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 527,
+          "name": "Unit 3 My room",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 528,
+          "name": "Unit 4 In the park",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 529,
+          "name": "Unit 5 Wash with water",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 530,
+          "name": "Unit 6 Eating and drinking",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 531,
+          "name": "Unit 7 Hot summer",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 532,
+          "name": "Unit 8 Time",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 533,
+          "name": "Unit 9 Revision",
+          "order_index": 9,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 21,
+      "subject": "english",
+      "grade": 3,
+      "semester": "first",
+      "official_chapters": 8,
+      "chapters": [
+        {
+          "id": 231,
+          "name": "Unit 1 How do we feel?",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 18
+        },
+        {
+          "id": 232,
+          "name": "Unit 2 What's interesting about families?",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 233,
+          "name": "Unit 3 What do we look like?",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 234,
+          "name": "Unit 4 How do we have fun?",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 235,
+          "name": "Unit 5 What do we eat?",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 236,
+          "name": "Unit 6 What do we like about small animals?",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 237,
+          "name": "Unit 7 What do we know about weather?",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 4
+        },
+        {
+          "id": 238,
+          "name": "Unit 8 Why do we like birthdays?",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 22,
+      "subject": "english",
+      "grade": 3,
+      "semester": "second",
+      "official_chapters": 8,
+      "chapters": [
+        {
+          "id": 534,
+          "name": "Unit 1 How do we spend our free time?",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 535,
+          "name": "Unit 2 How do we make friends?",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 536,
+          "name": "Unit 3 What do we wear?",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 537,
+          "name": "Unit 4 What sounds can we hear?",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 538,
+          "name": "Unit 5 Where can we see colours?",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 539,
+          "name": "Unit 6 What are our homes like?",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 540,
+          "name": "Unit 7 What do we do at school?",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 541,
+          "name": "Unit 8 What do you do on Children's Day?",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 29,
+      "subject": "english",
+      "grade": 4,
+      "semester": "first",
+      "official_chapters": 8,
+      "chapters": [
+        {
+          "id": 239,
+          "name": "Unit 1 Where do people live?",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 18
+        },
+        {
+          "id": 240,
+          "name": "Unit 2 Where do animals live?",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 241,
+          "name": "Unit 3 How do we use numbers?",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 242,
+          "name": "Unit 4 What do we buy?",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 243,
+          "name": "Unit 5 How are the seasons different?",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 244,
+          "name": "Unit 6 What's amazing about plants?",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 245,
+          "name": "Unit 7 How do we keep safe on the road?",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 246,
+          "name": "Unit 8 What do our grandparents do?",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 30,
+      "subject": "english",
+      "grade": 4,
+      "semester": "second",
+      "official_chapters": 9,
+      "chapters": [
+        {
+          "id": 542,
+          "name": "Unit 1 What is your daily schedule?",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 543,
+          "name": "Unit 2 What do we like about school?",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 544,
+          "name": "Unit 3 What's great about jobs?",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 545,
+          "name": "Unit 4 How can we make music?",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 546,
+          "name": "Unit 5 How do we make art?",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 547,
+          "name": "Unit 6 How do we measure time?",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 548,
+          "name": "Unit 7 How do things change?",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 549,
+          "name": "Unit 8 How do people get along with each other?",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 550,
+          "name": "Unit checklist",
+          "order_index": 9,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 37,
+      "subject": "english",
+      "grade": 5,
+      "semester": "first",
+      "official_chapters": 8,
+      "chapters": [
+        {
+          "id": 247,
+          "name": "Unit 1 What do we do at the weekend?",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 18
+        },
+        {
+          "id": 248,
+          "name": "Unit 2 How do we stay healthy?",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 249,
+          "name": "Unit 3 What do you know about different countries?",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 250,
+          "name": "Unit 4 What's interesting about holidays?",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 251,
+          "name": "Unit 5 What are living things?",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 252,
+          "name": "Unit 6 Why should we take care of the Earth?",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 253,
+          "name": "Unit 7 How do we celebrate festivals?",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 254,
+          "name": "Unit 8 How does music make us feel?",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 38,
+      "subject": "english",
+      "grade": 5,
+      "semester": "second",
+      "official_chapters": 12,
+      "chapters": [
+        {
+          "id": 551,
+          "name": "Unit 1 Tidy up!",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 552,
+          "name": "Unit 2 Our new home",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 553,
+          "name": "Unit 3 In the future",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 554,
+          "name": "Unit 4 Reading is fun",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 555,
+          "name": "Unit 5 At the weekend",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 556,
+          "name": "Unit 6 Holidays",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 557,
+          "name": "Unit 7 Open Day",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 558,
+          "name": "Unit 8 Buying clothes",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 559,
+          "name": "Unit 9 Seeing the doctor",
+          "order_index": 9,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 560,
+          "name": "Unit 10 Great inventions",
+          "order_index": 10,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 561,
+          "name": "Unit 11 Chinese festivals",
+          "order_index": 11,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 562,
+          "name": "Unit 12 The giant's garden",
+          "order_index": 12,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 45,
+      "subject": "english",
+      "grade": 6,
+      "semester": "first",
+      "official_chapters": 6,
+      "chapters": [
+        {
+          "id": 255,
+          "name": "Unit 1 Why do people move to new places?",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 18
+        },
+        {
+          "id": 256,
+          "name": "Unit 2 Why do we make art?",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 257,
+          "name": "Unit 3 How should we protect ourselves?",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 258,
+          "name": "Unit 4 What makes things move?",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 259,
+          "name": "Unit 5 How do inventions change our lives?",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 260,
+          "name": "Unit 6 What is a city?",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 46,
+      "subject": "english",
+      "grade": 6,
+      "semester": "second",
+      "official_chapters": 12,
+      "chapters": [
+        {
+          "id": 563,
+          "name": "Unit 1 You and me",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 564,
+          "name": "Unit 2 Changes in our lives",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 565,
+          "name": "Unit 3 Our school in the future",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 566,
+          "name": "Unit 4 Art",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 567,
+          "name": "Unit 5 Crafts",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 568,
+          "name": "Unit 6 PE lessons",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 569,
+          "name": "Unit 7 Helping others",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 570,
+          "name": "Unit 8 Reading signs",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 571,
+          "name": "Unit 9 Reusing things",
+          "order_index": 9,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 572,
+          "name": "Unit 10 Great storybooks",
+          "order_index": 10,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 573,
+          "name": "Unit 11 Western festivals",
+          "order_index": 11,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 574,
+          "name": "Unit 12 The five peas",
+          "order_index": 12,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 53,
+      "subject": "english",
+      "grade": 7,
+      "semester": "first",
+      "official_chapters": 6,
+      "chapters": [
+        {
+          "id": 261,
+          "name": "Unit 1 Trying new things",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 18
+        },
+        {
+          "id": 262,
+          "name": "Unit 2 Strong mind",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 263,
+          "name": "Unit 3 Jobs",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 264,
+          "name": "Unit 4 Smart home",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 265,
+          "name": "Unit 5 Films",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 266,
+          "name": "Unit 6 Mountains and rivers",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 54,
+      "subject": "english",
+      "grade": 7,
+      "semester": "second",
+      "official_chapters": 6,
+      "chapters": [
+        {
+          "id": 575,
+          "name": "Unit 1 Music",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 576,
+          "name": "Unit 2 Language and communication",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 577,
+          "name": "Unit 3 A helping hand",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 578,
+          "name": "Unit 4 Honesty",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 579,
+          "name": "Unit 5 Wild animals",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 580,
+          "name": "Unit 6 Trees",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 67,
+      "subject": "english",
+      "grade": 8,
+      "semester": "first",
+      "official_chapters": 6,
+      "chapters": [
+        {
+          "id": 267,
+          "name": "Unit 1 Water",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 18
+        },
+        {
+          "id": 268,
+          "name": "Unit 2 Digital life",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 269,
+          "name": "Unit 3 Curious minds",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 270,
+          "name": "Unit 4 Then and now",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 271,
+          "name": "Unit 5 Teamwork",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 272,
+          "name": "Unit 6 Life in the future",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 68,
+      "subject": "english",
+      "grade": 8,
+      "semester": "second",
+      "official_chapters": 6,
+      "chapters": [
+        {
+          "id": 581,
+          "name": "Unit 1 Art and artists",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 582,
+          "name": "Unit 2 Great inventions and discoveries",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 583,
+          "name": "Unit 3 Money",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 584,
+          "name": "Unit 4 Fashion",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 585,
+          "name": "Unit 5 Natural disasters",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 586,
+          "name": "Unit 6 Friendship",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 83,
+      "subject": "english",
+      "grade": 9,
+      "semester": "first",
+      "official_chapters": 6,
+      "chapters": [
+        {
+          "id": 273,
+          "name": "Unit 1 Teenage life",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 18
+        },
+        {
+          "id": 274,
+          "name": "Unit 2 People and their jobs",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 275,
+          "name": "Unit 3 Travellers' tales",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 276,
+          "name": "Unit 4 Folk customs",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 277,
+          "name": "Unit 5 Buildings",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 278,
+          "name": "Unit 6 Pollution",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 84,
+      "subject": "english",
+      "grade": 9,
+      "semester": "second",
+      "official_chapters": 6,
+      "chapters": [
+        {
+          "id": 587,
+          "name": "Unit 1 Sport and sportsmanship",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 588,
+          "name": "Unit 2 Finding balance in life",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 589,
+          "name": "Unit 3 Protecting the environment",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 590,
+          "name": "Unit 4 Natural disasters",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 591,
+          "name": "Unit 5 Great explorers and explorations",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 592,
+          "name": "Unit 6 Experiencing different cultures",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 97,
+      "subject": "english",
+      "grade": 10,
+      "semester": "first",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 98,
+      "subject": "english",
+      "grade": 10,
+      "semester": "second",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 115,
+      "subject": "english",
+      "grade": 11,
+      "semester": "first",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 116,
+      "subject": "english",
+      "grade": 11,
+      "semester": "second",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 133,
+      "subject": "english",
+      "grade": 12,
+      "semester": "first",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 134,
+      "subject": "english",
+      "grade": 12,
+      "semester": "second",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 59,
+      "subject": "geography",
+      "grade": 7,
+      "semester": "first",
+      "official_chapters": 6,
+      "chapters": [
+        {
+          "id": 279,
+          "name": "第一章 让我们走进地理",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 18
+        },
+        {
+          "id": 280,
+          "name": "第二章 认识地球",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 281,
+          "name": "第三章 地球的面貌",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 282,
+          "name": "第四章 世界的居民与文化",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 283,
+          "name": "第五章 世界的气候",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 284,
+          "name": "第六章 世界的发展差异",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 60,
+      "subject": "geography",
+      "grade": 7,
+      "semester": "second",
+      "official_chapters": 3,
+      "chapters": [
+        {
+          "id": 593,
+          "name": "第七章 认识大洲",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 594,
+          "name": "第八章 了解地区",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 595,
+          "name": "第九章 走近国家",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 75,
+      "subject": "geography",
+      "grade": 8,
+      "semester": "first",
+      "official_chapters": 4,
+      "chapters": [
+        {
+          "id": 285,
+          "name": "第一章 中国的疆域与人口",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 22
+        },
+        {
+          "id": 286,
+          "name": "第二章 中国的自然环境",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 287,
+          "name": "第三章 中国的自然资源",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 288,
+          "name": "第四章 中国的主要产业",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 76,
+      "subject": "geography",
+      "grade": 8,
+      "semester": "second",
+      "official_chapters": 5,
+      "chapters": [
+        {
+          "id": 596,
+          "name": "第五章 中国的地域差异",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 597,
+          "name": "第六章 区域地理特征与城乡分布",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 598,
+          "name": "第七章 区域内外联系与协同发展",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 599,
+          "name": "第八章 区域地理环境与未来图景",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 600,
+          "name": "第九章 建设永续发展的美丽中国",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 107,
+      "subject": "geography",
+      "grade": 10,
+      "semester": "first",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 108,
+      "subject": "geography",
+      "grade": 10,
+      "semester": "second",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 125,
+      "subject": "geography",
+      "grade": 11,
+      "semester": "first",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 126,
+      "subject": "geography",
+      "grade": 11,
+      "semester": "second",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 143,
+      "subject": "geography",
+      "grade": 12,
+      "semester": "first",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 144,
+      "subject": "geography",
+      "grade": 12,
+      "semester": "second",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 57,
+      "subject": "history",
+      "grade": 7,
+      "semester": "first",
+      "official_chapters": 4,
+      "chapters": [
+        {
+          "id": 289,
+          "name": "第一单元 史前时期：原始社会与中华文明的起源",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 25
+        },
+        {
+          "id": 290,
+          "name": "第二单元 夏商周时期：奴隶制王朝的更替和向封建社会的过渡",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 291,
+          "name": "第三单元 秦汉时期：统一多民族封建国家的建立和巩固",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 292,
+          "name": "第四单元 三国两晋南北朝时期：政权分立与民族交融",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 58,
+      "subject": "history",
+      "grade": 7,
+      "semester": "second",
+      "official_chapters": 3,
+      "chapters": [
+        {
+          "id": 601,
+          "name": "第一单元 隋唐时期：繁荣与开放的时代",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 602,
+          "name": "第二单元 辽宋夏金元时期：民族关系发展和社会变化",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 603,
+          "name": "第三单元 明清时期（至鸦片战争前）：统一多民族封建国家的巩固与发展",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 73,
+      "subject": "history",
+      "grade": 8,
+      "semester": "first",
+      "official_chapters": 7,
+      "chapters": [
+        {
+          "id": 293,
+          "name": "第一单元 中国开始沦为半殖民地半封建社会",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 19
+        },
+        {
+          "id": 294,
+          "name": "第二单元 早期现代化的初步探索和民族危机加剧",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 295,
+          "name": "第三单元 资产阶级民主革命与中华民国的建立",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 296,
+          "name": "第四单元 新民主主义革命的兴起",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 297,
+          "name": "第五单元 从国共合作到农村革命根据地的建立",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 298,
+          "name": "第六单元 中华民族的抗日战争",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 299,
+          "name": "第七单元 人民解放战争",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 74,
+      "subject": "history",
+      "grade": 8,
+      "semester": "second",
+      "official_chapters": 7,
+      "chapters": [
+        {
+          "id": 604,
+          "name": "第一单元 中华人民共和国成立和社会主义制度建立",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 605,
+          "name": "第二单元 社会主义建设道路的探索",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 606,
+          "name": "第三单元 改革开放与中国特色社会主义的开创",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 607,
+          "name": "第四单元 中国特色社会主义迈向21世纪",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 608,
+          "name": "第五单元 在新形势下坚持和发展中国特色社会主义",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 609,
+          "name": "第六单元 中国特色社会主义进入新时代",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 610,
+          "name": "第七单元 全面建设社会主义现代化国家",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 89,
+      "subject": "history",
+      "grade": 9,
+      "semester": "first",
+      "official_chapters": 7,
+      "chapters": [
+        {
+          "id": 300,
+          "name": "第一单元 文明的产生和古代亚非文明",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 20
+        },
+        {
+          "id": 301,
+          "name": "第二单元 古代欧洲文明",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 302,
+          "name": "第三单元 封建时代的欧洲",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 303,
+          "name": "第四单元 中古时期的亚洲、非洲和美洲",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 304,
+          "name": "第五单元 走向近代",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 305,
+          "name": "第六单元 资本主义制度的初步确立",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 306,
+          "name": "第七单元 第一次工业革命和马克思主义的诞生",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 90,
+      "subject": "history",
+      "grade": 9,
+      "semester": "second",
+      "official_chapters": 6,
+      "chapters": [
+        {
+          "id": 611,
+          "name": "第一单元 殖民地人民的反抗与资本主义制度的扩展",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 612,
+          "name": "第二单元 第二次工业革命和近代科学文化",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 613,
+          "name": "第三单元 第一次世界大战和战后初期的世界",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 614,
+          "name": "第四单元 经济大危机和第二次世界大战",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 615,
+          "name": "第五单元 二战后的世界变化",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 616,
+          "name": "第六单元 走向和平发展的世界",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 105,
+      "subject": "history",
+      "grade": 10,
+      "semester": "first",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 106,
+      "subject": "history",
+      "grade": 10,
+      "semester": "second",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 123,
+      "subject": "history",
+      "grade": 11,
+      "semester": "first",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 124,
+      "subject": "history",
+      "grade": 11,
+      "semester": "second",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 141,
+      "subject": "history",
+      "grade": 12,
+      "semester": "first",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 142,
+      "subject": "history",
+      "grade": 12,
+      "semester": "second",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 1,
+      "subject": "math",
+      "grade": 1,
+      "semester": "first",
+      "official_chapters": 6,
+      "chapters": [
+        {
+          "id": 307,
+          "name": "开篇",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 18
+        },
+        {
+          "id": 308,
+          "name": "第一单元 生活中的数",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 309,
+          "name": "第二单元 5以内数加与减",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 310,
+          "name": "第三单元 整理与分类",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 311,
+          "name": "第四单元 10以内数加与减",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 30
+        },
+        {
+          "id": 312,
+          "name": "第五单元 有趣的立体图形",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 2,
+      "subject": "math",
+      "grade": 1,
+      "semester": "second",
+      "official_chapters": 10,
+      "chapters": [
+        {
+          "id": 617,
+          "name": "第一单元 20以内数与加法",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 618,
+          "name": "第二单元 图形大变身（一）",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 619,
+          "name": "综合实践 设计教室装饰图",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 620,
+          "name": "第三单元 20以内数与减法",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 621,
+          "name": "第四单元 100以内数的认识",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 622,
+          "name": "数学好玩 填数游戏",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 623,
+          "name": "第五单元 100以内数加与减（一）",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 624,
+          "name": "第六单元 有趣的平面图形（一）",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 625,
+          "name": "综合实践 画数学连环画",
+          "order_index": 9,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 626,
+          "name": "总复习",
+          "order_index": 10,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 9,
+      "subject": "math",
+      "grade": 2,
+      "semester": "first",
+      "official_chapters": 8,
+      "chapters": [
+        {
+          "id": 313,
+          "name": "第一单元 100以内数加与减（二）",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 22
+        },
+        {
+          "id": 314,
+          "name": "第二单元 测量（一）",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 315,
+          "name": "第三单元 数一数与乘法",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 316,
+          "name": "第四单元 乘法口诀（一）",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 317,
+          "name": "第五单元 分一分与除法",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 318,
+          "name": "第六单元 图形的运动（一）",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 319,
+          "name": "第七单元 乘法口诀（二）",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 320,
+          "name": "第八单元 乘除法的应用（一）",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 10,
+      "subject": "math",
+      "grade": 2,
+      "semester": "second",
+      "official_chapters": 11,
+      "chapters": [
+        {
+          "id": 627,
+          "name": "第一单元 100以内数加与减（三）",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 628,
+          "name": "第二单元 图形大变身（二）",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 629,
+          "name": "第三单元 除法的应用",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 630,
+          "name": "综合实践 参加趣味运动会",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 631,
+          "name": "第四单元 生活中的大数",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 632,
+          "name": "第五单元 有趣的平面图形（二）",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 633,
+          "name": "数学好玩 有趣的推理",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 634,
+          "name": "第六单元 大数加与减（一）",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 635,
+          "name": "第七单元 分类",
+          "order_index": 9,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 636,
+          "name": "综合实践 发现身体上的尺子",
+          "order_index": 10,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 637,
+          "name": "总复习",
+          "order_index": 11,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 17,
+      "subject": "math",
+      "grade": 3,
+      "semester": "first",
+      "official_chapters": 8,
+      "chapters": [
+        {
+          "id": 321,
+          "name": "第一单元 混合运算",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 322,
+          "name": "第二单元 测量（二）",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 323,
+          "name": "第三单元 大数加与减（二）",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 324,
+          "name": "第四单元 我们生活的空间（一）",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 325,
+          "name": "第五单元 认识图形",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 326,
+          "name": "第六单元 乘除法的应用（二）",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 327,
+          "name": "第七单元 认识小数",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 328,
+          "name": "第八单元 调查与记录",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 18,
+      "subject": "math",
+      "grade": 3,
+      "semester": "second",
+      "official_chapters": 7,
+      "chapters": [
+        {
+          "id": 638,
+          "name": "第一单元 整数乘法（一）",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 639,
+          "name": "第二单元 图形的运动（二）",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 640,
+          "name": "第三单元 周长",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 641,
+          "name": "第四单元 整数除法（一）",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 642,
+          "name": "第五单元 动手做",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 643,
+          "name": "第六单元 关系与规律",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 644,
+          "name": "第七单元 数据的整理与表示",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 25,
+      "subject": "math",
+      "grade": 4,
+      "semester": "first",
+      "official_chapters": 12,
+      "chapters": [
+        {
+          "id": 329,
+          "name": "第一单元 认识更大的数",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 18
+        },
+        {
+          "id": 330,
+          "name": "综合实践 编码",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 331,
+          "name": "第二单元 线与角",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 332,
+          "name": "第三单元 整数乘法（二）",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 333,
+          "name": "第四单元 我们生活的空间（二）",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 334,
+          "name": "第五单元 运算律",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 335,
+          "name": "数学好玩 数图形的学问",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 336,
+          "name": "第六单元 图形的奥秘",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 337,
+          "name": "第七单元 运用数量关系解决问题",
+          "order_index": 9,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 338,
+          "name": "第八单元 数据的表示和分析（一）",
+          "order_index": 10,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 339,
+          "name": "综合实践 导航给的时间准吗",
+          "order_index": 11,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 340,
+          "name": "总复习",
+          "order_index": 12,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 26,
+      "subject": "math",
+      "grade": 4,
+      "semester": "second",
+      "official_chapters": 9,
+      "chapters": [
+        {
+          "id": 645,
+          "name": "一 小数的意义和加减法",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 646,
+          "name": "二 认识三角形和四边形",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 647,
+          "name": "三 小数乘法",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 648,
+          "name": "整理与复习",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 649,
+          "name": "四 观察物体",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 650,
+          "name": "五 认识方程",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 651,
+          "name": "数学好玩",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 652,
+          "name": "六 数据的表示和分析",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 653,
+          "name": "总复习",
+          "order_index": 9,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 33,
+      "subject": "math",
+      "grade": 5,
+      "semester": "first",
+      "official_chapters": 12,
+      "chapters": [
+        {
+          "id": 341,
+          "name": "第一单元 小数的再认识和加减法",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 342,
+          "name": "第二单元 三角形的再认识",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 343,
+          "name": "综合实践 小小设计师",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 344,
+          "name": "第三单元 小数乘法",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 345,
+          "name": "第四单元 用字母表示（一）",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 346,
+          "name": "第五单元 多边形的面积",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 347,
+          "name": "数学好玩 鸡兔同笼",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 348,
+          "name": "第六单元 图形的位置与运动（一）",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 349,
+          "name": "第七单元 倍数与因数",
+          "order_index": 9,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 350,
+          "name": "第八单元 可能性",
+          "order_index": 10,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 351,
+          "name": "综合实践 多少落叶能铺满",
+          "order_index": 11,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 352,
+          "name": "总复习",
+          "order_index": 12,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 34,
+      "subject": "math",
+      "grade": 5,
+      "semester": "second",
+      "official_chapters": 11,
+      "chapters": [
+        {
+          "id": 654,
+          "name": "一 分数加减法",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 655,
+          "name": "二 长方体（一）",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 656,
+          "name": "三 分数乘法",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 657,
+          "name": "四 长方体（二）",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 658,
+          "name": "整理与复习",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 659,
+          "name": "五 分数除法",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 660,
+          "name": "六 确定位置",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 661,
+          "name": "七 用方程解决问题",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 662,
+          "name": "数学好玩",
+          "order_index": 9,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 663,
+          "name": "八 数据的表示和分析",
+          "order_index": 10,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 664,
+          "name": "总复习",
+          "order_index": 11,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 41,
+      "subject": "math",
+      "grade": 6,
+      "semester": "first",
+      "official_chapters": 13,
+      "chapters": [
+        {
+          "id": 353,
+          "name": "第一单元 分数除法",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 354,
+          "name": "第二单元 圆",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 18
+        },
+        {
+          "id": 355,
+          "name": "第三单元 用字母表示（二）",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 356,
+          "name": "综合实践 制订节水方案",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 357,
+          "name": "第四单元 分数的应用",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 358,
+          "name": "第五单元 比的认识",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 359,
+          "name": "第六单元 确定位置",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 360,
+          "name": "数学好玩 五子棋",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 361,
+          "name": "第七单元 百分数的认识与应用（一）",
+          "order_index": 9,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 362,
+          "name": "第八单元 观察物体（二）",
+          "order_index": 10,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 363,
+          "name": "第九单元 数据的表示和分析（三）",
+          "order_index": 11,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 364,
+          "name": "综合实践 制订营养食谱",
+          "order_index": 12,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 365,
+          "name": "总复习",
+          "order_index": 13,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 42,
+      "subject": "math",
+      "grade": 6,
+      "semester": "second",
+      "official_chapters": 7,
+      "chapters": [
+        {
+          "id": 665,
+          "name": "一 圆柱与圆锥",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 666,
+          "name": "二 比例",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 667,
+          "name": "三 图形的运动",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 668,
+          "name": "四 正比例与反比例",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 669,
+          "name": "数学好玩",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 670,
+          "name": "整理与复习",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 671,
+          "name": "总复习",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 51,
+      "subject": "math",
+      "grade": 7,
+      "semester": "first",
+      "official_chapters": 6,
+      "chapters": [
+        {
+          "id": 366,
+          "name": "第一章 丰富的图形世界",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 18
+        },
+        {
+          "id": 367,
+          "name": "第二章 有理数及其运算",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 368,
+          "name": "第三章 整式及其加减",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 369,
+          "name": "第四章 基本平面图形",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 370,
+          "name": "第五章 一元一次方程",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 371,
+          "name": "第六章 数据的收集与整理",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 52,
+      "subject": "math",
+      "grade": 7,
+      "semester": "second",
+      "official_chapters": 6,
+      "chapters": [
+        {
+          "id": 672,
+          "name": "第一章 整式的乘除",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 673,
+          "name": "第二章 相交线与平行线",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 674,
+          "name": "第三章 概率初步",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 675,
+          "name": "第四章 三角形",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 676,
+          "name": "第五章 生活中的轴对称",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 677,
+          "name": "第六章 变量之间的关系",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 65,
+      "subject": "math",
+      "grade": 8,
+      "semester": "first",
+      "official_chapters": 7,
+      "chapters": [
+        {
+          "id": 372,
+          "name": "第一章 勾股定理",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 20
+        },
+        {
+          "id": 373,
+          "name": "第二章 实数",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 374,
+          "name": "第三章 位置与坐标",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 375,
+          "name": "第四章 一次函数",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 376,
+          "name": "第五章 二元一次方程组",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 377,
+          "name": "第六章 数据的分析",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 378,
+          "name": "第七章 证明",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 66,
+      "subject": "math",
+      "grade": 8,
+      "semester": "second",
+      "official_chapters": 6,
+      "chapters": [
+        {
+          "id": 678,
+          "name": "第一章 三角形的证明及其应用",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 679,
+          "name": "第二章 不等式与不等式组",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 680,
+          "name": "第三章 图形的平移与旋转",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 681,
+          "name": "第四章 因式分解",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 682,
+          "name": "第五章 分式与分式方程",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 683,
+          "name": "第六章 平行四边形",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 81,
+      "subject": "math",
+      "grade": 9,
+      "semester": "first",
+      "official_chapters": 7,
+      "chapters": [
+        {
+          "id": 735,
+          "name": "第一章 特殊平行四边形",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 20
+        },
+        {
+          "id": 736,
+          "name": "第二章 一元二次方程",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 737,
+          "name": "第三章 图形的相似",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 738,
+          "name": "第四章 投影与视图",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 739,
+          "name": "第五章 二次函数",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 740,
+          "name": "第六章 概率的进一步认识",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 741,
+          "name": "综合与实践 池塘里有多少条鱼",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 82,
+      "subject": "math",
+      "grade": 9,
+      "semester": "second",
+      "official_chapters": 7,
+      "chapters": [
+        {
+          "id": 742,
+          "name": "第一章 直角三角形的边角关系",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 743,
+          "name": "第二章 二次函数",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 744,
+          "name": "第三章 圆",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 745,
+          "name": "综合与实践 视力的变化",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 746,
+          "name": "综合与实践 哪种方式更合算",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 747,
+          "name": "综合与实践 设计遮阳篷",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 748,
+          "name": "总复习",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 95,
+      "subject": "math",
+      "grade": 10,
+      "semester": "first",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 96,
+      "subject": "math",
+      "grade": 10,
+      "semester": "second",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 113,
+      "subject": "math",
+      "grade": 11,
+      "semester": "first",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 114,
+      "subject": "math",
+      "grade": 11,
+      "semester": "second",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 131,
+      "subject": "math",
+      "grade": 12,
+      "semester": "first",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 132,
+      "subject": "math",
+      "grade": 12,
+      "semester": "second",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 69,
+      "subject": "physics",
+      "grade": 8,
+      "semester": "first",
+      "official_chapters": 6,
+      "chapters": [
+        {
+          "id": 379,
+          "name": "第一章 机械运动",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 20
+        },
+        {
+          "id": 380,
+          "name": "第二章 声现象",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 5
+        },
+        {
+          "id": 381,
+          "name": "第三章 物态变化",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 382,
+          "name": "第四章 光现象",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 383,
+          "name": "第五章 透镜及其应用",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 384,
+          "name": "第六章 质量与密度",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 70,
+      "subject": "physics",
+      "grade": 8,
+      "semester": "second",
+      "official_chapters": 6,
+      "chapters": [
+        {
+          "id": 684,
+          "name": "第七章 力",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 685,
+          "name": "第八章 运动和力",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 686,
+          "name": "第九章 压强",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 687,
+          "name": "第十章 浮力",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 688,
+          "name": "第十一章 功和机械能",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 689,
+          "name": "第十二章 简单机械",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 85,
+      "subject": "physics",
+      "grade": 9,
+      "semester": "first",
+      "official_chapters": 10,
+      "chapters": [
+        {
+          "id": 385,
+          "name": "第十三章 内能",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 18
+        },
+        {
+          "id": 386,
+          "name": "第十四章 内能的利用",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 387,
+          "name": "第十五章 电流和电路",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 388,
+          "name": "第十六章 电压 电阻",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 389,
+          "name": "第十七章 欧姆定律",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 390,
+          "name": "第十八章 电功率",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 391,
+          "name": "第十九章 生活用电",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 392,
+          "name": "第二十章 电与磁",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 393,
+          "name": "第二十一章 电磁波及其应用",
+          "order_index": 9,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 394,
+          "name": "第二十二章 能源与可持续发展",
+          "order_index": 10,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 86,
+      "subject": "physics",
+      "grade": 9,
+      "semester": "second",
+      "official_chapters": 10,
+      "chapters": [
+        {
+          "id": 690,
+          "name": "第十三章 内能",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 691,
+          "name": "第十四章 内能的利用",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 692,
+          "name": "第十五章 电流和电路",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 693,
+          "name": "第十六章 电压 电阻",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 694,
+          "name": "第十七章 欧姆定律",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 695,
+          "name": "第十八章 电功率",
+          "order_index": 6,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 696,
+          "name": "第十九章 生活用电",
+          "order_index": 7,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 697,
+          "name": "第二十章 电与磁",
+          "order_index": 8,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 698,
+          "name": "第二十一章 电磁波及其应用",
+          "order_index": 9,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 699,
+          "name": "第二十二章 能源与可持续发展",
+          "order_index": 10,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 99,
+      "subject": "physics",
+      "grade": 10,
+      "semester": "first",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 100,
+      "subject": "physics",
+      "grade": 10,
+      "semester": "second",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 117,
+      "subject": "physics",
+      "grade": 11,
+      "semester": "first",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 118,
+      "subject": "physics",
+      "grade": 11,
+      "semester": "second",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 135,
+      "subject": "physics",
+      "grade": 12,
+      "semester": "first",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 136,
+      "subject": "physics",
+      "grade": 12,
+      "semester": "second",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 7,
+      "subject": "politics",
+      "grade": 1,
+      "semester": "first",
+      "official_chapters": 4,
+      "chapters": [
+        {
+          "id": 395,
+          "name": "第一单元 我是小学生啦",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 20
+        },
+        {
+          "id": 396,
+          "name": "第二单元 过好校园生活",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 397,
+          "name": "第三单元 养成良好习惯",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 398,
+          "name": "第四单元 我们讲文明",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 8,
+      "subject": "politics",
+      "grade": 1,
+      "semester": "second",
+      "official_chapters": 4,
+      "chapters": [
+        {
+          "id": 700,
+          "name": "第一单元 我有新面貌",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 701,
+          "name": "第二单元 我们一起长大",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 702,
+          "name": "第三单元 幸福一家人",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 703,
+          "name": "第四单元 争做中国好儿童",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 15,
+      "subject": "politics",
+      "grade": 2,
+      "semester": "first",
+      "official_chapters": 4,
+      "chapters": [
+        {
+          "id": 399,
+          "name": "第一单元 过好节假日",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 19
+        },
+        {
+          "id": 400,
+          "name": "第二单元 我爱我们班",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 401,
+          "name": "第三单元 我的家乡美",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 402,
+          "name": "第四单元 我爱我们的祖国",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 16,
+      "subject": "politics",
+      "grade": 2,
+      "semester": "second",
+      "official_chapters": 4,
+      "chapters": [
+        {
+          "id": 704,
+          "name": "第一单元 我乐观我向上",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 705,
+          "name": "第二单元 大自然，谢谢您",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 706,
+          "name": "第三单元 传统美德我弘扬",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 707,
+          "name": "第四单元 播下梦想的种子",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 23,
+      "subject": "politics",
+      "grade": 3,
+      "semester": "first",
+      "official_chapters": 4,
+      "chapters": [
+        {
+          "id": 403,
+          "name": "第一单元 做学习的主人",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 20
+        },
+        {
+          "id": 404,
+          "name": "第二单元 爱科学 学科学",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 405,
+          "name": "第三单元 在集体中成长",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 406,
+          "name": "第四单元 公共生活靠大家",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 24,
+      "subject": "politics",
+      "grade": 3,
+      "semester": "second",
+      "official_chapters": 4,
+      "chapters": [
+        {
+          "id": 708,
+          "name": "第一单元 共建美好生活",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 709,
+          "name": "第二单元 劳动最光荣",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 710,
+          "name": "第三单元 我是家庭一员",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 711,
+          "name": "第四单元 我们来交往",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 31,
+      "subject": "politics",
+      "grade": 4,
+      "semester": "first",
+      "official_chapters": 4,
+      "chapters": [
+        {
+          "id": 407,
+          "name": "第一单元 我们的班集体",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 19
+        },
+        {
+          "id": 408,
+          "name": "第二单元 少年在成长",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 409,
+          "name": "第三单元 生活在信息社会",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 410,
+          "name": "第四单元 做文明的消费者",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 32,
+      "subject": "politics",
+      "grade": 4,
+      "semester": "second",
+      "official_chapters": 4,
+      "chapters": [
+        {
+          "id": 712,
+          "name": "第一单元 同伴与交往",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 713,
+          "name": "第二单元 做聪明的消费者",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 714,
+          "name": "第三单元 美好生活哪里来",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 715,
+          "name": "第四单元 感受家乡文化 关心家乡发展",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 39,
+      "subject": "politics",
+      "grade": 5,
+      "semester": "first",
+      "official_chapters": 4,
+      "chapters": [
+        {
+          "id": 411,
+          "name": "第一单元 没有共产党就没有新中国",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 19
+        },
+        {
+          "id": 412,
+          "name": "第二单元 建设社会主义新中国",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 413,
+          "name": "第三单元 进行改革开放",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 414,
+          "name": "第四单元 开创新时代",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 40,
+      "subject": "politics",
+      "grade": 5,
+      "semester": "second",
+      "official_chapters": 3,
+      "chapters": [
+        {
+          "id": 716,
+          "name": "第一单元 我们一家人",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 717,
+          "name": "第二单元 公共生活靠大家",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 718,
+          "name": "第三单元 百年追梦 复兴中华",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 47,
+      "subject": "politics",
+      "grade": 6,
+      "semester": "first",
+      "official_chapters": 4,
+      "chapters": [
+        {
+          "id": 415,
+          "name": "第一单元 生活中的法律",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 18
+        },
+        {
+          "id": 416,
+          "name": "第二单元 公民与国家",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 417,
+          "name": "第三单元 我们受特殊保护",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 418,
+          "name": "第四单元 知法守法 依法维权",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 48,
+      "subject": "politics",
+      "grade": 6,
+      "semester": "second",
+      "official_chapters": 4,
+      "chapters": [
+        {
+          "id": 719,
+          "name": "第一单元 完善自我 健康成长",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 720,
+          "name": "第二单元 爱护地球 共同责任",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 721,
+          "name": "第三单元 多样文明 多彩生活",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 722,
+          "name": "第四单元 让世界更美好",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 61,
+      "subject": "politics",
+      "grade": 7,
+      "semester": "first",
+      "official_chapters": 4,
+      "chapters": [
+        {
+          "id": 419,
+          "name": "第一单元 少年有梦",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 19
+        },
+        {
+          "id": 420,
+          "name": "第二单元 成长的时空",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 421,
+          "name": "第三单元 珍爱我们的生命",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 422,
+          "name": "第四单元 追求美好人生",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 62,
+      "subject": "politics",
+      "grade": 7,
+      "semester": "second",
+      "official_chapters": 4,
+      "chapters": [
+        {
+          "id": 723,
+          "name": "第一单元 珍惜青春时光",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 724,
+          "name": "第二单元 焕发青春活力",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 725,
+          "name": "第三单元 传承中华优秀传统文化",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 726,
+          "name": "第四单元 生活在法治社会",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 77,
+      "subject": "politics",
+      "grade": 8,
+      "semester": "first",
+      "official_chapters": 4,
+      "chapters": [
+        {
+          "id": 423,
+          "name": "第一单元走进社会生活",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 20
+        },
+        {
+          "id": 424,
+          "name": "第二单元 维护社会秩序",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 425,
+          "name": "第三单元 勇担社会责任",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 426,
+          "name": "第四单元 维护国家利益",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 78,
+      "subject": "politics",
+      "grade": 8,
+      "semester": "second",
+      "official_chapters": 5,
+      "chapters": [
+        {
+          "id": 727,
+          "name": "第一单元 坚持宪法至上",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 728,
+          "name": "第二单元 理解权利义务",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 729,
+          "name": "第三单元 认识国家制度",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 730,
+          "name": "第四单元 走近国家机构",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 731,
+          "name": "第五单元 建设法治中国",
+          "order_index": 5,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 91,
+      "subject": "politics",
+      "grade": 9,
+      "semester": "first",
+      "official_chapters": 4,
+      "chapters": [
+        {
+          "id": 427,
+          "name": "第一单元 坚持党的全面领导",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 18
+        },
+        {
+          "id": 428,
+          "name": "第二单元 进入新时代",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 429,
+          "name": "第三单元 奋进新征程",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 430,
+          "name": "第四单元 共圆中国梦",
+          "order_index": 4,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 92,
+      "subject": "politics",
+      "grade": 9,
+      "semester": "second",
+      "official_chapters": 3,
+      "chapters": [
+        {
+          "id": 732,
+          "name": "第一单元 我们共同的世界",
+          "order_index": 1,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 733,
+          "name": "第二单元 世界舞台上的中国",
+          "order_index": 2,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        },
+        {
+          "id": 734,
+          "name": "第三单元 走向未来的少年",
+          "order_index": 3,
+          "is_official": true,
+          "is_placeholder": 0,
+          "placeholder_note": null,
+          "questions": 0
+        }
+      ],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 109,
+      "subject": "politics",
+      "grade": 10,
+      "semester": "first",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 110,
+      "subject": "politics",
+      "grade": 10,
+      "semester": "second",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 127,
+      "subject": "politics",
+      "grade": 11,
+      "semester": "first",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 128,
+      "subject": "politics",
+      "grade": 11,
+      "semester": "second",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 145,
+      "subject": "politics",
+      "grade": 12,
+      "semester": "first",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    },
+    {
+      "textbook_id": 146,
+      "subject": "politics",
+      "grade": 12,
+      "semester": "second",
+      "official_chapters": 0,
+      "chapters": [],
+      "placeholder_marked": [],
+      "placeholder_unmarked": [],
+      "no_baseline": [],
+      "order_index_conflicts": {},
+      "order_index_mismatch": []
+    }
+  ]
+}

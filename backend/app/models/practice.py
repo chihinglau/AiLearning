@@ -12,6 +12,11 @@ class StudentQuestionRecord(Base):
     """答题记录，错题本与学情分析的原始数据来源。"""
 
     __tablename__ = "student_question_records"
+    __table_args__ = (
+        UniqueConstraint(
+            "user_id", "client_key", name="uq_record_user_client_key"
+        ),
+    )
 
     id: Mapped[int] = mapped_column(BigInteger().with_variant(Integer, "sqlite"), primary_key=True)
     user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
@@ -31,6 +36,8 @@ class StudentQuestionRecord(Base):
         ForeignKey("exam_attempts.id"), nullable=True, index=True
     )
     kp_weight: Mapped[float] = mapped_column(default=1.0)
+    # 离线答题幂等键：客户端生成的 UUID，联网批量同步时去重。
+    client_key: Mapped[Optional[str]] = mapped_column(String(64), nullable=True)
     attempted_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, index=True)
 
 

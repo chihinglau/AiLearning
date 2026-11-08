@@ -86,6 +86,8 @@ class Question {
     this.options = const [],
     this.difficulty = 3,
     this.tags = const [],
+    this.answer,
+    this.analysis,
   });
 
   final int id;
@@ -98,9 +100,14 @@ class Question {
   final int difficulty;
   final List<String> tags;
 
+  /// 仅离线整册下载的题目携带答案与解析；在线接口不返回，保持 null。
+  final Map<String, dynamic>? answer;
+  final String? analysis;
+
   factory Question.fromJson(Map<String, dynamic> json) {
     final content = json['content'] as Map<String, dynamic>? ?? const {};
     final rawOptions = json['options'] as List<dynamic>? ?? const [];
+    final rawAnswer = json['answer'];
     return Question(
       id: json['id'] as int,
       chapterId: json['chapter_id'] as int? ?? 0,
@@ -115,6 +122,8 @@ class Question {
       tags: (json['tags'] as List<dynamic>? ?? const [])
           .map((item) => item.toString())
           .toList(),
+      answer: rawAnswer is Map<String, dynamic> ? rawAnswer : null,
+      analysis: json['analysis'] as String?,
     );
   }
 }
