@@ -1,0 +1,1722 @@
+{
+  "schema": "consolidation-plan/1",
+  "generated_at": "2026-11-09T04:23:35",
+  "rule": "非 legacy > 批次日期最新 > 题量最多 > mtime 最新；分片不改名不删除；越界章节不并入；库内已存在的知识点不在整册里重复声明；空节（既无点也无题）归集时剔除",
+  "books": [
+    {
+      "subject": "math",
+      "grade": 1,
+      "files": [
+        "math_g1_first_20261107.json",
+        "math_g1_first_20261108.json",
+        "math_g1_first_20261108_r2.json",
+        "math_g1_first_20261108_r3.json",
+        "math_g1_first_20261108_r4.json",
+        "math_g1_first_20261108_r5.json",
+        "math_g1_first_20261108_r6.json"
+      ],
+      "fragment_files": 5,
+      "official_chapters": 6,
+      "covered_official": 6,
+      "missing_chapters": [],
+      "outside_outline": [
+        "10以内加减法"
+      ],
+      "duplicated_chapters": [],
+      "questions_after_merge": 119,
+      "chapters": [
+        {
+          "name": "10以内加减法",
+          "order_index": 1,
+          "in_outline": false,
+          "winner_file": "math_g1_first_20261107.json",
+          "reason": "唯一版本",
+          "questions": 20,
+          "versions": [
+            {
+              "file": "math_g1_first_20261107.json",
+              "fragment": false,
+              "legacy": true,
+              "questions": 20,
+              "points": 5,
+              "mtime": "2026-11-08 21:21:48"
+            }
+          ]
+        },
+        {
+          "name": "开篇",
+          "order_index": 1,
+          "in_outline": true,
+          "winner_file": "math_g1_first_20261108.json",
+          "reason": "唯一版本",
+          "questions": 18,
+          "versions": [
+            {
+              "file": "math_g1_first_20261108.json",
+              "fragment": false,
+              "legacy": false,
+              "questions": 18,
+              "points": 4,
+              "mtime": "2026-11-08 09:10:14"
+            }
+          ]
+        },
+        {
+          "name": "第一单元 生活中的数",
+          "order_index": 2,
+          "in_outline": true,
+          "winner_file": "math_g1_first_20261108_r2.json",
+          "reason": "唯一版本",
+          "questions": 21,
+          "versions": [
+            {
+              "file": "math_g1_first_20261108_r2.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 21,
+              "points": 4,
+              "mtime": "2026-11-08 22:58:54"
+            }
+          ]
+        },
+        {
+          "name": "第二单元 5以内数加与减",
+          "order_index": 3,
+          "in_outline": true,
+          "winner_file": "math_g1_first_20261108_r3.json",
+          "reason": "唯一版本",
+          "questions": 20,
+          "versions": [
+            {
+              "file": "math_g1_first_20261108_r3.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 20,
+              "points": 4,
+              "mtime": "2026-11-08 23:00:19"
+            }
+          ]
+        },
+        {
+          "name": "第三单元 整理与分类",
+          "order_index": 4,
+          "in_outline": true,
+          "winner_file": "math_g1_first_20261108_r4.json",
+          "reason": "唯一版本",
+          "questions": 20,
+          "versions": [
+            {
+              "file": "math_g1_first_20261108_r4.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 20,
+              "points": 4,
+              "mtime": "2026-11-08 23:01:23"
+            }
+          ]
+        },
+        {
+          "name": "第四单元 10以内数加与减",
+          "order_index": 5,
+          "in_outline": true,
+          "winner_file": "math_g1_first_20261108_r6.json",
+          "reason": "唯一版本",
+          "questions": 20,
+          "versions": [
+            {
+              "file": "math_g1_first_20261108_r6.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 20,
+              "points": 4,
+              "mtime": "2026-11-09 00:30:20"
+            }
+          ]
+        },
+        {
+          "name": "第五单元 有趣的立体图形",
+          "order_index": 6,
+          "in_outline": true,
+          "winner_file": "math_g1_first_20261108_r5.json",
+          "reason": "唯一版本",
+          "questions": 20,
+          "versions": [
+            {
+              "file": "math_g1_first_20261108_r5.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 20,
+              "points": 4,
+              "mtime": "2026-11-08 23:01:45"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "chinese",
+      "grade": 1,
+      "files": [
+        "chinese_g1_first_20261107.json",
+        "chinese_g1_first_20261108.json",
+        "chinese_g1_first_20261108_r3.json",
+        "chinese_g1_first_20261108_r4.json",
+        "chinese_g1_first_20261108_r5.json",
+        "chinese_g1_first_20261108_r6.json",
+        "chinese_g1_first_20261108_r7.json",
+        "chinese_g1_first_20261108_r8.json",
+        "chinese_g1_first_20261108_r9.json"
+      ],
+      "fragment_files": 7,
+      "official_chapters": 8,
+      "covered_official": 8,
+      "missing_chapters": [],
+      "outside_outline": [],
+      "duplicated_chapters": [
+        "第一单元 识字"
+      ],
+      "questions_after_merge": 208,
+      "chapters": [
+        {
+          "name": "第一单元 识字",
+          "order_index": 1,
+          "in_outline": true,
+          "winner_file": "chinese_g1_first_20261108.json",
+          "reason": "批次最新（20261108）；题量最多（19 道）；mtime 最新（2026-11-08 10:20:18）",
+          "questions": 19,
+          "versions": [
+            {
+              "file": "chinese_g1_first_20261108.json",
+              "fragment": false,
+              "legacy": false,
+              "questions": 19,
+              "points": 4,
+              "mtime": "2026-11-08 10:20:18"
+            },
+            {
+              "file": "chinese_g1_first_20261107.json",
+              "fragment": false,
+              "legacy": false,
+              "questions": 20,
+              "points": 5,
+              "mtime": "2026-11-07 23:39:47"
+            }
+          ]
+        },
+        {
+          "name": "第二单元 汉语拼音",
+          "order_index": 2,
+          "in_outline": true,
+          "winner_file": "chinese_g1_first_20261108_r3.json",
+          "reason": "唯一版本",
+          "questions": 28,
+          "versions": [
+            {
+              "file": "chinese_g1_first_20261108_r3.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 28,
+              "points": 5,
+              "mtime": "2026-11-08 23:21:50"
+            }
+          ]
+        },
+        {
+          "name": "第三单元 汉语拼音",
+          "order_index": 3,
+          "in_outline": true,
+          "winner_file": "chinese_g1_first_20261108_r4.json",
+          "reason": "唯一版本",
+          "questions": 27,
+          "versions": [
+            {
+              "file": "chinese_g1_first_20261108_r4.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 27,
+              "points": 6,
+              "mtime": "2026-11-08 23:21:02"
+            }
+          ]
+        },
+        {
+          "name": "第四单元 汉语拼音",
+          "order_index": 4,
+          "in_outline": true,
+          "winner_file": "chinese_g1_first_20261108_r5.json",
+          "reason": "唯一版本",
+          "questions": 27,
+          "versions": [
+            {
+              "file": "chinese_g1_first_20261108_r5.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 27,
+              "points": 6,
+              "mtime": "2026-11-08 23:21:02"
+            }
+          ]
+        },
+        {
+          "name": "第五单元 阅读",
+          "order_index": 5,
+          "in_outline": true,
+          "winner_file": "chinese_g1_first_20261108_r6.json",
+          "reason": "唯一版本",
+          "questions": 26,
+          "versions": [
+            {
+              "file": "chinese_g1_first_20261108_r6.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 26,
+              "points": 5,
+              "mtime": "2026-11-08 23:14:36"
+            }
+          ]
+        },
+        {
+          "name": "第六单元 识字",
+          "order_index": 6,
+          "in_outline": true,
+          "winner_file": "chinese_g1_first_20261108_r7.json",
+          "reason": "唯一版本",
+          "questions": 28,
+          "versions": [
+            {
+              "file": "chinese_g1_first_20261108_r7.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 28,
+              "points": 5,
+              "mtime": "2026-11-08 23:21:02"
+            }
+          ]
+        },
+        {
+          "name": "第七单元 阅读",
+          "order_index": 7,
+          "in_outline": true,
+          "winner_file": "chinese_g1_first_20261108_r8.json",
+          "reason": "唯一版本",
+          "questions": 26,
+          "versions": [
+            {
+              "file": "chinese_g1_first_20261108_r8.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 26,
+              "points": 4,
+              "mtime": "2026-11-08 23:21:08"
+            }
+          ]
+        },
+        {
+          "name": "第八单元 阅读",
+          "order_index": 8,
+          "in_outline": true,
+          "winner_file": "chinese_g1_first_20261108_r9.json",
+          "reason": "唯一版本",
+          "questions": 27,
+          "versions": [
+            {
+              "file": "chinese_g1_first_20261108_r9.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 27,
+              "points": 4,
+              "mtime": "2026-11-08 23:21:08"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 1,
+      "files": [
+        "english_g1_first_20261107.json",
+        "english_g1_first_20261108.json",
+        "english_g1_first_20261108_r2.json",
+        "english_g1_first_20261108_r3.json",
+        "english_g1_first_20261108_r4.json",
+        "english_g1_first_20261108_r5.json",
+        "english_g1_first_20261108_r6.json",
+        "english_g1_first_20261108_r7.json"
+      ],
+      "fragment_files": 6,
+      "official_chapters": 6,
+      "covered_official": 6,
+      "missing_chapters": [],
+      "outside_outline": [],
+      "duplicated_chapters": [
+        "Unit 1 What is your family like?"
+      ],
+      "questions_after_merge": 141,
+      "chapters": [
+        {
+          "name": "Unit 1 What is your family like?",
+          "order_index": 1,
+          "in_outline": true,
+          "winner_file": "english_g1_first_20261108_r2.json",
+          "reason": "批次最新（20261108）；题量最多（21 道）；mtime 最新（2026-11-08 23:10:43）",
+          "questions": 21,
+          "versions": [
+            {
+              "file": "english_g1_first_20261108_r2.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 21,
+              "points": 5,
+              "mtime": "2026-11-08 23:10:43"
+            },
+            {
+              "file": "english_g1_first_20261107.json",
+              "fragment": false,
+              "legacy": false,
+              "questions": 19,
+              "points": 4,
+              "mtime": "2026-11-08 19:09:25"
+            },
+            {
+              "file": "english_g1_first_20261108.json",
+              "fragment": false,
+              "legacy": false,
+              "questions": 19,
+              "points": 4,
+              "mtime": "2026-11-08 14:11:24"
+            }
+          ]
+        },
+        {
+          "name": "Unit 2 How are you today?",
+          "order_index": 2,
+          "in_outline": true,
+          "winner_file": "english_g1_first_20261108_r3.json",
+          "reason": "唯一版本",
+          "questions": 24,
+          "versions": [
+            {
+              "file": "english_g1_first_20261108_r3.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 24,
+              "points": 6,
+              "mtime": "2026-11-08 23:11:20"
+            }
+          ]
+        },
+        {
+          "name": "Unit 3 What do you take to school?",
+          "order_index": 3,
+          "in_outline": true,
+          "winner_file": "english_g1_first_20261108_r4.json",
+          "reason": "唯一版本",
+          "questions": 24,
+          "versions": [
+            {
+              "file": "english_g1_first_20261108_r4.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 24,
+              "points": 6,
+              "mtime": "2026-11-08 23:13:36"
+            }
+          ]
+        },
+        {
+          "name": "Unit 4 What can you do?",
+          "order_index": 4,
+          "in_outline": true,
+          "winner_file": "english_g1_first_20261108_r5.json",
+          "reason": "唯一版本",
+          "questions": 24,
+          "versions": [
+            {
+              "file": "english_g1_first_20261108_r5.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 24,
+              "points": 6,
+              "mtime": "2026-11-08 23:13:42"
+            }
+          ]
+        },
+        {
+          "name": "Unit 5 What is your favourite animal?",
+          "order_index": 5,
+          "in_outline": true,
+          "winner_file": "english_g1_first_20261108_r6.json",
+          "reason": "唯一版本",
+          "questions": 24,
+          "versions": [
+            {
+              "file": "english_g1_first_20261108_r6.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 24,
+              "points": 6,
+              "mtime": "2026-11-08 23:13:43"
+            }
+          ]
+        },
+        {
+          "name": "Unit 6 What colours can you see?",
+          "order_index": 6,
+          "in_outline": true,
+          "winner_file": "english_g1_first_20261108_r7.json",
+          "reason": "唯一版本",
+          "questions": 24,
+          "versions": [
+            {
+              "file": "english_g1_first_20261108_r7.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 24,
+              "points": 6,
+              "mtime": "2026-11-08 23:13:37"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "politics",
+      "grade": 1,
+      "files": [
+        "politics_g1_first_20261108.json",
+        "politics_g1_first_20261108_r2.json",
+        "politics_g1_first_20261108_r3.json",
+        "politics_g1_first_20261108_r4.json",
+        "politics_g1_first_20261108_r5.json"
+      ],
+      "fragment_files": 4,
+      "official_chapters": 4,
+      "covered_official": 4,
+      "missing_chapters": [],
+      "outside_outline": [],
+      "duplicated_chapters": [
+        "第一单元 我是小学生啦"
+      ],
+      "questions_after_merge": 100,
+      "chapters": [
+        {
+          "name": "第一单元 我是小学生啦",
+          "order_index": 1,
+          "in_outline": true,
+          "winner_file": "politics_g1_first_20261108_r2.json",
+          "reason": "题量最多（27 道）；mtime 最新（2026-11-08 23:08:11）",
+          "questions": 27,
+          "versions": [
+            {
+              "file": "politics_g1_first_20261108_r2.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 27,
+              "points": 6,
+              "mtime": "2026-11-08 23:08:11"
+            },
+            {
+              "file": "politics_g1_first_20261108.json",
+              "fragment": false,
+              "legacy": false,
+              "questions": 20,
+              "points": 4,
+              "mtime": "2026-11-08 10:20:18"
+            }
+          ]
+        },
+        {
+          "name": "第二单元 过好校园生活",
+          "order_index": 2,
+          "in_outline": true,
+          "winner_file": "politics_g1_first_20261108_r3.json",
+          "reason": "唯一版本",
+          "questions": 24,
+          "versions": [
+            {
+              "file": "politics_g1_first_20261108_r3.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 24,
+              "points": 6,
+              "mtime": "2026-11-08 23:08:57"
+            }
+          ]
+        },
+        {
+          "name": "第三单元 养成良好习惯",
+          "order_index": 3,
+          "in_outline": true,
+          "winner_file": "politics_g1_first_20261108_r4.json",
+          "reason": "唯一版本",
+          "questions": 24,
+          "versions": [
+            {
+              "file": "politics_g1_first_20261108_r4.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 24,
+              "points": 6,
+              "mtime": "2026-11-08 23:09:36"
+            }
+          ]
+        },
+        {
+          "name": "第四单元 我们讲文明",
+          "order_index": 4,
+          "in_outline": true,
+          "winner_file": "politics_g1_first_20261108_r5.json",
+          "reason": "唯一版本",
+          "questions": 25,
+          "versions": [
+            {
+              "file": "politics_g1_first_20261108_r5.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 25,
+              "points": 6,
+              "mtime": "2026-11-08 23:14:06"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "math",
+      "grade": 8,
+      "files": [
+        "math_g8_first_20261107.json",
+        "math_g8_first_20261108_r2.json",
+        "math_g8_first_20261108_r3.json",
+        "math_g8_first_20261108_r4.json",
+        "math_g8_first_20261108_r5.json",
+        "math_g8_first_20261108_r6.json",
+        "math_g8_first_20261108_r7.json",
+        "math_g8_first_20261108_r8.json"
+      ],
+      "fragment_files": 7,
+      "official_chapters": 7,
+      "covered_official": 7,
+      "missing_chapters": [],
+      "outside_outline": [
+        "勾股定理"
+      ],
+      "duplicated_chapters": [],
+      "questions_after_merge": 170,
+      "chapters": [
+        {
+          "name": "勾股定理",
+          "order_index": 1,
+          "in_outline": false,
+          "winner_file": "math_g8_first_20261107.json",
+          "reason": "唯一版本",
+          "questions": 20,
+          "versions": [
+            {
+              "file": "math_g8_first_20261107.json",
+              "fragment": false,
+              "legacy": true,
+              "questions": 20,
+              "points": 5,
+              "mtime": "2026-11-08 21:21:48"
+            }
+          ]
+        },
+        {
+          "name": "第一章 勾股定理",
+          "order_index": 1,
+          "in_outline": true,
+          "winner_file": "math_g8_first_20261108_r8.json",
+          "reason": "唯一版本",
+          "questions": 24,
+          "versions": [
+            {
+              "file": "math_g8_first_20261108_r8.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 24,
+              "points": 5,
+              "mtime": "2026-11-09 00:30:43"
+            }
+          ]
+        },
+        {
+          "name": "第二章 实数",
+          "order_index": 2,
+          "in_outline": true,
+          "winner_file": "math_g8_first_20261108_r2.json",
+          "reason": "唯一版本",
+          "questions": 26,
+          "versions": [
+            {
+              "file": "math_g8_first_20261108_r2.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 26,
+              "points": 5,
+              "mtime": "2026-11-08 23:19:47"
+            }
+          ]
+        },
+        {
+          "name": "第三章 位置与坐标",
+          "order_index": 3,
+          "in_outline": true,
+          "winner_file": "math_g8_first_20261108_r3.json",
+          "reason": "唯一版本",
+          "questions": 22,
+          "versions": [
+            {
+              "file": "math_g8_first_20261108_r3.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 22,
+              "points": 4,
+              "mtime": "2026-11-08 23:09:52"
+            }
+          ]
+        },
+        {
+          "name": "第四章 一次函数",
+          "order_index": 4,
+          "in_outline": true,
+          "winner_file": "math_g8_first_20261108_r4.json",
+          "reason": "唯一版本",
+          "questions": 26,
+          "versions": [
+            {
+              "file": "math_g8_first_20261108_r4.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 26,
+              "points": 5,
+              "mtime": "2026-11-08 23:20:04"
+            }
+          ]
+        },
+        {
+          "name": "第五章 二元一次方程组",
+          "order_index": 5,
+          "in_outline": true,
+          "winner_file": "math_g8_first_20261108_r5.json",
+          "reason": "唯一版本",
+          "questions": 23,
+          "versions": [
+            {
+              "file": "math_g8_first_20261108_r5.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 23,
+              "points": 4,
+              "mtime": "2026-11-08 23:12:14"
+            }
+          ]
+        },
+        {
+          "name": "第六章 数据的分析",
+          "order_index": 6,
+          "in_outline": true,
+          "winner_file": "math_g8_first_20261108_r6.json",
+          "reason": "唯一版本",
+          "questions": 24,
+          "versions": [
+            {
+              "file": "math_g8_first_20261108_r6.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 24,
+              "points": 5,
+              "mtime": "2026-11-08 23:20:05"
+            }
+          ]
+        },
+        {
+          "name": "第七章 证明",
+          "order_index": 7,
+          "in_outline": true,
+          "winner_file": "math_g8_first_20261108_r7.json",
+          "reason": "唯一版本",
+          "questions": 25,
+          "versions": [
+            {
+              "file": "math_g8_first_20261108_r7.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 25,
+              "points": 4,
+              "mtime": "2026-11-08 23:20:05"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "chinese",
+      "grade": 8,
+      "files": [
+        "chinese_g8_first_20261107.json",
+        "chinese_g8_first_20261108.json",
+        "chinese_g8_first_20261108_r10.json",
+        "chinese_g8_first_20261108_r11.json",
+        "chinese_g8_first_20261108_r2.json",
+        "chinese_g8_first_20261108_r3.json",
+        "chinese_g8_first_20261108_r4.json",
+        "chinese_g8_first_20261108_r5.json",
+        "chinese_g8_first_20261108_r6.json",
+        "chinese_g8_first_20261108_r7.json",
+        "chinese_g8_first_20261108_r8.json",
+        "chinese_g8_first_20261108_r9.json"
+      ],
+      "fragment_files": 10,
+      "official_chapters": 6,
+      "covered_official": 6,
+      "missing_chapters": [],
+      "outside_outline": [],
+      "duplicated_chapters": [
+        "第一单元 活动 探究",
+        "第二单元",
+        "第三单元",
+        "第四单元",
+        "第五单元"
+      ],
+      "questions_after_merge": 147,
+      "chapters": [
+        {
+          "name": "第一单元 活动 探究",
+          "order_index": 1,
+          "in_outline": true,
+          "winner_file": "chinese_g8_first_20261108_r2.json",
+          "reason": "批次最新（20261108）；题量最多（25 道）；mtime 最新（2026-11-08 23:09:51）",
+          "questions": 25,
+          "versions": [
+            {
+              "file": "chinese_g8_first_20261108_r2.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 25,
+              "points": 6,
+              "mtime": "2026-11-08 23:09:51"
+            },
+            {
+              "file": "chinese_g8_first_20261108.json",
+              "fragment": false,
+              "legacy": false,
+              "questions": 24,
+              "points": 6,
+              "mtime": "2026-11-08 23:09:25"
+            },
+            {
+              "file": "chinese_g8_first_20261107.json",
+              "fragment": false,
+              "legacy": false,
+              "questions": 20,
+              "points": 5,
+              "mtime": "2026-11-07 23:48:00"
+            }
+          ]
+        },
+        {
+          "name": "第二单元",
+          "order_index": 2,
+          "in_outline": true,
+          "winner_file": "chinese_g8_first_20261108_r4.json",
+          "reason": "mtime 最新（2026-11-08 23:11:46）",
+          "questions": 24,
+          "versions": [
+            {
+              "file": "chinese_g8_first_20261108_r4.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 24,
+              "points": 6,
+              "mtime": "2026-11-08 23:11:46"
+            },
+            {
+              "file": "chinese_g8_first_20261108_r3.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 24,
+              "points": 6,
+              "mtime": "2026-11-08 23:10:54"
+            }
+          ]
+        },
+        {
+          "name": "第三单元",
+          "order_index": 3,
+          "in_outline": true,
+          "winner_file": "chinese_g8_first_20261108_r6.json",
+          "reason": "mtime 最新（2026-11-08 23:14:04）",
+          "questions": 24,
+          "versions": [
+            {
+              "file": "chinese_g8_first_20261108_r6.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 24,
+              "points": 6,
+              "mtime": "2026-11-08 23:14:04"
+            },
+            {
+              "file": "chinese_g8_first_20261108_r5.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 24,
+              "points": 6,
+              "mtime": "2026-11-08 23:13:10"
+            }
+          ]
+        },
+        {
+          "name": "第四单元",
+          "order_index": 4,
+          "in_outline": true,
+          "winner_file": "chinese_g8_first_20261108_r8.json",
+          "reason": "mtime 最新（2026-11-08 23:16:11）",
+          "questions": 24,
+          "versions": [
+            {
+              "file": "chinese_g8_first_20261108_r8.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 24,
+              "points": 5,
+              "mtime": "2026-11-08 23:16:11"
+            },
+            {
+              "file": "chinese_g8_first_20261108_r7.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 24,
+              "points": 6,
+              "mtime": "2026-11-08 23:15:04"
+            }
+          ]
+        },
+        {
+          "name": "第五单元",
+          "order_index": 5,
+          "in_outline": true,
+          "winner_file": "chinese_g8_first_20261108_r10.json",
+          "reason": "题量最多（25 道）；mtime 最新（2026-11-08 23:18:44）",
+          "questions": 25,
+          "versions": [
+            {
+              "file": "chinese_g8_first_20261108_r10.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 25,
+              "points": 5,
+              "mtime": "2026-11-08 23:18:44"
+            },
+            {
+              "file": "chinese_g8_first_20261108_r9.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 24,
+              "points": 6,
+              "mtime": "2026-11-08 23:17:50"
+            }
+          ]
+        },
+        {
+          "name": "第六单元",
+          "order_index": 6,
+          "in_outline": true,
+          "winner_file": "chinese_g8_first_20261108_r11.json",
+          "reason": "唯一版本",
+          "questions": 25,
+          "versions": [
+            {
+              "file": "chinese_g8_first_20261108_r11.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 25,
+              "points": 6,
+              "mtime": "2026-11-08 23:19:55"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "english",
+      "grade": 8,
+      "files": [
+        "english_g8_first_20261107.json",
+        "english_g8_first_20261108_r2.json",
+        "english_g8_first_20261108_r3.json",
+        "english_g8_first_20261108_r4.json",
+        "english_g8_first_20261108_r5.json",
+        "english_g8_first_20261108_r6.json",
+        "english_g8_first_20261108_r7.json"
+      ],
+      "fragment_files": 6,
+      "official_chapters": 6,
+      "covered_official": 6,
+      "missing_chapters": [],
+      "outside_outline": [],
+      "duplicated_chapters": [
+        "Unit 1 Water"
+      ],
+      "questions_after_merge": 158,
+      "chapters": [
+        {
+          "name": "Unit 1 Water",
+          "order_index": 1,
+          "in_outline": true,
+          "winner_file": "english_g8_first_20261108_r2.json",
+          "reason": "批次最新（20261108）；题量最多（25 道）；mtime 最新（2026-11-08 23:08:15）",
+          "questions": 25,
+          "versions": [
+            {
+              "file": "english_g8_first_20261108_r2.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 25,
+              "points": 5,
+              "mtime": "2026-11-08 23:08:15"
+            },
+            {
+              "file": "english_g8_first_20261107.json",
+              "fragment": false,
+              "legacy": false,
+              "questions": 18,
+              "points": 4,
+              "mtime": "2026-11-07 23:57:31"
+            }
+          ]
+        },
+        {
+          "name": "Unit 2 Digital life",
+          "order_index": 2,
+          "in_outline": true,
+          "winner_file": "english_g8_first_20261108_r3.json",
+          "reason": "唯一版本",
+          "questions": 27,
+          "versions": [
+            {
+              "file": "english_g8_first_20261108_r3.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 27,
+              "points": 5,
+              "mtime": "2026-11-08 23:12:57"
+            }
+          ]
+        },
+        {
+          "name": "Unit 3 Curious minds",
+          "order_index": 3,
+          "in_outline": true,
+          "winner_file": "english_g8_first_20261108_r4.json",
+          "reason": "唯一版本",
+          "questions": 25,
+          "versions": [
+            {
+              "file": "english_g8_first_20261108_r4.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 25,
+              "points": 5,
+              "mtime": "2026-11-08 23:09:49"
+            }
+          ]
+        },
+        {
+          "name": "Unit 4 Then and now",
+          "order_index": 4,
+          "in_outline": true,
+          "winner_file": "english_g8_first_20261108_r5.json",
+          "reason": "唯一版本",
+          "questions": 27,
+          "versions": [
+            {
+              "file": "english_g8_first_20261108_r5.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 27,
+              "points": 5,
+              "mtime": "2026-11-08 23:12:58"
+            }
+          ]
+        },
+        {
+          "name": "Unit 5 Teamwork",
+          "order_index": 5,
+          "in_outline": true,
+          "winner_file": "english_g8_first_20261108_r6.json",
+          "reason": "唯一版本",
+          "questions": 27,
+          "versions": [
+            {
+              "file": "english_g8_first_20261108_r6.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 27,
+              "points": 5,
+              "mtime": "2026-11-08 23:11:44"
+            }
+          ]
+        },
+        {
+          "name": "Unit 6 Life in the future",
+          "order_index": 6,
+          "in_outline": true,
+          "winner_file": "english_g8_first_20261108_r7.json",
+          "reason": "唯一版本",
+          "questions": 27,
+          "versions": [
+            {
+              "file": "english_g8_first_20261108_r7.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 27,
+              "points": 5,
+              "mtime": "2026-11-08 23:12:42"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "politics",
+      "grade": 8,
+      "files": [
+        "politics_g8_first_20261108.json",
+        "politics_g8_first_20261108_r2.json",
+        "politics_g8_first_20261108_r3.json",
+        "politics_g8_first_20261108_r4.json",
+        "politics_g8_first_20261108_r5.json",
+        "politics_g8_first_20261108_r6.json",
+        "politics_g8_first_20261108_r7.json",
+        "politics_g8_first_20261108_r8.json",
+        "politics_g8_first_20261108_r9.json"
+      ],
+      "fragment_files": 8,
+      "official_chapters": 4,
+      "covered_official": 4,
+      "missing_chapters": [],
+      "outside_outline": [],
+      "duplicated_chapters": [
+        "第一单元走进社会生活",
+        "第二单元 维护社会秩序",
+        "第三单元 勇担社会责任",
+        "第四单元 维护国家利益"
+      ],
+      "questions_after_merge": 98,
+      "chapters": [
+        {
+          "name": "第一单元走进社会生活",
+          "order_index": 1,
+          "in_outline": true,
+          "winner_file": "politics_g8_first_20261108_r3.json",
+          "reason": "题量最多（24 道）；mtime 最新（2026-11-08 23:16:28）",
+          "questions": 24,
+          "versions": [
+            {
+              "file": "politics_g8_first_20261108_r3.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 24,
+              "points": 5,
+              "mtime": "2026-11-08 23:16:28"
+            },
+            {
+              "file": "politics_g8_first_20261108_r2.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 24,
+              "points": 5,
+              "mtime": "2026-11-08 23:16:28"
+            },
+            {
+              "file": "politics_g8_first_20261108.json",
+              "fragment": false,
+              "legacy": false,
+              "questions": 20,
+              "points": 4,
+              "mtime": "2026-11-08 10:20:18"
+            }
+          ]
+        },
+        {
+          "name": "第二单元 维护社会秩序",
+          "order_index": 2,
+          "in_outline": true,
+          "winner_file": "politics_g8_first_20261108_r5.json",
+          "reason": "题量最多（26 道）；mtime 最新（2026-11-08 23:16:56）",
+          "questions": 26,
+          "versions": [
+            {
+              "file": "politics_g8_first_20261108_r5.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 26,
+              "points": 6,
+              "mtime": "2026-11-08 23:16:56"
+            },
+            {
+              "file": "politics_g8_first_20261108_r4.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 24,
+              "points": 5,
+              "mtime": "2026-11-08 23:16:46"
+            }
+          ]
+        },
+        {
+          "name": "第三单元 勇担社会责任",
+          "order_index": 3,
+          "in_outline": true,
+          "winner_file": "politics_g8_first_20261108_r7.json",
+          "reason": "mtime 最新（2026-11-08 23:14:01）",
+          "questions": 24,
+          "versions": [
+            {
+              "file": "politics_g8_first_20261108_r7.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 24,
+              "points": 6,
+              "mtime": "2026-11-08 23:14:01"
+            },
+            {
+              "file": "politics_g8_first_20261108_r6.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 24,
+              "points": 6,
+              "mtime": "2026-11-08 23:13:35"
+            }
+          ]
+        },
+        {
+          "name": "第四单元 维护国家利益",
+          "order_index": 4,
+          "in_outline": true,
+          "winner_file": "politics_g8_first_20261108_r8.json",
+          "reason": "mtime 最新（2026-11-08 23:17:17）",
+          "questions": 24,
+          "versions": [
+            {
+              "file": "politics_g8_first_20261108_r8.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 24,
+              "points": 5,
+              "mtime": "2026-11-08 23:17:17"
+            },
+            {
+              "file": "politics_g8_first_20261108_r9.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 24,
+              "points": 5,
+              "mtime": "2026-11-08 23:16:31"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "physics",
+      "grade": 8,
+      "files": [
+        "physics_g8_first_20261108.json",
+        "physics_g8_first_20261108_r2.json",
+        "physics_g8_first_20261108_r3.json",
+        "physics_g8_first_20261108_r4.json",
+        "physics_g8_first_20261108_r5.json",
+        "physics_g8_first_20261108_r6.json"
+      ],
+      "fragment_files": 5,
+      "official_chapters": 6,
+      "covered_official": 6,
+      "missing_chapters": [],
+      "outside_outline": [],
+      "duplicated_chapters": [],
+      "questions_after_merge": 143,
+      "chapters": [
+        {
+          "name": "第一章 机械运动",
+          "order_index": 1,
+          "in_outline": true,
+          "winner_file": "physics_g8_first_20261108.json",
+          "reason": "唯一版本",
+          "questions": 20,
+          "versions": [
+            {
+              "file": "physics_g8_first_20261108.json",
+              "fragment": false,
+              "legacy": false,
+              "questions": 20,
+              "points": 4,
+              "mtime": "2026-11-08 14:13:32"
+            }
+          ]
+        },
+        {
+          "name": "第二章 声现象",
+          "order_index": 2,
+          "in_outline": true,
+          "winner_file": "physics_g8_first_20261108_r6.json",
+          "reason": "唯一版本",
+          "questions": 24,
+          "versions": [
+            {
+              "file": "physics_g8_first_20261108_r6.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 24,
+              "points": 6,
+              "mtime": "2026-11-09 00:30:23"
+            }
+          ]
+        },
+        {
+          "name": "第三章 物态变化",
+          "order_index": 3,
+          "in_outline": true,
+          "winner_file": "physics_g8_first_20261108_r2.json",
+          "reason": "唯一版本",
+          "questions": 25,
+          "versions": [
+            {
+              "file": "physics_g8_first_20261108_r2.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 25,
+              "points": 5,
+              "mtime": "2026-11-08 23:15:53"
+            }
+          ]
+        },
+        {
+          "name": "第四章 光现象",
+          "order_index": 4,
+          "in_outline": true,
+          "winner_file": "physics_g8_first_20261108_r3.json",
+          "reason": "唯一版本",
+          "questions": 25,
+          "versions": [
+            {
+              "file": "physics_g8_first_20261108_r3.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 25,
+              "points": 5,
+              "mtime": "2026-11-08 23:16:57"
+            }
+          ]
+        },
+        {
+          "name": "第五章 透镜及其应用",
+          "order_index": 5,
+          "in_outline": true,
+          "winner_file": "physics_g8_first_20261108_r4.json",
+          "reason": "唯一版本",
+          "questions": 25,
+          "versions": [
+            {
+              "file": "physics_g8_first_20261108_r4.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 25,
+              "points": 5,
+              "mtime": "2026-11-08 23:18:03"
+            }
+          ]
+        },
+        {
+          "name": "第六章 质量与密度",
+          "order_index": 6,
+          "in_outline": true,
+          "winner_file": "physics_g8_first_20261108_r5.json",
+          "reason": "唯一版本",
+          "questions": 24,
+          "versions": [
+            {
+              "file": "physics_g8_first_20261108_r5.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 24,
+              "points": 4,
+              "mtime": "2026-11-08 23:19:08"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "biology",
+      "grade": 8,
+      "files": [
+        "biology_g8_first_20261108.json",
+        "biology_g8_first_20261108_r2.json",
+        "biology_g8_first_20261108_r3.json",
+        "biology_g8_first_20261108_r4.json",
+        "biology_g8_first_20261108_r5.json",
+        "biology_g8_first_20261108_r6.json"
+      ],
+      "fragment_files": 5,
+      "official_chapters": 6,
+      "covered_official": 6,
+      "missing_chapters": [],
+      "outside_outline": [],
+      "duplicated_chapters": [],
+      "questions_after_merge": 139,
+      "chapters": [
+        {
+          "name": "第六章 人体生命活动的调节",
+          "order_index": 2,
+          "in_outline": true,
+          "winner_file": "biology_g8_first_20261108_r2.json",
+          "reason": "唯一版本",
+          "questions": 26,
+          "versions": [
+            {
+              "file": "biology_g8_first_20261108_r2.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 26,
+              "points": 6,
+              "mtime": "2026-11-08 23:08:21"
+            }
+          ]
+        },
+        {
+          "name": "第七章 健康地生活",
+          "order_index": 3,
+          "in_outline": true,
+          "winner_file": "biology_g8_first_20261108_r3.json",
+          "reason": "唯一版本",
+          "questions": 26,
+          "versions": [
+            {
+              "file": "biology_g8_first_20261108_r3.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 26,
+              "points": 6,
+              "mtime": "2026-11-08 23:09:21"
+            }
+          ]
+        },
+        {
+          "name": "第四单元 人体生理与健康（二）",
+          "order_index": 4,
+          "in_outline": true,
+          "winner_file": "biology_g8_first_20261108.json",
+          "reason": "唯一版本",
+          "questions": 19,
+          "versions": [
+            {
+              "file": "biology_g8_first_20261108.json",
+              "fragment": false,
+              "legacy": false,
+              "questions": 19,
+              "points": 4,
+              "mtime": "2026-11-08 10:20:18"
+            }
+          ]
+        },
+        {
+          "name": "第五单元 生物与环境",
+          "order_index": 4,
+          "in_outline": true,
+          "winner_file": "biology_g8_first_20261108_r4.json",
+          "reason": "唯一版本",
+          "questions": 20,
+          "versions": [
+            {
+              "file": "biology_g8_first_20261108_r4.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 20,
+              "points": 4,
+              "mtime": "2026-11-08 23:10:11"
+            }
+          ]
+        },
+        {
+          "name": "第一章 生态系统",
+          "order_index": 5,
+          "in_outline": true,
+          "winner_file": "biology_g8_first_20261108_r5.json",
+          "reason": "唯一版本",
+          "questions": 26,
+          "versions": [
+            {
+              "file": "biology_g8_first_20261108_r5.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 26,
+              "points": 6,
+              "mtime": "2026-11-08 23:15:32"
+            }
+          ]
+        },
+        {
+          "name": "第二章 生态安全",
+          "order_index": 6,
+          "in_outline": true,
+          "winner_file": "biology_g8_first_20261108_r6.json",
+          "reason": "唯一版本",
+          "questions": 22,
+          "versions": [
+            {
+              "file": "biology_g8_first_20261108_r6.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 22,
+              "points": 5,
+              "mtime": "2026-11-08 23:11:49"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "geography",
+      "grade": 8,
+      "files": [
+        "geography_g8_first_20261108.json",
+        "geography_g8_first_20261108_r2.json",
+        "geography_g8_first_20261108_r3.json",
+        "geography_g8_first_20261108_r4.json"
+      ],
+      "fragment_files": 3,
+      "official_chapters": 4,
+      "covered_official": 4,
+      "missing_chapters": [],
+      "outside_outline": [],
+      "duplicated_chapters": [],
+      "questions_after_merge": 92,
+      "chapters": [
+        {
+          "name": "第一章 中国的疆域与人口",
+          "order_index": 1,
+          "in_outline": true,
+          "winner_file": "geography_g8_first_20261108.json",
+          "reason": "唯一版本",
+          "questions": 22,
+          "versions": [
+            {
+              "file": "geography_g8_first_20261108.json",
+              "fragment": false,
+              "legacy": false,
+              "questions": 22,
+              "points": 4,
+              "mtime": "2026-11-08 14:13:48"
+            }
+          ]
+        },
+        {
+          "name": "第二章 中国的自然环境",
+          "order_index": 2,
+          "in_outline": true,
+          "winner_file": "geography_g8_first_20261108_r2.json",
+          "reason": "唯一版本",
+          "questions": 26,
+          "versions": [
+            {
+              "file": "geography_g8_first_20261108_r2.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 26,
+              "points": 6,
+              "mtime": "2026-11-08 23:12:58"
+            }
+          ]
+        },
+        {
+          "name": "第三章 中国的自然资源",
+          "order_index": 3,
+          "in_outline": true,
+          "winner_file": "geography_g8_first_20261108_r3.json",
+          "reason": "唯一版本",
+          "questions": 22,
+          "versions": [
+            {
+              "file": "geography_g8_first_20261108_r3.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 22,
+              "points": 5,
+              "mtime": "2026-11-08 23:13:49"
+            }
+          ]
+        },
+        {
+          "name": "第四章 中国的主要产业",
+          "order_index": 4,
+          "in_outline": true,
+          "winner_file": "geography_g8_first_20261108_r4.json",
+          "reason": "唯一版本",
+          "questions": 22,
+          "versions": [
+            {
+              "file": "geography_g8_first_20261108_r4.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 22,
+              "points": 5,
+              "mtime": "2026-11-08 23:14:38"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "history",
+      "grade": 8,
+      "files": [
+        "history_g8_first_20261108.json",
+        "history_g8_first_20261108_r2.json",
+        "history_g8_first_20261108_r3.json",
+        "history_g8_first_20261108_r4.json",
+        "history_g8_first_20261108_r5.json",
+        "history_g8_first_20261108_r6.json",
+        "history_g8_first_20261108_r7.json"
+      ],
+      "fragment_files": 6,
+      "official_chapters": 7,
+      "covered_official": 7,
+      "missing_chapters": [],
+      "outside_outline": [],
+      "duplicated_chapters": [],
+      "questions_after_merge": 171,
+      "chapters": [
+        {
+          "name": "第一单元 中国开始沦为半殖民地半封建社会",
+          "order_index": 1,
+          "in_outline": true,
+          "winner_file": "history_g8_first_20261108.json",
+          "reason": "唯一版本",
+          "questions": 19,
+          "versions": [
+            {
+              "file": "history_g8_first_20261108.json",
+              "fragment": false,
+              "legacy": false,
+              "questions": 19,
+              "points": 4,
+              "mtime": "2026-11-08 10:20:18"
+            }
+          ]
+        },
+        {
+          "name": "第二单元 早期现代化的初步探索和民族危机加剧",
+          "order_index": 2,
+          "in_outline": true,
+          "winner_file": "history_g8_first_20261108_r2.json",
+          "reason": "唯一版本",
+          "questions": 28,
+          "versions": [
+            {
+              "file": "history_g8_first_20261108_r2.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 28,
+              "points": 6,
+              "mtime": "2026-11-08 23:17:01"
+            }
+          ]
+        },
+        {
+          "name": "第三单元 资产阶级民主革命与中华民国的建立",
+          "order_index": 3,
+          "in_outline": true,
+          "winner_file": "history_g8_first_20261108_r3.json",
+          "reason": "唯一版本",
+          "questions": 24,
+          "versions": [
+            {
+              "file": "history_g8_first_20261108_r3.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 24,
+              "points": 5,
+              "mtime": "2026-11-08 23:10:58"
+            }
+          ]
+        },
+        {
+          "name": "第四单元 新民主主义革命的兴起",
+          "order_index": 4,
+          "in_outline": true,
+          "winner_file": "history_g8_first_20261108_r4.json",
+          "reason": "唯一版本",
+          "questions": 23,
+          "versions": [
+            {
+              "file": "history_g8_first_20261108_r4.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 23,
+              "points": 4,
+              "mtime": "2026-11-08 23:12:14"
+            }
+          ]
+        },
+        {
+          "name": "第五单元 从国共合作到农村革命根据地的建立",
+          "order_index": 5,
+          "in_outline": true,
+          "winner_file": "history_g8_first_20261108_r5.json",
+          "reason": "唯一版本",
+          "questions": 26,
+          "versions": [
+            {
+              "file": "history_g8_first_20261108_r5.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 26,
+              "points": 5,
+              "mtime": "2026-11-08 23:13:26"
+            }
+          ]
+        },
+        {
+          "name": "第六单元 中华民族的抗日战争",
+          "order_index": 6,
+          "in_outline": true,
+          "winner_file": "history_g8_first_20261108_r6.json",
+          "reason": "唯一版本",
+          "questions": 26,
+          "versions": [
+            {
+              "file": "history_g8_first_20261108_r6.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 26,
+              "points": 5,
+              "mtime": "2026-11-08 23:15:01"
+            }
+          ]
+        },
+        {
+          "name": "第七单元 人民解放战争",
+          "order_index": 7,
+          "in_outline": true,
+          "winner_file": "history_g8_first_20261108_r7.json",
+          "reason": "唯一版本",
+          "questions": 25,
+          "versions": [
+            {
+              "file": "history_g8_first_20261108_r7.json",
+              "fragment": true,
+              "legacy": false,
+              "questions": 25,
+              "points": 5,
+              "mtime": "2026-11-08 23:16:45"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

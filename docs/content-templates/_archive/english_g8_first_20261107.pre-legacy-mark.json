@@ -1,0 +1,308 @@
+{
+  "subject": "english",
+  "grade": 8,
+  "version": "牛津深圳版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "Unit 1 Water",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "Water uses 水的用途",
+      "parent": "Unit 1 Water",
+      "order_index": 1,
+      "explanation": "water plants、cook food、wash clothes、produce electricity，水在生活与生产中的用途是课文的主要内容。",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "be used to do 被动语态初步",
+      "parent": "Unit 1 Water",
+      "order_index": 2,
+      "explanation": "Water is used to produce electricity. = Water is used for producing electricity. be used to do 与 be used for doing 可互换。",
+      "prerequisites": [
+        "Water uses 水的用途"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "should must 节水建议",
+      "parent": "Unit 1 Water",
+      "order_index": 3,
+      "explanation": "should 表「应该」（建议），must 表「必须」（强制）；两者后都接动词原形。",
+      "prerequisites": [
+        "be used to do 被动语态初步"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "Quantity words 数量表达",
+      "parent": "Unit 1 Water",
+      "order_index": 4,
+      "explanation": "a lot of 许多、a little 一点（不可数）、enough 足够；不可数名词 water 不能直接加 a/an。",
+      "prerequisites": [
+        "should must 节水建议"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "Unit 1 Water",
+      "order_index": 1,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「水被用来发电」的英文是（  ）",
+          "options": [
+            "Water is used to produce electricity.",
+            "Water is used producing electricity.",
+            "Water uses to produce electricity.",
+            "Water used to produce electricity."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "被动语态 be used to do 结构，A 正确；B 缺 to，C 主动语态且缺 is，D 缺 be 动词。",
+          "difficulty": 2,
+          "knowledge_point": "be used to do 被动语态初步"
+        },
+        {
+          "q_type": "choice",
+          "stem": "We should （  ） water when we brush our teeth.",
+          "options": [
+            "save",
+            "saves",
+            "saved",
+            "saving"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "should 后接动词原形，用 save；saves 是第三人称单数，saved 是过去式，saving 是动名词。",
+          "difficulty": 1,
+          "knowledge_point": "should must 节水建议"
+        },
+        {
+          "q_type": "fill",
+          "stem": "The water in the river is not clean （  ） to drink. （填「足够」）",
+          "answer": {
+            "value": "enough"
+          },
+          "analysis": "「足够干净可以喝」用 clean enough；enough 修饰形容词时放在其后。",
+          "difficulty": 2,
+          "knowledge_point": "Quantity words 数量表达"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Water is used for cooking. 和 Water is used to cook. 意思基本相同。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "be used for doing 与 be used to do 都表示用途，可互换，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "be used to do 被动语态初步"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面哪句表达「我们必须节约用水」？（  ）",
+          "options": [
+            "We must save water.",
+            "We must to save water.",
+            "We must saving water.",
+            "We musts save water."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "must 后直接接动词原形，A 正确；B 多了 to，C 用了动名词，D must 不加 s。",
+          "difficulty": 1,
+          "knowledge_point": "should must 节水建议"
+        },
+        {
+          "q_type": "fill",
+          "stem": "Farmers use water to （  ） （water） the plants.",
+          "answer": {
+            "value": "water"
+          },
+          "analysis": "use sth to do sth 中 to 后接动词原形，water 作动词表示「浇灌」，所以填 water。",
+          "difficulty": 2,
+          "knowledge_point": "Water uses 水的用途"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列属于水在生活中的用途的有（  ）",
+          "options": [
+            "cooking food",
+            "washing clothes",
+            "watering plants",
+            "making paper money"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 做饭 ✓；B 洗衣服 ✓；C 浇植物 ✓；D 造纸币需要水但「制币」不是本单元列举的生活用途，且说法不严谨 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Water uses 水的用途",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "should 表示比 must 更强制的要求。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "must 语气更强，表示「必须」；should 表示建议「应该」，强度弱于 must，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "should must 节水建议"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「瓶子里有一点水」的英文是（  ）",
+          "options": [
+            "There is a little water in the bottle.",
+            "There is a few water in the bottle.",
+            "There are a little water in the bottle.",
+            "There is many water in the bottle."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "water 不可数，用 a little 修饰且 be 动词用 is，A 正确；B a few 只修饰可数复数，C are 与不可数不符，D many 只修饰可数复数。",
+          "difficulty": 3,
+          "knowledge_point": "Quantity words 数量表达"
+        },
+        {
+          "q_type": "fill",
+          "stem": "Water （  ） （use） to make paper in that factory.",
+          "answer": {
+            "value": "is used"
+          },
+          "analysis": "主语 water 是动作承受者，用被动语态 is used；写 uses 则语态错误。",
+          "difficulty": 3,
+          "knowledge_point": "be used to do 被动语态初步"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于本单元语法，说法正确的有（  ）",
+          "options": [
+            "be used to do 表示「被用来做」",
+            "should 后接动词原形",
+            "must 后接动名词",
+            "a little 修饰不可数名词"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A be used to do 表用途 ✓；B should + 原形 ✓；C must 后应接动词原形，不是动名词 ✗；D a little 修饰不可数 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "be used to do 被动语态初步",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "We should not waste water. 是否定建议句，意思是「我们不应该浪费水」。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "should not 表示「不应该」，整句意为不应浪费水，说法正确。",
+          "difficulty": 1,
+          "knowledge_point": "should must 节水建议"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「水足够热，可以洗澡」的英文是（  ）",
+          "options": [
+            "The water is hot enough to take a shower.",
+            "The water is enough hot to take a shower.",
+            "The water is hot enough taking a shower.",
+            "The water enough is hot to take a shower."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "enough 修饰形容词要后置：hot enough，后接 to do，A 正确；B 位置错，C 缺 to，D 语序错。",
+          "difficulty": 4,
+          "knowledge_point": "Quantity words 数量表达"
+        },
+        {
+          "q_type": "fill",
+          "stem": "We can save water by （  ） （turn） off the tap.",
+          "answer": {
+            "value": "turning"
+          },
+          "analysis": "by 表示方式，后接动名词，turn 变 turning；写 turn 则介词后缺 -ing。",
+          "difficulty": 3,
+          "knowledge_point": "should must 节水建议"
+        },
+        {
+          "q_type": "judge",
+          "stem": "water 是可数名词，可以说 a water。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "water 通常作不可数名词，不能直接加 a/an；表「一杯水」要说 a glass of water。",
+          "difficulty": 3,
+          "knowledge_point": "Quantity words 数量表达"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用英语写两句话说明水的用途，要求用上 be used to do 结构。",
+          "answer": {
+            "value": "Water is used to cook food. It is also used to produce electricity."
+          },
+          "analysis": "参考示例见答案。评分要点：①两句都用被动结构 be used to do（2 分）；②用途表述合理（1 分）；③主谓一致（1 分）；④大小写与标点（1 分）。写成 Water uses to cook 不得分。",
+          "difficulty": 4,
+          "knowledge_point": "be used to do 被动语态初步",
+          "tags": [
+            "写作"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "把句子补全并译成中文：We （  ） （should / must） save every drop of water, because clean water is not （  ） for everyone.",
+          "answer": {
+            "value": "should；enough。译文：我们应该节约每一滴水，因为对每个人来说干净的水并不够用。"
+          },
+          "analysis": "参考答案：should（建议语气，符合倡议语境）；enough（be not enough 表示不够）。译文见答案。评分要点：①两空正确（2 分）；②译文准确（2 分）；③标点（1 分）。第二空填 enough 时注意位置在形容词之后。",
+          "difficulty": 5,
+          "knowledge_point": "should must 节水建议",
+          "tags": [
+            "补全句子",
+            "翻译"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「这座工厂每天用掉大量水」的英文是（  ）",
+          "options": [
+            "The factory uses a lot of water every day.",
+            "The factory uses many water every day.",
+            "The factory uses a lot water every day.",
+            "The factory use a lot of waters every day."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "a lot of 可修饰不可数名词，A 正确；B many 只修饰可数，C 缺 of，D 主语第三人称单数应用 uses 且 water 不加 s。",
+          "difficulty": 3,
+          "knowledge_point": "Quantity words 数量表达"
+        }
+      ]
+    }
+  ]
+}

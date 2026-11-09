@@ -1,0 +1,3665 @@
+{
+  "subject": "english",
+  "grade": 1,
+  "version": "牛津深圳版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "Unit 1 What is your family like? / Story",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 1 What is your family like? / Extend",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "介绍我的家人",
+      "parent": "Unit 1 What is your family like? / Story",
+      "order_index": 1,
+      "explanation": "介绍身边的家人用 This is my…（近处的一个人）和 He / She is my…；表示「我的」一定要用 my，只说 This is mother 不合英语习惯。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "描述家人特征",
+      "parent": "Unit 1 What is your family like? / Story",
+      "order_index": 2,
+      "explanation": "用 tall、short、young、old、kind、lovely 这类形容词说家人的样子和性格；形容词放在 be 动词后面，主语是谁就形容谁。",
+      "prerequisites": [
+        "介绍我的家人"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "说出家人的相似",
+      "parent": "Unit 1 What is your family like? / Extend",
+      "order_index": 1,
+      "explanation": "拓展板块用 He / She is like my… 表示「他／她像我……」，把两个人放在一起比较；like 后面接人，不加物主代词。",
+      "prerequisites": [
+        "描述家人特征"
+      ],
+      "weight": 1.1,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "家庭成员单词归类",
+      "parent": "Unit 1 What is your family like? / Extend",
+      "order_index": 2,
+      "explanation": "把单词按「是不是家庭成员」分类，再按长幼分好组；分好类读一遍，既能记住词义，也能记住读音和拼写。",
+      "prerequisites": [],
+      "weight": 1.1,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "家庭小短文阅读",
+      "parent": "Unit 1 What is your family like? / Extend",
+      "order_index": 3,
+      "explanation": "读介绍家庭的小短文，先找出有哪些人，再找出人物之间的关系，最后回答 who、how many 这类问题，回答要回到原文找依据。",
+      "prerequisites": [
+        "介绍我的家人"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 2 How are you today? / Ready Go",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 2 How are you today? / Story",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 2 How are you today? / Practice",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 2 How are you today? / Communicate",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 2 How are you today? / Extend",
+      "order_index": 5
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 2 How are you today? / Letters",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "问候与心情词汇",
+      "parent": "Unit 2 How are you today? / Ready Go",
+      "order_index": 1,
+      "explanation": "问候语要看时间和场合：早上 Good morning，下午 Good afternoon，晚上 Good evening，睡前 Good night；心情词有 happy、sad、tired、hungry、fine。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "故事中的心情理解",
+      "parent": "Unit 2 How are you today? / Story",
+      "order_index": 1,
+      "explanation": "读故事时抓住人物心情变化的线索：什么时候高兴、为什么难过、后来怎样了；心情词要和句子里的事情对上，才能读懂故事。",
+      "prerequisites": [
+        "问候与心情词汇"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "心情问答句型",
+      "parent": "Unit 2 How are you today? / Practice",
+      "order_index": 1,
+      "explanation": "问近况用 How are you?，答用 I am…；问别人用 How is he / she?，答用 He / She is…；问句要借助助动词，答语里的 be 动词不能漏。",
+      "prerequisites": [
+        "问候与心情词汇"
+      ],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "见面问候交际任务",
+      "parent": "Unit 2 How are you today? / Communicate",
+      "order_index": 1,
+      "explanation": "见面先问候，再问近况：Good morning! How are you? 回答 I'm fine, thank you.；对方不开心时要多问一句、多关心他。",
+      "prerequisites": [
+        "心情问答句型"
+      ],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "心情拓展阅读",
+      "parent": "Unit 2 How are you today? / Extend",
+      "order_index": 1,
+      "explanation": "拓展短文常常写心情的起因和变化：先说不开心的事，再说让人开心的事；读完要能说出人物先怎样、后怎样。",
+      "prerequisites": [
+        "故事中的心情理解"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "问候语首字母大写",
+      "parent": "Unit 2 How are you today? / Letters",
+      "order_index": 1,
+      "explanation": "英语句子的第一个单词的首字母要大写，名字和称呼 Mr、Miss 后面的姓首字母也要大写；问候语写对大小写，才算写得规范。",
+      "prerequisites": [],
+      "weight": 1.1,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 3 What do you take to school? / Ready Go",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 3 What do you take to school? / Story",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 3 What do you take to school? / Practice",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 3 What do you take to school? / Communicate",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 3 What do you take to school? / Extend",
+      "order_index": 5
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 3 What do you take to school? / Letters",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "学习用品词汇",
+      "parent": "Unit 3 What do you take to school? / Ready Go",
+      "order_index": 1,
+      "explanation": "本单元要认读学习用品：book、pencil、pencil-box、ruler、rubber、crayon、bag；看图说词时先认物品，再用学过的词说出来。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "书包里的物品",
+      "parent": "Unit 3 What do you take to school? / Story",
+      "order_index": 1,
+      "explanation": "读故事时把物品和数量对上：谁带了什么、有几本书、什么放在哪里；带着数字和方位词读，物品就不会漏掉、也不会数错。",
+      "prerequisites": [
+        "学习用品词汇"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "带什么上学句型",
+      "parent": "Unit 3 What do you take to school? / Practice",
+      "order_index": 1,
+      "explanation": "问「你带什么上学」用 What do you take to school?，答用 I take…；问第三人称用 What does he take…?，答用 He takes…，注意 take 的第三人称加 s。",
+      "prerequisites": [
+        "学习用品词汇"
+      ],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "书包清点交际任务",
+      "parent": "Unit 3 What do you take to school? / Communicate",
+      "order_index": 1,
+      "explanation": "出门前清点书包，同学之间互相问 What do you take to school? 并作答；问的时候看着对方，说完要听清对方的答案。",
+      "prerequisites": [
+        "带什么上学句型"
+      ],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "校园物品拓展阅读",
+      "parent": "Unit 3 What do you take to school? / Extend",
+      "order_index": 1,
+      "explanation": "拓展阅读看图或读段落找物品：一件一件找位置（on、in、under），再数数量；读完能说出「哪里有什么、有几件」就算读懂。",
+      "prerequisites": [
+        "书包里的物品"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "物品词首字母大写",
+      "parent": "Unit 3 What do you take to school? / Letters",
+      "order_index": 1,
+      "explanation": "书写物品名称时首字母要大写：Book、Pencil、Ruler；一个句子里的物品名称也要跟着句子写，不可以大小写混着写。",
+      "prerequisites": [],
+      "weight": 1.1,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 4 What can you do? / Ready Go",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 4 What can you do? / Story",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 4 What can you do? / Practice",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 4 What can you do? / Communicate",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 4 What can you do? / Extend",
+      "order_index": 5
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 4 What can you do? / Letters",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "能力动词词汇",
+      "parent": "Unit 4 What can you do? / Ready Go",
+      "order_index": 1,
+      "explanation": "本单元认读表示本领的动词：run、jump、swim、dance、sing、draw、skate；看图说词时要把动作和图片连起来，先说动作再练拼写。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "故事中的动物本领",
+      "parent": "Unit 4 What can you do? / Story",
+      "order_index": 1,
+      "explanation": "读故事时把「谁」和「会做什么」配成一对：can 后面接动作，cannot 后面接不会的动作；读完能说出每个角色会什么、不会什么。",
+      "prerequisites": [
+        "能力动词词汇"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "能做什么句型",
+      "parent": "Unit 4 What can you do? / Practice",
+      "order_index": 1,
+      "explanation": "问「你会做什么」用 What can you do?，答用 I can + 动词；问别人用 What can he / she do?，答用 He / She can…，can 后面一定用动词原形。",
+      "prerequisites": [
+        "能力动词词汇"
+      ],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "展示本领交际任务",
+      "parent": "Unit 4 What can you do? / Communicate",
+      "order_index": 1,
+      "explanation": "用 What can you do? 互相询问本领，再用 I can… 回答；介绍时要看着对方、声音响亮，让别人听清自己的本领。",
+      "prerequisites": [
+        "能做什么句型"
+      ],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "本领拓展阅读",
+      "parent": "Unit 4 What can you do? / Extend",
+      "order_index": 1,
+      "explanation": "拓展短文常写「谁会什么、谁不会什么」，读完要能分清 can 和 cannot 的意思，再用完整句子说出人物的本领。",
+      "prerequisites": [
+        "故事中的动物本领"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "能力词首字母大写",
+      "parent": "Unit 4 What can you do? / Letters",
+      "order_index": 1,
+      "explanation": "书写动作词时首字母要大写：Run、Jump、Swim；写在句子里同样要遵守大写规则，写成 run、jump 就是不规范。",
+      "prerequisites": [],
+      "weight": 1.1,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 5 What is your favourite animal? / Ready Go",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 5 What is your favourite animal? / Story",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 5 What is your favourite animal? / Practice",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 5 What is your favourite animal? / Communicate",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 5 What is your favourite animal? / Extend",
+      "order_index": 5
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 5 What is your favourite animal? / Letters",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "动物词汇认知",
+      "parent": "Unit 5 What is your favourite animal? / Ready Go",
+      "order_index": 1,
+      "explanation": "本单元认读动物词：cat、dog、panda、monkey、tiger、bird、fish、rabbit、elephant；看图片说词时把动物的样子和词连起来，记住拼写。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "最喜欢的动物故事",
+      "parent": "Unit 5 What is your favourite animal? / Story",
+      "order_index": 1,
+      "explanation": "读故事时找出「谁最喜欢什么动物」和「为什么喜欢」：favourite 后面的词就是最喜欢的动物，because 后面说的是原因。",
+      "prerequisites": [
+        "动物词汇认知"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "喜好表达句型",
+      "parent": "Unit 5 What is your favourite animal? / Practice",
+      "order_index": 1,
+      "explanation": "问最喜欢的动物用 What is your favourite animal?，答 My favourite animal is the…；问喜欢哪一个用 Which animal do you like?，答 I like the…，注意冠词 the 不能漏。",
+      "prerequisites": [
+        "动物词汇认知"
+      ],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "动物喜好交际任务",
+      "parent": "Unit 5 What is your favourite animal? / Communicate",
+      "order_index": 1,
+      "explanation": "用 What's your favourite animal? 询问同伴，再用 My favourite animal is… 回答；听完要回应一句，说明自己喜欢的原因。",
+      "prerequisites": [
+        "喜好表达句型"
+      ],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "动物拓展阅读",
+      "parent": "Unit 5 What is your favourite animal? / Extend",
+      "order_index": 1,
+      "explanation": "拓展阅读要按顺序找动物：先看位置（on、in、near），再数数量，最后比大小；读完能说出「有什么、在哪里、几只」。",
+      "prerequisites": [
+        "最喜欢的动物故事"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "动物词首字母大写",
+      "parent": "Unit 5 What is your favourite animal? / Letters",
+      "order_index": 1,
+      "explanation": "书写动物名称时首字母要大写：Panda、Tiger、Elephant；写在句子中也要大写，大小写混写是不规范的。",
+      "prerequisites": [],
+      "weight": 1.1,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 6 What colours can you see? / Ready Go",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 6 What colours can you see? / Story",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 6 What colours can you see? / Practice",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 6 What colours can you see? / Communicate",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 6 What colours can you see? / Extend",
+      "order_index": 5
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 6 What colours can you see? / Letters",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "颜色词汇认知",
+      "parent": "Unit 6 What colours can you see? / Ready Go",
+      "order_index": 1,
+      "explanation": "本单元认读颜色词：red、yellow、blue、green、black、white、orange、purple、pink；看图说色时先把颜色词说准，再认字形。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "故事里的彩色世界",
+      "parent": "Unit 6 What colours can you see? / Story",
+      "order_index": 1,
+      "explanation": "读故事时把物品和颜色配对：红色的伞、黄色的雨衣、蓝色的书包；读完能说出每样东西是什么颜色，故事就读懂了。",
+      "prerequisites": [
+        "颜色词汇认知"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "颜色问答句型",
+      "parent": "Unit 6 What colours can you see? / Practice",
+      "order_index": 1,
+      "explanation": "问一样东西的颜色用 What colour is…?，答 It is + 颜色；问能看到什么颜色用 What colours can you see?，答 I can see…；问句里的 colours 用复数。",
+      "prerequisites": [
+        "颜色词汇认知"
+      ],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "找颜色交际任务",
+      "parent": "Unit 6 What colours can you see? / Communicate",
+      "order_index": 1,
+      "explanation": "用 What colour is…? 问同伴物品的颜色，用 What colours can you see? 说出自己看到的颜色；说完要看着对方，说清楚、听明白。",
+      "prerequisites": [
+        "颜色问答句型"
+      ],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "颜色拓展阅读",
+      "parent": "Unit 6 What colours can you see? / Extend",
+      "order_index": 1,
+      "explanation": "拓展阅读按顺序找颜色：先看物品（door、desk、cap），再看它的颜色，最后数一数有几样；读完能说出「什么颜色、几样」。",
+      "prerequisites": [
+        "故事里的彩色世界"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "颜色词首字母大写",
+      "parent": "Unit 6 What colours can you see? / Letters",
+      "order_index": 1,
+      "explanation": "书写颜色词时首字母要大写：Red、Blue、Green；写在句子里同样要大写，大小写混写是不规范的书写。",
+      "prerequisites": [],
+      "weight": 1.1,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "Unit 1 What is your family like?",
+      "order_index": 1,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Point at your mother and say: ",
+          "options": [
+            "This is my mother.",
+            "He is my mother.",
+            "This is my mothers.",
+            "I am my mother."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "介绍近处的家人用 This is my + 称呼，选 A；B 用 he 指女性不对，C 加了复数 -s，D 说成「我就是我的妈妈」，都不合英语习惯。",
+          "difficulty": 1,
+          "knowledge_point": "介绍我的家人",
+          "tags": [
+            "句型"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Your father is a man. You say: ",
+          "options": [
+            "She is my father.",
+            "He is my father.",
+            "He is my mother.",
+            "This is my father father."
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "爸爸是男性，用 he，选 B；A 用 she 性别错了，C 把 father 说成 mother，D 把称呼重复了。",
+          "difficulty": 2,
+          "knowledge_point": "介绍我的家人",
+          "tags": [
+            "句型"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "Look at the photo. ____ is my family.",
+          "answer": {
+            "value": "This"
+          },
+          "analysis": "指着近处的一家人用 This is my family.；It 只能指一样具体的东西，不能指一家人，所以横线填 This。",
+          "difficulty": 2,
+          "knowledge_point": "介绍我的家人",
+          "tags": [
+            "句型"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which sentences can you use to introduce your family?",
+          "options": [
+            "This is my father.",
+            "This is my brother.",
+            "He is my grandma.",
+            "This is my sister."
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A This is my father. ✓；B This is my brother. ✓；C He is my grandma. 前后不一致，grandma 是女性要用 she ✗；D This is my sister. ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "介绍我的家人",
+          "tags": [
+            "多选",
+            "句型"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Your father is very tall. He is ____.",
+          "options": [
+            "tall",
+            "short",
+            "little",
+            "young"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "句子里已经说了 very tall，横线要填 tall，选 A；short 和 tall 意思相反，little 用来形容小的，young 说的是年龄。",
+          "difficulty": 1,
+          "knowledge_point": "描述家人特征",
+          "tags": [
+            "词汇"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Look at the baby in the picture. The baby is ____.",
+          "options": [
+            "old",
+            "young",
+            "long",
+            "tall"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "婴儿是年幼的，选 young；old 说的是年长，long 说的是长度，tall 说的是身高，都不符合婴儿的特点。",
+          "difficulty": 2,
+          "knowledge_point": "描述家人特征",
+          "tags": [
+            "词汇"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "My grandpa is 70 years old. He is ____.",
+          "answer": {
+            "value": "old"
+          },
+          "analysis": "70 岁属于年长，横线填 old；young 说的是年幼，tall、short 说的是身高，与年龄无关。",
+          "difficulty": 3,
+          "knowledge_point": "描述家人特征",
+          "tags": [
+            "词汇"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "In 'My mother is lovely.', the word lovely tells us what the mother is like.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "lovely 是形容词，放在 is 后面，说明妈妈的样子；句子的主语是 mother，所以 lovely 说的就是妈妈，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "描述家人特征",
+          "tags": [
+            "句型"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Your brother looks like your father. You say: ",
+          "options": [
+            "He is my father.",
+            "He is like my father.",
+            "He like my father.",
+            "She is like my father."
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "「像我爸爸」用 He is like my father.，选 B；A 变成了「他就是我爸爸」，意思完全不同，C 少了 is，D 把 he 写成了 she。",
+          "difficulty": 2,
+          "knowledge_point": "说出家人的相似",
+          "tags": [
+            "句型"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which sentence means 'She looks like my mother.'?",
+          "options": [
+            "She is like my mother.",
+            "She is my mother.",
+            "She is likes my mother.",
+            "She like my mother."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「像」要用 like，选 A；B 只说「她是我妈妈」，没有「像」的意思；C、D 的 be 动词用错了。",
+          "difficulty": 3,
+          "knowledge_point": "说出家人的相似",
+          "tags": [
+            "句型"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "Tom has big eyes and his father has big eyes too. Tom is like his ____.",
+          "answer": {
+            "value": "father"
+          },
+          "analysis": "短文说两个人眼睛都大，所以 Tom 像他的爸爸，横线填 father；填 mother、brother 都与原文对不上。",
+          "difficulty": 3,
+          "knowledge_point": "说出家人的相似",
+          "tags": [
+            "句型"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "'She is like my sister.' means she looks the same as my sister.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "like 在这里表示「像」，这句话说她长得和姐姐一样，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "说出家人的相似",
+          "tags": [
+            "句型"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which word is NOT a family member?",
+          "options": [
+            "teacher",
+            "brother",
+            "sister",
+            "grandma"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "teacher 是老师的称呼，是职业不是家庭成员，选 A；brother、sister、grandma 都是家庭成员。",
+          "difficulty": 1,
+          "knowledge_point": "家庭成员单词归类",
+          "tags": [
+            "词汇"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which words are family members?",
+          "options": [
+            "brother",
+            "grandma",
+            "dog",
+            "father"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A brother 兄弟 ✓；B grandma 奶奶 ✓；C dog 是动物 ✗；D father 爸爸 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "家庭成员单词归类",
+          "tags": [
+            "多选",
+            "词汇"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which group are all family members?",
+          "options": [
+            "grandpa, grandma, sister",
+            "book, pen, bag",
+            "cat, dog, panda",
+            "red, blue, green"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "grandpa、grandma、sister 都是家庭成员，选 A；B 是文具，C 是动物，D 是颜色，都不属于家庭成员。",
+          "difficulty": 3,
+          "knowledge_point": "家庭成员单词归类",
+          "tags": [
+            "词汇"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "The word 'animal' does not belong to the family members group.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "animal 是「动物」，属于动物类词，不是家庭成员，放进家庭成员组就是归类错误，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "家庭成员单词归类",
+          "tags": [
+            "词汇"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Read the story: 'This is my family. This is my father. He is tall. This is my mother. She is kind. This is my sister. She is lovely.' The word 'He' means ____.",
+          "options": [
+            "the mother",
+            "the sister",
+            "the father",
+            "the grandpa"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "短文里 He 紧接在 This is my father. 后面，he 指男性，所以指 the father，选 C；he 不能指 mother 或 sister。",
+          "difficulty": 3,
+          "knowledge_point": "家庭小短文阅读",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Read the story again: 'This is my family. This is my father. He is tall. This is my mother. She is kind. This is my sister. She is lovely.' How many people are in the family? Say the number and the names.",
+          "answer": {
+            "value": "Three: the father, the mother and the sister."
+          },
+          "analysis": "参考答案：Three: the father, the mother and the sister.。评分要点：①答出正确的数量 three（2 分）；②把三个人的称呼都写出来（2 分）；③英文书写与拼写正确（1 分）。只写数字不写人物，最后 2 分不得。",
+          "difficulty": 4,
+          "knowledge_point": "家庭小短文阅读",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which question matches the answer 'He is my brother.'?",
+          "options": [
+            "How old is he?",
+            "Who is he?",
+            "What is he?",
+            "Where is he?"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "答语说「他是我哥哥」，问的就应该是「他是谁」，选 B；How old 问年龄、Where 问地点，答语都对不上。",
+          "difficulty": 3,
+          "knowledge_point": "家庭小短文阅读",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Your new classmate asks about your family. Write three sentences to introduce two of your family members.",
+          "answer": {
+            "value": "This is my father. He is tall. This is my mother. She is kind."
+          },
+          "analysis": "评分要点：①用上 This is my… 介绍家人（2 分）；②用上 He / She is… 说说家人的特点（2 分）；③句子完整、拼写和标点正确（1 分）。三句都写成同一句型，最后 1 分不得。",
+          "difficulty": 4,
+          "knowledge_point": "介绍我的家人",
+          "tags": [
+            "写作",
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Talk with your partner. Ask who is in his or her family, and then tell the class about it. Write the short dialogue.",
+          "answer": {
+            "value": "— Who is in your family? — My father, my mother and my sister. — What is your sister like? — She is lovely."
+          },
+          "analysis": "评分要点：①用问句 Who is… 提问（2 分）；②用完整句子回答家庭成员（2 分）；③用 He / She is… 说出一个家人的特点（1 分）；④对话格式与拼写正确（1 分）。写成单句不算对话。",
+          "difficulty": 4,
+          "knowledge_point": "家庭小短文阅读",
+          "tags": [
+            "写作",
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 2 How are you today?",
+      "order_index": 2,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "You meet your friend at 8 o'clock in the morning. You say: ",
+          "options": [
+            "Good morning.",
+            "Good evening.",
+            "Good night.",
+            "Goodbye."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "上午问候用 Good morning，选 A；Good evening 是傍晚用的，Good night 是睡前说的，Goodbye 是告别时说的。",
+          "difficulty": 1,
+          "knowledge_point": "问候与心情词汇",
+          "tags": [
+            "词汇"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which word means 'happy'?",
+          "options": [
+            "sad",
+            "tired",
+            "happy",
+            "angry"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "happy 是「开心的」，选 C；sad 是难过的，tired 是累的，angry 是生气的，三个都表示别的感受。",
+          "difficulty": 2,
+          "knowledge_point": "问候与心情词汇",
+          "tags": [
+            "词汇"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which words describe feelings?",
+          "options": [
+            "happy",
+            "tired",
+            "desk",
+            "sad"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A happy 开心 ✓；B tired 累 ✓；C desk 是课桌，是物品 ✗；D sad 难过 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "问候与心情词汇",
+          "tags": [
+            "多选",
+            "词汇"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "You say goodbye to your friend in the afternoon: ____!",
+          "answer": {
+            "value": [
+              "Goodbye",
+              "Bye-bye",
+              "See you"
+            ]
+          },
+          "analysis": "告别可以说 Goodbye、Bye-bye 或 See you，空里填哪一个都表示「再见」；早上、中午、晚上问好用词不同，但告别词是一样的。",
+          "difficulty": 2,
+          "knowledge_point": "问候与心情词汇",
+          "tags": [
+            "词汇"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "In the story Ben comes to school on Monday morning. He is happy because ____.",
+          "options": [
+            "it is his birthday",
+            "he is ill",
+            "he has no friends",
+            "he is too tired"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "故事里说今天是他的生日，所以他很开心，选 A；生病、没有朋友、太累都不是原文给出的原因。",
+          "difficulty": 2,
+          "knowledge_point": "故事中的心情理解",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "What is Ben at noon in the story?",
+          "options": [
+            "happy",
+            "sad",
+            "tired",
+            "angry"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "故事里说中午他累了，tired 是「累的」，选 C；happy 是开心，sad 是难过，angry 是生气，都和原文不符。",
+          "difficulty": 3,
+          "knowledge_point": "故事中的心情理解",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "In the story, Ben is hungry in the afternoon and his friend gives him a cake.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "故事里写的是他下午饿了，同学给了他一块蛋糕，前后因果清楚，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "故事中的心情理解",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which feelings are in Ben's story?",
+          "options": [
+            "happy",
+            "tired",
+            "hungry",
+            "proud"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A happy 开心 ✓；B tired 累 ✓；C hungry 饿 ✓；D proud 自豪，故事里没有这个词 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "故事中的心情理解",
+          "tags": [
+            "多选",
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "— How are you? — ____",
+          "options": [
+            "I'm fine, thank you.",
+            "I'm seven.",
+            "Yes, I do.",
+            "I'm Kitty."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "How are you? 问的是近况，要用 I'm… 回答，选 A；B 回答的是年龄，C 是对 Do you… 的回答，D 只是报名字。",
+          "difficulty": 1,
+          "knowledge_point": "心情问答句型",
+          "tags": [
+            "句型"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "— How is your mother? — ____",
+          "options": [
+            "She is fine.",
+            "I am fine.",
+            "It is fine.",
+            "You are fine."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "问的是妈妈，要用 She is… 回答，选 A；用 I am、It is、You are 回答，人称都对不上。",
+          "difficulty": 2,
+          "knowledge_point": "心情问答句型",
+          "tags": [
+            "句型"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "— How is your father? — He is ____.",
+          "answer": {
+            "value": "fine"
+          },
+          "analysis": "答语用 He is…，后面接表示状态的词；根据问句问的是父亲的近况，横线填 fine 组成 He is fine.。",
+          "difficulty": 3,
+          "knowledge_point": "心情问答句型",
+          "tags": [
+            "句型"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which questions ask about feelings?",
+          "options": [
+            "How are you?",
+            "How is he?",
+            "How old are you?",
+            "What is your name?"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "A How are you? 问近况 ✓；B How is he? 问他的近况 ✓；C 问年龄 ✗；D 问名字 ✗。故 A、B 成立，C、D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "心情问答句型",
+          "tags": [
+            "多选",
+            "句型"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "You meet your new teacher in the morning. The best thing to say is: ",
+          "options": [
+            "Good morning, Miss Li.",
+            "Good night, Miss Li.",
+            "How old are you, Miss Li?",
+            "I'm seven, Miss Li."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "上午见到老师要先问好，选 A；Good night 是睡前的问候，问年龄和报年龄都不礼貌也不对题。",
+          "difficulty": 2,
+          "knowledge_point": "见面问候交际任务",
+          "tags": [
+            "交际"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Your friend says 'I'm sad.' What can you say to him or her?",
+          "options": [
+            "What's the matter?",
+            "How old are you?",
+            "Good night!",
+            "Nice to meet you!"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "朋友说难过，要关心地问一句 What's the matter?，选 A；问年龄、说晚安、说初次见面都答非所问。",
+          "difficulty": 4,
+          "knowledge_point": "见面问候交际任务",
+          "tags": [
+            "交际"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "It is 6 o'clock in the evening. You meet your friend. You say: ",
+          "options": [
+            "Good evening.",
+            "Good morning.",
+            "Good night.",
+            "How old are you?"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "傍晚六点用 Good evening 问候，选 A；Good morning 是早上用的，Good night 是睡前说的。",
+          "difficulty": 3,
+          "knowledge_point": "见面问候交际任务",
+          "tags": [
+            "交际"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Greet your new classmate in the morning and ask how he or she is today. Write the short dialogue.",
+          "answer": {
+            "value": "— Good morning! I'm Kitty. — Good morning! I'm Ben. — How are you? — I'm fine, thank you."
+          },
+          "analysis": "评分要点：①写出问候语 Good morning（2 分）；②用 How are you? 询问近况（1 分）；③用 I'm fine, thank you. 等完整句子回答（1 分）。缺问候语扣 2 分，只写单词不算对话。",
+          "difficulty": 4,
+          "knowledge_point": "见面问候交际任务",
+          "tags": [
+            "写作",
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Read the passage: 'It is Sunday. Kitty is sad because it is raining and she cannot go to the park. Then her mother reads a story to her. Kitty is happy again.' Why is Kitty sad at first?",
+          "options": [
+            "It is raining and she cannot go to the park",
+            "She has no breakfast",
+            "She is ill",
+            "She has a new bag"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "短文第一句就说明下雨、去不了公园，所以她难过，选 A；早饭、生病、新书包都不是原文的原因。",
+          "difficulty": 2,
+          "knowledge_point": "心情拓展阅读",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "In the same passage, what makes Kitty happy again?",
+          "options": [
+            "the rain",
+            "her mother's story",
+            "a new bag",
+            "a long nap"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "短文最后写妈妈给她读故事，她就高兴起来了，选 B；下雨是让她难过的原因，其他两项文中没有出现。",
+          "difficulty": 3,
+          "knowledge_point": "心情拓展阅读",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Kitty's feelings change in the passage: she is sad at first and happy at last.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "短文先写她因为下雨去不了公园而难过，后来妈妈读故事给她，她又开心了，前后确实发生了变化，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "心情拓展阅读",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which words can describe feelings in the passage?",
+          "options": [
+            "sad",
+            "happy",
+            "rainy",
+            "angry"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "A sad 难过 ✓；B happy 开心 ✓；C rainy 是下雨，是天气 ✗；D angry 生气，文中没有 ✗。故 A、B 成立，C、D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "心情拓展阅读",
+          "tags": [
+            "多选",
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which is the correct way to write a greeting?",
+          "options": [
+            "Hello, Kitty.",
+            "hello, Kitty",
+            "Hello Kitty",
+            "hello kitty."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "句首首字母要大写、名字后面要有逗号和句号，选 A；其余三种写法的大写和标点都不合规范。",
+          "difficulty": 1,
+          "knowledge_point": "问候语首字母大写",
+          "tags": [
+            "书写"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which name is written correctly?",
+          "options": [
+            "Mr Li",
+            "mr Li",
+            "Mr li",
+            "mr li"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "称呼 Mr 的首字母和姓氏的首字母都要大写，选 A；其余三种写法有一处或两处没有大写。",
+          "difficulty": 2,
+          "knowledge_point": "问候语首字母大写",
+          "tags": [
+            "书写"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "Write the capital letter of the first word in 'good morning': ____",
+          "answer": {
+            "value": "G"
+          },
+          "analysis": "句子的第一个单词首字母要大写，good 要写成 Good，所以横线填大写字母 G。",
+          "difficulty": 3,
+          "knowledge_point": "问候语首字母大写",
+          "tags": [
+            "书写"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "In 'Good morning, Kitty!', which words begin with a capital letter?",
+          "options": [
+            "Good",
+            "Kitty",
+            "morning",
+            "I"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A Good 在句首，首字母大写 ✓；B Kitty 是名字，首字母大写 ✓；C morning 在句中，是小写 ✗；D 单词 I 无论在哪儿都要大写 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "问候语首字母大写",
+          "tags": [
+            "多选",
+            "书写"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 3 What do you take to school?",
+      "order_index": 3,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "You want to draw a straight line. You need a ____.",
+          "options": [
+            "ruler",
+            "rubber",
+            "bag",
+            "crayon"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "画直线要用尺子 ruler，选 A；rubber 是橡皮，bag 是书包，crayon 是蜡笔，都不能画直线。",
+          "difficulty": 1,
+          "knowledge_point": "学习用品词汇",
+          "tags": [
+            "词汇"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which word is NOT a school thing?",
+          "options": [
+            "school",
+            "pencil",
+            "cake",
+            "pencil-box"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "cake 是蛋糕，是食物不是学习用品，选 C；school 是上学这件事，pencil 和 pencil-box 都是文具。",
+          "difficulty": 2,
+          "knowledge_point": "学习用品词汇",
+          "tags": [
+            "词汇"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which words are school things?",
+          "options": [
+            "book",
+            "pencil-box",
+            "apple",
+            "ruler"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A book 是书 ✓；B pencil-box 是文具盒 ✓；C apple 是水果 ✗；D ruler 是尺子 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "学习用品词汇",
+          "tags": [
+            "多选",
+            "词汇"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "A ruler is a school thing. We use it to draw a straight line.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "尺子属于学习用品，画直线、量长短都要用它，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "学习用品词汇",
+          "tags": [
+            "词汇"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "In the story, Kitty has a maths book, an English book and a story book in her bag. How many books does she have?",
+          "options": [
+            "Two",
+            "Three",
+            "Four",
+            "Five"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "把三本书数出来：1+1+1=3，一共三本，选 B；只数两本就漏掉了一本。",
+          "difficulty": 2,
+          "knowledge_point": "书包里的物品",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "In the story, Kitty's pencil-box has two pencils, a rubber and a ruler. What is NOT in it?",
+          "options": [
+            "a pencil",
+            "a rubber",
+            "a ruler",
+            "a book"
+          ],
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "文具盒里有铅笔、橡皮和尺子，没有书，选 D；书是放在书包里的，不在文具盒中。",
+          "difficulty": 3,
+          "knowledge_point": "书包里的物品",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Kitty's bag is heavy because there are many things in it.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "故事说她的书包很沉，因为里面装了三本书和文具盒，物品多所以重，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "书包里的物品",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which things does Kitty take to school?",
+          "options": [
+            "a new book",
+            "a pencil-box",
+            "a ruler",
+            "a cake"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 一本新书 ✓；B 一个文具盒 ✓；C 一把尺子 ✓；D 蛋糕，故事里没有提到 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "书包里的物品",
+          "tags": [
+            "多选",
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "— What do you take to school? — ____",
+          "options": [
+            "I take a book and a pencil.",
+            "I am fine.",
+            "Yes, I do.",
+            "It is a book."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "问带什么上学，要用 I take… 回答，选 A；B 回答近况，C 回答一般疑问句，D 用 it 指代也不对。",
+          "difficulty": 1,
+          "knowledge_point": "带什么上学句型",
+          "tags": [
+            "句型"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "— What does she take to school? — ____",
+          "options": [
+            "She takes a schoolbag.",
+            "They take a schoolbag.",
+            "I take a schoolbag.",
+            "Take a schoolbag."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "问的是女孩，答语用 She takes…，take 的第三人称加 s，选 A；其他人称都不对，B、D 更是语序错误。",
+          "difficulty": 2,
+          "knowledge_point": "带什么上学句型",
+          "tags": [
+            "句型"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "You keep your books, your pencil-box and your ruler in your ____.",
+          "answer": {
+            "value": [
+              "bag",
+              "schoolbag"
+            ]
+          },
+          "analysis": "装书本和文具的袋子叫 bag，也可以说 schoolbag；横线填 bag 或 schoolbag 都对。",
+          "difficulty": 3,
+          "knowledge_point": "带什么上学句型",
+          "tags": [
+            "词汇"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which questions are about the things you take to school?",
+          "options": [
+            "What do you take to school?",
+            "What does he take to school?",
+            "What is your name?",
+            "How old are you?"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "A 问你带什么 ✓；B 问他带什么 ✓；C 问名字 ✗；D 问年龄 ✗。故 A、B 成立，C、D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "带什么上学句型",
+          "tags": [
+            "多选",
+            "句型"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Before you leave home in the morning, you should ____.",
+          "options": [
+            "check your schoolbag",
+            "buy a new bag",
+            "give your bag to a friend",
+            "put the bag in the river"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "出门前清点书包，看看课本和文具带齐了没有，选 A；买新包、送人、扔进河里都不能帮你记住要带的东西。",
+          "difficulty": 2,
+          "knowledge_point": "书包清点交际任务",
+          "tags": [
+            "交际"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Your classmate asks 'What do you take to school?' You answer: ",
+          "options": [
+            "I take a book, a pencil and a rubber.",
+            "I am Kitty.",
+            "It is Monday.",
+            "Yes, I like school."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "问带什么上学，用 I take… 说出三样文具，选 A；报名字、说星期、答非所问都对不上题。",
+          "difficulty": 2,
+          "knowledge_point": "书包清点交际任务",
+          "tags": [
+            "交际"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Ask your partner what he or she takes to school, and then tell the class one thing about it. Write the dialogue and the report.",
+          "answer": {
+            "value": "— What do you take to school? — I take a book and a ruler. He takes a book and a ruler."
+          },
+          "analysis": "评分要点：①用 What do you take to school? 提问（2 分）；②用 I take… 完整回答（1 分）；③把答案转述给全班（1 分）；④对话格式与拼写正确（1 分）。写成单句不算对话。",
+          "difficulty": 4,
+          "knowledge_point": "书包清点交际任务",
+          "tags": [
+            "写作",
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "You have a new schoolbag. Write what you put in it and why you take each thing to school.",
+          "answer": {
+            "value": "I put my books, my pencil-box and a ruler in my schoolbag. I take my books to my lessons, my pencil-box to write with, and the ruler to draw lines."
+          },
+          "analysis": "评分要点：①写出两件以上要带的东西（2 分）；②用 I take… 或完整句子说明用途（2 分）；③拼写与标点正确（1 分）。只列物品不写用途，最后 2 分不得。",
+          "difficulty": 4,
+          "knowledge_point": "书包清点交际任务",
+          "tags": [
+            "写作",
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Look at Ann's desk: there is a pencil-box, a ruler, a rubber and two books on it. How many books are on the desk?",
+          "options": [
+            "One",
+            "Two",
+            "Three",
+            "Four"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "原文说有两本书，2 就是 Two，选 B；把文具盒、尺子、橡皮也当书就会数错。",
+          "difficulty": 2,
+          "knowledge_point": "校园物品拓展阅读",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "In the same picture, where is Ann's cap?",
+          "options": [
+            "On the chair",
+            "On the desk",
+            "In the schoolbag",
+            "Under the desk"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "短文说帽子在椅子上 on the chair，选 A；桌上是文具和书，桌下是书包，都不是帽子的位置。",
+          "difficulty": 3,
+          "knowledge_point": "校园物品拓展阅读",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "The rubber is on Ann's desk.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "短文列在桌上的物品里有 a rubber，说明橡皮在桌上，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "校园物品拓展阅读",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which things are on Ann's desk?",
+          "options": [
+            "a pencil-box",
+            "a ruler",
+            "a cap",
+            "a rubber"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 文具盒在桌上 ✓；B 尺子在桌上 ✓；C 帽子在椅子上，不在桌上 ✗；D 橡皮在桌上 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "校园物品拓展阅读",
+          "tags": [
+            "多选",
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Write the word 'book'. Which way is correct?",
+          "options": [
+            "Book",
+            "book",
+            "bOok",
+            "booK"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "物品名称的第一个字母要大写，所以写 Book，选 A；其余三种写法把首字母写成小写或把中间的字母乱写。",
+          "difficulty": 1,
+          "knowledge_point": "物品词首字母大写",
+          "tags": [
+            "书写"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which list of school things is written correctly?",
+          "options": [
+            "Book, Pencil, Ruler",
+            "book, Pencil, ruler",
+            "Book, pencil, Ruler",
+            "book, pencil, ruler"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "每个物品名称的首字母都要大写，选 A；B、C 各有一处漏了大写，D 全是小写。",
+          "difficulty": 2,
+          "knowledge_point": "物品词首字母大写",
+          "tags": [
+            "书写"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "Write the capital letter of the first letter in 'pencil': ____",
+          "answer": {
+            "value": "P"
+          },
+          "analysis": "物品名称的首字母要大写，pencil 的第一个字母是 p，大写就是 P，所以横线填 P。",
+          "difficulty": 3,
+          "knowledge_point": "物品词首字母大写",
+          "tags": [
+            "书写"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which school things are written with a capital letter?",
+          "options": [
+            "Book",
+            "pencil",
+            "Ruler",
+            "bag"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A Book 首字母大写 ✓；B pencil 是小写 ✗；C Ruler 首字母大写 ✓；D bag 是小写 ✗。故 A、C 成立，B、D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "物品词首字母大写",
+          "tags": [
+            "多选",
+            "书写"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 4 What can you do?",
+      "order_index": 4,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "You can ____ very fast on the playground.",
+          "options": [
+            "run",
+            "read",
+            "write",
+            "sleep"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "在操场上跑得快用 run，选 A；read 是读，write 是写，sleep 是睡觉，都不是跑步。",
+          "difficulty": 1,
+          "knowledge_point": "能力动词词汇",
+          "tags": [
+            "词汇"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which word is NOT about what you can do?",
+          "options": [
+            "swim",
+            "jump",
+            "chair",
+            "sing"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "chair 是椅子，是东西不是本领，选 C；swim、jump、sing 都是动作。",
+          "difficulty": 2,
+          "knowledge_point": "能力动词词汇",
+          "tags": [
+            "词汇"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which words are things you can do?",
+          "options": [
+            "dance",
+            "skate",
+            "desk",
+            "draw"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A dance 跳舞 ✓；B skate 滑冰 ✓；C desk 是课桌 ✗；D draw 画画 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "能力动词词汇",
+          "tags": [
+            "多选",
+            "词汇"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "You can sing and you can dance. These two words tell us what people can do.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "sing 是唱歌、dance 是跳舞，都是表示本领的动作词，所以说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "能力动词词汇",
+          "tags": [
+            "词汇"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "In the story, what can the panda do?",
+          "options": [
+            "He can climb trees and eat bamboo.",
+            "He can swim.",
+            "He can sing.",
+            "He can skate."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "故事里说熊猫会爬树、会吃竹子，选 A；游泳、唱歌、滑冰都不是故事里熊猫的本领。",
+          "difficulty": 2,
+          "knowledge_point": "故事中的动物本领",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "In the story, what can Rabbit do well?",
+          "options": [
+            "He can jump and run fast.",
+            "He can swim.",
+            "He can draw pictures.",
+            "He can cook."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "故事里说兔子会跳、跑得快，选 A；游泳、画画、做饭都不是兔子的本领。",
+          "difficulty": 3,
+          "knowledge_point": "故事中的动物本领",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "In the story, the panda can swim.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "故事里写的是熊猫会爬树、吃竹子，cannot swim，所以「熊猫会游泳」的说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "故事中的动物本领",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which things can Rabbit do in the story?",
+          "options": [
+            "jump",
+            "run fast",
+            "swim",
+            "sing"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "A 跳 ✓；B 跑得快 ✓；C 游泳，故事里没有说 ✗；D 唱歌，也没有提到 ✗。故 A、B 成立，C、D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "故事中的动物本领",
+          "tags": [
+            "多选",
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "— What can you do? — ____",
+          "options": [
+            "I can swim.",
+            "I am seven.",
+            "Yes, I do.",
+            "I take a book."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "问会做什么，答语用 I can + 动词原形，选 A；B 答的是年龄，C 答一般疑问句，D 说的是带什么。",
+          "difficulty": 1,
+          "knowledge_point": "能做什么句型",
+          "tags": [
+            "句型"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "— What can he do? — ____",
+          "options": [
+            "He can jump.",
+            "He is jump.",
+            "He jump.",
+            "He am tall."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "答语要用 He can + 动词原形，选 A；B 的 be 动词多余，C 少了 can，D 用 am 配 he 不对。",
+          "difficulty": 2,
+          "knowledge_point": "能做什么句型",
+          "tags": [
+            "句型"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "— What can she do? — She can ____ and draw.",
+          "answer": {
+            "value": [
+              "sing",
+              "dance"
+            ]
+          },
+          "analysis": "can 后面接动作原形，能和 draw 并列的可以是 sing（唱歌）或 dance（跳舞），所以横线填 sing 或 dance 都对。",
+          "difficulty": 3,
+          "knowledge_point": "能做什么句型",
+          "tags": [
+            "句型"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which sentences about talents are correct?",
+          "options": [
+            "I can run.",
+            "He can dance.",
+            "She can swim.",
+            "I cans sing."
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A I can run. ✓；B He can dance. ✓；C She can swim. ✓；D I cans sing. can 后面不能加 s ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "能做什么句型",
+          "tags": [
+            "多选",
+            "句型"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Your new classmate asks 'What can you do?' The best answer is: ",
+          "options": [
+            "I can sing and dance.",
+            "I am Kitty.",
+            "It is a book.",
+            "Yes, I like it."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "问的是本领，要用 I can… 回答，选 A；报名字、说物品、答非所问都不对题。",
+          "difficulty": 2,
+          "knowledge_point": "展示本领交际任务",
+          "tags": [
+            "交际"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "You want to join the school show. You tell your teacher: ",
+          "options": [
+            "I can dance. Can I be in the show?",
+            "I am tired.",
+            "Where is the show?",
+            "It is Monday."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先说自己会什么本领，再提请求，说法最清楚，选 A；只说累、只问地点或只说星期，都没说清自己的本领。",
+          "difficulty": 3,
+          "knowledge_point": "展示本领交际任务",
+          "tags": [
+            "交际"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Talk with your partner about your talents. Write three sentences about what you can do.",
+          "answer": {
+            "value": "I can run. I can jump. I can draw."
+          },
+          "analysis": "评分要点：①写出三件自己会做的事（3 分）；②每句都用 I can + 动词原形（1 分）；③拼写与标点正确（1 分）。写成 I am tall 这类不算本领。",
+          "difficulty": 4,
+          "knowledge_point": "展示本领交际任务",
+          "tags": [
+            "写作",
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Make a small card for your family. Write three things you can do and say who you want to help.",
+          "answer": {
+            "value": "I can sing. I can dance. I can help my mother."
+          },
+          "analysis": "评分要点：①写出三件自己会做的事（3 分）；②用 I can + 动词原形（1 分）；③写出想帮的人（1 分）。只写三件物品不算本领表达。",
+          "difficulty": 4,
+          "knowledge_point": "展示本领交际任务",
+          "tags": [
+            "写作",
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Read the passage: 'Sam can do many things. He can swim very fast. He can ride a bike. But he cannot skate. His sister Lily can skate well. She can jump and dance too.' What can Sam do?",
+          "options": [
+            "He can swim and ride a bike.",
+            "He can skate.",
+            "He can only draw.",
+            "He can do nothing."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "短文写 Sam 会游泳、会骑自行车，选 A；滑冰是 Lily 会，滑板车也没提，D 与原文相反。",
+          "difficulty": 2,
+          "knowledge_point": "本领拓展阅读",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "In the same passage, who can skate well?",
+          "options": [
+            "Sam",
+            "Lily",
+            "Sam's father",
+            "Nobody"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "短文说 His sister Lily can skate well，所以会滑冰的是 Lily，选 B；Sam 明确写了 cannot skate。",
+          "difficulty": 3,
+          "knowledge_point": "本领拓展阅读",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "In the passage, Sam can skate, but he does not skate well.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "原文说 Sam cannot skate，是不会而不是不熟练，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "本领拓展阅读",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which things can Lily do in the passage?",
+          "options": [
+            "skate",
+            "jump",
+            "dance",
+            "cook"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 会滑冰 ✓；B 会跳 ✓；C 会跳舞 ✓；D 做饭，短文里没有提到 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "本领拓展阅读",
+          "tags": [
+            "多选",
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Write the word 'jump'. Which way is correct?",
+          "options": [
+            "Jump",
+            "jump",
+            "jUmp",
+            "jumP"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "动作词的首字母要大写，所以写 Jump，选 A；其余写法首字母是小写或把后面的字母乱写。",
+          "difficulty": 1,
+          "knowledge_point": "能力词首字母大写",
+          "tags": [
+            "书写"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which list of action words is written correctly?",
+          "options": [
+            "Run, Jump, Swim",
+            "run, Jump, swim",
+            "Run, jump, Swim",
+            "run, jump, swim"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "三个动作词的首字母都要大写，选 A；B、C 各漏了一个，D 全是小写。",
+          "difficulty": 2,
+          "knowledge_point": "能力词首字母大写",
+          "tags": [
+            "书写"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "Write the capital letter of the first letter in 'sing': ____",
+          "answer": {
+            "value": "S"
+          },
+          "analysis": "动作词的首字母要大写，sing 的第一个字母是 s，大写就是 S，所以横线填 S。",
+          "difficulty": 3,
+          "knowledge_point": "能力词首字母大写",
+          "tags": [
+            "书写"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which action words are written with a capital letter?",
+          "options": [
+            "Jump",
+            "swim",
+            "Sing",
+            "dance"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A Jump 首字母大写 ✓；B swim 是小写 ✗；C Sing 首字母大写 ✓；D dance 是小写 ✗。故 A、C 成立，B、D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "能力词首字母大写",
+          "tags": [
+            "多选",
+            "书写"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 5 What is your favourite animal?",
+      "order_index": 5,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "A panda is black and white. It likes ____.",
+          "options": [
+            "bamboo",
+            "fish",
+            "grass",
+            "bread"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "熊猫最爱吃竹子 bamboo，选 A；fish 是鱼、grass 是草，都是熊猫吃不到的东西，bread 是面包。",
+          "difficulty": 1,
+          "knowledge_point": "动物词汇认知",
+          "tags": [
+            "词汇"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which animal says 'Moo'?",
+          "options": [
+            "dog",
+            "cow",
+            "cat",
+            "bird"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "牛的叫声是 Moo，选 B；dog 是汪汪、cat 是喵喵、bird 是唧唧，都不是。",
+          "difficulty": 2,
+          "knowledge_point": "动物词汇认知",
+          "tags": [
+            "词汇"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which words are animals?",
+          "options": [
+            "tiger",
+            "monkey",
+            "school",
+            "rabbit"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A tiger 老虎 ✓；B monkey 猴子 ✓；C school 是学校 ✗；D rabbit 兔子 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "动物词汇认知",
+          "tags": [
+            "多选",
+            "词汇"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "A bird can fly, and a fish can swim.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "鸟有翅膀会飞，鱼生活在水里会游，两者都对，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "动物词汇认知",
+          "tags": [
+            "词汇"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "In the story, what is Mike's favourite animal?",
+          "options": [
+            "The tiger",
+            "The panda",
+            "The bird",
+            "The fish"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "故事开头说 Mike's favourite animal is the tiger，选 A；熊猫是妹妹 Lily 喜欢的，鸟和鱼文中没有提到。",
+          "difficulty": 2,
+          "knowledge_point": "最喜欢的动物故事",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "In the story, why does Mike like tigers?",
+          "options": [
+            "Because they are strong and beautiful.",
+            "Because they can swim.",
+            "Because they are very small.",
+            "Because they are slow."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "故事里 because 后面写的是 strong and beautiful，选 A；游泳、小、慢都不是原文给出的原因。",
+          "difficulty": 3,
+          "knowledge_point": "最喜欢的动物故事",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "In the story, Lily likes pandas and she thinks pandas are lovely.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "故事里说 Lily likes the panda because pandas are lovely，前后一致，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "最喜欢的动物故事",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which animals do Mike and Lily see at the zoo?",
+          "options": [
+            "pandas",
+            "tigers",
+            "fish",
+            "rabbits"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "A 熊猫 ✓；B 老虎 ✓；C 鱼，文中没写 ✗；D 兔子，也没写到 ✗。故 A、B 成立，C、D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "最喜欢的动物故事",
+          "tags": [
+            "多选",
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "— What is your favourite animal? — ____",
+          "options": [
+            "I like pandas.",
+            "I am a panda.",
+            "Yes, I do.",
+            "It is a cat."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "问最喜欢的动物，可以用 I like… 回答，选 A；说「我是熊猫」不对，答非所问和用 it 指代也不对。",
+          "difficulty": 1,
+          "knowledge_point": "喜好表达句型",
+          "tags": [
+            "句型"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "— Which animal do you like? — ____",
+          "options": [
+            "I like the tiger.",
+            "I am the tiger.",
+            "It is the tiger.",
+            "I like tiger."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "说喜欢哪一个动物用 I like the…，选 A；说成「我是老虎」意思完全不同，D 漏了冠词 the。",
+          "difficulty": 2,
+          "knowledge_point": "喜好表达句型",
+          "tags": [
+            "句型"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "I like the panda very much. The panda is my favourite ____.",
+          "answer": {
+            "value": "animal"
+          },
+          "analysis": "本单元谈的是最喜欢的动物，favourite 后面用 animal 组成 my favourite animal；填别的词就说不到动物上去了。",
+          "difficulty": 3,
+          "knowledge_point": "喜好表达句型",
+          "tags": [
+            "句型"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which sentences about favourite animals are correct?",
+          "options": [
+            "I like dogs.",
+            "She likes cats.",
+            "He like monkeys.",
+            "I am like birds."
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "A I like dogs. ✓；B She likes cats. ✓；C He like monkeys. 少了 s ✗；D I am like birds. 搭配错误 ✗。故 A、B 成立，C、D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "喜好表达句型",
+          "tags": [
+            "多选",
+            "句型"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Your friend asks 'What's your favourite animal?' You say: ",
+          "options": [
+            "My favourite animal is the panda.",
+            "It is Monday.",
+            "I take a book.",
+            "I am seven."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "回答最喜欢什么动物用 My favourite animal is…，选 A；说星期、说带什么、报年龄都答非所问。",
+          "difficulty": 2,
+          "knowledge_point": "动物喜好交际任务",
+          "tags": [
+            "交际"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "You want to know your classmate's favourite animal. You ask: ",
+          "options": [
+            "What's your favourite animal?",
+            "How old are you?",
+            "Where is the zoo?",
+            "What do you take to school?"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "想知道对方最喜欢什么动物，要问 What's your favourite animal?，选 A；问年龄、地点、带什么都不是这个问题。",
+          "difficulty": 3,
+          "knowledge_point": "动物喜好交际任务",
+          "tags": [
+            "交际"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Talk with your partner about favourite animals, and then tell the class about it. Write the short dialogue.",
+          "answer": {
+            "value": "— What's your favourite animal? — My favourite animal is the tiger. — I like tigers too."
+          },
+          "analysis": "评分要点：①用 What's your favourite animal? 提问（2 分）；②用 My favourite animal is… 回答（1 分）；③加一句回应或补充（1 分）；④对话格式与拼写正确（1 分）。写成单句不算对话。",
+          "difficulty": 4,
+          "knowledge_point": "动物喜好交际任务",
+          "tags": [
+            "写作",
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Make a 'My favourite animal' card for the classroom. Write the animal and one sentence about it.",
+          "answer": {
+            "value": "My favourite animal is the panda. It is black and white. It likes bamboo."
+          },
+          "analysis": "评分要点：①写出最喜欢的动物（2 分）；②用一句完整的话说它的样子或喜欢吃什么（2 分）；③拼写与标点正确（1 分）。只写一个动物名而没有句子，最后 2 分不得。",
+          "difficulty": 4,
+          "knowledge_point": "动物喜好交际任务",
+          "tags": [
+            "写作",
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Look at the picture: there is a small monkey on the tree, two fish in the water and an elephant near the tree. How many fish are there in the water?",
+          "options": [
+            "One",
+            "Two",
+            "Three",
+            "Four"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "原文写的是 two fish，2 就是 Two，选 B；只看到一只就数错，猴子和大象都不是鱼。",
+          "difficulty": 2,
+          "knowledge_point": "动物拓展阅读",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "In the same picture, which animal is very big?",
+          "options": [
+            "The monkey",
+            "The elephant",
+            "The fish",
+            "The bird"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "短文说 The elephant is very big，选 B；猴子是 very small，鱼和鸟文中没有提到。",
+          "difficulty": 3,
+          "knowledge_point": "动物拓展阅读",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "In the picture, the monkey is on the tree.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "短文写 there is a small monkey on the tree，猴子在树上，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "动物拓展阅读",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which animals are in the picture?",
+          "options": [
+            "a monkey",
+            "an elephant",
+            "some fish",
+            "a tiger"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 猴子 ✓；B 大象 ✓；C 几条鱼 ✓；D 老虎，图中没有写到 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "动物拓展阅读",
+          "tags": [
+            "多选",
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Write the word 'panda'. Which way is correct?",
+          "options": [
+            "Panda",
+            "panda",
+            "pAnda",
+            "panDa"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "动物名称的首字母要大写，所以写 Panda，选 A；其余写法首字母是小写或把中间的字母乱写。",
+          "difficulty": 1,
+          "knowledge_point": "动物词首字母大写",
+          "tags": [
+            "书写"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which list of animal words is written correctly?",
+          "options": [
+            "Cat, Dog, Tiger",
+            "cat, Dog, tiger",
+            "Cat, dog, Tiger",
+            "cat, dog, tiger"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "三个动物名称的首字母都要大写，选 A；B、C 各漏了一处，D 全是小写。",
+          "difficulty": 2,
+          "knowledge_point": "动物词首字母大写",
+          "tags": [
+            "书写"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "Write the capital letter of the first letter in 'tiger': ____",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "动物名称的首字母要大写，tiger 的第一个字母是 t，大写就是 T，所以横线填 T。",
+          "difficulty": 3,
+          "knowledge_point": "动物词首字母大写",
+          "tags": [
+            "书写"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which animal words are written with a capital letter?",
+          "options": [
+            "Tiger",
+            "bird",
+            "Fish",
+            "rabbit"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A Tiger 首字母大写 ✓；B bird 是小写 ✗；C Fish 首字母大写 ✓；D rabbit 是小写 ✗。故 A、C 成立，B、D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "动物词首字母大写",
+          "tags": [
+            "多选",
+            "书写"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 6 What colours can you see?",
+      "order_index": 6,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "The sky is ____ on a sunny day.",
+          "options": [
+            "blue",
+            "black",
+            "brown",
+            "pink"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "晴天时天空是蓝色的 blue，选 A；黑色、棕色和粉色都不是晴天天空的颜色。",
+          "difficulty": 1,
+          "knowledge_point": "颜色词汇认知",
+          "tags": [
+            "词汇"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which word is a colour?",
+          "options": [
+            "desk",
+            "green",
+            "school",
+            "book"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "green 是绿色，是颜色词，选 B；desk、school、book 都是物品名称，不是颜色。",
+          "difficulty": 2,
+          "knowledge_point": "颜色词汇认知",
+          "tags": [
+            "词汇"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which words are colours?",
+          "options": [
+            "red",
+            "yellow",
+            "window",
+            "white"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A red 红色 ✓；B yellow 黄色 ✓；C window 是窗户 ✗；D white 白色 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "颜色词汇认知",
+          "tags": [
+            "多选",
+            "词汇"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "A banana is yellow and the leaf of a tree is green.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "香蕉是黄色的，树叶是绿色的，两个颜色都对，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "颜色词汇认知",
+          "tags": [
+            "词汇"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "In the story, what colour is Ben's umbrella?",
+          "options": [
+            "Red",
+            "Blue",
+            "Yellow",
+            "Green"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "故事里写 a red umbrella，所以伞是红色，选 A；黄色是雨衣，蓝色是妈妈的包，绿色是画的树。",
+          "difficulty": 2,
+          "knowledge_point": "故事里的彩色世界",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "In the story, what colour is his mother's bag?",
+          "options": [
+            "Blue",
+            "Red",
+            "Yellow",
+            "Black"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "故事里写 His mother's bag is blue，选 A；红色是伞，黄色是雨衣，黑色是画的猫。",
+          "difficulty": 3,
+          "knowledge_point": "故事里的彩色世界",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "In the story, Ben draws a green tree and a black cat.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "故事最后写 he draws a green tree and a black cat，前后一致，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "故事里的彩色世界",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which colours can Ben see in the room?",
+          "options": [
+            "red",
+            "yellow",
+            "blue",
+            "purple"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 红色（伞）✓；B 黄色（雨衣）✓；C 蓝色（书包）✓；D 紫色，故事里没有 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "故事里的彩色世界",
+          "tags": [
+            "多选",
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "— What colour is the apple? — ____",
+          "options": [
+            "It is red.",
+            "I am red.",
+            "Yes, it is.",
+            "It is an apple."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "问东西的颜色，用 It is + 颜色 回答，选 A；用 I am 回答人不对，答非所问和用 it 指代物品都不行。",
+          "difficulty": 1,
+          "knowledge_point": "颜色问答句型",
+          "tags": [
+            "句型"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "— What colours can you see? — ____",
+          "options": [
+            "I can see red and blue.",
+            "I can red.",
+            "It is blue.",
+            "I am blue."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "问能看到什么颜色，答语用 I can see…，选 A；漏掉 see 就成了「能红色」，用 It is 或 I am 回答也不合句型。",
+          "difficulty": 2,
+          "knowledge_point": "颜色问答句型",
+          "tags": [
+            "句型"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "Complete the sentence with a colour word: The banana is yellow and the apple is ____.",
+          "answer": {
+            "value": "red"
+          },
+          "analysis": "常见的水果苹果是红色的，所以横线填 red 组成 the apple is red.；写成 yellow 就和香蕉重复了，也不符合实际。",
+          "difficulty": 3,
+          "knowledge_point": "颜色问答句型",
+          "tags": [
+            "句型"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which questions are about colours?",
+          "options": [
+            "What colour is it?",
+            "What colours can you see?",
+            "How old are you?",
+            "Where is my bag?"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "A 问它是什么颜色 ✓；B 问能看到什么颜色 ✓；C 问年龄 ✗；D 问包在哪里 ✗。故 A、B 成立，C、D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "颜色问答句型",
+          "tags": [
+            "多选",
+            "句型"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Your friend asks 'What colours can you see in the park?' You say: ",
+          "options": [
+            "I can see green and blue.",
+            "It is Monday.",
+            "I am green.",
+            "Yes, I can."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "问看到的颜色，用 I can see… 回答，选 A；说星期、说「我是绿色的」、只答 yes 都没有说出颜色。",
+          "difficulty": 2,
+          "knowledge_point": "找颜色交际任务",
+          "tags": [
+            "交际"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "You want to know the colour of your friend's cap. You ask: ",
+          "options": [
+            "What colour is your cap?",
+            "How old are you?",
+            "What do you take to school?",
+            "Can you swim?"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "想知道帽子的颜色，要问 What colour is your cap?，选 A；问年龄、带什么、会不会游泳都不是这个问题。",
+          "difficulty": 3,
+          "knowledge_point": "找颜色交际任务",
+          "tags": [
+            "交际"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Look around your classroom. Write down three colours you can see and one thing of each colour.",
+          "answer": {
+            "value": "I can see a red book, a blue chair and a green plant."
+          },
+          "analysis": "评分要点：①写出三种颜色（3 分）；②每种颜色配一样东西（1 分）；③拼写与标点正确（1 分）。只写颜色不写东西，最后 1 分不得。",
+          "difficulty": 4,
+          "knowledge_point": "找颜色交际任务",
+          "tags": [
+            "写作",
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "You are painting a rainbow. Tell your friend which colours you paint and in which order. Write two sentences.",
+          "answer": {
+            "value": "First I paint red and yellow. Then I paint blue and green."
+          },
+          "analysis": "评分要点：①写出至少四种颜色（2 分）；②用 First… Then… 说明顺序（2 分）；③句子完整、拼写正确（1 分）。只罗列颜色不说顺序，最后 2 分不得。",
+          "difficulty": 4,
+          "knowledge_point": "找颜色交际任务",
+          "tags": [
+            "写作",
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Look at the classroom: the door is green, the teacher's desk is brown, there are two blackboards on the wall, and Ben's pencil-box is white. What colour is the door?",
+          "options": [
+            "Green",
+            "Brown",
+            "White",
+            "Orange"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "短文写 the door is green，所以门是绿色，选 A；棕色是老师的桌子，白色是文具盒。",
+          "difficulty": 2,
+          "knowledge_point": "颜色拓展阅读",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "In the same picture, how many blackboards are there on the wall?",
+          "options": [
+            "One",
+            "Two",
+            "Three",
+            "Four"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "短文写 there are two blackboards，2 就是 Two，选 B；一块小的、一块大的合起来是两块。",
+          "difficulty": 3,
+          "knowledge_point": "颜色拓展阅读",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "In the picture, Ben's pencil-box is white and his cap is orange.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "短文写 his pencil-box is white and his cap is orange，两处颜色都说对了，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "颜色拓展阅读",
+          "tags": [
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which colours are in the classroom?",
+          "options": [
+            "green",
+            "brown",
+            "white",
+            "purple"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 绿色（门）✓；B 棕色（桌子）✓；C 白色（文具盒）✓；D 紫色，短文里没有写到 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "颜色拓展阅读",
+          "tags": [
+            "多选",
+            "阅读理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Write the word 'red'. Which way is correct?",
+          "options": [
+            "Red",
+            "red",
+            "rEd",
+            "reD"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "颜色词的首字母要大写，所以写 Red，选 A；其余写法首字母是小写或把后面的字母乱写。",
+          "difficulty": 1,
+          "knowledge_point": "颜色词首字母大写",
+          "tags": [
+            "书写"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which list of colour words is written correctly?",
+          "options": [
+            "Red, Blue, Green",
+            "red, Blue, green",
+            "Red, blue, Green",
+            "red, blue, green"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "三个颜色词的首字母都要大写，选 A；B、C 各漏了一处，D 全是小写。",
+          "difficulty": 2,
+          "knowledge_point": "颜色词首字母大写",
+          "tags": [
+            "书写"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "Write the capital letter of the first letter in 'green': ____",
+          "answer": {
+            "value": "G"
+          },
+          "analysis": "颜色词的首字母要大写，green 的第一个字母是 g，大写就是 G，所以横线填 G。",
+          "difficulty": 3,
+          "knowledge_point": "颜色词首字母大写",
+          "tags": [
+            "书写"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which colour words are written with a capital letter?",
+          "options": [
+            "Blue",
+            "brown",
+            "White",
+            "black"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A Blue 首字母大写 ✓；B brown 是小写 ✗；C White 首字母大写 ✓；D black 是小写 ✗。故 A、C 成立，B、D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "颜色词首字母大写",
+          "tags": [
+            "多选",
+            "书写"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    }
+  ],
+  "_consolidated": {
+    "generated_at": "2026-11-09T04:23:36",
+    "rule": "非 legacy > 批次日期最新 > 题量最多 > mtime 最新",
+    "sources": [
+      {
+        "chapter": "Unit 1 What is your family like?",
+        "file": "english_g1_first_20261108_r2.json",
+        "questions": 21
+      },
+      {
+        "chapter": "Unit 2 How are you today?",
+        "file": "english_g1_first_20261108_r3.json",
+        "questions": 24
+      },
+      {
+        "chapter": "Unit 3 What do you take to school?",
+        "file": "english_g1_first_20261108_r4.json",
+        "questions": 24
+      },
+      {
+        "chapter": "Unit 4 What can you do?",
+        "file": "english_g1_first_20261108_r5.json",
+        "questions": 24
+      },
+      {
+        "chapter": "Unit 5 What is your favourite animal?",
+        "file": "english_g1_first_20261108_r6.json",
+        "questions": 24
+      },
+      {
+        "chapter": "Unit 6 What colours can you see?",
+        "file": "english_g1_first_20261108_r7.json",
+        "questions": 24
+      }
+    ],
+    "dropped_sections": [],
+    "reused_point_names_not_redeclared": [],
+    "outside_outline_skipped": []
+  }
+}

@@ -27,16 +27,21 @@ class _LegalConsentPageState extends ConsumerState<LegalConsentPage> {
     });
     try {
       final user = ref.read(currentUserProvider);
-      await ref.read(legalServiceProvider).accept(
+      await ref
+          .read(legalServiceProvider)
+          .accept(
             privacyVersion: kLegalPrivacyVersion,
             termsVersion: kLegalTermsVersion,
             guardianConfirmed: user?.isChild ?? false,
           );
       if (!mounted) return;
       if (user != null) {
-        ref.read(currentUserProvider.notifier).state =
-            user.copyWith(needsReconsent: false);
+        final updated = user.copyWith(needsReconsent: false);
+        ref.read(currentUserProvider.notifier).state = updated;
+        // 落盘缓存，避免断网启动时用旧状态再次要求同意。
+        await ref.read(authServiceProvider).cacheUser(updated);
       }
+      if (!mounted) return;
       context.go('/gate');
     } on ApiException catch (error) {
       if (!mounted) return;
@@ -65,7 +70,9 @@ class _LegalConsentPageState extends ConsumerState<LegalConsentPage> {
         children: [
           Text(
             '隐私政策与用户协议已更新',
-            style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
+            style: theme.textTheme.titleMedium?.copyWith(
+              fontWeight: FontWeight.bold,
+            ),
           ),
           const SizedBox(height: 8),
           Text(

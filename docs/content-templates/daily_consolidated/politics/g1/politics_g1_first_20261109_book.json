@@ -1,0 +1,2512 @@
+{
+  "subject": "politics",
+  "grade": 1,
+  "version": "部编版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第2课 我向国旗敬个礼",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "第3课 这是我们的校园",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "第4课 平平安安回家来",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "认识国旗",
+      "parent": "第2课 我向国旗敬个礼",
+      "order_index": 1,
+      "explanation": "我们的国家是中华人民共和国，国旗是五星红旗：旗面是红色，中间一颗大五角星和四颗小五角星。国旗是国家的象征，我们要从小懂得尊敬它、爱护它。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "升旗仪式有礼仪",
+      "parent": "第2课 我向国旗敬个礼",
+      "order_index": 2,
+      "explanation": "升国旗时要立正、面向国旗、行注目礼，少先队员行队礼，跟着唱国歌；仪式结束前不说笑、不打闹，国旗升降由专人负责。",
+      "prerequisites": [
+        "认识国旗"
+      ],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "认识校园场所",
+      "parent": "第3课 这是我们的校园",
+      "order_index": 1,
+      "explanation": "教室、操场、图书室、食堂、医务室、卫生间各有各的用途；知道每个地方是做什么的，才能按要求活动，不去不该去、不该乱进的地方。",
+      "prerequisites": [],
+      "weight": 1.1,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "爱护校园环境",
+      "parent": "第3课 这是我们的校园",
+      "order_index": 2,
+      "explanation": "校园是大家的：爱护花草树木、桌椅门窗和图书，光是捡起一张纸、关紧水龙头、不在墙上乱画，都是在爱护校园环境。",
+      "prerequisites": [
+        "认识校园场所"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "出行交通安全",
+      "parent": "第4课 平平安安回家来",
+      "order_index": 1,
+      "explanation": "走路要看红绿灯、走人行横道，不在马路上追逐打闹；坐小汽车要坐安全座椅、系好安全带，不把头和手伸出窗外。",
+      "prerequisites": [],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "走失防骗会求助",
+      "parent": "第4课 平平安安回家来",
+      "order_index": 2,
+      "explanation": "记住爸爸妈妈的电话和家庭住址；不跟陌生人走、不吃陌生人的东西；万一走散，要找穿制服的工作人员或警察求助，不能自己乱跑。",
+      "prerequisites": [
+        "出行交通安全"
+      ],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第5课 老师，您好！",
+      "order_index": 5
+    },
+    {
+      "node_type": "section",
+      "name": "第6课 拉拉手，交朋友",
+      "order_index": 6
+    },
+    {
+      "node_type": "section",
+      "name": "第7课 上课了，好好学",
+      "order_index": 7
+    },
+    {
+      "node_type": "section",
+      "name": "第8课 课余生活真丰富",
+      "order_index": 8
+    },
+    {
+      "node_type": "point",
+      "name": "见师问好懂礼貌",
+      "parent": "第5课 老师，您好！",
+      "order_index": 1,
+      "explanation": "见到老师主动问好，说「老师好」；上课铃响老师进教室要起立问好，等老师示意坐下再坐。主动问老师好是对老师的尊重。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "尊重老师不顶撞",
+      "parent": "第5课 老师，您好！",
+      "order_index": 2,
+      "explanation": "老师的话要认真听，不懂的礼貌地请教；有不同意见要先听完再说明想法，不能顶撞老师、给老师起外号。",
+      "prerequisites": [
+        "见师问好懂礼貌"
+      ],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "主动结交新朋友",
+      "parent": "第6课 拉拉手，交朋友",
+      "order_index": 1,
+      "explanation": "认识新同学要主动打招呼、自我介绍，记住同学的名字和特点；别人和自己不一样的地方也要尊重，不能嘲笑。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "分享谦让好朋友",
+      "parent": "第6课 拉拉手，交朋友",
+      "order_index": 2,
+      "explanation": "一起玩要轮流、一起分享；同学之间闹了矛盾先冷静把事情说清楚，主动承认自己的错误，必要时找老师帮忙，不能动手。",
+      "prerequisites": [
+        "主动结交新朋友"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "上课专心听好讲",
+      "parent": "第7课 上课了，好好学",
+      "order_index": 1,
+      "explanation": "上课前把课本和文具准备好，上课眼睛看着老师认真听，发言先举手等老师同意，作业自己独立完成，不做小动作。",
+      "prerequisites": [],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "课余生活巧安排",
+      "parent": "第8课 课余生活真丰富",
+      "order_index": 1,
+      "explanation": "课余可以读书、跳绳、画画、下棋，但要有条理、适可而动：先休息好再学习，学习和活动交替进行，不做危险的游戏。",
+      "prerequisites": [
+        "上课专心听好讲"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第9课 作息有规律",
+      "order_index": 9
+    },
+    {
+      "node_type": "section",
+      "name": "第10课 吃饭有讲究",
+      "order_index": 10
+    },
+    {
+      "node_type": "section",
+      "name": "第11课 对人有礼貌",
+      "order_index": 11
+    },
+    {
+      "node_type": "section",
+      "name": "第12课 玩也有学问",
+      "order_index": 12
+    },
+    {
+      "node_type": "point",
+      "name": "作息时间有规律",
+      "parent": "第9课 作息有规律",
+      "order_index": 1,
+      "explanation": "按时起床、按时上学、按时睡觉、按时完成作业，作息有规律身体才精神、上课才专注；长期熬夜和睡懒觉都会影响长个子和学习。",
+      "prerequisites": [],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "吃饭讲卫生",
+      "parent": "第10课 吃饭有讲究",
+      "order_index": 1,
+      "explanation": "饭前便后用肥皂和流水洗手，饭前不吃东西；吃饭要坐在椅子上、细嚼慢咽，不边走边吃、不说笑打闹，干净卫生才安全。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "饮食不挑不贪",
+      "parent": "第10课 吃饭有讲究",
+      "order_index": 2,
+      "explanation": "不挑食、不偏食，蔬菜、肉蛋、主食都要吃一点；零食只能少量吃，不能代替正餐，喝水比甜饮料更好。",
+      "prerequisites": [
+        "吃饭讲卫生"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "礼貌用语要会用",
+      "parent": "第11课 对人有礼貌",
+      "order_index": 1,
+      "explanation": "请求用「请」，得到帮助说「谢谢」，做错事说「对不起」，见面说「您好」；用词要恰当，语气要诚恳。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "待人有礼尊重人",
+      "parent": "第11课 对人有礼貌",
+      "order_index": 2,
+      "explanation": "尊重长辈、尊重同学，不嘲笑别人的缺点和不同；别人说话时安静倾听，说话和气、不打断。",
+      "prerequisites": [
+        "礼貌用语要会用"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "安全健康地玩",
+      "parent": "第12课 玩也有学问",
+      "order_index": 1,
+      "explanation": "玩要注意安全：不玩火、不玩电，不在马路边、水边和楼顶玩，不做推搡打闹的危险动作；玩还要有节制，先商量好游戏规则。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第13课 我们小点儿声",
+      "order_index": 13
+    },
+    {
+      "node_type": "section",
+      "name": "第14课 人人爱护公物",
+      "order_index": 14
+    },
+    {
+      "node_type": "section",
+      "name": "第15课 我们不乱扔",
+      "order_index": 15
+    },
+    {
+      "node_type": "section",
+      "name": "第16课 大家排好队",
+      "order_index": 16
+    },
+    {
+      "node_type": "point",
+      "name": "轻声细语不吵人",
+      "parent": "第13课 我们小点儿声",
+      "order_index": 1,
+      "explanation": "说话声音要轻，能让身边人听清就行；上课、看书、休息时不大声喧哗、不敲东西，别人才能安心学习、好好休息。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "公共场所守安静",
+      "parent": "第13课 我们小点儿声",
+      "order_index": 2,
+      "explanation": "图书馆、博物馆、地铁车厢、电影院等公共场所要保持安静：不奔跑喧哗、不大声打电话，让别人也能安心做事。",
+      "prerequisites": [
+        "轻声细语不吵人"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "爱护公共财物",
+      "parent": "第14课 人人爱护公物",
+      "order_index": 1,
+      "explanation": "桌椅、门窗、黑板、图书、健身器材都是大家共用的公共财物：使用要爱护，坏了要报告老师，不能乱涂乱刻、据为己有。",
+      "prerequisites": [],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "爱护花草与设施",
+      "parent": "第14课 人人爱护公物",
+      "order_index": 2,
+      "explanation": "校园和公园的花草树木、亭子座椅同样是大家公有的：不攀折花木、不踩草坪、不摇晃损坏设施，看到损坏要及时报告。",
+      "prerequisites": [
+        "爱护公共财物"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "垃圾分类不乱扔",
+      "parent": "第15课 我们不乱扔",
+      "order_index": 1,
+      "explanation": "垃圾要投进垃圾桶，废纸、瓶罐等按可回收物投放，果皮纸屑包好再扔；不随地吐痰、不随手乱扔，垃圾还能回收再利用。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "排队守序讲文明",
+      "parent": "第16课 大家排好队",
+      "order_index": 1,
+      "explanation": "排队要先来后到、不插队，上车先下后上，打饭、上厕所都要排队；排队整齐又安全，插队推搡既危险又不文明。",
+      "prerequisites": [],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一单元 我是小学生啦",
+      "order_index": 1,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "我们的国家是中华人民共和国，它的国旗是（  ）。",
+          "options": [
+            "五星红旗",
+            "五环旗",
+            "校旗",
+            "红黄相间的彩旗"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "中华人民共和国的国旗是五星红旗，选 A；五环旗是国际奥委会的会旗，校旗是学校自己的旗帜，彩旗更不是国旗。",
+          "difficulty": 1,
+          "knowledge_point": "认识国旗",
+          "tags": [
+            "国旗"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面关于国旗的说法，正确的是（  ）。",
+          "options": [
+            "国旗是国家的象征，我们要尊敬它、爱护它",
+            "国旗可以用来垫桌脚",
+            "举着国旗跑着玩很开心",
+            "国旗上的图案可以随便涂改"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "国旗代表国家，是庄严的象征，必须尊敬和爱护，选 A；垫桌脚、举着跑、涂改图案都是糟蹋国旗的行为。",
+          "difficulty": 2,
+          "knowledge_point": "认识国旗",
+          "tags": [
+            "国旗"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "国旗是国家的象征，每个小学生都应该尊敬它、爱护它。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "国旗代表我们的国家，尊重和爱护国旗是每个小学生应尽的义务，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "认识国旗",
+          "tags": [
+            "国旗"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些做法是在爱护国旗（  ）",
+          "options": [
+            "升旗时严肃地行注目礼",
+            "把国旗铺在地上当垫子",
+            "用干净的双手把国旗抚平",
+            "在国旗上写写画画"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A 升旗时行注目礼 ✓；B 把国旗当垫子是糟蹋国旗 ✗；C 抚平国旗、保持整洁 ✓；D 在国旗上写画是损坏国旗 ✗。故 A、C 成立，B、D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "认识国旗",
+          "tags": [
+            "多选",
+            "国旗"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "在学校的升旗仪式上，下面哪种做法是正确的（  ）。",
+          "options": [
+            "全体肃立，面向国旗，行注目礼",
+            "低下头看地，等仪式结束就好",
+            "和后面的同学小声聊天",
+            "先跑回教室拿水杯"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "升旗是庄严的仪式，人要站直、眼睛看着国旗，选 A；低头、聊天、跑开都会破坏仪式的肃静。",
+          "difficulty": 3,
+          "knowledge_point": "认识国旗",
+          "tags": [
+            "国旗"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "升国旗的时候，小明应该怎么做？（  ）",
+          "options": [
+            "立正站好，面向国旗",
+            "继续和同桌聊天",
+            "低头去捡掉在地上的铅笔",
+            "背对着国旗站着"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "升旗时要立正站好、面向国旗，这是向国旗致敬的基本要求，选 A；聊天、捡东西、背对国旗都是不严肃的表现。",
+          "difficulty": 1,
+          "knowledge_point": "升旗仪式有礼仪",
+          "tags": [
+            "国旗"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "升国旗时同学们要肃立，不能说笑打闹。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "升旗时要肃立、保持安静，跟着唱国歌；说笑打闹既不严肃，也容易影响旗手升降国旗，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "升旗仪式有礼仪",
+          "tags": [
+            "国旗"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "升国旗时，我们要面向国旗行（  ）礼。",
+          "answer": {
+            "value": "注目"
+          },
+          "analysis": "面向国旗行注目礼，少先队员还可以行队礼，两者都是向国旗表示尊敬；空格里填「注目」最准确。",
+          "difficulty": 2,
+          "knowledge_point": "升旗仪式有礼仪",
+          "tags": [
+            "国旗"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "降旗的时候，正确的做法是（  ）。",
+          "options": [
+            "面向国旗立正，等旗降下后再离开",
+            "旗还在降就转身跑回教室",
+            "先收拾好书包准备回家",
+            "站在原地和同学讲话"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "国旗升降是同一套礼仪，降旗时也要立正看着国旗，等旗降下后再离开，选 A；提前走开或讲话都是不礼貌的。",
+          "difficulty": 3,
+          "knowledge_point": "升旗仪式有礼仪",
+          "tags": [
+            "国旗"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "参加升旗仪式时，下面哪些做法是合适的（  ）",
+          "options": [
+            "站直、站稳，眼睛看着国旗",
+            "唱国歌时声音洪亮",
+            "把手机举起来不停拍照",
+            "仪式结束后再和同学说话"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 站直站好、看着国旗 ✓；B 唱国歌时声音洪亮 ✓；C 举手机拍照既不专心也影响他人 ✗；D 仪式结束后再说话是守秩序的表现 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "升旗仪式有礼仪",
+          "tags": [
+            "多选",
+            "国旗"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "同学们上体育课，应该到的场所是（  ）。",
+          "options": [
+            "操场",
+            "图书室",
+            "食堂",
+            "医务室"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "体育课在操场上活动，选 A；图书室用来看书借书，食堂用来吃饭，医务室是身体不舒服时去的地方。",
+          "difficulty": 1,
+          "knowledge_point": "认识校园场所",
+          "tags": [
+            "校园"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "上体育课的地点是（  ）。",
+          "answer": {
+            "value": "操场"
+          },
+          "analysis": "体育课要活动身体，地点在操场；填「教室」或「图书室」都与上课地点不符，所以填操场。",
+          "difficulty": 2,
+          "knowledge_point": "认识校园场所",
+          "tags": [
+            "校园"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面关于校园场所的说法，正确的有（  ）",
+          "options": [
+            "每个场所都有各自的用途",
+            "想做什么就随便挑一个地方去",
+            "在图书室要保持安静",
+            "身体不舒服可以去医务室"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C",
+              "D"
+            ]
+          },
+          "analysis": "A 每个场所都有规定用途 ✓；B 想去哪就去哪会妨碍他人、也容易出危险 ✗；C 图书室要保持安静 ✓；D 不舒服去医务室 ✓。故 A、C、D 成立，B 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "认识校园场所",
+          "tags": [
+            "多选",
+            "校园"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "看到「实验室」三个字，小明就可以推门进去参观。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "实验室有专门用途，要上课或由老师带领才能进入，不能随便乱闯，所以说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "认识校园场所",
+          "tags": [
+            "校园"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "情境应用：一年级的乐乐刚上学，记不住学校里各个地方在哪里。请你帮他记住两个地方，并说清楚每个地方是做什么用的。",
+          "answer": {
+            "value": "图书室是看书、借书的地方；操场是跑步、做操、玩球的地方。"
+          },
+          "analysis": "评分要点：①说出两个不同的场所（2 分）；②说清每个场所的用途（2 分）；③语句通顺、完整（1 分）。只写场所名称不说用途，最后 1 分不得。",
+          "difficulty": 3,
+          "knowledge_point": "认识校园场所",
+          "tags": [
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "看到教学楼走廊上有一张废纸在风里飘，最好的做法是（  ）。",
+          "options": [
+            "捡起来丢进垃圾桶",
+            "先踩上一脚再捡起来",
+            "留在原地等保洁阿姨来收拾",
+            "捡起来放到同学桌上"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "把废纸捡起丢进垃圾桶，既保持了走廊干净，也保护了大家走动时的安全，选 A；踩、丢、挪走都是不合适的做法。",
+          "difficulty": 2,
+          "knowledge_point": "爱护校园环境",
+          "tags": [
+            "校园"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "校园里桌椅坏了要及时告诉老师，不能自己拿着锤子敲来敲去。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "公物坏了要报告老师，由学校安排修理；自己敲打既修不好，又会损坏公物甚至伤到自己，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "爱护校园环境",
+          "tags": [
+            "校园"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些做法是在爱护校园环境（  ）",
+          "options": [
+            "爱护花草树木，不摘花不踩草坪",
+            "洗完手随手关紧水龙头",
+            "把果皮纸屑丢在草地上",
+            "在图书室爱护书籍，不撕页不乱涂"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 不摘花不踩草坪 ✓；B 关紧水龙头、节约用水 ✓；C 垃圾丢在草地上会污染环境 ✗；D 爱护图书 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "爱护校园环境",
+          "tags": [
+            "多选",
+            "校园"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "情境应用：小雨看到教室窗台上的两盆花被一位同学摘了花。她应该怎么做？为什么？",
+          "answer": {
+            "value": "她应该马上制止这位同学，并告诉老师；花草是大家共同爱护的校园设施，摘花既伤害了植物，又破坏了校园环境。"
+          },
+          "analysis": "评分要点：①说出制止或劝阻的行为（2 分）；②说出向老师报告或提醒同学的做法（1 分）；③讲清爱护花木的理由（2 分）。只写「告诉他不对」而没有理由，最后 2 分不得。",
+          "difficulty": 4,
+          "knowledge_point": "爱护校园环境",
+          "tags": [
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "小明和妈妈走在路上，要过人行横道时应该（  ）。",
+          "options": [
+            "看红绿灯，绿灯亮了再走",
+            "看到没车就飞快地跑过去",
+            "一边看手机一边慢慢走过马路",
+            "站在路中间等朋友一起走"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "过马路要走人行横道、看红绿灯，绿灯亮了并在确认安全后通过，选 A；跑过去、看手机、停在路中间都有危险。",
+          "difficulty": 2,
+          "knowledge_point": "出行交通安全",
+          "tags": [
+            "安全"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "坐小汽车时把头伸出窗外看风景，是安全又开心的做法。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "头伸出窗外容易碰到路边的树枝、招牌，也可能被刮伤，属于危险行为；坐好、系好安全带才安全，所以说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "出行交通安全",
+          "tags": [
+            "安全"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些做法符合交通安全的要求（  ）",
+          "options": [
+            "走人行横道过马路",
+            "在马路上追逐打闹",
+            "坐车时坐在安全座椅上、系好安全带",
+            "过马路时牵着大人的手"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C",
+              "D"
+            ]
+          },
+          "analysis": "A 走人行横道 ✓；B 在马路上追逐打闹非常危险 ✗；C 坐安全座椅、系安全带 ✓；D 牵手过马路更稳妥 ✓。故 A、C、D 成立，B 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "出行交通安全",
+          "tags": [
+            "多选",
+            "安全"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "过马路要看红绿灯，红灯停、绿灯（  ）。",
+          "answer": {
+            "value": [
+              "行",
+              "通行"
+            ]
+          },
+          "analysis": "交通信号的基本规则是「红灯停、绿灯行」；绿灯亮了还要左右看一看，确认安全再过马路，空里填「行」或「通行」都对。",
+          "difficulty": 3,
+          "knowledge_point": "出行交通安全",
+          "tags": [
+            "安全"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "记住爸爸妈妈的电话号码和家庭住址，走失的时候能帮我们更快找到家。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "把家人的电话和住址记在脑子里，遇到走失或需要求助时就能马上说清楚，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "走失防骗会求助",
+          "tags": [
+            "安全"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "在商场里和妈妈走散了，小朋友应该（  ）。",
+          "options": [
+            "找穿制服的工作人员或保安求助",
+            "自己跑出商场去找妈妈",
+            "跟着说是来接他的陌生叔叔走",
+            "在马路边大声哭等妈妈找来"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "走散时留在原地或找工作人员、广播站求助最安全，选 A；跟陌生人走、乱跑、离开原地都可能遇到危险。",
+          "difficulty": 3,
+          "knowledge_point": "走失防骗会求助",
+          "tags": [
+            "安全"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些做法能帮助我们保护自己（  ）",
+          "options": [
+            "记住爸爸妈妈的电话号码",
+            "不跟陌生人走，不吃陌生人的东西",
+            "和同学结伴走，不一个人落单",
+            "陌生人给的东西都可以拿"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 记住家人电话 ✓；B 拒绝陌生人的邀请和食物 ✓；C 结伴走不落单 ✓；D 拿陌生人的东西可能被骗走财物甚至受到伤害 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "走失防骗会求助",
+          "tags": [
+            "多选",
+            "安全"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "情境应用：放学路上，一位陌生叔叔对你说「你爸爸让我来接你」。你会怎么做？请说出你的理由和求助的办法。",
+          "answer": {
+            "value": "我不跟他走。我先回学校找老师，或给爸爸妈妈打电话确认；陌生人说的话不能随便相信，要找老师、保安或警察这些可靠的大人帮忙。"
+          },
+          "analysis": "评分要点：①明确表示不跟陌生人走（2 分）；②说出向老师、保安或警察求助的做法（2 分）；③讲清理由（陌生人不可信，要先核实）（1 分）。只写「我不走」而不说怎么办，最后 2 分不得。",
+          "difficulty": 4,
+          "knowledge_point": "走失防骗会求助",
+          "tags": [
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第二单元 过好校园生活",
+      "order_index": 2,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "早上在校门口见到老师，最合适的做法是（  ）。",
+          "options": [
+            "主动打招呼问老师好",
+            "低头快步走过去",
+            "躲在同学身后",
+            "从老师身边跑过去"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "主动问老师好是有礼貌的表现，选 A；低头快走、躲着走、跑过去都是不懂礼貌的做法。",
+          "difficulty": 1,
+          "knowledge_point": "见师问好懂礼貌",
+          "tags": [
+            "礼貌"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "上课铃响后，老师走进教室，同学们应该（  ）。",
+          "options": [
+            "继续和同桌说话",
+            "自己先趴在桌上",
+            "起立问好，等老师说坐下再坐",
+            "把椅子推得吱吱响"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "老师进教室要起立问「老师好」，等老师示意后再坐下，选 C；说话、趴桌、弄出响声都是不尊重老师的表现。",
+          "difficulty": 2,
+          "knowledge_point": "见师问好懂礼貌",
+          "tags": [
+            "礼貌"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "见到老师主动问好，是有礼貌的表现。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "主动问好既是礼貌，也让老师感到被尊重，老师和同学的关系因此更融洽，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "见师问好懂礼貌",
+          "tags": [
+            "礼貌"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "见到老师问好，可以说「老师（  ）」。",
+          "answer": {
+            "value": [
+              "好",
+              "您好"
+            ]
+          },
+          "analysis": "见到老师问「老师好」或「老师您好」都是礼貌的问候，答句后面要有称呼；只说「你好」而不加称呼显得不够尊重。",
+          "difficulty": 3,
+          "knowledge_point": "见师问好懂礼貌",
+          "tags": [
+            "礼貌"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "小明觉得老师批评得不对，他应该（  ）。",
+          "options": [
+            "先认真听完，再礼貌地说明自己的想法",
+            "当场大声顶撞老师",
+            "转身走掉再也不理老师",
+            "和同学一起怪老师多管闲事"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "有不同意见要先听完再平静地说出来，选 A；顶撞、走掉、怪老师不但解决不了问题，还会伤害老师。",
+          "difficulty": 3,
+          "knowledge_point": "尊重老师不顶撞",
+          "tags": [
+            "尊师"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "有不懂的问题礼貌地请教老师，是好学的表现。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "学问问出来才学得明白，请教老师是爱思考、爱学习的表现，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "尊重老师不顶撞",
+          "tags": [
+            "尊师"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些做法体现了尊重老师（  ）",
+          "options": [
+            "认真听老师讲课",
+            "给老师起难听的外号",
+            "见到老师主动问好",
+            "按老师的要求完成作业"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C",
+              "D"
+            ]
+          },
+          "analysis": "A 认真听课 ✓；B 给老师起外号是不尊重 ✗；C 主动问好 ✓；D 按要求完成作业 ✓。故 A、C、D 成立，B 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "尊重老师不顶撞",
+          "tags": [
+            "多选",
+            "尊师"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "情境应用：小明因为老师让他把作业重做一遍，心里很不高兴。他可以怎么做？为什么？",
+          "answer": {
+            "value": "他可以先按老师的要求把作业重新做一遍，课后礼貌地问老师哪一步需要改进；老师的建议是让作业做得更好，顶撞老师反而解决不了问题。"
+          },
+          "analysis": "评分要点：①说出接受老师的建议、重新完成作业的做法（2 分）；②说出课后礼貌请教的方法（1 分）；③讲清理由（2 分）。只写「我很生气」而没有任何做法，最后 2 分不得。",
+          "difficulty": 4,
+          "knowledge_point": "尊重老师不顶撞",
+          "tags": [
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "新同学转入班里，想认识大家，他可以（  ）。",
+          "options": [
+            "主动介绍自己说「大家好，我叫……」",
+            "坐在座位上等别人来跟他说话",
+            "上课时只顾自己看书写字",
+            "把书包放到别人的座位上"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "主动自我介绍能让新同学很快被大家认识，选 A；干等着、只顾自己、把书包占别人座位都不是交朋友的做法。",
+          "difficulty": 1,
+          "knowledge_point": "主动结交新朋友",
+          "tags": [
+            "交友"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "想和新同学做朋友，最合适的做法是（  ）。",
+          "options": [
+            "把他喜欢的玩具藏起来",
+            "课间主动和他说说话、一起玩",
+            "请其他同学不要和他玩",
+            "走路时故意撞他一下"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "主动友好地交往、一起玩，才能真正成为朋友，选 B；藏玩具、孤立同学、故意撞人都只会让对方难过。",
+          "difficulty": 2,
+          "knowledge_point": "主动结交新朋友",
+          "tags": [
+            "交友"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些做法有助于交到新朋友（  ）",
+          "options": [
+            "主动微笑打招呼",
+            "记住同学的名字",
+            "做游戏时分享玩具",
+            "给同学起难听的外号"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 微笑打招呼让人愿意靠近 ✓；B 记住名字显得在意对方 ✓；C 分享玩具是友好相处 ✓；D 起外号会伤害同学 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "主动结交新朋友",
+          "tags": [
+            "多选",
+            "交友"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "有的同学和自己不一样的地方，也应该尊重他，不能嘲笑。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "每个人的习惯和特点都不一样，尊重差异才能友好相处，嘲笑别人会伤害同学的自尊，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "主动结交新朋友",
+          "tags": [
+            "交友"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "和同学一起玩同一个玩具，正确的做法是（  ）。",
+          "options": [
+            "轮流玩，谁玩谁保管",
+            "抢过来自己一直玩",
+            "藏起来不让别人碰",
+            "谁抢到就归谁，别人不许玩"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "轮流玩才是公平的规则，选 A；抢夺、藏起来、谁抢归谁都会让同伴扫兴，也交不到朋友。",
+          "difficulty": 2,
+          "knowledge_point": "分享谦让好朋友",
+          "tags": [
+            "交友"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "同学不小心踩坏了你的橡皮本，你应该（  ）。",
+          "options": [
+            "大声骂他一顿",
+            "从此再也不理他",
+            "先了解情况，一起想办法解决",
+            "把他的作业本藏起来"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "先弄清情况、再一起想办法，才可能把损失补回来，选 C；骂人、不理人、藏别人本子都会把小事变成大事。",
+          "difficulty": 3,
+          "knowledge_point": "分享谦让好朋友",
+          "tags": [
+            "交友"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些做法能处理好同学之间的矛盾（  ）",
+          "options": [
+            "先冷静下来，把事情说清楚",
+            "主动承认自己的错误",
+            "请老师帮忙评理",
+            "动手推对方一下"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 冷静说清事情 ✓；B 主动承认错误 ✓；C 请老师帮忙评理 ✓；D 动手推人会让矛盾升级 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "分享谦让好朋友",
+          "tags": [
+            "多选",
+            "交友"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "情境应用：小红想和小刚一起搭积木，小刚说「这个是我先搭的，不许你碰」。小红可以怎么做？为什么？",
+          "answer": {
+            "value": "小红可以先请他一起搭，说明「我们一起搭，积木一起用才搭得更高」；如果他说不通，就请老师帮忙调解，不能动手抢也不能不问就自己拿走。"
+          },
+          "analysis": "评分要点：①提出一起玩的办法（2 分）；②说出请老师调解的求助办法（1 分）；③讲清理由（1 分）；④语句通顺完整（1 分）。只写「我不理他了」，后面 3 分不得。",
+          "difficulty": 3,
+          "knowledge_point": "分享谦让好朋友",
+          "tags": [
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "上课时老师讲课，你应该（  ）。",
+          "options": [
+            "眼睛看着老师认真听",
+            "低头玩橡皮",
+            "和同桌小声聊天",
+            "在课本空白处画小人"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "认真听讲才能学到知识，选 A；玩橡皮、聊天、画画都会错过老师讲的内容，还影响别人。",
+          "difficulty": 1,
+          "knowledge_point": "上课专心听好讲",
+          "tags": [
+            "学习"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "上课时想发言，应该（  ）。",
+          "options": [
+            "不等老师同意就大声说出来",
+            "先举手，等老师点到再站起来说",
+            "拉同学一起说",
+            "写纸条传给同学"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "举手是课堂发言的信号，老师点到谁谁说，课堂才有秩序，选 B；抢着说、拉着同学说、传纸条都会打断讲课。",
+          "difficulty": 2,
+          "knowledge_point": "上课专心听好讲",
+          "tags": [
+            "学习"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些是上课的好习惯（  ）",
+          "options": [
+            "课前把课本和文具准备好",
+            "老师提问时安静地听",
+            "做作业独立完成，不抄同学的",
+            "一边听课一边和同学传纸条"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 备好课本文具 ✓；B 提问时安静听 ✓；C 独立完成作业 ✓；D 传纸条既影响自己也影响同学，是坏习惯 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "上课专心听好讲",
+          "tags": [
+            "多选",
+            "学习"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "上课要专心听讲，做作业要自己（  ）完成，不能抄同学的答案。",
+          "answer": {
+            "value": "独立"
+          },
+          "analysis": "自己独立完成作业才知道自己哪里会、哪里不会，抄答案只知道结果不懂过程；所以这里填「独立」。",
+          "difficulty": 3,
+          "knowledge_point": "上课专心听好讲",
+          "tags": [
+            "学习"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "课间十分钟，下面哪种活动最合适？（  ）",
+          "options": [
+            "在走廊慢慢走走、喝口水",
+            "在楼梯上追着跑",
+            "趴在桌上睡到上课铃响前一刻钟",
+            "在操场上踢球把同学撞倒"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课间要适度活动、准备好上课，选 A；追跑、久睡不起、撞人都会影响自己和同学。",
+          "difficulty": 2,
+          "knowledge_point": "课余生活巧安排",
+          "tags": [
+            "课余"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些是健康的课余生活（  ）",
+          "options": [
+            "跳绳、踢毽子等体育活动",
+            "在图书室读课外书",
+            "课间在楼梯间追逐打闹",
+            "很长时间低头玩电子游戏"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "A 体育活动有益健康 ✓；B 读课外书能开阔眼界 ✓；C 楼梯间追逐打闹很危险 ✗；D 长时间低头玩游戏伤眼睛也耽误学习 ✗。故 A、B 成立，C、D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "课余生活巧安排",
+          "tags": [
+            "多选",
+            "课余"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "课余时间应该安排得有条理，学习好、活动好、休息好。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "有安排地安排课余时间，才能学得轻松、玩得开心，也不会把作业拖到深夜，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "课余生活巧安排",
+          "tags": [
+            "课余"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "情境应用：周末在家安排课余生活，请你写出两项活动，并说明为什么这样安排。",
+          "answer": {
+            "value": "我先看半小时课外书，再到小区里跳绳十五分钟；先安静阅读再做运动，学和玩交替进行，既能休息好，也能锻炼身体。"
+          },
+          "analysis": "评分要点：①写出两项具体活动（2 分）；②说明安排的先后或理由（2 分）；③语句通顺完整（1 分）。只罗列活动不讲理由，最后 2 分不得。",
+          "difficulty": 4,
+          "knowledge_point": "课余生活巧安排",
+          "tags": [
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第三单元 养成良好习惯",
+      "order_index": 3,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "每天早上起床，下面哪种做法是对的（  ）。",
+          "options": [
+            "按闹钟起床，吃完早饭再去上学",
+            "再躺一会儿，迟到也不怕",
+            "先看电视再去上学",
+            "让妈妈叫醒后还躺着想再玩"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "按时起床、吃好早饭再上学，是有规律作息的开始，选 A；睡懒觉、先看电视都会耽误上学时间。",
+          "difficulty": 1,
+          "knowledge_point": "作息时间有规律",
+          "tags": [
+            "习惯"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "每天晚上很晚才睡，第二天上课会出现什么情况？（  ）",
+          "options": [
+            "精神特别好",
+            "容易打瞌睡，注意力不集中",
+            "个子长得更快",
+            "写作业速度更快"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "睡得晚身体休息不够，上课会打瞌睡、听不进课，选 B；按时早睡才能保证上课有精神。",
+          "difficulty": 2,
+          "knowledge_point": "作息时间有规律",
+          "tags": [
+            "习惯"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些是有规律作息的表现（  ）",
+          "options": [
+            "每天差不多的时间睡觉、起床",
+            "周末一直睡到中午才起",
+            "先完成作业，再去看电视",
+            "长时间熬夜看电视"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A 每天按时睡觉起床 ✓；B 周末睡到中午，作息被打乱 ✗；C 先写作业再看电视，顺序合理 ✓；D 长时间熬夜看电视 ✗。故 A、C 成立，B、D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "作息时间有规律",
+          "tags": [
+            "多选",
+            "习惯"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "情境应用：小明每天写作业写到晚上十一点，早上起不来，上课总打瞌睡。请你给他两条建议。",
+          "answer": {
+            "value": "一是要提前开始写作业，争取九点前上床睡觉；二是早上按时起床，起床后吃点早饭再去上学。作息有规律，上课才有精神。"
+          },
+          "analysis": "评分要点：①给出两条具体、可操作的建议（2 分）；②建议围绕按时睡觉、按时起床或先写作业后娱乐（2 分）；③语句通顺完整（1 分）。只说「要早点睡」不算两条具体建议，最后 1 分不得。",
+          "difficulty": 4,
+          "knowledge_point": "作息时间有规律",
+          "tags": [
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "饭前便后应该做什么？（  ）",
+          "options": [
+            "用肥皂和流水洗手",
+            "在衣服上随便擦擦",
+            "在水里晃一晃就行",
+            "不用管，饭前擦擦嘴就行"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "手上有很多看不见的细菌，饭前便后要用肥皂和流水认真洗手，选 A；随便擦、晃一晃都洗不干净。",
+          "difficulty": 1,
+          "knowledge_point": "吃饭讲卫生",
+          "tags": [
+            "卫生"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "吃饭时边说话边笑容易呛到，所以吃饭要专心。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "嘴里有食物时说笑容易呛进气管，很危险，所以吃饭要坐在椅子上专心吃，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "吃饭讲卫生",
+          "tags": [
+            "卫生"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "吃饭时正确的做法是（  ）。",
+          "options": [
+            "细嚼慢咽，坐在椅子上吃",
+            "站着吃、边走边吃",
+            "一边吃一边和同学打闹",
+            "把饭含在嘴里走来走去"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "坐好吃、慢慢嚼才安全也容易消化，选 A；边走边吃、打闹、含着饭走路都有呛到的危险。",
+          "difficulty": 3,
+          "knowledge_point": "吃饭讲卫生",
+          "tags": [
+            "卫生"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些是吃饭讲卫生的好习惯（  ）",
+          "options": [
+            "饭前便后洗手",
+            "用干净的碗筷吃饭",
+            "吃饭时大声说笑打闹",
+            "不吃从地上捡回来的食物"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 洗手 ✓；B 用干净的碗筷 ✓；C 吃饭时大声说笑容易呛到 ✗；D 掉在地上的食物不能再吃 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "吃饭讲卫生",
+          "tags": [
+            "多选",
+            "卫生"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "小明只吃自己爱吃的菜，把青菜全挑出来，这样做（  ）。",
+          "options": [
+            "不好，身体需要各种营养",
+            "很好，还能节约粮食",
+            "很好，妈妈会高兴",
+            "没关系，只要吃饱就行"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "身体需要各种各样的营养，只吃一种菜容易营养不良，选 A；挑食既不健康，也不是真正的节约。",
+          "difficulty": 2,
+          "knowledge_point": "饮食不挑不贪",
+          "tags": [
+            "饮食"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "零食可以代替正餐，吃得越多越好。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "零食营养不全、含糖多，只能少量吃，不能代替正餐；正餐吃得好，身体才有足够的营养，所以说法错误。",
+          "difficulty": 2,
+          "knowledge_point": "饮食不挑不贪",
+          "tags": [
+            "饮食"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些是健康的饮食习惯（  ）",
+          "options": [
+            "每天按时吃早饭",
+            "不挑食，蔬菜和水果都吃一点",
+            "把零食当饭吃",
+            "把甜饮料当水天天喝"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "A 每天吃早饭 ✓；B 不挑食、什么都吃一点 ✓；C 零食代替正餐 ✗；D 甜饮料含糖多，应该多喝水 ✗。故 A、B 成立，C、D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "饮食不挑不贪",
+          "tags": [
+            "多选",
+            "饮食"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "情境应用：午饭时，小丽面前有青菜和鸡腿，她只夹鸡腿。请你劝她怎么吃，并说出理由。",
+          "answer": {
+            "value": "她应该青菜和鸡腿都吃一点，比如先吃一口青菜再吃鸡腿；蔬菜和肉类都要吃一点，身体才有足够的营养，才长得高、不容易生病。"
+          },
+          "analysis": "评分要点：①劝她每样都吃一点、不挑食（2 分）；②说出理由——营养要全面（2 分）；③语句通顺完整（1 分）。只写「不能挑食」而没有理由，最后 2 分不得。",
+          "difficulty": 3,
+          "knowledge_point": "饮食不挑不贪",
+          "tags": [
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "铅笔掉在地上，想请同学帮你捡起来，最合适的说法是（  ）。",
+          "options": [
+            "请帮我捡一下好吗",
+            "快给我捡起来",
+            "喂，捡一下",
+            "你看着办吧"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "请求别人帮忙要用「请」，语气还要诚恳，选 A；命令、催逼和不管别人的做法都不礼貌。",
+          "difficulty": 1,
+          "knowledge_point": "礼貌用语要会用",
+          "tags": [
+            "礼貌"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "上课时不小心碰倒了同桌的水杯，你应该说（  ）。",
+          "options": [
+            "谢谢",
+            "对不起",
+            "再见",
+            "没关系"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "碰倒别人的东西是自己的失误，要主动道歉说「对不起」，选 B；「谢谢」是别人帮了你才说的话。",
+          "difficulty": 2,
+          "knowledge_point": "礼貌用语要会用",
+          "tags": [
+            "礼貌"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些是常用的礼貌用语（  ）",
+          "options": [
+            "您好",
+            "请",
+            "谢谢",
+            "快给我"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 您好 ✓；B 请 ✓；C 谢谢 ✓；D 快给我是命令式的说法 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "礼貌用语要会用",
+          "tags": [
+            "多选",
+            "礼貌"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "别人帮了你，要说「（  ）」；做错了事要说「（  ）」。",
+          "answer": {
+            "value": [
+              "谢谢",
+              "对不起"
+            ]
+          },
+          "analysis": "得到帮助要道谢，说「谢谢」；做错事要道歉，说「对不起」。两道空依次填谢谢、对不能颠倒，顺序写反就答错了。",
+          "difficulty": 2,
+          "knowledge_point": "礼貌用语要会用",
+          "tags": [
+            "礼貌"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "看见老爷爷提着重重的袋子慢慢上楼梯，你可以（  ）。",
+          "options": [
+            "上前帮他提一会儿",
+            "笑他年纪大了真慢",
+            "从旁边快步走过去",
+            "推他一把让他快点"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "主动帮忙是尊重长辈的表现，选 A；嘲笑、漠视、推搡都是不尊重也不安全的行为。",
+          "difficulty": 2,
+          "knowledge_point": "待人有礼尊重人",
+          "tags": [
+            "尊重"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "因为有的同学家里条件不如我们家，就不和他玩，这样做是不对的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "同学之间要平等相处，不能拿家庭条件去衡量别人；不和他玩会伤害同学的感情，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "待人有礼尊重人",
+          "tags": [
+            "尊重"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些做法体现了尊重别人（  ）",
+          "options": [
+            "请长辈先走",
+            "不打断别人说话",
+            "嘲笑说话有口音的同学",
+            "别人发言时安静倾听"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 请长辈先走 ✓；B 不打断别人 ✓；C 嘲笑有口音的同学 ✗；D 安静倾听 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "待人有礼尊重人",
+          "tags": [
+            "多选",
+            "尊重"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "情境应用：你的同桌说话有口音，别的同学取笑他。你会怎么做？为什么？",
+          "answer": {
+            "value": "我会制止他们，并告诉同学不能取笑别人；每个人都有不同的说话习惯，尊重别人，别人才会尊重自己。"
+          },
+          "analysis": "评分要点：①明确表示要制止取笑的行为（2 分）；②说出尊重差异的理由（2 分）；③语句通顺完整（1 分）。只写「不许笑」而没有理由，最后 2 分不得。",
+          "difficulty": 4,
+          "knowledge_point": "待人有礼尊重人",
+          "tags": [
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面哪种游戏是安全的？（  ）",
+          "options": [
+            "在小区空地上跳绳、踢毽子",
+            "在马路边追着球跑",
+            "到水边捞鱼虾",
+            "爬到楼顶上看风景"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "在开阔安全的场地活动最安全，选 A；马路边、水边、楼顶都有很大危险，绝不能去。",
+          "difficulty": 2,
+          "knowledge_point": "安全健康地玩",
+          "tags": [
+            "安全"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些做法在玩的时候是安全的（  ）",
+          "options": [
+            "不玩火、不玩电",
+            "不到没有大人陪同的水边玩",
+            "和小伙伴商量好游戏规则",
+            "和同学打闹时把对方推下楼梯"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 不玩火玩电 ✓；B 不独自去水边 ✓；C 先商量规则，玩得有序 ✓；D 把人推下楼梯非常危险 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "安全健康地玩",
+          "tags": [
+            "多选",
+            "安全"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "玩也要有节制，不能因为想玩就影响学习和休息。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "玩本身是好事，但玩得过头会耽误作业、影响身体，所以要安排好时间，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "安全健康地玩",
+          "tags": [
+            "安全"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "情境应用：星期天你和好朋友都想玩电子游戏。请你安排好这一天的活动，说明理由。",
+          "answer": {
+            "value": "我先完成作业，再玩十五分钟游戏，然后到小区里活动一会儿；学习和玩要交替安排，按时完成作业才玩得更安心。"
+          },
+          "analysis": "评分要点：①写出具体的活动安排（2 分）；②说明先学习后娱乐或劳逸结合的理由（2 分）；③语句通顺完整（1 分）。只写「玩一会儿」没有安排和理由，最后 3 分不得。",
+          "difficulty": 3,
+          "knowledge_point": "安全健康地玩",
+          "tags": [
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第四单元 我们讲文明",
+      "order_index": 4,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "上课时同桌想跟你说话，你应该（  ）。",
+          "options": [
+            "轻轻说一声「下课再说」",
+            "大声喊他一起说话",
+            "用脚踢他的椅子",
+            "假装没听见继续写字"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课堂上要保持安静，轻轻提醒「下课再说」既不影响别人，也照顾了同学，选 A；大声喊、踢椅子都会打扰课堂。",
+          "difficulty": 1,
+          "knowledge_point": "轻声细语不吵人",
+          "tags": [
+            "文明"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "在教室里，下面哪种声音是可以的？（  ）",
+          "options": [
+            "大声朗读课文",
+            "轻轻和同桌说一句悄悄话",
+            "用力敲桌子引起注意",
+            "追逐打闹发出响声"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "教室里说话要轻，选 B；大声朗读、敲桌子、追逐打闹都会影响同学的听课和学校的秩序。",
+          "difficulty": 2,
+          "knowledge_point": "轻声细语不吵人",
+          "tags": [
+            "文明"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "说话声音大一点才显得有精神，让周围的人都听见才好。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "声音大并不能显得有精神，反而会打扰身边的人；说话以对方能听清为宜，所以说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "轻声细语不吵人",
+          "tags": [
+            "文明"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些场合要小声说话（  ）",
+          "options": [
+            "教室上课的时候",
+            "图书室看书的时候",
+            "乘坐公交车的时候",
+            "操场上做游戏的时候"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 上课时要安静 ✓；B 图书室要保持安静 ✓；C 车厢里说话要小声 ✓；D 操场上做游戏可以放开声音 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "轻声细语不吵人",
+          "tags": [
+            "多选",
+            "文明"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "在地铁车厢里，最合适的做法是（  ）。",
+          "options": [
+            "小声说话、不大声打电话",
+            "大声打电话讲事情",
+            "放声唱歌",
+            "在车厢里追逐打闹"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "车厢里人多，小声说话才不影响别人，选 A；大声打电话、唱歌、追逐打闹都会打扰乘客。",
+          "difficulty": 2,
+          "knowledge_point": "公共场所守安静",
+          "tags": [
+            "文明"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "在博物馆、图书馆等公共场所要保持安静，因为大家都在专心参观或学习。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "公共场所需要安静，喧哗会打扰他人，也影响展品和图书，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "公共场所守安静",
+          "tags": [
+            "文明"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些是在公共场所应该做的（  ）",
+          "options": [
+            "排队购票、按秩序上车",
+            "大声打电话聊天",
+            "把垃圾丢进垃圾桶",
+            "在展厅里追逐打闹"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A 排队按秩序 ✓；B 大声打电话打扰他人 ✗；C 垃圾入箱 ✓；D 展厅里追逐打闹 ✗。故 A、C 成立，B、D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "公共场所守安静",
+          "tags": [
+            "多选",
+            "文明"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "情境应用：你和爸爸在博物馆参观，旁边两个小朋友在大声喧哗。请你劝他们怎么做，并说清楚为什么要安静。",
+          "answer": {
+            "value": "我会小声地对他们说「请小声一点，这里在参观」；因为博物馆里大家都在专心看展品，大声喧哗会打扰别人，也可能影响展品的安全。"
+          },
+          "analysis": "评分要点：①写出劝说的具体做法（2 分）；②说出公共场所要安静的理由（2 分）；③语句通顺完整（1 分）。只写「让他们小声点」而没有理由，最后 2 分不得。",
+          "difficulty": 4,
+          "knowledge_point": "公共场所守安静",
+          "tags": [
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "发现图书角的一本图书被撕破了，最好的做法是（  ）。",
+          "options": [
+            "告诉老师，请老师处理",
+            "用胶带自己粘一粘放回去",
+            "把破书藏起来不让别人看见",
+            "再撕几页让大家都别看"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "图书是大家的公共财物，损坏要及时报告老师处理，选 A；自己粘、藏起来、继续撕都是不对的做法。",
+          "difficulty": 1,
+          "knowledge_point": "爱护公共财物",
+          "tags": [
+            "爱护公物"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "课桌上被同学刻了字，你认为应该（  ）。",
+          "options": [
+            "用更深的字再刻一个",
+            "报告老师，请学校安排修理",
+            "拿刻过字的桌子去撞他",
+            "什么也不说，不管不问"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "公物被损坏要报告老师，由学校安排修理，选 B；再刻、撞人、不管不问都会让公物更坏、让同学受伤。",
+          "difficulty": 2,
+          "knowledge_point": "爱护公共财物",
+          "tags": [
+            "爱护公物"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "公共财物是大家共同使用的，爱护公共财物人人有责。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "桌椅、黑板、图书都用公家的钱购置，人人爱护才能用得长久，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "爱护公共财物",
+          "tags": [
+            "爱护公物"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些做法是在爱护公共财物（  ）",
+          "options": [
+            "不乱涂乱画黑板和桌椅",
+            "爱护图书室的图书",
+            "用脚踢学校的垃圾桶",
+            "发现桌椅损坏及时报告老师"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 不乱涂乱画 ✓；B 爱护图书 ✓；C 用脚踢垃圾桶是损坏公物 ✗；D 损坏及时报告 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "爱护公共财物",
+          "tags": [
+            "多选",
+            "爱护公物"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "看到花坛里的月季花开得正好，你应该（  ）。",
+          "options": [
+            "远远地看，不去攀折",
+            "折一枝带回家插瓶",
+            "踩进花坛里拍照片",
+            "摘几朵送给同学"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "花木是大家公有的，欣赏而不攀折才是爱护，选 A；折花、踩花、摘花都会伤害植物、破坏环境。",
+          "difficulty": 2,
+          "knowledge_point": "爱护花草与设施",
+          "tags": [
+            "爱护公物"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "爱护校园里的花草树木，是我们每个学生应尽的义务。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "校园的一草一木都是大家共同栽种的，爱护它们人人有责，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "爱护花草与设施",
+          "tags": [
+            "爱护公物"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "看到操场边的健身器材有些松动摇晃，应该（  ）。",
+          "options": [
+            "告诉老师或学校管理员",
+            "自己上去继续玩",
+            "把器材搬到别的地方",
+            "用脚踢一踢看结不结实"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "器材松动容易摔伤，要及时报告学校处理，选 A；自己继续玩、搬动、踢打都可能造成伤害。",
+          "difficulty": 3,
+          "knowledge_point": "爱护花草与设施",
+          "tags": [
+            "爱护公物"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些是在公园里爱护花草和设施的表现（  ）",
+          "options": [
+            "不踩草坪，走小路",
+            "在树干上刻字留纪念",
+            "把垃圾丢进垃圾桶",
+            "摇晃、损坏公共座椅"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A 不踩草坪走小路 ✓；B 在树上刻字伤害树木 ✗；C 垃圾入箱 ✓；D 摇晃损坏座椅 ✗。故 A、C 成立，B、D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "爱护花草与设施",
+          "tags": [
+            "多选",
+            "爱护公物"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "手里有喝完的牛奶盒，应该（  ）。",
+          "options": [
+            "扔进垃圾桶里的可回收物处",
+            "随手丢在路边",
+            "带回家再丢进河里",
+            "放在课桌上等它自己消失"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "空牛奶盒是可回收物，要投进对应的垃圾桶，选 A；随手丢、丢进河里、放着不管都会弄脏环境。",
+          "difficulty": 1,
+          "knowledge_point": "垃圾分类不乱扔",
+          "tags": [
+            "卫生"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "看到地上有一张废纸，正确的做法是（  ）。",
+          "options": [
+            "再踩两脚",
+            "捡起来丢进垃圾桶",
+            "踢到别人家门口",
+            "留在原地当风景"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "看见废纸就捡起来扔进垃圾桶，既整洁又是爱护环境，选 B；踩、踢给别人、留着不管都不应该。",
+          "difficulty": 2,
+          "knowledge_point": "垃圾分类不乱扔",
+          "tags": [
+            "卫生"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些做法能保持环境整洁（  ）",
+          "options": [
+            "垃圾投进垃圾桶",
+            "不随地吐痰",
+            "把废电池随手扔进草丛",
+            "把果皮纸屑包好再扔进垃圾桶"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 垃圾入箱 ✓；B 不随地吐痰 ✓；C 废电池有毒，随手乱扔会污染土壤和水 ✗；D 包好再扔更卫生 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "垃圾分类不乱扔",
+          "tags": [
+            "多选",
+            "卫生"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "把垃圾分类投放，资源才能回收再利用，还能减少环境污染。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "分好类，废纸、瓶罐能重新变成新东西，垃圾处理也更快更干净，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "垃圾分类不乱扔",
+          "tags": [
+            "卫生"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "看到地上有一张废纸，应当把它捡起来扔进（  ）。",
+          "answer": {
+            "value": "垃圾桶"
+          },
+          "analysis": "废纸是垃圾，捡起来扔进垃圾桶，地面才会干净；丢在原地、踢到别处都是把脏东西留给别人，所以填垃圾桶。",
+          "difficulty": 2,
+          "knowledge_point": "垃圾分类不乱扔",
+          "tags": [
+            "卫生"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "上车时人很多，正确的做法是（  ）。",
+          "options": [
+            "排队上车，先下后上",
+            "挤到车门口先挤上去",
+            "从车窗爬进车厢",
+            "把其他同学推到一边"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "排队、先下后上既安全又有秩序，选 A；拥挤、爬窗、推人容易造成摔伤和受伤。",
+          "difficulty": 1,
+          "knowledge_point": "排队守序讲文明",
+          "tags": [
+            "秩序"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "在食堂打饭，应该（  ）。",
+          "options": [
+            "插到前面先打",
+            "把勺子敲响催阿姨",
+            "拿好餐盘，排队等候",
+            "把餐盘放在窗口不走"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "打饭要排队等候，先来后到，选 C；插队、敲勺子催、占着窗口不走都会打乱秩序，还容易烫到人。",
+          "difficulty": 2,
+          "knowledge_point": "排队守序讲文明",
+          "tags": [
+            "秩序"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些是排队守序的表现（  ）",
+          "options": [
+            "先来后到，不插队",
+            "上下车先下后上",
+            "上下楼梯靠右、排队走",
+            "人少的时候抢着挤到最前面"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 先来后到 ✓；B 先下后上 ✓；C 靠右排队走 ✓；D 再挤人少也要排队 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "排队守序讲文明",
+          "tags": [
+            "多选",
+            "秩序"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "情境应用：放学时校门口有很多家长在等孩子，队伍被挤散了。请你提出两条让接送排队更整齐的建议。",
+          "answer": {
+            "value": "一是在校门外划出固定的等候线，家长按指定位置排队；二是安排值日生在路口疏导，把接送的家长分开成几个队。排队整齐接送更快，也更安全。"
+          },
+          "analysis": "评分要点：①提出两条具体可行的建议（2 分）；②建议围绕画线定点排队、分流疏导等做法（2 分）；③讲出排队整齐的好处（1 分）。只说「大家排好队」而没有具体做法，最后 3 分不得。",
+          "difficulty": 5,
+          "knowledge_point": "排队守序讲文明",
+          "tags": [
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    }
+  ],
+  "_consolidated": {
+    "generated_at": "2026-11-09T04:23:36",
+    "rule": "非 legacy > 批次日期最新 > 题量最多 > mtime 最新",
+    "sources": [
+      {
+        "chapter": "第一单元 我是小学生啦",
+        "file": "politics_g1_first_20261108_r2.json",
+        "questions": 27
+      },
+      {
+        "chapter": "第二单元 过好校园生活",
+        "file": "politics_g1_first_20261108_r3.json",
+        "questions": 24
+      },
+      {
+        "chapter": "第三单元 养成良好习惯",
+        "file": "politics_g1_first_20261108_r4.json",
+        "questions": 24
+      },
+      {
+        "chapter": "第四单元 我们讲文明",
+        "file": "politics_g1_first_20261108_r5.json",
+        "questions": 25
+      }
+    ],
+    "dropped_sections": [],
+    "reused_point_names_not_redeclared": [],
+    "outside_outline_skipped": []
+  }
+}

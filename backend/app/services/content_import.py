@@ -33,6 +33,10 @@ _ALIAS_PATH = Path(__file__).with_name("chapter_aliases.json")
 _ALIAS_CACHE: dict[str, dict[tuple[str, int, str, str], Any]] | None = None
 PLACEHOLDER_SINK_BASE = 9000
 
+# 教材目录骨架（baseline/_skeleton）写入的占位摘要。正式内容（整册/单元模板）
+# 不再提供 summary 时，需要清掉它，否则客户端会一直展示「章节占位，待补…」。
+SKELETON_SUMMARY = "教材目录骨架（章节占位，待补知识点与题目）"
+
 # 纯元数据键：不参与内容比对。文件只加这些键 → 视为「同一份内容的不同标注」，
 # 仍然是「已入库」；改了别的键 → 才是「文件已变更、未重导」。
 # 注意：docs/content-templates/_validate_daily.py 有一份同实现，改这里要同步改那里。
@@ -299,8 +303,13 @@ def import_document(db: Session, data: dict[str, Any], *, overwrite: bool = Fals
                     row.summary = chapter["summary"]
             else:
                 row.order_index = int(chapter.get("order_index", row.order_index))
-                if chapter.get("summary"):
-                    row.summary = chapter["summary"]
+                incoming_summary = str(chapter.get("summary") or "").strip()
+                if incoming_summary and incoming_summary != SKELETON_SUMMARY:
+                    # 正式内容自带的 summary 覆盖旧文案
+                    row.summary = incoming_summary
+                elif row.summary == SKELETON_SUMMARY:
+                    # 骨架摘要已无意义（正式内容不带 summary，或骨架文件重导）→ 清空
+                    row.summary = None
             chapters_updated += 1
         chapter_map[raw_name] = row
     db.flush()

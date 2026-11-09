@@ -1,0 +1,2128 @@
+{
+  "subject": "math",
+  "grade": 1,
+  "version": "北师大版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "生活中的数",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "几个和第几",
+      "parent": "生活中的数",
+      "order_index": 1,
+      "explanation": "“几个”说的是数量有多少，“第几”说的是排在第几个位置；数序数只数到要问的那一个为止，别把整队都数完。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "零的意义",
+      "parent": "生活中的数",
+      "order_index": 2,
+      "explanation": "0 表示一个也没有，它是一个有意义的数，还可以表示位置的起点；不要把 0 当成“什么都不是”。",
+      "prerequisites": [],
+      "weight": 1.0,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "分类与分类计数",
+      "parent": "生活中的数",
+      "order_index": 3,
+      "explanation": "分类要按同一个标准进行，分完再数才不会漏数或重复数；报数时只数同一类里的物体。",
+      "prerequisites": [],
+      "weight": 1.1,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "数的顺序与加减应用",
+      "parent": "生活中的数",
+      "order_index": 4,
+      "explanation": "数的顺序是从小到大排，比大小先看十位再比个位；“一共”常常要用加法解决，先数清原来的再数新来的。",
+      "prerequisites": [
+        "几个和第几"
+      ],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "5以内数加与减",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "5以内加法的意义",
+      "parent": "5以内数加与减",
+      "order_index": 1,
+      "explanation": "加法是把两部分合起来，求一共有多少；看到“又来了”“合起来”就想加法，别把加法算成减法。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "5以内减法的意义",
+      "parent": "5以内数加与减",
+      "order_index": 2,
+      "explanation": "减法是从总数里去掉一部分，求剩下多少；算式里的被减数是原来的总数，减数是去掉的部分。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "加减法的互算关系",
+      "parent": "5以内数加与减",
+      "order_index": 3,
+      "explanation": "加法和减法互为逆运算，可以用减法检验加法；交换两个加数的位置，和不变。",
+      "prerequisites": [
+        "5以内加法的意义",
+        "5以内减法的意义"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "用加减法解决简单问题",
+      "parent": "5以内数加与减",
+      "order_index": 4,
+      "explanation": "读题先找“原来的总数”和“变化的部分”，先减后加或先加后减要看清题目的先后顺序。",
+      "prerequisites": [
+        "5以内加法的意义",
+        "5以内减法的意义"
+      ],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "整理与分类",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "按标准分类",
+      "parent": "整理与分类",
+      "order_index": 1,
+      "explanation": "分类必须按同一个标准进行，标准不同分法就不同；分之前先说清楚按什么分，每件物品只能放进一类。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "分类后的计数与不重不漏",
+      "parent": "整理与分类",
+      "order_index": 2,
+      "explanation": "分好类再一類一类数，数完把各类数目合起来对一对总数，才能保证既不重复也不遗漏。",
+      "prerequisites": [
+        "按标准分类"
+      ],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "用基本图形拼摆图案",
+      "parent": "整理与分类",
+      "order_index": 3,
+      "explanation": "用同样的小正方形、小三角形可以拼出长方形、正方形等图案；长方形和正方形都是 4 条边，但正方形 4 条边一样长。",
+      "prerequisites": [],
+      "weight": 1.1,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "按数量分堆",
+      "parent": "整理与分类",
+      "order_index": 4,
+      "explanation": "按每堆几个来分堆，是把总数平均分；分完看看有没有余数，余下的个数就是没分完的部分。",
+      "prerequisites": [
+        "分类后的计数与不重不漏"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "10以内数加与减",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "10以内加法的含义",
+      "parent": "10以内数加与减",
+      "order_index": 1,
+      "explanation": "把两部分合起来求一共是多少，用加法。看到「又来了」「又买来」「合起来」要先想加法，再按数的分与合算出结果。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "10以内减法的含义",
+      "parent": "10以内数加与减",
+      "order_index": 2,
+      "explanation": "从总数里去掉一部分求剩下多少，或求两数相差多少，都用减法。算完可以用「剩下的 + 去掉的 = 总数」检验。",
+      "prerequisites": [
+        "10以内加法的含义"
+      ],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "加法与减法的互逆",
+      "parent": "10以内数加与减",
+      "order_index": 3,
+      "explanation": "由一道加法算式可以写出两道减法算式：和减去一个加数等于另一个加数。用这个关系既能填空，也能验算减法算得对不对。",
+      "prerequisites": [
+        "10以内加法的含义",
+        "10以内减法的含义"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "10以内加减情境问题",
+      "parent": "10以内数加与减",
+      "order_index": 4,
+      "explanation": "读题时先圈出「增加」还是「去掉」，再决定加还是减；两步问题要按顺序一步一步算，最后写清单位并检查答案是否符合生活常识。",
+      "prerequisites": [
+        "10以内加法的含义",
+        "10以内减法的含义",
+        "加法与减法的互逆"
+      ],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "有趣的立体图形",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "认识长方体与正方体",
+      "parent": "有趣的立体图形",
+      "order_index": 1,
+      "explanation": "长方体有 6 个面、12 条棱、8 个顶点，正方体是 4 条边一样长的特殊长方体；课本、牙膏盒是长方体，魔方是正方体。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "认识圆柱与球",
+      "parent": "有趣的立体图形",
+      "order_index": 2,
+      "explanation": "圆柱上下各有一个平平的圆面、侧面是弯的曲面；球整个表面都是曲面，放在斜面上会滚。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "平面图形与立体图形",
+      "parent": "有趣的立体图形",
+      "order_index": 3,
+      "explanation": "平面图形只有一个面、没有厚薄；立体图形有长宽高，能立起来，从不同方向看到的形状可能不同。",
+      "prerequisites": [
+        "认识长方体与正方体"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "立体图形在生活中的应用",
+      "parent": "有趣的立体图形",
+      "order_index": 4,
+      "explanation": "快递箱、路桩、水杯、铅笔各有不同的立体形状；判断物体能不能滚，要看接触面是不是平的。",
+      "prerequisites": [
+        "认识圆柱与球",
+        "平面图形与立体图形"
+      ],
+      "weight": 1.1,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "开篇",
+      "order_index": 1,
+      "summary": "我上学啦：数数、比较多少、说位置、守课堂常规。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "按 1、2、3、4、5 的顺序往下数，下一个数是几？",
+          "options": [
+            "5",
+            "6",
+            "7",
+            "4"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "5 后面紧接着是 6，所以选 B；A 是重复数，C 跳过了 6，D 是往回数。",
+          "difficulty": 1,
+          "knowledge_point": "数数与一一对应"
+        },
+        {
+          "q_type": "choice",
+          "stem": "一支一支地数完桌上的 4 支铅笔，最后说出的「4」表示什么？",
+          "options": [
+            "最后一支铅笔的颜色",
+            "铅笔的总数",
+            "桌子的高度",
+            "一共数了几遍"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "一个物体配一个数，数完时最后说出的数就是物体的总数，所以选 B；颜色、高度、遍数都不是数数的结果。",
+          "difficulty": 1,
+          "knowledge_point": "数数与一一对应"
+        },
+        {
+          "q_type": "judge",
+          "stem": "把两排小棒一根对一根地摆好，就能看出哪一排更多。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "一一对应是比较多少最直接的方法：哪排还剩没配上对的小棒，哪排就更多，说法正确。",
+          "difficulty": 1,
+          "knowledge_point": "比较多少"
+        },
+        {
+          "q_type": "judge",
+          "stem": "说「书在桌子上面」时，是用桌子作标准来说明书的位置。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "上下、前后、左右都要有一个参照物；这句话以桌子为标准说明书的位置，说法正确。",
+          "difficulty": 1,
+          "knowledge_point": "认识教室里的位置"
+        },
+        {
+          "q_type": "choice",
+          "stem": "一组有 3 个球，另一组有 5 个球，一个对一个摆好后，哪一组多？",
+          "options": [
+            "3 个那组",
+            "5 个那组",
+            "两组一样多",
+            "没法比较"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "3 个球都能配上对，5 个球里还会剩下 2 个没有配对，所以 5 个那组多，选 B。",
+          "difficulty": 2,
+          "knowledge_point": "比较多少"
+        },
+        {
+          "q_type": "fill",
+          "stem": "3 个苹果和 3 个梨一个对一个摆好后，两种水果（  ）。",
+          "answer": {
+            "value": "同样多"
+          },
+          "analysis": "两组都是 3 个，摆好后谁也没有剩下，就说它们同样多；不能只凭摆得长短来判断。",
+          "difficulty": 2,
+          "knowledge_point": "比较多少"
+        },
+        {
+          "q_type": "judge",
+          "stem": "上课时想到答案，可以直接大声喊出来，不用举手。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "课堂要有秩序，发言先举手、等老师同意再说；直接喊出来会打断别人听课，说法错误。",
+          "difficulty": 2,
+          "knowledge_point": "课堂常规与倾听"
+        },
+        {
+          "q_type": "fill",
+          "stem": "有问题要先（  ），得到老师同意后再发言。",
+          "answer": {
+            "value": "举手"
+          },
+          "analysis": "举手是课堂发言的信号，能让老师安排谁先说；不举手就说话，大家会听不清。",
+          "difficulty": 2,
+          "knowledge_point": "课堂常规与倾听"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列做法中，能说明「一一对应」的有（  ）",
+          "options": [
+            "一个杯子配一个杯盖",
+            "一个小朋友坐一把椅子",
+            "把积木全部堆在一起",
+            "一支铅笔配一块橡皮"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 一个杯子配一个杯盖 ✓；B 一个小朋友坐一把椅子 ✓；C 全部堆在一起没有配对关系 ✗；D 一支铅笔配一块橡皮 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "比较多少",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "小丽排队，她前面有 2 人，她自己排在第几个？",
+          "options": [
+            "第 1 个",
+            "第 2 个",
+            "第 3 个",
+            "第 4 个"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "前面 2 人加上她自己：2+1=3，所以她排第 3 个，选 C；只数前面的人会漏掉自己。",
+          "difficulty": 3,
+          "knowledge_point": "认识教室里的位置"
+        },
+        {
+          "q_type": "fill",
+          "stem": "上课时我们面向黑板，黑板在教室的（  ）面。",
+          "answer": {
+            "value": "前"
+          },
+          "analysis": "以自己坐的位置为标准，眼睛正对着的方向是前面；黑板就在这一面，所以填「前」。",
+          "difficulty": 3,
+          "knowledge_point": "认识教室里的位置"
+        },
+        {
+          "q_type": "choice",
+          "stem": "老师说「把数学书放在课桌左上角」，表示方位的词是（  ）",
+          "options": [
+            "数学书",
+            "课桌",
+            "左上角",
+            "放在"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "方位词说明东西在哪里；「左上角」同时说了左右和上下，是方位词，选 C；其余分别是物品、参照物和动作。",
+          "difficulty": 3,
+          "knowledge_point": "认识教室里的位置"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列属于课堂好习惯的有（  ）",
+          "options": [
+            "发言先举手",
+            "听同学说完再补充",
+            "随意离开座位",
+            "用完学具放回原处"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 发言先举手 ✓；B 听完再补充 ✓；C 随意离座会打扰别人，也不安全 ✗；D 学具归位 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "课堂常规与倾听",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "上排 4 个圆片，下排 4 个圆片，一个对一个摆好后应该怎么说？",
+          "options": [
+            "上排多",
+            "下排多",
+            "两排同样多",
+            "少了一排"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "两排都是 4 个，配对后没有剩下，所以是同样多，选 C；上下位置不影响数量。",
+          "difficulty": 3,
+          "knowledge_point": "比较多少"
+        },
+        {
+          "q_type": "fill",
+          "stem": "从 1 依次数到 5，一共数了（  ）个数。",
+          "answer": {
+            "value": "5"
+          },
+          "analysis": "数出的数是 1、2、3、4、5，最后一个数是 5，所以一共 5 个数；1+1+1+1+1=5 表示 5 个 1 合起来。",
+          "difficulty": 3,
+          "knowledge_point": "数数与一一对应"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用两句话写一写：进教室后你先做什么，再做什么？",
+          "answer": {
+            "value": "我进教室先把书包放好，再把数学书和铅笔摆在课桌上。"
+          },
+          "analysis": "参考答案给出先后顺序。评分要点：①写出进教室后第一件具体的事（1 分）；②用「再」写出第二件具体的事（1 分）；③句子完整通顺（1 分）；④标点正确（1 分）。只写词语不成句不得分。",
+          "difficulty": 4,
+          "knowledge_point": "课堂常规与倾听",
+          "tags": [
+            "简答"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "小军数 5 颗糖，数到第 3 颗就停了。请告诉他错在哪里，并写出正确做法。",
+          "answer": {
+            "value": "他没有把糖全部数完，最后一个数才是总数；应该从 1 数到 5，最后说一共 5 颗。"
+          },
+          "analysis": "评分要点：①指出「没数完就停」这一错误（2 分）；②说明最后一个数表示总数（1 分）；③写出从 1 数到 5 的正确数法并给出 5 颗（1 分）。只说「不对」不得分。",
+          "difficulty": 4,
+          "knowledge_point": "数数与一一对应",
+          "tags": [
+            "纠错"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "设计一个用教室里现有物品练习「比较多少」的小游戏，写清准备什么、怎么比、怎么判断。",
+          "answer": {
+            "value": "准备两组铅笔，一组 4 支、一组 6 支；把两组铅笔一支对一支摆好；剩下没配上对的那一组就更多。"
+          },
+          "analysis": "评分要点：①写出可操作的准备材料与数量（1 分）；②写出一一对应的比法（2 分）；③写出「有剩余就更多、都配完就同样多」的判断标准（1 分）；④表达清楚（1 分）。只写「比一比」不得分。",
+          "difficulty": 5,
+          "knowledge_point": "比较多少",
+          "tags": [
+            "设计应用"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第一单元 生活中的数",
+      "order_index": 2,
+      "summary": "生活中的数：认识几个与第几、0 的意义，按同一标准分类计数，以及 10 以内数的顺序和简单加减。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "3 个小朋友排成一队，从左边数第 2 个小朋友站在什么位置？",
+          "options": [
+            "第 1 个",
+            "第 2 个",
+            "第 3 个",
+            "第 4 个"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "从左边数到第 2 个，就是第二个位置，所以选 B；数序数时只数到要问的那一个，别把整队都数完。",
+          "difficulty": 1,
+          "knowledge_point": "几个和第几"
+        },
+        {
+          "q_type": "choice",
+          "stem": "笼子里有 5 只小鸟，5 只都飞走了，现在笼子里还剩几只？",
+          "options": [
+            "0 只",
+            "1 只",
+            "5 只",
+            "10 只"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "5-5=0，一只也不剩，剩下 0 只，所以选 A；0 是一个有意义的数，表示一个也没有。",
+          "difficulty": 1,
+          "knowledge_point": "零的意义"
+        },
+        {
+          "q_type": "fill",
+          "stem": "一个也没有，可以用数字（  ）表示。",
+          "answer": {
+            "value": "0"
+          },
+          "analysis": "一个也没有就是 0；5-5=0，差是 0 说明一个也没剩下，所以填 0。0 还能表示位置的起点。",
+          "difficulty": 1,
+          "knowledge_point": "零的意义"
+        },
+        {
+          "q_type": "judge",
+          "stem": "把铅笔、橡皮和尺子按“是不是文具”的标准分成一类，是合理的分类。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "铅笔、橡皮、尺子都是文具，按同一个标准分类既不重复也不遗漏，所以这种分法是对的。",
+          "difficulty": 1,
+          "knowledge_point": "分类与分类计数"
+        },
+        {
+          "q_type": "choice",
+          "stem": "一个数的前面有 4 个数，后面有 2 个数，这个数排在第几个？",
+          "options": [
+            "第 5 个",
+            "第 6 个",
+            "第 7 个",
+            "第 4 个"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "前面 4 个数加上它自己，4+1=5，所以它排在第 5 个，选 A；后面还有 2 个数，说明它不是最后一个。",
+          "difficulty": 2,
+          "knowledge_point": "几个和第几"
+        },
+        {
+          "q_type": "judge",
+          "stem": "“第 5 个”和“5 个”说的是同一件事。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "“第 5 个”说的是位置，是序数；“5 个”说的是数量，是基数，两者不能混着用，所以说法错误。",
+          "difficulty": 2,
+          "knowledge_point": "几个和第几"
+        },
+        {
+          "q_type": "fill",
+          "stem": "把 2 支红笔、1 支蓝笔和 2 支黄笔按颜色分类，红笔这一类一共有（  ）支。",
+          "answer": {
+            "value": "2"
+          },
+          "analysis": "数一数红笔：1+1=2，红笔有 2 支，所以填 2；分类计数时只数同一类，别把别的类也算进来。",
+          "difficulty": 2,
+          "knowledge_point": "分类与分类计数"
+        },
+        {
+          "q_type": "choice",
+          "stem": "把 10、3、7、5 从小到大排成一行，第一个数应该是（  ）。",
+          "options": [
+            "10",
+            "3",
+            "5",
+            "7"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "4 个数里最小的是 3，应该排在第一个，选 B；比大小时先看十位，十位相同再比个位。",
+          "difficulty": 2,
+          "knowledge_point": "数的顺序与加减应用"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列情景中，能用 0 表示的有（  ）",
+          "options": [
+            "盘子里一个饺子也没有",
+            "从家出发走了 0 千米",
+            "0 摄氏度的水正在沸腾",
+            "一共有 0 个小朋友举手"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 一个也没有，可以用 0 表示 ✓；B 0 千米表示一段路也没有走 ✓；C 0 摄氏度是水的凝固点，此时水结冰而不是沸腾 ✗；D 没有人举手，人数就是 0 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "零的意义",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "小明排队，从前数他是第 4 个，从后数他是第 3 个。这一队一共有多少人？",
+          "options": [
+            "6 人",
+            "7 人",
+            "8 人",
+            "5 人"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "4+3-1=6，小明被数了两次要减去 1，所以一共 6 人，选 A；只把前、后两个数相加会多算 1 个人。",
+          "difficulty": 3,
+          "knowledge_point": "几个和第几"
+        },
+        {
+          "q_type": "fill",
+          "stem": "与 5 相邻的两个数是（  ）和（  ）。",
+          "answer": {
+            "value": [
+              "4",
+              "6"
+            ]
+          },
+          "analysis": "数的顺序是 4、5、6，5 的前一个数是 4、后一个数是 6；5-1=4，5+1=6，所以填 4 和 6。",
+          "difficulty": 3,
+          "knowledge_point": "数的顺序与加减应用"
+        },
+        {
+          "q_type": "choice",
+          "stem": "小丽收集了 5 张三角形卡片和 3 张圆形卡片，三角形卡片比圆形卡片多几张？",
+          "options": [
+            "1 张",
+            "2 张",
+            "3 张",
+            "8 张"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "5-3=2，三角形比圆形多 2 张，所以选 B；比较多少要看清多出来的是哪一类，方向不能弄反。",
+          "difficulty": 3,
+          "knowledge_point": "分类与分类计数"
+        },
+        {
+          "q_type": "judge",
+          "stem": "分类时只要把物体分开摆好，不用说明按什么标准分。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "分类必须按同一个标准进行，还要讲清楚按什么分，标准一变分法也会变，所以说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "分类与分类计数"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面各组数中，从小到大排列正确的是（  ）",
+          "options": [
+            "2、4、6",
+            "5、3、1",
+            "6、7、8",
+            "1、9、2"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A 2<4<6，是从小到大 ✓；B 5>3>1，是从大到小 ✗；C 6<7<8，是从小到大 ✓；D 1<9 但 9 比 2 大，整体不是从小到大 ✗。故 A、C 成立，B、D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "数的顺序与加减应用",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "把 0 和 5 排成一行，0 应该排在 5 的（  ）边。",
+          "options": [
+            "左",
+            "右",
+            "上",
+            "下"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "0 比 5 小，小的数排在前面，所以 0 排在 5 的左边，选 A；0 是最小的数，可以排在最前面。",
+          "difficulty": 3,
+          "knowledge_point": "零的意义"
+        },
+        {
+          "q_type": "answer",
+          "stem": "小明有 4 张贴纸，小红比小明多 2 张。两人一共有多少张贴纸？请写出算式和想法。",
+          "answer": {
+            "value": "小红有 4+2=6（张），两人一共 6+4=10（张），所以两人一共有 10 张贴纸。"
+          },
+          "analysis": "评分要点：①先求小红有 6 张，写出 4+2=6（2 分）；②再求两人一共，写出 6+4=10（2 分）；③算式和结果都正确（1 分）；④语句完整通顺（1 分）。只写一个算式、不求两人总数，最后 1 分不得。",
+          "difficulty": 4,
+          "knowledge_point": "数的顺序与加减应用",
+          "tags": [
+            "简答"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "7 个小朋友排成一队，小丽站在正中间，她前面有（  ）人。",
+          "answer": {
+            "value": "3"
+          },
+          "analysis": "7 个人里除去小丽自己还剩 6 个：7-1=6，前后两半一样多，6÷2=3，所以小丽前面有 3 人，填 3。",
+          "difficulty": 4,
+          "knowledge_point": "几个和第几"
+        },
+        {
+          "q_type": "answer",
+          "stem": "把下面这些物品按“是不是学习用具”分成两类，并说出每类各有几个：苹果、铅笔、橡皮、橘子、直尺、书本。",
+          "answer": {
+            "value": "学习用具：铅笔、橡皮、直尺、书本，一共 4 个；不是学习用具：苹果、橘子，一共 2 个。"
+          },
+          "analysis": "评分要点：①按“是不是学习用具”这一统一标准分成两类（2 分）；②每类物品没有漏放也没有重复放（2 分）；③准确报出 4 个和 2 个两个数（1 分）；④表述完整（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "分类与分类计数",
+          "tags": [
+            "简答"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "班级图书角原有 18 本书，同学借走了 6 本，后来又还回来 3 本。现在图书角有多少本书？",
+          "options": [
+            "15 本",
+            "21 本",
+            "9 本",
+            "11 本"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "18-6=12，12+3=15，现在图书角有 15 本，选 A；先减去借走的，再加回还回来的，两步不要颠倒。",
+          "difficulty": 4,
+          "knowledge_point": "数的顺序与加减应用"
+        },
+        {
+          "q_type": "choice",
+          "stem": "早高峰时某地铁站的安检口有 8 人在排队，接着又跑来 5 个人，队伍一共有多少人？",
+          "options": [
+            "13 人",
+            "3 人",
+            "12 人",
+            "14 人"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "8+5=13，队伍一共 13 人，所以选 A；先数清原来排队的 8 人，再加上跑来的 5 人，不要重复数。",
+          "difficulty": 3,
+          "knowledge_point": "分类与分类计数"
+        },
+        {
+          "q_type": "answer",
+          "stem": "图书角有 9 张数字卡片，分别写着 3、7 和 5 三种数字，其中写着 3 的有 4 张，写着 7 的有 3 张。请你分类数一数，写着 5 的有几张，并说说怎样检查没有漏数或多数。",
+          "answer": {
+            "value": "写着 5 的有 2 张；把三堆合起来验算：4+3=7，7+2=9，正好 9 张，说明既没有漏数也没有多数。"
+          },
+          "analysis": "评分要点：①按数字把 9 张卡片分成三类（2 分）；②准确写出写着 5 的有 2 张（2 分）；③用 4+3=7、7+2=9 验算总数，说明没有漏数或多数（2 分）；④表述清楚（1 分）。只把三堆写出来、不作验算，最后 2 分不得。",
+          "difficulty": 5,
+          "knowledge_point": "分类与分类计数",
+          "tags": [
+            "整理与说理"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第二单元 5以内数加与减",
+      "order_index": 3,
+      "summary": "5 以内数加与减：加法与减法的意义，互算关系，以及用加减法解决生活中的简单问题。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "3 个小朋友在跳绳，又来了 2 个，现在一共有几个小朋友？",
+          "options": [
+            "4 个",
+            "5 个",
+            "6 个",
+            "3 个"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "3+2=5，现在一共有 5 个小朋友，所以选 B；求一共有多少要把两部分合起来，用加法。",
+          "difficulty": 1,
+          "knowledge_point": "5以内加法的意义"
+        },
+        {
+          "q_type": "fill",
+          "stem": "2 加上 3 得（  ）。",
+          "answer": {
+            "value": "5"
+          },
+          "analysis": "2+3=5，所以填 5；加法就是把两部分合起来，求一共有多少。",
+          "difficulty": 1,
+          "knowledge_point": "5以内加法的意义"
+        },
+        {
+          "q_type": "choice",
+          "stem": "小明有 2 支铅笔，同桌又给了他 3 支，他现在有几支铅笔？",
+          "options": [
+            "1 支",
+            "4 支",
+            "5 支",
+            "6 支"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "2+3=5，他现在有 5 支铅笔，选 C；题目说“又给了他”，东西变多了，用加法。",
+          "difficulty": 2,
+          "knowledge_point": "5以内加法的意义"
+        },
+        {
+          "q_type": "judge",
+          "stem": "求“一共有多少”的题目，一概用减法计算。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "求“一共有多少”要把两部分合起来，应该用加法；用减法算的是去掉一部分后剩下多少，所以说法错误。",
+          "difficulty": 2,
+          "knowledge_point": "5以内加法的意义"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些问题要用加法解决（  ）",
+          "options": [
+            "树上有 4 只鸟，又飞来 3 只，现在有多少只",
+            "盘子里有 5 个苹果，吃掉 2 个，还剩几个",
+            "小红有 3 张贴纸，弟弟有 2 张，两人一共有几张",
+            "教室里有 8 个同学，又进来 1 个，现在有几个"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C",
+              "D"
+            ]
+          },
+          "analysis": "A 是两部分合起来，4+3=7 ✓；B 是从总数里去掉一部分，用减法 ✗；C 是两部分合起来，3+2=5 ✓；D 也是两部分合起来，8+1=9 ✓。故 A、C、D 成立，B 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "5以内加法的意义",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "5 个气球飞走了 2 个，还剩几个气球？",
+          "options": [
+            "2 个",
+            "3 个",
+            "4 个",
+            "5 个"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "5-2=3，还剩 3 个气球，所以选 B；减法是从原来的总数里去掉一部分，求剩下多少。",
+          "difficulty": 1,
+          "knowledge_point": "5以内减法的意义"
+        },
+        {
+          "q_type": "fill",
+          "stem": "4 减去 1 得（  ）。",
+          "answer": {
+            "value": "3"
+          },
+          "analysis": "4-1=3，所以填 3；从总数里去掉 1 个，求的就是剩下的个数。",
+          "difficulty": 1,
+          "knowledge_point": "5以内减法的意义"
+        },
+        {
+          "q_type": "judge",
+          "stem": "减法算式里的两个数，一个表示原来的总数，另一个表示去掉或者用掉的部分。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "减法是被减数减去减数，被减数表示总数，减数表示去掉的部分，两个数各有用处，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "5以内减法的意义"
+        },
+        {
+          "q_type": "choice",
+          "stem": "树上有 5 只鸟，飞走 3 只后还剩 2 只。这里的 5 表示（  ）。",
+          "options": [
+            "飞走的只数",
+            "原来的总数",
+            "剩下的只数",
+            "一共数过几遍"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "5 是鸟飞走之前的总数，所以选 B；3 是飞走的部分，2 是剩下的部分，三个数不能混着用。",
+          "difficulty": 3,
+          "knowledge_point": "5以内减法的意义"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面算式中，得数是 3 的有（  ）",
+          "options": [
+            "5-2",
+            "2+1",
+            "4-1",
+            "3+1"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 5-2=3 ✓；B 2+1=3 ✓；C 4-1=3 ✓；D 3+1=4 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "5以内减法的意义",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "已知 2+3=5，那么 5-3 得（  ）。",
+          "options": [
+            "2",
+            "3",
+            "5",
+            "8"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "5-3=2，正好是被减掉的 3 以外的另一个加数，所以选 A；加法和减法互为逆运算，可以互相检验。",
+          "difficulty": 3,
+          "knowledge_point": "加减法的互算关系"
+        },
+        {
+          "q_type": "fill",
+          "stem": "4+1=5，用减法可以写成（  ）。",
+          "answer": {
+            "value": "5-1=4"
+          },
+          "analysis": "用和减去一个加数：5-1=4，所以填 5-1=4；拿减法去检验加法，是检查口算对错的好办法。",
+          "difficulty": 3,
+          "knowledge_point": "加减法的互算关系"
+        },
+        {
+          "q_type": "judge",
+          "stem": "用加法算出的结果，可以用减法再算一遍来检验。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "加法和减法互为逆运算，5-3=2 与 2+3=5 正好对应，用减法检验能及时发现口算错误，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "加减法的互算关系"
+        },
+        {
+          "q_type": "choice",
+          "stem": "已知 1+4=5，那么 4+1 等于（  ）。",
+          "options": [
+            "5",
+            "6",
+            "4",
+            "0"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "1+4=5，交换两个加数的位置和不变，4+1=5，所以选 A；加法交换律在 5 以内同样好用。",
+          "difficulty": 3,
+          "knowledge_point": "加减法的互算关系"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面每组算式中，两个算式的得数相同的有（  ）",
+          "options": [
+            "1+2 与 2+1",
+            "3+1 与 5-1",
+            "2+2 与 1+4",
+            "4-2 与 3+1"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "A 1+2=3，2+1=3 ✓；B 3+1=4，5-1=4 ✓；C 2+2=4，1+4=5 ✗；D 4-2=2，3+1=4 ✗。故 A、B 成立，C、D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "加减法的互算关系",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "树上有 5 只鸟，飞走 2 只后，又飞来 1 只。现在树上有几只鸟？",
+          "options": [
+            "4 只",
+            "3 只",
+            "2 只",
+            "5 只"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "5-2=3，3+1=4，现在有 4 只鸟，选 A；先减去飞走的，再加上飞来的，顺序不能颠倒。",
+          "difficulty": 3,
+          "knowledge_point": "用加减法解决简单问题"
+        },
+        {
+          "q_type": "fill",
+          "stem": "小明有 4 张贴纸，小红比小明少 1 张，小红有（  ）张。",
+          "answer": {
+            "value": "3"
+          },
+          "analysis": "比小明少 1 张就是少 1，4-1=3，小红有 3 张，所以填 3。",
+          "difficulty": 3,
+          "knowledge_point": "用加减法解决简单问题"
+        },
+        {
+          "q_type": "answer",
+          "stem": "小刚有 3 张卡片，送给同桌 1 张后，两人一共有多少张卡片？请写出算式并说明理由。",
+          "answer": {
+            "value": "送出 1 张后小刚剩 3-1=2（张），两人一共有 2+1=3（张），一共 3 张卡片。"
+          },
+          "analysis": "评分要点：①先算小刚送出后剩下 2 张，写出 3-1=2（2 分）；②再算两人一共 3 张，写出 2+1=3（2 分）；③算式与结果都正确（1 分）；④理由说清楚（1 分）。",
+          "difficulty": 3,
+          "knowledge_point": "用加减法解决简单问题",
+          "tags": [
+            "简答"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "小红有 4 颗糖，小刚比小红多 2 颗。两人一共有多少颗糖？请写出一种算法并说明每一步的意思。",
+          "answer": {
+            "value": "小红有 4 颗，小刚有 4+2=6（颗），两人一共有 4+6=10（颗），一共 10 颗糖。"
+          },
+          "analysis": "评分要点：①算出小刚有 6 颗，写出 4+2=6（2 分）；②算出两人一共 10 颗，写出 4+6=10（2 分）；③说清每一步算的是谁和谁（1 分）；④表述完整通顺（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "用加减法解决简单问题",
+          "tags": [
+            "简答"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "超市水果区原有 5 盒草莓，卖出 2 盒后又进货 1 盒，现在有多少盒草莓？",
+          "options": [
+            "3 盒",
+            "4 盒",
+            "8 盒",
+            "2 盒"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "5-2=3，3+1=4，现在有 4 盒草莓，所以选 B；先减去卖出的，再加上新进货的。",
+          "difficulty": 4,
+          "knowledge_point": "用加减法解决简单问题"
+        }
+      ]
+    },
+    {
+      "name": "第三单元 整理与分类",
+      "order_index": 4,
+      "summary": "整理与分类：按同一标准分类、分类后准确计数不重不漏、用基本图形拼摆图案，以及按数量分堆。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "把 3 支铅笔、2 支橡皮和 1 个苹果按“是不是文具”分类，会分成（  ）类。",
+          "options": [
+            "1 类",
+            "2 类",
+            "3 类",
+            "4 类"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "铅笔、橡皮是文具，苹果不是，按一个标准分成两类，所以选 B；标准只有一个，分出的类不会太多。",
+          "difficulty": 1,
+          "knowledge_point": "按标准分类"
+        },
+        {
+          "q_type": "choice",
+          "stem": "同样的 4 支彩笔，按“颜色”分和按“长短”分，结果（  ）。",
+          "options": [
+            "完全一样",
+            "不一样",
+            "都只能分成 2 类",
+            "都不能分"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "分类标准不同，分出的类就不一样：按颜色分和按长短分结果不同，所以选 B；分类前必须先定好标准。",
+          "difficulty": 2,
+          "knowledge_point": "按标准分类"
+        },
+        {
+          "q_type": "judge",
+          "stem": "一次分类中，每件物品只能放进一类里。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "一次分类要按同一个标准进行，每件物品放进哪一类是确定的，这样才不重复也不遗漏，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "按标准分类"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面按“用途”分类合理的分组有（  ）",
+          "options": [
+            "笔和尺子放在一起",
+            "苹果和铅笔放在一起",
+            "书和文具盒放在一起",
+            "帽子和袜子放在一起"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C",
+              "D"
+            ]
+          },
+          "analysis": "A 笔和尺子都是文具，用途相同 ✓；B 苹果是食物、铅笔是文具，用途不同 ✗；C 书和文具盒都是学习用具 ✓；D 帽子和袜子都是穿戴物品 ✓。故 A、C、D 成立，B 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "按标准分类",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "请你把“茶杯、椅子、书包、铅笔、橘子、书本”按“是不是学习用具”分成两类，并说出每类各有几个。",
+          "answer": {
+            "value": "学习用具：书包、铅笔、书本，一共 3 个；不是学习用具：茶杯、椅子、橘子，一共 3 个。"
+          },
+          "analysis": "评分要点：①按“是不是学习用具”这一统一标准分成两类（2 分）；②每类物品没有漏放也没有重复放（2 分）；③准确报出 3 个和 3 个两个数（1 分）；④表述完整（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "按标准分类",
+          "tags": [
+            "简答"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "把 4 支红笔和 3 支蓝笔按颜色分堆，红笔这一堆有（  ）支。",
+          "options": [
+            "3 支",
+            "4 支",
+            "7 支",
+            "1 支"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "数一数红笔是 4 支，1+1+1+1=4，所以选 B；一堆一堆数比合起来数更不容易数错。",
+          "difficulty": 1,
+          "knowledge_point": "分类后的计数与不重不漏"
+        },
+        {
+          "q_type": "fill",
+          "stem": "把 6 支铅笔每 2 支分成一堆，可以分成（  ）堆。",
+          "answer": {
+            "value": "3"
+          },
+          "analysis": "每堆 2 支，分堆就是 6÷2=3，可以分成 3 堆；分堆后再数堆数，比一支一支数快得多。",
+          "difficulty": 2,
+          "knowledge_point": "分类后的计数与不重不漏"
+        },
+        {
+          "q_type": "judge",
+          "stem": "分类计数时，只要把每一类的数目报出来就行，不用再检查总数。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "报出各类数目后还要合起来对一对总数：5+2=7 与原来一样，才说明既没漏数也没重复数，所以说法错误。",
+          "difficulty": 2,
+          "knowledge_point": "分类后的计数与不重不漏"
+        },
+        {
+          "q_type": "choice",
+          "stem": "小明从花坛里摘了 3 朵红花和 2 朵黄花，一共摘了（  ）朵花。",
+          "options": [
+            "5 朵",
+            "6 朵",
+            "4 朵",
+            "3 朵"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "3+2=5，一共摘了 5 朵花，所以选 A；分类计数后把各类的数合起来，就是总数。",
+          "difficulty": 3,
+          "knowledge_point": "分类后的计数与不重不漏"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面做法中，能避免重复或漏数的有（  ）",
+          "options": [
+            "分完一类数一类，记下每一类的数目",
+            "把分好的几堆合起来再数一遍",
+            "只数其中一堆",
+            "边分边数，数过的就放到另一边"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 分类记录各堆数目，不会数乱 ✓；B 合起来再数可以检验总数有没有漏 ✓；C 只数一堆，别的类就漏掉了 ✗；D 数过的放到另一边，避免回头重复数 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "分类后的计数与不重不漏",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面哪种图形没有尖角？",
+          "options": [
+            "正方形",
+            "三角形",
+            "长方形",
+            "圆形"
+          ],
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "圆形没有尖角，边是弯的，所以选 D；正方形、长方形和三角形都有角。",
+          "difficulty": 1,
+          "knowledge_point": "用基本图形拼摆图案"
+        },
+        {
+          "q_type": "fill",
+          "stem": "一个正方形有（  ）条边。",
+          "answer": {
+            "value": "四条"
+          },
+          "analysis": "正方形有 4 条一样长的边，四条边围成一个正方形，所以填「四条」；长方形也有 4 条边，但两条长两条短。",
+          "difficulty": 2,
+          "knowledge_point": "用基本图形拼摆图案"
+        },
+        {
+          "q_type": "judge",
+          "stem": "用同样的正方形一个挨一个地摆，可以摆出长方形，也可以摆出更大的正方形。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "同样的正方形横着摆是长方形，四个摆成两行两列就是大正方形，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "用基本图形拼摆图案"
+        },
+        {
+          "q_type": "choice",
+          "stem": "用 2 个同样的直角三角形可以拼成下面哪个图形？",
+          "options": [
+            "一个长方形",
+            "一个正方形",
+            "一个圆形",
+            "一个五边形"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "两个同样的直角三角形沿最长的那条边拼在一起，正好拼成一个长方形，所以选 A；两个三角形边一样长时拼不成正方形。",
+          "difficulty": 3,
+          "knowledge_point": "用基本图形拼摆图案"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面关于图形的说法正确的有（  ）",
+          "options": [
+            "三角形有 3 条边",
+            "圆形没有角",
+            "长方形有 4 条相等的边",
+            "正方形的 4 条边一样长"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 三角形有 3 条边和 3 个角 ✓；B 圆形没有角 ✓；C 长方形的 4 条边只是两两相等，不是 4 条都相等 ✗；D 正方形 4 条边一样长 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "用基本图形拼摆图案",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "把 7 颗花生按“每堆 1 颗”分，可以分成（  ）堆。",
+          "options": [
+            "1 堆",
+            "7 堆",
+            "3 堆",
+            "6 堆"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "每堆只放 1 颗，一颗就是一堆，7 颗就分 7 堆：7÷1=7，所以选 B；分堆后别忘了检查有没有剩下。",
+          "difficulty": 2,
+          "knowledge_point": "按数量分堆"
+        },
+        {
+          "q_type": "fill",
+          "stem": "有 8 个小球，每 2 个装一袋，可以装（  ）袋。",
+          "answer": {
+            "value": "4"
+          },
+          "analysis": "每袋装 2 个：8÷2=4，可以装 4 袋；装满后还剩 0 个才算正好装完。",
+          "difficulty": 3,
+          "knowledge_point": "按数量分堆"
+        },
+        {
+          "q_type": "answer",
+          "stem": "有 9 颗糖，平均分给 3 个小朋友，每人分几颗？请写出算式，并说清分完后有没有剩下。",
+          "answer": {
+            "value": "9÷3=3（颗），每人分 3 颗，正好分完，没有剩下。"
+          },
+          "analysis": "评分要点：①写出 9÷3=3 的算式（2 分）；②答出每人分 3 颗（1 分）；③说明正好分完、没有剩下（1 分）；④表述完整（1 分）。",
+          "difficulty": 3,
+          "knowledge_point": "按数量分堆",
+          "tags": [
+            "简答"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "小明有 2 支铅笔、3 支尺子和 1 个橡皮。请你按“数量多少”分成几堆，并说出每堆有几件、各有什么。",
+          "answer": {
+            "value": "按数量分成 3 堆：1 件一堆（橡皮），2 件一堆（2 支铅笔），3 件一堆（3 支尺子）。"
+          },
+          "analysis": "评分要点：①按数量多少分成三堆（2 分）；②说出 1 件、2 件、3 件各一堆（2 分）；③举例说明每堆放的是什么（1 分）；④表述完整（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "按数量分堆",
+          "tags": [
+            "简答"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "深圳地铁站的爱心专座有 8 个座位，已经坐了 3 人，空着的座位有（  ）个。",
+          "options": [
+            "5 个",
+            "4 个",
+            "11 个",
+            "3 个"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "8-3=5，空着 5 个座位，所以选 A；求剩下的用减法，写答案时别忘了单位是“个”。",
+          "difficulty": 3,
+          "knowledge_point": "按数量分堆"
+        }
+      ]
+    },
+    {
+      "name": "第四单元 10以内数加与减",
+      "order_index": 5,
+      "summary": "10 以内数加与减：加法与减法的含义、加减互逆关系，以及用两步运算解决生活中的简单问题。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "盘子里有 4 个苹果，妈妈又放进去 3 个，现在一共有几个苹果？",
+          "options": [
+            "6 个",
+            "7 个",
+            "8 个",
+            "9 个"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "4 + 3 = 7，一共有 7 个苹果，所以选 B。「又放进去」表示把两部分合起来，要用加法，不能算成 4 - 3 = 1。",
+          "difficulty": 1,
+          "knowledge_point": "10以内加法的含义",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "6 + 2 = （  ）",
+          "answer": {
+            "value": "8"
+          },
+          "analysis": "6 + 2 = 8，从 6 往后接着数 2 个数是 7、8，所以填 8；也可以用 8 - 2 = 6 反过来验算。",
+          "difficulty": 1,
+          "knowledge_point": "10以内加法的含义",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "算式 3 + 5 = 8 表示把 3 和 5 合起来一共是 8。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "3 + 5 = 8，加法的含义正是把两部分合并成总数，所以这个说法正确；若把 3 和 5 相减得不到 8。",
+          "difficulty": 3,
+          "knowledge_point": "10以内加法的含义",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面哪个算式的结果与 2 + 7 相同？",
+          "options": [
+            "3 + 5",
+            "4 + 5",
+            "6 + 2",
+            "1 + 7"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "先算 2 + 7 = 9；A 3 + 5 = 8，C 6 + 2 = 8，D 1 + 7 = 8，都不到 9；B 4 + 5 = 9，与它相同，所以选 B。",
+          "difficulty": 3,
+          "knowledge_point": "10以内加法的含义",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "小明有 5 张贴纸，小红又送给他 4 张。小明现在一共有多少张贴纸？请写出加法算式，并说说为什么用加法。",
+          "answer": {
+            "value": "5 + 4 = 9（张）。因为是把原来的 5 张和又得到的 4 张合起来求一共多少，所以用加法。"
+          },
+          "analysis": "评分要点：算式 5 + 4 = 9 得 2 分，说明「合起来求总数用加法」得 1 分，写单位「张」得 1 分。易错点：看到「送」就误列 5 - 4 = 1，要注意贴纸是增加而不是减少。",
+          "difficulty": 4,
+          "knowledge_point": "10以内加法的含义",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "树上有 9 只小鸟，飞走了 4 只，还剩几只？",
+          "options": [
+            "4 只",
+            "5 只",
+            "6 只",
+            "13 只"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "9 - 4 = 5，还剩 5 只，所以选 B。「飞走」是从总数里去掉一部分，用减法；D 的 9 + 4 = 13 把飞走的又加回去了，方向反了。",
+          "difficulty": 1,
+          "knowledge_point": "10以内减法的含义",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "10 - 3 = （  ）",
+          "answer": {
+            "value": "7"
+          },
+          "analysis": "10 - 3 = 7，从 10 里面去掉 3 剩 7；再用 7 + 3 = 10 检验，说明结果正确。",
+          "difficulty": 2,
+          "knowledge_point": "10以内减法的含义",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "8 - 2 = 6，也可以说 8 比 2 多 6。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "8 - 2 = 6，减法除了表示「去掉」，还可以表示求两个数相差多少，所以 8 比 2 多 6 的说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "10以内减法的含义",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些算式的结果是 5？",
+          "options": [
+            "9 - 4",
+            "7 - 2",
+            "10 - 4",
+            "8 - 3"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项计算：A 9 - 4 = 5 ✓；B 7 - 2 = 5 ✓；C 10 - 4 = 6 ✗；D 8 - 3 = 5 ✓。只有 A、B、D 的差是 5，C 多减了一个 1 才容易看错。",
+          "difficulty": 4,
+          "knowledge_point": "10以内减法的含义",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "盒子里有 8 支铅笔，用掉了 3 支，还剩几支？写出算式并说明这个减法表示什么。",
+          "answer": {
+            "value": "8 - 3 = 5（支）。减法表示从总数 8 支里去掉用掉的 3 支，求剩下的那一部分。"
+          },
+          "analysis": "评分要点：算式 8 - 3 = 5 得 2 分，单位「支」得 1 分，说明「从总数里去掉一部分」得 1 分。易错点：把 8 与 3 相加得 11，或漏写单位。",
+          "difficulty": 2,
+          "knowledge_point": "10以内减法的含义",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "因为 6 + 3 = 9，所以 9 - 3 = （  ）",
+          "options": [
+            "3",
+            "6",
+            "9",
+            "12"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "6 + 3 = 9，和减去一个加数等于另一个加数，所以 9 - 3 = 6，选 B；D 的 12 是把 9 和 3 又加了一次。",
+          "difficulty": 1,
+          "knowledge_point": "加法与减法的互逆",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "已知 2 + 7 = 9，那么 9 - （  ） = 2，括号里应填几？",
+          "answer": {
+            "value": "7"
+          },
+          "analysis": "9 - 2 = 7，所以 9 - 7 = 2，括号里填 7；用 2 + 7 = 9 验算，2 与 7 互换位置结果不变。",
+          "difficulty": 3,
+          "knowledge_point": "加法与减法的互逆",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "算式 10 - 6 = 4 可以用 4 + 6 = 10 来验算。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "4 + 6 = 10，差加减数正好等于被减数，说明 10 - 6 = 4 算对了，所以说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "加法与减法的互逆",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "已知 3 + 4 = 7，下面哪些说法是正确的？",
+          "options": [
+            "7 - 3 = 4",
+            "7 - 4 = 3",
+            "7 - 3 = 3",
+            "7 + 4 = 10"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "逐项验算：A 7 - 3 = 4 ✓；B 7 - 4 = 3 ✓；C 7 - 3 = 3 ✗（错，正确差是 4）；D 7 + 4 = 10 ✗（错，正确和是 11）。由一道加法算式只能得到「和减一个加数等于另一个加数」这两道减法。",
+          "difficulty": 4,
+          "knowledge_point": "加法与减法的互逆",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "根据 5 + 2 = 7 写出两道减法算式，再说说加法和减法有什么关系。",
+          "answer": {
+            "value": "7 - 5 = 2，7 - 2 = 5。加法把两部分合成总数，减法从总数里去掉一部分得到另一部分，两者互为逆运算，可以互相验算。"
+          },
+          "analysis": "评分要点：两道减法算式各 1 分，写出「互逆／互相验算」得 2 分。易错点：写成 5 - 2 = 3 这类同方向相减，或漏掉其中一道减法算式。",
+          "difficulty": 3,
+          "knowledge_point": "加法与减法的互逆",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "一年级图书角原有 6 本故事书，老师又买来 3 本，现在有几本故事书？",
+          "options": [
+            "3 本",
+            "8 本",
+            "9 本",
+            "10 本"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "6 + 3 = 9，现在有 9 本，所以选 C。「又买来」表示数量增加，用加法；A 的 3 本只是新买的数量，不是总数。",
+          "difficulty": 2,
+          "knowledge_point": "10以内加减情境问题",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "公交车上原有 10 人，到站下车 4 人，车上还有 （  ） 人。",
+          "answer": {
+            "value": "6"
+          },
+          "analysis": "10 - 4 = 6，下车使人数减少，用减法；再用 6 + 4 = 10 验算，结果与原来人数一致。",
+          "difficulty": 3,
+          "knowledge_point": "10以内加减情境问题",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "小明有 7 颗糖，吃了 2 颗，还剩 5 颗，列式是 7 - 2 = 5。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "7 - 2 = 5，「吃了」表示从总数里去掉，列式与结果都正确，所以说法正确；5 + 2 = 7 也能验算。",
+          "difficulty": 1,
+          "knowledge_point": "10以内加减情境问题",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "一年级同学做手工：先折了 4 只纸鹤，又折了 3 只，然后送给老师 2 只。下面哪些说法正确？",
+          "options": [
+            "一共折了 4 + 3 = 7 只",
+            "送出后还剩 7 - 2 = 5 只",
+            "一共折了 4 + 3 + 2 = 9 只",
+            "送出后还剩 4 + 3 = 7 只"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "逐项判断：A 4 + 3 = 7 ✓（两次折的合起来）；B 7 - 2 = 5 ✓（送走 2 只后剩 5 只）；C 4 + 3 + 2 = 9 ✗（送出的 2 只不是新折的，不能加进去）；D 4 + 3 = 7 ✗（算式虽对，但 7 是送出前的数量，送出后应是 5）。",
+          "difficulty": 5,
+          "knowledge_point": "10以内加减情境问题",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "盒里有 10 个小球，先拿走 3 个，又放回 2 个，现在盒里有几个小球？写出每一步算式并说明是加还是减。",
+          "answer": {
+            "value": "10 - 3 = 7（个），7 + 2 = 9（个），现在有 9 个。拿走要减，放回来要加。"
+          },
+          "analysis": "评分要点：第一步 10 - 3 = 7 得 2 分，第二步 7 + 2 = 9 得 2 分，说明「拿走用减、放回用加」得 1 分。易错点：把两步合并成 10 - 3 - 2 = 5，或忘了第二步要接着第一次剩下的 7 个算。",
+          "difficulty": 3,
+          "knowledge_point": "10以内加减情境问题",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第五单元 有趣的立体图形",
+      "order_index": 6,
+      "summary": "有趣的立体图形：认识长方体、正方体、圆柱和球，分清平面图形与立体图形，并认识立体形状在生活中的应用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "下面哪种物体的形状是长方体？",
+          "options": [
+            "魔方",
+            "足球",
+            "易拉罐",
+            "课本"
+          ],
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "课本是长方体的形状，所以选 D；魔方是正方体，足球是球，易拉罐是圆柱。",
+          "difficulty": 1,
+          "knowledge_point": "认识长方体与正方体"
+        },
+        {
+          "q_type": "fill",
+          "stem": "正方体有（  ）个面，每个面都是（  ）形。",
+          "answer": {
+            "value": [
+              "6",
+              "正方"
+            ]
+          },
+          "analysis": "正方体有 6 个完全相同的正方形面，所以填 6 和正方；长方体也有 6 个面，但每个面一般是长方形。",
+          "difficulty": 2,
+          "knowledge_point": "认识长方体与正方体"
+        },
+        {
+          "q_type": "judge",
+          "stem": "长方体和正方体都有 6 个面、12 条棱和 8 个顶点。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "长方体和正方体都是长方体形状，6 个面、12 条棱、8 个顶点，说法正确；正方体是特殊的长方体。",
+          "difficulty": 2,
+          "knowledge_point": "认识长方体与正方体"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面说法正确的是（  ）。",
+          "options": [
+            "正方体的 6 个面都是一样大的正方形",
+            "长方体只有 4 个面",
+            "球有 6 个面",
+            "圆柱的每个面都是圆的"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "A 正方体 6 个面都是同样大的正方形 ✓；B 长方体也有 6 个面 ✗；C 球没有平的面 ✗；D 圆柱只有上下两个圆面 ✗。故 A 成立。",
+          "difficulty": 3,
+          "knowledge_point": "认识长方体与正方体"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面这些物体中，形状是长方体的有（  ）",
+          "options": [
+            "冰箱",
+            "橡皮",
+            "铅笔",
+            "足球"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "A 冰箱是长方体 ✓；B 橡皮是长方体 ✓；C 铅笔是圆柱形 ✗；D 足球是球 ✗。故 A、B 成立，C、D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "认识长方体与正方体",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面哪种物体的形状是圆柱？",
+          "options": [
+            "铅笔",
+            "皮球",
+            "魔方",
+            "牙膏盒"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "铅笔的形状是圆柱，所以选 A；皮球是球，魔方是正方体，牙膏盒是长方体。",
+          "difficulty": 1,
+          "knowledge_point": "认识圆柱与球"
+        },
+        {
+          "q_type": "fill",
+          "stem": "圆柱有（  ）个平平的面。",
+          "answer": {
+            "value": "2"
+          },
+          "analysis": "圆柱上下各有一个平平的圆面，一共 2 个：1+1=2，所以填 2；圆柱的侧面是弯的曲面，不是平面。",
+          "difficulty": 1,
+          "knowledge_point": "认识圆柱与球"
+        },
+        {
+          "q_type": "judge",
+          "stem": "球放在斜面上会滚动，圆柱放在斜面上也会滚动。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "球和圆柱都有曲面，放在斜面上都会滚动，说法正确；正方体和长方体放在斜面上不会滚。",
+          "difficulty": 2,
+          "knowledge_point": "认识圆柱与球"
+        },
+        {
+          "q_type": "choice",
+          "stem": "圆柱竖着放在平桌上，它会（  ）。",
+          "options": [
+            "滚动起来",
+            "稳稳立住",
+            "自动翻倒",
+            "变成球"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "圆柱的底面是平的，竖着放在平桌上底面能稳稳支撑，所以选 B；把它横着放才会滚动。",
+          "difficulty": 3,
+          "knowledge_point": "认识圆柱与球"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面关于球和圆柱的说法正确的有（  ）",
+          "options": [
+            "球没有平平的面",
+            "圆柱有两个平平的圆面",
+            "球和圆柱放在斜面上都能滚",
+            "圆柱的侧面是平的"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 球表面都是曲面，没有平的面 ✓；B 圆柱上下各有一个圆面 ✓；C 两者放在斜面上都会滚 ✓；D 圆柱侧面是曲面，不是平的 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "认识圆柱与球",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面哪个是平面图形？",
+          "options": [
+            "三角形",
+            "正方体",
+            "圆柱",
+            "球"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "三角形画在纸上，是平的，属于平面图形；正方体、圆柱和球都是立体图形，所以选 A。",
+          "difficulty": 1,
+          "knowledge_point": "平面图形与立体图形"
+        },
+        {
+          "q_type": "fill",
+          "stem": "从正面看一个正方体，看到的是（  ）形。",
+          "answer": {
+            "value": "正方"
+          },
+          "analysis": "正方体从正面看是一个正方形，所以填「正方」；从上面、侧面看也都是正方形。",
+          "difficulty": 2,
+          "knowledge_point": "平面图形与立体图形"
+        },
+        {
+          "q_type": "judge",
+          "stem": "平面图形没有厚薄，立体图形有厚薄。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "平面图形只在一个平面上，没有厚薄；立体图形有长、宽、高，能立起来，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "平面图形与立体图形"
+        },
+        {
+          "q_type": "choice",
+          "stem": "小明把一个圆柱竖着放在桌上，从上面看到的形状是（  ）。",
+          "options": [
+            "圆形",
+            "长方形",
+            "三角形",
+            "正方形"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "从上面看圆柱，看到的是上面那个圆形的面，所以选 A；从侧面看才是长方形。",
+          "difficulty": 3,
+          "knowledge_point": "平面图形与立体图形"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面说法正确的有（  ）",
+          "options": [
+            "长方体从正面看一般是长方形",
+            "球从正面看是圆形",
+            "圆柱从上面看是长方形",
+            "球是平面图形"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "A 长方体正面一般是长方形 ✓；B 球从正面看是圆形 ✓；C 圆柱从上面看是圆形 ✗；D 球是立体图形 ✗。故 A、B 成立，C、D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "平面图形与立体图形",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "快递箱的形状是（  ）",
+          "options": [
+            "长方体",
+            "球",
+            "圆柱",
+            "平面图形"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "快递箱有长、宽、高三个方向，是长方体，所以选 A；球和圆柱都是曲面，箱体不是。",
+          "difficulty": 2,
+          "knowledge_point": "立体图形在生活中的应用"
+        },
+        {
+          "q_type": "fill",
+          "stem": "一个圆柱形的水杯放在桌上，从前面看是（  ）形。",
+          "answer": {
+            "value": "长方"
+          },
+          "analysis": "圆柱从前面看是一个长方形，所以填「长方」；从上面看是圆形，从侧面看也是长方形。",
+          "difficulty": 3,
+          "knowledge_point": "立体图形在生活中的应用"
+        },
+        {
+          "q_type": "answer",
+          "stem": "请你用 4 个同样的小正方体积木，拼出一个长方体，并说出你的摆法。",
+          "answer": {
+            "value": "有两种摆法：一是 4 个排成一行，拼成细长的长方体；二是 2 个并排成一行、两行上下叠起来，拼成宽一些的长方体。"
+          },
+          "analysis": "评分要点：①写出至少一种正确的摆法（2 分）；②摆法说得清楚、在纸面上能画出来（2 分）；③说出摆成的是长方体并说明理由（1 分）；④表述完整（1 分）。",
+          "difficulty": 3,
+          "knowledge_point": "立体图形在生活中的应用",
+          "tags": [
+            "简答"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "小明说：“球比正方体厉害，什么都能滚。”请你说说他说的对不对，并说出理由。",
+          "answer": {
+            "value": "他说的不对。正方体放在斜面上不会滚，只有球和圆柱这类曲面图形才会滚动，还要看接触面是不是平的。"
+          },
+          "analysis": "评分要点：①指出“球什么都能滚”的说法不正确（2 分）；②说出只有球、圆柱这类曲面图形在斜面上会滚（2 分）；③举出正方体在斜面上不滚的例子（1 分）；④表述完整（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "立体图形在生活中的应用",
+          "tags": [
+            "纠错"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "深圳某中学的操场上用圆柱形路桩隔开车行通道，路桩的形状是（  ）",
+          "options": [
+            "圆柱",
+            "球",
+            "长方体",
+            "平面图形"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "路桩上下两个圆面、中间是弯面，属于圆柱，所以选 A；圆柱立起来很稳，也不会被风刮倒。",
+          "difficulty": 4,
+          "knowledge_point": "立体图形在生活中的应用"
+        }
+      ]
+    }
+  ],
+  "_consolidated": {
+    "generated_at": "2026-11-09T04:23:35",
+    "rule": "非 legacy > 批次日期最新 > 题量最多 > mtime 最新",
+    "sources": [
+      {
+        "chapter": "开篇",
+        "file": "math_g1_first_20261108.json",
+        "questions": 18
+      },
+      {
+        "chapter": "第一单元 生活中的数",
+        "file": "math_g1_first_20261108_r2.json",
+        "questions": 21
+      },
+      {
+        "chapter": "第二单元 5以内数加与减",
+        "file": "math_g1_first_20261108_r3.json",
+        "questions": 20
+      },
+      {
+        "chapter": "第三单元 整理与分类",
+        "file": "math_g1_first_20261108_r4.json",
+        "questions": 20
+      },
+      {
+        "chapter": "第四单元 10以内数加与减",
+        "file": "math_g1_first_20261108_r6.json",
+        "questions": 20
+      },
+      {
+        "chapter": "第五单元 有趣的立体图形",
+        "file": "math_g1_first_20261108_r5.json",
+        "questions": 20
+      }
+    ],
+    "dropped_sections": [
+      {
+        "chapter": "（复名知识点不声明后变空）",
+        "sections": [
+          "我上学啦"
+        ]
+      }
+    ],
+    "reused_point_names_not_redeclared": [
+      "数数与一一对应",
+      "比较多少",
+      "认识教室里的位置",
+      "课堂常规与倾听"
+    ],
+    "outside_outline_skipped": [
+      "10以内加减法"
+    ]
+  }
+}

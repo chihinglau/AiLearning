@@ -1,0 +1,3427 @@
+{
+  "subject": "english",
+  "grade": 8,
+  "version": "牛津深圳版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "Unit 1 Water / A Facts about water",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 1 Water / B Water in everyday life",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 1 Water / C The land of little water",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 1 Water / D Water protection",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 1 Water / E Our water use in a day",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "Water facts 水的常识",
+      "parent": "Unit 1 Water / A Facts about water",
+      "order_index": 1,
+      "explanation": "本板块要求读懂关于水的常识性数据：地球表面约七成被水覆盖，海水多于淡水，水有固、液、气三态。读数据要看清 about 这类模糊限定词，别把约数当成精确值。",
+      "prerequisites": [],
+      "weight": 1.1,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Passive voice 被动语态进阶",
+      "parent": "Unit 1 Water / B Water in everyday life",
+      "order_index": 2,
+      "explanation": "本板块在 be used to do 的基础上扩展被动语态：be used for doing、can be + 过去分词、was + 过去分词。判断依据只有一条——动作的承受者是不是主语。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Water shortage 缺水状况",
+      "parent": "Unit 1 Water / C The land of little water",
+      "order_index": 3,
+      "explanation": "本板块训练读懂缺水题材的短文：缺水的原因是降水少、水体污染和浪费水，解决办法是开源节流。答题只能依据原文信息推断，不能凭常识臆造。",
+      "prerequisites": [
+        "Water facts 水的常识"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Modals for advice 情态动词建议",
+      "parent": "Unit 1 Water / D Water protection",
+      "order_index": 4,
+      "explanation": "本板块用 should、can、may、had better 提节水建议：should 表建议、may 表许可、can 表可能与能力，它们后面一律接动词原形，否定式直接把 not 放在情态动词后面。",
+      "prerequisites": [
+        "Passive voice 被动语态进阶"
+      ],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Water data 用水数据",
+      "parent": "Unit 1 Water / E Our water use in a day",
+      "order_index": 5,
+      "explanation": "本板块把一天的用水变成可以计算和记录的数据：家庭用水各项相加用加法，单位用水乘次数用乘法。计算题要写清算式，结论后面必须跟得上依据。",
+      "prerequisites": [
+        "Water shortage 缺水状况",
+        "Modals for advice 情态动词建议"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 2 Digital life / A Viewing and listening",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 2 Digital life / B Speaking",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 2 Digital life / C Reading & Grammar in use",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 2 Digital life / D Writing & Discovery",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 2 Digital life / E Project",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "Digital words 数字生活词汇",
+      "parent": "Unit 2 Digital life / A Viewing and listening",
+      "order_index": 1,
+      "explanation": "本板块积累数字生活的高频词汇：search engine、download、upload、device、screen、click、password 等。看听说题里往往先考词义，再考搭配，要按语境选词而不是凭中文直译。",
+      "prerequisites": [],
+      "weight": 1.1,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Views on digital life 数字生活观点",
+      "parent": "Unit 2 Digital life / B Speaking",
+      "order_index": 2,
+      "explanation": "本板块训练在讨论中表达观点与礼貌反对：I think / I believe / In my opinion 表明立场，I don't think so、I'm afraid I don't agree 委婉反对。think 后接 that 从句时从句要用陈述语序。",
+      "prerequisites": [
+        "Digital words 数字生活词汇"
+      ],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Comparative adjectives 比较级最高级",
+      "parent": "Unit 2 Digital life / C Reading & Grammar in use",
+      "order_index": 3,
+      "explanation": "本板块讲形容词比较级与最高级：多音节词用 more／most 加形容词，单音节词加 -er／-est；比较对象用 than 连接。容易错在 more 与 -er 重复、比较级前再加 very。",
+      "prerequisites": [
+        "Digital words 数字生活词汇"
+      ],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Email writing 邮件写作",
+      "parent": "Unit 2 Digital life / D Writing & Discovery",
+      "order_index": 4,
+      "explanation": "本板块写应用文邮件：称呼、开头问候、主体分段说理由、结尾致意与落款。主体用 because、so 说明原因与结果，用 also、however 补充与转折，让文章有条理。",
+      "prerequisites": [
+        "Views on digital life 数字生活观点"
+      ],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Digital project 数字主题项目",
+      "parent": "Unit 2 Digital life / E Project",
+      "order_index": 5,
+      "explanation": "本板块做小组项目：先定计划、再分工、然后收集资料并展示，最后互评。分工要落实到具体任务与时间节点，成果要能上台讲给大家听。",
+      "prerequisites": [
+        "Email writing 邮件写作"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 3 Curious minds / A Viewing and listening",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 3 Curious minds / B Speaking",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 3 Curious minds / C Reading & Grammar in use",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 3 Curious minds / D Writing & Discovery",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 3 Curious minds / E Project",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "Science words 科学探究词汇",
+      "parent": "Unit 3 Curious minds / A Viewing and listening",
+      "order_index": 1,
+      "explanation": "本板块积累科学探究的核心词汇：question、method、data、result、hypothesis、record、observe。听到或读到一段实验介绍时，要能抓住「问题—方法—数据—结论」这条线索，而不是抓住个别生词。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Asking questions 提问句型",
+      "parent": "Unit 3 Curious minds / B Speaking",
+      "order_index": 2,
+      "explanation": "本板块训练提问的构成与礼貌程度：特殊疑问词加助动词加主语加动词原形；向人打听信息要用 Could you tell me…?、Would you mind…? 等委婉说法。",
+      "prerequisites": [
+        "Science words 科学探究词汇"
+      ],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Past simple 过去式运用",
+      "parent": "Unit 3 Curious minds / C Reading & Grammar in use",
+      "order_index": 3,
+      "explanation": "本板块讲一般过去时：规则动词加 -ed，不规则动词要背（find—found、do—did、make—made）；否定与疑问要借助 did，后面的动词回到原形。",
+      "prerequisites": [
+        "Asking questions 提问句型"
+      ],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Report writing 探究报告写作",
+      "parent": "Unit 3 Curious minds / D Writing & Discovery",
+      "order_index": 4,
+      "explanation": "本板块写探究报告：按「问题—方法—结果—结论」四段组织，结果部分用数据说话，结论部分用 so、because 说明因果。报告要客观，不写夸张的形容词。",
+      "prerequisites": [
+        "Past simple 过去式运用"
+      ],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Science project 科学探究项目",
+      "parent": "Unit 3 Curious minds / E Project",
+      "order_index": 5,
+      "explanation": "本板块组织科学探究小组项目：先定问题与假设，再分工做实验、记录数据，最后整理结果并展示。数据要记进表格，异常情况也要写下来，不能只记成功的那次。",
+      "prerequisites": [
+        "Report writing 探究报告写作"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 4 Then and now / A Viewing and listening",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 4 Then and now / B Speaking",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 4 Then and now / C Reading & Grammar in use",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 4 Then and now / D Writing & Discovery",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 4 Then and now / E Project",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "Then and now 今昔对比词汇",
+      "parent": "Unit 4 Then and now / A Viewing and listening",
+      "order_index": 1,
+      "explanation": "本板块积累表示时间与变化的词：in the past、long ago、decades ago、nowadays、since、for、change、develop。听力材料常按「过去—现在」两段展开，听时要在心里给两段各画一条时间线。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Talking about change 变化口语表达",
+      "parent": "Unit 4 Then and now / B Speaking",
+      "order_index": 2,
+      "explanation": "本板块练口语讲变化：used to + 动词原形讲过去的习惯，nowadays、these days 讲现在，比较用 more...than、not as...as、the same as。口语中先说现在再说过去更自然。",
+      "prerequisites": [
+        "Then and now 今昔对比词汇"
+      ],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Past and present 对比时态",
+      "parent": "Unit 4 Then and now / C Reading & Grammar in use",
+      "order_index": 3,
+      "explanation": "本板块在同一段材料里对比一般过去时与一般现在时：yesterday、ten years ago、in 2019 用过去时，nowadays、every day、today 用现在时。否定过去时借助 did，动词要回到原形。",
+      "prerequisites": [
+        "Talking about change 变化口语表达"
+      ],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Story writing 变化叙事写作",
+      "parent": "Unit 4 Then and now / D Writing & Discovery",
+      "order_index": 4,
+      "explanation": "本板块写「过去与现在」的短文：按时间顺序写，用 at first、then、now、finally 把线索串起来；叙事用过去时，说现在的情况用现在时，两种时态切换要清楚。",
+      "prerequisites": [
+        "Past and present 对比时态"
+      ],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Change project 变化主题项目",
+      "parent": "Unit 4 Then and now / E Project",
+      "order_index": 5,
+      "explanation": "本板块做「Then and Now」项目：采访长辈、收集老照片、把同一件事的过去与现在排成时间线，再做成墙报展示。采访要提前列好问题，展示会要分工。",
+      "prerequisites": [
+        "Story writing 变化叙事写作"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 5 Teamwork / A Viewing and listening",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 5 Teamwork / B Speaking",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 5 Teamwork / C Reading & Grammar in use",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 5 Teamwork / D Writing & Discovery",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 5 Teamwork / E Project",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "Teamwork words 团队合作词汇",
+      "parent": "Unit 5 Teamwork / A Viewing and listening",
+      "order_index": 1,
+      "explanation": "本板块积累合作类词汇：team、member、share、cooperate、effort、duty、support、encourage。看听说材料时要抓住「谁做了什么、遇到困难怎么办」两条线索，而不是记住孤立单词。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Making suggestions 建议句型",
+      "parent": "Unit 5 Teamwork / B Speaking",
+      "order_index": 2,
+      "explanation": "本板块学提建议的三种句型：Why don't we + 动词原形？、Let's + 动词原形、How about + 动名词？另外 Shall we...? 也可以。句型后面一个接动词原形，一个接动名词，不能混用。",
+      "prerequisites": [
+        "Teamwork words 团队合作词汇"
+      ],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Linking words 连接词运用",
+      "parent": "Unit 5 Teamwork / C Reading & Grammar in use",
+      "order_index": 3,
+      "explanation": "本板块梳理连接词：because 与 so 表因果，but 与 however 表转折，although 表让步。读长句时先找连接词就能看出分句关系；写句子时 although 和 but 不能同时出现在一句里。",
+      "prerequisites": [
+        "Making suggestions 建议句型"
+      ],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Writing a proposal 方案写作",
+      "parent": "Unit 5 Teamwork / D Writing & Discovery",
+      "order_index": 4,
+      "explanation": "本板块写申请与方案：开头点明目的（We are writing to...），主体写目标、步骤和理由，结尾提出明确请求。理由用 because 支撑，请求要具体可执行，不能只说「请帮帮忙」。",
+      "prerequisites": [
+        "Linking words 连接词运用"
+      ],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Team project 小组协作项目",
+      "parent": "Unit 5 Teamwork / E Project",
+      "order_index": 5,
+      "explanation": "本板块做小组协作项目：定目标、分工、定进度，中途出问题时先沟通再调整分工，结束后开短会总结优点与不足。评价项目时看的是配合过程，不只是最后的结果。",
+      "prerequisites": [
+        "Writing a proposal 方案写作"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 6 Life in the future / A Viewing and listening",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 6 Life in the future / B Speaking",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 6 Life in the future / C Reading & Grammar in use",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 6 Life in the future / D Writing & Discovery",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 6 Life in the future / E Project",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "Future words 未来生活词汇",
+      "parent": "Unit 6 Life in the future / A Viewing and listening",
+      "order_index": 1,
+      "explanation": "本板块积累科幻与未来生活的核心词汇：robot、space、driverless、smart home、imagine、predict、astronaut。看图或听介绍时先判断是「已有的科技」还是「作者的想象」，想象部分常用情态动词，语气更不确定。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Imagining the future 未来设想口语",
+      "parent": "Unit 6 Life in the future / B Speaking",
+      "order_index": 2,
+      "explanation": "本板块练用英语谈未来：I think...、Maybe...、It's possible that...、I hope...。谈未来多用推测语气（may、might、perhaps），不要把猜测说成已经发生的事实。",
+      "prerequisites": [
+        "Future words 未来生活词汇"
+      ],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Future forms 将来时态",
+      "parent": "Unit 6 Life in the future / C Reading & Grammar in use",
+      "order_index": 3,
+      "explanation": "本板块区分三种将来表达：will 表示单纯的将来预测，be going to 表示已有打算或有迹象的预测，现在进行时表示已经安排好的将来。be going to 和 will 后面都接动词原形。",
+      "prerequisites": [
+        "Imagining the future 未来设想口语"
+      ],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Letter to the future 写给未来的信",
+      "parent": "Unit 6 Life in the future / D Writing & Discovery",
+      "order_index": 4,
+      "explanation": "本板块写给十年后自己的信：开头称呼，中段写今天的生活和今后的愿望，结尾落款。信里多用 I hope...、I wonder... 这类表达愿望与想象的句子，语气要真诚。",
+      "prerequisites": [
+        "Future forms 将来时态"
+      ],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Future project 未来主题项目",
+      "parent": "Unit 6 Life in the future / E Project",
+      "order_index": 5,
+      "explanation": "本板块做「未来校园」项目：先用问卷调查同学的愿望，再整理数据、画图、做海报，最后展示。调查结果要用数据说话，展示时每个成员都要有话说。",
+      "prerequisites": [
+        "Letter to the future 写给未来的信"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "Unit 1 Water",
+      "order_index": 1,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Which of the following is true about water on Earth?",
+          "options": [
+            "About 70% of the Earth's surface is covered by water.",
+            "Most of the water on Earth is fresh water.",
+            "Water covers about 30% of the Earth's surface.",
+            "There is no water in the seas and the rivers."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "地球表面约七成被水覆盖，所以选 A；B 错在大部分水是海水，淡水只占很小一部分；C 把七成写成了三成；D 与海洋河流的存在自相矛盾。读数据类选项要看清 about 这类模糊限定词。",
+          "difficulty": 1,
+          "knowledge_point": "Water facts 水的常识",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "Most of the water on Earth is ______ water, and only a small part of it is fresh water. (fresh/salt)",
+          "answer": {
+            "value": "salt"
+          },
+          "analysis": "地球上绝大部分水是咸水，淡水只占很小一部分，所以填 salt；填 fresh 就把两类水的比例弄反了。看到 most of 与 only a small part 的对比，就要让两组词一一对应起来。",
+          "difficulty": 2,
+          "knowledge_point": "Water facts 水的常识",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Fresh water and salt water can both be drunk directly.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "海水等咸水含有大量盐分，不能直接饮用；只有经过处理的淡水才可以饮用，所以说法错误。判断这类题要抓住 directly 这个词：处理后的水确实能喝，但它已经不再是原来的盐水了。",
+          "difficulty": 2,
+          "knowledge_point": "Water facts 水的常识",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following are true about water?",
+          "options": [
+            "Water can exist as a solid, a liquid and a gas.",
+            "Fresh water freezes at 0°C.",
+            "Salt water freezes at a higher temperature than fresh water.",
+            "Plants will die if they get no water for a long time."
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 水有固态、液态、气态三态 ✓；B 淡水在 0℃ 结冰 ✓；C 盐水的凝固点比淡水低，而不是更高 ✗；D 植物长期缺水会死亡 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Water facts 水的常识",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "You are making a poster for the school Science Week. Write two sentences in English to describe two facts about water on Earth.",
+          "answer": {
+            "value": "About 70% of the Earth's surface is covered by water. Most of the water on Earth is salt water, and only a small part of it is fresh water."
+          },
+          "analysis": "参考示例见答案。评分要点：①两句都是关于水的客观事实（2 分）；②用上 about 70% 一类的数据表达（1 分）；③事实准确、句间不矛盾（2 分）；④书写规范、句末有标点（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Water facts 水的常识",
+          "tags": [
+            "写作"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Water ______ to make paper in that factory.",
+          "options": [
+            "is used",
+            "uses",
+            "used",
+            "is using"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "主语 Water 是动作 make paper 的承受者，要用被动语态 is used，所以选 A；uses 是主动语态，主语应是工厂；used 缺 be 动词；is using 是现在进行时的主动结构。判断主动还是被动只看「谁承受动作」。",
+          "difficulty": 2,
+          "knowledge_point": "Passive voice 被动语态进阶",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which sentence is correct?",
+          "options": [
+            "Water can be used to clean the floor.",
+            "Water can be used for clean the floor.",
+            "Water can be used cleaning the floor.",
+            "Water can use to clean the floor."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "情态动词 can 后面接动词原形，被动语态的结构是 can be + 过去分词，所以选 A；B 用了原形 clean，应改为 cleaning；C 缺 be 动词；D 把被动语态写成了主动语态。",
+          "difficulty": 3,
+          "knowledge_point": "Passive voice 被动语态进阶",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「Water is used for washing clothes」和「Water is used to wash clothes」意思基本相同。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "be used for doing 与 be used to do 都表示用途，意思基本相同，可以互换，所以说法正确。区别只在搭配：for 后面用动名词，to 后面用动词原形。",
+          "difficulty": 3,
+          "knowledge_point": "Passive voice 被动语态进阶",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "This kind of water ______ (use) for washing cars in the car park.",
+          "answer": {
+            "value": "is used"
+          },
+          "analysis": "空格处要填谓语动词，且 water 是 wash cars 的承受者，用被动语态 is used；写成 used 缺 be 动词，写成 are used 也不行，因为 water 不可数、看作单数。",
+          "difficulty": 3,
+          "knowledge_point": "Passive voice 被动语态进阶",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following sentences are passive?",
+          "options": [
+            "The water was boiled in the kitchen.",
+            "Many people drink water every day.",
+            "The river was polluted last year.",
+            "He turned off the tap."
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A 水是 boils 的承受者，was boiled 属于被动语态 ✓；B 主语 people 是动作的发出者，是主动语态 ✗；C 河流是污染的承受者，was polluted 属于被动语态 ✓；D 主语 He 是动作的发出者，是主动语态 ✗。故 A、C 成立，B、D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "Passive voice 被动语态进阶",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Lin Tao lives in a town in the north of China. It rains little there, and the rivers are often dry in winter. What is the biggest problem for the people there?",
+          "options": [
+            "They do not have enough water.",
+            "They do not have enough food.",
+            "They cannot find a good job.",
+            "They cannot go to school."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "材料说降水少、河流常干，指向的就是缺水问题，所以选 A；其余三项在材料里都没有任何依据。做材料题只能依据原文信息推断，不能凭常识臆造。",
+          "difficulty": 3,
+          "knowledge_point": "Water shortage 缺水状况",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "A water shortage means that there is not enough clean water for people to use.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "water shortage 就是水资源短缺，即没有足够的清洁水供人们使用，所以说法正确。判断这类词义题要把句中的解释与词本身一一对上。",
+          "difficulty": 2,
+          "knowledge_point": "Water shortage 缺水状况",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which is the best way for a city with little water to solve the problem?",
+          "options": [
+            "Recycle water and get water from other places.",
+            "Build more factories in the city.",
+            "Grow more food in the city.",
+            "Buy more cars for the city."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "缺水城市的主要出路是节流与开源，即回收再利用水、从外地调水，所以选 A；建工厂、增粮食、买汽车都跟缺水问题没有直接关系。做措施类题要看它能不能真正缓解缺水。",
+          "difficulty": 3,
+          "knowledge_point": "Water shortage 缺水状况",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "What are the causes of a water shortage?",
+          "options": [
+            "Too little rain in a place.",
+            "Pollution in rivers and lakes.",
+            "Wasting water every day.",
+            "Too many fish in the river."
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 降水少直接导致水资源不足 ✓；B 水体被污染后可用的清洁水变少 ✓；C 浪费水让本来有限的水不够用 ✓；D 鱼多不会让水量减少，也不影响水质 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Water shortage 缺水状况",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Shenzhen is a city with a serious water shortage. Write three suggestions in English to help the city save water. Use at least one modal verb (can/should/may) in each suggestion.",
+          "answer": {
+            "value": "1. We should turn off the tap when we brush our teeth. 2. We can reuse the water from washing vegetables to water the plants. 3. We may ask our families to take shorter showers."
+          },
+          "analysis": "参考示例见答案。评分要点：①三条建议具体可行、都与节水有关（每条 1 分，共 3 分）；②每条用上 can、should 或 may，且后面接动词原形（2 分）；③句子完整，大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Water shortage 缺水状况",
+          "tags": [
+            "写作",
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "You ______ waste water when you wash the dishes.",
+          "options": [
+            "should not",
+            "should not to",
+            "not should",
+            "doesn't should"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "should 表示建议「应该」，否定式是 should not，后面接动词原形 waste，所以选 A；should 后不能直接加 to；否定词也不能放在 should 之前；doesn't 与情态动词不能连用。",
+          "difficulty": 2,
+          "knowledge_point": "Modals for advice 情态动词建议",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "We ______ use a bucket to catch the water when we wash vegetables.",
+          "options": [
+            "can",
+            "can to",
+            "canned",
+            "are can"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "can 表示「能够」，后面直接接动词原形 use，所以选 A；can 后加 to 是错的；canned 是过去式或形容词；can 没有 are 这种形式，情态动词前不能再加别的助动词。",
+          "difficulty": 2,
+          "knowledge_point": "Modals for advice 情态动词建议",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「You may take a short shower」的意思是说话人允许对方洗短一点的淋浴。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "may 常用来表示许可或可能，may take a short shower 就是「你可以洗短一点的淋浴」，表示允许，所以说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "Modals for advice 情态动词建议",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "To save water, we ______ (take) shorter showers. Use the correct form of the verb.",
+          "answer": {
+            "value": "should take"
+          },
+          "analysis": "句子是在提建议，用 should + 动词原形；take 已经给出原形，所以填 should take。只填 take 缺少情态动词，填 should taken 用了过去式，两者都不合语法。",
+          "difficulty": 3,
+          "knowledge_point": "Modals for advice 情态动词建议",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following are correct ways of giving advice about water?",
+          "options": [
+            "You had better turn off the tap.",
+            "You should wash the car less often.",
+            "You'd better not waste water.",
+            "You must to clean the tap every day."
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A had better 后接动词原形，是给建议 ✓；B should 后接动词原形，是正确的节水建议 ✓；C had better not 后接动词原形 ✓；D must 后接动词原形，must to 的结构错误 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Modals for advice 情态动词建议",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "A family uses 120 litres of water for washing, 30 litres for cooking and 50 litres for cleaning every day. How much water do they use for these three things altogether?",
+          "options": [
+            "170 litres",
+            "200 litres",
+            "220 litres",
+            "260 litres"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "120+30+50=200，三项一共用水 200 升，所以选 B；只把 washing 和 cleaning 相加会漏掉 cooking，算成 170 升；220 升与 260 升都是某一项加错了。做数据题要把每一项都加进去，只加一次。",
+          "difficulty": 2,
+          "knowledge_point": "Water data 用水数据",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "One shower uses about 40 litres of water. Five showers like that use ______ litres.",
+          "answer": {
+            "value": "200"
+          },
+          "analysis": "40×5=200，五次淋浴大约用 200 升水，所以填 200；这里是乘法，每多洗一次就多用 40 升，不能把次数当成加数。",
+          "difficulty": 2,
+          "knowledge_point": "Water data 用水数据",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "A tap that drips once a second can waste a lot of water in one day.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "滴水的龙头每一秒漏一滴，一天下来会漏掉大量水，所以说法正确。判断这类题要抓住 a lot of 这个程度词，不能因为「只是一滴水」就认为可以忽略。",
+          "difficulty": 3,
+          "knowledge_point": "Water data 用水数据",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following are good ways to find out how much water your family uses at home?",
+          "options": [
+            "Read the water meter at the beginning and the end of a week.",
+            "Write down how many minutes your shower runs.",
+            "Count how many times the tap is opened each day.",
+            "Guess the amount of water without writing anything down."
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 查水表能得到真实数据 ✓；B 记录洗澡时长便于推算水量 ✓；C 统计开水龙头次数能反映浪费情况 ✓；D 只靠猜没有依据，不是记录水量的办法 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Water data 用水数据",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Your class is doing a project on how much water we use in a day. Make a short plan in English with three parts: what you will record, how you will record it, and one way to save water.",
+          "answer": {
+            "value": "We will record how long the shower runs, how many times the tap is opened and how much water the washing machine uses. We will write the numbers in a table every evening for one week. Then we can take shorter showers and turn off the tap while brushing our teeth."
+          },
+          "analysis": "参考示例见答案。评分要点：①三部分齐全——记录什么、怎么记录、如何节水（每部分 1 分，共 3 分）；②记录内容具体，动词与将来表达用得正确（2 分）；③句子之间有简单衔接（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 5,
+          "knowledge_point": "Water data 用水数据",
+          "tags": [
+            "写作",
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 2 Digital life",
+      "order_index": 2,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Which word means 'to get a file from the Internet onto your computer'?",
+          "options": [
+            "download",
+            "delete",
+            "print",
+            "search"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "download 指把文件从网络下载到电脑，所以选 A；delete 是删除；print 是打印；search 是搜索，方向正好相反。记数字生活词汇要连同搭配一起记，不要只背中文。",
+          "difficulty": 1,
+          "knowledge_point": "Digital words 数字生活词汇",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "You can use a ______ engine to find information on the Internet.",
+          "answer": {
+            "value": "search"
+          },
+          "analysis": "查找网络信息的工具叫 search engine（搜索引擎），所以填 search；填 look 或 find 都不能与 engine 构成固定搭配。",
+          "difficulty": 2,
+          "knowledge_point": "Digital words 数字生活词汇",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "You can use a smart phone to check the weather and to book a bus ticket.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "查天气和买公交车票都是手机常见的应用场景，所以说法正确。这类听说题的判断要落在句中提到的具体功能上。",
+          "difficulty": 2,
+          "knowledge_point": "Digital words 数字生活词汇",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following are things people often do with a smart phone?",
+          "options": [
+            "Sending messages to friends.",
+            "Taking photos.",
+            "Playing games.",
+            "Washing clothes."
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 发消息是手机的常见用途 ✓；B 拍照是手机的常见用途 ✓；C 玩手机游戏是手机的常见用途 ✓；D 洗衣服是洗衣机的功能，与手机无关 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Digital words 数字生活词汇",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write a short dialogue of four lines in English between two students, A and B. They talk about what they use their phones for.",
+          "answer": {
+            "value": "A: What do you usually do with your phone? B: I use it to send messages and take photos. A: Do you play games on it? B: Yes, but only for ten minutes a day. A: I use mine to look up new words when I read."
+          },
+          "analysis": "参考示例见答案。评分要点：①四轮对话，格式是 A: / B: 交替（2 分）；②至少说出三件用手机做的事，用词属于本单元词汇（2 分）；②问句与答语搭配得当（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Digital words 数字生活词汇",
+          "tags": [
+            "写作"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which of the following sentences about giving an opinion is correct?",
+          "options": [
+            "I think mobile phones are useful for study.",
+            "I think mobile phones is useful for study.",
+            "I think mobile phones are use for study.",
+            "I thinks mobile phones are useful for study."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "think 后接 that 从句，从句里 mobile phones 是复数，be 动词用 are，所以选 A；B 主谓不一致；C be 动词后面要跟形容词而不是原形 use；D think 在主语 I 后面不能加 -s。",
+          "difficulty": 2,
+          "knowledge_point": "Views on digital life 数字生活观点",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "I ______ (agree) with you that we should put our phones away in class.",
+          "answer": {
+            "value": "agree"
+          },
+          "analysis": "句中 already 给出了 agree 的各种形式，句子是一般现在时、主语是 I，所以填 agree；写成 agrees 或 agreed 都与主语和时态不符。",
+          "difficulty": 2,
+          "knowledge_point": "Views on digital life 数字生活观点",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「I don't think so」可以用来委婉地表示不同意对方的观点。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "I don't think so 表示「我可不这么认为」，是英语中常用的礼貌反对方式，所以说法正确。注意它是省略句，完整形式是 I don't think so。",
+          "difficulty": 3,
+          "knowledge_point": "Views on digital life 数字生活观点",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Your friend says: 'We should ban all mobile phones at school.' How do you politely disagree?",
+          "options": [
+            "I'm afraid I don't agree. We can control our phones in class.",
+            "You're wrong. Phones are bad.",
+            "No, never. Stop talking about this.",
+            "That's a silly idea, and I don't care."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "A 用 I'm afraid I don't agree 先缓和语气再说明理由，既礼貌又清楚，所以选 A；B、C、D 都带有指责或情绪，语气生硬，在讨论中不合适。",
+          "difficulty": 3,
+          "knowledge_point": "Views on digital life 数字生活观点",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following expressions can be used to give an opinion in a class discussion?",
+          "options": [
+            "In my opinion.",
+            "I believe that it is important.",
+            "From my point of view.",
+            "That doesn't matter to me at all."
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A In my opinion 是标准的表明观点用语 ✓；B I believe that 引出看法 ✓；C From my point of view 同样表明立场 ✓；D 只是说「这与我无关」，并没有表达观点 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Views on digital life 数字生活观点",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Your class is discussing whether students should use mobile phones in class. Write your opinion in English in at least four sentences. Use two different expressions of opinion.",
+          "answer": {
+            "value": "In my opinion, mobile phones are helpful for learning, but they should be put away when the teacher is talking. I believe that we can use them to look up new words after class. From my point of view, what matters is not the phone itself but how we use it. That is why I agree with the rule in our school."
+          },
+          "analysis": "参考示例见答案。评分要点：①至少四句，内容完整表达立场（2 分）；②用上两种观点表达（如 In my opinion、I believe、From my point of view）（2 分）；③连接词使用正确，句子之间有逻辑（1 分）；④大小写、标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Views on digital life 数字生活观点",
+          "tags": [
+            "写作"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which is the correct comparative form of the word 'useful'?",
+          "options": [
+            "more useful",
+            "usefuller",
+            "most useful",
+            "more usefully"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "useful 是多音节词且以「辅音字母 + ful」结尾，比较级用 more 加形容词，所以选 A；usefuller 是生造的错误形式；most useful 是最高级；more usefully 是副词比较级，词性不对。",
+          "difficulty": 2,
+          "knowledge_point": "Comparative adjectives 比较级最高级",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which of the following sentences is grammatically correct?",
+          "options": [
+            "Mobile phones are more convenient than computers.",
+            "Mobile phones are convenient than computers.",
+            "Mobile phones more convenient than computers.",
+            "Mobile phones are more convenient than computer."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "多音节形容词 convenient 的比较级是 more convenient，比较对象用 than 连接且要用复数 computers，所以选 A；B 漏掉 more；C 漏掉 be 动词 are；D 比较对象 computer 漏了复数 -s。",
+          "difficulty": 2,
+          "knowledge_point": "Comparative adjectives 比较级最高级",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "This app is ______ (useful) than that one for learning English.",
+          "answer": {
+            "value": [
+              "more useful"
+            ]
+          },
+          "analysis": "空格在比较级位置，useful 是多音节词，要用 more 加形容词，即 more useful；than 说明是比较关系，句子缺 more 就成了原级。",
+          "difficulty": 3,
+          "knowledge_point": "Comparative adjectives 比较级最高级",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「the most useful app」的意思是「最有用的应用程序」。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "多音节形容词的最高级用 most 加形容词，the most useful app 就是「最有用的应用程序」，所以说法正确。注意最高级前面一般要加 the。",
+          "difficulty": 3,
+          "knowledge_point": "Comparative adjectives 比较级最高级",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following sentences are correct?",
+          "options": [
+            "This is the cheapest phone in the shop.",
+            "This phone is cheaper than that one.",
+            "My phone is more cheaper than yours.",
+            "The screen is bigger than the screen of my old phone."
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A cheap 是单音节词，最高级用 cheapest，前面加 the ✓；B cheap 的比较级是 cheaper ✓；D bigger 是 big 的正确比较级 ✓；C more cheaper 把两种比较级方式叠在一起，是双重比较错误 ✗。故 A、B、D 成立，C 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "Comparative adjectives 比较级最高级",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Your group is comparing two apps for a class project. Write three sentences in English to compare them, using at least two comparative forms.",
+          "answer": {
+            "value": "The first app is more useful for learning words, because it has a bigger dictionary. The second app is cheaper than the first one. However, the second app is less convenient, so I think the first app is the best choice for our group."
+          },
+          "analysis": "参考示例见答案。评分要点：①三句都在比较两款应用（2 分）；②至少两处比较级用对（more、cheaper、less、biggest 等）（2 分）；③比较对象齐全，用 than 或 in 引导（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Comparative adjectives 比较级最高级",
+          "tags": [
+            "写作"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which is the best opening for an email to a friend?",
+          "options": [
+            "Hi Anna,",
+            "Dear Sir or Madam,",
+            "To whom it may concern,",
+            "Hello teacher,"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "给朋友写邮件用熟悉的称呼 Hi Anna, 后面加逗号，所以选 A；Dear Sir or Madam 和 To whom it may concern 是写给陌生机构或老师的商务用语；Hello teacher 用于课堂当面称呼，不适合写在邮件里。",
+          "difficulty": 1,
+          "knowledge_point": "Email writing 邮件写作",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "In an email, we often use also, however and ______ to show reasons and results.",
+          "answer": {
+            "value": "because"
+          },
+          "analysis": "because 引出原因，also 与 however 分别表示补充和转折，because 与它们的语气一致，所以填 because；填 but 虽然也能表示转折，但和 also、however 搭配起来不如 because 能说明「原因与结果」。",
+          "difficulty": 2,
+          "knowledge_point": "Email writing 邮件写作",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "In a friendly email, we usually write 'Dear Anna,' with a comma after the name.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "英语邮件称呼后习惯加逗号再另起一行写正文，所以说法正确。写作题里称呼后的标点是最容易丢分的小地方，要记牢。",
+          "difficulty": 2,
+          "knowledge_point": "Email writing 邮件写作",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following words are often used to show reasons and results in an email?",
+          "options": [
+            "because",
+            "so",
+            "but",
+            "however"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "A because 引出原因 ✓；B so 引出结果 ✓；C but 表示转折，不表示原因与结果 ✗；D however 也是转折连词，同样不表示因果 ✗。故 A、B 成立，C、D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Email writing 邮件写作",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Your English teacher asks you to write an email to a pen friend about the digital tools you use for study. Write at least five sentences. Include a greeting, two reasons and a sign-off.",
+          "answer": {
+            "value": "Dear Tom, Thank you for your last email. I use my phone to look up new words and I take photos of the notes on the blackboard. I also use a search engine when I want to know more about a topic. In my opinion, these tools are useful because they save me time. Best wishes, Li Ming"
+          },
+          "analysis": "参考示例见答案。评分要点：①有称呼与结尾致意，格式完整（2 分）；②主体至少两句并写出两条理由（2 分）；③用上 because、also、in my opinion 等连接与观点表达（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Email writing 邮件写作",
+          "tags": [
+            "写作",
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "What is the first step of a group project?",
+          "options": [
+            "Plan the work.",
+            "Present the result.",
+            "Collect the marks.",
+            "Copy the report."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "做项目的第一步是制定计划，明确任务与时间，所以选 A；B 展示成果是最后一步；C 收集分数不是项目环节；D 抄袭报告既是错误的做法，也用词不通。",
+          "difficulty": 2,
+          "knowledge_point": "Digital project 数字主题项目",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "In a group project, each member should finish his or her own ______ (task) on time.",
+          "answer": {
+            "value": "task"
+          },
+          "analysis": "句意是「每个成员都应按时完成自己的任务」，task 指具体的分工任务，所以填 task；写成 jobs 语气不对，写成 task 的复数也与 own 单数搭配矛盾。",
+          "difficulty": 2,
+          "knowledge_point": "Digital project 数字主题项目",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "In a group project, everyone should do exactly the same job so that the work is fair.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "项目分工要按每个人的能力与任务需要来定，让所有人做同一件事反而效率低下，所以说法错误。公平指的是任务明确、进度互相配合，不是工作内容完全相同。",
+          "difficulty": 3,
+          "knowledge_point": "Digital project 数字主题项目",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following are good habits in a group project?",
+          "options": [
+            "Keep a clear schedule for the work.",
+            "Tell your group when you cannot finish your part.",
+            "Copy other members' work without telling them.",
+            "Practise the presentation together."
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 制定清晰的时间表能保证进度 ✓；B 提前告知进度困难是负责任的做法 ✓；C 抄袭别人的成果既不诚信也拿不到真正的训练 ✗；D 一起排练展示能提高配合度 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Digital project 数字主题项目",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Your group is making a short presentation about how digital devices change our daily life. Write a plan in English with four steps, and say what each member should do.",
+          "answer": {
+            "value": "First, we will discuss the topic and decide on the main points. Second, Wang Mei will search for information and write the facts. Third, Li Lei will design the pictures and the slides. Fourth, we will all practise the presentation on Monday and show it on Tuesday."
+          },
+          "analysis": "参考示例见答案。评分要点：①四个步骤齐全、有先后顺序（2 分）；②每一步写清谁做什么，分工具体（2 分）；③用上 first、second、third 等顺序词（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Digital project 数字主题项目",
+          "tags": [
+            "写作",
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 3 Curious minds",
+      "order_index": 3,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "What does a scientist do during an experiment?",
+          "options": [
+            "He or she observes the result and records the data.",
+            "He or she buys some new clothes.",
+            "He or she watches a film in the cinema.",
+            "He or she plays football with his or her friends."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "科学实验的核心动作是观察并记录数据，所以选 A；买衣服、看电影、踢足球都不属于实验步骤。做听看类题时要抓住动作与实验场景的搭配。",
+          "difficulty": 1,
+          "knowledge_point": "Science words 科学探究词汇",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "Scientists must be ______ (careful) when they record the data in an experiment.",
+          "answer": {
+            "value": "careful"
+          },
+          "analysis": "be 动词后面要接形容词，所以用 careful；carefully 是副词，不能直接跟在 be 后面。这一空同时考查词性与句法位置两个点。",
+          "difficulty": 2,
+          "knowledge_point": "Science words 科学探究词汇",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "A hypothesis is a possible answer that you can test in an experiment.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "hypothesis 就是「假设」，即一个可以被实验检验的可能答案，所以说法正确。记住 hypothesis（名词）— hypothesize（动词）这条词形链。",
+          "difficulty": 2,
+          "knowledge_point": "Science words 科学探究词汇",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following are parts of a science experiment?",
+          "options": [
+            "A question to find out.",
+            "A test or a method.",
+            "Data or results.",
+            "A new schoolbag."
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 实验要先有问题 ✓；B 要有测试或方法 ✓；C 要有数据或结果 ✓；D 新书包是文具，与实验环节无关 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Science words 科学探究词汇",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "You did a simple experiment at home with ice in a cup. Write three sentences in English about it: what you wanted to find out, what you did, and what you found.",
+          "answer": {
+            "value": "I wanted to find out how long a piece of ice takes to melt in a warm classroom. I put the ice in a cup and wrote down the time every five minutes. I found that the ice melted in about twenty minutes, and the warm classroom made it melt faster than in the fridge."
+          },
+          "analysis": "参考示例见答案。评分要点：①三部分齐全——想知道什么、怎么做的、发现什么（2 分）；②用上本单元的实验词汇（2 分）；③句子之间有顺序衔接（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 3,
+          "knowledge_point": "Science words 科学探究词汇",
+          "tags": [
+            "写作"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which question is used to ask about the reason of something?",
+          "options": [
+            "Why did the plant grow faster?",
+            "How many leaves did it have?",
+            "When did you put it on the desk?",
+            "Where did you buy the seeds?"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "问原因用疑问词 why，所以选 A；how many 问数量，when 问时间，where 问地点。抓住疑问词与句子所问信息的对应关系是本题的关键。",
+          "difficulty": 2,
+          "knowledge_point": "Asking questions 提问句型",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which of the following sentences is a correct question?",
+          "options": [
+            "What did you find in the experiment?",
+            "What you did find in the experiment?",
+            "What did you found in the experiment?",
+            "What did you find in the experiment yesterday?"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "疑问句要有助动词 did 加主语 you 加动词原形 find，所以选 A；B 缺助动词；C 在 did 之后又用过去式 found，是双重过去式错误；D 加了时间状语也救不了 C 的语法错误。",
+          "difficulty": 2,
+          "knowledge_point": "Asking questions 提问句型",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "Complete the question: How ______ the colour of the paper change after you put it in the sun? (did)",
+          "answer": {
+            "value": "did"
+          },
+          "analysis": "特殊疑问句 How 后面先放助动词，主语 the colour 是第三人称单数，过去时用 did 再加动词原形 change，所以填 did。",
+          "difficulty": 3,
+          "knowledge_point": "Asking questions 提问句型",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "In English questions, the helping verb (do, does, did) usually comes before the main verb.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "英语的疑问句要把助动词 do、does、did 提到主语之前，主句动词回到原形，所以说法正确。这是构造疑问句最容易出错的一步。",
+          "difficulty": 3,
+          "knowledge_point": "Asking questions 提问句型",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Your group is going to ask a scientist some questions after his talk. Write four questions in English about his work.",
+          "answer": {
+            "value": "1. What did you want to find out in your first experiment? 2. How long did it take you to collect the data? 3. Why did you choose this way to test your idea? 4. What would you like to try next?"
+          },
+          "analysis": "参考示例见答案。评分要点：①四个问句，疑问词不重复（2 分）；②问句结构正确，助动词与动词形式搭配无误（2 分）；③问题与科学探究有关（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Asking questions 提问句型",
+          "tags": [
+            "写作",
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Last week our class ______ a small experiment about plants.",
+          "options": [
+            "did",
+            "does",
+            "did done",
+            "doing"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "last week 说明是过去的事，一般过去时用 did 加动词原形 do，所以选 A；does 是一般现在时；did done 是多余的，do 的过去式本身就是 did；doing 不能单独作谓语。",
+          "difficulty": 2,
+          "knowledge_point": "Past simple 过去式运用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "The scientist ______ the water three times yesterday.",
+          "options": [
+            "boiled",
+            "boil",
+            "boils",
+            "boiling"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "yesterday 是过去时间标志，动词要用过去式 boiled，所以选 A；boil 是原形，boils 是第三人称单数，boiling 是动名词，都不能直接作这个句子的谓语。",
+          "difficulty": 2,
+          "knowledge_point": "Past simple 过去式运用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "He ______ (find) a new way to make clean water last year.",
+          "answer": {
+            "value": "found"
+          },
+          "analysis": "last year 表明是过去的事，find 是不规则动词，过去式是 found，所以填 found；写成 find 或 finds 都与时间状语不符。",
+          "difficulty": 3,
+          "knowledge_point": "Past simple 过去式运用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following sentences are in the past simple?",
+          "options": [
+            "We watched a documentary last night.",
+            "She is doing her homework now.",
+            "They went to the science museum yesterday.",
+            "I will call you tomorrow."
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A last night 是过去时间，watched 是过去式 ✓；B is doing 是现在进行时 ✗；C yesterday 是过去时间，went 是 go 的过去式 ✓；D will call 是将来时 ✗。故 A、C 成立，B、D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "Past simple 过去式运用",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write five sentences in English about what you and your classmates did during a science project last week. Use the past simple tense.",
+          "answer": {
+            "value": "Last week our group did a project about clean water. We first made a plan and divided the work into four parts. I searched for information and wrote it in a notebook. We tested the filter three times and recorded the data. Finally, we showed our results to the whole class and the teacher was pleased with our work."
+          },
+          "analysis": "参考示例见答案。评分要点：①五句话都讲过去发生的事（2 分）；②动词过去式使用正确，规则动词加 -ed、不规则动词用过去式（2 分）；③时间状语与时态一致（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Past simple 过去式运用",
+          "tags": [
+            "写作",
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which is the first part of a short science report?",
+          "options": [
+            "The question we wanted to answer.",
+            "The name of a popular song.",
+            "A shopping list for the lab.",
+            "The phone number of the lab."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "报告的顺序是「问题—方法—结果—结论」，第一部分就是写清楚要研究的问题，所以选 A；歌名、购物清单、电话号码都不属于报告结构。",
+          "difficulty": 2,
+          "knowledge_point": "Report writing 探究报告写作",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "A short science report usually has four parts: the question, the method, the ______ and the conclusion.",
+          "answer": {
+            "value": [
+              "results",
+              "result"
+            ]
+          },
+          "analysis": "报告在方法之后要摆出实验的结果，再写结论，所以填 results（写成 result 也可接受）。四个部分要按顺序出现，不能把结论写在结果前面。",
+          "difficulty": 3,
+          "knowledge_point": "Report writing 探究报告写作",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "A science report must be based on facts and data instead of personal feelings.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "科学报告要客观，用事实和数据说话，不能只写个人感受，所以说法正确。写作时少用 very good、amazing 这类主观形容词。",
+          "difficulty": 3,
+          "knowledge_point": "Report writing 探究报告写作",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following can be put in the 'method' part of a report?",
+          "options": [
+            "How we tested the idea.",
+            "The data we collected.",
+            "The steps we followed one by one.",
+            "The name of our school."
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A method 讲「怎么测试」，属于方法部分 ✓；C 一步一步的做法也属于方法部分 ✓；B 数据属于结果部分 ✗；D 学校名称与实验方法无关 ✗。故 A、C 成立，B、D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "Report writing 探究报告写作",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write a short science report in English (about 80 words) on an experiment your group did. Include the question, the method, the results and the conclusion.",
+          "answer": {
+            "value": "We wanted to find out which material makes a better filter for dirty water. We cut three pieces of cloth, filled three cups with the same amount of dirty water and poured the water through each cloth. After ten minutes, the cup with the cotton cloth was the clearest. So we concluded that cotton cloth is the best filter for our class project."
+          },
+          "analysis": "参考示例见答案。评分要点：①四个部分齐全且顺序正确（2 分）；②方法部分写清步骤，结果部分有数据（2 分）；③用上 so、because 等词说明结论（1 分）；④时态正确、大小写与标点规范（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Report writing 探究报告写作",
+          "tags": [
+            "写作",
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "What should a group do before starting a science project?",
+          "options": [
+            "Make a plan and divide the work.",
+            "Wait for the teacher to do everything.",
+            "Copy the results from another group.",
+            "Choose the easiest topic and stop there."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "开工前要先定计划并把任务分到人，否则后面容易乱，所以选 A；B 放弃了学生自己的探究；C 是抄袭行为；D 只挑容易的题就停下，探究没有深度。",
+          "difficulty": 2,
+          "knowledge_point": "Science project 科学探究项目",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "In a science project, we should record the data in a ______ so that everyone can see it clearly.",
+          "answer": {
+            "value": "table"
+          },
+          "analysis": "用表格记录数据一目了然，也方便比较，所以填 table；写成 book 或 paper 都强调载体而不是记录方式。",
+          "difficulty": 2,
+          "knowledge_point": "Science project 科学探究项目",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "All the members of a project group should check each other's results before the presentation.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "展示前互相检查数据和方法能及时发现错误，是小组合作中很重要的习惯，所以说法正确。互查的目的不是挑错，而是让报告更可靠。",
+          "difficulty": 3,
+          "knowledge_point": "Science project 科学探究项目",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following are useful things to do in a science project group?",
+          "options": [
+            "Check each step of the experiment.",
+            "Take photos of the experiment.",
+            "Let one member do all the work.",
+            "Talk about what went wrong and why."
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 检查每一步能保证方法可靠 ✓；B 拍实验照片是很好的过程记录 ✓；C 让一个人包干会让其他人失去探究机会 ✗；D 讨论出错原因正是探究的核心价值 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Science project 科学探究项目",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Your group is doing a project on how to make our classroom cleaner. Write a plan in English with four steps and say what each member should do.",
+          "answer": {
+            "value": "First, we will look around the classroom and list the things that make it dirty. Second, Li Mei will check how much water and paper we use every day. Third, Zhang Wei will look for rubbish on the floor and write down what we can recycle. Fourth, we will put our ideas on a poster and show it to our teacher on Friday."
+          },
+          "analysis": "参考示例见答案。评分要点：①四个步骤清楚、有先后顺序（2 分）；②每一步都写明谁负责，分工具体（2 分）；③用上 first、second、third 等顺序词（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Science project 科学探究项目",
+          "tags": [
+            "写作",
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 4 Then and now",
+      "order_index": 4,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Which word means 'at the present time, these days'?",
+          "options": [
+            "nowadays",
+            "long ago",
+            "already",
+            "ever"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "nowadays 意为「如今、现今」，所以选 A；long ago 表示很久以前，already 表示「已经」，ever 表示「曾经、究竟」，三个词都不表示现在。",
+          "difficulty": 1,
+          "knowledge_point": "Then and now 今昔对比词汇",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "Twenty years ago, people ______ (send) letters to keep in touch with their friends.",
+          "answer": {
+            "value": "sent"
+          },
+          "analysis": "twenty years ago 是过去时间，动词用过去式 sent，所以填 sent；写成 send 或 sends 都与时间状语冲突。",
+          "difficulty": 2,
+          "knowledge_point": "Then and now 今昔对比词汇",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "We usually use 'since' with a point of time and 'for' with a length of time.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "since 接时间点，for 接一段时间，所以说法正确。做题时看到 since 后面是 2019、for 后面是 three years 就能立刻判断搭配是否正确。",
+          "difficulty": 2,
+          "knowledge_point": "Then and now 今昔对比词汇",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following describe life in the past?",
+          "options": [
+            "People wrote letters by hand.",
+            "People bought music in shops.",
+            "People washed their clothes by hand.",
+            "People used to send photos on the Internet."
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 手写书信是过去的生活 ✓；B 在商店买音乐是过去的方式 ✓；C 手洗衣服是过去常见的情形 ✓；D 用互联网传照片是现在的事，不属于过去 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Then and now 今昔对比词汇",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write three sentences in English about how your grandparents' life was different from yours. Use the past simple tense.",
+          "answer": {
+            "value": "My grandmother went to school on foot when she was a girl. My grandfather did not have a mobile phone, and he wrote letters to his friends. Nowadays I take the metro to school and I send messages to my classmates every day."
+          },
+          "analysis": "参考示例见答案。评分要点：①三句话都写清今昔的不同（2 分）；②讲过去的事用过去式，讲现在用现在式，时态切换正确（2 分）；③用上 used to、nowadays 等本单元表达（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 3,
+          "knowledge_point": "Then and now 今昔对比词汇",
+          "tags": [
+            "写作"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which of the following sentences about the past is correct?",
+          "options": [
+            "My grandmother used to walk to school every day.",
+            "My grandmother used to walking to school every day.",
+            "My grandmother use to walk to school every day.",
+            "My grandmother used walk to school every day."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "used to 表示过去的习惯，后面接动词原形，所以选 A；B 后面用了动名词；C 的 used 少了 to；D 少了 to 并且没有原形 walk。",
+          "difficulty": 2,
+          "knowledge_point": "Talking about change 变化口语表达",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which sentence compares the past with the present in a correct way?",
+          "options": [
+            "Life is different from what it used to be.",
+            "Life is different from what it use to be.",
+            "Life is different from what it used to being.",
+            "Life is different what it used to be."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "what it used to be 是固定结构，意为「过去的样子」，所以选 A；B 少了 to；C 把 be 变成 being；D 少了介词 from，结构不完整。",
+          "difficulty": 2,
+          "knowledge_point": "Talking about change 变化口语表达",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "Ten years ago, people ______ (not use) mobile phones at all.",
+          "answer": {
+            "value": [
+              "did not use",
+              "didn't use"
+            ]
+          },
+          "analysis": "过去时的否定要用 did 加 not 再加动词原形，即 did not use（didn't use 也可）；写成 didn't used 或 didn't uses 都是错的，因为 did 之后动词必须回到原形。",
+          "difficulty": 3,
+          "knowledge_point": "Talking about change 变化口语表达",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「My grandpa often went to work by bus in the past」是用过去时描述过去经常发生的动作。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "in the past 表明是过去的情况，went 用的是过去式，often 强调动作的经常性，所以说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "Talking about change 变化口语表达",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following expressions can be used to describe a change in time?",
+          "options": [
+            "in the past",
+            "nowadays",
+            "a bit",
+            "used to"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A in the past 指向过去 ✓；B nowadays 指向现在 ✓；C a bit 是程度副词，不表示时间变化 ✗；D used to 表示过去的习惯 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Talking about change 变化口语表达",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Your English teacher asks you to talk for one minute about how your city has changed in the last ten years. Write four or five sentences in English.",
+          "answer": {
+            "value": "Ten years ago, most families in Shenzhen did not have a car. Now people take the metro every day, and the metro lines reach almost every corner of the city. My mother used to queue at the bus stop for half an hour, but now the bus card works with her phone. In my opinion, the city is much more convenient now than it used to be."
+          },
+          "analysis": "参考示例见答案。评分要点：①四到五句，内容围绕城市变化（2 分）；②过去用过去时、现在用现在时，时态切换正确（2 分）；③用上 used to、nowadays、than 等表达（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Talking about change 变化口语表达",
+          "tags": [
+            "写作",
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which of the following sentences about last week is correct?",
+          "options": [
+            "We didn't have smartphones ten years ago.",
+            "We didn't had smartphones ten years ago.",
+            "We don't have smartphones ten years ago.",
+            "We didn't has smartphones ten years ago."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "过去时的否定句要用 did not 加动词原形 have，所以选 A；B 在 did 之后用了过去式 had；C 的 don't 表示现在，与 ten years ago 不搭配；D 同样在 did 之后用了第三人称单数 has。",
+          "difficulty": 2,
+          "knowledge_point": "Past and present 对比时态",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "My sister ______ to Shenzhen Primary School in 2019, and she still studies there now.",
+          "options": [
+            "came",
+            "comes",
+            "come",
+            "is coming"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "in 2019 表明是过去发生的事，用过去式 came，所以选 A；comes 是一般现在时，与 in 2019 不搭配；come 是原形；is coming 表示正在发生，与 now 无关。",
+          "difficulty": 2,
+          "knowledge_point": "Past and present 对比时态",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "Ten years ago, Shenzhen ______ (have) very few metro lines, but now the network is much larger.",
+          "answer": {
+            "value": "had"
+          },
+          "analysis": "ten years ago 是过去时间，have 的过去式是 had，所以填 had；写成 have 或 has 都表示现在，与句意不符。",
+          "difficulty": 3,
+          "knowledge_point": "Past and present 对比时态",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Time words like 'yesterday', 'in 2019' and 'last year' usually signal the past simple tense.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "这些时间状语都指向过去，常与一般过去时连用，所以说法正确。读长句时先圈时间状语，就能大致定下该用哪个时态。",
+          "difficulty": 3,
+          "knowledge_point": "Past and present 对比时态",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following sentences use the past simple tense?",
+          "options": [
+            "The first metro line opened in 2004.",
+            "The metro runs every five minutes.",
+            "I took the metro to school yesterday.",
+            "My father works in a hospital."
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A in 2004 是过去时间，opened 是过去式 ✓；B every five minutes 表示现在的规律，用一般现在时 ✗；C yesterday 是过去时间，took 是过去式 ✓；D works 是一般现在时 ✗。故 A、C 成立，B、D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "Past and present 对比时态",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which is the best linker for the last step of a story?",
+          "options": [
+            "finally",
+            "because",
+            "but",
+            "so"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "finally 表示最后一步，与故事的时间顺序吻合，所以选 A；because 表示原因，but 表示转折，so 表示结果，都不能表示顺序。",
+          "difficulty": 2,
+          "knowledge_point": "Story writing 变化叙事写作",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which sentence describes a change correctly?",
+          "options": [
+            "Before 2010, most families in Shenzhen did not have a car.",
+            "Before 2010, most families in Shenzhen didn't has a car.",
+            "Before 2010, most families in Shenzhen not have a car.",
+            "Before 2010, most families in Shenzhen don't have a car."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "过去时的否定句用 did not 加动词原形 have，所以选 A；B 在 didn't 之后用了 has；C 少了助动词 did；D 的 don't 表示现在，与 Before 2010 不搭配。",
+          "difficulty": 2,
+          "knowledge_point": "Story writing 变化叙事写作",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "In the past, people ______ (write) letters to their friends. Now they send messages on the Internet.",
+          "answer": {
+            "value": "wrote"
+          },
+          "analysis": "in the past 表明是过去的事，write 的过去式是不规则形式 wrote，所以填 wrote；写成 writed 是把规则变化套错到不规则动词上。",
+          "difficulty": 3,
+          "knowledge_point": "Story writing 变化叙事写作",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "In a story about changes, we should put events in time order and use linkers like then, at first and finally.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "写变化类短文要按时间顺序叙述，并用 then、at first、finally 等连接词让读者跟得上，所以说法正确。这类文章的采分点往往就是顺序词。",
+          "difficulty": 3,
+          "knowledge_point": "Story writing 变化叙事写作",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which linkers can show the order of time in a story?",
+          "options": [
+            "at first",
+            "then",
+            "finally",
+            "because"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A at first 表示最初 ✓；B then 表示接下来 ✓；C finally 表示最后 ✓；D because 表示原因，不表示时间先后 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Story writing 变化叙事写作",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write a short paragraph (about 60 words) in English about how the way people travel in Shenzhen has changed in the last ten years. Use at least three time linkers.",
+          "answer": {
+            "value": "Ten years ago, most people in Shenzhen travelled by bus and car. At first, the traffic was heavy in the morning and many people were late for work. Then the metro lines were built one by one. Now people can take the metro to almost every corner of the city. Finally, people also use shared bikes for the last one or two kilometres, and the streets are much cleaner than before."
+          },
+          "analysis": "参考示例见答案。评分要点：①写清过去与现在的不同，内容具体（2 分）；②至少用上三个时间顺序词（如 ten years ago、at first、then、now、finally）（2 分）；③时态切换正确（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Story writing 变化叙事写作",
+          "tags": [
+            "写作",
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Your group wants to find out how life has changed. What is the best first step?",
+          "options": [
+            "Decide what to ask and who to interview.",
+            "Write the poster first.",
+            "Take photos of old things.",
+            "Copy a poster from the Internet."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "项目要先明确研究内容和采访对象，才能有针对性地收集材料，所以选 A；B 没材料就做海报；C 是收集材料中的一步，不是第一步；D 抄袭不可取。",
+          "difficulty": 2,
+          "knowledge_point": "Change project 变化主题项目",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "To show the change clearly, our group will make a ______ of important events in the past and today.",
+          "answer": {
+            "value": "timeline"
+          },
+          "analysis": "把过去和今天的重要事件按时间排成一条线，叫 timeline（时间线），所以填 timeline；写成 photograph 或 poster 都只是材料而不是排列方式。",
+          "difficulty": 2,
+          "knowledge_point": "Change project 变化主题项目",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "When your group interviews old people, you should write down their answers carefully.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "访谈的第一手材料来自被访者的回答，认真记录才能保证项目内容真实，所以说法正确。采访时边听边记要点，是信息类任务的基本功。",
+          "difficulty": 3,
+          "knowledge_point": "Change project 变化主题项目",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following are good ideas for a 'Then and Now' project?",
+          "options": [
+            "Interview a grandparent.",
+            "Collect old photos from family members.",
+            "Compare the same thing in the past and now.",
+            "Only use pictures found on the Internet."
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 采访长辈能得到真实的第一手口述 ✓；B 收集老照片是典型的对比材料 ✓；C 就同一件事比较过去与现在才能看出变化 ✓；D 只用网络图片缺少本地真实材料 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Change project 变化主题项目",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Your group is making a 'Then and Now' wall poster for the school open day. Write a plan in English with four steps.",
+          "answer": {
+            "value": "First, we will decide which three topics to show, such as transport, communication and school life. Then we will interview our grandparents and grandparents of our classmates and write down their stories. Third, we will collect old photos and put them on a timeline together with today's photos. Finally, we will design the poster, check the spelling and show it at the open day."
+          },
+          "analysis": "参考示例见答案。评分要点：①四个步骤齐全、顺序合理（2 分）；②每一步写清做什么、谁来做（2 分）；③用上 first、then、third、finally 等顺序词（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Change project 变化主题项目",
+          "tags": [
+            "写作",
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 5 Teamwork",
+      "order_index": 5,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "What should a team member do when the work is too much for one person?",
+          "options": [
+            "He or she shares the work with the other members.",
+            "He or she waits for the teacher to do it.",
+            "He or she keeps the work to himself or herself.",
+            "He or she gives up the work at once."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "团队的意义就在于分担任务，所以选 A；B 等老师不是合作的态度；C 独自扛下全部任务会让其他人失去参与；D 轻易放弃同样违背合作精神。",
+          "difficulty": 1,
+          "knowledge_point": "Teamwork words 团队合作词汇",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "In a team, each member must take part in the work and ______ (share) the duties with others.",
+          "answer": {
+            "value": "share"
+          },
+          "analysis": "括号里给出动词原形，句子用情态动词 must，后面要接动词原形，所以填 share；写成 shares 或 shared 都会破坏 must + 原形的结构。",
+          "difficulty": 2,
+          "knowledge_point": "Teamwork words 团队合作词汇",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "A good team member can say 'Sorry, I can't finish this today' when he or she has to deal with another job.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "及时说明自己无法按时完成，反而方便组员重新安排分工，是负责任的做法，所以说法正确。隐瞒进度才会真正拖慢整个团队。",
+          "difficulty": 2,
+          "knowledge_point": "Teamwork words 团队合作词汇",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following show team spirit?",
+          "options": [
+            "Helping a member who is behind.",
+            "Sharing your notes with the group.",
+            "Doing all the work yourself.",
+            "Encouraging a shy member to speak."
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 帮落后的成员是合作的表现 ✓；B 分享笔记让全组受益 ✓；C 全部自己做既让同伴闲着也让自己过载 ✗；D 鼓励腼腆的成员开口是团队精神 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Teamwork words 团队合作词汇",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write a short paragraph (about 50 words) in English about a time when you worked with your classmates on a group task. Say what the group did and what you learned.",
+          "answer": {
+            "value": "Last term our group made a poster about water saving for the school open day. We divided the work into four parts, and I was in charge of collecting the pictures. One member was ill that week, so we shared her work as well. I learned that a good team is not only about working hard, but also about talking to each other."
+          },
+          "analysis": "参考示例见答案。评分要点：①内容具体，写清小组做了什么、自己负责什么（2 分）；②用上 share、divide、in charge of 等合作词汇（2 分）；③有一句写学到的道理（1 分）；④时态与标点正确（1 分）。",
+          "difficulty": 3,
+          "knowledge_point": "Teamwork words 团队合作词汇",
+          "tags": [
+            "写作"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which sentence is the best way to make a suggestion to your group?",
+          "options": [
+            "Why don't we divide the work into three parts?",
+            "You must divide the work into three parts.",
+            "Divide the work into three parts, please.",
+            "Did you divide the work into three parts?"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "Why don't we...? 是英语中最常用、最礼貌的提建议句型，后面接动词原形，所以选 A；B 用了 must 变成命令；C 是祈使句，显得生硬；D 是疑问句，根本没有提建议。",
+          "difficulty": 2,
+          "knowledge_point": "Making suggestions 建议句型",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which of the following sentences about making a suggestion is correct?",
+          "options": [
+            "How about meeting at 3 p.m.?",
+            "How about to meeting at 3 p.m.?",
+            "How about we meeting at 3 p.m.?",
+            "How about meeting on 3 p.m.?"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "How about 后面接动名词 meeting，所以选 A；B 中 to 后面不能接动名词；C 中 we 后面要跟动词原形 meet；D 中具体钟点要用 at，不用 on。",
+          "difficulty": 2,
+          "knowledge_point": "Making suggestions 建议句型",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "Let's ______ (divide) the work into three parts and give each member one part.",
+          "answer": {
+            "value": "divide"
+          },
+          "analysis": "Let's 后面必须接动词原形，所以填 divide；写成 divides 或 divided 都违反了 Let's + 原形的结构。这是提建议句型里最常考的一点。",
+          "difficulty": 3,
+          "knowledge_point": "Making suggestions 建议句型",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「Shall we start now?」可以用来向同伴提出建议。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "Shall we...? 是询问对方意见、进而提出建议的句型，所以说法正确。回答时可以说 Yes, let's. 或 Sorry, not now.",
+          "difficulty": 3,
+          "knowledge_point": "Making suggestions 建议句型",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following are ways of making suggestions?",
+          "options": [
+            "Why don't we...?",
+            "Let's...",
+            "How about...?",
+            "How much...?"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A Why don't we...? 是提建议句型 ✓；B Let's... 是提建议句型 ✓；C How about...? 是提建议句型 ✓；D How much...? 是问数量或价格的疑问句，不是提建议 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Making suggestions 建议句型",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Your group has to finish a poster in one week. Make three suggestions in English about how to divide the work, using 'Why don't we...?', 'Let's...' and 'How about...?'.",
+          "answer": {
+            "value": "Why don't we divide the poster into four parts, one for each member? Let's set the deadline on Friday afternoon, so that we have time to check the spelling. How about meeting on Tuesday after school to look at what we have done so far?"
+          },
+          "analysis": "参考示例见答案。评分要点：①三条建议分别用上三个指定句型（2 分）；②每条建议后面动词形式正确（原形或动名词）（2 分）；③建议内容具体、与分工和进度有关（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Making suggestions 建议句型",
+          "tags": [
+            "写作",
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which linker shows a reason?",
+          "options": [
+            "because",
+            "so",
+            "but",
+            "however"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "because 引出原因，所以选 A；so 引出结果；but 表示转折；however 也是转折。四种连接词语气不同，用错会让句意跑偏。",
+          "difficulty": 2,
+          "knowledge_point": "Linking words 连接词运用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which of the following sentences about a team is correct?",
+          "options": [
+            "Although the task was difficult, we finished it on time.",
+            "Although the task was difficult, but we finished it on time.",
+            "Although the task was difficult, so we finished it on time.",
+            "Although the task was difficult, however we finished it on time."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "although 已经表示「虽然」，后面不能再用 but，所以选 A；B、C、D 都把两个连接词叠在一起，是典型的「双连词」错误。中文里「虽然……但是……」能连用，英文不可以。",
+          "difficulty": 2,
+          "knowledge_point": "Linking words 连接词运用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "______ the rain was heavy, the football match still started on time.",
+          "answer": {
+            "value": [
+              "Although",
+              "Though"
+            ]
+          },
+          "analysis": "空格在句首，后面是「虽然……但是」的让步关系，用 Although 或 Though 都可以；如果句首不用连接词，句末就得用 but，两种写法不能同时出现。",
+          "difficulty": 3,
+          "knowledge_point": "Linking words 连接词运用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "We cannot use 'although' and 'but' together in the same sentence.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "英语中 although 和 but 只能保留一个，否则就是重复表达让步关系，所以说法正确。这是中国学生最常见的错误之一，写作时要特别检查。",
+          "difficulty": 3,
+          "knowledge_point": "Linking words 连接词运用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following linkers can be used to show a contrast?",
+          "options": [
+            "but",
+            "however",
+            "because",
+            "so"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "A but 表示转折 ✓；B however 也是表示转折的副词 ✓；C because 表示原因 ✗；D so 表示结果 ✗。故 A、B 成立，C、D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "Linking words 连接词运用",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which sentence should come first in the body of a proposal?",
+          "options": [
+            "We need two more days because the data is not ready.",
+            "Thank you for your letter of last Monday.",
+            "Best wishes to you and your family.",
+            "Dear Sir or Madam, I am writing to you today."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "方案的主体要先说明需求与理由，所以选 A；B 是开头后的客套话，C 是结尾致意，D 属于称呼部分，都不能放在主体第一句。",
+          "difficulty": 2,
+          "knowledge_point": "Writing a proposal 方案写作",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which is the best opening sentence for a proposal to your teacher?",
+          "options": [
+            "We are writing to ask for one more week to finish our poster.",
+            "Poster.",
+            "Hello.",
+            "Yesterday we had a class meeting."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "方案开头要点明写作目的，We are writing to... 是最常用的句式，所以选 A；B 只是一个词，C 太随意，D 是背景交代，都不适合做第一句。",
+          "difficulty": 2,
+          "knowledge_point": "Writing a proposal 方案写作",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "We would like to ask for one more week, ______ the data is not ready yet.",
+          "answer": {
+            "value": [
+              "because",
+              "since"
+            ]
+          },
+          "analysis": "空格前后是原因关系，用 because 或 since 都可以；填 but 或 however 就变成了转折，与句意不符。写方案时每条理由都要用连接词把它和请求连起来。",
+          "difficulty": 3,
+          "knowledge_point": "Writing a proposal 方案写作",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "In a proposal we should give reasons and make clear requests instead of only saying what we want.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "只有要求没有理由的方案很难被接受，写清理由并提出具体请求是方案的基本要求，所以说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "Writing a proposal 方案写作",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following are parts of a short proposal?",
+          "options": [
+            "The aim of the project.",
+            "The steps of the plan.",
+            "The reasons for the request.",
+            "The price list of the poster company."
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 写清项目目标是方案的必要部分 ✓；B 具体步骤让方案可执行 ✓；C 说明理由才能支撑请求 ✓；D 印刷公司的价目表与学生方案无关 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Writing a proposal 方案写作",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write a short proposal (about 60 words) in English to your teacher. Your group needs one more day to finish the science poster. Give two reasons and make your request clear.",
+          "answer": {
+            "value": "We are writing to ask for one more day to finish our science poster. The data from our second test is not ready, because one of our group members was absent last Thursday. We also need to check all the numbers and draw the final picture. If we get one more day, we can finish the poster on Monday and print it in time for the open day."
+          },
+          "analysis": "参考示例见答案。评分要点：①开头点明目的与请求（2 分）；②给出两条理由，并用 because 等连接词衔接（2 分）；③结尾说明完成时间，语言正式得体（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Writing a proposal 方案写作",
+          "tags": [
+            "写作",
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "What should you do first when a group member does not finish his or her part?",
+          "options": [
+            "Talk to him or her and find out the reason.",
+            "Do the work for him or her without a word.",
+            "Tell the teacher at once.",
+            "Say nothing and wait for the deadline."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "同组成员没完成任务，先沟通了解原因、再一起调整分工，是成熟的合作做法，所以选 A；B 悄悄替人做既伤效率也伤关系；C 一上来就告状解决不了问题；D 拖到截止时间只会更糟。",
+          "difficulty": 2,
+          "knowledge_point": "Team project 小组协作项目",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "After finishing the project, our group will have a short ______ to talk about what went well and what to improve.",
+          "answer": {
+            "value": [
+              "meeting",
+              "review"
+            ]
+          },
+          "analysis": "项目结束后开一次短会（meeting）来总结经验与不足，review 也有「回顾」的意思，都能放在 a short 后面；写成 class 或 lesson 则与总结无关。",
+          "difficulty": 2,
+          "knowledge_point": "Team project 小组协作项目",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "In a good team, members talk about problems openly instead of complaining behind others' backs.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "有问题摆到桌面上解决，才能真正推进项目；背后抱怨只会让误会越积越多，所以说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "Team project 小组协作项目",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following are good ways to solve a problem in a group?",
+          "options": [
+            "Talk about the problem calmly.",
+            "Find out the reason of the problem.",
+            "Everyone blames the member who came late.",
+            "Change the plan and share the work again."
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 冷静沟通是解决问题的前提 ✓；B 找到原因才能对症下药 ✓；C 一味责怪迟到的人解决不了问题，还会破坏关系 ✗；D 调整计划并重新分工是有效的补救 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Team project 小组协作项目",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Your group has to make a short video about teamwork in your school. Write a plan in English with four steps and say what each member should do.",
+          "answer": {
+            "value": "First, we will decide the story of the video and write a short script. Second, Chen Jie will be the camera man and Li Na will take the photos of our work. Third, Zhang Wei will collect the old sports shoes for the poster. Finally, we will edit the video together and show it to our class on Friday."
+          },
+          "analysis": "参考示例见答案。评分要点：①四个步骤清楚、有先后顺序（2 分）；②每一步写明谁负责，分工具体（2 分）；③用上 first、second、third、finally 等顺序词（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Team project 小组协作项目",
+          "tags": [
+            "写作",
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 6 Life in the future",
+      "order_index": 6,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Which word means 'a car that can drive without a person driving it'?",
+          "options": [
+            "driverless car",
+            "ancient car",
+            "heavy truck",
+            "old bike"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "driverless 就是「无人驾驶」，car 是汽车，合起来指可以自己行驶的汽车，所以选 A；ancient 是古老的，heavy truck 是重型卡车，old bike 是旧自行车，都与「无人驾驶」无关。",
+          "difficulty": 1,
+          "knowledge_point": "Future words 未来生活词汇",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "In the future, robots will do many ______ (job) for us, such as cleaning and cooking.",
+          "answer": {
+            "value": "jobs"
+          },
+          "analysis": "many 后面要接可数名词的复数形式，所以填 jobs；写成 job 就变成「许多个职业」，与 cleaning and cooking 这两项任务对不上。",
+          "difficulty": 2,
+          "knowledge_point": "Future words 未来生活词汇",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "People in the future may live in smart homes where the lights turn on by themselves.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "智能家居里灯光自动亮起是常见的未来设想，句中用了 may 表示推测，所以说法正确。听到 may、might 时要意识到这是作者的想法而非事实。",
+          "difficulty": 2,
+          "knowledge_point": "Future words 未来生活词汇",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following may be true in the future?",
+          "options": [
+            "Robots will clean our homes.",
+            "People will travel to other planets.",
+            "Students will study only with paper books.",
+            "Cars will drive themselves on the roads."
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 机器人做家务是常见的未来设想 ✓；B 去其他星球旅行是科幻作品中的设想 ✓；C 只用纸质书学习与技术发展方向相反 ✗；D 汽车自动行驶已在部分城市试点 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Future words 未来生活词汇",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write three English sentences about life in the future. Use at least two words from this unit, such as robot, space or driverless.",
+          "answer": {
+            "value": "In the future, robots may do most of the housework for us. People will travel to other planets, and some students may study in space. I think driverless cars will be common on the roads, so we can do more reading on the way to school."
+          },
+          "analysis": "参考示例见答案。评分要点：①三句话都谈未来生活，内容合理（2 分）；②用上至少两个本单元词汇（2 分）；③用 I think、may、will 等表达推测与可能（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 3,
+          "knowledge_point": "Future words 未来生活词汇",
+          "tags": [
+            "写作"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which sentence is used to guess about the future?",
+          "options": [
+            "In the future, people may live on the moon.",
+            "In the past, people lived on the moon.",
+            "Now people live on the moon.",
+            "Yesterday people lived on the moon."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "in the future 加上 may 表示对未来的猜测，所以选 A；B、D 用过去时讲过去，C 用现在时讲现在，都不是谈未来。",
+          "difficulty": 2,
+          "knowledge_point": "Imagining the future 未来设想口语",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which of the following sentences about the future is correct?",
+          "options": [
+            "I think robots will do the housework for us.",
+            "I think robots will do the housework to us.",
+            "I think robots do the housework for us.",
+            "I think robots will doing the housework for us."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "will 后面接动词原形 do，介词用 for 表示「替我们做」，所以选 A；B 介词用错；C 少了表示将来的 will；D 在 will 之后用了动名词 doing。",
+          "difficulty": 2,
+          "knowledge_point": "Imagining the future 未来设想口语",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "It's ______ (possible) that people will travel to Mars in the future.",
+          "answer": {
+            "value": "possible"
+          },
+          "analysis": "It's + 形容词 + that 从句是常用结构，所以填 possible；写成 possibly 就不搭配了，副词不能跟在 be 动词后面作表语。",
+          "difficulty": 3,
+          "knowledge_point": "Imagining the future 未来设想口语",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「Maybe we will live on Mars one day」can be used to talk about a guess about the future.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "Maybe 表示不确定的推测，用来谈未来的猜想正合适，所以说法正确。谈未来时多用这类语气词，比用肯定句更准确。",
+          "difficulty": 3,
+          "knowledge_point": "Imagining the future 未来设想口语",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following expressions can be used to talk about the future?",
+          "options": [
+            "in the future",
+            "one day",
+            "maybe",
+            "yesterday"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A in the future 指向未来 ✓；B one day 指将来某一天 ✓；C maybe 是谈未来时的推测词 ✓；D yesterday 指过去 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Imagining the future 未来设想口语",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Your teacher asks you to imagine your life in twenty years and give a short speech. Write five sentences in English.",
+          "answer": {
+            "value": "In twenty years, I think my life will be quite different. I hope I will be working as a robot engineer in a smart factory near Shenzhen. Maybe I will live in a small flat with a robot that does the housework. I am not sure whether we will travel to the moon for a holiday, but it may be possible. Anyway, I will not forget my friends from Middle School."
+          },
+          "analysis": "参考示例见答案。评分要点：①五句话围绕二十年后的生活展开（2 分）；②用上 I think、I hope、Maybe、I'm not sure 等推测与愿望表达（2 分）；③将来表达时态正确（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Imagining the future 未来设想口语",
+          "tags": [
+            "写作",
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Look at the dark clouds! It ______ rain soon.",
+          "options": [
+            "is going to",
+            "is",
+            "was",
+            "will to"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "看到乌云是有迹象的预测，用 be going to，所以选 A；is 是一般现在时，was 是过去时，will to 结构根本不成立。",
+          "difficulty": 2,
+          "knowledge_point": "Future forms 将来时态",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "We ______ a party next Friday. Everything is ready.",
+          "options": [
+            "are having",
+            "have",
+            "had",
+            "will"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "已安排好的将来计划用现在进行时，所以选 A；have 不能直接表示已定下的将来安排，had 是过去式，will 后面还要接动词原形。",
+          "difficulty": 2,
+          "knowledge_point": "Future forms 将来时态",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "I think robots ______ (change) many people's lives in the next twenty years.",
+          "answer": {
+            "value": "will change"
+          },
+          "analysis": "主句 I think 后面的宾语从句用 will + 动词原形表示未来的预测，所以填 will change；写成 will changes 或 changing 都不对。",
+          "difficulty": 3,
+          "knowledge_point": "Future forms 将来时态",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "We usually use 'be going to' when we have already made a plan or decided to do something.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "be going to 表示「打算做某事」或「根据迹象判断即将发生」，已有计划时用它正合适，所以说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "Future forms 将来时态",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following sentences are grammatically correct?",
+          "options": [
+            "I am going to visit my grandparents this weekend.",
+            "Look! The children are running towards the school bus.",
+            "I'm meeting my cousin at the station tomorrow.",
+            "He is going to buys a new phone."
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A be going to 表示已打算去看祖父母 ✓；B 现在进行时表示此刻正在发生的动作 ✓；C 现在进行时表示已安排好的将来 ✓；D be going to 后面要用动词原形 buy，不能用 buys ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "Future forms 将来时态",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which is the best opening for a letter to your future self?",
+          "options": [
+            "Dear Jack,",
+            "Dear Mr. Smith,",
+            "To whom it may concern,",
+            "Attention, please."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "写给十年后的自己，称呼用 Dear 加自己的名字，所以选 A；Dear Mr. Smith 是写给老师的，To whom it may concern 是公函用语，Attention, please 是通知用语，都不合适。",
+          "difficulty": 2,
+          "knowledge_point": "Letter to the future 写给未来的信",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which sentence is suitable in a letter to your future self?",
+          "options": [
+            "I hope that in ten years you are still in touch with your old friends.",
+            "I hope that you will pay this bill before Friday.",
+            "We demand a reply within three working days.",
+            "Attention: the office will be closed next Monday."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "写给未来的自己要表达心愿与牵挂，所以选 A；B 是催款的口吻，C 是公函的强硬要求，D 是通知，三者都不适合私人信件。",
+          "difficulty": 2,
+          "knowledge_point": "Letter to the future 写给未来的信",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "I am writing this letter to tell you about my life today and my ______ for the future.",
+          "answer": {
+            "value": [
+              "wish",
+              "wishes"
+            ]
+          },
+          "analysis": "这里说「我对未来的愿望」，wish 可数，写一个用 wish，写多个用 wishes，两种都对；写成 hoping 就不与 my 搭配了。",
+          "difficulty": 3,
+          "knowledge_point": "Letter to the future 写给未来的信",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "In a letter to your future self, we can use 'I hope...' and 'I wonder...' to talk about the future.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "I hope... 表达愿望，I wonder... 表达想象与好奇，都是写给未来自己的信里常用的表达，所以说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "Letter to the future 写给未来的信",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which of the following can be used in a letter to your future self?",
+          "options": [
+            "I hope you will...",
+            "I wonder whether...",
+            "Please find enclosed the money.",
+            "Dear Sir or Madam,"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "A I hope you will... 表达对未来的祝愿 ✓；B I wonder whether... 表达对未来的想象 ✓；C「随函附上款项」是商务信函用语 ✗；D 是公函称呼 ✗。故 A、B 成立，C、D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Letter to the future 写给未来的信",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write a short letter (about 70 words) in English to yourself ten years from now. Say what your life is like now and what you hope it will be like.",
+          "answer": {
+            "value": "Dear Jack, I am writing to tell you about my life now and my hopes for the future. Today I am a student in Shenzhen and I spend most of my time in the classroom and on the football field. In ten years, I hope I am working as an engineer in a clean, green city. I also hope I still play football with my old friends. Best wishes, Jack"
+          },
+          "analysis": "参考示例见答案。评分要点：①有称呼与落款，信件格式完整（2 分）；②写清现在的生活与对未来的愿望两部分（2 分）；③用上 I hope...、will 等未来表达，时态正确（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Letter to the future 写给未来的信",
+          "tags": [
+            "写作",
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Your group wants to design the school of the future. What is the best first step?",
+          "options": [
+            "Ask students what they want and collect their ideas.",
+            "Draw the new building first.",
+            "Copy a picture of a space school from the Internet.",
+            "Choose a nice name for the new school."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "做任何设计都要先了解使用者的需求，先调查同学的愿望再动手，所以选 A；B 没有依据就画图；C 抄袭别人的设计；D 先取名字再定方案，顺序颠倒。",
+          "difficulty": 2,
+          "knowledge_point": "Future project 未来主题项目",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "In the project, we will use a ______ to ask our classmates about their ideas for the future.",
+          "answer": {
+            "value": [
+              "survey",
+              "questionnaire"
+            ]
+          },
+          "analysis": "用问卷（survey／questionnaire）来收集大家的意见，所以填 survey 或 questionnaire；写成 interview 不对，interview 指访谈，survey 指问卷调查。",
+          "difficulty": 2,
+          "knowledge_point": "Future project 未来主题项目",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "In a future project, the group should check the facts in the survey results before making a poster.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "问卷数据必须核实后才能使用，否则海报上的信息可能失真，所以说法正确。数据类项目里，「核对」是最容易被忽略却最关键的一步。",
+          "difficulty": 3,
+          "knowledge_point": "Future project 未来主题项目",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which are good ways to show the results of a survey about the future of the school?",
+          "options": [
+            "A bar chart.",
+            "A poster with pictures.",
+            "A list of random names.",
+            "A short summary."
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 柱状图能把数据看得一目了然 ✓；B 带图片的海报适合展示 ✓；C 随机列出的姓名既没有顺序也不代表数据 ✗；D 简短的总结能把主要发现说清楚 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Future project 未来主题项目",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Your group is making a poster about the future of your school for the open day. Write a plan in English with four steps.",
+          "answer": {
+            "value": "First, we will make a survey and ask our classmates which school facilities they hope to have. Second, we will count the answers and draw a bar chart with the results. Third, Zhang Wei will design the poster and Wang Mei will write the short summary. Finally, we will check the spelling and put up the poster on Friday."
+          },
+          "analysis": "参考示例见答案。评分要点：①四个步骤齐全、顺序合理（2 分）；②每一步写清做什么、谁来做（2 分）；③用上 first、second、third、finally 等顺序词（1 分）；④大小写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Future project 未来主题项目",
+          "tags": [
+            "写作",
+            "情境应用"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    }
+  ],
+  "_consolidated": {
+    "generated_at": "2026-11-09T04:23:36",
+    "rule": "非 legacy > 批次日期最新 > 题量最多 > mtime 最新",
+    "sources": [
+      {
+        "chapter": "Unit 1 Water",
+        "file": "english_g8_first_20261108_r2.json",
+        "questions": 25
+      },
+      {
+        "chapter": "Unit 2 Digital life",
+        "file": "english_g8_first_20261108_r3.json",
+        "questions": 27
+      },
+      {
+        "chapter": "Unit 3 Curious minds",
+        "file": "english_g8_first_20261108_r4.json",
+        "questions": 25
+      },
+      {
+        "chapter": "Unit 4 Then and now",
+        "file": "english_g8_first_20261108_r5.json",
+        "questions": 27
+      },
+      {
+        "chapter": "Unit 5 Teamwork",
+        "file": "english_g8_first_20261108_r6.json",
+        "questions": 27
+      },
+      {
+        "chapter": "Unit 6 Life in the future",
+        "file": "english_g8_first_20261108_r7.json",
+        "questions": 27
+      }
+    ],
+    "dropped_sections": [],
+    "reused_point_names_not_redeclared": [],
+    "outside_outline_skipped": []
+  }
+}

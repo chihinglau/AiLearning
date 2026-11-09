@@ -1,0 +1,94 @@
+{
+  "mode": "books",
+  "stamp": "20261109",
+  "database_url": "sqlite:///./ailearning_dev.db",
+  "database": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\ailearning_dev.db",
+  "backup": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\build\\backups\\ailearning-backup-20261109-044556.db",
+  "restore_hint": "Copy-Item -Force \"D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\build\\backups\\ailearning-backup-20261109-044556.db\" \"D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\ailearning_dev.db\"",
+  "files_total": 12,
+  "pattern": "*_20261109_book.json",
+  "overwrite": false,
+  "stats_before": {
+    "textbooks": 146,
+    "chapters": 618,
+    "knowledge_points": 1120,
+    "questions": 2434
+  },
+  "stats_after": {
+    "textbooks": 146,
+    "chapters": 618,
+    "knowledge_points": 1120,
+    "questions": 2434
+  },
+  "stats_delta": {
+    "textbooks": 0,
+    "chapters": 0,
+    "knowledge_points": 0,
+    "questions": 0
+  },
+  "pending_verification": {
+    "biology_g8_first_20261109_book.json": {
+      "questions": 139,
+      "stems_in_db": 139
+    },
+    "chinese_g1_first_20261109_book.json": {
+      "questions": 208,
+      "stems_in_db": 208
+    },
+    "chinese_g8_first_20261109_book.json": {
+      "questions": 147,
+      "stems_in_db": 147
+    },
+    "english_g1_first_20261109_book.json": {
+      "questions": 141,
+      "stems_in_db": 141
+    },
+    "english_g8_first_20261109_book.json": {
+      "questions": 158,
+      "stems_in_db": 158
+    },
+    "geography_g8_first_20261109_book.json": {
+      "questions": 92,
+      "stems_in_db": 92
+    },
+    "history_g8_first_20261109_book.json": {
+      "questions": 171,
+      "stems_in_db": 171
+    },
+    "math_g1_first_20261109_book.json": {
+      "questions": 119,
+      "stems_in_db": 119
+    },
+    "math_g8_first_20261109_book.json": {
+      "questions": 170,
+      "stems_in_db": 170
+    },
+    "physics_g8_first_20261109_book.json": {
+      "questions": 143,
+      "stems_in_db": 143
+    },
+    "politics_g1_first_20261109_book.json": {
+      "questions": 100,
+      "stems_in_db": 100
+    },
+    "politics_g8_first_20261109_book.json": {
+      "questions": 98,
+      "stems_in_db": 98
+    }
+  },
+  "all_book_stems_in_db": true,
+  "import_tail": [
+    "biology/g8/biology_g8_first_20261109_book.json: 已导入且文件未变，跳过（manifest）",
+    "chinese/g1/chinese_g1_first_20261109_book.json: 已导入且文件未变，跳过（manifest）",
+    "chinese/g8/chinese_g8_first_20261109_book.json: 已导入且文件未变，跳过（manifest）",
+    "english/g1/english_g1_first_20261109_book.json: 已导入且文件未变，跳过（manifest）",
+    "english/g8/english_g8_first_20261109_book.json: 已导入且文件未变，跳过（manifest）",
+    "geography/g8/geography_g8_first_20261109_book.json: 已导入且文件未变，跳过（manifest）",
+    "history/g8/history_g8_first_20261109_book.json: 已导入且文件未变，跳过（manifest）",
+    "math/g1/math_g1_first_20261109_book.json: 已导入且文件未变，跳过（manifest）",
+    "math/g8/math_g8_first_20261109_book.json: 已导入且文件未变，跳过（manifest）",
+    "physics/g8/physics_g8_first_20261109_book.json: 已导入且文件未变，跳过（manifest）",
+    "politics/g1/politics_g1_first_20261109_book.json: 已导入且文件未变，跳过（manifest）",
+    "politics/g8/politics_g8_first_20261109_book.json: 已导入且文件未变，跳过（manifest）"
+  ]
+}

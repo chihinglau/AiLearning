@@ -14,19 +14,33 @@
     ops.cmd -Action import -Date 20261108 -ConfirmToken I_KNOW
     ops.cmd -Action import -Date 20261108 -Overwrite -ConfirmToken I_KNOW
     ops.cmd -Action import-dry -Date 20261108 -ConfirmToken I_KNOW
+    ops.cmd -Action import-books -Stamp 20261109 -ConfirmToken I_KNOW
+    ops.cmd -Action import-books-dry -Stamp 20261109 -ConfirmToken I_KNOW
     ops.cmd -Action restore -Date 20261108 -BackupPath "<backup.db>" -ConfirmToken I_KNOW
                   (backup path comes from import_report_*.json)
+
+  import-books / import-books-dry (added 2026-11-09): the whole-book files under
+  `daily_consolidated` (`*_<Stamp>_book.json`) are NOT in the `daily` tree, so
+  `-Action import -Date` can never pick them up. They get their own Action
+  (validate -> backup -> dry-run -> import -> per-book stem check -> report).
+
+  -Unattended: skips the runtime 6-digit code, for "user explicitly authorized in
+  this session, assistant executes" or unattended runs. The other two gates
+  (explicit -ConfirmToken I_KNOW, explicit date) stay. Backup is still created.
+  Teaching/generation sessions must never call this script at all.
 
   Teaching sessions must never call this file; see the 01 / 02 prompt docs.
 #>
 [CmdletBinding()]
 param(
-    [ValidateSet('import', 'import-dry', 'restore')]
+    [ValidateSet('import', 'import-dry', 'import-books', 'import-books-dry', 'restore')]
     [string]$Action = 'import',
     [string]$Date = '',
+    [string]$Stamp = '',
     [string]$BackupPath = '',
     [string]$ConfirmToken = '',
-    [switch]$Overwrite
+    [switch]$Overwrite,
+    [switch]$Unattended
 )
 
 $ErrorActionPreference = 'Stop'
@@ -44,8 +58,11 @@ if ($ConfirmToken -ne 'I_KNOW') {
 $Cfg = Get-Content -Raw -Encoding UTF8 $CfgPath | ConvertFrom-Json
 $Py = $Cfg.paths.python
 if (-not (Test-Path $Py)) { throw "Python not found (check paths.python in tasks.json): $Py" }
-if ($Date -notmatch '^\d{8}$') {
+if ($Date -notmatch '^\d{8}$' -and $Action -in @('import', 'import-dry')) {
     throw "-Date must be an explicit YYYYMMDD batch date (no default), got '$Date'"
+}
+if ($Stamp -and $Stamp -notmatch '^\d{8}$') {
+    throw "-Stamp must be YYYYMMDD, got '$Stamp'"
 }
 
 switch ($Action) {
@@ -55,6 +72,16 @@ switch ($Action) {
     }
     'import-dry' {
         $OpsArgs = @('import', '--date', $Date, '--dry-run', '--confirm', $ConfirmToken)
+    }
+    'import-books' {
+        # whole-book import: daily_consolidated/**/*_<Stamp>_book.json (no -Stamp = every book)
+        $OpsArgs = @('import-books', '--confirm', $ConfirmToken)
+        if ($Stamp) { $OpsArgs += @('--stamp', $Stamp) }
+        if ($Overwrite) { $OpsArgs += '--overwrite' }
+    }
+    'import-books-dry' {
+        $OpsArgs = @('import-books', '--dry-run', '--confirm', $ConfirmToken)
+        if ($Stamp) { $OpsArgs += @('--stamp', $Stamp) }
     }
     'restore' {
         if (-not $BackupPath) { throw "-Action restore needs -BackupPath <backup.db>" }
@@ -73,12 +100,22 @@ Write-Host ''
 Write-Host '=== HUMAN DB-WRITE CONFIRMATION (5th review) ===' -ForegroundColor Yellow
 Write-Host "  Action      : $Action"
 Write-Host "  -Date       : $Date"
+Write-Host "  -Stamp      : $Stamp"
 Write-Host "  -BackupPath : $BackupDisplay"
 Write-Host "  Command     : $OpsDisplay"
-Write-Host "  One-time confirmation code (never stored in docs): $Nonce" -ForegroundColor Cyan
-$Answer = Read-Host 'Type the 6-digit code shown above to proceed'
-if ($Answer -ne $Nonce) {
-    throw "Refusing DB write: interactive confirmation failed (copying -ConfirmToken I_KNOW from an example is no longer enough)."
+if ($Unattended) {
+    # ASCII-only on purpose: this file is UTF-8 without BOM and cmd launches Windows
+    # PowerShell 5.1, which decodes no-BOM scripts as ANSI (CJK would turn into mojibake).
+    Write-Host '  -Unattended : skip the runtime 6-digit code (assistant / unattended path).' -ForegroundColor Red
+    Write-Host '                Backup is still created first. Use only when the user has explicitly' -ForegroundColor Red
+    Write-Host '                authorized this DB write in this session. Teaching sessions: forbidden.' -ForegroundColor Red
+}
+else {
+    Write-Host "  One-time confirmation code (never stored in docs): $Nonce" -ForegroundColor Cyan
+    $Answer = Read-Host 'Type the 6-digit code shown above to proceed'
+    if ($Answer -ne $Nonce) {
+        throw "Refusing DB write: interactive confirmation failed (copying -ConfirmToken I_KNOW from an example is no longer enough)."
+    }
 }
 
 & $Py $Ops @OpsArgs

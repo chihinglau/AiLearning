@@ -1,407 +1,504 @@
 {
-  "schema_version": 1,
-  "rewritten_from": "../automation_20261108/01-九条任务全文可复制.md",
-  "note": "参数逐条抄自 2026-11-08 导出包，学科/版本/学期/错峰分钟均未改。口径变更：按评审意见并经确认，数学 grades 由 1-8 扩到 1-9（工作区已有 g9 大纲与产出），全景由 45 年级变为 46 年级；2026-11-08 第三轮评审后经用户授权「可以动原文和库数据，彻底更正」，已改动原文体系 _validate_daily.py（(单元,板块) 二元组大纲校验）、英语 20261108 JSON 的 section 复合名、_run_daily.py 进度指针与台账/日志归一、物理/地理 6 条数值填空解析，并在备份后重新入库刷新 manifest 与知识点名称基线。其余原文不动。",
-  "paths": {
-    "workspace": "D:/ai/prj/trae/HuaWei/AiLearning",
-    "content_root": "D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates",
-    "python": "D:/ai/prj/trae/HuaWei/AiLearning/backend/.venv/Scripts/python.exe",
-    "validator": "D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/_validate_daily.py",
-    "instruction": "D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/_daily-task-instruction.md",
-    "readme": "D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/README.md",
-    "kp_baseline": "D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/baseline/_knowledge-points-baseline_latest.json",
-    "chapters_baseline": "D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/baseline/_chapters-baseline_latest.md",
-    "manifest": "D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/_import-manifest.json",
-    "baseline_dir": "D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/baseline",
-    "daily_dir": "D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/daily",
-    "ledger_dir": "D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/ledger",
-    "logs_dir": "D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/logs",
-    "run_daily": "D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/exports/automation_20261108_codebuddy/_run_daily.py"
+ "schema_version": 1,
+ "rewritten_from": "../automation_20261108/01-九条任务全文可复制.md",
+ "note": "参数逐条抄自 2026-11-08 导出包，学科/版本/学期/错峰分钟均未改。口径变更：按评审意见并经确认，数学 grades 由 1-8 扩到 1-9（工作区已有 g9 大纲与产出），全景由 45 年级变为 46 年级；2026-11-08 第三轮评审后经用户授权「可以动原文和库数据，彻底更正」，已改动原文体系 _validate_daily.py（(单元,板块) 二元组大纲校验）、英语 20261108 JSON 的 section 复合名、_run_daily.py 进度指针与台账/日志归一、物理/地理 6 条数值填空解析，并在备份后重新入库刷新 manifest 与知识点名称基线。其余原文不动。",
+ "paths": {
+  "workspace": "D:/ai/prj/trae/HuaWei/AiLearning",
+  "content_root": "D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates",
+  "python": "D:/ai/prj/trae/HuaWei/AiLearning/backend/.venv/Scripts/python.exe",
+  "validator": "D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/_validate_daily.py",
+  "instruction": "D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/_daily-task-instruction.md",
+  "readme": "D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/README.md",
+  "kp_baseline": "D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/baseline/_knowledge-points-baseline_latest.json",
+  "chapters_baseline": "D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/baseline/_chapters-baseline_latest.md",
+  "manifest": "D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/_import-manifest.json",
+  "baseline_dir": "D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/baseline",
+  "daily_dir": "D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/daily",
+  "ledger_dir": "D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/ledger",
+  "logs_dir": "D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/logs",
+  "run_daily": "D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/exports/automation_20261108_codebuddy/_run_daily.py"
+ },
+ "policy": {
+  "timezone": "Asia/Shanghai（用系统本地时间；跨零点用 --date 显式固定 BATCH_DATE）",
+  "batch_date": "触发时刻的日期，定下后全程不变；文件名/台账/日志都用它",
+  "lock_ttl_minutes": 30,
+  "lock_pattern": "logs/_daily-lock_{subject}_{semester}.txt，内容 YYYY-MM-DD HH:MM",
+  "late_stop": "23:30",
+  "max_repair_grades": 3,
+  "points_per_grade": [
+   3,
+   6
+  ],
+  "questions_per_grade": [
+   18,
+   28
+  ],
+  "min_questions_per_point": 4,
+  "min_questions_per_point_since": "20261108",
+  "legacy_batches": [
+   "20261107"
+  ],
+  "legacy_batches_note": "20261107 是试跑样本批次：每点≥4 未达标，且 8 册 math 的 chapter/section 用的是教材上没有的旧样章名（10以内加减法 / 100以内加减法 / 一位数乘多位数 / 小数除法 / 圆 / 勾股定理 等），库内与之对应的占位章节清理另立项；该批次记为 legacy，不纳入回归基线（all-verify 仍会打印遗留问题明细）。2026-11-09 补：盘上 26 份 1107 文件已**全部**打 `_legacy` + `_legacy_note`（原先只有 8 份 math 有标记，chinese/english 的 18 份没有，导致同一批历史内容一半按提醒一半按错误）；只加元数据键、内容哈希不变，manifest 仅刷 current_file_sha256，imported_sha256 / imported_content_sha256 未改（状态仍是 meta_only=已入库）。留痕见 _archive/legacy-1107-mark.provenance.txt。",
+  "question_status": "published",
+  "source_default": "知识点 original/教研组自编；题目 original/自主命题",
+  "kp_baseline": false,
+  "kp_baseline_note": "按导出包 9 条 query 的最新口径：不传 --kp-baseline，重名交给入库时自动后缀；需要更严时用 --with-kp-baseline",
+  "outline_required": true,
+  "chapter_progress": "progress_of() 按大纲表格顺序 + 历史 JSON 的 section/chapters 名算出 next_section；英语等学科多个单元复用同名板块，用历史出现的单元名锁定 active_row，纯板块名/复合名只在该单元内匹配，避免从 Unit 1 跳到 Unit 6；plan/context/commit 共用；今天只做这一节，不回头重做已覆盖节、不跳节；一节可拆 2 天需标注；全册覆盖完进入第二轮或零新增",
+  "same_name": "本批次已有同名文件→跳过，不重写、不加 _r2；绝不覆盖任何已有文件",
+  "encoding": "UTF-8 无 BOM",
+  "boundary": "只产出 JSON + 追加台账/日志；不执行 scripts/import_content、不跑 --dry-run、不连数据库、不跑 alembic、不修改任何已有内容文件、不读写其他学科文件。【硬约束】教研会话禁止调用 db_ops.py / ops.*，禁止执行任何入库或回退动作（run_all.* 已无入库 Action，ops.* 要求人工显式 -ConfirmToken I_KNOW），禁止执行 ledger-sync / log-sync（人工运维命令，写动作均需 --confirm I_KNOW）；_run_daily.py 已无 import/restore 子命令；新增的 ops.* -Action import-books / import-books-dry 同样属人工运维动作，教研会话禁止调用",
+  "generation_constraints": "出题阶段就按每知识点 ≥4 题、难度 1-2/3/4-5 ≈ 40/40/20（±15pp）设计；题目难度由题目本身决定，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例，禁止用一次性补丁脚本改写已通过自检的 JSON",
+  "english_section_naming": "英语按课时板块推进时，knowledge 的 section 必须写「Unit N 标题 / 板块」复合名，point 的 parent 与它一致，chapters[].name 仍是完整单元名；Ready Go / Story 这类纯板块名在多个单元重复，_validate_daily.py 按 (单元,板块) 二元组校验并判 error。整单元首跑的历史节点允许保留单元名（不编造板块）。台账/日志的下一节计划用复合名；大纲只有单元名、没有课时板块的年级（如 g9）沿用单元名，不拼成重复的复合名",
+  "rrule_minute_offset": 0,
+  "shift_hours": {
+   "02": 2,
+   "12": 12,
+   "22": 21
   },
-  "policy": {
-    "timezone": "Asia/Shanghai（用系统本地时间；跨零点用 --date 显式固定 BATCH_DATE）",
-    "batch_date": "触发时刻的日期，定下后全程不变；文件名/台账/日志都用它",
-    "lock_ttl_minutes": 30,
-    "lock_pattern": "logs/_daily-lock_{subject}_{semester}.txt，内容 YYYY-MM-DD HH:MM",
-    "late_stop": "23:30",
-    "max_repair_grades": 3,
-    "points_per_grade": [
-      3,
-      6
+  "late_shift_minute_base": 30,
+  "shift_schedule_note": "第五轮评审 D，用户 2026-11-08 拍板选 B：27 条全留，原 22 点班前移到 21 点档（shift key 仍为 22，只作晚班逻辑标识）。02/12 两班 BYMINUTE 沿用各学科原值 0/5/…/40（rrule_minute_offset=0）；21 点班从 21:30 起按学科顺序每分钟一条（BYMINUTE=30..38），因为 21:30-21:59 只剩 30 分钟、容纳不下 9×5 分钟错峰，且 9 个学科各有独立锁文件 logs/_daily-lock_<subject>_first.txt，1 分钟错峰不会触发同科并行锁。距 23:30 停手 ≥1h52m，原冲突解除。启用前仍须停用原文 9 条 cron",
+  "rrule_minute_offset_note": "第三轮评审确认：BYMINUTE 值域只有 0-59，分钟级 +3/+60 都不足以/无法避开 30 分钟并行锁，故 02/12 两班不再靠分钟错峰（保持 minute 原值）。第五轮 D 选 B 后晚班改为 21 点档 + 21:30..38 的 1 分钟错峰；27 条仍 PAUSED 且从未注册",
+  "registration_blocked": "第五轮 D 用户已选定候选 B 且 RRULE 已落地，但 02/12 两班仍与原文 cron 同分钟。registration.allowed 保持 false：启用前必须先停用原文 9 条 cron（禁止两套调度同时 ACTIVE）、逐条复核 27 条 RRULE / cwds / prompt，再把 status 改为 ACTIVE。在此之前禁止把本文件直接喂给 automation_update",
+  "import_stage": "入库/回退已隔离到独立人工运维脚本 db_ops.py + 独立入口 ops.cmd / ops.ps1；所有写库动作必须人工显式 -Date 与 -ConfirmToken I_KNOW（脚本不再代填），restore 的 -BackupPath 必须存在，并在控制台输入运行时打印的一次性 6 位确认码；run_all.ps1 的 ValidateSet 已彻底移除 import/import-dry/restore。目标库取 backend 的 settings.database_url，仅支持 SQLite；教研提示词与 27 条载荷里均明令禁止调用",
+  "ops_gate": "第五轮评审 C：-ConfirmToken I_KNOW 是可复制的明文口令，单独不足以开门。ops.ps1 现在有三道闸门——(1) 显式 -ConfirmToken I_KNOW；(2) 显式 -Date（无默认值）+ restore 的 -BackupPath 存在性校验；(3) 运行时生成并打印的一次性 6 位码，经 Read-Host 交互输入，文档/示例/提示词里都不含该码。教研会话仍一律禁止调用 ops.* / db_ops.py",
+  "enablement_decision": "第五轮评审 D，用户 2026-11-08 拍板 selected=B：27 条全留、原 22 点班前移到 21 点档（21:30-21:38，1 分钟错峰），避开 23:30 停手规则。候选 A（CodeBuddy 侧只留 02 点班 9 条）未采纳。RRULE 已按 B 生成在 03；剩余启用前置条件见 registration_blocked，allowed 仍为 false、27 条保持 PAUSED",
+  "schedule_ownership": "当前 27 条 RRULE 载荷全部 PAUSED 且从未注册，调度归属为『cron 停用、CodeBuddy 只做手动单次』；启用形态已定为 B（02 点班 / 12 点班 / 21 点档晚班）。若将来要启用，先停用原文 9 条 cron 并逐条复核 RRULE，禁止两套调度同时 ACTIVE",
+  "verification_extra": "verify_one 检查每知识点 >=min_questions_per_point 题（第七轮评审 A 项起为 fail 级：不达标即 errors，all-verify 判不通过、ops import 第 2 步直接中止，不再接受事后凑数）、难度 1-2/3/4-5 分布 40/40/20 ±15pp（warn 级），并把 _validate_daily.py 输出的 [提醒] 条数并入 warnings（--strict 计入未通过）；第三轮整改后原文体系 _validate_daily.py 的大纲范围校验已升级为『允许名 + (单元,板块) 二元组 + chapters 单元一致性』，越界/串单元一律 checker.err，不再因『已入库』降级为提醒",
+  "coverage_gap_note": "库清理干净 ≠ 教材覆盖齐了。占位章节清理后（2026-11-08），库内 46 册上册共 307 个教材真实章节里只有 53 个有题、254 个 0 题；真实覆盖是「每册各 1 节」。覆盖缺口清单用只读脚本 coverage_gap.py 生成（见 exports/automation_20261108_codebuddy/），与 chapter_audit.py 分工：后者管「干不干净」（占位/撞号），前者管「齐不齐」（覆盖）。任何对外汇报都要把两件事并列。",
+  "rerun_queue": [
+   {
+    "subject": "math",
+    "grade": 3,
+    "semester": "first",
+    "reason": "占位章节清理按用户授权「旧版数据删掉」整章删除旧样章「一位数乘多位数」（库内 22 题 + 6 个独占知识点），该册上册现为 0 题 / 8 章全空",
+    "action": "按现行教材目录（北师大版三上 8 个单元）重新出题并入库；在此之前不要在覆盖台账里显示成「已完成」",
+    "chapters_total": 8,
+    "questions": 0
+   },
+   {
+    "subject": "math",
+    "grade": 5,
+    "semester": "first",
+    "reason": "同理：旧样章「小数除法」（库内 18 题 + 6 个独占知识点）整章删除，该册上册现为 0 题 / 12 章全空",
+    "action": "按现行教材目录（北师大版五上 12 个单元）重新出题并入库；在此之前不要在覆盖台账里显示成「已完成」",
+    "chapters_total": 12,
+    "questions": 0
+   }
+  ],
+  "orphan_questions": [
+   {
+    "subject": "math",
+    "grade": 1,
+    "semester": "first",
+    "count": 10,
+    "samples": [
+     "9 - 4 = （  ）",
+     "有 8 个苹果，吃掉 3 个，还剩几个？"
     ],
-    "questions_per_grade": [
-      18,
-      28
+    "reason": "库内 48 题里 10 题在现有任何 daily JSON 都找不到出处（不可追溯）",
+    "status": "done",
+    "done_at": "2026-11-09",
+    "done_note": "已按 orphan-rollback_20261109.sql 删除并复核 0；随后 12 册整册入库把涉及章节补齐，现无 0 题章"
+   },
+   {
+    "subject": "chinese",
+    "grade": 1,
+    "semester": "first",
+    "count": 9,
+    "samples": [
+     "用「天」和「地」各写一个词语。"
     ],
-    "min_questions_per_point": 4,
-    "min_questions_per_point_since": "20261108",
-    "legacy_batches": [
-      "20261107"
+    "reason": "同上；且第四单元在库内只剩 1 题（孤题章）",
+    "status": "done",
+    "done_at": "2026-11-09",
+    "done_note": "已按 orphan-rollback_20261109.sql 删除并复核 0；随后 12 册整册入库把涉及章节补齐，现无 0 题章"
+   },
+   {
+    "subject": "english",
+    "grade": 1,
+    "semester": "first",
+    "count": 9,
+    "samples": [
+     "Which of the following are greetings?"
     ],
-    "legacy_batches_note": "20261107 是试跑样本批次：每点≥4 未达标，且 8 册 math 的 chapter/section 用的是教材上没有的旧样章名（10以内加减法 / 100以内加减法 / 一位数乘多位数 / 小数除法 / 圆 / 勾股定理 等），库内与之对应的占位章节清理另立项；该批次记为 legacy，不纳入回归基线（all-verify 仍会打印遗留问题明细）。",
-    "question_status": "published",
-    "source_default": "知识点 original/教研组自编；题目 original/自主命题",
-    "kp_baseline": false,
-    "kp_baseline_note": "按导出包 9 条 query 的最新口径：不传 --kp-baseline，重名交给入库时自动后缀；需要更严时用 --with-kp-baseline",
-    "outline_required": true,
-    "chapter_progress": "progress_of() 按大纲表格顺序 + 历史 JSON 的 section/chapters 名算出 next_section；英语等学科多个单元复用同名板块，用历史出现的单元名锁定 active_row，纯板块名/复合名只在该单元内匹配，避免从 Unit 1 跳到 Unit 6；plan/context/commit 共用；今天只做这一节，不回头重做已覆盖节、不跳节；一节可拆 2 天需标注；全册覆盖完进入第二轮或零新增",
-    "same_name": "本批次已有同名文件→跳过，不重写、不加 _r2；绝不覆盖任何已有文件",
-    "encoding": "UTF-8 无 BOM",
-    "boundary": "只产出 JSON + 追加台账/日志；不执行 scripts/import_content、不跑 --dry-run、不连数据库、不跑 alembic、不修改任何已有内容文件、不读写其他学科文件。【硬约束】教研会话禁止调用 db_ops.py / ops.*，禁止执行任何入库或回退动作（run_all.* 已无入库 Action，ops.* 要求人工显式 -ConfirmToken I_KNOW），禁止执行 ledger-sync / log-sync（人工运维命令，写动作均需 --confirm I_KNOW）；_run_daily.py 已无 import/restore 子命令",
-    "generation_constraints": "出题阶段就按每知识点 ≥4 题、难度 1-2/3/4-5 ≈ 40/40/20（±15pp）设计；题目难度由题目本身决定，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例，禁止用一次性补丁脚本改写已通过自检的 JSON",
-    "english_section_naming": "英语按课时板块推进时，knowledge 的 section 必须写「Unit N 标题 / 板块」复合名，point 的 parent 与它一致，chapters[].name 仍是完整单元名；Ready Go / Story 这类纯板块名在多个单元重复，_validate_daily.py 按 (单元,板块) 二元组校验并判 error。整单元首跑的历史节点允许保留单元名（不编造板块）。台账/日志的下一节计划用复合名；大纲只有单元名、没有课时板块的年级（如 g9）沿用单元名，不拼成重复的复合名",
-    "rrule_minute_offset": 0,
-    "shift_hours": {
-      "02": 2,
-      "12": 12,
-      "22": 21
+    "reason": "同上",
+    "status": "done",
+    "done_at": "2026-11-09",
+    "done_note": "已按 orphan-rollback_20261109.sql 删除并复核 0；随后 12 册整册入库把涉及章节补齐，现无 0 题章"
+   },
+   {
+    "subject": "physics",
+    "grade": 8,
+    "semester": "first",
+    "count": 5,
+    "samples": [
+     "声音在 15℃ 空气中的传播速度约为（  ）m/s"
+    ],
+    "reason": "同上；且第二章在库内只剩 5 题（孤题章）",
+    "status": "done",
+    "done_at": "2026-11-09",
+    "done_note": "已按 orphan-rollback_20261109.sql 删除并复核 0；随后 12 册整册入库把涉及章节补齐，现无 0 题章"
+   }
+  ],
+  "orphan_questions_note": "2026-11-09：4 条 33 题已回退执行完成（备份 backend/_backup/ailearning_dev_20261109-043223.db），留痕 db_op_20261109_044100.json；条目保留为历史记录，不再需要重跑。",
+  "consolidated_books_note": "2026-11-09：daily_consolidated/ 下 12 册整册文件（1686 题，12/12 通过 _validate_daily.py）**已按人工授权入库**（用户「你帮我完成吧，授权给你」）：先整库快照备份，再 `import_content --path daily_consolidated --pattern \"*_20261109_book.json\" --manifest`，12 条已登记 manifest（键为 `daily_consolidated` 相对路径，带 `_book` 后缀，与 daily 分片键空间不冲突）。入库后 questions 957→2493（净 +1536，扣掉先删的 33 题）、knowledge_points 537→1120；12 册上册 0 空章、0 缺答案/解析、quick_check=ok、外键 0 违规；留痕 db_op_20261109_044100.json。整册里不重复声明库内已存在的知识点（题目按旧名挂载），归集时剔除「既无点也无题」的空节。 2026-11-09 复核后又补：① 库清理删掉 1 组重复题（id 1227）+ 3 册 11-07 旧规格 58 题（math/chinese/english g8），questions 2493→2434；② db_ops.py 新增 import-books 子命令、ops.ps1/ops.cmd 新增 -Action import-books / import-books-dry 与 -Unattended（整册入库专用，因为 -Action import -Date 只扫 daily 目录树的 *_<date>.json，扫不到 daily_consolidated 的 *_book.json）；③ _consolidate_daily.py 增加 --subjects/--grades/--semester/--stamp/--out-dir，可按任意学科年级归集。",
+  "rerun_queue_note": "2026-11-08 第九轮评审 B 项：删除旧版数据把「这册有内容但挂错地方」变成「这册什么都没有」，缺口从可见变成不可见。rerun_queue 就是这个缺口的显式登记——两册数学上册在重新出题入库前，一律按「待重跑」而不是「已完成」对外说明。覆盖明细见 coverage_gap_20261108.json。2026-11-09 扩到 5 条：新增 math g8 / chinese g8 / english g8（库内内容全部来自 11-07 旧规格，1108 批次只有分片、未入库）。",
+  "import_books_note": "整册入库入口：ops.cmd -Action import-books -Stamp <YYYYMMDD> -ConfirmToken I_KNOW；助手代跑需用户本轮明确授权后加 -Unattended（仅跳过运行时 6 位码）。内部顺序＝整册校验（失败不建备份）→ 备份 → import_content --dry-run → 带 --manifest 正式导入 → 逐册题干核对 → import_report_books_<stamp>_<HHMMSS>.json。幂等：同 Stamp 重跑全部命中 manifest 跳过，全表增量 0。",
+  "known_gaps_20261109": [
+   "62 份 daily/**/*_rN.json 分片仍未登记 manifest（文件名末段是 rN，--pattern \"*_<batch>.json\" 扫不到）；须每轮跑 _consolidate_daily.py 归集后再入库",
+   "其余 34 个年级（g1/g8 之外）尚无整册文件，需按 §1.1 的 --subjects/--grades 逐批归集",
+   "_audit_ledger.py 只有只读体检，台账回写与「指针只能前进」联动校验未实现",
+   "daily/politics_g8_first_20261108_r3.json（空节「第三课共建网络美好家园」）与 r4.json（空节「第五课 社会生活讲道德」）原文件未修，整册归集时已剔除",
+   "_chapters-baseline_latest.md 仍是 11-08 口径（307 章 / 53 章有题），g1+g8 已在 11-09 补齐，仅对其余年级成立",
+   "其余 55 个「样章·…」占位知识点分组仍在 g2–g7、g9–g12（本轮只清 g1/g8），app 端按知识点浏览时仍会出现",
+   "g1/g8 有 10 个空壳知识点待补题（math g8 勾股定理 5 / chinese g8 新闻 5），补题须走生成规则"
+  ],
+  "kp_cleanup_note": "2026-11-09 晚知识点层清理（A–D）。执行脚本 exports/review_20261109/kp-cleanup_20261109.py，等价 SQL exports/review_20261109/cleanup-kp-20261109.sql，备份 backend/_backup/ailearning_dev_20261109-050711.db。A 删 9 个「样章·…」占位分组 + 18 子点（0 题 0 引用）；B 5 个实践类节点 section→point；C 2 个中文点名去 ?；D 156 个 point 补 prerequisites。knowledge_points 1120→1093，questions 2434 不变。同步：baseline/_knowledge-points-baseline_latest 已用 _build_kp_baseline.py 重算（703 名 / 0 歧义）。",
+  "kp_backlog": {
+   "note": "g1/g8 中仍有 37 个 0 题 point，其中 10 个是\"内容缺口\"而非常规概览点，需按生成规则补题（不要直接写库手造题目）。",
+   "items": [
+    {
+     "subject": "math",
+     "grade": 8,
+     "points": [
+      "勾股定理的内容",
+      "已知两边求第三边",
+      "勾股定理的逆定理",
+      "勾股数",
+      "设未知数求边"
+     ],
+     "why": "该章为 legacy 越界章，未并入整册；05 口径为\"不并入\"，故整册不带这部分题"
     },
-    "late_shift_minute_base": 30,
-    "shift_schedule_note": "第五轮评审 D，用户 2026-11-08 拍板选 B：27 条全留，原 22 点班前移到 21 点档（shift key 仍为 22，只作晚班逻辑标识）。02/12 两班 BYMINUTE 沿用各学科原值 0/5/…/40（rrule_minute_offset=0）；21 点班从 21:30 起按学科顺序每分钟一条（BYMINUTE=30..38），因为 21:30-21:59 只剩 30 分钟、容纳不下 9×5 分钟错峰，且 9 个学科各有独立锁文件 logs/_daily-lock_<subject>_first.txt，1 分钟错峰不会触发同科并行锁。距 23:30 停手 ≥1h52m，原冲突解除。启用前仍须停用原文 9 条 cron",
-    "rrule_minute_offset_note": "第三轮评审确认：BYMINUTE 值域只有 0-59，分钟级 +3/+60 都不足以/无法避开 30 分钟并行锁，故 02/12 两班不再靠分钟错峰（保持 minute 原值）。第五轮 D 选 B 后晚班改为 21 点档 + 21:30..38 的 1 分钟错峰；27 条仍 PAUSED 且从未注册",
-    "registration_blocked": "第五轮 D 用户已选定候选 B 且 RRULE 已落地，但 02/12 两班仍与原文 cron 同分钟。registration.allowed 保持 false：启用前必须先停用原文 9 条 cron（禁止两套调度同时 ACTIVE）、逐条复核 27 条 RRULE / cwds / prompt，再把 status 改为 ACTIVE。在此之前禁止把本文件直接喂给 automation_update",
-    "import_stage": "入库/回退已隔离到独立人工运维脚本 db_ops.py + 独立入口 ops.cmd / ops.ps1；所有写库动作必须人工显式 -Date 与 -ConfirmToken I_KNOW（脚本不再代填），restore 的 -BackupPath 必须存在，并在控制台输入运行时打印的一次性 6 位确认码；run_all.ps1 的 ValidateSet 已彻底移除 import/import-dry/restore。目标库取 backend 的 settings.database_url，仅支持 SQLite；教研提示词与 27 条载荷里均明令禁止调用",
-    "ops_gate": "第五轮评审 C：-ConfirmToken I_KNOW 是可复制的明文口令，单独不足以开门。ops.ps1 现在有三道闸门——(1) 显式 -ConfirmToken I_KNOW；(2) 显式 -Date（无默认值）+ restore 的 -BackupPath 存在性校验；(3) 运行时生成并打印的一次性 6 位码，经 Read-Host 交互输入，文档/示例/提示词里都不含该码。教研会话仍一律禁止调用 ops.* / db_ops.py",
-    "enablement_decision": "第五轮评审 D，用户 2026-11-08 拍板 selected=B：27 条全留、原 22 点班前移到 21 点档（21:30-21:38，1 分钟错峰），避开 23:30 停手规则。候选 A（CodeBuddy 侧只留 02 点班 9 条）未采纳。RRULE 已按 B 生成在 03；剩余启用前置条件见 registration_blocked，allowed 仍为 false、27 条保持 PAUSED",
-    "schedule_ownership": "当前 27 条 RRULE 载荷全部 PAUSED 且从未注册，调度归属为『cron 停用、CodeBuddy 只做手动单次』；启用形态已定为 B（02 点班 / 12 点班 / 21 点档晚班）。若将来要启用，先停用原文 9 条 cron 并逐条复核 RRULE，禁止两套调度同时 ACTIVE",
-    "verification_extra": "verify_one 检查每知识点 >=min_questions_per_point 题（第七轮评审 A 项起为 fail 级：不达标即 errors，all-verify 判不通过、ops import 第 2 步直接中止，不再接受事后凑数）、难度 1-2/3/4-5 分布 40/40/20 ±15pp（warn 级），并把 _validate_daily.py 输出的 [提醒] 条数并入 warnings（--strict 计入未通过）；第三轮整改后原文体系 _validate_daily.py 的大纲范围校验已升级为『允许名 + (单元,板块) 二元组 + chapters 单元一致性』，越界/串单元一律 checker.err，不再因『已入库』降级为提醒",
-    "coverage_gap_note": "库清理干净 ≠ 教材覆盖齐了。占位章节清理后（2026-11-08），库内 46 册上册共 307 个教材真实章节里只有 53 个有题、254 个 0 题；真实覆盖是「每册各 1 节」。覆盖缺口清单用只读脚本 coverage_gap.py 生成（见 exports/automation_20261108_codebuddy/），与 chapter_audit.py 分工：后者管「干不干净」（占位/撞号），前者管「齐不齐」（覆盖）。任何对外汇报都要把两件事并列。",
-    "rerun_queue": [
-      {
-        "subject": "math",
-        "grade": 3,
-        "semester": "first",
-        "reason": "占位章节清理按用户授权「旧版数据删掉」整章删除旧样章「一位数乘多位数」（库内 22 题 + 6 个独占知识点），该册上册现为 0 题 / 8 章全空",
-        "action": "按现行教材目录（北师大版三上 8 个单元）重新出题并入库；在此之前不要在覆盖台账里显示成「已完成」",
-        "chapters_total": 8,
-        "questions": 0
-      },
-      {
-        "subject": "math",
-        "grade": 5,
-        "semester": "first",
-        "reason": "同理：旧样章「小数除法」（库内 18 题 + 6 个独占知识点）整章删除，该册上册现为 0 题 / 12 章全空",
-        "action": "按现行教材目录（北师大版五上 12 个单元）重新出题并入库；在此之前不要在覆盖台账里显示成「已完成」",
-        "chapters_total": 12,
-        "questions": 0
-      }
-    ],
-    "rerun_queue_note": "2026-11-08 第九轮评审 B 项：删除旧版数据把「这册有内容但挂错地方」变成「这册什么都没有」，缺口从可见变成不可见。rerun_queue 就是这个缺口的显式登记——两册数学上册在重新出题入库前，一律按「待重跑」而不是「已完成」对外说明。覆盖明细见 coverage_gap_20261108.json。"
-  },
-  "shifts": {
-    "02": {
-      "role": "attack",
-      "label": "首跑·进攻班",
-      "log_batch": "首跑",
-      "detail": "按年级顺序推进当天下一个未覆盖单元/节，逐年级落盘+自检，做完几个算几个"
-    },
-    "12": {
-      "role": "repair",
-      "label": "补漏班",
-      "log_batch": "补漏",
-      "detail": "只修自检失败与补缺文件；不推进新节、不新增知识点；单次最多 3 个年级"
-    },
-    "22": {
-      "role": "repair",
-      "label": "补漏班·前移至21:30",
-      "log_batch": "补漏",
-      "detail": "同 12 点班；CodeBuddy 侧 RRULE 已前移到 21:30-21:38（第五轮 D 选 B，shift key 22 仅作晚班逻辑标识）；最迟 23:30 停手，未轮到年级顺延至次日 02:00 首跑"
+    {
+     "subject": "chinese",
+     "grade": 8,
+     "points": [
+      "新闻六要素",
+      "消息的五部分结构",
+      "电头与消息来源",
+      "消息语言的准确与简洁",
+      "新闻的真实性与时效性"
+     ],
+     "why": "1107 旧文件里这几条被判\"每点<4 题\"并降级为提醒，1108 新内容未覆盖"
     }
+   ]
+  }
+ },
+ "shifts": {
+  "02": {
+   "role": "attack",
+   "label": "首跑·进攻班",
+   "log_batch": "首跑",
+   "detail": "按年级顺序推进当天下一个未覆盖单元/节，逐年级落盘+自检，做完几个算几个"
   },
-  "expected_version": {
-    "chinese": {
-      "1-9": "人教版",
-      "10-12": "人教版"
-    },
-    "math": {
-      "1-9": "北师大版",
-      "10-12": "人教版A版"
-    },
-    "english": {
-      "1-9": "牛津深圳版",
-      "10-12": "外研版"
-    },
-    "politics": {
-      "1-9": "部编版",
-      "10-12": "部编版"
-    },
-    "physics": {
-      "8-9": "人教版",
-      "10-12": "人教版"
-    },
-    "chemistry": {
-      "9": "人教版",
-      "10-12": "人教版"
-    },
-    "biology": {
-      "7-8": "人教版",
-      "10-12": "人教版"
-    },
-    "history": {
-      "7-9": "部编版",
-      "10-12": "部编版"
-    },
-    "geography": {
-      "7-8": "湘教版",
-      "10-12": "人教版"
-    }
+  "12": {
+   "role": "repair",
+   "label": "补漏班",
+   "log_batch": "补漏",
+   "detail": "只修自检失败与补缺文件；不推进新节、不新增知识点；单次最多 3 个年级"
   },
-  "compulsory_scope": {
-    "chinese": [
-      1,
-      9
-    ],
-    "math": [
-      1,
-      9
-    ],
-    "english": [
-      1,
-      9
-    ],
-    "politics": [
-      1,
-      9
-    ],
-    "physics": [
-      8,
-      9
-    ],
-    "chemistry": [
-      9,
-      9
-    ],
-    "biology": [
-      7,
-      8
-    ],
-    "history": [
-      7,
-      9
-    ],
-    "geography": [
-      7,
-      8
-    ]
+  "22": {
+   "role": "repair",
+   "label": "补漏班·前移至21:30",
+   "log_batch": "补漏",
+   "detail": "同 12 点班；CodeBuddy 侧 RRULE 已前移到 21:30-21:38（第五轮 D 选 B，shift key 22 仅作晚班逻辑标识）；最迟 23:30 停手，未轮到年级顺延至次日 02:00 首跑"
+  }
+ },
+ "expected_version": {
+  "chinese": {
+   "1-9": "人教版",
+   "10-12": "人教版"
   },
-  "tasks": [
-    {
-      "id": "math-first",
-      "title": "数学1-9上每日教研",
-      "subject": "math",
-      "subject_name": "数学",
-      "version": "北师大版",
-      "semester": "first",
-      "grades": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9
-      ],
-      "minute": 0,
-      "cron": "0 2,12,22 * * *",
-      "outline": "_outline_math_first_latest.md",
-      "outline_by_grade": {
-        "9": "_outline_math_g9_first_latest.md"
-      },
-      "deviation_note": "原导出任务只到 8 年级；2026-11-08 按评审意见并经确认并入 g9：工作区已有 math/g9 产出与 _outline_math_g9_first_latest.md，outline_by_grade 已为 g9 单独指定大纲，all-verify --strict 现覆盖 46 个年级",
-      "rules": [
-        "章节名用大纲里的教材原名，order_index 取大纲序号",
-        "数学题带单位与解题步骤，上下标用纯文本"
-      ]
-    },
-    {
-      "id": "chinese-first",
-      "title": "语文1-9上每日教研",
-      "subject": "chinese",
-      "subject_name": "语文",
-      "version": "人教版",
-      "semester": "first",
-      "grades": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9
-      ],
-      "minute": 5,
-      "cron": "5 2,12,22 * * *",
-      "outline": "_outline_chinese_first_latest.md",
-      "rules": [
-        "字词、古诗文、现代文阅读、写作素材分开覆盖",
-        "材料题材料必须自带；古诗文原文不得写错字",
-        "阅读题解析写清答题切入角度"
-      ]
-    },
-    {
-      "id": "english-first",
-      "title": "英语1-9上每日教研",
-      "subject": "english",
-      "subject_name": "英语",
-      "version": "牛津深圳版",
-      "semester": "first",
-      "grades": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9
-      ],
-      "minute": 10,
-      "cron": "10 2,12,22 * * *",
-      "outline": "_outline_english_first_latest.md",
-      "rules": [
-        "题干与选项用英文，解析用中文（讲清语法点与易错处）",
-        "不写依赖音频的听力题",
-        "覆盖词汇、语法、完形/阅读、写作四类；小学段控制词量，初中段覆盖深圳中考常考语法（时态、被动、从句、非谓语）",
-        "多选题解析必须逐个选项写出 A/B/C/D 与 ✓/✗"
-      ]
-    },
-    {
-      "id": "politics-first",
-      "title": "道法1-9上每日教研",
-      "subject": "politics",
-      "subject_name": "道德与法治",
-      "version": "部编版",
-      "semester": "first",
-      "grades": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9
-      ],
-      "minute": 15,
-      "cron": "15 2,12,22 * * *",
-      "outline": "_outline_politics_first_latest.md",
-      "rules": [
-        "小学段与初中段均写「道德与法治」，高中才叫「思想政治」",
-        "观点题必须有材料且材料自包含；涉及法律条文只用教材表述，不引申、不评论",
-        "情境题优先用校园、家庭、深圳公共生活场景",
-        "多选题解析必须逐个选项写出 A/B/C/D 与 ✓/✗"
-      ]
-    },
-    {
-      "id": "physics-first",
-      "title": "物理8-9上每日教研",
-      "subject": "physics",
-      "subject_name": "物理",
-      "version": "人教版",
-      "semester": "first",
-      "grades": [
-        8,
-        9
-      ],
-      "minute": 20,
-      "cron": "20 2,12,22 * * *",
-      "outline": "_outline_physics_first_latest.md",
-      "rules": [
-        "物理量必须带单位，计算题给公式→代入→结果三步，结果带单位",
-        "不使用需要看图的题目；实验题用文字描述器材与现象",
-        "数据取常见可核验值（如 g=10 N/kg，若用 9.8 需在题干说明）",
-        "九年级该册为「全一册」，大纲收录全册章节，按章序正常推进",
-        "多选题解析必须逐个选项写出 A/B/C/D 与 ✓/✗"
-      ]
-    },
-    {
-      "id": "chemistry-first",
-      "title": "化学9上每日教研",
-      "subject": "chemistry",
-      "subject_name": "化学",
-      "version": "人教版",
-      "semester": "first",
-      "grades": [
-        9
-      ],
-      "minute": 25,
-      "cron": "25 2,12,22 * * *",
-      "outline": "_outline_chemistry_first_latest.md",
-      "rules": [
-        "化学式用纯文本（H2O、CO2、CaCO3），上下标不得用富文本",
-        "方程式必须配平并标条件（如「点燃」「加热」）；计算题写明相对原子质量取值",
-        "不使用需要看图或读装置图的题目",
-        "多选题解析必须逐个选项写出 A/B/C/D 与 ✓/✗"
-      ]
-    },
-    {
-      "id": "biology-first",
-      "title": "生物7-8上每日教研",
-      "subject": "biology",
-      "subject_name": "生物",
-      "version": "人教版",
-      "semester": "first",
-      "grades": [
-        7,
-        8
-      ],
-      "minute": 30,
-      "cron": "30 2,12,22 * * *",
-      "outline": "_outline_biology_first_latest.md",
-      "rules": [
-        "概念题与识图题不得依赖图片，用文字描述结构",
-        "探究题写清变量控制与对照；生物名词用规范全称，首次出现可附简称",
-        "大纲为单元→章→节三级，章节名用教材原名",
-        "多选题解析必须逐个选项写出 A/B/C/D 与 ✓/✗"
-      ]
-    },
-    {
-      "id": "history-first",
-      "title": "历史7-9上每日教研",
-      "subject": "history",
-      "subject_name": "历史",
-      "version": "部编版",
-      "semester": "first",
-      "grades": [
-        7,
-        8,
-        9
-      ],
-      "minute": 35,
-      "cron": "35 2,12,22 * * *",
-      "outline": "_outline_history_first_latest.md",
-      "rules": [
-        "时间、人物、事件、影响四要素要准确",
-        "材料题材料必须自包含（引用原文不超过 150 字）",
-        "不得编造史料原文、年代或人物言论；对史事的评价只用主流教材口径，不做争议性引申"
-      ]
-    },
-    {
-      "id": "geography-first",
-      "title": "地理7-8上每日教研",
-      "subject": "geography",
-      "subject_name": "地理",
-      "version": "湘教版",
-      "semester": "first",
-      "grades": [
-        7,
-        8
-      ],
-      "minute": 40,
-      "cron": "40 2,12,22 * * *",
-      "outline": "_outline_geography_first_latest.md",
-      "rules": [
-        "不依赖地图/景观图，所有经纬度、地形、气候信息用文字写进题干",
-        "可用深圳本地素材（气候、海岸线、台风、红树林）",
-        "数据必须真实可核验，拿不准不写具体数字",
-        "高中地理 10-12 是「人教版」，属另一条任务，本任务不得越界"
-      ]
-    }
+  "math": {
+   "1-9": "北师大版",
+   "10-12": "人教版A版"
+  },
+  "english": {
+   "1-9": "牛津深圳版",
+   "10-12": "外研版"
+  },
+  "politics": {
+   "1-9": "部编版",
+   "10-12": "部编版"
+  },
+  "physics": {
+   "8-9": "人教版",
+   "10-12": "人教版"
+  },
+  "chemistry": {
+   "9": "人教版",
+   "10-12": "人教版"
+  },
+  "biology": {
+   "7-8": "人教版",
+   "10-12": "人教版"
+  },
+  "history": {
+   "7-9": "部编版",
+   "10-12": "部编版"
+  },
+  "geography": {
+   "7-8": "湘教版",
+   "10-12": "人教版"
+  }
+ },
+ "compulsory_scope": {
+  "chinese": [
+   1,
+   9
+  ],
+  "math": [
+   1,
+   9
+  ],
+  "english": [
+   1,
+   9
+  ],
+  "politics": [
+   1,
+   9
+  ],
+  "physics": [
+   8,
+   9
+  ],
+  "chemistry": [
+   9,
+   9
+  ],
+  "biology": [
+   7,
+   8
+  ],
+  "history": [
+   7,
+   9
+  ],
+  "geography": [
+   7,
+   8
   ]
+ },
+ "tasks": [
+  {
+   "id": "math-first",
+   "title": "数学1-9上每日教研",
+   "subject": "math",
+   "subject_name": "数学",
+   "version": "北师大版",
+   "semester": "first",
+   "grades": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "minute": 0,
+   "cron": "0 2,12,22 * * *",
+   "outline": "_outline_math_first_latest.md",
+   "outline_by_grade": {
+    "9": "_outline_math_g9_first_latest.md"
+   },
+   "deviation_note": "原导出任务只到 8 年级；2026-11-08 按评审意见并经确认并入 g9：工作区已有 math/g9 产出与 _outline_math_g9_first_latest.md，outline_by_grade 已为 g9 单独指定大纲，all-verify --strict 现覆盖 46 个年级",
+   "rules": [
+    "章节名用大纲里的教材原名，order_index 取大纲序号",
+    "数学题带单位与解题步骤，上下标用纯文本"
+   ]
+  },
+  {
+   "id": "chinese-first",
+   "title": "语文1-9上每日教研",
+   "subject": "chinese",
+   "subject_name": "语文",
+   "version": "人教版",
+   "semester": "first",
+   "grades": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "minute": 5,
+   "cron": "5 2,12,22 * * *",
+   "outline": "_outline_chinese_first_latest.md",
+   "rules": [
+    "字词、古诗文、现代文阅读、写作素材分开覆盖",
+    "材料题材料必须自带；古诗文原文不得写错字",
+    "阅读题解析写清答题切入角度"
+   ]
+  },
+  {
+   "id": "english-first",
+   "title": "英语1-9上每日教研",
+   "subject": "english",
+   "subject_name": "英语",
+   "version": "牛津深圳版",
+   "semester": "first",
+   "grades": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "minute": 10,
+   "cron": "10 2,12,22 * * *",
+   "outline": "_outline_english_first_latest.md",
+   "rules": [
+    "题干与选项用英文，解析用中文（讲清语法点与易错处）",
+    "不写依赖音频的听力题",
+    "覆盖词汇、语法、完形/阅读、写作四类；小学段控制词量，初中段覆盖深圳中考常考语法（时态、被动、从句、非谓语）",
+    "多选题解析必须逐个选项写出 A/B/C/D 与 ✓/✗"
+   ]
+  },
+  {
+   "id": "politics-first",
+   "title": "道法1-9上每日教研",
+   "subject": "politics",
+   "subject_name": "道德与法治",
+   "version": "部编版",
+   "semester": "first",
+   "grades": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "minute": 15,
+   "cron": "15 2,12,22 * * *",
+   "outline": "_outline_politics_first_latest.md",
+   "rules": [
+    "小学段与初中段均写「道德与法治」，高中才叫「思想政治」",
+    "观点题必须有材料且材料自包含；涉及法律条文只用教材表述，不引申、不评论",
+    "情境题优先用校园、家庭、深圳公共生活场景",
+    "多选题解析必须逐个选项写出 A/B/C/D 与 ✓/✗"
+   ]
+  },
+  {
+   "id": "physics-first",
+   "title": "物理8-9上每日教研",
+   "subject": "physics",
+   "subject_name": "物理",
+   "version": "人教版",
+   "semester": "first",
+   "grades": [
+    8,
+    9
+   ],
+   "minute": 20,
+   "cron": "20 2,12,22 * * *",
+   "outline": "_outline_physics_first_latest.md",
+   "rules": [
+    "物理量必须带单位，计算题给公式→代入→结果三步，结果带单位",
+    "不使用需要看图的题目；实验题用文字描述器材与现象",
+    "数据取常见可核验值（如 g=10 N/kg，若用 9.8 需在题干说明）",
+    "九年级该册为「全一册」，大纲收录全册章节，按章序正常推进",
+    "多选题解析必须逐个选项写出 A/B/C/D 与 ✓/✗"
+   ]
+  },
+  {
+   "id": "chemistry-first",
+   "title": "化学9上每日教研",
+   "subject": "chemistry",
+   "subject_name": "化学",
+   "version": "人教版",
+   "semester": "first",
+   "grades": [
+    9
+   ],
+   "minute": 25,
+   "cron": "25 2,12,22 * * *",
+   "outline": "_outline_chemistry_first_latest.md",
+   "rules": [
+    "化学式用纯文本（H2O、CO2、CaCO3），上下标不得用富文本",
+    "方程式必须配平并标条件（如「点燃」「加热」）；计算题写明相对原子质量取值",
+    "不使用需要看图或读装置图的题目",
+    "多选题解析必须逐个选项写出 A/B/C/D 与 ✓/✗"
+   ]
+  },
+  {
+   "id": "biology-first",
+   "title": "生物7-8上每日教研",
+   "subject": "biology",
+   "subject_name": "生物",
+   "version": "人教版",
+   "semester": "first",
+   "grades": [
+    7,
+    8
+   ],
+   "minute": 30,
+   "cron": "30 2,12,22 * * *",
+   "outline": "_outline_biology_first_latest.md",
+   "rules": [
+    "概念题与识图题不得依赖图片，用文字描述结构",
+    "探究题写清变量控制与对照；生物名词用规范全称，首次出现可附简称",
+    "大纲为单元→章→节三级，章节名用教材原名",
+    "多选题解析必须逐个选项写出 A/B/C/D 与 ✓/✗"
+   ]
+  },
+  {
+   "id": "history-first",
+   "title": "历史7-9上每日教研",
+   "subject": "history",
+   "subject_name": "历史",
+   "version": "部编版",
+   "semester": "first",
+   "grades": [
+    7,
+    8,
+    9
+   ],
+   "minute": 35,
+   "cron": "35 2,12,22 * * *",
+   "outline": "_outline_history_first_latest.md",
+   "rules": [
+    "时间、人物、事件、影响四要素要准确",
+    "材料题材料必须自包含（引用原文不超过 150 字）",
+    "不得编造史料原文、年代或人物言论；对史事的评价只用主流教材口径，不做争议性引申"
+   ]
+  },
+  {
+   "id": "geography-first",
+   "title": "地理7-8上每日教研",
+   "subject": "geography",
+   "subject_name": "地理",
+   "version": "湘教版",
+   "semester": "first",
+   "grades": [
+    7,
+    8
+   ],
+   "minute": 40,
+   "cron": "40 2,12,22 * * *",
+   "outline": "_outline_geography_first_latest.md",
+   "rules": [
+    "不依赖地图/景观图，所有经纬度、地形、气候信息用文字写进题干",
+    "可用深圳本地素材（气候、海岸线、台风、红树林）",
+    "数据必须真实可核验，拿不准不写具体数字",
+    "高中地理 10-12 是「人教版」，属另一条任务，本任务不得越界"
+   ]
+  }
+ ]
 }

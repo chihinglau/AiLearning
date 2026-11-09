@@ -687,7 +687,259 @@
     "questions_skipped": 0
    },
    "imported_at": "2026-11-08T09:48:27+08:00"
+  },
+  "biology/g8/biology_g8_first_20261109_book.json": {
+   "imported_sha256": "31d23eb973800aa00b2f91b271775436a2a402c3b10b9319ec0cca6823e644a2",
+   "current_file_sha256": "31d23eb973800aa00b2f91b271775436a2a402c3b10b9319ec0cca6823e644a2",
+   "imported_content_sha256": "dfbae2a55cd3b0049031cca172d09e691b04d5a557ebeabee13a55b59894563d",
+   "status": "ok",
+   "report": {
+    "textbook_created": 0,
+    "chapters_created": 0,
+    "chapters_updated": 6,
+    "chapters_discarded": 0,
+    "knowledge_created": 43,
+    "knowledge_updated": 0,
+    "knowledge_discarded": 0,
+    "questions_created": 121,
+    "questions_skipped": 18,
+    "questions_discarded": 0,
+    "discarded_detail": [],
+    "legacy_file": false
+   },
+   "imported_at": "2026-11-09T05:31:00+08:00"
+  },
+  "chinese/g1/chinese_g1_first_20261109_book.json": {
+   "imported_sha256": "b80a425e673994c5062086cbed3a89bd41cf7ef47d021f265f18bb4c6b217f3d",
+   "current_file_sha256": "b80a425e673994c5062086cbed3a89bd41cf7ef47d021f265f18bb4c6b217f3d",
+   "imported_content_sha256": "0172081dab5a2152641428bfe033b41111dae3635d2c180fbcfe0e1367c7abe8",
+   "status": "ok",
+   "report": {
+    "textbook_created": 0,
+    "chapters_created": 0,
+    "chapters_updated": 8,
+    "chapters_discarded": 0,
+    "knowledge_created": 70,
+    "knowledge_updated": 0,
+    "knowledge_discarded": 0,
+    "questions_created": 190,
+    "questions_skipped": 18,
+    "questions_discarded": 0,
+    "discarded_detail": [],
+    "legacy_file": false
+   },
+   "imported_at": "2026-11-09T05:31:00+08:00"
+  },
+  "chinese/g8/chinese_g8_first_20261109_book.json": {
+   "imported_sha256": "8f72c73ad966b6102d8d7a08f80466d4ec0eae35525817ed6b3ed8bee89e85ea",
+   "current_file_sha256": "8f72c73ad966b6102d8d7a08f80466d4ec0eae35525817ed6b3ed8bee89e85ea",
+   "imported_content_sha256": "35420f33908d0a92ea62e5e18581db37b79d4087e9038529028003679a05e3c4",
+   "status": "ok",
+   "report": {
+    "textbook_created": 0,
+    "chapters_created": 0,
+    "chapters_updated": 6,
+    "chapters_discarded": 0,
+    "knowledge_created": 56,
+    "knowledge_updated": 0,
+    "knowledge_discarded": 0,
+    "questions_created": 147,
+    "questions_skipped": 0,
+    "questions_discarded": 0,
+    "discarded_detail": [],
+    "legacy_file": false
+   },
+   "imported_at": "2026-11-09T05:31:00+08:00"
+  },
+  "english/g1/english_g1_first_20261109_book.json": {
+   "imported_sha256": "0cde6defac0b168d370a4c2a07bcf274e8dc9df990cf347604230abd177187e2",
+   "current_file_sha256": "0cde6defac0b168d370a4c2a07bcf274e8dc9df990cf347604230abd177187e2",
+   "imported_content_sha256": "b79c4dcdb0ab227289a7343e3caf13ff492dcd91f7405cceadf2d78027e0df2c",
+   "status": "ok",
+   "report": {
+    "textbook_created": 0,
+    "chapters_created": 0,
+    "chapters_updated": 6,
+    "chapters_discarded": 0,
+    "knowledge_created": 67,
+    "knowledge_updated": 0,
+    "knowledge_discarded": 0,
+    "questions_created": 141,
+    "questions_skipped": 0,
+    "questions_discarded": 0,
+    "discarded_detail": [],
+    "legacy_file": false
+   },
+   "imported_at": "2026-11-09T05:31:00+08:00"
+  },
+  "english/g8/english_g8_first_20261109_book.json": {
+   "imported_sha256": "fcbe58dc531006947e18e4a7b423aa492941d0a700e19c46cf6a89a4e99ec315",
+   "current_file_sha256": "fcbe58dc531006947e18e4a7b423aa492941d0a700e19c46cf6a89a4e99ec315",
+   "imported_content_sha256": "d4258c5db40bf70e759843a67118d23865caaa793cd386db04dda66616b894aa",
+   "status": "ok",
+   "report": {
+    "textbook_created": 0,
+    "chapters_created": 0,
+    "chapters_updated": 6,
+    "chapters_discarded": 0,
+    "knowledge_created": 60,
+    "knowledge_updated": 0,
+    "knowledge_discarded": 0,
+    "questions_created": 158,
+    "questions_skipped": 0,
+    "questions_discarded": 0,
+    "discarded_detail": [],
+    "legacy_file": false
+   },
+   "imported_at": "2026-11-09T05:31:00+08:00"
+  },
+  "geography/g8/geography_g8_first_20261109_book.json": {
+   "imported_sha256": "47a3253db97376d8d23062049695330e9866cb85a30476a275fb50ded03f13cf",
+   "current_file_sha256": "47a3253db97376d8d23062049695330e9866cb85a30476a275fb50ded03f13cf",
+   "imported_content_sha256": "a5b1f3ada0ca1343de05648a75efe8ea89e2f710620c7b48b43cef97c5a2cdfb",
+   "status": "ok",
+   "report": {
+    "textbook_created": 0,
+    "chapters_created": 0,
+    "chapters_updated": 4,
+    "chapters_discarded": 0,
+    "knowledge_created": 30,
+    "knowledge_updated": 0,
+    "knowledge_discarded": 0,
+    "questions_created": 74,
+    "questions_skipped": 18,
+    "questions_discarded": 0,
+    "discarded_detail": [],
+    "legacy_file": false
+   },
+   "imported_at": "2026-11-09T05:31:00+08:00"
+  },
+  "history/g8/history_g8_first_20261109_book.json": {
+   "imported_sha256": "981d689a1f28e584d281015bc7a04cca672b44ef2fe12fb3d1d506eddf6cb6a6",
+   "current_file_sha256": "981d689a1f28e584d281015bc7a04cca672b44ef2fe12fb3d1d506eddf6cb6a6",
+   "imported_content_sha256": "b1a64e67abe3ba89428f1e27ce0d1cac504e929e82fb412fccc9ee18fb6b8f0e",
+   "status": "ok",
+   "report": {
+    "textbook_created": 0,
+    "chapters_created": 0,
+    "chapters_updated": 7,
+    "chapters_discarded": 0,
+    "knowledge_created": 49,
+    "knowledge_updated": 0,
+    "knowledge_discarded": 0,
+    "questions_created": 153,
+    "questions_skipped": 18,
+    "questions_discarded": 0,
+    "discarded_detail": [],
+    "legacy_file": false
+   },
+   "imported_at": "2026-11-09T05:31:00+08:00"
+  },
+  "math/g1/math_g1_first_20261109_book.json": {
+   "imported_sha256": "6a08befd679a07ab9e50b41f3f2a687e8199193f2c7fbd6453ca0b808855c7d1",
+   "current_file_sha256": "6a08befd679a07ab9e50b41f3f2a687e8199193f2c7fbd6453ca0b808855c7d1",
+   "imported_content_sha256": "4dac76969695603f1d49c344df478882ebbd8baf6cfb9095b7fbe131bdfea169",
+   "status": "ok",
+   "report": {
+    "textbook_created": 0,
+    "chapters_created": 0,
+    "chapters_updated": 6,
+    "chapters_discarded": 0,
+    "knowledge_created": 25,
+    "knowledge_updated": 0,
+    "knowledge_discarded": 0,
+    "questions_created": 101,
+    "questions_skipped": 18,
+    "questions_discarded": 0,
+    "discarded_detail": [],
+    "legacy_file": false
+   },
+   "imported_at": "2026-11-09T05:31:00+08:00"
+  },
+  "math/g8/math_g8_first_20261109_book.json": {
+   "imported_sha256": "d5375a270a997e1d361815347a4bf98ba607b8e25fe61cb3548bc310e8aef6bf",
+   "current_file_sha256": "d5375a270a997e1d361815347a4bf98ba607b8e25fe61cb3548bc310e8aef6bf",
+   "imported_content_sha256": "209b8655bafc1e8b13fa37874d97f2d0fc1807cfc76a2223a27682c046d17214",
+   "status": "ok",
+   "report": {
+    "textbook_created": 0,
+    "chapters_created": 0,
+    "chapters_updated": 7,
+    "chapters_discarded": 0,
+    "knowledge_created": 56,
+    "knowledge_updated": 0,
+    "knowledge_discarded": 0,
+    "questions_created": 170,
+    "questions_skipped": 0,
+    "questions_discarded": 0,
+    "discarded_detail": [],
+    "legacy_file": false
+   },
+   "imported_at": "2026-11-09T05:31:00+08:00"
+  },
+  "physics/g8/physics_g8_first_20261109_book.json": {
+   "imported_sha256": "cfbc1ec52aac58ae787cd02dfa73d47c5d7a774c0cda6722465f9e9624fc1384",
+   "current_file_sha256": "cfbc1ec52aac58ae787cd02dfa73d47c5d7a774c0cda6722465f9e9624fc1384",
+   "imported_content_sha256": "987be48f2acf26af9822701df000b48c4eb014a5825ea407ce61dba97ba9e635",
+   "status": "ok",
+   "report": {
+    "textbook_created": 0,
+    "chapters_created": 0,
+    "chapters_updated": 6,
+    "chapters_discarded": 0,
+    "knowledge_created": 49,
+    "knowledge_updated": 0,
+    "knowledge_discarded": 0,
+    "questions_created": 125,
+    "questions_skipped": 18,
+    "questions_discarded": 0,
+    "discarded_detail": [],
+    "legacy_file": false
+   },
+   "imported_at": "2026-11-09T05:31:00+08:00"
+  },
+  "politics/g1/politics_g1_first_20261109_book.json": {
+   "imported_sha256": "6b427ee3dfb1f309a4bd69f1543936ad97dec3c245dd09f135611a99e44d9765",
+   "current_file_sha256": "6b427ee3dfb1f309a4bd69f1543936ad97dec3c245dd09f135611a99e44d9765",
+   "imported_content_sha256": "5cbbaec7b1d6b2883a6d5a4094d72a098296d33dcd867546bfb3d5dba5a23d22",
+   "status": "ok",
+   "report": {
+    "textbook_created": 0,
+    "chapters_created": 0,
+    "chapters_updated": 4,
+    "chapters_discarded": 0,
+    "knowledge_created": 39,
+    "knowledge_updated": 0,
+    "knowledge_discarded": 0,
+    "questions_created": 100,
+    "questions_skipped": 0,
+    "questions_discarded": 0,
+    "discarded_detail": [],
+    "legacy_file": false
+   },
+   "imported_at": "2026-11-09T05:31:00+08:00"
+  },
+  "politics/g8/politics_g8_first_20261109_book.json": {
+   "imported_sha256": "d2282cce178496a690c8e3213ebe3545dd304d7ddb22b994b76e0198d7865603",
+   "current_file_sha256": "d2282cce178496a690c8e3213ebe3545dd304d7ddb22b994b76e0198d7865603",
+   "imported_content_sha256": "d8f22e944dd7bbfd142906c471814cd8aec44df206b65e4bfb8d03eb8e14e283",
+   "status": "ok",
+   "report": {
+    "textbook_created": 0,
+    "chapters_created": 0,
+    "chapters_updated": 4,
+    "chapters_discarded": 0,
+    "knowledge_created": 39,
+    "knowledge_updated": 0,
+    "knowledge_discarded": 0,
+    "questions_created": 98,
+    "questions_skipped": 0,
+    "questions_discarded": 0,
+    "discarded_detail": [],
+    "legacy_file": false
+   },
+   "imported_at": "2026-11-09T05:31:00+08:00"
   }
  },
- "updated_at": "2026-11-08T09:48:27+08:00"
+ "updated_at": "2026-11-09T05:31:00+08:00"
 }

@@ -1,0 +1,3544 @@
+{
+  "subject": "math",
+  "grade": 8,
+  "version": "北师大版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "1. 探索勾股定理",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "2. 一定是直角三角形吗",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "3. 勾股定理的应用",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "问题解决策略：反思",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "面积法验证勾股定理",
+      "parent": "1. 探索勾股定理",
+      "order_index": 1,
+      "explanation": "把四个全等直角三角形拼成边长为 a+b 的大正方形，用「整体面积 = 四个三角形面积 + 中间小正方形面积」列出等式，展开化简即得 a^2 + b^2 = c^2。面积法的核心是把同一个图形用两种方式算面积。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "斜边与直角边的互求",
+      "parent": "1. 探索勾股定理",
+      "order_index": 2,
+      "explanation": "直角三角形两直角边 a、b 与斜边 c 满足 a^2 + b^2 = c^2。求斜边用平方和，求直角边用平方差；边长取正值并带单位，斜边一定是三边中最长的一条。",
+      "prerequisites": [
+        "面积法验证勾股定理"
+      ],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "直角三角形判定",
+      "parent": "2. 一定是直角三角形吗",
+      "order_index": 3,
+      "explanation": "勾股定理的逆定理：若三角形三边满足较小两边的平方和等于最长边的平方，则这个三角形是直角三角形，最长边是斜边、其所对角是直角。判定时先找最长边，再验算平方和。",
+      "prerequisites": [
+        "斜边与直角边的互求"
+      ],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "勾股定理解决实际问题",
+      "parent": "3. 勾股定理的应用",
+      "order_index": 4,
+      "explanation": "把梯子靠墙、拉绳测高、长方形对角线等情境抽象成直角三角形，找出直角与斜边，统一单位后代入 a^2 + b^2 = c^2；需要两次勾股时先算底面对角线，再算体对角线。",
+      "prerequisites": [
+        "斜边与直角边的互求"
+      ],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "解题后的反思与检验",
+      "parent": "问题解决策略：反思",
+      "order_index": 5,
+      "explanation": "解完题先回看：已知边里有没有斜边、是否漏了分类讨论、单位是否统一、边长是否取正；再把结果代回 a^2 + b^2 = c^2 检验等式是否成立，或检查斜边是否确为最长边。",
+      "prerequisites": [
+        "斜边与直角边的互求",
+        "直角三角形判定",
+        "勾股定理解决实际问题"
+      ],
+      "weight": 1.1,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "1. 认识实数",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "2. 平方根与立方根",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "3.二次根式",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "实数的分类与无理数",
+      "parent": "1. 认识实数",
+      "order_index": 1,
+      "explanation": "有理数是能写成两个整数的比（分母不为 0）的数，整数和分数都是有理数；像 √2、π 这样不能化成分数的数叫无理数。有理数与无理数统称实数，任意实数都可以用数轴上的点表示。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "平方根与算术平方根",
+      "parent": "2. 平方根与立方根",
+      "order_index": 2,
+      "explanation": "平方根是满足 a²=b 的数 a，正数 b 有两个平方根且互为相反数；算术平方根只取其中非负的那一个。求平方根先判断被开方数非负，再取算术平方根，别把 ± 都漏掉。",
+      "prerequisites": [
+        "实数的分类与无理数"
+      ],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "立方根与开立方",
+      "parent": "2. 平方根与立方根",
+      "order_index": 3,
+      "explanation": "每个实数都有唯一的实数立方根，负数的立方根是负数，这一点与平方根不同。求立方根只需找到那个数，使它的立方等于被开方数，不必讨论正负两个值。",
+      "prerequisites": [
+        "实数的分类与无理数"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "二次根式的意义",
+      "parent": "3.二次根式",
+      "order_index": 4,
+      "explanation": "形如 √a（a 是非负数）的式子叫二次根式，它有意义的条件是被开方数非负。判断时先看根号内的式子能不能取到非负值，负数在实数范围内不能开方。",
+      "prerequisites": [
+        "平方根与算术平方根"
+      ],
+      "weight": 1.1,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "二次根式的化简",
+      "parent": "3.二次根式",
+      "order_index": 5,
+      "explanation": "化简的核心是把被开方数分解成平方因数与非平方因数，能开尽平方因数后写成分数或整数乘根号的形式，并注意 √(a²) 表示的是 |a| 而不是 a。",
+      "prerequisites": [
+        "二次根式的意义"
+      ],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "1. 确定位置",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "2. 平面直角坐标系",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "3. 轴对称与坐标变化",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "方向与距离确定位置",
+      "parent": "1. 确定位置",
+      "order_index": 1,
+      "explanation": "确定一个物体的位置必须同时知道方向和距离两个要素。只知方向，物体可能在同一条射线的任意位置；只知距离，物体可能在一个圆上。描述方向常用「南偏东 30 度」这类偏角形式。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "平面直角坐标系",
+      "parent": "2. 平面直角坐标系",
+      "order_index": 2,
+      "explanation": "平面直角坐标系由互相垂直的 x 轴和 y 轴组成，交点叫原点。规定 x 轴上的点纵坐标为 0，y 轴上的点横坐标为 0，横坐标在左为正、右为负，纵坐标在下为正、上为负。",
+      "prerequisites": [
+        "方向与距离确定位置"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "点的坐标与象限",
+      "parent": "2. 平面直角坐标系",
+      "order_index": 3,
+      "explanation": "点的坐标是（横坐标，纵坐标），顺序不能颠倒。由坐标符号可以判断点所在的象限：第一象限全正，第二象限横负纵正，第三象限全负，第四象限横正纵负；点到两坐标轴的距离等于相应坐标的绝对值。",
+      "prerequisites": [
+        "平面直角坐标系"
+      ],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "坐标轴对称与点的平移",
+      "parent": "3. 轴对称与坐标变化",
+      "order_index": 4,
+      "explanation": "关于 x 轴对称时横坐标不变、纵坐标变号；关于 y 轴对称时纵坐标不变、横坐标变号；关于原点对称时两个坐标都变号。平移则只改变与平移方向对应的那个坐标。",
+      "prerequisites": [
+        "点的坐标与象限"
+      ],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "1. 函数",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "2. 认识一次函数",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "3. 一次函数的图象",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "4. 一次函数的应用",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "函数的概念与表示",
+      "parent": "1. 函数",
+      "order_index": 1,
+      "explanation": "在一个变化过程中，如果给定两个变量 x、y，当 x 的值确定时 y 都有唯一确定的值与它对应，就说 y 是 x 的函数。判断的关键是「唯一确定」，解析式、表格、图象都可以表示函数。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "自变量的取值范围",
+      "parent": "1. 函数",
+      "order_index": 2,
+      "explanation": "自变量的取值范围要让解析式有意义：分式要保证分母不为 0，偶次根式要保证被开方数非负，二次根式要保证被开方数非负。实际情境中还要结合生活实际（如购买件数只能是整数）。",
+      "prerequisites": [
+        "函数的概念与表示"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "一次函数的定义与性质",
+      "parent": "2. 认识一次函数",
+      "order_index": 3,
+      "explanation": "形如 y=kx+b（k、b 为常数且 k 不为 0）的函数叫一次函数。k 决定图象的倾斜方向，b 是图象与 y 轴交点的纵坐标；k 为 0 时就变成了常数函数。",
+      "prerequisites": [
+        "函数的概念与表示"
+      ],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "一次函数的图象与性质",
+      "parent": "3. 一次函数的图象",
+      "order_index": 4,
+      "explanation": "一次函数的图象是一条直线，与 y 轴交于 (0, b)，与 x 轴交于横坐标为负 b 比 k 的点。k 大于 0 时从左下向右上倾斜，k 小于 0 时从左上向右下倾斜；上下平移只改变 b，左右平移只改变 k。",
+      "prerequisites": [
+        "一次函数的定义与性质"
+      ],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "待定系数法与实际应用",
+      "parent": "4. 一次函数的应用",
+      "order_index": 5,
+      "explanation": "求一次函数解析式常用待定系数法：设 y=kx+b，把已知的两个点代入得到两个方程，解出 k、b；k 决定了倾斜程度，b 决定了上下位置，解完最好代回原方程检验。",
+      "prerequisites": [
+        "一次函数的图象与性质",
+        "自变量的取值范围"
+      ],
+      "weight": 1.5,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "1. 认识二元一次方程组",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "2. 二元一次方程组的解法",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "3. 二元一次方程组的应用",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "4. 二元一次方程与一次函数",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "二元一次方程与方程组",
+      "parent": "1. 认识二元一次方程组",
+      "order_index": 1,
+      "explanation": "含两个未知数、未知数的次数都是 1 且方程两边都是整式的方程叫二元一次方程；把两个二元一次方程合在一起就得到二元一次方程组。方程组的解是同时满足两个方程的一组数值。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "二元一次方程组的解法",
+      "parent": "2. 二元一次方程组的解法",
+      "order_index": 2,
+      "explanation": "消元是解二元一次方程组的核心思想：代入消元把二元化为一元，加减消元把含同一未知数的两项直接消去。消元后解出未知数还要回代，解完最好代回原方程组检验。",
+      "prerequisites": [
+        "二元一次方程与方程组"
+      ],
+      "weight": 1.5,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "二元一次方程组的应用",
+      "parent": "3. 二元一次方程组的应用",
+      "order_index": 3,
+      "explanation": "列方程组解应用题的关键是找出两个独立的等量关系：总数关系用加减表示，比或多用差表示。设元后要写清每个未知数的意义，并检验答案是否符合实际。",
+      "prerequisites": [
+        "二元一次方程组的解法"
+      ],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "二元一次方程与一次函数",
+      "parent": "4. 二元一次方程与一次函数",
+      "order_index": 4,
+      "explanation": "二元一次方程 ax+by=c（b 不为 0）可以改写成 y 关于 x 的一次函数，反过来一次函数的图象上每一点的坐标都满足对应的二元一次方程，两者是同一关系的两种表示。",
+      "prerequisites": [
+        "二元一次方程与方程组"
+      ],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "1. 平均数与方差",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "2. 中位数与箱线图",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "3. 哪个团队收益大",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "平均数的意义与计算",
+      "parent": "1. 平均数与方差",
+      "order_index": 1,
+      "explanation": "平均数是一组数据的总和除以数据的个数，它反映一组数据的整体水平，一定在数据的最大值与最小值之间，但不一定就是数据中的某一个数。计算时先把数排好再逐个累加。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "方差与数据的稳定性",
+      "parent": "1. 平均数与方差",
+      "order_index": 2,
+      "explanation": "方差是各数据与平均数差的平方的平均，它衡量数据的波动程度，方差越小数据越稳定。计算步骤是：先求平均数，再求各数与平均数的差，然后平方、求平均。",
+      "prerequisites": [
+        "平均数的意义与计算"
+      ],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "中位数与众数",
+      "parent": "2. 中位数与箱线图",
+      "order_index": 3,
+      "explanation": "把数据从小到大排列后，正中间位置的数（偶数个数据取中间两个数的平均数）是中位数；出现次数最多的数是众数。中位数把数据分成大小相等的两部分，众数可能不止一个。",
+      "prerequisites": [
+        "平均数的意义与计算"
+      ],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "箱线图与数据分析",
+      "parent": "2. 中位数与箱线图",
+      "order_index": 4,
+      "explanation": "箱线图把数据分成四份：最小值、两个四分位数和最大值，箱体内那条线是中位数。箱体越短说明数据越集中，两端越长说明极差越大，据此可以比较两组数据的分布。",
+      "prerequisites": [
+        "中位数与众数"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "平均数方差与决策",
+      "parent": "3. 哪个团队收益大",
+      "order_index": 5,
+      "explanation": "比较两个团队的成绩要同时看平均数（整体水平）和方差（稳定程度）：平均数大的更有优势，方差小的更稳定。两者各有优势时要根据实际需要说明理由再作出选择。",
+      "prerequisites": [
+        "方差与数据的稳定性",
+        "中位数与众数"
+      ],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "1. 为什么要证明",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "2. 认识证明",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "3. 平行线的证明",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "命题与结论",
+      "parent": "1. 为什么要证明",
+      "order_index": 1,
+      "explanation": "命题是对某件事作出的判断，能判断真或假；它由条件（题设）和结论两部分组成。命题有真命题与假命题两类，要说明命题为假，只需举出一个反例。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "证明的基本过程",
+      "parent": "2. 认识证明",
+      "order_index": 2,
+      "explanation": "证明是从已知条件出发，通过有根据的推理得到结论的过程，一般步骤是提出问题、寻找条件、确定结论、寻找证明路径、写出证明过程。实验测量得到的规律不一定是证明，因为推理才是证明的关键。",
+      "prerequisites": [
+        "命题与结论"
+      ],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "平行线的判定",
+      "parent": "3. 平行线的证明",
+      "order_index": 3,
+      "explanation": "判定两直线平行的依据有三个：同位角相等、内错角相等、同旁内角互补。要注意「判定」的方向是由角的关系推出平行，使用每个判定前都要先说明所涉及的角是哪一对角。",
+      "prerequisites": [
+        "证明的基本过程"
+      ],
+      "weight": 1.5,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "平行线的性质",
+      "parent": "3. 平行线的证明",
+      "order_index": 4,
+      "explanation": "两直线平行时的性质是：同位角相等、内错角相等、同旁内角互补。它们与判定定理的方向相反：性质是「平行推相等」，判定是「相等推平行」，用时不能混淆。",
+      "prerequisites": [
+        "平行线的判定"
+      ],
+      "weight": 1.5,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一章 勾股定理",
+      "order_index": 1,
+      "summary": "勾股定理的面积法验证、边长互求与逆定理判定，以及梯子、拉绳、长方形对角线等实际情境中的建模应用与解题后检验。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "用四个全等的直角三角形（直角边 a、b，b > a）拼成「赵爽弦图」时，中间小正方形的边长是（  ）",
+          "options": [
+            "a + b",
+            "b - a",
+            "c",
+            "a + c"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "四个三角形围在边长为 c 的正方形外时，中间小正方形的边长是两直角边之差 b - a；由 c^2 = 4 × (a×b÷2) + (b - a)^2 = 2ab + b^2 - 2ab + a^2 = a^2 + b^2，即得勾股定理，所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "面积法验证勾股定理",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "把四个全等直角三角形拼成边长为 a + b 的大正方形，中间留出的小正方形边长为 c（直角三角形的斜边）。由 (a + b)^2 = 4 × (a×b÷2) + c^2 化简可得 a^2 + b^2 = （  ）",
+          "answer": {
+            "value": "c^2"
+          },
+          "analysis": "展开得 a^2 + 2ab + b^2 = 2ab + c^2，两边同时减去 2ab，得到 a^2 + b^2 = c^2，所以空格填 c^2；这里的关键是四个三角形的总面积 4 × (a×b÷2) = 2ab。",
+          "difficulty": 2,
+          "knowledge_point": "面积法验证勾股定理",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "用面积法验证勾股定理时，等式两边的面积指的是同一个大正方形用两种不同方式算出的结果。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "整体看是边长 a + b 的正方形，面积 (a + b)^2；分割看是四个直角三角形加中间小正方形，面积 2ab + c^2。同一图形面积相等才有 (a + b)^2 = 2ab + c^2，化简得 a^2 + b^2 = c^2，所以说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "面积法验证勾股定理",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于用拼图面积法验证勾股定理，下面哪些说法正确？",
+          "options": [
+            "四个直角三角形全等，每个面积都是 a×b÷2",
+            "拼成的大正方形边长可以取 a + b",
+            "依据是同一个图形用两种方式计算面积，结果相等",
+            "所得结论只对两直角边相等的直角三角形成立"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A 每个直角三角形面积 = a×b÷2 ✓；B 四个三角形沿大正方形四边拼放时边长为 a + b ✓；C 面积法正是同一图形的两种算法相等 ✓；D ✗ 勾股定理对任意直角三角形都成立，不要求 a = b（a = b 时只是特殊情形）。",
+          "difficulty": 4,
+          "knowledge_point": "面积法验证勾股定理",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "请用「边长为 a + b 的大正方形」这一拼图，写出验证勾股定理的面积等式，并把它化简到 a^2 + b^2 = c^2。",
+          "answer": {
+            "value": "大正方形面积整体算为 (a + b)^2；分割算为四个直角三角形加中间边长为 c 的小正方形，即 4 × (a×b÷2) + c^2 = 2ab + c^2。由 (a + b)^2 = 2ab + c^2 展开得 a^2 + 2ab + b^2 = 2ab + c^2，两边减去 2ab 得 a^2 + b^2 = c^2。"
+          },
+          "analysis": "评分要点：写出整体面积 (a + b)^2 得 1 分，写出分割面积 2ab + c^2 得 1 分，正确展开得 1 分，化简得到结论得 1 分。易错点：把四个三角形面积写成 4ab 而漏掉除以 2，导致等式无法化简。",
+          "difficulty": 3,
+          "knowledge_point": "面积法验证勾股定理",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "直角三角形两直角边分别是 3 cm 和 4 cm，斜边长是（  ）",
+          "options": [
+            "5 cm",
+            "6 cm",
+            "7 cm",
+            "25 cm"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "由 a^2 + b^2 = c^2，3^2 + 4^2 = 9 + 16 = 25，c = 5 cm，所以选 A；D 的 25 是 c^2 而不是边长 c，忘记开方是最常见的错误。",
+          "difficulty": 1,
+          "knowledge_point": "斜边与直角边的互求",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "直角三角形斜边长 13 cm，一条直角边长 5 cm，另一条直角边长 （  ） cm。",
+          "answer": {
+            "value": "12"
+          },
+          "analysis": "求直角边用平方差：b^2 = c^2 - a^2 = 13^2 - 5^2 = 169 - 25 = 144，b = 12 cm。代回验算：5^2 + 12^2 = 25 + 144 = 169 = 13^2，结果自洽。验算：169 - 25 = 144。",
+          "difficulty": 2,
+          "knowledge_point": "斜边与直角边的互求",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "一个直角三角形斜边长 10 m，一条直角边长 6 m，另一条直角边长是（  ）",
+          "options": [
+            "4 m",
+            "8 m",
+            "12 m",
+            "16 m"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "b^2 = 10^2 - 6^2 = 100 - 36 = 64，b = 8 m，所以选 B；A 的 4 m 是把 10 - 6 直接相减，忽略了勾股定理里的平方关系。",
+          "difficulty": 3,
+          "knowledge_point": "斜边与直角边的互求",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面各组数中，能作为同一个直角三角形三边长度的是哪些？",
+          "options": [
+            "6, 8, 10",
+            "5, 12, 13",
+            "2, 3, 4",
+            "9, 12, 15"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项验算最大数的平方：A 6^2 + 8^2 = 36 + 64 = 100 = 10^2 ✓；B 5^2 + 12^2 = 25 + 144 = 169 = 13^2 ✓；C 2^2 + 3^2 = 4 + 9 = 13 ≠ 4^2 = 16 ✗；D 9^2 + 12^2 = 81 + 144 = 225 = 15^2 ✓。只有 A、B、D 满足勾股关系。",
+          "difficulty": 4,
+          "knowledge_point": "斜边与直角边的互求",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "直角三角形两直角边长为 5 cm 和 12 cm，求斜边长；并说明为什么不能把 12 cm 当作斜边。",
+          "answer": {
+            "value": "由 a^2 + b^2 = c^2 得 c^2 = 5^2 + 12^2 = 25 + 144 = 169，c = 13 cm。斜边必须是三边中最长的一条，13 > 12；若把 12 当斜边，则 5^2 + 12^2 = 169 ≠ 12^2 = 144，勾股关系不成立，也与「5 和 12 都是直角边」的题设矛盾。"
+          },
+          "analysis": "评分要点：写出平方和算式 5^2 + 12^2 = 169 得 1 分，结果 13 cm 带单位得 1 分，指出斜边最长得 1 分，用等式 169 ≠ 144 说明矛盾得 1 分。易错点：求出 c^2 后忘记开方，或把较长直角边误认成斜边。",
+          "difficulty": 3,
+          "knowledge_point": "斜边与直角边的互求",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列长度（单位：cm）的三条线段中，能组成直角三角形的是（  ）",
+          "options": [
+            "2, 3, 4",
+            "3, 4, 5",
+            "4, 5, 6",
+            "5, 6, 7"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "取每组最大数检验：B 3^2 + 4^2 = 9 + 16 = 25 = 5^2 ✓；A 2^2 + 3^2 = 13 ≠ 16；C 4^2 + 5^2 = 41 ≠ 36；D 5^2 + 6^2 = 61 ≠ 49。只有 B 满足勾股定理逆定理。",
+          "difficulty": 1,
+          "knowledge_point": "直角三角形判定",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "若三角形三边满足 a^2 + b^2 = c^2，则 c 边所对的角是直角。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "这正是勾股定理的逆定理：满足 a^2 + b^2 = c^2 的三角形是直角三角形，最大边 c 是斜边，其所对角为直角，所以说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "直角三角形判定",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "三角形三边长为 7、24、25，因为 7^2 + 24^2 = 49 + 576 = 625 = 25^2，所以这个三角形是 （  ） 三角形。",
+          "answer": {
+            "value": "直角"
+          },
+          "analysis": "较小两边的平方和 49 + 576 = 625 恰好等于最长边平方 25^2 = 625，由勾股定理逆定理可判定它是直角三角形，25 是斜边。",
+          "difficulty": 3,
+          "knowledge_point": "直角三角形判定",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于勾股定理的逆定理，下面哪些说法正确？",
+          "options": [
+            "判定前要先找出最长边，再检验另外两边的平方和",
+            "满足 a^2 + b^2 = c^2 且能构成三角形的三边，一定组成直角三角形",
+            "三边长为 8、15、17 的三角形是直角三角形",
+            "只要三角形有两条边相等，就一定满足 a^2 + b^2 = c^2"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓ 先定最长边才知道该检验哪两数的平方和；B ✓ 这正是逆定理的内容；C 8^2 + 15^2 = 64 + 225 = 289 = 17^2 ✓；D ✗ 例如等腰三角形 2、2、3 有 2^2 + 2^2 = 8 ≠ 3^2 = 9，并不满足勾股关系。",
+          "difficulty": 4,
+          "knowledge_point": "直角三角形判定",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "一个三角形三边长为 9 cm、12 cm、15 cm，请判断它是不是直角三角形，并写出完整的检验过程。",
+          "answer": {
+            "value": "最长边是 15 cm。较小两边平方和为 9^2 + 12^2 = 81 + 144 = 225，最长边平方为 15^2 = 225，两者相等。由勾股定理逆定理可知它是直角三角形，15 cm 的边是斜边。"
+          },
+          "analysis": "评分要点：先指出最长边 15 cm 得 1 分，分别算出 225 与 225 得 2 分，得出「是直角三角形、15 为斜边」得 1 分。易错点：不先找最长边就随意取两数平方相加，或只写等式不写判定依据。",
+          "difficulty": 3,
+          "knowledge_point": "直角三角形判定",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "一架长 5 m 的梯子斜靠在竖直墙上，梯脚离墙 3 m，梯顶离地面的高度是（  ）",
+          "options": [
+            "2 m",
+            "3 m",
+            "4 m",
+            "5 m"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "墙、地面、梯子构成直角三角形，梯子 5 m 是斜边，梯脚到墙的 3 m 是一条直角边：h^2 = 5^2 - 3^2 = 25 - 9 = 16，h = 4 m，所以选 C。",
+          "difficulty": 1,
+          "knowledge_point": "勾股定理解决实际问题",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "一个长方形长 8 cm、宽 6 cm，它的对角线长 （  ） cm。",
+          "answer": {
+            "value": "10"
+          },
+          "analysis": "对角线把长方形分成两个直角三角形，两条直角边是 8 cm 与 6 cm：d^2 = 8^2 + 6^2 = 64 + 36 = 100，d = 10 cm；10 > 8 也符合对角线是最长线段。验算：64 + 36 = 100。",
+          "difficulty": 2,
+          "knowledge_point": "勾股定理解决实际问题",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "从旗杆顶垂下的绳子拉直后，绳脚离旗杆底部 5 m，绳长 13 m，则旗杆高为 12 m。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "旗杆、地面与拉直的绳子构成直角三角形，绳长 13 m 是斜边：h^2 = 13^2 - 5^2 = 169 - 25 = 144，h = 12 m，所以说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "勾股定理解决实际问题",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "一个长方体木箱从里面量长 4 dm、宽 3 dm、高 12 dm。关于箱内直杆的长度，下面哪些说法正确？",
+          "options": [
+            "底面（长 4 dm、宽 3 dm）的对角线长 5 dm",
+            "体对角线的平方等于 4^2 + 3^2 + 12^2 = 169",
+            "箱内最长可放的直杆长 13 dm",
+            "把长、宽、高直接相加，4 + 3 + 12 = 19 dm 就是体对角线"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项验算：A 4^2 + 3^2 = 16 + 9 = 25，底面对角线 = 5 dm ✓；B 先算底面对角线平方 25，再加高：25 + 12^2 = 25 + 144 = 169，也等于 4^2 + 3^2 + 12^2 ✓；C √169 = 13 dm ✓；D 4 + 3 + 12 = 19 ✗，体对角线要用两次勾股定理，不能把三个长度直接相加。",
+          "difficulty": 5,
+          "knowledge_point": "勾股定理解决实际问题",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "两根相距 6 m 的竖直立柱之间拉一条斜绳，绳的一端固定在离地 2 m 处，另一端固定在离地 10 m 处（地面水平）。求斜绳至少长多少米，写出建模与计算过程。",
+          "answer": {
+            "value": "两固定点的水平距离是 6 m，竖直高度差是 10 - 2 = 8 m，斜绳是直角三角形的斜边。由 a^2 + b^2 = c^2 得 c^2 = 6^2 + 8^2 = 36 + 64 = 100，c = 10 m，所以斜绳至少长 10 m。"
+          },
+          "analysis": "评分要点：把情境抽象成直角三角形得 1 分，算出竖直差 8 m 得 1 分，列出 6^2 + 8^2 = 100 并得 10 m 得 1 分，写单位与「至少」得 1 分。易错点：把 10 m 直接当竖直差，忘了减去 2 m；或把 6 与 10 相加得 16 m。",
+          "difficulty": 3,
+          "knowledge_point": "勾股定理解决实际问题",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "用勾股定理求直角三角形的边长时，下列做法正确的是（  ）",
+          "options": [
+            "把两条已知边直接相加当作第三边",
+            "先判断已知边中是否有斜边，再决定用平方和还是平方差",
+            "边长取正值或负值都可以，因为长度可正可负",
+            "单位不同也可以直接把数值代入公式"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "求斜边用 c^2 = a^2 + b^2，求直角边用 a^2 = c^2 - b^2，所以必须先分清斜边，B 正确；A 把长度直接相加没有依据，C 边长只能取正值，D 代入前必须统一单位。",
+          "difficulty": 1,
+          "knowledge_point": "解题后的反思与检验",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "求得三角形三边为 5、12、13 后，可用 5^2 + 12^2 = 25 + 144 = 169 = 13^2 检验结果是否自洽。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "把算出的三边代回勾股关系，较小两边平方和 169 与最长边平方 169 相等，说明计算自洽，这是解题后最常用的检验方法，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "解题后的反思与检验",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "某题算得直角三角形两直角边为 9 cm、12 cm、斜边为 15 cm，用 9^2 + 12^2 = 81 + 144 = （  ） 与 15^2 = 225 比较，两者相等说明结果正确。",
+          "answer": {
+            "value": "225"
+          },
+          "analysis": "9^2 + 12^2 = 81 + 144 = 225，与 15^2 = 225 相等，说明这组边长满足 a^2 + b^2 = c^2，结果正确；空格填 225。验算：81 + 144 = 225。",
+          "difficulty": 2,
+          "knowledge_point": "解题后的反思与检验",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "小亮解「直角三角形两边长为 3 和 4，求第三边」时只答了 5。请指出他的疏漏，并给出完整的分析。",
+          "answer": {
+            "value": "他没有先判断 3、4 里是否含斜边，漏了分类讨论。若 3 和 4 都是直角边，则斜边平方 = 3^2 + 4^2 = 9 + 16 = 25，斜边 = 5；若 4 是斜边、3 是直角边，则另一直角边平方 = 4^2 - 3^2 = 16 - 9 = 7，结果不是 5。所以答题前必须先分清已知边中哪条是斜边，再选平方和或平方差。"
+          },
+          "analysis": "评分要点：指出「未分类讨论／没判断斜边」得 1 分，第一种情况算出 3^2 + 4^2 = 25、斜边 5 得 1 分，第二种情况算出 4^2 - 3^2 = 7 得 1 分，总结「斜边最长、先判断再计算」得 1 分。易错点：默认 3、4 一定是两条直角边。",
+          "difficulty": 3,
+          "knowledge_point": "解题后的反思与检验",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第二章 实数",
+      "order_index": 2,
+      "summary": "实数的概念与分类，平方根、算术平方根与立方根，以及二次根式的意义和化简。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "下列各数中，是无理数的是（  ）",
+          "options": [
+            "-2",
+            "0.25",
+            "√5",
+            "7/3"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "-2 是整数，0.25 与 7/3 都能写成两个整数的比，都是有理数；√5 不能化成分数，是无理数，所以选 C。判断的关键是看能否写成分数。",
+          "difficulty": 1,
+          "knowledge_point": "实数的分类与无理数",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "在 0，-3，1/2，√2，0.75 这五个数中，无理数共有（  ）个。",
+          "answer": {
+            "value": "1"
+          },
+          "analysis": "0 与 -3 是整数，1/2 与 0.75 是分数，它们都是有理数；0.75×4=3，说明 0.75 可以写成分数。只有 √2 不能写成两个整数的比，是无理数，所以填 1。",
+          "difficulty": 2,
+          "knowledge_point": "实数的分类与无理数",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "所有无限不循环小数都是无理数。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "无限不循环小数不能化成分数，正是无理数的一种表示；而有限小数与无限循环小数都能化成分数，属于有理数，所以命题正确。",
+          "difficulty": 2,
+          "knowledge_point": "实数的分类与无理数",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列关于有理数与无理数的说法，正确的有（  ）",
+          "options": [
+            "0 是有理数",
+            "√16 是无理数",
+            "π 是无理数",
+            "负分数一定是有理数"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C",
+              "D"
+            ]
+          },
+          "analysis": "A 0 可以写成 0/1，是有理数 ✓；B √16=4，4 是整数，属于有理数，不是无理数 ✗；C π 是无限不循环小数，是无理数 ✓；D 负分数形如 -p/q（p、q 为正整数且 q 不为 0），能写成两个整数的比，是有理数 ✓。故 A、C、D 成立，B 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "实数的分类与无理数",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳湾公园科普展板上列出了 5 个数：-2、0.5、3/4、√9、π。请把它们分成「有理数」和「无理数」两类，并说明每个数归入哪一类。",
+          "answer": {
+            "value": "有理数：-2、0.5、3/4、√9；无理数：π。理由：凡是能写成两个整数的比（分母不为 0）的数都是有理数，其中 √9=3，3 是整数；而 π 不能化成分数，所以是无理数。"
+          },
+          "analysis": "评分要点：①正确分成两类，有理数 4 个、无理数 1 个（2 分）；②写出 √9=3 并说明 3 是整数、归入有理数（2 分）；③能说出「能写成分数即有理数」的判据（2 分）；④表述完整（1 分）。只写出分类不说理由，最后 2 分不得。",
+          "difficulty": 4,
+          "knowledge_point": "实数的分类与无理数",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "情境应用"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "49 的平方根是（  ）",
+          "options": [
+            "7",
+            "-7",
+            "±7",
+            "14"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "平方根是使平方等于 49 的那个数，7 和 -7 都满足，所以 49 的平方根是 ±7；而算术平方根只取正值 7。故选 C，别把两个值漏成一个。",
+          "difficulty": 1,
+          "knowledge_point": "平方根与算术平方根",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "0.25 的算术平方根是（  ）。",
+          "answer": {
+            "value": "0.5"
+          },
+          "analysis": "0.5×0.5=0.25，所以 0.25 的算术平方根是 0.5。注意算术平方根只取正值，而 0.25 的平方根是 ±0.5，两个概念不能混用。",
+          "difficulty": 2,
+          "knowledge_point": "平方根与算术平方根",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "一个数的平方根和它的算术平方根总是相同的。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "平方根有两个，互为相反数；算术平方根只取其中非负的那一个。例如 49 的平方根是 ±7，而算术平方根是 7，两者并不相同，所以说法错误。",
+          "difficulty": 2,
+          "knowledge_point": "平方根与算术平方根",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "一个正数的平方根与它的算术平方根之间的关系是（  ）",
+          "options": [
+            "完全相同",
+            "算术平方根是平方根中的一个",
+            "平方根是算术平方根中的一个",
+            "互为相反数"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "以 25 为例，它的平方根是 ±5，算术平方根是 5。可见算术平方根只是两个平方根中非负的那一个，所以选 B。",
+          "difficulty": 3,
+          "knowledge_point": "平方根与算术平方根",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "某同学求 2.56 的平方根时写成了 ±1.6。请判断他的做法是否正确，并说明理由，同时写出 2.56 的平方根和算术平方根。",
+          "answer": {
+            "value": "他的做法正确。1.6×1.6=2.56，负数相乘两次也为正，所以 2.56 的平方根是 ±1.6；算术平方根只取正值，因此 2.56 的算术平方根是 1.6。"
+          },
+          "analysis": "评分要点：①指出 ±1.6 是正确的平方根（2 分）；②写出 1.6×1.6=2.56 的验算（2 分）；③说明算术平方根只取正值，是 1.6（2 分）；④表述完整（1 分）。只写「对」或「错」而不给理由，最多得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "平方根与算术平方根",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "说理题"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "已知 x 的平方等于 121，且 x 是正数，那么 x = （  ）。",
+          "answer": {
+            "value": "11"
+          },
+          "analysis": "11×11=121，所以满足 x²=121 的数是 ±11；题目已经说明 x 是正数，因此只能取 x=11，填 11。",
+          "difficulty": 4,
+          "knowledge_point": "平方根与算术平方根",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "-27 的立方根是（  ）",
+          "options": [
+            "3",
+            "-3",
+            "±3",
+            "不存在"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "负数也有立方根，而且立方根只有一个值：(-3)×(-3)×(-3)=-27，所以 -27 的立方根是 -3，选 B。立方根与平方根在这一点上不同。",
+          "difficulty": 2,
+          "knowledge_point": "立方根与开立方",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "0.008 的立方根是（  ）。",
+          "answer": {
+            "value": "0.2"
+          },
+          "analysis": "0.2×0.2×0.2=0.008，所以 0.008 的立方根是 0.2。因为 0.008 是正数，它的立方根也是正数，不会出现两个答案。",
+          "difficulty": 3,
+          "knowledge_point": "立方根与开立方",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "负数没有立方根。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "任何实数都有立方根，负数的立方根仍是负数，例如 -8 的立方根是 -2。平方根要分情况讨论而立方根不用，所以说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "立方根与开立方",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于立方根的说法，正确的有（  ）",
+          "options": [
+            "每个实数都有唯一的立方根",
+            "立方根和平方根一样都有两个",
+            "负数的立方根是负数",
+            "0 的立方根是 0"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C",
+              "D"
+            ]
+          },
+          "analysis": "A 每个实数都有唯一的实数立方根 ✓；B 立方根只有一个，平方根才有两个 ✗；C 负数的立方根是负数，如 -8 的立方根是 -2 ✓；D 0×0×0=0，所以 0 的立方根是 0 ✓。故 A、C、D 成立，B 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "立方根与开立方",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列式子中，是二次根式的是（  ）",
+          "options": [
+            "√13",
+            "√(-13)",
+            "√(1-13)",
+            "∛(-13)"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "二次根式要求被开方数非负：13 大于 0，所以 √13 是二次根式 ✓；(-13) 小于 0、(1-13) 等于 -12 小于 0，负数在实数范围内不能开方 ✗；∛(-13) 是立方根式，不是二次根式 ✗。所以选 A。",
+          "difficulty": 2,
+          "knowledge_point": "二次根式的意义",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "若二次根式 √(x-3) 在实数范围内有意义，则 x 必须满足的条件是 x（  ）3。",
+          "answer": {
+            "value": "≥"
+          },
+          "analysis": "二次根式有意义的条件是被开方数非负，即 x-3 大于等于 0，所以 x 大于等于 3，填 ≥。等号能取到：x 为 3 时根式内的数为 0，同样有意义。",
+          "difficulty": 2,
+          "knowledge_point": "二次根式的意义",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "二次根式 √(-4) 在实数范围内是有意义的。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "被开方数 -4 是负数，负数在实数范围内不能开方，所以 √(-4) 没有意义，命题错误。要先看根号里的数能不能取到非负值再下结论。",
+          "difficulty": 3,
+          "knowledge_point": "二次根式的意义",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列各式中，属于二次根式且在实数范围内有意义的有（  ）",
+          "options": [
+            "√9",
+            "√(-9)",
+            "√(16-25)",
+            "√(25-16)"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "D"
+            ]
+          },
+          "analysis": "A 9 大于 0，√9 是有意义的二次根式 ✓；B -9 小于 0，不能开方 ✗；C 16-25 等于 -9 小于 0，不能开方 ✗；D 25-16 等于 9 大于 0，√(25-16) 是有意义的二次根式 ✓。故 A、D 成立，B、C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "二次根式的意义",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "某同学在作业本上写了三个式子：√(a²)、√(a²+b²)、√(-a²)。请判断它们在实数范围内是否有意义，并说明理由。",
+          "answer": {
+            "value": "√(a²) 和 √(a²+b²) 对任意实数 a、b 都有意义，因为 a² 不小于 0、a²+b² 不小于 0，被开方数始终非负；√(-a²) 只有在 a 为 0 时才有意义，因为 -a² 不大于 0，只有取到 0 时才能开方。"
+          },
+          "analysis": "评分要点：①指出二次根式有意义的条件是被开方数非负（2 分）；②说明 a² 不小于 0、a²+b² 不小于 0，前两个式子对一切实数 a、b 都有意义（2 分）；③说明 -a² 不大于 0，只有 a 为 0 时可以开方（2 分）；④表述完整（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "二次根式的意义",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "说理题"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "把 √12 化简，结果是（  ）",
+          "options": [
+            "2√3",
+            "3√2",
+            "4√3",
+            "√6"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先把被开方数分解成平方因数与非平方因数：4×3=12，所以 √12 可以写成 2√3，化简结果是 2√3，选 A。化简的关键是把 4 开出来写成 2。",
+          "difficulty": 2,
+          "knowledge_point": "二次根式的化简",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "化简 √75 的结果是（  ）。",
+          "answer": {
+            "value": "5√3"
+          },
+          "analysis": "把 75 分解成 25×3：25×3=75，所以 √75 可以写成 5√3。也可以先写成根号下 3×25，再把 25 开出来写成 5，结果同样是 5√3。",
+          "difficulty": 3,
+          "knowledge_point": "二次根式的化简",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "对任意实数 a，都有 √(a²)=a。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "错误。√(a²) 表示 a² 的算术平方根，结果只能是 a 的绝对值。当 a 为负数时，例如 a 为 -3，根式下的数是 9 而开出来是 3，与 a 不相等。",
+          "difficulty": 3,
+          "knowledge_point": "二次根式的化简",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列二次根式中，属于最简二次根式的是（  ）",
+          "options": [
+            "√12",
+            "√(3/4)",
+            "2√3",
+            "√(2/3)"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "最简二次根式要求被开方数不含分母，且不含能开尽的平方因数：√12 中的 12 等于 4×3，4 还能开出来，不是最简 ✗；√(3/4) 与 √(2/3) 的被开方数含分母，不是最简 ✗；2√3 中被开方数 3 没有平方因数，是最简二次根式 ✓。所以选 C。",
+          "difficulty": 3,
+          "knowledge_point": "二次根式的化简",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列二次根式中，化简后等于 2√5 的有（  ）",
+          "options": [
+            "√20",
+            "√45",
+            "√80",
+            "√(4×5)"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "D"
+            ]
+          },
+          "analysis": "先分解被开方数：4×5=20，9×5=45，16×5=80。A √20 可以写成 2√5 ✓；B √45 可以写成 3√5，不是 2√5 ✗；C √80 可以写成 4√5，不是 2√5 ✗；D √(4×5) 可以写成 2√5 ✓。故 A、D 成立，B、C 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "二次根式的化简",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "计算 √48 - √27 + √12 的结果，并写出完整的化简过程。",
+          "answer": {
+            "value": "结果是 3√3。化简：√48 写成 4√3，√27 写成 3√3，√12 写成 2√3，所以原式等于 4√3 - 3√3 + 2√3，最后合并得 3√3。"
+          },
+          "analysis": "评分要点：①分别化简三个二次根式，写出 4√3、3√3、2√3（3 分）；②合并同类二次根式得到 3√3（2 分）；③书写规范、结果带根号（1 分）。只写答案不给过程，过程分不得。",
+          "difficulty": 5,
+          "knowledge_point": "二次根式的化简",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "情境应用"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第三章 位置与坐标",
+      "order_index": 3,
+      "summary": "用方向和距离确定位置，平面直角坐标系与点的坐标、象限，以及关于坐标轴对称与平移引起的坐标变化。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "要确定一个物体在平面上的位置，下面条件中必须具备的是（  ）",
+          "options": [
+            "只要知道方向",
+            "只要知道距离",
+            "既要知道方向又要知道距离",
+            "只要知道物体的大小"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "只知道方向，物体可能在这条射线的任意一点上；只知道距离，物体可能在以某点为圆心的圆上，都无法唯一确定。所以必须同时知道方向和距离，选 C。",
+          "difficulty": 1,
+          "knowledge_point": "方向与距离确定位置",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "用「北偏东 40 度」和「距离 8 千米」描述一个气象站的位置，其中「北偏东 40 度」描述的是（  ），「8 千米」描述的是（  ）。",
+          "answer": {
+            "value": [
+              "方向",
+              "距离"
+            ]
+          },
+          "analysis": "确定位置的两个要素是方向和距离。「北偏东 40 度」说的是从观测点指向目标的方向，「8 千米」说的是两点之间的距离，所以依次填方向、距离。",
+          "difficulty": 2,
+          "knowledge_point": "方向与距离确定位置",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "只要知道两个地点之间的距离，就能确定这两个地点的相对位置。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "距离只说明两点间有多远，方向不确定时还可能有多个位置满足这个距离；必须同时知道方向和距离才能唯一确定相对位置，所以说法错误。",
+          "difficulty": 2,
+          "knowledge_point": "方向与距离确定位置",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "在深圳地图上用「东偏北 20 度」描述某地的位置，这个角指的是（  ）",
+          "options": [
+            "正东方向与正北方向的夹角是 20 度",
+            "正北方向与正东方向的夹角是 20 度",
+            "东偏北 20 度与北偏东 20 度完全相同",
+            "只要写清方向，角度大小无关紧要"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「东偏北 20 度」是从正东方向开始向北转 20 度，说明正东方向与正北方向之间的夹角是 20 度；若改写成「北偏东」，则 90-20=70 度，与原来的说法数值不同，所以选 A。",
+          "difficulty": 3,
+          "knowledge_point": "方向与距离确定位置",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳某中学的学生参加社会实践活动，记录员写下的位置是「深圳市人民公园正门南偏西 35 度方向 250 米处」。请写出描述这个位置的两个要素，并说明为什么只写「250 米」不足以确定位置。",
+          "answer": {
+            "value": "两个要素是方向「南偏西 35 度」和距离「250 米」。只写 250 米，只能确定这个点位于以公园正门为圆心、250 米为半径的圆上，圆上有无数个点，方向不明确，位置不唯一，所以还必须写明方向。"
+          },
+          "analysis": "评分要点：①写出方向与距离两个要素（2 分）；②指出只给距离时点在一个圆上、位置不唯一（2 分）；③说明方向不可缺少的理由（2 分）；④表述完整（1 分）。只写「不够」不给理由，最后 2 分不得。",
+          "difficulty": 4,
+          "knowledge_point": "方向与距离确定位置",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "情境应用"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "平面直角坐标系的两条数轴互相（  ）",
+          "options": [
+            "平行",
+            "垂直",
+            "重合",
+            "相交但不垂直"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "平面直角坐标系由 x 轴和 y 轴两条互相垂直的数轴组成，它们的交点叫原点。只有互相垂直才能把平面分成四个象限，所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "平面直角坐标系",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "在平面直角坐标系中，原点的坐标是（  ，  ）。",
+          "answer": {
+            "value": [
+              "0",
+              "0"
+            ]
+          },
+          "analysis": "原点是 x 轴与 y 轴的交点，它在 x 轴上所以纵坐标为 0，在 y 轴上所以横坐标为 0，两个坐标都是 0，填 0，0。",
+          "difficulty": 2,
+          "knowledge_point": "平面直角坐标系",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列各点中，在 y 轴上的点是（  ）",
+          "options": [
+            "(2, 0)",
+            "(0, 3)",
+            "(-3, 4)",
+            "(1, 1)"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "y 轴上的点横坐标一定为 0，所以 (0, 3) 在 y 轴上，选 B；而 (2, 0) 的横坐标不为 0，它在 x 轴上。",
+          "difficulty": 2,
+          "knowledge_point": "平面直角坐标系",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "在平面直角坐标系中，点 (a, b) 与点 (b, a) 表示的是同一个点。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "点的坐标顺序是横坐标在前、纵坐标在后，不能颠倒。(3, 5) 与 (5, 3) 一般表示两个不同的点，只有当 a 与 b 相等时才重合，所以说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "平面直角坐标系",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于平面直角坐标系，下列说法正确的有（  ）",
+          "options": [
+            "x 轴上的点纵坐标为 0",
+            "y 轴上的点横坐标为 0",
+            "原点不属于任何一条坐标轴",
+            "第四象限内点的横坐标为负"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A x 轴上的点纵坐标为 0 ✓；B y 轴上的点横坐标为 0 ✓；C 原点是两条坐标轴的交点，它既在 x 轴上也在 y 轴上，不是「不属于任何一条轴」 ✗；D 第四象限在 x 轴下方、y 轴右侧，横坐标为负 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "平面直角坐标系",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "点 P(-2, 3) 在（  ）",
+          "options": [
+            "第一象限",
+            "第二象限",
+            "第三象限",
+            "第四象限"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "第一象限横纵坐标都为正，第二象限横负纵正，第三象限都为负，第四象限横正纵负。P 的横坐标 -2 为负、纵坐标 3 为正，所以 P 在第二象限，选 B。",
+          "difficulty": 1,
+          "knowledge_point": "点的坐标与象限",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "若点 M(a, -5) 在第三象限，则 a 的取值范围是（  ）。",
+          "answer": {
+            "value": "a<0"
+          },
+          "analysis": "第三象限内点的横坐标和纵坐标都为负。纵坐标已经是 -5，符合要求；横坐标 a 也必须为负，所以 a 的取值范围是 a<0。",
+          "difficulty": 2,
+          "knowledge_point": "点的坐标与象限",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "点 P(3, -4) 到 x 轴的距离是（  ），到 y 轴的距离是（  ）。",
+          "answer": {
+            "value": [
+              "4",
+              "3"
+            ]
+          },
+          "analysis": "点到 x 轴的距离等于纵坐标的绝对值，-4 的绝对值是 4；点到 y 轴的距离等于横坐标的绝对值，3 的绝对值是 3。所以依次填 4 和 3。",
+          "difficulty": 3,
+          "knowledge_point": "点的坐标与象限",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "若点 A 与点 B 关于 y 轴对称，则点 A 到 y 轴的距离等于点 B 到 y 轴的距离。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "关于 y 轴对称的两个点纵坐标相同、横坐标互为相反数，横坐标的绝对值相等，而点到 y 轴的距离正好等于横坐标的绝对值，所以命题正确。",
+          "difficulty": 3,
+          "knowledge_point": "点的坐标与象限",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "已知点 M 在第三象限，点 N 与 M 关于 x 轴对称，则点 N 在（  ）",
+          "options": [
+            "第一象限",
+            "第二象限",
+            "第三象限",
+            "第四象限"
+          ],
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "关于 x 轴对称时横坐标不变、纵坐标变号。M 在第三象限说明横坐标为负、纵坐标为负，对称后横坐标仍为负而纵坐标变为正，所以 N 在第四象限，选 D。",
+          "difficulty": 3,
+          "knowledge_point": "点的坐标与象限",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于坐标对称的坐标变化规律，下列说法正确的有（  ）",
+          "options": [
+            "点 (a, b) 关于 x 轴对称的点是 (a, -b)",
+            "点 (a, b) 关于 y 轴对称的点是 (-a, b)",
+            "点 (a, b) 关于原点对称的点是 (-a, -b)",
+            "点 (a, b) 关于 x 轴对称后横坐标一定改变"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 关于 x 轴对称横坐标不变、纵坐标变号，得 (a, -b) ✓；B 关于 y 轴对称横坐标变号、纵坐标不变，得 (-a, b) ✓；C 关于原点对称两个坐标都变号，得 (-a, -b) ✓；D 关于 x 轴对称横坐标不变，横坐标并不改变 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "点的坐标与象限",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "把点 A(1, -2) 向右平移 3 个单位长度，所得点的坐标是（  ）",
+          "options": [
+            "(4, -2)",
+            "(1, 1)",
+            "(-2, -2)",
+            "(4, 2)"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "向右平移只改变横坐标，纵坐标保持不变：1 + 3 = 4，所以新点的坐标是 (4, -2)，选 A。左右平移看横坐标、上下平移看纵坐标，别搞反。",
+          "difficulty": 2,
+          "knowledge_point": "坐标轴对称与点的平移",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "点 A(-2, 5) 先向左平移 4 个单位长度，再向下平移 3 个单位长度，所得点的坐标是（  ，  ）。",
+          "answer": {
+            "value": [
+              "-6",
+              "2"
+            ]
+          },
+          "analysis": "向左平移 4 个单位长度，横坐标要减去 4：-2 - 4 = -6；向下平移 3 个单位长度，纵坐标要减去 3：5 - 3 = 2。所以填 -6，2。",
+          "difficulty": 3,
+          "knowledge_point": "坐标轴对称与点的平移",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "已知点 A(2, 3) 与点 B 关于 y 轴对称，则点 B 的坐标是（  ，  ）。",
+          "answer": {
+            "value": [
+              "-2",
+              "3"
+            ]
+          },
+          "analysis": "关于 y 轴对称的两个点，纵坐标相同、横坐标互为相反数。横坐标 2 变成 -2，纵坐标 3 仍是 3，所以点 B 是 (-2, 3)。",
+          "difficulty": 3,
+          "knowledge_point": "坐标轴对称与点的平移",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "点 (a, b) 与点 (a, -b) 关于 x 轴对称。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "关于 x 轴对称的判定条件是横坐标相同、纵坐标互为相反数。(a, b) 与 (a, -b) 恰好满足这两个条件，所以命题正确。",
+          "difficulty": 3,
+          "knowledge_point": "坐标轴对称与点的平移",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "若点 M 与点 N 关于原点对称，且点 M 的坐标是 (3, -5)，则点 N 的坐标是（  ）",
+          "options": [
+            "(-3, 5)",
+            "(3, 5)",
+            "(-3, -5)",
+            "(5, 3)"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "关于原点对称时横、纵坐标都变号：3 的相反数是 -3，-5 的相反数是 5，所以点 N 是 (-3, 5)，选 A。",
+          "difficulty": 4,
+          "knowledge_point": "坐标轴对称与点的平移",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳湾公园的平面图以公园正门为原点、正东方向为 x 轴正方向（单位为米），标出了三个景点：A(1200, 800)，B(-1200, 800)，C(-1200, -800)。请回答：（1）A 与 B 关于哪条直线对称？（2）点 C 关于原点的对称点是哪个景点，坐标是什么？（3）三个景点中哪个在第三象限？",
+          "answer": {
+            "value": "（1）A 与 B 关于 y 轴对称；（2）点 C 关于原点的对称点是 (1200, 800)，也就是景点 A；（3）景点 C 在第三象限。"
+          },
+          "analysis": "评分要点：①答出 A 与 B 关于 y 轴对称，并说明横坐标互为相反数、纵坐标相同（3 分）；②答出对称点是 (1200, 800)，并指出它就是景点 A（2 分）；③答出 C 在第三象限，并说明横纵坐标都为负（2 分）；④书写规范（1 分）。",
+          "difficulty": 5,
+          "knowledge_point": "坐标轴对称与点的平移",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "情境应用"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第四章 一次函数",
+      "order_index": 4,
+      "summary": "函数的概念与自变量取值范围，一次函数的定义、图象与性质，以及用待定系数法求解析式并解决实际问题。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "下列各组变量中，y 是 x 的函数的是（  ）",
+          "options": [
+            "圆的半径 x 与圆的面积 y",
+            "圆的半径 x 与圆周上到圆心距离等于 x 的点的个数 y",
+            "圆的半径 x 与圆内距圆心为 x 的点的坐标 y",
+            "圆的半径 x 与圆的弦长 y"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "A 半径确定后面积由公式唯一确定，构成函数 ✓；B 圆周上到圆心距离等于半径的点有无穷多个，y 不唯一 ✗；C 圆内距圆心为半径的点也有无穷多个，坐标不唯一 ✗；D 弦长可以在 0 与 2 倍半径之间取任意值，y 不唯一 ✗。故 A 成立，B、C、D 不成立。",
+          "difficulty": 2,
+          "knowledge_point": "函数的概念与表示",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "在函数 y=2x-1 中，当 x=3 时，y 的值是（  ）。",
+          "answer": {
+            "value": "5"
+          },
+          "analysis": "把 x=3 代入解析式：2×3-1=5，所以 y 的值是 5，填 5。求函数值只要代入求值，不必先求出整个解析式的形式。",
+          "difficulty": 2,
+          "knowledge_point": "函数的概念与表示",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "函数 y=1/x 中，自变量 x 可以取任意实数。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "当 x 等于 0 时分母为零，这个式子没有意义，所以自变量 x 不能取 0。写解析式时必须把使式子无意义的情况排除掉，所以说法错误。",
+          "difficulty": 2,
+          "knowledge_point": "函数的概念与表示",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列函数中，自变量取值范围是全体实数的是（  ）",
+          "options": [
+            "y=x²",
+            "y=1/x",
+            "y=√(x+1)",
+            "y=2/(x-3)"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "y=x² 中任意实数 x 都有意义，取值范围是全体实数 ✓；y=1/x 中 x 不能为 0 ✗；y=√(x+1) 要被开方数非负，x 不能小于 -1 ✗；y=2/(x-3) 中 x 不能为 3 ✗。故 A 成立，其余三个都排除了某些值。",
+          "difficulty": 3,
+          "knowledge_point": "函数的概念与表示",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列对应关系中，y 是 x 的函数的有（  ）",
+          "options": [
+            "用边长 x 表示正方形的面积 y",
+            "用边长 x 表示正方形的周长 y",
+            "用被开方数 x 表示它的立方根 y",
+            "用 x 表示满足 x²+y²=4 的 y 的值"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 边长确定后面积唯一 ✓；B 边长确定后周长唯一 ✓；C 立方根唯一 ✓；D 满足 x²+y²=4 的 y 有两个相反的值，x 为 0 时 y 可取 2 或 -2，不唯一 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "函数的概念与表示",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "函数 y=√(2-x) 中，自变量 x 的取值范围是（  ）",
+          "options": [
+            "x≤2",
+            "x≥2",
+            "x≠2",
+            "x 是任意实数"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "根式有意义要求被开方数非负，即 2-x 大于等于 0，解得 x 小于等于 2，所以选 A。根式函数先看被开方数能不能取到非负值。",
+          "difficulty": 1,
+          "knowledge_point": "自变量的取值范围",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "函数 y=(x+2)/(x-5) 中，自变量 x 的取值范围是（  ）。",
+          "answer": {
+            "value": "x≠5"
+          },
+          "analysis": "分式有意义要求分母不为 0，即 x-5 不等于 0，解得 x≠5；此时分子 x+2 可以取任何值，所以自变量取值范围是 x≠5。",
+          "difficulty": 2,
+          "knowledge_point": "自变量的取值范围",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "函数 y=3/x-1 中，自变量 x 的取值范围是（  ）。",
+          "answer": {
+            "value": "x≠0"
+          },
+          "analysis": "分母 x 不能为 0，所以自变量取值范围是 x≠0。分式函数要先看分母，不能凭感觉认为 x 可以取所有实数。",
+          "difficulty": 2,
+          "knowledge_point": "自变量的取值范围",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "函数 y=√x 的自变量 x 可以取任意实数。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "被开方数必须非负，所以 x 只能取 0 及以上的数，负数在实数范围内不能开方，因此这个说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "自变量的取值范围",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "某商店把一种商品的单价定为 12 元，顾客付出的钱数 y（元）与购买件数 x（件）之间的关系是 y=12x。关于 x 的取值范围，下列说法正确的是（  ）",
+          "options": [
+            "x 可以是任意实数",
+            "x 是正整数",
+            "x 可以是任意非负实数",
+            "x 可以是负数"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "购买件数只能是 1，2，3……这样的正整数，不能是小数，更不能是负数。所以 x 的取值范围是正整数，选 B；这一类问题要结合生活实际，不能只看解析式。",
+          "difficulty": 3,
+          "knowledge_point": "自变量的取值范围",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "情境应用"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列函数中，是一次函数的是（  ）",
+          "options": [
+            "y=1/x",
+            "y=2x-3",
+            "y=x²",
+            "y=3"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "一次函数的一般形式是 y=kx+b（k、b 为常数且 k 不为 0）。y=2x-3 中 k 等于 2、b 等于 -3，符合要求；y=1/x 不是整式函数，y=x² 的最高次是 2，y=3 是常数函数，所以选 B。",
+          "difficulty": 2,
+          "knowledge_point": "一次函数的定义与性质",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "一次函数 y=kx+b 中，k 可以等于 0。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "一次函数要求 k 不为 0，否则 y=b 就是常数函数，图象是一条水平直线，不再是一次函数，所以这个说法错误。",
+          "difficulty": 2,
+          "knowledge_point": "一次函数的定义与性质",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "一次函数 y=3x-6 与 y 轴的交点坐标是（  ，  ）。",
+          "answer": {
+            "value": [
+              "0",
+              "-6"
+            ]
+          },
+          "analysis": "与 y 轴相交时横坐标为 0，把 x=0 代入解析式：3×0-6=-6，所以交点坐标是 (0, -6)。",
+          "difficulty": 3,
+          "knowledge_point": "一次函数的定义与性质",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "一次函数 y=-2x+4 的图象不经过（  ）",
+          "options": [
+            "第一象限",
+            "第二象限",
+            "第三象限",
+            "第四象限"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "k=-2 小于 0，y 随 x 增大而减小，图象从左上方向右下方倾斜。当 x 小于 0 时 y 大于 0，图象在第二象限；0 小于 x 小于 2 时 y 大于 0，在第一象限；x 大于 2 时 y 小于 0，在第四象限。所以图象不经过第三象限，选 C。",
+          "difficulty": 3,
+          "knowledge_point": "一次函数的定义与性质",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于一次函数 y=kx+b（k 不为 0），下列说法正确的有（  ）",
+          "options": [
+            "k 决定图象的倾斜方向",
+            "b 决定图象与 y 轴的交点位置",
+            "k 相同的两条一次函数图象互相平行",
+            "k 等于 0 时图象也是一条直线"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A k 的符号决定 y 随 x 增大而增大还是减小，即倾斜方向 ✓；B b 就是图象与 y 轴交点的纵坐标 ✓；C k 相同表示斜率相同，两条直线互相平行（b 不同时不重合）✓；D k 等于 0 时是常数函数，不是一次函数 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "一次函数的定义与性质",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "一次函数 y=2x+1 的图象经过下列点中的（  ）",
+          "options": [
+            "(0, 1)",
+            "(1, 2)",
+            "(2, 4)",
+            "(3, 6)"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "把各点横坐标代入检验：2×0+1=1，所以 (0, 1) 在图象上 ✓；横坐标为 1 时 y 等于 3，不是 2 ✗；横坐标为 2 时 y 等于 5，不是 4 ✗；横坐标为 3 时 y 等于 7，不是 6 ✗。故只有 A 成立。",
+          "difficulty": 2,
+          "knowledge_point": "一次函数的图象与性质",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "一次函数 y=-3x+6 的图象与 x 轴的交点坐标是（  ，  ）。",
+          "answer": {
+            "value": [
+              "2",
+              "0"
+            ]
+          },
+          "analysis": "与 x 轴相交时纵坐标为 0，解 -3x+6=0 得 3x=6，x=2，所以交点是 (2, 0)。检验：-3×2+6=0，说明这一点确实在图象上。",
+          "difficulty": 2,
+          "knowledge_point": "一次函数的图象与性质",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "一次函数的图象是一条直线。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "一次函数 y=kx+b（k 不为 0）的图象是斜率为 k、经过点 (0, b) 的直线，在平面直角坐标系中就是一条直线，所以命题正确。",
+          "difficulty": 3,
+          "knowledge_point": "一次函数的图象与性质",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "把一次函数 y=2x-1 的图象向上平移 3 个单位长度，所得图象的解析式是（  ）",
+          "options": [
+            "y=2x+2",
+            "y=2x-4",
+            "y=2x-1",
+            "y=5x-1"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "上下平移只改变常数项 b，不改变 k。向上平移 3 个单位长度，b 要加上 3：-1+3=2，所以新解析式是 y=2x+2，选 A。若把 k 也改了，就变成另一种平移了。",
+          "difficulty": 3,
+          "knowledge_point": "一次函数的图象与性质",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列说法中，正确的有（  ）",
+          "options": [
+            "一次函数 y=kx+b 的图象一定经过点 (0, b)",
+            "当 b=0 时，直线 y=kx 经过原点",
+            "两个一次函数的图象平行，则它们的 k 相等",
+            "两个一次函数的图象垂直，则它们的 k 互为相反数"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 把 x=0 代入得 y=b，所以图象一定过 (0, b) ✓；B b 为 0 时解析式是 y=kx，图象过原点 ✓；C 斜率相同即 k 相等的两条直线互相平行 ✓；D 垂直的条件是两个 k 的乘积等于 -1，例如 2×(-0.5)=-1，可见它们不是互为相反数 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "一次函数的图象与性质",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "已知一次函数的图象经过点 (1, 3) 和 (2, 7)，则这个一次函数的解析式是（  ）",
+          "options": [
+            "y=4x-1",
+            "y=4x+1",
+            "y=3x",
+            "y=4x-3"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "设解析式为 y=kx+b，把两点代入得 k+b=3，2k+b=7，两式相减得 k=4，代回得 b=-1，所以解析式是 y=4x-1，选 A。检验：4×1-1=3，4×2-1=7，两点都满足。",
+          "difficulty": 3,
+          "knowledge_point": "待定系数法与实际应用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "已知一次函数 y=kx+2 的图象经过点 (3, 11)，则 k = （  ）。",
+          "answer": {
+            "value": "3"
+          },
+          "analysis": "把点 (3, 11) 代入解析式得 3k+2=11，移项得 3k=9，所以 k=3。检验：3×3+2=11，与已知点相符。",
+          "difficulty": 4,
+          "knowledge_point": "待定系数法与实际应用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "某商店销售一种商品，售价为每件 50 元时每天可卖 200 件；售价每上涨 1 元，每天少卖 10 件。（1）请写出每天卖出件数 y（件）与售价上涨数 x（元）之间的函数关系式；（2）当售价上涨 10 元时，每天能卖出多少件？",
+          "answer": {
+            "value": "（1）售价每上涨 1 元就少卖 10 件，所以上涨 x 元少卖 10x 件，函数关系式是 y=200-10x；（2）当 x 等于 10 时，y=200-10×10=100，即每天能卖出 100 件。"
+          },
+          "analysis": "评分要点：①写出 y=200-10x 并说明「上涨 x 元少卖 10x 件」的思路（3 分）；②第（2）问代入 x 等于 10 求出 y=100（2 分）；③答出「每天卖出 100 件」并带上单位（1 分）；④表述完整（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "待定系数法与实际应用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "情境应用"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳地铁某线路的列车从某站出发，行驶路程 s（千米）与行驶时间 t（分钟）之间的关系是 s=0.8t。请回答：（1）出发 5 分钟后，列车行驶了多少千米？（2）行驶 8 千米需要多少分钟？（3）若乘客要在 12 分钟内到达 10 千米外的下一站，这个速度能满足要求吗？",
+          "answer": {
+            "value": "（1）s=0.8×5=4，行驶了 4 千米；（2）由 0.8t=8 得 t=10，需要 10 分钟；（3）12 分钟内最多行驶 0.8×12=9.6 千米，小于 10 千米，所以这个速度不能满足要求。"
+          },
+          "analysis": "评分要点：①第（1）问写出 0.8×5=4 并答出 4 千米（2 分）；②第（2）问列出 0.8t=8 并解得 t=10 分钟（2 分）；③第（3）问算出 0.8×12=9.6 千米，与 10 千米比较后得出不能满足要求的结论（3 分）；④单位书写完整（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "待定系数法与实际应用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "情境应用"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "若两个一次函数的图象平行，则它们的 k 值相同。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "直线是否平行只取决于斜率，而一次函数 y=kx+b 的斜率就是 k，所以两个一次函数图象平行时 k 一定相等（此时若 b 也相等，两条直线重合），命题正确。",
+          "difficulty": 4,
+          "knowledge_point": "待定系数法与实际应用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳某楼盘推出「地铁沿线通勤」方案：小区门口到地铁站的距离 s（百米）与步行时间 t（分钟）之间满足 s=1.2t。请回答：（1）这个函数中的自变量和因变量各是什么？（2）某住户每天步行 15 分钟到地铁站，他家离地铁站有多少百米，合多少米？（3）若该住户要在 10 分钟内走到地铁站，最多能走多少百米？",
+          "answer": {
+            "value": "（1）自变量是步行时间 t（分），因变量是路程 s（百米）；（2）s=1.2×15=18，即 18 百米，合 1800 米；（3）10 分钟内最多走 1.2×10=12 百米。"
+          },
+          "analysis": "评分要点：①正确指出自变量 t、因变量 s（2 分）；②第（2）问写出 1.2×15=18 并换算成 1800 米（3 分）；③第（3）问写出 1.2×10=12 并答出 12 百米（2 分）；④单位与表述完整（1 分）。",
+          "difficulty": 5,
+          "knowledge_point": "待定系数法与实际应用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "情境应用"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第五章 二元一次方程组",
+      "order_index": 5,
+      "summary": "二元一次方程与方程组的概念，代入消元与加减消元两种解法，方程组在实际问题中的应用，以及方程与一次函数图象之间的对应关系。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "下列方程中，是二元一次方程的是（  ）",
+          "options": [
+            "x+y=5",
+            "x²+y²=5",
+            "xy=6",
+            "1/x+1/y=5"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "二元一次方程要求含两个未知数、未知数的次数都是 1，且方程两边都是整式。x+y=5 完全符合 ✓；x²+y²=5 中未知数的次数是 2 ✗；xy=6 中两个未知数的乘积是 2 次项 ✗；1/x+1/y=5 中未知数在分母上，不是整式 ✗。所以选 A。",
+          "difficulty": 1,
+          "knowledge_point": "二元一次方程与方程组",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "在方程 2x-3y=6 中，给定 x 的一个值，y 都有唯一确定的值与之对应。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "把方程整理成 y=(2x-6)÷3 的形式就看得更清楚：x 每取一个值，y 都有唯一确定的值，所以 y 是 x 的函数，命题正确。",
+          "difficulty": 2,
+          "knowledge_point": "二元一次方程与方程组",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "在方程 x+y=10 中，若 x=3，则 y = （  ）。",
+          "answer": {
+            "value": "7"
+          },
+          "analysis": "把 x=3 代入方程得 3+y=10，移项得 y=10-3=7，所以填 7。解二元一次方程中的二元时，本质上先把它当成一元一次方程处理。",
+          "difficulty": 1,
+          "knowledge_point": "二元一次方程与方程组",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "二元一次方程组 x+y=7 与 x-y=1 的解是（  ）",
+          "options": [
+            "x=4, y=3",
+            "x=3, y=4",
+            "x=2, y=5",
+            "x=5, y=2"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "两式相加得 2x=8，x=4；代回第一式得 y=7-4=3。检验：4+3=7，4-3=1，两个方程都满足，所以选 A。",
+          "difficulty": 2,
+          "knowledge_point": "二元一次方程与方程组",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于二元一次方程，下列说法正确的有（  ）",
+          "options": [
+            "含两个未知数",
+            "两个未知数的次数都是 1",
+            "它的解可以是无数组",
+            "它一定可以表示成 y 是 x 的函数"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 二元一次方程含两个未知数 ✓；B 两个未知数的次数都是 1 ✓；C 例如 x+y=2 有无数组解，所以解可以是无数组 ✓；D 不是每个二元一次方程都能表示成 y 是 x 的函数，x+y=2 就不行 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "二元一次方程与方程组",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "用代入消元法解方程组 2x+y=7 与 x-y=2，消去 y 的正确做法是（  ）",
+          "options": [
+            "由第一个方程得 y=2x+7，再代入第二个方程",
+            "由第二个方程得 y=x-2，再代入第一个方程",
+            "把 2x+y=7 直接代入 x-y=2",
+            "把两个方程的左边与右边分别相加"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "由第二个方程 x-y=2 得 y=x-2，把它代入第一个方程 2x+y=7，就消去了 y，剩下一个只含 x 的一元一次方程，所以选 B。注意第一个方程整理时应得 y=7-2x，选项 A 把符号写错了。",
+          "difficulty": 2,
+          "knowledge_point": "二元一次方程组的解法",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "方程组 x+y=10 与 x-y=2 的解是 x = （  ），y = （  ）。",
+          "answer": {
+            "value": [
+              "6",
+              "4"
+            ]
+          },
+          "analysis": "两式相加消去 y，得 2x=12，x=6；把 x=6 代入第一式得 y=10-6=4。所以填 6 和 4，最后别忘了把这一组数代回两个方程检验。",
+          "difficulty": 2,
+          "knowledge_point": "二元一次方程组的解法",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "二元一次方程组 x+y=5 与 x-y=1 相加，得到的方程是（  ）",
+          "options": [
+            "2x=6",
+            "2y=4",
+            "x=3",
+            "y=2"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "加减消元要把左边与左边、右边与右边分别相加：x+y 与 x-y 相加得 2x，5 与 1 相加得 6，得到方程 2x=6，所以选 A。口诀是「同号相加，异号相减」。",
+          "difficulty": 2,
+          "knowledge_point": "二元一次方程组的解法",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "二元一次方程组的解的个数可能是 0 个、1 个或者无数多个。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "两个方程的图象是两条相交直线时有一个交点，是平行直线时没有交点，是同一条直线时有无数个交点，对应方程组分别有唯一解、无解和无数解，所以命题正确。",
+          "difficulty": 3,
+          "knowledge_point": "二元一次方程组的解法",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "关于二元一次方程组的解的情况，下列说法正确的是（  ）",
+          "options": [
+            "两个方程的图象是两条相交直线时，方程组有唯一解",
+            "两个方程的图象是两条平行直线时，方程组有无数个解",
+            "两个方程的图象是同一条直线时，方程组无解",
+            "两个方程的图象是两条相交直线时，方程组有无数个解"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "两条相交直线只有一个交点，方程组有唯一解 ✓；两条平行直线没有公共点，对应的是无解而不是无数解 ✗；同一条直线上有无数个公共点，对应的是无数解而不是无解 ✗；D 与 A 自相矛盾 ✗。所以选 A。",
+          "difficulty": 3,
+          "knowledge_point": "二元一次方程组的解法",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "解二元一次方程组 2x+3y=12 与 2x-3y=-6 时，下面做法可行的是（  ）",
+          "options": [
+            "两式相加消去 y，得到关于 x 的方程",
+            "把第一个方程变形后代入第二个方程",
+            "两式相减消去 y，得到关于 x 的方程",
+            "把两个方程的左边与右边分别相乘"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 两式相加时 y 的系数 3 与 -3 相反，相加后 y 项消去，得到关于 x 的方程 ✓；B 代入消元是解方程组的基本方法之一 ✓；C 两式相减时 y 项系数相减为 0，y 也被消去 ✓；D 把左右两边分别相乘既不能消元也不改变方程的解 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "二元一次方程组的解法",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "解方程组 2x+3y=12 与 x-y=1，并写出完整的消元过程。",
+          "answer": {
+            "value": "由第二个方程得 x=y+1，代入第一个方程得 2(y+1)+3y=12，2y+2+3y=12，5y=10，y=2；再由 x=y+1 得 x=3。所以方程组的解是 x=3，y=2。"
+          },
+          "analysis": "评分要点：①用代入消元把二元一次方程组化为一元一次方程（3 分）；②正确解出 y=2 并回代得到 x=3（2 分）；③写出完整的解集（1 分）；④书写规范（1 分）。检验：2×3+3×2=12，3-2=1，两式都满足。",
+          "difficulty": 4,
+          "knowledge_point": "二元一次方程组的解法",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "某数的 3 倍与它的 2 倍的和是 25，设这个数为 x，则可列出的方程是（  ）",
+          "options": [
+            "3x+2x=25",
+            "3x-2x=25",
+            "x+2x=25",
+            "3x+2=25"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "这个数的 3 倍是 3x，2 倍是 2x，两者的和是 25，所以列方程 3x+2x=25，选 A。两倍与三倍相加，和就是 5 倍，解得 x 等于 5。",
+          "difficulty": 2,
+          "knowledge_point": "二元一次方程组的应用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "某数的 5 倍与 3 的和等于这个数的 8 倍，设这个数为 x，列方程 5x+3=8x，解得 x = （  ）。",
+          "answer": {
+            "value": "1"
+          },
+          "analysis": "由 5x+3=8x，移项得 3=3x，两边同除以 3 得 x=1。检验：5×1+3=8，8×1=8，两边相等，说明答案正确。",
+          "difficulty": 2,
+          "knowledge_point": "二元一次方程组的应用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "甲、乙两人共有 800 元，甲比乙多 120 元。设甲有 x 元、乙有 y 元，则列出的方程组是（  ）",
+          "options": [
+            "x+y=800 且 x-y=120",
+            "x+y=800 且 x+y=120",
+            "x·y=800 且 x-y=120",
+            "x+y=680 且 x-y=120"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "两人共有 800 元给出 x+y=800；甲比乙多 120 元给出 x-y=120，所以选 A。列方程组的关键是找出两个互相独立的等量关系，「比…多」要写成差。",
+          "difficulty": 3,
+          "knowledge_point": "二元一次方程组的应用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳某中学组织学生参加志愿服务，甲、乙两班共 60 人。若从甲班调 6 人到乙班，两班人数就相等。设甲班原有 x 人、乙班原有 y 人，请列出方程组并求出两班原来的人数。",
+          "answer": {
+            "value": "由两班共 60 人得 x+y=60；调 6 人后两班相等，即 x-6=y+6，整理得 x-y=12。方程组是 x+y=60 与 x-y=12。两式相加得 2x=72，x=36，代回得 y=24。所以甲班原有 36 人，乙班原有 24 人。"
+          },
+          "analysis": "评分要点：①列出方程组 x+y=60 与 x-y=12，并说明第二个方程由「调 6 人后相等」得到（3 分）；②解出 x=36、y=24（2 分）；③答出两班原来的人数（1 分）；④表述完整（1 分）。检验：36+24=60，36-24=12，都满足。",
+          "difficulty": 4,
+          "knowledge_point": "二元一次方程组的应用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "情境应用"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "方程组 x+y=12 与 x-y=4 中，两式相加得 2x=16，所以 x = （  ），y = （  ）。",
+          "answer": {
+            "value": [
+              "8",
+              "4"
+            ]
+          },
+          "analysis": "两式相加消去 y，得 2x=16，x=8；把 x=8 代入第一式得 y=12-8=4。所以填 8 和 4。也可以两式相减求 y，方法不唯一但结果唯一。",
+          "difficulty": 4,
+          "knowledge_point": "二元一次方程组的应用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列问题中，适合用二元一次方程组解决的有（  ）",
+          "options": [
+            "已知两个数的和与差，求这两个数",
+            "已知一个数的 3 倍与它的平方，求这个数",
+            "已知甲乙两种商品的单价与付出的总钱数，求各买了多少件",
+            "已知三角形的三边长，判断它是不是直角三角形"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A 和与差正好对应两个未知数，是二元一次方程组的典型模型 ✓；B 出现了未知数的平方，属于一元二次方程 ✗；C 单价与总价配合件数恰好给出两个未知数 ✓；D 是勾股定理的判定问题，不属于方程组模型 ✗。故 A、C 成立，B、D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "二元一次方程组的应用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "二元一次方程 2x+y=6 改写成 y 关于 x 的函数，解析式是（  ）",
+          "options": [
+            "y=6-2x",
+            "y=2x+6",
+            "y=6-2/x",
+            "y=x-6"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "把含 y 的一项单独留在等号左边：y=6-2x，所以解析式是 y=6-2x，选 A。化的时候要保证等式性质，移项要变号。",
+          "difficulty": 2,
+          "knowledge_point": "二元一次方程与一次函数",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "直线 y=4x-6 与 x 轴交点的横坐标是（  ）。",
+          "answer": {
+            "value": "1.5"
+          },
+          "analysis": "与 x 轴相交时纵坐标为 0，即 4x-6=0，移项得 6÷4=1.5，所以交点的横坐标是 1.5，填 1.5。",
+          "difficulty": 2,
+          "knowledge_point": "二元一次方程与一次函数",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "方程 3x+4y=12 可以表示成 y 是 x 的函数。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "把 4y 单独留在左边得 y=(12-3x)÷4，x 每取一个值，y 都有唯一确定的值与之对应，所以能表示成 y 是 x 的函数，命题正确。",
+          "difficulty": 3,
+          "knowledge_point": "二元一次方程与一次函数",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "已知直线 y=kx+b 经过点 (1, 2) 和 (3, 8)，则 k 与 b 的值是（  ）",
+          "options": [
+            "k=3, b=-1",
+            "k=2, b=0",
+            "k=3, b=1",
+            "k=1, b=1"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "把两点代入得 k+b=2，3k+b=8，两式相减得 2k=6，k=3；代回得 b=-1，所以选 A。检验：3×1-1=2，3×3-1=8，两点都满足。",
+          "difficulty": 4,
+          "knowledge_point": "二元一次方程与一次函数",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "某商店把一种商品的售价定为进价的 1.5 倍，每件售价 90 元；一次购买 10 件以上可以打八折。小明买了 8 件，实付 720 元，小红买了 12 件。请回答：（1）该商品的进价是多少元？（2）小红实付多少元？",
+          "answer": {
+            "value": "（1）设进价为 x 元，1.5x=90，x=90÷1.5=60，所以进价是 60 元；（2）小红买了 12 件，超过 10 件要打八折，实付 12×90×0.8=864 元。"
+          },
+          "analysis": "评分要点：①第（1）问列出 1.5x=90 并算出进价 60 元（3 分）；②第（2）问先判断 12 件可以打八折（1 分）；③写出 12×90×0.8=864 并答出 864 元（2 分）；④表述完整（1 分）。",
+          "difficulty": 5,
+          "knowledge_point": "二元一次方程与一次函数",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "情境应用"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第六章 数据的分析",
+      "order_index": 6,
+      "summary": "平均数与方差的计算和意义，中位数、众数与箱线图，以及综合运用平均数与方差比较两个团队并作出决策。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "一组数据 3、5、5、7、10 的平均数是（  ）",
+          "options": [
+            "5",
+            "6",
+            "6.5",
+            "30"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "平均数是这组数据的总和除以数据的个数：3+5+5+7+10=30，30÷5=6，所以选 B。最常见的错误是只求出和 30 就作答，忘了除以个数 5。",
+          "difficulty": 1,
+          "knowledge_point": "平均数的意义与计算",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "数据 2、4、6、8、10 的平均数是（  ）。",
+          "answer": {
+            "value": "6"
+          },
+          "analysis": "先求总和：2+4+6+8+10=30，再除以数据的个数 5：30÷5=6，所以填 6。",
+          "difficulty": 2,
+          "knowledge_point": "平均数的意义与计算",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "一组数据的平均数一定是这组数据中的某一个数据。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "平均数是这组数据整体水平的代表，不一定出现在原数据中。例如 2、5、9 的平均数是 16÷3，这个数并不在这三个数中间，所以说法错误。",
+          "difficulty": 2,
+          "knowledge_point": "平均数的意义与计算",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "某校八年级五个班参加志愿服务的人数分别是 20、25、30、25、40，这五个班的平均人数是（  ）",
+          "options": [
+            "28 人",
+            "30 人",
+            "25 人",
+            "26 人"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "总人数是 20+25+30+25+40=140，班数是 5，平均数 140÷5=28 人，所以选 A。平均数反映整体水平，不一定是数据中的某个数。",
+          "difficulty": 2,
+          "knowledge_point": "平均数的意义与计算",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "情境应用"
+          ]
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于平均数，下列说法正确的有（  ）",
+          "options": [
+            "平均数是一组数据的总和除以数据的个数",
+            "平均数能反映一组数据的整体水平",
+            "平均数一定在数据的最大值与最小值之间",
+            "一组数据中每个数据都与平均数相等"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 这是平均数的定义 ✓；B 平均数代表一组数据的整体水平 ✓；C 平均数是加权平均，不会大于最大值也不会小于最小值 ✓；D 只有所有数据都相同时才成立 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 2,
+          "knowledge_point": "平均数的意义与计算",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "一组数据 5、5、5、5 的方差是（  ）",
+          "options": [
+            "0",
+            "1",
+            "5",
+            "25"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "这组数据的平均数是 5，每个数与平均数的差都是 0，方差是这些差的平方的平均：0×0=0，所以方差为 0，选 A。方差为 0 说明这组数据最集中。",
+          "difficulty": 2,
+          "knowledge_point": "方差与数据的稳定性",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "数据 2、3、4、5、6 的方差是（  ）。",
+          "answer": {
+            "value": "2"
+          },
+          "analysis": "这组数据的平均数是 4，各数与平均数的差是 -2、-1、0、1、2，差的平方是 4、1、0、1、4，它们的和是 4+1+0+1+4=10，方差是 10÷5=2，所以填 2。",
+          "difficulty": 2,
+          "knowledge_point": "方差与数据的稳定性",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "甲、乙两组数据的平均数分别是 10 和 10，方差分别是 1 和 4，则下列说法正确的是（  ）",
+          "options": [
+            "甲组数据比乙组数据稳定",
+            "乙组数据比甲组数据稳定",
+            "两组数据一样稳定",
+            "无法比较两组的稳定性"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "方差衡量数据的波动程度，方差越小数据越稳定。甲的方差 1 小于乙的方差 4，所以甲组数据更稳定，选 A。平均数相同时只能靠方差比较稳定性。",
+          "difficulty": 2,
+          "knowledge_point": "方差与数据的稳定性",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "方差越大，说明这组数据的波动越小。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "方差是各数据与平均数差的平方的平均，反映的是数据的波动程度。方差越大说明数据偏离平均数越远、波动越大，所以说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "方差与数据的稳定性",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "甲、乙两名射击运动员各射 5 次，成绩（环）分别是：甲 7、9、8、9、7；乙 8、8、9、9、6。请比较两名运动员成绩的平均数与方差，并说明谁的成绩更稳定。",
+          "answer": {
+            "value": "甲、乙两组的平均数都是 8。甲的方差是 (1+1+0+1+1)÷5=4÷5=0.8，乙的方差是 (0+0+1+1+4)÷5=6÷5=1.2。甲的方差小，所以甲的成绩更稳定。"
+          },
+          "analysis": "评分要点：①写出甲、乙两组的平均数都是 8（1 分）；②正确写出甲的方差 4÷5=0.8 与乙的方差 6÷5=1.2（3 分）；③比较后得出甲更稳定的结论并说明理由（2 分）；④表述完整（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "方差与数据的稳定性",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "一组数据 3、5、7、8、9 的中位数是（  ）",
+          "options": [
+            "5",
+            "7",
+            "8",
+            "6"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "先把数据从小到大排列（本题已排好），共有 5 个数，正中间的第 3 个数是 7，所以中位数是 7，选 B。数据个数为奇数时，中位数就是正中间的那个数。",
+          "difficulty": 2,
+          "knowledge_point": "中位数与众数",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "数据 2、4、4、6、9、11 的中位数是（  ），众数是（  ）。",
+          "answer": {
+            "value": [
+              "5",
+              "4"
+            ]
+          },
+          "analysis": "数据已排好，共 6 个数，中间两个是第 3 个和第 4 个，即 4 和 6，它们的和是 4+6=10，再除以 2 得 10÷2=5，所以中位数是 5；出现次数最多的数是 4，所以众数是 4。",
+          "difficulty": 2,
+          "knowledge_point": "中位数与众数",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "中位数一定是数据中的某一个数。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "当数据个数是偶数时，中位数是中间两个数的平均数，不一定出现在数据中。例如数据 1、2、3、5，中间两个数是 2 和 3，2+3=5，5÷2=2.5，2.5 并不在这组数据里，所以说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "中位数与众数",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "一组数据 4、6、6、8、9、10 的众数和中位数分别是（  ）",
+          "options": [
+            "6 和 7",
+            "7 和 6",
+            "6 和 6",
+            "8 和 7"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "6 出现了两次而其他数只出现一次，所以众数是 6；数据共 6 个，中间两个是 6 和 8，6+8=14，14÷2=7，所以中位数是 7。众数与中位数不一定是同一个数，选 A。",
+          "difficulty": 3,
+          "knowledge_point": "中位数与众数",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列关于中位数和众数的说法，正确的有（  ）",
+          "options": [
+            "中位数把一组数据分成了大小相等的两部分",
+            "众数是出现次数最多的数据",
+            "一组数据的中位数只有一个",
+            "一组数据的众数也只有一个"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 中位数左右的数据个数相等 ✓；B 众数就是出现次数最多的那个数 ✓；C 中位数只有一个（偶数个数据时取中间两数的平均数）✓；D 众数可以不止一个，例如 3、3、5、5 的众数就有 3 和 5 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "中位数与众数",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "一组数据 2、4、6、8、10 画成箱线图时，箱体左边框表示的数是（  ）",
+          "options": [
+            "2",
+            "4",
+            "6",
+            "8"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "箱线图把数据从小到大排列后分成两半，左半部分的中间数是箱体左边框，右半部分的中间数是右边框，箱体内那条线是中位数。数据 2、4、6、8、10 中，左半是 2、4，中间数是 4，所以左边框是 4，选 B。",
+          "difficulty": 3,
+          "knowledge_point": "箱线图与数据分析",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "数据 3、5、7、9、11、13 画成箱线图时，箱体右边框表示的数是（  ）。",
+          "answer": {
+            "value": "11"
+          },
+          "analysis": "数据共 6 个，6÷2=3，所以左右两半各有 3 个数：左半是 3、5、7，右半是 9、11、13。箱体左边框取左半部分的中间数 5，右边框取右半部分的中间数 11，所以填 11；箱体内那条线表示全部数据的中位数 8。",
+          "difficulty": 3,
+          "knowledge_point": "箱线图与数据分析",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "箱线图既能反映一组数据的分布情况，也能看出这组数据的极差。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "箱线图把数据分成最小值、两个四分位数和最大值四段，因此既能反映数据的集中与离散情况；最左端到最右端的距离就是极差，也能直接看出，所以命题正确。",
+          "difficulty": 3,
+          "knowledge_point": "箱线图与数据分析",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳某小学对全校学生做视力筛查，随机抽取了 8 名八年级学生的视力数据（标准对数视力）：4.6、4.4、4.2、4.2、4.0、4.0、3.8、3.6。请回答：（1）这组数据的平均数和中位数分别是多少？（2）这组数据的众数是什么？（3）由这组数据看，样本视力主要集中在哪个范围？",
+          "answer": {
+            "value": "（1）平均数是 32.8÷8=4.1，中位数是中间两个数 4.0 与 4.2 的平均数，即 4.1；（2）4.0 与 4.2 各出现两次，所以众数有两个：4.0 和 4.2；（3）8 个数据中有 4 个落在 4.0 到 4.2 之间，说明样本视力主要集中在 4.0 至 4.2 这一段。"
+          },
+          "analysis": "评分要点：①第（1）问写出 32.8÷8=4.1 并求出中位数 4.1（2 分）；②第（2）问指出众数有两个，是 4.0 和 4.2（2 分）；③第（3）问根据数据说明样本视力主要集中在 4.0 至 4.2 之间（2 分）；④表述完整（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "箱线图与数据分析",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "情境应用"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "甲、乙两名射击运动员的平均成绩都是 8 环，甲的方差是 0.8，乙的方差是 1.2。若要选一名成绩更稳定的选手参加比赛，应该选（  ）",
+          "options": [
+            "甲",
+            "乙",
+            "两人一样稳定",
+            "无法判断"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "平均数相同的情况下要比较方差，方差小说明数据波动小、更稳定。0.8 小于 1.2，所以甲更稳定，应选甲。这正是「平均数相同用方差比」这一典型模型的考法。",
+          "difficulty": 3,
+          "knowledge_point": "平均数方差与决策",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于平均数、中位数与众数关系的说法，正确的有（  ）",
+          "options": [
+            "一组数据中，平均数、中位数、众数可能三者相等",
+            "一组数据中，众数、中位数、平均数可能三者互不相等",
+            "平均数受极端数据的影响比中位数大",
+            "中位数受极端数据的影响比平均数大"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 例如 1、1、1、1 这组数据，三者都等于 1 ✓；B 例如 2、3、8、9 这组数据，众数是 2、中位数是 3.5、平均数是 5.5，三者互不相等 ✓；C 平均数把所有数据都纳入计算，个别极端值会明显拉动它 ✓；D 说反了，中位数只取中间位置，反而比平均数更不受极端数据影响 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "平均数方差与决策",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "甲、乙两班各有 5 名学生参加数学竞赛，成绩（分）分别是甲 90、85、80、75、70 与乙 88、86、84、82、80。甲班的平均成绩是 80 分，方差是 50；乙班的平均成绩是 84 分，方差是 8。若要选一个成绩更整齐的班参加校级展演，应选（  ）班。",
+          "answer": {
+            "value": "乙"
+          },
+          "analysis": "方差的单位是平方分，甲是 50，乙是 8。方差越小说明成绩越整齐，8÷50=0.16，乙班的方差不到甲班的五分之一，所以应选乙班。",
+          "difficulty": 4,
+          "knowledge_point": "平均数方差与决策",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳某中学有两个读书社团，社员阅读量（万字）如下：甲社团 5 人分别是 12、15、18、20、25；乙社团 5 人分别是 14、15、16、17、18。请回答：（1）两个社团的平均阅读量各是多少？（2）哪个社团的阅读量更整齐？（3）若学校要推荐一个社团参加市级展示，你建议推荐哪一个并说明理由。",
+          "answer": {
+            "value": "（1）甲社团的平均阅读量是 90÷5=18 万字，乙社团的平均阅读量是 80÷5=16 万字；（2）甲的方差是 98÷5=19.6，乙的方差是 10÷5=2，乙的方差小得多，所以乙社团阅读量更整齐；（3）若学校看重整体阅读量水平，建议推荐甲社团，因为它的平均阅读量 18 万字明显高于乙社团的 16 万字；若更看重整齐程度，则推荐乙社团。"
+          },
+          "analysis": "评分要点：①第（1）问分别写出 90÷5=18 与 80÷5=16（2 分）；②第（2）问算出甲的方差 98÷5=19.6 与乙的方差 10÷5=2，并判断乙社团更整齐（3 分）；③第（3）问给出明确的建议并结合平均数或方差说明理由（2 分）；④表述完整（1 分）。",
+          "difficulty": 5,
+          "knowledge_point": "平均数方差与决策",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "情境应用"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "某校评选「书香班级」，甲班 40 名同学的月均阅读量平均数是 6 本、方差是 2.4；乙班 40 名同学的平均数也是 6 本、方差是 1.2。若评委更看重各班成绩的整齐程度，应优先评选（  ）",
+          "options": [
+            "甲班",
+            "乙班",
+            "两班一样",
+            "无法确定"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "两班平均数相同，要比较稳定性就看方差。乙班方差 1.2 小于甲班方差 2.4，1.2÷2.4=0.5，说明乙班的方差只有甲班的一半，数据更整齐，所以应优先评选乙班。",
+          "difficulty": 4,
+          "knowledge_point": "平均数方差与决策",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第七章 证明",
+      "order_index": 7,
+      "summary": "命题与结论的基本认识、证明的一般步骤与书写要求，以及平行线的判定依据与性质的应用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "下列语句中，是命题的是（  ）",
+          "options": [
+            "深圳的夏天很热",
+            "深圳的夏天热不热",
+            "请说出深圳的夏天热不热",
+            "深圳的夏天有多热"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "命题必须是对一件事作出的判断，能判断真或假。A「深圳的夏天很热」是判断句 ✓；B、C、D 都是疑问句，没有作出任何判断 ✗。所以选 A。",
+          "difficulty": 1,
+          "knowledge_point": "命题与结论",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "情境应用"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「如果两个角是对顶角，那么这两个角相等」这句话是（  ）（填「真命题」或「假命题」）。",
+          "answer": {
+            "value": "真命题"
+          },
+          "analysis": "对顶角相等是公理，这条语句正是对顶角性质的应用，所以它是真命题，填真命题。判断真假的依据必须是已有事实或已证结论，不能靠印象。",
+          "difficulty": 2,
+          "knowledge_point": "命题与结论",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "要说明某个命题是假命题，只需举出一个反例。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "只要找到一组满足命题条件却不满足结论的情形，这个情形就是反例，它足以推翻整个命题。所以举反例是证明假命题的基本方法，命题正确。",
+          "difficulty": 2,
+          "knowledge_point": "命题与结论",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列命题中，是假命题的是（  ）",
+          "options": [
+            "同位角相等，两直线平行",
+            "同旁内角互补，两直线平行",
+            "有一个角是直角的三角形是直角三角形",
+            "有两边相等的三角形是等腰三角形"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "同位角相等并不能推出两直线平行，例如两条相交的直线被第三条直线所截时同位角也相等，所以 A 是假命题 ✓；B 是判定平行的标准依据，是真命题 ✓；C、D 都是真命题 ✓。所以选 A。",
+          "difficulty": 3,
+          "knowledge_point": "命题与结论",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列语句中，是命题的有（  ）",
+          "options": [
+            "两条直线平行，同位角相等",
+            "直角三角形有两个锐角",
+            "请写出 3 的平方",
+            "10 是偶数"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 是对两条直线平行这一关系的判断 ✓；B 是对直角三角形形状的判断，能判断真假 ✓；C 是祈使句，没有作出判断 ✗；D 10 能被 2 整除，是偶数，是判断句 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "命题与结论",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "证明的一般步骤是（  ）",
+          "options": [
+            "提出问题、寻找条件、确定结论、寻找证明路径、写出证明过程",
+            "已知、求解、检验、得出结论",
+            "设未知数、列方程、解方程、作答",
+            "画图、测量、计算、得出结论"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "证明的一般过程是提出问题、寻找条件、确定结论、寻找证明路径、写出证明过程。选项 B 是解应用题的步骤，C 是列方程解方程的步骤，D 是实验探究的步骤，只有 A 属于证明，所以选 A。",
+          "difficulty": 2,
+          "knowledge_point": "证明的基本过程",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "在证明「同位角相等，两直线平行」时，已知条件是「两条直线被第三条直线所截，同位角相等」，要说明的结论是「（  ）」。",
+          "answer": {
+            "value": "这两条直线平行"
+          },
+          "analysis": "证明的结构是已知条件加上有根据的推理，得到结论。本题已知同位角相等，要说明的结论就是这两条直线平行，填「这两条直线平行」。",
+          "difficulty": 2,
+          "knowledge_point": "证明的基本过程",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「测量三角形三个内角的度数，它们的和为 180 度」这一结论的获得方法是（  ）",
+          "options": [
+            "实验测量法",
+            "逻辑推理法",
+            "举例法",
+            "反证法"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "通过测量几个具体的三角形、用归纳的方法得出结论，属于实验测量（归纳）方法；只有从前人已有结论出发，经过有逻辑的推理得到结论，才叫证明。所以选 A，不能把归纳当证明。",
+          "difficulty": 3,
+          "knowledge_point": "证明的基本过程",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "证明是一个推理过程，因此证明所得的结论一定是真命题。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "证明是从已知条件出发，通过有根据的推理得到结论的过程，结论必须为真。如果推理过程中有一步站不住脚，整个证明就失效了，所以命题正确。",
+          "difficulty": 3,
+          "knowledge_point": "证明的基本过程",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "小华要证明「直线 AB 与直线 CD 平行」。他先量出两个角分别是 40 度和 140 度，就直接得出 AB∥CD 的结论。请指出他的推理中必须补充的条件，并写出完整的推理过程。",
+          "answer": {
+            "value": "必须补充的条件是这两个角是直线 AB、CD 被第三条直线所截得到的同旁内角。因为 40+140=180，即两个角互补，所以根据「同旁内角互补，两直线平行」可以判定 AB∥CD。"
+          },
+          "analysis": "评分要点：①指出必须说明这两个角是同旁内角（3 分）；②写出 40+140=180 说明两角互补（2 分）；③写出依据「同旁内角互补，两直线平行」得出 AB∥CD 的结论（2 分）；④表述完整（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "证明的基本过程",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列条件中，能判定两直线平行的是（  ）",
+          "options": [
+            "同位角互补",
+            "内错角互补",
+            "同旁内角相等",
+            "内错角相等"
+          ],
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "判定两直线平行的三个依据是同位角相等、内错角相等、同旁内角互补。逐项检验：同位角互补不能判定平行 ✗；内错角互补不能判定平行 ✗；同旁内角相等不能判定平行 ✗；内错角相等可以判定平行 ✓。所以选 D。",
+          "difficulty": 1,
+          "knowledge_point": "平行线的判定",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "两条直线被第三条直线所截，如果同旁内角之和为 180 度，那么这两条直线（  ）。",
+          "answer": {
+            "value": "平行"
+          },
+          "analysis": "同旁内角互补是判定两直线平行的依据，同旁内角之和为 180 度就是互补，所以这两条直线平行，填平行。注意是「互补」而不是「相等」。",
+          "difficulty": 2,
+          "knowledge_point": "平行线的判定",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "已知直线 l1∥l2，直线 l3 与 l1、l2 都相交，则 l1 与 l2 的位置关系是（  ）",
+          "options": [
+            "相交",
+            "平行",
+            "垂直",
+            "无法确定"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "题目已经给出 l1∥l2，所以它们的位置关系就是平行，选 B。不能因为第三条直线 l3 与它们都相交就改变 l1 与 l2 之间的关系。",
+          "difficulty": 3,
+          "knowledge_point": "平行线的判定",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "在同一平面内，不相交的两条直线叫做平行线。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "这是平行线的定义本身：同一平面内不相交的两条直线叫平行线。当然也可以用同位角相等、内错角相等等判定定理来说明两条直线平行，命题正确。",
+          "difficulty": 2,
+          "knowledge_point": "平行线的判定",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "已知 AB∥CD，直线 EF 截这两条直线，∠1 与 ∠2 是一对内错角，若 ∠1=70 度，则 ∠2 = （  ）度",
+          "options": [
+            "70 度",
+            "110 度",
+            "140 度",
+            "无法确定"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "因为 AB∥CD，由「两直线平行，内错角相等」知 ∠2 等于 ∠1，都是 70 度，所以选 A。已知平行求角用性质，已知角相等求平行用判定，方向不要混。",
+          "difficulty": 4,
+          "knowledge_point": "平行线的判定",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "两条直线被第三条直线所截，若内错角相等，就能判定这两条直线平行。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「内错角相等，两直线平行」是判定两直线平行的依据之一，所以命题正确。要注意这里必须是内错角或同位角相等，同旁内角则要求互补。",
+          "difficulty": 3,
+          "knowledge_point": "平行线的判定",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列条件中，能判定两直线平行的有（  ）",
+          "options": [
+            "同位角相等",
+            "内错角相等",
+            "同旁内角互补",
+            "内错角互补"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 同位角相等可以判定两直线平行 ✓；B 内错角相等可以判定两直线平行 ✓；C 同旁内角互补可以判定两直线平行 ✓；D 内错角互补不能判定两直线平行 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 2,
+          "knowledge_point": "平行线的判定",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳某中学在校园里修了两条笔直的小路，两条小路都与一条林荫道相交。请你设计一个测量方案，用角的关系证明这两条小路互相平行，并写出你依据的判定定理。",
+          "answer": {
+            "value": "测量方案：在林荫道上任取一点 O，以 O 为顶点分别在与两条小路的交点方向截取相等的线段 OP、OQ，再用量角器分别测出 OP、OQ 与林荫道所成的两个角。若这两个角相等，因为它们是同位角，根据「同位角相等，两直线平行」可判定两条小路互相平行；也可以改为测量同旁内角，若这两个同旁内角互补，则由「同旁内角互补，两直线平行」判定两条小路互相平行。"
+          },
+          "analysis": "评分要点：①给出可操作的测量步骤（截取相等线段、测量角）（3 分）；②明确指出所量的两个角是同位角还是同旁内角（1 分）；③写出正确的判定定理名称（3 分）；④表述完整（1 分）。只写「因为相等所以平行」而不说清是哪一对角，扣 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "平行线的判定",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "情境应用"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "已知 AB∥CD，直线 EF 分别与 AB、CD 相交，∠1 与 ∠2 是一对同位角，若 ∠1=70 度，则 ∠2 = （  ）度",
+          "options": [
+            "70 度",
+            "110 度",
+            "140 度",
+            "无法确定"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "由「两直线平行，同位角相等」知 ∠2 等于 ∠1，都是 70 度，所以选 A。性质是由平行推相等，与「同位角相等推平行」的判定方向相反。",
+          "difficulty": 2,
+          "knowledge_point": "平行线的性质",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "两条平行线被第三条直线所截，其中一对同旁内角为 60 度和（  ）度。",
+          "answer": {
+            "value": "120"
+          },
+          "analysis": "两直线平行，同旁内角互补，所以另一个角是 180-60=120 度，填 120。检验：60+120=180，正好互补。",
+          "difficulty": 3,
+          "knowledge_point": "平行线的性质",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "已知 AB∥CD，∠1=40 度，∠2=140 度，则 ∠1 与 ∠2 一定是（  ）",
+          "options": [
+            "同位角",
+            "内错角",
+            "同旁内角",
+            "对顶角"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "40+140=180，两个角互补；又因为 AB∥CD，同旁内角互补，所以 ∠1 与 ∠2 是一对同旁内角，选 C。这道题要同时用到「平行」与「互补」两个条件，只看角度关系不够。",
+          "difficulty": 3,
+          "knowledge_point": "平行线的性质",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "两直线平行时，同旁内角一定互补。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "这是「两直线平行，同旁内角互补」这条性质，它正是判定「同旁内角互补，两直线平行」的依据，命题正确。",
+          "difficulty": 3,
+          "knowledge_point": "平行线的性质",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "已知 AB∥CD，∠1 与 ∠2 是一对内错角，且 ∠1=65 度，则 ∠2 = （  ）度",
+          "options": [
+            "65 度",
+            "115 度",
+            "130 度",
+            "无法确定"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "由「两直线平行，内错角相等」知 ∠2 等于 ∠1，都是 65 度，所以选 A。若错选 115 度，那是把同旁内角互补的结论套过来了，性质不能混用。",
+          "difficulty": 4,
+          "knowledge_point": "平行线的性质",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "两直线平行时的下列说法，正确的有（  ）",
+          "options": [
+            "两直线平行，同位角相等",
+            "两直线平行，内错角相等",
+            "两直线平行，同旁内角相等",
+            "两直线平行，同旁内角互补"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 是平行线的性质 ✓；B 是平行线的性质 ✓；C 两直线平行时同旁内角是互补而不是相等 ✗；D 是平行线的性质 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "平行线的性质",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳地铁隧道的两条轨道互相平行，检修梯与它们相交，其中一个角是 75 度。请回答：（1）与这个角相邻的补角是多少度？（2）与这个角构成内错对的角是多少度？写出你用到的平行线性质名称。",
+          "answer": {
+            "value": "（1）与 75 度相邻的补角是 180-75=105 度；（2）与它构成内错角的角是 75 度，用到的是「两直线平行，内错角相等」这条性质。"
+          },
+          "analysis": "评分要点：①第（1）问写出 180-75=105 度（3 分）；②第（2）问答出内错角为 75 度（2 分）；③正确写出所用性质「两直线平行，内错角相等」（2 分）；④表述完整（1 分）。",
+          "difficulty": 5,
+          "knowledge_point": "平行线的性质",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "情境应用"
+          ]
+        }
+      ]
+    }
+  ],
+  "_consolidated": {
+    "generated_at": "2026-11-09T04:23:36",
+    "rule": "非 legacy > 批次日期最新 > 题量最多 > mtime 最新",
+    "sources": [
+      {
+        "chapter": "第一章 勾股定理",
+        "file": "math_g8_first_20261108_r8.json",
+        "questions": 24
+      },
+      {
+        "chapter": "第二章 实数",
+        "file": "math_g8_first_20261108_r2.json",
+        "questions": 26
+      },
+      {
+        "chapter": "第三章 位置与坐标",
+        "file": "math_g8_first_20261108_r3.json",
+        "questions": 22
+      },
+      {
+        "chapter": "第四章 一次函数",
+        "file": "math_g8_first_20261108_r4.json",
+        "questions": 26
+      },
+      {
+        "chapter": "第五章 二元一次方程组",
+        "file": "math_g8_first_20261108_r5.json",
+        "questions": 23
+      },
+      {
+        "chapter": "第六章 数据的分析",
+        "file": "math_g8_first_20261108_r6.json",
+        "questions": 24
+      },
+      {
+        "chapter": "第七章 证明",
+        "file": "math_g8_first_20261108_r7.json",
+        "questions": 25
+      }
+    ],
+    "dropped_sections": [],
+    "reused_point_names_not_redeclared": [],
+    "outside_outline_skipped": [
+      "勾股定理"
+    ]
+  }
+}

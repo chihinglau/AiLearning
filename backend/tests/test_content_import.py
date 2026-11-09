@@ -1,7 +1,11 @@
 from sqlalchemy import select
 
 from app.models.content import Chapter, KnowledgePoint, Question, Textbook
-from app.services.content_import import import_document, validate_document
+from app.services.content_import import (
+    SKELETON_SUMMARY,
+    import_document,
+    validate_document,
+)
 
 
 def _document():
@@ -80,6 +84,25 @@ def test_import_is_idempotent(db):
     assert second["chapters_created"] == 0
     assert second["knowledge_created"] == 0
     assert len(list(db.scalars(select(Question)))) == 2
+
+
+def test_skeleton_summary_cleared_by_real_content(db):
+    """教材目录骨架的占位摘要：正式内容导入后清空，骨架重导不会写回。"""
+    skeleton = _document()
+    skeleton["chapters"][0]["summary"] = SKELETON_SUMMARY
+    import_document(db, skeleton)
+    chapter = db.scalar(select(Chapter))
+    assert chapter.summary == SKELETON_SUMMARY
+
+    # 正式内容（整册/单元模板）不带 summary → 占位文案清空
+    import_document(db, _document())
+    db.refresh(chapter)
+    assert chapter.summary is None
+
+    # 骨架文件重导不能把占位文案复活
+    import_document(db, skeleton)
+    db.refresh(chapter)
+    assert chapter.summary is None
 
 
 def test_same_name_point_gets_unique_suffix(db):

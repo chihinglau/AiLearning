@@ -7,6 +7,8 @@
 
     python db_ops.py import --date 20261108 --confirm I_KNOW
     python db_ops.py import --date 20261108 --dry-run --confirm I_KNOW
+    python db_ops.py import-books --stamp 20261109 --confirm I_KNOW          # 整册（daily_consolidated）
+    python db_ops.py import-books --stamp 20261109 --dry-run --confirm I_KNOW
     python db_ops.py restore --backup <backup.db> --force --confirm I_KNOW
     python db_ops.py audit --since <backup.db> --out db_op_<date>_<HHMMSS>.json
 
@@ -265,6 +267,104 @@ def cmd_import(cfg: dict, args) -> None:
         die("有新增题目的题干未查到，请检查导入日志；备份仍可用上述命令回退", code=1)
 
 
+def cmd_import_books(cfg: dict, args) -> None:
+    """整册入库：`daily_consolidated/**/*_<stamp>_book.json`。
+
+    与 `import` 的差别：daily 分片按「批次日期」扫 `daily_dir`，整册文件在另一棵目录树、
+    文件名是 `*_book.json`（归集器产出），`import --date` 永远扫不到它们。此命令把
+    整册文件单独走一遍「校验 → 备份 → 试跑 → 正式导入 → 逐册核对 → 报告」。
+    """
+    backend, _, importer, backuper = backend_paths(cfg)
+    url = db_url_of(cfg)
+    db = db_path_of(cfg, url)
+    manifest = P(cfg, "manifest")
+    books_dir = P(cfg, "content_root") / "daily_consolidated"
+    stamp = args.stamp or ""
+    pattern = f"*_{stamp}_book.json" if stamp else "*_book.json"
+    for path, label in ((importer, "import_content.py"), (backuper, "db_backup.py"), (db, "目标数据库")):
+        if not path.is_file():
+            die(f"{label} 不存在：{path}")
+    if not books_dir.is_dir():
+        die(f"整册目录不存在：{books_dir}（先跑 _consolidate_daily.py --apply）")
+    files = sorted(books_dir.rglob(pattern))
+    if not files:
+        die(f"没有找到整册文件：{books_dir} / {pattern}")
+
+    print(f"# 整册入库 · {pattern} · 库 {db}")
+    print(f"- 整册文件 {len(files)} 份")
+
+    validator = P(cfg, "validator")
+    version_map = P(cfg, "baseline_dir") / "_subject-version-map.json"
+    argv = [str(P(cfg, "python")), str(validator), str(books_dir), "--manifest", str(manifest)]
+    if version_map.is_file():
+        argv += ["--version-map", str(version_map)]
+    proc = subprocess.run(argv, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                          text=True, encoding="utf-8", errors="replace",
+                          env=dict(os.environ, PYTHONIOENCODING="utf-8"))
+    rc, vout = proc.returncode, (proc.stdout or "").strip()
+    tail = vout.splitlines()[-4:]
+    print("\n".join("  " + ln for ln in tail))
+    if rc != 0:
+        die(f"整册校验未通过（exit {rc}），先修整册文件再入库；备份尚未创建")
+
+    before = db_stats(db)
+    print(f"- 入库前统计：{before}")
+    backup = backup_db(cfg, url)
+
+    base = ["-m", "scripts.import_content", "--path", str(books_dir), "--pattern", pattern]
+    if args.overwrite:
+        base += ["--overwrite"]
+    rc, dry = run_backend(cfg, base + ["--dry-run"], env_extra={"DATABASE_URL": url})
+    print(f"- 试跑（dry-run，已回滚）：EXIT={rc}")
+    if dry:
+        print("\n".join("  " + ln for ln in dry.splitlines()[-8:]))
+    if rc != 0:
+        die(f"试跑未通过，已中止；数据库未改动。回退备份：{backup}")
+
+    if args.dry_run:
+        print(f"[试跑完成] 未写入数据库；备份已保留：{backup}")
+        print(f"[回退命令] Copy-Item -Force \"{backup}\" \"{db}\"")
+        return
+
+    rc, result = run_backend(cfg, base + ["--manifest", str(manifest)],
+                             env_extra={"DATABASE_URL": url})
+    print(f"- 正式导入：EXIT={rc}")
+    if result:
+        print("\n".join("  " + ln for ln in result.splitlines()[-10:]))
+    if rc != 0:
+        die(f"导入有失败文件（幂等，可修后重跑）。整体回退：Copy-Item -Force \"{backup}\" \"{db}\"")
+
+    after = db_stats(db)
+    delta = {t: after[t] - before[t] for t in IMPORT_TABLES}
+    stems = db_stems(db)
+    verified = {}
+    for fp in files:
+        qs = stems_of(fp)
+        verified[fp.name] = {"questions": len(qs),
+                             "stems_in_db": sum(1 for s in qs if s.strip() in stems)}
+    all_in = all(v["stems_in_db"] == v["questions"] for v in verified.values())
+    report = {
+        "mode": "books", "stamp": stamp, "database_url": url, "database": str(db),
+        "backup": str(backup), "restore_hint": f"Copy-Item -Force \"{backup}\" \"{db}\"",
+        "files_total": len(files), "pattern": pattern, "overwrite": bool(args.overwrite),
+        "stats_before": before, "stats_after": after, "stats_delta": delta,
+        "pending_verification": verified, "all_book_stems_in_db": all_in,
+        "import_tail": (result or "").splitlines()[-20:],
+    }
+    report_path = HERE / f"import_report_books_{datetime.now():%Y%m%d_%H%M%S}.json"
+    report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"- 入库后统计：{after}")
+    print(f"- 增量：{delta}")
+    for name, v in verified.items():
+        if v["stems_in_db"] != v["questions"]:
+            print(f"  [未命中] {name}: {v['stems_in_db']}/{v['questions']}（整册题量 vs 库内命中）")
+    print(f"- 报告：{report_path}")
+    print(f"[完成] 整册题目全部可查={all_in}；回退：{report['restore_hint']}")
+    if not all_in:
+        print("[提醒] 有题目未按题干查到：多见于同册旧内容还在库内、或题干空白，请逐册核对后再定是否回退",
+              file=sys.stderr)
+
+
 def cmd_restore(cfg: dict, args) -> None:
     backup = Path(args.backup).expanduser()
     if not backup.is_file():
@@ -465,6 +565,13 @@ def main() -> int:
                     help="同步已存在题目的字段（如调整后的 difficulty）；不传时同题干题按幂等跳过")
     sp.add_argument("--confirm", required=True, choices=["I_KNOW"],
                     help="显式确认会写数据库；教研会话禁止传入")
+    sp = sub.add_parser("import-books",
+                        help="整册入库：daily_consolidated/**/*_<stamp>_book.json（校验→备份→试跑→导入→核对）")
+    sp.add_argument("--stamp", help="整册文件名里的批次日期 YYYYMMDD；不传则导全部 *_book.json")
+    sp.add_argument("--dry-run", action="store_true", help="只校验 + 备份 + 试跑，不写数据库")
+    sp.add_argument("--overwrite", action="store_true", help="同步已存在题目的字段")
+    sp.add_argument("--confirm", required=True, choices=["I_KNOW"],
+                    help="显式确认会写数据库；教研会话禁止传入")
     sp = sub.add_parser("restore")
     sp.add_argument("--backup", required=True, help="备份 .db 路径")
     sp.add_argument("--force", action="store_true", help="确认覆盖当前数据库")
@@ -477,7 +584,8 @@ def main() -> int:
     sp.add_argument("--json", action="store_true", help="同时把报告打印到 stdout")
     args = ap.parse_args()
     cfg = load_cfg()
-    {"import": cmd_import, "restore": cmd_restore, "audit": cmd_audit}[args.cmd](cfg, args)
+    {"import": cmd_import, "import-books": cmd_import_books, "restore": cmd_restore,
+     "audit": cmd_audit}[args.cmd](cfg, args)
     return 0
 
 

@@ -1,0 +1,378 @@
+{
+  "subject": "chinese",
+  "grade": 1,
+  "version": "人教版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "3 口耳目手足",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "口耳目手足认读",
+      "parent": "3 口耳目手足",
+      "order_index": 1,
+      "explanation": "「口、耳、目、手、足」都是身体的部位，读准字音、认清字形，能把字和身体部位对应起来。",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "日与目的形近辨字",
+      "parent": "3 口耳目手足",
+      "order_index": 2,
+      "explanation": "「日」共 4 画，中间一横；「目」共 5 画，中间两横。写的时候少一横就成了「日」，多一横就成了「目」。",
+      "prerequisites": [
+        "口耳目手足认读"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "基本笔画撇与竖弯钩",
+      "parent": "3 口耳目手足",
+      "order_index": 3,
+      "explanation": "撇是自右上向左下的一笔（丿）；竖弯钩是先竖后向右弯再向上钩（乚）。这两个笔画是写好「手」「毛」等字的关键。",
+      "prerequisites": [
+        "日与目的形近辨字"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "象形字初步",
+      "parent": "3 口耳目手足",
+      "order_index": 4,
+      "explanation": "古人照着事物的样子造字，「日、月、山、川」这类字叫象形字，看字形能猜出意思。",
+      "prerequisites": [
+        "基本笔画撇与竖弯钩"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "身体部位字组词",
+      "parent": "3 口耳目手足",
+      "order_index": 5,
+      "explanation": "用「口、耳、目、手、足」组词，如「门口、耳朵、目光、双手、足球」，组词要搭配合理。",
+      "prerequisites": [
+        "象形字初步"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一单元 识字",
+      "order_index": 1,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「口」的正确读音是（  ）",
+          "options": [
+            "kǒu",
+            "kòu",
+            "kōu",
+            "gǒu"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「口」读 kǒu，第三声，声母是 k，韵母是 ou。",
+          "difficulty": 2,
+          "knowledge_point": "口耳目手足认读",
+          "tags": [
+            "字音"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "「足」指的是人的脚。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「足」的本义就是脚，如「足球、手足」；不要与「走」混淆。",
+          "difficulty": 2,
+          "knowledge_point": "口耳目手足认读",
+          "tags": [
+            "字义"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「耳」的笔顺是横、竖、竖、横、横、横，它的第三笔是（  ）。",
+          "answer": {
+            "value": "竖"
+          },
+          "analysis": "「耳」共 6 画，笔顺依次是横（1）、竖（2）、竖（3）、横（4）、横（5）、横（6），所以第三笔是竖。",
+          "difficulty": 2,
+          "knowledge_point": "口耳目手足认读"
+        },
+        {
+          "q_type": "choice",
+          "stem": "在深圳的地铁站里，指示牌上的「出口」两个字中，「口」表示（  ）",
+          "options": [
+            "人说话和吃东西的器官",
+            "一个出入口",
+            "一个圆形",
+            "一种声音"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "「出口」里的「口」由「嘴」引申为「通道的门」，指可以进出的地方；题目考的是词语中的意思，不是本义。",
+          "difficulty": 2,
+          "knowledge_point": "口耳目手足认读",
+          "tags": [
+            "情境应用",
+            "字义"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列字中，与「日」笔画数相同的是（  ）",
+          "options": [
+            "手",
+            "目",
+            "口",
+            "足"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "A 手：撇、横、横、竖钩，4 画 ✓；B 目 5 画 ✗；C 口 3 画 ✗；D 足 7 画 ✗。所以只有 A 与「日」同为 4 画。",
+          "difficulty": 4,
+          "knowledge_point": "日与目的形近辨字",
+          "tags": [
+            "笔画"
+          ]
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列字中，笔画数不少于 5 画的有（  ）",
+          "options": [
+            "目",
+            "耳",
+            "足",
+            "口"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 目 5 画 ✓；B 耳 6 画 ✓；C 足 7 画 ✓；D 口 3 画 ✗。故 A、B、C 成立。",
+          "difficulty": 4,
+          "knowledge_point": "日与目的形近辨字",
+          "tags": [
+            "笔画",
+            "多选"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「目」的笔顺是竖、横折、横、横、横，它的第三笔是（  ）。",
+          "answer": {
+            "value": "横"
+          },
+          "analysis": "「目」五画依次是：竖（1）、横折（2）、横（3）、横（4）、横（5），第三笔是横。",
+          "difficulty": 3,
+          "knowledge_point": "日与目的形近辨字"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「日」和「目」的字形只差一横，所以可以通用。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "「日」4 画只有一横在中间，「目」5 画有两横；字形相近但意思不同（日指太阳、日子，目指眼睛），不能通用。",
+          "difficulty": 3,
+          "knowledge_point": "日与目的形近辨字"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列笔画中，名称与写法对应正确的是（  ）",
+          "options": [
+            "撇——丿",
+            "点——乚",
+            "横——丶",
+            "竖弯钩——一"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "A 撇写作丿 ✓；B 点是丶不是乚 ✗；C 横是一不是丶 ✗；D 竖弯钩是乚不是一 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "基本笔画撇与竖弯钩",
+          "tags": [
+            "笔画名称"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「手」共 4 画，笔顺是撇、横、横、竖钩，它的第四笔是（  ）。",
+          "answer": {
+            "value": "竖钩"
+          },
+          "analysis": "「手」四画：撇（1）、横（2）、横（3）、竖钩（4）。第四笔是竖钩，不是撇。",
+          "difficulty": 3,
+          "knowledge_point": "基本笔画撇与竖弯钩"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「乚」这个笔画叫竖弯钩。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "先写竖，再向右弯出，最后向上钩起，这一笔就是竖弯钩；「毛」「七」等字中都用到它。",
+          "difficulty": 2,
+          "knowledge_point": "基本笔画撇与竖弯钩"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列笔画名称与符号对应正确的有（  ）",
+          "options": [
+            "丶——点",
+            "丿——撇",
+            "一——横",
+            "乚——竖弯钩"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ]
+          },
+          "analysis": "A 丶是点 ✓；B 丿是撇 ✓；C 一是横 ✓；D 乚是竖弯钩 ✓。四项全部正确。",
+          "difficulty": 4,
+          "knowledge_point": "基本笔画撇与竖弯钩",
+          "tags": [
+            "笔画名称",
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列字中，属于象形字的是（  ）",
+          "options": [
+            "日",
+            "你",
+            "吗",
+            "的"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "A「日」像太阳的形状，是象形字 ✓；B「你」、C「吗」、D「的」都是后起的形声或会意字，不是象形字 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "象形字初步",
+          "tags": [
+            "造字法"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "「月」是根据月亮弯弯的样子造出来的字。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "甲骨文里的「月」就是一弯新月的样子，属于象形字。",
+          "difficulty": 2,
+          "knowledge_point": "象形字初步"
+        },
+        {
+          "q_type": "fill",
+          "stem": "「山」字的字形像（  ）的样子。",
+          "answer": {
+            "value": "山峰"
+          },
+          "analysis": "「山」中间一竖像最高的主峰，两边像较低的山峰，所以像山峰的样子。",
+          "difficulty": 2,
+          "knowledge_point": "象形字初步"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "深圳红树林的科普牌上出现了几个字，其中属于象形字的有（  ）",
+          "options": [
+            "日",
+            "月",
+            "山",
+            "说"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 日象太阳 ✓；B 月象月牙 ✓；C 山象山峰 ✓；D「说」从言旁、兑声，是形声字 ✗。故 A、B、C 成立。",
+          "difficulty": 4,
+          "knowledge_point": "象形字初步",
+          "tags": [
+            "情境应用",
+            "造字法",
+            "多选"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「足」的笔顺是竖、横折、横、竖、横、撇、捺，它的第一笔是（  ）。",
+          "answer": {
+            "value": "竖"
+          },
+          "analysis": "「足」共 7 画，第一笔是竖，不是横折；从左上往下写才符合笔顺规则。",
+          "difficulty": 3,
+          "knowledge_point": "身体部位字组词"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「口」「耳」「目」各写一个词语。",
+          "answer": {
+            "value": "门口；耳朵；目光"
+          },
+          "analysis": "参考答案：门口、耳朵、目光（也可以写「人口、木耳、目录」等）。评分要点：三个词语各 1 分，必须含指定的字且搭配合理；写出「口子」这类生造词不得分。",
+          "difficulty": 3,
+          "knowledge_point": "身体部位字组词",
+          "tags": [
+            "组词"
+          ],
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「耳目」这个词的意思是（  ）",
+          "options": [
+            "耳朵和眼睛",
+            "嘴巴和手",
+            "脚和手",
+            "头和尾"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「耳目」本义指耳朵和眼睛，如「耳目一新」；不是指嘴巴和手。",
+          "difficulty": 2,
+          "knowledge_point": "身体部位字组词",
+          "tags": [
+            "词义"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "「手足」除了指手和脚，还可以用来指兄弟。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「手足」本义是手和脚，引申为同胞兄弟，如「情同手足」；这里考的是引申义。",
+          "difficulty": 3,
+          "knowledge_point": "身体部位字组词",
+          "tags": [
+            "词义"
+          ]
+        }
+      ]
+    }
+  ]
+}

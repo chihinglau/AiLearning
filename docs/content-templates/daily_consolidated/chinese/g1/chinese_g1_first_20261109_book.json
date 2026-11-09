@@ -1,0 +1,4781 @@
+{
+  "subject": "chinese",
+  "grade": 1,
+  "version": "人教版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "1 ɑ o e",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "2 i u ü",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "3 b p m f",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "4 d t n l",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "语文园地二",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "单韵母的发音",
+      "parent": "1 ɑ o e",
+      "order_index": 1,
+      "weight": 1.3,
+      "explanation": "ɑ o e 是三个最简单的单韵母，发音时嘴形和舌位保持不变，统称单韵母。ɑ 嘴张最大，o 嘴唇收圆，e 嘴角向两边展开。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "ü的两点省略规则",
+      "parent": "2 i u ü",
+      "order_index": 2,
+      "weight": 1.2,
+      "explanation": "ü 上面的两点是它区别于 u 的标志，单独成音节或与 n、l 相拼时两点必须保留；i 标调时要先抹掉上面的点，才好写调号。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "单韵母的发音"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "双唇音与唇齿音",
+      "parent": "3 b p m f",
+      "order_index": 3,
+      "weight": 1.0,
+      "explanation": "b p m 是双唇音，发音时双唇开合；f 是唇齿音，上牙轻碰下唇。p 与 b 口型相同，区别只在送不送气。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "单韵母的发音"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "dtnl的拼读要领",
+      "parent": "4 d t n l",
+      "order_index": 4,
+      "weight": 1.0,
+      "explanation": "d t n l 都是舌尖抵上牙床的音，d 与 t 差在不送气，n 是鼻音、l 是边音，气流走的通道不同。h 与 f 的区别要靠口型判断。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "双唇音与唇齿音"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "音节拼读与字词积累",
+      "parent": "语文园地二",
+      "order_index": 5,
+      "weight": 1.1,
+      "explanation": "两拼音节拼读要「前音轻短后音重，两音相连碰一碰」；ɑ o e 开头的音节跟在别的音节后面时要用隔音符号隔开；语文园地二的日积月累是《画》，还要积累反义词、间架结构和用字写话。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "ü的两点省略规则"
+      ]
+    },
+    {
+      "node_type": "section",
+      "name": "5 g k h",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "6 j q x",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "7 z c s",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "8 zh ch sh r",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "9 y w",
+      "order_index": 5
+    },
+    {
+      "node_type": "section",
+      "name": "语文园地三",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "声母gkh的发音",
+      "parent": "5 g k h",
+      "order_index": 1,
+      "weight": 1.0,
+      "explanation": "g k h 都是舌根音，发音时舌根抬起抵住软腭。g 与 k 口型相同，只差在送不送气，h 是摩擦音，气流从口腔出来。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "ü与jqx相拼去两点",
+      "parent": "6 j q x",
+      "order_index": 2,
+      "weight": 1.3,
+      "explanation": "j q x 是舌面音，j 不送气、q 送气、x 是摩擦音。小 ü 见了 j q x 要摘掉帽子，写作 ju qu xu，两点不能保留。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "平舌音zcs的发音",
+      "parent": "7 z c s",
+      "order_index": 3,
+      "weight": 1.1,
+      "explanation": "z c s 是平舌音，发音时舌头平放在下牙齿后面，舌尖抵住下齿背。c 要送气，z 不送气；s 从舌齿缝里送气。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "声母gkh的发音"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "翘舌音zhchshr的发音",
+      "parent": "8 zh ch sh r",
+      "order_index": 4,
+      "weight": 1.2,
+      "explanation": "zh ch sh r 是翘舌音，舌尖要翘起来抵住上齿龈后部，读音比 z c s 靠后。读绕口令「四是四，十是十」时要分清平舌与翘舌。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "平舌音zcs的发音"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "yw与整体认读音节",
+      "parent": "9 y w",
+      "order_index": 5,
+      "weight": 1.2,
+      "explanation": "y w 后面不加声母，直接和韵母组成整体认读音节，如 yi wu yu。ü 与 y 相拼要去两点写成 yu，不能写成 yü。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "ü与jqx相拼去两点"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "数字词语与绕口令",
+      "parent": "语文园地三",
+      "order_index": 6,
+      "weight": 1.1,
+      "explanation": "语文园地三日积月累收集了六个带数字的词语，绕口令「四是四，十是十」练平舌与翘舌，识字加油站要按课程表积累组词。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "翘舌音zhchshr的发音"
+      ]
+    },
+    {
+      "node_type": "section",
+      "name": "10 ɑi ei ui",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "11 ɑo ou iu",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "12 ie üe er",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "13 ɑn en in un ün",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "14 ɑng eng ing ong",
+      "order_index": 5
+    },
+    {
+      "node_type": "section",
+      "name": "语文园地四",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "ɑi ei ui的拼读",
+      "parent": "10 ɑi ei ui",
+      "order_index": 1,
+      "weight": 1.2,
+      "explanation": "ɑi ei ui 都是复韵母，由两个字母组成，一口气读出来。标调要跟着标调歌走：有 ɑ 别放过，没 ɑ 找 o e，i u 并列标在后。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "ɑo ou iu的拼读",
+      "parent": "11 ɑo ou iu",
+      "order_index": 2,
+      "weight": 1.2,
+      "explanation": "ɑo ou iu 也是复韵母。i u 并列时标调标在后面那个字母上，所以 niú 标在 i 上，liù 标在 u 上，这是最容易混的一处。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "ɑi ei ui的拼读"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "ie üe er的拼读",
+      "parent": "12 ie üe er",
+      "order_index": 3,
+      "weight": 1.2,
+      "explanation": "ie üe 是复韵母，er 是特殊韵母，可以单独成一个音节。ie 与 ei、ui 与 iu 两组形近复韵母，要看字母顺序才能读准。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "ɑo ou iu的拼读"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "前鼻韵母的拼读",
+      "parent": "13 ɑn en in un ün",
+      "order_index": 4,
+      "weight": 1.2,
+      "explanation": "ɑn en in un ün 是前鼻韵母，读的时候舌尖抵住上牙床，声音从前鼻收住。ü 与 j q x 相拼要去两点，与 n、l 相拼要保留两点。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "ie üe er的拼读"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "后鼻韵母的拼读",
+      "parent": "14 ɑng eng ing ong",
+      "order_index": 5,
+      "weight": 1.2,
+      "explanation": "ɑng eng ing ong 是后鼻韵母，读的时候舌根抬起抵住软腭。分清 an 与 ang、en 与 eng、in 与 ing，是这一课最大的易错点。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "前鼻韵母的拼读"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "时间词语与标调歌",
+      "parent": "语文园地四",
+      "order_index": 6,
+      "weight": 1.3,
+      "explanation": "语文园地四要积累表示时间的词语，按「时、日、月、年」的顺序排列；同时巩固标调歌，区分 ie 与 ei、ui 与 iu，并背下《悯农（其二）》。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "后鼻韵母的拼读"
+      ]
+    },
+    {
+      "node_type": "section",
+      "name": "1 秋天",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "2 江南",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "3 雪地里的小画家",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "4 四季",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "语文园地五",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "秋天的景色与朗读",
+      "parent": "1 秋天",
+      "order_index": 1,
+      "weight": 1.2,
+      "explanation": "《秋天》按「凉了、黄了、落下来」「天蓝、天高」「大雁南飞」的顺序写秋天的景。朗读要读出凉意和欢喜，语气轻快，「啊！秋天来了！」要读出惊喜。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "江南的背诵与字词",
+      "parent": "2 江南",
+      "order_index": 2,
+      "weight": 1.2,
+      "explanation": "《江南》是汉乐府民歌，写采莲和鱼戏莲叶的江南水乡。「何田田」写荷叶茂盛，「间」是中间，合起来就是鱼在莲叶中间游来游去。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "小画家的对应关系",
+      "parent": "3 雪地里的小画家",
+      "order_index": 3,
+      "weight": 1.2,
+      "explanation": "小鸡画竹叶、小狗画梅花、小鸭画枫叶、小马画月牙，四组对应要背牢。不用颜料不用笔，几步就成一幅画，写的是小动物用脚印在雪地上作画。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "四季的拟人与积累",
+      "parent": "4 四季",
+      "order_index": 4,
+      "weight": 1.2,
+      "explanation": "《四季》用拟人的写法：草芽、荷叶、谷穗、雪人都会说话，分别代表春夏秋冬。尖尖、圆圆、弯弯写形状，一挺、顽皮写动作和神态。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "惜时名言与写话",
+      "parent": "语文园地五",
+      "order_index": 5,
+      "weight": 1.1,
+      "explanation": "语文园地五日积月累是惜时名句：一年之计在于春，一日之计在于晨；一寸光阴一寸金，寸金难买寸光阴。会写字有女、开、关、先，组词时要注意意思用对。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "秋天的景色与朗读"
+      ]
+    },
+    {
+      "node_type": "section",
+      "name": "5 对韵歌",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "6 日月明",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "7 小书包",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "8 升国旗",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "语文园地六",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "对韵歌的对仗词语",
+      "parent": "5 对韵歌",
+      "order_index": 1,
+      "weight": 1.2,
+      "explanation": "《对韵歌》一句一韵，云对雨、雪对风、花对树、鸟对虫，读起来抑扬顿挫。对仗就是前后两个词意思相对、读音相配，背的时候一句一句连起来背最牢。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "会意字的组合规律",
+      "parent": "6 日月明",
+      "order_index": 2,
+      "weight": 1.3,
+      "explanation": "《日月明》学的是会意字：日+月=明、小+土=尘、人+人=从、人+人+人=众、又+又=双、木+木=林、木+木+木=森。记住部件的意思，字义就明白了。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "对韵歌的对仗词语"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "小书包的生字与笔顺",
+      "parent": "7 小书包",
+      "order_index": 3,
+      "weight": 1.1,
+      "explanation": "《小书包》的会写字是早、书、刀、尺、本。书写要按笔顺：刀两画，本五画；组词时量词要配对，一本书、一把刀、尺子要分清。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "升国旗的生字与朗读",
+      "parent": "8 升国旗",
+      "order_index": 4,
+      "weight": 1.1,
+      "explanation": "《升国旗》写的是升旗仪式：国歌声中国旗徐徐升起，迎风飘扬；向着国旗我们立正，望着国旗我们敬礼。朗读要有庄重感，会写字中、五、立、正要注意笔顺。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "方向词语与古朗月行",
+      "parent": "语文园地六",
+      "order_index": 5,
+      "weight": 1.1,
+      "explanation": "语文园地六要背《前后左右 东西南北》和《古朗月行（节选）》：早晨起来面向太阳，前面是东、后面是西、左面是北、右面是南；小时不识月，呼作白玉盘。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "升国旗的生字与朗读"
+      ]
+    },
+    {
+      "node_type": "section",
+      "name": "5 小小的船",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "6 影子",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "7 两件宝",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "语文园地七",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "小小的船的想象与朗读",
+      "parent": "5 小小的船",
+      "order_index": 1,
+      "weight": 1.2,
+      "explanation": "《小小的船》是一首儿歌：弯弯的月儿小小的船，我在小小的船里坐，只看见闪闪的星星蓝蓝的天。弯弯、小小、闪闪、蓝蓝都是叠词，读起来轻柔像唱歌。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "影子的方位与情谊",
+      "parent": "6 影子",
+      "order_index": 2,
+      "weight": 1.2,
+      "explanation": "《影子》写了前、后和左、右四组方位词，先说影子像小黑狗，又说影子是好朋友。影子跟着人动，是因为光被身体挡住，影子就落在身体的一侧。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "两件宝的手脑并用",
+      "parent": "7 两件宝",
+      "order_index": 3,
+      "weight": 1.3,
+      "explanation": "陶行知《两件宝》说人的两件宝是双手和大脑：双手会做工，大脑会思考；用手不用脑事情做不好，用脑不用手啥也办不到，用手又用脑才能有创造。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "影子的方位与情谊"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "谚语积累与道理",
+      "parent": "语文园地七",
+      "order_index": 4,
+      "weight": 1.1,
+      "explanation": "语文园地七日积月累是四句谚语：种瓜得瓜、种豆得豆，前人栽树、后人乘凉，千里之行、始于足下，百尺竿头、更进一步。识字加油站还要学会称称呼。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": []
+    },
+    {
+      "node_type": "section",
+      "name": "8 比尾巴",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "9 乌鸦喝水",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "10 雨点儿",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "语文园地八",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "比尾巴的动物特征",
+      "parent": "8 比尾巴",
+      "order_index": 1,
+      "weight": 1.2,
+      "explanation": "《比尾巴》用问答的儿歌形式写小动物的尾巴：猴子的尾巴长，兔子的尾巴短，松鼠的尾巴好像一把伞，公鸡的尾巴弯，鸭子的尾巴扁，孔雀的尾巴最好看。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "乌鸦喝水的办法与道理",
+      "parent": "9 乌鸦喝水",
+      "order_index": 2,
+      "weight": 1.3,
+      "explanation": "《乌鸦喝水》讲乌鸦口渴找到瓶子，瓶口小水又少，它把石子一颗一颗放进瓶里，水升高后喝到了水。故事告诉我们遇到困难要动脑筋想办法。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "比尾巴的动物特征"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "雨点儿的大小与去向",
+      "parent": "10 雨点儿",
+      "order_index": 3,
+      "weight": 1.2,
+      "explanation": "《雨点儿》写数不清的雨点儿从云彩里飘落下来：大雨点儿要去有田有池子的地方，小雨点儿要去有花有草的地方。「沙沙沙」写出雨落下的轻声。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": [
+        "乌鸦喝水的办法与道理"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "风的古诗与写祝福语",
+      "parent": "语文园地八",
+      "order_index": 4,
+      "weight": 1.2,
+      "explanation": "语文园地八要背唐代李峤的《风》：解落三秋叶，能开二月花，过江千尺浪，入竹万竿斜；还要会写祝福语，称呼后打冒号，祝福写在下一行空两格。",
+      "source_type": "original",
+      "source_name": "教研组自编",
+      "prerequisites": []
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一单元 识字",
+      "order_index": 1,
+      "summary": "《日月山川》：字义、象形识字、笔画笔顺与组词。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「日」这个字在课文里指的是什么？",
+          "options": [
+            "太阳",
+            "月亮",
+            "河流",
+            "高山"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "日就是太阳，选 A；月亮是「月」，河流是「川」，高山是「山」，四个字各指一种事物。",
+          "difficulty": 1,
+          "knowledge_point": "日月山川的字义"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「川」在「山川」这个词里的意思是（  ）",
+          "options": [
+            "河流",
+            "山峰",
+            "田地",
+            "云朵"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "川指河流，山川合起来就是山和河流，选 A；山峰对应「山」，田地、云朵都不是这两个字的意思。",
+          "difficulty": 1,
+          "knowledge_point": "日月山川的字义"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「山」和「川」在课文里指的是同一类事物。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "山是地面上高起的土石，川是流动的河流，一个高地一个水流，不是同一类事物，说法错误。",
+          "difficulty": 1,
+          "knowledge_point": "日月山川的字义"
+        },
+        {
+          "q_type": "fill",
+          "stem": "「日月」合起来，说的是太阳和（  ）。",
+          "answer": {
+            "value": "月亮"
+          },
+          "analysis": "日是太阳，月是月亮，两个字合起来并提这两种天体；填「月亮」才与「太阳」相对。",
+          "difficulty": 1,
+          "knowledge_point": "组词与用词"
+        },
+        {
+          "q_type": "choice",
+          "stem": "要记住「月」字，最合适的办法是（  ）",
+          "options": [
+            "先想弯弯的月亮，再对照字形",
+            "只抄十遍不想意思",
+            "只看拼音不看字",
+            "把字倒过来写"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "月的字形来自弯月的样子，先想实物再对照字形最容易记住，选 A；机械抄写、只看拼音或倒写都不建立字形与字义的联系。",
+          "difficulty": 2,
+          "knowledge_point": "象形字识字"
+        },
+        {
+          "q_type": "judge",
+          "stem": "象形字是先有生活中的实物样子，再有照着样子画出来的字。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "日、月、山、川都是照着实物的轮廓造出来的字，先有实物后有字形，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "象形字识字"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列词语中，用到了本课「日、月、山、川」里某个字的有（  ）",
+          "options": [
+            "日月",
+            "上山",
+            "河流",
+            "月光"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 日月 用了日、月 ✓；B 上山 用了山 ✓；C 河流 里没有本课这四个字 ✗；D 月光 用了月 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 2,
+          "knowledge_point": "组词与用词",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「山川」这个词最适合用来描写（  ）",
+          "options": [
+            "桌上的文具",
+            "有山有河的景色",
+            "教室里的同学",
+            "一顿早饭"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "山川指山和河流，是写自然景色的词，选 B；文具、同学、早饭都与山水无关。",
+          "difficulty": 2,
+          "knowledge_point": "组词与用词"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「日」字一共有几画？",
+          "options": [
+            "3 画",
+            "4 画",
+            "5 画",
+            "6 画"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "日的笔顺是竖、横折、横、横，共 4 画，选 B；把外框和里面两横漏数，才会误答 3 画。",
+          "difficulty": 3,
+          "knowledge_point": "笔画与笔顺"
+        },
+        {
+          "q_type": "judge",
+          "stem": "写「山」字时，先写中间一竖，再写左右两边。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "山按先中间后两边的笔顺写：中间竖、竖折、右边竖，说法正确；先两边后中间会把字写散。",
+          "difficulty": 3,
+          "knowledge_point": "笔画与笔顺"
+        },
+        {
+          "q_type": "fill",
+          "stem": "「日」字的第二笔是（  ）。",
+          "answer": {
+            "value": "横折"
+          },
+          "analysis": "日的第一笔是左边一竖，第二笔横折把上边和右边一起写出，最后写里面一横和封口一横；所以第二笔是横折。",
+          "difficulty": 3,
+          "knowledge_point": "笔画与笔顺"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列说法中，符合象形字特点的有（  ）",
+          "options": [
+            "字形像实物的样子",
+            "看到实物能联想到字",
+            "每个字都带拼音",
+            "日、月、山、川都能找到对应的实物"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 字形像实物 ✓；B 由实物联想到字 ✓；C 拼音是后来标注的读音，不是造字办法 ✗；D 四个字都有对应实物 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "象形字识字",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "读下面这段材料：太阳落山后，月亮升起来；远处有山，山脚下有一条小河。材料里的「小河」和哪个字的意思最接近？",
+          "options": [
+            "日",
+            "月",
+            "山",
+            "川"
+          ],
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "答题切入角度：先找材料中写水流的词「小河」，再与四个字义对照；川指河流，所以选 D。日、月、山分别与太阳、月亮、高地对应，都不写水流。",
+          "difficulty": 3,
+          "knowledge_point": "日月山川的字义",
+          "tags": [
+            "材料自包含"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「月光」这个词里，表示月亮的字是（  ）。",
+          "answer": {
+            "value": "月"
+          },
+          "analysis": "月光是月亮发出的光，前面的「月」点明来源；填「日」就成了日光，意思完全不同。",
+          "difficulty": 3,
+          "knowledge_point": "组词与用词"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列关于本课四个字的说法，正确的有（  ）",
+          "options": [
+            "日和月都能在天上看到",
+            "山和川都是地面上能看到的景物",
+            "四个字都是左右结构的合体字",
+            "四个字都能单独成词使用"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 太阳、月亮都在天上 ✓；B 山、河流都在地面上 ✓；C 四字都是独体字，不是左右合体 ✗；D 日、月、山、川都能单独成词 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "日月山川的字义",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「上山」和「月亮」各写一句话，句子要完整。",
+          "answer": {
+            "value": "周末我们一家去上山看风景。晚上，月亮照在窗前。"
+          },
+          "analysis": "参考答案给出两个完整句。评分要点：①「上山」用在句子里且意思正确（1 分）；②「月亮」用在句子里且意思正确（1 分）；③两句都完整通顺（1 分）；④标点正确（1 分）。只写词语不成句不得分。",
+          "difficulty": 4,
+          "knowledge_point": "组词与用词",
+          "tags": [
+            "写话"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "不用图片，用两三句话说说你怎样记住「山」字。",
+          "answer": {
+            "value": "我先想远处三个高低不同的山峰，中间高两边低；再看「山」字，中间一竖最高，两边矮一些；这样字形和实物就对上了。"
+          },
+          "analysis": "评分要点：①写出能想到的实物样子（1 分）；②说清字形与实物的相似处（2 分）；③表达有顺序、句子完整（1 分）。只说「多写几遍」不得分。",
+          "difficulty": 4,
+          "knowledge_point": "象形字识字",
+          "tags": [
+            "识字方法"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "读下面这段材料：清晨，太阳从山后升起来，河面亮了起来。请用上「日」「山」「川」中的至少两个字写两句话介绍这处景色，并说明你选的字在句子里的意思。",
+          "answer": {
+            "value": "太阳从山后慢慢升起，河面被照得发亮。我用了「山」和「川」：山是那道高高的山梁，川是山脚下那条小河。"
+          },
+          "analysis": "材料自带，无需看图。评分要点：①两句话写出清晨景色（1 分）；②用上本课至少两个字并写对（1 分）；③分别说明字义（1 分）；④句子通顺、说明与字义一致（1 分）。只抄材料不算作答。",
+          "difficulty": 5,
+          "knowledge_point": "日月山川的字义",
+          "tags": [
+            "材料自包含",
+            "综合运用"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "写「山」字时，正确的笔顺是（  ）。",
+          "options": [
+            "先写中间一竖，再写竖折，最后写右边一竖",
+            "先写竖折，再写两竖",
+            "先写两竖，最后写竖折",
+            "先写左右两笔，最后写中间一竖"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「山」共 3 画，笔顺为竖、竖折、竖；先定中间一竖能让左右对称，其余顺序都会把笔画数或方向写错。",
+          "difficulty": 3,
+          "knowledge_point": "笔画与笔顺"
+        }
+      ]
+    },
+    {
+      "name": "第二单元 汉语拼音",
+      "order_index": 2,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「ɑ」「o」「e」这三个单韵母里，发音时嘴巴张得最大的是（  ）",
+          "options": [
+            "ɑ",
+            "o",
+            "e",
+            "i"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "ɑ 发音时双唇张到最大、舌头放平，声音最响亮，所以选 A；o 的嘴唇要收圆，声音比 ɑ 小；e 的嘴角向两边展开；i 是上齿轻碰上齿龈的细音。",
+          "difficulty": 1,
+          "knowledge_point": "单韵母的发音",
+          "tags": [
+            "单韵母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "单韵母发音的时候，嘴形和舌位都不发生变化，所以又叫「单韵母」。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「单」指只含一个音，ɑ o e 发音时口形舌位保持不变，这正是它与复韵母（口形有变化）的区别所在，所以说法正确。",
+          "difficulty": 1,
+          "knowledge_point": "单韵母的发音",
+          "tags": [
+            "单韵母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面哪一个是单韵母？",
+          "options": [
+            "ɑ",
+            "bɑ",
+            "ɑi",
+            "hɑo"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "ɑ 只由一个元音字母构成，是单韵母，选 A；bɑ 是声母 b 与韵母 ɑ 拼成的两拼音节；ɑi 由 ɑ 和 i 两个韵母组成，是复韵母；hɑo 是三拼音节。",
+          "difficulty": 2,
+          "knowledge_point": "单韵母的发音",
+          "tags": [
+            "单韵母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面这些字母中，属于单韵母的有（  ）",
+          "options": [
+            "ɑ",
+            "o",
+            "zh",
+            "ɑi"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "A ɑ 是单韵母 ✓；B o 是单韵母 ✓；C zh 是声母，不是韵母 ✗；D ɑi 是复韵母 ✗。所以选 A、B。",
+          "difficulty": 3,
+          "knowledge_point": "单韵母的发音",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "在四线三格里写单韵母「e」时，字母要写在（  ）格里。",
+          "answer": {
+            "value": "中间格"
+          },
+          "analysis": "四线三格一共三格，单韵母 ɑ o e 都写在中间格里，不能顶到上面一格、也不能掉到下面一格，所以填「中间格」。",
+          "difficulty": 3,
+          "knowledge_point": "单韵母的发音",
+          "tags": [
+            "书写"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "单韵母「ü」单独写成一个音节时，它上面的两点一定要写出来。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "ü 上面的两点是它区别于 u 的标志，单独成音节时两点必须写出来，漏写两点就变成了 u，所以说法法正确。",
+          "difficulty": 2,
+          "knowledge_point": "ü的两点省略规则",
+          "tags": [
+            "书写规则"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面音节中，「ü」上面两点的写法完全正确的一项是（  ）",
+          "options": [
+            "lǘ",
+            "lü",
+            "lù",
+            "lǔ"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "ü 与 l 相拼时两点要保留，再标上第二声调号写成 lǘ，选 A；lü 漏了调号 ✗；lù 把两点去掉 ✗；lǔ 用了第三声调号 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "ü的两点省略规则",
+          "tags": [
+            "书写规则"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "韵母「i」标调的时候，i 上面的点要先（  ），写成 ī í ǐ ì。",
+          "answer": {
+            "value": "去掉"
+          },
+          "analysis": "单韵母 i 标调时要把上面的点抹掉，写成 ī í ǐ ì，调号才能安在一横上；不抹点就写不出这四个调号，所以填「去掉」。",
+          "difficulty": 3,
+          "knowledge_point": "ü的两点省略规则",
+          "tags": [
+            "标调"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「ü」和「u」在读音上的主要区别是（  ）",
+          "options": [
+            "ü 的嘴唇比 u 撮得更圆",
+            "u 比 ü 多两点",
+            "ü 和 u 读起来完全一样",
+            "ü 没有一竖，只写两点"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "ü 的口型比 u 更小更圆，靠拢的两点表示撮口，选 A；多两点的是 ü 而不是 u ✗；u 与 ü 读音并不相同 ✗；ü 除了两点还有一竖 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "ü的两点省略规则",
+          "tags": [
+            "发音"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "声母「b」发音的时候，双唇应该（  ）",
+          "options": [
+            "轻轻闭合，再让气流冲开",
+            "张开大口，让气流自由出来",
+            "舌尖抵住上牙床",
+            "嘴唇不动，只用喉咙发声"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "b 是双唇不送气音，发音时双唇轻轻闭合，然后气流把嘴唇冲开，选 A；张大嘴是发元音的口型 ✗；舌尖抵上牙床是 d t n l ✗；不用嘴形发音就成不了音 ✗。",
+          "difficulty": 1,
+          "knowledge_point": "双唇音与唇齿音",
+          "tags": [
+            "声母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「p」和「b」这两个声母的主要区别是（  ）",
+          "options": [
+            "p 要送气，b 不送气",
+            "p 用舌尖发音，b 用嘴唇发音",
+            "p 是单音节，b 是双音节",
+            "p 有两点，b 没有两点"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "p 是双唇送气音，发音时要把一股强气流送出去；b 是不送气音，只轻轻冲开，选 A；两者都是双唇音，舌头不参与 ✗；单双音节说的是音节数量 ✗；两点是 ü 的特征 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "双唇音与唇齿音",
+          "tags": [
+            "声母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "声母「f」是唇齿音，发音时上牙轻轻接触下嘴唇。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "f 发音时上齿轻碰下唇，气流从齿缝中挤出，所以属于唇齿音，说法正确；它和 b p m 这类双唇音的口型明显不同。",
+          "difficulty": 2,
+          "knowledge_point": "双唇音与唇齿音",
+          "tags": [
+            "声母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面这些声母里，发音时嘴唇或牙齿必须参与动作的有（  ）",
+          "options": [
+            "b",
+            "f",
+            "h",
+            "k"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "A b 是双唇音，双唇要闭合 ✓；B f 是唇齿音，上牙要碰下唇 ✓；C h 是舌根音，嘴形不动、只用舌根 ✗；D k 也是舌根音 ✗。所以选 A、B。",
+          "difficulty": 3,
+          "knowledge_point": "双唇音与唇齿音",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "声母「m」发音时，气流是从（  ）里出来的，所以它叫鼻音。",
+          "answer": {
+            "value": "鼻子"
+          },
+          "analysis": "m 发音时双唇闭合，气流从鼻腔出来，所以叫鼻音，填「鼻子」；边音 l 才是气流从舌头两边出来。",
+          "difficulty": 2,
+          "knowledge_point": "双唇音与唇齿音",
+          "tags": [
+            "声母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「d」「t」「n」「l」发音的时候，舌尖都要抵住（  ）",
+          "options": [
+            "上牙床",
+            "下嘴唇",
+            "舌根",
+            "上下牙齿中间"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "d t n l 都是舌尖抵住上牙床（上齿龈）发出的音，所以选 A；下唇是 f 的位置 ✗；舌根是 g k h 的位置 ✗；牙齿中间发不出这四个音 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "dtnl的拼读要领",
+          "tags": [
+            "声母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「l」和「n」这两个声母的主要区别是（  ）",
+          "options": [
+            "l 的气流从舌头两边出来，n 的气流从鼻子出来",
+            "l 是双唇音，n 是唇齿音",
+            "l 用舌尖发音，n 用舌根发音",
+            "l 要送气，n 不送气"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "l 是边音，气流从舌头两边出来；n 是鼻音，气流从鼻腔出来，选 A；d t n l 都是舌尖抵上牙床的音 ✗；l 不送气 ✗。",
+          "difficulty": 4,
+          "knowledge_point": "dtnl的拼读要领",
+          "tags": [
+            "声母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「d」和「t」都是舌尖抵上牙床的音，区别在于「t」要送气、「d」不送气。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "d 是不送气的舌尖音，t 是送气的舌尖音，两者口型位置相同、只差气流强弱，所以说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "dtnl的拼读要领",
+          "tags": [
+            "声母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "声母「h」是舌根音，发音的时候舌根要抬起抵住（  ）。",
+          "answer": {
+            "value": "软腭"
+          },
+          "analysis": "h 发音时舌根抬起抵住软腭，气流从口腔出来；f 是唇齿音，上牙碰下唇，两者口型完全不同，所以填「软腭」。",
+          "difficulty": 3,
+          "knowledge_point": "dtnl的拼读要领",
+          "tags": [
+            "声母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "要分清「f」和「h」，下面哪种做法最可靠？",
+          "options": [
+            "看口型：上牙碰下唇，还是舌根抬起",
+            "看音节里有没有两点",
+            "只听老师读一遍就牢牢记住",
+            "把两个音节写成同一个样子"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "f 是上牙碰下唇的唇齿音，h 是舌根抬起抵软腭的舌根音，口型差别明显，看口型判断最可靠，选 A；两点是 ü 的标志 ✗；只听一次容易混 ✗；写成一样更分不清 ✗。",
+          "difficulty": 4,
+          "knowledge_point": "dtnl的拼读要领",
+          "tags": [
+            "辨音"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "拼读两拼音节要记住口诀：「前音轻短后音重，（  ）」。",
+          "answer": {
+            "value": "两音相连碰一碰"
+          },
+          "analysis": "两拼音节的拼读口诀是「前音轻短后音重，两音相连碰一碰」，读的时候两个音要快速连起来、中间不能断开，所以填「两音相连碰一碰」。",
+          "difficulty": 2,
+          "knowledge_point": "音节拼读与字词积累",
+          "tags": [
+            "拼读"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「皮袄」的拼音写作 pí'ǎo，中间那个小符号是（  ）",
+          "options": [
+            "隔音符号，用来把两个音节分开",
+            "声调符号，要写在 ɑ 的左上方",
+            "字母 o 的另一种写法",
+            "ü 上面的两点"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "ɑ o e 开头的音节跟在另一个音节后面时，两个音节容易混在一起，要用隔音符号「'」隔开，所以 pí'ǎo 中间要加它，选 A；声调号写在韵母上，不是加在字母左边 ✗；它不是字母 ✗；两点是 ü 的特征 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "音节拼读与字词积累",
+          "tags": [
+            "拼写规则"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面词语的拼音中，需要加隔音符号的有（  ）",
+          "options": [
+            "西安（xī'ān）",
+            "皮袄（pí'ǎo）",
+            "妈妈（mā ma）",
+            "弟弟（dì di）"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "A 西安的后一个音节以 ɑ 开头，容易和前面的音节混在一起，要加隔音符号 ✓；B 皮袄的后一个音节以 ɑ 开头，也要加隔音符号 ✓；C 妈妈的两个音节都是声母加韵母，不会混淆，不用加 ✗；D 弟弟也是两个独立音节，不用加 ✗。所以选 A、B。",
+          "difficulty": 3,
+          "knowledge_point": "音节拼读与字词积累",
+          "tags": [
+            "多选",
+            "拼写规则"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "语文园地二「日积月累」里《画》的作者是（  ）",
+          "options": [
+            "唐代的王维",
+            "唐代的李白",
+            "宋代的苏轼",
+            "唐代的骆宾王"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "语文园地二的日积月累是《画》，作者是唐代诗人王维，选 A；李白写的是《古朗月行》✗；苏轼是宋代诗人 ✗；骆宾王写的是《咏鹅》✗。",
+          "difficulty": 3,
+          "knowledge_point": "音节拼读与字词积累",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《画》里「远看山有色，近听水无声」写出了山水的什么特点？",
+          "options": [
+            "远看有颜色，走近却听不到水声",
+            "山上有颜色，水里一点声音也没有",
+            "远看没有颜色，近听才有水声",
+            "山水都很吵闹，看不清颜色"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "前两句写「远看」与「近听」的差别：远看山有颜色，靠近了却听不到水声，选 A；后两句「春去花还在，人来鸟不惊」写的是花鸟依旧 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "音节拼读与字词积累",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面词语中，互为反义词的一组有（  ）",
+          "options": [
+            "上—下",
+            "高—矮",
+            "多—多",
+            "前—后"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 上和下方向相反 ✓；B 高和矮相反 ✓；C 多和多意思相同，不是反义词 ✗；D 前和后相反 ✓。所以选 A、B、D。",
+          "difficulty": 2,
+          "knowledge_point": "音节拼读与字词积累",
+          "tags": [
+            "字词积累",
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面四个字中，属于左右结构的是（  ）",
+          "options": [
+            "妈",
+            "花",
+            "草",
+            "书"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「妈」是女字旁加马，左右结构，选 A；花、草都是上下结构 ✗；书是独体字 ✗。写左右结构字时要左右分清、两边不挤在一起。",
+          "difficulty": 4,
+          "knowledge_point": "音节拼读与字词积累",
+          "tags": [
+            "间架结构"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳地铁站的站名牌上既有汉字，也有拼音。请你用学过的字词，给同学写一句在地铁里需要注意安全的话（要写成完整的一句话）。",
+          "answer": {
+            "value": "过马路要走人行横道，红灯停，绿灯行。"
+          },
+          "analysis": "评分要点：①用上学过的字词（1 分）；②句子完整、意思清楚（2 分）；③标点使用正确（1 分）。只罗列词语而不写成完整句子的，不得分。",
+          "difficulty": 4,
+          "knowledge_point": "音节拼读与字词积累",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "台风天，学校要在班级群里发一则通知：明天不上课，请家长留意。下面这句话里，哪些字写错了？请抄写正确的写法，并照着通知的口气补上一句话。\n明天不上课，请大家注意安按。",
+          "answer": {
+            "value": "「按」字写错了，应改成「全」，正确写法是「明天不上课，请大家注意安全。」补上一句可以写：明天在家复习课文，注意添衣保暖。"
+          },
+          "analysis": "评分要点：①找出错字「按」并改成「全」（2 分）；②抄写句子时标点正确（1 分）；③补写的句子符合通知口气、意思完整（1 分）。只指出错字不补写句子扣分。",
+          "difficulty": 5,
+          "knowledge_point": "音节拼读与字词积累",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第三单元 汉语拼音",
+      "order_index": 3,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「g」「k」「h」这三个声母发音的时候，舌根都要（  ）",
+          "options": [
+            "抬起抵住软腭",
+            "平放在下牙齿后面",
+            "翘起来抵住上齿龈",
+            "轻轻碰住下嘴唇"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "g k h 都是舌根音，发音时舌根抬起抵住软腭，选 A；平放下牙齿后面是 z c s ✗；翘起舌尖是 zh ch sh r ✗；碰下嘴唇是 f ✗。",
+          "difficulty": 2,
+          "knowledge_point": "声母gkh的发音",
+          "tags": [
+            "声母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「g」和「k」这两个声母的主要区别是（  ）",
+          "options": [
+            "k 要送气，g 不送气",
+            "g 用舌尖发音，k 用舌根发音",
+            "g 是单音节，k 是双音节",
+            "g 有两点，k 没有两点"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "k 是舌根送气音，发音时有一股强气流冲出；g 是不送气音，只轻轻放开，选 A；两者都是舌根音 ✗；单双音节说的是音节数量 ✗；两点是 ü 的特征 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "声母gkh的发音",
+          "tags": [
+            "声母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「h」是舌根音，发音的时候气流是从口腔里出来的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "h 发音时舌根抬起抵住软腭，气流从口腔中间摩擦而出，所以是舌根音，说法正确；鼻音的气流才会从鼻腔出来。",
+          "difficulty": 2,
+          "knowledge_point": "声母gkh的发音",
+          "tags": [
+            "声母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "要分辨「g」和「k」，可以把手掌放在（  ）前面，读「k」时能感到一股气流冲过来。",
+          "answer": {
+            "value": [
+              "嘴前",
+              "嘴巴前"
+            ]
+          },
+          "analysis": "送气的音会把气流送出来，手掌放在嘴前能感到明显的冲击，k 送气而 g 不送气；所以填「嘴前」或「嘴巴前」。",
+          "difficulty": 3,
+          "knowledge_point": "声母gkh的发音",
+          "tags": [
+            "拼读"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「ü」和声母 j q x 相拼的时候，ü 上面的两点要去掉。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "小 ü 见了 j q x 就要摘掉帽子，写作 ju qu xu，这样既省去两点，又不至于和 lü nü 混起来，所以说法法正确。",
+          "difficulty": 2,
+          "knowledge_point": "ü与jqx相拼去两点",
+          "tags": [
+            "书写规则"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面音节中，ü 的两点省略得完全正确的一项是（  ）",
+          "options": [
+            "jú",
+            "jü",
+            "jù",
+            "jǚ"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "ü 与 j 相拼要去两点，标第二声写成 jú，选 A；jü 还留着两点 ✗；jù 调号写成了第四声 ✗；jǚ 多留了两点 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "ü与jqx相拼去两点",
+          "tags": [
+            "书写规则"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "小 ü 见了 j q x 就要摘掉帽子，这个「帽子」指的是 ü 上面的（  ）。",
+          "answer": {
+            "value": "两点"
+          },
+          "analysis": "「帽子」比作 ü 上面的两点，遇到 j q x 就要摘掉，所以写作 ju qu xu；遇到 n、l 相拼时两点反而要保留，填「两点」。",
+          "difficulty": 3,
+          "knowledge_point": "ü与jqx相拼去两点",
+          "tags": [
+            "书写规则"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面各组音节中，ü 都去掉两点的一组是（  ）",
+          "options": [
+            "ju qu xu",
+            "jü qü xü",
+            "ju qu xü",
+            "jü qu xu"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "ü 与 j q x 相拼一律去掉两点，所以是 ju qu xu，选 A；B 三个都留着两点 ✗；C 的 xü 多留两点 ✗；D 的 jü 多留两点 ✗。",
+          "difficulty": 4,
+          "knowledge_point": "ü与jqx相拼去两点",
+          "tags": [
+            "书写规则"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面音节中，属于整体认读音节的有（  ）",
+          "options": [
+            "yi",
+            "wu",
+            "ju",
+            "yuan"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A yi 是整体认读音节 ✓；B wu 是整体认读音节 ✓；C ju 是 j 与 ü 相拼的两拼音节 ✗；D yuan 是整体认读音节 ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "yw与整体认读音节",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「z」「c」「s」发音的时候，舌头应该（  ）",
+          "options": [
+            "平放在下牙齿后面，舌尖抵住下齿背",
+            "翘起来抵住上齿龈",
+            "抬起抵住软腭",
+            "轻轻碰住下嘴唇"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "z c s 是平舌音，舌头平放在下牙齿后面、舌尖抵住下齿背，选 A；翘起舌尖是 zh ch sh r ✗；舌根抬起是 g k h ✗；碰下唇是 f ✗。",
+          "difficulty": 2,
+          "knowledge_point": "平舌音zcs的发音",
+          "tags": [
+            "声母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「z」和「zh」读音最容易混，它们的主要区别在于（  ）",
+          "options": [
+            "舌尖是平放还是翘起来",
+            "要不要送气",
+            "嘴唇闭不闭",
+            "有没有两点"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "z 是平舌音、zh 是翘舌音，区别在舌尖的位置，选 A；zh 与 z 都不送气 ✗；嘴唇不参与这两个音 ✗；两点是 ü 的标志 ✗。",
+          "difficulty": 4,
+          "knowledge_point": "平舌音zcs的发音",
+          "tags": [
+            "辨音"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「c」和「q」都要送气，但 c 是平舌音，q 是舌面音。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "c 送气、q 也送气，这一点相同；c 的舌头平放抵下齿背，是平舌音，q 的舌面抬起抵硬腭，是舌面音，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "平舌音zcs的发音",
+          "tags": [
+            "声母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "声母「s」发音时，舌尖平放在下齿背后面，气流从（  ）的缝里送出来。",
+          "answer": {
+            "value": [
+              "牙齿缝",
+              "上下牙齿之间"
+            ]
+          },
+          "analysis": "s 是平舌擦音，舌尖抵住下齿背，气流从舌尖与牙齿之间的缝隙中挤出，所以填「牙齿缝」或「上下牙齿之间」。",
+          "difficulty": 3,
+          "knowledge_point": "平舌音zcs的发音",
+          "tags": [
+            "声母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「zh」「ch」「sh」「r」发音的时候，舌尖要（  ）",
+          "options": [
+            "翘起来抵住上齿龈后部",
+            "平放在下牙齿后面",
+            "抬起抵住软腭",
+            "碰住下嘴唇"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "翘舌音要把舌尖翘起来，抵住上齿龈后部，读音比平舌音靠后，选 A；平放下齿背是 z c s ✗；舌根抬起是 g k h ✗；碰下唇是 f ✗。",
+          "difficulty": 2,
+          "knowledge_point": "翘舌音zhchshr的发音",
+          "tags": [
+            "声母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "声母「r」的读音比「z」「c」「s」靠后，它属于翘舌音。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "r 发音时舌尖翘起抵住上齿龈后部，声音靠后，是翘舌音，说法正确；z c s 才是平舌音。",
+          "difficulty": 2,
+          "knowledge_point": "翘舌音zhchshr的发音",
+          "tags": [
+            "声母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "读绕口令「四是四，十是十」的时候，最容易读错的地方是（  ）",
+          "options": [
+            "s 和 sh 分不清",
+            "n 和 l 分不清",
+            "b 和 d 分不清",
+            "zh 和 z 分不清"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "绕口令里的「四」「十」都是平舌音 s，而 sh 是翘舌音，最容易混的就是 s 与 sh，选 A；n 与 l、b 与 d 在这段话里没出现 ✗。",
+          "difficulty": 4,
+          "knowledge_point": "翘舌音zhchshr的发音",
+          "tags": [
+            "绕口令"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面声母中，属于翘舌音的有（  ）",
+          "options": [
+            "zh",
+            "sh",
+            "z",
+            "r"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A zh 是翘舌音 ✓；B sh 是翘舌音 ✓；C z 是平舌音 ✗；D r 是翘舌音 ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "翘舌音zhchshr的发音",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "绕口令「四是四，十是十」里的「四」，拼写时应该写成（  ）。",
+          "answer": {
+            "value": "sì"
+          },
+          "analysis": "「四」是平舌音，韵母是 i，声母要写平舌的 s，再标上第四声，写作 sì；写成 shì 就变成翘舌音了。",
+          "difficulty": 4,
+          "knowledge_point": "翘舌音zhchshr的发音",
+          "tags": [
+            "拼写"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面一组音节中，全部属于整体认读音节的是（  ）",
+          "options": [
+            "yi wu yu",
+            "ba po mo",
+            "yi wu ju",
+            "zh chi shi"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "yi wu yu 都是整体认读音节，看到就能直接读出，选 A；ba po mo 是声母加韵母拼出来的 ✗；ju 是两拼音节 ✗；zh chi sh 是声母 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "yw与整体认读音节",
+          "tags": [
+            "整体认读音节"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「ü」和声母 y 相拼的时候，ü 上面的两点要去掉，写作 yu。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "ü 与 y 相拼同样要去掉两点，写成 yu，这样 yu 就成了整体认读音节；写成 yü 是错的，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "yw与整体认读音节",
+          "tags": [
+            "书写规则"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "声母「y」和「w」跟别的声母不一样，它们后面（  ）再加声母，直接和韵母组成整体认读音节。",
+          "answer": {
+            "value": "不能"
+          },
+          "analysis": "y w 后面不能再加声母，它们直接和韵母相拼就构成整体认读音节，如 yu、wei，所以填「不能」。",
+          "difficulty": 3,
+          "knowledge_point": "yw与整体认读音节",
+          "tags": [
+            "整体认读音节"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「y」「w」这两个声母和别的声母不同的地方是（  ）",
+          "options": [
+            "它们都直接和韵母组成整体认读音节",
+            "它们发音时都要卷舌",
+            "它们都比别的声母多两点",
+            "它们可以放在音节的最前面"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "y w 是整体认读音节里的两个声母，后面直接接韵母，选 A；卷舌的是 zh ch sh r ✗；两点是 ü 的特征 ✗；y w 后面本来就不能再加声母 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "yw与整体认读音节",
+          "tags": [
+            "整体认读音节"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面词语中，含有数字的有（  ）",
+          "options": [
+            "一模一样",
+            "三头六臂",
+            "五颜六色",
+            "绿油油"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 一模一样里有「一」 ✓；B 三头六臂里有「三」「六」 ✓；C 五颜六色里有「五」「六」 ✓；D 绿油油里没有数字 ✗。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "数字词语与绕口令",
+          "tags": [
+            "多选",
+            "字词积累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "语文园地三的「日积月累」一共列出了（  ）个带数字的词语。",
+          "answer": {
+            "value": "六"
+          },
+          "analysis": "日积月累里的词语是一模一样、一心一意、独一无二、三头六臂、五颜六色、十全十美，一共六个，所以填「六」。",
+          "difficulty": 3,
+          "knowledge_point": "数字词语与绕口令",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面各组词语中，全部用「识字加油站」的生字组成的是（  ）",
+          "options": [
+            "语文 算数 美术",
+            "午饭 文具 开会",
+            "晚饭 火车 大米",
+            "午餐 数字 书画"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "识字加油站的生字有午、语、文、数、美、术、写、会，A 中「语文」「算数」「美术」六个字全在其中，选 A；B 的「具」不在 ✗；C 的「饭」「车」「米」不在 ✗；D 的「餐」「字」「书」不在 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "数字词语与绕口令",
+          "tags": [
+            "字词积累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "学校要开运动会，班级按学号分组：第三组有十二人，第七组有十八人。请你用今天学的带数字的词语，把两个小组的人数说清楚，写一句完整的话。",
+          "answer": {
+            "value": "第三组有十二人，第七组有十八人。"
+          },
+          "analysis": "评分要点：①用上带数字的词语（三头六臂式的数字说法或直接写出「十二」「十八」均可）（2 分）；②句子完整、意思清楚（1 分）；③标点正确（1 分）。只写数字不成句不得分。",
+          "difficulty": 4,
+          "knowledge_point": "数字词语与绕口令",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳地铁报站时常要读出站名。请你用今天学的整体认读音节，给「yuè」和「wū」各组一个自己会读的词语，并把词语写下来。",
+          "answer": {
+            "value": "yuè 可以组成「月亮」，wū 可以组成「乌鸦」。"
+          },
+          "analysis": "评分要点：①两个音节各组成一个词语（2 分）；②词语要能读出来、写对（1 分）；③句子通顺（1 分）。写成「yüè」「wǔ」这类不合规则的写法扣分。",
+          "difficulty": 4,
+          "knowledge_point": "yw与整体认读音节",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第四单元 汉语拼音",
+      "order_index": 4,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「ɑi」「ei」「ui」这三个韵母的共同点是（  ）",
+          "options": [
+            "都是复韵母，由两个字母组成",
+            "都是单韵母，只占一个音",
+            "都是整体认读音节，不用拼",
+            "都要用 ü 上面的两点"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "ɑi ei ui 都由两个字母组成、一口气读出来，属于复韵母，选 A；单韵母只有 ɑ o e i u ü 六个 ✗；整体认读音节不用拼 ✗；两点是 ü 的特征 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "ɑi ei ui的拼读",
+          "tags": [
+            "复韵母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面音节中，声调标在 ɑ 上的一项是（  ）",
+          "options": [
+            "hǎi",
+            "hēi",
+            "huī",
+            "héi"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "标调歌说「有 ɑ 别放过」，hǎi 里有 ɑ，调号就标在 ɑ 上，选 A；hēi 的调号标在 e 上 ✗；huī 标在 u 上 ✗；héi 里的 e 不标调 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "ɑi ei ui的拼读",
+          "tags": [
+            "标调"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "单韵母只有一个字母，复韵母由两个字母连起来，一口气读出来。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "复韵母由两个字母组成，前一个音轻短、后一个音重，两个音连着一口气读出，如 ɑi、ei、ui，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "ɑi ei ui的拼读",
+          "tags": [
+            "复韵母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "标调歌是：「有 ɑ 别放过，没 ɑ 找 o e，（  ）」。",
+          "answer": {
+            "value": "i u 并列标在后"
+          },
+          "analysis": "标调歌的后两句是「i u 并列标在后，单个韵母不用说」，说的是 i 和 u 挨在一起时调号写在后面那个字母上，所以填「i u 并列标在后」。",
+          "difficulty": 3,
+          "knowledge_point": "ɑi ei ui的拼读",
+          "tags": [
+            "标调"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "音节「niú」里的声调应该标在哪个字母上？",
+          "options": [
+            "i",
+            "u",
+            "n",
+            "ɑ"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "niú 由 i 和 u 并列组成，按标调歌「i u 并列标在后」，调号要标在后面的 i 上，选 A；标在 u 上就错成了 niù ✗。",
+          "difficulty": 2,
+          "knowledge_point": "ɑo ou iu的拼读",
+          "tags": [
+            "标调"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面三个音节中，读出来是「小」的是（  ）",
+          "options": [
+            "xiǎo",
+            "shǎo",
+            "zhǎo"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「小」拼作 xiǎo，x 是声母、iǎo 是复韵母，选 A；shǎo 的声母是 sh，读音偏「少」；zhǎo 读「找」，都要靠声母区分。",
+          "difficulty": 2,
+          "knowledge_point": "ɑo ou iu的拼读",
+          "tags": [
+            "拼读"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "音节「liù」和「niú」都是由 i 和 u 拼成的，标调时调号都标在 u 上。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "liù 读「六」，调号标在 u 上；niú 读「牛」，i u 并列标在后，调号标在 i 上。两句说成一样是错的，答案 F。",
+          "difficulty": 3,
+          "knowledge_point": "ɑo ou iu的拼读",
+          "tags": [
+            "辨析"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面音节中，属于三拼音节的有（  ）",
+          "options": [
+            "jiao",
+            "guang",
+            "hao",
+            "xiong"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A jiao 是 j 加介母 i 加韵母 ao，三音节 ✓；B guang 是 g 加 uang，三音节 ✓；C hao 只有声母加韵母，是两拼音节 ✗；D xiong 是 x 加 iong，三音节 ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "ɑo ou iu的拼读",
+          "tags": [
+            "多选",
+            "音节"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "韵母「er」在拼音里比较特别，它可以（  ）",
+          "options": [
+            "单独成为一个音节，比如「儿」读作 er",
+            "和声母相拼才成音节",
+            "标调时必须去掉上面的两点",
+            "只能和 j q x 相拼"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "er 是特殊韵母，本身就能成一个音节，选 A；它不靠声母相拼 ✗；去掉两点是 ü 的规则 ✗；er 不与 j q x 相拼 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "ie üe er的拼读",
+          "tags": [
+            "特殊韵母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「叶」这个字的正确拼音是（  ）",
+          "options": [
+            "yè",
+            "yě",
+            "yē",
+            "yuè"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「叶」读第四声，ye 是整体认读音节，写成 yè，选 A；yě 是「也」✗；yē 是「椰」✗；yuè 是「月」✗。",
+          "difficulty": 2,
+          "knowledge_point": "ie üe er的拼读",
+          "tags": [
+            "拼写"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「ie」和「ei」读音很相近，区别在于 ie 是 i 在前，ei 是 e 在前。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "ie 由 i 和 e 组成，ei 由 e 和 i 组成，字母顺序不同读音就不同，所以说法正确；读的时候要一个字母一个字母看清楚。",
+          "difficulty": 3,
+          "knowledge_point": "ie üe er的拼读",
+          "tags": [
+            "辨析"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "儿歌《月儿弯弯》里唱：「月儿弯弯挂蓝天，（  ）」。",
+          "answer": {
+            "value": "小溪弯弯出青山"
+          },
+          "analysis": "儿歌《月儿弯弯》的原句是「月儿弯弯挂蓝天，小溪弯弯出青山。大河弯弯流入海，山路弯弯到校园」，所以填「小溪弯弯出青山」。",
+          "difficulty": 2,
+          "knowledge_point": "ie üe er的拼读",
+          "tags": [
+            "朗读背诵"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "前鼻韵母 ɑn en in un ün 读的时候，舌尖都要（  ）",
+          "options": [
+            "抵住上牙床",
+            "抬起抵住软腭",
+            "翘起来抵住上齿龈",
+            "平放在下牙齿后面"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "前鼻韵母的收音在舌尖，舌尖要抵住上牙床，选 A；舌根抬起是后鼻韵母 ✗；翘起舌尖是 zh ch sh r ✗；平放下齿背是 z c s ✗。",
+          "difficulty": 2,
+          "knowledge_point": "前鼻韵母的拼读",
+          "tags": [
+            "前鼻韵母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「n」和「ng」的区别是（  ）",
+          "options": [
+            "n 是前鼻音，ng 是后鼻音",
+            "n 要送气，ng 不送气",
+            "n 是单音节，ng 是双音节",
+            "n 有两点，ng 没有两点"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "n 的收音在舌尖，是前鼻音；ng 的收音在舌根，是后鼻音，选 A；n 不送气 ✗；n、ng 单独都能成音节 ✗；两点是 ü 的特征 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "前鼻韵母的拼读",
+          "tags": [
+            "前鼻韵母",
+            "后鼻韵母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「in」和「ing」都是前鼻韵母，读音也完全相同。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "in 是前鼻韵母，ing 是后鼻韵母，两者收音位置不同、读音有区别，说法错误，答案 F。",
+          "difficulty": 2,
+          "knowledge_point": "前鼻韵母的拼读",
+          "tags": [
+            "辨析"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "儿歌《家》里唱：「蓝天是白云的家，（  ）」。",
+          "answer": {
+            "value": "树林是小鸟的家"
+          },
+          "analysis": "儿歌《家》的原句是「蓝天是白云的家，树林是小鸟的家，小河是鱼儿的家，泥土是种子的家」，所以填「树林是小鸟的家」。",
+          "difficulty": 3,
+          "knowledge_point": "前鼻韵母的拼读",
+          "tags": [
+            "朗读背诵"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "后鼻韵母 ɑng eng ing ong 的共同特点是（  ）",
+          "options": [
+            "收音时舌根抬起抵住软腭",
+            "收音时舌尖抵住上牙床",
+            "发音时嘴唇要撮圆",
+            "都是整体认读音节"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "后鼻韵母的鼻音收在舌根，舌根要抬起抵住软腭，选 A；舌尖抵上牙床是前鼻韵母 ✗；撮圆嘴唇是 u ü ✗；ang eng ing ong 都要拼读 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "后鼻韵母的拼读",
+          "tags": [
+            "后鼻韵母"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「fēng」（风）和「fěn」（粉）读起来不一样，原因是（  ）",
+          "options": [
+            "feng 是后鼻音，fen 是前鼻音",
+            "feng 要送气，fen 不送气",
+            "feng 是单音节，fen 是双音节",
+            "feng 的声母不同"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "两个音节的声母都是 f，区别在韵母：eng 是后鼻韵母、en 是前鼻韵母，选 A；f 都不送气 ✗；两个都是两拼音节 ✗；声母相同 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "后鼻韵母的拼读",
+          "tags": [
+            "辨析"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面音节中，韵母是后鼻韵母的有（  ）",
+          "options": [
+            "yáng",
+            "xīng",
+            "méng",
+            "shān"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A yáng 的韵母是 ang，后鼻韵母 ✓；B xīng 的韵母是 ing，后鼻韵母 ✓；C méng 的韵母是 eng，后鼻韵母 ✓；D shān 的韵母是 an，前鼻韵母 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "后鼻韵母的拼读",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "音节「zhōng」的韵母是（  ）。",
+          "answer": {
+            "value": "ong"
+          },
+          "analysis": "zhōng 由声母 zh 和韵母 ong 组成，ong 是后鼻韵母；声母 zh 不能算进韵母里，所以填「ong」。",
+          "difficulty": 4,
+          "knowledge_point": "后鼻韵母的拼读",
+          "tags": [
+            "拼读"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面词语中，表示时间的有（  ）",
+          "options": [
+            "昨天",
+            "今天",
+            "明年",
+            "青山"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 昨天表示时间 ✓；B 今天表示时间 ✓；C 明年表示时间 ✓；D 青山是景物，不是时间 ✗。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "时间词语与标调歌",
+          "tags": [
+            "多选",
+            "字词积累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「昨天」「今天」「明天」这三个词是按什么顺序排列的？",
+          "options": [
+            "时间先后的顺序",
+            "字数的多少",
+            "声调的高低",
+            "笔画的长短"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "这三个词讲的是同一天里的前后次序，按时间先后排开，选 A；三个词都是两个字，字数一样 ✗；它们讲的是日子，不是调子 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "时间词语与标调歌",
+          "tags": [
+            "字词积累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「上个月」「这个月」「下个月」这一组词里，「这个月」排在中间。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "这一组词以「这个月」为中心，上个月在前、下个月在后，「这个月」正好在中间，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "时间词语与标调歌",
+          "tags": [
+            "字词积累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "语文园地四「日积月累」的《悯农（其二）》的作者是（  ）",
+          "options": [
+            "唐代的李绅",
+            "唐代的王维",
+            "唐代的骆宾王",
+            "宋代的苏轼"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "《悯农（其二）》是唐代诗人李绅的作品，选 A；王维写的是《画》✗；骆宾王写的是《咏鹅》✗；苏轼是宋代 ✗。",
+          "difficulty": 4,
+          "knowledge_point": "时间词语与标调歌",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "《悯农（其二）》里说：「谁知盘中餐，（  ）」。",
+          "answer": {
+            "value": "粒粒皆辛苦"
+          },
+          "analysis": "《悯农（其二）》的后两句是「谁知盘中餐，粒粒皆辛苦」，说的是碗里的每一粒米都来得辛苦，所以填「粒粒皆辛苦」。",
+          "difficulty": 4,
+          "knowledge_point": "时间词语与标调歌",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "学校组织秋游，定在明天上午八点。请你用今天学的时间词语，写一句话通知同学（要写完整，不要只写词语）。",
+          "answer": {
+            "value": "明天上午八点，我们班去秋游，请大家带好水壶。"
+          },
+          "analysis": "评分要点：①用上「明天」「上午」这类表示时间的词语（2 分）；②句子完整、意思清楚（1 分）；③标点使用正确（1 分）。只写「明天上午八点」而没有完整句子的扣 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "时间词语与标调歌",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳有不少快餐店使用一次性筷子。请你想一想，用《悯农（其二）》的道理，写一句劝同学爱惜粮食、不浪费的话。",
+          "answer": {
+            "value": "谁知盘中餐，粒粒皆辛苦。我们吃饭不要剩饭，浪费的每一粒米都是农民伯伯辛苦种出来的。"
+          },
+          "analysis": "评分要点：①用上《悯农（其二）》的意思或原句（2 分）；②劝说的内容具体、句子完整（1 分）；③语气礼貌、标点正确（1 分）。只写「要爱惜粮食」而没有道理的扣分。",
+          "difficulty": 5,
+          "knowledge_point": "时间词语与标调歌",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第五单元 阅读",
+      "order_index": 5,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "《秋天》里说，天气凉了以后，树叶（  ）",
+          "options": [
+            "黄了，一片片从树上落下来",
+            "还是绿的，一片片挂在树上",
+            "开满了粉色的小花",
+            "被雪盖得严严实实"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文原句是「天气凉了，树叶黄了，一片片叶子从树上落下来」，选 A；后三个选项写的是别的季节的样子，不合秋天的景。",
+          "difficulty": 1,
+          "knowledge_point": "秋天的景色与朗读",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《秋天》里说，一群大雁往南飞，一会儿排成个（  ）字。",
+          "options": [
+            "人",
+            "一",
+            "大",
+            "天"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文写大雁「一会儿排成个『人』字，一会儿排成个『一』字」，所以先排成「人」字，选 A；「一」字是后来排成的。",
+          "difficulty": 2,
+          "knowledge_point": "秋天的景色与朗读",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《秋天》里说天空「那么蓝，那么高」，这句话写出了秋天天空的特点。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「那么蓝，那么高」用两个「那么」写出秋天天空又蓝又高，朗读时声音要舒展、往上扬，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "秋天的景色与朗读",
+          "tags": [
+            "朗读"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面词语中，出自《秋天》的有（  ）",
+          "options": [
+            "一片片叶子",
+            "大雁往南飞",
+            "莲叶何田田",
+            "小鸡画竹叶"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "A 一片片叶子出自《秋天》✓；B 大雁往南飞出自《秋天》✓；C 莲叶何田田出自《江南》✗；D 小鸡画竹叶出自《雪地里的小画家》✗。所以选 A、B。",
+          "difficulty": 3,
+          "knowledge_point": "秋天的景色与朗读",
+          "tags": [
+            "多选",
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "《秋天》要求会写的字里，「大」字一共有（  ）画。",
+          "answer": {
+            "value": "三"
+          },
+          "analysis": "「大」的笔顺是横、撇、捺，一共三画，写的时候先写一横，再写一撇和一捺，撇捺要张开放匀，所以填「三」。",
+          "difficulty": 4,
+          "knowledge_point": "秋天的景色与朗读",
+          "tags": [
+            "笔顺"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "《江南》是一首（  ）乐府民歌，课文写的是江南采莲的景色。",
+          "answer": {
+            "value": "汉"
+          },
+          "analysis": "《江南》出自《汉乐府》，所以填「汉」；课文先写采莲时莲叶「何田田」，再写鱼在莲叶间东西南北地游。",
+          "difficulty": 2,
+          "knowledge_point": "江南的背诵与字词",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《江南》里「莲叶何田田」，这句话写的是（  ）",
+          "options": [
+            "荷叶又多又密的样子",
+            "荷叶上落着白雪",
+            "莲叶被鱼儿咬出了缺口",
+            "采莲人把荷叶摘回家"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「何田田」形容荷叶茂盛、连成一片，选 A；课文没有写落雪 ✗；鱼儿是戏莲叶，不是咬叶子 ✗；课文写的是采莲的场景，不写摘荷叶 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "江南的背诵与字词",
+          "tags": [
+            "字词"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《江南》里鱼儿玩闹的地方是（  ）",
+          "options": [
+            "莲叶间",
+            "石头缝里",
+            "沙滩上",
+            "小桥下面"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文说「鱼戏莲叶间」，鱼在莲叶中间游来游去，选 A；石头缝、沙滩、小桥下课文里都没有写。",
+          "difficulty": 3,
+          "knowledge_point": "江南的背诵与字词",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "《江南》里写到鱼儿游玩的方位词有（  ）",
+          "options": [
+            "东",
+            "西",
+            "南",
+            "上"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 东 ✓，课文有「鱼戏莲叶东」；B 西 ✓，课文有「鱼戏莲叶西」；C 南 ✓，课文有「鱼戏莲叶南」；D 上 ✗，课文写的是「鱼戏莲叶北」，没有「上」。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "江南的背诵与字词",
+          "tags": [
+            "多选",
+            "背诵"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "读一读《江南》，再用自己的话说一说：鱼儿在莲叶间是怎么玩闹的？",
+          "answer": {
+            "value": "鱼儿在莲叶中间游来游去，一会儿游到东边，一会儿游到西边，一会儿游到南边，一会儿游到北边，玩得可开心了。"
+          },
+          "analysis": "评分要点：①说出鱼儿是在莲叶间玩闹（1 分）；②能把东、西、南、北四个方位都用上（2 分）；③句子通顺完整（1 分）。只写「鱼儿在玩」不得分。",
+          "difficulty": 4,
+          "knowledge_point": "江南的背诵与字词",
+          "tags": [
+            "朗读背诵",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "雪地里的小画家画的图案，对应正确的有（  ）",
+          "options": [
+            "小鸡画竹叶",
+            "小狗画梅花",
+            "小鸭画枫叶",
+            "青蛙画荷花"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 小鸡画竹叶 ✓；B 小狗画梅花 ✓；C 小鸭画枫叶 ✓；D 青蛙在洞里睡着，没有参加画画 ✗。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "小画家的对应关系",
+          "tags": [
+            "多选",
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《雪地里的小画家》里，青蛙为什么没有参加画画？",
+          "options": [
+            "它在洞里睡着啦",
+            "它怕冷不敢出来",
+            "它去找小鱼玩了",
+            "它不会画竹叶和梅花"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文最后一句写「青蛙为什么没参加？它在洞里睡着啦」，选 A；课文没有说它怕冷 ✗；也没有写它去找小鱼 ✗；更不是不会画 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "小画家的对应关系",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《雪地里的小画家》里说，小鸡、小狗、小鸭、小马不用颜料也不用笔，几步就成了一幅画。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "课文原句是「不用颜料不用笔，几步就成一幅画」，说的是小动物用脚印在雪地上作画，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "小画家的对应关系",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "《雪地里的小画家》里说，青蛙「在洞里（  ）」啦。",
+          "answer": {
+            "value": "睡着"
+          },
+          "analysis": "课文原句是「青蛙为什么没参加？它在洞里睡着啦」，写青蛙在洞里睡大觉，所以填「睡着」。",
+          "difficulty": 3,
+          "knowledge_point": "小画家的对应关系",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "小画家们不用颜料不用笔，靠什么在雪地上画出图案？",
+          "options": [
+            "用脚踩、用身体在雪地上印出花纹",
+            "用树枝在雪上写字画画",
+            "用嘴叼着颜料涂出来",
+            "把画好的纸贴在雪地上"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文说不颜料不用笔、几步就成一幅画，小鸡的竹叶、小鸭的枫叶正像脚印踩出来的，选 A；用树枝与「几步就成」不合 ✗；用颜料与「不用颜料」矛盾 ✗；贴纸更不可能 ✗。",
+          "difficulty": 4,
+          "knowledge_point": "小画家的对应关系",
+          "tags": [
+            "想象"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《四季》里，草芽尖尖，它对（  ）说「我是春天」。",
+          "options": [
+            "小鸟",
+            "青蛙",
+            "燕子",
+            "雪人"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文写「草芽尖尖，他对小鸟说：『我是春天。』」，选 A；青蛙是荷叶的朋友 ✗；燕子是谷穗的朋友 ✗；雪人说的是冬天 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "四季的拟人与积累",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《四季》里，荷叶圆圆的，它告诉青蛙自己是（  ）",
+          "options": [
+            "夏天",
+            "春天",
+            "秋天",
+            "冬天"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文写「荷叶圆圆，他对青蛙说：『我是夏天。』」，选 A；春天是草芽 ✗；秋天是谷穗 ✗；冬天是雪人 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "四季的拟人与积累",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于《四季》，下面说法正确的有（  ）",
+          "options": [
+            "课文用了拟人的写法",
+            "谷穗弯弯，它说自己是是秋天",
+            "雪人大肚子一挺，很顽皮",
+            "草芽尖尖，代表的是冬天"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 草芽、荷叶、谷穗、雪人都会说话，是拟人 ✓；B 谷穗对燕子说「我是秋天」✓；C 雪人一挺、很顽皮 ✓；D 草芽说的是春天，不是冬天 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "四季的拟人与积累",
+          "tags": [
+            "多选",
+            "写法"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "《四季》里说雪人「他顽皮地说」，这样写用了（  ）的写法，让雪人像人一样会说话。",
+          "answer": {
+            "value": "拟人"
+          },
+          "analysis": "把物当作人来写、让它会说话，这叫拟人；《四季》整篇都用拟人写春夏秋冬，所以填「拟人」。",
+          "difficulty": 3,
+          "knowledge_point": "四季的拟人与积累",
+          "tags": [
+            "写法"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面词语中，是《四季》里用来写景物形状的有（  ）",
+          "options": [
+            "尖尖、圆圆、弯弯",
+            "顽皮、挺、大肚子",
+            "春天、夏天、秋天、冬天",
+            "小鸟、青蛙、燕子、雪人"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "尖尖写草芽、圆圆写荷叶、弯弯写谷穗，都是形状，选 A；顽皮、挺、大肚子写神态动作 ✗；四个词是季节 ✗；四个词是朋友 ✗。",
+          "difficulty": 4,
+          "knowledge_point": "四季的拟人与积累",
+          "tags": [
+            "字词积累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "语文园地五「日积月累」里说：「一年之计在于春，（  ）」。",
+          "answer": {
+            "value": "一日之计在于晨"
+          },
+          "analysis": "语文园地五日积月累是「一年之计在于春，一日之计在于晨。一寸光阴一寸金，寸金难买寸光阴」，所以填「一日之计在于晨」。",
+          "difficulty": 2,
+          "knowledge_point": "惜时名言与写话",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「一寸光阴一寸金」这句话的意思是（  ）",
+          "options": [
+            "时间非常宝贵，像黄金一样",
+            "买一寸金子要花一寸时间",
+            "金子比时间更值钱",
+            "要花钱才能买到时间"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "这句用金子来比喻时间，说的是时间像黄金一样珍贵，选 A；后三个选项都把意思弄反了。",
+          "difficulty": 3,
+          "knowledge_point": "惜时名言与写话",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面句子中，可以用来劝人珍惜时间的有（  ）",
+          "options": [
+            "一寸光阴一寸金",
+            "一年之计在于春",
+            "一日之计在于晨",
+            "对牛弹琴"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 一寸光阴一寸金讲时间宝贵 ✓；B 一年之计在于春讲抓住时机 ✓；C 一日之计在于晨讲珍惜早晨 ✓；D 对牛弹琴是讽刺白费口舌 ✗。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "惜时名言与写话",
+          "tags": [
+            "多选",
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「寸金难买寸光阴」的意思是，再多的金钱也买不到时间。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「寸金」指一点点金子，「寸光阴」指一点点时间，句子说时间比金子还难得，说法正确，所以要惜时。",
+          "difficulty": 3,
+          "knowledge_point": "惜时名言与写话",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳地铁早高峰的时间很宝贵。请你用今天积累的惜时名句，写一句劝同学珍惜时间的话。",
+          "answer": {
+            "value": "一寸光阴一寸金，寸金难买寸光阴。我们要珍惜每一分钟，上学不要迟到。"
+          },
+          "analysis": "评分要点：①用上日积月累中的惜时名句或它的意思（2 分）；②劝说的内容具体、句子完整（1 分）；③标点正确、语气友好（1 分）。只写「要珍惜时间」而没有名句或道理的扣分。",
+          "difficulty": 4,
+          "knowledge_point": "惜时名言与写话",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳的秋天也很好看：树叶黄了，大雁往南飞。请你从《秋天》里找出两个合适的词语，用它们写两句话，介绍深圳秋天的景色。",
+          "answer": {
+            "value": "深圳的秋天树叶金黄，一片片叶子落下来。天上的大雁往南飞，一会儿排成人字，一会儿排成一字。"
+          },
+          "analysis": "评分要点：①从《秋天》里找出并用上两个词语（2 分）；②写了两句完整的话（1 分）；②内容与深圳秋天的景色相符（1 分）；③标点正确（1 分）。只抄课文不给深圳的秋天扣分。",
+          "difficulty": 5,
+          "knowledge_point": "惜时名言与写话",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第六单元 识字",
+      "order_index": 6,
+      "questions": [
+        {
+          "q_type": "fill",
+          "stem": "《对韵歌》的第一句是「云对雨，（  ）」。",
+          "answer": {
+            "value": "雪对风"
+          },
+          "analysis": "《对韵歌》原文是「云对雨，雪对风，花对树，鸟对虫。山清对水秀，柳绿对桃红」，所以填「雪对风」。",
+          "difficulty": 2,
+          "knowledge_point": "对韵歌的对仗词语",
+          "tags": [
+            "朗读背诵"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《对韵歌》里「山清对水秀」这一句，写的是（  ）",
+          "options": [
+            "山水清秀的景色",
+            "天气变冷的样子",
+            "花儿开得很红",
+            "鸟儿飞得很高"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「山清」对「水秀」，写的是山明水秀的景色，选 A；后三项在《对韵歌》里都没有出现。",
+          "difficulty": 2,
+          "knowledge_point": "对韵歌的对仗词语",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面出自《对韵歌》的对子有（  ）",
+          "options": [
+            "花对树",
+            "鸟对虫",
+            "柳绿对桃红",
+            "白毛浮绿水"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 花对树出自《对韵歌》✓；B 鸟对虫出自《对韵歌》✓；C 柳绿对桃红出自《对韵歌》✓；D 白毛浮绿水出自《咏鹅》✗。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "对韵歌的对仗词语",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《对韵歌》里「云」和「雨」、「花」和「树」都是意思相对、读音相配的词。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "对韵歌的上下句意思相对：云对雨都是天气，花对树都是景物，读起来抑扬相对，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "对韵歌的对仗词语",
+          "tags": [
+            "对仗"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《对韵歌》全文共六句，最后一句是（  ）",
+          "options": [
+            "柳绿对桃红",
+            "山清对水秀",
+            "鸟对虫",
+            "云对雨"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "《对韵歌》的顺序是云对雨、雪对风、花对树、鸟对虫、山清对水秀、柳绿对桃红，最后一句是「柳绿对桃红」，选 A。",
+          "difficulty": 4,
+          "knowledge_point": "对韵歌的对仗词语",
+          "tags": [
+            "背诵"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "照着《对韵歌》的样子，自己编一句对子（如「天对地」），并把你的对子写下来。",
+          "answer": {
+            "value": "天对地，水对山，人对花。"
+          },
+          "analysis": "评分要点：①写出三个或两个意思相对的词（2 分）；②前后词字数相同、读起来顺口（1 分）；③字写得工整、句子完整（1 分）。像「太阳对月亮」这样只写一个词也可以。",
+          "difficulty": 4,
+          "knowledge_point": "对韵歌的对仗词语",
+          "tags": [
+            "语文实践",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面这些字，是由几个字组合成的会意字的有（  ）",
+          "options": [
+            "明",
+            "从",
+            "林",
+            "力"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 明是日+月组合 ✓；B 从是人+人组合 ✓；C 林是木+木组合 ✓；D 力是一个独体字，不能拆成几个字 ✗。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "会意字的组合规律",
+          "tags": [
+            "多选",
+            "识字方法"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「明」这个字是由（  ）组合成的，它的意思是（  ）",
+          "options": [
+            "日+月，太阳和月亮都很亮",
+            "日+月，表示早晨和晚上",
+            "口+月，表示说话",
+            "目+月，表示看东西"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「明」是日+月，太阳和月亮都能发光，合起来表示明亮，选 A；课文的题目《日月明》正是从这两个字说起 ✗；其他两项的部件不对 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "会意字的组合规律",
+          "tags": [
+            "识字方法"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「尘」这个字是由下面哪两个部件组合成的？",
+          "options": [
+            "小+土",
+            "人+土",
+            "日+月",
+            "木+木"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「尘」是「小」加「土」，细小的泥土就是灰尘，选 A；人+土、人+人 都不是 ✗；日+月是「明」✗；木+木是「林」✗。",
+          "difficulty": 2,
+          "knowledge_point": "会意字的组合规律",
+          "tags": [
+            "识字方法"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "「众」是由三个（  ）组合成的字，表示人很多。",
+          "answer": {
+            "value": "人"
+          },
+          "analysis": "一个「人」是单人，两个「人」组成「从」，三个「人」组成「众」，人越多字里部件越多，所以填「人」。",
+          "difficulty": 3,
+          "knowledge_point": "会意字的组合规律",
+          "tags": [
+            "识字方法"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「森」字比「林」字多了一个「木」，这说明（  ）",
+          "options": [
+            "树木比「林」更多",
+            "「森」比「林」少一个木",
+            "「林」字写错了",
+            "「森」和「林」读音一样"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "林是木+木，表示树多；森是木+木+木，树木更茂密，选 A；「森」比「林」多不是少 ✗；两个字都对 ✗；读音不同 ✗。",
+          "difficulty": 4,
+          "knowledge_point": "会意字的组合规律",
+          "tags": [
+            "识字方法"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「心」是象形字，字形像心脏的样子，所以不是两个部件组合成的字。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「心」是照着心脏的样子画出来的象形字，不能拆成两个字组合，所以这句话说得对；会意字才是几个部件合起来表意。",
+          "difficulty": 3,
+          "knowledge_point": "会意字的组合规律",
+          "tags": [
+            "识字方法"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面词语中，都含有《小书包》会写字「本」的有（  ）",
+          "options": [
+            "书本",
+            "本子",
+            "课本",
+            "太阳"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 书本里有「本」✓；B 本子里有「本」✓；C 课本里有「本」✓；D 太阳里没有「本」✗。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "小书包的生字与笔顺",
+          "tags": [
+            "多选",
+            "组词"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「刀」字一共有（  ）画",
+          "options": [
+            "两",
+            "三",
+            "四",
+            "五"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「刀」的笔顺是横折钩、撇，一共两画，选 A；把「刀」写成三画以上是笔画数记错 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "小书包的生字与笔顺",
+          "tags": [
+            "笔顺"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "「本」字的笔顺是横、竖、撇、捺、横，一共有（  ）画。",
+          "answer": {
+            "value": "五"
+          },
+          "analysis": "「本」先写木字的一横，再写竖、撇、捺，最后在下面加一横标出「本」字，一共五画，所以填「五」。",
+          "difficulty": 3,
+          "knowledge_point": "小书包的生字与笔顺",
+          "tags": [
+            "笔顺"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面哪个词语是用《小书包》的生字「早」组成的？",
+          "options": [
+            "早上",
+            "书本",
+            "尺子",
+            "刀子"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「早」可以组成「早上」，选 A；书本、尺子、刀子里没有「早」字 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "小书包的生字与笔顺",
+          "tags": [
+            "组词"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用《小书包》里学过的生字写一句话，说说你上学时书包里都装了些什么。",
+          "answer": {
+            "value": "我的书包里装着一本书、一把尺子和一把小刀，还有一个新本子。"
+          },
+          "analysis": "评分要点：①用上《小书包》的生字（书、本、刀、尺、早）至少两个（2 分）；②句子完整、意思清楚（1 分）；③量词搭配正确、标点正确（1 分）。只罗列词语不成句不得分。",
+          "difficulty": 4,
+          "knowledge_point": "小书包的生字与笔顺",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "升国旗的时候，我们对着国旗应该（  ）",
+          "options": [
+            "立正、敬礼",
+            "低头看书",
+            "边走边说笑",
+            "把手插进口袋"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文写「向着国旗，我们立正；望着国旗，我们敬礼」，这是升旗仪式的基本要求，选 A；后三项都不庄重 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "升国旗的生字与朗读",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "《升国旗》里写：「向着国旗，我们立正；望着国旗，我们（  ）」。",
+          "answer": {
+            "value": "敬礼"
+          },
+          "analysis": "课文原句是「向着国旗，我们立正；望着国旗，我们敬礼」，前后两个动作要对应，所以填「敬礼」。",
+          "difficulty": 2,
+          "knowledge_point": "升国旗的生字与朗读",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《升国旗》里写，国歌声中，国旗（  ）",
+          "options": [
+            "徐徐升起",
+            "慢慢降下",
+            "一动不动",
+            "被风吹跑了"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文写「国歌声中，徐徐升起」，选 A；课文写的是升起不是降下 ✗；更没有写旗被吹跑 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "升国旗的生字与朗读",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于《升国旗》，下面说法正确的有（  ）",
+          "options": [
+            "课文写的是五星红旗",
+            "升旗时要立正、敬礼",
+            "课文写国旗徐徐降下来",
+            "国歌声中国旗迎风飘扬"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 课文写「五星红旗，我们的国旗」✓；B 课文写立正、敬礼 ✓；C 课文写的是徐徐升起，不是降下 ✗；D 课文写「迎风飘扬，多么美丽」✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "升国旗的生字与朗读",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「五」字一共有四画，写的时候先写横，再写竖、横折，最后写横。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「五」的笔顺是横、竖、横折、横，一共四画，说法正确；数字「五」和「五」字笔画数不同，别数错了。",
+          "difficulty": 3,
+          "knowledge_point": "升国旗的生字与朗读",
+          "tags": [
+            "笔顺"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写一写你在学校参加升旗仪式时看到的情景（要用上「立正」「敬礼」这样的词）。",
+          "answer": {
+            "value": "升旗仪式开始了，国歌声响起来，国旗徐徐升起。我们排得整整齐齐，向着国旗立正，望着国旗敬礼。"
+          },
+          "analysis": "评分要点：①写清楚升旗时的情景（2 分）；②用上「立正」「敬礼」等词（1 分）；③句子完整、标点正确（1 分）。只写「我们去升旗了」不得分。",
+          "difficulty": 4,
+          "knowledge_point": "升国旗的生字与朗读",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "语文园地六「读一读，背一背」里说：「早晨起来，面向太阳。前面是东，后面是西。左面是北，（  ）」。",
+          "answer": {
+            "value": "右面是南"
+          },
+          "analysis": "这段儿歌是「早晨起来，面向太阳。前面是东，后面是西。左面是北，右面是南」，方向要对着记，别记反了，所以填「右面是南」。",
+          "difficulty": 2,
+          "knowledge_point": "方向词语与古朗月行",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "语文园地六「日积月累」的《古朗月行（节选）》的作者是（  ）",
+          "options": [
+            "唐代的李白",
+            "唐代的王维",
+            "唐代的李绅",
+            "宋代的苏轼"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "《古朗月行（节选）》是唐代诗人李白写的，选 A；王维写《画》✗；李绅写《悯农》✗；苏轼是宋代诗人 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "方向词语与古朗月行",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "《古朗月行（节选）》里说：「小时不识月，呼作（  ）」。",
+          "answer": {
+            "value": "白玉盘"
+          },
+          "analysis": "《古朗月行（节选）》原句是「小时不识月，呼作白玉盘。又疑瑶台镜，飞在青云端」，所以填「白玉盘」。",
+          "difficulty": 3,
+          "knowledge_point": "方向词语与古朗月行",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面《古朗月行（节选）》里的诗句，正确的有（  ）",
+          "options": [
+            "呼作白玉盘",
+            "飞在青云端",
+            "又疑瑶台镜",
+            "疑是地上霜"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 呼作白玉盘 ✓；B 飞在青云端 ✓；C 又疑瑶台镜 ✓；D 疑是地上霜是《静夜思》里的诗句 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "方向词语与古朗月行",
+          "tags": [
+            "多选",
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "早晨，你面向太阳站着。请你说一说自己的前面、后面、左面、右面分别是什么方向，再写一句完整的话。",
+          "answer": {
+            "value": "早晨我面向太阳站着，前面是东，后面是西，左面是北，右面是南。我迎着太阳大步向前走。"
+          },
+          "analysis": "评分要点：①四个方向都说对（2 分）；②用上「前面、后面、左面、右面」等词（1 分）；③写成完整的一句话、标点正确（1 分）。方向说错要扣分。",
+          "difficulty": 4,
+          "knowledge_point": "方向词语与古朗月行",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第七单元 阅读",
+      "order_index": 7,
+      "questions": [
+        {
+          "q_type": "fill",
+          "stem": "《小小的船》的第一句是「弯弯的月儿（  ）」。",
+          "answer": {
+            "value": "小小的船"
+          },
+          "analysis": "《小小的船》原文是「弯弯的月儿小小的船。小小的船儿两头尖」，所以填「小小的船」。",
+          "difficulty": 2,
+          "knowledge_point": "小小的船的想象与朗读",
+          "tags": [
+            "朗读背诵"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「小小的船儿两头尖」中的「尖」，写出了小船的什么特点？",
+          "options": [
+            "两头尖尖的形状",
+            "船身很高很重",
+            "船上坐着很多人",
+            "船在水里划得很快"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「两头尖」写的是小船形状两头尖尖，像一弯月亮，选 A；后三项课文里都没有写。",
+          "difficulty": 2,
+          "knowledge_point": "小小的船的想象与朗读",
+          "tags": [
+            "字词"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "《小小的船》里写到的景物有（  ）",
+          "options": [
+            "弯弯的月儿",
+            "闪闪的星星",
+            "蓝蓝的天",
+            "皑皑的白雪"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 弯弯的月儿出自《小小的船》✓；B 闪闪的星星出自《小小的船》✓；C 蓝蓝的天出自《小小的船》✓；D 皑皑的白雪课文里没有 ✗。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "小小的船的想象与朗读",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《小小的船》里用了「弯弯的」「小小的」「蓝蓝的」这样的叠词，读起来轻柔得像唱歌。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "叠词把景物写得又柔和又可爱，朗读时声音轻轻的、慢慢的，像摇篮曲，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "小小的船的想象与朗读",
+          "tags": [
+            "朗读"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "《小小的船》里说：「我在小小的船里坐，（  ）」。",
+          "answer": {
+            "value": "只看见闪闪的星星蓝蓝的天"
+          },
+          "analysis": "儿歌原文是「我在小小的船里坐，只看见闪闪的星星蓝蓝的天」，写的是坐在月亮船上看夜空的美丽，说法正确所以填这句。",
+          "difficulty": 3,
+          "knowledge_point": "小小的船的想象与朗读",
+          "tags": [
+            "朗读背诵"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「只看见闪闪的星星蓝蓝的天」这句话，写出了作者坐在小船上的什么感觉？",
+          "options": [
+            "安静又轻盈，像飘在夜空里",
+            "害怕，因为四周很黑",
+            "着急，因为船要翻了",
+            "生气，因为没有人陪"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「只看见」写出眼前只有星星和蓝天，人的心情是安静、轻松、像飘在空中，选 A；后三项和课文轻快的语气不符 ✗。",
+          "difficulty": 4,
+          "knowledge_point": "小小的船的想象与朗读",
+          "tags": [
+            "体会情感"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "晚上你抬头看月亮，觉得它像什么？请用《小小的船》里的叠词写一句话。",
+          "answer": {
+            "value": "弯弯的月儿像小小的船，我坐在船上数闪闪的星星。"
+          },
+          "analysis": "评分要点：①用上《小小的船》里的叠词至少一个（2 分）；②写出月亮和自己（或想象）的画面（1 分）；③句子完整、标点正确（1 分）。只写「像小船」两个字不得分。",
+          "difficulty": 4,
+          "knowledge_point": "小小的船的想象与朗读",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于《影子》，下面说法正确的有（  ）",
+          "options": [
+            "影子可以在人的前面，也可以在人的后面",
+            "课文把影子比作一条小黑狗",
+            "影子是「我」的好朋友",
+            "影子只会在左边，不会到右边"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 课文写「影子在前，影子在后」✓；B 课文写「就像一条小黑狗」✓；C 课文写「它是我的好朋友」✓；D 课文还写「影子在左，影子在右」✗。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "影子的方位与情谊",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《影子》里影子在左、在右，说明影子会（  ）",
+          "options": [
+            "跟着人一起移动",
+            "一直停在原地不动",
+            "越跑越快追不上人",
+            "只在下雨的时候出现"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "人在走，影子就一会儿在前、一会儿在后，方向也变来变去，说明影子跟着人一起移动，选 A；后面三项都和课文不符 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "影子的方位与情谊",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "《影子》里写：「影子常常跟着我，（  ）」。",
+          "answer": {
+            "value": "就像一条小黑狗"
+          },
+          "analysis": "课文原句是「影子在前，影子在后，影子常常跟着我，就像一条小黑狗」，这个比喻写出了影子跟着人跑的样子，所以填「就像一条小黑狗」。",
+          "difficulty": 3,
+          "knowledge_point": "影子的方位与情谊",
+          "tags": [
+            "朗读背诵"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《影子》这首课文里用到了「前、后」和「左、右」两组方位词。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "课文先写「影子在前，影子在后」，再写「影子在左，影子在右」，两组方位词都用上了，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "影子的方位与情谊",
+          "tags": [
+            "字词积累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "影子为什么会跟着人一起动？道理是（  ）",
+          "options": [
+            "光被身体挡住，影子就落在身体的一侧",
+            "影子是活的，会自己跟着人",
+            "影子被风吹着，所以跑得快",
+            "地上有一条影子在拖着你"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "光被身体挡住，照不到的地方就是影子，人一动，挡光的位置变了，影子也跟着变，选 A；影子没有生命 ✗；风和影子无关 ✗；影子不是活物 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "影子的方位与情谊",
+          "tags": [
+            "观察思考"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "放学路上，你看到自己的影子在前面。请你写两句话，说说影子和自己的位置关系。",
+          "answer": {
+            "value": "我的影子在前面，跟着我一步一步地走。我往前走，影子也往前走，就像一条小黑狗。"
+          },
+          "analysis": "评分要点：①写清楚影子和自己的位置关系（前、后、左、右）（2 分）；②写了两句完整的话（1 分）；③句子通顺、标点正确（1 分）。只写「影子在前面」一句扣分。",
+          "difficulty": 4,
+          "knowledge_point": "影子的方位与情谊",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《两件宝》里说的，人的两件宝是（  ）",
+          "options": [
+            "双手和大脑",
+            "书包和铅笔",
+            "钱和房子",
+            "力气和时间"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文开头就写「人有两件宝，双手和大脑」，选 A；书包、铅笔是文具 ✗；钱和房子不是课文说的 ✗；力气和时间课文没提 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "两件宝的手脑并用",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "《两件宝》里说：「人有两件宝，（  ）」。",
+          "answer": {
+            "value": "双手和大脑"
+          },
+          "analysis": "课文第一句是「人有两件宝，双手和大脑」，接着分别说双手会做工、大脑会思考，所以填「双手和大脑」。",
+          "difficulty": 3,
+          "knowledge_point": "两件宝的手脑并用",
+          "tags": [
+            "朗读背诵"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「双手会做工，大脑会思考」这句话把双手和大脑的什么说得最清楚？",
+          "options": [
+            "各自的本领",
+            "各自的颜色",
+            "各自的大小",
+            "各自的价格"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "做工是手的本领，思考是大脑的本领，这句话讲的是两者各有所长，选 A；颜色、大小、价格课文都没提 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "两件宝的手脑并用",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面说法中，符合《两件宝》意思的有（  ）",
+          "options": [
+            "用手不用脑，事情做不好",
+            "用脑不用手，啥也办不到",
+            "用手又用脑，才能有创造",
+            "两件宝指的是钱和房子"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 用手不用脑，事情做不好 ✓；B 用脑不用手，啥也办不到 ✓；C 用手又用脑，才能有创造 ✓；D 两件宝指双手和大脑，不是钱和房子 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "两件宝的手脑并用",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《两件宝》想告诉我们的道理是：手脑并用，才能有创造。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "课文最后一句「用手又用脑，才能有创造」就是全课的中心，说法正确；读完要能用生活中的事说明这个道理。",
+          "difficulty": 2,
+          "knowledge_point": "两件宝的手脑并用",
+          "tags": [
+            "体会道理"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "学了《两件宝》，下面哪种做法最符合课文的意思？",
+          "options": [
+            "动手做之前先动脑想清楚怎么做",
+            "先做出来再说，不用想",
+            "只要手快就行，别的都不管",
+            "等别人做好了，自己照着做"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文说大脑会思考、双手会做工，要用手又用脑，选 A；先做不想就是「用手不用脑」✗；只图快不管思考 ✗；照抄别人的更没有自己的创造 ✗。",
+          "difficulty": 4,
+          "knowledge_point": "两件宝的手脑并用",
+          "tags": [
+            "联系生活"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳的科创课上，同学们先动脑设计，再用小手把模型搭起来。请你写一句话，说说手和脑各起什么作用。",
+          "answer": {
+            "value": "大脑帮我们想出好办法，双手帮我们把想法做出来，手和脑一起用，才能做出新东西。"
+          },
+          "analysis": "评分要点：①写清脑负责思考、手负责做工（2 分）；②用上「用手又用脑」的意思（1 分）；③句子完整、标点正确（1 分）。只写「用手和脑一起」而没说清各自作用扣 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "两件宝的手脑并用",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "语文园地七「日积月累」里说：「种瓜得瓜，（  ）」。",
+          "answer": {
+            "value": "种豆得豆"
+          },
+          "analysis": "日积月累第一句是「种瓜得瓜，种豆得豆」，说的是种什么结什么，后一句是「种豆得豆」，所以填「种豆得豆」。",
+          "difficulty": 2,
+          "knowledge_point": "谚语积累与道理",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面句子中，出自语文园地七「日积月累」的有（  ）",
+          "options": [
+            "前人栽树，后人乘凉",
+            "千里之行，始于足下",
+            "百尺竿头，更进一步",
+            "一寸光阴一寸金"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 前人栽树，后人乘凉出自语文园地七 ✓；B 千里之行，始于足下出自语文园地七 ✓；C 百尺竿头，更进一步出自语文园地七 ✓；D 一寸光阴一寸金出自语文园地五 ✗。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "谚语积累与道理",
+          "tags": [
+            "多选",
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「千里之行，始于足下」这句话告诉我们（  ）",
+          "options": [
+            "再远的事情也要从第一步做起",
+            "走路比坐车快",
+            "路很长要走很久",
+            "脚比手更有用"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「千里之行」指远大的事，「始于足下」指从脚下的第一步开始，说的是做事要从第一步做起，选 A；后三项只抓住字面 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "谚语积累与道理",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "语文园地七「日积月累」里说：「前人栽树，（  ）」。",
+          "answer": {
+            "value": "后人乘凉"
+          },
+          "analysis": "日积月累第二句是「前人栽树，后人乘凉」，说的是前人付出、后人得益，所以填「后人乘凉」。",
+          "difficulty": 3,
+          "knowledge_point": "谚语积累与道理",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「百尺竿头，更进一步」的意思是取得成绩以后，还要向更高的目标努力。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "已经到了一百尺高，还要再往上爬一点，说的是不能满足于已有的成绩，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "谚语积累与道理",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "「前人栽树，后人乘凉」。请你想一想，自己准备为班级和同学做哪一件「让后人乘凉」的事，并写下来。",
+          "answer": {
+            "value": "我打算每天把教室的桌椅摆整齐，还把图书角整理好，让后来的同学一进教室就能看到整整齐齐的桌椅和排好的书。"
+          },
+          "analysis": "评分要点：①写出一件自己能为他人做的事（2 分）；②与「前人栽树，后人乘凉」的道理相合（1 分）；③句子完整、标点正确（1 分）。写成空话、没有具体做法扣分。",
+          "difficulty": 4,
+          "knowledge_point": "谚语积累与道理",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第八单元 阅读",
+      "order_index": 8,
+      "questions": [
+        {
+          "q_type": "multiple",
+          "stem": "下面动物与尾巴特点的对应，正确的有（  ）",
+          "options": [
+            "猴子的尾巴长",
+            "兔子的尾巴短",
+            "松鼠的尾巴好像一把伞",
+            "鸭子的尾巴弯"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 猴子的尾巴长 ✓；B 兔子的尾巴短 ✓；C 松鼠的尾巴好像一把伞 ✓；D 鸭子的尾巴是扁的，不是弯的 ✗。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "比尾巴的动物特征",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《比尾巴》里问「谁的尾巴弯」，回答的是（  ）",
+          "options": [
+            "公鸡",
+            "鸭子",
+            "孔雀",
+            "松鼠"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文写「公鸡的尾巴弯。鸭子的尾巴扁。孔雀的尾巴最好看」，所以是公鸡，选 A；松鼠的尾巴好像一把伞 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "比尾巴的动物特征",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "《比尾巴》里说：「谁的尾巴扁，（  ）」。",
+          "answer": {
+            "value": "鸭子的尾巴扁"
+          },
+          "analysis": "课文原句是「鸭子的尾巴扁」，写的是鸭子扁扁的尾巴，所以填「鸭子的尾巴扁」。",
+          "difficulty": 2,
+          "knowledge_point": "比尾巴的动物特征",
+          "tags": [
+            "朗读背诵"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《比尾巴》用一问一答的句子，写出了好几种小动物尾巴的样子。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "课文先问「谁的尾巴长？谁的尾巴短？」，再一句一句回答，读起来像儿歌一样有节奏，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "比尾巴的动物特征",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《比尾巴》里「好像一把伞」形容的是（  ）的尾巴",
+          "options": [
+            "松鼠",
+            "猴子",
+            "兔子",
+            "孔雀"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文写「松鼠的尾巴好像一把伞」，伞是蓬蓬的、松鼠尾巴也是蓬蓬的，选 A；其他三个动物都不是 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "比尾巴的动物特征",
+          "tags": [
+            "字词"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "学完《比尾巴》，请你用「谁的尾巴……？」的句式，向同学介绍一种小动物的尾巴。",
+          "answer": {
+            "value": "谁的尾巴最短？小狗的尾巴最短。小狗高兴的时候，尾巴摇来摇去，像一把小扇子。"
+          },
+          "analysis": "评分要点：①用上「谁的尾巴……」的问句格式（2 分）；②说出一种小动物尾巴的样子（1 分）；③句子完整、标点正确（1 分）。只写「小狗的尾巴短」而没有用问句格式扣 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "比尾巴的动物特征",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《乌鸦喝水》里，乌鸦找到瓶子后发现（  ）",
+          "options": [
+            "瓶口小，里面的水又少",
+            "瓶口很大，水满满的",
+            "瓶子破了，一点水也没有",
+            "瓶子被树叶盖住了"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文写乌鸦口渴找到瓶子，可是瓶口小、水又少，喝不到水，选 A；水满或瓶子破都用不上想办法的办法 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "乌鸦喝水的办法与道理",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些是《乌鸦喝水》里乌鸦做的事？（  ）",
+          "options": [
+            "把石子一颗一颗放进瓶子里",
+            "把石子放进去以后喝到了水",
+            "把瓶子打碎了",
+            "用翅膀把水舀出来"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "A 乌鸦把石子一颗一颗放进瓶里 ✓；B 水升高后乌鸦喝到了水 ✓；C 课文没有打碎瓶子 ✗；D 也没有用翅膀舀水 ✗。所以选 A、B。",
+          "difficulty": 2,
+          "knowledge_point": "乌鸦喝水的办法与道理",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "乌鸦把石子放进瓶子里以后，瓶里的水就（  ）上来了。",
+          "answer": {
+            "value": "升高"
+          },
+          "analysis": "石子沉到瓶底占了地方，水就被挤得升高了，乌鸦这才喝到水，所以填「升高」。",
+          "difficulty": 3,
+          "knowledge_point": "乌鸦喝水的办法与道理",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "乌鸦最后能喝到水，是因为（  ）",
+          "options": [
+            "石子占了地方，把水挤得升高了",
+            "太阳把水晒热了",
+            "风把水吹到了瓶口",
+            "瓶子自己裂开了"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "瓶口小水又少，石子沉下去占了空间，水位就升高，乌鸦喝着水，选 A；晒热、吹风、裂开课文都没写 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "乌鸦喝水的办法与道理",
+          "tags": [
+            "道理"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《乌鸦喝水》告诉我们，遇到困难的时候要肯动脑筋、想办法。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "乌鸦没有放弃，也没有去破坏瓶子，而是想出放石子的办法，说明遇到困难要开动脑筋，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "乌鸦喝水的办法与道理",
+          "tags": [
+            "体会道理"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "《乌鸦喝水》里的「办」字，可以组成词语（  ）。",
+          "answer": {
+            "value": "办法"
+          },
+          "analysis": "「办」可以组成「办法」，课文里乌鸦想出的主意就是一种办法，所以填「办法」。",
+          "difficulty": 2,
+          "knowledge_point": "乌鸦喝水的办法与道理",
+          "tags": [
+            "组词"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面做法中，最像乌鸦喝水时动脑筋的是（  ）",
+          "options": [
+            "水少够不着时，先想办法把水位升高",
+            "够不着就算了，回家去",
+            "使劲把瓶子推倒",
+            "大声喊人来帮忙抬瓶子"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "乌鸦是自己想办法把水位升高，选 A；放弃 ✗；推倒瓶子不是课文里的办法 ✗；课文里乌鸦没有叫人 ✗。",
+          "difficulty": 4,
+          "knowledge_point": "乌鸦喝水的办法与道理",
+          "tags": [
+            "联系生活"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳有些公园放了大水桶接雨水浇花。请你想一想：除了放石子，你还能想出什么办法，让瓶子里的水升高？写一句话说明理由。",
+          "answer": {
+            "value": "还可以把瓶子斜靠在树桩上，让雨水慢慢流进瓶口更多的位置；也可以换一个口大一些的瓶子，装的水就多了。"
+          },
+          "analysis": "评分要点：①能提出一个动脑筋的具体办法（2 分）；②说清楚为什么这个办法能让水升高（1 分）；③句子完整、标点正确（1 分）。只写「把水多倒点」而没有理由扣分。",
+          "difficulty": 4,
+          "knowledge_point": "乌鸦喝水的办法与道理",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《雨点儿》里，大雨点儿要去的地方是（  ）",
+          "options": [
+            "有田有池子的地方",
+            "有花有草的地方",
+            "又高又远的山顶",
+            "热闹的城市里"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文写大雨点儿说「我要去有田有池子的地方」，选 A；小雨点儿才去有花有草的地方 ✗；山顶和城市课文都没写 ✗。",
+          "difficulty": 2,
+          "knowledge_point": "雨点儿的大小与去向",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "《雨点儿》里，大雨点儿说它要去有田有（  ）的地方。",
+          "answer": {
+            "value": "池子"
+          },
+          "analysis": "课文原句是「我要去有田有池子的地方」，田里种庄稼，池子里养鱼，所以填「池子」。",
+          "difficulty": 2,
+          "knowledge_point": "雨点儿的大小与去向",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于《雨点儿》，下面说法正确的有（  ）",
+          "options": [
+            "雨点儿是从云彩里飘落下来的",
+            "大雨点儿要去有田有池子的地方",
+            "小雨点儿跟着大雨点儿一起来了到有花有草的地方",
+            "雨点儿只会落在屋顶上"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 课文写「数不清的雨点儿，从云彩里飘落下来」✓；B 大雨点儿去有田有池子的地方 ✓；C 小雨点儿跟着大雨点儿来到有花有草的地方 ✓；D 课文没有说只落在屋顶上 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "雨点儿的大小与去向",
+          "tags": [
+            "多选"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《雨点儿》里的「沙沙沙」，写的是雨点轻轻落下来的声音。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「沙沙沙」是拟声词，写雨点落在地上、落在花草上的轻声，和「数不清的雨点儿」连起来读，像轻柔的儿歌，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "雨点儿的大小与去向",
+          "tags": [
+            "朗读"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "从《雨点儿》里可以知道，小雨点儿最后落在（  ）",
+          "options": [
+            "有花有草的地方，把花儿浇得更红艳艳",
+            "又高又远的山顶上",
+            "城市的马路上",
+            "干枯的沙漠里"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文写小雨点儿跟着大雨点儿来到有花有草的地方，「沙沙沙」把花儿浇得红艳艳，选 A；其他三项课文都没有写到 ✗。",
+          "difficulty": 4,
+          "knowledge_point": "雨点儿的大小与去向",
+          "tags": [
+            "课文理解"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳的台风天常有大雨。请你用《雨点儿》里的一个词语（比如「云彩」「飘落」），写一句描写雨点的话。",
+          "answer": {
+            "value": "乌云里飘落下来数不清的雨点儿，落在我的雨伞上，响得沙沙沙。"
+          },
+          "analysis": "评分要点：①用上《雨点儿》里的词语至少一个（2 分）；②写出雨点飘落的画面（1 分）；③句子完整、标点正确（1 分）。只写词语不成句不得分。",
+          "difficulty": 4,
+          "knowledge_point": "雨点儿的大小与去向",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "语文园地八「日积月累」里《风》的作者是唐代的（  ）。",
+          "answer": {
+            "value": "李峤"
+          },
+          "analysis": "《风》是唐代诗人李峤写的，所以填「李峤」；朗读时「解落三秋叶」的「解」读 jiè，指能够。",
+          "difficulty": 2,
+          "knowledge_point": "风的古诗与写祝福语",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "《风》里说：「解落三秋叶，（  ）」。",
+          "answer": {
+            "value": "能开二月花"
+          },
+          "analysis": "《风》的原句是「解落三秋叶，能开二月花。过江千尺浪，入竹万竿斜」，写风能吹落秋叶、催开春花，所以填「能开二月花」。",
+          "difficulty": 3,
+          "knowledge_point": "风的古诗与写祝福语",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《风》里「过江千尺浪，入竹万竿斜」，写出了风的（  ）",
+          "options": [
+            "很大的力量",
+            "很小的声音",
+            "很长的绳子",
+            "很矮的竹子"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "风一过江就掀起千尺高的浪，一进竹林就把万竿竹子吹斜，写的是风力气大，选 A；后三项都和诗意相反 ✗。",
+          "difficulty": 3,
+          "knowledge_point": "风的古诗与写祝福语",
+          "tags": [
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面出自语文园地八「日积月累」的有（  ）",
+          "options": [
+            "解落三秋叶，能开二月花",
+            "过江千尺浪，入竹万竿斜",
+            "众人一条心，黄土变成金",
+            "锄禾日当午，汗滴禾下土"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 解落三秋叶，能开二月花出自《风》✓；B 过江千尺浪，入竹万竿斜出自《风》✓；C 众人一条心，黄土变成金也是园地八日积月累 ✓；D 锄禾日当午出自语文园地四的《悯农》✗。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "风的古诗与写祝福语",
+          "tags": [
+            "多选",
+            "日积月累"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "写祝福语的时候，称呼的后面应该（  ）",
+          "options": [
+            "打冒号",
+            "打问号",
+            "写句号",
+            "什么都不用写"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "书信的格式是：称呼写在第一行，称呼后面打冒号，祝福的话写在下一行并空两格，所以选 A。",
+          "difficulty": 3,
+          "knowledge_point": "风的古诗与写祝福语",
+          "tags": [
+            "语文实践"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "写祝福语的时候，祝福的话要写在称呼的下一行，并且（  ）。",
+          "answer": {
+            "value": "空两格"
+          },
+          "analysis": "语文园地八的字词句运用要求：称呼后面打冒号，祝福的话写在称呼的下一行，空两格，名字和日期写在右下角，所以填「空两格」。",
+          "difficulty": 3,
+          "knowledge_point": "风的古诗与写祝福语",
+          "tags": [
+            "语文实践"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "新年快到了。请你给爸爸妈妈写一句祝福的话（要有称呼、冒号，祝福语写在下一行并空两格）。",
+          "answer": {
+            "value": "爸爸妈妈：\n　　祝你们新年快乐，身体健康，工作顺利！"
+          },
+          "analysis": "评分要点：①写上称呼并在后面打冒号（2 分）；②祝福语写在下一行并空两格（1 分）；③祝福语内容具体、语气礼貌（1 分）。没有称呼或没打冒号的扣分。",
+          "difficulty": 4,
+          "knowledge_point": "风的古诗与写祝福语",
+          "tags": [
+            "情境应用",
+            "写话"
+          ],
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    }
+  ],
+  "_consolidated": {
+    "generated_at": "2026-11-09T04:23:36",
+    "rule": "非 legacy > 批次日期最新 > 题量最多 > mtime 最新",
+    "sources": [
+      {
+        "chapter": "第一单元 识字",
+        "file": "chinese_g1_first_20261108.json",
+        "questions": 19
+      },
+      {
+        "chapter": "第二单元 汉语拼音",
+        "file": "chinese_g1_first_20261108_r3.json",
+        "questions": 28
+      },
+      {
+        "chapter": "第三单元 汉语拼音",
+        "file": "chinese_g1_first_20261108_r4.json",
+        "questions": 27
+      },
+      {
+        "chapter": "第四单元 汉语拼音",
+        "file": "chinese_g1_first_20261108_r5.json",
+        "questions": 27
+      },
+      {
+        "chapter": "第五单元 阅读",
+        "file": "chinese_g1_first_20261108_r6.json",
+        "questions": 26
+      },
+      {
+        "chapter": "第六单元 识字",
+        "file": "chinese_g1_first_20261108_r7.json",
+        "questions": 28
+      },
+      {
+        "chapter": "第七单元 阅读",
+        "file": "chinese_g1_first_20261108_r8.json",
+        "questions": 26
+      },
+      {
+        "chapter": "第八单元 阅读",
+        "file": "chinese_g1_first_20261108_r9.json",
+        "questions": 27
+      }
+    ],
+    "dropped_sections": [
+      {
+        "chapter": "（复名知识点不声明后变空）",
+        "sections": [
+          "4 日月山川"
+        ]
+      }
+    ],
+    "reused_point_names_not_redeclared": [
+      "日月山川的字义",
+      "象形字识字",
+      "笔画与笔顺",
+      "组词与用词"
+    ],
+    "outside_outline_skipped": []
+  }
+}

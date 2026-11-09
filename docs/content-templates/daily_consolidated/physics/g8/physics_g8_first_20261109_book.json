@@ -1,0 +1,2969 @@
+{
+  "subject": "physics",
+  "grade": 8,
+  "version": "人教版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第一节 声音的产生与传播",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "第二节 声音的特性",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "第三节 声的利用",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "第四节 噪声的危害和控制",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "第五节 跨学科实践：制作隔音房间模型",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "声音的产生与介质",
+      "parent": "第一节 声音的产生与传播",
+      "order_index": 1,
+      "explanation": "一切声音都由物体振动产生，振动停止发声也停止。声音的传播需要介质，固体、液体、气体都能传声，真空不能传声；发声体本身不能脱离介质把声音送出去。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "声速与回声计算",
+      "parent": "第一节 声音的产生与传播",
+      "order_index": 2,
+      "explanation": "声速由介质种类与温度决定，15 ℃ 空气中约 340 m/s，一般有 v_固 > v_液 > v_气。回声是声波遇障碍物反射形成的，测距时用 s = v×t 先算往返路程，再除以 2 得单程距离。",
+      "prerequisites": [
+        "声音的产生与介质"
+      ],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "声音的三特性辨析",
+      "parent": "第二节 声音的特性",
+      "order_index": 3,
+      "explanation": "音调由发声体振动频率决定，频率越高音调越高；响度与振幅及距声源远近有关；音色由发声体的材料与结构决定，是分辨不同人、不同乐器的依据。三者互不混淆。",
+      "prerequisites": [
+        "声音的产生与介质"
+      ],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "声的利用与信息传递",
+      "parent": "第三节 声的利用",
+      "order_index": 4,
+      "explanation": "声既能传递信息（B 超、声呐、蝙蝠回声定位），也能传递能量（超声波清洗、超声碎石）。频率高于 20000 Hz 的是超声波，低于 20 Hz 的是次声波，两者都超出人耳听觉范围。",
+      "prerequisites": [
+        "声速与回声计算"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "噪声控制的三条途径",
+      "parent": "第四节 噪声的危害和控制",
+      "order_index": 5,
+      "explanation": "从物理角度看噪声由发声体无规则振动产生，从环保角度看凡妨碍正常休息、学习和工作的声音都是噪声。控制噪声有三条途径：在声源处、在传播过程中、在人耳处减弱。",
+      "prerequisites": [
+        "声音的三特性辨析"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "隔音模型的控制变量",
+      "parent": "第五节 跨学科实践：制作隔音房间模型",
+      "order_index": 6,
+      "explanation": "比较材料隔音性能要用控制变量法：只换材料，保持声源、盒子、材料厚度、测量位置与环境不变，在相同位置用声级计读数比较；缝隙会漏声，密封与多次测量取平均能减小误差。",
+      "prerequisites": [
+        "噪声控制的三条途径"
+      ],
+      "weight": 1.1,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第一节 温度",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "第二节 熔化和凝固",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "第三节 汽化和液化",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "第四节 升华和凝华",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "第五节 跨学科实践：探索厨房中的物态变化问题",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "温度与温度计",
+      "parent": "第一节 温度",
+      "order_index": 1,
+      "explanation": "温度表示物体的冷热程度，国际单位制中温度的单位是开尔文（K），常用摄氏度（℃）。用温度计测温时要让玻璃泡与被测物充分接触、待示数稳定后读数，并按分度值估读。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "熔化与凝固",
+      "parent": "第二节 熔化和凝固",
+      "order_index": 2,
+      "explanation": "物质由固态变液态叫熔化，由液态变固态叫凝固，熔化吸热、凝固放热。晶体有固定的熔点，熔化过程中温度不变；非晶体没有固定熔点，熔化时持续升温。",
+      "prerequisites": [
+        "温度与温度计"
+      ],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "汽化与液化",
+      "parent": "第三节 汽化和液化",
+      "order_index": 3,
+      "explanation": "汽化有蒸发和沸腾两种方式，都要吸热；蒸发在任何温度下都能在液体表面进行，沸腾在沸点时进行。液化是汽化的逆过程，要放热，常表现为「白气」或物体表面出现水珠。",
+      "prerequisites": [
+        "熔化与凝固"
+      ],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "升华与凝华",
+      "parent": "第四节 升华和凝华",
+      "order_index": 4,
+      "explanation": "物质由固态直接变成气态叫升华，吸热；由气态直接变成固态叫凝华，放热。霜、冰花的形成是凝华，樟脑丸变小、干冰冒白雾是升华，常见于低温环境。",
+      "prerequisites": [
+        "汽化与液化"
+      ],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "物态变化的辨析与应用",
+      "parent": "第五节 跨学科实践：探索厨房中的物态变化问题",
+      "order_index": 5,
+      "explanation": "判断物态变化要抓住「状态怎么变」和「吸热还是放热」两条线索：先看起点和终态是哪种状态，再看中间是否经过液态。冰箱制冷、空调冷凝水、炒菜、烧水等生活现象都能用这套线索分析。",
+      "prerequisites": [
+        "汽化与液化",
+        "升华与凝华"
+      ],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第一节 光的直线传播",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "第二节 光的反射",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "第三节 平面镜成像",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "第四节 光的折射",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "第五节 光的色散",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "光的直线传播",
+      "parent": "第一节 光的直线传播",
+      "order_index": 1,
+      "explanation": "光在同种均匀介质中沿直线传播，这是影子、日食月食、小孔成像等现象的成因。光在真空中的速度最大，约为 3×10⁸ 米每秒；在不同介质中传播速度不同。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "光的反射定律",
+      "parent": "第二节 光的反射",
+      "order_index": 2,
+      "explanation": "反射定律的内容是：反射光线、入射光线和法线在同一平面内，反射光线与入射光线分居法线两侧，反射角等于入射角。注意法线垂直于镜面，反射角是反射光线与法线的夹角。",
+      "prerequisites": [
+        "光的直线传播"
+      ],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "平面镜成像特点",
+      "parent": "第三节 平面镜成像",
+      "order_index": 3,
+      "explanation": "平面镜成正立、等大的虚像，像与物到镜面的距离相等，像与物左右相反。虚像由反射光线的反向延长线会聚形成，不能用光屏承接，因此要看到完整的像需适当移动镜面或人。",
+      "prerequisites": [
+        "光的反射定律"
+      ],
+      "weight": 1.5,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "光的折射规律",
+      "parent": "第四节 光的折射",
+      "order_index": 4,
+      "explanation": "光从空气斜射入水、玻璃等介质时折射角小于入射角，从水斜射入空气时折射角大于入射角；垂直入射时传播方向不变。池底看起来变浅、筷子看起来弯折都是折射造成的。",
+      "prerequisites": [
+        "光的反射定律"
+      ],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "光的色散与三原色",
+      "parent": "第五节 光的色散",
+      "order_index": 5,
+      "explanation": "白光通过三棱镜后分解成红、橙、黄、绿、蓝、靛、紫七色光，说明白光由多种色光混合而成。色光三原色是红、绿、蓝；红外线热效应强可用于加热，紫外线可用于杀菌和验钞。",
+      "prerequisites": [
+        "光的折射规律"
+      ],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第一节 透镜",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "第二节 生活中的透镜",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "第三节 凸透镜成像的规律",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "第四节 眼睛和眼镜",
+      "order_index": 4
+    },
+    {
+      "node_type": "section",
+      "name": "第五节 跨学科实践：制作望远镜",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "透镜的识别与作用",
+      "parent": "第一节 透镜",
+      "order_index": 1,
+      "explanation": "中间厚、边缘薄的透镜叫凸透镜，它对光有会聚作用；中间薄、边缘厚的叫凹透镜，它对光有发散作用。平行于主光轴的光经凸透镜后会聚于焦点，焦点到光心的距离叫焦距。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "生活中的透镜",
+      "parent": "第二节 生活中的透镜",
+      "order_index": 2,
+      "explanation": "照相机、投影仪、放大镜的镜头都是凸透镜；近视眼镜是凹透镜。照相机成倒立缩小的实像，投影仪成倒立放大的实像，放大镜成正立放大的虚像。汽车后视镜是凸面镜。",
+      "prerequisites": [
+        "透镜的识别与作用"
+      ],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "凸透镜成像规律",
+      "parent": "第三节 凸透镜成像的规律",
+      "order_index": 3,
+      "explanation": "凸透镜成实像时像是倒立的：物距大于二倍焦距成倒立缩小的实像，介于焦距与二倍焦距之间成倒立放大的实像，小于焦距时成正立放大的虚像。实像能用光屏承接，虚像不能。",
+      "prerequisites": [
+        "透镜的识别与作用"
+      ],
+      "weight": 1.5,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "眼睛与眼镜",
+      "parent": "第四节 眼睛和眼镜",
+      "order_index": 4,
+      "explanation": "眼睛的晶状体相当于凸透镜，视网膜相当于光屏。近视眼看远处时像成在视网膜前，要戴凹透镜矫正；远视眼看近处时像成在视网膜后，要戴凸透镜矫正。",
+      "prerequisites": [
+        "凸透镜成像规律"
+      ],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "望远镜的原理与制作",
+      "parent": "第五节 跨学科实践：制作望远镜",
+      "order_index": 5,
+      "explanation": "望远镜的物镜相当于焦距较长的凸透镜，把远处物体成一个倒立缩小的实像，目镜相当于放大镜再把这个实像放大。物镜口径大能收集更多光线，看到的像才明亮清晰。",
+      "prerequisites": [
+        "凸透镜成像规律"
+      ],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第一节 质量",
+      "order_index": 1
+    },
+    {
+      "node_type": "section",
+      "name": "第二节 密度",
+      "order_index": 2
+    },
+    {
+      "node_type": "section",
+      "name": "第三节 测量液体和固体的密度",
+      "order_index": 3
+    },
+    {
+      "node_type": "section",
+      "name": "第四节 密度的应用",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "质量与天平的使用",
+      "parent": "第一节 质量",
+      "order_index": 1,
+      "explanation": "质量是物体所含物质的多少，国际单位是千克，1 吨等于 1000 千克。质量与物体的形状、状态、温度和位置无关。用托盘天平测质量时先调平（左物右码、镊子取砝码、先读砝码再读游码）。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "密度的概念与公式",
+      "parent": "第二节 密度",
+      "order_index": 2,
+      "explanation": "密度是某种物质单位体积的质量，公式是 ρ=m/V。国际单位是千克每立方米，常用单位是克每立方厘米，1 g/cm³ 等于 1000 kg/m³。密度是物质的一种特性，同种物质在同一状态下密度不变。",
+      "prerequisites": [
+        "质量与天平的使用"
+      ],
+      "weight": 1.5,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "固体和液体密度的测量",
+      "parent": "第三节 测量液体和固体的密度",
+      "order_index": 3,
+      "explanation": "测固体密度要先用量筒测出体积（避免吸收水影响质量），再用天平测质量；测液体密度常用「空量筒质量与体积」「装液后质量与体积」相减。量筒读数时视线要与凹液面最低处相平。",
+      "prerequisites": [
+        "密度的概念与公式"
+      ],
+      "weight": 1.5,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "密度的应用与物质鉴别",
+      "parent": "第四节 密度的应用",
+      "order_index": 4,
+      "explanation": "密度可以鉴别物质、选择材料、解释生活现象：航空器用密度小的材料，水结冰体积变大密度变小，物体在液体中浮沉由密度与液体密度的大小关系决定。密度大不等于质量一定大，还要看体积。",
+      "prerequisites": [
+        "密度的概念与公式",
+        "固体和液体密度的测量"
+      ],
+      "weight": 1.4,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一章 机械运动",
+      "order_index": 1,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "国际单位制中长度的基本单位是（  ）",
+          "options": [
+            "米",
+            "厘米",
+            "千米",
+            "毫米"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "国际单位制规定长度的基本单位为米（m），厘米、千米、毫米都是米的导出单位。",
+          "difficulty": 1,
+          "knowledge_point": "长度的单位与换算"
+        },
+        {
+          "q_type": "choice",
+          "stem": "用刻度尺测出一支新铅笔的长度记为 17.50 cm，这把刻度尺的分度值是（  ）",
+          "options": [
+            "1 mm",
+            "1 cm",
+            "0.1 mm",
+            "1 dm"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "读数 17.50 cm 的最后一位是估读位，倒数第二位「5」所在位为 0.1 cm = 1 mm，故分度值为 1 mm。",
+          "difficulty": 3,
+          "knowledge_point": "刻度尺的正确使用"
+        },
+        {
+          "q_type": "fill",
+          "stem": "3.5 m = （  ）cm。",
+          "answer": {
+            "value": "350"
+          },
+          "analysis": "1 m = 100 cm，换算时数值乘 100：3.5 × 100 = 350，所以 3.5 m = 350 cm。",
+          "difficulty": 2,
+          "knowledge_point": "长度的单位与换算"
+        },
+        {
+          "q_type": "judge",
+          "stem": "多次测量取平均值可以减小误差。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "多次测量取平均能抵消部分偶然因素，使结果更接近真实值；这是减小误差的常用方法。",
+          "difficulty": 2,
+          "knowledge_point": "误差与错误"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列记录结果中，错误的是（  ）",
+          "options": [
+            "课本宽 18.5",
+            "课桌高 0.75 m",
+            "铅笔长 175 mm",
+            "教室长 8.5 m"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "物理量记录必须带单位，只有数字没有单位的记录不规范，A 缺失单位。",
+          "difficulty": 2,
+          "knowledge_point": "刻度尺的正确使用"
+        },
+        {
+          "q_type": "fill",
+          "stem": "1 h = （  ）s。",
+          "answer": {
+            "value": "3600"
+          },
+          "analysis": "1 h = 60 min，1 min = 60 s，所以换算成秒要连乘两次：60 × 60 = 3600，即 1 h = 3600 s。",
+          "difficulty": 2,
+          "knowledge_point": "时间的测量"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "使用刻度尺测量长度时，下列做法正确的有（  ）",
+          "options": [
+            "零刻度线对准被测物体的一端",
+            "视线正对刻度线",
+            "读数时估读到分度值的下一位",
+            "把尺子斜放在物体上测量"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 对准零刻度 ✓；B 视线正对可避免视差 ✓；C 估读一位是规范要求 ✓；D 尺应平行放置，斜放会使读数偏大 ✗。故 A、B、C 成立。",
+          "difficulty": 3,
+          "knowledge_point": "刻度尺的正确使用",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "误差就是错误，只要测量仔细就可以完全消除。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "误差源于工具、方法和读数等客观因素，只能减小不能消除；错误由操作或记录不当造成，可以避免。",
+          "difficulty": 3,
+          "knowledge_point": "误差与错误"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列属于时间单位的是（  ）",
+          "options": [
+            "秒",
+            "米",
+            "千克",
+            "摄氏度"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "秒是时间的基本单位；米是长度、千克是质量、摄氏度是温度的单位。",
+          "difficulty": 1,
+          "knowledge_point": "时间的测量"
+        },
+        {
+          "q_type": "fill",
+          "stem": "测量值与真实值之间的差异叫做（  ）。",
+          "answer": {
+            "value": "误差"
+          },
+          "analysis": "误差的定义即测量值与真实值之差，它不可避免，只能通过改进方法减小。",
+          "difficulty": 1,
+          "knowledge_point": "误差与错误"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列可以减小误差的做法有（  ）",
+          "options": [
+            "选用更精密的测量工具",
+            "改进测量方法",
+            "多次测量取平均值",
+            "把测量结果随意改小"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A、B、C 都是减小误差的正当方法；D 属于伪造数据，不是减小误差 ✗。故 A、B、C 成立。",
+          "difficulty": 3,
+          "knowledge_point": "误差与错误",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "用停表测时间时，应先读小表盘的分，再读大表盘的秒。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "停表大小表盘需配合读数：小表盘指示分钟，大表盘指示秒，先分后秒才不会读错。",
+          "difficulty": 3,
+          "knowledge_point": "时间的测量"
+        },
+        {
+          "q_type": "choice",
+          "stem": "某同学四次测得同一物体长度分别为 12.34 cm、12.36 cm、12.35 cm、12.75 cm，其中最可能错误的数据是（  ）",
+          "options": [
+            "12.75 cm",
+            "12.34 cm",
+            "12.36 cm",
+            "12.35 cm"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "其余三次集中在 12.34~12.36 cm，12.75 cm 偏离近 0.4 cm，明显超出合理误差范围，属记录或操作错误。",
+          "difficulty": 3,
+          "knowledge_point": "误差与错误"
+        },
+        {
+          "q_type": "fill",
+          "stem": "1 mm = （  ）μm。",
+          "answer": {
+            "value": "1000"
+          },
+          "analysis": "1 m = 1000 mm，1 mm = 1000 μm，毫米到微米按千进制递进：1 × 1000 = 1000，所以 1 mm = 1000 μm。",
+          "difficulty": 2,
+          "knowledge_point": "长度的单位与换算"
+        },
+        {
+          "q_type": "judge",
+          "stem": "零刻度线磨损的刻度尺必须丢弃，不能再用。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "零刻度线磨损时可从其他整数刻度线量起，用两端读数之差求长度，仍能准确测量。",
+          "difficulty": 3,
+          "knowledge_point": "刻度尺的正确使用"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用刻度尺测量物理课本的宽度，请写出三条操作要点。",
+          "answer": {
+            "value": "第一，选择量程合适、分度值为 1 mm 的刻度尺。第二，尺边与课本宽度平行，零刻度线对准一端，视线正对刻度线。第三，读数估读到分度值的下一位，并注明单位，如 18.50 cm。"
+          },
+          "analysis": "参考示例见答案。评分要点：选尺（2 分）；放尺与视线（2 分）；估读并带单位（2 分）。只写「量一下」不得分。",
+          "difficulty": 4,
+          "knowledge_point": "刻度尺的正确使用",
+          "tags": [
+            "简答"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "小明三次测得同一支笔的长度分别是 15.2 cm、15.3 cm、15.25 cm，他认为 15.25 cm 最准确。请判断这种说法是否正确并说明理由。",
+          "answer": {
+            "value": "说法不正确。三次读数应估读到同一分度值的下一位，15.2 cm 与 15.3 cm 只估读到 0.1 cm，而 15.25 cm 估读到 0.01 cm，估读位数不一致，说明所用刻度尺或记录不规范。应统一用同一把尺、按同一分度值估读后再取平均值，如 15.2 cm、15.3 cm、15.3 cm 取平均约 15.27 cm，并保留到与读数相同的位数。"
+          },
+          "analysis": "参考示例见答案。评分要点：指出估读位数不一致（2 分）；说明应统一工具与记录（2 分）；给出取平均值的正确做法（1 分）。只答「不对」不得分。",
+          "difficulty": 5,
+          "knowledge_point": "误差与错误",
+          "tags": [
+            "情境应用"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "用同一把刻度尺多次测量同一长度，读数略有不同，其主要原因是（  ）",
+          "options": [
+            "存在误差",
+            "刻度尺坏了",
+            "物体长度在变化",
+            "单位用错了"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "估读带来的差异属于误差，是正常现象；工具损坏、物体变化、单位错误则属于错误。",
+          "difficulty": 2,
+          "knowledge_point": "误差与错误"
+        },
+        {
+          "q_type": "choice",
+          "stem": "某同学测得课桌宽 0.6 m，换算成 cm 应写为（  ）。",
+          "options": [
+            "60 cm",
+            "6 cm",
+            "0.006 cm",
+            "600 cm"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "1 m = 100 cm，0.6 × 100 = 60 cm；换算要乘进率，不能只改单位符号。",
+          "difficulty": 3,
+          "knowledge_point": "长度的单位与换算"
+        },
+        {
+          "q_type": "fill",
+          "stem": "停表小表盘指针在 2 min 与 3 min 之间、大表盘指 15 s，读数为 2 min （  ）s。",
+          "answer": {
+            "value": "15"
+          },
+          "analysis": "停表先读小盘分钟数，再读大盘秒数；小盘指针在 2 min 与 3 min 之间且未过半格，大盘读 0~30 s 这一圈，指针指 15 s，故秒数为 15 s。换算成总秒数是 2 × 60 + 15 = 135 s。",
+          "difficulty": 4,
+          "knowledge_point": "时间的测量"
+        }
+      ]
+    },
+    {
+      "name": "第二章 声现象",
+      "order_index": 2,
+      "summary": "声音的产生与传播条件、声速与回声计算、音调响度音色三特性、超声与次声的应用、噪声控制三途径，以及隔音房间模型的控制变量实验。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "下列关于声音产生的说法，正确的是（  ）",
+          "options": [
+            "正在发声的物体一定在振动",
+            "不振动的物体也能持续发声",
+            "声音可以脱离声源单独存在",
+            "只要物体足够坚硬，不振动也能发声"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "一切声音都由物体振动产生，振动停止发声也停止，所以 A 正确；B、D 否认了「振动是发声的必要条件」，C 忽略了声源，均错误。判断时抓住「先有振动、后有声音」。",
+          "difficulty": 1,
+          "knowledge_point": "声音的产生与介质",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "把正在发声的音叉轻触水面，水面溅起水花，说明音叉在振动。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "音叉叉股的振动幅度很小，不易直接观察；轻触水面时水花被弹起，把微小振动放大成可见现象，这是「转换法」的典型应用，所以说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "声音的产生与介质",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "宇航员在月球表面不能直接面对面交谈，必须借助无线电，原因是月球表面接近 （  ），声音无法传播。",
+          "answer": {
+            "value": "真空"
+          },
+          "analysis": "声音的传播需要介质，固体、液体、气体都可以传声；月球表面几乎没有空气，接近真空，声波没有可依靠的介质，所以填「真空」，而电磁波可以在真空中传播，故用无线电通话。",
+          "difficulty": 3,
+          "knowledge_point": "声音的产生与介质",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于声音的产生与传播，下面哪些说法正确？",
+          "options": [
+            "一切发声的物体都在振动",
+            "固体、液体、气体都能作为传声介质",
+            "真空不能传声",
+            "振动停止后，已经发出的声音会立刻在原地消失"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓ 声音由物体振动产生；B ✓ 棉线（固体）、水（液体）、空气（气体）都能传声；C ✓ 真空没有介质，声波无法传播；D ✗ 振动停止只是声源不再产生新的声音，已发出的声波仍会在介质中继续向前传播一段距离。",
+          "difficulty": 4,
+          "knowledge_point": "声音的产生与介质",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "在 15 ℃ 的空气中，声音的传播速度约为（  ）",
+          "options": [
+            "340 m/s",
+            "3×10^8 m/s",
+            "1500 m/s",
+            "34 m/s"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "15 ℃ 空气中声速约 340 m/s，选 A；B 的 3×10^8 m/s 是真空中的光速，C 的 1500 m/s 接近声音在水中的速度，D 少了一个数量级。记忆时把「声速 340」和「光速 3×10^8」分开。",
+          "difficulty": 1,
+          "knowledge_point": "声速与回声计算",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "某同学面对山崖喊话，2 s 后听到回声（15 ℃ 空气，声速取 340 m/s）。声音在 2 s 内传播的往返总路程是 （  ） m。",
+          "answer": {
+            "value": "680"
+          },
+          "analysis": "由 s = v×t 得 s = 340 m/s × 2 s = 680 m，这是声音从人到山崖再反射回来的往返路程；人与山崖的距离还要除以 2，即 680 m ÷ 2 = 340 m。验算：340 × 2 = 680。",
+          "difficulty": 2,
+          "knowledge_point": "声速与回声计算",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "声音在固体中的传播速度通常比在气体中快。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "一般情况下 v_固 > v_液 > v_气：钢轨中声速可达数千米每秒，水中约 1500 m/s，而 15 ℃ 空气中约 340 m/s，所以说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "声速与回声计算",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于声速与回声，下面哪些说法正确？",
+          "options": [
+            "声速与介质的种类有关",
+            "声速与介质的温度有关",
+            "用回声测距离时要用往返路程除以 2",
+            "回声由声音反射形成，因此测距时完全不需要知道声速"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓ 固体、液体、气体中声速不同；B ✓ 同种介质温度不同声速也不同（空气温度升高声速略增大）；C ✓ 回声走了往返两段，单程距离 = v×t÷2；D ✗ 回声确由反射形成，但要由时间算距离必须知道声速 v，说「完全不需要」错误。",
+          "difficulty": 4,
+          "knowledge_point": "声速与回声计算",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「闻其声而知其人」主要依据声音的（  ）",
+          "options": [
+            "音调",
+            "响度",
+            "音色",
+            "声速"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "不同人的声带结构与发声方式不同，发出声音的音色不同，因此不看人也能辨认，选 C；音调指声音高低（频率），响度指声音大小（振幅），声速是传播快慢。",
+          "difficulty": 2,
+          "knowledge_point": "声音的三特性辨析",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "用大小不同的力敲同一面鼓，主要改变的是声音的响度。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "用力越大，鼓面振动的振幅越大，响度越大；同一面鼓的振动频率与结构基本不变，音调、音色变化不明显，所以说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "声音的三特性辨析",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "「女高音」「男低音」里的「高」「低」描述的是声音的 （  ），它由发声体振动的频率决定。",
+          "answer": {
+            "value": "音调"
+          },
+          "analysis": "频率越高音调越高，女声声带振动频率通常高于男声，所以填「音调」；不要与「响度」混淆，响度由振幅与距离决定，生活中的「大声说话」说的才是响度。",
+          "difficulty": 3,
+          "knowledge_point": "声音的三特性辨析",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于音调、响度与音色，下面哪些说法正确？",
+          "options": [
+            "音调由发声体振动的频率决定",
+            "响度与振幅以及距声源的远近有关",
+            "音色可用来区分不同乐器演奏同一音调的声音",
+            "把琴弦拉得越紧，发出的声音响度一定越大"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓ 频率决定音调；B ✓ 振幅越大、离声源越近，听起来越响；C ✓ 音调相同时靠音色分辨钢琴与小提琴；D ✗ 弦拉紧主要使振动频率升高、音调变高，并不能保证振幅变大，响度不一定增大。",
+          "difficulty": 4,
+          "knowledge_point": "声音的三特性辨析",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "医院用 B 超检查身体，主要利用了超声能够（  ）",
+          "options": [
+            "传递信息",
+            "传递能量",
+            "提高声速",
+            "改变音色"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "B 超接收人体组织反射回来的超声波并成像，医生据此获取体内结构的信息，属于声传递信息，选 A；超声波清洗眼镜、粉碎结石才是利用声传递能量，声速与音色不由超声「提高或改变」。",
+          "difficulty": 1,
+          "knowledge_point": "声的利用与信息传递",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "蝙蝠靠发出并接收 （  ） 来判断猎物与障碍物的方位，这种方法叫回声定位。",
+          "answer": {
+            "value": "超声波"
+          },
+          "analysis": "蝙蝠发出频率高于 20000 Hz 的超声波，靠回声返回的时间与方向定位目标；超声波超出人耳听觉范围，所以人听不到蝙蝠定位时发出的声音。",
+          "difficulty": 2,
+          "knowledge_point": "声的利用与信息传递",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "超声波清洗眼镜、超声波粉碎体内结石，说明声能够传递能量。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "清洗时声波使污垢振动脱落，碎石时声波对结石做功，都是声对物体产生作用，属于声传递能量；而 B 超、声呐是声传递信息，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "声的利用与信息传递",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于超声与次声，下面哪些说法正确？",
+          "options": [
+            "声呐利用超声波回声定位探测海底深度",
+            "超声波清洗精密零件，是利用声传递能量",
+            "次声波频率低于 20 Hz，人耳通常听不到",
+            "地震、火山喷发等常伴随次声波，可用于灾害监测",
+            "频率高于 20000 Hz 的声波叫次声波"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓ 声呐发出超声波，海底深度 = v×t÷2；B ✓ 清洗是声传递能量；C ✓ 低于 20 Hz 属次声，超出人耳 20~20000 Hz 的听觉范围；D ✓ 地震、火山等伴随次声，监测次声可辅助灾害预警研究；E ✗ 高于 20000 Hz 的是超声波，次声是低于 20 Hz，两者写反了。",
+          "difficulty": 5,
+          "knowledge_point": "声的利用与信息传递",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列控制噪声的措施中，属于「在声源处减弱」的是（  ）",
+          "options": [
+            "给汽车安装消声器",
+            "道路两旁设置隔音墙",
+            "戴防噪声耳罩",
+            "关上教室门窗"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "消声器直接减少排气气流产生的声音，作用在声源上，选 A；B、D 是阻断声波传播，属于「在传播过程中减弱」；C 是保护接收者，属于「在人耳处减弱」。",
+          "difficulty": 1,
+          "knowledge_point": "噪声控制的三条途径",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "从物理角度看，噪声是发声体做无规则振动时发出的声音；从环保角度看，妨碍人们正常休息的声音也属于噪声。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "物理定义看振动是否规则，环保定义看是否干扰人的正常生活；深夜播放的音乐即使波形规则，只要影响休息也属于噪声，两个角度都成立，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "噪声控制的三条途径",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "在城区道路旁安装隔音屏障，是在噪声的 （  ） 过程中减弱噪声。",
+          "answer": {
+            "value": "传播"
+          },
+          "analysis": "隔音屏障挡在声源与居民区之间，使声波在传播途中被反射和吸收，属于「在传播过程中减弱」；另外两条途径分别是在声源处（如消声器）与在人耳处（如耳塞）。",
+          "difficulty": 2,
+          "knowledge_point": "噪声控制的三条途径",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于噪声的控制，下面哪些说法正确？",
+          "options": [
+            "摩托车的消声器在声源处减弱噪声",
+            "关闭门窗在传播过程中减弱噪声",
+            "戴耳塞在人耳处减弱噪声",
+            "把声音的响度降到 0 dB，就表示周围完全没有声音"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓ 消声器作用在声源；B ✓ 门窗阻断传播路径；C ✓ 耳塞保护人耳；D ✗ 0 dB 是人耳刚能听到的最弱声音（听觉下限），并不是「没有声音」，且实际环境很难做到绝对无声。",
+          "difficulty": 4,
+          "knowledge_point": "噪声控制的三条途径",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "要比较海绵与硬纸板哪种材料隔音效果更好，最合理的做法是（  ）",
+          "options": [
+            "只更换材料，保持声源、距离、盒子大小等条件相同",
+            "同时更换材料和声源，看哪次声音更小",
+            "用不同材料时分别在不同房间里测量",
+            "只凭手摸材料的软硬来判断"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "比较材料性能必须用控制变量法：只改变材料这一种因素，声源、盒子、材料厚度、测量位置与环境都保持相同，选 A；B、C 同时改变了多个变量，无法归因；D 没有客观测量依据。",
+          "difficulty": 1,
+          "knowledge_point": "隔音模型的控制变量",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "制作隔音房间模型时，在盒内放置发声器、盒外相同位置用声级计测量。铺某材料前读数为 70 dB，铺好后为 55 dB。请算出声音减弱了多少分贝，并说明这个数据能说明什么。",
+          "answer": {
+            "value": "70 dB - 55 dB = 15 dB，声音减弱了 15 dB。说明该材料使传到盒外的声音变小，具有一定隔音效果；比较不同材料时，应看相同条件下读数下降的多少，下降越多隔音越好。"
+          },
+          "analysis": "评分要点：写出 70 dB - 55 dB = 15 dB 得 2 分，说明「传出声音变小、材料有隔音效果」得 1 分，指出「其它条件相同才可比较、下降越多越好」得 1 分。易错点：把 70 与 55 相加，或忘记写单位 dB。",
+          "difficulty": 2,
+          "knowledge_point": "隔音模型的控制变量",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "隔音房间模型的盒壁留有缝隙会让声音泄漏，使测得的隔音效果变差。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "缝隙形成空气通路，声波可以不经过材料直接传出，盒外读数偏高，于是低估了材料本身的隔音能力；所以密封是隔音设计的必要环节，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "隔音模型的控制变量",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "请设计一个小实验比较海绵与硬纸板的隔音效果，写出需要控制的变量、测量方法与判断依据。",
+          "answer": {
+            "value": "把同一发声器调到固定音量放进相同的盒子，分别在盒内铺等厚海绵与等厚硬纸板，在盒外同一位置用声级计读出示数。只改变材料，保持声源、盒子、材料厚度、测量距离与周围环境不变。声级计读数较小的一组隔音效果更好；每种材料重复测量 3 次取平均值，以减小误差。"
+          },
+          "analysis": "评分要点：列出控制变量（声源/盒子/厚度/距离/环境）得 2 分，写出相同位置用声级计测量得 1 分，写出「读数小者隔音更好」及多次测量取平均得 1 分。易错点：两种材料厚度不同，或只用「听起来更小」这类主观感受作判断。",
+          "difficulty": 3,
+          "knowledge_point": "隔音模型的控制变量",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第三章 物态变化",
+      "order_index": 3,
+      "summary": "温度与温度计的使用，熔化与凝固、汽化与液化、升华与凝华四类物态变化的规律与吸放热，以及厨房与空调等生活情境中的物态变化分析。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "国际单位制中温度的单位是（  ）",
+          "options": [
+            "摄氏度",
+            "开尔文",
+            "华氏度",
+            "焦耳"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "国际单位制中热力学温度的单位是开尔文，符号是 K；摄氏度（℃）与华氏度（°F）是常用单位，焦耳是热量的单位。所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "温度与温度计",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "在实验室中测量液体温度时，应把温度计的玻璃泡（  ）浸入被测液体中。",
+          "answer": {
+            "value": "全部"
+          },
+          "analysis": "测液体温度时要让玻璃泡全部浸入被测液体，并且不能碰到容器底或容器壁，否则示数会偏高或偏低。填「全部」。",
+          "difficulty": 2,
+          "knowledge_point": "温度与温度计",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "用温度计测量液体温度时，玻璃泡没有全部浸入液体也可以读数。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "读数前必须使温度计与被测物充分接触，待示数稳定后再读。玻璃泡没有全部浸入时，测得的是温度计与液体接触部分的温度，示数不准确，所以说法错误。",
+          "difficulty": 2,
+          "knowledge_point": "温度与温度计",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "体温计的量程是 35 ℃ 到 42 ℃，分度值是 0.1 ℃；普通温度计的分度值一般是 1 ℃。这说明体温计（  ）",
+          "options": [
+            "量程更小、分度值更小，读数更精确",
+            "量程更大、分度值更大，读数更精确",
+            "量程更小、分度值更大，读数更精确",
+            "量程与分度值都和普通温度计相同"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "体温计只能测体温，量程小；它的分度值 0.1 ℃ 比普通温度计的 1 ℃ 更小，所以读数更精确，选 A。玻璃泡大小会影响测量速度，但不是决定精确程度的因素。",
+          "difficulty": 3,
+          "knowledge_point": "温度与温度计",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于温度，下列说法正确的有（  ）",
+          "options": [
+            "国际单位制中温度的单位是开尔文",
+            "0 ℃ 对应 273.15 K",
+            "人的正常体温约为 37 ℃",
+            "温度计玻璃泡越大，测量结果就越精确"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 国际单位制中温度的单位是开尔文 ✓；B 0 ℃ 对应 273.15 K ✓；C 人的正常体温约 37 ℃ ✓；D 玻璃泡大能让接触更充分、减小与被测物的温差，但精确程度由分度值决定 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "温度与温度计",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "在标准大气压下，冰的熔点是（  ）",
+          "options": [
+            "0 ℃",
+            "100 ℃",
+            "-10 ℃",
+            "37 ℃"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "在标准大气压下冰的熔点是 0 ℃，水的沸点是 100 ℃。晶体熔化时温度保持不变，所以冰在 0 ℃ 熔化，选 A。",
+          "difficulty": 1,
+          "knowledge_point": "熔化与凝固",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "物质由固态变成液态的过程叫（  ），这个过程需要（  ）热。",
+          "answer": {
+            "value": [
+              "熔化",
+              "吸"
+            ]
+          },
+          "analysis": "物质由固态变液态叫熔化，熔化过程要吸收热量；反过来由液态变固态叫凝固，凝固过程要放热。填熔化、吸。",
+          "difficulty": 2,
+          "knowledge_point": "熔化与凝固",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "晶体在熔化过程中温度不断升高。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "晶体（如冰、海波）熔化时不断吸热，但温度保持在熔点不变，全部变成液体后温度才继续升高。非晶体（如蜡）熔化时才是持续升温，所以说法错误。",
+          "difficulty": 2,
+          "knowledge_point": "熔化与凝固",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "把一块 0 ℃ 的冰放在 0 ℃ 的房间里，一段时间后这块冰（  ）",
+          "options": [
+            "会熔化，因为室温不低于冰的熔点",
+            "不会熔化，因为冰与房间的温度相同、没有温度差",
+            "会熔化得更快",
+            "会直接变成水蒸气"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "物质熔化需要吸热，而热量总是从温度高的物体传向温度低的物体。房间与冰都是 0 ℃，没有温度差，冰得不到热量就不能熔化，所以选 B。",
+          "difficulty": 3,
+          "knowledge_point": "熔化与凝固",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列关于熔化和凝固的说法，正确的有（  ）",
+          "options": [
+            "熔化吸热，凝固放热",
+            "晶体熔化时温度保持不变",
+            "非晶体熔化时温度不断升高",
+            "物质熔化时温度一定升高"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 熔化吸热、凝固放热 ✓；B 晶体熔化时温度保持在熔点不变 ✓；C 非晶体（如蜡）没有固定熔点，熔化过程中温度不断升高 ✓；D 对晶体不成立，晶体熔化时温度保持不变 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "熔化与凝固",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "汽化的两种方式是（  ）",
+          "options": [
+            "蒸发和沸腾",
+            "熔化和凝固",
+            "升华和凝华",
+            "液化和汽化"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "汽化有两种方式：蒸发和沸腾，二者都要吸热。蒸发在任何温度下都能在液体表面进行，沸腾则必须达到沸点才发生、汽化剧烈并要继续吸热。所以选 A。",
+          "difficulty": 1,
+          "knowledge_point": "汽化与液化",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "100 ℃ 的水蒸气遇到冷的物体会变成（  ）态的水，这个过程要（  ）热。",
+          "answer": {
+            "value": [
+              "液",
+              "放"
+            ]
+          },
+          "analysis": "水蒸气变成液态水叫液化，液化过程要放出热量。100 ℃ 的水蒸气遇到温度较低的物体时把热量放出来，变成液态水，填液、放。",
+          "difficulty": 2,
+          "knowledge_point": "汽化与液化",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "液体的蒸发可以在任何温度下发生。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "蒸发是液体在任何温度下都能发生的缓慢汽化，只在液体表面进行；沸腾则必须达到沸点才发生。两者都要吸热，所以命题正确。",
+          "difficulty": 3,
+          "knowledge_point": "汽化与液化",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "夏天从冰箱里拿出的饮料瓶外壁出现水珠，这是（  ）现象",
+          "options": [
+            "液化",
+            "汽化",
+            "熔化",
+            "升华"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "瓶外壁的水珠不是饮料渗出来的，而是空气中的水蒸气遇到冰冷的瓶壁放热变成的小水珠，属于液化，选 A。判断的关键是水珠出现在物体的外表面。",
+          "difficulty": 3,
+          "knowledge_point": "汽化与液化",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "情境应用"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳夏天空调房间内温度为 26 ℃，而室外机的散热片温度可高达 45 ℃。请回答：（1）空调制冷时，室内空气中的水蒸气在室内机的冷蒸发器上发生了什么物态变化？室内机表面温度一定高于还是低于 26 ℃？（2）为什么开着空调的房间空气会变干燥？",
+          "answer": {
+            "value": "（1）水蒸气在冷蒸发器上放热液化成小水珠，所以室内机表面温度一定低于 26 ℃，水蒸气才可能放热液化；（2）空气中的水蒸气被大量液化变成水并流走，房间里水蒸气的含量减少，因此空气变干燥。"
+          },
+          "analysis": "评分要点：①第（1）问答出液化并说明液化要放热（2 分）；②指出室内机表面温度低于 26 ℃（2 分）；③第（2）问答出因为水蒸气被液化排出、水分减少（3 分）；④表述完整（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "汽化与液化",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "情境应用"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列现象中属于升华的是（  ）",
+          "options": [
+            "霜的形成",
+            "樟脑丸放久后变小",
+            "冰化成水",
+            "湿衣服晾干"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "物质从固态直接变成气态叫升华。霜是水蒸气凝华成的，冰化成水是熔化，湿衣服晾干是汽化，只有樟脑丸变小是固态樟脑直接变成气态，属于升华，选 B。",
+          "difficulty": 1,
+          "knowledge_point": "升华与凝华",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "冬天窗玻璃上出现的冰花，是室内水蒸气（  ）形成的，这个过程要（  ）热。",
+          "answer": {
+            "value": [
+              "凝华",
+              "放"
+            ]
+          },
+          "analysis": "室内水蒸气遇到冰冷的窗玻璃放热，直接由气态变成固态冰晶，这个过程叫凝华，要放热。填凝华、放。冰花出现在玻璃的内表面。",
+          "difficulty": 2,
+          "knowledge_point": "升华与凝华",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "升华和凝华这两个过程都要吸收热量。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "升华是吸热过程，凝华是放热过程，两者正好相反。所以「都要吸热」的说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "升华与凝华",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "北方冬天窗户上出现冰花，结冰花的那一面在（  ）",
+          "options": [
+            "室内一侧",
+            "室外一侧",
+            "两侧都有",
+            "与室内外无关"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "冰花是由室内的水蒸气凝华形成的，凝华发生在温度较低的玻璃内表面，所以冰花出现在室内一侧，选 A。",
+          "difficulty": 3,
+          "knowledge_point": "升华与凝华",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列现象中，属于凝华的有（  ）",
+          "options": [
+            "秋天窗户玻璃上出现的冰花",
+            "冬天屋顶上出现的霜",
+            "冰冻的衣服在 0 ℃ 以下慢慢变干",
+            "樟脑丸放久后变小"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "A 水蒸气在玻璃上直接变成固态冰晶，是凝华 ✓；B 水蒸气直接变成霜，是凝华 ✓；C 冰不熔化直接变成水蒸气，是升华 ✗（它是凝华的逆过程）；D 樟脑丸由固态直接变成气态，是升华 ✗。故 A、B 成立，C、D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "升华与凝华",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "深圳夏天下雨前，地面上会出现一层水雾，这是（  ）现象",
+          "options": [
+            "液化",
+            "汽化",
+            "凝华",
+            "熔化"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "空气中的水蒸气遇到温度较低的地面放出热量，变成细小水珠附着在地面上，属于液化，选 A。",
+          "difficulty": 2,
+          "knowledge_point": "物态变化的辨析与应用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "情境应用"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "冰箱冷冻室的温度是 -18 ℃，把一杯水放进去结成冰，水由液态变成固态的过程叫（  ），这个过程要（  ）热。",
+          "answer": {
+            "value": [
+              "凝固",
+              "放"
+            ]
+          },
+          "analysis": "液态变固态叫凝固，凝固过程要放出热量。冰箱内温度低于 0 ℃，水放热降到凝固点后放出潜热变成冰，所以填凝固、放。",
+          "difficulty": 4,
+          "knowledge_point": "物态变化的辨析与应用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "情境应用"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列现象与所对应的物态变化搭配正确的是（  ）",
+          "options": [
+            "夏天在地面洒水降温——汽化吸热",
+            "冰棒周围冒「白气」——汽化",
+            "樟脑丸变小——凝华",
+            "霜的形成——升华"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "A 水蒸发汽化时要吸热，使地面温度降低 ✓；B「白气」是空气中的水蒸气遇冷液化成的小水珠，属于液化而不是汽化 ✗；C 樟脑丸变小是升华 ✗；D 霜的形成是凝华 ✗。所以选 A。",
+          "difficulty": 3,
+          "knowledge_point": "物态变化的辨析与应用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于物态变化，下列说法正确的有（  ）",
+          "options": [
+            "所有的物态变化过程都要吸热",
+            "在标准大气压下，冰的熔化与水的凝固都在 0 ℃ 附近进行",
+            "湿衣服在阳光下晾干是汽化",
+            "水在 100 ℃ 时可能正在熔化"
+          ],
+          "answer": {
+            "value": [
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 错，凝固和凝华都是放热过程 ✗；B 对，标准大气压下冰的熔点是 0 ℃，冰水共存时温度都是 0 ℃ ✓；C 对，湿衣服变干是汽化中的蒸发 ✓；D 错，水在 100 ℃ 时是沸腾而不是熔化 ✗。故 B、C 成立，A、D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "物态变化的辨析与应用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳某中学物理兴趣小组在厨房里观察物态变化。请回答：（1）刚从冰箱拿出的可乐瓶外壁「出汗」了，这是什么物态变化？瓶壁温度比室温高还是低？（2）炒菜时锅里的油先变稀、再遇热变浓并冒烟，这分别对应什么物态变化？（3）煮饭时锅盖内侧出现水珠，这是什么物态变化？",
+          "answer": {
+            "value": "（1）是液化：空气中的水蒸气遇到低温的瓶壁放热变成小水珠，瓶壁温度比室温低；（2）油先变稀是熔化，固态的油受热变成液态；后来变浓并冒烟是汽化，液态的油受热变成气态，两个过程都要吸热；（3）是液化：锅里的水蒸气遇到温度较低的锅盖内侧放热变成小水珠。"
+          },
+          "analysis": "评分要点：①第（1）问答出液化并指出瓶壁温度低于室温（2 分）；②第（2）问答出先是熔化、后是汽化，并说明都要吸热（3 分）；③第（3）问答出液化并说明水蒸气放热（2 分）；④表述完整（1 分）。",
+          "difficulty": 5,
+          "knowledge_point": "物态变化的辨析与应用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "情境应用"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第四章 光现象",
+      "order_index": 4,
+      "summary": "光的直线传播、光的反射定律与平面镜成像特点、光的折射规律，以及光的色散、红外线与紫外线的应用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "光在同种均匀介质中传播的方向是（  ）",
+          "options": [
+            "沿直线传播",
+            "沿曲线传播",
+            "先直后弯",
+            "无法确定"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "光在同种均匀介质中沿直线传播，这叫光的直线传播。影子、日食月食、小孔成像等现象都是光沿直线传播的结果，所以选 A。",
+          "difficulty": 1,
+          "knowledge_point": "光的直线传播",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "太阳光穿过小孔会在屏上形成（  ）的像，这是光的直线传播的典型应用。",
+          "answer": {
+            "value": "倒立的实像"
+          },
+          "analysis": "光沿直线穿过小孔，物体上每一点发出的光都沿直线射到屏的对应位置，上下位置正好颠倒，并且光确实会聚在屏上，所以形成倒立的实像，填倒立的实像。",
+          "difficulty": 2,
+          "knowledge_point": "光的直线传播",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "光在真空中的传播速度最大，光在水中的传播速度比在空气中小。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "光在真空中的速度约为 3×10⁸ 米每秒，是宇宙中最快的速度。光在水中传播时速度比在空气中小，所以说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "光的直线传播",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "小孔成像所成的像是（  ）",
+          "options": [
+            "倒立的实像",
+            "正立的实像",
+            "倒立的虚像",
+            "正立的虚像"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "光沿直线穿过小孔，物体上、下两部分发出的光在屏上位置颠倒，并且真实的光线会聚在屏上，所以成的是倒立的实像，选 A。",
+          "difficulty": 3,
+          "knowledge_point": "光的直线传播",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列现象中，属于光的直线传播形成的有（  ）",
+          "options": [
+            "日食、月食",
+            "小孔成像",
+            "水中的筷子看起来向上弯",
+            "影子的形成"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 日食、月食是光沿直线传播被月球或地球挡住形成的 ✓；B 小孔成像是光沿直线穿过小孔形成的 ✓；C 水中筷子看起来向上弯是光的折射 ✗；D 影子是光沿直线传播、被不透明物体挡住形成的 ✓。故 A、B、D 成立，C 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "光的直线传播",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "光的反射定律中，反射光线、入射光线和法线所在的平面（  ）",
+          "options": [
+            "互相垂直",
+            "互相平行",
+            "在同一平面内",
+            "互相重合"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "反射定律的内容是：反射光线、入射光线和法线在同一平面内；反射光线与入射光线分居法线两侧；反射角等于入射角。所以选 C，法线是垂直于镜面的直线。",
+          "difficulty": 1,
+          "knowledge_point": "光的反射定律",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "一束光垂直射到平面镜上，入射角是 0 度，此时反射光线与入射光线的位置关系是（  ）。",
+          "answer": {
+            "value": "重合"
+          },
+          "analysis": "入射角为 0 度时反射角也为 0 度，反射光线与入射光线分居法线两侧但方向一致，即两者重合，填重合。",
+          "difficulty": 3,
+          "knowledge_point": "光的反射定律",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "发生反射时，反射光线的方向总是与入射光线的方向相反。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "反射光线与入射光线分居法线两侧，但方向一般并不相反；只有当入射光线垂直射向镜面（入射角为 0 度）时两者才重合。所以说法错误。",
+          "difficulty": 2,
+          "knowledge_point": "光的反射定律",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "人靠近平面镜时，在镜中看到的自己的像（  ）",
+          "options": [
+            "变大",
+            "变小",
+            "大小不变",
+            "先变大后变小"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "平面镜成像时像与物体大小始终相等，与人离镜子的远近无关。人靠近镜子只是因为视角变大而觉得「看起来变大」，像本身的大小并没有改变，所以选 C。",
+          "difficulty": 3,
+          "knowledge_point": "光的反射定律",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于光的反射，下列说法正确的有（  ）",
+          "options": [
+            "反射光线、入射光线和法线在同一平面内",
+            "反射角等于入射角",
+            "反射角等于入射光线与镜面的夹角",
+            "光发生反射时传播方向不改变"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "A 这是反射定律的基本内容 ✓；B 反射角等于入射角 ✓；C 错，反射角是反射光线与法线的夹角，它与入射光线和镜面的夹角互为余角 ✗；D 错，光反射后传播方向发生改变 ✗。故 A、B 成立，C、D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "光的反射定律",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "平面镜所成的像是（  ）",
+          "options": [
+            "倒立的实像",
+            "正立的虚像",
+            "倒立的虚像",
+            "正立的实像"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "平面镜成正立的虚像：像与物体大小相等、左右相反，像到镜面的距离与物体到镜面的距离相等。虚像不能用光屏承接，所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "平面镜成像特点",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "一个物体距平面镜 3 m，则它的像与物体之间的距离是（  ）m。",
+          "answer": {
+            "value": "6"
+          },
+          "analysis": "平面镜成像时像与物到镜面的距离相等，都是 3 m，所以像与物体之间的距离是 3+3=6 m，填 6。",
+          "difficulty": 2,
+          "knowledge_point": "平面镜成像特点",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "小明站在平面镜前 2 m 处面向镜子站立。请回答：（1）他在镜中看到的像距镜面多远？他与自己的像相距多远？（2）他向镜前走近 0.5 m 后，像与他本人相距多远？（3）在整个过程中像的大小会改变吗？为什么？",
+          "answer": {
+            "value": "（1）像与物到镜面的距离相等，所以像距镜 2 m，他与像相距 2+2=4 m；（2）走近 0.5 m 后他距镜 1.5 m，像也距镜 1.5 m，他与像相距 1.5+1.5=3 m；（3）像的大小不变，因为平面镜成像时像与物体等大，与物体到镜面的距离无关。"
+          },
+          "analysis": "评分要点：①第（1）问答出像距镜 2 m、像与本人相距 2+2=4 m（2 分）；②第（2）问写出 1.5+1.5=3 m（2 分）；③第（3）问答出大小不变并说明「像与物等大」（2 分）；④表述完整（1 分）。",
+          "difficulty": 3,
+          "knowledge_point": "平面镜成像特点",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "情境应用"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "平面镜所成的虚像可以用光屏承接下来。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "虚像是反射光线的反向延长线会聚形成的，实际光线并没有真正会聚在像的位置，所以虚像不能用光屏承接，平面镜成的像正是虚像。说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "平面镜成像特点",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳某中学实验室的墙上贴着一面平面镜。小明站在距镜 2 m 处面向镜子站立。请回答：（1）他与自己的像相距多少米？（2）他向镜前走开 0.5 m 后，像距镜面多远？（3）他在镜中看到的是实像还是虚像？用光屏能不能承接这个像？",
+          "answer": {
+            "value": "（1）像与物到镜面的距离相等，都为 2 m，所以他与自己的像相距 2+2=4 m；（2）小明走到距镜 1.5 m 处，像到镜面的距离也是 1.5 m，即 2-0.5=1.5 m；（3）他看到的是虚像，因为反射光线并没有真正会聚在像的位置，所以光屏不能承接。"
+          },
+          "analysis": "评分要点：①第（1）问写出 2+2=4 m（2 分）；②第（2）问写出 2-0.5=1.5 m（2 分）；③第（3）问答出虚像并说明反射光线未真正会聚、光屏不能承接（3 分）；④表述完整（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "平面镜成像特点",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "情境应用"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "光从空气斜射入水中时，折射角（  ）入射角",
+          "options": [
+            "大于",
+            "小于",
+            "等于",
+            "无法确定"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "光从空气斜射入水或玻璃等介质时，折射角小于入射角；反过来从水斜射入空气时折射角大于入射角。所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "光的折射规律",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "光从水斜射入空气时，折射角（  ）入射角，这正是筷子在水中看起来向上弯的原因。",
+          "answer": {
+            "value": "大于"
+          },
+          "analysis": "光从水射向空气属于从光密介质射向光疏介质，折射角大于入射角，人逆着折射光线看去，看到的是向上弯折的虚像。填大于。",
+          "difficulty": 3,
+          "knowledge_point": "光的折射规律",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "光从空气垂直射入水中时，传播方向发生改变。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "垂直入射时入射角为 0 度，折射角也为 0 度，光的传播方向不改变，只是速度变小。所以说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "光的折射规律",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "站在池边的人看到池底的硬币，感觉它比实际的（  ）",
+          "options": [
+            "深",
+            "浅",
+            "一样深",
+            "无法确定"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "池底反射的光从水中射入空气时发生折射，折射角大于入射角，人逆着折射光线看去，看到的是位置变浅的虚像，所以感觉硬币比实际的浅，选 B。",
+          "difficulty": 3,
+          "knowledge_point": "光的折射规律",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列现象中，由光的折射造成的有（  ）",
+          "options": [
+            "平静水面下的倒影",
+            "水中的筷子看起来向上弯",
+            "手影游戏",
+            "插入水中的铅笔看起来折断"
+          ],
+          "answer": {
+            "value": [
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A 平静水面下的倒影是水面反射光线形成的虚像 ✗；B 筷子反射的光从水中射入空气时发生折射，看起来向上弯 ✓；C 手影是光沿直线传播被手挡住形成的 ✗；D 铅笔看起来折断是折射造成的 ✓。故 B、D 成立，A、C 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "光的折射规律",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "白光通过三棱镜后被分解成七色光，这说明（  ）",
+          "options": [
+            "白光由多种色光混合而成",
+            "三棱镜本身带有颜色",
+            "白光不能在空气中传播",
+            "色光不能混合成白光"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "白光经三棱镜后分解成红、橙、黄、绿、蓝、靛、紫七色光，说明白光是由多种色光混合成的；红、绿、蓝是色光的三原色，混合得当可以合成白光。所以选 A。",
+          "difficulty": 1,
+          "knowledge_point": "光的色散与三原色",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "小明用三棱镜观察太阳光，看到七色光带，这说明白光由多种色光混合而成。色光的三个原色是红、（  ）和（  ）。",
+          "answer": {
+            "value": [
+              "绿",
+              "蓝"
+            ]
+          },
+          "analysis": "色光的三原色是红、绿、蓝，它们按适当比例混合能产生白色光。太阳光就是白光，所以填绿、蓝。",
+          "difficulty": 2,
+          "knowledge_point": "光的色散与三原色",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "红外线的热效应显著，可以用来加热物体，如红外烤箱。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "红外线的热效应强、温度也较高，应用于红外烤箱、红外取暖器等加热设备；紫外线可用于杀菌、验钞，还能使感光胶片感光。所以说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "光的色散与三原色",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "雨后的天空呈现蔚蓝色，主要是因为（  ）",
+          "options": [
+            "蓝光的波长较短，更容易被空气中的小水珠散射",
+            "天空本身就是蓝色的",
+            "蓝光被小水珠完全吸收了",
+            "太阳光本来就只有蓝色光"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "太阳光中蓝光的波长较短，被空气分子和微小水珠散射得最厉害，散射到各个方向后进入人眼，所以天空呈蔚蓝色。天空本身并没有颜色，所以选 A。",
+          "difficulty": 4,
+          "knowledge_point": "光的色散与三原色",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "情境应用"
+          ]
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于光的色散与光的颜色，下列说法正确的有（  ）",
+          "options": [
+            "白光通过三棱镜后分解成七色光",
+            "红、绿、蓝是色光的三原色",
+            "红外线的热效应强，可用于加热",
+            "紫光最容易使照相胶片感光"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 白光经三棱镜发生色散分成七色光 ✓；B 红、绿、蓝是色光的三原色 ✓；C 红外线热效应强，可用于红外烤箱等加热设备 ✓；D 错，使胶片感光的是紫外线而不是紫光 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "光的色散与三原色",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "多选"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第五章 透镜及其应用",
+      "order_index": 5,
+      "summary": "凸透镜与凹透镜的识别和作用，照相机、投影仪等生活透镜，凸透镜成像的规律，眼睛与眼镜的矫正原理，以及简易望远镜的制作。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "下列透镜中，中间比边缘厚的是（  ）",
+          "options": [
+            "凹透镜",
+            "凸透镜",
+            "玻璃片",
+            "平面镜"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "中间厚、边缘薄的透镜叫凸透镜，中间薄、边缘厚的叫凹透镜。凸透镜对光有会聚作用，凹透镜对光有发散作用。所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "透镜的识别与作用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "凸透镜对光线的作用是（  ），凹透镜对光线的作用是（  ）。",
+          "answer": {
+            "value": [
+              "会聚",
+              "发散"
+            ]
+          },
+          "analysis": "凸透镜能把平行光会聚到一点，凹透镜能把光束发散开，填会聚、发散。形状与作用一一对应：中间厚而凸的会聚，中间薄而凹的发散。",
+          "difficulty": 2,
+          "knowledge_point": "透镜的识别与作用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "平行于主光轴的光通过凸透镜后会聚于一点，这一点叫做焦点。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "凸透镜能使平行于主光轴的光会聚于一点，这一点叫焦点，焦点到光心的距离叫焦距。命题正确。",
+          "difficulty": 2,
+          "knowledge_point": "透镜的识别与作用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "把一束平行光沿主光轴射入凸透镜，调节光屏位置可在屏上得到最亮的光斑，光斑到光心的距离就是（  ）",
+          "options": [
+            "焦距",
+            "物距",
+            "像距",
+            "口径"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "光屏上出现最亮光斑，说明平行光会聚在此处，这一点就是焦点，它到光心的距离叫焦距，选 A。物距是物体到光心的距离，像距是像到光心的距离。",
+          "difficulty": 3,
+          "knowledge_point": "透镜的识别与作用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于透镜，下列说法正确的有（  ）",
+          "options": [
+            "凸透镜中间厚、边缘薄",
+            "凹透镜中间薄、边缘厚",
+            "凸透镜对光有发散作用",
+            "通过凸透镜的光线一定会聚于同一点"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "A、B 是凸透镜与凹透镜在形状上的区别 ✓✓；C 错，凸透镜对光有会聚作用，有发散作用的是凹透镜 ✗；D 错，只有平行于主光轴的光才会在焦点会聚，其他方向的光会聚在别的位置 ✗。故 A、B 成立，C、D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "透镜的识别与作用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列物品中，镜头利用了凸透镜成像的有（  ）",
+          "options": [
+            "照相机镜头",
+            "放大镜",
+            "近视眼镜",
+            "汽车的后视镜"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "A 照相机镜头是凸透镜，在二倍焦距以外成倒立缩小的实像 ✓；B 放大镜是凸透镜，物体在焦点以内成正立放大的虚像 ✓；C 近视眼镜是凹透镜 ✗；D 汽车后视镜是凸面镜，靠反射成像，并不是透镜 ✗。故 A、B 成立，C、D 不成立。",
+          "difficulty": 2,
+          "knowledge_point": "生活中的透镜",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "用照相机拍小照片时，胶片（底片）到镜头的距离（  ）",
+          "options": [
+            "大于二倍焦距",
+            "等于二倍焦距",
+            "小于焦距",
+            "等于焦距"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "照相机的胶片相当于光屏，要成倒立缩小的实像，物体必须放在二倍焦距以外，此时像距小于焦距，所以胶片到镜头的距离小于焦距，选 C。",
+          "difficulty": 2,
+          "knowledge_point": "生活中的透镜",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "投影仪的镜头是（  ）透镜，它在幕布上成的像是（  ）的实像（填「放大」或「缩小」）。",
+          "answer": {
+            "value": [
+              "凸",
+              "放大"
+            ]
+          },
+          "analysis": "投影仪的镜头是凸透镜，投影时物距小于焦距，成的像是倒立放大的实像，所以幕布上的像被放大，填凸、放大。",
+          "difficulty": 3,
+          "knowledge_point": "生活中的透镜",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "汽车的后视镜利用的是凹面镜，可以扩大视野范围。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "汽车的后视镜是凸面镜，它成正立缩小的虚像，虽然像变小但视野范围扩大；若用凹面镜反而成正立放大的实像，视野会变小。所以说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "生活中的透镜",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳某中学摄影社用照相机拍摄运动会场景。请回答：（1）照片上的人相对真人来说是放大还是缩小？这说明照相机镜头相当于什么透镜？（2）想让照片上的人物显得更大一些，应该让镜头靠近被摄者还是远离被摄者？（3）如果发现照片上的像太小了，可以采取什么办法把像变大？",
+          "answer": {
+            "value": "（1）照片上的人比真人小，是缩小的像，说明照相机镜头相当于凸透镜，物体在二倍焦距以外时成倒立缩小的实像；（2）应该让镜头靠近被摄者，物距减小、像距增大，像就变大；（3）可以缩短镜头到被摄者的距离，也就是靠近被摄者，也可以换用焦距更长的镜头，这两种办法都能增大实像。"
+          },
+          "analysis": "评分要点：①第（1）问答出缩小的像、镜头相当于凸透镜（3 分）；②第（2）问答出镜头靠近被摄者并说明物距减小像变大（3 分）；③第（3）问给出可行办法并说明道理（2 分）；④表述完整（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "生活中的透镜",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "情境应用"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "凸透镜的焦距为 10 cm，物体放在距透镜 30 cm 处，此时成（  ）像",
+          "options": [
+            "倒立缩小的实像",
+            "倒立放大的实像",
+            "正立放大的虚像",
+            "不能成像"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "本题 2×10=20 cm，二倍焦距是 20 cm，物体在 30 cm 处大于二倍焦距，所以成倒立缩小的实像，与照相机原理相同，选 A。",
+          "difficulty": 1,
+          "knowledge_point": "凸透镜成像规律",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "凸透镜的焦距为 10 cm，物体放在距透镜 15 cm 处，此时成（  ）的实像。",
+          "answer": {
+            "value": "倒立放大"
+          },
+          "analysis": "本题 2×10=20 cm，物距 15 cm 介于焦距 10 cm 与二倍焦距 20 cm 之间，此时成倒立放大的实像，填倒立放大。",
+          "difficulty": 2,
+          "knowledge_point": "凸透镜成像规律",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "在探究凸透镜成像规律的实验中，凸透镜焦距为 10 cm，把蜡烛放在距透镜 8 cm 处，此时（  ）",
+          "options": [
+            "能得到倒立放大的实像",
+            "能得到正立放大的虚像",
+            "光屏承接不到，只能透过透镜看到正立放大的虚像",
+            "什么像都看不到"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "物距 8 cm 小于焦距 10 cm，此时成的是正立放大的虚像，像在物体一侧，光屏承接不到，只有透过透镜才能看到这个正立放大的虚像，所以选 C。",
+          "difficulty": 3,
+          "knowledge_point": "凸透镜成像规律",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "凸透镜成实像时，像与物体分别位于光屏所在平面的两侧。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "实像由光实际会聚形成，可以被光屏承接，因此像与物体分居光屏两侧；虚像才与物体在同一侧。命题正确。",
+          "difficulty": 3,
+          "knowledge_point": "凸透镜成像规律",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "凸透镜焦距为 10 cm，物体从距透镜 30 cm 处逐渐向透镜移动到 15 cm 处，像的变化是（  ）",
+          "options": [
+            "由倒立缩小的实像变成倒立放大的实像",
+            "由正立放大的虚像变成倒立缩小的实像",
+            "一直变小",
+            "先变大再变小"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "开始时物距 30 cm 大于二倍焦距 20 cm，成倒立缩小的实像；移动到 15 cm 时物距介于焦距与二倍焦距之间，成倒立放大的实像。所以像由倒立缩小的实像变成倒立放大的实像，选 A。",
+          "difficulty": 4,
+          "knowledge_point": "凸透镜成像规律",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于凸透镜成像，下列说法正确的有（  ）",
+          "options": [
+            "物体在二倍焦距以外时成倒立缩小的实像",
+            "物体在焦距和二倍焦距之间时成倒立放大的实像",
+            "物体在焦距以内时成正立放大的虚像",
+            "凸透镜成的虚像可以用光屏承接"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A、B、C 是凸透镜成像的三条基本规律 ✓✓✓；D 错，虚像是光线的反向延长线会聚形成的，光线并没有真正会聚到像的位置，所以光屏承接不到 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "凸透镜成像规律",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "人眼的晶状体相当于（  ）",
+          "options": [
+            "凹透镜",
+            "凸透镜",
+            "平面镜",
+            "玻璃板"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "眼睛里的晶状体相当于凸透镜，视网膜相当于光屏，物体在二倍焦距以外时视网膜上成倒立缩小的实像，所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "眼睛与眼镜",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "近视眼看不清远处的物体，是因为像成在了视网膜的（  ）方。",
+          "answer": {
+            "value": "前"
+          },
+          "analysis": "近视眼的晶状体太厚、折光能力太强，平行光会聚在视网膜之前，形成近视，所以像成在视网膜前方，填前。远视眼则相反，像成在视网膜后方。",
+          "difficulty": 2,
+          "knowledge_point": "眼睛与眼镜",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列关于近视眼与远视眼的说法，正确的是（  ）",
+          "options": [
+            "近视眼应佩戴凹透镜矫正",
+            "近视眼应佩戴凸透镜矫正",
+            "远视眼应佩戴凹透镜矫正",
+            "两种情况都应佩戴凹透镜"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "近视眼是像成在视网膜前，需要用对光有发散作用的凹透镜把会聚点向后推；远视眼是像成在视网膜后，需要用会聚作用的凸透镜。所以选 A。",
+          "difficulty": 2,
+          "knowledge_point": "眼睛与眼镜",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "眼睛看到的物体越大，在视网膜上成的像也越大。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "晶状体相当于凸透镜，视网膜相当于光屏，在物体位于二倍焦距以外时视网膜上总是成倒立缩小的实像，与物体本身的大小无关，只有视角变大时像才变大。所以说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "眼睛与眼镜",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳某中学八年级学生小明在黑板上看不清老师写的字，到医院检查被诊断为近视眼。请回答：（1）他的眼睛相当于哪种透镜出了什么问题？（2）他应该佩戴哪种透镜做眼镜？依据是什么？（3）他现在还能看清自己近处的书吗？为什么？",
+          "answer": {
+            "value": "（1）他的晶状体太厚、折光能力太强，相当于凸透镜折光能力过强，使平行光会聚在视网膜之前，形成近视；（2）应佩戴凹透镜制成的近视眼镜，因为凹透镜对光有发散作用，可以使会聚点后移到视网膜上；（3）能看清近处的书，因为近视眼看近处物体时像仍能成在视网膜上，只是看远处不清楚。"
+          },
+          "analysis": "评分要点：①第（1）问答出晶状体太厚、折光能力过强，像成在视网膜前（3 分）；②第（2）问答出凹透镜并说明凹透镜对光有发散作用（3 分）；③第（3）问答出能看清并说明原因（2 分）；④表述完整（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "眼睛与眼镜",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "情境应用"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "望远镜中物镜的主要作用是（  ）",
+          "options": [
+            "把远处物体成一个倒立缩小的实像",
+            "把远处物体成一个倒立放大的实像",
+            "把物镜成的像再放大",
+            "把射入的光线变成平行光"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "物镜焦距长、相当于凸透镜，远处物体在二倍焦距以外，所以物镜后成倒立缩小的实像，这个实像再由目镜放大，所以选 A。",
+          "difficulty": 2,
+          "knowledge_point": "望远镜的原理与制作",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "用望远镜观察远处物体时，物镜后面成的是（  ）的实像。",
+          "answer": {
+            "value": "倒立缩小"
+          },
+          "analysis": "物镜相当于焦距较长的凸透镜，远处物体位于二倍焦距以外，所以在物镜后面成倒立缩小的实像，再由目镜把这个实像放大，填倒立缩小。",
+          "difficulty": 3,
+          "knowledge_point": "望远镜的原理与制作",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "制作简易望远镜时，两个透镜的口径应该（  ）",
+          "options": [
+            "一样大",
+            "物镜口径大、目镜口径小",
+            "物镜口径小、目镜口径大",
+            "大小都可以，没有要求"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "物镜要收集尽量多的来自远处物体的光线，所以口径要大；目镜只负责把已经形成的实像放大，口径可以小一些。这样像才明亮清晰，也便于制作，所以选 B。",
+          "difficulty": 3,
+          "knowledge_point": "望远镜的原理与制作",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳某中学科技社要制作一架简易望远镜。请回答：（1）物镜和目镜各相当于什么透镜？各自起什么作用？（2）为什么物镜的口径要比目镜大？（3）用它观察远处的建筑物时，物镜后面成的像是怎样的像？",
+          "answer": {
+            "value": "（1）物镜和目镜都相当于凸透镜；物镜焦距长、口径大，负责把远处物体成一个倒立缩小的实像，目镜相当于放大镜，把这个实像再放大，所以人最终看到的是变大的像；（2）物镜口径大能收集更多来自远处物体的光线，看到的像才明亮、清晰；（3）物镜后面成的是倒立缩小的实像，目镜再把这个实像放大。"
+          },
+          "analysis": "评分要点：①第（1）问答出物镜、目镜都是凸透镜并分别说明作用（3 分）；②第（2）问答出物镜口径大能收集更多光线、像更亮（2 分）；③第（3）问答出倒立缩小的实像（2 分）；④表述完整（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "望远镜的原理与制作",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "情境应用"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第六章 质量与密度",
+      "order_index": 6,
+      "summary": "质量的概念与天平的规范使用，密度的概念、公式与单位换算，固体和液体密度的测量方法，以及密度在鉴别物质和材料选择中的应用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "质量是物体的（  ）",
+          "options": [
+            "形状",
+            "多少",
+            "温度",
+            "颜色"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "质量是物体所含物质的多少，是国际单位制中的基本物理量，其单位是千克（kg）。它与物体的形状、状态、温度和所处位置都无关，所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "质量与天平的使用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "国际单位制中质量的单位是（  ），1 吨等于（  ）千克。",
+          "answer": {
+            "value": [
+              "千克",
+              "1000"
+            ]
+          },
+          "analysis": "质量的国际单位是千克，符号是 kg；1 吨就是 1000 千克，即 1×1000=1000（kg）。填千克、1000。",
+          "difficulty": 2,
+          "knowledge_point": "质量与天平的使用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "同一块铁熔化成铁水以后，质量变小了。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "质量是物体所含物质的多少，与状态无关。铁熔化成铁水只是状态改变，所含铁的质量并没有变，所以质量不变，说法错误。",
+          "difficulty": 2,
+          "knowledge_point": "质量与天平的使用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "使用托盘天平测量物体质量时，下列操作正确的是（  ）",
+          "options": [
+            "测量前把游码移到标尺零刻度线处并调节横梁平衡",
+            "物体和砝码放在哪个盘里都可以",
+            "读数时可以一边读数一边添加砝码",
+            "调节横梁平衡与添加砝码可以同时进行"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "正确步骤是：把天平放在水平桌面，游码移到标尺零刻度线处，调节平衡螺母使横梁平衡，再把物体放左盘、用镊子向右盘加砝码并移动游码，最后先读砝码质量再读游码示数。所以只有 A 正确，选 A。",
+          "difficulty": 3,
+          "knowledge_point": "质量与天平的使用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "用天平称量物体时，所用砝码为 50 g、20 g 和 5 g，游码在标尺上指 4 g 处，则被测物体的质量是（  ）g。",
+          "answer": {
+            "value": "79"
+          },
+          "analysis": "砝码的总质量是 50+20+5=75 g，再加上游码示数 4 g，被测物体的质量是 75+4=79 g，填 79。读数时先读砝码、后读游码，两部分不能漏。",
+          "difficulty": 3,
+          "knowledge_point": "质量与天平的使用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于质量和天平，下列说法正确的有（  ）",
+          "options": [
+            "质量是物体所含物质的多少",
+            "把物体从深圳带到北京，质量会变小",
+            "实验室托盘天平一般可以精确到 0.1 g",
+            "使用天平时调节横梁平衡与添加砝码可以同时进行"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A 这是质量的定义 ✓；B 错，物体所含物质的多少没有变，位置改变只改变重力，质量不变 ✗；C 对，托盘天平一般精确到 0.1 g ✓；D 错，必须先调平横梁再放物体、加砝码，不能同时进行 ✗。故 A、C 成立，B、D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "质量与天平的使用",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "计算密度的公式是（  ）",
+          "options": [
+            "ρ=m/V",
+            "ρ=V/m",
+            "ρ=mV",
+            "ρ=m+V"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "密度等于质量除以体积，公式是 ρ=m/V。用千克、立方米作单位时密度单位是千克每立方米，用克、立方厘米作单位时是克每立方厘米。所以选 A。",
+          "difficulty": 1,
+          "knowledge_point": "密度的概念与公式",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "水的密度是 1.0 g/cm³，合（  ）kg/m³。",
+          "answer": {
+            "value": "1000"
+          },
+          "analysis": "1 g/cm³ 等于 1000 kg/m³，水的密度 1.0 g/cm³ 换算成国际单位就是 1.0×1000=1000 kg/m³，填 1000。",
+          "difficulty": 2,
+          "knowledge_point": "密度的概念与公式",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "一块金属的体积是 20 cm³，质量是 79 g，它的密度是（  ）",
+          "options": [
+            "3.95 g/cm³",
+            "2.7 g/cm³",
+            "1580 g/cm³",
+            "0.253 g/cm³"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "由 ρ=m/V 得密度是 79÷20=3.95 g/cm³，所以选 A。计算时质量与体积的单位必须对应，这里用 g 与 cm³，得到 g/cm³。",
+          "difficulty": 3,
+          "knowledge_point": "密度的概念与公式",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "密度是物质的一种特性，同种物质的密度与物体的质量、体积无关。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "密度由物质本身决定，同种物质在同一状态下密度是一定的，不随物体质量、体积的多少而改变，所以说法正确。但温度或状态改变时密度会变，如水结成冰后密度变小。",
+          "difficulty": 3,
+          "knowledge_point": "密度的概念与公式",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "把一块木块切成大小相等的两半，每半块木块的密度（  ）",
+          "options": [
+            "变为原来的一半",
+            "变为原来的两倍",
+            "与原来相同",
+            "无法确定"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "切开后木块的质量和体积都变成原来的一半，密度是它们的比值：原来密度是 ρ，切后是 (m/2)÷(V/2)=m÷V，与原来完全相同。所以选 C。",
+          "difficulty": 4,
+          "knowledge_point": "密度的概念与公式",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "一个金属零件的体积是 20 cm³，用天平测得它的质量是 54 g。请回答：（1）求这个零件的密度并写出计算式；（2）若这种金属的密度是 2.7 g/cm³，它可能是铝还是铁？（3）把这个零件熔化后重新铸成一个体积是 40 cm³ 的实心金属块，金属块的质量是多少？",
+          "answer": {
+            "value": "（1）ρ=m/V=54÷20=2.7 g/cm³；（2）2.7 g/cm³ 是铝的密度，铁的密度是 7.9 g/cm³，所以这种零件是铝制的；（3）质量是物质多少的量，熔化后重新铸成体积是 40 cm³ 的金属块，质量仍为 54 g。"
+          },
+          "analysis": "评分要点：①第（1）问写出 ρ=m/V=54÷20=2.7 g/cm³ 并带单位（3 分）；②第（2）问答出是铝并写出铁的密度作对比（2 分）；③第（3）问答出质量仍是 54 g 并说明质量不随形状改变（2 分）；④表述完整（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "密度的概念与公式",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "情境应用"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "用天平和量筒测量小石块的密度，正确的做法是（  ）",
+          "options": [
+            "先用天平测出石块质量，再用量筒测出体积",
+            "先用量筒测出石块的体积，再用天平测出质量",
+            "质量和体积同时测量",
+            "只用量筒测出体积即可算出密度"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "小石块会吸水，所以应先用量筒测出水的体积，再放入石块读出总体积，差值就是石块体积，这样石块来不及吸水；然后用天平测质量。所以选 B。",
+          "difficulty": 2,
+          "knowledge_point": "固体和液体密度的测量",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "用量筒测得水的体积是 20 mL，把一块小石块浸没在水中后水面升到 30 mL，则小石块的体积是（  ）cm³。",
+          "answer": {
+            "value": "10"
+          },
+          "analysis": "石块的体积等于水面上升的那部分体积：30-20=10 cm³，填 10。用量筒测体积读的是凹液面最低处对应的刻度。",
+          "difficulty": 2,
+          "knowledge_point": "固体和液体密度的测量",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "用量筒测量液体体积时，读数时视线应该（  ）",
+          "options": [
+            "与凹液面最低处保持水平",
+            "从上方俯视凹液面",
+            "从下方仰视凹液面",
+            "从斜上方看凹液面"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "量筒读数时视线必须与凹液面的最低处保持水平。俯视会使读数偏大、仰视会使读数偏小，斜看也会引起误差，所以选 A。",
+          "difficulty": 3,
+          "knowledge_point": "固体和液体密度的测量",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "用量筒测量液体体积时，视线俯视会使读数偏小。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "俯视时读数偏大，仰视时读数偏小。因为凹形液面有厚度，俯视看到的是液面较高处所对应的刻度，示数就偏大。所以说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "固体和液体密度的测量",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于测量固体和液体的密度，下列做法正确的有（  ）",
+          "options": [
+            "量筒读数时视线要与凹液面最低处相平",
+            "测小石块的密度要先测体积再测质量",
+            "测液体密度可用空量筒与装液体量筒的质量之差求液体质量",
+            "把量筒放在天平上测液体的质量更精确"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 量筒读数必须与凹液面最低处相平 ✓；B 测小石块密度要先用量筒测体积，避免石块吸水影响天平读数 ✓；C 用空量筒与装液体量筒的质量之差可得液体质量 ✓；D 量筒不能称质量，测质量必须用天平 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 4,
+          "knowledge_point": "固体和液体密度的测量",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "小明用天平和量筒测量一杯食用油的密度。请回答：（1）怎样测出这杯油的质量？写出两种方法；（2）用量筒量出这杯油的体积时，视线应该怎样放？",
+          "answer": {
+            "value": "（1）方法一：先用天平测出空量筒的质量 m1，再把油倒入量筒测出总质量 m2，油的质量是 m2-m1；方法二：先测出烧杯和油的总质量，倒一部分油进量筒测出这部分油的体积，再测出烧杯和剩余油的质量，两次质量之差就是量筒中油的质量。（2）读数时视线要与凹液面最低处保持水平，不能俯视或仰视。"
+          },
+          "analysis": "评分要点：①写出方法一的两步测量并说明油的质量是两次质量之差（3 分）；②写出方法二的两步测量并说明质量差（3 分）；③第（2）问答出视线与凹液面最低处相平（2 分）；④表述完整（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "固体和液体密度的测量",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "情境应用"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "要鉴别一个金属块是铁还是铝，最简便的方法是（  ）",
+          "options": [
+            "测量并比较它们的密度",
+            "比较它们的颜色",
+            "比较它们的硬度",
+            "比较它们的质量"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "不同物质的密度一般不同，测出密度再与铁的 7.9 g/cm³、铝的 2.7 g/cm³ 比较就能鉴别。颜色相近，硬度需要专门的硬度计，质量还要结合体积才有意义，所以选 A。",
+          "difficulty": 1,
+          "knowledge_point": "密度的应用与物质鉴别",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "密度是 2.7 g/cm³ 的金属是（  ）。",
+          "answer": {
+            "value": "铝"
+          },
+          "analysis": "铝的密度是 2.7 g/cm³，铁是 7.9 g/cm³，铜是 8.9 g/cm³，所以密度为 2.7 g/cm³ 的金属是铝，填铝。",
+          "difficulty": 2,
+          "knowledge_point": "密度的应用与物质鉴别",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "把一块金属块分别放入水（密度 1.0 g/cm³）和酒精（密度 0.8 g/cm³）中，金属块在水中漂浮、在酒精中下沉，则这块金属的密度（  ）",
+          "options": [
+            "大于 0.8 g/cm³ 且小于 1.0 g/cm³",
+            "大于 1.0 g/cm³",
+            "小于 0.8 g/cm³",
+            "等于 1.0 g/cm³"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "物体在液体中漂浮说明它的密度小于该液体，下沉说明它的密度大于该液体。金属块在水中漂浮，所以密度小于 1.0 g/cm³；在酒精中下沉，所以密度大于 0.8 g/cm³。合起来它的密度介于 0.8 g/cm³ 与 1.0 g/cm³ 之间，选 A。",
+          "difficulty": 3,
+          "knowledge_point": "密度的应用与物质鉴别",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "把一块砖敲碎成两块，碎砖的密度与原来整块砖的密度相同。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "敲碎后砖的质量变小、体积也按比例变小，密度是质量与体积的比值，两者同时按比例减小，比值不变，所以碎砖的密度与整块砖相同，命题正确。",
+          "difficulty": 3,
+          "knowledge_point": "密度的应用与物质鉴别",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于密度在生产生活中的应用，下列说法正确的有（  ）",
+          "options": [
+            "航空器常选用密度较小的材料",
+            "水结成冰后体积变大、密度变小",
+            "密度是鉴别物质的重要依据之一",
+            "密度大的物体质量一定大"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A 航空器要飞得起来，常用密度小的铝合金等材料 ✓；B 水结成冰后体积变大而质量不变，所以密度变小 ✓；C 密度是鉴别物质的重要依据之一 ✓；D 错，密度大只说明体积相同时质量大，质量还与体积有关 ✗。故 A、B、C 成立，D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "密度的应用与物质鉴别",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "深圳某中学实验室有一块标称为「纯铜」的实心金属块，体积为 20 cm³，用天平测得它的质量是 174 g。请回答：（1）求这块金属块的密度；（2）与纯铜的密度 8.9 g/cm³ 比较，它可能是纯铜吗？（3）如果它是铜和铝的混合物，掺入铝后混合物的密度会怎样变化？",
+          "answer": {
+            "value": "（1）ρ=m/V=174÷20=8.7 g/cm³；（2）不可能是纯铜，纯铜的密度是 8.9 g/cm³，而实测值 8.7 g/cm³ 小于它，测量误差不会造成这么大的差别；（3）铜的密度 8.9 g/cm³ 大于铝的 2.7 g/cm³，掺入铝后单位体积里含铜的量减少，混合物的密度会减小，介于 2.7 g/cm³ 与 8.9 g/cm³ 之间。"
+          },
+          "analysis": "评分要点：①第（1）问写出 ρ=m/V=174÷20=8.7 g/cm³ 并带单位（3 分）；②第（2）问答出不是纯铜并与 8.9 g/cm³ 比较（2 分）；③第（3）问答出密度减小并说明介于 2.7 g/cm³ 与 8.9 g/cm³ 之间（3 分）；④表述完整（1 分）。",
+          "difficulty": 5,
+          "knowledge_point": "密度的应用与物质鉴别",
+          "source_type": "original",
+          "source_name": "自主命题",
+          "status": "published",
+          "tags": [
+            "情境应用"
+          ]
+        }
+      ]
+    }
+  ],
+  "_consolidated": {
+    "generated_at": "2026-11-09T04:23:36",
+    "rule": "非 legacy > 批次日期最新 > 题量最多 > mtime 最新",
+    "sources": [
+      {
+        "chapter": "第一章 机械运动",
+        "file": "physics_g8_first_20261108.json",
+        "questions": 20
+      },
+      {
+        "chapter": "第二章 声现象",
+        "file": "physics_g8_first_20261108_r6.json",
+        "questions": 24
+      },
+      {
+        "chapter": "第三章 物态变化",
+        "file": "physics_g8_first_20261108_r2.json",
+        "questions": 25
+      },
+      {
+        "chapter": "第四章 光现象",
+        "file": "physics_g8_first_20261108_r3.json",
+        "questions": 25
+      },
+      {
+        "chapter": "第五章 透镜及其应用",
+        "file": "physics_g8_first_20261108_r4.json",
+        "questions": 25
+      },
+      {
+        "chapter": "第六章 质量与密度",
+        "file": "physics_g8_first_20261108_r5.json",
+        "questions": 24
+      }
+    ],
+    "dropped_sections": [
+      {
+        "chapter": "（复名知识点不声明后变空）",
+        "sections": [
+          "第一节 长度和时间的测量"
+        ]
+      }
+    ],
+    "reused_point_names_not_redeclared": [
+      "长度的单位与换算",
+      "刻度尺的正确使用",
+      "时间的测量",
+      "误差与错误"
+    ],
+    "outside_outline_skipped": []
+  }
+}

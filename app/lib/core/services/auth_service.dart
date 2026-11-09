@@ -71,6 +71,11 @@ class AuthService {
     }
   }
 
+  /// 缓存当前用户，供断网启动时恢复（如同意新协议后需立即落盘）。
+  Future<void> cacheUser(AppUser user) async {
+    await _storage.write(_userKey, jsonEncode(user.toJson()));
+  }
+
   Future<AppUser?> _readCachedUser() async {
     final raw = await _storage.read(_userKey);
     if (raw == null || raw.isEmpty) return null;
@@ -86,10 +91,9 @@ class AuthService {
   }
 
   Future<AuthTokens?> _refreshTokens(String refreshToken) async {
-    final data = await _api.postJson(
-      '/api/auth/refresh',
-      {'refresh_token': refreshToken},
-    );
+    final data = await _api.postJson('/api/auth/refresh', {
+      'refresh_token': refreshToken,
+    });
     final tokens = AuthTokens.fromJson(data);
     if (tokens.accessToken.isEmpty || tokens.refreshToken.isEmpty) {
       return null;

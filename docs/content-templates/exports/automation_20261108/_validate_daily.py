@@ -25,6 +25,7 @@ import hashlib
 import json
 import re
 import sys
+from collections import Counter
 from pathlib import Path
 
 # 纯元数据键：不参与内容比对（打 `_legacy` 标记只加这两个键）。
@@ -198,6 +199,18 @@ SOURCE_TYPES = {"original", "adapted", "licensed", "public", "external"}
 STATUSES = {"published", "draft", "offline"}
 SEMESTERS = {"first", "second"}
 
+# ===== 产出规格机检（2026-11-09 新增）=====
+# 此前这些规格只写在任务指令与 04 手册里，脚本一条都不查，导致
+# 「每知识点 0 题」「题量超出 18~28」「知识点 7 个以上」全都能通过自检。
+# 口径原文：`_daily-task-instruction.md`「每日产出量：新增知识点 3~6 个；新增题目 18~28 道
+# （每个知识点至少 4 道）」——按批次（一个文件）计，不按节计。
+CHAPTER_Q_MIN, CHAPTER_Q_MAX = 18, 28      # 每个章节（一轮抓的批次）题量
+POINTS_PER_FILE_MIN, POINTS_PER_FILE_MAX = 3, 6         # 每批次新增知识点数
+MIN_Q_PER_POINT = 4                        # 每个声明的知识点至少挂几道题
+DIFFICULTY_BUCKETS = (("1-2", (1, 2), 0.40), ("3", (3,), 0.40), ("4-5", (4, 5), 0.20))
+DIFFICULTY_TOL_PP = 15                     # 难度配比容差（百分点）
+_FRAGMENT_RE = re.compile(r"_r\d+\.json$", re.IGNORECASE)
+
 
 class Checker:
     def __init__(self) -> None:
@@ -211,6 +224,7 @@ class Checker:
         self.import_state = "unknown"              # unchanged / meta_only / changed / unknown（见 _manifest_import_state）
         self.imported_path = False                 # 该路径曾成功入库（内容被改过）：仅重名降级，避免自指误判
         self.legacy = False                        # 文件带 "_legacy": true（旧样章内容，占位章节清理前的产物）
+        self.book = False                          # 整册归集文件（*_book.json）：「每日批次」规格不适用
 
     def _baseline_names(self) -> dict[str, int] | None:
         """返回本学科本年级的「名称 -> 库内出现次数」，基线不可用时返回 None。"""
@@ -449,6 +463,107 @@ class Checker:
                         break
         return total
 
+    # ---------- 产出规格（题量 / 节均点 / 每点题量 / 难度配比） ----------
+    def check_spec(self, data: dict, points: set[str], total: int) -> None:
+        """2026-11-09 新增：把「只写在指令文档里」的四条规格变成机检。
+
+        legacy 文件（占位章节清理前的旧样章）一律降级为提醒，避免历史数据刷屏。
+        """
+
+        def report(msg: str) -> None:
+            if self.legacy:
+                self.warn(msg + "｜[legacy] 旧样章内容，按提醒处理，不阻断")
+            else:
+                self.err(msg)
+
+        # 1) 每个章节（一轮抓的批次）18~28 题
+        for chapter in data.get("chapters") or []:
+            if not isinstance(chapter, dict):
+                continue
+            cname = str(chapter.get("name") or "").strip()
+            count = len(chapter.get("questions") or [])
+            if count and not (CHAPTER_Q_MIN <= count <= CHAPTER_Q_MAX):
+                report(
+                    f"章节「{cname}」题量 {count} 道，超出每批次 "
+                    f"{CHAPTER_Q_MIN}~{CHAPTER_Q_MAX} 道的规格"
+                )
+
+        # 2) 每批次新增知识点 3~6 个；section 下既无知识点也无题 → 导入会造空节
+        section_names = [
+            str(item.get("name") or "").strip()
+            for item in (data.get("knowledge") or [])
+            if isinstance(item, dict) and item.get("node_type") == "section"
+        ]
+        per_section = Counter()
+        for item in data.get("knowledge") or []:
+            if isinstance(item, dict) and item.get("node_type", "point") == "point":
+                per_section[str(item.get("parent") or "").strip()] += 1
+        for section in section_names:
+            if per_section.get(section, 0):
+                continue
+            direct = 0
+            for chapter in data.get("chapters") or []:
+                for question in chapter.get("questions") or []:
+                    if isinstance(question, dict) and str(question.get("knowledge_point") or "").strip() == section:
+                        direct += 1
+            if not direct:
+                report(f"节「{section}」下既没有知识点也没有题（导入会造出一个空节）")
+
+        # 3) 每个声明的知识点 ≥4 题（0 题也算不合规——此前是最大的盲区）
+        used = Counter()
+        for chapter in data.get("chapters") or []:
+            for question in chapter.get("questions") or []:
+                if isinstance(question, dict):
+                    used[str(question.get("knowledge_point") or "").strip()] += 1
+        if points and not self.book and not (POINTS_PER_FILE_MIN <= len(points) <= POINTS_PER_FILE_MAX):
+            report(
+                f"本批次新增知识点 {len(points)} 个，超出每批次 "
+                f"{POINTS_PER_FILE_MIN}~{POINTS_PER_FILE_MAX} 个的规格"
+            )
+        for name in sorted(points):
+            count = used.get(name, 0)
+            if count == 0:
+                report(
+                    f"知识点「{name}」已声明但一道题都没有挂（等于 0 题，"
+                    f"规格要求 ≥{MIN_Q_PER_POINT}）"
+                )
+            elif count < MIN_Q_PER_POINT:
+                report(
+                    f"知识点「{name}」只挂了 {count} 道题，低于每知识点 "
+                    f"≥{MIN_Q_PER_POINT} 道的规格"
+                )
+
+        # 4) 难度配比 40/40/20（±容差，仅提醒）
+        if total:
+            buckets = Counter()
+            for chapter in data.get("chapters") or []:
+                for question in chapter.get("questions") or []:
+                    if not isinstance(question, dict):
+                        continue
+                    level = question.get("difficulty", 2)
+                    for label, values, _ in DIFFICULTY_BUCKETS:
+                        if level in values:
+                            buckets[label] += 1
+            for label, _, target in DIFFICULTY_BUCKETS:
+                percent = 100 * buckets.get(label, 0) / total
+                deviation = percent - target * 100
+                if abs(deviation) > DIFFICULTY_TOL_PP:
+                    self.warn(
+                        f"难度 {label} 级占比 {percent:.0f}%，偏离 {target * 100:.0f}% "
+                        f"目标 {deviation:+.0f}pp（容差 ±{DIFFICULTY_TOL_PP}pp）"
+                    )
+
+        # 5) 题型齐备（仅提醒）
+        present = {
+            str(question.get("q_type"))
+            for chapter in (data.get("chapters") or [])
+            for question in (chapter.get("questions") or [])
+            if isinstance(question, dict)
+        }
+        missing = sorted(Q_TYPES - present)
+        if missing:
+            self.warn(f"缺少题型：{','.join(missing)}（规格要求五种题型齐备）")
+
     def check_answer(self, question: dict, qtype: str, value, label: str) -> None:
         if qtype in ("choice", "multiple"):
             options = question.get("options") or []
@@ -596,6 +711,7 @@ def validate_file(
     kp_baseline: dict | None = None,
     manifest: dict | None = None,
     outlines: dict[str, tuple[dict[int, set[str]], dict[int, set[tuple[str, str]]]]] | None = None,
+    version_map: dict | None = None,
 ) -> Checker:
     checker = Checker()
     checker.kp_baseline = kp_baseline
@@ -616,12 +732,27 @@ def validate_file(
         checker.err("顶层必须是 JSON 对象")
         return checker
 
+    # 版本口径按学科查表（各科并不统一：北师大版/人教版/牛津深圳版/部编版/湘教版），
+    # 只在没显式传 --expect-version 时生效，避免「人教版」写死导致整批误报。
+    if version_map and expects.get("version") is None:
+        entry = (version_map.get(str(data.get("subject") or "")) or {})
+        resolved = entry.get(str(data.get("grade"))) or entry.get("*") or entry.get("default")
+        if resolved:
+            expects = dict(expects)
+            expects["version"] = resolved
+
     checker.check_top(data, expects)
     checker.template_mode = path.stem == str(data.get("subject") or "")
     checker.import_state = _manifest_import_state(path, raw, data, manifest)
     checker.imported = checker.import_state in ("unchanged", "meta_only")
     checker.imported_path = _manifest_has_path(path, manifest)
     checker.legacy = bool(data.get("_legacy"))
+    checker.book = path.name.lower().endswith("_book.json")
+    if checker.book:
+        checker.warn(
+            "整册归集文件（*_book.json）：「每批次知识点 3~6 个」「每知识点≥4 道」的每日规格不适用，"
+            "只按章节题量、题量与结构层校验"
+        )
     if checker.template_mode:
         checker.warn(
             "这是学科模板文件（名字就是学科代码），它本身就是库内容的来源；"
@@ -635,8 +766,14 @@ def validate_file(
         )
     sections, points = checker.check_knowledge(data)
     total = checker.check_questions(data, sections, points)
+    checker.check_spec(data, points, total)
     if total > 200:
         checker.warn(f"题目总数 {total} 超过 200，建议按章节拆分")
+    if _FRAGMENT_RE.search(path.name):
+        checker.warn(
+            f"[分片] 文件名带 `_rN` 后缀：导入清单只登记「不带 _rN 的那份」，"
+            "分片不会进 manifest、也不会被导入；请改成带章节标识的文件名或合并成一册一文件"
+        )
 
     allowed = None
     allowed_pairs: set[tuple[str, str]] = set()
@@ -736,6 +873,15 @@ def main() -> int:
         dest="outline",
         help="教材大纲基线 md（baseline/_outline_*.md）；给了就校验章节是否落在本册教材范围内",
     )
+    parser.add_argument(
+        "--version-map",
+        dest="version_map",
+        help=(
+            "学科→版本映射 JSON（baseline/_subject-version-map.json）；"
+            "不传 --expect-version 时按文件的 subject/grade 自动取版本，"
+            "避免各科版本不同导致整批误报"
+        ),
+    )
     args = parser.parse_args()
 
     OutlineEntry = tuple[dict[int, set[str]], dict[int, set[tuple[str, str]]]]
@@ -803,6 +949,21 @@ def main() -> int:
         "semester": args.semester,
     }
 
+    version_map = None
+    if args.version_map:
+        map_path = Path(args.version_map)
+        if not map_path.is_file():
+            print(f"版本映射不存在：{args.version_map}")
+            return 1
+        try:
+            version_map = json.loads(map_path.read_text(encoding="utf-8")).get("versions")
+        except (json.JSONDecodeError, AttributeError) as exc:
+            print(f"版本映射解析失败：{exc}")
+            return 1
+        if not version_map:
+            print("版本映射里没有 versions 字段")
+            return 1
+
     files: list[Path] = []
     for pattern in args.paths:
         target = Path(pattern)
@@ -822,7 +983,7 @@ def main() -> int:
 
     failed = 0
     for file in files:
-        if validate_file(file, expects, kp_baseline, manifest, outlines).errors:
+        if validate_file(file, expects, kp_baseline, manifest, outlines, version_map).errors:
             failed += 1
     print(f"\n合计 {len(files)} 个文件，通过 {len(files) - failed} 个，失败 {failed} 个")
     return 1 if failed else 0

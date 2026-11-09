@@ -201,9 +201,11 @@ SEMESTERS = {"first", "second"}
 
 # ===== 产出规格机检（2026-11-09 新增）=====
 # 此前这些规格只写在任务指令与 04 手册里，脚本一条都不查，导致
-# 「节均 1 个知识点」「每知识点 0 题」「题量超出 18~28」全都能通过自检。
+# 「每知识点 0 题」「题量超出 18~28」「知识点 7 个以上」全都能通过自检。
+# 口径原文：`_daily-task-instruction.md`「每日产出量：新增知识点 3~6 个；新增题目 18~28 道
+# （每个知识点至少 4 道）」——按批次（一个文件）计，不按节计。
 CHAPTER_Q_MIN, CHAPTER_Q_MAX = 18, 28      # 每个章节（一轮抓的批次）题量
-POINTS_PER_SECTION_MIN, POINTS_PER_SECTION_MAX = 3, 6   # 每节知识点数
+POINTS_PER_FILE_MIN, POINTS_PER_FILE_MAX = 3, 6         # 每批次新增知识点数
 MIN_Q_PER_POINT = 4                        # 每个声明的知识点至少挂几道题
 DIFFICULTY_BUCKETS = (("1-2", (1, 2), 0.40), ("3", (3,), 0.40), ("4-5", (4, 5), 0.20))
 DIFFICULTY_TOL_PP = 15                     # 难度配比容差（百分点）
@@ -222,6 +224,7 @@ class Checker:
         self.import_state = "unknown"              # unchanged / meta_only / changed / unknown（见 _manifest_import_state）
         self.imported_path = False                 # 该路径曾成功入库（内容被改过）：仅重名降级，避免自指误判
         self.legacy = False                        # 文件带 "_legacy": true（旧样章内容，占位章节清理前的产物）
+        self.book = False                          # 整册归集文件（*_book.json）：「每日批次」规格不适用
 
     def _baseline_names(self) -> dict[str, int] | None:
         """返回本学科本年级的「名称 -> 库内出现次数」，基线不可用时返回 None。"""
@@ -485,7 +488,7 @@ class Checker:
                     f"{CHAPTER_Q_MIN}~{CHAPTER_Q_MAX} 道的规格"
                 )
 
-        # 2) 每节知识点 3~6 个；节下 0 个点（导入会造空节）
+        # 2) 每批次新增知识点 3~6 个；section 下既无知识点也无题 → 导入会造空节
         section_names = [
             str(item.get("name") or "").strip()
             for item in (data.get("knowledge") or [])
@@ -496,14 +499,15 @@ class Checker:
             if isinstance(item, dict) and item.get("node_type", "point") == "point":
                 per_section[str(item.get("parent") or "").strip()] += 1
         for section in section_names:
-            count = per_section.get(section, 0)
-            if count == 0:
-                report(f"节「{section}」下没有任何知识点（导入会造出一个空节）")
-            elif not (POINTS_PER_SECTION_MIN <= count <= POINTS_PER_SECTION_MAX):
-                report(
-                    f"节「{section}」下有 {count} 个知识点，超出每节 "
-                    f"{POINTS_PER_SECTION_MIN}~{POINTS_PER_SECTION_MAX} 个的规格"
-                )
+            if per_section.get(section, 0):
+                continue
+            direct = 0
+            for chapter in data.get("chapters") or []:
+                for question in chapter.get("questions") or []:
+                    if isinstance(question, dict) and str(question.get("knowledge_point") or "").strip() == section:
+                        direct += 1
+            if not direct:
+                report(f"节「{section}」下既没有知识点也没有题（导入会造出一个空节）")
 
         # 3) 每个声明的知识点 ≥4 题（0 题也算不合规——此前是最大的盲区）
         used = Counter()
@@ -511,6 +515,11 @@ class Checker:
             for question in chapter.get("questions") or []:
                 if isinstance(question, dict):
                     used[str(question.get("knowledge_point") or "").strip()] += 1
+        if points and not self.book and not (POINTS_PER_FILE_MIN <= len(points) <= POINTS_PER_FILE_MAX):
+            report(
+                f"本批次新增知识点 {len(points)} 个，超出每批次 "
+                f"{POINTS_PER_FILE_MIN}~{POINTS_PER_FILE_MAX} 个的规格"
+            )
         for name in sorted(points):
             count = used.get(name, 0)
             if count == 0:
@@ -738,6 +747,12 @@ def validate_file(
     checker.imported = checker.import_state in ("unchanged", "meta_only")
     checker.imported_path = _manifest_has_path(path, manifest)
     checker.legacy = bool(data.get("_legacy"))
+    checker.book = path.name.lower().endswith("_book.json")
+    if checker.book:
+        checker.warn(
+            "整册归集文件（*_book.json）：「每批次知识点 3~6 个」「每知识点≥4 道」的每日规格不适用，"
+            "只按章节题量、题量与结构层校验"
+        )
     if checker.template_mode:
         checker.warn(
             "这是学科模板文件（名字就是学科代码），它本身就是库内容的来源；"

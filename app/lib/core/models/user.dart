@@ -61,6 +61,21 @@ class AppUser {
     );
   }
 
+  /// 用于写入本地缓存，字段名与 [AppUser.fromJson] 保持一致。
+  Map<String, dynamic> toJson() => {
+    'id': id,
+    'phone': phone,
+    'nickname': nickname,
+    'role': role,
+    'stage': stage,
+    'grade': grade,
+    'is_child': isChild,
+    'daily_limit_minutes': dailyLimitMinutes,
+    'permissions': permissions,
+    'scope': scope,
+    'needs_reconsent': needsReconsent,
+  };
+
   factory AppUser.fromJson(Map<String, dynamic> json) {
     return AppUser(
       id: json['id'] as int,
