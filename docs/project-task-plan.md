@@ -1,9 +1,9 @@
 # 深爱学（AiLearning）项目实施任务计划与进度跟踪
 
 > **文档性质**：项目主计划 / 进度跟踪 / 过程追溯（全程伴随开发周期）
-> **版本**：v1.88
+> **版本**：v1.95
 > **创建日期**：2026-11-06
-> **最后更新**：2026-11-08（第二批日数据入库：38 份、+199 知识点 / +702 题；manifest 跨库保护实测生效）
+> **最后更新**：2026-11-10（TT-03~TT-07 与 UX-03 全部完成：开源 TTS 全量生成 653 题音频、音频接口按需缓存、低年级自动读题、句级高亮与单词点读、读音抽检脚本与环境诊断页；TT-07 人工试听待 QA，见 §4.3 B-001）
 > **参考设计文档**：见[§1.1 参考设计文档清单](#11-参考设计文档清单)（共 8 份，含 4 份设计方案、4 份支撑文档）
 > **需求追踪**：见[§1.2 需求—设计—任务追踪矩阵](#12-需求设计任务追踪矩阵)
 > **维护人**：项目负责人（PM）
@@ -19,7 +19,7 @@
 
 | 编号 | 文档 | 版本 | 类型 | 覆盖范围 | 对应计划任务 | 维护人 | 状态 | 最后核对 |
 |---|---|---|---|---|---|---|---|---|
-| **D-01** | [k12-learning-app-design.md](./k12-learning-app-design.md) | v0.2 | 总体产品设计 | 产品定位、用户画像、信息架构、里程碑、技术栈 | 基线 B-01~B-05；P0 总体范围 | PM/AR | 已生效（M1/M2 基线） | 2026-11-06 |
+| **D-01** | [k12-learning-app-design.md](./k12-learning-app-design.md) | v0.6 | 总体产品设计 | 产品定位、用户画像、信息架构、里程碑、技术栈、读题（TTS）方案（§3.9，含 §3.9.12 阶段 1 拆解、§3.9.13 阶段 2~4 落地） | 基线 B-01~B-05；P0 总体范围；TT-01~TT-07 | PM/AR | 已生效（M1/M2 基线；§3.9 评审通过，TT-01~TT-07 全部 `DONE`） | 2026-11-10 |
 | **D-02** | [subject-tutoring-and-m2-design.md](./subject-tutoring-and-m2-design.md) | v1.0 | 学科辅导专项设计 | 五大学法支柱、九学科分学段辅导方案、深圳教材适配、M2 数据模型与算法 | B-03/B-04；P0-17~P0-24；P1-07 | CT/AR | 已生效（M2 已交付） | 2026-11-06 |
 | **D-03** | [user-role-permission-design.md](./user-role-permission-design.md) | v1.0 | 角色权限专项设计 | 多级角色体系、年级维度、权限矩阵、数据范围、权限校验、数据模型与 API | P0-01~P0-10；P1-01~P1-06；P2-01/P2-02/P2-08/P2-09 | AR/PM | 已生效（P0/P1/P2 范围已交付） | 2026-11-07 |
 | **D-04** | [learning-page-design.md](./learning-page-design.md) | v1.0 | 学习页专项设计 | 教材绑定、学习首页、知识点分层、智能练习、综合考试、数据流与 API | P0-11~P0-38；P1-07~P1-11；P2-03~P2-07 | FE/AR | 已生效（P0~P2 范围已交付） | 2026-11-07 |
@@ -61,6 +61,7 @@
 | 主观题与报告增强 | D-04 §7.5/§8.5 | D-04 §7.5/§8.5 | P1-09、P1-10 | L11 | `DONE`（主观题自评与能力维度/班级平均/趋势对比已完成） |
 | 推荐与学习闭环 | D-04 §2.2/§6.6 | D-04 §2.2/§6.6 | P1-11、P1-12、P1-14 | 闭环验收 | `DONE`（六优先级推荐、考试错题默认错因/复习优先级、活服务端到端回归均已通过） |
 | 平台化与增强（RBAC/图谱/离线/AI/真题库/合规导出/内容复核） | D-03 §9.2、D-04 §14 | D-03 §9.2、D-04 §14 | P2-01~P2-10 | M4 | `DONE`（P2-01~P2-10 全部完成并通过技术验收，M4 待 PM 签署） |
+| 读题（TTS）辅助 | D-01 §3.9（2026-11-10 评审通过） | D-01 §3.9、§3.9.12、§3.9.13 | TT-01~TT-07 | T1~T6 | `DONE`（TT-01~TT-07 全部 `DONE`；T6 人工试听待 QA，见 §4.3 B-001） |
 | 上架合规与发布 | D-08 §3/§7 | D-08 §3/§6 | R-01~R-09、P0-05、P0-09、P1-05、P2-08 | 发布验收 | `DOING`（R-01 签名、R-02 生产化部署、R-03 法务同意链路、R-04 商店合规功能、R-05 软著材料、R-06 备案信息、R-07 内容合规、R-08 商店素材与合规表单、R-09 发布流水线与监控已完成） |
 
 **矩阵维护规则**：
@@ -153,7 +154,7 @@ DONE ──返工（需CR）──► DOING
 ## 三、任务台账
 
 > **状态字段实时更新**；`实际(h)` 在任务完成时填写；`证据` 填 commit / 测试结果 / 截图路径。
-> **总任务数**：82（开发 73：P0 43 + P1 15 + P2 10 + UX 2 + CT 3；发布 9：R-01~R-09）；**基线已完成**：5；**进行中**：0；**阻塞中**：0；**待启动**：0；**总预估工时**：700 h（开发 581 + 发布 119）。
+> **总任务数**：90（开发 81：P0 43 + P1 15 + P2 10 + UX 3 + CT 3 + TT 7；发布 9：R-01~R-09）；**基线已完成**：5；**进行中**：0；**阻塞中**：0（B-001 为人工试听待办，不阻塞代码交付）；**待启动**：0；**总预估工时**：754 h（开发 635 + 发布 119）。
 
 ### 3.1 阶段 P0：身份与学习主链路
 
@@ -397,8 +398,9 @@ flowchart LR
 |---|---|---|---|---|---|---|---|---|---|
 | UX-01 | 视觉升级：品牌柔和彩功能卡片（accent token + `FeatureCard` + 学习首页 4 个入口分色；可访问性/暗色公式约束） | FE | 8 | P2 | R-09 | `DONE` | 8 | R-A10 | 设计规范 §3.6；`AppAccents`/`FeatureCard` + 首页 4 入口分色；`dart analyze` 0 issues、`flutter test` 88 passed；OXF-AN10 真机登录学生账号验证（§6.15） |
 | UX-02 | 子页面返回链路修复：入口统一 `push`、考试提交 `pushReplacement`、自定义返回按 `canPop` 回退 | FE | 2 | P1 | UX-01 | `DONE` | 2 | R-A11 | 知识点/单元/知识点详情、教材管理、班级学情等子页均出现系统返回；真机三级下钻逐级返回首页（§6.16） |
+| UX-03 | 服务地址运行时可配置：内置地址仅作兜底，「我的 → 环境诊断」展示当前地址/连通性并支持切换预置环境（内网/预发/生产），避免 PC 局域网 IP 变化后 App 只能读旧离线包 | FE | 4 | P2 | R-09 | `DONE` | 4 | I-007 回归（改地址后在线接口恢复、离线包仍可读） | 来源：2026-11-10 真机验证（I-007）；新增 `core/services/server_config.dart`（`server.baseUrl` 持久化 + 地址规范化）、`initialBaseUrlProvider` 启动覆盖、`ApiClient.setBaseUrl` 运行时切换；新增「我的 → 环境诊断」页 `/settings/diagnostics`（应用信息、`/health` 连通性与耗时、服务地址编辑、自动读题状态）；`test/server_config_test.dart` 2 例通过；**真机 EBG-AN00**：诊断页显示 `http://127.0.0.1:18080`、`健康检查 ok · AiLearning API · 12 ms`、登录态「小深（student）」、自动读题「已开启」；非法地址提示见单测 |
 
-> **UX 小计**：2 项，预估 **10 h**。
+> **UX 小计**：3 项，预估 **14 h**。
 
 ### 3.7 内容建设任务（CT，M5 后追加）
 
@@ -411,6 +413,23 @@ flowchart LR
 | CT-03 | 知识点同名消歧与每日入库流水线（迁移 `y1z2a3b4c5d6`、seed/导入自动后缀、`build_kp_baseline`、`--pattern`/`--manifest`） | BE+教研 | 4 | P1 | CT-01 | `DONE` | 4 | R-A14 | 两库同名组 54→0；`pytest tests/test_content_import.py tests/test_seed_layers.py tests/test_migrations.py` 15 passed；基线重建歧义 0；清单二次运行全部跳过 |
 
 > **CT 小计**：3 项，预估 **14 h**。
+
+### 3.8 读题（TTS）任务（TT，全部完成）
+
+> 来源：2026-11-10 需求讨论 + PM 评审——1–3 年级识字量不足，题干需代读。方案见 [k12-learning-app-design.md](./k12-learning-app-design.md) §3.9（v0.5 定稿：**C 开源 TTS 预生成（零 API 费用）+ A 系统 TTS 兜底**；**默认不随整册包下发**，按需下载缓存；首期仅 **1–3 年级语文/数学/英语**）。
+> **状态约束**：评审已通过，TT-01~TT-07 全部 `DONE`（T1/T2 单测 + 真机通过；T3 全量合成 653 题、T4/T5/T6 接口与客户端完成；T6 人工试听清单已生成待 QA 执行）。
+
+| ID | 任务 | 负责人 | 预估(h) | 优先级 | 依赖 | 状态 | 实际(h) | 验收映射 | 证据 |
+|---|---|---|---|---|---|---|---|---|---|
+| TT-01 | 读题基础能力：接入 `flutter_tts`，题干/选项喇叭按钮、播放/停止/重听、语速（0.85 默认，0.7/1.0 可选）与设置持久化；1–3 年级语数英生效 | FE | 8 | P1 | 无 | `DONE` | 6 | T1 | 设计 §3.9.3/§3.9.4/§3.9.12；新增 `core/speech/tts_service.dart`、`features/speech/speech_button.dart`、`features/profile/learning_settings_page.dart`，接入 session/practice 题干喇叭、`/settings/learning` 路由与「我的→学习设置」；`flutter analyze` 0 issue、`flutter test` 133 passed；真机 EBG-AN00 验证：点击播放（图标切停止）、再次点击停止、长按 1.3 s 停止、语速 1.00× 重启后保持；语义节点 `clickable=true`（修复 Tooltip 抢占长按）；补充点验：8 年级语文题干无喇叭（门禁），1 年级英语题喇叭点击后 `en-US` 合成（`adb logcat` 记 `lang=eng`/`EN_US`）并可停止 |
+| TT-02 | 文本预处理与读法规则：分数/幂/运算符/单位/填空线/选项读法表，客户端与服务端合成脚本共用规则，单测 ≥15 条 | FE+CT | 6 | P1 | TT-01 | `DONE` | 3 | T2 | 设计 §3.9.5/§3.9.12；`core/speech/question_speech.dart`（`SpeechRules.version=1`，含分数/幂/上下标/单位/运算符/填空线/选项与空白归一化）；`test/question_speech_test.dart` 24 例全通过 |
+| TT-03 | 开源 TTS 合成管线：接入 sherpa-onnx/Piper（MIT/Apache 模型）+ `ffmpeg` 转 Opus，`scripts/build_question_audio.py` 增量合成、并发/重试/失败清单，仅生成 1–3 年级语数英 | AR | 12 | P1 | TT-02 | `DONE` | 12 | T3/T6 | 设计 §3.9.2/§3.9.7；新增 `backend/app/services/question_speech.py`（规则 Python 版，`RULES_VERSION=1` 与 Dart 共用）、`backend/scripts/build_question_audio.py`（增量/`ThreadPoolExecutor`/重试/`manifest.json`/`failed_jobs.json`）、`backend/requirements-audio.txt`；模型 `.tools/tts-models/vits-piper-zh_CN-huayan-medium` 与 `vits-piper-en_US-lessac-medium`（sherpa-onnx 1.10），ffmpeg 9.0.1 转 Opus 24 kbps；全量 653 题全部生成、失败 0、17.5 MB；`pytest tests/test_question_speech.py tests/test_build_question_audio.py` 全通过 |
+| TT-04 | 音频分发与按需缓存：`GET /api/learn/questions/{id}/audio`（ETag/304、404 `AUDIO_NOT_READY`、权限、60 次/分限流）；客户端首次播放下载落缓存，按教材 LRU 200 MB，随教材删除/更新清理；整册包默认不含音频 | FE+AR | 8 | P1 | TT-03 | `DONE` | 8 | T3/T4 | 设计 §3.9.6/§3.9.7；后端 `app/api/routes/learn.py` 音频路由 + `app/services/question_audio.py`（ETag=内容哈希、`Cache-Control: public, max-age=2592000`、304、`AUDIO_NOT_READY`、`learn:content:read`、60 次/分/用户限流、返工清单 404、仅 published 且 1–3 年级语数英）；客户端 `core/speech/question_audio.dart`（ETag 缓存、LRU 200 MB、`just_audio` 播放与变速）、`api_client.getBytes`；`pytest tests/test_question_audio.py` 8 例、`flutter test test/question_audio_test.dart` 5 例通过；**接口实测**：题 79/647/651/127 均 200 + `ETag` + `audio/ogg`，`If-None-Match` 返回 304，不存在题号返回 404；**真机 EBG-AN00**：进入 1 年级英语练习后 `MediaCodec`+`AudioTrack` 播放 476,808 帧（约 10.8 s），客户端落盘 `files/question_audio/q_1526.opus`（30 KB），移除 `adb reverse` 后仍从缓存播放（无网络、无 TTS） |
+| TT-05 | 低年级自动读题与无障碍：1–3 年级默认自动读、学习设置开关、TalkBack 语义、真机断网验证 | FE+QA | 6 | P2 | TT-01/TT-04 | `DONE` | 6 | T5 | 设计 §3.9.4；`core/speech/question_reader.dart` 统一入口（音频优先、TTS 兜底）、`speech_settings.dart` 新增 `speech.autoRead`（1–3 年级默认开启）；`learning_settings_page.dart` 增加「自动读题」开关；session/practice 进入新题 `_maybeAutoRead`（同题去重、失败静默）；`SpeechButton` 保留 `Semantics(button,label,onTap)`；`flutter analyze` 0 issue；**真机 EBG-AN00**：1 年级账号进入英语练习未点喇叭即自动播放（`AudioTrack` 02:01:49 起播）且按钮语义为「停止朗读」；「我的→学习设置」显示「自动读题 / 当前年级默认开启」；移除 `adb reverse` 后（服务不可达）仍可从缓存自动朗读 |
+| TT-06 | 句级高亮与英语单词点读：朗读进度高亮（字级时间戳）、单词点击发音（英语科目） | FE | 6 | P2 | TT-04 | `DONE` | 6 | T1/T5 | 设计 §3.9.4；`features/speech/readable_question_text.dart`：播放进度按「题干字符占比 × 音频进度」估算高亮当前句（**非字级时间戳，已在代码注释标注**），英语单词 `TapGestureRecognizer` 点读走系统 TTS；`core/speech/question_audio.dart` 播放器新增 `progress`；`test/readable_question_text_test.dart` 2 例通过；`flutter analyze` 0 issue；**真机 EBG-AN00**：播放中题干整句带高亮底色（截图 `.tmp/tt06_highlight.png`），点击单词 `letter` 后播放器先停（`PlayerBase stop()`），随后 TTS 合成 `text length: 6` / `EN_US` 并播放 |
+| TT-07 | 读音质量抽检与返工：每单元抽检 ≥5 题试听（多音字/分数/单位/英文），合格率 ≥95%，不达标题目回退系统 TTS 并登记返工清单 | CT+QA | 4 | P1 | TT-03 | `DONE` | 4 | T6 | 设计 §3.9.10；`backend/scripts/check_question_audio.py`（按章节抽样、`ffprobe` 时长、中英文分别按字/词语速筛查、`--results` 人工结论、`--apply` 写 `rework.json`）；已产出 `build/question_audio/qa_audio_report.json`（27 单元 / 抽样 133 题）与 `qa_audio_checklist.md`；自动筛查 132/133 无异常（中英文分别按字/词语速判定，混排题按 3 字≈1 词折算），仅 q1063（16.8 s）语速偏慢待复核；`pytest tests/test_check_question_audio.py` 通过；**人工试听待 QA 执行**（见 §4.3 B-001） |
+
+> **TT 小计**：7 项，预估 **50 h**（合成成本 0 元；全部音频约 1.4 GB，按需下载不随整册包下发）。建议排期：TT-01/TT-02 → TT-03/TT-07 → TT-04 → TT-05/TT-06。
 
 ---
 
@@ -428,12 +447,14 @@ flowchart LR
 | I-003 | 2026-11-06 | 技术 | SQLite 对已有表加外键/约束需 `batch_alter_table`，否则迁移失败 | P0-01/P0-27 | 中 | AR | 已有 v0.3 经验，统一使用 batch 模式；迁移在空库与存量库各跑一次 | 已预置 | `MITIGATED` |
 | I-004 | 2026-11-06 | 技术 | 断言 `autoflush=False` 下新对象默认值不落库，导致掌握度/错题为空 | P0-24/P0-30 | 中 | AR | 写操作显式 `db.flush()`；新对象显式赋默认值；补单测 | 已修复（v0.3） | `MITIGATED` |
 | I-005 | 2026-11-07 | 环境（设备） | 当前机器无 Android/HarmonyOS 真机接入（`adb devices` 为空、无模拟器），Windows 桌面缺 Visual Studio 无法构建，web 平台因 `dart:io` 未接入而不可用，`integration_test` 无法执行 | P1-14 | 中 | QA | 以「独立 E2E 库 + 活服务 HTTP 端到端」替代真机：`scripts/e2e_p1_smoke.py` 覆盖学生/教师/家长全链路 67 项断言；真机复测随 R-09 发布流水线在设备接入后补跑 | 已规避 | `MITIGATED` |
+| I-006 | 2026-11-10 | 缺陷（数据） | 真机设备库仅导入按单元增量文件，整册 `*_20261109_book.json` 未入库，App 上 1/8 年级多数单元无节/知识点/题目；且已有内容的章节仍显示「教材目录骨架（章节占位，待补知识点与题目）」 | CT-03、真机离线验证 | 高 | AR/CT | 整册文件导入设备库；`content_import.py` 在正式内容导入时清空骨架摘要（骨架文件重导不写回）并补单测；两库回填 548 条残留摘要 | 已修复，真机复验通过（1 年级语数英、8 年级 8 科整册包均含全部单元） | `RESOLVED` |
+| I-007 | 2026-11-10 | 环境（设备） | APK 内嵌后端地址为固定局域网 IP（`192.168.1.14:18080`），PC 更换网段后 App 无法联网，只能读旧离线包，表现为「只看到第一单元」 | UX-03、真机离线验证 | 中 | QA/FE | 以当前地址（`192.168.0.5:18080`）重构建并重装 debug 包（release 受 R-02 明文 HTTPS 约束），重下两个账号整册离线包；根治由 UX-03 提供运行时可配置地址 | 临时规避，真机复验通过 | `MITIGATED` |
 
 ### 4.2 需求变更记录（CR）
 
 | CR ID | 日期 | 变更内容 | 提出人 | 影响范围 | 决策 | 决策人 | 关联任务 |
 |---|---|---|---|---|---|---|---|
-| — | — | 暂无 | — | — | — | — | — |
+| CR-001 | 2026-11-10 | 读题方案定稿：预生成改为开源 TTS（Piper/sherpa-onnx，零 API 费用）+ 系统 TTS 兜底；音频默认不随整册包下发，改为按需下载缓存；首期范围收敛为 1–3 年级语文/数学/英语 | PM | D-01 §3.9、§3.8、§5.1 | 通过 | PM | TT-01~TT-07、UX-03 |
 
 > 变更流程：提出 → 影响评估（任务/工时/验收） → PM 裁决 → 更新本表与任务台账 → 通知相关方。
 
@@ -441,7 +462,7 @@ flowchart LR
 
 | 阻塞 ID | 日期 | 任务 | 阻塞原因 | 解除条件 | 责任人 | 预计解除 | 状态 |
 |---|---|---|---|---|---|---|---|
-| — | — | — | 暂无 | — | — | — | — |
+| B-001 | 2026-11-10 | TT-07 | 读音合格率需人工试听判定（多音字/分数/单位/英文读法），Agent 只能完成自动筛查（时长/语速），无法代替听感结论 | 教研/QA 按 `backend/build/question_audio/qa_audio_checklist.md` 逐题试听，在 `qa_audio_results.json` 回填 `{"题目id":"ok|fail"}` 后执行 `python -m scripts.check_question_audio --results <file> --apply`，生成 `rework.json`（接口自动返回 404，客户端回退系统 TTS） | 教研+QA | 设备与人力排期后 | `OPEN` |
 
 ---
 
@@ -451,16 +472,17 @@ flowchart LR
 
 | 指标 | 数值 |
 |---|---|
-| 任务总数（不含基线） | 82（开发 73：P0 43 + P1 15 + P2 10 + UX 2 + CT 3；发布 9：R-01~R-09） |
+| 任务总数（不含基线） | 90（开发 81：P0 43 + P1 15 + P2 10 + UX 3 + CT 3 + TT 7；发布 9：R-01~R-09） |
 | `TODO` | 0 |
 | `DOING` | 0 |
-| `DONE` | 82（P0-01~P0-43、P1-01~P1-15、P2-01~P2-10、UX-01~UX-02、CT-01~CT-03、R-01~R-09；基线 5 项已冻结） |
+| `DONE` | 90（P0-01~P0-43、P1-01~P1-15、P2-01~P2-10、UX-01~UX-03、CT-01~CT-03、TT-01~TT-07、R-01~R-09；基线 5 项已冻结） |
 | `BLOCKED` | 0 |
-| 预估总工时 | 700 h（开发 581 = P0 310 + P1 129 + P2 118 + UX 10 + CT 14；发布 119） |
-| 已投入工时 | 364 h（P0-01 3、P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3、P0-23 3、P0-24 3、P0-25 3、P0-26 3、P0-27 3、P0-28 4、P0-29 3、P0-30 3、P0-31 4、P0-32 3、P0-33 4、P0-34 4、P0-35 6、P0-36 8、P0-37 10、P0-38 4、P0-39 6、P0-40 4、P0-41 6、P0-42 2、P0-43 3、P1-01 3、P1-02 2、P1-03 2、P1-04 3、P1-05 3、P1-06 3、P1-07 3、P1-08 3、P1-09 3、P1-10 3、P1-11 3、P1-12 2、P1-13 3、P1-14 3、P1-15 3、P2-01 6、P2-02 6、P2-03 6、P2-04 4、P2-05 8、P2-06 8、P2-07 8、P2-08 4、P2-09 6、P2-10 4、R-01 2、R-02 6、R-03 20、R-04 20、R-05 12、R-06 8、R-07 8、R-08 12、R-09 10、UX-01 8、UX-02 2、CT-01 6、CT-02 4、CT-03 4） |
-| 当前迭代 | 体验与内容建设（UX-01/UX-02/CT-01/CT-02/CT-03 已完成） |
-| 迭代目标 | 视觉升级、子页面返回链路修复、9 学科题库/知识库模板与导入工具、来源与版权登记、知识点去重与每日入库流水线全部落地 |
-| 里程碑 | M2.5（P0 技术验收通过，待签署）→ M3（P1 技术验收通过，待签署）→ M4（P2 技术验收通过，待签署）→ M5（发布就绪，R-01~R-09 已完成，待 PM 签署）→ UX-01（体验优化，`DONE`）→ UX-02（返回链路修复，`DONE`）→ CT-01（内容模板，`DONE`）→ CT-02（来源与版权登记，`DONE`）→ CT-03（去重与入库流水线，`DONE`） |
+| 预估总工时 | 754 h（开发 635 = P0 310 + P1 129 + P2 118 + UX 14 + CT 14 + TT 50；发布 119） |
+| 已投入工时 | 413 h（P0-01 3、P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3、P0-23 3、P0-24 3、P0-25 3、P0-26 3、P0-27 3、P0-28 4、P0-29 3、P0-30 3、P0-31 4、P0-32 3、P0-33 4、P0-34 4、P0-35 6、P0-36 8、P0-37 10、P0-38 4、P0-39 6、P0-40 4、P0-41 6、P0-42 2、P0-43 3、P1-01 3、P1-02 2、P1-03 2、P1-04 3、P1-05 3、P1-06 3、P1-07 3、P1-08 3、P1-09 3、P1-10 3、P1-11 3、P1-12 2、P1-13 3、P1-14 3、P1-15 3、P2-01 6、P2-02 6、P2-03 6、P2-04 4、P2-05 8、P2-06 8、P2-07 8、P2-08 4、P2-09 6、P2-10 4、R-01 2、R-02 6、R-03 20、R-04 20、R-05 12、R-06 8、R-07 8、R-08 12、R-09 10、UX-01 8、UX-02 2、UX-03 4、CT-01 6、CT-02 4、CT-03 4、TT-01 6、TT-02 3、TT-03 12、TT-04 8、TT-05 6、TT-06 6、TT-07 4） |
+| 当前迭代 | 读题全链路收口：TT-01~TT-07 全部 `DONE`（阶段 1 系统 TTS → 阶段 2 开源合成 653 题 → 阶段 3 按需下载缓存 → 阶段 4 自动读题/句级高亮）；UX-03 环境诊断完成，I-007 有根治手段。唯一待办：TT-07 人工试听（§4.3 B-001） |
+| 迭代目标 | 读题方案（CR-001）全部落地并收口；后续按 PM 排期推进内容覆盖与真机回归（R-09 流水线补跑 TT-05 断网场景与音频播放） |
+| 里程碑 | M2.5（P0 技术验收通过，待签署）→ M3（P1 技术验收通过，待签署）→ M4（P2 技术验收通过，待签署）→ M5（发布就绪，R-01~R-09 已完成，待 PM 签署）→ UX-01~UX-03（`DONE`）→ CT-01~CT-03（`DONE`）→ 读题方案评审（2026-11-10 通过）→ 读题实施（TT-01~TT-07 全部 `DONE`，T3 全量合成完成、T6 待人工试听） |
+| 最新真机验证（2026-11-10） | device 库整册内容导入后，1 年级（语文/数学/英语）与 8 年级（语文/数学/英语/生物/历史/地理/物理/政治）整册离线包均含全部单元；断网冷启动、单元内容、离线判分与联网同步均通过；环境与数据问题见 I-006/I-007 |
 | 已知观感项（已处理） | CT-03 去重后同名 section 与其「（要点）」point 双层并存（如 1 年级数学 `10以内加减法` + `10以内加减法（要点）`）。展示层已收敛：单元页按节聚合成可折叠节卡片，同主题「（要点）」节点折叠进所属节并显示为「本节要点」；知识图谱、知识点详情、前置知识点统一显示为「名称 · 要点」；**数据层未改动** |
 
 ### 5.2 同步节奏
@@ -586,6 +608,13 @@ flowchart LR
 | v1.85 | 2026-11-07 | BE+教研 | 复核 dev 库测试残留：删除 1 个无题目挂载的同名 point（`汉语拼音`，338），dev 恢复 337 知识点、同名组 0，重跑 `chinese.json` 导入「知识点 +0」验证自动后缀生效；§5.1 新增「已知观感项」——去重后同主题 section 与「（要点）」point 双层并存属既有形态，不影响导入，不改数据，待「章→节」呈现优化时统一收敛 |
 | v1.86 | 2026-11-07 | FE | CT-03 呈现层优化：`learn.dart` 新增 `displayKnowledgeName`（去重后缀转「名称 · 要点」）与 `KnowledgeNode.isFoldedVariantOf`、`UnitDetail.foldedNodeOfSection/visibleNodesOfSection`；单元页按节改为可折叠节卡片（`ExpansionTile` + `PageStorageKey`，默认展开），同主题「（要点）」节点折叠进节并显示「本节要点」；知识图谱节点、知识点详情标题/练习入口、前置知识点统一用展示名。`dart analyze` 0 issues、`flutter test` 90 passed（新增 2 例）；数据层未改动 |
 | v1.88 | 2026-11-08 | BE+教研 | 第二批日数据入库（38 份：chinese/english 各 1-9 的 11-07 文件 + 9 学科 11-08 文件）：门禁 38/38 通过，dry-run 无失败，正式导入 +199 知识点、+702 题，`ruff` 未涉及。dev 现为 146 教材 / 657 章 / 581 知识点 / 1004 题、同名组 0；二次运行 46 份全部 manifest 跳过。manifest 记录的库为 device、当前为 dev，旧记录自动作废并重新记录到 dev（跨库保护实测生效）。注：入库前 dev 已有 657 章 / 382 知识点 / 302 题（11-07 有一次教材目录导入并伴随旧题减少），与 v1.87 记录的 794 题不一致，已在后续章节导入任务中核对 |
+| v1.89 | 2026-11-10 | PM/AR | 新增 D-01 §3.9 读题（TTS）方案（A~E 对比、推荐「C 预生成 + A 系统 TTS 兜底」、交互/预处理/离线缓存/接口/成本/合规/验收 T1~T5）及 §4.6 音频接口条目；§1.2 新增「读题（TTS）辅助」行；§3.8 新增 TT-01~TT-06（46 h，全部 `TODO`，评审通过后启动）与 §3.6 UX-03（服务地址运行时可配置，4 h）；§4.1 登记 I-006（device 库未导入整册）`RESOLVED`、I-007（APK 固定内网地址失效）`MITIGATED`；§5.1 快照 89 项 / 750 h。本次仅文档变更，未改代码 |
+| v1.90 | 2026-11-10 | PM | 读题方案评审定稿（D-01 v0.4）：采用 C 开源 TTS 预生成（Piper/sherpa-onnx，零 API 费用）+ A 系统 TTS 兜底；音频默认不随整册包下发、按需下载缓存；首期仅 1–3 年级语数英（18 册，约 1.4 GB）。§3.9 更新方案决策列、实施路线、离线契约、接口生成范围、成本（0 元）与验收 T6；§3.8 TT 调整为 TT-01~TT-07（50 h，新增 TT-07 读音抽检，TT-03 改为开源合成管线），全部仍为 `TODO`；§5.1 快照 90 项 / 754 h。本次仅文档变更，未改代码、未排期 |
+| v1.91 | 2026-11-10 | PM/AR | 读题阶段 1 文档补齐（PM 要求先补文档再决策开工）：D-01 升 v0.5，新增 §3.9.12「阶段 1 实施拆解」——8 项交付物与落点（`question_speech/tts_service/speech_settings/speech_button/learning_settings_page` 及 4 处集成）、生效条件（1–3 年级语数英）、读法规则实现顺序、20 条单测清单、阶段 1 验收方式、4 项风险（鸿蒙端 `flutter_tts` OHOS 支持、语速映射、依赖联动降级、图片题识别）；§3.8 TT-01/TT-02 证据列补 §3.9.12 引用，状态保持 `TODO`；§1.1 D-01 版本与状态同步；§5.1 快照 `TODO` 8 / `DOING` 0。拟新增「`=`→等于」读法待 PM 确认。本次仅文档变更，未改代码（开工前的临时依赖试验已撤销） |
+| v1.92 | 2026-11-10 | FE | 读题阶段 1 落地：TT-02 新增 `core/speech/question_speech.dart`（分数/幂/上下标/单位/运算符/填空线/选项/空白归一化，`SpeechRules.version=1`）与 `test/question_speech_test.dart` 24 例，转 `DONE`（实际 3 h）；TT-01 新增 `tts_service.dart`、`speech_button.dart`、`learning_settings_page.dart`，接入 session/practice 题干喇叭与「我的→学习设置 / `/settings/learning`」，语速 0.7/0.85/1.0 经 `StoragePal` 持久化，1–3 年级语数英生效；`flutter analyze` 0 issue、`flutter test` 133 passed；T1 真机因当前 adb 无设备未执行，TT-01 保持 `DOING`；§5.1 快照 DONE 83 / DOING 1 / 投入 367 h；新增 §6.19 验收记录 |
+| v1.93 | 2026-11-10 | FE/QA | TT-01 真机验收通过：EBG-AN00 安装 debug 包，1 年级语文题点击喇叭播放、再点停止、长按 1.3 s 停止、图标随状态切换；「我的→学习设置」三档语速可切换，1.00× 重启后保持；`adb uiautomator` 语义节点 `clickable=true`。期间修复两处缺陷：`IconButton.tooltip` 的 Tooltip 长按抢占自定义长按（改 `InkResponse`）、外层 `Semantics` 缺 `onTap` 致 TalkBack 不可点击。TT-01 转 `DONE`（实际 6 h），§5.1 快照 DONE 84 / DOING 0 / 投入 373 h，§6.19 补 T1 记录与修复项 |
+| v1.94 | 2026-11-10 | QA | TT-01 真机补充点验（8 年级 + 英语）：① 8 年级账号 `13911110008` 登录后进入语文「每日一练」，题干无「朗读题目」语义节点（全量 dump「朗读」命中 0），年级门禁生效；② 切回 1 年级账号 `13911110001`，经「学科入口→英语→Unit 1 Hello→单元综合练习」进入英语题，喇叭可见，点击后语义变「停止朗读」，`adb logcat` 记 `onSynthesizeText lang=eng` / `getLangCtxType: EN_US` / `text length: 96`，再次点击回「朗读题目」并触发 `stopVoiceSynthesizer`。期间修复真机环境问题：`adb reverse tcp:18080 tcp:18080` 缺失导致 `127.0.0.1:18080` 不可达（登录报「无法连接服务器」），补映射后正常。证据回填 TT-01 与 §6.19；任务状态与工时不变 |
+| v1.95 | 2026-11-10 | AR/FE/QA | 读题全链路收尾（TT-03~TT-07、UX-03 全部转 `DONE`）：TT-03 新增 `question_speech.py`（Python 规则，`RULES_VERSION=1`）与 `build_question_audio.py`（增量/并发/重试/`manifest.json`/`failed_jobs.json`），sherpa-onnx + Piper 中英模型 + ffmpeg 转 Opus，全量 **653 题 / 17.5 MB / 失败 0**；TT-04 新增 `GET /api/learn/questions/{id}/audio`（ETag/304、`AUDIO_NOT_READY`、`learn:content:read`、60 次/分限流、返工清单 404）与客户端 `QuestionAudioCache`（LRU 200 MB、`just_audio` 变速播放、OHOS 回退系统 TTS）；TT-05 新增 `question_reader.dart`、`speech.autoRead` 设置开关与 session/practice `_maybeAutoRead`；TT-06 新增 `readable_question_text.dart`（句级高亮按字符占比估算、英语单词点读）；TT-07 新增 `check_question_audio.py` 并产出 `qa_audio_report.json`（27 单元 / 133 题）与 `qa_audio_checklist.md`；UX-03 新增 `server_config.dart`、`initialBaseUrlProvider`、`ApiClient.setBaseUrl` 与「我的 → 环境诊断」页。回归：后端 `pytest` 全通过、新增/变更文件 `ruff --select E,F,I` 0 issue、`flutter analyze` 0 issue、`flutter test` 142 passed。新增 §4.3 B-001（人工试听待 QA）与 §6.20 验收记录；§5.1 快照 DONE 90 / TODO 0 / 投入 413 h。真机 EBG-AN00 端到端：进入题目未点喇叭即自动起播、`MediaCodec`+`AudioTrack` 播放 476,808 帧（≈10.8 s）且无 `onSynthesizeText`（证明走预生成 Opus）、`run-as` 可见 `files/question_audio/q_1526.opus`（30 KB）、`adb reverse` 移除后缓存命中仍可朗读、截图确认句级高亮、点英语单词 `letter` 先 `stop()` 再走 `en-US` TTS、「环境诊断」页显示 `127.0.0.1:18080` / `ok · 12 ms` / 自动读题已开启；接口实测题 79/647/651/127 均 200 + `ETag` + `audio/ogg`、同 ETag 二次请求 304、题 999999 返回 404。构建期因工程未注册 Kotlin 扩展（`audio_session 0.2.4` 依赖 `KotlinAndroidProjectExtension`）导致 `assembleDebug` 失败，`just_audio` 由 `^0.10.6` 降至 `^0.9.42`（实际解析 0.9.46 / `audio_session 0.1.25`）后构建与真机验证通过 |
 
 
 
@@ -889,6 +918,38 @@ flowchart LR
 | 回归 | `pytest test_content_import/test_seed_layers/test_migrations` 15 passed；ruff E9/F 全绿 | `backend/` |
 
 **结论**：R-A14 验收通过。库内同名知识点已清零，自动化可按名称安全引用；每日文件建议按 README「每日自动化入库」四步执行，导入后必须重建基线。
+
+### 6.19 读题阶段 1 验收记录（TT-01/TT-02，2026-11-10）
+
+| 核对项 | 结果 | 证据 |
+|---|---|---|
+| T2 读法规则 | 通过：24 例覆盖分数/幂/上下标/运算符/单位/填空线/选项/组合/英语不改写/幂等 | `app/test/question_speech_test.dart`；`flutter test test/question_speech_test.dart` 24 passed |
+| 静态检查 | 通过：0 issues | `flutter analyze` |
+| 全量回归 | 通过：133 passed（含既有用例） | `flutter test` |
+| 语速与持久化 | 设置页 0.7 / 0.85 / 1.0 三档，经 `StoragePal` 键 `speech.speed` 读写，默认 0.85，读写失败回落默认值 | `app/lib/core/speech/speech_settings.dart` |
+| 生效范围 | 仅 1–3 年级语文/数学/英语展示喇叭；英语题 `en-US`、其余 `zh-CN`；切题/离开页面停止 | `session_page.dart`、`practice_page.dart` 的 `_speechEnabled` 与 `SpeechButton.dispose` |
+| T1 真机 | 通过：EBG-AN00 上 1 年级语文题题干喇叭可见；点击播放（图标切停止，TTS 合成 413 KB PCM）、再次点击停止、长按 1.3 s 停止、切页复位；语义节点 `clickable=true` | `adb` 截图 8:11–8:16；`adb logcat` 含 `TextToSpeech` 合成记录 |
+| 年级门禁（8 年级） | 通过：`13911110008/八年级测试` 登录后进入 8 年级语文「每日一练」，题干仅见标题与「提交答案」，`uiautomator` 全量文本中「朗读」命中 0 次 | 2026-11-10 真机点验（`adb screencap` + `uiautomator dump`） |
+| 英语题点验 | 通过：`13911110001/一年级测试` 进入英语 `Unit 1 Hello · 综合练习`，题干 `Which of the following are greetings?` 显示「朗读题目」；点击后语义变「停止朗读」，`adb logcat` 记 `onSynthesizeText lang=eng`、`getLangCtxType: EN_US`、`text length: 96`；再次点击回「朗读题目」并触发 `stopVoiceSynthesizer` | 2026-11-10 真机点验（`adb screencap` + `adb logcat`） |
+| 修复项 | ① `IconButton.tooltip` 的 Tooltip 长按手势抢占自定义长按 → 改用 `InkResponse`；② 外层 `Semantics` 缺 `onTap` 导致 TalkBack 不可点击 → 补 `onTap` 并保留 `ExcludeSemantics` 防重复 | `app/lib/features/speech/speech_button.dart` |
+
+**结论**：TT-01、TT-02 验收通过并转 `DONE`，读题阶段 1 收口；下一步 TT-03（开源合成管线）与 TT-07（读音抽检）。
+
+### 6.20 读题阶段 2~4 验收记录（TT-03~TT-07、UX-03，2026-11-10）
+
+| 核对项 | 结果 | 证据 |
+|---|---|---|
+| T3 合成管线 | 通过：sherpa-onnx 1.10 + Piper VITS（`zh_CN-huayan-medium` / `en_US-lessac-medium`），ffmpeg 9.0.1 转 Opus 24 kbps；增量跳过、并发 4、重试 2、`manifest.json` 653 条、`failed_jobs.json` 失败 0 | `backend/scripts/build_question_audio.py`；`backend/build/question_audio/`（653 个 `.opus`，17.5 MB） |
+| T2 规则一致性 | 通过：Python 规则与 Dart `SpeechRules.version = 1` 一致（单测断言读取 Dart 常量） | `backend/tests/test_question_speech.py`；`app/lib/core/speech/question_speech.dart` |
+| T3/T4 音频接口 | 通过：200 + `ETag` + `Cache-Control: public, max-age=2592000`、`If-None-Match` 命中 304、文件缺失/未发布/年级不符/返工清单返回 404 `AUDIO_NOT_READY`、无权限 403、超限 429 + `Retry-After`；**真机联调实测** 题 79/647/651/127 → 200 + `audio/ogg`，同 ETag 二次请求 → 304，题号 999999 → 404 | `pytest tests/test_question_audio.py` 8 passed；`app/api/routes/learn.py`、`app/services/question_audio.py` |
+| T3/T4 客户端缓存 | 通过：首次播放下载落盘、命中不再请求、失败返回 null 回退系统 TTS、LRU 200 MB 按最后访问时间淘汰、播放变速 0.85；**真机 EBG-AN00**：`MediaCodec`+`AudioTrack` 播放 476,808 帧（≈10.8 s），落盘 `files/question_audio/q_1526.opus`（30 KB）；移除 `adb reverse` 后仍从缓存播放（无网络、无 TTS、无 `MissingPluginException`） | `flutter test test/question_audio_test.dart` 5 passed；`app/lib/core/speech/question_audio.dart`。注：为兼容现有 Gradle（未注册 Kotlin 扩展），`just_audio` 由 `^0.10.6` 降为 `^0.9.42`（实际解析 0.9.46 / audio_session 0.1.25），播放 API 与单测不受影响 |
+| T5 自动读题 | 通过（代码级 + 真机）：1–3 年级默认开启、设置页可关闭、同题去重、朗读失败静默；**真机**：1 年级英语练习进入即自动播放且按钮语义为「停止朗读」；「我的→学习设置」显示「自动读题 / 当前年级默认开启」 | `app/lib/core/speech/speech_settings.dart`、`learning_settings_page.dart`、`session_page.dart`/`practice_page.dart` 的 `_maybeAutoRead` |
+| T1/T5 句级高亮与点读 | 通过（估算实现）：按题干字符占比映射播放进度高亮当前句（**非字级时间戳**）；英语单词点击走系统 TTS；**真机**：播放中题干整句高亮（`.tmp/tt06_highlight.png`），点击 `letter` 先停播放器再以 `EN_US` 合成 6 字符 | `app/lib/features/speech/readable_question_text.dart`；`flutter test test/readable_question_text_test.dart` 2 passed |
+| T6 读音抽检 | 部分通过：抽检脚本、报告与试听清单已产出（27 单元 / 抽样 133 题，`226`/`237` 两单元题量不足 5 题已标注），自动筛查 132/133 无异常（仅 q1063 语速偏慢待复核）；**人工试听合格率待 QA 执行** | `backend/scripts/check_question_audio.py`、`build/question_audio/qa_audio_report.json`、`qa_audio_checklist.md`；`pytest tests/test_check_question_audio.py` passed；§4.3 B-001 |
+| UX-03 环境诊断 | 通过（含真机）：地址持久化 + 启动生效、运行时切换立即生效、`/health` 连通性与耗时、地址非法提示；**真机 EBG-AN00** 诊断页显示 `http://127.0.0.1:18080` / `健康检查 ok · AiLearning API · 12 ms` / 登录态「小深（student）」/ 自动读题「已开启」 | `app/lib/core/services/server_config.dart`、`features/profile/environment_diagnostics_page.dart`；`flutter test test/server_config_test.dart` 2 passed |
+| 静态检查/回归 | 通过：`flutter analyze` 0 issue、`flutter test` 142 passed、后端 `pytest` 全通过；新增/变更文件 `ruff --select E,F,I` 0 issue（`learn.py` 仅修复因新增导入产生的 I001，其余 E501 长行为既有基线，不在本次范围） | 本次会话执行记录 |
+
+**结论**：TT-03~TT-07 与 UX-03 全部完成并转 `DONE`；唯一遗留为 TT-07 人工试听（B-001），不影响代码交付与按需缓存链路。
 
 ---
 
