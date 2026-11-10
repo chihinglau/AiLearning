@@ -1,3 +1,6 @@
+import 'dart:async';
+
+import 'package:ai_learning/core/constants/app_constants.dart';
 import 'package:ai_learning/core/models/user.dart';
 import 'package:ai_learning/core/offline/offline_exam_store.dart';
 import 'package:ai_learning/core/offline/offline_exam_sync.dart';
@@ -19,8 +22,13 @@ import 'package:ai_learning/core/services/legal_service.dart';
 import 'package:ai_learning/core/services/offline_learn_service.dart';
 import 'package:ai_learning/core/services/org_service.dart';
 import 'package:ai_learning/core/services/rbac_service.dart';
+import 'package:ai_learning/core/services/server_config.dart';
 import 'package:ai_learning/core/services/textbook_service.dart';
 import 'package:ai_learning/core/services/user_service.dart';
+import 'package:ai_learning/core/speech/question_audio.dart';
+import 'package:ai_learning/core/speech/question_reader.dart';
+import 'package:ai_learning/core/speech/speech_settings.dart';
+import 'package:ai_learning/core/speech/tts_service.dart';
 import 'package:ai_learning/pal/platform_pal.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -34,7 +42,16 @@ final platformPalProvider = Provider<PlatformPal>(
   (ref) => throw UnimplementedError('请在 main.dart 的 ProviderScope 中覆盖'),
 );
 
-final apiClientProvider = Provider<ApiClient>((ref) => ApiClient());
+final apiClientProvider = Provider<ApiClient>(
+  (ref) => ApiClient(baseUrl: ref.watch(initialBaseUrlProvider)),
+);
+
+/// 服务地址（UX-03）：默认取编译期配置，启动时用本地保存值覆盖。
+final initialBaseUrlProvider = Provider<String>((ref) => AppConfig.apiBaseUrl);
+
+final serverConfigStoreProvider = Provider<ServerConfigStore>((ref) {
+  return ServerConfigStore(ref.watch(platformPalProvider).storage);
+});
 
 final authServiceProvider = Provider<AuthService>((ref) {
   final api = ref.watch(apiClientProvider);
@@ -141,3 +158,29 @@ final appInfoServiceProvider = Provider<AppInfoService>((ref) {
 });
 
 final currentUserProvider = StateProvider<AppUser?>((ref) => null);
+
+/// 读题（TT-01）：系统 TTS 与本地语速设置。
+final ttsServiceProvider = Provider<TtsService>((ref) {
+  final service = TtsService();
+  ref.onDispose(service.dispose);
+  return service;
+});
+
+/// TT-04：优先播放服务端预生成音频，未就绪时由调用方回退系统 TTS。
+final questionAudioServiceProvider = Provider<QuestionAudioService>((ref) {
+  final service = QuestionAudioService(api: ref.watch(apiClientProvider));
+  ref.onDispose(() => unawaited(service.dispose()));
+  return service;
+});
+
+final speechSettingsStoreProvider = Provider<SpeechSettingsStore>((ref) {
+  return SpeechSettingsStore(ref.watch(platformPalProvider).storage);
+});
+
+/// TT-05：统一读题入口（预生成音频优先，系统 TTS 兜底）。
+final questionReaderProvider = Provider<QuestionReader>((ref) {
+  return QuestionReader(
+    tts: ref.watch(ttsServiceProvider),
+    audio: ref.watch(questionAudioServiceProvider),
+  );
+});

@@ -3,17 +3,29 @@
 from datetime import datetime, timedelta
 from typing import Optional
 
-from fastapi import APIRouter, Depends, HTTPException, Query, status
+from fastapi import APIRouter, Depends, HTTPException, Query, Request, Response, status
+from fastapi.responses import FileResponse
 from sqlalchemy import and_, func, or_, select
 from sqlalchemy.orm import Session
 
-from app.api.deps import get_current_user, require_student_access
+from app.api.deps import (
+    get_current_user,
+    require_permission,
+    require_student_access,
+)
 from app.core import cache
+from app.core.config import settings
 from app.core.grade import derive_grade_group, derive_semester, derive_stage
+from app.core.rate_limit import rate_limiter
 from app.core.scope import StudentAccess
 from app.db.session import get_db
 from app.models.content import Chapter, KnowledgePoint, Question, Textbook
-from app.models.practice import MasteryScore, PracticeSession, StudentQuestionRecord, WrongQuestion
+from app.models.practice import (
+    MasteryScore,
+    PracticeSession,
+    StudentQuestionRecord,
+    WrongQuestion,
+)
 from app.models.textbook import TextbookBinding
 from app.models.user import User
 from app.schemas.content import QuestionPublic
@@ -24,38 +36,39 @@ from app.schemas.learn import (
     HomeRecommendation,
     HomeTextbook,
     HomeTodayPlan,
+    KnowledgeNodeOut,
     KpBriefOut,
     KpDetailOut,
     KpExampleOut,
     KpSelfTestIn,
     KpStateOut,
-    KnowledgeNodeOut,
     LearnStartIn,
     LearnStartOut,
     LearnStatsOut,
     LearnSubmitIn,
     LearnSubmitOut,
     MasteryMapOut,
+    OfflineAttemptOut,
+    OfflineAttemptsIn,
+    OfflineAttemptsOut,
     PracticePreviewIn,
     PracticePreviewOut,
     PracticeSessionFinishOut,
     PracticeSessionOut,
     SessionAnswerOut,
     SessionKpStatOut,
+    TextbookBundleOut,
     UnitDetailOut,
     UnitOut,
     UnitSectionOut,
     WrongQuestionOut,
     WrongReasonIn,
-    TextbookBundleOut,
-    OfflineAttemptsIn,
-    OfflineAttemptsOut,
-    OfflineAttemptOut,
 )
 from app.services import learning as engine
 from app.services import practice as practice_service
-from app.services import recommendation
-from app.services import study_state
+from app.services import question_audio as question_audio_service
+from app.services import question_speech as speech
+from app.services import recommendation, study_state
 from app.services import textbook as textbook_service
 from app.services import textbook_bundle as bundle_service
 from app.services import wrong_reason as wrong_reason_service
@@ -1444,3 +1457,73 @@ def home(
     )
     cache.set(cache_key, result)
     return result
+
+
+@router.get("/questions/{question_id}/audio")
+def question_audio(
+    question_id: int,
+    request: Request,
+    voice: Optional[str] = Query(default=None),
+    speed: float = Query(
+        default=float(settings.question_audio_default_speed), ge=0.5, le=2.0
+    ),
+    current: User = Depends(require_permission("learn:content:read")),
+    db: Session = Depends(get_db),
+) -> Response:
+    """TT-04 题干朗读音频：ETag/304、未就绪 404、单用户 60 次/分钟限流。"""
+    allowed, retry_after = rate_limiter.allow(
+        f"question-audio:{current.id}",
+        settings.question_audio_rate_limit_per_minute,
+        60.0,
+    )
+    if not allowed:
+        raise HTTPException(
+            status_code=status.HTTP_429_TOO_MANY_REQUESTS,
+            detail={
+                "code": "RATE_LIMITED",
+                "message": "读题音频请求过于频繁，请稍后再试",
+            },
+            headers={"Retry-After": str(retry_after)},
+        )
+
+    def _not_ready() -> HTTPException:
+        return HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=dict(question_audio_service.AUDIO_NOT_READY),
+        )
+
+    row = db.execute(
+        select(Question, Chapter.grade)
+        .join(Chapter, Question.chapter_id == Chapter.id)
+        .where(Question.id == question_id)
+    ).first()
+    if row is None:
+        raise _not_ready()
+    question, grade = row
+    if (
+        question.status != "published"
+        or grade not in speech.ALLOWED_GRADES
+        or question.subject not in speech.ALLOWED_SUBJECTS
+    ):
+        raise _not_ready()
+    text = speech.text_for_question(question)
+    if not text.strip():
+        raise _not_ready()
+    resolved_voice = voice or speech.voice_for_subject(question.subject)
+    key = speech.cache_key(text, resolved_voice, speed)
+    if question_id in question_audio_service.rework_ids():
+        raise _not_ready()
+    path = question_audio_service.audio_dir() / speech.audio_rel_path(key)
+    if not path.is_file() or path.stat().st_size == 0:
+        raise _not_ready()
+
+    etag = f'"{key}"'
+    headers = {
+        "ETag": etag,
+        "Cache-Control": settings.question_audio_cache_control,
+    }
+    if question_audio_service.etag_matches(
+        request.headers.get("if-none-match"), etag
+    ):
+        return Response(status_code=status.HTTP_304_NOT_MODIFIED, headers=headers)
+    return FileResponse(path, media_type="audio/ogg", headers=headers)

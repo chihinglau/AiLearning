@@ -28,6 +28,8 @@ import 'package:ai_learning/features/practice/practice_config_page.dart';
 import 'package:ai_learning/features/practice/practice_page.dart';
 import 'package:ai_learning/features/profile/about_page.dart';
 import 'package:ai_learning/features/profile/account_security_page.dart';
+import 'package:ai_learning/features/profile/environment_diagnostics_page.dart';
+import 'package:ai_learning/features/profile/learning_settings_page.dart';
 import 'package:ai_learning/features/session/session_page.dart';
 import 'package:ai_learning/features/shell/app_shell.dart';
 import 'package:ai_learning/features/teacher/class_stats_page.dart';
@@ -91,6 +93,16 @@ final routerProvider = Provider<GoRouter>((ref) {
       ),
       // R-06：关于页（备案号/软著登记号/法务入口）。
       GoRoute(path: '/about', builder: (context, state) => const AboutPage()),
+      // TT-01：读题语速等学习设置。
+      GoRoute(
+        path: '/settings/learning',
+        builder: (context, state) => const LearningSettingsPage(),
+      ),
+      // UX-03：服务地址运行时配置与环境诊断。
+      GoRoute(
+        path: '/settings/diagnostics',
+        builder: (context, state) => const EnvironmentDiagnosticsPage(),
+      ),
       // R-07：内容举报入口。
       GoRoute(
         path: '/content/report',

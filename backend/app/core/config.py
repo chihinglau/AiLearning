@@ -1,5 +1,4 @@
 from functools import lru_cache
-from typing import List
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
@@ -29,7 +28,7 @@ class Settings(BaseSettings):
     study_curfew_end: int = 6
     default_daily_limit_minutes: int = 120
 
-    cors_origins: List[str] = ["http://localhost:3000"]
+    cors_origins: list[str] = ["http://localhost:3000"]
 
     # R-02 生产化：登录/注册限流（进程内滑动窗口，单实例部署适用）
     rate_limit_enabled: bool = True
@@ -64,6 +63,12 @@ class Settings(BaseSettings):
     # 离线整册下载上限：超过后提示联系管理员或改用单元范围。
     bundle_max_questions: int = 1500
     bundle_max_bytes: int = 8 * 1024 * 1024
+
+    # TT-04 读题音频分发：生成目录（scripts/build_question_audio.py 写入）与缓存策略
+    question_audio_dir: str = "build/question_audio"
+    question_audio_default_speed: float = 1.0
+    question_audio_rate_limit_per_minute: int = 60
+    question_audio_cache_control: str = "public, max-age=2592000"
 
     @property
     def is_production(self) -> bool:

@@ -11,7 +11,10 @@ import 'package:ai_learning/core/offline/offline_learn_store.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
 import 'package:ai_learning/core/services/learn_service.dart';
+import 'package:ai_learning/core/speech/question_speech.dart';
 import 'package:ai_learning/features/learn/widgets/offline_banner.dart';
+import 'package:ai_learning/features/speech/readable_question_text.dart';
+import 'package:ai_learning/features/speech/speech_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -95,6 +98,7 @@ class _SessionPageState extends ConsumerState<SessionPage> {
   @override
   void dispose() {
     _fillController.dispose();
+    unawaited(ref.read(questionReaderProvider).stop());
     super.dispose();
   }
 
@@ -137,6 +141,7 @@ class _SessionPageState extends ConsumerState<SessionPage> {
           _loading = false;
           _startedAt = DateTime.now();
         });
+        unawaited(_maybeAutoRead());
       }
     } on ApiException catch (error) {
       if (!mounted) return;
@@ -205,6 +210,7 @@ class _SessionPageState extends ConsumerState<SessionPage> {
       _loading = false;
       _startedAt = DateTime.now();
     });
+    unawaited(_maybeAutoRead());
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(content: Text('离线模式：已从本机题库组卷，答题将联网后同步')),
     );
@@ -271,6 +277,7 @@ class _SessionPageState extends ConsumerState<SessionPage> {
       await _finishSession();
     } else {
       unawaited(_rememberSession());
+      unawaited(_maybeAutoRead());
     }
   }
 
@@ -301,6 +308,7 @@ class _SessionPageState extends ConsumerState<SessionPage> {
         _startedAt = DateTime.now();
       });
       unawaited(_rememberSession());
+      unawaited(_maybeAutoRead());
     } on ApiException catch (error) {
       if (error.code == 'TEXTBOOK_MISMATCH' && !confirm) {
         final accepted = await _confirmMismatch();
@@ -440,6 +448,7 @@ class _SessionPageState extends ConsumerState<SessionPage> {
       _startedAt = DateTime.now();
     });
     unawaited(_rememberSession());
+    unawaited(_maybeAutoRead());
   }
 
   Future<void> _finishSession() async {
@@ -560,7 +569,33 @@ class _SessionPageState extends ConsumerState<SessionPage> {
             style: Theme.of(context).textTheme.bodySmall,
           ),
           const SizedBox(height: 12),
-          Text(question.stem, style: Theme.of(context).textTheme.titleLarge),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(
+                child: ReadableQuestionText(
+                  text: question.stem,
+                  spokenText: QuestionSpeech.questionScript(
+                    stem: question.stem,
+                    options: question.options,
+                  ),
+                  language:
+                      question.subject == 'english' ? 'en-US' : 'zh-CN',
+                  style: Theme.of(context).textTheme.titleLarge,
+                ),
+              ),
+              if (_speechEnabled(question))
+                SpeechButton(
+                  key: ValueKey('speech-${question.id}'),
+                  text: QuestionSpeech.questionScript(
+                    stem: question.stem,
+                    options: question.options,
+                  ),
+                  language: question.subject == 'english' ? 'en-US' : 'zh-CN',
+                  questionId: question.id,
+                ),
+            ],
+          ),
           const SizedBox(height: 20),
           _buildAnswerArea(question),
           const SizedBox(height: 20),
@@ -585,6 +620,41 @@ class _SessionPageState extends ConsumerState<SessionPage> {
         ],
       ),
     );
+  }
+
+  /// 读题仅对 1–3 年级语文/数学/英语开放（设计 §3.9.12）。
+  bool _speechEnabled(Question question) {
+    final grade = ref.watch(currentUserProvider)?.grade;
+    if (grade == null || grade < 1 || grade > 3) return false;
+    return const {'chinese', 'math', 'english'}.contains(question.subject);
+  }
+
+  /// TT-05：进入新题时按设置自动读题；同一题只触发一次，失败不阻断答题。
+  String? _autoReadKey;
+
+  Future<void> _maybeAutoRead() async {
+    final question = _current;
+    if (question == null || !_speechEnabled(question)) return;
+    final key = '${question.id}@$_index';
+    if (_autoReadKey == key) return;
+    _autoReadKey = key;
+    final store = ref.read(speechSettingsStoreProvider);
+    final grade = ref.read(currentUserProvider)?.grade;
+    if (!await store.autoReadEnabled(grade: grade)) return;
+    if (!mounted) return;
+    try {
+      await ref.read(questionReaderProvider).read(
+            questionId: question.id,
+            text: QuestionSpeech.questionScript(
+              stem: question.stem,
+              options: question.options,
+            ),
+            language: question.subject == 'english' ? 'en-US' : 'zh-CN',
+            speed: await store.speed(),
+          );
+    } catch (_) {
+      // 设备不支持朗读时静默降级。
+    }
   }
 
   Widget _buildAnswerArea(Question question) {

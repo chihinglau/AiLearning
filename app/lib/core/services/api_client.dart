@@ -1,5 +1,16 @@
+import 'dart:typed_data';
+
 import 'package:ai_learning/core/constants/app_constants.dart';
 import 'package:dio/dio.dart';
+
+/// 二进制响应：读题音频等非 JSON 资源。
+class ApiBinary {
+  const ApiBinary({required this.bytes, this.etag, this.notModified = false});
+
+  final Uint8List bytes;
+  final String? etag;
+  final bool notModified;
+}
 
 class ApiException implements Exception {
   const ApiException(
@@ -87,6 +98,14 @@ class ApiClient {
   String? _token;
   String? _refreshToken;
 
+  /// 当前生效的服务地址（UX-03 环境诊断展示用）。
+  String get baseUrl => _dio.options.baseUrl;
+
+  /// 运行时切换服务地址，后续请求立即生效。
+  void setBaseUrl(String url) {
+    _dio.options.baseUrl = url;
+  }
+
   /// 由 AuthService 注入：用 refresh token 换新双 Token。
   TokenRefreshCallback? onRefresh;
 
@@ -164,6 +183,39 @@ class ApiClient {
       final response = await _dio.get<dynamic>(path, queryParameters: query);
       final data = response.data;
       return data is List ? data : const [];
+    } on DioException catch (error) {
+      throw _toApiException(error);
+    }
+  }
+
+  /// 下载二进制资源（TT-04 读题音频）：支持 ETag 条件请求，304 时 [ApiBinary.bytes] 为空。
+  Future<ApiBinary> getBytes(
+    String path, {
+    Map<String, dynamic>? query,
+    String? ifNoneMatch,
+  }) async {
+    try {
+      final response = await _dio.get<List<int>>(
+        path,
+        queryParameters: query,
+        options: Options(
+          responseType: ResponseType.bytes,
+          headers: ifNoneMatch == null ? null : {'If-None-Match': ifNoneMatch},
+          validateStatus: (status) => status == 200 || status == 304,
+        ),
+      );
+      if (response.statusCode == 304) {
+        return ApiBinary(
+          bytes: Uint8List(0),
+          etag: response.headers.value('etag'),
+          notModified: true,
+        );
+      }
+      final data = response.data;
+      return ApiBinary(
+        bytes: data == null ? Uint8List(0) : Uint8List.fromList(data),
+        etag: response.headers.value('etag'),
+      );
     } on DioException catch (error) {
       throw _toApiException(error);
     }

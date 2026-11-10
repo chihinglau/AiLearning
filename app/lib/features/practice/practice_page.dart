@@ -1,9 +1,14 @@
+import 'dart:async';
+
 import 'package:ai_learning/core/errors/api_error_guide.dart';
 import 'package:ai_learning/core/models/content.dart';
 import 'package:ai_learning/core/models/practice.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
+import 'package:ai_learning/core/speech/question_speech.dart';
 import 'package:ai_learning/core/theme/app_accents.dart';
+import 'package:ai_learning/features/speech/readable_question_text.dart';
+import 'package:ai_learning/features/speech/speech_button.dart';
 import 'package:ai_learning/widgets/accent_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -44,6 +49,12 @@ class _PracticePageState extends ConsumerState<PracticePage> {
     _loadQuestions();
   }
 
+  @override
+  void dispose() {
+    unawaited(ref.read(questionReaderProvider).stop());
+    super.dispose();
+  }
+
   Future<void> _loadQuestions() async {
     setState(() {
       _loading = true;
@@ -62,6 +73,7 @@ class _PracticePageState extends ConsumerState<PracticePage> {
         _loading = false;
         _startedAt = DateTime.now();
       });
+      unawaited(_maybeAutoRead());
     } on ApiException catch (error) {
       if (!mounted) return;
       setState(() {
@@ -113,6 +125,7 @@ class _PracticePageState extends ConsumerState<PracticePage> {
       _result = null;
       _startedAt = DateTime.now();
     });
+    unawaited(_maybeAutoRead());
   }
 
   @override
@@ -156,7 +169,33 @@ class _PracticePageState extends ConsumerState<PracticePage> {
             style: Theme.of(context).textTheme.bodySmall,
           ),
           const SizedBox(height: 12),
-          Text(question.stem, style: Theme.of(context).textTheme.titleLarge),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(
+                child: ReadableQuestionText(
+                  text: question.stem,
+                  spokenText: QuestionSpeech.questionScript(
+                    stem: question.stem,
+                    options: question.options,
+                  ),
+                  language:
+                      question.subject == 'english' ? 'en-US' : 'zh-CN',
+                  style: Theme.of(context).textTheme.titleLarge,
+                ),
+              ),
+              if (_speechEnabled(question))
+                SpeechButton(
+                  key: ValueKey('speech-${question.id}'),
+                  text: QuestionSpeech.questionScript(
+                    stem: question.stem,
+                    options: question.options,
+                  ),
+                  language: question.subject == 'english' ? 'en-US' : 'zh-CN',
+                  questionId: question.id,
+                ),
+            ],
+          ),
           const SizedBox(height: 20),
           ...question.options.map(
             (option) => Card(
@@ -196,6 +235,41 @@ class _PracticePageState extends ConsumerState<PracticePage> {
         ],
       ),
     );
+  }
+
+  /// 读题仅对 1–3 年级语文/数学/英语开放（设计 §3.9.12）。
+  bool _speechEnabled(Question question) {
+    final grade = ref.watch(currentUserProvider)?.grade;
+    if (grade == null || grade < 1 || grade > 3) return false;
+    return const {'chinese', 'math', 'english'}.contains(question.subject);
+  }
+
+  /// TT-05：进入新题时按设置自动读题；同一题只触发一次，失败不阻断答题。
+  String? _autoReadKey;
+
+  Future<void> _maybeAutoRead() async {
+    final question = _currentQuestion;
+    if (question == null || !_speechEnabled(question)) return;
+    final key = '${question.id}@$_index';
+    if (_autoReadKey == key) return;
+    _autoReadKey = key;
+    final store = ref.read(speechSettingsStoreProvider);
+    final grade = ref.read(currentUserProvider)?.grade;
+    if (!await store.autoReadEnabled(grade: grade)) return;
+    if (!mounted) return;
+    try {
+      await ref.read(questionReaderProvider).read(
+            questionId: question.id,
+            text: QuestionSpeech.questionScript(
+              stem: question.stem,
+              options: question.options,
+            ),
+            language: question.subject == 'english' ? 'en-US' : 'zh-CN',
+            speed: await store.speed(),
+          );
+    } catch (_) {
+      // 设备不支持朗读时静默降级。
+    }
   }
 
   Widget _buildSummary(BuildContext context) {

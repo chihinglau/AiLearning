@@ -275,6 +275,21 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                       ),
                     ),
                     const SizedBox(height: 16),
+                    if (user?.grade case final grade?
+                        when grade >= 1 && grade <= 3) ...[
+                      AccentCard(
+                        accent: AppAccents.of(context).practice,
+                        padding: EdgeInsets.zero,
+                        child: ListTile(
+                          leading: const Icon(Icons.record_voice_over_outlined),
+                          title: const Text('学习设置'),
+                          subtitle: const Text('自动读题与读题语速'),
+                          trailing: const Icon(Icons.chevron_right),
+                          onTap: () => context.push('/settings/learning'),
+                        ),
+                      ),
+                      const SizedBox(height: 16),
+                    ],
                   ],
                   if (user?.hasPermission('learn:stats:child:read') ==
                       true) ...[
@@ -399,6 +414,14 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                           subtitle: const Text('题目/教材内容问题反馈，24 小时内处理'),
                           trailing: const Icon(Icons.chevron_right),
                           onTap: () => context.push('/content/report'),
+                        ),
+                        const Divider(height: 1),
+                        ListTile(
+                          leading: const Icon(Icons.troubleshoot_outlined),
+                          title: const Text('环境诊断'),
+                          subtitle: const Text('服务地址、连通性与读题能力'),
+                          trailing: const Icon(Icons.chevron_right),
+                          onTap: () => context.push('/settings/diagnostics'),
                         ),
                         const Divider(height: 1),
                         ListTile(

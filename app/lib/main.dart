@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:ai_learning/app.dart';
 import 'package:ai_learning/core/monitoring/crash_reporter.dart';
 import 'package:ai_learning/core/providers.dart';
+import 'package:ai_learning/core/services/server_config.dart';
 import 'package:ai_learning/pal/platform_pal_factory.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -12,6 +13,9 @@ Future<void> main() async {
   final pal = createPlatformPal();
   await pal.storage.init();
 
+  // UX-03：本地保存的服务地址优先于编译期默认值。
+  final baseUrl = await ServerConfigStore(pal.storage).baseUrl();
+
   // R-09：全局崩溃捕获 + 启动时重放上次未上报的记录（失败不影响启动）。
   final crashReporter = CrashReporter(storage: pal.storage);
   crashReporter.install();
@@ -19,7 +23,10 @@ Future<void> main() async {
 
   runApp(
     ProviderScope(
-      overrides: [platformPalProvider.overrideWithValue(pal)],
+      overrides: [
+        platformPalProvider.overrideWithValue(pal),
+        initialBaseUrlProvider.overrideWithValue(baseUrl),
+      ],
       child: const AiLearningApp(),
     ),
   );
