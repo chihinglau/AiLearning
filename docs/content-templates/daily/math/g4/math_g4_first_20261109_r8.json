@@ -1,0 +1,340 @@
+{
+  "subject": "math",
+  "grade": 4,
+  "version": "北师大版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第六单元 图形的奥秘",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "图形与面积·概念理解",
+      "parent": "第六单元 图形的奥秘",
+      "order_index": 1,
+      "explanation": "图形与面积·概念理解：在「第六单元 图形的奥秘」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "图形与面积·基本运算",
+      "parent": "第六单元 图形的奥秘",
+      "order_index": 2,
+      "explanation": "图形与面积·基本运算：在「第六单元 图形的奥秘」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "图形与面积·实际应用",
+      "parent": "第六单元 图形的奥秘",
+      "order_index": 3,
+      "explanation": "图形与面积·实际应用：在「第六单元 图形的奥秘」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "图形与面积·易错辨析",
+      "parent": "第六单元 图形的奥秘",
+      "order_index": 4,
+      "explanation": "图形与面积·易错辨析：在「第六单元 图形的奥秘」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第六单元 图形的奥秘",
+      "order_index": 8,
+      "summary": "第六单元 图形的奥秘：围绕「图形与面积」的概念、练习与运用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "【图形与面积·概念理解】长 8 cm、宽 8 cm 的长方形面积 = （  ）",
+          "options": [
+            "64",
+            "63",
+            "62",
+            "61"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "长 8 cm、宽 8 cm 的长方形面积 = 64，所以选 A；其余是常见错误。",
+          "difficulty": 1,
+          "knowledge_point": "图形与面积·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【图形与面积·概念理解】算式 长 5 cm、宽 2 cm 的长方形面积 的结果是（  ）",
+          "answer": {
+            "value": "10"
+          },
+          "analysis": "验算：长 5 cm、宽 2 cm 的长方形面积 = 10，所以填 10。",
+          "difficulty": 1,
+          "knowledge_point": "图形与面积·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【图形与面积·概念理解】长 8 cm、宽 5 cm 的长方形面积 = 40。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "长 8 cm、宽 5 cm 的长方形面积 = 40，题面写的是 40，相等，说法正确。",
+          "difficulty": 1,
+          "knowledge_point": "图形与面积·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「图形与面积·概念理解」，举一个生活中用到「图形与面积」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 1,
+          "knowledge_point": "图形与面积·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【图形与面积·基本运算】长 11 cm、宽 2 cm 的长方形面积 = （  ）",
+          "options": [
+            "22",
+            "24",
+            "23",
+            "19"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "长 11 cm、宽 2 cm 的长方形面积 = 22，所以选 A；其余是常见错误。",
+          "difficulty": 2,
+          "knowledge_point": "图形与面积·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【图形与面积·基本运算】算式 长 6 cm、宽 5 cm 的长方形面积 的结果是（  ）",
+          "answer": {
+            "value": "30"
+          },
+          "analysis": "验算：长 6 cm、宽 5 cm 的长方形面积 = 30，所以填 30。",
+          "difficulty": 2,
+          "knowledge_point": "图形与面积·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【图形与面积·基本运算】长 5 cm、宽 7 cm 的长方形面积 = 35。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "长 5 cm、宽 7 cm 的长方形面积 = 35，题面写的是 35，相等，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "图形与面积·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「图形与面积·基本运算」，举一个生活中用到「图形与面积」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 2,
+          "knowledge_point": "图形与面积·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【图形与面积·实际应用】长 10 cm、宽 7 cm 的长方形面积 = （  ）",
+          "options": [
+            "67",
+            "68",
+            "72",
+            "70"
+          ],
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "长 10 cm、宽 7 cm 的长方形面积 = 70，所以选 D；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "图形与面积·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【图形与面积·实际应用】算式 长 6 cm、宽 6 cm 的长方形面积 的结果是（  ）",
+          "answer": {
+            "value": "36"
+          },
+          "analysis": "验算：长 6 cm、宽 6 cm 的长方形面积 = 36，所以填 36。",
+          "difficulty": 3,
+          "knowledge_point": "图形与面积·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【图形与面积·实际应用】长 8 cm、宽 7 cm 的长方形面积 = 56。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "长 8 cm、宽 7 cm 的长方形面积 = 56，题面写的是 56，相等，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "图形与面积·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「图形与面积·实际应用」，举一个生活中用到「图形与面积」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 3,
+          "knowledge_point": "图形与面积·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【图形与面积·易错辨析】长 8 cm、宽 3 cm 的长方形面积 = （  ）",
+          "options": [
+            "23",
+            "24",
+            "22",
+            "25"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "长 8 cm、宽 3 cm 的长方形面积 = 24，所以选 B；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "图形与面积·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【图形与面积·易错辨析】算式 长 12 cm、宽 2 cm 的长方形面积 的结果是（  ）",
+          "answer": {
+            "value": "24"
+          },
+          "analysis": "验算：长 12 cm、宽 2 cm 的长方形面积 = 24，所以填 24。",
+          "difficulty": 3,
+          "knowledge_point": "图形与面积·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【图形与面积·易错辨析】长 7 cm、宽 3 cm 的长方形面积 = 21。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "长 7 cm、宽 3 cm 的长方形面积 = 21，题面写的是 21，相等，说法正确。",
+          "difficulty": 4,
+          "knowledge_point": "图形与面积·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「图形与面积·易错辨析」，举一个生活中用到「图形与面积」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "图形与面积·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【图形与面积·概念理解】下面哪些算式的结果等于 108？",
+          "options": [
+            "长 12 cm、宽 9 cm 的长方形面积",
+            "108 + 1",
+            "108 - 2",
+            "108 × 2"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 长 12 cm、宽 9 cm 的长方形面积 = 108 ✓；B 为 109 ✗；C 为 106 ✗；D 为 216 ✗。所以选 A。",
+          "difficulty": 4,
+          "knowledge_point": "图形与面积·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【图形与面积·基本运算】下面哪些算式的结果等于 32？",
+          "options": [
+            "长 4 cm、宽 8 cm 的长方形面积",
+            "32 + 1",
+            "32 - 2",
+            "32 × 2"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 长 4 cm、宽 8 cm 的长方形面积 = 32 ✓；B 为 33 ✗；C 为 30 ✗；D 为 64 ✗。所以选 A。",
+          "difficulty": 5,
+          "knowledge_point": "图形与面积·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "source": "rerun_packs/_pack_progress.py",
+  "totals": {
+    "quarantined": 34,
+    "done": 31,
+    "pack_only": 0,
+    "pending": 3,
+    "chapters_pending": 15
+  },
+  "rows": [
+    {
+      "book": "biology:7",
+      "chapters": 9,
+      "pack": true,
+      "review_book": true,
+      "status": "done"
+    },
+    {
+      "book": "chemistry:9",
+      "chapters": 7,
+      "pack": true,
+      "review_book": true,
+      "status": "done"
+    },
+    {
+      "book": "chinese:2",
+      "chapters": 8,
+      "pack": true,
+      "review_book": true,
+      "status": "done"
+    },
+    {
+      "book": "chinese:3",
+      "chapters": 8,
+      "pack": true,
+      "review_book": true,
+      "status": "done"
+    },
+    {
+      "book": "chinese:4",
+      "chapters": 8,
+      "pack": true,
+      "review_book": true,
+      "status": "done"
+    },
+    {
+      "book": "chinese:5",
+      "chapters": 8,
+      "pack": true,
+      "review_book": true,
+      "status": "done"
+    },
+    {
+      "book": "chinese:6",
+      "chapters": 8,
+      "pack": true,
+      "review_book": true,
+      "status": "done"
+    },
+    {
+      "book": "chinese:7",
+      "chapters": 6,
+      "pack": true,
+      "review_book": true,
+      "status": "done"
+    },
+    {
+      "book": "chinese:9",
+      "chapters": 6,
+      "pack": true,
+      "review_book": true,
+      "status": "done"
+    },
+    {
+      "book": "english:2",
+      "chapters": 6,
+      "pack": true,
+      "review_book": true,
+      "status": "done"
+    },
+    {
+      "book": "english:3",
+      "chapters": 8,
+      "pack": true,
+      "review_book": true,
+      "status": "done"
+    },
+    {
+      "book": "english:4",
+      "chapters": 8,
+      "pack": true,
+      "review_book": true,
+      "status": "done"
+    },
+    {
+      "book": "english:5",
+      "chapters": 8,
+      "pack": true,
+      "review_book": true,
+      "status": "done"
+    },
+    {
+      "book": "english:6",
+      "chapters": 6,
+      "pack": true,
+      "review_book": true,
+      "status": "done"
+    },
+    {
+      "book": "english:7",
+      "chapters": 6,
+      "pack": true,
+      "review_book": true,
+      "status": "done"
+    },
+    {
+      "book": "english:9",
+      "chapters": 6,
+      "pack": true,
+      "review_book": true,
+      "status": "done"
+    },
+    {
+      "book": "geography:7",
+      "chapters": 6,
+      "pack": true,
+      "review_book": true,
+      "status": "done"
+    },
+    {
+      "book": "history:7",
+      "chapters": 4,
+      "pack": true,
+      "review_book": true,
+      "status": "done"
+    },
+    {
+      "book": "history:9",
+      "chapters": 7,
+      "pack": false,
+      "review_book": false,
+      "status": "pending"
+    },
+    {
+      "book": "math:2",
+      "chapters": 8,
+      "pack": true,
+      "review_book": true,
+      "status": "done"
+    },
+    {
+      "book": "math:3",
+      "chapters": 8,
+      "pack": true,
+      "review_book": true,
+      "status": "done"
+    },
+    {
+      "book": "math:4",
+      "chapters": 12,
+      "pack": true,
+      "review_book": true,
+      "status": "done"
+    },
+    {
+      "book": "math:5",
+      "chapters": 12,
+      "pack": true,
+      "review_book": true,
+      "status": "done"
+    },
+    {
+      "book": "math:6",
+      "chapters": 13,
+      "pack": true,
+      "review_book": true,
+      "status": "done"
+    },
+    {
+      "book": "math:7",
+      "chapters": 6,
+      "pack": true,
+      "review_book": true,
+      "status": "done"
+    },
+    {
+      "book": "math:9",
+      "chapters": 7,
+      "pack": true,
+      "review_book": true,
+      "status": "done"
+    },
+    {
+      "book": "physics:9",
+      "chapters": 10,
+      "pack": true,
+      "review_book": true,
+      "status": "done"
+    },
+    {
+      "book": "politics:2",
+      "chapters": 4,
+      "pack": true,
+      "review_book": true,
+      "status": "done"
+    },
+    {
+      "book": "politics:3",
+      "chapters": 4,
+      "pack": true,
+      "review_book": true,
+      "status": "done"
+    },
+    {
+      "book": "politics:4",
+      "chapters": 4,
+      "pack": true,
+      "review_book": true,
+      "status": "done"
+    },
+    {
+      "book": "politics:5",
+      "chapters": 4,
+      "pack": false,
+      "review_book": false,
+      "status": "pending"
+    },
+    {
+      "book": "politics:6",
+      "chapters": 4,
+      "pack": true,
+      "review_book": true,
+      "status": "done"
+    },
+    {
+      "book": "politics:7",
+      "chapters": 4,
+      "pack": true,
+      "review_book": true,
+      "status": "done"
+    },
+    {
+      "book": "politics:9",
+      "chapters": 4,
+      "pack": false,
+      "review_book": false,
+      "status": "pending"
+    }
+  ]
+}

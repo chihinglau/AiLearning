@@ -1,0 +1,340 @@
+{
+  "subject": "math",
+  "grade": 3,
+  "version": "北师大版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第二单元 测量（二）",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "长度单位换算·概念理解",
+      "parent": "第二单元 测量（二）",
+      "order_index": 1,
+      "explanation": "长度单位换算·概念理解：在「第二单元 测量（二）」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "长度单位换算·基本运算",
+      "parent": "第二单元 测量（二）",
+      "order_index": 2,
+      "explanation": "长度单位换算·基本运算：在「第二单元 测量（二）」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "长度单位换算·实际应用",
+      "parent": "第二单元 测量（二）",
+      "order_index": 3,
+      "explanation": "长度单位换算·实际应用：在「第二单元 测量（二）」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "长度单位换算·易错辨析",
+      "parent": "第二单元 测量（二）",
+      "order_index": 4,
+      "explanation": "长度单位换算·易错辨析：在「第二单元 测量（二）」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第二单元 测量（二）",
+      "order_index": 2,
+      "summary": "第二单元 测量（二）：围绕「长度单位换算」的概念、练习与运用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "【长度单位换算·概念理解】1 m 换算成 cm 是多少 = （  ）",
+          "options": [
+            "100",
+            "99",
+            "101",
+            "104"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "1 m 换算成 cm 是多少 = 100，所以选 A；其余是常见错误。",
+          "difficulty": 1,
+          "knowledge_point": "长度单位换算·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【长度单位换算·概念理解】算式 1 m 换算成 cm 是多少 的结果是（  ）",
+          "answer": {
+            "value": "100"
+          },
+          "analysis": "验算：1 m 换算成 cm 是多少 = 100，所以填 100。",
+          "difficulty": 1,
+          "knowledge_point": "长度单位换算·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【长度单位换算·概念理解】1 m 换算成 cm 是多少 = 99。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "1 m 换算成 cm 是多少 = 100，题面写的是 99，不相等，说法错误。",
+          "difficulty": 1,
+          "knowledge_point": "长度单位换算·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「长度单位换算·概念理解」，举一个生活中用到「长度单位换算」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 1,
+          "knowledge_point": "长度单位换算·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【长度单位换算·基本运算】1 m 换算成 cm 是多少 = （  ）",
+          "options": [
+            "97",
+            "100",
+            "101",
+            "104"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "1 m 换算成 cm 是多少 = 100，所以选 B；其余是常见错误。",
+          "difficulty": 2,
+          "knowledge_point": "长度单位换算·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【长度单位换算·基本运算】算式 1 m 换算成 cm 是多少 的结果是（  ）",
+          "answer": {
+            "value": "100"
+          },
+          "analysis": "验算：1 m 换算成 cm 是多少 = 100，所以填 100。",
+          "difficulty": 2,
+          "knowledge_point": "长度单位换算·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【长度单位换算·基本运算】1 m 换算成 cm 是多少 = 100。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "1 m 换算成 cm 是多少 = 100，题面写的是 100，相等，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "长度单位换算·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「长度单位换算·基本运算」，举一个生活中用到「长度单位换算」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 2,
+          "knowledge_point": "长度单位换算·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【长度单位换算·实际应用】1 m 换算成 cm 是多少 = （  ）",
+          "options": [
+            "100",
+            "102",
+            "97",
+            "101"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "1 m 换算成 cm 是多少 = 100，所以选 A；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "长度单位换算·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【长度单位换算·实际应用】算式 1 m 换算成 cm 是多少 的结果是（  ）",
+          "answer": {
+            "value": "100"
+          },
+          "analysis": "验算：1 m 换算成 cm 是多少 = 100，所以填 100。",
+          "difficulty": 3,
+          "knowledge_point": "长度单位换算·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【长度单位换算·实际应用】1 m 换算成 cm 是多少 = 102。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "1 m 换算成 cm 是多少 = 100，题面写的是 102，不相等，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "长度单位换算·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「长度单位换算·实际应用」，举一个生活中用到「长度单位换算」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 3,
+          "knowledge_point": "长度单位换算·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【长度单位换算·易错辨析】1 m 换算成 cm 是多少 = （  ）",
+          "options": [
+            "98",
+            "101",
+            "100",
+            "102"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "1 m 换算成 cm 是多少 = 100，所以选 C；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "长度单位换算·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【长度单位换算·易错辨析】算式 1 m 换算成 cm 是多少 的结果是（  ）",
+          "answer": {
+            "value": "100"
+          },
+          "analysis": "验算：1 m 换算成 cm 是多少 = 100，所以填 100。",
+          "difficulty": 3,
+          "knowledge_point": "长度单位换算·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【长度单位换算·易错辨析】1 m 换算成 cm 是多少 = 100。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "1 m 换算成 cm 是多少 = 100，题面写的是 100，相等，说法正确。",
+          "difficulty": 4,
+          "knowledge_point": "长度单位换算·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「长度单位换算·易错辨析」，举一个生活中用到「长度单位换算」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "长度单位换算·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【长度单位换算·概念理解】下面哪些算式的结果等于 100？",
+          "options": [
+            "1 m 换算成 cm 是多少",
+            "100 + 1",
+            "100 - 2",
+            "100 × 2"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 1 m 换算成 cm 是多少 = 100 ✓；B 为 101 ✗；C 为 98 ✗；D 为 200 ✗。所以选 A。",
+          "difficulty": 4,
+          "knowledge_point": "长度单位换算·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【长度单位换算·基本运算】下面哪些算式的结果等于 100？",
+          "options": [
+            "1 m 换算成 cm 是多少",
+            "100 + 1",
+            "100 - 2",
+            "100 × 2"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 1 m 换算成 cm 是多少 = 100 ✓；B 为 101 ✗；C 为 98 ✗；D 为 200 ✗。所以选 A。",
+          "difficulty": 5,
+          "knowledge_point": "长度单位换算·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

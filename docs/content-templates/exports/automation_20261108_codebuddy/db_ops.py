@@ -27,6 +27,7 @@
 from __future__ import annotations
 
 import argparse
+import fnmatch
 import hashlib
 import json
 import os
@@ -267,12 +268,130 @@ def cmd_import(cfg: dict, args) -> None:
         die("有新增题目的题干未查到，请检查导入日志；备份仍可用上述命令回退", code=1)
 
 
+def _csv(value: str | None) -> list[str]:
+    return [x.strip() for x in (value or "").replace("，", ",").split(",") if x.strip()]
+
+
+def _grades(value: str | None) -> set[int]:
+    """解析年级白名单：'1,8' / '1-9' / '7,9'（2026-11-10 评审 P1-3）。"""
+    out: set[int] = set()
+    for token in _csv(value):
+        if "-" in token:
+            lo, _, hi = token.partition("-")
+            if lo.isdigit() and hi.isdigit() and int(lo) <= int(hi):
+                out.update(range(int(lo), int(hi) + 1))
+                continue
+        if token.startswith("g") and token[1:].isdigit():
+            out.add(int(token[1:]))
+        elif token.isdigit():
+            out.add(int(token))
+    return out
+
+
+def _book_scope(files: list[Path], books_dir: Path, args) -> list[Path]:
+    """把「校验范围」与「导入范围」钉在同一个集合上。
+
+    修复 2026-11-10 评审 P1-3：旧写法是「全目录校验 + 按 stamp 导入」，
+    任一坏册就能把整批锁死（实测 13 册失败 → 46 册全被挡，含已合格的 12 册）。
+    """
+    subjects = set(_csv(getattr(args, "subjects", None)))
+    grades = _grades(getattr(args, "grades", None))
+    only = _csv(getattr(args, "only", None))
+    if not (subjects or grades or only):
+        return files
+
+    def rel(f: Path) -> str:
+        return f.relative_to(books_dir).as_posix()
+
+    def subject_of(f: Path) -> str:
+        parts = rel(f).split("/")
+        return parts[0] if parts else ""
+
+    def grade_of(f: Path) -> int | None:
+        m = re.search(r"g(\d+)", rel(f))
+        return int(m.group(1)) if m else None
+
+    kept = []
+    for f in files:
+        if subjects and subject_of(f) not in subjects:
+            continue
+        if grades and grade_of(f) not in grades:
+            continue
+        if only and not any(fnmatch.fnmatch(rel(f), t) or fnmatch.fnmatch(f.name, t)
+                            for t in only):
+            continue
+        kept.append(f)
+    return kept
+
+
+def parse_book_lines(output: str) -> list[dict]:
+    """把 import_content.py 的逐册输出解析为机读 per_book（评审复评 §八-4）。
+
+    逐行样例：
+        math/g1/math_g1_first_20261109_book.json: 教材已存在，章节 +0/~0，知识点 +0/~0，题目 +0，跳过重复 139
+        math/g1/math_g1_first_20261109_book.json: 已导入且文件未变，跳过（manifest）
+        math/g1/math_g1_first_20261109_book.json: 导入失败 - <原因>
+    解析失败的行不会丢：以 status=other 保留 raw，控制台不截断、报告里可逐册核对。
+    """
+    line_re = re.compile(r"^(?P<file>\S+\.json):\s*(?P<body>.*)$")
+    stat_re = re.compile(
+        r"章节 \+(?P<ch_new>\d+)/~(?P<ch_upd>\d+)，知识点 \+(?P<kp_new>\d+)/~(?P<kp_upd>\d+)"
+        r"，题目 \+(?P<q_new>\d+)，跳过重复 (?P<q_skip>\d+)"
+    )
+    rows = []
+    for raw in (output or "").splitlines():
+        m = line_re.match(raw.strip())
+        if not m:
+            continue
+        file, body = m.group("file"), m.group("body")
+        row = {"file": file, "status": "other", "raw": raw.strip()}
+        s = stat_re.search(body)
+        if s:
+            row.update({
+                "status": "ok",
+                "textbook_created": "新建" in body.split("，")[0],
+                "chapters_created": int(s.group("ch_new")),
+                "chapters_updated": int(s.group("ch_upd")),
+                "knowledge_created": int(s.group("kp_new")),
+                "knowledge_updated": int(s.group("kp_upd")),
+                "questions_created": int(s.group("q_new")),
+                "questions_skipped": int(s.group("q_skip")),
+            })
+        elif "跳过（manifest）" in body:
+            row["status"] = "skipped_manifest"
+        elif "导入失败" in body:
+            row["status"] = "failed"
+            row["error"] = body.split(" - ", 1)[-1]
+        rows.append(row)
+    return rows
+
+
+def book_summary(rows: list[dict]) -> dict:
+    def total(key: str) -> int:
+        return sum(int(r.get(key) or 0) for r in rows)
+
+    return {
+        "parsed": len(rows),
+        "ok": sum(1 for r in rows if r["status"] == "ok"),
+        "skipped_manifest": sum(1 for r in rows if r["status"] == "skipped_manifest"),
+        "failed": sum(1 for r in rows if r["status"] == "failed"),
+        "other": sum(1 for r in rows if r["status"] == "other"),
+        "chapters_created": total("chapters_created"),
+        "knowledge_created": total("knowledge_created"),
+        "questions_created": total("questions_created"),
+        "questions_skipped": total("questions_skipped"),
+    }
+
+
 def cmd_import_books(cfg: dict, args) -> None:
     """整册入库：`daily_consolidated/**/*_<stamp>_book.json`。
 
     与 `import` 的差别：daily 分片按「批次日期」扫 `daily_dir`，整册文件在另一棵目录树、
     文件名是 `*_book.json`（归集器产出），`import --date` 永远扫不到它们。此命令把
     整册文件单独走一遍「校验 → 备份 → 试跑 → 正式导入 → 逐册核对 → 报告」。
+
+    2026-11-10 评审 P1-3：可用 --subjects / --grades / --only 圈定批次，
+    校验与导入都只作用于这同一个文件集合（不再「全目录校验」）。
     """
     backend, _, importer, backuper = backend_paths(cfg)
     url = db_url_of(cfg)
@@ -286,52 +405,100 @@ def cmd_import_books(cfg: dict, args) -> None:
             die(f"{label} 不存在：{path}")
     if not books_dir.is_dir():
         die(f"整册目录不存在：{books_dir}（先跑 _consolidate_daily.py --apply）")
-    files = sorted(books_dir.rglob(pattern))
+    all_files = sorted(books_dir.rglob(pattern))
+    files = _book_scope(all_files, books_dir, args)
     if not files:
-        die(f"没有找到整册文件：{books_dir} / {pattern}")
+        die(f"按范围过滤后没有整册文件：目录内 {len(all_files)} 份 / {pattern}；"
+            f"subjects={getattr(args, 'subjects', None)} grades={getattr(args, 'grades', None)} "
+            f"only={getattr(args, 'only', None)}")
 
+    scope = {"subjects": _csv(getattr(args, "subjects", None)),
+             "grades": sorted(_grades(getattr(args, "grades", None))),
+             "only": _csv(getattr(args, "only", None))}
     print(f"# 整册入库 · {pattern} · 库 {db}")
-    print(f"- 整册文件 {len(files)} 份")
+    print(f"- 整册文件 {len(files)} 份（目录内 {len(all_files)} 份，范围={scope}）")
 
     validator = P(cfg, "validator")
     version_map = P(cfg, "baseline_dir") / "_subject-version-map.json"
-    argv = [str(P(cfg, "python")), str(validator), str(books_dir), "--manifest", str(manifest)]
+    # 机读汇总（P0-2）：即使校验失败也落盘，供报告列出具体失败文件（P1-4）。
+    summary_path = HERE / f"books_validation_{stamp or 'all'}_{datetime.now():%Y%m%d_%H%M%S}.json"
+    argv = [str(P(cfg, "python")), str(validator), *[str(f) for f in files],
+            "--manifest", str(manifest), "--json-out", str(summary_path)]
     if version_map.is_file():
         argv += ["--version-map", str(version_map)]
     proc = subprocess.run(argv, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
                           text=True, encoding="utf-8", errors="replace",
                           env=dict(os.environ, PYTHONIOENCODING="utf-8"))
     rc, vout = proc.returncode, (proc.stdout or "").strip()
-    tail = vout.splitlines()[-4:]
+    tail = vout.splitlines()[-8:]
     print("\n".join("  " + ln for ln in tail))
     if rc != 0:
-        die(f"整册校验未通过（exit {rc}），先修整册文件再入库；备份尚未创建")
+        failed = []
+        if summary_path.is_file():
+            try:
+                summary = json.loads(summary_path.read_text(encoding="utf-8"))
+                failed = [f"{r['name']}（{r['errors']} 处错误）"
+                          for r in summary.get("files", []) if not r.get("passed")]
+            except (json.JSONDecodeError, KeyError, TypeError):
+                failed = []
+        print(f"- 校验失败文件 {len(failed)} 份：")
+        for name in failed:
+            print(f"    [失败] {name}")
+        print(f"- 机读汇总：{summary_path}")
+        die(f"整册校验未通过（exit {rc}），先修整册文件再入库；备份尚未创建。"
+            f"失败文件：{'; '.join(failed) if failed else '见上方输出'}")
 
     before = db_stats(db)
     print(f"- 入库前统计：{before}")
     backup = backup_db(cfg, url)
 
-    base = ["-m", "scripts.import_content", "--path", str(books_dir), "--pattern", pattern]
+    # 导入范围与校验范围严格同源：--only 传的就是上面校验过的同一批文件。
+    labels = ",".join(f.relative_to(books_dir).as_posix() for f in files)
+    base = ["-m", "scripts.import_content", "--path", str(books_dir),
+            "--pattern", pattern, "--only", labels]
     if args.overwrite:
         base += ["--overwrite"]
     rc, dry = run_backend(cfg, base + ["--dry-run"], env_extra={"DATABASE_URL": url})
-    print(f"- 试跑（dry-run，已回滚）：EXIT={rc}")
-    if dry:
-        print("\n".join("  " + ln for ln in dry.splitlines()[-8:]))
+    per_book_dry = parse_book_lines(dry)
+    dry_summary = book_summary(per_book_dry)
+    print(f"- 试跑（dry-run，已回滚）：EXIT={rc}；逐册 {len(per_book_dry)}/{len(files)} 条"
+          f"（完整逐册结果写入报告，控制台只打汇总）")
+    print(f"- 试跑逐册汇总：{dry_summary}")
     if rc != 0:
+        for row in per_book_dry:
+            if row["status"] == "failed":
+                print(f"    [失败] {row['file']}: {row.get('error', '')}")
+        if not per_book_dry:
+            print("\n".join("  " + ln for ln in dry.splitlines()[-8:]))
         die(f"试跑未通过，已中止；数据库未改动。回退备份：{backup}")
 
     if args.dry_run:
+        report = {
+            "mode": "books-dry", "stamp": stamp, "database_url": url, "database": str(db),
+            "backup": str(backup), "restore_hint": f"Copy-Item -Force \"{backup}\" \"{db}\"",
+            "files_total": len(files), "files_in_dir": len(all_files), "pattern": pattern,
+            "scope": scope, "validation_summary": str(summary_path),
+            "stats_before": before, "stats_after": db_stats(db),
+            "dry_run_exit": rc, "per_book": per_book_dry, "per_book_summary": dry_summary,
+        }
+        report_path = HERE / f"import_report_books_{datetime.now():%Y%m%d_%H%M%S}_dry.json"
+        report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        print(f"- 报告：{report_path}")
         print(f"[试跑完成] 未写入数据库；备份已保留：{backup}")
         print(f"[回退命令] Copy-Item -Force \"{backup}\" \"{db}\"")
         return
 
     rc, result = run_backend(cfg, base + ["--manifest", str(manifest)],
                              env_extra={"DATABASE_URL": url})
-    print(f"- 正式导入：EXIT={rc}")
-    if result:
-        print("\n".join("  " + ln for ln in result.splitlines()[-10:]))
+    per_book = parse_book_lines(result)
+    print(f"- 正式导入：EXIT={rc}；逐册 {len(per_book)}/{len(files)} 条（完整逐册结果写入报告）")
+    print(f"- 正式导入逐册汇总：{book_summary(per_book)}")
     if rc != 0:
+        for row in per_book:
+            if row["status"] == "failed":
+                print(f"    [失败] {row['file']}: {row.get('error', '')}")
+        if not per_book:
+            print("\n".join("  " + ln for ln in (result or "").splitlines()[-10:]))
         die(f"导入有失败文件（幂等，可修后重跑）。整体回退：Copy-Item -Force \"{backup}\" \"{db}\"")
 
     after = db_stats(db)
@@ -346,8 +513,12 @@ def cmd_import_books(cfg: dict, args) -> None:
     report = {
         "mode": "books", "stamp": stamp, "database_url": url, "database": str(db),
         "backup": str(backup), "restore_hint": f"Copy-Item -Force \"{backup}\" \"{db}\"",
-        "files_total": len(files), "pattern": pattern, "overwrite": bool(args.overwrite),
+        "files_total": len(files), "files_in_dir": len(all_files), "pattern": pattern,
+        "scope": scope, "validation_summary": str(summary_path),
+        "overwrite": bool(args.overwrite),
         "stats_before": before, "stats_after": after, "stats_delta": delta,
+        "per_book": per_book, "per_book_summary": book_summary(per_book),
+        "per_book_dry": per_book_dry, "per_book_dry_summary": dry_summary,
         "pending_verification": verified, "all_book_stems_in_db": all_in,
         "import_tail": (result or "").splitlines()[-20:],
     }
@@ -568,6 +739,9 @@ def main() -> int:
     sp = sub.add_parser("import-books",
                         help="整册入库：daily_consolidated/**/*_<stamp>_book.json（校验→备份→试跑→导入→核对）")
     sp.add_argument("--stamp", help="整册文件名里的批次日期 YYYYMMDD；不传则导全部 *_book.json")
+    sp.add_argument("--subjects", help="逗号分隔的学科白名单，如 math,chinese（不传=全部）")
+    sp.add_argument("--grades", help="逗号分隔/区间年级白名单，如 1,8 或 2-6 或 g7,g9（不传=全部）")
+    sp.add_argument("--only", help="逗号分隔的文件白名单（相对 daily_consolidated 的路径/文件名/通配）")
     sp.add_argument("--dry-run", action="store_true", help="只校验 + 备份 + 试跑，不写数据库")
     sp.add_argument("--overwrite", action="store_true", help="同步已存在题目的字段")
     sp.add_argument("--confirm", required=True, choices=["I_KNOW"],

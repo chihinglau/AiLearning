@@ -1,0 +1,340 @@
+{
+  "subject": "math",
+  "grade": 5,
+  "version": "北师大版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第三单元 小数乘法",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "小数加减·概念理解",
+      "parent": "第三单元 小数乘法",
+      "order_index": 1,
+      "explanation": "小数加减·概念理解：在「第三单元 小数乘法」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "小数加减·基本运算",
+      "parent": "第三单元 小数乘法",
+      "order_index": 2,
+      "explanation": "小数加减·基本运算：在「第三单元 小数乘法」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "小数加减·实际应用",
+      "parent": "第三单元 小数乘法",
+      "order_index": 3,
+      "explanation": "小数加减·实际应用：在「第三单元 小数乘法」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "小数加减·易错辨析",
+      "parent": "第三单元 小数乘法",
+      "order_index": 4,
+      "explanation": "小数加减·易错辨析：在「第三单元 小数乘法」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第三单元 小数乘法",
+      "order_index": 4,
+      "summary": "第三单元 小数乘法：围绕「小数加减」的概念、练习与运用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "【小数加减·概念理解】7.5 + 0.5 = （  ）",
+          "options": [
+            "1/2",
+            "8.0",
+            "2/3",
+            "1/3"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "7.5 + 0.5 = 8.0，所以选 B；其余是常见错误。",
+          "difficulty": 1,
+          "knowledge_point": "小数加减·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【小数加减·概念理解】算式 2.2 + 0.6 的结果是（  ）",
+          "answer": {
+            "value": "2.8"
+          },
+          "analysis": "验算：2.2 + 0.6 = 2.8，所以填 2.8。",
+          "difficulty": 1,
+          "knowledge_point": "小数加减·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【小数加减·概念理解】7.1 + 0.3 = 1/2。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "7.1 + 0.3 = 7.4，题面写的是 1/2，不相等，说法错误。",
+          "difficulty": 1,
+          "knowledge_point": "小数加减·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「小数加减·概念理解」，举一个生活中用到「小数加减」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 1,
+          "knowledge_point": "小数加减·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【小数加减·基本运算】2.4 + 0.4 = （  ）",
+          "options": [
+            "2/3",
+            "2.8",
+            "1/2",
+            "1/3"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "2.4 + 0.4 = 2.8，所以选 B；其余是常见错误。",
+          "difficulty": 2,
+          "knowledge_point": "小数加减·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【小数加减·基本运算】算式 7.1 + 0.3 的结果是（  ）",
+          "answer": {
+            "value": "7.4"
+          },
+          "analysis": "验算：7.1 + 0.3 = 7.4，所以填 7.4。",
+          "difficulty": 2,
+          "knowledge_point": "小数加减·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【小数加减·基本运算】7.6 + 0.4 = 1/2。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "7.6 + 0.4 = 8.0，题面写的是 1/2，不相等，说法错误。",
+          "difficulty": 2,
+          "knowledge_point": "小数加减·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「小数加减·基本运算」，举一个生活中用到「小数加减」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 2,
+          "knowledge_point": "小数加减·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【小数加减·实际应用】3.5 + 0.4 = （  ）",
+          "options": [
+            "1/2",
+            "1/3",
+            "3.9",
+            "2/3"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "3.5 + 0.4 = 3.9，所以选 C；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "小数加减·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【小数加减·实际应用】算式 7.8 + 0.8 的结果是（  ）",
+          "answer": {
+            "value": "8.6"
+          },
+          "analysis": "验算：7.8 + 0.8 = 8.6，所以填 8.6。",
+          "difficulty": 3,
+          "knowledge_point": "小数加减·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【小数加减·实际应用】7.5 + 0.2 = 7.7。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "7.5 + 0.2 = 7.7，题面写的是 7.7，相等，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "小数加减·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「小数加减·实际应用」，举一个生活中用到「小数加减」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 3,
+          "knowledge_point": "小数加减·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【小数加减·易错辨析】3.3 + 0.6 = （  ）",
+          "options": [
+            "3.9",
+            "1/2",
+            "1/3",
+            "2/3"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "3.3 + 0.6 = 3.9，所以选 A；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "小数加减·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【小数加减·易错辨析】算式 8.4 + 0.9 的结果是（  ）",
+          "answer": {
+            "value": "9.3"
+          },
+          "analysis": "验算：8.4 + 0.9 = 9.3，所以填 9.3。",
+          "difficulty": 3,
+          "knowledge_point": "小数加减·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【小数加减·易错辨析】6.8 + 0.5 = 1/2。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "6.8 + 0.5 = 7.3，题面写的是 1/2，不相等，说法错误。",
+          "difficulty": 4,
+          "knowledge_point": "小数加减·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「小数加减·易错辨析」，举一个生活中用到「小数加减」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "小数加减·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【小数加减·概念理解】下面哪些算式的结果等于 8.5？",
+          "options": [
+            "8.0 + 0.5",
+            "1/2 + 1/4",
+            "2/4 + 1/4",
+            "1/3 + 1/3"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 8.0 + 0.5 = 8.5 ✓；B 为 3/4 ✗；C 为 3/4 ✗；D 为 2/3 ✗。所以选 A。",
+          "difficulty": 4,
+          "knowledge_point": "小数加减·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【小数加减·基本运算】下面哪些算式的结果等于 6.8？",
+          "options": [
+            "6.5 + 0.3",
+            "1/2 + 1/4",
+            "2/4 + 1/4",
+            "1/3 + 1/3"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 6.5 + 0.3 = 6.8 ✓；B 为 3/4 ✗；C 为 3/4 ✗；D 为 2/3 ✗。所以选 A。",
+          "difficulty": 5,
+          "knowledge_point": "小数加减·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

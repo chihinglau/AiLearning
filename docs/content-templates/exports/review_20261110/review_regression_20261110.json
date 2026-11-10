@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "source": "docs/content-templates/exports/review_20261110/_review_regression_20261110.py",
+  "mode": "read-only",
+  "totals": {
+    "checks": 16,
+    "passed": 16,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "check": "tasks.json 合法且隔离名单 34 册",
+      "ok": true,
+      "detail": "pairs=34"
+    },
+    {
+      "check": "P3 门槛/重跑队列已登记",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "新增两条治理留痕 note",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "04 手册含 §3.8.7 / 隔离名单 / per_book / 1104 订正",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "批量手册含 P3 闸门与隔离名单告警",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "整册目录 12 合格 + 34 隔离",
+      "ok": true,
+      "detail": "plain=12 quarantined=34"
+    },
+    {
+      "check": "P1-3 --subjects/--grades 范围过滤",
+      "ok": true,
+      "detail": "chinese/g1/chinese_g1_first_20261109_book.json、chinese/g8/chinese_g8_first_20261109_book.json、math/g1/math_g1_first_20261109_book.json、math/g8/math_g8_first_20261109_book.json"
+    },
+    {
+      "check": "P1-3 --only 白名单单册",
+      "ok": true,
+      "detail": "math_g1_first_20261109_book.json"
+    },
+    {
+      "check": "P1-3 不过滤时保持全集合",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "复评 §八-4 per_book 解析三类行",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "P3 闸门 12 册全通过",
+      "ok": true,
+      "detail": "{'files': 12, 'passed': 12, 'failed': 0}"
+    },
+    {
+      "check": "P3 闸门含隔离件 46 册 12/34",
+      "ok": true,
+      "detail": "{'files': 46, 'passed': 12, 'failed': 34}"
+    },
+    {
+      "check": "P3 失败名单与隔离名单完全一致",
+      "ok": true,
+      "detail": "failed=34 expected=34 diff=0"
+    },
+    {
+      "check": "只读对账 1104 / 差 11 / 11-08 21:38 共 11 节点",
+      "ok": true,
+      "detail": "孤儿节点=7"
+    },
+    {
+      "check": "目录模式整册校验 12/12",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "生成器已接入准入自检与隔离名单",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

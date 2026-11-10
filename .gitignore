@@ -65,3 +65,8 @@ __pycache__/
 # === Content pipeline scratch ===
 docs/content-templates/_tmp_*
 docs/content-templates/__pycache__/
+
+# === Scratch / review working dirs (not deliverables) ===
+.tmp/
+backend/.tmp/
+docs -review/

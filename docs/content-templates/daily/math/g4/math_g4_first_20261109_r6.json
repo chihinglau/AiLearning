@@ -1,0 +1,340 @@
+{
+  "subject": "math",
+  "grade": 4,
+  "version": "北师大版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第五单元 运算律",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "运算律·概念理解",
+      "parent": "第五单元 运算律",
+      "order_index": 1,
+      "explanation": "运算律·概念理解：在「第五单元 运算律」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "运算律·基本运算",
+      "parent": "第五单元 运算律",
+      "order_index": 2,
+      "explanation": "运算律·基本运算：在「第五单元 运算律」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "运算律·实际应用",
+      "parent": "第五单元 运算律",
+      "order_index": 3,
+      "explanation": "运算律·实际应用：在「第五单元 运算律」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "运算律·易错辨析",
+      "parent": "第五单元 运算律",
+      "order_index": 4,
+      "explanation": "运算律·易错辨析：在「第五单元 运算律」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第五单元 运算律",
+      "order_index": 6,
+      "summary": "第五单元 运算律：围绕「运算律」的概念、练习与运用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "【运算律·概念理解】25 × 4 = （  ）",
+          "options": [
+            "100",
+            "103",
+            "98",
+            "101"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "25 × 4 = 100，所以选 A；其余是常见错误。",
+          "difficulty": 1,
+          "knowledge_point": "运算律·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【运算律·概念理解】算式 25 × 4 的结果是（  ）",
+          "answer": {
+            "value": "100"
+          },
+          "analysis": "验算：25 × 4 = 100，所以填 100。",
+          "difficulty": 1,
+          "knowledge_point": "运算律·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【运算律·概念理解】25 × 4 = 99。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "25 × 4 = 100，题面写的是 99，不相等，说法错误。",
+          "difficulty": 1,
+          "knowledge_point": "运算律·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「运算律·概念理解」，举一个生活中用到「运算律」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 1,
+          "knowledge_point": "运算律·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【运算律·基本运算】25 × 4 = （  ）",
+          "options": [
+            "99",
+            "102",
+            "100",
+            "98"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "25 × 4 = 100，所以选 C；其余是常见错误。",
+          "difficulty": 2,
+          "knowledge_point": "运算律·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【运算律·基本运算】算式 4 × 4 的结果是（  ）",
+          "answer": {
+            "value": "16"
+          },
+          "analysis": "验算：4 × 4 = 16，所以填 16。",
+          "difficulty": 2,
+          "knowledge_point": "运算律·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【运算律·基本运算】25 × 4 = 101。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "25 × 4 = 100，题面写的是 101，不相等，说法错误。",
+          "difficulty": 2,
+          "knowledge_point": "运算律·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「运算律·基本运算」，举一个生活中用到「运算律」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 2,
+          "knowledge_point": "运算律·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【运算律·实际应用】25 × 4 = （  ）",
+          "options": [
+            "98",
+            "99",
+            "100",
+            "102"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "25 × 4 = 100，所以选 C；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "运算律·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【运算律·实际应用】算式 8 × 4 的结果是（  ）",
+          "answer": {
+            "value": "32"
+          },
+          "analysis": "验算：8 × 4 = 32，所以填 32。",
+          "difficulty": 3,
+          "knowledge_point": "运算律·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【运算律·实际应用】8 × 4 = 34。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "8 × 4 = 32，题面写的是 34，不相等，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "运算律·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「运算律·实际应用」，举一个生活中用到「运算律」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 3,
+          "knowledge_point": "运算律·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【运算律·易错辨析】4 × 4 = （  ）",
+          "options": [
+            "16",
+            "17",
+            "19",
+            "20"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "4 × 4 = 16，所以选 A；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "运算律·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【运算律·易错辨析】算式 25 × 4 的结果是（  ）",
+          "answer": {
+            "value": "100"
+          },
+          "analysis": "验算：25 × 4 = 100，所以填 100。",
+          "difficulty": 3,
+          "knowledge_point": "运算律·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【运算律·易错辨析】4 × 4 = 16。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "4 × 4 = 16，题面写的是 16，相等，说法正确。",
+          "difficulty": 4,
+          "knowledge_point": "运算律·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「运算律·易错辨析」，举一个生活中用到「运算律」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "运算律·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【运算律·概念理解】下面哪些算式的结果等于 16？",
+          "options": [
+            "4 × 4",
+            "16 + 1",
+            "16 - 2",
+            "16 × 2"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 4 × 4 = 16 ✓；B 为 17 ✗；C 为 14 ✗；D 为 32 ✗。所以选 A。",
+          "difficulty": 4,
+          "knowledge_point": "运算律·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【运算律·基本运算】下面哪些算式的结果等于 32？",
+          "options": [
+            "8 × 4",
+            "32 + 1",
+            "32 - 2",
+            "32 × 2"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 8 × 4 = 32 ✓；B 为 33 ✗；C 为 30 ✗；D 为 64 ✗。所以选 A。",
+          "difficulty": 5,
+          "knowledge_point": "运算律·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

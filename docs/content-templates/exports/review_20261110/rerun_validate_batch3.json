@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "source": "docs/content-templates/_validate_daily.py",
+  "expects": {
+    "subject": null,
+    "grade": null,
+    "version": null,
+    "semester": null
+  },
+  "totals": {
+    "files": 11,
+    "passed": 11,
+    "failed": 0,
+    "errors": 0,
+    "warnings": 28,
+    "quarantined_skipped": 0
+  },
+  "quarantined_skipped_names": [],
+  "files": [
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\chemistry\\g9\\chemistry_g9_first_20261110_book.json",
+      "name": "chemistry_g9_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\chinese\\g7\\chinese_g7_first_20261110_book.json",
+      "name": "chinese_g7_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\chinese\\g9\\chinese_g9_first_20261110_book.json",
+      "name": "chinese_g9_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\english\\g2\\english_g2_first_20261110_book.json",
+      "name": "english_g2_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 6,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\geography\\g7\\geography_g7_first_20261110_book.json",
+      "name": "geography_g7_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\history\\g7\\history_g7_first_20261110_book.json",
+      "name": "history_g7_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g2\\politics_g2_first_20261110_book.json",
+      "name": "politics_g2_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 3,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g3\\politics_g3_first_20261110_book.json",
+      "name": "politics_g3_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 3,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g4\\politics_g4_first_20261110_book.json",
+      "name": "politics_g4_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g6\\politics_g6_first_20261110_book.json",
+      "name": "politics_g6_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g7\\politics_g7_first_20261110_book.json",
+      "name": "politics_g7_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    }
+  ]
+}

@@ -1,0 +1,344 @@
+{
+  "subject": "politics",
+  "grade": 4,
+  "version": "部编版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第四单元 做文明的消费者",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "做文明的消费者·认知",
+      "parent": "第四单元 做文明的消费者",
+      "order_index": 1,
+      "explanation": "做文明的消费者·认知：在「第四单元 做文明的消费者」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "做文明的消费者·判断",
+      "parent": "第四单元 做文明的消费者",
+      "order_index": 2,
+      "explanation": "做文明的消费者·判断：在「第四单元 做文明的消费者」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "做文明的消费者·践行",
+      "parent": "第四单元 做文明的消费者",
+      "order_index": 3,
+      "explanation": "做文明的消费者·践行：在「第四单元 做文明的消费者」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "做文明的消费者·思考",
+      "parent": "第四单元 做文明的消费者",
+      "order_index": 4,
+      "explanation": "做文明的消费者·思考：在「第四单元 做文明的消费者」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第四单元 做文明的消费者",
+      "order_index": 4,
+      "summary": "第四单元 做文明的消费者：围绕「做文明的消费者」的概念、练习与运用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "在「做文明的消费者·认知」相关情境中，比较合适的做法是（  ）",
+          "options": [
+            "先了解再行动",
+            "不管别人感受",
+            "随意应付",
+            "只做表面"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先了解、负责任地行动才合适，选 A；其余都不妥当。",
+          "difficulty": 1,
+          "knowledge_point": "做文明的消费者·认知",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "参与「做文明的消费者·认知」前，我们可以先制定一个（  ）。",
+          "answer": {
+            "value": "计划"
+          },
+          "analysis": "先有计划再行动，事情更有条理，所以填「计划」。",
+          "difficulty": 1,
+          "knowledge_point": "做文明的消费者·认知",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "在「做文明的消费者·认知」中，认真完成自己承担的任务是一种负责任的表现。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "对自己负责、说到做到是正确的态度，说法正确。",
+          "difficulty": 1,
+          "knowledge_point": "做文明的消费者·认知",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「做文明的消费者·认知」，写一件你能做的小事并说明好处。",
+          "answer": {
+            "value": "示例：主动整理班级图书角，让同学取书更方便，也培养自己的责任心。"
+          },
+          "analysis": "评分要点：写出具体小事得 2 分，说清好处得 2 分。",
+          "difficulty": 1,
+          "knowledge_point": "做文明的消费者·认知",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "在「做文明的消费者·判断」相关情境中，比较合适的做法是（  ）",
+          "options": [
+            "先了解再行动",
+            "不管别人感受",
+            "随意应付",
+            "只做表面"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先了解、负责任地行动才合适，选 A；其余都不妥当。",
+          "difficulty": 2,
+          "knowledge_point": "做文明的消费者·判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "参与「做文明的消费者·判断」前，我们可以先制定一个（  ）。",
+          "answer": {
+            "value": "计划"
+          },
+          "analysis": "先有计划再行动，事情更有条理，所以填「计划」。",
+          "difficulty": 2,
+          "knowledge_point": "做文明的消费者·判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "在「做文明的消费者·判断」中，认真完成自己承担的任务是一种负责任的表现。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "对自己负责、说到做到是正确的态度，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "做文明的消费者·判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「做文明的消费者·判断」，写一件你能做的小事并说明好处。",
+          "answer": {
+            "value": "示例：主动整理班级图书角，让同学取书更方便，也培养自己的责任心。"
+          },
+          "analysis": "评分要点：写出具体小事得 2 分，说清好处得 2 分。",
+          "difficulty": 2,
+          "knowledge_point": "做文明的消费者·判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "在「做文明的消费者·践行」相关情境中，比较合适的做法是（  ）",
+          "options": [
+            "先了解再行动",
+            "不管别人感受",
+            "随意应付",
+            "只做表面"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先了解、负责任地行动才合适，选 A；其余都不妥当。",
+          "difficulty": 3,
+          "knowledge_point": "做文明的消费者·践行",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "参与「做文明的消费者·践行」前，我们可以先制定一个（  ）。",
+          "answer": {
+            "value": "计划"
+          },
+          "analysis": "先有计划再行动，事情更有条理，所以填「计划」。",
+          "difficulty": 3,
+          "knowledge_point": "做文明的消费者·践行",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "在「做文明的消费者·践行」中，认真完成自己承担的任务是一种负责任的表现。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "对自己负责、说到做到是正确的态度，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "做文明的消费者·践行",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「做文明的消费者·践行」，写一件你能做的小事并说明好处。",
+          "answer": {
+            "value": "示例：主动整理班级图书角，让同学取书更方便，也培养自己的责任心。"
+          },
+          "analysis": "评分要点：写出具体小事得 2 分，说清好处得 2 分。",
+          "difficulty": 3,
+          "knowledge_point": "做文明的消费者·践行",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "在「做文明的消费者·思考」相关情境中，比较合适的做法是（  ）",
+          "options": [
+            "先了解再行动",
+            "不管别人感受",
+            "随意应付",
+            "只做表面"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先了解、负责任地行动才合适，选 A；其余都不妥当。",
+          "difficulty": 3,
+          "knowledge_point": "做文明的消费者·思考",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "参与「做文明的消费者·思考」前，我们可以先制定一个（  ）。",
+          "answer": {
+            "value": "计划"
+          },
+          "analysis": "先有计划再行动，事情更有条理，所以填「计划」。",
+          "difficulty": 3,
+          "knowledge_point": "做文明的消费者·思考",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "在「做文明的消费者·思考」中，认真完成自己承担的任务是一种负责任的表现。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "对自己负责、说到做到是正确的态度，说法正确。",
+          "difficulty": 4,
+          "knowledge_point": "做文明的消费者·思考",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「做文明的消费者·思考」，写一件你能做的小事并说明好处。",
+          "answer": {
+            "value": "示例：主动整理班级图书角，让同学取书更方便，也培养自己的责任心。"
+          },
+          "analysis": "评分要点：写出具体小事得 2 分，说清好处得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "做文明的消费者·思考",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于「做文明的消费者·认知」，哪些做法值得提倡？",
+          "options": [
+            "认真完成分内事",
+            "尊重不同意见",
+            "只做自己喜欢的",
+            "主动帮助同伴"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A 负责任 ✓；B 尊重他人 ✓；C 挑三拣四 ✗；D 互助 ✓。所以选 A、B、D。",
+          "difficulty": 4,
+          "knowledge_point": "做文明的消费者·认知",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于「做文明的消费者·判断」，哪些做法值得提倡？",
+          "options": [
+            "认真完成分内事",
+            "尊重不同意见",
+            "只做自己喜欢的",
+            "主动帮助同伴"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A 负责任 ✓；B 尊重他人 ✓；C 挑三拣四 ✗；D 互助 ✓。所以选 A、B、D。",
+          "difficulty": 5,
+          "knowledge_point": "做文明的消费者·判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

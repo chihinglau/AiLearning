@@ -1,0 +1,340 @@
+{
+  "subject": "math",
+  "grade": 7,
+  "version": "北师大版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第三章 整式及其加减",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "100 以内加减法·概念理解",
+      "parent": "第三章 整式及其加减",
+      "order_index": 1,
+      "explanation": "100 以内加减法·概念理解：在「第三章 整式及其加减」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "100 以内加减法·基本运算",
+      "parent": "第三章 整式及其加减",
+      "order_index": 2,
+      "explanation": "100 以内加减法·基本运算：在「第三章 整式及其加减」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "100 以内加减法·实际应用",
+      "parent": "第三章 整式及其加减",
+      "order_index": 3,
+      "explanation": "100 以内加减法·实际应用：在「第三章 整式及其加减」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "100 以内加减法·易错辨析",
+      "parent": "第三章 整式及其加减",
+      "order_index": 4,
+      "explanation": "100 以内加减法·易错辨析：在「第三章 整式及其加减」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第三章 整式及其加减",
+      "order_index": 3,
+      "summary": "第三章 整式及其加减：围绕「100 以内加减法」的概念、练习与运用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "【100 以内加减法·概念理解】26 + 27 = （  ）",
+          "options": [
+            "56",
+            "57",
+            "53",
+            "52"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "26 + 27 = 53，所以选 C；其余是常见错误。",
+          "difficulty": 1,
+          "knowledge_point": "100 以内加减法·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【100 以内加减法·概念理解】算式 22 + 2 的结果是（  ）",
+          "answer": {
+            "value": "24"
+          },
+          "analysis": "验算：22 + 2 = 24，所以填 24。",
+          "difficulty": 1,
+          "knowledge_point": "100 以内加减法·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【100 以内加减法·概念理解】3 + 17 = 19。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "3 + 17 = 20，题面写的是 19，不相等，说法错误。",
+          "difficulty": 1,
+          "knowledge_point": "100 以内加减法·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「100 以内加减法·概念理解」，举一个生活中用到「100 以内加减法」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 1,
+          "knowledge_point": "100 以内加减法·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【100 以内加减法·基本运算】12 + 8 = （  ）",
+          "options": [
+            "17",
+            "23",
+            "22",
+            "20"
+          ],
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "12 + 8 = 20，所以选 D；其余是常见错误。",
+          "difficulty": 2,
+          "knowledge_point": "100 以内加减法·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【100 以内加减法·基本运算】算式 38 + 39 的结果是（  ）",
+          "answer": {
+            "value": "77"
+          },
+          "analysis": "验算：38 + 39 = 77，所以填 77。",
+          "difficulty": 2,
+          "knowledge_point": "100 以内加减法·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【100 以内加减法·基本运算】15 + 9 = 26。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "15 + 9 = 24，题面写的是 26，不相等，说法错误。",
+          "difficulty": 2,
+          "knowledge_point": "100 以内加减法·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「100 以内加减法·基本运算」，举一个生活中用到「100 以内加减法」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 2,
+          "knowledge_point": "100 以内加减法·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【100 以内加减法·实际应用】39 + 6 = （  ）",
+          "options": [
+            "42",
+            "45",
+            "48",
+            "43"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "39 + 6 = 45，所以选 B；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "100 以内加减法·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【100 以内加减法·实际应用】算式 12 + 27 的结果是（  ）",
+          "answer": {
+            "value": "39"
+          },
+          "analysis": "验算：12 + 27 = 39，所以填 39。",
+          "difficulty": 3,
+          "knowledge_point": "100 以内加减法·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【100 以内加减法·实际应用】12 + 16 = 27。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "12 + 16 = 28，题面写的是 27，不相等，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "100 以内加减法·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「100 以内加减法·实际应用」，举一个生活中用到「100 以内加减法」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 3,
+          "knowledge_point": "100 以内加减法·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【100 以内加减法·易错辨析】23 + 24 = （  ）",
+          "options": [
+            "47",
+            "46",
+            "48",
+            "44"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "23 + 24 = 47，所以选 A；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "100 以内加减法·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【100 以内加减法·易错辨析】算式 31 + 33 的结果是（  ）",
+          "answer": {
+            "value": "64"
+          },
+          "analysis": "验算：31 + 33 = 64，所以填 64。",
+          "difficulty": 3,
+          "knowledge_point": "100 以内加减法·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【100 以内加减法·易错辨析】34 + 19 = 55。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "34 + 19 = 53，题面写的是 55，不相等，说法错误。",
+          "difficulty": 4,
+          "knowledge_point": "100 以内加减法·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「100 以内加减法·易错辨析」，举一个生活中用到「100 以内加减法」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "100 以内加减法·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【100 以内加减法·概念理解】下面哪些算式的结果等于 63？",
+          "options": [
+            "42 + 21",
+            "63 + 1",
+            "63 - 2",
+            "63 × 2"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 42 + 21 = 63 ✓；B 为 64 ✗；C 为 61 ✗；D 为 126 ✗。所以选 A。",
+          "difficulty": 4,
+          "knowledge_point": "100 以内加减法·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【100 以内加减法·基本运算】下面哪些算式的结果等于 69？",
+          "options": [
+            "37 + 32",
+            "69 + 1",
+            "69 - 2",
+            "69 × 2"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 37 + 32 = 69 ✓；B 为 70 ✗；C 为 67 ✗；D 为 138 ✗。所以选 A。",
+          "difficulty": 5,
+          "knowledge_point": "100 以内加减法·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

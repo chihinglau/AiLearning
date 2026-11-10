@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "source": "docs/content-templates/_validate_daily.py",
+  "expects": {
+    "subject": null,
+    "grade": null,
+    "version": null,
+    "semester": null
+  },
+  "totals": {
+    "files": 8,
+    "passed": 7,
+    "failed": 1,
+    "errors": 1,
+    "warnings": 18,
+    "quarantined_skipped": 0
+  },
+  "quarantined_skipped_names": [],
+  "files": [
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\chinese\\g7\\chinese_g7_first_20261110_book.json",
+      "name": "chinese_g7_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\geography\\g7\\geography_g7_first_20261110_book.json",
+      "name": "geography_g7_first_20261110_book.json",
+      "passed": false,
+      "errors": 1,
+      "warnings": 2,
+      "error_messages": [
+        "题目「地图上表示地理事物的符号叫（  ），标注的山峰高…」 题干含指代「上表」，客户端只能渲染题干"
+      ],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\history\\g7\\history_g7_first_20261110_book.json",
+      "name": "history_g7_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g2\\politics_g2_first_20261110_book.json",
+      "name": "politics_g2_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 3,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g3\\politics_g3_first_20261110_book.json",
+      "name": "politics_g3_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 3,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g4\\politics_g4_first_20261110_book.json",
+      "name": "politics_g4_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g6\\politics_g6_first_20261110_book.json",
+      "name": "politics_g6_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g7\\politics_g7_first_20261110_book.json",
+      "name": "politics_g7_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    }
+  ]
+}

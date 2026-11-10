@@ -1,0 +1,2565 @@
+{
+  "schema_version": 1,
+  "source": "docs/content-templates/_check_book_gate.py",
+  "review": "docs/content-templates/exports/review_20261110/daily_consolidated-评审_20261110.md §五 P3",
+  "policy_source": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\tasks.json",
+  "validator_status": "ok",
+  "include_quarantined": true,
+  "hard_gates": [
+    "validator_0_errors",
+    "cross_chapter_duplicate_stems_0",
+    "section_shared_questions_0",
+    "cliche_ratio_le_5pct",
+    "same_stem_unique_answer"
+  ],
+  "negative_stems": [
+    "更可取的学习做法",
+    "可以先梳理",
+    "举一个生活中用到",
+    "结合实例分析比单纯背诵",
+    "值得提倡的",
+    "先理解概念再结合实例分析",
+    "知识脉络",
+    "·概念理解",
+    "·认知"
+  ],
+  "totals": {
+    "files": 46,
+    "passed": 12,
+    "failed": 34
+  },
+  "files": [
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\biology\\g7\\biology_g7_first_20261109_book.quarantined.json",
+      "name": "biology_g7_first_20261109_book.quarantined.json",
+      "relative": "biology/g7/biology_g7_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "validator_0_errors",
+        "cliche_ratio_le_5pct"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": false,
+          "value": 19,
+          "detail": "题目「关于「第一单元 生物和细胞·概念」，哪些做法是值…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」; 题目「关于「第一单元 生物和细胞·结构」，哪些做法是值…」 多选题解析未逐项写出字号与结果对照（缺 A），答案可能未经验算；要求每个选项都写出「该项结果」; 题目「关于「第一章 认识生物·概念」，哪些做法是值得提…」 多选题解析未逐项写出字号与结果对照（缺 D），答案可能未经验算；要求每个选项都写出「该项结果」; 题目「关于「第一章 认识生物·结构」，哪些做法是值得提…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要"
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": true,
+          "value": 0,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": true,
+          "value": 0,
+          "shared_sections": 0
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": false,
+          "value": 0.7778,
+          "hits": 126,
+          "questions": 162,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [],
+      "stats": {
+        "chapters": 9,
+        "sections": 9,
+        "points": 36,
+        "questions": 162,
+        "cliche_hits": 126,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 19,
+        "warnings": 0,
+        "passed": false
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\biology\\g8\\biology_g8_first_20261109_book.json",
+      "name": "biology_g8_first_20261109_book.json",
+      "relative": "biology/g8/biology_g8_first_20261109_book.json",
+      "passed": true,
+      "failed_gates": [],
+      "hard": {
+        "validator_0_errors": {
+          "ok": true,
+          "value": 0,
+          "detail": ""
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": true,
+          "value": 0,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": true,
+          "value": 0,
+          "shared_sections": 0
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 139,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "题挂载点在文件内未声明（依赖库内同名点）19 处",
+        "校验器提醒 20 条（不阻断）"
+      ],
+      "stats": {
+        "chapters": 6,
+        "sections": 16,
+        "points": 27,
+        "questions": 139,
+        "cliche_hits": 0,
+        "unresolved_kp": 19
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 0,
+        "warnings": 20,
+        "passed": true
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\chemistry\\g9\\chemistry_g9_first_20261109_book.quarantined.json",
+      "name": "chemistry_g9_first_20261109_book.quarantined.json",
+      "relative": "chemistry/g9/chemistry_g9_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "validator_0_errors",
+        "cliche_ratio_le_5pct"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": false,
+          "value": 15,
+          "detail": "题目「关于「第一单元 走进化学世界·物质」，哪些做法是…」 多选题解析未逐项写出字号与结果对照（缺 A），答案可能未经验算；要求每个选项都写出「该项结果」; 题目「关于「第一单元 走进化学世界·变化」，哪些做法是…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」; 题目「关于「第二单元 空气和氧气·物质」，哪些做法是值…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」; 题目「关于「第二单元 空气和氧气·变化」，哪些做法是值…」 多选题解析未逐项写出字号与结果对照（缺 C），答案可能未经验算；要"
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": true,
+          "value": 0,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": true,
+          "value": 0,
+          "shared_sections": 0
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": false,
+          "value": 0.7778,
+          "hits": 98,
+          "questions": 126,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [],
+      "stats": {
+        "chapters": 7,
+        "sections": 7,
+        "points": 28,
+        "questions": 126,
+        "cliche_hits": 98,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 15,
+        "warnings": 0,
+        "passed": false
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\chinese\\g1\\chinese_g1_first_20261109_book.json",
+      "name": "chinese_g1_first_20261109_book.json",
+      "relative": "chinese/g1/chinese_g1_first_20261109_book.json",
+      "passed": true,
+      "failed_gates": [],
+      "hard": {
+        "validator_0_errors": {
+          "ok": true,
+          "value": 0,
+          "detail": ""
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": true,
+          "value": 0,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": true,
+          "value": 0,
+          "shared_sections": 0
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 208,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "题挂载点在文件内未声明（依赖库内同名点）19 处",
+        "校验器提醒 21 条（不阻断）"
+      ],
+      "stats": {
+        "chapters": 8,
+        "sections": 35,
+        "points": 35,
+        "questions": 208,
+        "cliche_hits": 0,
+        "unresolved_kp": 19
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 0,
+        "warnings": 21,
+        "passed": true
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\chinese\\g2\\chinese_g2_first_20261109_book.quarantined.json",
+      "name": "chinese_g2_first_20261109_book.quarantined.json",
+      "relative": "chinese/g2/chinese_g2_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "validator_0_errors",
+        "cross_chapter_duplicate_stems_0",
+        "section_shared_questions_0"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": false,
+          "value": 1,
+          "detail": "本批次新增知识点 8 个，超出每批次 3~6 个的规格"
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": false,
+          "value": 120,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": false,
+          "value": 126,
+          "shared_sections": 1
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 144,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "section 2 < 章数-1 7",
+        "point 8 < 章数×4 32（结构目标，见 structural_exemptions）"
+      ],
+      "stats": {
+        "chapters": 8,
+        "sections": 2,
+        "points": 8,
+        "questions": 144,
+        "cliche_hits": 0,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 1,
+        "warnings": 0,
+        "passed": false
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\chinese\\g3\\chinese_g3_first_20261109_book.quarantined.json",
+      "name": "chinese_g3_first_20261109_book.quarantined.json",
+      "relative": "chinese/g3/chinese_g3_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "cross_chapter_duplicate_stems_0",
+        "section_shared_questions_0"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": true,
+          "value": 0,
+          "detail": ""
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": false,
+          "value": 126,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": false,
+          "value": 144,
+          "shared_sections": 1
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 144,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "section 1 < 章数-1 7",
+        "point 4 < 章数×4 32（结构目标，见 structural_exemptions）"
+      ],
+      "stats": {
+        "chapters": 8,
+        "sections": 1,
+        "points": 4,
+        "questions": 144,
+        "cliche_hits": 0,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 0,
+        "warnings": 0,
+        "passed": true
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\chinese\\g4\\chinese_g4_first_20261109_book.quarantined.json",
+      "name": "chinese_g4_first_20261109_book.quarantined.json",
+      "relative": "chinese/g4/chinese_g4_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "cross_chapter_duplicate_stems_0",
+        "section_shared_questions_0"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": true,
+          "value": 0,
+          "detail": ""
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": false,
+          "value": 126,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": false,
+          "value": 144,
+          "shared_sections": 1
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 144,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "section 1 < 章数-1 7",
+        "point 4 < 章数×4 32（结构目标，见 structural_exemptions）"
+      ],
+      "stats": {
+        "chapters": 8,
+        "sections": 1,
+        "points": 4,
+        "questions": 144,
+        "cliche_hits": 0,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 0,
+        "warnings": 0,
+        "passed": true
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\chinese\\g5\\chinese_g5_first_20261109_book.quarantined.json",
+      "name": "chinese_g5_first_20261109_book.quarantined.json",
+      "relative": "chinese/g5/chinese_g5_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "cross_chapter_duplicate_stems_0",
+        "section_shared_questions_0"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": true,
+          "value": 0,
+          "detail": ""
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": false,
+          "value": 126,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": false,
+          "value": 144,
+          "shared_sections": 1
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 144,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "section 1 < 章数-1 7",
+        "point 4 < 章数×4 32（结构目标，见 structural_exemptions）"
+      ],
+      "stats": {
+        "chapters": 8,
+        "sections": 1,
+        "points": 4,
+        "questions": 144,
+        "cliche_hits": 0,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 0,
+        "warnings": 0,
+        "passed": true
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\chinese\\g6\\chinese_g6_first_20261109_book.quarantined.json",
+      "name": "chinese_g6_first_20261109_book.quarantined.json",
+      "relative": "chinese/g6/chinese_g6_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "cross_chapter_duplicate_stems_0",
+        "section_shared_questions_0"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": true,
+          "value": 0,
+          "detail": ""
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": false,
+          "value": 126,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": false,
+          "value": 144,
+          "shared_sections": 1
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 144,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "section 1 < 章数-1 7",
+        "point 4 < 章数×4 32（结构目标，见 structural_exemptions）"
+      ],
+      "stats": {
+        "chapters": 8,
+        "sections": 1,
+        "points": 4,
+        "questions": 144,
+        "cliche_hits": 0,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 0,
+        "warnings": 0,
+        "passed": true
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\chinese\\g7\\chinese_g7_first_20261109_book.quarantined.json",
+      "name": "chinese_g7_first_20261109_book.quarantined.json",
+      "relative": "chinese/g7/chinese_g7_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "cross_chapter_duplicate_stems_0",
+        "section_shared_questions_0"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": true,
+          "value": 0,
+          "detail": ""
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": false,
+          "value": 90,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": false,
+          "value": 108,
+          "shared_sections": 1
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 108,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "section 1 < 章数-1 5",
+        "point 4 < 章数×4 24（结构目标，见 structural_exemptions）"
+      ],
+      "stats": {
+        "chapters": 6,
+        "sections": 1,
+        "points": 4,
+        "questions": 108,
+        "cliche_hits": 0,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 0,
+        "warnings": 0,
+        "passed": true
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\chinese\\g8\\chinese_g8_first_20261109_book.json",
+      "name": "chinese_g8_first_20261109_book.json",
+      "relative": "chinese/g8/chinese_g8_first_20261109_book.json",
+      "passed": true,
+      "failed_gates": [],
+      "hard": {
+        "validator_0_errors": {
+          "ok": true,
+          "value": 0,
+          "detail": ""
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": true,
+          "value": 0,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": true,
+          "value": 0,
+          "shared_sections": 0
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 147,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "校验器提醒 2 条（不阻断）"
+      ],
+      "stats": {
+        "chapters": 6,
+        "sections": 22,
+        "points": 34,
+        "questions": 147,
+        "cliche_hits": 0,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 0,
+        "warnings": 2,
+        "passed": true
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\chinese\\g9\\chinese_g9_first_20261109_book.quarantined.json",
+      "name": "chinese_g9_first_20261109_book.quarantined.json",
+      "relative": "chinese/g9/chinese_g9_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "cross_chapter_duplicate_stems_0",
+        "section_shared_questions_0"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": true,
+          "value": 0,
+          "detail": ""
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": false,
+          "value": 90,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": false,
+          "value": 108,
+          "shared_sections": 1
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 108,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "section 1 < 章数-1 5",
+        "point 4 < 章数×4 24（结构目标，见 structural_exemptions）"
+      ],
+      "stats": {
+        "chapters": 6,
+        "sections": 1,
+        "points": 4,
+        "questions": 108,
+        "cliche_hits": 0,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 0,
+        "warnings": 0,
+        "passed": true
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\english\\g1\\english_g1_first_20261109_book.json",
+      "name": "english_g1_first_20261109_book.json",
+      "relative": "english/g1/english_g1_first_20261109_book.json",
+      "passed": true,
+      "failed_gates": [],
+      "hard": {
+        "validator_0_errors": {
+          "ok": true,
+          "value": 0,
+          "detail": ""
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": true,
+          "value": 0,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": true,
+          "value": 0,
+          "shared_sections": 0
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 141,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "校验器提醒 1 条（不阻断）"
+      ],
+      "stats": {
+        "chapters": 6,
+        "sections": 32,
+        "points": 35,
+        "questions": 141,
+        "cliche_hits": 0,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 0,
+        "warnings": 1,
+        "passed": true
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\english\\g2\\english_g2_first_20261109_book.quarantined.json",
+      "name": "english_g2_first_20261109_book.quarantined.json",
+      "relative": "english/g2/english_g2_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "validator_0_errors",
+        "cross_chapter_duplicate_stems_0",
+        "section_shared_questions_0"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": false,
+          "value": 6,
+          "detail": "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we lea"
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": false,
+          "value": 74,
+          "same_chapter_duplicates_warn": 1
+        },
+        "section_shared_questions_0": {
+          "ok": false,
+          "value": 108,
+          "shared_sections": 1
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 108,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "同章内重复题干 1 处",
+        "section 1 < 章数-1 5",
+        "point 4 < 章数×4 24（结构目标，见 structural_exemptions）"
+      ],
+      "stats": {
+        "chapters": 6,
+        "sections": 1,
+        "points": 4,
+        "questions": 108,
+        "cliche_hits": 0,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 6,
+        "warnings": 0,
+        "passed": false
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\english\\g3\\english_g3_first_20261109_book.quarantined.json",
+      "name": "english_g3_first_20261109_book.quarantined.json",
+      "relative": "english/g3/english_g3_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "validator_0_errors",
+        "cross_chapter_duplicate_stems_0",
+        "section_shared_questions_0"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": false,
+          "value": 8,
+          "detail": "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we lea"
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": false,
+          "value": 98,
+          "same_chapter_duplicates_warn": 1
+        },
+        "section_shared_questions_0": {
+          "ok": false,
+          "value": 144,
+          "shared_sections": 1
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 144,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "同章内重复题干 1 处",
+        "section 1 < 章数-1 7",
+        "point 4 < 章数×4 32（结构目标，见 structural_exemptions）"
+      ],
+      "stats": {
+        "chapters": 8,
+        "sections": 1,
+        "points": 4,
+        "questions": 144,
+        "cliche_hits": 0,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 8,
+        "warnings": 0,
+        "passed": false
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\english\\g4\\english_g4_first_20261109_book.quarantined.json",
+      "name": "english_g4_first_20261109_book.quarantined.json",
+      "relative": "english/g4/english_g4_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "validator_0_errors",
+        "cross_chapter_duplicate_stems_0",
+        "section_shared_questions_0"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": false,
+          "value": 8,
+          "detail": "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we lea"
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": false,
+          "value": 98,
+          "same_chapter_duplicates_warn": 1
+        },
+        "section_shared_questions_0": {
+          "ok": false,
+          "value": 144,
+          "shared_sections": 1
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 144,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "同章内重复题干 1 处",
+        "section 1 < 章数-1 7",
+        "point 4 < 章数×4 32（结构目标，见 structural_exemptions）"
+      ],
+      "stats": {
+        "chapters": 8,
+        "sections": 1,
+        "points": 4,
+        "questions": 144,
+        "cliche_hits": 0,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 8,
+        "warnings": 0,
+        "passed": false
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\english\\g5\\english_g5_first_20261109_book.quarantined.json",
+      "name": "english_g5_first_20261109_book.quarantined.json",
+      "relative": "english/g5/english_g5_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "validator_0_errors",
+        "cross_chapter_duplicate_stems_0",
+        "section_shared_questions_0"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": false,
+          "value": 8,
+          "detail": "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we lea"
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": false,
+          "value": 98,
+          "same_chapter_duplicates_warn": 1
+        },
+        "section_shared_questions_0": {
+          "ok": false,
+          "value": 144,
+          "shared_sections": 1
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 144,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "同章内重复题干 1 处",
+        "section 1 < 章数-1 7",
+        "point 4 < 章数×4 32（结构目标，见 structural_exemptions）"
+      ],
+      "stats": {
+        "chapters": 8,
+        "sections": 1,
+        "points": 4,
+        "questions": 144,
+        "cliche_hits": 0,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 8,
+        "warnings": 0,
+        "passed": false
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\english\\g6\\english_g6_first_20261109_book.quarantined.json",
+      "name": "english_g6_first_20261109_book.quarantined.json",
+      "relative": "english/g6/english_g6_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "validator_0_errors",
+        "cross_chapter_duplicate_stems_0",
+        "section_shared_questions_0"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": false,
+          "value": 6,
+          "detail": "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we lea"
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": false,
+          "value": 70,
+          "same_chapter_duplicates_warn": 1
+        },
+        "section_shared_questions_0": {
+          "ok": false,
+          "value": 108,
+          "shared_sections": 1
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 108,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "同章内重复题干 1 处",
+        "section 1 < 章数-1 5",
+        "point 4 < 章数×4 24（结构目标，见 structural_exemptions）"
+      ],
+      "stats": {
+        "chapters": 6,
+        "sections": 1,
+        "points": 4,
+        "questions": 108,
+        "cliche_hits": 0,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 6,
+        "warnings": 0,
+        "passed": false
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\english\\g7\\english_g7_first_20261109_book.quarantined.json",
+      "name": "english_g7_first_20261109_book.quarantined.json",
+      "relative": "english/g7/english_g7_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "validator_0_errors",
+        "cross_chapter_duplicate_stems_0",
+        "section_shared_questions_0"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": false,
+          "value": 6,
+          "detail": "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we lea"
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": false,
+          "value": 70,
+          "same_chapter_duplicates_warn": 1
+        },
+        "section_shared_questions_0": {
+          "ok": false,
+          "value": 108,
+          "shared_sections": 1
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 108,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "同章内重复题干 1 处",
+        "section 1 < 章数-1 5",
+        "point 4 < 章数×4 24（结构目标，见 structural_exemptions）"
+      ],
+      "stats": {
+        "chapters": 6,
+        "sections": 1,
+        "points": 4,
+        "questions": 108,
+        "cliche_hits": 0,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 6,
+        "warnings": 0,
+        "passed": false
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\english\\g8\\english_g8_first_20261109_book.json",
+      "name": "english_g8_first_20261109_book.json",
+      "relative": "english/g8/english_g8_first_20261109_book.json",
+      "passed": true,
+      "failed_gates": [],
+      "hard": {
+        "validator_0_errors": {
+          "ok": true,
+          "value": 0,
+          "detail": ""
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": true,
+          "value": 0,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": true,
+          "value": 0,
+          "shared_sections": 0
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 158,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "校验器提醒 1 条（不阻断）"
+      ],
+      "stats": {
+        "chapters": 6,
+        "sections": 30,
+        "points": 30,
+        "questions": 158,
+        "cliche_hits": 0,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 0,
+        "warnings": 1,
+        "passed": true
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\english\\g9\\english_g9_first_20261109_book.quarantined.json",
+      "name": "english_g9_first_20261109_book.quarantined.json",
+      "relative": "english/g9/english_g9_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "validator_0_errors",
+        "cross_chapter_duplicate_stems_0",
+        "section_shared_questions_0"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": false,
+          "value": 6,
+          "detail": "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）; 题目「Which are words we lea"
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": false,
+          "value": 70,
+          "same_chapter_duplicates_warn": 1
+        },
+        "section_shared_questions_0": {
+          "ok": false,
+          "value": 108,
+          "shared_sections": 1
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 108,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "同章内重复题干 1 处",
+        "section 1 < 章数-1 5",
+        "point 4 < 章数×4 24（结构目标，见 structural_exemptions）"
+      ],
+      "stats": {
+        "chapters": 6,
+        "sections": 1,
+        "points": 4,
+        "questions": 108,
+        "cliche_hits": 0,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 6,
+        "warnings": 0,
+        "passed": false
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\geography\\g7\\geography_g7_first_20261109_book.quarantined.json",
+      "name": "geography_g7_first_20261109_book.quarantined.json",
+      "relative": "geography/g7/geography_g7_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "validator_0_errors",
+        "cliche_ratio_le_5pct"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": false,
+          "value": 13,
+          "detail": "题目「关于「第一章 让我们走进地理·区域」，哪些做法是…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」; 题目「关于「第一章 让我们走进地理·综合」，哪些做法是…」 多选题解析未逐项写出字号与结果对照（缺 D），答案可能未经验算；要求每个选项都写出「该项结果」; 题目「关于「第二章 认识地球·区域」，哪些做法是值得提…」 多选题解析未逐项写出字号与结果对照（缺 C），答案可能未经验算；要求每个选项都写出「该项结果」; 题目「关于「第二章 认识地球·综合」，哪些做法是值得提…」 多选题解析未逐项写出字号与结果对照（缺 D），答案可能未经验算；要"
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": true,
+          "value": 0,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": true,
+          "value": 0,
+          "shared_sections": 0
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": false,
+          "value": 0.7778,
+          "hits": 84,
+          "questions": 108,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [],
+      "stats": {
+        "chapters": 6,
+        "sections": 6,
+        "points": 24,
+        "questions": 108,
+        "cliche_hits": 84,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 13,
+        "warnings": 0,
+        "passed": false
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\geography\\g8\\geography_g8_first_20261109_book.json",
+      "name": "geography_g8_first_20261109_book.json",
+      "relative": "geography/g8/geography_g8_first_20261109_book.json",
+      "passed": true,
+      "failed_gates": [],
+      "hard": {
+        "validator_0_errors": {
+          "ok": true,
+          "value": 0,
+          "detail": ""
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": true,
+          "value": 0,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": true,
+          "value": 0,
+          "shared_sections": 0
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 92,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "题挂载点在文件内未声明（依赖库内同名点）22 处",
+        "校验器提醒 23 条（不阻断）"
+      ],
+      "stats": {
+        "chapters": 4,
+        "sections": 14,
+        "points": 16,
+        "questions": 92,
+        "cliche_hits": 0,
+        "unresolved_kp": 22
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 0,
+        "warnings": 23,
+        "passed": true
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\history\\g7\\history_g7_first_20261109_book.quarantined.json",
+      "name": "history_g7_first_20261109_book.quarantined.json",
+      "relative": "history/g7/history_g7_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "validator_0_errors",
+        "cliche_ratio_le_5pct"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": false,
+          "value": 9,
+          "detail": "题目「关于「第一单元 史前时期：原始社会与中华文明的起…」 多选题解析未逐项写出字号与结果对照（缺 A），答案可能未经验算；要求每个选项都写出「该项结果」; 题目「关于「第一单元 史前时期：原始社会与中华文明的起…」 多选题解析未逐项写出字号与结果对照（缺 D），答案可能未经验算；要求每个选项都写出「该项结果」; 题目「关于「第二单元 夏商周时期：奴隶制王朝的更替和向…」 多选题解析未逐项写出字号与结果对照（缺 D），答案可能未经验算；要求每个选项都写出「该项结果」; 题目「关于「第二单元 夏商周时期：奴隶制王朝的更替和向…」 多选题解析未逐项写出字号与结果对照（缺 A），答案可能未经验算；要"
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": true,
+          "value": 0,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": true,
+          "value": 0,
+          "shared_sections": 0
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": false,
+          "value": 0.7778,
+          "hits": 56,
+          "questions": 72,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [],
+      "stats": {
+        "chapters": 4,
+        "sections": 4,
+        "points": 16,
+        "questions": 72,
+        "cliche_hits": 56,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 9,
+        "warnings": 0,
+        "passed": false
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\history\\g8\\history_g8_first_20261109_book.json",
+      "name": "history_g8_first_20261109_book.json",
+      "relative": "history/g8/history_g8_first_20261109_book.json",
+      "passed": true,
+      "failed_gates": [],
+      "hard": {
+        "validator_0_errors": {
+          "ok": true,
+          "value": 0,
+          "detail": ""
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": true,
+          "value": 0,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": true,
+          "value": 0,
+          "shared_sections": 0
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 171,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "题挂载点在文件内未声明（依赖库内同名点）19 处",
+        "校验器提醒 20 条（不阻断）"
+      ],
+      "stats": {
+        "chapters": 7,
+        "sections": 19,
+        "points": 30,
+        "questions": 171,
+        "cliche_hits": 0,
+        "unresolved_kp": 19
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 0,
+        "warnings": 20,
+        "passed": true
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\history\\g9\\history_g9_first_20261109_book.quarantined.json",
+      "name": "history_g9_first_20261109_book.quarantined.json",
+      "relative": "history/g9/history_g9_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "validator_0_errors",
+        "cliche_ratio_le_5pct"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": false,
+          "value": 15,
+          "detail": "题目「关于「第一单元 文明的产生和古代亚非文明·时空」…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」; 题目「关于「第一单元 文明的产生和古代亚非文明·史料」…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」; 题目「关于「第二单元 古代欧洲文明·时空」，哪些做法是…」 多选题解析未逐项写出字号与结果对照（缺 A），答案可能未经验算；要求每个选项都写出「该项结果」; 题目「关于「第二单元 古代欧洲文明·史料」，哪些做法是…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要"
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": true,
+          "value": 0,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": true,
+          "value": 0,
+          "shared_sections": 0
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": false,
+          "value": 0.7778,
+          "hits": 98,
+          "questions": 126,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [],
+      "stats": {
+        "chapters": 7,
+        "sections": 7,
+        "points": 28,
+        "questions": 126,
+        "cliche_hits": 98,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 15,
+        "warnings": 0,
+        "passed": false
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\math\\g1\\math_g1_first_20261109_book.json",
+      "name": "math_g1_first_20261109_book.json",
+      "relative": "math/g1/math_g1_first_20261109_book.json",
+      "passed": true,
+      "failed_gates": [],
+      "hard": {
+        "validator_0_errors": {
+          "ok": true,
+          "value": 0,
+          "detail": ""
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": true,
+          "value": 0,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": true,
+          "value": 0,
+          "shared_sections": 0
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 119,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "题挂载点在文件内未声明（依赖库内同名点）18 处",
+        "point 20 < 章数×4 24（结构目标，见 structural_exemptions）",
+        "校验器提醒 19 条（不阻断）"
+      ],
+      "stats": {
+        "chapters": 6,
+        "sections": 5,
+        "points": 20,
+        "questions": 119,
+        "cliche_hits": 0,
+        "unresolved_kp": 18
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 0,
+        "warnings": 19,
+        "passed": true
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\math\\g2\\math_g2_first_20261109_book.quarantined.json",
+      "name": "math_g2_first_20261109_book.quarantined.json",
+      "relative": "math/g2/math_g2_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "validator_0_errors",
+        "cross_chapter_duplicate_stems_0",
+        "section_shared_questions_0",
+        "cliche_ratio_le_5pct"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": false,
+          "value": 1,
+          "detail": "本批次新增知识点 20 个，超出每批次 3~6 个的规格"
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": false,
+          "value": 15,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": false,
+          "value": 72,
+          "shared_sections": 1
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": false,
+          "value": 0.4444,
+          "hits": 64,
+          "questions": 144,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "section 5 < 章数-1 7",
+        "point 20 < 章数×4 32（结构目标，见 structural_exemptions）",
+        "校验器提醒 8 条（不阻断）"
+      ],
+      "stats": {
+        "chapters": 8,
+        "sections": 5,
+        "points": 20,
+        "questions": 144,
+        "cliche_hits": 64,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 1,
+        "warnings": 8,
+        "passed": false
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\math\\g3\\math_g3_first_20261109_book.quarantined.json",
+      "name": "math_g3_first_20261109_book.quarantined.json",
+      "relative": "math/g3/math_g3_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "validator_0_errors",
+        "cross_chapter_duplicate_stems_0",
+        "section_shared_questions_0",
+        "cliche_ratio_le_5pct"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": false,
+          "value": 1,
+          "detail": "本批次新增知识点 24 个，超出每批次 3~6 个的规格"
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": false,
+          "value": 11,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": false,
+          "value": 54,
+          "shared_sections": 1
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": false,
+          "value": 0.4444,
+          "hits": 64,
+          "questions": 144,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "section 6 < 章数-1 7",
+        "point 24 < 章数×4 32（结构目标，见 structural_exemptions）",
+        "校验器提醒 12 条（不阻断）"
+      ],
+      "stats": {
+        "chapters": 8,
+        "sections": 6,
+        "points": 24,
+        "questions": 144,
+        "cliche_hits": 64,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 1,
+        "warnings": 12,
+        "passed": false
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\math\\g4\\math_g4_first_20261109_book.quarantined.json",
+      "name": "math_g4_first_20261109_book.quarantined.json",
+      "relative": "math/g4/math_g4_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "validator_0_errors",
+        "cross_chapter_duplicate_stems_0",
+        "section_shared_questions_0",
+        "cliche_ratio_le_5pct"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": false,
+          "value": 1,
+          "detail": "本批次新增知识点 32 个，超出每批次 3~6 个的规格"
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": false,
+          "value": 44,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": false,
+          "value": 126,
+          "shared_sections": 3
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": false,
+          "value": 0.4444,
+          "hits": 96,
+          "questions": 216,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "section 8 < 章数-1 11",
+        "point 32 < 章数×4 48（结构目标，见 structural_exemptions）",
+        "校验器提醒 21 条（不阻断）"
+      ],
+      "stats": {
+        "chapters": 12,
+        "sections": 8,
+        "points": 32,
+        "questions": 216,
+        "cliche_hits": 96,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 1,
+        "warnings": 21,
+        "passed": false
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\math\\g5\\math_g5_first_20261109_book.quarantined.json",
+      "name": "math_g5_first_20261109_book.quarantined.json",
+      "relative": "math/g5/math_g5_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "validator_0_errors",
+        "cross_chapter_duplicate_stems_0",
+        "section_shared_questions_0",
+        "cliche_ratio_le_5pct"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": false,
+          "value": 1,
+          "detail": "本批次新增知识点 32 个，超出每批次 3~6 个的规格"
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": false,
+          "value": 44,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": false,
+          "value": 126,
+          "shared_sections": 3
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": false,
+          "value": 0.4444,
+          "hits": 96,
+          "questions": 216,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "section 8 < 章数-1 11",
+        "point 32 < 章数×4 48（结构目标，见 structural_exemptions）",
+        "校验器提醒 29 条（不阻断）"
+      ],
+      "stats": {
+        "chapters": 12,
+        "sections": 8,
+        "points": 32,
+        "questions": 216,
+        "cliche_hits": 96,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 1,
+        "warnings": 29,
+        "passed": false
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\math\\g6\\math_g6_first_20261109_book.quarantined.json",
+      "name": "math_g6_first_20261109_book.quarantined.json",
+      "relative": "math/g6/math_g6_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "validator_0_errors",
+        "cross_chapter_duplicate_stems_0",
+        "section_shared_questions_0",
+        "cliche_ratio_le_5pct"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": false,
+          "value": 1,
+          "detail": "本批次新增知识点 32 个，超出每批次 3~6 个的规格"
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": false,
+          "value": 49,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": false,
+          "value": 144,
+          "shared_sections": 3
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": false,
+          "value": 0.4444,
+          "hits": 104,
+          "questions": 234,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "section 8 < 章数-1 12",
+        "point 32 < 章数×4 52（结构目标，见 structural_exemptions）",
+        "校验器提醒 25 条（不阻断）"
+      ],
+      "stats": {
+        "chapters": 13,
+        "sections": 8,
+        "points": 32,
+        "questions": 234,
+        "cliche_hits": 104,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 1,
+        "warnings": 25,
+        "passed": false
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\math\\g7\\math_g7_first_20261109_book.quarantined.json",
+      "name": "math_g7_first_20261109_book.quarantined.json",
+      "relative": "math/g7/math_g7_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "validator_0_errors",
+        "cross_chapter_duplicate_stems_0",
+        "section_shared_questions_0",
+        "cliche_ratio_le_5pct"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": false,
+          "value": 1,
+          "detail": "本批次新增知识点 12 个，超出每批次 3~6 个的规格"
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": false,
+          "value": 12,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": false,
+          "value": 90,
+          "shared_sections": 2
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": false,
+          "value": 0.4444,
+          "hits": 48,
+          "questions": 108,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "section 3 < 章数-1 5",
+        "point 12 < 章数×4 24（结构目标，见 structural_exemptions）",
+        "校验器提醒 12 条（不阻断）"
+      ],
+      "stats": {
+        "chapters": 6,
+        "sections": 3,
+        "points": 12,
+        "questions": 108,
+        "cliche_hits": 48,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 1,
+        "warnings": 12,
+        "passed": false
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\math\\g8\\math_g8_first_20261109_book.json",
+      "name": "math_g8_first_20261109_book.json",
+      "relative": "math/g8/math_g8_first_20261109_book.json",
+      "passed": true,
+      "failed_gates": [],
+      "hard": {
+        "validator_0_errors": {
+          "ok": true,
+          "value": 0,
+          "detail": ""
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": true,
+          "value": 0,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": true,
+          "value": 0,
+          "shared_sections": 0
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 170,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "校验器提醒 1 条（不阻断）"
+      ],
+      "stats": {
+        "chapters": 7,
+        "sections": 24,
+        "points": 32,
+        "questions": 170,
+        "cliche_hits": 0,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 0,
+        "warnings": 1,
+        "passed": true
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\math\\g9\\math_g9_first_20261109_book.quarantined.json",
+      "name": "math_g9_first_20261109_book.quarantined.json",
+      "relative": "math/g9/math_g9_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "validator_0_errors",
+        "cross_chapter_duplicate_stems_0",
+        "section_shared_questions_0",
+        "cliche_ratio_le_5pct"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": false,
+          "value": 1,
+          "detail": "本批次新增知识点 8 个，超出每批次 3~6 个的规格"
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": false,
+          "value": 20,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": false,
+          "value": 108,
+          "shared_sections": 1
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": false,
+          "value": 0.4444,
+          "hits": 56,
+          "questions": 126,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "section 2 < 章数-1 6",
+        "point 8 < 章数×4 28（结构目标，见 structural_exemptions）",
+        "校验器提醒 4 条（不阻断）"
+      ],
+      "stats": {
+        "chapters": 7,
+        "sections": 2,
+        "points": 8,
+        "questions": 126,
+        "cliche_hits": 56,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 1,
+        "warnings": 4,
+        "passed": false
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\physics\\g8\\physics_g8_first_20261109_book.json",
+      "name": "physics_g8_first_20261109_book.json",
+      "relative": "physics/g8/physics_g8_first_20261109_book.json",
+      "passed": true,
+      "failed_gates": [],
+      "hard": {
+        "validator_0_errors": {
+          "ok": true,
+          "value": 0,
+          "detail": ""
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": true,
+          "value": 0,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": true,
+          "value": 0,
+          "shared_sections": 0
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 143,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "题挂载点在文件内未声明（依赖库内同名点）20 处",
+        "校验器提醒 21 条（不阻断）"
+      ],
+      "stats": {
+        "chapters": 6,
+        "sections": 24,
+        "points": 25,
+        "questions": 143,
+        "cliche_hits": 0,
+        "unresolved_kp": 20
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 0,
+        "warnings": 21,
+        "passed": true
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\physics\\g9\\physics_g9_first_20261109_book.quarantined.json",
+      "name": "physics_g9_first_20261109_book.quarantined.json",
+      "relative": "physics/g9/physics_g9_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "validator_0_errors",
+        "cliche_ratio_le_5pct"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": false,
+          "value": 21,
+          "detail": "题目「关于「第十三章 内能·概念」，哪些做法是值得提倡…」 多选题解析未逐项写出字号与结果对照（缺 A），答案可能未经验算；要求每个选项都写出「该项结果」; 题目「关于「第十三章 内能·规律」，哪些做法是值得提倡…」 多选题解析未逐项写出字号与结果对照（缺 C），答案可能未经验算；要求每个选项都写出「该项结果」; 题目「关于「第十四章 内能的利用·概念」，哪些做法是值…」 多选题解析未逐项写出字号与结果对照（缺 C），答案可能未经验算；要求每个选项都写出「该项结果」; 题目「关于「第十四章 内能的利用·规律」，哪些做法是值…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要"
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": true,
+          "value": 0,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": true,
+          "value": 0,
+          "shared_sections": 0
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": false,
+          "value": 0.7778,
+          "hits": 140,
+          "questions": 180,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [],
+      "stats": {
+        "chapters": 10,
+        "sections": 10,
+        "points": 40,
+        "questions": 180,
+        "cliche_hits": 140,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 21,
+        "warnings": 0,
+        "passed": false
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\politics\\g1\\politics_g1_first_20261109_book.json",
+      "name": "politics_g1_first_20261109_book.json",
+      "relative": "politics/g1/politics_g1_first_20261109_book.json",
+      "passed": true,
+      "failed_gates": [],
+      "hard": {
+        "validator_0_errors": {
+          "ok": true,
+          "value": 0,
+          "detail": ""
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": true,
+          "value": 0,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": true,
+          "value": 0,
+          "shared_sections": 0
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 100,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "校验器提醒 1 条（不阻断）"
+      ],
+      "stats": {
+        "chapters": 4,
+        "sections": 15,
+        "points": 24,
+        "questions": 100,
+        "cliche_hits": 0,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 0,
+        "warnings": 1,
+        "passed": true
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\politics\\g2\\politics_g2_first_20261109_book.quarantined.json",
+      "name": "politics_g2_first_20261109_book.quarantined.json",
+      "relative": "politics/g2/politics_g2_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "validator_0_errors",
+        "cliche_ratio_le_5pct"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": false,
+          "value": 1,
+          "detail": "本批次新增知识点 16 个，超出每批次 3~6 个的规格"
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": true,
+          "value": 0,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": true,
+          "value": 0,
+          "shared_sections": 0
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": false,
+          "value": 0.2778,
+          "hits": 20,
+          "questions": 72,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [],
+      "stats": {
+        "chapters": 4,
+        "sections": 4,
+        "points": 16,
+        "questions": 72,
+        "cliche_hits": 20,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 1,
+        "warnings": 0,
+        "passed": false
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\politics\\g3\\politics_g3_first_20261109_book.quarantined.json",
+      "name": "politics_g3_first_20261109_book.quarantined.json",
+      "relative": "politics/g3/politics_g3_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "validator_0_errors",
+        "cliche_ratio_le_5pct"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": false,
+          "value": 1,
+          "detail": "本批次新增知识点 16 个，超出每批次 3~6 个的规格"
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": true,
+          "value": 0,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": true,
+          "value": 0,
+          "shared_sections": 0
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": false,
+          "value": 0.2778,
+          "hits": 20,
+          "questions": 72,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [],
+      "stats": {
+        "chapters": 4,
+        "sections": 4,
+        "points": 16,
+        "questions": 72,
+        "cliche_hits": 20,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 1,
+        "warnings": 0,
+        "passed": false
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\politics\\g4\\politics_g4_first_20261109_book.quarantined.json",
+      "name": "politics_g4_first_20261109_book.quarantined.json",
+      "relative": "politics/g4/politics_g4_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "validator_0_errors",
+        "cliche_ratio_le_5pct"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": false,
+          "value": 1,
+          "detail": "本批次新增知识点 16 个，超出每批次 3~6 个的规格"
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": true,
+          "value": 0,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": true,
+          "value": 0,
+          "shared_sections": 0
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": false,
+          "value": 0.2778,
+          "hits": 20,
+          "questions": 72,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [],
+      "stats": {
+        "chapters": 4,
+        "sections": 4,
+        "points": 16,
+        "questions": 72,
+        "cliche_hits": 20,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 1,
+        "warnings": 0,
+        "passed": false
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\politics\\g5\\politics_g5_first_20261109_book.quarantined.json",
+      "name": "politics_g5_first_20261109_book.quarantined.json",
+      "relative": "politics/g5/politics_g5_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "validator_0_errors",
+        "cliche_ratio_le_5pct"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": false,
+          "value": 1,
+          "detail": "本批次新增知识点 16 个，超出每批次 3~6 个的规格"
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": true,
+          "value": 0,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": true,
+          "value": 0,
+          "shared_sections": 0
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": false,
+          "value": 0.2778,
+          "hits": 20,
+          "questions": 72,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [],
+      "stats": {
+        "chapters": 4,
+        "sections": 4,
+        "points": 16,
+        "questions": 72,
+        "cliche_hits": 20,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 1,
+        "warnings": 0,
+        "passed": false
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\politics\\g6\\politics_g6_first_20261109_book.quarantined.json",
+      "name": "politics_g6_first_20261109_book.quarantined.json",
+      "relative": "politics/g6/politics_g6_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "validator_0_errors",
+        "cliche_ratio_le_5pct"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": false,
+          "value": 1,
+          "detail": "本批次新增知识点 16 个，超出每批次 3~6 个的规格"
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": true,
+          "value": 0,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": true,
+          "value": 0,
+          "shared_sections": 0
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": false,
+          "value": 0.2778,
+          "hits": 20,
+          "questions": 72,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [],
+      "stats": {
+        "chapters": 4,
+        "sections": 4,
+        "points": 16,
+        "questions": 72,
+        "cliche_hits": 20,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 1,
+        "warnings": 0,
+        "passed": false
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\politics\\g7\\politics_g7_first_20261109_book.quarantined.json",
+      "name": "politics_g7_first_20261109_book.quarantined.json",
+      "relative": "politics/g7/politics_g7_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "validator_0_errors",
+        "cliche_ratio_le_5pct"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": false,
+          "value": 1,
+          "detail": "本批次新增知识点 16 个，超出每批次 3~6 个的规格"
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": true,
+          "value": 0,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": true,
+          "value": 0,
+          "shared_sections": 0
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": false,
+          "value": 0.2778,
+          "hits": 20,
+          "questions": 72,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [],
+      "stats": {
+        "chapters": 4,
+        "sections": 4,
+        "points": 16,
+        "questions": 72,
+        "cliche_hits": 20,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 1,
+        "warnings": 0,
+        "passed": false
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\politics\\g8\\politics_g8_first_20261109_book.json",
+      "name": "politics_g8_first_20261109_book.json",
+      "relative": "politics/g8/politics_g8_first_20261109_book.json",
+      "passed": true,
+      "failed_gates": [],
+      "hard": {
+        "validator_0_errors": {
+          "ok": true,
+          "value": 0,
+          "detail": ""
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": true,
+          "value": 0,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": true,
+          "value": 0,
+          "shared_sections": 0
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 98,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "校验器提醒 1 条（不阻断）"
+      ],
+      "stats": {
+        "chapters": 4,
+        "sections": 17,
+        "points": 22,
+        "questions": 98,
+        "cliche_hits": 0,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 0,
+        "warnings": 1,
+        "passed": true
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\politics\\g9\\politics_g9_first_20261109_book.quarantined.json",
+      "name": "politics_g9_first_20261109_book.quarantined.json",
+      "relative": "politics/g9/politics_g9_first_20261109_book.quarantined.json",
+      "passed": false,
+      "failed_gates": [
+        "validator_0_errors",
+        "cliche_ratio_le_5pct"
+      ],
+      "hard": {
+        "validator_0_errors": {
+          "ok": false,
+          "value": 1,
+          "detail": "本批次新增知识点 16 个，超出每批次 3~6 个的规格"
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": true,
+          "value": 0,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": true,
+          "value": 0,
+          "shared_sections": 0
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": false,
+          "value": 0.2778,
+          "hits": 20,
+          "questions": 72,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [],
+      "stats": {
+        "chapters": 4,
+        "sections": 4,
+        "points": 16,
+        "questions": 72,
+        "cliche_hits": 20,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 1,
+        "warnings": 0,
+        "passed": false
+      }
+    }
+  ]
+}

@@ -882,6 +882,17 @@ def main() -> int:
             "避免各科版本不同导致整批误报"
         ),
     )
+    parser.add_argument(
+        "--json-out",
+        dest="json_out",
+        help="机读汇总输出路径：逐文件通过/失败、错误与提醒条数、错误原文（2026-11-10 评审 P0-2）",
+    )
+    parser.add_argument(
+        "--include-quarantined",
+        dest="include_quarantined",
+        action="store_true",
+        help="目录模式下连 *.quarantined.json 一起校验（默认跳过隔离件；显式传路径时不受影响）",
+    )
     args = parser.parse_args()
 
     OutlineEntry = tuple[dict[int, set[str]], dict[int, set[tuple[str, str]]]]
@@ -965,26 +976,68 @@ def main() -> int:
             return 1
 
     files: list[Path] = []
+    skipped_quarantined: list[str] = []
     for pattern in args.paths:
         target = Path(pattern)
         if target.is_dir():
-            files.extend(
-                Path(p) for p in sorted(glob.glob(str(target / "**" / "*.json"), recursive=True))
-                if not Path(p).name.startswith("_")
-            )
+            for p in sorted(glob.glob(str(target / "**" / "*.json"), recursive=True)):
+                name = Path(p).name
+                if name.startswith("_"):
+                    continue
+                if name.endswith(".quarantined.json") and not args.include_quarantined:
+                    skipped_quarantined.append(name)
+                    continue
+                files.append(Path(p))
         elif target.is_file():
-            files.append(target)
+            files.append(target)  # 显式传入的路径照常校验，便于单独复核隔离件
         else:
             print(f"路径不存在：{pattern}")
             return 1
+    if skipped_quarantined:
+        print(f"[隔离] 目录扫描跳过 {len(skipped_quarantined)} 份 *.quarantined.json"
+              f"（需要复核请显式传入路径或加 --include-quarantined）")
     if not files:
         print("没有找到可校验的 JSON")
         return 1
 
+    results: list[dict] = []
     failed = 0
     for file in files:
-        if validate_file(file, expects, kp_baseline, manifest, outlines, version_map).errors:
+        checker = validate_file(file, expects, kp_baseline, manifest, outlines, version_map)
+        if checker.errors:
             failed += 1
+        results.append({
+            "path": str(file),
+            "name": file.name,
+            "passed": not checker.errors,
+            "errors": len(checker.errors),
+            "warnings": len(checker.warns),
+            "error_messages": list(checker.errors),
+            "import_state": checker.import_state,
+            "book": checker.book,
+        })
+
+    summary = {
+        "schema_version": 1,
+        "source": "docs/content-templates/_validate_daily.py",
+        "expects": expects,
+        "totals": {
+            "files": len(files),
+            "passed": len(files) - failed,
+            "failed": failed,
+            "errors": sum(r["errors"] for r in results),
+            "warnings": sum(r["warnings"] for r in results),
+            "quarantined_skipped": len(skipped_quarantined),
+        },
+        "quarantined_skipped_names": sorted(skipped_quarantined),
+        "files": results,
+    }
+    if args.json_out:
+        out = Path(args.json_out)
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        print(f"[机读汇总] {out}")
+        print(f"  逐文件失败清单：{', '.join(r['name'] for r in results if not r['passed']) or '（无）'}")
     print(f"\n合计 {len(files)} 个文件，通过 {len(files) - failed} 个，失败 {failed} 个")
     return 1 if failed else 0
 

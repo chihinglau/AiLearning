@@ -1,0 +1,340 @@
+{
+  "subject": "math",
+  "grade": 5,
+  "version": "北师大版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第七单元 倍数与因数",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "倍数与因数·概念理解",
+      "parent": "第七单元 倍数与因数",
+      "order_index": 1,
+      "explanation": "倍数与因数·概念理解：在「第七单元 倍数与因数」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "倍数与因数·基本运算",
+      "parent": "第七单元 倍数与因数",
+      "order_index": 2,
+      "explanation": "倍数与因数·基本运算：在「第七单元 倍数与因数」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "倍数与因数·实际应用",
+      "parent": "第七单元 倍数与因数",
+      "order_index": 3,
+      "explanation": "倍数与因数·实际应用：在「第七单元 倍数与因数」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "倍数与因数·易错辨析",
+      "parent": "第七单元 倍数与因数",
+      "order_index": 4,
+      "explanation": "倍数与因数·易错辨析：在「第七单元 倍数与因数」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第七单元 倍数与因数",
+      "order_index": 9,
+      "summary": "第七单元 倍数与因数：围绕「倍数与因数」的概念、练习与运用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "【倍数与因数·概念理解】12 是不是 6 的倍数 = （  ）",
+          "options": [
+            "8",
+            "6",
+            "3",
+            "9"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "12 是不是 6 的倍数 = 6，所以选 B；其余是常见错误。",
+          "difficulty": 1,
+          "knowledge_point": "倍数与因数·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【倍数与因数·概念理解】算式 24 是不是 3 的倍数 的结果是（  ）",
+          "answer": {
+            "value": "3"
+          },
+          "analysis": "验算：24 是不是 3 的倍数 = 3，所以填 3。",
+          "difficulty": 1,
+          "knowledge_point": "倍数与因数·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【倍数与因数·概念理解】30 是不是 3 的倍数 = 3。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "30 是不是 3 的倍数 = 3，题面写的是 3，相等，说法正确。",
+          "difficulty": 1,
+          "knowledge_point": "倍数与因数·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「倍数与因数·概念理解」，举一个生活中用到「倍数与因数」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 1,
+          "knowledge_point": "倍数与因数·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【倍数与因数·基本运算】30 是不是 4 的倍数 = （  ）",
+          "options": [
+            "6",
+            "4",
+            "7",
+            "5"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "30 是不是 4 的倍数 = 4，所以选 B；其余是常见错误。",
+          "difficulty": 2,
+          "knowledge_point": "倍数与因数·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【倍数与因数·基本运算】算式 12 是不是 4 的倍数 的结果是（  ）",
+          "answer": {
+            "value": "4"
+          },
+          "analysis": "验算：12 是不是 4 的倍数 = 4，所以填 4。",
+          "difficulty": 2,
+          "knowledge_point": "倍数与因数·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【倍数与因数·基本运算】18 是不是 6 的倍数 = 5。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "18 是不是 6 的倍数 = 6，题面写的是 5，不相等，说法错误。",
+          "difficulty": 2,
+          "knowledge_point": "倍数与因数·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「倍数与因数·基本运算」，举一个生活中用到「倍数与因数」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 2,
+          "knowledge_point": "倍数与因数·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【倍数与因数·实际应用】24 是不是 4 的倍数 = （  ）",
+          "options": [
+            "8",
+            "4",
+            "5",
+            "1"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "24 是不是 4 的倍数 = 4，所以选 B；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "倍数与因数·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【倍数与因数·实际应用】算式 12 是不是 2 的倍数 的结果是（  ）",
+          "answer": {
+            "value": "2"
+          },
+          "analysis": "验算：12 是不是 2 的倍数 = 2，所以填 2。",
+          "difficulty": 3,
+          "knowledge_point": "倍数与因数·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【倍数与因数·实际应用】24 是不是 6 的倍数 = 6。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "24 是不是 6 的倍数 = 6，题面写的是 6，相等，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "倍数与因数·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「倍数与因数·实际应用」，举一个生活中用到「倍数与因数」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 3,
+          "knowledge_point": "倍数与因数·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【倍数与因数·易错辨析】12 是不是 2 的倍数 = （  ）",
+          "options": [
+            "1",
+            "2",
+            "4",
+            "6"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "12 是不是 2 的倍数 = 2，所以选 B；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "倍数与因数·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【倍数与因数·易错辨析】算式 24 是不是 6 的倍数 的结果是（  ）",
+          "answer": {
+            "value": "6"
+          },
+          "analysis": "验算：24 是不是 6 的倍数 = 6，所以填 6。",
+          "difficulty": 3,
+          "knowledge_point": "倍数与因数·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【倍数与因数·易错辨析】18 是不是 6 的倍数 = 5。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "18 是不是 6 的倍数 = 6，题面写的是 5，不相等，说法错误。",
+          "difficulty": 4,
+          "knowledge_point": "倍数与因数·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「倍数与因数·易错辨析」，举一个生活中用到「倍数与因数」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "倍数与因数·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【倍数与因数·概念理解】下面哪些算式的结果等于 4？",
+          "options": [
+            "30 是不是 4 的倍数",
+            "4 + 1",
+            "4 - 2",
+            "4 × 2"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 30 是不是 4 的倍数 = 4 ✓；B 为 5 ✗；C 为 2 ✗；D 为 8 ✗。所以选 A。",
+          "difficulty": 4,
+          "knowledge_point": "倍数与因数·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【倍数与因数·基本运算】下面哪些算式的结果等于 2？",
+          "options": [
+            "30 是不是 2 的倍数",
+            "2 + 1",
+            "2 - 2",
+            "2 × 2"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 30 是不是 2 的倍数 = 2 ✓；B 为 3 ✗；C 为 0 ✗；D 为 4 ✗。所以选 A。",
+          "difficulty": 5,
+          "knowledge_point": "倍数与因数·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

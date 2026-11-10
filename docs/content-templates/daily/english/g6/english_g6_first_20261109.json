@@ -1,0 +1,344 @@
+{
+  "subject": "english",
+  "grade": 6,
+  "version": "牛津深圳版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "Unit 1 Why do people move to new places?",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "Vocabulary 词汇认读",
+      "parent": "Unit 1 Why do people move to new places?",
+      "order_index": 1,
+      "explanation": "Vocabulary 词汇认读：在「Unit 1 Why do people move to new places?」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Sentence patterns 句型结构",
+      "parent": "Unit 1 Why do people move to new places?",
+      "order_index": 2,
+      "explanation": "Sentence patterns 句型结构：在「Unit 1 Why do people move to new places?」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Daily talk 日常问答",
+      "parent": "Unit 1 Why do people move to new places?",
+      "order_index": 3,
+      "explanation": "Daily talk 日常问答：在「Unit 1 Why do people move to new places?」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Language use 语用表达",
+      "parent": "Unit 1 Why do people move to new places?",
+      "order_index": 4,
+      "explanation": "Language use 语用表达：在「Unit 1 Why do people move to new places?」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "Unit 1 Why do people move to new places?",
+      "order_index": 1,
+      "summary": "Unit 1 Why do people move to new places?：围绕「Vocabulary 词汇认读」的概念、练习与运用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「红色」的英文是（  ）",
+          "options": [
+            "red",
+            "dog",
+            "red",
+            "book"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "red 表示「红色」，选 A；其余是别的词。",
+          "difficulty": 1,
+          "knowledge_point": "Vocabulary 词汇认读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "I can see a （  ）. 填入「红色」的词。",
+          "answer": {
+            "value": "red"
+          },
+          "analysis": "red 表示「红色」，句子意为「我能看见一只红色」，填 red。",
+          "difficulty": 1,
+          "knowledge_point": "Vocabulary 词汇认读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "In this unit we learn \"red\" means \"红色\".",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "red 本义就是「红色」，与单元主题一致，说法正确。",
+          "difficulty": 1,
+          "knowledge_point": "Vocabulary 词汇认读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write one sentence using \"red\" about \"Why do people move t\".",
+          "answer": {
+            "value": "Example: I like the red. It is about Why do people move t."
+          },
+          "analysis": "评分要点：用对单词得 2 分，句子通顺贴合主题得 2 分。",
+          "difficulty": 1,
+          "knowledge_point": "Vocabulary 词汇认读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「快乐」的英文是（  ）",
+          "options": [
+            "happy",
+            "red",
+            "book",
+            "run"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "happy 表示「快乐」，选 A；其余是别的词。",
+          "difficulty": 2,
+          "knowledge_point": "Sentence patterns 句型结构",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "I can see a （  ）. 填入「快乐」的词。",
+          "answer": {
+            "value": "happy"
+          },
+          "analysis": "happy 表示「快乐」，句子意为「我能看见一只快乐」，填 happy。",
+          "difficulty": 2,
+          "knowledge_point": "Sentence patterns 句型结构",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "In this unit we learn \"happy\" means \"快乐\".",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "happy 本义就是「快乐」，与单元主题一致，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "Sentence patterns 句型结构",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write one sentence using \"happy\" about \"Why do people move t\".",
+          "answer": {
+            "value": "Example: I like the happy. It is about Why do people move t."
+          },
+          "analysis": "评分要点：用对单词得 2 分，句子通顺贴合主题得 2 分。",
+          "difficulty": 2,
+          "knowledge_point": "Sentence patterns 句型结构",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「树」的英文是（  ）",
+          "options": [
+            "tree",
+            "book",
+            "run",
+            "happy"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "tree 表示「树」，选 A；其余是别的词。",
+          "difficulty": 3,
+          "knowledge_point": "Daily talk 日常问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "I can see a （  ）. 填入「树」的词。",
+          "answer": {
+            "value": "tree"
+          },
+          "analysis": "tree 表示「树」，句子意为「我能看见一只树」，填 tree。",
+          "difficulty": 3,
+          "knowledge_point": "Daily talk 日常问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "In this unit we learn \"tree\" means \"树\".",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "tree 本义就是「树」，与单元主题一致，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "Daily talk 日常问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write one sentence using \"tree\" about \"Why do people move t\".",
+          "answer": {
+            "value": "Example: I like the tree. It is about Why do people move t."
+          },
+          "analysis": "评分要点：用对单词得 2 分，句子通顺贴合主题得 2 分。",
+          "difficulty": 3,
+          "knowledge_point": "Daily talk 日常问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「狗」的英文是（  ）",
+          "options": [
+            "dog",
+            "run",
+            "happy",
+            "school"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "dog 表示「狗」，选 A；其余是别的词。",
+          "difficulty": 3,
+          "knowledge_point": "Language use 语用表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "I can see a （  ）. 填入「狗」的词。",
+          "answer": {
+            "value": "dog"
+          },
+          "analysis": "dog 表示「狗」，句子意为「我能看见一只狗」，填 dog。",
+          "difficulty": 3,
+          "knowledge_point": "Language use 语用表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "In this unit we learn \"dog\" means \"狗\".",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "dog 本义就是「狗」，与单元主题一致，说法正确。",
+          "difficulty": 4,
+          "knowledge_point": "Language use 语用表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write one sentence using \"dog\" about \"Why do people move t\".",
+          "answer": {
+            "value": "Example: I like the dog. It is about Why do people move t."
+          },
+          "analysis": "评分要点：用对单词得 2 分，句子通顺贴合主题得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "Language use 语用表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which are words we learned in this unit?",
+          "options": [
+            "red",
+            "dog",
+            "red",
+            "apple"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A red ✓；B dog ✓；C red ✓；D apple 是别的单元词 ✗。所以选 A、B、C。",
+          "difficulty": 4,
+          "knowledge_point": "Vocabulary 词汇认读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which are words we learned in this unit?",
+          "options": [
+            "happy",
+            "red",
+            "book",
+            "apple"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A happy ✓；B red ✓；C book ✓；D apple 是别的单元词 ✗。所以选 A、B、C。",
+          "difficulty": 5,
+          "knowledge_point": "Sentence patterns 句型结构",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

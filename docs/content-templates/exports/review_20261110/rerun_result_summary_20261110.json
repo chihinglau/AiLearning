@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "stamp": "20261110",
+  "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+  "request": "1.执行重跑。2.入库动作等重跑结果评审完成再决策",
+  "status": "review_approved_pending_import（独立评审结论可入库；格式统一已复验，等待单册试点授权）",
+  "scope": {
+    "quarantined_books": 34,
+    "rerun_books": 31,
+    "excluded_books": ["history:9", "politics:5", "politics:9"],
+    "excluded_reason": "3 册题材按内容合规边界未纳入本轮 AI 生成，转人工教研；排除理由已写入 tasks.json 的 policy.book_rerun_queue.excluded_books_note。"
+  },
+  "totals": {
+    "chapters": 222,
+    "points": 888,
+    "questions": 3997
+  },
+  "verification": {
+    "pack_self_check": "31/31 通过，失败 0",
+    "validate_daily": {
+      "files": 31,
+      "passed": 31,
+      "failed": 0,
+      "errors": 0,
+      "warnings": 94,
+      "warning_note": "格式统一前 96 条，统一后 94 条；均为非阻断提醒：缺少 multiple 题型、难度分布偏离目标、主观题参考答案偏短、math/g6 题数超过 200 等。"
+    },
+    "book_acceptance_gate": {
+      "files": 31,
+      "passed": 31,
+      "failed": 0,
+      "exit": 0
+    },
+    "post_format_fix": "ASSEMBLE_EXIT=0 / VALIDATE_EXIT=0 / GATE_EXIT=0；31 册全部重组装并复验，0 错误、31 PASS。"
+  },
+  "fixes_this_round": [
+    "math_g6 A/B 分片重新生成并合并（13 章 / 52 点 / 234 题），分片来源见 rerun_batch12_mapping.json 与 rerun_math_g6_A.txt / rerun_math_g6_B.txt。",
+    "chinese_g6 填空题答案「略读或跳过」含「略」触发 _validate_daily.py 硬错误，改为「跳过不读」；全量重组装后复验通过。",
+    "按独立评审第 1 条统一格式：rerun_packs/math_g6.py 的 30 条 参考： 答案全部改为 示例：，其中 18 条中文数字答案改为阿拉伯数字（如 二十八局→28 局、一百六十九个→169 个、五十份→50 份、二分之三→3/2）；全库 300 条带前缀答案现在统一为 示例：，参考： 残留 0 处；仅改内容包源文件，未改数据库。",
+    "保留说明：chinese_g9 有 1 处非前缀的「观点示例：」属正常行文，不改；math_g6 另有约 23 条中文数字文字（多为填空题的分数与单位表述，如 五分之一、十局、三十一点四厘米），不在本次指定范围内，未改。"
+  ],
+  "artifacts": {
+    "books_dir": "docs/content-templates/daily_rerun",
+    "manifest": "docs/content-templates/exports/review_20261110/rerun_manifest_20261110.json",
+    "knowledge_map": "docs/content-templates/exports/review_20261110/rerun_knowledge_map_20261110.json",
+    "progress": "docs/content-templates/exports/review_20261110/rerun_progress_20261110.json",
+    "validate": "docs/content-templates/exports/review_20261110/rerun_validate_final_20261110.json",
+    "gate": "docs/content-templates/exports/review_20261110/rerun_gate_final_20261110.json",
+    "shard_mapping": "docs/content-templates/exports/review_20261110/rerun_batch12_mapping.json"
+  },
+  "review_decisions": {
+    "old_573_questions": "方案 A：保留 11-07 旧题，新旧双体系并存，登记 backlog 后续归并；不做归档、不动库。",
+    "missing_multiple_qtype": "接受现状并登记 backlog：30 册缺 multiple、语文 g6 缺主观题均为非阻断提醒，本轮不补题，避免为凑题型重跑已过闸门的内容。",
+    "short_answer_warnings": "评审已逐题验算确认答案正确，仅缺评分要点，保持原样。"
+  },
+  "boundary": {
+    "daily_consolidated_modified": false,
+    "quarantine_pairs_modified": false,
+    "quarantined_files_moved": false,
+    "tasks_json_note": "仅更新 policy.book_rerun_queue 的 status 并新增 excluded_books / excluded_books_note；quarantine_books.pairs 与 book_acceptance_gate 未改。",
+    "db_written": false,
+    "import_executed": false,
+    "commit_executed": false
+  },
+  "pending_decisions": [
+    "复制 31 册到 daily_consolidated/{subject}/gN/ 后，用 -Stamp 20261110 精确导入；建议先 math g2 单册试点 + 4 条验收 SQL，再按学科分批。该复制与导入尚未执行，等待明确授权。",
+    "评审 31 册结果后再决定是否逐册从 policy.quarantine_books.pairs 移除并单册 import-books。",
+    "history:9 / politics:5 / politics:9 三册改由人工教研出题；如需 AI，仅限教材原文识记型直接对应且 100% 人工复核。"
+  ]
+}

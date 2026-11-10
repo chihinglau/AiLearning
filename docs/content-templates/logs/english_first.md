@@ -21,5 +21,12 @@
 | 日期 | 批次 | 年级 | 文件 | 状态 | 自检 | 耗时（分） | 备注 |
 |---|---|---|---|---|---|---|---|
 | 2026-11-08 | 首跑 | g1 | english_g1_first_20261108.json | 完成 | 通过（0 错误 / 0 提醒） | 5 | 首跑·进攻班；下一节：Unit 1 What is your family like? / Story |
+| 2026-11-09 | 补漏 | g2 | english_g2_first_20261109.json | 完成 | 通过（0 错误 / 0 提醒） | 5 | 补漏班·前移至21:30；下一节：Unit 1 What can you do with your five senses? / Story |
+| 2026-11-09 | 补漏 | g3 | english_g3_first_20261109.json | 完成 | 通过（0 错误 / 0 提醒） | 5 | 补漏班·前移至21:30；下一节：Unit 1 How do we feel? / Explore |
+| 2026-11-09 | 补漏 | g4 | english_g4_first_20261109.json | 完成 | 通过（0 错误 / 0 提醒） | 5 | 补漏班·前移至21:30；下一节：Unit 1 Where do people live? / Explore |
+| 2026-11-09 | 补漏 | g5 | english_g5_first_20261109.json | 完成 | 通过（0 错误 / 0 提醒） | 5 | 补漏班·前移至21:30；下一节：Unit 1 What do we do at the weekend? / Explore |
+| 2026-11-09 | 补漏 | g6 | english_g6_first_20261109.json | 完成 | 通过（0 错误 / 0 提醒） | 5 | 补漏班·前移至21:30；下一节：Unit 1 Why do people move to new places? / 课时 2 |
 
 - 本轮收尾 2026-11-08 09:11：完成 1 个年级 / 总耗时约 5 分钟 / 未完成年级顺延至下一班（以运行日志为准）
+
+- 本轮收尾 2026-11-09 22:41：完成 5 个年级 / 总耗时约 25 分钟 / 未完成年级顺延至下一班（以运行日志为准）

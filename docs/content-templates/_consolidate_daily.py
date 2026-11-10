@@ -15,6 +15,12 @@
     python _consolidate_daily.py --subjects english --grades 8 --semester second --stamp 20261201 --apply
     不传 --subjects/--grades 时仍按历史默认 12 册（g1+g8 上册），行为与改造前一致。
 
+隔离名单（2026-11-10 评审复评 §八-1，防止重新归集让坏册复发）：
+- 名单在 tasks.json 的 policy.quarantine_books.pairs（"subject:grade"），本脚本每次运行都读；
+- 命中的册在 --apply 时默认**跳过不写**，不会再生成可被 *_book.json 扫到的整册文件；
+- 需要复核隔离件时加 --force-quarantined，输出名改为 *_book.quarantined.json；
+- 重跑合格并经人工确认后，从名单里删掉该 (subject,grade) 才恢复正式输出。
+
 裁定规则（写进 04 手册，可复核）：
 1. 同一章节多份并存时，优先「不带 _legacy」；其次「批次日期最新」；再次题量最多；最后 mtime 最新；
 2. 分片文件一律不改名、不删除，只在方案里标注它归到哪一章；
@@ -33,12 +39,34 @@ from pathlib import Path
 
 CT = Path(__file__).resolve().parent
 SKELETON_DIR = CT / "baseline" / "_skeleton_first"
+TASKS_JSON = CT / "exports" / "automation_20261108_codebuddy" / "tasks.json"
 PAIRS = [
     ("math", 1), ("chinese", 1), ("english", 1), ("politics", 1),
     ("math", 8), ("chinese", 8), ("english", 8), ("politics", 8),
     ("physics", 8), ("biology", 8), ("geography", 8), ("history", 8),
 ]
 _FRAG_RE = re.compile(r"_r(\d+)\.json$", re.IGNORECASE)
+
+
+def quarantine_pairs() -> set[tuple[str, int]]:
+    """2026-11-10 评审复评 §八-1：隔离名单机制化。
+
+    读 tasks.json 的 policy.quarantine_books.pairs（"subject:grade"）。名单缺失或
+    文件损坏时返回空集（不阻断原有归集行为），但会由 main 打印「名单未加载」提示。
+    """
+    if not TASKS_JSON.is_file():
+        return set()
+    try:
+        policy = json.loads(TASKS_JSON.read_text(encoding="utf-8")).get("policy") or {}
+        raw = (policy.get("quarantine_books") or {}).get("pairs") or []
+    except (json.JSONDecodeError, OSError, AttributeError):
+        return set()
+    out = set()
+    for item in raw:
+        sub, _, grade = str(item).partition(":")
+        if sub.strip() and grade.strip().isdigit():
+            out.add((sub.strip(), int(grade.strip())))
+    return out
 
 
 def skeleton_chapters(subject: str, grade: int, semester: str = "first") -> list[str]:
@@ -114,8 +142,10 @@ def pick(versions: list[dict]) -> tuple[dict, str]:
     return winner, "；".join(reasons) or "唯一版本"
 
 
-def build_plan(pairs: list[tuple[str, int]] | None = None, semester: str = "first") -> dict:
+def build_plan(pairs: list[tuple[str, int]] | None = None, semester: str = "first",
+               quarantine: set[tuple[str, int]] | None = None) -> dict:
     books = []
+    quarantine = quarantine or set()
     for subject, grade in (pairs or PAIRS):
         chapters, files = collect(subject, grade, semester)
         official = skeleton_chapters(subject, grade, semester)
@@ -141,6 +171,7 @@ def build_plan(pairs: list[tuple[str, int]] | None = None, semester: str = "firs
             "subject": subject,
             "grade": grade,
             "semester": semester,
+            "quarantined": (subject, grade) in quarantine,
             "files": files,
             "fragment_files": len([f for f in files if _FRAG_RE.search(f)]),
             "official_chapters": len(official),
@@ -156,8 +187,10 @@ def build_plan(pairs: list[tuple[str, int]] | None = None, semester: str = "firs
         "generated_at": datetime.now().strftime("%Y-%m-%dT%H:%M:%S"),
         "semester": semester,
         "pairs": f"{len(books)} 册",
+        "quarantined_books": sum(1 for b in books if b["quarantined"]),
         "rule": "非 legacy > 批次日期最新 > 题量最多 > mtime 最新；分片不改名不删除；越界章节不并入；"
-                "库内已存在的知识点不在整册里重复声明；空节（既无点也无题）归集时剔除",
+                "库内已存在的知识点不在整册里重复声明；空节（既无点也无题）归集时剔除；"
+                "命中 policy.quarantine_books 的册 --apply 时跳过（除非 --force-quarantined）",
         "books": books,
     }
 
@@ -165,13 +198,14 @@ def build_plan(pairs: list[tuple[str, int]] | None = None, semester: str = "firs
 def render_md(plan: dict) -> str:
     lines = ["# 整册归集方案（只出方案，未改任何文件）", "",
              f"生成时间：{plan['generated_at']}", "", plan["rule"], "",
-             "| 册 | 文件数 | 分片数 | 官方章 | 已覆盖 | 缺章 | 多版本章 | 越界章 | 归集后题量 |",
-             "|---|---|---|---|---|---|---|---|---|"]
+             "| 册 | 文件数 | 分片数 | 官方章 | 已覆盖 | 缺章 | 多版本章 | 越界章 | 归集后题量 | 隔离 |",
+             "|---|---|---|---|---|---|---|---|---|---|"]
     for b in plan["books"]:
         lines.append(
             f"| {b['subject']}/g{b['grade']} | {len(b['files'])} | {b['fragment_files']} | "
             f"{b['official_chapters']} | {b['covered_official']} | {len(b['missing_chapters'])} | "
-            f"{len(b['duplicated_chapters'])} | {len(b['outside_outline'])} | {b['questions_after_merge']} |"
+            f"{len(b['duplicated_chapters'])} | {len(b['outside_outline'])} | {b['questions_after_merge']} | "
+            f"{'是' if b.get('quarantined') else '否'} |"
         )
     for b in plan["books"]:
         lines += ["", f"## {b['subject']} / g{b['grade']}", ""]
@@ -204,7 +238,8 @@ def baseline_names(subject: str, grade: int) -> dict[str, int]:
 
 
 def apply_plan(plan: dict, out_root: Path | None = None, stamp: str | None = None,
-               semester: str = "first") -> list[str]:
+               semester: str = "first", quarantine: set[tuple[str, int]] | None = None,
+               force_quarantined: bool = False) -> tuple[list[str], list[str]]:
     """把裁定后的章节写成一册一文件（默认目录 daily_consolidated，不动 daily 原文件）。
 
     整册文件与「当日批次文件」的差别（2026-11-09 校准时踩到的两个坑）：
@@ -213,12 +248,20 @@ def apply_plan(plan: dict, out_root: Path | None = None, stamp: str | None = Non
     2. r3/r4 里「既无知识点也无题」的空节不能带进整册（否则整册一导入就造空节），
        归集时剔除并记进 `_consolidated.dropped_sections`。
     """
-    written = []
+    written, skipped = [], []
     out_root = out_root or (CT / "daily_consolidated")
     stamp = stamp or f"{datetime.now():%Y%m%d}"
+    quarantine = quarantine or set()
     cache: dict[tuple[str, int], dict[str, list[dict]]] = {}
     for b in plan["books"]:
         subject, grade = b["subject"], b["grade"]
+        is_quarantined = b.get("quarantined") or (subject, grade) in quarantine
+        if is_quarantined and not force_quarantined:
+            skipped.append(
+                f"{subject}/g{grade}：命中 policy.quarantine_books，跳过（不生成 *_book.json）；"
+                f"需要复核隔离件请加 --force-quarantined"
+            )
+            continue
         key = (subject, grade)
         if key not in cache:
             cache[key] = collect(subject, grade, semester)[0]
@@ -298,11 +341,19 @@ def apply_plan(plan: dict, out_root: Path | None = None, stamp: str | None = Non
         }
         target = out_root / subject / f"g{grade}"
         target.mkdir(parents=True, exist_ok=True)
-        path = target / f"{subject}_g{grade}_{semester}_{stamp}_book.json"
+        stem = f"{subject}_g{grade}_{semester}_{stamp}_book"
+        plain = target / f"{stem}.json"
+        if is_quarantined:
+            if plain.is_file():
+                print(f"[警告] {plain.name} 仍是未隔离文件，会被 *_book.json 扫到；"
+                      f"请用隔离脚本改名后再入库")
+            path = target / f"{stem}.quarantined.json"
+        else:
+            path = plain
         path.write_text(json.dumps(doc, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         written.append(f"{path}（章 {len(chapters)} / 知识点 {len(knowledge)} / 复名不声明 {len(reused)} / 剔除空节 "
                        f"{sum(len(d['sections']) for d in dropped)}）")
-    return written
+    return written, skipped
 
 
 def parse_pairs(subjects: str | None, grades: str | None) -> list[tuple[str, int]]:
@@ -341,10 +392,13 @@ def main() -> int:
     parser.add_argument("--grades", help="年级范围，如 1-9 或 1,8；配合 --subjects 使用")
     parser.add_argument("--stamp", help="整册文件名里的批次日期 YYYYMMDD，默认今天（同一天重跑会覆盖同名文件）")
     parser.add_argument("--out-dir", help="整册输出目录，默认 <CT>\\daily_consolidated")
+    parser.add_argument("--force-quarantined", action="store_true",
+                        help="命中隔离名单时仍写出，但文件名用 *_book.quarantined.json（仅用于复核）")
     args = parser.parse_args()
 
     pairs = parse_pairs(args.subjects, args.grades)
-    plan = build_plan(pairs, args.semester)
+    qset = quarantine_pairs()
+    plan = build_plan(pairs, args.semester, qset)
     if args.out:
         Path(args.out).write_text(json.dumps(plan, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     if args.md:
@@ -357,12 +411,17 @@ def main() -> int:
     total_dup = sum(len(b["duplicated_chapters"]) for b in plan["books"])
     print(f"[方案] {len(plan['books'])} 册（semester={args.semester}），归集后题量 {total_q} 道，"
           f"缺章 {total_missing} 个，多版本章 {total_dup} 个")
+    print(f"[隔离名单] tasks.json 登记 {len(qset)} 册，本次命中 {plan['quarantined_books']} 册"
+          + ("" if qset else "（名单未加载，请检查 tasks.json）"))
 
     if args.apply:
-        written = apply_plan(plan, Path(args.out_dir) if args.out_dir else None,
-                             args.stamp, args.semester)
+        written, skipped = apply_plan(plan, Path(args.out_dir) if args.out_dir else None,
+                                     args.stamp, args.semester, qset, args.force_quarantined)
         for path in written:
             print(f"[写入] {path}")
+        for item in skipped:
+            print(f"[跳过-隔离] {item}")
+        print(f"[apply 汇总] 写入 {len(written)} 册 / 跳过隔离 {len(skipped)} 册")
     else:
         print("[dry-run] 未写任何文件；要生成整册文件请加 --apply")
     return 0

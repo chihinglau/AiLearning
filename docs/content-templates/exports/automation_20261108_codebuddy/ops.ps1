@@ -16,6 +16,7 @@
     ops.cmd -Action import-dry -Date 20261108 -ConfirmToken I_KNOW
     ops.cmd -Action import-books -Stamp 20261109 -ConfirmToken I_KNOW
     ops.cmd -Action import-books-dry -Stamp 20261109 -ConfirmToken I_KNOW
+    ops.cmd -Action import-books-dry -Stamp 20261109 -Grades 1,8 -ConfirmToken I_KNOW
     ops.cmd -Action restore -Date 20261108 -BackupPath "<backup.db>" -ConfirmToken I_KNOW
                   (backup path comes from import_report_*.json)
 
@@ -39,6 +40,9 @@ param(
     [string]$Stamp = '',
     [string]$BackupPath = '',
     [string]$ConfirmToken = '',
+    [string]$Subjects = '',
+    [string]$Grades = '',
+    [string]$Only = '',
     [switch]$Overwrite,
     [switch]$Unattended
 )
@@ -75,13 +79,20 @@ switch ($Action) {
     }
     'import-books' {
         # whole-book import: daily_consolidated/**/*_<Stamp>_book.json (no -Stamp = every book)
+        # 2026-11-10 review P1-3: -Subjects/-Grades/-Only pin validation scope == import scope.
         $OpsArgs = @('import-books', '--confirm', $ConfirmToken)
         if ($Stamp) { $OpsArgs += @('--stamp', $Stamp) }
+        if ($Subjects) { $OpsArgs += @('--subjects', $Subjects) }
+        if ($Grades) { $OpsArgs += @('--grades', $Grades) }
+        if ($Only) { $OpsArgs += @('--only', $Only) }
         if ($Overwrite) { $OpsArgs += '--overwrite' }
     }
     'import-books-dry' {
         $OpsArgs = @('import-books', '--dry-run', '--confirm', $ConfirmToken)
         if ($Stamp) { $OpsArgs += @('--stamp', $Stamp) }
+        if ($Subjects) { $OpsArgs += @('--subjects', $Subjects) }
+        if ($Grades) { $OpsArgs += @('--grades', $Grades) }
+        if ($Only) { $OpsArgs += @('--only', $Only) }
     }
     'restore' {
         if (-not $BackupPath) { throw "-Action restore needs -BackupPath <backup.db>" }
@@ -101,6 +112,9 @@ Write-Host '=== HUMAN DB-WRITE CONFIRMATION (5th review) ===' -ForegroundColor Y
 Write-Host "  Action      : $Action"
 Write-Host "  -Date       : $Date"
 Write-Host "  -Stamp      : $Stamp"
+Write-Host "  -Subjects   : $Subjects"
+Write-Host "  -Grades     : $Grades"
+Write-Host "  -Only       : $Only"
 Write-Host "  -BackupPath : $BackupDisplay"
 Write-Host "  Command     : $OpsDisplay"
 if ($Unattended) {

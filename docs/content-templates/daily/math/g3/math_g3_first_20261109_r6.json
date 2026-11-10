@@ -1,0 +1,340 @@
+{
+  "subject": "math",
+  "grade": 3,
+  "version": "北师大版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第六单元 乘除法的应用（二）",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "表内乘法·概念理解",
+      "parent": "第六单元 乘除法的应用（二）",
+      "order_index": 1,
+      "explanation": "表内乘法·概念理解：在「第六单元 乘除法的应用（二）」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "表内乘法·基本运算",
+      "parent": "第六单元 乘除法的应用（二）",
+      "order_index": 2,
+      "explanation": "表内乘法·基本运算：在「第六单元 乘除法的应用（二）」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "表内乘法·实际应用",
+      "parent": "第六单元 乘除法的应用（二）",
+      "order_index": 3,
+      "explanation": "表内乘法·实际应用：在「第六单元 乘除法的应用（二）」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "表内乘法·易错辨析",
+      "parent": "第六单元 乘除法的应用（二）",
+      "order_index": 4,
+      "explanation": "表内乘法·易错辨析：在「第六单元 乘除法的应用（二）」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第六单元 乘除法的应用（二）",
+      "order_index": 6,
+      "summary": "第六单元 乘除法的应用（二）：围绕「表内乘法」的概念、练习与运用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "【表内乘法·概念理解】9 × 6 = （  ）",
+          "options": [
+            "58",
+            "54",
+            "53",
+            "52"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "9 × 6 = 54，所以选 B；其余是常见错误。",
+          "difficulty": 1,
+          "knowledge_point": "表内乘法·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【表内乘法·概念理解】算式 3 × 5 的结果是（  ）",
+          "answer": {
+            "value": "15"
+          },
+          "analysis": "验算：3 × 5 = 15，所以填 15。",
+          "difficulty": 1,
+          "knowledge_point": "表内乘法·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【表内乘法·概念理解】9 × 6 = 54。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "9 × 6 = 54，题面写的是 54，相等，说法正确。",
+          "difficulty": 1,
+          "knowledge_point": "表内乘法·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「表内乘法·概念理解」，举一个生活中用到「表内乘法」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 1,
+          "knowledge_point": "表内乘法·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【表内乘法·基本运算】7 × 4 = （  ）",
+          "options": [
+            "25",
+            "31",
+            "28",
+            "29"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "7 × 4 = 28，所以选 C；其余是常见错误。",
+          "difficulty": 2,
+          "knowledge_point": "表内乘法·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【表内乘法·基本运算】算式 6 × 5 的结果是（  ）",
+          "answer": {
+            "value": "30"
+          },
+          "analysis": "验算：6 × 5 = 30，所以填 30。",
+          "difficulty": 2,
+          "knowledge_point": "表内乘法·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【表内乘法·基本运算】7 × 2 = 15。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "7 × 2 = 14，题面写的是 15，不相等，说法错误。",
+          "difficulty": 2,
+          "knowledge_point": "表内乘法·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「表内乘法·基本运算」，举一个生活中用到「表内乘法」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 2,
+          "knowledge_point": "表内乘法·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【表内乘法·实际应用】8 × 7 = （  ）",
+          "options": [
+            "57",
+            "56",
+            "53",
+            "55"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "8 × 7 = 56，所以选 B；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "表内乘法·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【表内乘法·实际应用】算式 5 × 3 的结果是（  ）",
+          "answer": {
+            "value": "15"
+          },
+          "analysis": "验算：5 × 3 = 15，所以填 15。",
+          "difficulty": 3,
+          "knowledge_point": "表内乘法·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【表内乘法·实际应用】6 × 3 = 18。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "6 × 3 = 18，题面写的是 18，相等，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "表内乘法·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「表内乘法·实际应用」，举一个生活中用到「表内乘法」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 3,
+          "knowledge_point": "表内乘法·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【表内乘法·易错辨析】5 × 4 = （  ）",
+          "options": [
+            "22",
+            "18",
+            "20",
+            "24"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "5 × 4 = 20，所以选 C；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "表内乘法·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【表内乘法·易错辨析】算式 7 × 3 的结果是（  ）",
+          "answer": {
+            "value": "21"
+          },
+          "analysis": "验算：7 × 3 = 21，所以填 21。",
+          "difficulty": 3,
+          "knowledge_point": "表内乘法·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【表内乘法·易错辨析】4 × 5 = 20。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "4 × 5 = 20，题面写的是 20，相等，说法正确。",
+          "difficulty": 4,
+          "knowledge_point": "表内乘法·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「表内乘法·易错辨析」，举一个生活中用到「表内乘法」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "表内乘法·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【表内乘法·概念理解】下面哪些算式的结果等于 16？",
+          "options": [
+            "2 × 8",
+            "16 + 1",
+            "16 - 2",
+            "16 × 2"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 2 × 8 = 16 ✓；B 为 17 ✗；C 为 14 ✗；D 为 32 ✗。所以选 A。",
+          "difficulty": 4,
+          "knowledge_point": "表内乘法·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【表内乘法·基本运算】下面哪些算式的结果等于 24？",
+          "options": [
+            "6 × 4",
+            "24 + 1",
+            "24 - 2",
+            "24 × 2"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 6 × 4 = 24 ✓；B 为 25 ✗；C 为 22 ✗；D 为 48 ✗。所以选 A。",
+          "difficulty": 5,
+          "knowledge_point": "表内乘法·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

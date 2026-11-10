@@ -1,0 +1,340 @@
+{
+  "subject": "math",
+  "grade": 2,
+  "version": "北师大版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第五单元 分一分与除法",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "除法计算·概念理解",
+      "parent": "第五单元 分一分与除法",
+      "order_index": 1,
+      "explanation": "除法计算·概念理解：在「第五单元 分一分与除法」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "除法计算·基本运算",
+      "parent": "第五单元 分一分与除法",
+      "order_index": 2,
+      "explanation": "除法计算·基本运算：在「第五单元 分一分与除法」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "除法计算·实际应用",
+      "parent": "第五单元 分一分与除法",
+      "order_index": 3,
+      "explanation": "除法计算·实际应用：在「第五单元 分一分与除法」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "除法计算·易错辨析",
+      "parent": "第五单元 分一分与除法",
+      "order_index": 4,
+      "explanation": "除法计算·易错辨析：在「第五单元 分一分与除法」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第五单元 分一分与除法",
+      "order_index": 5,
+      "summary": "第五单元 分一分与除法：围绕「除法计算」的概念、练习与运用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "【除法计算·概念理解】20 ÷ 5 = （  ）",
+          "options": [
+            "7",
+            "4",
+            "2",
+            "1"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "20 ÷ 5 = 4，所以选 B；其余是常见错误。",
+          "difficulty": 1,
+          "knowledge_point": "除法计算·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【除法计算·概念理解】算式 45 ÷ 9 的结果是（  ）",
+          "answer": {
+            "value": "5"
+          },
+          "analysis": "验算：45 ÷ 9 = 5，所以填 5。",
+          "difficulty": 1,
+          "knowledge_point": "除法计算·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【除法计算·概念理解】72 ÷ 9 = 8。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "72 ÷ 9 = 8，题面写的是 8，相等，说法正确。",
+          "difficulty": 1,
+          "knowledge_point": "除法计算·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「除法计算·概念理解」，举一个生活中用到「除法计算」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 1,
+          "knowledge_point": "除法计算·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【除法计算·基本运算】30 ÷ 5 = （  ）",
+          "options": [
+            "4",
+            "6",
+            "9",
+            "7"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "30 ÷ 5 = 6，所以选 B；其余是常见错误。",
+          "difficulty": 2,
+          "knowledge_point": "除法计算·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【除法计算·基本运算】算式 32 ÷ 4 的结果是（  ）",
+          "answer": {
+            "value": "8"
+          },
+          "analysis": "验算：32 ÷ 4 = 8，所以填 8。",
+          "difficulty": 2,
+          "knowledge_point": "除法计算·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【除法计算·基本运算】27 ÷ 9 = 3。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "27 ÷ 9 = 3，题面写的是 3，相等，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "除法计算·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「除法计算·基本运算」，举一个生活中用到「除法计算」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 2,
+          "knowledge_point": "除法计算·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【除法计算·实际应用】40 ÷ 5 = （  ）",
+          "options": [
+            "10",
+            "8",
+            "5",
+            "11"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "40 ÷ 5 = 8，所以选 B；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "除法计算·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【除法计算·实际应用】算式 45 ÷ 9 的结果是（  ）",
+          "answer": {
+            "value": "5"
+          },
+          "analysis": "验算：45 ÷ 9 = 5，所以填 5。",
+          "difficulty": 3,
+          "knowledge_point": "除法计算·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【除法计算·实际应用】35 ÷ 5 = 7。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "35 ÷ 5 = 7，题面写的是 7，相等，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "除法计算·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「除法计算·实际应用」，举一个生活中用到「除法计算」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 3,
+          "knowledge_point": "除法计算·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【除法计算·易错辨析】16 ÷ 2 = （  ）",
+          "options": [
+            "7",
+            "9",
+            "8",
+            "6"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "16 ÷ 2 = 8，所以选 C；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "除法计算·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【除法计算·易错辨析】算式 45 ÷ 9 的结果是（  ）",
+          "answer": {
+            "value": "5"
+          },
+          "analysis": "验算：45 ÷ 9 = 5，所以填 5。",
+          "difficulty": 3,
+          "knowledge_point": "除法计算·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【除法计算·易错辨析】72 ÷ 9 = 7。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "72 ÷ 9 = 8，题面写的是 7，不相等，说法错误。",
+          "difficulty": 4,
+          "knowledge_point": "除法计算·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「除法计算·易错辨析」，举一个生活中用到「除法计算」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "除法计算·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【除法计算·概念理解】下面哪些算式的结果等于 2？",
+          "options": [
+            "10 ÷ 5",
+            "2 + 1",
+            "2 - 2",
+            "2 × 2"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 10 ÷ 5 = 2 ✓；B 为 3 ✗；C 为 0 ✗；D 为 4 ✗。所以选 A。",
+          "difficulty": 4,
+          "knowledge_point": "除法计算·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【除法计算·基本运算】下面哪些算式的结果等于 5？",
+          "options": [
+            "25 ÷ 5",
+            "5 + 1",
+            "5 - 2",
+            "5 × 2"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 25 ÷ 5 = 5 ✓；B 为 6 ✗；C 为 3 ✗；D 为 10 ✗。所以选 A。",
+          "difficulty": 5,
+          "knowledge_point": "除法计算·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

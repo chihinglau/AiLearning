@@ -24,6 +24,28 @@ from app.db.session import SessionLocal
 from app.services.content_import import content_sha256, import_document, load_document
 
 
+def _filter_only(path: Path, files: list[Path], only: str | None) -> list[Path]:
+    """2026-11-10 评审 P1-3：把导入范围钉在「与校验同一个文件集合」。
+
+    `only` 是逗号分隔的白名单，条目可以是相对 --path 的路径、文件名，或 fnmatch 通配。
+    不传时原样返回，保持旧调用完全兼容。
+    """
+    if not only:
+        return files
+    tokens = [t.strip().replace("\\", "/") for t in only.split(",") if t.strip()]
+    if not tokens:
+        return files
+
+    def label(f: Path) -> str:
+        return f.name if path.is_file() else f.relative_to(path).as_posix()
+
+    kept = [
+        f for f in files
+        if any(fnmatch.fnmatch(label(f), t) or fnmatch.fnmatch(f.name, t) for t in tokens)
+    ]
+    return kept
+
+
 def _collect_files(path: Path, pattern: str) -> list[Path]:
     if path.is_file():
         if not fnmatch.fnmatch(path.name, pattern):
@@ -81,13 +103,19 @@ def main() -> int:
     parser.add_argument("--overwrite", action="store_true", help="覆盖同章节同题干同题型的题目")
     parser.add_argument("--dry-run", action="store_true", help="只校验并统计，不落库")
     parser.add_argument(
+        "--only",
+        help="逗号分隔的白名单（相对路径/文件名/通配），只导入这些文件；与校验范围取同一个集合",
+    )
+    parser.add_argument(
         "--manifest",
         help="导入清单 JSON；记录文件 hash 与结果，相同文件自动跳过",
     )
     args = parser.parse_args()
 
     root = Path(args.path)
-    files = _collect_files(root, args.pattern)
+    files = _filter_only(root, _collect_files(root, args.pattern), args.only)
+    if args.only and not files:
+        raise FileNotFoundError(f"--only 白名单没有匹配到任何 JSON：{args.only}")
     manifest = _load_manifest(Path(args.manifest) if args.manifest else None)
     session = SessionLocal()
     failed = 0

@@ -1,0 +1,340 @@
+{
+  "subject": "math",
+  "grade": 7,
+  "version": "北师大版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第六章 数据的收集与整理",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "数据表示·概念理解",
+      "parent": "第六章 数据的收集与整理",
+      "order_index": 1,
+      "explanation": "数据表示·概念理解：在「第六章 数据的收集与整理」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "数据表示·基本运算",
+      "parent": "第六章 数据的收集与整理",
+      "order_index": 2,
+      "explanation": "数据表示·基本运算：在「第六章 数据的收集与整理」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "数据表示·实际应用",
+      "parent": "第六章 数据的收集与整理",
+      "order_index": 3,
+      "explanation": "数据表示·实际应用：在「第六章 数据的收集与整理」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "数据表示·易错辨析",
+      "parent": "第六章 数据的收集与整理",
+      "order_index": 4,
+      "explanation": "数据表示·易错辨析：在「第六章 数据的收集与整理」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第六章 数据的收集与整理",
+      "order_index": 6,
+      "summary": "第六章 数据的收集与整理：围绕「数据表示」的概念、练习与运用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "【数据表示·概念理解】三个数 [91, 74, 90] 的平均数 = （  ）",
+          "options": [
+            "86",
+            "85",
+            "88",
+            "89"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "三个数 [91, 74, 90] 的平均数 = 85，所以选 B；其余是常见错误。",
+          "difficulty": 1,
+          "knowledge_point": "数据表示·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【数据表示·概念理解】算式 三个数 [72, 73, 92] 的平均数 的结果是（  ）",
+          "answer": {
+            "value": "79"
+          },
+          "analysis": "验算：三个数 [72, 73, 92] 的平均数 = 79，所以填 79。",
+          "difficulty": 1,
+          "knowledge_point": "数据表示·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "学习「数据表示·概念理解」时，认真记录数据是得到正确结论的前提。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "数据是分析依据，先记准再分析，说法正确。",
+          "difficulty": 1,
+          "knowledge_point": "数据表示·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「数据表示·概念理解」，举一个生活中用到「数据表示」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 1,
+          "knowledge_point": "数据表示·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【数据表示·基本运算】三个数 [83, 94, 75] 的平均数 = （  ）",
+          "options": [
+            "84",
+            "82",
+            "83",
+            "86"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "三个数 [83, 94, 75] 的平均数 = 84，所以选 A；其余是常见错误。",
+          "difficulty": 2,
+          "knowledge_point": "数据表示·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【数据表示·基本运算】算式 三个数 [74, 74, 82] 的平均数 的结果是（  ）",
+          "answer": {
+            "value": "77"
+          },
+          "analysis": "验算：三个数 [74, 74, 82] 的平均数 = 77，所以填 77。",
+          "difficulty": 2,
+          "knowledge_point": "数据表示·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "学习「数据表示·基本运算」时，认真记录数据是得到正确结论的前提。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "数据是分析依据，先记准再分析，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "数据表示·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「数据表示·基本运算」，举一个生活中用到「数据表示」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 2,
+          "knowledge_point": "数据表示·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【数据表示·实际应用】三个数 [80, 83, 74] 的平均数 = （  ）",
+          "options": [
+            "81",
+            "77",
+            "79",
+            "82"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "三个数 [80, 83, 74] 的平均数 = 79，所以选 C；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "数据表示·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【数据表示·实际应用】算式 三个数 [77, 75, 71] 的平均数 的结果是（  ）",
+          "answer": {
+            "value": "74"
+          },
+          "analysis": "验算：三个数 [77, 75, 71] 的平均数 = 74，所以填 74。",
+          "difficulty": 3,
+          "knowledge_point": "数据表示·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "学习「数据表示·实际应用」时，认真记录数据是得到正确结论的前提。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "数据是分析依据，先记准再分析，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "数据表示·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「数据表示·实际应用」，举一个生活中用到「数据表示」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 3,
+          "knowledge_point": "数据表示·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【数据表示·易错辨析】三个数 [82, 94, 93] 的平均数 = （  ）",
+          "options": [
+            "93",
+            "90",
+            "89",
+            "92"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "三个数 [82, 94, 93] 的平均数 = 90，所以选 B；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "数据表示·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【数据表示·易错辨析】算式 三个数 [72, 94, 80] 的平均数 的结果是（  ）",
+          "answer": {
+            "value": "82"
+          },
+          "analysis": "验算：三个数 [72, 94, 80] 的平均数 = 82，所以填 82。",
+          "difficulty": 3,
+          "knowledge_point": "数据表示·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "学习「数据表示·易错辨析」时，认真记录数据是得到正确结论的前提。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "数据是分析依据，先记准再分析，说法正确。",
+          "difficulty": 4,
+          "knowledge_point": "数据表示·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「数据表示·易错辨析」，举一个生活中用到「数据表示」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "数据表示·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【数据表示·概念理解】下面哪些算式的结果等于 83？",
+          "options": [
+            "三个数 [79, 80, 91] 的平均数",
+            "83 + 1",
+            "83 - 2",
+            "83 × 2"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 三个数 [79, 80, 91] 的平均数 = 83 ✓；B 为 84 ✗；C 为 81 ✗；D 为 166 ✗。所以选 A。",
+          "difficulty": 4,
+          "knowledge_point": "数据表示·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【数据表示·基本运算】下面哪些算式的结果等于 89？",
+          "options": [
+            "三个数 [84, 90, 94] 的平均数",
+            "89 + 1",
+            "89 - 2",
+            "89 × 2"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 三个数 [84, 90, 94] 的平均数 = 89 ✓；B 为 90 ✗；C 为 87 ✗；D 为 178 ✗。所以选 A。",
+          "difficulty": 5,
+          "knowledge_point": "数据表示·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

@@ -16,8 +16,10 @@
   "daily_dir": "D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/daily",
   "ledger_dir": "D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/ledger",
   "logs_dir": "D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/logs",
-  "run_daily": "D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/exports/automation_20261108_codebuddy/_run_daily.py"
+  "run_daily": "D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/exports/automation_20261108_codebuddy/_run_daily.py",
+  "batch_fullbook_manual": "D:/ai/prj/trae/HuaWei/AiLearning/docs/content-templates/批量生成某年级全学科全册章节操作手册.md"
  },
+ "batch_fullbook_manual_note": "2026-11-10 新增批量全册生成手册（paths.batch_fullbook_manual）：docs/content-templates/批量生成某年级全学科全册章节操作手册.md。与 04 手册互补——04 是「一节一批次、靠 AI 会话逐节推进」的每日管线；本手册是确定性一次性生成每章分片 + 归集整册的批量全册方案（用 _gen_fullbooks.py，不依赖 AI 会话、不改已有内容文件、不入库，仅产出并校验 JSON）。适用于一次性补齐整册覆盖缺口（如 g7/g9 全学科）；生成后仍需走 04 手册 §1.1 归集 + §3.8.6 人工入库（需授权）。subject/grade/version/outline 以本文件 expected_version、compulsory_scope、tasks[].outline / outline_by_grade 为准。2026-11-10 评审后状态变更：该手册依赖的 _gen_fullbooks.py 产出被判为模板套话题，34 册已隔离并登记在 policy.quarantine_books；生成器现内置 policy.book_acceptance_gate 准入自检（不合格册不写 daily/ 分片），归集器遇名单册跳过。34 册实质重跑必须走 04 手册 AI 逐册教研管线按年级知识点表生成，重跑后先过 §3.8.7 的 P3 闸门才可解除隔离并单册入库。本手册流程目前仅用于生成链路演练 / 覆盖预演。",
  "policy": {
   "timezone": "Asia/Shanghai（用系统本地时间；跨零点用 --date 显式固定 BATCH_DATE）",
   "batch_date": "触发时刻的日期，定下后全程不变；文件名/台账/日志都用它",
@@ -145,6 +147,50 @@
   "consolidated_books_note": "2026-11-09：daily_consolidated/ 下 12 册整册文件（1686 题，12/12 通过 _validate_daily.py）**已按人工授权入库**（用户「你帮我完成吧，授权给你」）：先整库快照备份，再 `import_content --path daily_consolidated --pattern \"*_20261109_book.json\" --manifest`，12 条已登记 manifest（键为 `daily_consolidated` 相对路径，带 `_book` 后缀，与 daily 分片键空间不冲突）。入库后 questions 957→2493（净 +1536，扣掉先删的 33 题）、knowledge_points 537→1120；12 册上册 0 空章、0 缺答案/解析、quick_check=ok、外键 0 违规；留痕 db_op_20261109_044100.json。整册里不重复声明库内已存在的知识点（题目按旧名挂载），归集时剔除「既无点也无题」的空节。 2026-11-09 复核后又补：① 库清理删掉 1 组重复题（id 1227）+ 3 册 11-07 旧规格 58 题（math/chinese/english g8），questions 2493→2434；② db_ops.py 新增 import-books 子命令、ops.ps1/ops.cmd 新增 -Action import-books / import-books-dry 与 -Unattended（整册入库专用，因为 -Action import -Date 只扫 daily 目录树的 *_<date>.json，扫不到 daily_consolidated 的 *_book.json）；③ _consolidate_daily.py 增加 --subjects/--grades/--semester/--stamp/--out-dir，可按任意学科年级归集。",
   "rerun_queue_note": "2026-11-08 第九轮评审 B 项：删除旧版数据把「这册有内容但挂错地方」变成「这册什么都没有」，缺口从可见变成不可见。rerun_queue 就是这个缺口的显式登记——两册数学上册在重新出题入库前，一律按「待重跑」而不是「已完成」对外说明。覆盖明细见 coverage_gap_20261108.json。2026-11-09 扩到 5 条：新增 math g8 / chinese g8 / english g8（库内内容全部来自 11-07 旧规格，1108 批次只有分片、未入库）。",
   "import_books_note": "整册入库入口：ops.cmd -Action import-books -Stamp <YYYYMMDD> -ConfirmToken I_KNOW；助手代跑需用户本轮明确授权后加 -Unattended（仅跳过运行时 6 位码）。内部顺序＝整册校验（失败不建备份）→ 备份 → import_content --dry-run → 带 --manifest 正式导入 → 逐册题干核对 → import_report_books_<stamp>_<HHMMSS>.json。幂等：同 Stamp 重跑全部命中 manifest 跳过，全表增量 0。",
+  "quarantine_books": {
+   "note": "2026-11-10 daily_consolidated 评审 P0-1 / 复评 §八-1 的机制化落地：34 册不合格整册只以 *.quarantined.json 存在，禁止被 *_book.json 扫描命中。_consolidate_daily.py --apply 读本名单后默认跳过对应 (subject,grade)，不再生成未隔离整册；只有经人工确认从 pairs 移除，才恢复正式输出。名单与 daily/ 下 275 份分片无关，故重新归集不会让坏册复发。",
+   "review": "docs/content-templates/exports/review_20261110/daily_consolidated-评审_20261110.md",
+   "manifest": "docs/content-templates/exports/review_20261110/quarantine_manifest_20261110.json",
+   "stamp": "20261109",
+   "keep_grades": [1, 8],
+   "output_suffix": ".quarantined.json",
+   "pairs": ["biology:7", "chemistry:9", "chinese:2", "chinese:3", "chinese:4", "chinese:5", "chinese:6", "chinese:7", "chinese:9", "english:2", "english:3", "english:4", "english:5", "english:6", "english:7", "english:9", "geography:7", "history:7", "history:9", "math:2", "math:3", "math:4", "math:5", "math:6", "math:7", "math:9", "physics:9", "politics:2", "politics:3", "politics:4", "politics:5", "politics:6", "politics:7", "politics:9"],
+   "release_condition": "重跑册通过 policy.book_acceptance_gate 全部硬门槛、并经人工确认后，才从 pairs 删除该 (subject,grade)；未删除前 import-books 一律不得纳入该册"
+  },
+  "book_acceptance_gate": {
+   "note": "评审 P3：任一册必须同时满足硬门槛才允许进 import-books。执行命令见 04 手册 §3.8.7；脚本 docs/content-templates/_check_book_gate.py 输出机读结论，目录模式默认只扫未隔离的 *_book.json。",
+   "script": "docs/content-templates/_check_book_gate.py",
+   "hard_gates": [
+    "_validate_daily.py 该册 0 错误",
+    "册内跨章重复题种（同题型+同题干跨章出现）= 0",
+    "题挂载 section 被多个章共用的题数 = 0",
+    "模板套话题占比 <= 5%",
+    "同题干答案唯一"
+   ],
+   "structural_targets": [
+    "section 数 >= 章数 - 1",
+    "point 数 >= 章数 * 4（结构目标，不达标只告警并登记豁免，不阻断已入库历史合格册）"
+   ],
+   "structural_exemptions": ["math:1：point 20 < 6*4=24，属 2026-11-09 已入库历史合格册口径"],
+   "cliche_max_ratio": 0.05,
+   "negative_stems": ["更可取的学习做法", "可以先梳理", "举一个生活中用到", "结合实例分析比单纯背诵", "值得提倡的", "先理解概念再结合实例分析", "知识脉络", "·概念理解", "·认知"],
+   "note_2": "结构目标按 2026-11-10 对 12 册合格册只读校准：section 5~35、point 16~35、章 4~8；math/g1 的 point=20 低于章数×4，故该项列为目标而非硬门槛。"
+  },
+  "book_rerun_queue": {
+   "note": "评审复评 §九-③：这 34 册必须按「年级知识点表」重跑，走 04 手册的 AI 逐册教研管线；禁止用 _gen_fullbooks.py 的章节名模板顶替。确定性脚本只用于覆盖预演，产出默认隔离、不得入库。",
+   "pairs_ref": "policy.quarantine_books.pairs",
+   "requirements": [
+    "知识点按节级建，每章 4-6 个点，名称须可测量（禁止 X·概念理解 / X·认知 之类占位后缀）",
+    "每点 >= min_questions_per_point（4）题",
+    "题干命中 policy.book_acceptance_gate.negative_stems 一律禁止",
+    "册内跨章重复题种 = 0；数学 g7/g9 的 100 以内加减法、英语 g2-g9 的 red/happy/tree、语文 g3-g6 的 温暖/朋友 必须按年级知识点重写",
+    "多选题解析逐项写出 A/B/C/D 与 ✓/✗（校验器硬门槛）",
+    "重跑后先过 _check_book_gate.py，再从 policy.quarantine_books.pairs 移除该册并单册 import-books"
+   ],
+   "status": "31 册实质重跑完成（222 章 / 888 点 / 3997 题）：_validate_daily 31 通过 0 错误、_check_book_gate 31 PASS；2026-11-10 独立评审结论为可入库，待按 -Stamp 20261110 单册试点后分批 import-books。另有 3 册转人工教研，见 excluded_books。",
+   "excluded_books": ["history:9", "politics:5", "politics:9"],
+   "excluded_books_note": "2026-11-10 评审处置：这 3 册题材按内容合规边界不纳入 AI 批量生成，改由人工教研出题；如确需 AI 辅助，仅限教材原文识记型的直接对应，禁止评价性、立场性题干，且必须 100% 人工复核。下一轮批量生成须先读本字段并从生成清单中剔除，避免重复撞到同一处。本批次 31 册内容包在 rerun_packs/，待评审整册在 daily_rerun/，均未入库。"
+  },
   "known_gaps_20261109": [
    "62 份 daily/**/*_rN.json 分片仍未登记 manifest（文件名末段是 rN，--pattern \"*_<batch>.json\" 扫不到）；须每轮跑 _consolidate_daily.py 归集后再入库",
    "其余 34 个年级（g1/g8 之外）尚无整册文件，需按 §1.1 的 --subjects/--grades 逐批归集",
@@ -155,6 +201,8 @@
    "g1/g8 有 10 个空壳知识点待补题（math g8 勾股定理 5 / chinese g8 新闻 5），补题须走生成规则"
   ],
   "kp_cleanup_note": "2026-11-09 晚知识点层清理（A–D）。执行脚本 exports/review_20261109/kp-cleanup_20261109.py，等价 SQL exports/review_20261109/cleanup-kp-20261109.sql，备份 backend/_backup/ailearning_dev_20261109-050711.db。A 删 9 个「样章·…」占位分组 + 18 子点（0 题 0 引用）；B 5 个实践类节点 section→point；C 2 个中文点名去 ?；D 156 个 point 补 prerequisites。knowledge_points 1120→1093，questions 2434 不变。同步：baseline/_knowledge-points-baseline_latest 已用 _build_kp_baseline.py 重算（703 名 / 0 歧义）。",
+  "kp_reconcile_20261110_note": "2026-11-10 只读对账（评审复评 §八-3 / §九-②）：实测 knowledge_points 1104，比 04 手册与本文件 kp_cleanup_note 的 1093 多 11；差异恰为 11-08 21:38 建的 11 个存量节点（biology g8 综合实践 section×2、chinese g8 新闻采访/写作 section×2+point×4、geography g8 探究与实践 section×3），其中 7 个 0 题 0 子点 0 先修引用；基线 703 名逐项比对「库内缺 0、库内多 4」（多的是 chinese g8 新闻 4 个点名）。留痕 exports/review_20261110/kp_reconciliation_20261110.json（脚本 _kp_reconcile_20261110.py，sqlite mode=ro）。当前口径以 1104 为准；补清理这 11 个节点使库回到 1093 属写库动作，需另行授权并先备份，本次未改库。",
+  "import_books_note_20261110": "评审 P0-2 / P1 / 复评 §八-4 已落地：db_ops.py import-books 支持 --subjects/--grades/--only（校验与导入同一个文件集合）、失败文件清单、books_validation_*.json 机读汇总；import_content.py 支持 --only；ops.ps1 / ops.cmd 透传 -Subjects/-Grades/-Only；报告新增 per_book / per_book_summary，dry-run 也写 import_report_books_*_dry.json，控制台只打汇总。P3 闸门 _check_book_gate.py 于 2026-11-10 实测：未隔离 12 册全 PASS（EXIT=0），含隔离件 46 册 12 PASS / 34 FAIL（EXIT=1），失败名单与 policy.quarantine_books.pairs 完全一致。",
   "kp_backlog": {
    "note": "g1/g8 中仍有 37 个 0 题 point，其中 10 个是\"内容缺口\"而非常规概览点，需按生成规则补题（不要直接写库手造题目）。",
    "items": [

@@ -1,0 +1,664 @@
+{
+  "schema_version": 1,
+  "source": "docs/content-templates/_validate_daily.py",
+  "expects": {
+    "subject": null,
+    "grade": null,
+    "version": null,
+    "semester": null
+  },
+  "totals": {
+    "files": 46,
+    "passed": 18,
+    "failed": 28,
+    "errors": 155,
+    "warnings": 242,
+    "quarantined_skipped": 0
+  },
+  "quarantined_skipped_names": [],
+  "files": [
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\biology\\g7\\biology_g7_first_20261109_book.quarantined.json",
+      "name": "biology_g7_first_20261109_book.quarantined.json",
+      "passed": false,
+      "errors": 19,
+      "warnings": 0,
+      "error_messages": [
+        "题目「关于「第一单元 生物和细胞·概念」，哪些做法是值…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第一单元 生物和细胞·结构」，哪些做法是值…」 多选题解析未逐项写出字号与结果对照（缺 A），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第一章 认识生物·概念」，哪些做法是值得提…」 多选题解析未逐项写出字号与结果对照（缺 D），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第一章 认识生物·结构」，哪些做法是值得提…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第二章 认识细胞·概念」，哪些做法是值得提…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第二章 认识细胞·结构」，哪些做法是值得提…」 多选题解析未逐项写出字号与结果对照（缺 A），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第三章 从细胞到生物体·概念」，哪些做法是…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第三章 从细胞到生物体·结构」，哪些做法是…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第二单元 多种多样的生物·概念」，哪些做法…」 多选题解析未逐项写出字号与结果对照（缺 D），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第二单元 多种多样的生物·结构」，哪些做法…」 多选题解析未逐项写出字号与结果对照（缺 D），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第一章 藻类与植物的类群·概念」，哪些做法…」 多选题解析未逐项写出字号与结果对照（缺 C），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第一章 藻类与植物的类群·结构」，哪些做法…」 多选题解析未逐项写出字号与结果对照（缺 A），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第二章 动物的类群·概念」，哪些做法是值得…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第二章 动物的类群·结构」，哪些做法是值得…」 多选题解析未逐项写出字号与结果对照（缺 C），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第三章 微生物·概念」，哪些做法是值得提倡…」 多选题解析未逐项写出字号与结果对照（缺 A），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第三章 微生物·结构」，哪些做法是值得提倡…」 多选题解析未逐项写出字号与结果对照（缺 A），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第四章 生物分类的方法·概念」，哪些做法是…」 多选题解析未逐项写出字号与结果对照（缺 D），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第四章 生物分类的方法·结构」，哪些做法是…」 多选题解析未逐项写出字号与结果对照（缺 D），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "本批次新增知识点 36 个，超出每批次 3~6 个的规格"
+      ],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\biology\\g8\\biology_g8_first_20261109_book.json",
+      "name": "biology_g8_first_20261109_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 20,
+      "error_messages": [],
+      "import_state": "unchanged",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\chemistry\\g9\\chemistry_g9_first_20261109_book.quarantined.json",
+      "name": "chemistry_g9_first_20261109_book.quarantined.json",
+      "passed": false,
+      "errors": 15,
+      "warnings": 0,
+      "error_messages": [
+        "题目「关于「第一单元 走进化学世界·物质」，哪些做法是…」 多选题解析未逐项写出字号与结果对照（缺 A），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第一单元 走进化学世界·变化」，哪些做法是…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第二单元 空气和氧气·物质」，哪些做法是值…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第二单元 空气和氧气·变化」，哪些做法是值…」 多选题解析未逐项写出字号与结果对照（缺 C），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第三单元 物质构成的奥秘·物质」，哪些做法…」 多选题解析未逐项写出字号与结果对照（缺 D），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第三单元 物质构成的奥秘·变化」，哪些做法…」 多选题解析未逐项写出字号与结果对照（缺 C），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第四单元 自然界的水·物质」，哪些做法是值…」 多选题解析未逐项写出字号与结果对照（缺 D），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第四单元 自然界的水·变化」，哪些做法是值…」 多选题解析未逐项写出字号与结果对照（缺 C），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第五单元 化学反应的定量关系·物质」，哪些…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第五单元 化学反应的定量关系·变化」，哪些…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第六单元 碳和碳的氧化物·物质」，哪些做法…」 多选题解析未逐项写出字号与结果对照（缺 D），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第六单元 碳和碳的氧化物·变化」，哪些做法…」 多选题解析未逐项写出字号与结果对照（缺 A），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第七单元 能源的合理利用与开发·物质」，哪…」 多选题解析未逐项写出字号与结果对照（缺 D），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第七单元 能源的合理利用与开发·变化」，哪…」 多选题解析未逐项写出字号与结果对照（缺 A），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "本批次新增知识点 28 个，超出每批次 3~6 个的规格"
+      ],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\chinese\\g1\\chinese_g1_first_20261109_book.json",
+      "name": "chinese_g1_first_20261109_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 21,
+      "error_messages": [],
+      "import_state": "unchanged",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\chinese\\g2\\chinese_g2_first_20261109_book.quarantined.json",
+      "name": "chinese_g2_first_20261109_book.quarantined.json",
+      "passed": false,
+      "errors": 1,
+      "warnings": 0,
+      "error_messages": [
+        "本批次新增知识点 8 个，超出每批次 3~6 个的规格"
+      ],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\chinese\\g3\\chinese_g3_first_20261109_book.quarantined.json",
+      "name": "chinese_g3_first_20261109_book.quarantined.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 0,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\chinese\\g4\\chinese_g4_first_20261109_book.quarantined.json",
+      "name": "chinese_g4_first_20261109_book.quarantined.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 0,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\chinese\\g5\\chinese_g5_first_20261109_book.quarantined.json",
+      "name": "chinese_g5_first_20261109_book.quarantined.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 0,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\chinese\\g6\\chinese_g6_first_20261109_book.quarantined.json",
+      "name": "chinese_g6_first_20261109_book.quarantined.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 0,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\chinese\\g7\\chinese_g7_first_20261109_book.quarantined.json",
+      "name": "chinese_g7_first_20261109_book.quarantined.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 0,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\chinese\\g8\\chinese_g8_first_20261109_book.json",
+      "name": "chinese_g8_first_20261109_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unchanged",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\chinese\\g9\\chinese_g9_first_20261109_book.quarantined.json",
+      "name": "chinese_g9_first_20261109_book.quarantined.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 0,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\english\\g1\\english_g1_first_20261109_book.json",
+      "name": "english_g1_first_20261109_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 1,
+      "error_messages": [],
+      "import_state": "unchanged",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\english\\g2\\english_g2_first_20261109_book.quarantined.json",
+      "name": "english_g2_first_20261109_book.quarantined.json",
+      "passed": false,
+      "errors": 6,
+      "warnings": 0,
+      "error_messages": [
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）"
+      ],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\english\\g3\\english_g3_first_20261109_book.quarantined.json",
+      "name": "english_g3_first_20261109_book.quarantined.json",
+      "passed": false,
+      "errors": 8,
+      "warnings": 0,
+      "error_messages": [
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）"
+      ],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\english\\g4\\english_g4_first_20261109_book.quarantined.json",
+      "name": "english_g4_first_20261109_book.quarantined.json",
+      "passed": false,
+      "errors": 8,
+      "warnings": 0,
+      "error_messages": [
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）"
+      ],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\english\\g5\\english_g5_first_20261109_book.quarantined.json",
+      "name": "english_g5_first_20261109_book.quarantined.json",
+      "passed": false,
+      "errors": 8,
+      "warnings": 0,
+      "error_messages": [
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）"
+      ],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\english\\g6\\english_g6_first_20261109_book.quarantined.json",
+      "name": "english_g6_first_20261109_book.quarantined.json",
+      "passed": false,
+      "errors": 6,
+      "warnings": 0,
+      "error_messages": [
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）"
+      ],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\english\\g7\\english_g7_first_20261109_book.quarantined.json",
+      "name": "english_g7_first_20261109_book.quarantined.json",
+      "passed": false,
+      "errors": 6,
+      "warnings": 0,
+      "error_messages": [
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）"
+      ],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\english\\g8\\english_g8_first_20261109_book.json",
+      "name": "english_g8_first_20261109_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 1,
+      "error_messages": [],
+      "import_state": "unchanged",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\english\\g9\\english_g9_first_20261109_book.quarantined.json",
+      "name": "english_g9_first_20261109_book.quarantined.json",
+      "passed": false,
+      "errors": 6,
+      "warnings": 0,
+      "error_messages": [
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）",
+        "题目「Which are words we learn…」 题干与本章节前一题重复（同题型同题干会被跳过）"
+      ],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\geography\\g7\\geography_g7_first_20261109_book.quarantined.json",
+      "name": "geography_g7_first_20261109_book.quarantined.json",
+      "passed": false,
+      "errors": 13,
+      "warnings": 0,
+      "error_messages": [
+        "题目「关于「第一章 让我们走进地理·区域」，哪些做法是…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第一章 让我们走进地理·综合」，哪些做法是…」 多选题解析未逐项写出字号与结果对照（缺 D），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第二章 认识地球·区域」，哪些做法是值得提…」 多选题解析未逐项写出字号与结果对照（缺 C），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第二章 认识地球·综合」，哪些做法是值得提…」 多选题解析未逐项写出字号与结果对照（缺 D），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第三章 地球的面貌·区域」，哪些做法是值得…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第三章 地球的面貌·综合」，哪些做法是值得…」 多选题解析未逐项写出字号与结果对照（缺 D），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第四章 世界的居民与文化·区域」，哪些做法…」 多选题解析未逐项写出字号与结果对照（缺 C），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第四章 世界的居民与文化·综合」，哪些做法…」 多选题解析未逐项写出字号与结果对照（缺 A），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第五章 世界的气候·区域」，哪些做法是值得…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第五章 世界的气候·综合」，哪些做法是值得…」 多选题解析未逐项写出字号与结果对照（缺 A），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第六章 世界的发展差异·区域」，哪些做法是…」 多选题解析未逐项写出字号与结果对照（缺 D），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第六章 世界的发展差异·综合」，哪些做法是…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "本批次新增知识点 24 个，超出每批次 3~6 个的规格"
+      ],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\geography\\g8\\geography_g8_first_20261109_book.json",
+      "name": "geography_g8_first_20261109_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 23,
+      "error_messages": [],
+      "import_state": "unchanged",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\history\\g7\\history_g7_first_20261109_book.quarantined.json",
+      "name": "history_g7_first_20261109_book.quarantined.json",
+      "passed": false,
+      "errors": 9,
+      "warnings": 0,
+      "error_messages": [
+        "题目「关于「第一单元 史前时期：原始社会与中华文明的起…」 多选题解析未逐项写出字号与结果对照（缺 A），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第一单元 史前时期：原始社会与中华文明的起…」 多选题解析未逐项写出字号与结果对照（缺 D），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第二单元 夏商周时期：奴隶制王朝的更替和向…」 多选题解析未逐项写出字号与结果对照（缺 D），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第二单元 夏商周时期：奴隶制王朝的更替和向…」 多选题解析未逐项写出字号与结果对照（缺 A），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第三单元 秦汉时期：统一多民族封建国家的建…」 多选题解析未逐项写出字号与结果对照（缺 A），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第三单元 秦汉时期：统一多民族封建国家的建…」 多选题解析未逐项写出字号与结果对照（缺 A），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第四单元 三国两晋南北朝时期：政权分立与民…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第四单元 三国两晋南北朝时期：政权分立与民…」 多选题解析未逐项写出字号与结果对照（缺 C），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "本批次新增知识点 16 个，超出每批次 3~6 个的规格"
+      ],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\history\\g8\\history_g8_first_20261109_book.json",
+      "name": "history_g8_first_20261109_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 20,
+      "error_messages": [],
+      "import_state": "unchanged",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\history\\g9\\history_g9_first_20261109_book.quarantined.json",
+      "name": "history_g9_first_20261109_book.quarantined.json",
+      "passed": false,
+      "errors": 15,
+      "warnings": 0,
+      "error_messages": [
+        "题目「关于「第一单元 文明的产生和古代亚非文明·时空」…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第一单元 文明的产生和古代亚非文明·史料」…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第二单元 古代欧洲文明·时空」，哪些做法是…」 多选题解析未逐项写出字号与结果对照（缺 A），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第二单元 古代欧洲文明·史料」，哪些做法是…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第三单元 封建时代的欧洲·时空」，哪些做法…」 多选题解析未逐项写出字号与结果对照（缺 A），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第三单元 封建时代的欧洲·史料」，哪些做法…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第四单元 中古时期的亚洲、非洲和美洲·时空…」 多选题解析未逐项写出字号与结果对照（缺 D），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第四单元 中古时期的亚洲、非洲和美洲·史料…」 多选题解析未逐项写出字号与结果对照（缺 C），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第五单元 走向近代·时空」，哪些做法是值得…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第五单元 走向近代·史料」，哪些做法是值得…」 多选题解析未逐项写出字号与结果对照（缺 C），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第六单元 资本主义制度的初步确立·时空」，…」 多选题解析未逐项写出字号与结果对照（缺 D），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第六单元 资本主义制度的初步确立·史料」，…」 多选题解析未逐项写出字号与结果对照（缺 C），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第七单元 第一次工业革命和马克思主义的诞生…」 多选题解析未逐项写出字号与结果对照（缺 A），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第七单元 第一次工业革命和马克思主义的诞生…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "本批次新增知识点 28 个，超出每批次 3~6 个的规格"
+      ],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\math\\g1\\math_g1_first_20261109_book.json",
+      "name": "math_g1_first_20261109_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 19,
+      "error_messages": [],
+      "import_state": "unchanged",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\math\\g2\\math_g2_first_20261109_book.quarantined.json",
+      "name": "math_g2_first_20261109_book.quarantined.json",
+      "passed": false,
+      "errors": 1,
+      "warnings": 8,
+      "error_messages": [
+        "本批次新增知识点 20 个，超出每批次 3~6 个的规格"
+      ],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\math\\g3\\math_g3_first_20261109_book.quarantined.json",
+      "name": "math_g3_first_20261109_book.quarantined.json",
+      "passed": false,
+      "errors": 1,
+      "warnings": 12,
+      "error_messages": [
+        "本批次新增知识点 24 个，超出每批次 3~6 个的规格"
+      ],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\math\\g4\\math_g4_first_20261109_book.quarantined.json",
+      "name": "math_g4_first_20261109_book.quarantined.json",
+      "passed": false,
+      "errors": 1,
+      "warnings": 21,
+      "error_messages": [
+        "本批次新增知识点 32 个，超出每批次 3~6 个的规格"
+      ],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\math\\g5\\math_g5_first_20261109_book.quarantined.json",
+      "name": "math_g5_first_20261109_book.quarantined.json",
+      "passed": false,
+      "errors": 1,
+      "warnings": 29,
+      "error_messages": [
+        "本批次新增知识点 32 个，超出每批次 3~6 个的规格"
+      ],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\math\\g6\\math_g6_first_20261109_book.quarantined.json",
+      "name": "math_g6_first_20261109_book.quarantined.json",
+      "passed": false,
+      "errors": 1,
+      "warnings": 25,
+      "error_messages": [
+        "本批次新增知识点 32 个，超出每批次 3~6 个的规格"
+      ],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\math\\g7\\math_g7_first_20261109_book.quarantined.json",
+      "name": "math_g7_first_20261109_book.quarantined.json",
+      "passed": false,
+      "errors": 1,
+      "warnings": 12,
+      "error_messages": [
+        "本批次新增知识点 12 个，超出每批次 3~6 个的规格"
+      ],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\math\\g8\\math_g8_first_20261109_book.json",
+      "name": "math_g8_first_20261109_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 1,
+      "error_messages": [],
+      "import_state": "unchanged",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\math\\g9\\math_g9_first_20261109_book.quarantined.json",
+      "name": "math_g9_first_20261109_book.quarantined.json",
+      "passed": false,
+      "errors": 1,
+      "warnings": 4,
+      "error_messages": [
+        "本批次新增知识点 8 个，超出每批次 3~6 个的规格"
+      ],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\physics\\g8\\physics_g8_first_20261109_book.json",
+      "name": "physics_g8_first_20261109_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 21,
+      "error_messages": [],
+      "import_state": "unchanged",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\physics\\g9\\physics_g9_first_20261109_book.quarantined.json",
+      "name": "physics_g9_first_20261109_book.quarantined.json",
+      "passed": false,
+      "errors": 21,
+      "warnings": 0,
+      "error_messages": [
+        "题目「关于「第十三章 内能·概念」，哪些做法是值得提倡…」 多选题解析未逐项写出字号与结果对照（缺 A），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第十三章 内能·规律」，哪些做法是值得提倡…」 多选题解析未逐项写出字号与结果对照（缺 C），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第十四章 内能的利用·概念」，哪些做法是值…」 多选题解析未逐项写出字号与结果对照（缺 C），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第十四章 内能的利用·规律」，哪些做法是值…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第十五章 电流和电路·概念」，哪些做法是值…」 多选题解析未逐项写出字号与结果对照（缺 D），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第十五章 电流和电路·规律」，哪些做法是值…」 多选题解析未逐项写出字号与结果对照（缺 A），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第十六章 电压 电阻·概念」，哪些做法是值…」 多选题解析未逐项写出字号与结果对照（缺 A），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第十六章 电压 电阻·规律」，哪些做法是值…」 多选题解析未逐项写出字号与结果对照（缺 D），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第十七章 欧姆定律·概念」，哪些做法是值得…」 多选题解析未逐项写出字号与结果对照（缺 A），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第十七章 欧姆定律·规律」，哪些做法是值得…」 多选题解析未逐项写出字号与结果对照（缺 D），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第十八章 电功率·概念」，哪些做法是值得提…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第十八章 电功率·规律」，哪些做法是值得提…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第十九章 生活用电·概念」，哪些做法是值得…」 多选题解析未逐项写出字号与结果对照（缺 D），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第十九章 生活用电·规律」，哪些做法是值得…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第二十章 电与磁·概念」，哪些做法是值得提…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第二十章 电与磁·规律」，哪些做法是值得提…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第二十一章 电磁波及其应用·概念」，哪些做…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第二十一章 电磁波及其应用·规律」，哪些做…」 多选题解析未逐项写出字号与结果对照（缺 B），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第二十二章 能源与可持续发展·概念」，哪些…」 多选题解析未逐项写出字号与结果对照（缺 A），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "题目「关于「第二十二章 能源与可持续发展·规律」，哪些…」 多选题解析未逐项写出字号与结果对照（缺 C），答案可能未经验算；要求每个选项都写出「该项结果」",
+        "本批次新增知识点 40 个，超出每批次 3~6 个的规格"
+      ],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\politics\\g1\\politics_g1_first_20261109_book.json",
+      "name": "politics_g1_first_20261109_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 1,
+      "error_messages": [],
+      "import_state": "unchanged",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\politics\\g2\\politics_g2_first_20261109_book.quarantined.json",
+      "name": "politics_g2_first_20261109_book.quarantined.json",
+      "passed": false,
+      "errors": 1,
+      "warnings": 0,
+      "error_messages": [
+        "本批次新增知识点 16 个，超出每批次 3~6 个的规格"
+      ],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\politics\\g3\\politics_g3_first_20261109_book.quarantined.json",
+      "name": "politics_g3_first_20261109_book.quarantined.json",
+      "passed": false,
+      "errors": 1,
+      "warnings": 0,
+      "error_messages": [
+        "本批次新增知识点 16 个，超出每批次 3~6 个的规格"
+      ],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\politics\\g4\\politics_g4_first_20261109_book.quarantined.json",
+      "name": "politics_g4_first_20261109_book.quarantined.json",
+      "passed": false,
+      "errors": 1,
+      "warnings": 0,
+      "error_messages": [
+        "本批次新增知识点 16 个，超出每批次 3~6 个的规格"
+      ],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\politics\\g5\\politics_g5_first_20261109_book.quarantined.json",
+      "name": "politics_g5_first_20261109_book.quarantined.json",
+      "passed": false,
+      "errors": 1,
+      "warnings": 0,
+      "error_messages": [
+        "本批次新增知识点 16 个，超出每批次 3~6 个的规格"
+      ],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\politics\\g6\\politics_g6_first_20261109_book.quarantined.json",
+      "name": "politics_g6_first_20261109_book.quarantined.json",
+      "passed": false,
+      "errors": 1,
+      "warnings": 0,
+      "error_messages": [
+        "本批次新增知识点 16 个，超出每批次 3~6 个的规格"
+      ],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\politics\\g7\\politics_g7_first_20261109_book.quarantined.json",
+      "name": "politics_g7_first_20261109_book.quarantined.json",
+      "passed": false,
+      "errors": 1,
+      "warnings": 0,
+      "error_messages": [
+        "本批次新增知识点 16 个，超出每批次 3~6 个的规格"
+      ],
+      "import_state": "unknown",
+      "book": false
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\politics\\g8\\politics_g8_first_20261109_book.json",
+      "name": "politics_g8_first_20261109_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 1,
+      "error_messages": [],
+      "import_state": "unchanged",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\politics\\g9\\politics_g9_first_20261109_book.quarantined.json",
+      "name": "politics_g9_first_20261109_book.quarantined.json",
+      "passed": false,
+      "errors": 1,
+      "warnings": 0,
+      "error_messages": [
+        "本批次新增知识点 16 个，超出每批次 3~6 个的规格"
+      ],
+      "import_state": "unknown",
+      "book": false
+    }
+  ]
+}

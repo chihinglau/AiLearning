@@ -1,0 +1,340 @@
+{
+  "subject": "math",
+  "grade": 5,
+  "version": "北师大版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第四单元 用字母表示（一）",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "字母表示数·概念理解",
+      "parent": "第四单元 用字母表示（一）",
+      "order_index": 1,
+      "explanation": "字母表示数·概念理解：在「第四单元 用字母表示（一）」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "字母表示数·基本运算",
+      "parent": "第四单元 用字母表示（一）",
+      "order_index": 2,
+      "explanation": "字母表示数·基本运算：在「第四单元 用字母表示（一）」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "字母表示数·实际应用",
+      "parent": "第四单元 用字母表示（一）",
+      "order_index": 3,
+      "explanation": "字母表示数·实际应用：在「第四单元 用字母表示（一）」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "字母表示数·易错辨析",
+      "parent": "第四单元 用字母表示（一）",
+      "order_index": 4,
+      "explanation": "字母表示数·易错辨析：在「第四单元 用字母表示（一）」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第四单元 用字母表示（一）",
+      "order_index": 5,
+      "summary": "第四单元 用字母表示（一）：围绕「字母表示数」的概念、练习与运用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "【字母表示数·概念理解】当 a=6 时，3a 的值 = （  ）",
+          "options": [
+            "16",
+            "20",
+            "17",
+            "18"
+          ],
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "当 a=6 时，3a 的值 = 18，所以选 D；其余是常见错误。",
+          "difficulty": 1,
+          "knowledge_point": "字母表示数·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【字母表示数·概念理解】算式 当 a=4 时，3a 的值 的结果是（  ）",
+          "answer": {
+            "value": "12"
+          },
+          "analysis": "验算：当 a=4 时，3a 的值 = 12，所以填 12。",
+          "difficulty": 1,
+          "knowledge_point": "字母表示数·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【字母表示数·概念理解】当 a=6 时，3a 的值 = 19。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "当 a=6 时，3a 的值 = 18，题面写的是 19，不相等，说法错误。",
+          "difficulty": 1,
+          "knowledge_point": "字母表示数·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「字母表示数·概念理解」，举一个生活中用到「字母表示数」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 1,
+          "knowledge_point": "字母表示数·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【字母表示数·基本运算】当 a=4 时，3a 的值 = （  ）",
+          "options": [
+            "14",
+            "10",
+            "15",
+            "12"
+          ],
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "当 a=4 时，3a 的值 = 12，所以选 D；其余是常见错误。",
+          "difficulty": 2,
+          "knowledge_point": "字母表示数·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【字母表示数·基本运算】算式 当 a=4 时，3a 的值 的结果是（  ）",
+          "answer": {
+            "value": "12"
+          },
+          "analysis": "验算：当 a=4 时，3a 的值 = 12，所以填 12。",
+          "difficulty": 2,
+          "knowledge_point": "字母表示数·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【字母表示数·基本运算】当 a=6 时，3a 的值 = 18。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "当 a=6 时，3a 的值 = 18，题面写的是 18，相等，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "字母表示数·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「字母表示数·基本运算」，举一个生活中用到「字母表示数」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 2,
+          "knowledge_point": "字母表示数·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【字母表示数·实际应用】当 a=5 时，3a 的值 = （  ）",
+          "options": [
+            "13",
+            "18",
+            "16",
+            "15"
+          ],
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "当 a=5 时，3a 的值 = 15，所以选 D；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "字母表示数·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【字母表示数·实际应用】算式 当 a=2 时，3a 的值 的结果是（  ）",
+          "answer": {
+            "value": "6"
+          },
+          "analysis": "验算：当 a=2 时，3a 的值 = 6，所以填 6。",
+          "difficulty": 3,
+          "knowledge_point": "字母表示数·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【字母表示数·实际应用】当 a=5 时，3a 的值 = 17。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "当 a=5 时，3a 的值 = 15，题面写的是 17，不相等，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "字母表示数·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「字母表示数·实际应用」，举一个生活中用到「字母表示数」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 3,
+          "knowledge_point": "字母表示数·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【字母表示数·易错辨析】当 a=5 时，3a 的值 = （  ）",
+          "options": [
+            "19",
+            "13",
+            "17",
+            "15"
+          ],
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "当 a=5 时，3a 的值 = 15，所以选 D；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "字母表示数·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【字母表示数·易错辨析】算式 当 a=3 时，3a 的值 的结果是（  ）",
+          "answer": {
+            "value": "9"
+          },
+          "analysis": "验算：当 a=3 时，3a 的值 = 9，所以填 9。",
+          "difficulty": 3,
+          "knowledge_point": "字母表示数·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【字母表示数·易错辨析】当 a=6 时，3a 的值 = 19。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "当 a=6 时，3a 的值 = 18，题面写的是 19，不相等，说法错误。",
+          "difficulty": 4,
+          "knowledge_point": "字母表示数·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「字母表示数·易错辨析」，举一个生活中用到「字母表示数」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "字母表示数·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【字母表示数·概念理解】下面哪些算式的结果等于 18？",
+          "options": [
+            "当 a=6 时，3a 的值",
+            "18 + 1",
+            "18 - 2",
+            "18 × 2"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 当 a=6 时，3a 的值 = 18 ✓；B 为 19 ✗；C 为 16 ✗；D 为 36 ✗。所以选 A。",
+          "difficulty": 4,
+          "knowledge_point": "字母表示数·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【字母表示数·基本运算】下面哪些算式的结果等于 12？",
+          "options": [
+            "当 a=4 时，3a 的值",
+            "12 + 1",
+            "12 - 2",
+            "12 × 2"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 当 a=4 时，3a 的值 = 12 ✓；B 为 13 ✗；C 为 10 ✗；D 为 24 ✗。所以选 A。",
+          "difficulty": 5,
+          "knowledge_point": "字母表示数·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

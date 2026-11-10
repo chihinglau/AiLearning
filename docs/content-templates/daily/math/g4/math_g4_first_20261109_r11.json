@@ -1,0 +1,342 @@
+{
+  "subject": "math",
+  "grade": 4,
+  "version": "北师大版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "综合实践 导航给的时间准吗",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "综合实践·概念理解",
+      "parent": "综合实践 导航给的时间准吗",
+      "order_index": 1,
+      "explanation": "综合实践·概念理解：在「综合实践 导航给的时间准吗」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "综合实践·基本运算",
+      "parent": "综合实践 导航给的时间准吗",
+      "order_index": 2,
+      "explanation": "综合实践·基本运算：在「综合实践 导航给的时间准吗」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "综合实践·实际应用",
+      "parent": "综合实践 导航给的时间准吗",
+      "order_index": 3,
+      "explanation": "综合实践·实际应用：在「综合实践 导航给的时间准吗」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "综合实践·易错辨析",
+      "parent": "综合实践 导航给的时间准吗",
+      "order_index": 4,
+      "explanation": "综合实践·易错辨析：在「综合实践 导航给的时间准吗」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "综合实践 导航给的时间准吗",
+      "order_index": 11,
+      "summary": "综合实践 导航给的时间准吗：围绕「综合实践」的概念、练习与运用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "做「综合实践·概念理解」练习时，比较合适的做法是（  ）",
+          "options": [
+            "先理解题意再列式",
+            "直接抄答案",
+            "随便写数",
+            "不检验"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先读懂再动笔才能做对，选 A；其余三项都不可取。",
+          "difficulty": 1,
+          "knowledge_point": "综合实践·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "研究「综合实践·概念理解」时，要按（  ）—记录—分析的步骤进行。",
+          "answer": {
+            "value": "调查"
+          },
+          "analysis": "先调查、再记录、最后分析，所以填「调查」。",
+          "difficulty": 1,
+          "knowledge_point": "综合实践·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "学习「综合实践·概念理解」时，认真记录数据是得到正确结论的前提。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "数据是分析依据，先记准再分析，说法正确。",
+          "difficulty": 1,
+          "knowledge_point": "综合实践·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「综合实践·概念理解」，举一个生活中用到「综合实践」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 1,
+          "knowledge_point": "综合实践·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "做「综合实践·基本运算」练习时，比较合适的做法是（  ）",
+          "options": [
+            "先理解题意再列式",
+            "直接抄答案",
+            "随便写数",
+            "不检验"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先读懂再动笔才能做对，选 A；其余三项都不可取。",
+          "difficulty": 2,
+          "knowledge_point": "综合实践·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "研究「综合实践·基本运算」时，要按（  ）—记录—分析的步骤进行。",
+          "answer": {
+            "value": "调查"
+          },
+          "analysis": "先调查、再记录、最后分析，所以填「调查」。",
+          "difficulty": 2,
+          "knowledge_point": "综合实践·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "学习「综合实践·基本运算」时，认真记录数据是得到正确结论的前提。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "数据是分析依据，先记准再分析，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "综合实践·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「综合实践·基本运算」，举一个生活中用到「综合实践」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 2,
+          "knowledge_point": "综合实践·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "做「综合实践·实际应用」练习时，比较合适的做法是（  ）",
+          "options": [
+            "先理解题意再列式",
+            "直接抄答案",
+            "随便写数",
+            "不检验"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先读懂再动笔才能做对，选 A；其余三项都不可取。",
+          "difficulty": 3,
+          "knowledge_point": "综合实践·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "研究「综合实践·实际应用」时，要按（  ）—记录—分析的步骤进行。",
+          "answer": {
+            "value": "调查"
+          },
+          "analysis": "先调查、再记录、最后分析，所以填「调查」。",
+          "difficulty": 3,
+          "knowledge_point": "综合实践·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "学习「综合实践·实际应用」时，认真记录数据是得到正确结论的前提。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "数据是分析依据，先记准再分析，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "综合实践·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「综合实践·实际应用」，举一个生活中用到「综合实践」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 3,
+          "knowledge_point": "综合实践·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "做「综合实践·易错辨析」练习时，比较合适的做法是（  ）",
+          "options": [
+            "先理解题意再列式",
+            "直接抄答案",
+            "随便写数",
+            "不检验"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先读懂再动笔才能做对，选 A；其余三项都不可取。",
+          "difficulty": 3,
+          "knowledge_point": "综合实践·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "研究「综合实践·易错辨析」时，要按（  ）—记录—分析的步骤进行。",
+          "answer": {
+            "value": "调查"
+          },
+          "analysis": "先调查、再记录、最后分析，所以填「调查」。",
+          "difficulty": 3,
+          "knowledge_point": "综合实践·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "学习「综合实践·易错辨析」时，认真记录数据是得到正确结论的前提。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "数据是分析依据，先记准再分析，说法正确。",
+          "difficulty": 4,
+          "knowledge_point": "综合实践·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「综合实践·易错辨析」，举一个生活中用到「综合实践」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "综合实践·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于「综合实践·概念理解」的探究，哪些做法可取？",
+          "options": [
+            "先明确问题",
+            "只抄第一段",
+            "找可靠来源",
+            "随便猜测"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A 先明确问题 ✓；B 只抄第一段 ✗；C 找可靠来源 ✓；D 随便猜测 ✗。所以选 A、C。",
+          "difficulty": 4,
+          "knowledge_point": "综合实践·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于「综合实践·基本运算」的探究，哪些做法可取？",
+          "options": [
+            "先明确问题",
+            "只抄第一段",
+            "找可靠来源",
+            "随便猜测"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A 先明确问题 ✓；B 只抄第一段 ✗；C 找可靠来源 ✓；D 随便猜测 ✗。所以选 A、C。",
+          "difficulty": 5,
+          "knowledge_point": "综合实践·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

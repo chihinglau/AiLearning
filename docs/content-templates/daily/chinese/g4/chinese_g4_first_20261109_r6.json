@@ -1,0 +1,344 @@
+{
+  "subject": "chinese",
+  "grade": 4,
+  "version": "人教版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第六单元",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "语文要素·字词",
+      "parent": "第六单元",
+      "order_index": 1,
+      "explanation": "语文要素·字词：在「第六单元」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "语文要素·阅读",
+      "parent": "第六单元",
+      "order_index": 2,
+      "explanation": "语文要素·阅读：在「第六单元」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "语文要素·表达",
+      "parent": "第六单元",
+      "order_index": 3,
+      "explanation": "语文要素·表达：在「第六单元」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "语文要素·习惯",
+      "parent": "第六单元",
+      "order_index": 4,
+      "explanation": "语文要素·习惯：在「第六单元」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第六单元",
+      "order_index": 6,
+      "summary": "第六单元：围绕「语文要素」的概念、练习与运用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "词语「温暖」的正确书写形式是（  ）",
+          "options": [
+            "温暖",
+            "明liàng",
+            "温援",
+            "快东"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「温暖」写法正确，选 A；其余有错别字。",
+          "difficulty": 1,
+          "knowledge_point": "语文要素·字词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "请写出「温暖」的近义词：（  ）。",
+          "answer": {
+            "value": "示例：开心"
+          },
+          "analysis": "近义词要义近词性同，可填示例；填反义词或错词不合要求。",
+          "difficulty": 1,
+          "knowledge_point": "语文要素·字词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "学习「语文要素·字词」时，应做到读准字音、不添字漏字。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "读准字音、读通句子是基本要求，说法正确。",
+          "difficulty": 1,
+          "knowledge_point": "语文要素·字词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「温暖」写一句话，并说明为什么用这个词。",
+          "answer": {
+            "value": "示例：今天天气温暖，我们去公园。因为「温暖」写出了舒服的感受，很贴切。"
+          },
+          "analysis": "评分要点：造句通顺得 2 分，说明理由得 2 分。",
+          "difficulty": 1,
+          "knowledge_point": "语文要素·字词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "词语「朋友」的正确书写形式是（  ）",
+          "options": [
+            "朋友",
+            "明liàng",
+            "温援",
+            "快东"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「朋友」写法正确，选 A；其余有错别字。",
+          "difficulty": 2,
+          "knowledge_point": "语文要素·阅读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "请写出「朋友」的近义词：（  ）。",
+          "answer": {
+            "value": "示例：光亮"
+          },
+          "analysis": "近义词要义近词性同，可填示例；填反义词或错词不合要求。",
+          "difficulty": 2,
+          "knowledge_point": "语文要素·阅读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "学习「语文要素·阅读」时，应做到读准字音、不添字漏字。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "读准字音、读通句子是基本要求，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "语文要素·阅读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「朋友」写一句话，并说明为什么用这个词。",
+          "answer": {
+            "value": "示例：今天天气朋友，我们去公园。因为「朋友」写出了舒服的感受，很贴切。"
+          },
+          "analysis": "评分要点：造句通顺得 2 分，说明理由得 2 分。",
+          "difficulty": 2,
+          "knowledge_point": "语文要素·阅读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "词语「安静」的正确书写形式是（  ）",
+          "options": [
+            "安静",
+            "明liàng",
+            "温援",
+            "快东"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「安静」写法正确，选 A；其余有错别字。",
+          "difficulty": 3,
+          "knowledge_point": "语文要素·表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "请写出「安静」的近义词：（  ）。",
+          "answer": {
+            "value": "示例：开心"
+          },
+          "analysis": "近义词要义近词性同，可填示例；填反义词或错词不合要求。",
+          "difficulty": 3,
+          "knowledge_point": "语文要素·表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "学习「语文要素·表达」时，应做到读准字音、不添字漏字。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "读准字音、读通句子是基本要求，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "语文要素·表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「安静」写一句话，并说明为什么用这个词。",
+          "answer": {
+            "value": "示例：今天天气安静，我们去公园。因为「安静」写出了舒服的感受，很贴切。"
+          },
+          "analysis": "评分要点：造句通顺得 2 分，说明理由得 2 分。",
+          "difficulty": 3,
+          "knowledge_point": "语文要素·表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "词语「认真」的正确书写形式是（  ）",
+          "options": [
+            "认真",
+            "明liàng",
+            "温援",
+            "快东"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「认真」写法正确，选 A；其余有错别字。",
+          "difficulty": 3,
+          "knowledge_point": "语文要素·习惯",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "请写出「认真」的近义词：（  ）。",
+          "answer": {
+            "value": "示例：光亮"
+          },
+          "analysis": "近义词要义近词性同，可填示例；填反义词或错词不合要求。",
+          "difficulty": 3,
+          "knowledge_point": "语文要素·习惯",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "学习「语文要素·习惯」时，应做到读准字音、不添字漏字。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "读准字音、读通句子是基本要求，说法正确。",
+          "difficulty": 4,
+          "knowledge_point": "语文要素·习惯",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「认真」写一句话，并说明为什么用这个词。",
+          "answer": {
+            "value": "示例：今天天气认真，我们去公园。因为「认真」写出了舒服的感受，很贴切。"
+          },
+          "analysis": "评分要点：造句通顺得 2 分，说明理由得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "语文要素·习惯",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于「语文要素·字词」，哪些做法有助于积累？",
+          "options": [
+            "先读准字音",
+            "边读边想意思",
+            "读完就丢一边",
+            "圈画好词好句"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A 读准字音 ✓；B 边读边想 ✓；C 读完就丢 ✗；D 圈画积累 ✓。所以选 A、B、D。",
+          "difficulty": 4,
+          "knowledge_point": "语文要素·字词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于「语文要素·阅读」，哪些做法有助于积累？",
+          "options": [
+            "先读准字音",
+            "边读边想意思",
+            "读完就丢一边",
+            "圈画好词好句"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A 读准字音 ✓；B 边读边想 ✓；C 读完就丢 ✗；D 圈画积累 ✓。所以选 A、B、D。",
+          "difficulty": 5,
+          "knowledge_point": "语文要素·阅读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}

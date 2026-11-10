@@ -1,0 +1,3876 @@
+{
+  "subject": "math",
+  "grade": 5,
+  "version": "北师大版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第一单元 小数的再认识和加减法",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "小数加减·概念理解",
+      "parent": "第一单元 小数的再认识和加减法",
+      "order_index": 1,
+      "explanation": "小数加减·概念理解：在「第一单元 小数的再认识和加减法」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "小数加减·基本运算",
+      "parent": "第一单元 小数的再认识和加减法",
+      "order_index": 2,
+      "explanation": "小数加减·基本运算：在「第一单元 小数的再认识和加减法」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "小数加减·实际应用",
+      "parent": "第一单元 小数的再认识和加减法",
+      "order_index": 3,
+      "explanation": "小数加减·实际应用：在「第一单元 小数的再认识和加减法」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "小数加减·易错辨析",
+      "parent": "第一单元 小数的再认识和加减法",
+      "order_index": 4,
+      "explanation": "小数加减·易错辨析：在「第一单元 小数的再认识和加减法」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二单元 三角形的再认识",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "线与角·概念理解",
+      "parent": "第二单元 三角形的再认识",
+      "order_index": 1,
+      "explanation": "线与角·概念理解：在「第二单元 三角形的再认识」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "线与角·基本运算",
+      "parent": "第二单元 三角形的再认识",
+      "order_index": 2,
+      "explanation": "线与角·基本运算：在「第二单元 三角形的再认识」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "线与角·实际应用",
+      "parent": "第二单元 三角形的再认识",
+      "order_index": 3,
+      "explanation": "线与角·实际应用：在「第二单元 三角形的再认识」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "线与角·易错辨析",
+      "parent": "第二单元 三角形的再认识",
+      "order_index": 4,
+      "explanation": "线与角·易错辨析：在「第二单元 三角形的再认识」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "综合实践 小小设计师",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "综合实践·概念理解",
+      "parent": "综合实践 小小设计师",
+      "order_index": 1,
+      "explanation": "综合实践·概念理解：在「综合实践 小小设计师」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "综合实践·基本运算",
+      "parent": "综合实践 小小设计师",
+      "order_index": 2,
+      "explanation": "综合实践·基本运算：在「综合实践 小小设计师」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "综合实践·实际应用",
+      "parent": "综合实践 小小设计师",
+      "order_index": 3,
+      "explanation": "综合实践·实际应用：在「综合实践 小小设计师」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "综合实践·易错辨析",
+      "parent": "综合实践 小小设计师",
+      "order_index": 4,
+      "explanation": "综合实践·易错辨析：在「综合实践 小小设计师」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第四单元 用字母表示（一）",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "字母表示数·概念理解",
+      "parent": "第四单元 用字母表示（一）",
+      "order_index": 1,
+      "explanation": "字母表示数·概念理解：在「第四单元 用字母表示（一）」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "字母表示数·基本运算",
+      "parent": "第四单元 用字母表示（一）",
+      "order_index": 2,
+      "explanation": "字母表示数·基本运算：在「第四单元 用字母表示（一）」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "字母表示数·实际应用",
+      "parent": "第四单元 用字母表示（一）",
+      "order_index": 3,
+      "explanation": "字母表示数·实际应用：在「第四单元 用字母表示（一）」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "字母表示数·易错辨析",
+      "parent": "第四单元 用字母表示（一）",
+      "order_index": 4,
+      "explanation": "字母表示数·易错辨析：在「第四单元 用字母表示（一）」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第五单元 多边形的面积",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "图形与面积·概念理解",
+      "parent": "第五单元 多边形的面积",
+      "order_index": 1,
+      "explanation": "图形与面积·概念理解：在「第五单元 多边形的面积」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "图形与面积·基本运算",
+      "parent": "第五单元 多边形的面积",
+      "order_index": 2,
+      "explanation": "图形与面积·基本运算：在「第五单元 多边形的面积」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "图形与面积·实际应用",
+      "parent": "第五单元 多边形的面积",
+      "order_index": 3,
+      "explanation": "图形与面积·实际应用：在「第五单元 多边形的面积」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "图形与面积·易错辨析",
+      "parent": "第五单元 多边形的面积",
+      "order_index": 4,
+      "explanation": "图形与面积·易错辨析：在「第五单元 多边形的面积」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "数学好玩 鸡兔同笼",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "鸡兔同笼·概念理解",
+      "parent": "数学好玩 鸡兔同笼",
+      "order_index": 1,
+      "explanation": "鸡兔同笼·概念理解：在「数学好玩 鸡兔同笼」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "鸡兔同笼·基本运算",
+      "parent": "数学好玩 鸡兔同笼",
+      "order_index": 2,
+      "explanation": "鸡兔同笼·基本运算：在「数学好玩 鸡兔同笼」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "鸡兔同笼·实际应用",
+      "parent": "数学好玩 鸡兔同笼",
+      "order_index": 3,
+      "explanation": "鸡兔同笼·实际应用：在「数学好玩 鸡兔同笼」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "鸡兔同笼·易错辨析",
+      "parent": "数学好玩 鸡兔同笼",
+      "order_index": 4,
+      "explanation": "鸡兔同笼·易错辨析：在「数学好玩 鸡兔同笼」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第七单元 倍数与因数",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "倍数与因数·概念理解",
+      "parent": "第七单元 倍数与因数",
+      "order_index": 1,
+      "explanation": "倍数与因数·概念理解：在「第七单元 倍数与因数」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "倍数与因数·基本运算",
+      "parent": "第七单元 倍数与因数",
+      "order_index": 2,
+      "explanation": "倍数与因数·基本运算：在「第七单元 倍数与因数」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "倍数与因数·实际应用",
+      "parent": "第七单元 倍数与因数",
+      "order_index": 3,
+      "explanation": "倍数与因数·实际应用：在「第七单元 倍数与因数」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "倍数与因数·易错辨析",
+      "parent": "第七单元 倍数与因数",
+      "order_index": 4,
+      "explanation": "倍数与因数·易错辨析：在「第七单元 倍数与因数」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第八单元 可能性",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "数据表示·概念理解",
+      "parent": "第八单元 可能性",
+      "order_index": 1,
+      "explanation": "数据表示·概念理解：在「第八单元 可能性」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "数据表示·基本运算",
+      "parent": "第八单元 可能性",
+      "order_index": 2,
+      "explanation": "数据表示·基本运算：在「第八单元 可能性」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "数据表示·实际应用",
+      "parent": "第八单元 可能性",
+      "order_index": 3,
+      "explanation": "数据表示·实际应用：在「第八单元 可能性」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "数据表示·易错辨析",
+      "parent": "第八单元 可能性",
+      "order_index": 4,
+      "explanation": "数据表示·易错辨析：在「第八单元 可能性」中落实，先理解再练习，注意常见混淆。",
+      "prerequisites": [],
+      "weight": 1.3,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一单元 小数的再认识和加减法",
+      "order_index": 1,
+      "summary": "第一单元 小数的再认识和加减法：围绕「小数加减」的概念、练习与运用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "【小数加减·概念理解】5.8 + 0.6 = （  ）",
+          "options": [
+            "6.4",
+            "1/3",
+            "2/3",
+            "1/2"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "5.8 + 0.6 = 6.4，所以选 A；其余是常见错误。",
+          "difficulty": 1,
+          "knowledge_point": "小数加减·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【小数加减·概念理解】算式 5.8 + 0.3 的结果是（  ）",
+          "answer": {
+            "value": "6.1"
+          },
+          "analysis": "验算：5.8 + 0.3 = 6.1，所以填 6.1。",
+          "difficulty": 1,
+          "knowledge_point": "小数加减·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【小数加减·概念理解】2.0 + 0.9 = 1/2。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "2.0 + 0.9 = 2.9，题面写的是 1/2，不相等，说法错误。",
+          "difficulty": 1,
+          "knowledge_point": "小数加减·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「小数加减·概念理解」，举一个生活中用到「小数加减」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 1,
+          "knowledge_point": "小数加减·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【小数加减·基本运算】2.8 + 0.6 = （  ）",
+          "options": [
+            "1/3",
+            "2/3",
+            "1/2",
+            "3.4"
+          ],
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "2.8 + 0.6 = 3.4，所以选 D；其余是常见错误。",
+          "difficulty": 2,
+          "knowledge_point": "小数加减·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【小数加减·基本运算】算式 5.2 + 0.9 的结果是（  ）",
+          "answer": {
+            "value": "6.1"
+          },
+          "analysis": "验算：5.2 + 0.9 = 6.1，所以填 6.1。",
+          "difficulty": 2,
+          "knowledge_point": "小数加减·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【小数加减·基本运算】6.9 + 0.4 = 7.3。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "6.9 + 0.4 = 7.3，题面写的是 7.3，相等，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "小数加减·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「小数加减·基本运算」，举一个生活中用到「小数加减」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 2,
+          "knowledge_point": "小数加减·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【小数加减·实际应用】6.7 + 0.8 = （  ）",
+          "options": [
+            "7.5",
+            "1/2",
+            "2/3",
+            "1/3"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "6.7 + 0.8 = 7.5，所以选 A；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "小数加减·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【小数加减·实际应用】算式 6.7 + 0.2 的结果是（  ）",
+          "answer": {
+            "value": "6.9"
+          },
+          "analysis": "验算：6.7 + 0.2 = 6.9，所以填 6.9。",
+          "difficulty": 3,
+          "knowledge_point": "小数加减·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【小数加减·实际应用】5.1 + 0.2 = 5.3。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "5.1 + 0.2 = 5.3，题面写的是 5.3，相等，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "小数加减·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「小数加减·实际应用」，举一个生活中用到「小数加减」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 3,
+          "knowledge_point": "小数加减·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【小数加减·易错辨析】7.4 + 0.6 = （  ）",
+          "options": [
+            "8.0",
+            "1/2",
+            "1/3",
+            "2/3"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "7.4 + 0.6 = 8.0，所以选 A；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "小数加减·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【小数加减·易错辨析】算式 2.7 + 0.8 的结果是（  ）",
+          "answer": {
+            "value": "3.5"
+          },
+          "analysis": "验算：2.7 + 0.8 = 3.5，所以填 3.5。",
+          "difficulty": 3,
+          "knowledge_point": "小数加减·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【小数加减·易错辨析】5.8 + 0.3 = 1/2。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "5.8 + 0.3 = 6.1，题面写的是 1/2，不相等，说法错误。",
+          "difficulty": 4,
+          "knowledge_point": "小数加减·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「小数加减·易错辨析」，举一个生活中用到「小数加减」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "小数加减·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【小数加减·概念理解】下面哪些算式的结果等于 4.0？",
+          "options": [
+            "3.1 + 0.9",
+            "1/2 + 1/4",
+            "2/4 + 1/4",
+            "1/3 + 1/3"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 3.1 + 0.9 = 4.0 ✓；B 为 3/4 ✗；C 为 3/4 ✗；D 为 2/3 ✗。所以选 A。",
+          "difficulty": 4,
+          "knowledge_point": "小数加减·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【小数加减·基本运算】下面哪些算式的结果等于 5.5？",
+          "options": [
+            "5.1 + 0.4",
+            "1/2 + 1/4",
+            "2/4 + 1/4",
+            "1/3 + 1/3"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 5.1 + 0.4 = 5.5 ✓；B 为 3/4 ✗；C 为 3/4 ✗；D 为 2/3 ✗。所以选 A。",
+          "difficulty": 5,
+          "knowledge_point": "小数加减·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第二单元 三角形的再认识",
+      "order_index": 2,
+      "summary": "第二单元 三角形的再认识：围绕「线与角」的概念、练习与运用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "【线与角·概念理解】一个直角的度数 = （  ）",
+          "options": [
+            "93",
+            "92",
+            "91",
+            "90"
+          ],
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "一个直角的度数 = 90，所以选 D；其余是常见错误。",
+          "difficulty": 1,
+          "knowledge_point": "线与角·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【线与角·概念理解】算式 一个直角的度数 的结果是（  ）",
+          "answer": {
+            "value": "90"
+          },
+          "analysis": "验算：一个直角的度数 = 90，所以填 90。",
+          "difficulty": 1,
+          "knowledge_point": "线与角·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【线与角·概念理解】一个直角的度数 = 90。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "一个直角的度数 = 90，题面写的是 90，相等，说法正确。",
+          "difficulty": 1,
+          "knowledge_point": "线与角·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「线与角·概念理解」，举一个生活中用到「线与角」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 1,
+          "knowledge_point": "线与角·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【线与角·基本运算】一个直角的度数 = （  ）",
+          "options": [
+            "92",
+            "90",
+            "87",
+            "88"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "一个直角的度数 = 90，所以选 B；其余是常见错误。",
+          "difficulty": 2,
+          "knowledge_point": "线与角·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【线与角·基本运算】算式 一个直角的度数 的结果是（  ）",
+          "answer": {
+            "value": "90"
+          },
+          "analysis": "验算：一个直角的度数 = 90，所以填 90。",
+          "difficulty": 2,
+          "knowledge_point": "线与角·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【线与角·基本运算】一个直角的度数 = 89。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "一个直角的度数 = 90，题面写的是 89，不相等，说法错误。",
+          "difficulty": 2,
+          "knowledge_point": "线与角·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「线与角·基本运算」，举一个生活中用到「线与角」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 2,
+          "knowledge_point": "线与角·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【线与角·实际应用】一个直角的度数 = （  ）",
+          "options": [
+            "87",
+            "88",
+            "90",
+            "94"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "一个直角的度数 = 90，所以选 C；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "线与角·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【线与角·实际应用】算式 一个直角的度数 的结果是（  ）",
+          "answer": {
+            "value": "90"
+          },
+          "analysis": "验算：一个直角的度数 = 90，所以填 90。",
+          "difficulty": 3,
+          "knowledge_point": "线与角·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【线与角·实际应用】一个直角的度数 = 89。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "一个直角的度数 = 90，题面写的是 89，不相等，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "线与角·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「线与角·实际应用」，举一个生活中用到「线与角」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 3,
+          "knowledge_point": "线与角·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【线与角·易错辨析】一个直角的度数 = （  ）",
+          "options": [
+            "87",
+            "92",
+            "90",
+            "94"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "一个直角的度数 = 90，所以选 C；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "线与角·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【线与角·易错辨析】算式 一个直角的度数 的结果是（  ）",
+          "answer": {
+            "value": "90"
+          },
+          "analysis": "验算：一个直角的度数 = 90，所以填 90。",
+          "difficulty": 3,
+          "knowledge_point": "线与角·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【线与角·易错辨析】一个直角的度数 = 90。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "一个直角的度数 = 90，题面写的是 90，相等，说法正确。",
+          "difficulty": 4,
+          "knowledge_point": "线与角·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「线与角·易错辨析」，举一个生活中用到「线与角」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "线与角·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【线与角·概念理解】下面哪些算式的结果等于 90？",
+          "options": [
+            "一个直角的度数",
+            "90 + 1",
+            "90 - 2",
+            "90 × 2"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 一个直角的度数 = 90 ✓；B 为 91 ✗；C 为 88 ✗；D 为 180 ✗。所以选 A。",
+          "difficulty": 4,
+          "knowledge_point": "线与角·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【线与角·基本运算】下面哪些算式的结果等于 90？",
+          "options": [
+            "一个直角的度数",
+            "90 + 1",
+            "90 - 2",
+            "90 × 2"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 一个直角的度数 = 90 ✓；B 为 91 ✗；C 为 88 ✗；D 为 180 ✗。所以选 A。",
+          "difficulty": 5,
+          "knowledge_point": "线与角·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "综合实践 小小设计师",
+      "order_index": 3,
+      "summary": "综合实践 小小设计师：围绕「综合实践」的概念、练习与运用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "做「综合实践·概念理解」练习时，比较合适的做法是（  ）",
+          "options": [
+            "先理解题意再列式",
+            "直接抄答案",
+            "随便写数",
+            "不检验"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先读懂再动笔才能做对，选 A；其余三项都不可取。",
+          "difficulty": 1,
+          "knowledge_point": "综合实践·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "研究「综合实践·概念理解」时，要按（  ）—记录—分析的步骤进行。",
+          "answer": {
+            "value": "调查"
+          },
+          "analysis": "先调查、再记录、最后分析，所以填「调查」。",
+          "difficulty": 1,
+          "knowledge_point": "综合实践·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "学习「综合实践·概念理解」时，认真记录数据是得到正确结论的前提。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "数据是分析依据，先记准再分析，说法正确。",
+          "difficulty": 1,
+          "knowledge_point": "综合实践·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「综合实践·概念理解」，举一个生活中用到「综合实践」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 1,
+          "knowledge_point": "综合实践·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "做「综合实践·基本运算」练习时，比较合适的做法是（  ）",
+          "options": [
+            "先理解题意再列式",
+            "直接抄答案",
+            "随便写数",
+            "不检验"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先读懂再动笔才能做对，选 A；其余三项都不可取。",
+          "difficulty": 2,
+          "knowledge_point": "综合实践·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "研究「综合实践·基本运算」时，要按（  ）—记录—分析的步骤进行。",
+          "answer": {
+            "value": "调查"
+          },
+          "analysis": "先调查、再记录、最后分析，所以填「调查」。",
+          "difficulty": 2,
+          "knowledge_point": "综合实践·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "学习「综合实践·基本运算」时，认真记录数据是得到正确结论的前提。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "数据是分析依据，先记准再分析，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "综合实践·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「综合实践·基本运算」，举一个生活中用到「综合实践」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 2,
+          "knowledge_point": "综合实践·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "做「综合实践·实际应用」练习时，比较合适的做法是（  ）",
+          "options": [
+            "先理解题意再列式",
+            "直接抄答案",
+            "随便写数",
+            "不检验"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先读懂再动笔才能做对，选 A；其余三项都不可取。",
+          "difficulty": 3,
+          "knowledge_point": "综合实践·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "研究「综合实践·实际应用」时，要按（  ）—记录—分析的步骤进行。",
+          "answer": {
+            "value": "调查"
+          },
+          "analysis": "先调查、再记录、最后分析，所以填「调查」。",
+          "difficulty": 3,
+          "knowledge_point": "综合实践·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "学习「综合实践·实际应用」时，认真记录数据是得到正确结论的前提。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "数据是分析依据，先记准再分析，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "综合实践·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「综合实践·实际应用」，举一个生活中用到「综合实践」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 3,
+          "knowledge_point": "综合实践·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "做「综合实践·易错辨析」练习时，比较合适的做法是（  ）",
+          "options": [
+            "先理解题意再列式",
+            "直接抄答案",
+            "随便写数",
+            "不检验"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先读懂再动笔才能做对，选 A；其余三项都不可取。",
+          "difficulty": 3,
+          "knowledge_point": "综合实践·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "研究「综合实践·易错辨析」时，要按（  ）—记录—分析的步骤进行。",
+          "answer": {
+            "value": "调查"
+          },
+          "analysis": "先调查、再记录、最后分析，所以填「调查」。",
+          "difficulty": 3,
+          "knowledge_point": "综合实践·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "学习「综合实践·易错辨析」时，认真记录数据是得到正确结论的前提。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "数据是分析依据，先记准再分析，说法正确。",
+          "difficulty": 4,
+          "knowledge_point": "综合实践·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「综合实践·易错辨析」，举一个生活中用到「综合实践」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "综合实践·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于「综合实践·概念理解」的探究，哪些做法可取？",
+          "options": [
+            "先明确问题",
+            "只抄第一段",
+            "找可靠来源",
+            "随便猜测"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A 先明确问题 ✓；B 只抄第一段 ✗；C 找可靠来源 ✓；D 随便猜测 ✗。所以选 A、C。",
+          "difficulty": 4,
+          "knowledge_point": "综合实践·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于「综合实践·基本运算」的探究，哪些做法可取？",
+          "options": [
+            "先明确问题",
+            "只抄第一段",
+            "找可靠来源",
+            "随便猜测"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A 先明确问题 ✓；B 只抄第一段 ✗；C 找可靠来源 ✓；D 随便猜测 ✗。所以选 A、C。",
+          "difficulty": 5,
+          "knowledge_point": "综合实践·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第三单元 小数乘法",
+      "order_index": 4,
+      "summary": "第三单元 小数乘法：围绕「小数加减」的概念、练习与运用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "【小数加减·概念理解】7.5 + 0.5 = （  ）",
+          "options": [
+            "1/2",
+            "8.0",
+            "2/3",
+            "1/3"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "7.5 + 0.5 = 8.0，所以选 B；其余是常见错误。",
+          "difficulty": 1,
+          "knowledge_point": "小数加减·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【小数加减·概念理解】算式 2.2 + 0.6 的结果是（  ）",
+          "answer": {
+            "value": "2.8"
+          },
+          "analysis": "验算：2.2 + 0.6 = 2.8，所以填 2.8。",
+          "difficulty": 1,
+          "knowledge_point": "小数加减·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【小数加减·概念理解】7.1 + 0.3 = 1/2。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "7.1 + 0.3 = 7.4，题面写的是 1/2，不相等，说法错误。",
+          "difficulty": 1,
+          "knowledge_point": "小数加减·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「小数加减·概念理解」，举一个生活中用到「小数加减」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 1,
+          "knowledge_point": "小数加减·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【小数加减·基本运算】2.4 + 0.4 = （  ）",
+          "options": [
+            "2/3",
+            "2.8",
+            "1/2",
+            "1/3"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "2.4 + 0.4 = 2.8，所以选 B；其余是常见错误。",
+          "difficulty": 2,
+          "knowledge_point": "小数加减·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【小数加减·基本运算】算式 7.1 + 0.3 的结果是（  ）",
+          "answer": {
+            "value": "7.4"
+          },
+          "analysis": "验算：7.1 + 0.3 = 7.4，所以填 7.4。",
+          "difficulty": 2,
+          "knowledge_point": "小数加减·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【小数加减·基本运算】7.6 + 0.4 = 1/2。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "7.6 + 0.4 = 8.0，题面写的是 1/2，不相等，说法错误。",
+          "difficulty": 2,
+          "knowledge_point": "小数加减·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「小数加减·基本运算」，举一个生活中用到「小数加减」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 2,
+          "knowledge_point": "小数加减·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【小数加减·实际应用】3.5 + 0.4 = （  ）",
+          "options": [
+            "1/2",
+            "1/3",
+            "3.9",
+            "2/3"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "3.5 + 0.4 = 3.9，所以选 C；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "小数加减·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【小数加减·实际应用】算式 7.8 + 0.8 的结果是（  ）",
+          "answer": {
+            "value": "8.6"
+          },
+          "analysis": "验算：7.8 + 0.8 = 8.6，所以填 8.6。",
+          "difficulty": 3,
+          "knowledge_point": "小数加减·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【小数加减·实际应用】7.5 + 0.2 = 7.7。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "7.5 + 0.2 = 7.7，题面写的是 7.7，相等，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "小数加减·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「小数加减·实际应用」，举一个生活中用到「小数加减」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 3,
+          "knowledge_point": "小数加减·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【小数加减·易错辨析】3.3 + 0.6 = （  ）",
+          "options": [
+            "3.9",
+            "1/2",
+            "1/3",
+            "2/3"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "3.3 + 0.6 = 3.9，所以选 A；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "小数加减·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【小数加减·易错辨析】算式 8.4 + 0.9 的结果是（  ）",
+          "answer": {
+            "value": "9.3"
+          },
+          "analysis": "验算：8.4 + 0.9 = 9.3，所以填 9.3。",
+          "difficulty": 3,
+          "knowledge_point": "小数加减·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【小数加减·易错辨析】6.8 + 0.5 = 1/2。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "6.8 + 0.5 = 7.3，题面写的是 1/2，不相等，说法错误。",
+          "difficulty": 4,
+          "knowledge_point": "小数加减·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「小数加减·易错辨析」，举一个生活中用到「小数加减」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "小数加减·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【小数加减·概念理解】下面哪些算式的结果等于 8.5？",
+          "options": [
+            "8.0 + 0.5",
+            "1/2 + 1/4",
+            "2/4 + 1/4",
+            "1/3 + 1/3"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 8.0 + 0.5 = 8.5 ✓；B 为 3/4 ✗；C 为 3/4 ✗；D 为 2/3 ✗。所以选 A。",
+          "difficulty": 4,
+          "knowledge_point": "小数加减·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【小数加减·基本运算】下面哪些算式的结果等于 6.8？",
+          "options": [
+            "6.5 + 0.3",
+            "1/2 + 1/4",
+            "2/4 + 1/4",
+            "1/3 + 1/3"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 6.5 + 0.3 = 6.8 ✓；B 为 3/4 ✗；C 为 3/4 ✗；D 为 2/3 ✗。所以选 A。",
+          "difficulty": 5,
+          "knowledge_point": "小数加减·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第四单元 用字母表示（一）",
+      "order_index": 5,
+      "summary": "第四单元 用字母表示（一）：围绕「字母表示数」的概念、练习与运用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "【字母表示数·概念理解】当 a=6 时，3a 的值 = （  ）",
+          "options": [
+            "16",
+            "20",
+            "17",
+            "18"
+          ],
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "当 a=6 时，3a 的值 = 18，所以选 D；其余是常见错误。",
+          "difficulty": 1,
+          "knowledge_point": "字母表示数·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【字母表示数·概念理解】算式 当 a=4 时，3a 的值 的结果是（  ）",
+          "answer": {
+            "value": "12"
+          },
+          "analysis": "验算：当 a=4 时，3a 的值 = 12，所以填 12。",
+          "difficulty": 1,
+          "knowledge_point": "字母表示数·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【字母表示数·概念理解】当 a=6 时，3a 的值 = 19。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "当 a=6 时，3a 的值 = 18，题面写的是 19，不相等，说法错误。",
+          "difficulty": 1,
+          "knowledge_point": "字母表示数·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「字母表示数·概念理解」，举一个生活中用到「字母表示数」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 1,
+          "knowledge_point": "字母表示数·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【字母表示数·基本运算】当 a=4 时，3a 的值 = （  ）",
+          "options": [
+            "14",
+            "10",
+            "15",
+            "12"
+          ],
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "当 a=4 时，3a 的值 = 12，所以选 D；其余是常见错误。",
+          "difficulty": 2,
+          "knowledge_point": "字母表示数·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【字母表示数·基本运算】算式 当 a=4 时，3a 的值 的结果是（  ）",
+          "answer": {
+            "value": "12"
+          },
+          "analysis": "验算：当 a=4 时，3a 的值 = 12，所以填 12。",
+          "difficulty": 2,
+          "knowledge_point": "字母表示数·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【字母表示数·基本运算】当 a=6 时，3a 的值 = 18。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "当 a=6 时，3a 的值 = 18，题面写的是 18，相等，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "字母表示数·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「字母表示数·基本运算」，举一个生活中用到「字母表示数」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 2,
+          "knowledge_point": "字母表示数·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【字母表示数·实际应用】当 a=5 时，3a 的值 = （  ）",
+          "options": [
+            "13",
+            "18",
+            "16",
+            "15"
+          ],
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "当 a=5 时，3a 的值 = 15，所以选 D；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "字母表示数·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【字母表示数·实际应用】算式 当 a=2 时，3a 的值 的结果是（  ）",
+          "answer": {
+            "value": "6"
+          },
+          "analysis": "验算：当 a=2 时，3a 的值 = 6，所以填 6。",
+          "difficulty": 3,
+          "knowledge_point": "字母表示数·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【字母表示数·实际应用】当 a=5 时，3a 的值 = 17。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "当 a=5 时，3a 的值 = 15，题面写的是 17，不相等，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "字母表示数·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「字母表示数·实际应用」，举一个生活中用到「字母表示数」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 3,
+          "knowledge_point": "字母表示数·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【字母表示数·易错辨析】当 a=5 时，3a 的值 = （  ）",
+          "options": [
+            "19",
+            "13",
+            "17",
+            "15"
+          ],
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "当 a=5 时，3a 的值 = 15，所以选 D；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "字母表示数·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【字母表示数·易错辨析】算式 当 a=3 时，3a 的值 的结果是（  ）",
+          "answer": {
+            "value": "9"
+          },
+          "analysis": "验算：当 a=3 时，3a 的值 = 9，所以填 9。",
+          "difficulty": 3,
+          "knowledge_point": "字母表示数·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【字母表示数·易错辨析】当 a=6 时，3a 的值 = 19。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "当 a=6 时，3a 的值 = 18，题面写的是 19，不相等，说法错误。",
+          "difficulty": 4,
+          "knowledge_point": "字母表示数·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「字母表示数·易错辨析」，举一个生活中用到「字母表示数」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "字母表示数·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【字母表示数·概念理解】下面哪些算式的结果等于 18？",
+          "options": [
+            "当 a=6 时，3a 的值",
+            "18 + 1",
+            "18 - 2",
+            "18 × 2"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 当 a=6 时，3a 的值 = 18 ✓；B 为 19 ✗；C 为 16 ✗；D 为 36 ✗。所以选 A。",
+          "difficulty": 4,
+          "knowledge_point": "字母表示数·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【字母表示数·基本运算】下面哪些算式的结果等于 12？",
+          "options": [
+            "当 a=4 时，3a 的值",
+            "12 + 1",
+            "12 - 2",
+            "12 × 2"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 当 a=4 时，3a 的值 = 12 ✓；B 为 13 ✗；C 为 10 ✗；D 为 24 ✗。所以选 A。",
+          "difficulty": 5,
+          "knowledge_point": "字母表示数·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第五单元 多边形的面积",
+      "order_index": 6,
+      "summary": "第五单元 多边形的面积：围绕「图形与面积」的概念、练习与运用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "【图形与面积·概念理解】长 8 cm、宽 7 cm 的长方形面积 = （  ）",
+          "options": [
+            "56",
+            "59",
+            "53",
+            "55"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "长 8 cm、宽 7 cm 的长方形面积 = 56，所以选 A；其余是常见错误。",
+          "difficulty": 1,
+          "knowledge_point": "图形与面积·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【图形与面积·概念理解】算式 长 3 cm、宽 6 cm 的长方形面积 的结果是（  ）",
+          "answer": {
+            "value": "18"
+          },
+          "analysis": "验算：长 3 cm、宽 6 cm 的长方形面积 = 18，所以填 18。",
+          "difficulty": 1,
+          "knowledge_point": "图形与面积·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【图形与面积·概念理解】长 5 cm、宽 3 cm 的长方形面积 = 15。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "长 5 cm、宽 3 cm 的长方形面积 = 15，题面写的是 15，相等，说法正确。",
+          "difficulty": 1,
+          "knowledge_point": "图形与面积·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「图形与面积·概念理解」，举一个生活中用到「图形与面积」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 1,
+          "knowledge_point": "图形与面积·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【图形与面积·基本运算】长 8 cm、宽 2 cm 的长方形面积 = （  ）",
+          "options": [
+            "18",
+            "17",
+            "20",
+            "16"
+          ],
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "长 8 cm、宽 2 cm 的长方形面积 = 16，所以选 D；其余是常见错误。",
+          "difficulty": 2,
+          "knowledge_point": "图形与面积·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【图形与面积·基本运算】算式 长 10 cm、宽 9 cm 的长方形面积 的结果是（  ）",
+          "answer": {
+            "value": "90"
+          },
+          "analysis": "验算：长 10 cm、宽 9 cm 的长方形面积 = 90，所以填 90。",
+          "difficulty": 2,
+          "knowledge_point": "图形与面积·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【图形与面积·基本运算】长 11 cm、宽 5 cm 的长方形面积 = 55。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "长 11 cm、宽 5 cm 的长方形面积 = 55，题面写的是 55，相等，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "图形与面积·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「图形与面积·基本运算」，举一个生活中用到「图形与面积」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 2,
+          "knowledge_point": "图形与面积·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【图形与面积·实际应用】长 5 cm、宽 4 cm 的长方形面积 = （  ）",
+          "options": [
+            "18",
+            "20",
+            "24",
+            "21"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "长 5 cm、宽 4 cm 的长方形面积 = 20，所以选 B；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "图形与面积·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【图形与面积·实际应用】算式 长 5 cm、宽 7 cm 的长方形面积 的结果是（  ）",
+          "answer": {
+            "value": "35"
+          },
+          "analysis": "验算：长 5 cm、宽 7 cm 的长方形面积 = 35，所以填 35。",
+          "difficulty": 3,
+          "knowledge_point": "图形与面积·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【图形与面积·实际应用】长 6 cm、宽 5 cm 的长方形面积 = 29。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "长 6 cm、宽 5 cm 的长方形面积 = 30，题面写的是 29，不相等，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "图形与面积·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「图形与面积·实际应用」，举一个生活中用到「图形与面积」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 3,
+          "knowledge_point": "图形与面积·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【图形与面积·易错辨析】长 12 cm、宽 2 cm 的长方形面积 = （  ）",
+          "options": [
+            "21",
+            "25",
+            "27",
+            "24"
+          ],
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "长 12 cm、宽 2 cm 的长方形面积 = 24，所以选 D；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "图形与面积·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【图形与面积·易错辨析】算式 长 8 cm、宽 8 cm 的长方形面积 的结果是（  ）",
+          "answer": {
+            "value": "64"
+          },
+          "analysis": "验算：长 8 cm、宽 8 cm 的长方形面积 = 64，所以填 64。",
+          "difficulty": 3,
+          "knowledge_point": "图形与面积·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【图形与面积·易错辨析】长 4 cm、宽 8 cm 的长方形面积 = 33。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "长 4 cm、宽 8 cm 的长方形面积 = 32，题面写的是 33，不相等，说法错误。",
+          "difficulty": 4,
+          "knowledge_point": "图形与面积·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「图形与面积·易错辨析」，举一个生活中用到「图形与面积」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "图形与面积·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【图形与面积·概念理解】下面哪些算式的结果等于 36？",
+          "options": [
+            "长 12 cm、宽 3 cm 的长方形面积",
+            "36 + 1",
+            "36 - 2",
+            "36 × 2"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 长 12 cm、宽 3 cm 的长方形面积 = 36 ✓；B 为 37 ✗；C 为 34 ✗；D 为 72 ✗。所以选 A。",
+          "difficulty": 4,
+          "knowledge_point": "图形与面积·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【图形与面积·基本运算】下面哪些算式的结果等于 33？",
+          "options": [
+            "长 11 cm、宽 3 cm 的长方形面积",
+            "33 + 1",
+            "33 - 2",
+            "33 × 2"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 长 11 cm、宽 3 cm 的长方形面积 = 33 ✓；B 为 34 ✗；C 为 31 ✗；D 为 66 ✗。所以选 A。",
+          "difficulty": 5,
+          "knowledge_point": "图形与面积·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "数学好玩 鸡兔同笼",
+      "order_index": 7,
+      "summary": "数学好玩 鸡兔同笼：围绕「鸡兔同笼」的概念、练习与运用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "【鸡兔同笼·概念理解】鸡兔同笼，共 8 头、26 脚，鸡的只数 = （  ）",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "6"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "鸡兔同笼，共 8 头、26 脚，鸡的只数 = 3，所以选 C；其余是常见错误。",
+          "difficulty": 1,
+          "knowledge_point": "鸡兔同笼·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【鸡兔同笼·概念理解】算式 鸡兔同笼，共 8 头、26 脚，鸡的只数 的结果是（  ）",
+          "answer": {
+            "value": "3"
+          },
+          "analysis": "验算：鸡兔同笼，共 8 头、26 脚，鸡的只数 = 3，所以填 3。",
+          "difficulty": 1,
+          "knowledge_point": "鸡兔同笼·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【鸡兔同笼·概念理解】鸡兔同笼，共 8 头、26 脚，鸡的只数 = 3。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "鸡兔同笼，共 8 头、26 脚，鸡的只数 = 3，题面写的是 3，相等，说法正确。",
+          "difficulty": 1,
+          "knowledge_point": "鸡兔同笼·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「鸡兔同笼·概念理解」，举一个生活中用到「鸡兔同笼」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 1,
+          "knowledge_point": "鸡兔同笼·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【鸡兔同笼·基本运算】鸡兔同笼，共 8 头、26 脚，鸡的只数 = （  ）",
+          "options": [
+            "6",
+            "5",
+            "2",
+            "3"
+          ],
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "鸡兔同笼，共 8 头、26 脚，鸡的只数 = 3，所以选 D；其余是常见错误。",
+          "difficulty": 2,
+          "knowledge_point": "鸡兔同笼·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【鸡兔同笼·基本运算】算式 鸡兔同笼，共 8 头、26 脚，鸡的只数 的结果是（  ）",
+          "answer": {
+            "value": "3"
+          },
+          "analysis": "验算：鸡兔同笼，共 8 头、26 脚，鸡的只数 = 3，所以填 3。",
+          "difficulty": 2,
+          "knowledge_point": "鸡兔同笼·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【鸡兔同笼·基本运算】鸡兔同笼，共 8 头、26 脚，鸡的只数 = 2。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "鸡兔同笼，共 8 头、26 脚，鸡的只数 = 3，题面写的是 2，不相等，说法错误。",
+          "difficulty": 2,
+          "knowledge_point": "鸡兔同笼·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「鸡兔同笼·基本运算」，举一个生活中用到「鸡兔同笼」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 2,
+          "knowledge_point": "鸡兔同笼·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【鸡兔同笼·实际应用】鸡兔同笼，共 8 头、26 脚，鸡的只数 = （  ）",
+          "options": [
+            "7",
+            "4",
+            "2",
+            "3"
+          ],
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "鸡兔同笼，共 8 头、26 脚，鸡的只数 = 3，所以选 D；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "鸡兔同笼·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【鸡兔同笼·实际应用】算式 鸡兔同笼，共 8 头、26 脚，鸡的只数 的结果是（  ）",
+          "answer": {
+            "value": "3"
+          },
+          "analysis": "验算：鸡兔同笼，共 8 头、26 脚，鸡的只数 = 3，所以填 3。",
+          "difficulty": 3,
+          "knowledge_point": "鸡兔同笼·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【鸡兔同笼·实际应用】鸡兔同笼，共 8 头、26 脚，鸡的只数 = 2。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "鸡兔同笼，共 8 头、26 脚，鸡的只数 = 3，题面写的是 2，不相等，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "鸡兔同笼·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「鸡兔同笼·实际应用」，举一个生活中用到「鸡兔同笼」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 3,
+          "knowledge_point": "鸡兔同笼·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【鸡兔同笼·易错辨析】鸡兔同笼，共 8 头、26 脚，鸡的只数 = （  ）",
+          "options": [
+            "0",
+            "2",
+            "1",
+            "3"
+          ],
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "鸡兔同笼，共 8 头、26 脚，鸡的只数 = 3，所以选 D；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "鸡兔同笼·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【鸡兔同笼·易错辨析】算式 鸡兔同笼，共 8 头、26 脚，鸡的只数 的结果是（  ）",
+          "answer": {
+            "value": "3"
+          },
+          "analysis": "验算：鸡兔同笼，共 8 头、26 脚，鸡的只数 = 3，所以填 3。",
+          "difficulty": 3,
+          "knowledge_point": "鸡兔同笼·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【鸡兔同笼·易错辨析】鸡兔同笼，共 8 头、26 脚，鸡的只数 = 3。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "鸡兔同笼，共 8 头、26 脚，鸡的只数 = 3，题面写的是 3，相等，说法正确。",
+          "difficulty": 4,
+          "knowledge_point": "鸡兔同笼·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「鸡兔同笼·易错辨析」，举一个生活中用到「鸡兔同笼」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "鸡兔同笼·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【鸡兔同笼·概念理解】下面哪些算式的结果等于 3？",
+          "options": [
+            "鸡兔同笼，共 8 头、26 脚，鸡的只数",
+            "3 + 1",
+            "3 - 2",
+            "3 × 2"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 鸡兔同笼，共 8 头、26 脚，鸡的只数 = 3 ✓；B 为 4 ✗；C 为 1 ✗；D 为 6 ✗。所以选 A。",
+          "difficulty": 4,
+          "knowledge_point": "鸡兔同笼·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【鸡兔同笼·基本运算】下面哪些算式的结果等于 3？",
+          "options": [
+            "鸡兔同笼，共 8 头、26 脚，鸡的只数",
+            "3 + 1",
+            "3 - 2",
+            "3 × 2"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 鸡兔同笼，共 8 头、26 脚，鸡的只数 = 3 ✓；B 为 4 ✗；C 为 1 ✗；D 为 6 ✗。所以选 A。",
+          "difficulty": 5,
+          "knowledge_point": "鸡兔同笼·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第六单元 图形的位置与运动（一）",
+      "order_index": 8,
+      "summary": "第六单元 图形的位置与运动（一）：围绕「图形与面积」的概念、练习与运用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "【图形与面积·概念理解】长 7 cm、宽 7 cm 的长方形面积 = （  ）",
+          "options": [
+            "47",
+            "49",
+            "53",
+            "46"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "长 7 cm、宽 7 cm 的长方形面积 = 49，所以选 B；其余是常见错误。",
+          "difficulty": 1,
+          "knowledge_point": "图形与面积·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【图形与面积·概念理解】算式 长 11 cm、宽 8 cm 的长方形面积 的结果是（  ）",
+          "answer": {
+            "value": "88"
+          },
+          "analysis": "验算：长 11 cm、宽 8 cm 的长方形面积 = 88，所以填 88。",
+          "difficulty": 1,
+          "knowledge_point": "图形与面积·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【图形与面积·概念理解】长 3 cm、宽 4 cm 的长方形面积 = 12。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "长 3 cm、宽 4 cm 的长方形面积 = 12，题面写的是 12，相等，说法正确。",
+          "difficulty": 1,
+          "knowledge_point": "图形与面积·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「图形与面积·概念理解」，举一个生活中用到「图形与面积」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 1,
+          "knowledge_point": "图形与面积·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【图形与面积·基本运算】长 9 cm、宽 4 cm 的长方形面积 = （  ）",
+          "options": [
+            "38",
+            "36",
+            "37",
+            "34"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "长 9 cm、宽 4 cm 的长方形面积 = 36，所以选 B；其余是常见错误。",
+          "difficulty": 2,
+          "knowledge_point": "图形与面积·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【图形与面积·基本运算】算式 长 3 cm、宽 8 cm 的长方形面积 的结果是（  ）",
+          "answer": {
+            "value": "24"
+          },
+          "analysis": "验算：长 3 cm、宽 8 cm 的长方形面积 = 24，所以填 24。",
+          "difficulty": 2,
+          "knowledge_point": "图形与面积·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【图形与面积·基本运算】长 3 cm、宽 4 cm 的长方形面积 = 12。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "长 3 cm、宽 4 cm 的长方形面积 = 12，题面写的是 12，相等，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "图形与面积·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「图形与面积·基本运算」，举一个生活中用到「图形与面积」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 2,
+          "knowledge_point": "图形与面积·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【图形与面积·实际应用】长 6 cm、宽 3 cm 的长方形面积 = （  ）",
+          "options": [
+            "21",
+            "18",
+            "15",
+            "22"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "长 6 cm、宽 3 cm 的长方形面积 = 18，所以选 B；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "图形与面积·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【图形与面积·实际应用】算式 长 3 cm、宽 3 cm 的长方形面积 的结果是（  ）",
+          "answer": {
+            "value": "9"
+          },
+          "analysis": "验算：长 3 cm、宽 3 cm 的长方形面积 = 9，所以填 9。",
+          "difficulty": 3,
+          "knowledge_point": "图形与面积·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【图形与面积·实际应用】长 4 cm、宽 7 cm 的长方形面积 = 28。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "长 4 cm、宽 7 cm 的长方形面积 = 28，题面写的是 28，相等，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "图形与面积·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「图形与面积·实际应用」，举一个生活中用到「图形与面积」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 3,
+          "knowledge_point": "图形与面积·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【图形与面积·易错辨析】长 3 cm、宽 3 cm 的长方形面积 = （  ）",
+          "options": [
+            "6",
+            "9",
+            "12",
+            "8"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "长 3 cm、宽 3 cm 的长方形面积 = 9，所以选 B；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "图形与面积·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【图形与面积·易错辨析】算式 长 12 cm、宽 4 cm 的长方形面积 的结果是（  ）",
+          "answer": {
+            "value": "48"
+          },
+          "analysis": "验算：长 12 cm、宽 4 cm 的长方形面积 = 48，所以填 48。",
+          "difficulty": 3,
+          "knowledge_point": "图形与面积·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【图形与面积·易错辨析】长 7 cm、宽 3 cm 的长方形面积 = 21。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "长 7 cm、宽 3 cm 的长方形面积 = 21，题面写的是 21，相等，说法正确。",
+          "difficulty": 4,
+          "knowledge_point": "图形与面积·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「图形与面积·易错辨析」，举一个生活中用到「图形与面积」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "图形与面积·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【图形与面积·概念理解】下面哪些算式的结果等于 44？",
+          "options": [
+            "长 11 cm、宽 4 cm 的长方形面积",
+            "44 + 1",
+            "44 - 2",
+            "44 × 2"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 长 11 cm、宽 4 cm 的长方形面积 = 44 ✓；B 为 45 ✗；C 为 42 ✗；D 为 88 ✗。所以选 A。",
+          "difficulty": 4,
+          "knowledge_point": "图形与面积·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【图形与面积·基本运算】下面哪些算式的结果等于 49？",
+          "options": [
+            "长 7 cm、宽 7 cm 的长方形面积",
+            "49 + 1",
+            "49 - 2",
+            "49 × 2"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 长 7 cm、宽 7 cm 的长方形面积 = 49 ✓；B 为 50 ✗；C 为 47 ✗；D 为 98 ✗。所以选 A。",
+          "difficulty": 5,
+          "knowledge_point": "图形与面积·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第七单元 倍数与因数",
+      "order_index": 9,
+      "summary": "第七单元 倍数与因数：围绕「倍数与因数」的概念、练习与运用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "【倍数与因数·概念理解】12 是不是 6 的倍数 = （  ）",
+          "options": [
+            "8",
+            "6",
+            "3",
+            "9"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "12 是不是 6 的倍数 = 6，所以选 B；其余是常见错误。",
+          "difficulty": 1,
+          "knowledge_point": "倍数与因数·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【倍数与因数·概念理解】算式 24 是不是 3 的倍数 的结果是（  ）",
+          "answer": {
+            "value": "3"
+          },
+          "analysis": "验算：24 是不是 3 的倍数 = 3，所以填 3。",
+          "difficulty": 1,
+          "knowledge_point": "倍数与因数·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【倍数与因数·概念理解】30 是不是 3 的倍数 = 3。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "30 是不是 3 的倍数 = 3，题面写的是 3，相等，说法正确。",
+          "difficulty": 1,
+          "knowledge_point": "倍数与因数·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「倍数与因数·概念理解」，举一个生活中用到「倍数与因数」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 1,
+          "knowledge_point": "倍数与因数·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【倍数与因数·基本运算】30 是不是 4 的倍数 = （  ）",
+          "options": [
+            "6",
+            "4",
+            "7",
+            "5"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "30 是不是 4 的倍数 = 4，所以选 B；其余是常见错误。",
+          "difficulty": 2,
+          "knowledge_point": "倍数与因数·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【倍数与因数·基本运算】算式 12 是不是 4 的倍数 的结果是（  ）",
+          "answer": {
+            "value": "4"
+          },
+          "analysis": "验算：12 是不是 4 的倍数 = 4，所以填 4。",
+          "difficulty": 2,
+          "knowledge_point": "倍数与因数·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【倍数与因数·基本运算】18 是不是 6 的倍数 = 5。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "18 是不是 6 的倍数 = 6，题面写的是 5，不相等，说法错误。",
+          "difficulty": 2,
+          "knowledge_point": "倍数与因数·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「倍数与因数·基本运算」，举一个生活中用到「倍数与因数」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 2,
+          "knowledge_point": "倍数与因数·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【倍数与因数·实际应用】24 是不是 4 的倍数 = （  ）",
+          "options": [
+            "8",
+            "4",
+            "5",
+            "1"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "24 是不是 4 的倍数 = 4，所以选 B；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "倍数与因数·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【倍数与因数·实际应用】算式 12 是不是 2 的倍数 的结果是（  ）",
+          "answer": {
+            "value": "2"
+          },
+          "analysis": "验算：12 是不是 2 的倍数 = 2，所以填 2。",
+          "difficulty": 3,
+          "knowledge_point": "倍数与因数·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【倍数与因数·实际应用】24 是不是 6 的倍数 = 6。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "24 是不是 6 的倍数 = 6，题面写的是 6，相等，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "倍数与因数·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「倍数与因数·实际应用」，举一个生活中用到「倍数与因数」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 3,
+          "knowledge_point": "倍数与因数·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【倍数与因数·易错辨析】12 是不是 2 的倍数 = （  ）",
+          "options": [
+            "1",
+            "2",
+            "4",
+            "6"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "12 是不是 2 的倍数 = 2，所以选 B；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "倍数与因数·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【倍数与因数·易错辨析】算式 24 是不是 6 的倍数 的结果是（  ）",
+          "answer": {
+            "value": "6"
+          },
+          "analysis": "验算：24 是不是 6 的倍数 = 6，所以填 6。",
+          "difficulty": 3,
+          "knowledge_point": "倍数与因数·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "【倍数与因数·易错辨析】18 是不是 6 的倍数 = 5。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "18 是不是 6 的倍数 = 6，题面写的是 5，不相等，说法错误。",
+          "difficulty": 4,
+          "knowledge_point": "倍数与因数·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「倍数与因数·易错辨析」，举一个生活中用到「倍数与因数」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "倍数与因数·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【倍数与因数·概念理解】下面哪些算式的结果等于 4？",
+          "options": [
+            "30 是不是 4 的倍数",
+            "4 + 1",
+            "4 - 2",
+            "4 × 2"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 30 是不是 4 的倍数 = 4 ✓；B 为 5 ✗；C 为 2 ✗；D 为 8 ✗。所以选 A。",
+          "difficulty": 4,
+          "knowledge_point": "倍数与因数·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【倍数与因数·基本运算】下面哪些算式的结果等于 2？",
+          "options": [
+            "30 是不是 2 的倍数",
+            "2 + 1",
+            "2 - 2",
+            "2 × 2"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 30 是不是 2 的倍数 = 2 ✓；B 为 3 ✗；C 为 0 ✗；D 为 4 ✗。所以选 A。",
+          "difficulty": 5,
+          "knowledge_point": "倍数与因数·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第八单元 可能性",
+      "order_index": 10,
+      "summary": "第八单元 可能性：围绕「数据表示」的概念、练习与运用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "【数据表示·概念理解】三个数 [92, 93, 86] 的平均数 = （  ）",
+          "options": [
+            "90",
+            "93",
+            "88",
+            "87"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "三个数 [92, 93, 86] 的平均数 = 90，所以选 A；其余是常见错误。",
+          "difficulty": 1,
+          "knowledge_point": "数据表示·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【数据表示·概念理解】算式 三个数 [92, 76, 91] 的平均数 的结果是（  ）",
+          "answer": {
+            "value": "86"
+          },
+          "analysis": "验算：三个数 [92, 76, 91] 的平均数 = 86，所以填 86。",
+          "difficulty": 1,
+          "knowledge_point": "数据表示·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "学习「数据表示·概念理解」时，认真记录数据是得到正确结论的前提。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "数据是分析依据，先记准再分析，说法正确。",
+          "difficulty": 1,
+          "knowledge_point": "数据表示·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「数据表示·概念理解」，举一个生活中用到「数据表示」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 1,
+          "knowledge_point": "数据表示·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【数据表示·基本运算】三个数 [70, 79, 88] 的平均数 = （  ）",
+          "options": [
+            "83",
+            "79",
+            "82",
+            "78"
+          ],
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "三个数 [70, 79, 88] 的平均数 = 79，所以选 B；其余是常见错误。",
+          "difficulty": 2,
+          "knowledge_point": "数据表示·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【数据表示·基本运算】算式 三个数 [77, 94, 94] 的平均数 的结果是（  ）",
+          "answer": {
+            "value": "88"
+          },
+          "analysis": "验算：三个数 [77, 94, 94] 的平均数 = 88，所以填 88。",
+          "difficulty": 2,
+          "knowledge_point": "数据表示·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "学习「数据表示·基本运算」时，认真记录数据是得到正确结论的前提。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "数据是分析依据，先记准再分析，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "数据表示·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「数据表示·基本运算」，举一个生活中用到「数据表示」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 2,
+          "knowledge_point": "数据表示·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【数据表示·实际应用】三个数 [92, 84, 84] 的平均数 = （  ）",
+          "options": [
+            "88",
+            "86",
+            "85",
+            "87"
+          ],
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "三个数 [92, 84, 84] 的平均数 = 87，所以选 D；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "数据表示·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【数据表示·实际应用】算式 三个数 [75, 71, 88] 的平均数 的结果是（  ）",
+          "answer": {
+            "value": "78"
+          },
+          "analysis": "验算：三个数 [75, 71, 88] 的平均数 = 78，所以填 78。",
+          "difficulty": 3,
+          "knowledge_point": "数据表示·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "学习「数据表示·实际应用」时，认真记录数据是得到正确结论的前提。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "数据是分析依据，先记准再分析，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "数据表示·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「数据表示·实际应用」，举一个生活中用到「数据表示」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 3,
+          "knowledge_point": "数据表示·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "【数据表示·易错辨析】三个数 [74, 72, 90] 的平均数 = （  ）",
+          "options": [
+            "83",
+            "76",
+            "79",
+            "82"
+          ],
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "三个数 [74, 72, 90] 的平均数 = 79，所以选 C；其余是常见错误。",
+          "difficulty": 3,
+          "knowledge_point": "数据表示·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "【数据表示·易错辨析】算式 三个数 [90, 85, 81] 的平均数 的结果是（  ）",
+          "answer": {
+            "value": "85"
+          },
+          "analysis": "验算：三个数 [90, 85, 81] 的平均数 = 85，所以填 85。",
+          "difficulty": 3,
+          "knowledge_point": "数据表示·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "学习「数据表示·易错辨析」时，认真记录数据是得到正确结论的前提。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "数据是分析依据，先记准再分析，说法正确。",
+          "difficulty": 4,
+          "knowledge_point": "数据表示·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「数据表示·易错辨析」，举一个生活中用到「数据表示」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "数据表示·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【数据表示·概念理解】下面哪些算式的结果等于 81？",
+          "options": [
+            "三个数 [93, 80, 70] 的平均数",
+            "81 + 1",
+            "81 - 2",
+            "81 × 2"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 三个数 [93, 80, 70] 的平均数 = 81 ✓；B 为 82 ✗；C 为 79 ✗；D 为 162 ✗。所以选 A。",
+          "difficulty": 4,
+          "knowledge_point": "数据表示·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "【数据表示·基本运算】下面哪些算式的结果等于 80？",
+          "options": [
+            "三个数 [74, 92, 74] 的平均数",
+            "80 + 1",
+            "80 - 2",
+            "80 × 2"
+          ],
+          "answer": {
+            "value": [
+              "A"
+            ]
+          },
+          "analysis": "逐项判断：A 三个数 [74, 92, 74] 的平均数 = 80 ✓；B 为 81 ✗；C 为 78 ✗；D 为 160 ✗。所以选 A。",
+          "difficulty": 5,
+          "knowledge_point": "数据表示·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "综合实践 多少落叶能铺满",
+      "order_index": 11,
+      "summary": "综合实践 多少落叶能铺满：围绕「综合实践」的概念、练习与运用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "做「综合实践·概念理解」练习时，比较合适的做法是（  ）",
+          "options": [
+            "先理解题意再列式",
+            "直接抄答案",
+            "随便写数",
+            "不检验"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先读懂再动笔才能做对，选 A；其余三项都不可取。",
+          "difficulty": 1,
+          "knowledge_point": "综合实践·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "研究「综合实践·概念理解」时，要按（  ）—记录—分析的步骤进行。",
+          "answer": {
+            "value": "调查"
+          },
+          "analysis": "先调查、再记录、最后分析，所以填「调查」。",
+          "difficulty": 1,
+          "knowledge_point": "综合实践·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "学习「综合实践·概念理解」时，认真记录数据是得到正确结论的前提。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "数据是分析依据，先记准再分析，说法正确。",
+          "difficulty": 1,
+          "knowledge_point": "综合实践·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「综合实践·概念理解」，举一个生活中用到「综合实践」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 1,
+          "knowledge_point": "综合实践·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "做「综合实践·基本运算」练习时，比较合适的做法是（  ）",
+          "options": [
+            "先理解题意再列式",
+            "直接抄答案",
+            "随便写数",
+            "不检验"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先读懂再动笔才能做对，选 A；其余三项都不可取。",
+          "difficulty": 2,
+          "knowledge_point": "综合实践·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "研究「综合实践·基本运算」时，要按（  ）—记录—分析的步骤进行。",
+          "answer": {
+            "value": "调查"
+          },
+          "analysis": "先调查、再记录、最后分析，所以填「调查」。",
+          "difficulty": 2,
+          "knowledge_point": "综合实践·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "学习「综合实践·基本运算」时，认真记录数据是得到正确结论的前提。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "数据是分析依据，先记准再分析，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "综合实践·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「综合实践·基本运算」，举一个生活中用到「综合实践」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 2,
+          "knowledge_point": "综合实践·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "做「综合实践·实际应用」练习时，比较合适的做法是（  ）",
+          "options": [
+            "先理解题意再列式",
+            "直接抄答案",
+            "随便写数",
+            "不检验"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先读懂再动笔才能做对，选 A；其余三项都不可取。",
+          "difficulty": 3,
+          "knowledge_point": "综合实践·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "研究「综合实践·实际应用」时，要按（  ）—记录—分析的步骤进行。",
+          "answer": {
+            "value": "调查"
+          },
+          "analysis": "先调查、再记录、最后分析，所以填「调查」。",
+          "difficulty": 3,
+          "knowledge_point": "综合实践·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "学习「综合实践·实际应用」时，认真记录数据是得到正确结论的前提。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "数据是分析依据，先记准再分析，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "综合实践·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「综合实践·实际应用」，举一个生活中用到「综合实践」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 3,
+          "knowledge_point": "综合实践·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "做「综合实践·易错辨析」练习时，比较合适的做法是（  ）",
+          "options": [
+            "先理解题意再列式",
+            "直接抄答案",
+            "随便写数",
+            "不检验"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先读懂再动笔才能做对，选 A；其余三项都不可取。",
+          "difficulty": 3,
+          "knowledge_point": "综合实践·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "研究「综合实践·易错辨析」时，要按（  ）—记录—分析的步骤进行。",
+          "answer": {
+            "value": "调查"
+          },
+          "analysis": "先调查、再记录、最后分析，所以填「调查」。",
+          "difficulty": 3,
+          "knowledge_point": "综合实践·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "学习「综合实践·易错辨析」时，认真记录数据是得到正确结论的前提。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "数据是分析依据，先记准再分析，说法正确。",
+          "difficulty": 4,
+          "knowledge_point": "综合实践·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「综合实践·易错辨析」，举一个生活中用到「综合实践」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "综合实践·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于「综合实践·概念理解」的探究，哪些做法可取？",
+          "options": [
+            "先明确问题",
+            "只抄第一段",
+            "找可靠来源",
+            "随便猜测"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A 先明确问题 ✓；B 只抄第一段 ✗；C 找可靠来源 ✓；D 随便猜测 ✗。所以选 A、C。",
+          "difficulty": 4,
+          "knowledge_point": "综合实践·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于「综合实践·基本运算」的探究，哪些做法可取？",
+          "options": [
+            "先明确问题",
+            "只抄第一段",
+            "找可靠来源",
+            "随便猜测"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A 先明确问题 ✓；B 只抄第一段 ✗；C 找可靠来源 ✓；D 随便猜测 ✗。所以选 A、C。",
+          "difficulty": 5,
+          "knowledge_point": "综合实践·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "总复习",
+      "order_index": 12,
+      "summary": "总复习：围绕「综合实践」的概念、练习与运用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "做「综合实践·概念理解」练习时，比较合适的做法是（  ）",
+          "options": [
+            "先理解题意再列式",
+            "直接抄答案",
+            "随便写数",
+            "不检验"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先读懂再动笔才能做对，选 A；其余三项都不可取。",
+          "difficulty": 1,
+          "knowledge_point": "综合实践·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "研究「综合实践·概念理解」时，要按（  ）—记录—分析的步骤进行。",
+          "answer": {
+            "value": "调查"
+          },
+          "analysis": "先调查、再记录、最后分析，所以填「调查」。",
+          "difficulty": 1,
+          "knowledge_point": "综合实践·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "学习「综合实践·概念理解」时，认真记录数据是得到正确结论的前提。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "数据是分析依据，先记准再分析，说法正确。",
+          "difficulty": 1,
+          "knowledge_point": "综合实践·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「综合实践·概念理解」，举一个生活中用到「综合实践」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 1,
+          "knowledge_point": "综合实践·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "做「综合实践·基本运算」练习时，比较合适的做法是（  ）",
+          "options": [
+            "先理解题意再列式",
+            "直接抄答案",
+            "随便写数",
+            "不检验"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先读懂再动笔才能做对，选 A；其余三项都不可取。",
+          "difficulty": 2,
+          "knowledge_point": "综合实践·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "研究「综合实践·基本运算」时，要按（  ）—记录—分析的步骤进行。",
+          "answer": {
+            "value": "调查"
+          },
+          "analysis": "先调查、再记录、最后分析，所以填「调查」。",
+          "difficulty": 2,
+          "knowledge_point": "综合实践·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "学习「综合实践·基本运算」时，认真记录数据是得到正确结论的前提。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "数据是分析依据，先记准再分析，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "综合实践·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「综合实践·基本运算」，举一个生活中用到「综合实践」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 2,
+          "knowledge_point": "综合实践·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "做「综合实践·实际应用」练习时，比较合适的做法是（  ）",
+          "options": [
+            "先理解题意再列式",
+            "直接抄答案",
+            "随便写数",
+            "不检验"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先读懂再动笔才能做对，选 A；其余三项都不可取。",
+          "difficulty": 3,
+          "knowledge_point": "综合实践·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "研究「综合实践·实际应用」时，要按（  ）—记录—分析的步骤进行。",
+          "answer": {
+            "value": "调查"
+          },
+          "analysis": "先调查、再记录、最后分析，所以填「调查」。",
+          "difficulty": 3,
+          "knowledge_point": "综合实践·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "学习「综合实践·实际应用」时，认真记录数据是得到正确结论的前提。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "数据是分析依据，先记准再分析，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "综合实践·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「综合实践·实际应用」，举一个生活中用到「综合实践」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 3,
+          "knowledge_point": "综合实践·实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "做「综合实践·易错辨析」练习时，比较合适的做法是（  ）",
+          "options": [
+            "先理解题意再列式",
+            "直接抄答案",
+            "随便写数",
+            "不检验"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先读懂再动笔才能做对，选 A；其余三项都不可取。",
+          "difficulty": 3,
+          "knowledge_point": "综合实践·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "研究「综合实践·易错辨析」时，要按（  ）—记录—分析的步骤进行。",
+          "answer": {
+            "value": "调查"
+          },
+          "analysis": "先调查、再记录、最后分析，所以填「调查」。",
+          "difficulty": 3,
+          "knowledge_point": "综合实践·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "学习「综合实践·易错辨析」时，认真记录数据是得到正确结论的前提。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "数据是分析依据，先记准再分析，说法正确。",
+          "difficulty": 4,
+          "knowledge_point": "综合实践·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合「综合实践·易错辨析」，举一个生活中用到「综合实践」的例子并说明。",
+          "answer": {
+            "value": "示例：购物结账时用加减法核对总价与找零，能确认钱数对不对。"
+          },
+          "analysis": "评分要点：举出合理例子得 2 分，说明与知识联系得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "综合实践·易错辨析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于「综合实践·概念理解」的探究，哪些做法可取？",
+          "options": [
+            "先明确问题",
+            "只抄第一段",
+            "找可靠来源",
+            "随便猜测"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A 先明确问题 ✓；B 只抄第一段 ✗；C 找可靠来源 ✓；D 随便猜测 ✗。所以选 A、C。",
+          "difficulty": 4,
+          "knowledge_point": "综合实践·概念理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于「综合实践·基本运算」的探究，哪些做法可取？",
+          "options": [
+            "先明确问题",
+            "只抄第一段",
+            "找可靠来源",
+            "随便猜测"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A 先明确问题 ✓；B 只抄第一段 ✗；C 找可靠来源 ✓；D 随便猜测 ✗。所以选 A、C。",
+          "difficulty": 5,
+          "knowledge_point": "综合实践·基本运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ],
+  "_consolidated": {
+    "generated_at": "2026-11-10T00:25:24",
+    "rule": "非 legacy > 批次日期最新 > 题量最多 > mtime 最新",
+    "sources": [
+      {
+        "chapter": "第一单元 小数的再认识和加减法",
+        "file": "math_g5_first_20261109.json",
+        "questions": 18
+      },
+      {
+        "chapter": "第二单元 三角形的再认识",
+        "file": "math_g5_first_20261109_r2.json",
+        "questions": 18
+      },
+      {
+        "chapter": "综合实践 小小设计师",
+        "file": "math_g5_first_20261109_r3.json",
+        "questions": 18
+      },
+      {
+        "chapter": "第三单元 小数乘法",
+        "file": "math_g5_first_20261109_r4.json",
+        "questions": 18
+      },
+      {
+        "chapter": "第四单元 用字母表示（一）",
+        "file": "math_g5_first_20261109_r5.json",
+        "questions": 18
+      },
+      {
+        "chapter": "第五单元 多边形的面积",
+        "file": "math_g5_first_20261109_r6.json",
+        "questions": 18
+      },
+      {
+        "chapter": "数学好玩 鸡兔同笼",
+        "file": "math_g5_first_20261109_r7.json",
+        "questions": 18
+      },
+      {
+        "chapter": "第六单元 图形的位置与运动（一）",
+        "file": "math_g5_first_20261109_r8.json",
+        "questions": 18
+      },
+      {
+        "chapter": "第七单元 倍数与因数",
+        "file": "math_g5_first_20261109_r9.json",
+        "questions": 18
+      },
+      {
+        "chapter": "第八单元 可能性",
+        "file": "math_g5_first_20261109_r10.json",
+        "questions": 18
+      },
+      {
+        "chapter": "综合实践 多少落叶能铺满",
+        "file": "math_g5_first_20261109_r11.json",
+        "questions": 18
+      },
+      {
+        "chapter": "总复习",
+        "file": "math_g5_first_20261109_r12.json",
+        "questions": 18
+      }
+    ],
+    "dropped_sections": [
+      {
+        "chapter": "（复名知识点不声明后变空）",
+        "sections": [
+          "第三单元 小数乘法"
+        ]
+      },
+      {
+        "chapter": "（复名知识点不声明后变空）",
+        "sections": [
+          "第六单元 图形的位置与运动（一）"
+        ]
+      },
+      {
+        "chapter": "（复名知识点不声明后变空）",
+        "sections": [
+          "综合实践 多少落叶能铺满"
+        ]
+      },
+      {
+        "chapter": "（复名知识点不声明后变空）",
+        "sections": [
+          "总复习"
+        ]
+      }
+    ],
+    "reused_point_names_not_redeclared": [],
+    "outside_outline_skipped": [
+      "小数除法"
+    ]
+  }
+}
