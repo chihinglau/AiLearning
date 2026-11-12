@@ -124,7 +124,12 @@ class _KpDetailPageState extends ConsumerState<KpDetailPage> {
   }
 
   void _openPrerequisite(KpBrief prerequisite) {
-    context.push('/kp/${prerequisite.id}');
+    // 直达该知识点的独立讲解页，第一屏就是讲解本身，不必在详情页里再往下滚。
+    context.push('/kp/${prerequisite.id}/explain');
+  }
+
+  void _openOwnExplanation() {
+    context.push('/kp/${widget.kpId}/explain');
   }
 
   void _practice() {
@@ -255,36 +260,47 @@ class _KpDetailPageState extends ConsumerState<KpDetailPage> {
             ),
           ),
           if (detail.prerequisites.isNotEmpty) ...[
-            const SizedBox(height: 20),
-            Text('前置知识点', style: theme.textTheme.titleMedium),
-            const SizedBox(height: 8),
-            Wrap(
-              spacing: 8,
-              runSpacing: 8,
+            const SizedBox(height: 16),
+            Row(
               children: [
-                for (final prerequisite in detail.prerequisites)
-                  ActionChip(
-                    avatar: Icon(
-                      Icons.subdirectory_arrow_right,
-                      size: 16,
-                      color: masteryBandColor(
-                        prerequisite.masteryScore >= 85
-                            ? 'mastered'
-                            : prerequisite.masteryScore >= 65
-                                ? 'skilled'
-                                : prerequisite.masteryScore >= 40
-                                    ? 'growing'
-                                    : 'weak',
-                      ),
-                    ),
-                    label: Text(prerequisite.displayName),
-                    onPressed: () => _openPrerequisite(prerequisite),
-                  ),
+                Text('前置知识点', style: theme.textTheme.titleMedium),
+                const Spacer(),
+                Text(
+                  '${detail.prerequisites.length} 个 · 按教材顺序',
+                  style: theme.textTheme.labelSmall,
+                ),
               ],
+            ),
+            const SizedBox(height: 8),
+            Card(
+              clipBehavior: Clip.antiAlias,
+              child: Column(
+                children: [
+                  for (var index = 0;
+                      index < detail.prerequisites.length;
+                      index++)
+                    _PrerequisiteTile(
+                      index: index + 1,
+                      brief: detail.prerequisites[index],
+                      onTap: () =>
+                          _openPrerequisite(detail.prerequisites[index]),
+                    ),
+                ],
+              ),
             ),
           ],
           const SizedBox(height: 20),
-          Text('讲解', style: theme.textTheme.titleMedium),
+          Row(
+            children: [
+              Text('讲解', style: theme.textTheme.titleMedium),
+              const Spacer(),
+              TextButton.icon(
+                onPressed: _openOwnExplanation,
+                icon: const Icon(Icons.open_in_new, size: 16),
+                label: const Text('独立讲解页'),
+              ),
+            ],
+          ),
           const SizedBox(height: 8),
           Card(
             child: Padding(
@@ -321,6 +337,68 @@ class _KpDetailPageState extends ConsumerState<KpDetailPage> {
               _ExampleCard(example: example),
               const SizedBox(height: 10),
             ],
+        ],
+      ),
+    );
+  }
+}
+
+class _PrerequisiteTile extends StatelessWidget {
+  const _PrerequisiteTile({
+    required this.index,
+    required this.brief,
+    required this.onTap,
+  });
+
+  final int index;
+  final KpBrief brief;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final color = masteryBandColor(
+      brief.masteryScore >= 85
+          ? 'mastered'
+          : brief.masteryScore >= 65
+              ? 'skilled'
+              : brief.masteryScore >= 40
+                  ? 'growing'
+                  : 'weak',
+    );
+    return ListTile(
+      dense: true,
+      onTap: onTap,
+      leading: CircleAvatar(
+        radius: 12,
+        backgroundColor: color.withValues(alpha: 0.15),
+        child: Text(
+          '$index',
+          style: theme.textTheme.labelSmall?.copyWith(color: color),
+        ),
+      ),
+      title: Text(
+        brief.displayName,
+        maxLines: 1,
+        overflow: TextOverflow.ellipsis,
+        style: theme.textTheme.bodyMedium,
+      ),
+      subtitle: Text(
+        brief.sectionName ?? '教材前置',
+        maxLines: 1,
+        overflow: TextOverflow.ellipsis,
+        style: theme.textTheme.labelSmall,
+      ),
+      trailing: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Container(
+            width: 8,
+            height: 8,
+            decoration: BoxDecoration(color: color, shape: BoxShape.circle),
+          ),
+          const SizedBox(width: 8),
+          const Icon(Icons.chevron_right, size: 18),
         ],
       ),
     );

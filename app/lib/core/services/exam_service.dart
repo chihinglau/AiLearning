@@ -44,6 +44,32 @@ class ExamService {
         .toList();
   }
 
+  /// 考试入库：可选组卷蓝图（需 content:exam:write）。
+  Future<List<ExamBlueprint>> blueprints() async {
+    final data = await _api.getList('/api/exams/blueprints');
+    return data
+        .map((item) => ExamBlueprint.fromJson(item as Map<String, dynamic>))
+        .toList();
+  }
+
+  /// 考试入库：按蓝图在指定章节范围内组卷并发布。
+  Future<ExamGenerateResult> generateExam({
+    required String blueprintCode,
+    required List<int> chapterIds,
+    String? title,
+    int? seed,
+    bool isPastPaper = false,
+  }) async {
+    final data = await _api.postJson('/api/exams/generate', {
+      'blueprint_code': blueprintCode,
+      'chapter_ids': chapterIds,
+      'title': ?title,
+      'seed': ?seed,
+      'is_past_paper': isPastPaper,
+    });
+    return ExamGenerateResult.fromJson(data);
+  }
+
   /// 教师把一张真题/模考模板派发为班级同卷模考。
   Future<MockExamAssignment> assignClassMock({
     required int classId,

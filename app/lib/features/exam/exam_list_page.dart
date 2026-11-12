@@ -94,6 +94,10 @@ class _ExamListPageState extends ConsumerState<ExamListPage> {
         final attempt = exam.attempt;
         if (attempt != null) {
           context.push('/exam/report/${attempt.id}');
+        } else {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text('报告尚未生成，请稍后重试')),
+          );
         }
       default:
         break;

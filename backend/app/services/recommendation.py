@@ -7,12 +7,13 @@
 from datetime import datetime
 from typing import Any, Optional
 
-from sqlalchemy import select
+from sqlalchemy import or_, select
 from sqlalchemy.orm import Session
 
 from app.core.grade import semester_start
 from app.models.content import Chapter, Question
 from app.models.exam import Exam, ExamAttempt
+from app.models.org import ClassMember
 from app.models.practice import KpStudyState, MasteryScore, StudentQuestionRecord
 from app.models.user import User
 
@@ -298,14 +299,32 @@ def _window_state(exam: Exam, now: datetime) -> str:
     return "open"
 
 
+def student_visible_exam_clauses(user: User) -> list[Any]:
+    """学生视角可见考试的统一过滤条件（D-04 §8.7.1）。
+
+    `GET /api/exams` 与 `GET /api/learn/home.pending_exams` 必须共用本谓词，
+    避免首页提示「有 N 场待办」但考试列表看不到对应试卷。
+    """
+    member_classes = select(ClassMember.class_id).where(
+        ClassMember.student_id == user.id
+    )
+    return [
+        Exam.status == "published",
+        Exam.is_past_paper.is_(False),
+        Exam.source != "assignment",
+        Exam.grade == (user.grade or 1),
+        or_(Exam.class_id.is_(None), Exam.class_id.in_(member_classes)),
+    ]
+
+
 def build_pending_exams(
     db: Session, *, user: User, now: datetime, limit: int = 3
 ) -> list[dict[str, Any]]:
-    """待办考试：本年级已发布、窗口未关闭且尚未完成的试卷。"""
+    """待办考试：学生可见、窗口未关闭且尚未交卷的试卷。"""
     exams = list(
         db.scalars(
             select(Exam)
-            .where(Exam.status == "published", Exam.grade == (user.grade or 1))
+            .where(*student_visible_exam_clauses(user))
             .order_by(Exam.id.desc())
             .limit(20)
         )
@@ -335,6 +354,8 @@ def build_pending_exams(
                 "window_state": state,
                 "window_start": exam.window_start,
                 "window_end": exam.window_end,
+                "entry": "past_paper" if exam.is_past_paper else "exam",
+                "subject": exam.subject,
             }
         )
         if len(result) >= limit:

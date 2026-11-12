@@ -1,8 +1,9 @@
 # 深爱学（AiLearning）学习页面功能设计方案
 
 > **文档性质**：专项设计方案（学习主链路闭环蓝本）
-> **版本**：v1.0
+> **版本**：v1.2
 > **日期**：2026-11-06
+> **最后更新**：2026-11-12（第二次修订：考试入口口径对齐、待办考试独立入口、考试入库/发布闭环，见 §8.7 / §12.4 / §14.2 L18~L20；对应主计划 CR-003 / EX-01~EX-03。第一次修订为练习模式与前置知识点，CR-002 / UX-04~UX-06）
 > **关联文档**：[user-role-permission-design.md](./user-role-permission-design.md)、[k12-learning-app-design.md](./k12-learning-app-design.md)、[subject-tutoring-and-m2-design.md](./subject-tutoring-and-m2-design.md)
 > **目标**：把当前"教材清单 + 章节列表"升级为"教材绑定 → 分层学习 → 智能练习 → 综合考试 → 复盘推荐"的完整闭环
 
@@ -115,17 +116,26 @@ flowchart LR
 │       └── 单元测试入口
 ├── 知识点详情 /kp/:id
 │   ├── 讲解（概念/公式/例题）
-│   ├── 前置知识（prerequisites，可跳转补齐）
+│   ├── 前置知识（按教材顺序，点击进入独立讲解页）
 │   ├── 掌握度与作答历史
 │   └── 开始练习（基础/变式/拔高）
+├── 知识点独立讲解 /kp/:id/explain（v1.1 新增）
+│   ├── 第一屏即讲解 + 例题，不重复前置/掌握度等详情
+│   └── 底部「完整详情 / 练一练」按需下钻
 ├── 练习配置 /practice/config
-│   └── 模式、范围、题量、题型、预计时长 → 开始
+│   └── 模式策略卡 + 各模式默认题量/题型/范围 + 组卷预览 → 开始
 ├── 答题 /practice/session
 │   └── 逐题作答、反馈、结算
+├── 学习首页「待办考试」卡（v1.2 新增）
+│   └── pending_exams 按 entry 直达 /exam/:id 或 /past-papers
 ├── 考试中心 /exams
 │   ├── 可参加（单元测/期中/期末/模考）
 │   ├── 进行中（断点续答）
 │   └── 已完成（报告）
+├── 真题库 /past-papers（v1.2 提升为首页入口）
+├── 考试管理与发布 /exams/manage（v1.2 新增，content:exam:write）
+│   ├── 按蓝图组卷入库 POST /api/exams/generate
+│   └── 派发班级同卷模考 POST /api/exams/mock
 ├── 考试详情 /exams/:id
 ├── 考试答题 /exams/:id/attempt
 └── 考试报告 /exams/attempts/:id/report
@@ -393,6 +403,16 @@ stateDiagram-v2
 5. 学期进度落后（已学单元 < 当前周应学单元）→ "继续学习下一节"。
 6. 无以上 → "每日一练"（保持手感）。
 
+### 6.7 前置知识点排序与独立讲解页（v1.1 新增）
+
+| 项 | 规则 |
+|---|---|
+| 排序 | `GET /api/learn/kp/{id}` 的前置按 `section.order_index → kp.order_index → prerequisites 声明顺序` 输出，附带 `order_index/section_order/section_name/has_explanation`；不再依赖无 `ORDER BY` 的 `IN` 查询与 dict 顺序 |
+| 离线一致 | 离线整册包 `_ordered_prerequisites()` 只取当前知识点自己声明的前置并按同一规则排序；旧实现把整册前置塞给每个详情，已修 |
+| 详情页展示 | 前置区改为紧凑编号列表（序号 / 名称 / 节名 / 掌握度圆点 / chevron），标题标注「N 个 · 按教材顺序」；前端 `sortedPrerequisites()` 对旧离线包缺字段按 id 稳定兜底 |
+| 点击去向 | 前置项 → `/kp/:id/explain` 独立讲解页，第一屏即讲解卡 + 例题；掌握度、前置依赖、状态等留在 `/kp/:id` 完整详情，底部提供「完整详情 / 练一练」 |
+| 路由约束 | GoRouter 中 `/kp/:kpId/explain` 必须注册在 `/kp/:kpId` 之前 |
+
 ---
 
 ## 七、智能辅助练习模块
@@ -407,6 +427,21 @@ stateDiagram-v2
 | 单元综合 | 单元详情 | 整章 | 15-25 | 即时/延后 | 单元内知识串联 |
 | 考前速练 | 考试中心 | 多单元/整册高频考点 | 20-30 | 延后 | 考前查漏 |
 | 每日一练 | 首页 | 当前教材近期知识点 | 5-10 | 即时 | 保持学习习惯 |
+
+#### 7.1.1 三种模式组卷策略落地（v1.1）
+
+> 旧实现三个分段只改 `mode` 字符串，`build_plan` 不消费它，同 seed 下出同一套题。以下为落地后的真实策略。
+
+| mode | 默认题量 | 默认范围 | 近 7 天答题排重 | 到期错题配额 | 选题/排序 | 知识点覆盖 |
+|---|---|---|---|---|---|---|
+| `special` 专项突破 | 10 | 整册教材 | 排除 | 25% | 掌握度 < 60 的薄弱 KP 优先 | 常规覆盖 |
+| `sync` 同步巩固 | 15 | 本单元 | 排除 | 15% | 教材章节 → 知识点 → 难度由易到难 | 均衡覆盖 |
+| `pre_exam` 考前速练 | 20 | 整册教材 | 不排重 | 0 | 考试题型配比、难度递进 | 要求全覆盖 |
+| `unit` 单元测 | 沿用原蓝图 | 单元 | 沿用 | 沿用 | 蓝图 | 蓝图 |
+
+- 后端 `services/practice.py` 的 `ModePolicy` / `MODE_POLICIES` 统一消费 `exclude_recent / due_quota_ratio / weak_first / cover_all_kps / textbook_order / difficulty_order`；`select_questions` 支持薄弱 KP 桶前移与全覆盖目标。
+- 前端 `core/models/practice_mode.dart` 的 `PracticeModeSpec` 定义三模式默认题量、题型与优先范围；切换模式重置 seed、套用默认值并展示策略卡；学习首页新增三个独立入口，把 `mode` 传入 `/practice/config`。
+- 预览与 `/learn/start` 消费同一策略，返回 `mode / mode_label / strategy`；`mode` 白名单 `special|sync|pre_exam|unit`，未知值 422。离线组卷按 `sync`/`pre_exam` 的排序规则兜底。
 
 ### 7.2 题型体系（按学科 × 学段）
 
@@ -613,6 +648,38 @@ stateDiagram-v2
 - 服务端计时 + 交卷时间戳校验；客户端时间仅展示。
 - 切屏/后台记录次数（仅记录，不强制交卷），报告可见。
 - 选项乱序按 seed，同一用户稳定；不承诺强防作弊（非高利害考试）。
+
+### 8.7 考试入口与考试入库闭环（v1.2 新增）
+
+> 来源：2026-11-12 PM 反馈「App 端考试入口功能依然未完成」。
+> **实测根因**：`build_pending_exams()` 把 `is_past_paper` 真题、`source='assignment'` 作业卷、非本班班级卷都算进首页待办；`GET /api/exams` 对学生恰好排除这些卷。EBG 真机出现「首页 2 场考试待完成 → 考试中心 0 场」的**入口虚标**。
+
+#### 8.7.1 口径契约（先修数据，再修入口）
+
+| 来源 | 计入条件 | 排除 |
+|---|---|---|
+| `GET /api/learn/home.pending_exams` | `status=published`、年级匹配、未交卷、窗口未关闭、非真题/非作业卷、班级卷限本班 | `is_past_paper=true`、`source='assignment'`、`class_id` 不在本班、已交卷、`closed` |
+| `GET /api/exams`（学生） | 同上 | 同上 |
+| 真题 | 仅 `GET /api/exams/past-papers` 与首页「真题库」 | 通用考试列表 |
+
+- 两处共用同一可见性过滤（避免再次漂移）；`pending_exams` 每条带 `entry`（`exam` / `past_paper`）、`subject`、`window_state`，供前端直达。
+- 已完成但缺 `attempt` 的列表卡片必须给明确提示，禁止静默无响应。
+
+#### 8.7.2 首页入口
+
+- 落地 §2.1 / §3.2 要求的「待办考试」独立卡：最多 3 条，展示标题、类型与窗口状态；`entry=exam` 直达 `/exam/:id`，`entry=past_paper` 直达 `/past-papers`；`scheduled`/`closed` 给 SnackBar；无待办显示空态卡。
+- 「考试入口」区由 2 张扩为 3 张：**考试中心 / 真题库 / 班级作业**；考试中心副标题与列表同口径，不再虚标。
+- 首页「我的」按 `content:exam:write` 显示「考试管理与发布」入口。
+
+#### 8.7.3 考试入库（生成/派发）
+
+| 动作 | 入口 | 接口 | 权限 |
+|---|---|---|---|
+| 可选蓝图 | 「我的 → 考试管理与发布」 | `GET /api/exams/blueprints`（v1.2 新增） | `content:exam:write` |
+| 按蓝图组卷并发布（入库） | 同上 | `POST /api/exams/generate` | `content:exam:write` |
+| 派发班级同卷模考 | 同上 | `POST /api/exams/mock` | `learn:assignment:create` |
+
+`/exams/manage` 提交后展示 `exam_id` / 题量 / 总分 / KP 覆盖 / 难度分布 / 兜底数，并允许把新卷直接派发到班级；生成结果立即进入学生可见考试列表，形成「入库 → 入口 → 作答」闭环。
 
 ---
 
@@ -889,15 +956,19 @@ CREATE TABLE exam_answers (
 | GET | `/api/public/chapters?textbook_id=` | 章（单元）列表 | 已有 |
 | GET | `/api/learn/textbook/{id}/units` | 单元 + 进度 + 掌握度热力 | 新增（可复用 knowledge-tree 扩展） |
 | GET | `/api/learn/unit/{chapterId}` | 节 + 知识点 + 状态 | 新增（扩展 knowledge-tree） |
-| GET | `/api/learn/kp/{id}` | 知识点详情：讲解、例题、前置、历史 | 新增 |
+| GET | `/api/learn/kp/{id}` | 知识点详情：讲解、例题、前置、历史 | 新增；v1.1 扩展 |
 | GET | `/api/learn/knowledge-tree?textbook_id=` | 现有章→KP 树（兼容） | 已有，扩展 |
+
+> v1.1：`KpBriefOut` 增 `order_index / section_order / section_name / has_explanation`，`prerequisites` 按 §6.7 的教材顺序输出；离线整册包同口径，且只返回本知识点声明的前置。前端新增页面路由 `/kp/:kpId/explain`（纯客户端路由，无新后端接口）。
 
 ### 12.3 练习
 
 | 方法 | 路径 | 说明 | 状态 |
 |---|---|---|---|
-| POST | `/api/learn/practice/preview` | 组卷预览（题量/覆盖/时长/seed） | 新增 |
+| POST | `/api/learn/practice/preview` | 组卷预览（题量/覆盖/时长/seed/模式策略） | 新增；v1.1 扩展 |
 | POST | `/api/learn/start` | 生成练习（兼容旧参数） | 已有，扩展 mode/seed |
+
+> v1.1：两者均按 §7.1.1 的 `ModePolicy` 组卷；`LearnStartIn.mode` / `PracticePreviewIn.mode` 白名单 `special|sync|pre_exam|unit`（未知值 422），`PracticePreviewOut` 与 `PracticePlan` 增加 `mode / mode_label / strategy`，与实际出题顺序一致。
 | POST | `/api/learn/submit` | 单题提交 | 已有 |
 | POST | `/api/learn/sessions/{id}/finish` | 结算 | 新增 |
 | GET | `/api/learn/sessions/{id}` | 续答（含已答状态） | 新增 |
@@ -910,14 +981,18 @@ CREATE TABLE exam_answers (
 
 | 方法 | 路径 | 说明 | 状态 |
 |---|---|---|---|
-| GET | `/api/exams?type=&status=` | 考试列表（可参加/进行中/已完成） | 扩展 |
+| GET | `/api/exams?type=&status=` | 考试列表（可参加/进行中/已完成） | 扩展；v1.2 与 `pending_exams` 同口径 |
 | GET | `/api/exams/{id}` | 试卷详情（不含答案） | 扩展 |
+| GET | `/api/exams/blueprints` | 可选组卷蓝图（code/name/subject/grade/exam_type/total_score/time_limit_min） | v1.2 新增，需 `content:exam:write`，须注册在 `/{exam_id}` 之前 |
+| GET | `/api/exams/past-papers` | 真题库 | 已有（P2-07）；v1.2 提升为首页入口 |
 | POST | `/api/exams/{id}/attempts` | 开始/续答 | 新增 |
 | PATCH | `/api/exams/attempts/{id}` | 自动保存答案 | 新增 |
 | POST | `/api/exams/attempts/{id}/submit` | 交卷（幂等） | 新增 |
 | GET | `/api/exams/attempts/{id}/report` | 报告 | 新增 |
 | POST | `/api/exams/attempts/{id}/self-grade` | 主观题自评 | 新增（P1） |
-| POST | `/api/exams/generate` | 按蓝图生成试卷（内部/运营） | 新增 |
+| POST | `/api/exams/generate` | 按蓝图生成试卷并发布（入库） | 新增；v1.2 接入 App `/exams/manage` |
+| POST | `/api/exams/mock` | 派发班级同卷模考 | 已有（P2-07）；v1.2 接入 App，需 `learn:assignment:create` |
+| GET | `/api/learn/home` | `pending_exams` 增 `entry` / `subject` | v1.2 扩展，与 `/api/exams` 同可见性口径（§8.7.1） |
 
 ### 12.5 响应示例：学习首页聚合
 
@@ -933,15 +1008,20 @@ CREATE TABLE exam_answers (
     "due_review": 5,
     "recommended_kp": [
       {"id": 12, "name": "两位数乘法", "mastery": 38, "band": "weak", "action": "study_first"}
-    ],
-    "pending_exam": {"exam_id": 101, "title": "第 3 单元测试", "type": "unit", "time_limit_min": 40}
+    ]
   },
   "continue_learning": {
     "kp_id": 9, "name": "认识几分之一", "mastery": 60, "last_study_at": "2026-11-04"
   },
-  "exam_entry": {"available": 3, "nearest_deadline": "2026-11-10"}
+  "pending_exams": [
+    {"exam_id": 101, "title": "第 3 单元测试", "exam_type": "unit",
+     "window_state": "open", "window_start": null, "window_end": null,
+     "entry": "exam", "subject": "math"}
+  ]
 }
 ```
+
+> v1.2：顶层 `pending_exams[]` 由 `student_visible_exam_clauses()` 过滤，与 `GET /api/exams` 同口径；真题（`is_past_paper`）、作业卷（`source='assignment'`）、非本班班级卷、草稿/已交卷/窗口关闭卷均不出现（§8.7.1、§12.4）。
 
 ---
 
@@ -992,6 +1072,11 @@ CREATE TABLE exam_answers (
 | L13 | 断点续答 | 杀进程后重进可恢复未交卷考试与未完成练习 |
 | L14 | 性能 | 首页聚合接口 P95 < 300ms（本地库）；首屏渲染 < 800ms |
 | L15 | 权限 | 家长/教师视角只能读取授权范围（见权限文档 A3-A5） |
+| L16 | 三练习模式组卷策略互不相同 | 同 seed 下 `special/sync/pre_exam` 的默认题量、题型配比、排序、排重、错题配额与预览 `strategy` 均不同；§7.1.1 |
+| L17 | 前置知识点按教材顺序且点击直达讲解 | `/kp/{id}` 前置按 `section_order → order_index` 排序并带节名；点击进 `/kp/{id}/explain` 首屏即讲解；§6.7 |
+| L18 | 首页待办考试口径一致 | `pending_exams` 与 `GET /api/exams` 同过滤，真题/作业卷/非本班卷/已交卷/关闭窗口不虚标；§8.7.1 |
+| L19 | 待办考试可直达 | 首页待办卡按 `entry` 直达 `/exam/:id` 或 `/past-papers`，窗口状态有提示、无待办有空态；已完成无 attempt 不静默；§8.7.2 |
+| L20 | 考试入库闭环 | `content:exam:write` 可在 App 按蓝图生成并发布试卷，`learn:assignment:create` 可派发班级模考；新卷立即出现在学生可见列表；§8.7.3 |
 
 ### 14.3 风险与对策
 

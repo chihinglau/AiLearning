@@ -84,12 +84,37 @@ def _node(kp: KnowledgePoint, question_count: int) -> KnowledgeNodeOut:
     return node
 
 
+def _ordered_prerequisites(
+    kp: KnowledgePoint,
+    pool: dict[int, KnowledgePoint],
+    sections: dict[int, KnowledgePoint],
+) -> list[KnowledgePoint]:
+    """只取该知识点自己声明的前置，并按教材顺序（节 → KP → 声明顺序）排列。
+
+    修复：此前把整册所有前置知识点都塞进每一个详情，离线包里前置列表
+    既乱序又超长；线上 /learn/kp/{id} 的排序口径与此保持一致。
+    """
+    ids = list(kp.prerequisites or [])
+    position = {pid: index for index, pid in enumerate(ids)}
+    rows = [pool[pid] for pid in ids if pid in pool]
+    return sorted(
+        rows,
+        key=lambda item: (
+            sections[item.parent_id].order_index
+            if item.parent_id in sections
+            else 10**9,
+            item.order_index,
+            position.get(item.id, 10**9),
+        ),
+    )
+
+
 def _kp_detail(
     kp: KnowledgePoint,
     *,
     question_count: int,
     sections: dict[int, KnowledgePoint],
-    prerequisites: dict[int, KnowledgePoint],
+    prerequisites: list[KnowledgePoint],
 ) -> KpDetailOut:
     section = sections.get(kp.parent_id) if kp.parent_id else None
     return KpDetailOut(
@@ -102,8 +127,24 @@ def _kp_detail(
         section_id=section.id if section else None,
         section_name=section.name if section else None,
         prerequisites=[
-            KpBriefOut(id=item.id, name=item.name, subject=item.subject)
-            for item in prerequisites.values()
+            KpBriefOut(
+                id=item.id,
+                name=item.name,
+                subject=item.subject,
+                order_index=item.order_index,
+                section_order=(
+                    sections[item.parent_id].order_index
+                    if item.parent_id in sections
+                    else 0
+                ),
+                section_name=(
+                    sections[item.parent_id].name
+                    if item.parent_id in sections
+                    else None
+                ),
+                has_explanation=bool((item.explanation or "").strip()),
+            )
+            for item in prerequisites
         ],
         mastery_score=0.0,
         mastery_confidence=0,
@@ -223,12 +264,13 @@ def build_textbook_bundle(db: Session, textbook_id: int) -> TextbookBundleOut:
         )
 
     all_details = {**kps, **section_kps, **prerequisite_kps}
+    detail_sections = {**section_kps, **prerequisite_kps}
     kp_details = {
         str(kp_id): _kp_detail(
             kp,
             question_count=question_count_by_kp.get(kp_id, 0),
-            sections=section_kps,
-            prerequisites=prerequisite_kps,
+            sections=detail_sections,
+            prerequisites=_ordered_prerequisites(kp, prerequisite_kps, detail_sections),
         )
         for kp_id, kp in all_details.items()
     }

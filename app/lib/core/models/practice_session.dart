@@ -13,6 +13,9 @@ class PracticePreview {
     required this.qTypeMix,
     required this.dueReviewCount,
     required this.seed,
+    this.mode = 'special',
+    this.modeLabel = '',
+    this.strategy = '',
   });
 
   final int count;
@@ -25,9 +28,19 @@ class PracticePreview {
   final Map<String, int> qTypeMix;
   final int dueReviewCount;
   final int seed;
+  final String mode;
+  final String modeLabel;
+  final String strategy;
 
   factory PracticePreview.fromJson(Map<String, dynamic> json) {
-    final mix = json['q_type_mix'] as Map<String, dynamic>? ?? const {};
+    // 兼容接口 JSON 与本地构造的 Map（字面量可能是 Map<dynamic, dynamic>）。
+    final mix = <String, int>{};
+    final rawMix = json['q_type_mix'];
+    if (rawMix is Map) {
+      rawMix.forEach((key, value) {
+        mix[key.toString()] = value as int? ?? 0;
+      });
+    }
     return PracticePreview(
       count: json['count'] as int? ?? 0,
       available: json['available'] as int? ?? 0,
@@ -36,9 +49,12 @@ class PracticePreview {
       kpCoverage: (json['kp_coverage'] as num?)?.toDouble() ?? 0,
       coveredKpCount: json['covered_kp_count'] as int? ?? 0,
       rangeKpCount: json['range_kp_count'] as int? ?? 0,
-      qTypeMix: mix.map((key, value) => MapEntry(key, value as int? ?? 0)),
+      qTypeMix: mix,
       dueReviewCount: json['due_review_count'] as int? ?? 0,
       seed: json['seed'] as int? ?? 0,
+      mode: json['mode'] as String? ?? 'special',
+      modeLabel: json['mode_label'] as String? ?? '',
+      strategy: json['strategy'] as String? ?? '',
     );
   }
 }

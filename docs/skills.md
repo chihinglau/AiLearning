@@ -151,6 +151,12 @@ cd backend
 | GET/POST | `/api/admin/textbooks` | 教材管理（需 admin） |
 | POST | `/api/admin/chapters` | 章节管理（需 admin） |
 | GET/POST | `/api/admin/questions` | 题库管理（需 admin，含答案） |
+| GET | `/api/exams` | 考试列表（学生按统一可见性谓词过滤） |
+| GET | `/api/exams/past-papers` | 真题库（真题不进通用列表） |
+| GET | `/api/exams/blueprints` | 可选组卷蓝图（需 `content:exam:write`，须注册在 `/{exam_id}` 前） |
+| POST | `/api/exams/generate` | 按蓝图组卷并发布（需 `content:exam:write`） |
+| POST | `/api/exams/mock` | 派发班级同卷模考（需 `learn:assignment:create`） |
+| GET | `/api/learn/home` | 首页聚合；`pending_exams[]` 与 `/api/exams` 同口径 |
 
 学生端抽题接口**不返回** `answer` / `analysis`，避免客户端作弊。
 
@@ -177,6 +183,9 @@ flutter pub get
 flutter analyze
 flutter test
 ```
+
+- **Alembic 以 locale 编码读 ini**：`backend/alembic.ini` 若含中文注释，中文 Windows（cp936）执行 `python -m alembic -c alembic.ini upgrade head` 会报 `UnicodeDecodeError: 'gbk' codec can't decode byte ...`；ini 必须保持纯 ASCII，注释写英文（2026-11-12 已修，`tests/test_migrations.py` 3 例恢复通过）。
+- `flutter pub get` 在共享工具链下可能升级 `matcher/meta/test_api/vector_math` 等传递依赖并改写 `app/pubspec.lock`；与本轮需求无关时应在会话结束前还原锁定文件，避免无台账的代码变更。
 
 ### 5.2 本地运行
 
@@ -319,8 +328,12 @@ adb exec-out screencap -p > screen.png
 ```
 
 **注意**
-- 真机访问后端请改用 `http://<PC局域网IP>:18080`（不要再用 `10.0.2.2`）。
+- 真机访问后端请改用 `http://<PC局域网IP>:18080`（不要再用 `10.0.2.2`）；已建立 `adb reverse` 时可直接烧录 `http://127.0.0.1:18080`。
 - 手机与 PC 需同 Wi-Fi，且 Windows 防火墙允许 18080 入站。
+- **adb 不在系统 PATH**：先 `. .\scripts\use-env.ps1`，或直接用 `.tools\android-sdk\platform-tools\adb.exe`（v1.0.41）；第三方 adb（如 RKDevTool 自带 v1.0.40）会因 client/server 版本不符重启 daemon。
+- **装完必须冷启动**：`adb install -r` 只替换 APK，已有进程仍跑旧 Dart 快照；先 `adb shell am force-stop com.ailearning.ai_learning` 再 `am start -n com.ailearning.ai_learning/.MainActivity`，否则会误判「新功能没生效」（2026-11-12 实测：热启动首页缺「练习模式」入口，冷启动后正常）。
+- **截图**：`adb exec-out screencap -p > x.png` 在 PowerShell 下易得 0 字节，改用 `adb shell screencap -p /sdcard/x.png` + `adb pull /sdcard/x.png .tmp\x.png`。
+- **读 UI**：Flutter 文本落在 `content-desc`（不是 `text`），用 `adb shell uiautomator dump /sdcard/win.xml` + `adb shell cat` 解析 `content-desc`，坐标直接取节点 `bounds`。
 
 #### 5.5.2 鸿蒙真机（hdc）
 
@@ -355,14 +368,46 @@ hdc shell "uitest uiInput click x y"
 - **锁屏后 `aa start` 报 `10106102`**：开发者模式 + 密码锁的设备必须先手动解锁。Pura70 建议：设置 → 关闭锁屏密码；开发者选项 → 充电时保持唤醒。USB 连接期间屏幕常亮，全程零解锁。
 - **EBG-AN00（HWEBG）**：当前识别为 Android 设备（`adb`），非 HarmonyOS NEXT；如需鸿蒙联调请换用 Pura70（SN 2MN0224730027764）。
 
-#### 5.5.4 本次 EBG 真机调试结果
+#### 5.5.4 首次 EBG 真机调试结果（历史）
 
 - APK 已安装：`adb install -r app-debug.apk` → `Success`
 - 包名验证：`com.ailearning.ai_learning`
 - 已启动：`am start` 成功，无 FATAL / AndroidRuntime 异常
 - 设备 IP：`192.168.1.8`（与 PC 同 Wi-Fi，ping 通）
 
-> 截图文件 `ailaunch.png` / `ailaunch2.png` 拉取为 0 字节，疑为 EBG 机型兼容性问题；建议真机亮屏后再次 `adb exec-out screencap -p` 或用系统截图验证 UI。
+> 截图文件 `ailaunch.png` / `ailaunch2.png` 拉取为 0 字节，疑为重定向写法导致；改用 §5.5.1 的 `screencap + pull` 后正常。
+
+#### 5.5.5 2026-11-12 练习模式与前置知识点回归（EBG-AN00）
+
+**环境**：设备 `2NSDU20423005421`（`EBG-AN00` / `HWEBG`，Android）；后端 `.\.venv\Scripts\python.exe -m uvicorn app.main:app --host 0.0.0.0 --port 18080` + `adb reverse tcp:18080 tcp:18080`，`/health` 返回 200。构建 `scripts\build-apk.ps1 -DebugBuild -ApiBaseUrl http://127.0.0.1:18080`（72 s / 86.3 MB）。
+
+```powershell
+$adb = ".\.tools\android-sdk\platform-tools\adb.exe"
+& $adb install -r app\build\app\outputs\flutter-apk\app-debug.apk
+& $adb shell am force-stop com.ailearning.ai_learning
+& $adb shell am start -n com.ailearning.ai_learning/.MainActivity
+```
+
+**结果**（`adb logcat -d -t 250` 无 FATAL / AndroidRuntime）：
+
+| 核对项 | 真机表现 |
+|---|---|
+| 首页练习模式入口 | 冷启动后「练习模式」区显示 `专项突破 / 同步巩固 / 考前速练` 三张卡与策略说明 |
+| 专项突破 | 策略卡「薄弱点集中练」；默认 10 题、6 分钟、覆盖 10/44；题型配比 判断 3 / 填空 4 / 单选 2 / 多选 1 |
+| 同步巩固 | 策略卡「跟着教材进度练」；默认 15 题、9 分钟、覆盖 15/44；题型配比 单选 5 / 多选 2 / 判断 5 / 填空 3 |
+| 考前速练 | 策略卡「全范围模拟卷」；默认 20 题、13 分钟、覆盖 20/44；策略含考试题型配比、全覆盖、难度递进、不排重 |
+| 活服务接口 | `/api/learn/practice/preview` 三 mode 返回不同的 `mode_label` / `strategy` |
+| 前置知识点 | 知识点详情显示「前置知识点 1 个 · 按教材顺序」，条目「1 天地人 / 识字与写字」 |
+| 点击直达讲解 | 点击前置项进入「天地人 · 讲解」独立页，首屏为讲解 + 典型例题，底部「完整详情 / 练一练」，无冗长前置区 |
+
+截图证据：`.tmp/ebg_cold.png`（首页三入口）、`.tmp/ebg_boot.png`（专项突破）、`.tmp/ebg_sync.png`（同步巩固）、`.tmp/ebg_preexam.png`（考前速练）、`.tmp/ebg_kp_detail.png`（前置列表）、`.tmp/ebg_explain2.png`（独立讲解页）。
+
+#### 5.5.6 2026-11-12 考试入口闭环回归（EBG-AN00）
+
+- **改了后端代码必须重启服务**：uvicorn 未加 `--reload`，旧进程仍跑旧代码，真机会继续显示「首页 2 场待办 / 考试中心 0 场」的旧口径。不停止旧进程的做法：在 `18081` 起新实例，`adb reverse --remove tcp:18080` 后 `adb reverse tcp:18080 tcp:18081`，App 内烧录地址无需改动。
+- 重启后活服务：`/api/learn/home.pending_exams=0`、`/api/exams=0`（口径一致）；`admin` 访问 `/api/exams/blueprints` 200（9 个蓝图），`student` 403。
+- 真机首页：「待办考试」显示空态卡「暂无待考考试 / 新发布的考试会出现在这里」；考试中心副标题改为「暂无待考考试，可查看全部考试」；考试入口区为 **考试中心 / 真题库 / 班级作业** 三张卡；点击「真题库」列出 2 张一年级真题并带「开始模考」。
+- 截图：`.tmp/ebg_pastpapers.png`。
 
 ### 5.6 生产部署与运维（R-02）
 
@@ -602,6 +647,11 @@ cd ..\app; flutter analyze; flutter test
 Invoke-RestMethod http://127.0.0.1:18080/health
 Invoke-RestMethod http://127.0.0.1:18080/api/public/textbooks
 Invoke-RestMethod http://127.0.0.1:18080/openapi.json
+# CR-003：考试入口口径（学生 token；pending_exams 数量应与 /api/exams 一致）
+Invoke-RestMethod http://127.0.0.1:18080/api/learn/home -Headers $h
+Invoke-RestMethod http://127.0.0.1:18080/api/exams -Headers $h
+# CR-003：蓝图接口权限（admin 200、student 403）
+Invoke-RestMethod http://127.0.0.1:18080/api/exams/blueprints -Headers $ah
 ```
 
 ---
@@ -630,5 +680,6 @@ Invoke-RestMethod http://127.0.0.1:18080/openapi.json
 - ⏳ 鸿蒙 HAP：真机安装验证（`hdc install`）。
 - ⏳ M2：题库批量导入、错题本与复训调度、家长绑定与家长端、会员权益服务端校验。
 - ⏳ 鸿蒙 Pal 实机能力：华为账号、Push、系统使用时长统计。
+- ✅ CR-003 / EX-01~EX-03：考试入口闭环（统一可见性谓词、待办考试独立入口、考试入库与派发）已交付，EBG 真机回归通过；**R-A16 技术验收通过、待 PM 签署**（主计划 §6.22、§5.5.6）。
 
 设计依据：[k12-learning-app-design.md](./k12-learning-app-design.md)

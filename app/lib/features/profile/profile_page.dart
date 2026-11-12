@@ -336,6 +336,20 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                     ),
                     const SizedBox(height: 16),
                   ],
+                  if (user?.hasPermission('content:exam:write') == true) ...[
+                    AccentCard(
+                      accent: AppAccents.of(context).exam,
+                      padding: EdgeInsets.zero,
+                      child: ListTile(
+                        leading: const Icon(Icons.library_add_outlined),
+                        title: const Text('考试管理与发布'),
+                        subtitle: const Text('按蓝图组卷入库并派发班级模考'),
+                        trailing: const Icon(Icons.chevron_right),
+                        onTap: () => context.push('/exams/manage'),
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                  ],
                   if (_canReviewContent(user)) ...[
                     AccentCard(
                       accent: AppAccents.of(context).assignment,

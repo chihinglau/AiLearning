@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:ai_learning/core/errors/api_error_guide.dart';
 import 'package:ai_learning/core/models/content.dart';
+import 'package:ai_learning/core/models/practice_mode.dart';
 import 'package:ai_learning/core/models/practice_session.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
@@ -40,13 +41,14 @@ class _PracticeConfigPageState extends ConsumerState<PracticeConfigPage> {
     'multiple': '多选题',
     'fill': '填空题',
     'judge': '判断题',
+    'answer': '解答题',
   };
 
   late String _scopeType = widget.scopeType;
   late List<int> _scopeIds = widget.scopeIds;
   late String _mode = widget.initialMode;
-  int _count = 10;
-  final Set<String> _qTypes = {'choice', 'multiple', 'fill', 'judge'};
+  late int _count;
+  late Set<String> _qTypes;
 
   PracticePreview? _preview;
   bool _loadingPreview = false;
@@ -56,7 +58,52 @@ class _PracticeConfigPageState extends ConsumerState<PracticeConfigPage> {
   @override
   void initState() {
     super.initState();
+    _applyModeDefaults(widget.initialMode, notify: false);
     _loadPreview();
+  }
+
+  /// 切换模式时重置随机种子并套用该模式默认配置，保证三种模式的
+  /// 组卷结果、题量、题型与范围都真正不同（而不是只换个标题）。
+  void _applyModeDefaults(String mode, {bool notify = true}) {
+    final spec = practiceModeOf(mode);
+    void apply() {
+      _mode = mode;
+      _seed = null;
+      _count = spec.defaultCount;
+      _qTypes = {...spec.defaultQTypes};
+      if (spec.preferredScope != null) {
+        for (final option in _scopeOptions) {
+          if (option.type == spec.preferredScope) {
+            _scopeType = option.type;
+            _scopeIds = option.ids;
+            break;
+          }
+        }
+      }
+    }
+
+    if (!notify) {
+      apply();
+      return;
+    }
+    setState(apply);
+    _reloadPreviewSoon();
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text('已按「${spec.label}」调整：${spec.defaultCount} 题 · '
+            '${_scopeLabel(_scopeType)} · ${_qTypes.length} 种题型'),
+        duration: const Duration(seconds: 2),
+      ),
+    );
+  }
+
+  String _scopeLabel(String type) {
+    return switch (type) {
+      'chapter' => '本单元',
+      'textbook' => '整册教材',
+      'wrong' => '错题重练',
+      _ => '当前知识点',
+    };
   }
 
   List<_ScopeOption> get _scopeOptions {
@@ -153,9 +200,27 @@ class _PracticeConfigPageState extends ConsumerState<PracticeConfigPage> {
         .toList();
     if (questions.isEmpty) return null;
 
+    // 离线预览也按模式给出不同顺序，避免断网时三种模式又变得一样。
+    if (_mode == 'sync') {
+      questions.sort((a, b) {
+        final byChapter = a.chapterId.compareTo(b.chapterId);
+        if (byChapter != 0) return byChapter;
+        final byKp = (a.knowledgePointId ?? 0).compareTo(b.knowledgePointId ?? 0);
+        if (byKp != 0) return byKp;
+        final byDifficulty = a.difficulty.compareTo(b.difficulty);
+        return byDifficulty != 0 ? byDifficulty : a.id.compareTo(b.id);
+      });
+    } else if (_mode == 'pre_exam') {
+      questions.sort((a, b) {
+        final byDifficulty = a.difficulty.compareTo(b.difficulty);
+        return byDifficulty != 0 ? byDifficulty : a.id.compareTo(b.id);
+      });
+    }
+
+    final spec = practiceModeOf(_mode);
     final count = questions.length < _count ? questions.length : _count;
     final mix = <String, int>{};
-    for (final question in questions) {
+    for (final question in questions.take(count)) {
       mix[question.qType] = (mix[question.qType] ?? 0) + 1;
     }
     final kpIds = questions
@@ -173,6 +238,9 @@ class _PracticeConfigPageState extends ConsumerState<PracticeConfigPage> {
       qTypeMix: mix,
       dueReviewCount: 0,
       seed: _seed ?? 0,
+      mode: spec.key,
+      modeLabel: spec.label,
+      strategy: spec.description,
     );
   }
 
@@ -211,17 +279,20 @@ class _PracticeConfigPageState extends ConsumerState<PracticeConfigPage> {
           _sectionTitle('练习模式'),
           const SizedBox(height: 8),
           SegmentedButton<String>(
-            segments: const [
-              ButtonSegment(value: 'special', label: Text('专项突破')),
-              ButtonSegment(value: 'sync', label: Text('同步巩固')),
-              ButtonSegment(value: 'pre_exam', label: Text('考前速练')),
+            segments: [
+              for (final key in kPracticeModeOrder)
+                ButtonSegment(
+                  value: key,
+                  icon: Icon(_modeIcon(key), size: 18),
+                  label: Text(practiceModeOf(key).label),
+                ),
             ],
             selected: {_mode},
-            onSelectionChanged: (selection) {
-              setState(() => _mode = selection.first);
-              _reloadPreviewSoon();
-            },
+            onSelectionChanged: (selection) =>
+                _applyModeDefaults(selection.first),
           ),
+          const SizedBox(height: 12),
+          _ModeCard(spec: practiceModeOf(_mode)),
           if (_scopeOptions.length > 1) ...[
             const SizedBox(height: 20),
             _sectionTitle('练习范围'),
@@ -326,6 +397,77 @@ class _PracticeConfigPageState extends ConsumerState<PracticeConfigPage> {
   Widget _sectionTitle(String text) {
     return Text(text, style: Theme.of(context).textTheme.titleMedium);
   }
+
+  IconData _modeIcon(String key) {
+    return switch (key) {
+      'sync' => Icons.menu_book_outlined,
+      'pre_exam' => Icons.timer_outlined,
+      _ => Icons.gps_fixed_outlined,
+    };
+  }
+}
+
+class _ModeCard extends StatelessWidget {
+  const _ModeCard({required this.spec});
+
+  final PracticeModeSpec spec;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final icon = switch (spec.key) {
+      'sync' => Icons.menu_book_outlined,
+      'pre_exam' => Icons.timer_outlined,
+      _ => Icons.gps_fixed_outlined,
+    };
+    return Card(
+      color: theme.colorScheme.primaryContainer.withValues(alpha: 0.4),
+      child: Padding(
+        padding: const EdgeInsets.all(14),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Icon(icon, size: 20, color: theme.colorScheme.primary),
+                const SizedBox(width: 8),
+                Text(
+                  '${spec.label} · ${spec.tagline}',
+                  style: theme.textTheme.titleSmall?.copyWith(
+                    color: theme.colorScheme.primary,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const Spacer(),
+                Text('${spec.defaultCount} 题', style: theme.textTheme.labelSmall),
+              ],
+            ),
+            const SizedBox(height: 8),
+            Text(spec.description, style: theme.textTheme.bodySmall),
+            const SizedBox(height: 8),
+            for (final point in spec.points)
+              Padding(
+                padding: const EdgeInsets.only(bottom: 4),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Icon(
+                      Icons.check_circle_outline,
+                      size: 14,
+                      color: theme.colorScheme.primary,
+                    ),
+                    const SizedBox(width: 6),
+                    Expanded(
+                      child: Text(point, style: theme.textTheme.bodySmall),
+                    ),
+                  ],
+                ),
+              ),
+          ],
+        ),
+      ),
+    );
+  }
 }
 
 class _ScopeOption {
@@ -408,6 +550,15 @@ class _PreviewCard extends StatelessWidget {
             ' · 到期错题 ${data.dueReviewCount} 道',
             style: theme.textTheme.bodySmall,
           ),
+          if (data.strategy.isNotEmpty) ...[
+            const SizedBox(height: 6),
+            Text(
+              '${data.modeLabel.isEmpty ? practiceModeOf(data.mode).label : data.modeLabel} · ${data.strategy}',
+              style: theme.textTheme.labelSmall?.copyWith(
+                color: theme.colorScheme.primary,
+              ),
+            ),
+          ],
           if (data.insufficient) ...[
             const SizedBox(height: 8),
             Container(

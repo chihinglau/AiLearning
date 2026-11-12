@@ -17,7 +17,7 @@ class LearnStartIn(BaseModel):
     scope_type: Optional[str] = Field(default=None, pattern=r"^(kp|chapter|textbook|wrong)$")
     scope_ids: list[int] = Field(default_factory=list, max_length=50)
     q_types: list[str] = Field(default_factory=list)
-    mode: str = "special"
+    mode: str = Field(default="special", pattern=r"^(special|sync|pre_exam|unit)$")
     seed: Optional[int] = None
     duration_limit_min: Optional[int] = Field(default=None, ge=1, le=120)
 
@@ -92,6 +92,11 @@ class KpBriefOut(BaseModel):
     name: str
     subject: str
     mastery_score: float = 0.0
+    # 教材顺序（用于前置知识点列表稳定排序）与讲解可用性（用于直达讲解页）
+    order_index: int = 0
+    section_order: int = 0
+    section_name: Optional[str] = None
+    has_explanation: bool = False
 
 
 class KpDetailOut(BaseModel):
@@ -190,7 +195,7 @@ class PracticePreviewIn(BaseModel):
     scope_ids: list[int] = Field(default_factory=list, max_length=50)
     count: int = Field(default=10, ge=1, le=50)
     q_types: list[str] = Field(default_factory=list)
-    mode: str = "special"
+    mode: str = Field(default="special", pattern=r"^(special|sync|pre_exam|unit)$")
     seed: Optional[int] = None
     duration_limit_min: Optional[int] = Field(default=None, ge=1, le=120)
 
@@ -206,6 +211,10 @@ class PracticePreviewOut(BaseModel):
     q_type_mix: dict[str, int] = {}
     due_review_count: int
     seed: int
+    # 模式策略说明：前端配置页据此展示三种模式的实际差异
+    mode: str = "special"
+    mode_label: str = "专项突破"
+    strategy: str = ""
 
 
 class SessionAnswerOut(BaseModel):

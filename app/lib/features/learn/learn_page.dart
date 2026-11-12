@@ -3,7 +3,9 @@ import 'dart:convert';
 
 import 'package:ai_learning/core/errors/api_error_guide.dart';
 import 'package:ai_learning/core/models/content.dart';
+import 'package:ai_learning/core/models/exam_entry.dart';
 import 'package:ai_learning/core/models/learn.dart';
+import 'package:ai_learning/core/models/practice_mode.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
 import 'package:ai_learning/core/theme/app_accents.dart';
@@ -147,6 +149,18 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
     context.push('/session?title=${Uri.encodeComponent('每日一练')}');
   }
 
+  /// 首页三个练习模式入口：把 mode 传进配置页，由配置页套用各自的默认范围、
+  /// 题量与题型，进入后组卷策略也按 mode 区分。
+  void _openPracticeMode(String mode) {
+    final textbooks = _home?.textbooks ?? const <HomeTextbook>[];
+    if (textbooks.isEmpty) return;
+    final spec = practiceModeOf(mode);
+    context.push(
+      '/practice/config?scope=textbook&ids=${textbooks.first.textbookId}'
+      '&mode=${spec.key}&title=${Uri.encodeComponent(spec.label)}',
+    );
+  }
+
   void _openRecommendation(HomeData home) {
     final rec = home.recommendation;
     switch (rec.action) {
@@ -265,6 +279,33 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
                 onPractice: _startDaily,
               ),
               const SizedBox(height: 20),
+              _SectionTitle('练习模式'),
+              const SizedBox(height: 4),
+              Text(
+                '三种模式的组卷策略不同，进入后可再调整范围与题量',
+                style: theme.textTheme.bodySmall,
+              ),
+              const SizedBox(height: 8),
+              if (_home!.textbooks.isEmpty)
+                const Card(
+                  child: ListTile(title: Text('绑定教材后即可开始分模式练习')),
+                )
+              else
+                Row(
+                  children: [
+                    for (final key in kPracticeModeOrder) ...[
+                      Expanded(
+                        child: _PracticeModeEntry(
+                          spec: practiceModeOf(key),
+                          onTap: () => _openPracticeMode(key),
+                        ),
+                      ),
+                      if (key != kPracticeModeOrder.last)
+                        const SizedBox(width: 8),
+                    ],
+                  ],
+                ),
+              const SizedBox(height: 20),
               if (_home!.continueLearning != null) ...[
                 _SectionTitle('继续学习'),
                 const SizedBox(height: 8),
@@ -317,6 +358,47 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
                 ),
                 const SizedBox(height: 20),
               ],
+              _SectionTitle('待办考试'),
+              const SizedBox(height: 8),
+              if (_home!.pendingExams.isEmpty)
+                const Card(
+                  child: ListTile(
+                    leading: Icon(Icons.event_available_outlined),
+                    title: Text('暂无待考考试'),
+                    subtitle: Text('新发布的考试会出现在这里'),
+                  ),
+                )
+              else
+                for (final item in _home!.pendingExams.take(3))
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 8),
+                    child: FeatureCard(
+                      icon: Icons.event_note_outlined,
+                      accent: accents.exam,
+                      title: item['title']?.toString() ?? '待办考试',
+                      subtitle: pendingExamSubtitle(item),
+                      onTap: () {
+                        final route = pendingExamRoute(item);
+                        if (route == null) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text('考试窗口已关闭，暂无法进入'),
+                            ),
+                          );
+                          return;
+                        }
+                        if (item['window_state'] == 'scheduled') {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text('考试尚未开始，可先查看试卷信息'),
+                            ),
+                          );
+                        }
+                        context.push(route);
+                      },
+                    ),
+                  ),
+              const SizedBox(height: 20),
               _SectionTitle('考试入口'),
               const SizedBox(height: 8),
               FeatureCard(
@@ -324,9 +406,17 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
                 accent: accents.exam,
                 title: '考试中心',
                 subtitle: _home!.pendingExams.isEmpty
-                    ? '暂无待考考试'
+                    ? '暂无待考考试，可查看全部考试'
                     : '${_home!.pendingExams.length} 场考试待完成',
                 onTap: () => context.push('/exams'),
+              ),
+              const SizedBox(height: 8),
+              FeatureCard(
+                icon: Icons.history_edu_outlined,
+                accent: accents.exam,
+                title: '真题库',
+                subtitle: '按学科、年份与地区查看历年真题',
+                onTap: () => context.push('/past-papers'),
               ),
               const SizedBox(height: 8),
               FeatureCard(
@@ -338,6 +428,52 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
               ),
             ],
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class _PracticeModeEntry extends StatelessWidget {
+  const _PracticeModeEntry({required this.spec, required this.onTap});
+
+  final PracticeModeSpec spec;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final icon = switch (spec.key) {
+      'sync' => Icons.menu_book_outlined,
+      'pre_exam' => Icons.timer_outlined,
+      _ => Icons.gps_fixed_outlined,
+    };
+    return Card(
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        onTap: onTap,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 6),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(icon, size: 24, color: theme.colorScheme.primary),
+              const SizedBox(height: 8),
+              Text(
+                spec.label,
+                textAlign: TextAlign.center,
+                style: theme.textTheme.labelLarge?.copyWith(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 4),
+              Text(
+                spec.tagline,
+                textAlign: TextAlign.center,
+                style: theme.textTheme.labelSmall,
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -679,12 +679,22 @@ class KpBrief {
     required this.name,
     required this.subject,
     this.masteryScore = 0,
+    this.orderIndex = 0,
+    this.sectionOrder = 0,
+    this.sectionName,
+    this.hasExplanation = false,
   });
 
   final int id;
   final String name;
   final String subject;
   final double masteryScore;
+
+  /// 教材顺序：先按所属节，再按节内序号；后端已按此顺序返回，前端兜底。
+  final int orderIndex;
+  final int sectionOrder;
+  final String? sectionName;
+  final bool hasExplanation;
 
   String get displayName => displayKnowledgeName(name);
 
@@ -694,8 +704,29 @@ class KpBrief {
       name: json['name'] as String? ?? '',
       subject: json['subject'] as String? ?? '',
       masteryScore: (json['mastery_score'] as num?)?.toDouble() ?? 0,
+      orderIndex: json['order_index'] as int? ?? 0,
+      sectionOrder: json['section_order'] as int? ?? 0,
+      sectionName: json['section_name'] as String?,
+      hasExplanation: json['has_explanation'] as bool? ?? false,
     );
   }
+}
+
+/// 前置知识点排序兜底：按「所属节 → 节内序号 → id」稳定排序。
+/// 后端 /learn/kp/{id} 与离线整册包都已按教材顺序输出；这里保证即使
+/// 遇到旧缓存包（字段缺省为 0）也不会出现随机顺序。
+List<KpBrief> sortedPrerequisites(dynamic raw) {
+  final list = (raw as List<dynamic>? ?? const [])
+      .map((item) => KpBrief.fromJson(item as Map<String, dynamic>))
+      .toList();
+  list.sort((a, b) {
+    final bySection = a.sectionOrder.compareTo(b.sectionOrder);
+    if (bySection != 0) return bySection;
+    final byOrder = a.orderIndex.compareTo(b.orderIndex);
+    if (byOrder != 0) return byOrder;
+    return a.id.compareTo(b.id);
+  });
+  return list;
 }
 
 /// 知识点详情 /learn/kp/{id}：讲解、状态、前置、掌握度。
@@ -752,9 +783,7 @@ class KpDetail {
       explanation: json['explanation'] as String?,
       sectionId: json['section_id'] as int?,
       sectionName: json['section_name'] as String?,
-      prerequisites: (json['prerequisites'] as List<dynamic>? ?? const [])
-          .map((item) => KpBrief.fromJson(item as Map<String, dynamic>))
-          .toList(),
+      prerequisites: sortedPrerequisites(json['prerequisites']),
       masteryScore: (json['mastery_score'] as num?)?.toDouble() ?? 0,
       masteryConfidence: json['mastery_confidence'] as int? ?? 0,
       masteryBand: json['mastery_band'] as String? ?? 'weak',

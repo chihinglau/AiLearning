@@ -53,6 +53,7 @@ from app.services import wrong_reason as wrong_reason_service
 from app.services.assignment import class_authorized
 from app.services.audit import record_audit
 from app.services.exam_paper import generate_paper
+from app.services.recommendation import student_visible_exam_clauses
 from app.services.usage import (
     daily_limit_status,
     limit_exceeded_detail,
@@ -369,18 +370,8 @@ def list_exams(
     # 班级作业卷通过 /api/assignments 暴露，避免在通用考试列表中重复出现
     stmt = stmt.where(Exam.source != "assignment")
     if current.role == "student":
-        stmt = stmt.where(Exam.status == "published")
-        # 真题统一在「真题库」入口展示，避免与常规考试列表重复
-        stmt = stmt.where(Exam.is_past_paper.is_(False))
-        if current.grade:
-            stmt = stmt.where(Exam.grade == current.grade)
-        # 班级同卷模考仅本班可见（非班级卷对所有学生开放）
-        member_classes = select(ClassMember.class_id).where(
-            ClassMember.student_id == current.id
-        )
-        stmt = stmt.where(
-            or_(Exam.class_id.is_(None), Exam.class_id.in_(member_classes))
-        )
+        # 与 /api/learn/home.pending_exams 共用同一可见性谓词（D-04 §8.7.1）
+        stmt = stmt.where(*student_visible_exam_clauses(current))
     if exam_type:
         stmt = stmt.where(Exam.exam_type == exam_type)
     exams = list(db.scalars(stmt.order_by(Exam.id.desc()).limit(100)))
@@ -449,6 +440,34 @@ def list_exams(
             )
         )
     return result
+
+
+@router.get("/blueprints", response_model=list[dict[str, Any]])
+def list_blueprints(
+    current: User = Depends(require_permission("content:exam:write")),
+    db: Session = Depends(get_db),
+) -> list[dict[str, Any]]:
+    """App 考试入库表单的可选蓝图（D-04 §8.7.3）。
+
+    必须注册在 /{exam_id} 之前，否则路径会被当作 exam_id 解析。
+    """
+    rows = db.scalars(
+        select(ExamBlueprint)
+        .where(ExamBlueprint.is_active.is_(True))
+        .order_by(ExamBlueprint.id)
+    )
+    return [
+        {
+            "code": row.code,
+            "name": row.name,
+            "subject": row.subject,
+            "grade": row.grade,
+            "exam_type": row.exam_type,
+            "total_score": row.total_score,
+            "time_limit_min": row.time_limit_min,
+        }
+        for row in rows
+    ]
 
 
 @router.get("/past-papers", response_model=list[PastPaperOut])

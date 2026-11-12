@@ -1,8 +1,9 @@
 # 深爱学（AiLearning）—— 深圳中小学跨平台学习辅助应用 软件开发方案
 
 > **文档性质**：项目整体设计方案（M1 技术底座已落地，持续迭代）
-> **版本**：v0.6（2026-11-10 补充 §3.9.13 阶段 2~4 落地说明；TT-03~TT-07 与 UX-03 已实施）
+> **版本**：v0.7（2026-11-12 按 CR-003 回写考试入口闭环：§3.6.4 首页入口、§4.5 数据模型、§4.6 API 分组、§8.3 质量门禁 L18~L20；EX-01~EX-03 已交付）
 > **日期**：2026-11-05
+> **最后更新**：2026-11-12（对应主计划 CR-003 / §3.9 / §6.22 验收记录）
 > **适用范围**：深圳市小学 / 初中 / 高中全学段学习辅助
 > **目标平台**：Android（安卓）+ HarmonyOS NEXT（鸿蒙）双端
 > **文档约束**：本方案为实施蓝本；M1 技术底座（双端工程 + 后端 API + 账号/教材/练习闭环）已完成并通过真机验证
@@ -368,6 +369,9 @@ FeatureCard(
 | 页面/区域 | 改造方式 |
 |---|---|
 | 学习首页「继续练习/继续学习/考试中心/班级作业」 | 四张入口卡分别使用 practice/learn/exam/assignment 色 |
+| 学习首页「待办考试」独立卡（v0.7 / CR-003） | 按 `pending_exams[].entry` 直达 `/exam/:id` 或 `/past-papers`，使用 exam 色；无待办显示空态卡 |
+| 学习首页「考试入口」区（v0.7 / CR-003） | 考试中心 / 真题库 / 班级作业三张卡，口径与考试列表一致，不再虚标待办数 |
+| 「我的 → 考试管理与发布」（v0.7 / CR-003） | 按 `content:exam:write` 显隐，承载组卷入库与班级模考派发（详见 D-04 §8.7） |
 | 学习首页欢迎卡 | 保持品牌 `primaryContainer`，作为唯一视觉锚点 |
 | 学习首页推荐卡 | 整卡保持中性，仅类型标签/图标使用 accent |
 | 知识点/目录页 | 复用同一 token；现有 `withValues(alpha:0.12)` 标签与卡片统一透明度 |
@@ -975,6 +979,8 @@ AccentCard(
 │ questions (JSONB []) │
 └──────────────────────┘
 
+> v0.7（CR-003）实际字段补充：`exams` 还含 `status / is_past_paper / source（assignment|generated|blueprint）/ class_id / window_start / window_end / blueprint_id / exam_type / chapter_ids / region`；另有 `exam_blueprints`（`code/name/subject/grade/exam_type/total_score/time_limit_min/sections/difficulty_mix/is_active`）。`student_visible_exam_clauses()` 依赖 `status/is_past_paper/source/class_id/grade`，与 `GET /api/exams` 共用（D-04 §8.7.1）。
+
 ┌──────────────────────┐
 │ knowledge_points     │   ← 知识点图谱
 ├──────────────────────┤
@@ -1021,12 +1027,22 @@ GET  /api/wrong-book/{id}                错题详情 + 相似题推荐
 POST /api/wrong-book/{id}/master         标记为已掌握
 POST /api/wrong-book/retrain             开始错题复训
 
-# —— 模拟考试 ——
-GET  /api/exams/list                     模考列表（按学科/年级）
-POST /api/exams/{id}/start               开始模考（限时）
-POST /api/exams/{id}/submit              提交模考
-GET  /api/exams/{id}/result              模考结果 + AI 点评
+# —— 模拟考试（v0.7 按 CR-003 / D-04 §8.7 修订为现行接口） ——
+GET  /api/exams                          考试列表（学生按统一可见性谓词过滤）
+GET  /api/exams/{id}                     试卷详情（不含答案）
+GET  /api/exams/past-papers              真题库（历年真题独立入口）
+GET  /api/exams/blueprints               可选组卷蓝图（content:exam:write）
+POST /api/exams/generate                 按蓝图组卷并发布（考试入库，content:exam:write）
+POST /api/exams/mock                     派发班级同卷模考（learn:assignment:create）
+POST /api/exams/{id}/attempts            开始/续答
+PATCH /api/exams/attempts/{id}           自动保存答案
+POST /api/exams/attempts/{id}/submit     交卷（幂等）
+GET  /api/exams/attempts/{id}/report     考试报告
 
+# —— 学习首页聚合 ——
+GET  /api/learn/home                     pending_exams[] 与考试列表同口径，含 entry/subject/window_state
+
+# —— 注：student_visible_exam_clauses() 为两处共用谓词，排除真题/作业卷/非本班卷
 # —— 学情分析 ——
 GET  /api/analytics/knowledge-mastery    知识点掌握雷达图
 GET  /api/analytics/trend                学习趋势（近 30 天正确率）
@@ -1339,6 +1355,9 @@ Phase 1 ────────────────────────
 | 合规 | PIPL + 教育 APP 备案 + 商店政策 100% 自检通过 |
 | 双端一致性 | 功能对等测试通过率 ≥ 98%（Android vs HarmonyOS） |
 | 可访问性 | 色彩对比度 ≥ 4.5:1、字号可调节、语音辅助兼容 |
+| L18 考试入口口径（CR-003） | `/api/learn/home.pending_exams` 与 `GET /api/exams` 同谓词，真题/作业卷/非本班卷/草稿不虚标 |
+| L19 待办考试直达（CR-003） | 首页待办卡按 `entry` 直达 `/exam/:id` 或 `/past-papers`，窗口状态有提示、无待办有空态 |
+| L20 考试入库闭环（CR-003） | `content:exam:write` 可在 App 组卷发布，`learn:assignment:create` 可派发班级模考，新卷立即进入学生可见列表 |
 
 ---
 

@@ -11,6 +11,7 @@ import 'package:ai_learning/features/common/permission_gate.dart';
 import 'package:ai_learning/features/content/content_report_page.dart';
 import 'package:ai_learning/features/content/content_review_page.dart';
 import 'package:ai_learning/features/exam/exam_list_page.dart';
+import 'package:ai_learning/features/exam/exam_manage_page.dart';
 import 'package:ai_learning/features/exam/exam_page.dart';
 import 'package:ai_learning/features/exam/exam_report_page.dart';
 import 'package:ai_learning/features/exam/past_paper_page.dart';
@@ -18,6 +19,7 @@ import 'package:ai_learning/features/family/parent_children_page.dart';
 import 'package:ai_learning/features/learn/knowledge_graph_page.dart';
 import 'package:ai_learning/features/learn/knowledge_page.dart';
 import 'package:ai_learning/features/learn/kp_detail_page.dart';
+import 'package:ai_learning/features/learn/kp_explain_page.dart';
 import 'package:ai_learning/features/learn/unit_page.dart';
 import 'package:ai_learning/features/legal/consent_gate.dart';
 import 'package:ai_learning/features/legal/legal_consent_page.dart';
@@ -140,6 +142,14 @@ final routerProvider = Provider<GoRouter>((ref) {
         builder: (context, state) => const PermissionGate(
           anyOf: ['learn:exam:take'],
           child: ExamListPage(),
+        ),
+      ),
+      // EX-03：考试入库（组卷发布 / 派发班级模考）。
+      GoRoute(
+        path: '/exams/manage',
+        builder: (context, state) => const PermissionGate(
+          anyOf: ['content:exam:write'],
+          child: ExamManagePage(),
         ),
       ),
       GoRoute(
@@ -317,6 +327,17 @@ final routerProvider = Provider<GoRouter>((ref) {
               textbookName: query['textbook'] ?? '教材',
               textbookId: int.tryParse(query['tid'] ?? ''),
             ),
+          );
+        },
+      ),
+      GoRoute(
+        path: '/kp/:kpId/explain',
+        builder: (context, state) {
+          final kpId = int.tryParse(state.pathParameters['kpId'] ?? '');
+          if (kpId == null) return const AppShell();
+          return PermissionGate(
+            anyOf: const ['learn:kp:study'],
+            child: KpExplainPage(kpId: kpId),
           );
         },
       ),

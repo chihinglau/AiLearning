@@ -802,3 +802,82 @@ class MockExamAssignment {
     );
   }
 }
+
+/// 组卷蓝图（GET /api/exams/blueprints）。
+class ExamBlueprint {
+  const ExamBlueprint({
+    required this.code,
+    required this.name,
+    required this.subject,
+    required this.examType,
+    required this.totalScore,
+    required this.timeLimitMin,
+    this.grade,
+  });
+
+  final String code;
+  final String name;
+  final String subject;
+  final int? grade;
+  final String examType;
+  final int totalScore;
+  final int timeLimitMin;
+
+  factory ExamBlueprint.fromJson(Map<String, dynamic> json) {
+    return ExamBlueprint(
+      code: json['code'] as String? ?? '',
+      name: json['name'] as String? ?? '',
+      subject: json['subject'] as String? ?? '',
+      grade: json['grade'] as int?,
+      examType: json['exam_type'] as String? ?? 'unit',
+      totalScore: (json['total_score'] as num?)?.toInt() ?? 100,
+      timeLimitMin: (json['time_limit_min'] as num?)?.toInt() ?? 60,
+    );
+  }
+}
+
+/// 组卷发布结果（POST /api/exams/generate）。
+class ExamGenerateResult {
+  const ExamGenerateResult({
+    required this.examId,
+    required this.title,
+    required this.seed,
+    required this.questionCount,
+    required this.totalScore,
+    required this.kpCoverage,
+    required this.difficultyMix,
+    required this.fallbackCount,
+    required this.insufficient,
+  });
+
+  final int examId;
+  final String title;
+  final int seed;
+  final int questionCount;
+  final double totalScore;
+  final double kpCoverage;
+  final Map<String, int> difficultyMix;
+  final int fallbackCount;
+  final bool insufficient;
+
+  factory ExamGenerateResult.fromJson(Map<String, dynamic> json) {
+    final rawMix = json['difficulty_mix'];
+    final mix = <String, int>{};
+    if (rawMix is Map) {
+      rawMix.forEach((key, value) {
+        mix[key.toString()] = (value as num?)?.toInt() ?? 0;
+      });
+    }
+    return ExamGenerateResult(
+      examId: json['exam_id'] as int? ?? 0,
+      title: json['title'] as String? ?? '',
+      seed: json['seed'] as int? ?? 0,
+      questionCount: json['question_count'] as int? ?? 0,
+      totalScore: (json['total_score'] as num?)?.toDouble() ?? 0,
+      kpCoverage: (json['kp_coverage'] as num?)?.toDouble() ?? 0,
+      difficultyMix: mix,
+      fallbackCount: json['fallback_count'] as int? ?? 0,
+      insufficient: json['insufficient'] as bool? ?? false,
+    );
+  }
+}

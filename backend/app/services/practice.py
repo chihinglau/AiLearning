@@ -10,8 +10,8 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.core.grade import derive_stage
-from app.models.content import Chapter, Question
-from app.models.practice import StudentQuestionRecord, WrongQuestion
+from app.models.content import Chapter, KnowledgePoint, Question
+from app.models.practice import MasteryScore, StudentQuestionRecord, WrongQuestion
 from app.models.user import User
 
 # 预估单题耗时（秒），用于练习配置页展示
@@ -32,10 +32,65 @@ MIN_COVERAGE_RATIO = 0.8      # KP 覆盖率下限（D-04 §7.3）
 COVERAGE_FULL_KP = 3          # 范围 KP ≤ 3 时要求 100% 覆盖
 DUE_QUOTA_CAP = 5             # 到期错题绝对上限
 RECENT_EXCLUDE_DAYS = 7       # 去重窗口：7 天内做过的题不再出（D-04 §7.3）
+WEAK_MASTERY_THRESHOLD = 60   # 掌握度低于此值视为薄弱知识点
+
+
+@dataclass(frozen=True)
+class ModePolicy:
+    """一种练习模式的组卷策略（前端配置页展示同一份语义）。"""
+
+    label: str
+    summary: str
+    due_quota_ratio: float = 0.25
+    exclude_recent: bool = True
+    weak_first: bool = False
+    cover_all_kps: bool = False
+    textbook_order: bool = False
+    difficulty_order: bool = False
+    type_ratio: Optional[dict[str, float]] = None
+
+
+MODE_POLICIES: dict[str, ModePolicy] = {
+    "special": ModePolicy(
+        label="专项突破",
+        summary="优先攻克薄弱知识点与到期错题，题目集中在尚未掌握的内容",
+        due_quota_ratio=0.25,
+        weak_first=True,
+    ),
+    "sync": ModePolicy(
+        label="同步巩固",
+        summary="按教材章节顺序由易到难推进，均衡覆盖范围内的知识点",
+        due_quota_ratio=0.15,
+        textbook_order=True,
+        difficulty_order=True,
+    ),
+    "pre_exam": ModePolicy(
+        label="考前速练",
+        summary="全范围模拟卷：考试题型配比、知识点全覆盖、难度递进，不排重近期做过的题",
+        due_quota_ratio=0.10,
+        exclude_recent=False,
+        cover_all_kps=True,
+        difficulty_order=True,
+        type_ratio=TYPE_RATIO_BY_MODE["pre_exam"],
+    ),
+    "unit": ModePolicy(
+        label="单元测",
+        summary="按单元测蓝图配比组卷",
+        type_ratio=TYPE_RATIO_BY_MODE["unit"],
+    ),
+}
+
+
+def get_mode_policy(mode: str) -> ModePolicy:
+    """未知模式回退到专项突破，保证旧会话仍可组卷。"""
+    return MODE_POLICIES.get(mode, MODE_POLICIES["special"])
 
 
 def ratio_for(stage: str, mode: str) -> dict[str, float]:
     """题型配比：unit/pre_exam 用练习蓝图表，其余按学段默认。"""
+    policy = get_mode_policy(mode)
+    if policy.type_ratio:
+        return policy.type_ratio
     if mode in TYPE_RATIO_BY_MODE:
         return TYPE_RATIO_BY_MODE[mode]
     return TYPE_RATIO_BY_STAGE.get(stage, TYPE_RATIO_BY_STAGE["primary"])
@@ -64,6 +119,61 @@ def recent_attempted_ids(
     return set(rows)
 
 
+def weak_kp_ids(db: Session, *, user_id: int, kp_ids: set[int]) -> Optional[set[int]]:
+    """薄弱知识点（掌握度 < 60）。
+
+    完全没有掌握度记录时返回 None，表示不倾斜——新用户/新教材不会因
+    「全部未学」而让组卷退化为按 id 顺序，也不会改变既有的确定性结果。
+    """
+    if not kp_ids:
+        return None
+    rows = list(
+        db.scalars(
+            select(MasteryScore).where(
+                MasteryScore.user_id == user_id,
+                MasteryScore.knowledge_point_id.in_(kp_ids),
+            )
+        )
+    )
+    if not rows:
+        return None
+    weak = {
+        row.knowledge_point_id
+        for row in rows
+        if row.score < WEAK_MASTERY_THRESHOLD
+    }
+    return weak or None
+
+
+def order_by_textbook(db: Session, questions: list[Question]) -> list[Question]:
+    """按教材顺序（章 → 知识点 order_index → 难度 → id）重排已选中的题。
+
+    只改变呈现顺序，不改变题目集合，因此不影响覆盖率、题型配比与预览一致性。
+    """
+    kp_ids = {q.knowledge_point_id for q in questions if q.knowledge_point_id}
+    chapter_ids = {q.chapter_id for q in questions if q.chapter_id}
+    kp_order = {
+        kp.id: kp.order_index
+        for kp in db.scalars(
+            select(KnowledgePoint).where(KnowledgePoint.id.in_(kp_ids))
+        )
+    } if kp_ids else {}
+    chapter_order = {
+        chapter.id: chapter.order_index
+        for chapter in db.scalars(select(Chapter).where(Chapter.id.in_(chapter_ids)))
+    } if chapter_ids else {}
+    big = 10**9
+    return sorted(
+        questions,
+        key=lambda q: (
+            chapter_order.get(q.chapter_id, big),
+            kp_order.get(q.knowledge_point_id, big),
+            q.difficulty or 0,
+            q.id,
+        ),
+    )
+
+
 @dataclass
 class PracticePlan:
     questions: list[Question]
@@ -73,6 +183,9 @@ class PracticePlan:
     seed: int
     requested: int = 0
     q_type_mix: dict[str, int] = field(default_factory=dict)
+    mode: str = "special"
+    mode_label: str = "专项突破"
+    strategy: str = ""
 
     @property
     def count(self) -> int:
@@ -166,11 +279,14 @@ def select_questions(
     type_ratio: Optional[dict[str, float]] = None,
     duration_limit_min: Optional[int] = None,
     kp_ids: Optional[set[int]] = None,
+    weak_kps: Optional[set[int]] = None,
+    cover_all_kps: bool = False,
 ) -> list[Question]:
     """确定性选题（D-04 §7.3）：
 
-    1) 到期错题优先，占比 ≤ 25% 且上限 5 题；
-    2) 知识点覆盖：先每 KP 取 1 题，直到达到覆盖目标（KP≤3 时 100%，否则 ≥80%）；
+    1) 到期错题优先，占比由模式策略给定且绝对上限 5 题；
+    2) 知识点覆盖：先每 KP 取 1 题，直到达到覆盖目标（KP≤3 时 100%，否则 ≥80%；
+       考前速练要求全覆盖）；薄弱知识点在专项突破模式下排在最前；
     3) 题型配比：按学段/模式蓝图分配剩余名额；
     4) 兜底：按 KP 轮转补齐，题量不足时自然收敛；
     5) 时长预算：超限时优先裁剪低难度非到期题。
@@ -192,6 +308,9 @@ def select_questions(
         buckets.setdefault(question.knowledge_point_id or 0, []).append(question)
     bucket_keys = sorted(buckets)
     rng.shuffle(bucket_keys)
+    if weak_kps:
+        # 稳定排序：弱项知识点整体前移，组内仍保持同一 seed 下的随机次序。
+        bucket_keys.sort(key=lambda key: 0 if key in weak_kps else 1)
     for key in bucket_keys:
         buckets[key].sort(key=lambda q: q.id)
         rng.shuffle(buckets[key])
@@ -201,7 +320,7 @@ def select_questions(
     covered = {q.knowledge_point_id for q in selected if q.knowledge_point_id}
 
     range_kps = set(kp_ids) if kp_ids else {key for key in bucket_keys if key}
-    target = coverage_target(len(range_kps))
+    target = len(range_kps) if cover_all_kps else coverage_target(len(range_kps))
 
     cursor = 0
 
@@ -293,14 +412,16 @@ def build_plan(
     duration_limit_min: Optional[int] = None,
     exclude_recent: bool = True,
 ) -> PracticePlan:
+    policy = get_mode_policy(mode)
     pool = resolve_pool(
         db, user=user, scope_type=scope_type, scope_ids=scope_ids, q_types=q_types
     )
     actual_seed = int(seed) if seed is not None else random.randint(1, 2**31 - 1)
 
-    # 去重：排除最近 7 天已做题；若过滤后为空则回退全量，避免无题可练
+    # 去重：默认排除最近 7 天已做题；考前速练不排重（模拟卷允许再见做过的题）。
+    # 过滤后为空则回退全量，避免无题可练。
     availablePool = pool
-    if exclude_recent and pool:
+    if exclude_recent and policy.exclude_recent and pool:
         recent = recent_attempted_ids(db, user_id=user.id)
         filtered = [q for q in pool if q.id not in recent]
         availablePool = filtered or pool
@@ -311,24 +432,44 @@ def build_plan(
     except Exception:  # 非学生/异常年级兜底为小学配比
         stage = "primary"
 
+    range_kp_ids = {q.knowledge_point_id for q in pool if q.knowledge_point_id}
+    weak = (
+        weak_kp_ids(db, user_id=user.id, kp_ids=range_kp_ids)
+        if policy.weak_first
+        else None
+    )
+
     selected = select_questions(
         availablePool,
         count=count,
         seed=actual_seed,
         due_ids=due,
+        due_quota_ratio=policy.due_quota_ratio,
         type_ratio=ratio_for(stage, mode),
         duration_limit_min=duration_limit_min,
-        kp_ids={q.knowledge_point_id for q in pool if q.knowledge_point_id},
+        kp_ids=range_kp_ids,
+        weak_kps=weak,
+        cover_all_kps=policy.cover_all_kps,
     )
+    # 呈现顺序也随模式变化：同步巩固按教材章节推进，考前速练按难度分层。
+    # 只重排、不换题，预览与实际、覆盖率与题型配比均保持一致。
+    if policy.textbook_order:
+        selected = order_by_textbook(db, selected)
+    elif policy.difficulty_order:
+        selected = sorted(selected, key=lambda q: (q.difficulty or 0, q.id))
+
     mix: dict[str, int] = {}
     for question in selected:
         mix[question.q_type] = mix.get(question.q_type, 0) + 1
     return PracticePlan(
         questions=selected,
         available=len(availablePool),
-        range_kp_count=len({q.knowledge_point_id for q in pool if q.knowledge_point_id}),
+        range_kp_count=len(range_kp_ids),
         due_review_count=len([q for q in pool if q.id in due]),
         seed=actual_seed,
         requested=count,
         q_type_mix=mix,
+        mode=mode,
+        mode_label=policy.label,
+        strategy=policy.summary,
     )

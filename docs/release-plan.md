@@ -4,7 +4,7 @@
 > **适用产品**：深爱学（AiLearning）Android 版 / HarmonyOS NEXT 版
 > **适用版本**：`com.ailearning.ai_learning` `versionName 1.0.0` `versionCode 1`（发布前须按 §3 缺口 1 规范递增）
 > **适用主体**：个人开发者（附个体户/公司名义对比与建议）
-> **最后更新**：2026-11-06
+> **最后更新**：2026-11-12（按 CR-003 / R-A16 补 §11 映射与附表；见主计划 §6.22 验收记录）
 > **关联文档**：[privacy.md](./privacy.md)（隐私政策源稿）、[project-task-plan.md](./project-task-plan.md)（任务台账）、[k12-learning-app-design.md](./k12-learning-app-design.md)（产品方案）
 >
 > 文中涉及的平台政策、周期、费用均为行业通行情况，**执行前须以各平台当期官网/公告为准**；本文件不构成法律意见。
@@ -525,6 +525,8 @@
 | `R-09` | CI 与发布流水线（analyze/test/build/签名校验/归档/tag）+ 崩溃监控 | 缺口 8 | 新增 |
 
 > 验收口径（R-A1~R-A9）、依赖关系与优先级见 `project-task-plan.md` §3.4；R-05 为最长外部周期，计划要求第 1 天启动。
+>
+> **v1.1 补充（CR-003 / EX-01~EX-03）**：考试入口闭环新增验收编号 **R-A16**（技术验收已通过，**待 PM 签署**），不新增发布任务与工时，纳入 M5 签署前检查项；真机证据与 QA 待补项（admin 账号实际提交一次组卷）见 `project-task-plan.md` §6.22、`skills.md` §5.5.6。
 
 ---
 
@@ -671,5 +673,6 @@ cd ..\app; flutter analyze; flutter test
 | 8 | APP 备案 / 软著 | 缺口 4/5 | ⬜ 未启动 |
 | 9 | 账号注销 / 数据导出 / 家长同意 / 时长限制 | 缺口 8 | ⬜ 未做（设计与任务已就绪） |
 | 10 | CI 与发布校验脚本 | 缺口 8 | ⬜ 未做 |
+| 11 | 考试入口闭环 R-A16 签署 / QA 补 admin 真机组卷 | CR-003（EX-01~EX-03） | ✅ 代码与真机回归完成，⬜ 待 PM 签署与 QA 补验（主计划 §6.22） |
 
 > 需要执行时告知编号即可；执行后同步更新本表与 `project-task-plan.md`。

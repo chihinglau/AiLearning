@@ -1,8 +1,9 @@
 # 深爱学（AiLearning）用户角色定位及权限设计方案
 
 > **文档性质**：专项设计方案（可落地实施蓝本）
-> **版本**：v1.0
+> **版本**：v1.1（2026-11-12 按 CR-003 补考试域接口契约 §10.5、验收项 A11~A13 与权限点落地说明）
 > **日期**：2026-11-06
+> **最后更新**：2026-11-12（对应主计划 CR-003 / §6.22）
 > **关联文档**：[k12-learning-app-design.md](./k12-learning-app-design.md)、[learning-page-design.md](./learning-page-design.md)、[subject-tutoring-and-m2-design.md](./subject-tutoring-and-m2-design.md)
 > **适用范围**：学生 / 家长 / 教师 / 学校管理员 / 平台运营与审核
 
@@ -729,6 +730,19 @@ WHERE grade IS NOT NULL;
 | `GET /api/learn/knowledge-tree` | 增加 `grade` 过滤；非当前年级教材返回 `GRADE_MISMATCH` 提示 |
 | `POST /api/learn/start` | 增加 `grade`/`textbook_id` 一致性校验 |
 
+### 10.5 考试域接口契约（v1.1 新增，CR-003 / EX-01~EX-03）
+
+| 方法 | 路径 | 权限点 | 说明 |
+|---|---|---|---|
+| GET | `/api/exams` | `learn:exam:take` | 学生视角按 `student_visible_exam_clauses()` 过滤：`status=published`、年级匹配、非真题、非作业卷、班级卷限本班 |
+| GET | `/api/exams/past-papers` | `learn:exam:take` | 真题库；真题不进入通用考试列表，避免入口虚标 |
+| GET | `/api/exams/blueprints` | `content:exam:write` | App 组卷表单的可选蓝图；**须注册在 `/{exam_id}` 之前**，学生调用返回 403 |
+| POST | `/api/exams/generate` | `content:exam:write` | 按蓝图组卷并发布（考试入库）；生成结果立即进入学生可见列表 |
+| POST | `/api/exams/mock` | `learn:assignment:create` | 派发班级同卷模考 |
+| GET | `/api/learn/home` | 登录 | `pending_exams[]` 与 `/api/exams` 共用同一可见性谓词，每条带 `entry` / `subject` / `window_state` |
+
+App 侧入口：「我的 → 考试管理与发布」（`/exams/manage`）按 `content:exam:write` 显隐；首页「待办考试」卡按 `entry` 直达 `/exam/:id` 或 `/past-papers`。详见 [learning-page-design.md](./learning-page-design.md) §8.7。
+
 ---
 
 ## 十一、前端交互与年级选择
@@ -794,6 +808,11 @@ WHERE grade IS NOT NULL;
 | A8 | 权限矩阵覆盖 | 每个业务路由均声明权限点，CI 静态检查无遗漏 |
 | A9 | 年级升级任务重复执行 | 不产生重复升级记录（唯一键） |
 | A10 | 敏感操作审计 | 改角色/改年级/跨用户读取 100% 有日志 |
+| A11 | 考试域接口权限（CR-003 / L18） | 学生调用 `GET /api/exams/blueprints` 返回 403；`content:exam:write` 账号返回 200 且仅列 `is_active` 蓝图 |
+| A12 | 待办考试口径（CR-003 / L18） | 学生首页 `pending_exams` 与 `GET /api/exams` 完全一致；真题、作业卷、非本班班级卷、已交卷/关闭窗口卷不出现 |
+| A13 | 考试入库与派发（CR-003 / L20） | `POST /api/exams/generate` 生成的普通卷立即出现在学生待办与列表；`POST /api/exams/mock` 仅 `learn:assignment:create` 可调用 |
+
+> A11~A13 与主计划 `L18~L20`、`R-A16` 交叉引用，实现证据见 `project-task-plan.md` §6.22。
 
 ### 12.3 风险与对策
 
@@ -833,12 +852,12 @@ action  ∈ read | write | create | delete | execute | manage | assign | decide
 | `learn:review:today` | 今日到期复习 | SELF |
 | `learn:exam:take` | 参加考试 | SELF |
 | `learn:exam:report:self` | 本人考试报告 | SELF |
-| `learn:assignment:create` | 布置作业/测验 | CLASS |
+| `learn:assignment:create` | 布置作业/测验；v1.1 起控制 `POST /api/exams/mock` 班级同卷模考派发 | CLASS |
 | `learn:exam:grade` | 批改主观题 | CLASS |
 | `content:textbook:write` | 教材/章节维护 | ALL |
 | `content:kp:write` | 知识点维护 | ALL |
 | `content:question:write` | 题库维护 | ALL |
-| `content:exam:write` | 试卷模板维护 | ALL |
+| `content:exam:write` | 试卷模板维护；v1.1 起控制 App `/exams/manage` 入口显隐、`GET /api/exams/blueprints` 与 `POST /api/exams/generate` | ALL |
 | `content:review:decide` | 内容审核 | ALL |
 | `content:publish` | 内容上下架 | ALL |
 | `family:binding:request` | 发起绑定 | SELF |

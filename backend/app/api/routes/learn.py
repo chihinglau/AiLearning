@@ -481,12 +481,39 @@ def kp_detail(
 
     section = db.get(KnowledgePoint, kp.parent_id) if kp.parent_id else None
     prereq_ids = list(kp.prerequisites or [])
-    prereqs = {
+    prereq_rows = (
+        list(
+            db.scalars(
+                select(KnowledgePoint).where(KnowledgePoint.id.in_(prereq_ids))
+            )
+        )
+        if prereq_ids
+        else []
+    )
+    prereqs = {item.id: item for item in prereq_rows}
+    parent_ids = {item.parent_id for item in prereq_rows if item.parent_id}
+    prereq_sections = {
         item.id: item
         for item in db.scalars(
-            select(KnowledgePoint).where(KnowledgePoint.id.in_(prereq_ids))
+            select(KnowledgePoint).where(KnowledgePoint.id.in_(parent_ids))
         )
-    } if prereq_ids else {}
+    } if parent_ids else {}
+    # 教材顺序：所属节 order_index → 知识点 order_index → 导入时声明顺序。
+    # 不用 IN 查询的返回顺序，避免数据库物理顺序导致前置知识点乱序。
+    prereq_position = {pid: index for index, pid in enumerate(prereq_ids)}
+
+    def _prereq_sort_key(item: KnowledgePoint):
+        parent = prereq_sections.get(item.parent_id)
+        return (
+            parent.order_index if parent else 10**9,
+            item.order_index,
+            prereq_position.get(item.id, 10**9),
+        )
+
+    ordered_prereqs = sorted(
+        (prereqs[pid] for pid in prereq_ids if pid in prereqs),
+        key=_prereq_sort_key,
+    )
 
     return KpDetailOut(
         id=kp.id,
@@ -505,8 +532,20 @@ def kp_detail(
                 mastery_score=round(mastery[prereq.id].score, 1)
                 if prereq.id in mastery
                 else 0.0,
+                order_index=prereq.order_index,
+                section_order=(
+                    prereq_sections[prereq.parent_id].order_index
+                    if prereq.parent_id in prereq_sections
+                    else 0
+                ),
+                section_name=(
+                    prereq_sections[prereq.parent_id].name
+                    if prereq.parent_id in prereq_sections
+                    else None
+                ),
+                has_explanation=bool((prereq.explanation or "").strip()),
             )
-            for prereq in prereqs.values()
+            for prereq in ordered_prereqs
         ],
         mastery_score=score,
         mastery_confidence=row.confidence if row else 0,
@@ -639,6 +678,9 @@ def practice_preview(
         q_type_mix=plan.q_type_mix,
         due_review_count=plan.due_review_count,
         seed=plan.seed,
+        mode=plan.mode,
+        mode_label=plan.mode_label,
+        strategy=plan.strategy,
     )
 
 

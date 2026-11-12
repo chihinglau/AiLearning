@@ -1,9 +1,9 @@
 # 深爱学（AiLearning）项目实施任务计划与进度跟踪
 
 > **文档性质**：项目主计划 / 进度跟踪 / 过程追溯（全程伴随开发周期）
-> **版本**：v1.95
+> **版本**：v1.97
 > **创建日期**：2026-11-06
-> **最后更新**：2026-11-10（TT-03~TT-07 与 UX-03 全部完成：开源 TTS 全量生成 653 题音频、音频接口按需缓存、低年级自动读题、句级高亮与单词点读、读音抽检脚本与环境诊断页；TT-07 人工试听待 QA，见 §4.3 B-001）
+> **最后更新**：2026-11-12（CR-003 考试入口闭环已完成：D-04 升 v1.2 §8.7，EX-01~EX-03 全部 `DONE`，I-011 `RESOLVED`，EBG 真机回归通过；§6.22 验收记录 / §5.5 v1.97 Changelog 已回写，R-A16 待 PM 签署）
 > **参考设计文档**：见[§1.1 参考设计文档清单](#11-参考设计文档清单)（共 8 份，含 4 份设计方案、4 份支撑文档）
 > **需求追踪**：见[§1.2 需求—设计—任务追踪矩阵](#12-需求设计任务追踪矩阵)
 > **维护人**：项目负责人（PM）
@@ -19,14 +19,14 @@
 
 | 编号 | 文档 | 版本 | 类型 | 覆盖范围 | 对应计划任务 | 维护人 | 状态 | 最后核对 |
 |---|---|---|---|---|---|---|---|---|
-| **D-01** | [k12-learning-app-design.md](./k12-learning-app-design.md) | v0.6 | 总体产品设计 | 产品定位、用户画像、信息架构、里程碑、技术栈、读题（TTS）方案（§3.9，含 §3.9.12 阶段 1 拆解、§3.9.13 阶段 2~4 落地） | 基线 B-01~B-05；P0 总体范围；TT-01~TT-07 | PM/AR | 已生效（M1/M2 基线；§3.9 评审通过，TT-01~TT-07 全部 `DONE`） | 2026-11-10 |
-| **D-02** | [subject-tutoring-and-m2-design.md](./subject-tutoring-and-m2-design.md) | v1.0 | 学科辅导专项设计 | 五大学法支柱、九学科分学段辅导方案、深圳教材适配、M2 数据模型与算法 | B-03/B-04；P0-17~P0-24；P1-07 | CT/AR | 已生效（M2 已交付） | 2026-11-06 |
-| **D-03** | [user-role-permission-design.md](./user-role-permission-design.md) | v1.0 | 角色权限专项设计 | 多级角色体系、年级维度、权限矩阵、数据范围、权限校验、数据模型与 API | P0-01~P0-10；P1-01~P1-06；P2-01/P2-02/P2-08/P2-09 | AR/PM | 已生效（P0/P1/P2 范围已交付） | 2026-11-07 |
-| **D-04** | [learning-page-design.md](./learning-page-design.md) | v1.0 | 学习页专项设计 | 教材绑定、学习首页、知识点分层、智能练习、综合考试、数据流与 API | P0-11~P0-38；P1-07~P1-11；P2-03~P2-07 | FE/AR | 已生效（P0~P2 范围已交付） | 2026-11-07 |
+| **D-01** | [k12-learning-app-design.md](./k12-learning-app-design.md) | v0.7 | 总体产品设计 | 产品定位、用户画像、信息架构、里程碑、技术栈、读题（TTS）方案（§3.9）；v0.7 按 CR-003 回写考试入口闭环（§3.6.4 首页入口、§4.5 数据模型、§4.6 API 分组、§8.3 L18~L20） | 基线 B-01~B-05；P0 总体范围；TT-01~TT-07；EX-01~EX-03 | PM/AR | 已生效（M1/M2 基线；§3.9 评审通过；v0.7 已回写，见 CR-003 / §6.22） | 2026-11-12 |
+| **D-02** | [subject-tutoring-and-m2-design.md](./subject-tutoring-and-m2-design.md) | v1.0 | 学科辅导专项设计 | 五大学法支柱、九学科分学段辅导方案、深圳教材适配、M2 数据模型与算法；§3.6 补考试闭环交叉引用 | B-03/B-04；P0-17~P0-24；P1-07 | CT/AR | 已生效（M2 已交付；§3.6 历史路线已加 CR-003 交叉引用） | 2026-11-12 |
+| **D-03** | [user-role-permission-design.md](./user-role-permission-design.md) | v1.1 | 角色权限专项设计 | 多级角色体系、年级维度、权限矩阵、数据范围、权限校验、数据模型与 API；v1.1 补考试域接口契约（§10.5）、A11~A13 与权限点落地说明 | P0-01~P0-10；P1-01~P1-06；P2-01/P2-02/P2-08/P2-09；EX-01/EX-03 | AR/PM | 已生效（P0/P1/P2 已交付；v1.1 已回写，见 CR-003 / §6.22） | 2026-11-12 |
+| **D-04** | [learning-page-design.md](./learning-page-design.md) | v1.2 | 学习页专项设计 | 教材绑定、学习首页、知识点分层、智能练习、综合考试、数据流与 API；v1.1 补三模式策略/前置排序/独立讲解页；v1.2 补考试入口口径、待办考试卡与考试入库闭环（§8.7），§12.5 响应示例同步 | P0-11~P0-38；P1-07~P1-11；P2-03~P2-07；UX-04~UX-06；EX-01~EX-03 | FE/AR | 已生效（P0~P2 已交付；v1.2 已实施并验收，见 CR-003 / §6.22） | 2026-11-12 |
 | **D-05** | [privacy.md](./privacy.md) | v1.0（2026.11.06） | 合规支撑 | 隐私政策、未成年人数据、家长同意与数据留存 | P0-05/P0-09；P1-05；P2-08 | PM | 已生效（P2-08 脱敏导出与用途登记已落地；R-03 公网发布与首启同意链路已上线；R-04 注销/导出/青少年模式时长已生效） | 2026-11-07 |
-| **D-06** | [skills.md](./skills.md) | 现行 | 工程支撑 | 开发规范、技能与接口使用说明 | 全部任务（开发约定） | AR | 已生效 | 2026-11-06 |
+| **D-06** | [skills.md](./skills.md) | 现行 | 工程支撑 | 开发规范、技能与接口使用说明 | 全部任务（开发约定） | AR | 已生效（§5.5 真机规程；§4.3 考试 API 清单、§7 冒烟、§9 里程碑已按 CR-003 回写） | 2026-11-12 |
 | **D-07** | [skill_github_repo_access.md](./skill_github_repo_access.md) | 现行 | 内部支撑 | 仓库访问与凭据说明（不进入版本库） | 发布/提交相关任务 | AR | 内部参考 | 2026-11-06 |
-| **D-08** | [release-plan.md](./release-plan.md) | v1.0 | 发布支撑 | 上架缺口、渠道矩阵、备案/软著、合规红线、素材与时间线 | 发布任务 R-01~R-09；P0-05/P0-09、P1-05、P2-08 | PM/AR | 已生效（R-01 签名、R-02 生产化部署、R-03 法务同意链路、R-04 商店合规功能、R-05 软著材料、R-06 备案接口与关于页、R-07 内容合规、R-08 商店素材与合规表单、R-09 发布流水线与监控已完成） | 2026-11-07 |
+| **D-08** | [release-plan.md](./release-plan.md) | v1.0 | 发布支撑 | 上架缺口、渠道矩阵、备案/软著、合规红线、素材与时间线；§11/附表补 R-A16 签署与 QA 待补项 | 发布任务 R-01~R-09；R-A16；P0-05/P0-09、P1-05、P2-08 | PM/AR | 已生效（R-01~R-09 已完成；R-A16 技术验收通过，待 PM 签署） | 2026-11-12 |
 
 **文档优先级**：需求冲突时，`D-01`（总体）> 专项设计（`D-02/D-03/D-04`）> 支撑文档（`D-05`~`D-08`）。专项之间冲突由 PM 裁决并登记 CR。发布相关的合规与上架要求以 `D-08` 为准。
 
@@ -62,6 +62,8 @@
 | 推荐与学习闭环 | D-04 §2.2/§6.6 | D-04 §2.2/§6.6 | P1-11、P1-12、P1-14 | 闭环验收 | `DONE`（六优先级推荐、考试错题默认错因/复习优先级、活服务端到端回归均已通过） |
 | 平台化与增强（RBAC/图谱/离线/AI/真题库/合规导出/内容复核） | D-03 §9.2、D-04 §14 | D-03 §9.2、D-04 §14 | P2-01~P2-10 | M4 | `DONE`（P2-01~P2-10 全部完成并通过技术验收，M4 待 PM 签署） |
 | 读题（TTS）辅助 | D-01 §3.9（2026-11-10 评审通过） | D-01 §3.9、§3.9.12、§3.9.13 | TT-01~TT-07 | T1~T6 | `DONE`（TT-01~TT-07 全部 `DONE`；T6 人工试听待 QA，见 §4.3 B-001） |
+| 练习模式差异化与前置知识点讲解直达 | 2026-11-12 PM 反馈（CR-002） | D-04 §3.1、§6.7、§7.1.1、§12.2/12.3、§14.2 | UX-04、UX-05、UX-06 | L16/L17、R-A15 | `DONE`（后端 `ModePolicy` + 前端 `PracticeModeSpec`、前置排序与独立讲解页；EBG 真机三模式与跳转已验证，见 §6.21） |
+| 考试入口闭环与考试入库 | 2026-11-12 PM 反馈（CR-003）；D-04 §2.1/§3.2 | D-04 §3.1、§8.7、§12.4、§14.2 | EX-01、EX-02、EX-03 | L18/L19/L20、R-A16 | `DONE`（统一可见性谓词 + 待办考试独立入口 + 考试入库/派发页面；EBG 真机与单测通过，见 §6.22） |
 | 上架合规与发布 | D-08 §3/§7 | D-08 §3/§6 | R-01~R-09、P0-05、P0-09、P1-05、P2-08 | 发布验收 | `DOING`（R-01 签名、R-02 生产化部署、R-03 法务同意链路、R-04 商店合规功能、R-05 软著材料、R-06 备案信息、R-07 内容合规、R-08 商店素材与合规表单、R-09 发布流水线与监控已完成） |
 
 **矩阵维护规则**：
@@ -154,7 +156,7 @@ DONE ──返工（需CR）──► DOING
 ## 三、任务台账
 
 > **状态字段实时更新**；`实际(h)` 在任务完成时填写；`证据` 填 commit / 测试结果 / 截图路径。
-> **总任务数**：90（开发 81：P0 43 + P1 15 + P2 10 + UX 3 + CT 3 + TT 7；发布 9：R-01~R-09）；**基线已完成**：5；**进行中**：0；**阻塞中**：0（B-001 为人工试听待办，不阻塞代码交付）；**待启动**：0；**总预估工时**：754 h（开发 635 + 发布 119）。
+> **总任务数**：96（开发 87：P0 43 + P1 15 + P2 10 + UX 6 + CT 3 + TT 7 + EX 3；发布 9：R-01~R-09）；**基线已完成**：5；**进行中**：0；**阻塞中**：0（B-001 为人工试听待办，不阻塞代码交付）；**待启动**：0；**总预估工时**：780 h（开发 661 + 发布 119）。
 
 ### 3.1 阶段 P0：身份与学习主链路
 
@@ -399,8 +401,11 @@ flowchart LR
 | UX-01 | 视觉升级：品牌柔和彩功能卡片（accent token + `FeatureCard` + 学习首页 4 个入口分色；可访问性/暗色公式约束） | FE | 8 | P2 | R-09 | `DONE` | 8 | R-A10 | 设计规范 §3.6；`AppAccents`/`FeatureCard` + 首页 4 入口分色；`dart analyze` 0 issues、`flutter test` 88 passed；OXF-AN10 真机登录学生账号验证（§6.15） |
 | UX-02 | 子页面返回链路修复：入口统一 `push`、考试提交 `pushReplacement`、自定义返回按 `canPop` 回退 | FE | 2 | P1 | UX-01 | `DONE` | 2 | R-A11 | 知识点/单元/知识点详情、教材管理、班级学情等子页均出现系统返回；真机三级下钻逐级返回首页（§6.16） |
 | UX-03 | 服务地址运行时可配置：内置地址仅作兜底，「我的 → 环境诊断」展示当前地址/连通性并支持切换预置环境（内网/预发/生产），避免 PC 局域网 IP 变化后 App 只能读旧离线包 | FE | 4 | P2 | R-09 | `DONE` | 4 | I-007 回归（改地址后在线接口恢复、离线包仍可读） | 来源：2026-11-10 真机验证（I-007）；新增 `core/services/server_config.dart`（`server.baseUrl` 持久化 + 地址规范化）、`initialBaseUrlProvider` 启动覆盖、`ApiClient.setBaseUrl` 运行时切换；新增「我的 → 环境诊断」页 `/settings/diagnostics`（应用信息、`/health` 连通性与耗时、服务地址编辑、自动读题状态）；`test/server_config_test.dart` 2 例通过；**真机 EBG-AN00**：诊断页显示 `http://127.0.0.1:18080`、`健康检查 ok · AiLearning API · 12 ms`、登录态「小深（student）」、自动读题「已开启」；非法地址提示见单测 |
+| UX-04 | 三种练习模式真实差异：后端 `ModePolicy` 按薄弱优先/教材顺序/考前全覆盖组卷，前端 `PracticeModeSpec` 套用各自默认题量、题型与范围，首页新增三个独立入口、配置页策略卡与预览策略展示，离线组卷按模式排序 | AR/FE | 6 | P1 | UX-03 | `DONE` | 4 | L16、R-A15 | 新增 `backend/app/services/practice.py` 的 `ModePolicy`/`MODE_POLICIES`/`weak_kp_ids`/`order_by_textbook`、`app/lib/core/models/practice_mode.dart`；改 `practice_config_page.dart`/`session_page.dart`/`learn_page.dart`/`practice_session.dart`；`schemas/learn.py` 增 `mode` 白名单与预览策略字段；`pytest tests/test_practice_modes.py`、`flutter test test/practice_mode_test.dart` 通过；EBG 真机三模式题量 10/15/20、时长 6/9/13 分钟、策略与题型配比均不同（§6.21） |
+| UX-05 | 前置知识点按教材章节排序并支持点击直达讲解：后端 `/learn/kp/{id}` 与离线整册包按 `section_order → order_index → 声明顺序` 输出且只取本知识点声明的前置；新增 `/kp/:kpId/explain` 独立讲解页，详情页前置区改为紧凑编号列表 | AR/FE | 5 | P1 | UX-04 | `DONE` | 3 | L17、R-A15 | 改 `backend/app/api/routes/learn.py`、`services/textbook_bundle.py`、`schemas/learn.py`、`app/lib/core/models/learn.dart`、`features/learn/kp_detail_page.dart`、`app/lib/app.dart`；新增 `features/learn/kp_explain_page.dart`；`pytest tests/test_kp_prerequisites_order.py`、`flutter test test/practice_mode_test.dart` 通过；EBG 真机「前置知识点 1 个 · 按教材顺序」→「天地人 · 讲解」首屏即讲解（§6.21） |
+| UX-06 | EBG 真机回归与文档同步：构建/安装 debug 包，按 §7.7 在 EBG-AN00 走一遍三模式与前置跳转主链路，同步 D-04/D-06 与主计划台账 | QA/PM | 3 | P1 | UX-04/UX-05 | `DONE` | 2 | R-A15 | `build-apk.ps1 -DebugBuild` 72 s / 86.3 MB；`adb install -r` Success + `force-stop`/`am start` 冷启动；`/health` 200、logcat 无 FATAL；截图 6 张见 `docs/skills.md` §5.5.5；D-04 升 v1.1、D-06 §5.1/§5.5 更新、CR-002 与 §6.21 登记 |
 
-> **UX 小计**：3 项，预估 **14 h**。
+> **UX 小计**：6 项，预估 **28 h**（本轮新增 14 h：UX-04 6 + UX-05 5 + UX-06 3）。
 
 ### 3.7 内容建设任务（CT，M5 后追加）
 
@@ -431,6 +436,18 @@ flowchart LR
 
 > **TT 小计**：7 项，预估 **50 h**（合成成本 0 元；全部音频约 1.4 GB，按需下载不随整册包下发）。建议排期：TT-01/TT-02 → TT-03/TT-07 → TT-04 → TT-05/TT-06。
 
+### 3.9 考试入口闭环任务（EX，2026-11-12 追加）
+
+> 来源：2026-11-12 PM 反馈「App 端考试入口功能依然未完成」→ CR-003。设计见 [learning-page-design.md](./learning-page-design.md) §8.7（v1.2）。按 §1.5 状态流转：方案阶段 `DOING`，实施 + 测试 + 真机验收通过后转 `DONE` 并补证据。
+
+| ID | 任务 | 负责人 | 预估(h) | 优先级 | 依赖 | 状态 | 实际(h) | 验收映射 | 证据 |
+|---|---|---|---|---|---|---|---|---|---|
+| EX-01 | 入口口径对齐：抽出学生可见考试过滤谓词，让 `build_pending_exams()` 与 `GET /api/exams` 同口径（排除真题/作业卷/非本班班级卷/已交卷/窗口关闭），`pending_exams` 增 `entry`/`subject`；新增 `GET /api/exams/blueprints` | AR | 3 | P1 | 无 | `DONE` | 2 | L18、R-A16 | `backend/app/services/recommendation.py` 新增 `student_visible_exam_clauses()` 并被 `routes/exams.py::list_exams` 与 `build_pending_exams()` 共用；新增 `GET /api/exams/blueprints`（注册在 `/{exam_id}` 前）；`pytest tests/test_exam_entry.py` 4 passed、全量 `pytest` 全绿；活服务 `/api/learn/home.pending_exams=0` 与 `/api/exams=0` 一致（§6.22） |
+| EX-02 | 首页「待办考试」独立卡（直达 `/exam/:id` 或 `/past-papers`、窗口提示、空态）、考试入口区补「真题库」第三张卡、修复已完成无 attempt 的静默点击 | FE | 4 | P1 | EX-01 | `DONE` | 3 | L19、R-A16 | `app/lib/core/models/exam_entry.dart`（`pendingExamRoute`/`pendingExamSubtitle`）、`learn_page.dart` 待办考试区与三入口、`exam_list_page.dart` 静默点击提示；`flutter test test/exam_entry_test.dart` 9 passed、`dart analyze` 0 issue；EBG 真机：首页「待办考试」空态卡、考试中心不再虚标、真题库入口列出 2 张一年级真题（§6.22） |
+| EX-03 | 考试入库入口：`exam_service` 补 `blueprints()`/`generateExam()`，新增 `/exams/manage` 组卷与派发页面，按 `content:exam:write` 在「我的」显隐入口 | AR/FE | 5 | P1 | EX-01 | `DONE` | 4 | L20、R-A16 | `exam_service.dart` 增 `blueprints()`/`generateExam()`、`exam.dart` 增 `ExamBlueprint`/`ExamGenerateResult`、新增 `exam_manage_page.dart`（组卷发布 + 派发班级模考）、`app.dart` 注册 `/exams/manage`、`profile_page.dart` 按权限显隐；活服务 admin `/api/exams/blueprints` 200（9 蓝图）/ student 403；`test_generated_exam_is_visible_in_entry` 覆盖入库后立即可见（§6.22） |
+
+> **EX 小计**：3 项，预估 **12 h**，实际 **9 h**。
+
 ---
 
 ## 四、问题记录与解决方案
@@ -449,14 +466,22 @@ flowchart LR
 | I-005 | 2026-11-07 | 环境（设备） | 当前机器无 Android/HarmonyOS 真机接入（`adb devices` 为空、无模拟器），Windows 桌面缺 Visual Studio 无法构建，web 平台因 `dart:io` 未接入而不可用，`integration_test` 无法执行 | P1-14 | 中 | QA | 以「独立 E2E 库 + 活服务 HTTP 端到端」替代真机：`scripts/e2e_p1_smoke.py` 覆盖学生/教师/家长全链路 67 项断言；真机复测随 R-09 发布流水线在设备接入后补跑 | 已规避 | `MITIGATED` |
 | I-006 | 2026-11-10 | 缺陷（数据） | 真机设备库仅导入按单元增量文件，整册 `*_20261109_book.json` 未入库，App 上 1/8 年级多数单元无节/知识点/题目；且已有内容的章节仍显示「教材目录骨架（章节占位，待补知识点与题目）」 | CT-03、真机离线验证 | 高 | AR/CT | 整册文件导入设备库；`content_import.py` 在正式内容导入时清空骨架摘要（骨架文件重导不写回）并补单测；两库回填 548 条残留摘要 | 已修复，真机复验通过（1 年级语数英、8 年级 8 科整册包均含全部单元） | `RESOLVED` |
 | I-007 | 2026-11-10 | 环境（设备） | APK 内嵌后端地址为固定局域网 IP（`192.168.1.14:18080`），PC 更换网段后 App 无法联网，只能读旧离线包，表现为「只看到第一单元」 | UX-03、真机离线验证 | 中 | QA/FE | 以当前地址（`192.168.0.5:18080`）重构建并重装 debug 包（release 受 R-02 明文 HTTPS 约束），重下两个账号整册离线包；根治由 UX-03 提供运行时可配置地址 | 临时规避，真机复验通过 | `MITIGATED` |
+| I-008 | 2026-11-12 | 缺陷（体验） | 专项突破/同步巩固/考前速练只切换 `mode` 字符串，后端 `build_plan` 不消费模式，同 seed 出同一套题；前置知识点用无 `ORDER BY` 的 `IN` 查询 + dict 顺序输出，离线包又把整册前置塞给每个详情，点击前置仅进完整详情页而非讲解位置 | UX-04/UX-05 | 中 | AR/FE | 后端引入 `ModePolicy` 与教材顺序排序，前端 `PracticeModeSpec` 套用各模式默认参数并新增 `/kp/:id/explain` 独立讲解页；`test_practice_modes.py`、`test_kp_prerequisites_order.py`、`practice_mode_test.dart` 覆盖；EBG 真机复验通过（§6.21） | 已修复 | `RESOLVED` |
+| I-009 | 2026-11-12 | 技术（编码） | `backend/alembic.ini` 含中文注释，Alembic 以 `encoding="locale"` 读 ini，中文 Windows cp936 下 `alembic upgrade head` 报 `UnicodeDecodeError: 'gbk' codec ... position 101`，3 个 `tests/test_migrations.py` 用例失败 | P0-42 回归 | 中 | AR | 注释改为纯 ASCII；ini 保持 locale 无关，真实部署命令在中文 Windows 同样可用；全量 `pytest` 恢复全绿 | 已修复 | `RESOLVED` |
+| I-010 | 2026-11-12 | 环境（设备） | `adb install -r` 只替换 APK，旧进程仍运行加载过的 Dart 快照，`am start` 仅把已有 task 置前，导致真机首页看不到本轮新增的「练习模式」入口，易误判功能未生效 | UX-06 | 中 | QA | 安装后先 `adb shell am force-stop com.ailearning.ai_learning` 再 `am start` 冷启动；规程写入 D-06 §5.5.1 | 已规避并固化规程 | `RESOLVED` |
+| I-011 | 2026-11-12 | 缺陷（数据/入口） | `build_pending_exams()` 把真题（`is_past_paper=true`）、作业卷、非本班班级卷计入首页待办，`GET /api/exams` 对学生恰好排除它们；EBG 真机 + 活服务实测：首页「2 场考试待完成」，`/api/exams` 返回 0，点进考试中心为空列表 | EX-01/EX-02 | 高 | AR/FE | 抽出统一的学生可见性过滤谓词并让两处共用，`pending_exams` 增 `entry`；首页新增待办考试独立卡与真题库入口；单测 + 真机复验 | 已修复，真机复验通过（§6.22）；旧进程需重启或换端口映射 | `RESOLVED` |
 
 ### 4.2 需求变更记录（CR）
 
 | CR ID | 日期 | 变更内容 | 提出人 | 影响范围 | 决策 | 决策人 | 关联任务 |
 |---|---|---|---|---|---|---|---|
 | CR-001 | 2026-11-10 | 读题方案定稿：预生成改为开源 TTS（Piper/sherpa-onnx，零 API 费用）+ 系统 TTS 兜底；音频默认不随整册包下发，改为按需下载缓存；首期范围收敛为 1–3 年级语文/数学/英语 | PM | D-01 §3.9、§3.8、§5.1 | 通过 | PM | TT-01~TT-07、UX-03 |
+| CR-002 | 2026-11-12 | PM 反馈定稿：三种练习模式必须有真实组卷差异；前置知识点按教材章节排序、点击直达讲解，知识点单独成页以让详情页更简洁 | PM | D-04 §3.1/§6.7/§7.1.1/§12.2/12.3/§14.2；D-06 §5.5 | 通过 | PM | UX-04~UX-06 |
+| CR-003 | 2026-11-12 | PM 反馈定稿：补齐 App 端考试入口闭环——① 待办考试口径与考试列表一致，消除「有待办 / 无考试」虚标；② 落地 §2.1/§3.2 的待办考试独立入口、真题库入口与静默点击修复；③ 接入已有 `exams/generate`、`exams/mock`，让教师/管理员可在 App 组卷入库与派发班级模考 | PM | D-04 §3.1/§8.7/§12.4/§14.2（L18~L20）；D-06；`recommendation.py`、`routes/exams.py`、`learn_page.dart`、`exam_service.dart` | 通过 | PM | EX-01~EX-03 |
 
 > 变更流程：提出 → 影响评估（任务/工时/验收） → PM 裁决 → 更新本表与任务台账 → 通知相关方。
+> CR-002 说明：按 §7.6「先更新设计文档或登记 CR」执行——D-04 升 v1.1 补设计与 L16/L17 验收项，D-06 补真机规程，再回写 §1.2/§3.6/§5.1/§6.21 台账；代码与文档同批交付，无未登记的需求偏差。
+> CR-003 说明：同样按 §7.6 先升 D-04 v1.2（§8.7 方案 + L18~L20 验收项），再登记 §3.9 任务组（`DOING`）、§1.2 矩阵与 I-011；实施/单测/真机通过后回写 `DONE`、§6.22 验收记录与 Changelog。
 
 ### 4.3 阻塞记录
 
@@ -472,17 +497,17 @@ flowchart LR
 
 | 指标 | 数值 |
 |---|---|
-| 任务总数（不含基线） | 90（开发 81：P0 43 + P1 15 + P2 10 + UX 3 + CT 3 + TT 7；发布 9：R-01~R-09） |
+| 任务总数（不含基线） | 96（开发 87：P0 43 + P1 15 + P2 10 + UX 6 + CT 3 + TT 7 + EX 3；发布 9：R-01~R-09） |
 | `TODO` | 0 |
 | `DOING` | 0 |
-| `DONE` | 90（P0-01~P0-43、P1-01~P1-15、P2-01~P2-10、UX-01~UX-03、CT-01~CT-03、TT-01~TT-07、R-01~R-09；基线 5 项已冻结） |
+| `DONE` | 96（P0-01~P0-43、P1-01~P1-15、P2-01~P2-10、UX-01~UX-06、CT-01~CT-03、TT-01~TT-07、EX-01~EX-03、R-01~R-09；基线 5 项已冻结） |
 | `BLOCKED` | 0 |
-| 预估总工时 | 754 h（开发 635 = P0 310 + P1 129 + P2 118 + UX 14 + CT 14 + TT 50；发布 119） |
-| 已投入工时 | 413 h（P0-01 3、P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3、P0-23 3、P0-24 3、P0-25 3、P0-26 3、P0-27 3、P0-28 4、P0-29 3、P0-30 3、P0-31 4、P0-32 3、P0-33 4、P0-34 4、P0-35 6、P0-36 8、P0-37 10、P0-38 4、P0-39 6、P0-40 4、P0-41 6、P0-42 2、P0-43 3、P1-01 3、P1-02 2、P1-03 2、P1-04 3、P1-05 3、P1-06 3、P1-07 3、P1-08 3、P1-09 3、P1-10 3、P1-11 3、P1-12 2、P1-13 3、P1-14 3、P1-15 3、P2-01 6、P2-02 6、P2-03 6、P2-04 4、P2-05 8、P2-06 8、P2-07 8、P2-08 4、P2-09 6、P2-10 4、R-01 2、R-02 6、R-03 20、R-04 20、R-05 12、R-06 8、R-07 8、R-08 12、R-09 10、UX-01 8、UX-02 2、UX-03 4、CT-01 6、CT-02 4、CT-03 4、TT-01 6、TT-02 3、TT-03 12、TT-04 8、TT-05 6、TT-06 6、TT-07 4） |
-| 当前迭代 | 读题全链路收口：TT-01~TT-07 全部 `DONE`（阶段 1 系统 TTS → 阶段 2 开源合成 653 题 → 阶段 3 按需下载缓存 → 阶段 4 自动读题/句级高亮）；UX-03 环境诊断完成，I-007 有根治手段。唯一待办：TT-07 人工试听（§4.3 B-001） |
-| 迭代目标 | 读题方案（CR-001）全部落地并收口；后续按 PM 排期推进内容覆盖与真机回归（R-09 流水线补跑 TT-05 断网场景与音频播放） |
-| 里程碑 | M2.5（P0 技术验收通过，待签署）→ M3（P1 技术验收通过，待签署）→ M4（P2 技术验收通过，待签署）→ M5（发布就绪，R-01~R-09 已完成，待 PM 签署）→ UX-01~UX-03（`DONE`）→ CT-01~CT-03（`DONE`）→ 读题方案评审（2026-11-10 通过）→ 读题实施（TT-01~TT-07 全部 `DONE`，T3 全量合成完成、T6 待人工试听） |
-| 最新真机验证（2026-11-10） | device 库整册内容导入后，1 年级（语文/数学/英语）与 8 年级（语文/数学/英语/生物/历史/地理/物理/政治）整册离线包均含全部单元；断网冷启动、单元内容、离线判分与联网同步均通过；环境与数据问题见 I-006/I-007 |
+| 预估总工时 | 780 h（开发 661 = P0 310 + P1 129 + P2 118 + UX 28 + CT 14 + TT 50 + EX 12；发布 119） |
+| 已投入工时 | 431 h（P0-01 3、P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3、P0-23 3、P0-24 3、P0-25 3、P0-26 3、P0-27 3、P0-28 4、P0-29 3、P0-30 3、P0-31 4、P0-32 3、P0-33 4、P0-34 4、P0-35 6、P0-36 8、P0-37 10、P0-38 4、P0-39 6、P0-40 4、P0-41 6、P0-42 2、P0-43 3、P1-01 3、P1-02 2、P1-03 2、P1-04 3、P1-05 3、P1-06 3、P1-07 3、P1-08 3、P1-09 3、P1-10 3、P1-11 3、P1-12 2、P1-13 3、P1-14 3、P1-15 3、P2-01 6、P2-02 6、P2-03 6、P2-04 4、P2-05 8、P2-06 8、P2-07 8、P2-08 4、P2-09 6、P2-10 4、R-01 2、R-02 6、R-03 20、R-04 20、R-05 12、R-06 8、R-07 8、R-08 12、R-09 10、UX-01 8、UX-02 2、UX-03 4、CT-01 6、CT-02 4、CT-03 4、TT-01 6、TT-02 3、TT-03 12、TT-04 8、TT-05 6、TT-06 6、TT-07 4、UX-04 4、UX-05 3、UX-06 2、EX-01 2、EX-02 3、EX-03 4） |
+| 当前迭代 | 考试入口闭环收口：CR-003 / EX-01~EX-03 全部完成（统一可见性谓词、待办考试独立入口、考试入库/派发页面、EBG 真机回归）；唯一待办仍为 TT-07 人工试听（§4.3 B-001） |
+| 迭代目标 | 按 CR-002 消除「三模式相同」与「前置乱序、点击不到讲解」，按 CR-003 消除「有待办 / 无考试」虚标并补齐考试入库入口；后续按 PM 排期推进内容覆盖与真机回归（R-09 流水线补跑 TT-05 断网场景与音频播放） |
+| 里程碑 | M2.5（P0 技术验收通过，待签署）→ M3（P1 技术验收通过，待签署）→ M4（P2 技术验收通过，待签署）→ M5（发布就绪，R-01~R-09 已完成，待 PM 签署）→ UX-01~UX-03（`DONE`）→ CT-01~CT-03（`DONE`）→ 读题方案评审（2026-11-10 通过）→ 读题实施（TT-01~TT-07 全部 `DONE`，T3 全量合成完成、T6 待人工试听）→ 练习体验收口（CR-002 / UX-04~UX-06 `DONE`）→ 考试入口闭环（CR-003 / EX-01~EX-03 `DONE`，EBG 真机回归通过） |
+| 最新真机验证（2026-11-12） | EBG-AN00（SN `2NSDU20423005421`）冷启动 debug 包两轮回归：① UX 组：三模式 10/15/20 题、策略与题型配比各异，前置「按教材顺序」→「天地人 · 讲解」首屏即讲解（§6.21）；② EX 组：新后端（18081 + `adb reverse`）下 `pending_exams=0` / `/api/exams=0` 口径一致，首页「待办考试」空态卡、考试中心不再虚标、真题库入口列出 2 张一年级真题；admin `/api/exams/blueprints` 200（9 蓝图）/ student 403。`/health` 200、logcat 无 FATAL。证据见 D-06 §5.5.5/§5.5.6、§6.22。历史（2026-11-10）：device 库整册离线包断网冷启动、离线判分与联网同步通过（I-006/I-007） |
 | 已知观感项（已处理） | CT-03 去重后同名 section 与其「（要点）」point 双层并存（如 1 年级数学 `10以内加减法` + `10以内加减法（要点）`）。展示层已收敛：单元页按节聚合成可折叠节卡片，同主题「（要点）」节点折叠进所属节并显示为「本节要点」；知识图谱、知识点详情、前置知识点统一显示为「名称 · 要点」；**数据层未改动** |
 
 ### 5.2 同步节奏
@@ -615,6 +640,8 @@ flowchart LR
 | v1.93 | 2026-11-10 | FE/QA | TT-01 真机验收通过：EBG-AN00 安装 debug 包，1 年级语文题点击喇叭播放、再点停止、长按 1.3 s 停止、图标随状态切换；「我的→学习设置」三档语速可切换，1.00× 重启后保持；`adb uiautomator` 语义节点 `clickable=true`。期间修复两处缺陷：`IconButton.tooltip` 的 Tooltip 长按抢占自定义长按（改 `InkResponse`）、外层 `Semantics` 缺 `onTap` 致 TalkBack 不可点击。TT-01 转 `DONE`（实际 6 h），§5.1 快照 DONE 84 / DOING 0 / 投入 373 h，§6.19 补 T1 记录与修复项 |
 | v1.94 | 2026-11-10 | QA | TT-01 真机补充点验（8 年级 + 英语）：① 8 年级账号 `13911110008` 登录后进入语文「每日一练」，题干无「朗读题目」语义节点（全量 dump「朗读」命中 0），年级门禁生效；② 切回 1 年级账号 `13911110001`，经「学科入口→英语→Unit 1 Hello→单元综合练习」进入英语题，喇叭可见，点击后语义变「停止朗读」，`adb logcat` 记 `onSynthesizeText lang=eng` / `getLangCtxType: EN_US` / `text length: 96`，再次点击回「朗读题目」并触发 `stopVoiceSynthesizer`。期间修复真机环境问题：`adb reverse tcp:18080 tcp:18080` 缺失导致 `127.0.0.1:18080` 不可达（登录报「无法连接服务器」），补映射后正常。证据回填 TT-01 与 §6.19；任务状态与工时不变 |
 | v1.95 | 2026-11-10 | AR/FE/QA | 读题全链路收尾（TT-03~TT-07、UX-03 全部转 `DONE`）：TT-03 新增 `question_speech.py`（Python 规则，`RULES_VERSION=1`）与 `build_question_audio.py`（增量/并发/重试/`manifest.json`/`failed_jobs.json`），sherpa-onnx + Piper 中英模型 + ffmpeg 转 Opus，全量 **653 题 / 17.5 MB / 失败 0**；TT-04 新增 `GET /api/learn/questions/{id}/audio`（ETag/304、`AUDIO_NOT_READY`、`learn:content:read`、60 次/分限流、返工清单 404）与客户端 `QuestionAudioCache`（LRU 200 MB、`just_audio` 变速播放、OHOS 回退系统 TTS）；TT-05 新增 `question_reader.dart`、`speech.autoRead` 设置开关与 session/practice `_maybeAutoRead`；TT-06 新增 `readable_question_text.dart`（句级高亮按字符占比估算、英语单词点读）；TT-07 新增 `check_question_audio.py` 并产出 `qa_audio_report.json`（27 单元 / 133 题）与 `qa_audio_checklist.md`；UX-03 新增 `server_config.dart`、`initialBaseUrlProvider`、`ApiClient.setBaseUrl` 与「我的 → 环境诊断」页。回归：后端 `pytest` 全通过、新增/变更文件 `ruff --select E,F,I` 0 issue、`flutter analyze` 0 issue、`flutter test` 142 passed。新增 §4.3 B-001（人工试听待 QA）与 §6.20 验收记录；§5.1 快照 DONE 90 / TODO 0 / 投入 413 h。真机 EBG-AN00 端到端：进入题目未点喇叭即自动起播、`MediaCodec`+`AudioTrack` 播放 476,808 帧（≈10.8 s）且无 `onSynthesizeText`（证明走预生成 Opus）、`run-as` 可见 `files/question_audio/q_1526.opus`（30 KB）、`adb reverse` 移除后缓存命中仍可朗读、截图确认句级高亮、点英语单词 `letter` 先 `stop()` 再走 `en-US` TTS、「环境诊断」页显示 `127.0.0.1:18080` / `ok · 12 ms` / 自动读题已开启；接口实测题 79/647/651/127 均 200 + `ETag` + `audio/ogg`、同 ETag 二次请求 304、题 999999 返回 404。构建期因工程未注册 Kotlin 扩展（`audio_session 0.2.4` 依赖 `KotlinAndroidProjectExtension`）导致 `assembleDebug` 失败，`just_audio` 由 `^0.10.6` 降至 `^0.9.42`（实际解析 0.9.46 / `audio_session 0.1.25`）后构建与真机验证通过 |
+| v1.96 | 2026-11-12 | AR/FE/QA/PM | 按 CR-002 完成 UX-04~UX-06：① 三练习模式真实差异——后端 `ModePolicy`/`MODE_POLICIES` 消费薄弱优先、教材顺序、考前全覆盖、近 7 天排重与错题配额，前端 `PracticeModeSpec` 套用 10/15/20 题默认参数，首页新增三入口、配置页策略卡与预览 `strategy`，离线组卷按模式排序；② 前置知识点按 `section_order → order_index → 声明顺序` 排序（线上 `/learn/kp/{id}` 与离线整册包同口径，且只取自身前置），新增 `/kp/:id/explain` 独立讲解页，详情页前置区改紧凑编号列表；③ EBG-AN00（SN `2NSDU20423005421`）安装 debug 包并冷启动回归：三模式题量 10/15/20、预计 6/9/13 分钟、策略与题型配比各异，前置点击直达「天地人 · 讲解」首屏即讲解，`/health` 200、logcat 无 FATAL。回归：后端全量 `pytest` 全绿（顺带修 I-009：`alembic.ini` 中文注释改 ASCII，解决 cp936 `UnicodeDecodeError`，3 个迁移用例恢复）、`dart analyze` 0 issue、`flutter test test/practice_mode_test.dart` 6 passed；新增 `test_practice_modes.py` / `test_kp_prerequisites_order.py`。文档：D-04 升 v1.1（§6.7/§7.1.1/§12/§14.2 增 L16/L17）、D-06 §5.1/§5.5 补真机规程与结果；§1.1/§1.2/§3.6/§4.1/§4.2/§5.1 同步，新增 §6.21 验收记录。I-008/I-009/I-010 全部 `RESOLVED`；构建期 `app/pubspec.lock` 的传递依赖升级已还原，本轮未新增无台账的代码变更 |
+| v1.97 | 2026-11-12 | AR/FE/QA/PM | CR-003 考试入口闭环：① **根因** `build_pending_exams()` 把真题/作业卷/非本班班级卷计入首页待办，而 `GET /api/exams` 排除它们，EBG 真机出现「首页 2 场待完成 → 考试中心 0 场」虚标（I-011）；② 后端 `student_visible_exam_clauses()` 统一谓词被两处共用，`pending_exams` 增 `entry`/`subject`，新增 `GET /api/exams/blueprints`（`content:exam:write`，注册在 `/{exam_id}` 前）；③ 前端 `exam_entry.dart` 路由决策 + 首页「待办考试」独立卡（直达 `/exam/:id`/`/past-papers`、窗口提示、空态）+ 考试入口区补「真题库」+ 已完成无 attempt 的 SnackBar；④ 考试入库：`exam_service` 增 `blueprints()`/`generateExam()`、`exam.dart` 增 `ExamBlueprint`/`ExamGenerateResult`、新增 `/exams/manage` 组卷与派发页面、按权限在「我的」显隐。回归：新增 `backend/tests/test_exam_entry.py` 4 passed、`app/test/exam_entry_test.dart` 9 passed、后端全量 `pytest` 全绿、`dart analyze` 0 issue；EBG 真机（新后端 18081 + `adb reverse`）`pending_exams=0`/`/api/exams=0` 一致、首页空态卡、真题库列出 2 张真题、admin 蓝图 200 / student 403。文档：D-04 升 v1.2（§8.7/§12.4/§14.2 L18~L20）、D-06 §5.5.6；§1.1/§1.2/§3.9/§4.1/§4.2/§5.1/§6.1 同步，新增 §6.22 验收记录。EX-01~EX-03 全部 `DONE`（实际 9 h / 预估 12 h），I-011 `RESOLVED`；`app/pubspec.lock` 构建副作用已还原，本轮未写 dev 库、未生成新试卷；会话结束统一提交并推送 GitHub。补充回写：D-01 v0.7 / D-02 §3.6 / D-03 v1.1 / D-04 §12.5 / D-06 §4.3·§7·§9 / D-08 §11 与附表，§6.22 文档同步行已纳入全量证据 |
 
 
 
@@ -648,6 +675,11 @@ flowchart LR
 | L13 | 断点续答 | P0-23/P0-36 | `DONE`（会话按下一题下标续答，本地草稿入口与结算清理已完成） |
 | L14 | 首页聚合 P95<300ms | P0-14/P1-13 | `DONE`（缓存命中路径本地 P95=2.03ms，`tests/test_learn_cache.py::test_home_aggregate_p95_under_300ms`） |
 | L15 | 权限范围与验收 | P0-10/P0-40/P0-41/P1-14 | `DONE`（权限矩阵/范围/越权用例 + 真机 E2E 全链路验收通过；P1-14 活服务端到端回归 67 项断言通过；真机复测仍受 §4.1 I-005 设备条件制约） |
+| L16 | 三练习模式组卷策略互不相同 | UX-04 | `DONE`（`ModePolicy` + `PracticeModeSpec`；同 seed 下题量/题型配比/排序/排重/错题配额/预览 `strategy` 各异；EBG 真机 10/15/20 题，见 §6.21） |
+| L17 | 前置知识点按教材顺序且点击直达讲解 | UX-05 | `DONE`（线上/离线同口径排序 + `/kp/:id/explain` 独立讲解页；真机「天地人 · 讲解」首屏即讲解，见 §6.21） |
+| L18 | 首页待办考试口径一致 | EX-01 | `DONE`（统一可见性谓词；活服务 `pending_exams=0`/`/api/exams=0`，真题/作业卷/非本班卷/草稿不虚标；见 §6.22） |
+| L19 | 待办考试可直达 | EX-02 | `DONE`（待办考试独立卡 + 真题库入口 + 窗口提示与空态；真机真题库列出 2 张一年级真题；见 §6.22） |
+| L20 | 考试入库闭环 | EX-03 | `DONE`（`/exams/manage` 组卷发布与派发、`/api/exams/blueprints` 权限控制；admin 200 / student 403，`test_generated_exam_is_visible_in_entry` 覆盖入库后立即可见；见 §6.22） |
 
 ### 6.2 M2.5（P0）验收记录（2026-11-06）
 
@@ -953,6 +985,38 @@ flowchart LR
 
 ---
 
+### 6.21 练习模式与前置知识点验收记录（UX-04~UX-06 / R-A15，2026-11-12）
+
+| 核对项 | 结果 | 证据 |
+|---|---|---|
+| L16 三模式组卷策略互不相同 | 通过：`special` 薄弱 KP 优先 + 25% 到期错题 + 排重；`sync` 教材章节顺序 + 15% 错题 + 排重 + 由易到难；`pre_exam` 全覆盖 + 不排重 + 考试题型配比 + 难度递进；`unit` 沿用蓝图。`MODE_POLICIES` 与 `PracticeModeSpec` 双侧消费同一策略 | `backend/app/services/practice.py`、`app/lib/core/models/practice_mode.dart`；`pytest tests/test_practice_modes.py`；`flutter test test/practice_mode_test.dart` 6 passed |
+| L16 预览=实际、接口兼容 | 通过：预览与 `/learn/start` 同策略同题，返回 `mode/mode_label/strategy`；`mode` 白名单 `special\|sync\|pre_exam\|unit`，未知值 422；旧调用不传 mode 时默认 `special` | `backend/app/schemas/learn.py`、`app/lib/core/models/practice_session.dart`；活服务 `/api/learn/practice/preview` 三 mode 返回不同 `mode_label`/`strategy` |
+| L17 前置知识点按教材顺序 | 通过：线上 `/learn/kp/{id}` 显式按 `section_order → order_index → 声明顺序` 排序并带 `section_name/has_explanation`；离线整册包只取本知识点声明的前置；前端 `sortedPrerequisites()` 对旧包缺字段按 id 稳定兜底 | `backend/app/api/routes/learn.py`、`services/textbook_bundle.py`、`app/lib/core/models/learn.dart`；`pytest tests/test_kp_prerequisites_order.py`；真机「前置知识点 1 个 · 按教材顺序 / 1 天地人 / 识字与写字」 |
+| L17 点击直达讲解且详情页简洁 | 通过：新增 `/kp/:kpId/explain`（注册在 `/kp/:kpId` 之前），首屏讲解卡 + 例题 + 「完整详情 / 练一练」；详情页前置区由 `Wrap(ActionChip)` 改紧凑编号列表 | `app/lib/features/learn/kp_explain_page.dart`、`kp_detail_page.dart`、`app/lib/app.dart`；真机「天地人 · 讲解」页截图 `.tmp/ebg_explain2.png` |
+| 静态检查与回归 | 通过：后端全量 `pytest` 全绿（含 `test_migrations.py` 3 例，I-009 已修）、`dart analyze` 0 issue、`flutter test test/practice_mode_test.dart` 6 passed；新增后端测试 7 例 | 本次会话执行记录；`backend/alembic.ini` 纯 ASCII 注释 |
+| EBG 真机主链路（§7.7） | 通过：设备 `2NSDU20423005421`；`build-apk.ps1 -DebugBuild` 72 s / 86.3 MB，`adb install -r` Success，`force-stop` + `am start` 冷启动；`/health` 200、logcat 无 FATAL；专项/同步/考前分别 10/15/20 题、6/9/13 分钟、覆盖 10/15/20 题（共 44 KP），策略卡、题型配比与预览 strategy 各异；前置点击直达独立讲解页 | `docs/skills.md` §5.5.5；截图 `.tmp/ebg_cold.png`、`ebg_boot.png`、`ebg_sync.png`、`ebg_preexam.png`、`ebg_kp_detail.png`、`ebg_explain2.png` |
+| 文档同步与台账一致 | 通过：D-04 升 v1.1（§3.1/§6.7/§7.1.1/§12/§14.2 L16/L17）、D-06 §5.1/§5.5 补规程与结果；§1.1/§1.2/§3.6/§4.1/§4.2/§5.1/§5.5 同步；CR-002 已登记，I-008~I-010 全部 `RESOLVED`；DoD 六项（代码/测试/静态检查/真机证据/验收项/无 DB 迁移）均满足 | 本文件 §1~§6；`docs/learning-page-design.md`、`docs/skills.md` |
+
+**结论**：UX-04~UX-06 全部 `DONE`，R-A15 技术验收通过（待 PM 签署）。本轮不涉及数据库迁移，`alembic upgrade head` / `seed` 幂等性由全量 `pytest` 迁移用例回归覆盖。
+
+---
+
+### 6.22 考试入口闭环验收记录（EX-01~EX-03 / R-A16，2026-11-12）
+
+| 核对项 | 结果 | 证据 |
+|---|---|---|
+| L18 首页待办与考试列表同口径 | 通过：`student_visible_exam_clauses()` 统一过滤 `status=published` / 非真题 / 非作业卷 / 年级匹配 / 班级卷限本班，`build_pending_exams()` 与 `list_exams()` 共用；`pending_exams` 增 `entry`/`subject` | `backend/app/services/recommendation.py`、`api/routes/exams.py`；`pytest tests/test_exam_entry.py::test_pending_exams_match_visible_exam_list`；活服务 `pending_exams=0` / `/api/exams=0` |
+| L19 待办考试可直达且入口不静默 | 通过：`pendingExamRoute()` 按 `entry` 直达 `/exam/:id` 或 `/past-papers`，关闭窗口不跳转并提示；首页待办考试独立卡 + 空态、考试入口区三卡；已完成无 attempt 给 SnackBar | `app/lib/core/models/exam_entry.dart`、`features/learn/learn_page.dart`、`features/exam/exam_list_page.dart`；`flutter test test/exam_entry_test.dart` 9 passed；真机首页空态卡与真题库 2 张试卷 |
+| L20 考试入库闭环 | 通过（接口/模型/页面/单测闭环）：`GET /api/exams/blueprints`（admin 9 蓝图 200 / student 403）、`POST /api/exams/generate` 与 `/api/exams/mock` 已接入 App；`/exams/manage` 组卷发布与派发页面、按 `content:exam:write` 显隐；`test_generated_exam_is_visible_in_entry` 证明新卷立即进入待办与列表 | `backend/app/api/routes/exams.py::list_blueprints`、`app/lib/features/exam/exam_manage_page.dart`、`core/services/exam_service.dart`、`core/models/exam.dart`、`app/lib/app.dart`、`features/profile/profile_page.dart`；`dart analyze` 0 issue；活服务权限验证 |
+| 单测与静态检查 | 通过：后端全量 `pytest` 全绿（含新增 4 例）、`flutter test test/exam_entry_test.dart` 9 passed、`dart analyze` `No issues found!` | 本次会话执行记录 |
+| EBG 真机主链路（§7.7） | 通过：`build-apk.ps1 -DebugBuild`（33 s / 108.7 MB）→ `adb install -r` Success → `force-stop`/`am start` 冷启动；新后端 18081 + `adb reverse tcp:18080 tcp:18081` 后，首页「待办考试」显示空态、考试中心副标题不再虚标、真题库入口列出 2 张一年级真题（含「开始模考」）；logcat 无 FATAL | D-06 §5.5.6；截图 `.tmp/ebg_pastpapers.png` |
+| 文档同步与台账一致 | 通过：D-04 升 v1.2（§3.1/§8.7/§12.4/§12.5/§14.2 L18~L20）、D-01 升 v0.7（§3.6.4/§4.5/§4.6/§8.3）、D-03 升 v1.1（§10.5/§12.2 A11~A13/§13.2）、D-02 §3.6 交叉引用、D-08 §11 与附表第 11 行、D-06 §4.3/§7/§9；§1.1 版本与最后核对、§1.2/§3.9/§4.1/§4.2/§5.1/§5.5/§6.1 同步；CR-003 已登记，I-011 `RESOLVED`；旧口径 `pending_exam`/`exam_entry`/`/api/exams/list` 全库检索 0 命中 | 本文件 §1~§6；`docs/k12-learning-app-design.md`、`docs/learning-page-design.md`、`docs/user-role-permission-design.md`、`docs/subject-tutoring-and-m2-design.md`、`docs/release-plan.md`、`docs/skills.md` |
+
+**结论**：EX-01~EX-03 全部 `DONE`，R-A16 技术验收通过（待 PM 签署）。本轮未改动数据库结构、未向 dev 库写入新试卷、未执行内容入库与提交。
+**QA 待补**：以 `content:exam:write` 账号在真机点击「考试管理与发布」实际提交一次组卷，并验证生成卷在首页待办卡中直达 `/exam/:id`（本轮真机以学生账号验证了入口侧，管理侧由活服务接口 + 单测 + 静态检查覆盖，未反复切换真机登录态）。
+
+---
+
 ## 七、开发执行约定
 
 1. **分支与提交**：每个任务独立小步提交，提交信息含任务 ID（如 `P0-03: RBAC 权限依赖`）。
@@ -966,4 +1030,4 @@ flowchart LR
 
 ---
 
-> **当前下一步**：UX-02、CT-01、CT-02、CT-03 已完成（验收见 §6.16/§6.17/§6.18）。后续：①教研按 `docs/content-templates/README.md` 的“每日自动化入库”四步执行（离线自检 → `--dry-run` → 带 `--manifest` 导入 → 重建基线）；**每道题与知识点必须如实登记 `source_type` 等来源字段**，非原创填 `source_name`、授权内容填 `license_note`、外部导入先置 `draft`，复核后转 `published`；②在 OXF-AN10 上继续走查登录/学习/练习/考试/作业/家长/教师主链路返回行为；③记录真机反馈，评估功能卡片是否推广到知识点/考试/作业列表（推广前登记 CR）。并行人工项：M5 发布就绪签署；PM 回填软著受理号/登记号与 ICP/APP 备案号；代码提交后运行 `scripts\ci.ps1 -Tag` 生成 `v1.0.0` 标签。
+> **当前下一步**：UX-01~UX-06、CT-01~CT-03、EX-01~EX-03 全部完成；CR-002 验收见 §6.21、CR-003 验收见 §6.22，EBG 真机记录见 D-06 §5.5.5/§5.5.6；**R-A15 / R-A16 与 M5 待 PM 签署**，QA 待补 admin 真机组卷一次（§6.22）。后续：①教研按 `docs/content-templates/README.md` 的“每日自动化入库”四步执行（离线自检 → `--dry-run` → 带 `--manifest` 导入 → 重建基线）；**每道题与知识点必须如实登记 `source_type` 等来源字段**，非原创填 `source_name`、授权内容填 `license_note`、外部导入先置 `draft`，复核后转 `published`；②在 OXF-AN10 上继续走查登录/学习/练习/考试/作业/家长/教师主链路返回行为；③记录真机反馈，评估功能卡片是否推广到知识点/考试/作业列表（推广前登记 CR）。并行人工项：M5 发布就绪签署；PM 回填软著受理号/登记号与 ICP/APP 备案号；代码提交后运行 `scripts\ci.ps1 -Tag` 生成 `v1.0.0` 标签。

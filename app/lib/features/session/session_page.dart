@@ -202,6 +202,22 @@ class _SessionPageState extends ConsumerState<SessionPage> {
         DateTime.now().microsecondsSinceEpoch.remainder(1 << 31);
     questions.shuffle(Random(seed));
     final selected = questions.take(widget.count).toList();
+    // 离线组卷同样区分三种模式：同步巩固按教材顺序、考前速练按难度递进。
+    if (widget.mode == 'sync') {
+      selected.sort((a, b) {
+        final byChapter = a.chapterId.compareTo(b.chapterId);
+        if (byChapter != 0) return byChapter;
+        final byKp = (a.knowledgePointId ?? 0).compareTo(b.knowledgePointId ?? 0);
+        if (byKp != 0) return byKp;
+        final byDifficulty = a.difficulty.compareTo(b.difficulty);
+        return byDifficulty != 0 ? byDifficulty : a.id.compareTo(b.id);
+      });
+    } else if (widget.mode == 'pre_exam') {
+      selected.sort((a, b) {
+        final byDifficulty = a.difficulty.compareTo(b.difficulty);
+        return byDifficulty != 0 ? byDifficulty : a.id.compareTo(b.id);
+      });
+    }
     if (!mounted) return false;
     setState(() {
       _questions = selected;
