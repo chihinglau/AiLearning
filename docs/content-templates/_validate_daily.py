@@ -266,6 +266,9 @@ class Checker:
             self.err("knowledge 与 chapters 不能同时为空")
         self.subject = str(subject) if subject else None
         self.grade = grade if isinstance(grade, int) else None
+        # 2026-11-12：semester 必须落到实例上，否则章节范围校验永远取「学科」兜底键（= 上册大纲），
+        # 下册册子会被整册误判为「不在本册教材大纲内」。
+        self.semester = str(data.get("semester") or "first")
 
     # ---------- 来源字段 ----------
     def check_source(self, item: dict, label: str, *, is_question: bool) -> None:
@@ -797,6 +800,11 @@ def validate_file(
     if allowed:
         chapter_names = [str(c.get("name") or "") for c in (data.get("chapters") or [])]
         unit_names = {unit for unit, _ in allowed_pairs}
+        # 2026-11-12：板块名 → 归属单元集合。只有「同一个板块名横跨多个单元」才真的无法定位单元；
+        # 小学（模块 × 单元）大纲下像「Unit 7 Seasons」这样的单元名本身唯一，不该被当成歧义板块拦下。
+        sec_to_units: dict[str, set[str]] = {}
+        for unit, sec in allowed_pairs:
+            sec_to_units.setdefault(sec, set()).add(unit)
         for name in sorted(sections):
             reason = ""
             if name not in allowed:
@@ -812,10 +820,12 @@ def validate_file(
                     ):
                         reason = "复合名里的单元与本文件 chapters 的单元不一致"
             elif checker.subject == "english" and unit_names and name not in unit_names:
-                reason = (
-                    "英语按板块推进时 section 必须写「Unit N 标题 / 板块」复合名；"
-                    "Ready Go / Story 这类纯板块名在多个单元重复，无法定位单元"
-                )
+                owners = sec_to_units.get(name, set())
+                if len(owners) > 1:
+                    reason = (
+                        "英语按板块推进时 section 必须写「Unit N 标题 / 板块」复合名；"
+                        f"「{name}」这个纯板块名在 {len(owners)} 个单元重复，无法定位单元"
+                    )
             if reason:
                 msg = (
                     f"章节「{name}」{reason}（本册共 {len(allowed)} 个允许名、"

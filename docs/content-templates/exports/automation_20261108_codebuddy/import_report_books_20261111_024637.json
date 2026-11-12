@@ -1,0 +1,948 @@
+{
+  "mode": "books",
+  "stamp": "20261110",
+  "database_url": "sqlite:///./ailearning_dev.db",
+  "database": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\ailearning_dev.db",
+  "backup": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\build\\backups\\ailearning-backup-20261111-024633.db",
+  "restore_hint": "Copy-Item -Force \"D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\build\\backups\\ailearning-backup-20261111-024633.db\" \"D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\ailearning_dev.db\"",
+  "files_total": 31,
+  "files_in_dir": 31,
+  "pattern": "*_20261110_book.json",
+  "scope": {
+    "subjects": [],
+    "grades": [],
+    "only": []
+  },
+  "validation_summary": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\books_validation_20261110_20261111_024632.json",
+  "overwrite": false,
+  "stats_before": {
+    "textbooks": 146,
+    "chapters": 618,
+    "knowledge_points": 1144,
+    "questions": 2578
+  },
+  "stats_after": {
+    "textbooks": 146,
+    "chapters": 618,
+    "knowledge_points": 2206,
+    "questions": 6436
+  },
+  "stats_delta": {
+    "textbooks": 0,
+    "chapters": 0,
+    "knowledge_points": 1062,
+    "questions": 3858
+  },
+  "per_book": [
+    {
+      "file": "biology/g7/biology_g7_first_20261110_book.json",
+      "status": "ok",
+      "raw": "biology/g7/biology_g7_first_20261110_book.json: 教材已存在，章节 +0/~9，知识点 +44/~1，题目 +162，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 9,
+      "knowledge_created": 44,
+      "knowledge_updated": 1,
+      "questions_created": 162,
+      "questions_skipped": 0
+    },
+    {
+      "file": "chemistry/g9/chemistry_g9_first_20261110_book.json",
+      "status": "ok",
+      "raw": "chemistry/g9/chemistry_g9_first_20261110_book.json: 教材已存在，章节 +0/~7，知识点 +35/~0，题目 +126，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 7,
+      "knowledge_created": 35,
+      "knowledge_updated": 0,
+      "questions_created": 126,
+      "questions_skipped": 0
+    },
+    {
+      "file": "chinese/g2/chinese_g2_first_20261110_book.json",
+      "status": "ok",
+      "raw": "chinese/g2/chinese_g2_first_20261110_book.json: 教材已存在，章节 +0/~8，知识点 +40/~0，题目 +144，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 8,
+      "knowledge_created": 40,
+      "knowledge_updated": 0,
+      "questions_created": 144,
+      "questions_skipped": 0
+    },
+    {
+      "file": "chinese/g3/chinese_g3_first_20261110_book.json",
+      "status": "ok",
+      "raw": "chinese/g3/chinese_g3_first_20261110_book.json: 教材已存在，章节 +0/~8，知识点 +40/~0，题目 +144，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 8,
+      "knowledge_created": 40,
+      "knowledge_updated": 0,
+      "questions_created": 144,
+      "questions_skipped": 0
+    },
+    {
+      "file": "chinese/g4/chinese_g4_first_20261110_book.json",
+      "status": "ok",
+      "raw": "chinese/g4/chinese_g4_first_20261110_book.json: 教材已存在，章节 +0/~8，知识点 +40/~0，题目 +144，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 8,
+      "knowledge_created": 40,
+      "knowledge_updated": 0,
+      "questions_created": 144,
+      "questions_skipped": 0
+    },
+    {
+      "file": "chinese/g5/chinese_g5_first_20261110_book.json",
+      "status": "ok",
+      "raw": "chinese/g5/chinese_g5_first_20261110_book.json: 教材已存在，章节 +0/~8，知识点 +40/~0，题目 +144，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 8,
+      "knowledge_created": 40,
+      "knowledge_updated": 0,
+      "questions_created": 144,
+      "questions_skipped": 0
+    },
+    {
+      "file": "chinese/g6/chinese_g6_first_20261110_book.json",
+      "status": "ok",
+      "raw": "chinese/g6/chinese_g6_first_20261110_book.json: 教材已存在，章节 +0/~8，知识点 +40/~0，题目 +149，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 8,
+      "knowledge_created": 40,
+      "knowledge_updated": 0,
+      "questions_created": 149,
+      "questions_skipped": 0
+    },
+    {
+      "file": "chinese/g7/chinese_g7_first_20261110_book.json",
+      "status": "ok",
+      "raw": "chinese/g7/chinese_g7_first_20261110_book.json: 教材已存在，章节 +0/~6，知识点 +30/~0，题目 +108，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 6,
+      "knowledge_created": 30,
+      "knowledge_updated": 0,
+      "questions_created": 108,
+      "questions_skipped": 0
+    },
+    {
+      "file": "chinese/g9/chinese_g9_first_20261110_book.json",
+      "status": "ok",
+      "raw": "chinese/g9/chinese_g9_first_20261110_book.json: 教材已存在，章节 +0/~6，知识点 +30/~0，题目 +108，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 6,
+      "knowledge_created": 30,
+      "knowledge_updated": 0,
+      "questions_created": 108,
+      "questions_skipped": 0
+    },
+    {
+      "file": "english/g2/english_g2_first_20261110_book.json",
+      "status": "ok",
+      "raw": "english/g2/english_g2_first_20261110_book.json: 教材已存在，章节 +0/~6，知识点 +29/~1，题目 +108，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 6,
+      "knowledge_created": 29,
+      "knowledge_updated": 1,
+      "questions_created": 108,
+      "questions_skipped": 0
+    },
+    {
+      "file": "english/g3/english_g3_first_20261110_book.json",
+      "status": "ok",
+      "raw": "english/g3/english_g3_first_20261110_book.json: 教材已存在，章节 +0/~8，知识点 +39/~1，题目 +144，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 8,
+      "knowledge_created": 39,
+      "knowledge_updated": 1,
+      "questions_created": 144,
+      "questions_skipped": 0
+    },
+    {
+      "file": "english/g4/english_g4_first_20261110_book.json",
+      "status": "ok",
+      "raw": "english/g4/english_g4_first_20261110_book.json: 教材已存在，章节 +0/~8，知识点 +39/~1，题目 +144，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 8,
+      "knowledge_created": 39,
+      "knowledge_updated": 1,
+      "questions_created": 144,
+      "questions_skipped": 0
+    },
+    {
+      "file": "english/g5/english_g5_first_20261110_book.json",
+      "status": "ok",
+      "raw": "english/g5/english_g5_first_20261110_book.json: 教材已存在，章节 +0/~8，知识点 +39/~1，题目 +144，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 8,
+      "knowledge_created": 39,
+      "knowledge_updated": 1,
+      "questions_created": 144,
+      "questions_skipped": 0
+    },
+    {
+      "file": "english/g6/english_g6_first_20261110_book.json",
+      "status": "ok",
+      "raw": "english/g6/english_g6_first_20261110_book.json: 教材已存在，章节 +0/~6，知识点 +29/~1，题目 +108，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 6,
+      "knowledge_created": 29,
+      "knowledge_updated": 1,
+      "questions_created": 108,
+      "questions_skipped": 0
+    },
+    {
+      "file": "english/g7/english_g7_first_20261110_book.json",
+      "status": "ok",
+      "raw": "english/g7/english_g7_first_20261110_book.json: 教材已存在，章节 +0/~6，知识点 +29/~1，题目 +108，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 6,
+      "knowledge_created": 29,
+      "knowledge_updated": 1,
+      "questions_created": 108,
+      "questions_skipped": 0
+    },
+    {
+      "file": "english/g9/english_g9_first_20261110_book.json",
+      "status": "ok",
+      "raw": "english/g9/english_g9_first_20261110_book.json: 教材已存在，章节 +0/~6，知识点 +29/~1，题目 +108，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 6,
+      "knowledge_created": 29,
+      "knowledge_updated": 1,
+      "questions_created": 108,
+      "questions_skipped": 0
+    },
+    {
+      "file": "geography/g7/geography_g7_first_20261110_book.json",
+      "status": "ok",
+      "raw": "geography/g7/geography_g7_first_20261110_book.json: 教材已存在，章节 +0/~6，知识点 +30/~0，题目 +108，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 6,
+      "knowledge_created": 30,
+      "knowledge_updated": 0,
+      "questions_created": 108,
+      "questions_skipped": 0
+    },
+    {
+      "file": "history/g7/history_g7_first_20261110_book.json",
+      "status": "ok",
+      "raw": "history/g7/history_g7_first_20261110_book.json: 教材已存在，章节 +0/~4，知识点 +20/~0，题目 +72，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 4,
+      "knowledge_created": 20,
+      "knowledge_updated": 0,
+      "questions_created": 72,
+      "questions_skipped": 0
+    },
+    {
+      "file": "math/g2/math_g2_first_20261110_book.json",
+      "status": "skipped_manifest",
+      "raw": "math/g2/math_g2_first_20261110_book.json: 已导入且文件未变，跳过（manifest）"
+    },
+    {
+      "file": "math/g3/math_g3_first_20261110_book.json",
+      "status": "ok",
+      "raw": "math/g3/math_g3_first_20261110_book.json: 教材已存在，章节 +0/~8，知识点 +40/~0，题目 +144，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 8,
+      "knowledge_created": 40,
+      "knowledge_updated": 0,
+      "questions_created": 144,
+      "questions_skipped": 0
+    },
+    {
+      "file": "math/g4/math_g4_first_20261110_book.json",
+      "status": "ok",
+      "raw": "math/g4/math_g4_first_20261110_book.json: 教材已存在，章节 +0/~12，知识点 +60/~0，题目 +216，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 12,
+      "knowledge_created": 60,
+      "knowledge_updated": 0,
+      "questions_created": 216,
+      "questions_skipped": 0
+    },
+    {
+      "file": "math/g5/math_g5_first_20261110_book.json",
+      "status": "ok",
+      "raw": "math/g5/math_g5_first_20261110_book.json: 教材已存在，章节 +0/~12，知识点 +60/~0，题目 +216，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 12,
+      "knowledge_created": 60,
+      "knowledge_updated": 0,
+      "questions_created": 216,
+      "questions_skipped": 0
+    },
+    {
+      "file": "math/g6/math_g6_first_20261110_book.json",
+      "status": "ok",
+      "raw": "math/g6/math_g6_first_20261110_book.json: 教材已存在，章节 +0/~13，知识点 +65/~0，题目 +234，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 13,
+      "knowledge_created": 65,
+      "knowledge_updated": 0,
+      "questions_created": 234,
+      "questions_skipped": 0
+    },
+    {
+      "file": "math/g7/math_g7_first_20261110_book.json",
+      "status": "ok",
+      "raw": "math/g7/math_g7_first_20261110_book.json: 教材已存在，章节 +0/~6，知识点 +30/~0，题目 +108，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 6,
+      "knowledge_created": 30,
+      "knowledge_updated": 0,
+      "questions_created": 108,
+      "questions_skipped": 0
+    },
+    {
+      "file": "math/g9/math_g9_first_20261110_book.json",
+      "status": "ok",
+      "raw": "math/g9/math_g9_first_20261110_book.json: 教材已存在，章节 +0/~7，知识点 +35/~0，题目 +126，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 7,
+      "knowledge_created": 35,
+      "knowledge_updated": 0,
+      "questions_created": 126,
+      "questions_skipped": 0
+    },
+    {
+      "file": "physics/g9/physics_g9_first_20261110_book.json",
+      "status": "ok",
+      "raw": "physics/g9/physics_g9_first_20261110_book.json: 教材已存在，章节 +0/~10，知识点 +50/~0，题目 +180，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 10,
+      "knowledge_created": 50,
+      "knowledge_updated": 0,
+      "questions_created": 180,
+      "questions_skipped": 0
+    },
+    {
+      "file": "politics/g2/politics_g2_first_20261110_book.json",
+      "status": "ok",
+      "raw": "politics/g2/politics_g2_first_20261110_book.json: 教材已存在，章节 +0/~4，知识点 +20/~0，题目 +73，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 4,
+      "knowledge_created": 20,
+      "knowledge_updated": 0,
+      "questions_created": 73,
+      "questions_skipped": 0
+    },
+    {
+      "file": "politics/g3/politics_g3_first_20261110_book.json",
+      "status": "ok",
+      "raw": "politics/g3/politics_g3_first_20261110_book.json: 教材已存在，章节 +0/~4，知识点 +20/~0，题目 +72，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 4,
+      "knowledge_created": 20,
+      "knowledge_updated": 0,
+      "questions_created": 72,
+      "questions_skipped": 0
+    },
+    {
+      "file": "politics/g4/politics_g4_first_20261110_book.json",
+      "status": "ok",
+      "raw": "politics/g4/politics_g4_first_20261110_book.json: 教材已存在，章节 +0/~4，知识点 +20/~0，题目 +72，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 4,
+      "knowledge_created": 20,
+      "knowledge_updated": 0,
+      "questions_created": 72,
+      "questions_skipped": 0
+    },
+    {
+      "file": "politics/g6/politics_g6_first_20261110_book.json",
+      "status": "ok",
+      "raw": "politics/g6/politics_g6_first_20261110_book.json: 教材已存在，章节 +0/~4，知识点 +20/~0，题目 +72，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 4,
+      "knowledge_created": 20,
+      "knowledge_updated": 0,
+      "questions_created": 72,
+      "questions_skipped": 0
+    },
+    {
+      "file": "politics/g7/politics_g7_first_20261110_book.json",
+      "status": "ok",
+      "raw": "politics/g7/politics_g7_first_20261110_book.json: 教材已存在，章节 +0/~4，知识点 +20/~0，题目 +72，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 4,
+      "knowledge_created": 20,
+      "knowledge_updated": 0,
+      "questions_created": 72,
+      "questions_skipped": 0
+    }
+  ],
+  "per_book_summary": {
+    "parsed": 31,
+    "ok": 30,
+    "skipped_manifest": 1,
+    "failed": 0,
+    "other": 0,
+    "chapters_created": 0,
+    "knowledge_created": 1062,
+    "questions_created": 3858,
+    "questions_skipped": 0
+  },
+  "per_book_dry": [
+    {
+      "file": "biology/g7/biology_g7_first_20261110_book.json",
+      "status": "ok",
+      "raw": "biology/g7/biology_g7_first_20261110_book.json: 教材已存在，章节 +0/~9，知识点 +44/~1，题目 +162，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 9,
+      "knowledge_created": 44,
+      "knowledge_updated": 1,
+      "questions_created": 162,
+      "questions_skipped": 0
+    },
+    {
+      "file": "chemistry/g9/chemistry_g9_first_20261110_book.json",
+      "status": "ok",
+      "raw": "chemistry/g9/chemistry_g9_first_20261110_book.json: 教材已存在，章节 +0/~7，知识点 +35/~0，题目 +126，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 7,
+      "knowledge_created": 35,
+      "knowledge_updated": 0,
+      "questions_created": 126,
+      "questions_skipped": 0
+    },
+    {
+      "file": "chinese/g2/chinese_g2_first_20261110_book.json",
+      "status": "ok",
+      "raw": "chinese/g2/chinese_g2_first_20261110_book.json: 教材已存在，章节 +0/~8，知识点 +40/~0，题目 +144，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 8,
+      "knowledge_created": 40,
+      "knowledge_updated": 0,
+      "questions_created": 144,
+      "questions_skipped": 0
+    },
+    {
+      "file": "chinese/g3/chinese_g3_first_20261110_book.json",
+      "status": "ok",
+      "raw": "chinese/g3/chinese_g3_first_20261110_book.json: 教材已存在，章节 +0/~8，知识点 +40/~0，题目 +144，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 8,
+      "knowledge_created": 40,
+      "knowledge_updated": 0,
+      "questions_created": 144,
+      "questions_skipped": 0
+    },
+    {
+      "file": "chinese/g4/chinese_g4_first_20261110_book.json",
+      "status": "ok",
+      "raw": "chinese/g4/chinese_g4_first_20261110_book.json: 教材已存在，章节 +0/~8，知识点 +40/~0，题目 +144，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 8,
+      "knowledge_created": 40,
+      "knowledge_updated": 0,
+      "questions_created": 144,
+      "questions_skipped": 0
+    },
+    {
+      "file": "chinese/g5/chinese_g5_first_20261110_book.json",
+      "status": "ok",
+      "raw": "chinese/g5/chinese_g5_first_20261110_book.json: 教材已存在，章节 +0/~8，知识点 +40/~0，题目 +144，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 8,
+      "knowledge_created": 40,
+      "knowledge_updated": 0,
+      "questions_created": 144,
+      "questions_skipped": 0
+    },
+    {
+      "file": "chinese/g6/chinese_g6_first_20261110_book.json",
+      "status": "ok",
+      "raw": "chinese/g6/chinese_g6_first_20261110_book.json: 教材已存在，章节 +0/~8，知识点 +40/~0，题目 +149，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 8,
+      "knowledge_created": 40,
+      "knowledge_updated": 0,
+      "questions_created": 149,
+      "questions_skipped": 0
+    },
+    {
+      "file": "chinese/g7/chinese_g7_first_20261110_book.json",
+      "status": "ok",
+      "raw": "chinese/g7/chinese_g7_first_20261110_book.json: 教材已存在，章节 +0/~6，知识点 +30/~0，题目 +108，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 6,
+      "knowledge_created": 30,
+      "knowledge_updated": 0,
+      "questions_created": 108,
+      "questions_skipped": 0
+    },
+    {
+      "file": "chinese/g9/chinese_g9_first_20261110_book.json",
+      "status": "ok",
+      "raw": "chinese/g9/chinese_g9_first_20261110_book.json: 教材已存在，章节 +0/~6，知识点 +30/~0，题目 +108，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 6,
+      "knowledge_created": 30,
+      "knowledge_updated": 0,
+      "questions_created": 108,
+      "questions_skipped": 0
+    },
+    {
+      "file": "english/g2/english_g2_first_20261110_book.json",
+      "status": "ok",
+      "raw": "english/g2/english_g2_first_20261110_book.json: 教材已存在，章节 +0/~6，知识点 +29/~1，题目 +108，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 6,
+      "knowledge_created": 29,
+      "knowledge_updated": 1,
+      "questions_created": 108,
+      "questions_skipped": 0
+    },
+    {
+      "file": "english/g3/english_g3_first_20261110_book.json",
+      "status": "ok",
+      "raw": "english/g3/english_g3_first_20261110_book.json: 教材已存在，章节 +0/~8，知识点 +39/~1，题目 +144，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 8,
+      "knowledge_created": 39,
+      "knowledge_updated": 1,
+      "questions_created": 144,
+      "questions_skipped": 0
+    },
+    {
+      "file": "english/g4/english_g4_first_20261110_book.json",
+      "status": "ok",
+      "raw": "english/g4/english_g4_first_20261110_book.json: 教材已存在，章节 +0/~8，知识点 +39/~1，题目 +144，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 8,
+      "knowledge_created": 39,
+      "knowledge_updated": 1,
+      "questions_created": 144,
+      "questions_skipped": 0
+    },
+    {
+      "file": "english/g5/english_g5_first_20261110_book.json",
+      "status": "ok",
+      "raw": "english/g5/english_g5_first_20261110_book.json: 教材已存在，章节 +0/~8，知识点 +39/~1，题目 +144，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 8,
+      "knowledge_created": 39,
+      "knowledge_updated": 1,
+      "questions_created": 144,
+      "questions_skipped": 0
+    },
+    {
+      "file": "english/g6/english_g6_first_20261110_book.json",
+      "status": "ok",
+      "raw": "english/g6/english_g6_first_20261110_book.json: 教材已存在，章节 +0/~6，知识点 +29/~1，题目 +108，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 6,
+      "knowledge_created": 29,
+      "knowledge_updated": 1,
+      "questions_created": 108,
+      "questions_skipped": 0
+    },
+    {
+      "file": "english/g7/english_g7_first_20261110_book.json",
+      "status": "ok",
+      "raw": "english/g7/english_g7_first_20261110_book.json: 教材已存在，章节 +0/~6，知识点 +29/~1，题目 +108，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 6,
+      "knowledge_created": 29,
+      "knowledge_updated": 1,
+      "questions_created": 108,
+      "questions_skipped": 0
+    },
+    {
+      "file": "english/g9/english_g9_first_20261110_book.json",
+      "status": "ok",
+      "raw": "english/g9/english_g9_first_20261110_book.json: 教材已存在，章节 +0/~6，知识点 +29/~1，题目 +108，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 6,
+      "knowledge_created": 29,
+      "knowledge_updated": 1,
+      "questions_created": 108,
+      "questions_skipped": 0
+    },
+    {
+      "file": "geography/g7/geography_g7_first_20261110_book.json",
+      "status": "ok",
+      "raw": "geography/g7/geography_g7_first_20261110_book.json: 教材已存在，章节 +0/~6，知识点 +30/~0，题目 +108，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 6,
+      "knowledge_created": 30,
+      "knowledge_updated": 0,
+      "questions_created": 108,
+      "questions_skipped": 0
+    },
+    {
+      "file": "history/g7/history_g7_first_20261110_book.json",
+      "status": "ok",
+      "raw": "history/g7/history_g7_first_20261110_book.json: 教材已存在，章节 +0/~4，知识点 +20/~0，题目 +72，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 4,
+      "knowledge_created": 20,
+      "knowledge_updated": 0,
+      "questions_created": 72,
+      "questions_skipped": 0
+    },
+    {
+      "file": "math/g2/math_g2_first_20261110_book.json",
+      "status": "ok",
+      "raw": "math/g2/math_g2_first_20261110_book.json: 教材已存在，章节 +0/~8，知识点 +0/~40，题目 +0，跳过重复 144",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 8,
+      "knowledge_created": 0,
+      "knowledge_updated": 40,
+      "questions_created": 0,
+      "questions_skipped": 144
+    },
+    {
+      "file": "math/g3/math_g3_first_20261110_book.json",
+      "status": "ok",
+      "raw": "math/g3/math_g3_first_20261110_book.json: 教材已存在，章节 +0/~8，知识点 +40/~0，题目 +144，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 8,
+      "knowledge_created": 40,
+      "knowledge_updated": 0,
+      "questions_created": 144,
+      "questions_skipped": 0
+    },
+    {
+      "file": "math/g4/math_g4_first_20261110_book.json",
+      "status": "ok",
+      "raw": "math/g4/math_g4_first_20261110_book.json: 教材已存在，章节 +0/~12，知识点 +60/~0，题目 +216，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 12,
+      "knowledge_created": 60,
+      "knowledge_updated": 0,
+      "questions_created": 216,
+      "questions_skipped": 0
+    },
+    {
+      "file": "math/g5/math_g5_first_20261110_book.json",
+      "status": "ok",
+      "raw": "math/g5/math_g5_first_20261110_book.json: 教材已存在，章节 +0/~12，知识点 +60/~0，题目 +216，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 12,
+      "knowledge_created": 60,
+      "knowledge_updated": 0,
+      "questions_created": 216,
+      "questions_skipped": 0
+    },
+    {
+      "file": "math/g6/math_g6_first_20261110_book.json",
+      "status": "ok",
+      "raw": "math/g6/math_g6_first_20261110_book.json: 教材已存在，章节 +0/~13，知识点 +65/~0，题目 +234，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 13,
+      "knowledge_created": 65,
+      "knowledge_updated": 0,
+      "questions_created": 234,
+      "questions_skipped": 0
+    },
+    {
+      "file": "math/g7/math_g7_first_20261110_book.json",
+      "status": "ok",
+      "raw": "math/g7/math_g7_first_20261110_book.json: 教材已存在，章节 +0/~6，知识点 +30/~0，题目 +108，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 6,
+      "knowledge_created": 30,
+      "knowledge_updated": 0,
+      "questions_created": 108,
+      "questions_skipped": 0
+    },
+    {
+      "file": "math/g9/math_g9_first_20261110_book.json",
+      "status": "ok",
+      "raw": "math/g9/math_g9_first_20261110_book.json: 教材已存在，章节 +0/~7，知识点 +35/~0，题目 +126，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 7,
+      "knowledge_created": 35,
+      "knowledge_updated": 0,
+      "questions_created": 126,
+      "questions_skipped": 0
+    },
+    {
+      "file": "physics/g9/physics_g9_first_20261110_book.json",
+      "status": "ok",
+      "raw": "physics/g9/physics_g9_first_20261110_book.json: 教材已存在，章节 +0/~10，知识点 +50/~0，题目 +180，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 10,
+      "knowledge_created": 50,
+      "knowledge_updated": 0,
+      "questions_created": 180,
+      "questions_skipped": 0
+    },
+    {
+      "file": "politics/g2/politics_g2_first_20261110_book.json",
+      "status": "ok",
+      "raw": "politics/g2/politics_g2_first_20261110_book.json: 教材已存在，章节 +0/~4，知识点 +20/~0，题目 +73，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 4,
+      "knowledge_created": 20,
+      "knowledge_updated": 0,
+      "questions_created": 73,
+      "questions_skipped": 0
+    },
+    {
+      "file": "politics/g3/politics_g3_first_20261110_book.json",
+      "status": "ok",
+      "raw": "politics/g3/politics_g3_first_20261110_book.json: 教材已存在，章节 +0/~4，知识点 +20/~0，题目 +72，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 4,
+      "knowledge_created": 20,
+      "knowledge_updated": 0,
+      "questions_created": 72,
+      "questions_skipped": 0
+    },
+    {
+      "file": "politics/g4/politics_g4_first_20261110_book.json",
+      "status": "ok",
+      "raw": "politics/g4/politics_g4_first_20261110_book.json: 教材已存在，章节 +0/~4，知识点 +20/~0，题目 +72，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 4,
+      "knowledge_created": 20,
+      "knowledge_updated": 0,
+      "questions_created": 72,
+      "questions_skipped": 0
+    },
+    {
+      "file": "politics/g6/politics_g6_first_20261110_book.json",
+      "status": "ok",
+      "raw": "politics/g6/politics_g6_first_20261110_book.json: 教材已存在，章节 +0/~4，知识点 +20/~0，题目 +72，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 4,
+      "knowledge_created": 20,
+      "knowledge_updated": 0,
+      "questions_created": 72,
+      "questions_skipped": 0
+    },
+    {
+      "file": "politics/g7/politics_g7_first_20261110_book.json",
+      "status": "ok",
+      "raw": "politics/g7/politics_g7_first_20261110_book.json: 教材已存在，章节 +0/~4，知识点 +20/~0，题目 +72，跳过重复 0",
+      "textbook_created": false,
+      "chapters_created": 0,
+      "chapters_updated": 4,
+      "knowledge_created": 20,
+      "knowledge_updated": 0,
+      "questions_created": 72,
+      "questions_skipped": 0
+    }
+  ],
+  "per_book_dry_summary": {
+    "parsed": 31,
+    "ok": 31,
+    "skipped_manifest": 0,
+    "failed": 0,
+    "other": 0,
+    "chapters_created": 0,
+    "knowledge_created": 1062,
+    "questions_created": 3858,
+    "questions_skipped": 144
+  },
+  "pending_verification": {
+    "biology_g7_first_20261110_book.json": {
+      "questions": 162,
+      "stems_in_db": 162
+    },
+    "chemistry_g9_first_20261110_book.json": {
+      "questions": 126,
+      "stems_in_db": 126
+    },
+    "chinese_g2_first_20261110_book.json": {
+      "questions": 144,
+      "stems_in_db": 144
+    },
+    "chinese_g3_first_20261110_book.json": {
+      "questions": 144,
+      "stems_in_db": 144
+    },
+    "chinese_g4_first_20261110_book.json": {
+      "questions": 144,
+      "stems_in_db": 144
+    },
+    "chinese_g5_first_20261110_book.json": {
+      "questions": 144,
+      "stems_in_db": 144
+    },
+    "chinese_g6_first_20261110_book.json": {
+      "questions": 149,
+      "stems_in_db": 149
+    },
+    "chinese_g7_first_20261110_book.json": {
+      "questions": 108,
+      "stems_in_db": 108
+    },
+    "chinese_g9_first_20261110_book.json": {
+      "questions": 108,
+      "stems_in_db": 108
+    },
+    "english_g2_first_20261110_book.json": {
+      "questions": 108,
+      "stems_in_db": 108
+    },
+    "english_g3_first_20261110_book.json": {
+      "questions": 144,
+      "stems_in_db": 144
+    },
+    "english_g4_first_20261110_book.json": {
+      "questions": 144,
+      "stems_in_db": 144
+    },
+    "english_g5_first_20261110_book.json": {
+      "questions": 144,
+      "stems_in_db": 144
+    },
+    "english_g6_first_20261110_book.json": {
+      "questions": 108,
+      "stems_in_db": 108
+    },
+    "english_g7_first_20261110_book.json": {
+      "questions": 108,
+      "stems_in_db": 108
+    },
+    "english_g9_first_20261110_book.json": {
+      "questions": 108,
+      "stems_in_db": 108
+    },
+    "geography_g7_first_20261110_book.json": {
+      "questions": 108,
+      "stems_in_db": 108
+    },
+    "history_g7_first_20261110_book.json": {
+      "questions": 72,
+      "stems_in_db": 72
+    },
+    "math_g2_first_20261110_book.json": {
+      "questions": 144,
+      "stems_in_db": 144
+    },
+    "math_g3_first_20261110_book.json": {
+      "questions": 144,
+      "stems_in_db": 144
+    },
+    "math_g4_first_20261110_book.json": {
+      "questions": 216,
+      "stems_in_db": 216
+    },
+    "math_g5_first_20261110_book.json": {
+      "questions": 216,
+      "stems_in_db": 216
+    },
+    "math_g6_first_20261110_book.json": {
+      "questions": 234,
+      "stems_in_db": 234
+    },
+    "math_g7_first_20261110_book.json": {
+      "questions": 108,
+      "stems_in_db": 108
+    },
+    "math_g9_first_20261110_book.json": {
+      "questions": 126,
+      "stems_in_db": 126
+    },
+    "physics_g9_first_20261110_book.json": {
+      "questions": 180,
+      "stems_in_db": 180
+    },
+    "politics_g2_first_20261110_book.json": {
+      "questions": 73,
+      "stems_in_db": 73
+    },
+    "politics_g3_first_20261110_book.json": {
+      "questions": 72,
+      "stems_in_db": 72
+    },
+    "politics_g4_first_20261110_book.json": {
+      "questions": 72,
+      "stems_in_db": 72
+    },
+    "politics_g6_first_20261110_book.json": {
+      "questions": 72,
+      "stems_in_db": 72
+    },
+    "politics_g7_first_20261110_book.json": {
+      "questions": 72,
+      "stems_in_db": 72
+    }
+  },
+  "all_book_stems_in_db": true,
+  "import_tail": [
+    "english/g4/english_g4_first_20261110_book.json: 教材已存在，章节 +0/~8，知识点 +39/~1，题目 +144，跳过重复 0",
+    "english/g5/english_g5_first_20261110_book.json: 教材已存在，章节 +0/~8，知识点 +39/~1，题目 +144，跳过重复 0",
+    "english/g6/english_g6_first_20261110_book.json: 教材已存在，章节 +0/~6，知识点 +29/~1，题目 +108，跳过重复 0",
+    "english/g7/english_g7_first_20261110_book.json: 教材已存在，章节 +0/~6，知识点 +29/~1，题目 +108，跳过重复 0",
+    "english/g9/english_g9_first_20261110_book.json: 教材已存在，章节 +0/~6，知识点 +29/~1，题目 +108，跳过重复 0",
+    "geography/g7/geography_g7_first_20261110_book.json: 教材已存在，章节 +0/~6，知识点 +30/~0，题目 +108，跳过重复 0",
+    "history/g7/history_g7_first_20261110_book.json: 教材已存在，章节 +0/~4，知识点 +20/~0，题目 +72，跳过重复 0",
+    "math/g2/math_g2_first_20261110_book.json: 已导入且文件未变，跳过（manifest）",
+    "math/g3/math_g3_first_20261110_book.json: 教材已存在，章节 +0/~8，知识点 +40/~0，题目 +144，跳过重复 0",
+    "math/g4/math_g4_first_20261110_book.json: 教材已存在，章节 +0/~12，知识点 +60/~0，题目 +216，跳过重复 0",
+    "math/g5/math_g5_first_20261110_book.json: 教材已存在，章节 +0/~12，知识点 +60/~0，题目 +216，跳过重复 0",
+    "math/g6/math_g6_first_20261110_book.json: 教材已存在，章节 +0/~13，知识点 +65/~0，题目 +234，跳过重复 0",
+    "math/g7/math_g7_first_20261110_book.json: 教材已存在，章节 +0/~6，知识点 +30/~0，题目 +108，跳过重复 0",
+    "math/g9/math_g9_first_20261110_book.json: 教材已存在，章节 +0/~7，知识点 +35/~0，题目 +126，跳过重复 0",
+    "physics/g9/physics_g9_first_20261110_book.json: 教材已存在，章节 +0/~10，知识点 +50/~0，题目 +180，跳过重复 0",
+    "politics/g2/politics_g2_first_20261110_book.json: 教材已存在，章节 +0/~4，知识点 +20/~0，题目 +73，跳过重复 0",
+    "politics/g3/politics_g3_first_20261110_book.json: 教材已存在，章节 +0/~4，知识点 +20/~0，题目 +72，跳过重复 0",
+    "politics/g4/politics_g4_first_20261110_book.json: 教材已存在，章节 +0/~4，知识点 +20/~0，题目 +72，跳过重复 0",
+    "politics/g6/politics_g6_first_20261110_book.json: 教材已存在，章节 +0/~4，知识点 +20/~0，题目 +72，跳过重复 0",
+    "politics/g7/politics_g7_first_20261110_book.json: 教材已存在，章节 +0/~4，知识点 +20/~0，题目 +72，跳过重复 0"
+  ]
+}

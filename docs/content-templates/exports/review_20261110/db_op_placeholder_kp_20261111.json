@@ -1,0 +1,903 @@
+{
+ "op": "delete_placeholder_kp",
+ "time": "2026-11-11T02:55:07",
+ "reason": "11-07 08:51 生成的“样章·…”演示节点（55 section + 110 point），0 题、0 更深子节点、无 prerequisites / kp_study_states / mastery_scores 引用，属模板残留，清出学生端目录",
+ "sections": [
+  {
+   "id": 76,
+   "name": "样章·道德与法治·观点与材料",
+   "subject": "politics",
+   "grade": 2
+  },
+  {
+   "id": 115,
+   "name": "样章·道德与法治·观点与材料",
+   "subject": "politics",
+   "grade": 3
+  },
+  {
+   "id": 118,
+   "name": "样章·数与式·运算基础",
+   "subject": "math",
+   "grade": 4
+  },
+  {
+   "id": 121,
+   "name": "样章·现代文阅读·词句赏析",
+   "subject": "chinese",
+   "grade": 4
+  },
+  {
+   "id": 124,
+   "name": "样章·Grammar in use",
+   "subject": "english",
+   "grade": 4
+  },
+  {
+   "id": 127,
+   "name": "样章·道德与法治·观点与材料",
+   "subject": "politics",
+   "grade": 4
+  },
+  {
+   "id": 130,
+   "name": "样章·数与式·运算基础",
+   "subject": "math",
+   "grade": 5
+  },
+  {
+   "id": 133,
+   "name": "样章·现代文阅读·词句赏析",
+   "subject": "chinese",
+   "grade": 5
+  },
+  {
+   "id": 136,
+   "name": "样章·Grammar in use",
+   "subject": "english",
+   "grade": 5
+  },
+  {
+   "id": 139,
+   "name": "样章·道德与法治·观点与材料",
+   "subject": "politics",
+   "grade": 5
+  },
+  {
+   "id": 142,
+   "name": "样章·数与式·运算基础",
+   "subject": "math",
+   "grade": 6
+  },
+  {
+   "id": 145,
+   "name": "样章·现代文阅读·词句赏析",
+   "subject": "chinese",
+   "grade": 6
+  },
+  {
+   "id": 148,
+   "name": "样章·Grammar in use",
+   "subject": "english",
+   "grade": 6
+  },
+  {
+   "id": 151,
+   "name": "样章·道德与法治·观点与材料",
+   "subject": "politics",
+   "grade": 6
+  },
+  {
+   "id": 154,
+   "name": "样章·现代文阅读·词句赏析",
+   "subject": "chinese",
+   "grade": 7
+  },
+  {
+   "id": 157,
+   "name": "样章·数与式·运算基础",
+   "subject": "math",
+   "grade": 7
+  },
+  {
+   "id": 160,
+   "name": "样章·Grammar in use",
+   "subject": "english",
+   "grade": 7
+  },
+  {
+   "id": 163,
+   "name": "样章·生物体的结构与功能",
+   "subject": "biology",
+   "grade": 7
+  },
+  {
+   "id": 166,
+   "name": "样章·中国古代史·时序与制度",
+   "subject": "history",
+   "grade": 7
+  },
+  {
+   "id": 169,
+   "name": "样章·地图与世界地理",
+   "subject": "geography",
+   "grade": 7
+  },
+  {
+   "id": 172,
+   "name": "样章·道德与法治·观点与材料",
+   "subject": "politics",
+   "grade": 7
+  },
+  {
+   "id": 199,
+   "name": "样章·现代文阅读·词句赏析",
+   "subject": "chinese",
+   "grade": 9
+  },
+  {
+   "id": 202,
+   "name": "样章·数与式·运算基础",
+   "subject": "math",
+   "grade": 9
+  },
+  {
+   "id": 205,
+   "name": "样章·Grammar in use",
+   "subject": "english",
+   "grade": 9
+  },
+  {
+   "id": 208,
+   "name": "样章·力学基础",
+   "subject": "physics",
+   "grade": 9
+  },
+  {
+   "id": 211,
+   "name": "样章·化学用语与基本概念",
+   "subject": "chemistry",
+   "grade": 9
+  },
+  {
+   "id": 214,
+   "name": "样章·中国古代史·时序与制度",
+   "subject": "history",
+   "grade": 9
+  },
+  {
+   "id": 217,
+   "name": "样章·道德与法治·观点与材料",
+   "subject": "politics",
+   "grade": 9
+  },
+  {
+   "id": 220,
+   "name": "样章·现代文阅读·词句赏析",
+   "subject": "chinese",
+   "grade": 10
+  },
+  {
+   "id": 223,
+   "name": "样章·数与式·运算基础",
+   "subject": "math",
+   "grade": 10
+  },
+  {
+   "id": 226,
+   "name": "样章·Grammar in use",
+   "subject": "english",
+   "grade": 10
+  },
+  {
+   "id": 229,
+   "name": "样章·力学基础",
+   "subject": "physics",
+   "grade": 10
+  },
+  {
+   "id": 232,
+   "name": "样章·化学用语与基本概念",
+   "subject": "chemistry",
+   "grade": 10
+  },
+  {
+   "id": 235,
+   "name": "样章·生物体的结构与功能",
+   "subject": "biology",
+   "grade": 10
+  },
+  {
+   "id": 238,
+   "name": "样章·中国古代史·时序与制度",
+   "subject": "history",
+   "grade": 10
+  },
+  {
+   "id": 241,
+   "name": "样章·地图与世界地理",
+   "subject": "geography",
+   "grade": 10
+  },
+  {
+   "id": 244,
+   "name": "样章·道德与法治·观点与材料",
+   "subject": "politics",
+   "grade": 10
+  },
+  {
+   "id": 247,
+   "name": "样章·现代文阅读·词句赏析",
+   "subject": "chinese",
+   "grade": 11
+  },
+  {
+   "id": 250,
+   "name": "样章·数与式·运算基础",
+   "subject": "math",
+   "grade": 11
+  },
+  {
+   "id": 253,
+   "name": "样章·Grammar in use",
+   "subject": "english",
+   "grade": 11
+  },
+  {
+   "id": 256,
+   "name": "样章·力学基础",
+   "subject": "physics",
+   "grade": 11
+  },
+  {
+   "id": 259,
+   "name": "样章·化学用语与基本概念",
+   "subject": "chemistry",
+   "grade": 11
+  },
+  {
+   "id": 262,
+   "name": "样章·生物体的结构与功能",
+   "subject": "biology",
+   "grade": 11
+  },
+  {
+   "id": 265,
+   "name": "样章·中国古代史·时序与制度",
+   "subject": "history",
+   "grade": 11
+  },
+  {
+   "id": 268,
+   "name": "样章·地图与世界地理",
+   "subject": "geography",
+   "grade": 11
+  },
+  {
+   "id": 271,
+   "name": "样章·道德与法治·观点与材料",
+   "subject": "politics",
+   "grade": 11
+  },
+  {
+   "id": 274,
+   "name": "样章·现代文阅读·词句赏析",
+   "subject": "chinese",
+   "grade": 12
+  },
+  {
+   "id": 277,
+   "name": "样章·数与式·运算基础",
+   "subject": "math",
+   "grade": 12
+  },
+  {
+   "id": 280,
+   "name": "样章·Grammar in use",
+   "subject": "english",
+   "grade": 12
+  },
+  {
+   "id": 283,
+   "name": "样章·力学基础",
+   "subject": "physics",
+   "grade": 12
+  },
+  {
+   "id": 286,
+   "name": "样章·化学用语与基本概念",
+   "subject": "chemistry",
+   "grade": 12
+  },
+  {
+   "id": 289,
+   "name": "样章·生物体的结构与功能",
+   "subject": "biology",
+   "grade": 12
+  },
+  {
+   "id": 292,
+   "name": "样章·中国古代史·时序与制度",
+   "subject": "history",
+   "grade": 12
+  },
+  {
+   "id": 295,
+   "name": "样章·地图与世界地理",
+   "subject": "geography",
+   "grade": 12
+  },
+  {
+   "id": 298,
+   "name": "样章·道德与法治·观点与材料",
+   "subject": "politics",
+   "grade": 12
+  }
+ ],
+ "points": [
+  {
+   "id": 77,
+   "parent_id": 76,
+   "name": "核心观点"
+  },
+  {
+   "id": 78,
+   "parent_id": 76,
+   "name": "答题方法"
+  },
+  {
+   "id": 116,
+   "parent_id": 115,
+   "name": "核心观点"
+  },
+  {
+   "id": 117,
+   "parent_id": 115,
+   "name": "答题方法"
+  },
+  {
+   "id": 119,
+   "parent_id": 118,
+   "name": "有理数与代数式"
+  },
+  {
+   "id": 120,
+   "parent_id": 118,
+   "name": "方程与函数初步"
+  },
+  {
+   "id": 122,
+   "parent_id": 121,
+   "name": "赏析句子的方法"
+  },
+  {
+   "id": 123,
+   "parent_id": 121,
+   "name": "病句与标点"
+  },
+  {
+   "id": 125,
+   "parent_id": 124,
+   "name": "Tenses 时态"
+  },
+  {
+   "id": 126,
+   "parent_id": 124,
+   "name": "Vocabulary & reading"
+  },
+  {
+   "id": 128,
+   "parent_id": 127,
+   "name": "核心观点"
+  },
+  {
+   "id": 129,
+   "parent_id": 127,
+   "name": "答题方法"
+  },
+  {
+   "id": 131,
+   "parent_id": 130,
+   "name": "有理数与代数式"
+  },
+  {
+   "id": 132,
+   "parent_id": 130,
+   "name": "方程与函数初步"
+  },
+  {
+   "id": 134,
+   "parent_id": 133,
+   "name": "赏析句子的方法"
+  },
+  {
+   "id": 135,
+   "parent_id": 133,
+   "name": "病句与标点"
+  },
+  {
+   "id": 137,
+   "parent_id": 136,
+   "name": "Tenses 时态"
+  },
+  {
+   "id": 138,
+   "parent_id": 136,
+   "name": "Vocabulary & reading"
+  },
+  {
+   "id": 140,
+   "parent_id": 139,
+   "name": "核心观点"
+  },
+  {
+   "id": 141,
+   "parent_id": 139,
+   "name": "答题方法"
+  },
+  {
+   "id": 143,
+   "parent_id": 142,
+   "name": "有理数与代数式"
+  },
+  {
+   "id": 144,
+   "parent_id": 142,
+   "name": "方程与函数初步"
+  },
+  {
+   "id": 146,
+   "parent_id": 145,
+   "name": "赏析句子的方法"
+  },
+  {
+   "id": 147,
+   "parent_id": 145,
+   "name": "病句与标点"
+  },
+  {
+   "id": 149,
+   "parent_id": 148,
+   "name": "Tenses 时态"
+  },
+  {
+   "id": 150,
+   "parent_id": 148,
+   "name": "Vocabulary & reading"
+  },
+  {
+   "id": 152,
+   "parent_id": 151,
+   "name": "核心观点"
+  },
+  {
+   "id": 153,
+   "parent_id": 151,
+   "name": "答题方法"
+  },
+  {
+   "id": 155,
+   "parent_id": 154,
+   "name": "赏析句子的方法"
+  },
+  {
+   "id": 156,
+   "parent_id": 154,
+   "name": "病句与标点"
+  },
+  {
+   "id": 158,
+   "parent_id": 157,
+   "name": "有理数与代数式"
+  },
+  {
+   "id": 159,
+   "parent_id": 157,
+   "name": "方程与函数初步"
+  },
+  {
+   "id": 161,
+   "parent_id": 160,
+   "name": "Tenses 时态"
+  },
+  {
+   "id": 162,
+   "parent_id": 160,
+   "name": "Vocabulary & reading"
+  },
+  {
+   "id": 164,
+   "parent_id": 163,
+   "name": "细胞与生物体"
+  },
+  {
+   "id": 165,
+   "parent_id": 163,
+   "name": "光合作用与呼吸作用"
+  },
+  {
+   "id": 167,
+   "parent_id": 166,
+   "name": "重大时序"
+  },
+  {
+   "id": 168,
+   "parent_id": 166,
+   "name": "制度演变"
+  },
+  {
+   "id": 170,
+   "parent_id": 169,
+   "name": "地图基础"
+  },
+  {
+   "id": 171,
+   "parent_id": 169,
+   "name": "气候与地形"
+  },
+  {
+   "id": 173,
+   "parent_id": 172,
+   "name": "核心观点"
+  },
+  {
+   "id": 174,
+   "parent_id": 172,
+   "name": "答题方法"
+  },
+  {
+   "id": 200,
+   "parent_id": 199,
+   "name": "赏析句子的方法"
+  },
+  {
+   "id": 201,
+   "parent_id": 199,
+   "name": "病句与标点"
+  },
+  {
+   "id": 203,
+   "parent_id": 202,
+   "name": "有理数与代数式"
+  },
+  {
+   "id": 204,
+   "parent_id": 202,
+   "name": "方程与函数初步"
+  },
+  {
+   "id": 206,
+   "parent_id": 205,
+   "name": "Tenses 时态"
+  },
+  {
+   "id": 207,
+   "parent_id": 205,
+   "name": "Vocabulary & reading"
+  },
+  {
+   "id": 209,
+   "parent_id": 208,
+   "name": "运动与力"
+  },
+  {
+   "id": 210,
+   "parent_id": 208,
+   "name": "压强与浮力"
+  },
+  {
+   "id": 212,
+   "parent_id": 211,
+   "name": "元素与化学式"
+  },
+  {
+   "id": 213,
+   "parent_id": 211,
+   "name": "化学方程式"
+  },
+  {
+   "id": 215,
+   "parent_id": 214,
+   "name": "重大时序"
+  },
+  {
+   "id": 216,
+   "parent_id": 214,
+   "name": "制度演变"
+  },
+  {
+   "id": 218,
+   "parent_id": 217,
+   "name": "核心观点"
+  },
+  {
+   "id": 219,
+   "parent_id": 217,
+   "name": "答题方法"
+  },
+  {
+   "id": 221,
+   "parent_id": 220,
+   "name": "赏析句子的方法"
+  },
+  {
+   "id": 222,
+   "parent_id": 220,
+   "name": "病句与标点"
+  },
+  {
+   "id": 224,
+   "parent_id": 223,
+   "name": "有理数与代数式"
+  },
+  {
+   "id": 225,
+   "parent_id": 223,
+   "name": "方程与函数初步"
+  },
+  {
+   "id": 227,
+   "parent_id": 226,
+   "name": "Tenses 时态"
+  },
+  {
+   "id": 228,
+   "parent_id": 226,
+   "name": "Vocabulary & reading"
+  },
+  {
+   "id": 230,
+   "parent_id": 229,
+   "name": "运动与力"
+  },
+  {
+   "id": 231,
+   "parent_id": 229,
+   "name": "压强与浮力"
+  },
+  {
+   "id": 233,
+   "parent_id": 232,
+   "name": "元素与化学式"
+  },
+  {
+   "id": 234,
+   "parent_id": 232,
+   "name": "化学方程式"
+  },
+  {
+   "id": 236,
+   "parent_id": 235,
+   "name": "细胞与生物体"
+  },
+  {
+   "id": 237,
+   "parent_id": 235,
+   "name": "光合作用与呼吸作用"
+  },
+  {
+   "id": 239,
+   "parent_id": 238,
+   "name": "重大时序"
+  },
+  {
+   "id": 240,
+   "parent_id": 238,
+   "name": "制度演变"
+  },
+  {
+   "id": 242,
+   "parent_id": 241,
+   "name": "地图基础"
+  },
+  {
+   "id": 243,
+   "parent_id": 241,
+   "name": "气候与地形"
+  },
+  {
+   "id": 245,
+   "parent_id": 244,
+   "name": "核心观点"
+  },
+  {
+   "id": 246,
+   "parent_id": 244,
+   "name": "答题方法"
+  },
+  {
+   "id": 248,
+   "parent_id": 247,
+   "name": "赏析句子的方法"
+  },
+  {
+   "id": 249,
+   "parent_id": 247,
+   "name": "病句与标点"
+  },
+  {
+   "id": 251,
+   "parent_id": 250,
+   "name": "有理数与代数式"
+  },
+  {
+   "id": 252,
+   "parent_id": 250,
+   "name": "方程与函数初步"
+  },
+  {
+   "id": 254,
+   "parent_id": 253,
+   "name": "Tenses 时态"
+  },
+  {
+   "id": 255,
+   "parent_id": 253,
+   "name": "Vocabulary & reading"
+  },
+  {
+   "id": 257,
+   "parent_id": 256,
+   "name": "运动与力"
+  },
+  {
+   "id": 258,
+   "parent_id": 256,
+   "name": "压强与浮力"
+  },
+  {
+   "id": 260,
+   "parent_id": 259,
+   "name": "元素与化学式"
+  },
+  {
+   "id": 261,
+   "parent_id": 259,
+   "name": "化学方程式"
+  },
+  {
+   "id": 263,
+   "parent_id": 262,
+   "name": "细胞与生物体"
+  },
+  {
+   "id": 264,
+   "parent_id": 262,
+   "name": "光合作用与呼吸作用"
+  },
+  {
+   "id": 266,
+   "parent_id": 265,
+   "name": "重大时序"
+  },
+  {
+   "id": 267,
+   "parent_id": 265,
+   "name": "制度演变"
+  },
+  {
+   "id": 269,
+   "parent_id": 268,
+   "name": "地图基础"
+  },
+  {
+   "id": 270,
+   "parent_id": 268,
+   "name": "气候与地形"
+  },
+  {
+   "id": 272,
+   "parent_id": 271,
+   "name": "核心观点"
+  },
+  {
+   "id": 273,
+   "parent_id": 271,
+   "name": "答题方法"
+  },
+  {
+   "id": 275,
+   "parent_id": 274,
+   "name": "赏析句子的方法"
+  },
+  {
+   "id": 276,
+   "parent_id": 274,
+   "name": "病句与标点"
+  },
+  {
+   "id": 278,
+   "parent_id": 277,
+   "name": "有理数与代数式"
+  },
+  {
+   "id": 279,
+   "parent_id": 277,
+   "name": "方程与函数初步"
+  },
+  {
+   "id": 281,
+   "parent_id": 280,
+   "name": "Tenses 时态"
+  },
+  {
+   "id": 282,
+   "parent_id": 280,
+   "name": "Vocabulary & reading"
+  },
+  {
+   "id": 284,
+   "parent_id": 283,
+   "name": "运动与力"
+  },
+  {
+   "id": 285,
+   "parent_id": 283,
+   "name": "压强与浮力"
+  },
+  {
+   "id": 287,
+   "parent_id": 286,
+   "name": "元素与化学式"
+  },
+  {
+   "id": 288,
+   "parent_id": 286,
+   "name": "化学方程式"
+  },
+  {
+   "id": 290,
+   "parent_id": 289,
+   "name": "细胞与生物体"
+  },
+  {
+   "id": 291,
+   "parent_id": 289,
+   "name": "光合作用与呼吸作用"
+  },
+  {
+   "id": 293,
+   "parent_id": 292,
+   "name": "重大时序"
+  },
+  {
+   "id": 294,
+   "parent_id": 292,
+   "name": "制度演变"
+  },
+  {
+   "id": 296,
+   "parent_id": 295,
+   "name": "地图基础"
+  },
+  {
+   "id": 297,
+   "parent_id": 295,
+   "name": "气候与地形"
+  },
+  {
+   "id": 299,
+   "parent_id": 298,
+   "name": "核心观点"
+  },
+  {
+   "id": 300,
+   "parent_id": 298,
+   "name": "答题方法"
+  }
+ ],
+ "stats_before": {
+  "textbooks": 146,
+  "chapters": 618,
+  "knowledge_points": 2206,
+  "questions": 6436
+ },
+ "backup": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\build\\backups\\ailearning-backup-20261111-0302-phclean.db",
+ "rollback": "Copy-Item -Force \"D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\build\\backups\\ailearning-backup-20261111-0302-phclean.db\" \"D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\ailearning_dev.db\"",
+ "stats_after": {
+  "textbooks": 146,
+  "chapters": 618,
+  "knowledge_points": 2041,
+  "questions": 6436
+ }
+}

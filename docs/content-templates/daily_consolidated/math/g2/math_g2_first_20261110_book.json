@@ -1,0 +1,2579 @@
+{
+  "subject": "math",
+  "grade": 2,
+  "version": "北师大版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第一单元 100以内数加与减（二）",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "两位数加两位数的进位",
+      "parent": "第一单元 100以内数加与减（二）",
+      "order_index": 1,
+      "explanation": "个位相加满十向十位进1，十位相加时要加上进位的1。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "两位数减两位数的退位",
+      "parent": "第一单元 100以内数加与减（二）",
+      "order_index": 2,
+      "explanation": "个位不够减，从十位退1当10，与个位合起来再减。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "连加与加减混合运算",
+      "parent": "第一单元 100以内数加与减（二）",
+      "order_index": 3,
+      "explanation": "连加、加减混合按从左到右依次算，也可以先凑整再算。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "求比一个数多几或少几",
+      "parent": "第一单元 100以内数加与减（二）",
+      "order_index": 4,
+      "explanation": "求比某数多几用加法，求少几用减法，先找准比较的标准量。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二单元 测量（一）",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "厘米与米的认识",
+      "parent": "第二单元 测量（一）",
+      "order_index": 1,
+      "explanation": "量较短物体用厘米，量较长距离用米，1米等于100厘米。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "用刻度尺量物体长度",
+      "parent": "第二单元 测量（一）",
+      "order_index": 2,
+      "explanation": "物体一端对准0刻度，另一端所对刻度就是它的长度。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "米与厘米的换算",
+      "parent": "第二单元 测量（一）",
+      "order_index": 3,
+      "explanation": "1米是100厘米，几米就是几个100厘米，半米是50厘米。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "长度的估测与比较",
+      "parent": "第二单元 测量（一）",
+      "order_index": 4,
+      "explanation": "先记住1厘米约一个指甲宽、1米约双臂长，再估后量。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第三单元 数一数与乘法",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "相同加数连加的计数",
+      "parent": "第三单元 数一数与乘法",
+      "order_index": 1,
+      "explanation": "一排几个、共几排，用同数连加求总数，加数相同才能改乘法。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "乘法算式的意义",
+      "parent": "第三单元 数一数与乘法",
+      "order_index": 2,
+      "explanation": "3×4表示3个4相加，也表示4个3相加，结果都是12。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "连加算式改写成乘法",
+      "parent": "第三单元 数一数与乘法",
+      "order_index": 3,
+      "explanation": "数清相同加数是几、出现几次，写成几乘几，结果不变。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "乘法算式的读法与各部分",
+      "parent": "第三单元 数一数与乘法",
+      "order_index": 4,
+      "explanation": "2×5读作2乘5，2和5叫乘数，算出的结果叫积。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第四单元 乘法口诀（一）",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "5的乘法口诀",
+      "parent": "第四单元 乘法口诀（一）",
+      "order_index": 1,
+      "explanation": "一五得五到五五二十五，每句后一个数比前一句多5。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "2和3的乘法口诀",
+      "parent": "第四单元 乘法口诀（一）",
+      "order_index": 2,
+      "explanation": "二二得四、二三得六、三三得九，相邻两句差2或差3。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "4的乘法口诀",
+      "parent": "第四单元 乘法口诀（一）",
+      "order_index": 3,
+      "explanation": "一四得四到四四十六，四的口诀每句多4。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "用2到5的口诀求积",
+      "parent": "第四单元 乘法口诀（一）",
+      "order_index": 4,
+      "explanation": "算几乘几先想对应口诀，口诀末尾的数就是积。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第五单元 分一分与除法",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "平均分的意义",
+      "parent": "第五单元 分一分与除法",
+      "order_index": 1,
+      "explanation": "每份分得同样多叫平均分，分之前先定好要分成几份。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "除法算式的写法",
+      "parent": "第五单元 分一分与除法",
+      "order_index": 2,
+      "explanation": "总数除以份数得每份数，除号前是被除数，后面是除数。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "用乘法口诀求商",
+      "parent": "第五单元 分一分与除法",
+      "order_index": 3,
+      "explanation": "算几除以几，想除数乘几得被除数，那个几就是商。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "按每份个数平均分",
+      "parent": "第五单元 分一分与除法",
+      "order_index": 4,
+      "explanation": "每几个分一份，求能分几份，也用除法，商就是份数。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第六单元 图形的运动（一）",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "轴对称图形的判断",
+      "parent": "第六单元 图形的运动（一）",
+      "order_index": 1,
+      "explanation": "沿一条直线对折，两边完全重合的图形是轴对称图形。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "寻找对称轴",
+      "parent": "第六单元 图形的运动（一）",
+      "order_index": 2,
+      "explanation": "折痕所在的直线叫对称轴，正方形4条，长方形2条。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "平移现象",
+      "parent": "第六单元 图形的运动（一）",
+      "order_index": 3,
+      "explanation": "物体沿直线移动，形状大小和方向都不变，这种运动叫平移。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "旋转现象",
+      "parent": "第六单元 图形的运动（一）",
+      "order_index": 4,
+      "explanation": "物体绕一个点或轴转动，方向改变但大小形状不变，叫旋转。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第七单元 乘法口诀（二）",
+      "order_index": 7
+    },
+    {
+      "node_type": "point",
+      "name": "6的乘法口诀",
+      "parent": "第七单元 乘法口诀（二）",
+      "order_index": 1,
+      "explanation": "一六得六到六六三十六，每多一个6，得数就多6。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "7的乘法口诀",
+      "parent": "第七单元 乘法口诀（二）",
+      "order_index": 2,
+      "explanation": "一七得七到七七四十九，相邻两句得数相差7。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "8和9的乘法口诀",
+      "parent": "第七单元 乘法口诀（二）",
+      "order_index": 3,
+      "explanation": "八八六十四、九九八十一，可用前一句加8或加9推出。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "用6到9口诀求积",
+      "parent": "第七单元 乘法口诀（二）",
+      "order_index": 4,
+      "explanation": "看到算式先找对应口诀，口诀最后两个数就是积。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第八单元 乘除法的应用（一）",
+      "order_index": 8
+    },
+    {
+      "node_type": "point",
+      "name": "用乘法求几个几的总数",
+      "parent": "第八单元 乘除法的应用（一）",
+      "order_index": 1,
+      "explanation": "每份数乘份数得总数，先找准每份是几、共有几份。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "用除法平均分",
+      "parent": "第八单元 乘除法的应用（一）",
+      "order_index": 2,
+      "explanation": "总数除以份数得每份数；总数除以每份数得份数。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "乘除法的一步应用",
+      "parent": "第八单元 乘除法的应用（一）",
+      "order_index": 3,
+      "explanation": "求一共多少用乘法，求每份或份数用除法，先读清问题。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "口诀求商与乘除互验",
+      "parent": "第八单元 乘除法的应用（一）",
+      "order_index": 4,
+      "explanation": "用口诀算除法，再用商乘除数，看是否回到被除数。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一单元 100以内数加与减（二）",
+      "order_index": 1,
+      "summary": "练习两位数进位加、退位减、连加混合与比多比少问题。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "36+27的结果是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "36+27=63；B漏进位，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "两位数加两位数的进位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "63",
+            "53",
+            "62",
+            "73"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "45+38，个位5加8得（  ），满十进1。",
+          "answer": {
+            "value": "13个一"
+          },
+          "analysis": "5+8得13个一，满十向十位进1。",
+          "difficulty": 2,
+          "knowledge_point": "两位数加两位数的进位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "48+25=63，对吗？",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "48+25得73，不是63，判F",
+          "difficulty": 3,
+          "knowledge_point": "两位数加两位数的进位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "小明有29张卡片，又买18张，共几张？写算式。",
+          "answer": {
+            "value": "29+18得47张，共47张。"
+          },
+          "analysis": "①29+18=47得2分；②答47张1分。",
+          "difficulty": 4,
+          "knowledge_point": "两位数加两位数的进位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "文具店有58支笔，卖19支又卖21支，剩几支？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "58-19得39，再减21得18，所以选A",
+          "difficulty": 3,
+          "knowledge_point": "两位数加两位数的进位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "18支",
+            "38支",
+            "28支",
+            "19支"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "52-28的结果是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "52-28=24；B未退位，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "两位数减两位数的退位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "24",
+            "34",
+            "26",
+            "36"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "64-37的个位不够减，退1当（  ）",
+          "answer": {
+            "value": "10个一"
+          },
+          "analysis": "退1当10个一，与4合成14再减。",
+          "difficulty": 2,
+          "knowledge_point": "两位数减两位数的退位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "70-45=35，对吗？",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "70-40得30，再减5得25，判F",
+          "difficulty": 3,
+          "knowledge_point": "两位数减两位数的退位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "书架有61本书，借走26本，剩几本？写算式。",
+          "answer": {
+            "value": "先算61-20得41，再减6得35本。"
+          },
+          "analysis": "①61-26=35得2分；②答35本1分。",
+          "difficulty": 4,
+          "knowledge_point": "两位数减两位数的退位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "小明折42只纸鹤，小红少15只，共几只？",
+          "answer": {
+            "value": "42-15得27，再加42得69只。"
+          },
+          "analysis": "①求小红27只2分；②共69只1分；③单位1分。",
+          "difficulty": 4,
+          "knowledge_point": "两位数减两位数的退位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "24+18+32的结果是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "24+18得42，加32得74，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "连加与加减混合运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "74",
+            "64",
+            "72",
+            "84"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "17+26+13，先算17+13得（  ）。",
+          "answer": {
+            "value": "30"
+          },
+          "analysis": "17+13=30，再算30+26得56。",
+          "difficulty": 2,
+          "knowledge_point": "连加与加减混合运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "80-26-14=40，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "26+14得40，80减40得40，判T",
+          "difficulty": 3,
+          "knowledge_point": "连加与加减混合运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "车上38人，下车15人上车9人，现有几人？",
+          "answer": {
+            "value": "38-15得23，再加9得32人。"
+          },
+          "analysis": "①38-15+9=32得2分；②答32人1分。",
+          "difficulty": 4,
+          "knowledge_point": "连加与加减混合运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "比45多18的数是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "45+18=63；B用了减法，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "求比一个数多几或少几",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "63",
+            "27",
+            "53",
+            "65"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "比72少25的数是（  ）。",
+          "answer": {
+            "value": "47"
+          },
+          "analysis": "72-25=47，少几用减法。",
+          "difficulty": 2,
+          "knowledge_point": "求比一个数多几或少几",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "红花30朵，黄花比红花多12朵，黄花有42朵。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "30+12得42，多几用加，判T",
+          "difficulty": 3,
+          "knowledge_point": "求比一个数多几或少几",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "二班有34人，一班比二班少7人，一班几人？",
+          "answer": {
+            "value": "34-7得27人，一班27人。"
+          },
+          "analysis": "①34-7=27得2分；②答27人1分。",
+          "difficulty": 4,
+          "knowledge_point": "求比一个数多几或少几",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第二单元 测量（一）",
+      "order_index": 2,
+      "summary": "认识厘米和米，会量长度、换算单位并估测物体长度。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "量数学书边长用（  ）合适",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "书边较短用厘米，其余非长度单位，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "厘米与米的认识",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "厘米",
+            "米",
+            "时",
+            "克"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "1米里面有（  ）个1厘米。",
+          "answer": {
+            "value": "100个"
+          },
+          "analysis": "1米是100厘米，即100个1厘米。",
+          "difficulty": 2,
+          "knowledge_point": "厘米与米的认识",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "教室门高约2米，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "门比1米高，约2米合理，判T",
+          "difficulty": 3,
+          "knowledge_point": "厘米与米的认识",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "量黑板的长，你选米还是厘米？说明理由。",
+          "answer": {
+            "value": "选米。黑板很长，用厘米要数很多次，米更方便。"
+          },
+          "analysis": "①选米1分；②说清黑板长1分；③理由1分。",
+          "difficulty": 4,
+          "knowledge_point": "厘米与米的认识",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "黑板长4米，换成厘米是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "4个100得400，所以选A",
+          "difficulty": 3,
+          "knowledge_point": "厘米与米的认识",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "400厘米",
+            "40厘米",
+            "4厘米",
+            "100厘米"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "橡皮左端对0，右端对4，长（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "右端刻度4即4厘米，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "用刻度尺量物体长度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "4厘米",
+            "3厘米",
+            "5厘米",
+            "4米"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "从刻度2量到刻度7，物体长（  ）厘米。",
+          "answer": {
+            "value": "5"
+          },
+          "analysis": "7-2=5，两端刻度相减得5厘米。",
+          "difficulty": 2,
+          "knowledge_point": "用刻度尺量物体长度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "量物体时一端对0，另一端对6，长6厘米。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "0到6相差6，长6厘米，判T",
+          "difficulty": 3,
+          "knowledge_point": "用刻度尺量物体长度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "小尺断了，从3量到9，纸条多长？写算式。",
+          "answer": {
+            "value": "9-3得6，纸条长6厘米。"
+          },
+          "analysis": "①9-3=6得2分；②答6厘米1分。",
+          "difficulty": 4,
+          "knowledge_point": "用刻度尺量物体长度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "红丝带1米，蓝丝带85厘米，哪条长，长多少？",
+          "answer": {
+            "value": "1米是100厘米，100-85得15厘米，红的长15厘米。"
+          },
+          "analysis": "①100-85=15得2分；②答红的长1分。",
+          "difficulty": 4,
+          "knowledge_point": "用刻度尺量物体长度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "3米等于（  ）厘米",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "3×100得300，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "米与厘米的换算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "300",
+            "30",
+            "100",
+            "3"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "2米50厘米等于（  ）厘米。",
+          "answer": {
+            "value": "250"
+          },
+          "analysis": "2米是200厘米，200+50=250。",
+          "difficulty": 2,
+          "knowledge_point": "米与厘米的换算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "1米30厘米就是130厘米，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "100+30=130，判T",
+          "difficulty": 3,
+          "knowledge_point": "米与厘米的换算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "绳子长1米，剪去40厘米，剩几厘米？",
+          "answer": {
+            "value": "1米是100厘米，100-40得60厘米。"
+          },
+          "analysis": "①100-40=60得2分；②答60厘米1分。",
+          "difficulty": 4,
+          "knowledge_point": "米与厘米的换算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "一根新铅笔长约（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "铅笔约一拃，18厘米合理，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "长度的估测与比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "18厘米",
+            "18米",
+            "2厘米",
+            "2米"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "食指宽约1（  ），填单位。",
+          "answer": {
+            "value": "厘米"
+          },
+          "analysis": "食指宽约1厘米，填厘米。",
+          "difficulty": 2,
+          "knowledge_point": "长度的估测与比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "小明身高120米，对吗？",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "身高约120厘米，不是米，判F",
+          "difficulty": 3,
+          "knowledge_point": "长度的估测与比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "不用尺子，估一估课桌长约多少？再写验证办法。",
+          "answer": {
+            "value": "估约60厘米。再用尺子从0量到另一端核对。"
+          },
+          "analysis": "①估约60厘米1分；②用尺量验证1分。",
+          "difficulty": 4,
+          "knowledge_point": "长度的估测与比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第三单元 数一数与乘法",
+      "order_index": 3,
+      "summary": "从同数连加引出乘法，会写乘法式、读式并说出各部分名。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "4排桌子每排3张，共几张？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "4个3相加得12，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "相同加数连加的计数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "12张",
+            "7张",
+            "9张",
+            "10张"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "3个6连加，得数是（  ）。",
+          "answer": {
+            "value": "18"
+          },
+          "analysis": "6+6+6=18，填18。",
+          "difficulty": 2,
+          "knowledge_point": "相同加数连加的计数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "2+2+2+2+2=10，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "5个2相加得10，判T",
+          "difficulty": 3,
+          "knowledge_point": "相同加数连加的计数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "摆3堆棋子每堆4颗，共几颗？写连加式。",
+          "answer": {
+            "value": "4+4+4得12颗，一共12颗。"
+          },
+          "analysis": "①4+4+4=12得2分；②答12颗1分。",
+          "difficulty": 4,
+          "knowledge_point": "相同加数连加的计数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "每袋装5个球，装了4袋，共几个？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "4个5连加得20，所以选A",
+          "difficulty": 3,
+          "knowledge_point": "相同加数连加的计数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "20个",
+            "9个",
+            "15个",
+            "25个"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "3×4表示（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "3×4是3个4连加，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "乘法算式的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "3个4相加",
+            "3加4",
+            "4减3",
+            "3个3"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "2×5表示（  ）个5相加。",
+          "answer": {
+            "value": "2"
+          },
+          "analysis": "2×5=10，即2个5，填2。",
+          "difficulty": 2,
+          "knowledge_point": "乘法算式的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "4×2和2×4的得数相同，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "都是8，交换乘数积不变，判T",
+          "difficulty": 3,
+          "knowledge_point": "乘法算式的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用算式表示6个3相加，并算出得数。",
+          "answer": {
+            "value": "3×6得18，也可写6×3得18。"
+          },
+          "analysis": "①3×6=18得2分；②答18给1分。",
+          "difficulty": 4,
+          "knowledge_point": "乘法算式的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "摆4行方块每行6块，写乘法式并求总数。",
+          "answer": {
+            "value": "4个6连加，写6×4得24块。"
+          },
+          "analysis": "①6×4=24得2分；②答24块1分。",
+          "difficulty": 4,
+          "knowledge_point": "乘法算式的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "7+7+7+7改写成乘法是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "4个7相加是7×4，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "连加算式改写成乘法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "7×4",
+            "7+4",
+            "7-4",
+            "4+7"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "6+6+6+6+6写成（  ）×（  ）。",
+          "answer": {
+            "value": [
+              "6",
+              "5"
+            ]
+          },
+          "analysis": "5个6连加，写6×5得30。",
+          "difficulty": 2,
+          "knowledge_point": "连加算式改写成乘法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "5+5+5可以写成3×5，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "3个5相加即3×5，判T",
+          "difficulty": 3,
+          "knowledge_point": "连加算式改写成乘法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "把2+2+2+2+2+2改写成乘法并求积。",
+          "answer": {
+            "value": "6个2连加，写2×6得12。"
+          },
+          "analysis": "①2×6=12得2分；②答12给1分。",
+          "difficulty": 4,
+          "knowledge_point": "连加算式改写成乘法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "4×3读作（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "4×3读作4乘3，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "乘法算式的读法与各部分",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "4乘3",
+            "4加3",
+            "3除4",
+            "4个3"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "在3×5=15里，15叫作（  ）。",
+          "answer": {
+            "value": "积"
+          },
+          "analysis": "乘得的结果叫积，填积。",
+          "difficulty": 2,
+          "knowledge_point": "乘法算式的读法与各部分",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "5×2读作5乘以2，对吗？",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "应读5乘2，不读乘以，判F",
+          "difficulty": 3,
+          "knowledge_point": "乘法算式的读法与各部分",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出4×6的读法、乘数和积。",
+          "answer": {
+            "value": "读4乘6；乘数是4和6；积是24。"
+          },
+          "analysis": "①读法1分；②乘数1分；③积24给1分。",
+          "difficulty": 4,
+          "knowledge_point": "乘法算式的读法与各部分",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第四单元 乘法口诀（一）",
+      "order_index": 4,
+      "summary": "熟记2到5的乘法口诀，用口诀快速算出乘法算式的积。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "5×4的口诀是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "4个5用四五二十，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "5的乘法口诀",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "四五二十",
+            "五四二十",
+            "五五二十五",
+            "四四十六"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "三五（  ），补全口诀。",
+          "answer": {
+            "value": "十五"
+          },
+          "analysis": "3个5相加得15，填十五。",
+          "difficulty": 2,
+          "knowledge_point": "5的乘法口诀",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "5×5=25，口诀是五五二十五。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "五五二十五得25，判T",
+          "difficulty": 3,
+          "knowledge_point": "5的乘法口诀",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "一盒5支彩笔，3盒几支？写口诀和算式。",
+          "answer": {
+            "value": "口诀三五十五，5×3得15支。"
+          },
+          "analysis": "①5×3=15得2分；②答15支1分。",
+          "difficulty": 4,
+          "knowledge_point": "5的乘法口诀",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "买3支5角铅笔，共几角？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "三五十五，3×5得15，所以选A",
+          "difficulty": 3,
+          "knowledge_point": "5的乘法口诀",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "15角",
+            "8角",
+            "10角",
+            "20角"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "3×3得（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "三三得九，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "2和3的乘法口诀",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "9",
+            "6",
+            "12",
+            "8"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "二（  ）得六，补全口诀。",
+          "answer": {
+            "value": "三"
+          },
+          "analysis": "2×3得6，口诀二三得六，填三。",
+          "difficulty": 2,
+          "knowledge_point": "2和3的乘法口诀",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "2×4=8用口诀二四得八，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "二四得八，积是8，判T",
+          "difficulty": 3,
+          "knowledge_point": "2和3的乘法口诀",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "每只小船坐3人，2只坐几人？写口诀。",
+          "answer": {
+            "value": "口诀二三得六，3×2得6人。"
+          },
+          "analysis": "①3×2=6得2分；②答6人1分。",
+          "difficulty": 4,
+          "knowledge_point": "2和3的乘法口诀",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "每组4人共5组，用口诀求总人数。",
+          "answer": {
+            "value": "口诀四五二十，4×5得20人。"
+          },
+          "analysis": "①4×5=20得2分；②答20人1分。",
+          "difficulty": 4,
+          "knowledge_point": "2和3的乘法口诀",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "4×4的结果是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "四四十六，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "4的乘法口诀",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "16",
+            "12",
+            "8",
+            "20"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "4×3用口诀（  ）十二。",
+          "answer": {
+            "value": "三四"
+          },
+          "analysis": "3个4是12，口诀三四十二，填三四。",
+          "difficulty": 2,
+          "knowledge_point": "4的乘法口诀",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "四四十六，所以4×4=16，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "4个4连加得16，判T",
+          "difficulty": 3,
+          "knowledge_point": "4的乘法口诀",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "4张桌子每桌坐2人，共几人？写口诀。",
+          "answer": {
+            "value": "口诀二四得八，2×4得8人。"
+          },
+          "analysis": "①2×4=8得2分；②答8人1分。",
+          "difficulty": 4,
+          "knowledge_point": "4的乘法口诀",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "5×2得（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "二五一十，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "用2到5的口诀求积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "10",
+            "7",
+            "12",
+            "25"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "3×5得（  ），想口诀三五十五。",
+          "answer": {
+            "value": "15"
+          },
+          "analysis": "3×5=15，所以填15。",
+          "difficulty": 2,
+          "knowledge_point": "用2到5的口诀求积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "算4×5要用口诀四五二十，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "四五二十，积为20，判T",
+          "difficulty": 3,
+          "knowledge_point": "用2到5的口诀求积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "5个盘子每盘4个苹果，共几个？写口诀。",
+          "answer": {
+            "value": "口诀四五二十，4×5得20个。"
+          },
+          "analysis": "①4×5=20得2分；②答20个1分。",
+          "difficulty": 4,
+          "knowledge_point": "用2到5的口诀求积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第五单元 分一分与除法",
+      "order_index": 5,
+      "summary": "理解平均分，会写除法算式并用2到5的口诀求商。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "把6个桃分给2人，平均分每人（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "6÷2=3，每份同样多，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "平均分的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "3个",
+            "2个",
+            "4个",
+            "6个"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "把8块糖平均放4盘，每盘（  ）块。",
+          "answer": {
+            "value": "2"
+          },
+          "analysis": "8÷4=2，填2块。",
+          "difficulty": 2,
+          "knowledge_point": "平均分的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "把9个梨分成3份，每份3个是平均分。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "3份都是3个，同样多，判T",
+          "difficulty": 3,
+          "knowledge_point": "平均分的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "12颗珠子平均分给3人，每人几颗？写除法式。",
+          "answer": {
+            "value": "12÷3得4颗，每人4颗。"
+          },
+          "analysis": "①12÷3=4得2分；②答4颗1分。",
+          "difficulty": 4,
+          "knowledge_point": "平均分的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "把12块饼平均分给3人，每人几块？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "12÷3=4，每人4块，所以选A",
+          "difficulty": 3,
+          "knowledge_point": "平均分的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "4块",
+            "3块",
+            "6块",
+            "9块"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "15÷3中，3叫作（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "除号后的数是除数，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "除法算式的写法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "除数",
+            "被除数",
+            "商",
+            "积"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "10÷2=5里，5叫作（  ）。",
+          "answer": {
+            "value": "商"
+          },
+          "analysis": "除得的结果叫商，填商。",
+          "difficulty": 2,
+          "knowledge_point": "除法算式的写法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "20÷4读作20除4，对吗？",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "应读20除以4，判F",
+          "difficulty": 3,
+          "knowledge_point": "除法算式的写法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "18个橘子平均装6袋，写除法式并读出来。",
+          "answer": {
+            "value": "18÷6得3，读作18除以6。"
+          },
+          "analysis": "①18÷6=3得2分；②读法1分。",
+          "difficulty": 4,
+          "knowledge_point": "除法算式的写法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "有15朵花，每3朵扎一束，能扎几束？",
+          "answer": {
+            "value": "15÷3得5束，能扎5束。"
+          },
+          "analysis": "①15÷3=5得2分；②答5束1分。",
+          "difficulty": 4,
+          "knowledge_point": "除法算式的写法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "20÷4的商是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "四五二十，商是5，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "用乘法口诀求商",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "5",
+            "4",
+            "6",
+            "16"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "15÷5，想（  ）五十五，商是3。",
+          "answer": {
+            "value": "三"
+          },
+          "analysis": "三五十五，商为3，填三。",
+          "difficulty": 2,
+          "knowledge_point": "用乘法口诀求商",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "算12÷3，想三四十二，商是4。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "3×4得12，商为4，判T",
+          "difficulty": 3,
+          "knowledge_point": "用乘法口诀求商",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "20个气球每5个一束，能扎几束？写算式。",
+          "answer": {
+            "value": "想四五二十，20÷5得4束。"
+          },
+          "analysis": "①20÷5=4得2分；②答4束1分。",
+          "difficulty": 4,
+          "knowledge_point": "用乘法口诀求商",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "12根小棒每3根一份，分（  ）份",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "12÷3=4，能分4份，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "按每份个数平均分",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "4份",
+            "3份",
+            "6份",
+            "9份"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "10个扣子每2个一份，分（  ）份。",
+          "answer": {
+            "value": "5"
+          },
+          "analysis": "10÷2=5，填5份。",
+          "difficulty": 2,
+          "knowledge_point": "按每份个数平均分",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "8个果每4个一盘，能放2盘。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "8÷4=2，正好2盘，判T",
+          "difficulty": 3,
+          "knowledge_point": "按每份个数平均分",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "16块饼干每4块装一袋，能装几袋？写式。",
+          "answer": {
+            "value": "16÷4得4袋，能装4袋。"
+          },
+          "analysis": "①16÷4=4得2分；②答4袋1分。",
+          "difficulty": 4,
+          "knowledge_point": "按每份个数平均分",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第六单元 图形的运动（一）",
+      "order_index": 6,
+      "summary": "辨认轴对称图形，会找对称轴，区分平移和旋转现象。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "下面图形对折能重合的是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "正方形对折重合，其余不一定，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "轴对称图形的判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "正方形",
+            "不等边三角形",
+            "直角梯形",
+            "任意四边形"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "长方形沿中线对折，两边能（  ）。",
+          "answer": {
+            "value": "重合"
+          },
+          "analysis": "对折后两边完全重合，填重合。",
+          "difficulty": 2,
+          "knowledge_point": "轴对称图形的判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "圆形无论怎么对折都能重合，是轴对称图形。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "过圆心的折痕都重合，判T",
+          "difficulty": 3,
+          "knowledge_point": "轴对称图形的判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "举出教室里一个轴对称物品，说理由。",
+          "answer": {
+            "value": "黑板。沿竖直中线对折，左右两边一样大能重合。"
+          },
+          "analysis": "①举例1分；②说对折重合1分；③合理1分。",
+          "difficulty": 4,
+          "knowledge_point": "轴对称图形的判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "剪纸时把纸对折再剪，展开后两边（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "对折剪出轴对称，两边重合，所以选A",
+          "difficulty": 3,
+          "knowledge_point": "轴对称图形的判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "完全重合",
+            "一大一小",
+            "方向相反",
+            "变成两半"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "正方形有几条对称轴？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "两中线加两对角共4条，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "寻找对称轴",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "4条",
+            "2条",
+            "1条",
+            "3条"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "长方形的对称轴共（  ）。",
+          "answer": {
+            "value": "2条"
+          },
+          "analysis": "横竖各一条，共2条，填2条。",
+          "difficulty": 2,
+          "knowledge_point": "寻找对称轴",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "圆的对称轴只有1条，对吗？",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "过圆心的直线都是，有无数条，判F",
+          "difficulty": 3,
+          "knowledge_point": "寻找对称轴",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出等腰三角形对称轴的位置并说明理由。",
+          "answer": {
+            "value": "在顶角到底边中点的连线上，沿它对折两边重合。"
+          },
+          "analysis": "①位置1分；②说对折重合2分。",
+          "difficulty": 4,
+          "knowledge_point": "寻找对称轴",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "推箱子是平移还是旋转？从方向和形状说理由。",
+          "answer": {
+            "value": "是平移。箱子沿地面直走，方向不变，形状也不变。"
+          },
+          "analysis": "①判平移1分；②说方向与形状2分。",
+          "difficulty": 4,
+          "knowledge_point": "寻找对称轴",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "电梯上下移动属于（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "沿直线升降方向不变，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "平移现象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "平移",
+            "旋转",
+            "轴对称",
+            "翻折"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "推拉窗的移动是（  ）现象。",
+          "answer": {
+            "value": "平移"
+          },
+          "analysis": "窗扇沿轨道直走，是平移。",
+          "difficulty": 2,
+          "knowledge_point": "平移现象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "升国旗时旗子向上移动是平移。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "旗子直线上移，方向不变，判T",
+          "difficulty": 3,
+          "knowledge_point": "平移现象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "举一个家里的平移例子，说它怎么动。",
+          "answer": {
+            "value": "抽屉。拉出时沿直线向外，盒子形状方向都不变。"
+          },
+          "analysis": "①举例1分；②说清直线与方向2分。",
+          "difficulty": 4,
+          "knowledge_point": "平移现象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "风车叶片的转动属于（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "绕中心轴转，方向变，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "旋转现象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "旋转",
+            "平移",
+            "对称",
+            "缩放"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "钟表指针走动是（  ）现象。",
+          "answer": {
+            "value": "旋转"
+          },
+          "analysis": "指针绕中心转，是旋转。",
+          "difficulty": 2,
+          "knowledge_point": "旋转现象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "荡秋千时人的运动是平移。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "绕横梁来回摆，是旋转，判F",
+          "difficulty": 3,
+          "knowledge_point": "旋转现象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说一说转盘转动为什么算旋转。",
+          "answer": {
+            "value": "转盘绕中心轴转，方向一直变，大小和形状不变。"
+          },
+          "analysis": "①绕中心1分；②说方向变化2分。",
+          "difficulty": 4,
+          "knowledge_point": "旋转现象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第七单元 乘法口诀（二）",
+      "order_index": 7,
+      "summary": "熟记6到9的乘法口诀，用口诀求积并解决简单问题。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "6×7的得数是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "六七四十二，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "6的乘法口诀",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "42",
+            "36",
+            "48",
+            "40"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "6×8用口诀（  ）四十八。",
+          "answer": {
+            "value": "六八"
+          },
+          "analysis": "6个8是48，口诀六八四十八。",
+          "difficulty": 2,
+          "knowledge_point": "6的乘法口诀",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "六六三十六，所以6×6=36。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "6个6连加得36，判T",
+          "difficulty": 3,
+          "knowledge_point": "6的乘法口诀",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "一周6节课，4周共几节？写口诀。",
+          "answer": {
+            "value": "口诀四六二十四，6×4得24节。"
+          },
+          "analysis": "①6×4=24得2分；②答24节1分。",
+          "difficulty": 4,
+          "knowledge_point": "6的乘法口诀",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "6只小船每只坐8人，共坐几人？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "六八四十八，6×8得48，所以选A",
+          "difficulty": 3,
+          "knowledge_point": "6的乘法口诀",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "48人",
+            "42人",
+            "54人",
+            "36人"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "7×7的结果是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "七七四十九，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "7的乘法口诀",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "49",
+            "42",
+            "56",
+            "47"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "7×6想口诀（  ）四十二。",
+          "answer": {
+            "value": "六七"
+          },
+          "analysis": "6个7是42，口诀六七四十二。",
+          "difficulty": 2,
+          "knowledge_point": "7的乘法口诀",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "五七三十五，所以7×5=35。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "5个7相加得35，判T",
+          "difficulty": 3,
+          "knowledge_point": "7的乘法口诀",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "每天读7页书，读5天共几页？写口诀。",
+          "answer": {
+            "value": "口诀五七三十五，7×5得35页。"
+          },
+          "analysis": "①7×5=35得2分；②答35页1分。",
+          "difficulty": 4,
+          "knowledge_point": "7的乘法口诀",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "买7本9元的本子，共花多少？写口诀和式。",
+          "answer": {
+            "value": "口诀七九六十三，9×7得63元。"
+          },
+          "analysis": "①9×7=63得2分；②答63元1分。",
+          "difficulty": 4,
+          "knowledge_point": "7的乘法口诀",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "8×8的结果是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "八八六十四，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "8和9的乘法口诀",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "64",
+            "56",
+            "72",
+            "48"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "9×6用口诀（  ）五十四。",
+          "answer": {
+            "value": "六九"
+          },
+          "analysis": "6个9得54，口诀六九五十四。",
+          "difficulty": 2,
+          "knowledge_point": "8和9的乘法口诀",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "九九八十一，9×9=81，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "9个9连加得81，判T",
+          "difficulty": 3,
+          "knowledge_point": "8和9的乘法口诀",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "9盒彩笔每盒8支，共几支？写口诀。",
+          "answer": {
+            "value": "口诀八九七十二，8×9得72支。"
+          },
+          "analysis": "①8×9=72得2分；②答72支1分。",
+          "difficulty": 4,
+          "knowledge_point": "8和9的乘法口诀",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "6×9得（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "六九五十四，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "用6到9口诀求积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "54",
+            "45",
+            "56",
+            "63"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "7×8得（  ），想口诀七八五十六。",
+          "answer": {
+            "value": "56"
+          },
+          "analysis": "7×8=56，填56。",
+          "difficulty": 2,
+          "knowledge_point": "用6到9口诀求积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "算8×7用口诀七八五十六，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "七八五十六，积为56，判T",
+          "difficulty": 3,
+          "knowledge_point": "用6到9口诀求积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "每层楼9级台阶，走8层共几级？写式。",
+          "answer": {
+            "value": "口诀八九七十二，9×8得72级。"
+          },
+          "analysis": "①9×8=72得2分；②答72级1分。",
+          "difficulty": 4,
+          "knowledge_point": "用6到9口诀求积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第八单元 乘除法的应用（一）",
+      "order_index": 8,
+      "summary": "用乘法求总数、用除法平均分，会选法列式并验算。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "每盒6支笔，5盒共几支？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "6×5=30，5个6，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "用乘法求几个几的总数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "30支",
+            "11支",
+            "24支",
+            "36支"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "每行7个座位，4行共（  ）个。",
+          "answer": {
+            "value": "28"
+          },
+          "analysis": "7×4=28，填28个。",
+          "difficulty": 2,
+          "knowledge_point": "用乘法求几个几的总数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "8个盘子每盘3个果，共24个。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "3×8=24，判T",
+          "difficulty": 3,
+          "knowledge_point": "用乘法求几个几的总数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "每组9人，有6组，一共几人？写算式。",
+          "answer": {
+            "value": "9×6得54人，一共54人。"
+          },
+          "analysis": "①9×6=54得2分；②答54人1分。",
+          "difficulty": 4,
+          "knowledge_point": "用乘法求几个几的总数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "54个同学每9人一队，可分几队？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "54÷9=6，六九五十四，所以选A",
+          "difficulty": 3,
+          "knowledge_point": "用乘法求几个几的总数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "6队",
+            "7队",
+            "8队",
+            "5队"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "42个球平均分给6班，每班（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "42÷6=7，口诀六七四十二，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "用除法平均分",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "7个",
+            "6个",
+            "8个",
+            "36个"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "56颗糖每8颗一袋，装（  ）袋。",
+          "answer": {
+            "value": "7"
+          },
+          "analysis": "56÷8=7，填7袋。",
+          "difficulty": 2,
+          "knowledge_point": "用除法平均分",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "把36本书分给9人，每人4本。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "36÷9=4，正好分完，判T",
+          "difficulty": 3,
+          "knowledge_point": "用除法平均分",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "48个苹果平均装8箱，每箱几个？写式。",
+          "answer": {
+            "value": "48÷8得6个，每箱6个。"
+          },
+          "analysis": "①48÷8=6得2分；②答6个1分。",
+          "difficulty": 4,
+          "knowledge_point": "用除法平均分",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "8盒彩笔每盒7支，平均分给4班，每班几支？",
+          "answer": {
+            "value": "8×7得56支，56÷4得14支，每班14支。"
+          },
+          "analysis": "①8×7=56得2分；②56÷4=14得1分。",
+          "difficulty": 4,
+          "knowledge_point": "用除法平均分",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "求5个8一共多少，用（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "求几个几的总数用乘，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "乘除法的一步应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "8×5",
+            "8+5",
+            "8-5",
+            "8÷5"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "把30平均分成5份，列式（  ）。",
+          "answer": {
+            "value": "30÷5"
+          },
+          "analysis": "求每份用除，30÷5得6。",
+          "difficulty": 2,
+          "knowledge_point": "乘除法的一步应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "有24人，每4人一组，求组数用除法。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "求能分几份用除，判T",
+          "difficulty": 3,
+          "knowledge_point": "乘除法的一步应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "35个座位每排7个，能排几排？",
+          "answer": {
+            "value": "求份数用除法，35÷7得5排。"
+          },
+          "analysis": "①35÷7=5得2分；②答5排1分。",
+          "difficulty": 4,
+          "knowledge_point": "乘除法的一步应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "54÷9的商，用口诀（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "9×6得54，商是6，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "口诀求商与乘除互验",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "六九五十四",
+            "五九四十五",
+            "七九六十三",
+            "四九三十六"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "63÷7得（  ），想七九六十三。",
+          "answer": {
+            "value": "9"
+          },
+          "analysis": "7×9=63，商为9，填9。",
+          "difficulty": 2,
+          "knowledge_point": "口诀求商与乘除互验",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "算40÷8，想五八四十，商是5。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "8×5得40，商为5，判T",
+          "difficulty": 3,
+          "knowledge_point": "口诀求商与乘除互验",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "算72÷8，写出口诀并验算。",
+          "answer": {
+            "value": "口诀八九七十二，商9；9×8得72，对了。"
+          },
+          "analysis": "①72÷8=9得2分；②验算1分。",
+          "difficulty": 4,
+          "knowledge_point": "口诀求商与乘除互验",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-11T02:29:22+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

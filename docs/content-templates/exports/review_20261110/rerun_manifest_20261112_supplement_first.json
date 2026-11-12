@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "stamp": "20261112",
+  "out_dir": "docs/content-templates/daily_rerun",
+  "status": "pending_review（入库待评审后决策）",
+  "packs": [
+    {
+      "pack": "history_g9_first",
+      "book": "history/g9",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\history\\g9\\history_g9_first_20261112_book.json",
+      "stats": {
+        "chapters": 7,
+        "points": 28,
+        "questions": 140
+      },
+      "errors": []
+    },
+    {
+      "pack": "politics_g5_first",
+      "book": "politics/g5",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g5\\politics_g5_first_20261112_book.json",
+      "stats": {
+        "chapters": 4,
+        "points": 16,
+        "questions": 80
+      },
+      "errors": []
+    },
+    {
+      "pack": "politics_g9_first",
+      "book": "politics/g9",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g9\\politics_g9_first_20261112_book.json",
+      "stats": {
+        "chapters": 4,
+        "points": 16,
+        "questions": 80
+      },
+      "errors": []
+    }
+  ]
+}

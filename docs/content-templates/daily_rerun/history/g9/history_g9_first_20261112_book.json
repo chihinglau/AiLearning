@@ -1,0 +1,2584 @@
+{
+  "subject": "history",
+  "grade": 9,
+  "version": "部编版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第一单元 文明的产生和古代亚非文明",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "人类文明的产生",
+      "parent": "第一单元 文明的产生和古代亚非文明",
+      "order_index": 1,
+      "explanation": "农业出现后出现剩余产品，进而产生私有制、阶级和国家，人类进入文明时代。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "古代埃及文明",
+      "parent": "第一单元 文明的产生和古代亚非文明",
+      "order_index": 2,
+      "explanation": "尼罗河孕育古埃及文明，金字塔与象形文字是其代表成就。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "古代两河流域文明",
+      "parent": "第一单元 文明的产生和古代亚非文明",
+      "order_index": 3,
+      "explanation": "两河流域孕育古巴比伦文明，《汉谟拉比法典》是重要遗产。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "古代印度文明",
+      "parent": "第一单元 文明的产生和古代亚非文明",
+      "order_index": 4,
+      "explanation": "印度河流域出现早期文明，种姓制度与佛教影响深远。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二单元 古代欧洲文明",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "古希腊城邦与雅典民主",
+      "parent": "第二单元 古代欧洲文明",
+      "order_index": 1,
+      "explanation": "希腊城邦小国寡民，雅典形成公民直接参与的直接民主。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "亚历山大帝国与希腊化时代",
+      "parent": "第二单元 古代欧洲文明",
+      "order_index": 2,
+      "explanation": "亚历山大东征建立横跨欧亚非的帝国，促进东西方文化交流。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "古罗马的兴起与帝国",
+      "parent": "第二单元 古代欧洲文明",
+      "order_index": 3,
+      "explanation": "罗马由城邦发展为共和国，再演变为帝国，疆域横跨欧亚非。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "罗马法",
+      "parent": "第二单元 古代欧洲文明",
+      "order_index": 4,
+      "explanation": "从《十二铜表法》到《民法大全》，罗马法体系逐步完备，影响深远。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第三单元 封建时代的欧洲",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "西欧封建等级制度",
+      "parent": "第三单元 封建时代的欧洲",
+      "order_index": 1,
+      "explanation": "封君封臣制以土地封赐为纽带，形成层层分封的等级关系。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "西欧庄园与农奴",
+      "parent": "第三单元 封建时代的欧洲",
+      "order_index": 2,
+      "explanation": "庄园是西欧中世纪基本的经济和社会单位，农奴受庄园主剥削。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "西欧城市的兴起与大学",
+      "parent": "第三单元 封建时代的欧洲",
+      "order_index": 3,
+      "explanation": "10世纪后工商业发展推动城市复兴，城市争取自治，大学兴起。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "基督教会的地位",
+      "parent": "第三单元 封建时代的欧洲",
+      "order_index": 4,
+      "explanation": "中世纪的基督教会拥有巨大经济与精神权力，影响社会生活各方面。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第四单元 中古时期的亚洲、非洲和美洲",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "阿拉伯帝国",
+      "parent": "第四单元 中古时期的亚洲、非洲和美洲",
+      "order_index": 1,
+      "explanation": "阿拉伯帝国横跨三洲，传播伊斯兰文化，沟通东西方。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "日本的大化改新与幕府",
+      "parent": "第四单元 中古时期的亚洲、非洲和美洲",
+      "order_index": 2,
+      "explanation": "7世纪大化改新学习唐制建立中央集权，后进入幕府统治。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "奥斯曼帝国与亚洲其他政权",
+      "parent": "第四单元 中古时期的亚洲、非洲和美洲",
+      "order_index": 3,
+      "explanation": "奥斯曼帝国控制东西交通要道，对世界贸易格局产生重要影响。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "非洲与美洲的中古文明",
+      "parent": "第四单元 中古时期的亚洲、非洲和美洲",
+      "order_index": 4,
+      "explanation": "东非、西非古国与美洲玛雅、阿兹特克、印加文明各具特色。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第五单元 走向近代",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "西欧经济与社会的变化",
+      "parent": "第五单元 走向近代",
+      "order_index": 1,
+      "explanation": "租地农场和手工工场出现，推动西欧向近代社会过渡。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "文艺复兴",
+      "parent": "第五单元 走向近代",
+      "order_index": 2,
+      "explanation": "14世纪起意大利兴起文艺复兴，核心是人文主义。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "新航路的开辟",
+      "parent": "第五单元 走向近代",
+      "order_index": 3,
+      "explanation": "15世纪末起欧洲人开辟通往亚洲、美洲的新航线，世界开始连为一体。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "早期殖民扩张",
+      "parent": "第五单元 走向近代",
+      "order_index": 4,
+      "explanation": "新航路开辟后西欧国家展开殖民掠夺，形成三角贸易。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第六单元 资本主义制度的初步确立",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "英国资产阶级革命",
+      "parent": "第六单元 资本主义制度的初步确立",
+      "order_index": 1,
+      "explanation": "1640年革命爆发，1688年光荣革命后确立君主立宪制。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "美国独立战争",
+      "parent": "第六单元 资本主义制度的初步确立",
+      "order_index": 2,
+      "explanation": "1775年战争爆发，1776年《独立宣言》宣告独立，1787年制定宪法。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "法国大革命与拿破仑帝国",
+      "parent": "第六单元 资本主义制度的初步确立",
+      "order_index": 3,
+      "explanation": "1789年法国大革命爆发，《人权宣言》宣示自由平等，拿破仑帝国对外扩张。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "资本主义制度的确立与扩展",
+      "parent": "第六单元 资本主义制度的初步确立",
+      "order_index": 4,
+      "explanation": "英、美、法确立资本主义制度，19世纪中期俄、日等国以改革方式走上资本主义道路。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第七单元 第一次工业革命和马克思主义的诞生",
+      "order_index": 7
+    },
+    {
+      "node_type": "point",
+      "name": "第一次工业革命的进程",
+      "parent": "第七单元 第一次工业革命和马克思主义的诞生",
+      "order_index": 1,
+      "explanation": "18世纪60年代始于英国，珍妮机与改良蒸汽机推动机器大生产。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "工业革命的影响",
+      "parent": "第七单元 第一次工业革命和马克思主义的诞生",
+      "order_index": 2,
+      "explanation": "工业革命推动生产力飞跃，也带来社会结构变化与贫富分化。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "马克思主义的诞生",
+      "parent": "第七单元 第一次工业革命和马克思主义的诞生",
+      "order_index": 3,
+      "explanation": "1848年《共产党宣言》发表，标志马克思主义诞生。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "巴黎公社",
+      "parent": "第七单元 第一次工业革命和马克思主义的诞生",
+      "order_index": 4,
+      "explanation": "1871年巴黎人民起义建立公社，是无产阶级建立政权的第一次伟大尝试。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一单元 文明的产生和古代亚非文明",
+      "order_index": 1,
+      "summary": "人类文明产生与古埃及、古巴比伦、古印度文明。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "人类文明产生的前提是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "农业提供了稳定剩余产品。",
+          "difficulty": 2,
+          "knowledge_point": "人类文明的产生",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "农业的出现与发展",
+            "铁器的普及",
+            "纸币的使用",
+            "蒸汽机的发明"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "私有制、阶级和国家产生的根本原因是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "生产力发展导致剩余与分化。",
+          "difficulty": 3,
+          "knowledge_point": "人类文明的产生",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "生产力的发展",
+            "战争频繁",
+            "宗教信仰",
+            "人口减少"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "人类进入文明时代的重要标志之一是（ ）的出现（填「文字」或「城市」，两者皆可，此处作答为文字）。",
+          "answer": {
+            "value": "文字"
+          },
+          "analysis": "文字是文明时代的重要标志。",
+          "difficulty": 3,
+          "knowledge_point": "人类文明的产生",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "最初的文明多产生于大河流域。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "尼罗河、两河、印度河、黄河等流域孕育早期文明。",
+          "difficulty": 3,
+          "knowledge_point": "人类文明的产生",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "简述人类文明产生的基本过程（不超过三句话）。",
+          "answer": {
+            "value": "示例：农业和畜牧出现后有了剩余产品；剩余产品的占有差异产生私有制和阶级；阶级矛盾与公共事务需要推动国家产生，人类由此进入文明时代。"
+          },
+          "analysis": "评分要点：农业—剩余—私有制阶级—国家。",
+          "difficulty": 4,
+          "knowledge_point": "人类文明的产生",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "古埃及文明依托的河流是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "尼罗河定期泛滥带来肥沃淤泥。",
+          "difficulty": 2,
+          "knowledge_point": "古代埃及文明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "尼罗河",
+            "幼发拉底河",
+            "印度河",
+            "恒河"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "金字塔的主要功能是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "金字塔为法老陵墓，体现王权与建筑水平。",
+          "difficulty": 2,
+          "knowledge_point": "古代埃及文明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "法老的陵墓",
+            "商业仓库",
+            "学校",
+            "水利工程"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "古埃及人创造的文字是（ ）文字。",
+          "answer": {
+            "value": "象形"
+          },
+          "analysis": "古埃及使用象形文字。",
+          "difficulty": 3,
+          "knowledge_point": "古代埃及文明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "尼罗河的定期泛滥有利于农业生产。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "泛滥带来肥沃淤泥，便于耕作。",
+          "difficulty": 2,
+          "knowledge_point": "古代埃及文明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明金字塔能反映古埃及哪些社会状况（写出两点）。",
+          "answer": {
+            "value": "示例：反映法老至高无上的权威和国家的强大组织能力；反映劳动人民的智慧与沉重负担。"
+          },
+          "analysis": "评分要点：两点且方向正确。",
+          "difficulty": 4,
+          "knowledge_point": "古代埃及文明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "两河流域指的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "两河即幼发拉底河与底格里斯河。",
+          "difficulty": 2,
+          "knowledge_point": "古代两河流域文明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "幼发拉底河与底格里斯河",
+            "尼罗河与刚果河",
+            "印度河与恒河",
+            "长江与黄河"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "《汉谟拉比法典》属于（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "该法典为古巴比伦王国产物。",
+          "difficulty": 3,
+          "knowledge_point": "古代两河流域文明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "古巴比伦",
+            "古埃及",
+            "古印度",
+            "古希腊"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "两河流域的居民创造的文字是（ ）文字。",
+          "answer": {
+            "value": "楔形"
+          },
+          "analysis": "用芦苇杆在泥板上刻写，形成楔形文字。",
+          "difficulty": 3,
+          "knowledge_point": "古代两河流域文明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《汉谟拉比法典》是世界上现存最早的较为完整的成文法典之一。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "该法典以成文形式系统规定社会关系。",
+          "difficulty": 3,
+          "knowledge_point": "古代两河流域文明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明《汉谟拉比法典》的历史价值。",
+          "answer": {
+            "value": "示例：以成文法形式维护奴隶主利益、规范社会秩序，是研究古巴比伦社会经济与法律的重要史料。"
+          },
+          "analysis": "评分要点：史料价值 + 阶级实质。",
+          "difficulty": 4,
+          "knowledge_point": "古代两河流域文明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "古印度种姓制度中地位最高的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "婆罗门为祭司阶层，居首位。",
+          "difficulty": 3,
+          "knowledge_point": "古代印度文明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "婆罗门",
+            "刹帝利",
+            "吠舍",
+            "首陀罗"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "佛教的创始人是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "释迦牟尼创立佛教。",
+          "difficulty": 2,
+          "knowledge_point": "古代印度文明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "释迦牟尼",
+            "穆罕默德",
+            "耶稣",
+            "孔子"
+          ]
+        },
+        {
+          "q_type": "multiple",
+          "stem": "古印度种姓制度包括的等级有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓ 祭司；B ✓ 王族武士；C ✓ 平民商人；D ✗ 骑士属西欧封建等级。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "古代印度文明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "婆罗门",
+            "刹帝利",
+            "吠舍",
+            "骑士"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "种姓制度下各等级之间界限森严，职业世袭。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "种姓制度强调等级世袭与隔离。",
+          "difficulty": 3,
+          "knowledge_point": "古代印度文明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明种姓制度对古印度社会的影响。",
+          "answer": {
+            "value": "示例：维护了统治秩序，也造成社会长期分裂与底层民众受压迫，阻碍社会流动。"
+          },
+          "analysis": "评分要点：秩序 + 压迫两面。",
+          "difficulty": 4,
+          "knowledge_point": "古代印度文明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第二单元 古代欧洲文明",
+      "order_index": 2,
+      "summary": "古希腊城邦与民主、亚历山大帝国、古罗马的兴起与法律。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "古希腊城邦的突出特点是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "城邦面积小、人口少。",
+          "difficulty": 2,
+          "knowledge_point": "古希腊城邦与雅典民主",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "小国寡民",
+            "地广人多",
+            "中央集权",
+            "政教合一"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "雅典民主政治的最高权力机关是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "公民大会是最高权力机关。",
+          "difficulty": 3,
+          "knowledge_point": "古希腊城邦与雅典民主",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "公民大会",
+            "元老院",
+            "执政官",
+            "教会"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "雅典民主政治在（ ）执政时期达到全盛。",
+          "answer": {
+            "value": "伯里克利"
+          },
+          "analysis": "伯里克利时期雅典民主鼎盛。",
+          "difficulty": 4,
+          "knowledge_point": "古希腊城邦与雅典民主",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "雅典民主是全体居民共同享有的民主。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "妇女、外邦人和奴隶被排除在外，是少数人的民主。",
+          "difficulty": 4,
+          "knowledge_point": "古希腊城邦与雅典民主",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "评价雅典民主政治的进步性与局限性各一点。",
+          "answer": {
+            "value": "示例：进步性在于公民直接参与国家管理，激发公民积极性；局限在于享有民主的只是成年男性公民，妇女、奴隶和外邦人被排除。"
+          },
+          "analysis": "评分要点：进步与局限各一点。",
+          "difficulty": 5,
+          "knowledge_point": "古希腊城邦与雅典民主",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "亚历山大帝国的建立者是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "马其顿国王亚历山大东征建立帝国。",
+          "difficulty": 2,
+          "knowledge_point": "亚历山大帝国与希腊化时代",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "亚历山大",
+            "凯撒",
+            "屋大维",
+            "查理曼"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "亚历山大东征的积极影响之一是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "东征客观上促进文化交融。",
+          "difficulty": 3,
+          "knowledge_point": "亚历山大帝国与希腊化时代",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "促进东西方文化交流",
+            "彻底消灭战争",
+            "建立民主制度",
+            "推广蒸汽机"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "亚历山大东征后，希腊文化与东方文化交融形成的时代被称为（ ）时代。",
+          "answer": {
+            "value": "希腊化"
+          },
+          "analysis": "史称希腊化时代。",
+          "difficulty": 4,
+          "knowledge_point": "亚历山大帝国与希腊化时代",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "亚历山大东征给被征服地区带来了沉重灾难。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "东征伴随掠夺与破坏。",
+          "difficulty": 3,
+          "knowledge_point": "亚历山大帝国与希腊化时代",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明为什么评价亚历山大东征要兼顾两个方面。",
+          "answer": {
+            "value": "示例：东征造成破坏与奴役，是侵略行为；同时客观上打通欧亚非通道，推动希腊文化与东方文化交融，因此须辩证评价。"
+          },
+          "analysis": "评分要点：破坏 + 客观促进。",
+          "difficulty": 5,
+          "knowledge_point": "亚历山大帝国与希腊化时代",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "罗马共和国时期的主要权力机构是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "元老院掌握实权。",
+          "difficulty": 2,
+          "knowledge_point": "古罗马的兴起与帝国",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "元老院",
+            "公民大会为唯一机构",
+            "教会",
+            "议会"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "罗马帝国建立于（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "屋大维于公元前27年建立帝国。",
+          "difficulty": 3,
+          "knowledge_point": "古罗马的兴起与帝国",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "公元前27年",
+            "公元前509年",
+            "公元476年",
+            "公元前221年"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "公元前509年，罗马建立了（ ）（填「共和国」或「帝国」）。",
+          "answer": {
+            "value": "共和国"
+          },
+          "analysis": "公元前509年罗马进入共和国时期。",
+          "difficulty": 3,
+          "knowledge_point": "古罗马的兴起与帝国",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "公元476年西罗马帝国灭亡。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "476年西罗马灭亡被视为西欧奴隶制结束的标志。",
+          "difficulty": 3,
+          "knowledge_point": "古罗马的兴起与帝国",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明罗马从共和国到帝国转变的原因（写出一点）。",
+          "answer": {
+            "value": "示例：长期对外扩张使社会矛盾尖锐、军队干政，共和体制难以维持，集权帝制应运而生。"
+          },
+          "analysis": "评分要点：扩张矛盾或军队干政。",
+          "difficulty": 4,
+          "knowledge_point": "古罗马的兴起与帝国",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "罗马第一部成文法是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "《十二铜表法》为罗马第一部成文法。",
+          "difficulty": 2,
+          "knowledge_point": "罗马法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "《十二铜表法》",
+            "《汉谟拉比法典》",
+            "《权利法案》",
+            "《民法典》"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "罗马法体系最终完成的标志是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "查士丁尼时期编成《民法大全》。",
+          "difficulty": 4,
+          "knowledge_point": "罗马法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "《民法大全》的编成",
+            "《十二铜表法》的颁布",
+            "共和国建立",
+            "帝国灭亡"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "《十二铜表法》颁布于公元前（ ）世纪中叶。",
+          "answer": {
+            "value": "5"
+          },
+          "analysis": "约公元前450年颁布，属公元前5世纪。",
+          "difficulty": 4,
+          "knowledge_point": "罗马法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "罗马法对近代西方法律制度产生了重要影响。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "罗马法是近代民法的重要渊源。",
+          "difficulty": 3,
+          "knowledge_point": "罗马法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明《十二铜表法》的意义。",
+          "answer": {
+            "value": "示例：把法律条文公开刻于铜表，限制了贵族随意解释法律的权力，一定程度上保护了平民利益，是罗马法发展的起点。"
+          },
+          "analysis": "评分要点：限制贵族 + 保护平民 + 起点。",
+          "difficulty": 4,
+          "knowledge_point": "罗马法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第三单元 封建时代的欧洲",
+      "order_index": 3,
+      "summary": "西欧封建制度、庄园经济、城市与大学兴起。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "西欧封君封臣制的纽带是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "以土地封赐建立权利义务关系。",
+          "difficulty": 2,
+          "knowledge_point": "西欧封建等级制度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "土地的封赐",
+            "血缘关系",
+            "宗教信仰",
+            "商业契约"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "封臣对封君的主要义务是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "封臣须服兵役并提供协助。",
+          "difficulty": 3,
+          "knowledge_point": "西欧封建等级制度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "服兵役和提供帮助",
+            "缴纳商业税",
+            "参加选举",
+            "送子弟上学"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "西欧封建社会中，拥有土地并剥削农奴的统治阶级主要包括国王、贵族和（ ）。",
+          "answer": {
+            "value": "教会"
+          },
+          "analysis": "教会也是大土地所有者。",
+          "difficulty": 3,
+          "knowledge_point": "西欧封建等级制度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "封君封臣关系是双向的权利义务关系。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "封君须保护封臣，封臣须效忠服役。",
+          "difficulty": 3,
+          "knowledge_point": "西欧封建等级制度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明封君封臣制对西欧政治的影响。",
+          "answer": {
+            "value": "示例：形成层层分封的等级秩序，王权有限、地方贵族势力强大，造成政治分散。"
+          },
+          "analysis": "评分要点：等级秩序 + 王权有限。",
+          "difficulty": 4,
+          "knowledge_point": "西欧封建等级制度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "西欧中世纪庄园的主要生产者是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "农奴是庄园主要劳动力。",
+          "difficulty": 2,
+          "knowledge_point": "西欧庄园与农奴",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "农奴",
+            "自由商人",
+            "市民",
+            "骑士"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "庄园土地中由领主直接经营的部分称为（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "领主自营地由农奴无偿耕作。",
+          "difficulty": 3,
+          "knowledge_point": "西欧庄园与农奴",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "领主自营地",
+            "公共牧场",
+            "自由地",
+            "城市土地"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "庄园具有经济上自给自足的特点，同时也是一个（ ）单位（填「社会」或「政治」，此处作答为社会）。",
+          "answer": {
+            "value": "社会"
+          },
+          "analysis": "庄园兼具经济与社会管理职能。",
+          "difficulty": 4,
+          "knowledge_point": "西欧庄园与农奴",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "农奴被固定在土地上，人身自由受到限制。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "农奴依附于土地，自由受限。",
+          "difficulty": 2,
+          "knowledge_point": "西欧庄园与农奴",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明庄园制度下农奴的处境。",
+          "answer": {
+            "value": "示例：农奴须为领主耕种自营地、缴纳租税，人身依附于土地，生活贫困且缺乏自由。"
+          },
+          "analysis": "评分要点：劳役 + 依附 + 贫困。",
+          "difficulty": 4,
+          "knowledge_point": "西欧庄园与农奴",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "西欧城市兴起的主要原因是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "工商业复兴推动城市兴起。",
+          "difficulty": 2,
+          "knowledge_point": "西欧城市的兴起与大学",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "工商业的发展",
+            "人口减少",
+            "战争停止",
+            "教会禁止"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "西欧城市争取自治的常用手段是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "常以赎买或斗争获得自治权。",
+          "difficulty": 3,
+          "knowledge_point": "西欧城市的兴起与大学",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "金钱赎买和武装斗争",
+            "只靠祈祷",
+            "向教皇请愿",
+            "放弃商业"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "中世纪大学享有一定自治权，其课程基础包括文法、修辞、逻辑等「（ ）」学科。",
+          "answer": {
+            "value": "七艺"
+          },
+          "analysis": "中世纪大学基础课程为七艺。",
+          "difficulty": 4,
+          "knowledge_point": "西欧城市的兴起与大学",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "城市兴起后，市民阶层逐渐成为一支重要的社会力量。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "市民阶层推动社会发展。",
+          "difficulty": 3,
+          "knowledge_point": "西欧城市的兴起与大学",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明西欧城市兴起的意义（写出两点）。",
+          "answer": {
+            "value": "示例：促进工商业发展，孕育市民阶层；推动大学兴起与文化教育发展，为近代社会转型准备条件。"
+          },
+          "analysis": "评分要点：两点。",
+          "difficulty": 4,
+          "knowledge_point": "西欧城市的兴起与大学",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "中世纪西欧教会在思想领域的地位是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "教会垄断思想文化。",
+          "difficulty": 3,
+          "knowledge_point": "基督教会的地位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "占据支配地位",
+            "完全无权",
+            "与王权无关",
+            "只管理学校"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "教会通过（ ）向信徒征收钱财。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "什一税是教会重要收入。",
+          "difficulty": 3,
+          "knowledge_point": "基督教会的地位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "什一税",
+            "关税",
+            "商业税",
+            "人头税"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "中世纪西欧教会与王权之间既有合作也有（ ）（填「斗争」）。",
+          "answer": {
+            "value": "斗争"
+          },
+          "analysis": "教权与王权长期既合作又争夺。",
+          "difficulty": 4,
+          "knowledge_point": "基督教会的地位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "教会垄断文化教育，对科学思想发展有抑制作用。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "教会对异端思想的压制阻碍科学。",
+          "difficulty": 3,
+          "knowledge_point": "基督教会的地位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明中世纪教会的影响应如何评价。",
+          "answer": {
+            "value": "示例：教会保存了部分古典文化、兴办学校；同时以神学束缚思想、聚敛财富，压制科学与异端，须两方面看待。"
+          },
+          "analysis": "评分要点：两面评价。",
+          "difficulty": 4,
+          "knowledge_point": "基督教会的地位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第四单元 中古时期的亚洲、非洲和美洲",
+      "order_index": 4,
+      "summary": "阿拉伯帝国、日本、非洲与美洲的中古文明。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "伊斯兰教的创始人是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "穆罕默德创立伊斯兰教。",
+          "difficulty": 2,
+          "knowledge_point": "阿拉伯帝国",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "穆罕默德",
+            "释迦牟尼",
+            "耶稣",
+            "亚里士多德"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "阿拉伯帝国在文化上的重要贡献是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "帝国是东西文化交流桥梁。",
+          "difficulty": 3,
+          "knowledge_point": "阿拉伯帝国",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "保存与传播古代文化，沟通东西方",
+            "发明蒸汽机",
+            "建立民主制度",
+            "开创工业革命"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "阿拉伯人改造并传播了后来被称为「阿拉伯数字」的（ ）数字。",
+          "answer": {
+            "value": "印度"
+          },
+          "analysis": "数字原由印度人创造。",
+          "difficulty": 3,
+          "knowledge_point": "阿拉伯帝国",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "阿拉伯帝国时期，东西方贸易与文化交流较为活跃。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "帝国处于东西交通要道。",
+          "difficulty": 3,
+          "knowledge_point": "阿拉伯帝国",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明阿拉伯帝国在文化传播中的作用。",
+          "answer": {
+            "value": "示例：保存希腊、波斯、印度典籍并译成阿拉伯文，把东方技术传入欧洲，成为东西文化交流的桥梁。"
+          },
+          "analysis": "评分要点：保存 + 传播。",
+          "difficulty": 4,
+          "knowledge_point": "阿拉伯帝国",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "日本大化改新发生的时间是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "646年开始大化改新。",
+          "difficulty": 3,
+          "knowledge_point": "日本的大化改新与幕府",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "7世纪",
+            "5世纪",
+            "9世纪",
+            "12世纪"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "大化改新主要效仿的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "以唐制为蓝本。",
+          "difficulty": 3,
+          "knowledge_point": "日本的大化改新与幕府",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "中国唐朝制度",
+            "罗马帝国制度",
+            "阿拉伯制度",
+            "西欧庄园制度"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "大化改新在经济上实行（ ）制，把土地收归国有分配给农民。",
+          "answer": {
+            "value": "班田收授"
+          },
+          "analysis": "班田收授法为经济改革核心。",
+          "difficulty": 4,
+          "knowledge_point": "日本的大化改新与幕府",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "大化改新使日本由奴隶社会向封建社会过渡。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "改革推动社会形态转变。",
+          "difficulty": 3,
+          "knowledge_point": "日本的大化改新与幕府",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明大化改新对日本的影响。",
+          "answer": {
+            "value": "示例：建立中央集权国家，发展经济文化，使日本逐步成为封建国家，为其后续发展奠定基础。"
+          },
+          "analysis": "评分要点：集权 + 封建化。",
+          "difficulty": 4,
+          "knowledge_point": "日本的大化改新与幕府",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "奥斯曼帝国攻占君士坦丁堡的时间是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "1453年东罗马帝国灭亡。",
+          "difficulty": 3,
+          "knowledge_point": "奥斯曼帝国与亚洲其他政权",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "1453年",
+            "1492年",
+            "1258年",
+            "1517年"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "奥斯曼帝国控制东西方交通要道后产生的影响是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "商路受阻推动新航路开辟。",
+          "difficulty": 4,
+          "knowledge_point": "奥斯曼帝国与亚洲其他政权",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "促使西欧人寻找新航路",
+            "立即实现工业革命",
+            "促进欧洲统一",
+            "结束所有贸易"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "奥斯曼帝国定都于（ ）（原名君士坦丁堡）。",
+          "answer": {
+            "value": "伊斯坦布尔"
+          },
+          "analysis": "改名伊斯坦布尔并定为首都。",
+          "difficulty": 3,
+          "knowledge_point": "奥斯曼帝国与亚洲其他政权",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "奥斯曼帝国一度成为横跨欧亚非的封建军事帝国。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "帝国疆域广大、军事强盛。",
+          "difficulty": 2,
+          "knowledge_point": "奥斯曼帝国与亚洲其他政权",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明奥斯曼帝国崛起对欧洲的影响（写出一点）。",
+          "answer": {
+            "value": "示例：控制地中海东部商路使欧洲商品价格上涨，促使西欧国家开辟新航路、走向海外扩张。"
+          },
+          "analysis": "评分要点：商路受阻 + 新航路。",
+          "difficulty": 4,
+          "knowledge_point": "奥斯曼帝国与亚洲其他政权",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "西非古国中因黄金贸易而繁荣的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "加纳、马里、桑海为西非重要古国。",
+          "difficulty": 3,
+          "knowledge_point": "非洲与美洲的中古文明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "加纳、马里和桑海",
+            "阿克苏姆",
+            "印加",
+            "玛雅"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "美洲印加文明位于（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "印加位于安第斯山区。",
+          "difficulty": 3,
+          "knowledge_point": "非洲与美洲的中古文明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "南美洲安第斯山区",
+            "北美洲平原",
+            "中美洲雨林",
+            "西印度群岛"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "中美洲玛雅人创造了独特的文字与（ ）（填「历法」）。",
+          "answer": {
+            "value": "历法"
+          },
+          "analysis": "玛雅历法相当精确。",
+          "difficulty": 3,
+          "knowledge_point": "非洲与美洲的中古文明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "非洲与美洲的中古文明在与外界相对隔绝的条件下独立发展。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "部分文明地理上相对封闭。",
+          "difficulty": 3,
+          "knowledge_point": "非洲与美洲的中古文明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "举一例说明美洲古代文明的成就。",
+          "answer": {
+            "value": "示例：印加人修建了贯通山区的道路系统和梯田，建造了巨石建筑，显示出高超的组织与工程能力。"
+          },
+          "analysis": "评分要点：具体成就 + 能力评价。",
+          "difficulty": 4,
+          "knowledge_point": "非洲与美洲的中古文明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第五单元 走向近代",
+      "order_index": 5,
+      "summary": "西欧经济与社会变化、文艺复兴、新航路开辟与早期殖民扩张。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "西欧农村中出现的新经营方式是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "租地农场采用雇佣劳动。",
+          "difficulty": 3,
+          "knowledge_point": "西欧经济与社会的变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "租地农场",
+            "庄园自营地",
+            "集体公社",
+            "国营农场"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "手工工场的主要特点是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "集中与雇佣是近代工场特征。",
+          "difficulty": 3,
+          "knowledge_point": "西欧经济与社会的变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "集中生产、雇佣劳动",
+            "手工零散加工",
+            "国家统一分配",
+            "无偿劳役"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "租地农场主与手工工场主逐渐形成新的（ ）阶级。",
+          "answer": {
+            "value": "资产"
+          },
+          "analysis": "他们成为早期资产阶级。",
+          "difficulty": 4,
+          "knowledge_point": "西欧经济与社会的变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "租地农场和手工工场的出现推动了西欧社会结构的变化。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "新生产方式孕育新阶级。",
+          "difficulty": 3,
+          "knowledge_point": "西欧经济与社会的变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明西欧经济变化为什么会推动社会转型。",
+          "answer": {
+            "value": "示例：雇佣劳动与市场化生产提高了效率，孕育出资产阶级和雇佣工人，冲击封建关系，为资本主义发展准备条件。"
+          },
+          "analysis": "评分要点：生产方式 + 阶级 + 冲击封建。",
+          "difficulty": 4,
+          "knowledge_point": "西欧经济与社会的变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "文艺复兴首先兴起于（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "14世纪始于意大利。",
+          "difficulty": 2,
+          "knowledge_point": "文艺复兴",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "意大利",
+            "英国",
+            "法国",
+            "德国"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "文艺复兴的核心思想是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "人文主义肯定人的价值。",
+          "difficulty": 2,
+          "knowledge_point": "文艺复兴",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "人文主义",
+            "禁欲主义",
+            "重商主义",
+            "空想社会主义"
+          ]
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列属于文艺复兴代表人物的是（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓ 《神曲》；B ✓ 绘画与科学；C ✓ 戏剧；D ✗ 牛顿属近代科学革命。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "文艺复兴",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "但丁",
+            "达·芬奇",
+            "莎士比亚",
+            "牛顿"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "文艺复兴借助复兴古典文化的形式宣传新的思想。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "以复古为形式、创新为实质。",
+          "difficulty": 3,
+          "knowledge_point": "文艺复兴",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明文艺复兴的历史意义。",
+          "answer": {
+            "value": "示例：解放了人们的思想，推动文学艺术与科学的发展，为资本主义发展和近代社会转型作了思想准备。"
+          },
+          "analysis": "评分要点：解放思想 + 推动科学文艺。",
+          "difficulty": 4,
+          "knowledge_point": "文艺复兴",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "1492年到达美洲的航海家是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "哥伦布1492年到达美洲。",
+          "difficulty": 2,
+          "knowledge_point": "新航路的开辟",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "哥伦布",
+            "麦哲伦",
+            "达·伽马",
+            "迪亚士"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "完成环球航行的船队领导者是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "麦哲伦船队完成环球航行。",
+          "difficulty": 3,
+          "knowledge_point": "新航路的开辟",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "麦哲伦",
+            "哥伦布",
+            "达·伽马",
+            "郑和"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "1498年到达印度的航海家是（ ）。",
+          "answer": {
+            "value": "达·伽马"
+          },
+          "analysis": "达·伽马开辟绕好望角到印度的航线。",
+          "difficulty": 4,
+          "knowledge_point": "新航路的开辟",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "新航路开辟使世界开始连为一个整体。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "全球联系由此逐步建立。",
+          "difficulty": 3,
+          "knowledge_point": "新航路的开辟",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明新航路开辟的原因（写出两点）。",
+          "answer": {
+            "value": "示例：欧洲商品经济发展、对黄金与东方商品的需求增强；奥斯曼帝国控制传统商路，促使西欧寻找新航线。"
+          },
+          "analysis": "评分要点：经济动因 + 商路受阻。",
+          "difficulty": 4,
+          "knowledge_point": "新航路的开辟",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「三角贸易」中欧洲殖民者主要贩卖的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "三角贸易以贩卖黑奴为核心。",
+          "difficulty": 3,
+          "knowledge_point": "早期殖民扩张",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "非洲黑人",
+            "欧洲工匠",
+            "亚洲茶叶",
+            "美洲白银"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "早期殖民扩张对欧洲的影响是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "掠夺为资本主义积累财富。",
+          "difficulty": 3,
+          "knowledge_point": "早期殖民扩张",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "加速资本原始积累",
+            "导致欧洲衰落",
+            "消除贫富差距",
+            "结束殖民制度"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "16世纪，西班牙的「无敌舰队」被英国击败，英国逐渐取得海上（ ）权。",
+          "answer": {
+            "value": "霸"
+          },
+          "analysis": "英国由此走向海上霸权。",
+          "difficulty": 4,
+          "knowledge_point": "早期殖民扩张",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "早期殖民扩张给亚非拉地区带来深重灾难。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "掠夺、奴役与屠杀造成巨大破坏。",
+          "difficulty": 2,
+          "knowledge_point": "早期殖民扩张",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "评价早期殖民扩张（写出两方面）。",
+          "answer": {
+            "value": "示例：一方面通过掠夺、奴役和屠杀给殖民地人民带来深重灾难；另一方面为欧洲资本主义发展积累资金、开拓市场，客观上推动世界联系加强。"
+          },
+          "analysis": "评分要点：灾难 + 客观作用。",
+          "difficulty": 5,
+          "knowledge_point": "早期殖民扩张",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第六单元 资本主义制度的初步确立",
+      "order_index": 6,
+      "summary": "英、美、法资产阶级革命与资本主义制度的确立。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "英国资产阶级革命开始于（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "1640年议会与国王冲突引发革命。",
+          "difficulty": 3,
+          "knowledge_point": "英国资产阶级革命",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "1640年",
+            "1688年",
+            "1776年",
+            "1789年"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "1689年英国议会通过的限制王权文件是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "《权利法案》确立议会主权。",
+          "difficulty": 2,
+          "knowledge_point": "英国资产阶级革命",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "《权利法案》",
+            "《人权宣言》",
+            "《独立宣言》",
+            "《民法典》"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "1688年英国发生不流血的政变，史称「（ ）革命」。",
+          "answer": {
+            "value": "光荣"
+          },
+          "analysis": "1688年政变称光荣革命。",
+          "difficulty": 3,
+          "knowledge_point": "英国资产阶级革命",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《权利法案》确立了君主立宪制，王权受到法律限制。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "议会主权、王权受限。",
+          "difficulty": 3,
+          "knowledge_point": "英国资产阶级革命",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明英国资产阶级革命的意义。",
+          "answer": {
+            "value": "示例：推翻封建专制统治，确立君主立宪制，为英国资本主义发展和工业革命提供了政治前提。"
+          },
+          "analysis": "评分要点：推翻专制 + 制度确立 + 发展前提。",
+          "difficulty": 4,
+          "knowledge_point": "英国资产阶级革命",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "美国独立战争开始于（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "1775年来克星顿枪声标志战争开始。",
+          "difficulty": 3,
+          "knowledge_point": "美国独立战争",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "1775年",
+            "1776年",
+            "1787年",
+            "1789年"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "《独立宣言》发表于（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "1776年7月4日发表。",
+          "difficulty": 2,
+          "knowledge_point": "美国独立战争",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "1776年7月4日",
+            "1775年4月",
+            "1787年9月",
+            "1789年7月"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "1787年美国宪法确立的政体是（ ）制共和制。",
+          "answer": {
+            "value": "总统"
+          },
+          "analysis": "美国确立总统制共和制。",
+          "difficulty": 3,
+          "knowledge_point": "美国独立战争",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "1787年宪法确立了三权分立与制衡原则。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "立法、行政、司法分立制衡。",
+          "difficulty": 3,
+          "knowledge_point": "美国独立战争",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明美国独立战争的性质与影响。",
+          "answer": {
+            "value": "示例：它既是民族解放战争，也是资产阶级革命；推翻了英国殖民统治，为美国资本主义发展扫清障碍。"
+          },
+          "analysis": "评分要点：双重性质 + 影响。",
+          "difficulty": 4,
+          "knowledge_point": "美国独立战争",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "法国大革命爆发的标志是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "1789年7月14日攻占巴士底狱。",
+          "difficulty": 2,
+          "knowledge_point": "法国大革命与拿破仑帝国",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "1789年攻占巴士底狱",
+            "1789年召开三级会议",
+            "1792年建立共和国",
+            "1804年称帝"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "《人权宣言》宣告的核心原则是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "宣言宣示自由平等与主权在民。",
+          "difficulty": 3,
+          "knowledge_point": "法国大革命与拿破仑帝国",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "自由、平等，主权在民",
+            "君权神授",
+            "等级世袭",
+            "殖民扩张"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "1804年拿破仑建立法兰西第一（ ）。",
+          "answer": {
+            "value": "帝国"
+          },
+          "analysis": "1804年称帝建立第一帝国。",
+          "difficulty": 3,
+          "knowledge_point": "法国大革命与拿破仑帝国",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "法国大革命摧毁了法国的封建专制制度。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "革命推翻封建统治。",
+          "difficulty": 3,
+          "knowledge_point": "法国大革命与拿破仑帝国",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "评价拿破仑的对外战争（写出两点）。",
+          "answer": {
+            "value": "示例：早期战争打击欧洲封建势力、传播革命成果；后期战争变为侵略掠夺，激起各国反抗并最终导致帝国覆灭。"
+          },
+          "analysis": "评分要点：前期进步 + 后期侵略。",
+          "difficulty": 5,
+          "knowledge_point": "法国大革命与拿破仑帝国",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "1861年俄国废除农奴制的改革者是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "亚历山大二世推行1861年改革。",
+          "difficulty": 3,
+          "knowledge_point": "资本主义制度的确立与扩展",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "亚历山大二世",
+            "彼得一世",
+            "拿破仑",
+            "林肯"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "日本明治维新开始于（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "1868年明治维新开始。",
+          "difficulty": 3,
+          "knowledge_point": "资本主义制度的确立与扩展",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "1868年",
+            "1853年",
+            "1861年",
+            "1871年"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "美国南北战争中颁布的《解放黑人奴隶宣言》由（ ）总统发布。",
+          "answer": {
+            "value": "林肯"
+          },
+          "analysis": "林肯发布该宣言。",
+          "difficulty": 3,
+          "knowledge_point": "资本主义制度的确立与扩展",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "俄国1861年改革和日本明治维新都保留了较多封建残余。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "两国改革均不彻底。",
+          "difficulty": 4,
+          "knowledge_point": "资本主义制度的确立与扩展",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "比较俄国1861年改革与日本明治维新的共同点（写出一点）。",
+          "answer": {
+            "value": "示例：都由统治者自上而下推行，都使本国走上资本主义发展道路，同时都保留了大量封建残余。"
+          },
+          "analysis": "评分要点：自上而下 + 保留残余。",
+          "difficulty": 4,
+          "knowledge_point": "资本主义制度的确立与扩展",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第七单元 第一次工业革命和马克思主义的诞生",
+      "order_index": 7,
+      "summary": "工业革命改变世界面貌，马克思主义诞生与巴黎公社。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "第一次工业革命首先发生在（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "18世纪60年代始于英国。",
+          "difficulty": 3,
+          "knowledge_point": "第一次工业革命的进程",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "英国",
+            "法国",
+            "美国",
+            "德国"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "第一次工业革命开始的标志性发明是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "珍妮纺纱机标志工业革命开始。",
+          "difficulty": 2,
+          "knowledge_point": "第一次工业革命的进程",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "珍妮机",
+            "蒸汽机车",
+            "电灯",
+            "汽车"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "瓦特改良的（ ）机成为工业革命的主要动力。",
+          "answer": {
+            "value": "蒸汽"
+          },
+          "analysis": "改良蒸汽机为机器提供动力。",
+          "difficulty": 3,
+          "knowledge_point": "第一次工业革命的进程",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "工业革命使人类进入「蒸汽时代」。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "蒸汽成为主要动力。",
+          "difficulty": 3,
+          "knowledge_point": "第一次工业革命的进程",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明工业革命首先发生在英国的条件（写出两点）。",
+          "answer": {
+            "value": "示例：英国较早确立君主立宪制，政治稳定；资本积累充足、劳动力充足、海外市场广阔且技术条件成熟。"
+          },
+          "analysis": "评分要点：制度 + 资本/市场/劳动力。",
+          "difficulty": 5,
+          "knowledge_point": "第一次工业革命的进程",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "工业革命带来的生产组织形式变化是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "机器生产推动工厂制度形成。",
+          "difficulty": 3,
+          "knowledge_point": "工业革命的影响",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "工厂制度确立",
+            "工场手工业扩大",
+            "家庭作坊复兴",
+            "庄园经济恢复"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "工业革命后社会日益分裂为两大对立阶级是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "两大阶级对立是重要社会后果。",
+          "difficulty": 3,
+          "knowledge_point": "工业革命的影响",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "工业资产阶级和工业无产阶级",
+            "贵族与农民",
+            "地主与商人",
+            "教会与市民"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "工业革命促进了（ ）化进程，大量人口涌入城市。",
+          "answer": {
+            "value": "城市"
+          },
+          "analysis": "工业化带动城市化。",
+          "difficulty": 3,
+          "knowledge_point": "工业革命的影响",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "工业革命造成了严重的环境污染和工人贫困问题。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "早期工业化伴随污染与剥削。",
+          "difficulty": 2,
+          "knowledge_point": "工业革命的影响",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明工业革命对世界格局的影响。",
+          "answer": {
+            "value": "示例：西方工业国生产力与军事实力大增，加紧对外扩张，使亚非拉许多地区沦为殖民地或半殖民地，世界市场进一步形成。"
+          },
+          "analysis": "评分要点：西方增强 + 殖民扩张 + 世界市场。",
+          "difficulty": 5,
+          "knowledge_point": "工业革命的影响",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "马克思主义诞生的标志是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "1848年《共产党宣言》发表。",
+          "difficulty": 2,
+          "knowledge_point": "马克思主义的诞生",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "《共产党宣言》发表",
+            "巴黎公社成立",
+            "第一国际建立",
+            "十月革命胜利"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "马克思主义的创立者是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "马克思、恩格斯共同创立。",
+          "difficulty": 2,
+          "knowledge_point": "马克思主义的诞生",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "马克思和恩格斯",
+            "列宁和斯大林",
+            "欧文和傅立叶",
+            "林肯和杰斐逊"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "《共产党宣言》发表于（ ）年。",
+          "answer": {
+            "value": "1848"
+          },
+          "analysis": "1848年2月发表。",
+          "difficulty": 3,
+          "knowledge_point": "马克思主义的诞生",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "马克思主义诞生于工业革命后工人运动兴起的背景之下。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "工人运动需要科学理论指导。",
+          "difficulty": 3,
+          "knowledge_point": "马克思主义的诞生",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明马克思主义诞生的历史条件（写出两点）。",
+          "answer": {
+            "value": "示例：工业革命使资本主义矛盾暴露、工人运动兴起；空想社会主义等思想成果与德国古典哲学、英国政治经济学提供了理论来源。"
+          },
+          "analysis": "评分要点：社会条件 + 理论来源。",
+          "difficulty": 4,
+          "knowledge_point": "马克思主义的诞生",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "巴黎公社建立于（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "1871年3月18日起义后建立。",
+          "difficulty": 3,
+          "knowledge_point": "巴黎公社",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "1871年",
+            "1848年",
+            "1864年",
+            "1889年"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "巴黎公社的性质是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "公社是无产阶级政权的尝试。",
+          "difficulty": 3,
+          "knowledge_point": "巴黎公社",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "无产阶级建立政权的第一次伟大尝试",
+            "资产阶级改良政府",
+            "封建王朝复辟",
+            "殖民机构"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "巴黎公社失败的重要原因是缺乏（ ）政党的领导。",
+          "answer": {
+            "value": "无产阶级"
+          },
+          "analysis": "缺少统一的无产阶级政党领导。",
+          "difficulty": 4,
+          "knowledge_point": "巴黎公社",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "巴黎公社颁布了保护工人利益的法令。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "公社采取多项进步措施。",
+          "difficulty": 2,
+          "knowledge_point": "巴黎公社",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明巴黎公社的历史意义。",
+          "answer": {
+            "value": "示例：它是无产阶级夺取政权、建立新型国家的第一次伟大尝试，为后来的社会主义运动提供了宝贵经验与教训。"
+          },
+          "analysis": "评分要点：第一次尝试 + 经验教训。",
+          "difficulty": 4,
+          "knowledge_point": "巴黎公社",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-12T08:10:22+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

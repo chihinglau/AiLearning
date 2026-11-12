@@ -58,8 +58,8 @@ SKELETON_INDEX = REVIEW / "rerun_skeleton_index_20261110.json"
 Q_TYPES = {"choice", "multiple", "judge", "fill", "answer"}
 
 
-def skeleton_chapter_names(subject: str, grade: int) -> list[str] | None:
-    """官方章节骨架；返回 None 表示索引不存在（跳过该检查）。"""
+def skeleton_chapter_names(subject: str, grade: int, semester: str = "first") -> list[str] | None:
+    """官方章节骨架（按学期匹配）；返回 None 表示索引不存在（跳过该检查）。"""
     if not SKELETON_INDEX.is_file():
         return None
     try:
@@ -67,19 +67,47 @@ def skeleton_chapter_names(subject: str, grade: int) -> list[str] | None:
     except (OSError, json.JSONDecodeError):
         return None
     for book in data.get("books", []):
-        if book.get("subject") == subject and book.get("grade") == grade:
-            return [str(c) for c in book.get("chapters", [])]
+        if book.get("subject") != subject or book.get("grade") != grade:
+            continue
+        # 旧索引（上册）没有 semester 字段，按 first 处理，保持既有行为不变
+        if str(book.get("semester") or "first") != semester:
+            continue
+        return [str(c) for c in book.get("chapters", [])]
     return []
+
+
+def apply_pad(pack: dict) -> dict:
+    """把包内 `PACK["pad"]` 的补题块按「知识点名」并入对应点（2026-11-12）。
+
+    用途：_validate_daily.py 要求每章（批次）18~28 题，4 点 × 4 题只有 16 题；
+    补题块让内容包保持「按点组织」的结构，同时在章级题量上达标。
+    """
+    pad = pack.get("pad")
+    if not isinstance(pad, dict):
+        return pack
+    merged = 0
+    for ch in pack.get("chapters") or []:
+        for p in ch.get("points") or []:
+            extra = pad.get(str(p.get("name")))
+            if not extra:
+                continue
+            p.setdefault("questions", []).extend(list(extra))
+            merged += len(extra)
+    if merged:
+        print(f"[补题] {pack.get('subject')}/g{pack.get('grade')} 并入 {merged} 题")
+    return pack
 
 
 def load_packs(only: str | None = None) -> list[tuple[Path, dict]]:
     if not PACKS.is_dir():
         return []
+    # --pack 支持逗号分隔多册（2026-11-12 下册批次需要一次组装多册并出一份合并 manifest）
+    names = {s.strip() for s in (only or "").split(",") if s.strip()}
     out = []
     for f in sorted(PACKS.glob("*.py")):
         if f.name.startswith("_"):
             continue
-        if only and f.stem != only:
+        if names and f.stem not in names:
             continue
         spec = importlib.util.spec_from_file_location(f.stem, f)
         mod = importlib.util.module_from_spec(spec)
@@ -88,7 +116,7 @@ def load_packs(only: str | None = None) -> list[tuple[Path, dict]]:
         if not isinstance(pack, dict):
             print(f"[错误] {f.name} 没有 PACK 字典", file=sys.stderr)
             sys.exit(1)
-        out.append((f, pack))
+        out.append((f, apply_pad(pack)))
     return out
 
 
@@ -106,10 +134,11 @@ def self_check(pack: dict) -> tuple[list[str], dict]:
     errors = []
     neg = negative_stems()
     subject, grade = pack.get("subject"), pack.get("grade")
+    semester = str(pack.get("semester") or "first")
     chapters = pack.get("chapters") or []
     if not subject or not isinstance(grade, int) or not chapters:
         return ["缺少 subject/grade/chapters"], {}
-    expected = skeleton_chapter_names(subject, grade)
+    expected = skeleton_chapter_names(subject, grade, semester)
     if expected is not None:
         actual = [str(c.get("name") or "").strip() for c in chapters]
         if actual != expected:
@@ -227,11 +256,17 @@ def build_doc(pack: dict) -> dict:
 
 
 def main() -> int:
+    global SKELETON_INDEX
     ap = argparse.ArgumentParser(description="重跑内容包 → 待评审整册（不入库）")
     ap.add_argument("--pack", help="只组装指定内容包名，如 biology_g7")
     ap.add_argument("--check", action="store_true", help="只自检，不落盘")
     ap.add_argument("--stamp", default="20261110", help="整册文件名批次日期")
+    ap.add_argument("--skeleton",
+                    help="章节骨架索引 JSON（默认用 review_20261110 的上册索引；下册传 "
+                         "exports/review_20261112/rerun_skeleton_index_second_20261112.json）")
     args = ap.parse_args()
+    if args.skeleton:
+        SKELETON_INDEX = Path(args.skeleton).resolve()
 
     packs = load_packs(args.pack)
     if not packs:

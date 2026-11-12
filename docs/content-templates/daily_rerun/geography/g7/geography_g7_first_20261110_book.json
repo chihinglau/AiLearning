@@ -1,0 +1,2007 @@
+{
+  "subject": "geography",
+  "grade": 7,
+  "version": "湘教版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第一章 让我们走进地理",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "地图上的方向判读",
+      "parent": "第一章 让我们走进地理",
+      "order_index": 1,
+      "explanation": "一般地图按上北下南、左西右东定方向；有指向标时箭头指北；经纬网图上经线指南北、纬线指东西，三种方法要按图选用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "比例尺的表示与大小比较",
+      "parent": "第一章 让我们走进地理",
+      "order_index": 2,
+      "explanation": "比例尺=图上距离/实地距离，有数字式、文字式、线段式三种写法；分母越大比例尺越小。图幅相同时，比例尺越大表示范围越小、内容越详细。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "图例和注记的识别",
+      "parent": "第一章 让我们走进地理",
+      "order_index": 3,
+      "explanation": "图例是地图上表示地理事物的符号，注记是说明文字或数字；读图先看图例，如洲界、国界、运河、铁路、首都、山峰等符号各有固定含义。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "地理与生产生活及风土人情",
+      "parent": "第一章 让我们走进地理",
+      "order_index": 4,
+      "explanation": "地理影响衣食住行与生产：南方水田种水稻、北方旱地种小麦，阿拉伯人穿白袍防风沙，因纽特人住冰屋；因地制宜安排生产、尊重不同风土人情。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二章 认识地球",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "地球的形状与大小数据",
+      "parent": "第二章 认识地球",
+      "order_index": 1,
+      "explanation": "地球是两极稍扁、赤道略鼓的不规则球体。平均半径6371千米，赤道周长约4万千米，表面积约5.1亿平方千米；麦哲伦船队环球航行和卫星照片可作证据。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "经线与纬线的特点",
+      "parent": "第二章 认识地球",
+      "order_index": 2,
+      "explanation": "经线是连接南北两极的半圆，长度相等、指示南北；纬线是与赤道平行的圆圈，赤道最长、向两极缩短、指示东西。经线与纬线互相垂直交织成经纬网。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "经纬度与半球划分",
+      "parent": "第二章 认识地球",
+      "order_index": 3,
+      "explanation": "经度以本初子午线为0°向东西各分180°，纬度以赤道为0°向南北各分90°。20°W与160°E把地球分东西半球，赤道分南北半球，可避免把陆地国家切开。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "地球自转与昼夜更替",
+      "parent": "第二章 认识地球",
+      "order_index": 4,
+      "explanation": "地球绕地轴自西向东自转，周期约24小时，产生昼夜更替和东西方向的时间差；公转周期一年、地轴倾斜不变，产生四季更替与昼夜长短变化。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第三章 地球的面貌",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "海陆分布与七大洲四大洋",
+      "parent": "第三章 地球的面貌",
+      "order_index": 1,
+      "explanation": "地球表面约71%为海洋、29%为陆地，称七分海洋三分陆地，陆地多集中在北半球。七大洲为亚、非、北美、南美、南极、欧、大洋；四大洋为太平、大西、印度、北冰。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "大陆漂移与板块构造",
+      "parent": "第三章 地球的面貌",
+      "order_index": 2,
+      "explanation": "魏格纳根据大西洋两岸轮廓吻合提出大陆漂移说。全球岩石圈分为亚欧、非洲、美洲、太平洋、印度洋、南极洲六大板块，板块交界处地壳活跃，多火山地震。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "海拔与相对高度",
+      "parent": "第三章 地球的面貌",
+      "order_index": 3,
+      "explanation": "海拔是地面高出海平面的垂直距离，相对高度是两点海拔之差。珠峰海拔约8848米，死海约-415米；平原、高原、山地、丘陵、盆地按海拔和起伏区分。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "等高线地形图的判读",
+      "parent": "第三章 地球的面貌",
+      "order_index": 4,
+      "explanation": "等高线是海拔相等的点连成的线。线密坡陡、线疏坡缓；闭合且中间高为山峰，凸向低处为山脊、凸向高处为山谷，两峰间为鞍部，等高线重合处为陡崖。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第四章 世界的居民与文化",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "人口密度与人口自然增长率",
+      "parent": "第四章 世界的居民与文化",
+      "order_index": 1,
+      "explanation": "人口密度=人口总数÷面积，单位人/平方千米，反映疏密；自然增长率=出生率-死亡率，为正表示人口增加。世界人口稠密区在亚洲东部南部、欧洲西部、北美东部。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "三大人种及其分布",
+      "parent": "第四章 世界的居民与文化",
+      "order_index": 2,
+      "explanation": "按肤色、毛发、面部特征分为黄色、白色、黑色三大人种。黄种人主要在亚洲东部，白种人在欧洲、北美、大洋洲，黑种人在非洲中部南部；人种无优劣之分。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "世界主要语言与三大宗教",
+      "parent": "第四章 世界的居民与文化",
+      "order_index": 3,
+      "explanation": "汉语使用人数最多，英语流传最广；联合国工作语言含汉、英、法、俄、西、阿六种。基督教、伊斯兰教、佛教为世界三大宗教，各有经典与主要分布区。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "乡村与城市聚落及其环境",
+      "parent": "第四章 世界的居民与文化",
+      "order_index": 4,
+      "explanation": "聚落分乡村与城市：乡村从事农耕放牧捕鱼、规模小，城市以非农业为主、建筑密集。聚落多选地形平坦、水源足、交通便处，湿热雨林与严寒极地稀少。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第五章 世界的气候",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "天气与气候的区别及天气符号",
+      "parent": "第五章 世界的气候",
+      "order_index": 1,
+      "explanation": "天气是某地短时间里的大气状况，多变，如晴、雨、风；气候是多年平均状况，较稳定。卫星云图绿色为陆地、蓝色为海洋、白色为云区，云越白越可能降水。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "气温的测量与气温日较差",
+      "parent": "第五章 世界的气候",
+      "order_index": 2,
+      "explanation": "气温用摄氏度表示，百叶箱内温度计在2、8、14、20时观测取平均。日较差=最高-最低；一天最高温约14时、最低在日出前后。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "世界气温与降水的分布规律",
+      "parent": "第五章 世界的气候",
+      "order_index": 3,
+      "explanation": "世界气温大致由低纬向高纬递减，同纬度夏季陆地高于海洋；降水赤道多、两极少，回归线附近大陆东岸多、西岸少，山地迎风坡多、背风坡少。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "影响气候的因素与主要气候类型",
+      "parent": "第五章 世界的气候",
+      "order_index": 4,
+      "explanation": "纬度、海陆、地形是影响气候的三大因素：纬度定热量，海陆定温差与降水，海拔每升100米气温约降0.6℃。热带雨林气候全年高温多雨，地中海气候夏干冬雨。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第六章 世界的发展差异",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "世界上的国家与面积人口大国",
+      "parent": "第六章 世界的发展差异",
+      "order_index": 1,
+      "explanation": "全球有200多个国家和地区。面积最大是俄罗斯约1707万平方千米，中国约960万平方千米，梵蒂冈最小；人口过亿国家多在亚洲，国家主权含领土、领海与领空。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "发达国家与发展中国家的差异",
+      "parent": "第六章 世界的发展差异",
+      "order_index": 2,
+      "explanation": "按经济发展水平分发达国家与发展中国家。发达国家多在北半球北部，如美、日、德、英、法，工农业技术高、人均收入高；发展中国家多在亚洲、非洲、拉美。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "南北对话与南南合作",
+      "parent": "第六章 世界的发展差异",
+      "order_index": 3,
+      "explanation": "发达国家多分布在北半球北部，称「北」；发展中国家主要在南半球及北半球南部，称「南」。南北对话指两类国家间谈判，南南合作指发展中国家之间互助。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "国际经济合作与重要国际组织",
+      "parent": "第六章 世界的发展差异",
+      "order_index": 4,
+      "explanation": "资源、技术、市场分布不均使各国需合作。联合国是世界最大综合性组织，总部纽约，宗旨维护和平与安全；世界贸易组织总部日内瓦，负责制定贸易规则、解决争端。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一章 让我们走进地理",
+      "order_index": 1,
+      "summary": "了解身边的地理与生产生活、风土人情的关系，掌握地图的方向、比例尺、图例三要素并会阅读地图。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "没有指向标和经纬网的普通地图，通常按什么定方向？（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "普通地图默认上北下南、左西右东；B颠倒南北、C是指向标规则、D无依据，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "地图上的方向判读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "上北下南左西右东",
+            "上南下北",
+            "箭头指东",
+            "随意判断"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "在有指向标的地图上，箭头一般指向（  ）方；经线指示（  ）方向。",
+          "answer": {
+            "value": [
+              "北",
+              "南北"
+            ]
+          },
+          "analysis": "指向标箭头默认指北；经纬网中经线连接南北两极，指示南北方向。",
+          "difficulty": 2,
+          "knowledge_point": "地图上的方向判读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "在经纬网地图上，纬线指示南北方向，经线指示东西方向。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "经纬网中经线指南北、纬线指东西，题干把两者说反，所以错误。",
+          "difficulty": 3,
+          "knowledge_point": "地图上的方向判读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "小明拿到一张校园平面图，请写出两种判断方向的方法并说明何时用哪种。",
+          "answer": {
+            "value": "示例：图上有指向标就按箭头定北；无指向标但有经纬网，用经线定南北、纬线定东西；两者都无，按上北下南左西右东。"
+          },
+          "analysis": "评分要点：写出指向标法与经纬网法或一般定法各得2分；说明按图选用再得1分。",
+          "difficulty": 4,
+          "knowledge_point": "地图上的方向判读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "指向标箭头指北，湖泊在右侧，图上2厘米、比例尺1:100000，实地（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "右侧为东；2厘米×100000=200000厘米=2千米，故2千米且在东，所以选A。",
+          "difficulty": 3,
+          "knowledge_point": "地图上的方向判读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "2千米且在东",
+            "20千米且在东",
+            "2千米且在西",
+            "2千米且在南"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "比例尺 1:100000 写成文字式，正确的是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "1:100000 即图上1厘米=实地100000厘米=1千米；B、C、D换算均不符，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "比例尺的表示与大小比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "图上1厘米代表实地1千米",
+            "图上1厘米代表实地10千米",
+            "图上1米代表实地1千米",
+            "图上1厘米代表实地10米"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "图幅相同的两幅地图，比例尺较大的那幅表示范围较（  ）、内容较（  ）。",
+          "answer": {
+            "value": [
+              "小",
+              "详细"
+            ]
+          },
+          "analysis": "比例尺越大，同样图幅容纳的实地范围越小，能画出的地物越细，内容更详细。",
+          "difficulty": 2,
+          "knowledge_point": "比例尺的表示与大小比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "分母越大的比例尺越大，描绘的内容也越详细。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "比例尺是分数，分母越大值越小，表示范围越大、内容越简略，所以错误。",
+          "difficulty": 3,
+          "knowledge_point": "比例尺的表示与大小比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "要在同样大小的纸上画学校或画全省，哪幅该用较大比例尺？说明理由。",
+          "answer": {
+            "value": "示例：画学校用较大比例尺。学校实地范围小，大比例尺能在同样图幅里把教学楼、操场画得更详细；全省范围大，只能用较小比例尺。"
+          },
+          "analysis": "评分要点：判断学校用大比例尺得2分；说明范围与详略关系得2分。",
+          "difficulty": 4,
+          "knowledge_point": "比例尺的表示与大小比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "图上5厘米、比例尺1:50000，求实地距离，并说明换大比例尺后的变化。",
+          "answer": {
+            "value": "示例：实地=5×50000=250000厘米=2.5千米。换更大比例尺，同图幅表示范围变小、内容更详细，可画出街道和建筑。"
+          },
+          "analysis": "评分要点：算出2.5千米或250000厘米得2分；写出等式得1分；说明范围变小内容更详细得1分。",
+          "difficulty": 4,
+          "knowledge_point": "比例尺的表示与大小比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "地图上用来说明各种符号含义的一栏叫（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "图例集中列出符号及含义；B量算距离、C定方向、D是文字数字说明，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "图例和注记的识别",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "图例",
+            "比例尺",
+            "指向标",
+            "注记"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "地图里用来表示地理事物的符号叫（  ），标注的山峰高程、城市名称叫（  ）。",
+          "answer": {
+            "value": [
+              "图例",
+              "注记"
+            ]
+          },
+          "analysis": "图例是符号及其说明，注记是图上起说明作用的文字或数字，二者配合才能读懂地图。",
+          "difficulty": 2,
+          "knowledge_point": "图例和注记的识别",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "地图上的注记只指文字，数字如山峰海拔不属于注记。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "注记包括文字和数字，山峰高程、经纬度数字都是注记，所以错误。",
+          "difficulty": 3,
+          "knowledge_point": "图例和注记的识别",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "读一幅陌生地图前为什么要先看图例？请写出两种常见图例符号。",
+          "answer": {
+            "value": "示例：先看图例才知符号含义，免把铁路认成公路。常见符号：黑白相间线段表铁路、三角形表山峰、小圆点表居民点。"
+          },
+          "analysis": "评分要点：说明先读图例的作用得2分；写出两种符号及含义各得1分。",
+          "difficulty": 4,
+          "knowledge_point": "图例和注记的识别",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "我国南方以水田为主、主食多稻米，主要因为当地（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "南方热量足、降水多、水源丰，宜种水稻；其余三项与南方气候不符，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "地理与生产生活及风土人情",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "湿热多雨水源足",
+            "寒冷干燥",
+            "沙漠广布",
+            "终年积雪"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "阿拉伯人身穿白色宽袍，既利于（  ）风沙，又能（  ）强烈的阳光。",
+          "answer": {
+            "value": [
+              "遮挡",
+              "反射"
+            ]
+          },
+          "analysis": "白袍宽松通风、白色反射阳光减少吸热，同时遮住风沙，适应炎热干旱的沙漠环境。",
+          "difficulty": 2,
+          "knowledge_point": "地理与生产生活及风土人情",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "因纽特人住冰屋，说明寒冷地区的民居与当地气候没有关系。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "冰屋就地取冰、保温避风，正是适应北极严寒气候的结果，所以错误。",
+          "difficulty": 3,
+          "knowledge_point": "地理与生产生活及风土人情",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "举出一项家乡因地制宜发展生产的例子，并说明利用了什么地理条件。",
+          "answer": {
+            "value": "示例：家乡丘陵坡地种茶树，因坡地排水好、酸性红壤与暖湿气候适宜；平原种水稻，靠平坦耕地和充足水源。"
+          },
+          "analysis": "评分要点：例子具体得2分；写出气候或地形等条件并对应得2分。",
+          "difficulty": 4,
+          "knowledge_point": "地理与生产生活及风土人情",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第二章 认识地球",
+      "order_index": 2,
+      "summary": "认识地球的形状与大小数据，学会在地球仪上辨认经纬线、经纬度与半球划分，理解自转产生的昼夜更替与公转产生的四季。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "地球的平均半径约为（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "平均半径6371千米；B是赤道周长、C是表面积、D是珠峰海拔，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "地球的形状与大小数据",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "6371千米",
+            "4万千米",
+            "5.1亿平方千米",
+            "8848米"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "证明地球是球体的证据有麦哲伦船队（  ）航行和从太空拍摄的（  ）照片。",
+          "answer": {
+            "value": [
+              "环球",
+              "卫星"
+            ]
+          },
+          "analysis": "麦哲伦船队首次环球一周回到原地，卫星影像直接显示地球为球体，两者都是实证。",
+          "difficulty": 2,
+          "knowledge_point": "地球的形状与大小数据",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "地球是一个正圆球体，各处的半径都完全相等。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "地球两极稍扁、赤道略鼓，是不规则球体，赤道半径略大于极半径，所以错误。",
+          "difficulty": 3,
+          "knowledge_point": "地球的形状与大小数据",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出地球大小的三个常用数据，并说明哪个数据能解释「坐地日行八万里」。",
+          "answer": {
+            "value": "示例：平均半径6371千米、赤道周长约4万千米、表面积约5.1亿平方千米。赤道周长合8万里，随自转一周即「日行八万里」。"
+          },
+          "analysis": "评分要点：三个数据各得1分；答出赤道周长并联系自转得1分。",
+          "difficulty": 4,
+          "knowledge_point": "地球的形状与大小数据",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "请用两个数据说明地球很大，并解释为什么远航船先见桅杆后见船身。",
+          "answer": {
+            "value": "示例：赤道周长约4万千米、表面积约5.1亿平方千米，可见地球很大。船从远处驶来先露桅杆，是因为海面是球面，船身被曲面挡住。"
+          },
+          "analysis": "评分要点：两个数据各得1分；写出球面曲率遮挡得2分。",
+          "difficulty": 4,
+          "knowledge_point": "地球的形状与大小数据",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "关于经线的叙述，正确的是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "经线为连接两极的等长半圆、指南北；B、C、D都是纬线特征，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "经线与纬线的特点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "是半圆且等长",
+            "是完整的圆圈",
+            "指示东西方向",
+            "赤道最长"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "纬线中长度最长的是（  ），经线指示（  ）方向。",
+          "answer": {
+            "value": [
+              "赤道",
+              "南北"
+            ]
+          },
+          "analysis": "赤道是最大的纬线圈，周长约4万千米；经线连接南北两极，故指示南北方向。",
+          "difficulty": 2,
+          "knowledge_point": "经线与纬线的特点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "所有纬线的长度都相等，且与经线平行。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "纬线长度由赤道向两极递减，且与经线垂直相交而非平行，所以错误。",
+          "difficulty": 3,
+          "knowledge_point": "经线与纬线的特点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "在地球仪上比较经线和纬线，请写出形状、长度、指示方向三处不同。",
+          "answer": {
+            "value": "示例：经线是半圆、各条等长、指示南北；纬线是圆圈、赤道最长向两极变短、指示东西。两者垂直交织，可用来定位任意地点。"
+          },
+          "analysis": "评分要点：形状、长度、方向各写出一组对比得1分；答出互相垂直再得1分。",
+          "difficulty": 4,
+          "knowledge_point": "经线与纬线的特点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "东西半球的分界线是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "20°W与160°E多经海洋可避切开大陆；0°与180°是经度起点，赤道分南北半球，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "经纬度与半球划分",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "20°W和160°E",
+            "0°和180°经线",
+            "赤道",
+            "20°E和160°W"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "纬度以（  ）为0°，向北增大是北纬，向南增大是（  ）。",
+          "answer": {
+            "value": [
+              "赤道",
+              "南纬"
+            ]
+          },
+          "analysis": "赤道为0°纬线，向北到北极90°N、向南到南极90°S，故向南增大称南纬。",
+          "difficulty": 2,
+          "knowledge_point": "经纬度与半球划分",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "某点经度是170°E，它一定位于东半球。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "东半球范围是20°W向东到160°E，170°E超过160°E属西半球，所以错误。",
+          "difficulty": 3,
+          "knowledge_point": "经纬度与半球划分",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出北纬40°、东经116°所在半球，并说明判读依据。",
+          "answer": {
+            "value": "示例：北纬40°在赤道以北，属北半球；东经116°在20°W—160°E之间，属东半球。该点大致位于北京附近，可用经纬网定位。"
+          },
+          "analysis": "评分要点：南北半球判断及依据各得1分；东西半球判断并写出20°W、160°E得2分。",
+          "difficulty": 4,
+          "knowledge_point": "经纬度与半球划分",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "某船在10°N、170°E遇险，报告位置应说位于（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "10°N在赤道以北属北半球；170°E超过160°E属西半球，所以选A。",
+          "difficulty": 3,
+          "knowledge_point": "经纬度与半球划分",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "北半球、西半球",
+            "南半球、东半球",
+            "北半球、东半球",
+            "南半球、西半球"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "地球自转一周的时间约为（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "自转周期约24小时即一天，形成昼夜更替；一个月、一年分别是月相与公转尺度，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "地球自转与昼夜更替",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "24小时（一天）",
+            "一个月",
+            "一年",
+            "12小时"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "地球（  ）自转，周期约一天，产生昼夜更替和东西的（  ）差异。",
+          "answer": {
+            "value": [
+              "自西向东",
+              "时间"
+            ]
+          },
+          "analysis": "自西向东自转约24小时一周，东边先见日出，故不同经度出现时间差异。",
+          "difficulty": 2,
+          "knowledge_point": "地球自转与昼夜更替",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "四季更替是地球自转造成的，昼夜更替是公转造成的。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "昼夜更替由自转产生，四季与昼夜长短变化由公转产生，题干把因果说反，所以错误。",
+          "difficulty": 3,
+          "knowledge_point": "地球自转与昼夜更替",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "北京比乌鲁木齐先看到日出，请用地球自转的知识解释。",
+          "answer": {
+            "value": "示例：地球自西向东自转，东边的地点先转进阳光照射的一侧。北京在乌鲁木齐以东，所以北京更早迎来日出，两地出现时间差。"
+          },
+          "analysis": "评分要点：写出自转方向自西向东得2分；说明东边先见日出并联系两地位置得2分。",
+          "difficulty": 4,
+          "knowledge_point": "地球自转与昼夜更替",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第三章 地球的面貌",
+      "order_index": 3,
+      "summary": "掌握海陆分布比例与七大洲四大洋，用板块构造解释海陆变迁与地震，学会判读海拔、相对高度和等高线地形图。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "地球表面海洋面积所占比例约为（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "海洋约占71%、陆地约29%，即七分海洋三分陆地，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "海陆分布与七大洲四大洋",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "71%",
+            "29%",
+            "50%",
+            "90%"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "面积最大的大洲是（  ），面积最大的大洋是（  ）。",
+          "answer": {
+            "value": [
+              "亚洲",
+              "太平洋"
+            ]
+          },
+          "analysis": "亚洲约4400万平方千米为最大洲，太平洋约占大洋总面积一半，为最大洋。",
+          "difficulty": 2,
+          "knowledge_point": "海陆分布与七大洲四大洋",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "陆地主要集中在南半球，北半球几乎全是海洋。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "陆地约三分之二分布在北半球，北半球陆地多于南半球，所以错误。",
+          "difficulty": 3,
+          "knowledge_point": "海陆分布与七大洲四大洋",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出七大洲中面积最大和最小的大洲，以及四大洋中最小的大洋。",
+          "answer": {
+            "value": "示例：七大洲中面积最大的是亚洲，最小的是大洋洲；四大洋中面积最大的是太平洋，最小的是北冰洋。可结合地图按轮廓依次辨认。"
+          },
+          "analysis": "评分要点：最大洲、最小洲各得1分；最小洋答北冰洋得1分；答出最大洋再得1分。",
+          "difficulty": 4,
+          "knowledge_point": "海陆分布与七大洲四大洋",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "提出「大陆漂移假说」的科学家是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "魏格纳据南美东岸与非洲西岸轮廓吻合提出漂移说；其余三人分别是航海与天文学者，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "大陆漂移与板块构造",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "魏格纳",
+            "哥伦布",
+            "麦哲伦",
+            "哥白尼"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "全球岩石圈共分（  ）大板块，板块（  ）地带多火山地震。",
+          "answer": {
+            "value": [
+              "六",
+              "交界"
+            ]
+          },
+          "analysis": "六大板块内部较稳定，交界张裂或碰撞、地壳活跃，形成两大火山地震带。",
+          "difficulty": 2,
+          "knowledge_point": "大陆漂移与板块构造",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "喜马拉雅山由亚欧板块与太平洋板块张裂形成。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "喜马拉雅山是亚欧板块与印度洋板块碰撞挤压隆起，且非张裂，所以错误。",
+          "difficulty": 3,
+          "knowledge_point": "大陆漂移与板块构造",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用板块构造解释日本多地震，并写出一条避险做法。",
+          "answer": {
+            "value": "示例：日本位于亚欧板块与太平洋板块交界，地壳活跃，故多火山地震。避险做法：室内桌下护头、远离玻璃窗，户外避开高大建筑。"
+          },
+          "analysis": "评分要点：写出交界处地壳活跃得2分；写出一条具体避险动作得2分。",
+          "difficulty": 4,
+          "knowledge_point": "大陆漂移与板块构造",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "对照同一地区的古海陆图，发现这里由海洋变成陆地，可佐证海陆变迁。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "地层中的海相化石与古今海陆分布对比是海陆变迁的可核对证据，所以正确。",
+          "difficulty": 3,
+          "knowledge_point": "大陆漂移与板块构造",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "甲地海拔1500米、乙地海拔500米，两地相对高度是（  ）",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "相对高度=1500-500=1000米，B正确；A误作相加、C、D取了单点云，所以选B。",
+          "difficulty": 1,
+          "knowledge_point": "海拔与相对高度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "2000米",
+            "1000米",
+            "500米",
+            "1500米"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "地面某点高出（  ）的垂直距离叫海拔；两点海拔之（  ）叫相对高度。",
+          "answer": {
+            "value": [
+              "海平面",
+              "差"
+            ]
+          },
+          "analysis": "海拔以平均海平面为零点起算，相对高度=高点海拔-低点海拔，反映两地起伏。",
+          "difficulty": 2,
+          "knowledge_point": "海拔与相对高度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "高原海拔较高但地面平坦，山地海拔高且起伏大，两者相同。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "高原顶面平缓、边缘陡，山地峰谷起伏大，二者按地面起伏区分，并不相同，所以错误。",
+          "difficulty": 3,
+          "knowledge_point": "海拔与相对高度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出海拔与相对高度的区别，并各举一个可核对的数据例子。",
+          "answer": {
+            "value": "示例：海拔以海平面起算，如珠峰约8848米；相对高度是两点之差，如甲1500米、乙500米差1000米。前者定点，后者比两点。"
+          },
+          "analysis": "评分要点：区别写清基准与差值各得1分；两个数据例子各得1分。",
+          "difficulty": 4,
+          "knowledge_point": "海拔与相对高度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "等高线越密集，表示坡度（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "同样图上距离内高差越大则线越密、坡越陡；稀疏则坡缓，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "等高线地形图的判读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "越陡",
+            "越缓",
+            "不变",
+            "无法判断"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "等高线闭合并向内增高表示（  ），多条等高线重叠处是（  ）。",
+          "answer": {
+            "value": [
+              "山顶",
+              "陡崖"
+            ]
+          },
+          "analysis": "闭合曲线内数值最大为山顶；陡崖处垂直落差大，多条等高线在图上叠合为一处。",
+          "difficulty": 2,
+          "knowledge_point": "等高线地形图的判读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "等高线向海拔高处凸出的部位是山脊，适合发育河流。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "向高处凸出的是山谷，易集水成河；山脊向低处凸、为分水线，所以错误。",
+          "difficulty": 3,
+          "knowledge_point": "等高线地形图的判读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "要在等高线图上选一条缓坡登山路线，写出判读依据和理由。",
+          "answer": {
+            "value": "示例：选等高线最稀疏的一段，因为线疏表示单位距离高差小、坡度缓，攀登省力；还应避开等高线重合的陡崖和山谷陡坡。"
+          },
+          "analysis": "评分要点：答出选稀疏处得2分；说明线疏坡缓并避开陡崖得2分。",
+          "difficulty": 4,
+          "knowledge_point": "等高线地形图的判读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "等高线图上A处线密、B处线疏，从哪处登山更省力，为什么（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "线疏坡缓，B处单位距离高差小更省力；A线密坡陡，D未重合不是陡崖，所以选A。",
+          "difficulty": 3,
+          "knowledge_point": "等高线地形图的判读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "B处，坡缓",
+            "A处，坡缓",
+            "B处，坡陡",
+            "A处是陡崖"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第四章 世界的居民与文化",
+      "order_index": 4,
+      "summary": "会计算人口密度与自然增长率，辨认三大人种、主要语言与三大宗教，比较乡村与城市聚落并理解聚落与自然环境的关系。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "某地面积100平方千米、人口2万人，人口密度是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "密度=20000÷100=200人/平方千米；B少算一位、C、D换算错，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "人口密度与人口自然增长率",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "200人/平方千米",
+            "20人/平方千米",
+            "2人/平方千米",
+            "2000人/平方千米"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "人口自然增长率等于（  ）率减去（  ）率。",
+          "answer": {
+            "value": [
+              "出生",
+              "死亡"
+            ]
+          },
+          "analysis": "自然增长率=出生率-死亡率，只计自然增减，不含人口迁入迁出。",
+          "difficulty": 2,
+          "knowledge_point": "人口密度与人口自然增长率",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "人口密度大的地区，人口自然增长率一定也高。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "密度反映现有疏密，增长率是出生减死亡，二者无关；欧洲西部密而近零增长，所以错误。",
+          "difficulty": 3,
+          "knowledge_point": "人口密度与人口自然增长率",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出人口密度公式，并列出世界两处人口稠密区及其共同条件。",
+          "answer": {
+            "value": "示例：人口密度=人口总数÷面积。稠密区如亚洲东部、南部和欧洲西部，共同条件是中低纬近海平原、气候温和、交通方便。"
+          },
+          "analysis": "评分要点：公式得1分；两处稠密区各得1分；写出气候地形等条件得1分。",
+          "difficulty": 4,
+          "knowledge_point": "人口密度与人口自然增长率",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "甲地100平方千米2万人，乙地200平方千米2万人，人口较密的是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "甲=20000÷100=200，乙=20000÷200=100，甲更密；D忽略面积不同，所以选A。",
+          "difficulty": 3,
+          "knowledge_point": "人口密度与人口自然增长率",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "甲地，200人/平方千米",
+            "乙地，200人/平方千米",
+            "甲地，100人/平方千米",
+            "两地相同"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "黑色人种的主要故乡是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "撒哈拉以南非洲是黑种人主要聚居区；B多白种人、C多黄种人、D有因纽特人，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "三大人种及其分布",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "非洲中部和南部",
+            "欧洲西部",
+            "亚洲东部",
+            "北美洲北部"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "世界三大人种是黄色人种、（  ）人种和（  ）人种。",
+          "answer": {
+            "value": [
+              "白色",
+              "黑色"
+            ]
+          },
+          "analysis": "按体质特征分黄、白、黑三大人种，划分依据是肤色、发型、面部等可遗传特征。",
+          "difficulty": 2,
+          "knowledge_point": "三大人种及其分布",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "人种有高低优劣之分，白色人种比其他人种更聪明。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "人种差异是长期适应环境形成的体质特征，各种族智力与能力无优劣，所以错误。",
+          "difficulty": 3,
+          "knowledge_point": "三大人种及其分布",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出划分人种的依据，并说明为什么美洲也有黑色人种。",
+          "answer": {
+            "value": "示例：依据肤色、头发形状、面部特征等体质特征划分。美洲的黑种人主要是历史上被贩运的非洲人后裔，属人口迁移，并非当地原生。"
+          },
+          "analysis": "评分要点：写出两项体质依据得2分；用人口迁移解释得2分。",
+          "difficulty": 4,
+          "knowledge_point": "三大人种及其分布",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "世界上流传最广的语言是（  ）",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "英语因殖民与经贸流传最广，C正确；汉语使用人数最多，法语、阿语范围较小，所以选C。",
+          "difficulty": 1,
+          "knowledge_point": "世界主要语言与三大宗教",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "汉语",
+            "法语",
+            "英语",
+            "阿拉伯语"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "使用人数最多的语言是（  ），信仰人数最多的宗教是（  ）。",
+          "answer": {
+            "value": [
+              "汉语",
+              "基督教"
+            ]
+          },
+          "analysis": "汉语因中国人口多而使用者最多；基督教信徒广布欧洲、美洲、大洋洲，为第一大宗教。",
+          "difficulty": 2,
+          "knowledge_point": "世界主要语言与三大宗教",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "联合国六种工作语言里包括汉语，也包括日语。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "六种工作语言为汉、英、法、俄、西班牙、阿拉伯语，不含日语，所以错误。",
+          "difficulty": 3,
+          "knowledge_point": "世界主要语言与三大宗教",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出世界三大宗教名称，并各写一处主要分布地区。",
+          "answer": {
+            "value": "示例：基督教主要分布在欧洲、美洲和大洋洲；伊斯兰教分布在西亚、北非；佛教分布在东亚、东南亚。三者均有固定经典与发源地。"
+          },
+          "analysis": "评分要点：三个宗教名称各得1分；写出一处对应分布区得1分。",
+          "difficulty": 4,
+          "knowledge_point": "世界主要语言与三大宗教",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面属于城市聚落典型特征的是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "城市人口密集、建筑高、从事工业服务业；B、C、D都是乡村聚落特征，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "乡村与城市聚落及其环境",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "高楼多、非农业为主",
+            "农田连片",
+            "以放牧为生",
+            "房屋低矮分散"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "聚落一般分为（  ）聚落和（  ）聚落两大类。",
+          "answer": {
+            "value": [
+              "乡村",
+              "城市"
+            ]
+          },
+          "analysis": "按生产方式和景观差异，聚落先分乡村与城市，再细分为农村、牧村、渔村与集镇等。",
+          "difficulty": 2,
+          "knowledge_point": "乡村与城市聚落及其环境",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "聚落都均匀分布，与地形、水源、气候没有关系。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "聚落集中在平原、河谷、沿海等水源足交通便处，沙漠、高山、极地稀疏，所以错误。",
+          "difficulty": 3,
+          "knowledge_point": "乡村与城市聚落及其环境",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "列举两项利于聚落形成的自然条件，并各说明一个反面例子。",
+          "answer": {
+            "value": "示例：地形平坦利建耕地，冲积平原常形成大城；水源足便生活灌溉，故沙漠腹地村落极少。反面如高寒山地、干旱荒漠。"
+          },
+          "analysis": "评分要点：两项条件各得1分；对应反面例子各得1分。",
+          "difficulty": 4,
+          "knowledge_point": "乡村与城市聚落及其环境",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "比较乡村与城市聚落，并从地形、水源两角度说明选址原因。",
+          "answer": {
+            "value": "示例：乡村从事农林牧渔、房屋低矮分散，城市以工业服务业为主、高楼密集。选址多选平原与河流沿岸：平坦易建、近水便于生活和运输。"
+          },
+          "analysis": "评分要点：乡村与城市各写出一项差异得2分；地形、水源原因各得1分。",
+          "difficulty": 4,
+          "knowledge_point": "乡村与城市聚落及其环境",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第五章 世界的气候",
+      "order_index": 5,
+      "summary": "区分天气与气候、识别天气符号，会读气温曲线和降水柱状图，掌握气温降水分布规律、影响因素与世界主要气候类型。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "下列描述属于气候的是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "气候是多年平均、较稳定；B、C、D都指短时天气变化，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "天气与气候的区别及天气符号",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "昆明四季如春",
+            "今天下小雨",
+            "明晚有大风",
+            "午后转阴"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "卫星云图上绿色表示（  ），白色表示（  ）区。",
+          "answer": {
+            "value": [
+              "陆地",
+              "云"
+            ]
+          },
+          "analysis": "绿色为陆地、蓝色为海洋、白色为云区，云层越厚越白、降水可能越大。",
+          "difficulty": 2,
+          "knowledge_point": "天气与气候的区别及天气符号",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「夜来风雨声，花落知多少」描述的是当地稳定的气候。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "诗句写一夜风雨的短时大气状况，属天气而非多年平均的气候，所以错误。",
+          "difficulty": 3,
+          "knowledge_point": "天气与气候的区别及天气符号",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出天气与气候的两点区别，并各举一个说法为例。",
+          "answer": {
+            "value": "示例：天气短时间、多变，如「今天有雷阵雨」；气候多年平均、较稳定，如「长沙夏季高温多雨」。区别在时间尺度和稳定性。"
+          },
+          "analysis": "评分要点：写出时间长短与稳定性得2分；两个例子各得1分。",
+          "difficulty": 4,
+          "knowledge_point": "天气与气候的区别及天气符号",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "看卫星云图：海洋蓝、陆地绿、某片浓白云区将移来，推断天气并说明理由。",
+          "answer": {
+            "value": "示例：浓白云区移来可能转阴下雨。理由：卫星云图白色表云区，越白云越厚、水汽越足，易形成降水。"
+          },
+          "analysis": "评分要点：写出颜色含义得2分；推断转阴或降水并说清依据得2分。",
+          "difficulty": 4,
+          "knowledge_point": "天气与气候的区别及天气符号",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "一天中最高气温一般出现在（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "地面吸热再放热有滞后，最高气温约在14时；最低在日出前后，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "气温的测量与气温日较差",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "14时左右",
+            "正午12时",
+            "日出前后",
+            "午夜0时"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "测量气温的仪器是（  ），单位通常用（  ）表示。",
+          "answer": {
+            "value": [
+              "温度计",
+              "摄氏度"
+            ]
+          },
+          "analysis": "气温用放在百叶箱里的温度计测量，我国通用单位是摄氏度，符号℃。日较差为最高减最低。",
+          "difficulty": 2,
+          "knowledge_point": "气温的测量与气温日较差",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "一天中最低气温出现在正午12时前后。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "最低气温出现在日出前后，正午前后太阳辐射最强但气温仍在上升，所以错误。",
+          "difficulty": 3,
+          "knowledge_point": "气温的测量与气温日较差",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "某地8时16℃、14时28℃，写出日较差并说明为何最高温不在正午。",
+          "answer": {
+            "value": "示例：日较差=28-16=12℃。正午太阳最高，但地面吸热、再加热空气需要时间，故最高气温滞后到约14时出现。"
+          },
+          "analysis": "评分要点：算出12℃并写等式得2分；说明地面放热滞后得2分。",
+          "difficulty": 4,
+          "knowledge_point": "气温的测量与气温日较差",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "世界气温分布的总趋势是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "太阳辐射随纬度升高减弱，故气温由赤道向两极递减；B、C、D不符，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "世界气温与降水的分布规律",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "由低纬向高纬递减",
+            "由低纬向高纬递增",
+            "沿海向内陆递减",
+            "各地完全相同"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "赤道附近降水（  ），两极地区降水（  ）。",
+          "answer": {
+            "value": [
+              "多",
+              "少"
+            ]
+          },
+          "analysis": "赤道受热强、空气上升易成云致雨；两极冷、气流下沉，水汽少故降水稀少。",
+          "difficulty": 2,
+          "knowledge_point": "世界气温与降水的分布规律",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "山地迎风坡降水比背风坡少，因为气流在迎风坡下沉。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "迎风坡气流被迫抬升、冷却凝结成雨，背风坡下沉增温少雨，所以错误。",
+          "difficulty": 3,
+          "knowledge_point": "世界气温与降水的分布规律",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出影响降水分布的两条规律，并解释回归线西岸为何少雨。",
+          "answer": {
+            "value": "示例：赤道多雨、两极少雨；回归线大陆东岸多、西岸少。西岸受副热带高压和离岸风控制，又常伴寒流，空气稳定难成雨。"
+          },
+          "analysis": "评分要点：两条规律各得1分；写出高压或寒流等成因得2分。",
+          "difficulty": 4,
+          "knowledge_point": "世界气温与降水的分布规律",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "海拔每升高100米，气温大致（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "对流层气温随海拔升高而降，约每100米降0.6℃；B方向反、C数量级错，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "影响气候的因素与主要气候类型",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "下降约0.6℃",
+            "上升约0.6℃",
+            "下降约6℃",
+            "不变"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "影响气候的三个主要因素是纬度位置、（  ）位置和（  ）。",
+          "answer": {
+            "value": [
+              "海陆",
+              "地形"
+            ]
+          },
+          "analysis": "纬度决定获得太阳热量多少，海陆影响温差与降水，地形通过海拔和坡向改变水热。",
+          "difficulty": 2,
+          "knowledge_point": "影响气候的因素与主要气候类型",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "地中海气候的特征是夏季高温多雨、冬季寒冷干燥。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "地中海气候夏季炎热干燥、冬季温和多雨，雨热不同期，题干说反，所以错误。",
+          "difficulty": 3,
+          "knowledge_point": "影响气候的因素与主要气候类型",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "同纬度的沿海与内陆，哪里气温年较差小？用海陆因素解释。",
+          "answer": {
+            "value": "示例：沿海年较差小。海水热容量大、升温降温慢，对沿岸有调节作用；内陆砂石升温降温快，故夏更热冬更冷、年较差大。"
+          },
+          "analysis": "评分要点：答沿海得1分；写出海陆热力性质差异得2分；说明调节作用得1分。",
+          "difficulty": 4,
+          "knowledge_point": "影响气候的因素与主要气候类型",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "山麓气温20℃，山顶比山麓高1000米，山顶气温约为（  ）",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "每升100米降0.6℃，1000米降6℃，20-6=14℃，C正确；A误加、D只写降幅，所以选C。",
+          "difficulty": 3,
+          "knowledge_point": "影响气候的因素与主要气候类型",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "26℃",
+            "20℃",
+            "14℃",
+            "6℃"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第六章 世界的发展差异",
+      "order_index": 6,
+      "summary": "了解世界国家与地区的面积人口差异，比较发达国家与发展中国家，理解南北对话、南南合作及联合国等国际经济组织的作用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "世界上面积最大的国家是（  ）",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "俄罗斯约1707万平方千米最大，B正确；中、加、美均小于它，所以选B。",
+          "difficulty": 1,
+          "knowledge_point": "世界上的国家与面积人口大国",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "中国",
+            "俄罗斯",
+            "加拿大",
+            "美国"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "全球约有200多个（  ）和地区，面积最小的是（  ）。",
+          "answer": {
+            "value": [
+              "国家",
+              "梵蒂冈"
+            ]
+          },
+          "analysis": "世界有200多个国家与地区，梵蒂冈面积不足0.5平方千米，是最小的国家。",
+          "difficulty": 2,
+          "knowledge_point": "世界上的国家与面积人口大国",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "一个国家的领土只包括陆地，不包括领海和领空。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "领土含领陆、领水（含领海）与领空，三者同属国家主权管辖范围，所以错误。",
+          "difficulty": 3,
+          "knowledge_point": "世界上的国家与面积人口大国",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出面积居世界前三的国家，并说明面积数据可在哪里核对。",
+          "answer": {
+            "value": "示例：前三为俄罗斯、加拿大、中国，面积约1707万、998万、960万平方千米。可在世界政区图或地理年鉴的面积表核对。"
+          },
+          "analysis": "评分要点：三个国家顺序正确得2分；写出地图或年鉴等可核对来源得2分。",
+          "difficulty": 4,
+          "knowledge_point": "世界上的国家与面积人口大国",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列国家中属于发展中国家的是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "中国属发展中国家；日本、德国、美国均为高收入的发达国家，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "发达国家与发展中国家的差异",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "中国",
+            "日本",
+            "德国",
+            "美国"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "按（  ）发展水平，世界国家分为发达国家与（  ）国家。",
+          "answer": {
+            "value": [
+              "经济",
+              "发展中"
+            ]
+          },
+          "analysis": "划分依据是经济发展水平及人均收入、产业结构，而非面积大小或人口多少。",
+          "difficulty": 2,
+          "knowledge_point": "发达国家与发展中国家的差异",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "发达国家全部位于北半球，南半球没有发达国家。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "澳大利亚、新西兰位于南半球却是发达国家，故不能只按南北半球划分，所以错误。",
+          "difficulty": 3,
+          "knowledge_point": "发达国家与发展中国家的差异",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "从产业和收入两方面比较发达国家与发展中国家的差异。",
+          "answer": {
+            "value": "示例：发达国家以高新技术工业和服务业为主，人均收入高、教育医疗投入多；发展中国家农业比重大、工业多在起步，人均收入较低。"
+          },
+          "analysis": "评分要点：产业差异得2分；人均收入或生活水平差异得2分。",
+          "difficulty": 4,
+          "knowledge_point": "发达国家与发展中国家的差异",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列四国中，位于南半球且属发达国家的是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "澳大利亚在南半球且为发达国家；中印属北半球发展中，巴西在南半球但仍属发展中，所以选A。",
+          "difficulty": 3,
+          "knowledge_point": "发达国家与发展中国家的差异",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "澳大利亚",
+            "中国",
+            "巴西",
+            "印度"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "发展中国家之间的互助合作称为（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「南」指发展中国家，彼此合作即南南合作；南北对话是与发达国家谈判，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "南北对话与南南合作",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "南南合作",
+            "南北对话",
+            "南北差距",
+            "北北合作"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "国际上把发达国家称「（  ）」，发展中国家称「（  ）」。",
+          "answer": {
+            "value": [
+              "北",
+              "南"
+            ]
+          },
+          "analysis": "发达国家多在北半球北部简称北，发展中国家多在南半球及北部南缘简称南，因分布得名。",
+          "difficulty": 2,
+          "knowledge_point": "南北对话与南南合作",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「南北对话」是指南半球国家与北半球国家之间的所有往来。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "南北对话特指发展中国家与发达国家就经济等问题的协商，不是按地理半球划分的往来，所以错误。",
+          "difficulty": 3,
+          "knowledge_point": "南北对话与南南合作",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "解释「南北差距」，并写出一项缩小差距的可行做法。",
+          "answer": {
+            "value": "示例：南北差距指两类国家在收入、技术上的差距。缩小做法：开展南南合作、承接技术转移，或在南北对话中争取公平贸易条件。"
+          },
+          "analysis": "评分要点：解释差距含义得2分；写出合作或对话等具体做法得2分。",
+          "difficulty": 4,
+          "knowledge_point": "南北对话与南南合作",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "中国与非洲某国签基建协议，判断属哪类合作，并写出判断依据。",
+          "answer": {
+            "value": "示例：属南南合作。中国与非洲国家均为发展中国家，「南」指发展中国家，双方互助即南南合作；若与发达国家谈判才叫南北对话。"
+          },
+          "analysis": "评分要点：判断南南合作得2分；用双方均为发展中国家解释得2分。",
+          "difficulty": 4,
+          "knowledge_point": "南北对话与南南合作",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "总部设在美国纽约、以维护国际和平为宗旨的是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "联合国总部在纽约、以和平与安全为核心；WTO在日内瓦管贸易，奥委会在洛桑，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "国际经济合作与重要国际组织",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "联合国",
+            "世界贸易组织",
+            "国际奥委会",
+            "红十字会"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "简称WTO、总部在日内瓦、管国际贸易规则的是（  ）。",
+          "answer": {
+            "value": [
+              "世界贸易组织"
+            ]
+          },
+          "analysis": "WTO即世界贸易组织，总部瑞士日内瓦，职能是降低关税、制定规则并处理成员间贸易争端。",
+          "difficulty": 2,
+          "knowledge_point": "国际经济合作与重要国际组织",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "一国资源技术样样充足，因此不需要与其他国家经济合作。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "各国资源、技术、市场禀赋不同，如石油、芯片、农产品需互通有无，故必须合作，所以错误。",
+          "difficulty": 3,
+          "knowledge_point": "国际经济合作与重要国际组织",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出联合国的两项主要作用，并说明为何各国要加入国际组织。",
+          "answer": {
+            "value": "示例：联合国维护国际和平、协调救灾与公共卫生。加入国际组织便于协商规则、获得合作，单国难应对跨国问题。"
+          },
+          "analysis": "评分要点：两项作用各得1分；说明协商或合作必要性得2分。",
+          "difficulty": 4,
+          "knowledge_point": "国际经济合作与重要国际组织",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-11T02:29:22+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

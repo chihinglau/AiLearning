@@ -1,0 +1,2640 @@
+{
+  "subject": "english",
+  "grade": 4,
+  "version": "牛津深圳版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "Unit 1 Where do people live?",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "认读住所名词 flat、house、village、city",
+      "parent": "Unit 1 Where do people live?",
+      "order_index": 1,
+      "explanation": "flat 是公寓，house 是独栋房子，village 是村庄，city 是城市，四个词都表示住处。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "用 There is / There are 描述房屋",
+      "parent": "Unit 1 Where do people live?",
+      "order_index": 2,
+      "explanation": "单数用 There is，复数用 There are；描述房间数量时按单复数选 is 或 are。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "用 Where do you live 问答与介词 in、on",
+      "parent": "Unit 1 Where do people live?",
+      "order_index": 3,
+      "explanation": "问住处用 Where do you live?，答 I live in a flat；城市用 in，农场用 on。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "辨认 ar 与 a-e 的发音",
+      "parent": "Unit 1 Where do people live?",
+      "order_index": 4,
+      "explanation": "ar 常读 /ɑː/，如 car、park；a-e 常读 /eɪ/，如 name、cake。听音辨词要看字母组合。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 2 Where do animals live?",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "认读栖息地名词 forest、river、cave、sea",
+      "parent": "Unit 2 Where do animals live?",
+      "order_index": 1,
+      "explanation": "forest 森林、river 河流、cave 洞穴、sea 海都是动物住处，位置常用 in、near 说明。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "用 Where does a 单数动物 live 提问",
+      "parent": "Unit 2 Where do animals live?",
+      "order_index": 2,
+      "explanation": "主语是单数动物时，用 does 提问，答语动词加 -s，如 It lives in a forest。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "用 in、on、near 说动物位置",
+      "parent": "Unit 2 Where do animals live?",
+      "order_index": 3,
+      "explanation": "in 表示在里面，on 表示在表面，near 表示在附近；描述鸟、鱼、熊的位置时按实际关系选词。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "辨认 oo 的长短音",
+      "parent": "Unit 2 Where do animals live?",
+      "order_index": 4,
+      "explanation": "oo 在 moon、zoo 里读长音 /uː/，在 book、foot 里读短音 /ʊ/；同是 oo，读音要按词记。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 3 How do we use numbers?",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "认读 13 到 19 与整十数词",
+      "parent": "Unit 3 How do we use numbers?",
+      "order_index": 1,
+      "explanation": "13 到 19 多以 -teen 结尾，如 fourteen、fifteen；整十数以 -ty 结尾，如 twenty、fifty。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "用 How many 问可数名词数量",
+      "parent": "Unit 3 How do we use numbers?",
+      "order_index": 2,
+      "explanation": "问可数名词数量用 How many 加复数名词，答语用数词加名词，如 Six books。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "读电话号码与价格",
+      "parent": "Unit 3 How do we use numbers?",
+      "order_index": 3,
+      "explanation": "电话号码逐位读，0 可读 oh；价格用数词加 yuan，问价用 How much is it?",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "辨认 i-e 与 i 的发音",
+      "parent": "Unit 3 How do we use numbers?",
+      "order_index": 4,
+      "explanation": "i-e 常读 /aɪ/，如 five、nine、bike；闭音节里单个 i 读 /ɪ/，如 sit、big、six。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 4 What do we buy?",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "认读食物与日用品名词",
+      "parent": "Unit 4 What do we buy?",
+      "order_index": 1,
+      "explanation": "bread 面包、milk 牛奶、juice 果汁是食品，shoes 鞋、socks 袜是衣物，购物按类别找货架。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "用 How much is it 问价与找零",
+      "parent": "Unit 4 What do we buy?",
+      "order_index": 2,
+      "explanation": "问单价用 How much is it?，回答用 It's 加数词和 yuan；付钱后店员给的零钱叫 change。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "用 Can I help you 购物交际",
+      "parent": "Unit 4 What do we buy?",
+      "order_index": 3,
+      "explanation": "店员说 Can I help you?，顾客答 Yes, please；递东西说 Here you are。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "辨认 sh 与 ch 的发音",
+      "parent": "Unit 4 What do we buy?",
+      "order_index": 4,
+      "explanation": "sh 读 /ʃ/，如 ship、shop；ch 常读 /tʃ/，如 chair、cheese。两组起首辅音不同，别听混。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 5 How are the seasons different?",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "认读四季名词",
+      "parent": "Unit 5 How are the seasons different?",
+      "order_index": 1,
+      "explanation": "一年有 spring 春、summer 夏、autumn 秋、winter 冬，说季节用 in spring。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "用 It's 加天气形容词描述季节",
+      "parent": "Unit 5 How are the seasons different?",
+      "order_index": 2,
+      "explanation": "描述天气用 It's 加形容词：hot、cold、warm、cool、rainy、snowy，主语 it 指天气。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "用 Which season do you like 表达喜好",
+      "parent": "Unit 5 How are the seasons different?",
+      "order_index": 3,
+      "explanation": "问喜好用 Which season do you like?，答语用 I like 加季节名，再用 because 给理由。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "辨认 ea 与 ee 的发音",
+      "parent": "Unit 5 How are the seasons different?",
+      "order_index": 4,
+      "explanation": "ee 读 /iː/，如 see、green；ea 在 sea、tea 里也读 /iː/，在 head 里读 /e/。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 6 What's amazing about plants?",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "认读植物部位名词",
+      "parent": "Unit 6 What's amazing about plants?",
+      "order_index": 1,
+      "explanation": "root 根、stem 茎、leaf 叶、flower 花、seed 种子、fruit 果实；根在土里，花果在地上。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "用 Plants need 说生长需求",
+      "parent": "Unit 6 What's amazing about plants?",
+      "order_index": 2,
+      "explanation": "植物需要 water、sunlight、soil、air，用 Plants need 加名词表达，need 后接名词。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "用 It has / They have 描述植物",
+      "parent": "Unit 6 What's amazing about plants?",
+      "order_index": 3,
+      "explanation": "单数用 It has，复数用 They have；描述叶子和花瓣数量时按主语单复数选词。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "辨认 ow 与 ou 的发音",
+      "parent": "Unit 6 What's amazing about plants?",
+      "order_index": 4,
+      "explanation": "ow 读 /aʊ/（cow）或 /əʊ/（slow）；ou 常读 /aʊ/（house、out），读音要按词记。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 7 How do we keep safe on the road?",
+      "order_index": 7
+    },
+    {
+      "node_type": "point",
+      "name": "认读交通设施与规则名词",
+      "parent": "Unit 7 How do we keep safe on the road?",
+      "order_index": 1,
+      "explanation": "认读 traffic lights、zebra crossing、pavement、helmet 等交通安全词。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "用 must / mustn't 与祈使句说规则",
+      "parent": "Unit 7 How do we keep safe on the road?",
+      "order_index": 2,
+      "explanation": "必须做用 must，禁止做用 mustn't 或 Don't 加动词原形；否定祈使句以 Don't 开头。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "过街的 stop、look、go 交际指令",
+      "parent": "Unit 7 How do we keep safe on the road?",
+      "order_index": 3,
+      "explanation": "过街前说 Look left and right，绿灯亮才走；提醒同伴用 Wait! 或 Stop!，按停看行三步做。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "辨认 ay 与 ai 的发音",
+      "parent": "Unit 7 How do we keep safe on the road?",
+      "order_index": 4,
+      "explanation": "ay 常在词尾读 /eɪ/（day、play），ai 常在词中读 /eɪ/（rain、train）；位置不同读音相同。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 8 What do our grandparents do?",
+      "order_index": 8
+    },
+    {
+      "node_type": "point",
+      "name": "认读日常活动动词短语",
+      "parent": "Unit 8 What do our grandparents do?",
+      "order_index": 1,
+      "explanation": "cook 做饭、garden 种花、read 读报、walk 散步、tell stories 讲故事都是日常活动。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "第三人称单数动词加 -s / -es",
+      "parent": "Unit 8 What do our grandparents do?",
+      "order_index": 2,
+      "explanation": "主语 He、She 是第三人称单数，动词加 -s 或 -es，如 cooks、goes、watches。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "用 What does your grandpa do 问答",
+      "parent": "Unit 8 What do our grandparents do?",
+      "order_index": 3,
+      "explanation": "问祖父母日常用 What does your grandpa do?，答 He 加动词 -s；does 后动词回原形。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "辨认 o-e 与 o 的发音",
+      "parent": "Unit 8 What do our grandparents do?",
+      "order_index": 4,
+      "explanation": "o-e 常读 /əʊ/，如 note、home、rose；闭音节 o 读 /ɒ/，如 dog、box、hot、hop。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "Unit 1 Where do people live?",
+      "order_index": 1,
+      "summary": "学习住所与房屋部位名词，用 There is/There are 和 Where do you live? 介绍住处，并辨认 ar 与 a-e 的读音。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Which word is a home?",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "flat 是住房，其余是车、食物、树，所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "认读住所名词 flat、house、village、city",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "A bus",
+            "A flat",
+            "A cake",
+            "A tree"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "I ___ in a flat with my family.",
+          "answer": {
+            "value": [
+              "live"
+            ]
+          },
+          "analysis": "主语 I 后用动词原形 live 表示居住，填 live。",
+          "difficulty": 2,
+          "knowledge_point": "认读住所名词 flat、house、village、city",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "A village is bigger than a city.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "city 城市远大于 village 村庄，说法相反，所以 F。",
+          "difficulty": 3,
+          "knowledge_point": "认读住所名词 flat、house、village、city",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write about your home in English.",
+          "answer": {
+            "value": "I live in a flat in a city."
+          },
+          "analysis": "写出 I live in 加住所得 2 分；名词正确得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "认读住所名词 flat、house、village、city",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Ben lives on a farm. Where is it?",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "farm 在乡村，village 最贴切，其余场所不合，所以选 B。",
+          "difficulty": 3,
+          "knowledge_point": "认读住所名词 flat、house、village、city",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "In a lift",
+            "In a village",
+            "In a bank",
+            "In a cave"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "___ a garden near my flat.",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "a garden 单数用 There is，其余搭配不对，所以选 C。",
+          "difficulty": 1,
+          "knowledge_point": "用 There is / There are 描述房屋",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "There are",
+            "There have",
+            "There is",
+            "It has"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "There ___ three bedrooms here.",
+          "answer": {
+            "value": [
+              "are"
+            ]
+          },
+          "analysis": "three bedrooms 是复数，be 动词用 are，填 are。",
+          "difficulty": 2,
+          "knowledge_point": "用 There is / There are 描述房屋",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "There are a lift in this building.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "a lift 是单数，应说 There is a lift，所以 F。",
+          "difficulty": 3,
+          "knowledge_point": "用 There is / There are 描述房屋",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write: two things in your flat.",
+          "answer": {
+            "value": "There is a kitchen. There are two bedrooms."
+          },
+          "analysis": "用 There is/are 各写一句得 2 分；单复数一致得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "用 There is / There are 描述房屋",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "___ do you live? In a flat.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "答语是地点，问地点用 Where，其余疑问词不合，所以选 A。",
+          "difficulty": 1,
+          "knowledge_point": "用 Where do you live 问答与介词 in、on",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Where",
+            "What",
+            "Who",
+            "How"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "I live ___ the fifth floor.",
+          "answer": {
+            "value": [
+              "on"
+            ]
+          },
+          "analysis": "表示在第几层楼用介词 on，填 on。",
+          "difficulty": 2,
+          "knowledge_point": "用 Where do you live 问答与介词 in、on",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "We say I live in a farm.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "农场前用 on a farm，不用 in，所以 F。",
+          "difficulty": 3,
+          "knowledge_point": "用 Where do you live 问答与介词 in、on",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Ask your friend where he lives.",
+          "answer": {
+            "value": "Where do you live?"
+          },
+          "analysis": "用 Where do you live? 提问得 2 分；疑问词正确得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "用 Where do you live 问答与介词 in、on",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "I live in a flat on a farm.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "flat 在楼里用 in，农场用 on，两句混搭矛盾，所以 F。",
+          "difficulty": 4,
+          "knowledge_point": "用 Where do you live 问答与介词 in、on",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which word has /ɑː/?",
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "car 里 ar 读 /ɑː/，其余 a-e 读 /eɪ/，所以选 D。",
+          "difficulty": 1,
+          "knowledge_point": "辨认 ar 与 a-e 的发音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Cake",
+            "Name",
+            "Gate",
+            "Car"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Park and card both have ___ sound.",
+          "answer": {
+            "value": [
+              "/ɑː/"
+            ]
+          },
+          "analysis": "park 与 card 的 ar 都读 /ɑː/，填此音标。",
+          "difficulty": 2,
+          "knowledge_point": "辨认 ar 与 a-e 的发音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Name and game rhyme with cat.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "name、game 读 /eɪ/，cat 读 /æ/，不押韵，所以 F。",
+          "difficulty": 3,
+          "knowledge_point": "辨认 ar 与 a-e 的发音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write two words with /eɪ/ sound.",
+          "answer": {
+            "value": "Cake and name."
+          },
+          "analysis": "写出两个 a-e 发 /eɪ/ 的词各得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "辨认 ar 与 a-e 的发音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 2 Where do animals live?",
+      "order_index": 2,
+      "summary": "学习动物栖息地名词，用 Where does a ... live? 与介词 in、on、near 描述位置，辨认 oo 长短音。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Which is a home for a bird?",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "nest 是鸟巢，其余都不是动物住所，所以选 C。",
+          "difficulty": 1,
+          "knowledge_point": "认读栖息地名词 forest、river、cave、sea",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "A shoe",
+            "A cup",
+            "A nest",
+            "A road"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "A fish lives ___ a river.",
+          "answer": {
+            "value": [
+              "in"
+            ]
+          },
+          "analysis": "鱼生活在河里，用介词 in，填 in。",
+          "difficulty": 2,
+          "knowledge_point": "认读栖息地名词 forest、river、cave、sea",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "A camel lives on the ice.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "camel 骆驼住在沙漠 desert，不在冰上，所以 F。",
+          "difficulty": 3,
+          "knowledge_point": "认读栖息地名词 forest、river、cave、sea",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Name one animal home in English.",
+          "answer": {
+            "value": "A nest in a tree."
+          },
+          "analysis": "写出一个动物住所名词得 2 分；搭配合理得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "认读栖息地名词 forest、river、cave、sea",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "A penguin lives on cold ice. Where?",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "企鹅住海冰，sea ice 最合，其余是沙漠森林鸟巢，所以选 C。",
+          "difficulty": 3,
+          "knowledge_point": "认读栖息地名词 forest、river、cave、sea",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "A desert",
+            "A forest",
+            "The sea ice",
+            "A nest"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "Where ___ a panda live?",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "a panda 单数，助动词用 does，其余不配，所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "用 Where does a 单数动物 live 提问",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "do",
+            "does",
+            "is",
+            "are"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "It ___ in a forest.",
+          "answer": {
+            "value": [
+              "lives"
+            ]
+          },
+          "analysis": "主语 It 后动词加 -s，填 lives。",
+          "difficulty": 2,
+          "knowledge_point": "用 Where does a 单数动物 live 提问",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Where do a bee live is correct.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "a bee 单数应用 does，且语序错，所以 F。",
+          "difficulty": 3,
+          "knowledge_point": "用 Where does a 单数动物 live 提问",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Ask where an eagle lives.",
+          "answer": {
+            "value": "Where does an eagle live?"
+          },
+          "analysis": "用 does 提问得 2 分；主语与动词搭配对得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "用 Where does a 单数动物 live 提问",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write: Where does a fish live?",
+          "answer": {
+            "value": "It lives in a river."
+          },
+          "analysis": "用 It lives in 加地点作答得 2 分；动词加 -s 得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "用 Where does a 单数动物 live 提问",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "A bird sits ___ a tree.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "鸟在树里用 in a tree，其余场所不合理，所以选 A。",
+          "difficulty": 1,
+          "knowledge_point": "用 in、on、near 说动物位置",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "in",
+            "At sea",
+            "In a cup",
+            "On ice"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "A bear sleeps ___ a cave.",
+          "answer": {
+            "value": [
+              "in"
+            ]
+          },
+          "analysis": "熊在洞穴里冬眠，用 in，填 in。",
+          "difficulty": 2,
+          "knowledge_point": "用 in、on、near 说动物位置",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "A bee lives in a river.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "蜜蜂住在花丛或蜂巢，不在河里，所以 F。",
+          "difficulty": 3,
+          "knowledge_point": "用 in、on、near 说动物位置",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write where a bee lives.",
+          "answer": {
+            "value": "A bee lives near flowers."
+          },
+          "analysis": "写出 bee 的住处得 2 分；介词使用正确得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "用 in、on、near 说动物位置",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which word has short /ʊ/?",
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "book 里 oo 读短音 /ʊ/，其余读 /uː/，所以选 D。",
+          "difficulty": 1,
+          "knowledge_point": "辨认 oo 的长短音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Moon",
+            "Zoo",
+            "Food",
+            "Book"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Moon and zoo share ___ sound.",
+          "answer": {
+            "value": [
+              "/uː/"
+            ]
+          },
+          "analysis": "moon 与 zoo 的 oo 都读长音 /uː/，填此音标。",
+          "difficulty": 2,
+          "knowledge_point": "辨认 oo 的长短音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Foot and food sound the same.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "foot 读 /ʊ/，food 读 /uː/，元音不同，所以 F。",
+          "difficulty": 3,
+          "knowledge_point": "辨认 oo 的长短音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write two words with /uː/.",
+          "answer": {
+            "value": "Moon and zoo."
+          },
+          "analysis": "写出两个 oo 读 /uː/ 的词各得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "辨认 oo 的长短音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 3 How do we use numbers?",
+      "order_index": 3,
+      "summary": "学习 13 到 19 与整十数词，用 How many 问数量、读电话号码与价格，辨认 i-e 与 i 的读音。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Which word means 15?",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "15 是 fifteen，fifty 是 50，其余是 14 和 5，所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "认读 13 到 19 与整十数词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Fifty",
+            "Fifteen",
+            "Fourteen",
+            "Five"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Ten and ten make ___.",
+          "answer": {
+            "value": [
+              "twenty"
+            ]
+          },
+          "analysis": "10 加 10 等于 20，英文是 twenty，填 twenty。",
+          "difficulty": 2,
+          "knowledge_point": "认读 13 到 19 与整十数词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Thirteen is the same as thirty.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "13 是 thirteen，30 是 thirty，读音与数值都不同，所以 F。",
+          "difficulty": 3,
+          "knowledge_point": "认读 13 到 19 与整十数词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write the word for 18.",
+          "answer": {
+            "value": "Eighteen."
+          },
+          "analysis": "写出 eighteen 得 2 分；拼写含 -teen 得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "认读 13 到 19 与整十数词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Cake 15 yuan, milk 5. How much?",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "15 加 5 得 20，即 twenty yuan，其余金额不对，所以选 B。",
+          "difficulty": 3,
+          "knowledge_point": "认读 13 到 19 与整十数词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Fifteen",
+            "Twenty yuan",
+            "Fifty yuan",
+            "Ten yuan"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "___ apples do you have?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "apples 可数复数，问数量用 How many，其余疑问词不合，所以选 A。",
+          "difficulty": 1,
+          "knowledge_point": "用 How many 问可数名词数量",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "How many",
+            "How much",
+            "How old",
+            "How long"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "How many ___ are in a week?",
+          "answer": {
+            "value": [
+              "days"
+            ]
+          },
+          "analysis": "一周有七天，how many 后接复数 days，填 days。",
+          "difficulty": 2,
+          "knowledge_point": "用 How many 问可数名词数量",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "How many milk is on the desk?",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "milk 不可数，应用 How much，所以 F。",
+          "difficulty": 3,
+          "knowledge_point": "用 How many 问可数名词数量",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Count: write twelve plus three.",
+          "answer": {
+            "value": "Fifteen."
+          },
+          "analysis": "算出 15 得 2 分；用英文数词 fifteen 得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "用 How many 问可数名词数量",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "How much is the pen? ___ ten yuan.",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "单数 the pen 用 It's 答价，其余主谓不配，所以选 C。",
+          "difficulty": 1,
+          "knowledge_point": "读电话号码与价格",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "They're",
+            "There",
+            "It's",
+            "I'm"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "My phone ___ is 8520 6611.",
+          "answer": {
+            "value": [
+              "number"
+            ]
+          },
+          "analysis": "电话号码是 phone number，填 number。",
+          "difficulty": 2,
+          "knowledge_point": "读电话号码与价格",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "We read 0 as oh in a phone number.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "电话号码里 0 常读作 oh，说法正确，所以 T。",
+          "difficulty": 3,
+          "knowledge_point": "读电话号码与价格",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Say the price: 30 yuan, in English.",
+          "answer": {
+            "value": "It's thirty yuan."
+          },
+          "analysis": "用 It's 加 yuan 得 2 分；thirty 拼写正确得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "读电话号码与价格",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Ten yuan plus five yuan is fifty.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "10 加 5 得 15 fifteen，不是 50，所以 F。",
+          "difficulty": 4,
+          "knowledge_point": "读电话号码与价格",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which word has /aɪ/?",
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "bike 里 i-e 读 /aɪ/，其余读 /ɪ/，所以选 D。",
+          "difficulty": 1,
+          "knowledge_point": "辨认 i-e 与 i 的发音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Big",
+            "Sit",
+            "Six",
+            "Bike"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Nine and five share ___ sound.",
+          "answer": {
+            "value": [
+              "/aɪ/"
+            ]
+          },
+          "analysis": "nine 与 five 的 i-e 都读 /aɪ/，填此音标。",
+          "difficulty": 2,
+          "knowledge_point": "辨认 i-e 与 i 的发音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Time and sit rhyme well.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "time 读 /aɪ/，sit 读 /ɪ/，元音不同，所以 F。",
+          "difficulty": 3,
+          "knowledge_point": "辨认 i-e 与 i 的发音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write two words with /aɪ/.",
+          "answer": {
+            "value": "Nine and bike."
+          },
+          "analysis": "写出两个 i-e 发 /aɪ/ 的词各得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "辨认 i-e 与 i 的发音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 4 What do we buy?",
+      "order_index": 4,
+      "summary": "学习食物与日用品名词，用 How much is it? 问价、Can I help you? 购物交际，辨认 sh 与 ch。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Which one can you drink?",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "juice 是果汁可喝，其余是食物或衣物，所以选 C。",
+          "difficulty": 1,
+          "knowledge_point": "认读食物与日用品名词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Bread",
+            "Socks",
+            "Juice",
+            "Rice"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Mum buys ___ and bread.",
+          "answer": {
+            "value": [
+              "milk"
+            ]
+          },
+          "analysis": "早餐常买牛奶和面包，填食品名词 milk。",
+          "difficulty": 2,
+          "knowledge_point": "认读食物与日用品名词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "We can wear a bottle of juice.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "juice 是喝的，不能穿，说法荒谬，所以 F。",
+          "difficulty": 3,
+          "knowledge_point": "认读食物与日用品名词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write two things you can eat.",
+          "answer": {
+            "value": "Bread and apples."
+          },
+          "analysis": "写出两个可食用名词各得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "认读食物与日用品名词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "50 yuan, bread 8 yuan. Change?",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "50 减 8 得 42，即 forty two，其余金额不对，所以选 C。",
+          "difficulty": 3,
+          "knowledge_point": "认读食物与日用品名词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Fifty yuan",
+            "Eight yuan",
+            "Forty two",
+            "Fifty eight"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "___ is the T-shirt? Ten yuan.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "答语是价格，问价用 How much，其余疑问词不合，所以选 A。",
+          "difficulty": 1,
+          "knowledge_point": "用 How much is it 问价与找零",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "How much",
+            "How many",
+            "How old",
+            "How big"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "It ___ twenty yuan.",
+          "answer": {
+            "value": [
+              "is"
+            ]
+          },
+          "analysis": "单数物品价格用 It is，缩写 It's，填 is。",
+          "difficulty": 2,
+          "knowledge_point": "用 How much is it 问价与找零",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "How much is your shoes?",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "shoes 复数应用 are，不用 is，所以 F。",
+          "difficulty": 3,
+          "knowledge_point": "用 How much is it 问价与找零",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Ask the price of a bag.",
+          "answer": {
+            "value": "How much is the bag?"
+          },
+          "analysis": "用 How much is 提问得 2 分；单数一致得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "用 How much is it 问价与找零",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "You want milk. You say: ___",
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "点牛奶说 Milk, please，其余不是购物用语，所以选 D。",
+          "difficulty": 1,
+          "knowledge_point": "用 Can I help you 购物交际",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "I'm fine",
+            "Sit down",
+            "Good night",
+            "Milk, please"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "___ you are. Thank you!",
+          "answer": {
+            "value": [
+              "Here"
+            ]
+          },
+          "analysis": "递东西给对方说 Here you are，填 Here。",
+          "difficulty": 2,
+          "knowledge_point": "用 Can I help you 购物交际",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Can I help you? asks about age.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "这句是店员提供帮助，不是问年龄，所以 F。",
+          "difficulty": 3,
+          "knowledge_point": "用 Can I help you 购物交际",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write a polite shop reply.",
+          "answer": {
+            "value": "Yes, please. I'd like some bread."
+          },
+          "analysis": "用 Yes, please 应答得 2 分；说出所买物品得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "用 Can I help you 购物交际",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Say Thank you for the change.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "收到找零说 Thank you 是礼貌用语，说法正确，所以 T。",
+          "difficulty": 4,
+          "knowledge_point": "用 Can I help you 购物交际",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which word starts with /ʃ/?",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "ship 的 sh 读 /ʃ/，其余 ch 读 /tʃ/，所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "辨认 sh 与 ch 的发音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Chair",
+            "Ship",
+            "Cheese",
+            "Cheap"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Ship and shop share ___ sound.",
+          "answer": {
+            "value": [
+              "/ʃ/"
+            ]
+          },
+          "analysis": "ship 与 shop 的 sh 都读 /ʃ/，填此音标。",
+          "difficulty": 2,
+          "knowledge_point": "辨认 sh 与 ch 的发音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Chair and ship start the same.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "chair 起音 /tʃ/，ship 起音 /ʃ/，不同，所以 F。",
+          "difficulty": 3,
+          "knowledge_point": "辨认 sh 与 ch 的发音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write two words with /tʃ/.",
+          "answer": {
+            "value": "Chair and cheese."
+          },
+          "analysis": "写出两个 ch 发 /tʃ/ 的词各得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "辨认 sh 与 ch 的发音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 5 How are the seasons different?",
+      "order_index": 5,
+      "summary": "学习四季与天气形容词，用 It's 和 Which season do you like? 描述季节，辨认 ea 与 ee。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Which season has snow?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "winter 冬天下雪，其余季节不下雪，所以选 A。",
+          "difficulty": 1,
+          "knowledge_point": "认读四季名词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Winter",
+            "Spring",
+            "Summer",
+            "Autumn"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Flowers come out in ___.",
+          "answer": {
+            "value": [
+              "spring"
+            ]
+          },
+          "analysis": "春天花开，季节名词用 spring，填 spring。",
+          "difficulty": 2,
+          "knowledge_point": "认读四季名词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Autumn comes before summer.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "顺序是 summer 后 autumn，说法颠倒，所以 F。",
+          "difficulty": 3,
+          "knowledge_point": "认读四季名词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write your favourite season.",
+          "answer": {
+            "value": "I like autumn best."
+          },
+          "analysis": "写出季节名词得 2 分；句子完整得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "认读四季名词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Leaves fall. Which season is it?",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "落叶是秋天 autumn，其余季节不合，所以选 B。",
+          "difficulty": 3,
+          "knowledge_point": "认读四季名词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Winter",
+            "Autumn",
+            "Spring",
+            "Summer"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "In summer it is very ___.",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "夏天炎热用 hot，其余是冷天用语，所以选 C。",
+          "difficulty": 1,
+          "knowledge_point": "用 It's 加天气形容词描述季节",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Cold",
+            "Snowy",
+            "Hot",
+            "Icy"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "It ___ rainy in spring.",
+          "answer": {
+            "value": [
+              "is"
+            ]
+          },
+          "analysis": "主语 It 描述天气，be 动词用 is，填 is。",
+          "difficulty": 2,
+          "knowledge_point": "用 It's 加天气形容词描述季节",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "We say it is snowy in summer.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "夏天不下雪，snowy 属于冬天，所以 F。",
+          "difficulty": 3,
+          "knowledge_point": "用 It's 加天气形容词描述季节",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Describe today's weather.",
+          "answer": {
+            "value": "It is sunny and warm."
+          },
+          "analysis": "用 It is 加天气词得 2 分；形容词正确得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "用 It's 加天气形容词描述季节",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write: why do you like spring?",
+          "answer": {
+            "value": "I like spring because it is warm."
+          },
+          "analysis": "用 because 给理由得 2 分；天气词正确得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "用 It's 加天气形容词描述季节",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "___ season do you like? Winter.",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "在特定范围选一个用 Which，其余疑问词不合，所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "用 Which season do you like 表达喜好",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "How much",
+            "Which",
+            "How many",
+            "Where"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "I like summer ___ I can swim.",
+          "answer": {
+            "value": [
+              "because"
+            ]
+          },
+          "analysis": "后半句说明原因，连词用 because，填 because。",
+          "difficulty": 2,
+          "knowledge_point": "用 Which season do you like 表达喜好",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Which season you like is correct.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "疑问句要加助动词 do，语序应为 do you like，所以 F。",
+          "difficulty": 3,
+          "knowledge_point": "用 Which season do you like 表达喜好",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Ask which season Ben likes.",
+          "answer": {
+            "value": "Which season do you like, Ben?"
+          },
+          "analysis": "用 Which season 提问得 2 分；助动词 do 正确得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "用 Which season do you like 表达喜好",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which word has /e/?",
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "head 里 ea 读 /e/，其余读 /iː/，所以选 D。",
+          "difficulty": 1,
+          "knowledge_point": "辨认 ea 与 ee 的发音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Sea",
+            "Tea",
+            "Green",
+            "Head"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "See and green share ___ sound.",
+          "answer": {
+            "value": [
+              "/iː/"
+            ]
+          },
+          "analysis": "see 与 green 都读长音 /iː/，填此音标。",
+          "difficulty": 2,
+          "knowledge_point": "辨认 ea 与 ee 的发音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Sea and head sound the same.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "sea 读 /iː/，head 读 /e/，元音不同，所以 F。",
+          "difficulty": 3,
+          "knowledge_point": "辨认 ea 与 ee 的发音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write two words with /iː/.",
+          "answer": {
+            "value": "Tea and sea."
+          },
+          "analysis": "写出两个读 /iː/ 的词各得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "辨认 ea 与 ee 的发音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 6 What's amazing about plants?",
+      "order_index": 6,
+      "summary": "学习植物部位名词，用 Plants need 与 It has/They have 描述植物，辨认 ow 与 ou。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Which part is under the soil?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "root 根长在土下，其余部位在地上，所以选 A。",
+          "difficulty": 1,
+          "knowledge_point": "认读植物部位名词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Root",
+            "Flower",
+            "Leaf",
+            "Fruit"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "A small ___ grows into a plant.",
+          "answer": {
+            "value": [
+              "seed"
+            ]
+          },
+          "analysis": "种子 seed 发芽长成植株，填 seed。",
+          "difficulty": 2,
+          "knowledge_point": "认读植物部位名词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "The stem carries water to leaves.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "茎 stem 把水送到叶子，说法正确，所以 T。",
+          "difficulty": 3,
+          "knowledge_point": "认读植物部位名词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Name two parts of a plant.",
+          "answer": {
+            "value": "A stem and a leaf."
+          },
+          "analysis": "写出两个部位名词各得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "认读植物部位名词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "You put a seed in soil. What next?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "播种后要浇水，其余做法不利生长，所以选 A。",
+          "difficulty": 3,
+          "knowledge_point": "认读植物部位名词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Water it",
+            "Add a shoe",
+            "Freeze it",
+            "Hide it"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "Plants need ___ to make food.",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "植物靠 sunlight 造养分，其余无关，所以选 C。",
+          "difficulty": 1,
+          "knowledge_point": "用 Plants need 说生长需求",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "A shoe",
+            "A book",
+            "Sunlight",
+            "Money"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Plants ___ water and air.",
+          "answer": {
+            "value": [
+              "need"
+            ]
+          },
+          "analysis": "主语 Plants 复数，动词用原形 need，填 need。",
+          "difficulty": 2,
+          "knowledge_point": "用 Plants need 说生长需求",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "A plant grows well with no water.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "缺水植物会枯萎，不能长好，所以 F。",
+          "difficulty": 3,
+          "knowledge_point": "用 Plants need 说生长需求",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write what a seed needs.",
+          "answer": {
+            "value": "It needs water and sunlight."
+          },
+          "analysis": "写出水与阳光各得 2 分；need 用法正确得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "用 Plants need 说生长需求",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Plants need soil only, not light.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "植物还需要阳光与水，说法不全，所以 F。",
+          "difficulty": 4,
+          "knowledge_point": "用 Plants need 说生长需求",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "A sunflower ___ yellow flowers.",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "主语单数 A sunflower 用 has，其余不配，所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "用 It has / They have 描述植物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "have",
+            "has",
+            "is",
+            "are"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Trees ___ many leaves.",
+          "answer": {
+            "value": [
+              "have"
+            ]
+          },
+          "analysis": "主语 Trees 复数，动词用 have，填 have。",
+          "difficulty": 2,
+          "knowledge_point": "用 It has / They have 描述植物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "It have green leaves is correct.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "主语 It 单数应用 has，不用 have，所以 F。",
+          "difficulty": 3,
+          "knowledge_point": "用 It has / They have 描述植物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write: what does a tree have?",
+          "answer": {
+            "value": "It has a stem and many leaves."
+          },
+          "analysis": "用 It has 描述得 2 分；部位名词正确得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "用 It has / They have 描述植物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which word has /aʊ/?",
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "cow 里 ow 读 /aʊ/，其余读 /əʊ/，所以选 D。",
+          "difficulty": 1,
+          "knowledge_point": "辨认 ow 与 ou 的发音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Slow",
+            "Yellow",
+            "Window",
+            "Cow"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "House and out share ___ sound.",
+          "answer": {
+            "value": [
+              "/aʊ/"
+            ]
+          },
+          "analysis": "house 与 out 的 ou 都读 /aʊ/，填此音标。",
+          "difficulty": 2,
+          "knowledge_point": "辨认 ow 与 ou 的发音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Slow and cow sound the same.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "slow 读 /əʊ/，cow 读 /aʊ/，不同，所以 F。",
+          "difficulty": 3,
+          "knowledge_point": "辨认 ow 与 ou 的发音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write two words with /əʊ/.",
+          "answer": {
+            "value": "Slow and yellow."
+          },
+          "analysis": "写出两个 ow 读 /əʊ/ 的词各得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "辨认 ow 与 ou 的发音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 7 How do we keep safe on the road?",
+      "order_index": 7,
+      "summary": "学习交通设施与规则名词，用 must/mustn't 与祈使句说安全规则，辨认 ay 与 ai。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Where do we cross the road?",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "过街走斑马线 a crossing，其余场所不合，所以选 C。",
+          "difficulty": 1,
+          "knowledge_point": "认读交通设施与规则名词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "A bus",
+            "A tree",
+            "A crossing",
+            "A shop"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Walk on the ___, not the road.",
+          "answer": {
+            "value": [
+              "pavement"
+            ]
+          },
+          "analysis": "行人走人行道 pavement，填 pavement。",
+          "difficulty": 2,
+          "knowledge_point": "认读交通设施与规则名词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "A helmet keeps your head safe.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "骑车戴头盔保护头部，说法正确，所以 T。",
+          "difficulty": 3,
+          "knowledge_point": "认读交通设施与规则名词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Name two things on a road.",
+          "answer": {
+            "value": "Traffic lights and a crossing."
+          },
+          "analysis": "写出两个交通设施名词各得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "认读交通设施与规则名词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "On a bike, what must you wear?",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "骑车戴 helmet 护头，其余护具不管用，所以选 B。",
+          "difficulty": 3,
+          "knowledge_point": "认读交通设施与规则名词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Glasses",
+            "A helmet",
+            "A cap",
+            "A scarf"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "We ___ stop at a red light.",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "红灯必须停用 must，mustn't 表禁止，所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "用 must / mustn't 与祈使句说规则",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "mustn't",
+            "must",
+            "don't",
+            "can't"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "___ run on the road.",
+          "answer": {
+            "value": [
+              "Don't"
+            ]
+          },
+          "analysis": "禁止在马路上跑，否定祈使句用 Don't，填 Don't。",
+          "difficulty": 2,
+          "knowledge_point": "用 must / mustn't 与祈使句说规则",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "We mustn't wear a seat belt.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "乘车必须系安全带，不能禁止，所以 F。",
+          "difficulty": 3,
+          "knowledge_point": "用 must / mustn't 与祈使句说规则",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write one road rule with must.",
+          "answer": {
+            "value": "We must wait for the green light."
+          },
+          "analysis": "用 We must 得 2 分；规则内容安全得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "用 must / mustn't 与祈使句说规则",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Green light means we can ___.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "绿灯行用 go，红灯才 stop，其余动作不合，所以选 A。",
+          "difficulty": 1,
+          "knowledge_point": "过街的 stop、look、go 交际指令",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Go",
+            "Stop",
+            "Wait",
+            "Hide"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "___ left and right before you cross.",
+          "answer": {
+            "value": [
+              "Look"
+            ]
+          },
+          "analysis": "过街前左右看，祈使句用 Look，填 Look。",
+          "difficulty": 2,
+          "knowledge_point": "过街的 stop、look、go 交际指令",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Wait! is a word to warn a friend.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "Wait! 用来提醒同伴停下，说法正确，所以 T。",
+          "difficulty": 3,
+          "knowledge_point": "过街的 stop、look、go 交际指令",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write two steps to cross safely.",
+          "answer": {
+            "value": "Stop, look left and right, then go."
+          },
+          "analysis": "写出停与看两步各得 2 分；顺序合理得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "过街的 stop、look、go 交际指令",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "We can cross when the light is red.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "红灯禁止通行，绿灯才能过，所以 F。",
+          "difficulty": 4,
+          "knowledge_point": "过街的 stop、look、go 交际指令",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which word has /eɪ/ in the middle?",
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "rain 的 ai 在词中读 /eɪ/，其余 ay 在词尾，所以选 D。",
+          "difficulty": 1,
+          "knowledge_point": "辨认 ay 与 ai 的发音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Day",
+            "Play",
+            "May",
+            "Rain"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Day and play share ___ sound.",
+          "answer": {
+            "value": [
+              "/eɪ/"
+            ]
+          },
+          "analysis": "day 与 play 的 ay 都读 /eɪ/，填此音标。",
+          "difficulty": 2,
+          "knowledge_point": "辨认 ay 与 ai 的发音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Train and may rhyme well.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "两词都含 /eɪ/，押韵，说法正确，所以 T。",
+          "difficulty": 3,
+          "knowledge_point": "辨认 ay 与 ai 的发音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write two words with ai.",
+          "answer": {
+            "value": "Rain and train."
+          },
+          "analysis": "写出两个含 ai 发 /eɪ/ 的词各得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "辨认 ay 与 ai 的发音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 8 What do our grandparents do?",
+      "order_index": 8,
+      "summary": "学习祖父母日常活动动词，掌握第三人称单数 -s/-es 与 What does ... do?，辨认 o-e 与 o。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Growing flowers is called ___.",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "种花叫 garden 园艺，其余是别的活动，所以选 C。",
+          "difficulty": 1,
+          "knowledge_point": "认读日常活动动词短语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Read",
+            "Fish",
+            "Garden",
+            "Cook"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Grandpa likes to ___ stories.",
+          "answer": {
+            "value": [
+              "tell"
+            ]
+          },
+          "analysis": "讲故事是 tell stories，填动词 tell。",
+          "difficulty": 2,
+          "knowledge_point": "认读日常活动动词短语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Read a book means singing a song.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "read a book 是读书，不是唱歌，所以 F。",
+          "difficulty": 3,
+          "knowledge_point": "认读日常活动动词短语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write two things grandpa does.",
+          "answer": {
+            "value": "He reads and walks every day."
+          },
+          "analysis": "写出两个活动动词各得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "认读日常活动动词短语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Grandma walks daily. She ___.",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "散步是锻炼 exercise，其余动作不对应，所以选 C。",
+          "difficulty": 3,
+          "knowledge_point": "认读日常活动动词短语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Sleeps",
+            "Swims",
+            "Exercises",
+            "Drives"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "Grandpa ___ the paper every day.",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "主语第三人称单数，动词加 -s 用 reads，所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "第三人称单数动词加 -s / -es",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Read",
+            "Reads",
+            "Reading",
+            "Are reading"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "She ___ to the park each morning.",
+          "answer": {
+            "value": [
+              "goes"
+            ]
+          },
+          "analysis": "主语 She，go 的第三人称单数是 goes，填 goes。",
+          "difficulty": 2,
+          "knowledge_point": "第三人称单数动词加 -s / -es",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "He cook dinner is correct English.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "主语 He 后动词应为 cooks，所以 F。",
+          "difficulty": 3,
+          "knowledge_point": "第三人称单数动词加 -s / -es",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write: grandma walks. Change to I.",
+          "answer": {
+            "value": "I walk every morning."
+          },
+          "analysis": "主语换成 I 得 2 分；动词去 -s 得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "第三人称单数动词加 -s / -es",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "She watches TV. The verb has -es.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "watch 以 ch 结尾，第三人称单数加 -es，所以 T。",
+          "difficulty": 4,
+          "knowledge_point": "第三人称单数动词加 -s / -es",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "___ does your grandma do?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "问做什么活动用 What 加 do，其余疑问词不合，所以选 A。",
+          "difficulty": 1,
+          "knowledge_point": "用 What does your grandpa do 问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "What",
+            "Where",
+            "Who",
+            "How much"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "What ___ your grandpa do?",
+          "answer": {
+            "value": [
+              "does"
+            ]
+          },
+          "analysis": "主语第三人称单数，疑问句助动词用 does，填 does。",
+          "difficulty": 2,
+          "knowledge_point": "用 What does your grandpa do 问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "What does he do? He cook.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "答语动词应为 cooks，与 does 问句一致，所以 F。",
+          "difficulty": 3,
+          "knowledge_point": "用 What does your grandpa do 问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Ask about grandma's morning.",
+          "answer": {
+            "value": "What does your grandma do in the morning?"
+          },
+          "analysis": "用 What does 引导提问得 2 分；主语正确得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "用 What does your grandpa do 问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which word has /əʊ/?",
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "note 的 o-e 读 /əʊ/，其余读 /ɒ/，所以选 D。",
+          "difficulty": 1,
+          "knowledge_point": "辨认 o-e 与 o 的发音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Dog",
+            "Box",
+            "Hot",
+            "Note"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Home and rose share ___ sound.",
+          "answer": {
+            "value": [
+              "/əʊ/"
+            ]
+          },
+          "analysis": "home 与 rose 的 o-e 都读 /əʊ/，填此音标。",
+          "difficulty": 2,
+          "knowledge_point": "辨认 o-e 与 o 的发音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Hop and hope sound the same.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "hop 读 /ɒ/，hope 读 /əʊ/，元音不同，所以 F。",
+          "difficulty": 3,
+          "knowledge_point": "辨认 o-e 与 o 的发音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write two words with /ɒ/.",
+          "answer": {
+            "value": "Dog and box."
+          },
+          "analysis": "写出两个 o 读 /ɒ/ 的词各得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "辨认 o-e 与 o 的发音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-11T02:29:22+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

@@ -1,0 +1,2591 @@
+{
+  "subject": "math",
+  "grade": 3,
+  "version": "北师大版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第一单元 混合运算",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "乘加乘减的运算顺序",
+      "parent": "第一单元 混合运算",
+      "order_index": 1,
+      "explanation": "乘加乘减先算乘法，再算加减；同级运算从左到右。列式时先找每份数，再加或减多出的部分。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "除加除减的运算顺序",
+      "parent": "第一单元 混合运算",
+      "order_index": 2,
+      "explanation": "除加除减先算除法，再算加减。先把总数平均分，再把得到的商与增加或减少的数量合并。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "带小括号的两步运算",
+      "parent": "第一单元 混合运算",
+      "order_index": 3,
+      "explanation": "有小括号先算括号里面，再算括号外面；括号能改变原来先乘除后加减的顺序。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "购物情境中的两步列式",
+      "parent": "第一单元 混合运算",
+      "order_index": 4,
+      "explanation": "购物先算几件同价商品的总价，再算付款后的找回或差额；列综合算式时保持运算顺序。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二单元 测量（二）",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "千米和米的换算",
+      "parent": "第二单元 测量（二）",
+      "order_index": 1,
+      "explanation": "1千米=1000米。千米化米乘1000，米化千米除以1000；比较长短前先统一单位。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "分米厘米毫米的换算",
+      "parent": "第二单元 测量（二）",
+      "order_index": 2,
+      "explanation": "1米=10分米，1分米=10厘米，1厘米=10毫米。相邻长度单位换算看清乘或除以10。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "克千克吨的进率",
+      "parent": "第二单元 测量（二）",
+      "order_index": 3,
+      "explanation": "1吨=1000千克，1千克=1000克。比较质量先换成同一单位，重物体常用千克或吨。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "质量单位购物估算",
+      "parent": "第二单元 测量（二）",
+      "order_index": 4,
+      "explanation": "买食品看每千克单价与质量，先用乘法求总价，再与付款数比较，判断钱是否够。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第三单元 大数加与减（二）",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "三位数连加的竖式",
+      "parent": "第三单元 大数加与减（二）",
+      "order_index": 1,
+      "explanation": "连加竖式相同数位对齐，从个位加起，满几十向前进几；可先把前两个数相加再加第三个。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "万以内退位减法",
+      "parent": "第三单元 大数加与减（二）",
+      "order_index": 2,
+      "explanation": "退位减从个位起，不够减向前进位借1；连续退位要逐位标记，算后用加法核对。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "加减混合验算",
+      "parent": "第三单元 大数加与减（二）",
+      "order_index": 3,
+      "explanation": "加法可用和减去一个加数验算；减法可用差加减数验算。估算时把数看成接近的整百数。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "里程记录中的加减",
+      "parent": "第三单元 大数加与减（二）",
+      "order_index": 4,
+      "explanation": "里程记录有起点和终点读数，行驶路程用终点减起点；累计路程可把各段相加。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第四单元 我们生活的空间（一）",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "从前面观察物体",
+      "parent": "第四单元 我们生活的空间（一）",
+      "order_index": 1,
+      "explanation": "站在物体正面时，常看到脸、车头、校名等正面特征；背面和侧面特征不会同时居中出现。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "从侧面观察物体",
+      "parent": "第四单元 我们生活的空间（一）",
+      "order_index": 2,
+      "explanation": "从左侧或右侧观察，主要看到相应侧面；把方向词与看到的部位对应，能判断观察者位置。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "从上面观察小正方体",
+      "parent": "第四单元 我们生活的空间（一）",
+      "order_index": 3,
+      "explanation": "俯看小正方体只数每个方格的位置；横排、竖排和方阵要看清行列，不被高度遮挡。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "由视图判断观察位置",
+      "parent": "第四单元 我们生活的空间（一）",
+      "order_index": 4,
+      "explanation": "把看到的形状与物体各面特征对应：车头多在前面，背面多为背，杯口或车顶多在上方。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第五单元 认识图形",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "长方形正方形的边角特征",
+      "parent": "第五单元 认识图形",
+      "order_index": 1,
+      "explanation": "长方形和正方形都有4个直角；长方形对边相等，正方形四条边都相等。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "封闭图形一周的长度",
+      "parent": "第五单元 认识图形",
+      "order_index": 2,
+      "explanation": "封闭图形边线一周的长度叫周长。只有首尾相接的封闭边线，才能沿边线量出一圈。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "长方形周长的计算",
+      "parent": "第五单元 认识图形",
+      "order_index": 3,
+      "explanation": "长方形周长等于2个长加2个宽，可写成2×(长+宽)；代入时先算括号里的和。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "正方形周长的计算",
+      "parent": "第五单元 认识图形",
+      "order_index": 4,
+      "explanation": "正方形四边等长，周长=边长×4；知道周长求边长时，用周长÷4。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第六单元 乘除法的应用（二）",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "两位数乘一位数",
+      "parent": "第六单元 乘除法的应用（二）",
+      "order_index": 1,
+      "explanation": "求几个相同加数的和用乘法；两位数乘一位数可分十位和个位分别乘，再合并。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "两位数除以一位数",
+      "parent": "第六单元 乘除法的应用（二）",
+      "order_index": 2,
+      "explanation": "平均分用除法；两位数除以一位数从十位除起，十位余下的数和个位合并继续除。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "乘除混合两步问题",
+      "parent": "第六单元 乘除法的应用（二）",
+      "order_index": 3,
+      "explanation": "先求总数用乘法，再平均分用除法；综合算式中乘除同级，按从左到右依次计算。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "有余数除法的取舍",
+      "parent": "第六单元 乘除法的应用（二）",
+      "order_index": 4,
+      "explanation": "分组、租船、住帐篷时若有余数，余下的人也要再占一份，商要进一取整数。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第七单元 认识小数",
+      "order_index": 7
+    },
+    {
+      "node_type": "point",
+      "name": "小数的读写与意义",
+      "parent": "第七单元 认识小数",
+      "order_index": 1,
+      "explanation": "一位小数表示十分之几，0.5读作零点五；小数点后一位是角或十分位，末尾0可省。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "元角分与一位小数",
+      "parent": "第七单元 认识小数",
+      "order_index": 2,
+      "explanation": "1元=10角，几角是十分之几元；几元几角可写成整数部分加一位小数。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "一位小数大小比较",
+      "parent": "第七单元 认识小数",
+      "order_index": 3,
+      "explanation": "比较一位小数先看整数部分，整数相同再比十分位；也可换成角或十分之几比较。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "一位小数加减法",
+      "parent": "第七单元 认识小数",
+      "order_index": 4,
+      "explanation": "一位小数加减要把小数点对齐，按整数加减算，满十进一或退一，结果点上小数点。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第八单元 调查与记录",
+      "order_index": 8
+    },
+    {
+      "node_type": "point",
+      "name": "画正字记录数据",
+      "parent": "第八单元 调查与记录",
+      "order_index": 1,
+      "explanation": "一个正字有5笔，表示5票或5人；余下1至4笔单独记，统计时用5乘正字数再加零笔。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "读统计表比较数量",
+      "parent": "第八单元 调查与记录",
+      "order_index": 2,
+      "explanation": "会从统计表读出最多、最少和相差数，用减法核对数量差，比较前看清项目名称。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "生日月份与天数记录",
+      "parent": "第八单元 调查与记录",
+      "order_index": 3,
+      "explanation": "用月份记录生日人数，知道大月31天、小月30天，平年2月28天、闰年29天。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "根据记录作简单推断",
+      "parent": "第八单元 调查与记录",
+      "order_index": 4,
+      "explanation": "依据记录中的最多、最少和相差数作判断，先核对总数，再说明推断理由。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一单元 混合运算",
+      "order_index": 1,
+      "summary": "练习乘加、除加、括号与两步应用，按运算顺序解决购物、分组问题。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "8+6×2的结果是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "8+6×2=20；B先加，C漏乘，D添括号，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "乘加乘减的运算顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "20",
+            "16",
+            "14",
+            "28"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "3支笔，每支4元，再买2元橡皮，共（  ）元。",
+          "answer": {
+            "value": "14元"
+          },
+          "analysis": "3×4=12，12+2=14元，填14元。",
+          "difficulty": 2,
+          "knowledge_point": "乘加乘减的运算顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "算式8+6×2=22，对吗？",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "8+6×2=20，不是22，判F",
+          "difficulty": 3,
+          "knowledge_point": "乘加乘减的运算顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "小军买4支2元笔，又买8元本，共花多少？写算式。",
+          "answer": {
+            "value": "4×2+8=16元，共16元。"
+          },
+          "analysis": "①4×2+8=16元2分；②答16元1分；③单位1分。",
+          "difficulty": 4,
+          "knowledge_point": "乘加乘减的运算顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "秋游3辆车各坐8人，另有6人步行，共几人？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "3×8+6=30人；B漏加，C多2，D多8，所以选A",
+          "difficulty": 3,
+          "knowledge_point": "乘加乘减的运算顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "30人",
+            "24人",
+            "32人",
+            "38人"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "36÷4+7的结果是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "36÷4+7=16；B漏加，C少3，D多4，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "除加除减的运算顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "16",
+            "9",
+            "13",
+            "20"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "48颗糖分给6人，每人再得2颗，每人有（  ）颗。",
+          "answer": {
+            "value": "10颗"
+          },
+          "analysis": "48÷6=8，8+2=10颗，填10颗。",
+          "difficulty": 2,
+          "knowledge_point": "除加除减的运算顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "算式48÷6-5=3，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "48÷6-5=3，判T",
+          "difficulty": 3,
+          "knowledge_point": "除加除减的运算顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "48颗糖平均放6盒，每盒再加7颗，每盒几颗？写算式。",
+          "answer": {
+            "value": "48÷6+7=15颗，每盒15颗。"
+          },
+          "analysis": "①48÷6+7=15颗2分；②答15颗1分；③单位1分。",
+          "difficulty": 4,
+          "knowledge_point": "除加除减的运算顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "研学买4盒彩笔，每盒12元，付50元，找回多少？写算式。",
+          "answer": {
+            "value": "50-4×12=2元，找回2元。"
+          },
+          "analysis": "①50-4×12=2元2分；②答2元1分；③单位1分。",
+          "difficulty": 4,
+          "knowledge_point": "除加除减的运算顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "（45-9）÷6的结果是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "45-9=36，36÷6=6；B多1，C多2，D多3，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "带小括号的两步运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "6",
+            "7",
+            "8",
+            "9"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "72-(25+17)的括号里先得（  ）。",
+          "answer": {
+            "value": "42这个和"
+          },
+          "analysis": "25+17=42，填42这个和。",
+          "difficulty": 2,
+          "knowledge_point": "带小括号的两步运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "54÷(3+6)应先算3+6，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "3+6=9，54÷9=6，判T",
+          "difficulty": 3,
+          "knowledge_point": "带小括号的两步运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "72个球，拿走25个又拿17个，剩多少？写带括号算式。",
+          "answer": {
+            "value": "72-(25+17)=30个，剩30个。"
+          },
+          "analysis": "①72-(25+17)=30个2分；②答30个1分；③单位1分。",
+          "difficulty": 4,
+          "knowledge_point": "带小括号的两步运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "买3本8元书，付30元，找回（  ）元",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "30-3×8=6元；B多找，C总价，D只减一本，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "购物情境中的两步列式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "6元",
+            "8元",
+            "24元",
+            "22元"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "2袋6元糖和1袋9元饼，共（  ）元。",
+          "answer": {
+            "value": "21元"
+          },
+          "analysis": "2×6+9=21元，填21元。",
+          "difficulty": 2,
+          "knowledge_point": "购物情境中的两步列式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "算式7×6+18=60，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "7×6+18=60，判T",
+          "difficulty": 3,
+          "knowledge_point": "购物情境中的两步列式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "买5支3元笔，付20元，找回多少？写算式。",
+          "answer": {
+            "value": "20-5×3=5元，找回5元。"
+          },
+          "analysis": "①20-5×3=5元2分；②答5元1分；③单位1分。",
+          "difficulty": 4,
+          "knowledge_point": "购物情境中的两步列式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第二单元 测量（二）",
+      "order_index": 2,
+      "summary": "认识千米、分米、毫米和克千克吨，会在换算、估计和购物情境中选用单位。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "2千米等于（  ）米",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "2×1000=2000米；A少零，C缩小，D多零，所以选B",
+          "difficulty": 1,
+          "knowledge_point": "千米和米的换算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "200米",
+            "2000米",
+            "20米",
+            "20000米"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "4000米是（  ）千米，合（  ）米。",
+          "answer": {
+            "value": [
+              "4千米",
+              "4000米"
+            ]
+          },
+          "analysis": "4000÷1000=4千米，填4千米、4000米。",
+          "difficulty": 2,
+          "knowledge_point": "千米和米的换算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "1千米比900米长100米，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "1000-900=100米，判T",
+          "difficulty": 3,
+          "knowledge_point": "千米和米的换算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "操场一圈400米，跑2圈是多少米？还差多少米到1千米？写算式。",
+          "answer": {
+            "value": "400×2=800米，1000-800=200米。"
+          },
+          "analysis": "①400×2=800米2分；②差200米1分；③单位1分。",
+          "difficulty": 4,
+          "knowledge_point": "千米和米的换算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "操场一圈400米，跑2圈再走200米，共几米？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "400×2+200=1000米；B漏走，C少一圈，D多一圈，所以选A",
+          "difficulty": 3,
+          "knowledge_point": "千米和米的换算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "1000米",
+            "800米",
+            "600米",
+            "1200米"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "30厘米等于（  ）分米",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "30÷10=3分米；B多10，C多100，D缩小，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "分米厘米毫米的换算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "3分米",
+            "30分米",
+            "300分米",
+            "0.3分米"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "5厘米是（  ）毫米，40毫米是（  ）厘米。",
+          "answer": {
+            "value": [
+              "50毫米",
+              "4厘米"
+            ]
+          },
+          "analysis": "5×10=50毫米，40÷10=4厘米，填50毫米、4厘米。",
+          "difficulty": 2,
+          "knowledge_point": "分米厘米毫米的换算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "1米比90厘米长10厘米，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "10×10=100厘米，100-90=10厘米，判T",
+          "difficulty": 3,
+          "knowledge_point": "分米厘米毫米的换算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "彩带长2米，剪去70厘米，还剩多少厘米？写算式。",
+          "answer": {
+            "value": "2×100=200厘米，200-70=130厘米。"
+          },
+          "analysis": "①2×100=200厘米2分；②剩130厘米1分；③单位1分。",
+          "difficulty": 4,
+          "knowledge_point": "分米厘米毫米的换算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "食堂有1吨米，用去350千克，还剩多少千克？写算式。",
+          "answer": {
+            "value": "1000-350=650千克，还剩650千克。"
+          },
+          "analysis": "①1000-350=650千克2分；②答650千克1分；③单位1分。",
+          "difficulty": 4,
+          "knowledge_point": "分米厘米毫米的换算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "1吨等于（  ）千克",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "1吨=1000千克；B少零，C更少，D把吨当千克，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "克千克吨的进率",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "1000千克",
+            "100千克",
+            "10千克",
+            "1千克"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "5000克是（  ）千克，2千克是（  ）克。",
+          "answer": {
+            "value": [
+              "5千克",
+              "2000克"
+            ]
+          },
+          "analysis": "5000÷1000=5，2×1000=2000克，填5千克、2000克。",
+          "difficulty": 2,
+          "knowledge_point": "克千克吨的进率",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "3千克比2500克轻，对吗？",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "3×1000=3000克>2500，判F",
+          "difficulty": 3,
+          "knowledge_point": "克千克吨的进率",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "一箱梨重8千克，4箱共重多少克？写算式。",
+          "answer": {
+            "value": "8×4=32千克，32×1000=32000克。"
+          },
+          "analysis": "①8×4=32千克2分；②换32000克1分；③单位1分。",
+          "difficulty": 4,
+          "knowledge_point": "克千克吨的进率",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "1袋盐500克，2袋共（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "500×2=1000克=1千克；B少零，C漏克，D多零，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "质量单位购物估算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "1千克",
+            "100克",
+            "2克",
+            "10千克"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "3千克苹果，每千克6元，共（  ）元。",
+          "answer": {
+            "value": "18元"
+          },
+          "analysis": "3×6=18元，填18元。",
+          "difficulty": 2,
+          "knowledge_point": "质量单位购物估算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "2吨水泥比1500千克重，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "2×1000=2000千克>1500，判T",
+          "difficulty": 3,
+          "knowledge_point": "质量单位购物估算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "食堂买5千克米，每千克4元，付25元够吗？写算式。",
+          "answer": {
+            "value": "5×4=20元，25-20=5元，够。"
+          },
+          "analysis": "①5×4=20元2分；②25-20=5元1分；③答够1分。",
+          "difficulty": 4,
+          "knowledge_point": "质量单位购物估算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第三单元 大数加与减（二）",
+      "order_index": 3,
+      "summary": "练习万以内连加、退位减、加减混合验算，解决里程记录中的数量变化。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "235+168+97的结果是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "235+168+97=500；B少10，C多10，D漏97，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "三位数连加的竖式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "500",
+            "490",
+            "510",
+            "400"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "128+236+145，个位相加先得（  ）。",
+          "answer": {
+            "value": "19个一"
+          },
+          "analysis": "8+6+5=19个一，填19个一。",
+          "difficulty": 2,
+          "knowledge_point": "三位数连加的竖式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "计算356+278时，十位应加进位的1，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "6+8=14，十位加1，判T",
+          "difficulty": 3,
+          "knowledge_point": "三位数连加的竖式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "捐书：一班128本，二班236本，三班145本，共多少本？写算式。",
+          "answer": {
+            "value": "128+236+145=509本，共509本。"
+          },
+          "analysis": "①128+236+145=509本2分；②答509本1分；③单位1分。",
+          "difficulty": 4,
+          "knowledge_point": "三位数连加的竖式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "书店上午卖235本，下午卖168本，共卖多少本？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "235+168=403；B少10，C多10，D漏十位，所以选A",
+          "difficulty": 3,
+          "knowledge_point": "三位数连加的竖式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "403本",
+            "393本",
+            "413本",
+            "303本"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "1000-367的结果是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "1000-367=633；B多10，C多100，D多4，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "万以内退位减法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "633",
+            "643",
+            "733",
+            "637"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "523-187，个位13-7得（  ）。",
+          "answer": {
+            "value": "6个一"
+          },
+          "analysis": "13-7=6个一，填6个一。",
+          "difficulty": 2,
+          "knowledge_point": "万以内退位减法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "604-258=346，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "604-258=346，判T",
+          "difficulty": 3,
+          "knowledge_point": "万以内退位减法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "书城有900本，卖276本，还剩多少本？写算式。",
+          "answer": {
+            "value": "900-276=624本，剩624本。"
+          },
+          "analysis": "①900-276=624本2分；②答624本1分；③单位1分。",
+          "difficulty": 4,
+          "knowledge_point": "万以内退位减法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "水厂原有900吨，运出276吨，又运来158吨，现有多少？写算式。",
+          "answer": {
+            "value": "900-276+158=782吨，现有782吨。"
+          },
+          "analysis": "①900-276+158=782吨2分；②答782吨1分；③单位1分。",
+          "difficulty": 4,
+          "knowledge_point": "万以内退位减法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "425+398≈（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "425+398=823，约800；B偏小，C偏大，D更大，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "加减混合验算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "800",
+            "700",
+            "900",
+            "1000"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "验算278+165=443，可用443-（  ）=165。",
+          "answer": {
+            "value": "278这个加数"
+          },
+          "analysis": "443-278=165，填278这个加数。",
+          "difficulty": 2,
+          "knowledge_point": "加减混合验算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "验算612-245=367，可用367+245=612，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "367+245=612，判T",
+          "difficulty": 3,
+          "knowledge_point": "加减混合验算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "小敏有500元，买书用238元，又存入125元，现有多少？写算式。",
+          "answer": {
+            "value": "500-238+125=387元，现有387元。"
+          },
+          "analysis": "①500-238+125=387元2分；②答387元1分；③单位1分。",
+          "difficulty": 4,
+          "knowledge_point": "加减混合验算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "公交里程记录：起点325千米，终点612千米，行了（  ）千米",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "612-325=287千米；B相加，C少12，D多13，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "里程记录中的加减",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "287千米",
+            "937千米",
+            "275千米",
+            "300千米"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "出租里程记录：已行148千米，再行236千米，共（  ）千米。",
+          "answer": {
+            "value": "384千米"
+          },
+          "analysis": "148+236=384千米，填384千米。",
+          "difficulty": 2,
+          "knowledge_point": "里程记录中的加减",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "里程从700千米到940千米，增加240千米，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "940-700=240千米，判T",
+          "difficulty": 3,
+          "knowledge_point": "里程记录中的加减",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "货车里程记录：早晨218千米，傍晚503千米，下午行多少？写算式。",
+          "answer": {
+            "value": "503-218=285千米，行285千米。"
+          },
+          "analysis": "①503-218=285千米2分；②答285千米1分；③单位1分。",
+          "difficulty": 4,
+          "knowledge_point": "里程记录中的加减",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第四单元 我们生活的空间（一）",
+      "order_index": 4,
+      "summary": "从前、侧、上等位置观察物体和小正方体，依据看到的特征判断观察位置。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "小敏站玩具车正前方，看到（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "前面见车头；B在后面，C左轮，D右轮，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "从前面观察物体",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "车头",
+            "车尾",
+            "左车轮",
+            "右车轮"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "站布娃娃正面，能看见（  ）和两只眼睛。",
+          "answer": {
+            "value": "娃娃脸"
+          },
+          "analysis": "正面看脸，填娃娃脸。",
+          "difficulty": 2,
+          "knowledge_point": "从前面观察物体",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "站在柜子背面，能看到柜门正面，对吗？",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "背面只见背板，判F",
+          "difficulty": 3,
+          "knowledge_point": "从前面观察物体",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "小宇从正面看校园门，写看到的两处特征。",
+          "answer": {
+            "value": "看到校名和两扇门，位于正面。"
+          },
+          "analysis": "①校名1分；②两扇门1分；③正面方向1分。",
+          "difficulty": 4,
+          "knowledge_point": "从前面观察物体",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "讲台放一只玩具熊，小青站正前方，看到（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "前面见熊脸；B熊背，C左耳，D右耳，所以选A",
+          "difficulty": 3,
+          "knowledge_point": "从前面观察物体",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "熊脸",
+            "熊背",
+            "左耳",
+            "右耳"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "从玩具车左侧看，主要看到（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "左侧见左车身；B前面，C后面，D上方，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "从侧面观察物体",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "左车身",
+            "车头",
+            "车尾",
+            "车顶"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "从水杯右面看，杯把在（  ）侧。",
+          "answer": {
+            "value": "右侧"
+          },
+          "analysis": "右侧观察杯把在右，填右侧。",
+          "difficulty": 2,
+          "knowledge_point": "从侧面观察物体",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "从侧面看长方体纸盒，可能只看到一个长方形，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "侧面是长方形，判T",
+          "difficulty": 3,
+          "knowledge_point": "从侧面观察物体",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "小青从书架右侧看，写能看到的两处特征。",
+          "answer": {
+            "value": "看到右侧板和层板边，共两处。"
+          },
+          "analysis": "①右侧板1分；②层板边1分；③方向正确1分。",
+          "difficulty": 4,
+          "knowledge_point": "从侧面观察物体",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "三个小正方体横排，从前面看是什么形状？写一句。",
+          "answer": {
+            "value": "看到3个并排正方形，连成一行。"
+          },
+          "analysis": "①3个正方形1分；②并排一行1分；③方向正确1分。",
+          "difficulty": 4,
+          "knowledge_point": "从侧面观察物体",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "3个小正方体横排，从上面看是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "俯看3个横排；B转向，C漏2，D漏1，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "从上面观察小正方体",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "3个横排",
+            "3个竖排",
+            "1个方块",
+            "2个方块"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "2×2摆4个小方块，俯看有（  ）个方格。",
+          "answer": {
+            "value": "4个"
+          },
+          "analysis": "2×2=4个，填4个。",
+          "difficulty": 2,
+          "knowledge_point": "从上面观察小正方体",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "4个小方块摆成一排，俯看仍是4个方格，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "4×1=4个，判T",
+          "difficulty": 3,
+          "knowledge_point": "从上面观察小正方体",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "5个小正方体摆成一排，从上面看是什么形状？写一句。",
+          "answer": {
+            "value": "看到5个方格横排成一行。"
+          },
+          "analysis": "①5个方格1分；②横排一行1分；③方向正确1分。",
+          "difficulty": 4,
+          "knowledge_point": "从上面观察小正方体",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "看到长方形车顶，观察者可能在（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "车顶从上方见；B见车头，C见车尾，D见车身，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "由视图判断观察位置",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "上方",
+            "前面",
+            "后面",
+            "左侧"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "只看到玩具熊背面，观察者在（  ）面。",
+          "answer": {
+            "value": "后面"
+          },
+          "analysis": "背面需到后面看，填后面。",
+          "difficulty": 2,
+          "knowledge_point": "由视图判断观察位置",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "看到杯口圆形，可能是从上方观察，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "杯口朝上，上方可见，判T",
+          "difficulty": 3,
+          "knowledge_point": "由视图判断观察位置",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "小禾看到楼房正面窗户，判断她站的位置并说明理由。",
+          "answer": {
+            "value": "站在正面；正面才有窗户和楼门。"
+          },
+          "analysis": "①正面1分；②窗户1分；③楼门或理由1分。",
+          "difficulty": 4,
+          "knowledge_point": "由视图判断观察位置",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第五单元 认识图形",
+      "order_index": 5,
+      "summary": "辨认四边形边角，理解封闭一周的长度，会算长方形和正方形周长。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "长方形和正方形都有的特征是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "都有4个直角；B边不等，C无斜边，D漏直角，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "长方形正方形的边角特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "四个直角",
+            "四边不等",
+            "四条斜边",
+            "没有直角"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "正方形有（  ）条边，四条边都（  ）。",
+          "answer": {
+            "value": [
+              "4条",
+              "相等"
+            ]
+          },
+          "analysis": "正方形4条边等长，填4条、相等。",
+          "difficulty": 2,
+          "knowledge_point": "长方形正方形的边角特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "长方形对边相等，四个角都是直角，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "长方形对边等、四角直，判T",
+          "difficulty": 3,
+          "knowledge_point": "长方形正方形的边角特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用一句话写出长方形和正方形边的不同。",
+          "answer": {
+            "value": "长方形对边相等，正方形四边都相等。"
+          },
+          "analysis": "①对边相等1分；②四边相等1分；③比较清楚1分。",
+          "difficulty": 4,
+          "knowledge_point": "长方形正方形的边角特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "给长6米宽4米花坛围篱笆，需多少米？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "2×(6+4)=20米；B只加，C求面积，D少边，所以选A",
+          "difficulty": 3,
+          "knowledge_point": "长方形正方形的边角特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "20米",
+            "10米",
+            "24米",
+            "12米"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "围图形一周的长度叫作（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "一周长度是周长；B面大小，C单边，D高，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "封闭图形一周的长度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "周长",
+            "面积",
+            "边长",
+            "高度"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "沿操场边线走一圈，走过的长度是操场的（  ）。",
+          "answer": {
+            "value": "周长"
+          },
+          "analysis": "绕边线一周是周长，填周长。",
+          "difficulty": 2,
+          "knowledge_point": "封闭图形一周的长度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "不封口的曲线也能求周长，对吗？",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "周长须封闭一周，判F",
+          "difficulty": 3,
+          "knowledge_point": "封闭图形一周的长度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用绳子沿课本封面绕一周，量得什么？写名称。",
+          "answer": {
+            "value": "量得课本封面的周长，一圈长度。"
+          },
+          "analysis": "①周长1分；②绕一周1分；③测量对象1分。",
+          "difficulty": 4,
+          "knowledge_point": "封闭图形一周的长度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "边长8米的正方形菜地，围一圈篱笆需多少米？写算式。",
+          "answer": {
+            "value": "8×4=32米，需32米篱笆。"
+          },
+          "analysis": "①8×4=32米2分；②答32米1分；③单位1分。",
+          "difficulty": 4,
+          "knowledge_point": "封闭图形一周的长度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "长6厘米宽4厘米的长方形周长是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "2×(6+4)=20厘米；B只加，C求面积，D少边，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "长方形周长的计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "20厘米",
+            "10厘米",
+            "24厘米",
+            "12厘米"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "长7米宽3米，长方形周长是（  ）米。",
+          "answer": {
+            "value": "20米"
+          },
+          "analysis": "2×(7+3)=20米，填20米。",
+          "difficulty": 2,
+          "knowledge_point": "长方形周长的计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "长8厘米宽2厘米，周长是10厘米，对吗？",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "2×(8+2)=20厘米，不是10，判F",
+          "difficulty": 3,
+          "knowledge_point": "长方形周长的计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "黑板长4米宽1米，沿边贴彩带需多少米？写算式。",
+          "answer": {
+            "value": "2×(4+1)=10米，需10米彩带。"
+          },
+          "analysis": "①2×(4+1)=10米2分；②答10米1分；③单位1分。",
+          "difficulty": 4,
+          "knowledge_point": "长方形周长的计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "边长5厘米的正方形周长是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "5×4=20厘米；B只加倍，C求面积，D少边，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "正方形周长的计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "20厘米",
+            "10厘米",
+            "25厘米",
+            "15厘米"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "边长9分米，正方形周长是（  ）分米。",
+          "answer": {
+            "value": "36分米"
+          },
+          "analysis": "9×4=36分米，填36分米。",
+          "difficulty": 2,
+          "knowledge_point": "正方形周长的计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "边长6米的正方形，周长24米，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "6×4=24米，判T",
+          "difficulty": 3,
+          "knowledge_point": "正方形周长的计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "边长7米的正方形花坛，围一圈需多少米？写算式。",
+          "answer": {
+            "value": "7×4=28米，需28米篱笆。"
+          },
+          "analysis": "①7×4=28米2分；②答28米1分；③单位1分。",
+          "difficulty": 4,
+          "knowledge_point": "正方形周长的计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第六单元 乘除法的应用（二）",
+      "order_index": 6,
+      "summary": "用两位数乘一位数、两位数除以一位数及两步运算解决分组购物问题。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "23×3的结果是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "23×3=69；B少3，C少6，D颠倒，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "两位数乘一位数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "69",
+            "66",
+            "63",
+            "96"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "一盒12支彩笔，4盒共有（  ）支。",
+          "answer": {
+            "value": "48支"
+          },
+          "analysis": "12×4=48支，填48支。",
+          "difficulty": 2,
+          "knowledge_point": "两位数乘一位数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "14×5=70，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "14×5=70，判T",
+          "difficulty": 3,
+          "knowledge_point": "两位数乘一位数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "每袋24颗糖，买3袋共有多少颗？写算式。",
+          "answer": {
+            "value": "24×3=72颗，共72颗。"
+          },
+          "analysis": "①24×3=72颗2分；②答72颗1分；③单位1分。",
+          "difficulty": 4,
+          "knowledge_point": "两位数乘一位数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "4盒彩笔共48支，每盒几支？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "48÷4=12支；B除6，C加4，D乘2，所以选A",
+          "difficulty": 3,
+          "knowledge_point": "两位数乘一位数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "12支",
+            "8支",
+            "16支",
+            "24支"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "72÷8的结果是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "72÷8=9；B少1，C少2，D未除，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "两位数除以一位数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "9",
+            "8",
+            "7",
+            "12"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "36个苹果平均放4盘，每盘（  ）个。",
+          "answer": {
+            "value": "9个"
+          },
+          "analysis": "36÷4=9个，填9个。",
+          "difficulty": 2,
+          "knowledge_point": "两位数除以一位数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "84÷4=21，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "84÷4=21，判T",
+          "difficulty": 3,
+          "knowledge_point": "两位数除以一位数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "48名同学分成6队，每队几人？写算式。",
+          "answer": {
+            "value": "48÷6=8人，每队8人。"
+          },
+          "analysis": "①48÷6=8人2分；②答8人1分；③单位1分。",
+          "difficulty": 4,
+          "knowledge_point": "两位数除以一位数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "租车每辆坐6人，44人需几辆车？写算式并说明。",
+          "answer": {
+            "value": "6×7=42，44-42=2人，需8辆车。"
+          },
+          "analysis": "①6×7=42得2分；②44-42=2人1分；③进一取8辆1分。",
+          "difficulty": 4,
+          "knowledge_point": "两位数除以一位数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "3盒各8支，平均装4袋，每袋（  ）支",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "3×8÷4=6支；B漏除，C除2，D总数，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "乘除混合两步问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "6支",
+            "8支",
+            "12支",
+            "24支"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "5组各6人，平均分成3队，每队（  ）人。",
+          "answer": {
+            "value": "10人"
+          },
+          "analysis": "5×6÷3=10人，填10人。",
+          "difficulty": 2,
+          "knowledge_point": "乘除混合两步问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "2盒各9块，分给6人，每人3块，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "2×9÷6=3块，判T",
+          "difficulty": 3,
+          "knowledge_point": "乘除混合两步问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "4箱各12瓶，平均装8盒，每盒几瓶？写算式。",
+          "answer": {
+            "value": "4×12÷8=6瓶，每盒6瓶。"
+          },
+          "analysis": "①4×12÷8=6瓶2分；②答6瓶1分；③单位1分。",
+          "difficulty": 4,
+          "knowledge_point": "乘除混合两步问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "26人坐6人船，至少需（  ）条",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "6×4=24，26-24=2人；A余2，C多1，D多2，所以选B",
+          "difficulty": 1,
+          "knowledge_point": "有余数除法的取舍",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "4条",
+            "5条",
+            "6条",
+            "7条"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "29人乘车，每车坐5人，至少需（  ）辆。",
+          "answer": {
+            "value": "6辆"
+          },
+          "analysis": "5×5=25，29-25=4人，填6辆。",
+          "difficulty": 2,
+          "knowledge_point": "有余数除法的取舍",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "17块糖每袋装4块，4个袋够装，对吗？",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "4×4=16，17-16=1块，判F",
+          "difficulty": 3,
+          "knowledge_point": "有余数除法的取舍",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "35人住4人帐篷，至少需几顶？写算式并说明。",
+          "answer": {
+            "value": "4×8=32，35-32=3人，需9顶帐篷。"
+          },
+          "analysis": "①4×8=32得2分；②35-32=3人1分；③进一取9顶1分。",
+          "difficulty": 4,
+          "knowledge_point": "有余数除法的取舍",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第七单元 认识小数",
+      "order_index": 7,
+      "summary": "认识一位小数的读写、元角分表示、大小比较和简单加减。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "0.5读作（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "0.5读零点五；B倒读，C多位，D漏小数，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "小数的读写与意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "零点五",
+            "五点零",
+            "零点零五",
+            "五"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "7角是（  ）元，3元5角是（  ）元。",
+          "answer": {
+            "value": [
+              "0.7元",
+              "3.5元"
+            ]
+          },
+          "analysis": "7÷10=0.7元，3+5÷10=3.5元，填0.7元、3.5元。",
+          "difficulty": 2,
+          "knowledge_point": "小数的读写与意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "0.80元就是0.8元，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "0.80=0.8，末尾0可省，判T",
+          "difficulty": 3,
+          "knowledge_point": "小数的读写与意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "把1米平均分成10份，3份用小数表示是多少米？写依据。",
+          "answer": {
+            "value": "3÷10=0.3米，3份是0.3米。"
+          },
+          "analysis": "①3÷10=0.3米得2分；②答0.3米1分；③单位1分。",
+          "difficulty": 4,
+          "knowledge_point": "小数的读写与意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "小北有1.5元，买0.7元本子，剩（  ）元",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "1.5-0.7=0.8元；B多0.1，C少减，D相加，所以选A",
+          "difficulty": 3,
+          "knowledge_point": "小数的读写与意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "0.8元",
+            "0.9元",
+            "1.2元",
+            "2.2元"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "3元5角写成小数是（  ）元",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "3+5÷10=3.5元；B缩小，C放大，D角位乱，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "元角分与一位小数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "3.5",
+            "0.35",
+            "35",
+            "3.05"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "买橡皮用8角，写成小数是（  ）元。",
+          "answer": {
+            "value": "0.8元"
+          },
+          "analysis": "8÷10=0.8元，填0.8元。",
+          "difficulty": 2,
+          "knowledge_point": "元角分与一位小数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "1元2角写成1.02元，对吗？",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "1+2÷10=1.2元，不是1.02，判F",
+          "difficulty": 3,
+          "knowledge_point": "元角分与一位小数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "小禾有2元5角，买本用1元8角，剩多少？写算式。",
+          "answer": {
+            "value": "2.5-1.8=0.7元，剩0.7元。"
+          },
+          "analysis": "①2.5-1.8=0.7元2分；②答0.7元1分；③单位1分。",
+          "difficulty": 4,
+          "knowledge_point": "元角分与一位小数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "小雨买0.8元橡皮和0.9元尺，共花多少？写算式。",
+          "answer": {
+            "value": "0.8+0.9=1.7元，共1.7元。"
+          },
+          "analysis": "①0.8+0.9=1.7元2分；②答1.7元1分；③单位1分。",
+          "difficulty": 4,
+          "knowledge_point": "元角分与一位小数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "比0.6元多、比1元少的价钱是（  ）",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "0.6<0.9<1；A小，B相等，D超1，所以选C",
+          "difficulty": 1,
+          "knowledge_point": "一位小数大小比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "0.5元",
+            "0.6元",
+            "0.9元",
+            "1.2元"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "在数线标出0.4和0.7，较大的是（  ）。",
+          "answer": {
+            "value": "0.7较大"
+          },
+          "analysis": "0.4<0.7，填0.7较大。",
+          "difficulty": 2,
+          "knowledge_point": "一位小数大小比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "0.9元比1.2元多，对吗？",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "0.9<1.2，9角<12角，判F",
+          "difficulty": 3,
+          "knowledge_point": "一位小数大小比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "三根彩带长0.5米、0.8米、0.6米，最长多少米？写比较式。",
+          "answer": {
+            "value": "0.8米最长；0.8>0.6>0.5。"
+          },
+          "analysis": "①0.8>0.6>0.5得2分；②答0.8米1分；③单位1分。",
+          "difficulty": 4,
+          "knowledge_point": "一位小数大小比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "0.8+0.5的结果是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "0.8+0.5=1.3；B缩小，C少0.1，D放大，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "一位小数加减法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "1.3",
+            "0.13",
+            "1.2",
+            "13"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "1.2元减0.5元，剩（  ）元。",
+          "answer": {
+            "value": "0.7元"
+          },
+          "analysis": "1.2-0.5=0.7元，填0.7元。",
+          "difficulty": 2,
+          "knowledge_point": "一位小数加减法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "0.6+0.7=1.3，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "0.6+0.7=1.3，满十进一，判T",
+          "difficulty": 3,
+          "knowledge_point": "一位小数加减法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "小青带2.0元，买1.3元尺，剩多少？写算式。",
+          "answer": {
+            "value": "2.0-1.3=0.7元，剩0.7元。"
+          },
+          "analysis": "①2.0-1.3=0.7元2分；②答0.7元1分；③单位1分。",
+          "difficulty": 4,
+          "knowledge_point": "一位小数加减法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第八单元 调查与记录",
+      "order_index": 8,
+      "summary": "用画正字、统计表、生日月份记录整理数据，并依据数量作简单判断。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "画正字记录，一个正字表示（  ）票",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "正字5笔；A少4，B少2，D多5，所以选C",
+          "difficulty": 1,
+          "knowledge_point": "画正字记录数据",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "1票",
+            "3票",
+            "5票",
+            "10票"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "用正字记了3个正字另2笔，共有（  ）票。",
+          "answer": {
+            "value": "17票"
+          },
+          "analysis": "3×5+2=17票，填17票。",
+          "difficulty": 2,
+          "knowledge_point": "画正字记录数据",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "8票可记成一个正字加3笔，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "5+3=8票，判T",
+          "difficulty": 3,
+          "knowledge_point": "画正字记录数据",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "调查12人喜欢水果，画正字记录，两个正字加2笔表示几票？写算式。",
+          "answer": {
+            "value": "2×5+2=12票，表示12票。"
+          },
+          "analysis": "①2×5+2=12票得2分；②答12票1分；③单位1分。",
+          "difficulty": 4,
+          "knowledge_point": "画正字记录数据",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "校服尺码记录：M码12人、L码8人、S码5人，最多的是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "12>8>5；B少4，C少7，D不符，所以选A",
+          "difficulty": 3,
+          "knowledge_point": "画正字记录数据",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "M码",
+            "L码",
+            "S码",
+            "一样多"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "读班级宠物统计表，狗8只、猫6只，哪种多？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "8-6=2只；B少2，C漏差，D可比较，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "读统计表比较数量",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "狗",
+            "猫",
+            "一样多",
+            "无法比"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "读水果记录，苹果9票、梨5票，苹果比梨多（  ）票。",
+          "answer": {
+            "value": "4票"
+          },
+          "analysis": "9-5=4票，填4票。",
+          "difficulty": 2,
+          "knowledge_point": "读统计表比较数量",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "读书记录中故事书7本，科技书4本，故事书少3本，对吗？",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "7-4=3本，故事书多3本，判F",
+          "difficulty": 3,
+          "knowledge_point": "读统计表比较数量",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "读天气记录：晴6天、阴3天、雨2天，共记录几天？写算式。",
+          "answer": {
+            "value": "6+3+2=11天，共11天。"
+          },
+          "analysis": "①6+3+2=11天得2分；②答11天1分；③单位1分。",
+          "difficulty": 4,
+          "knowledge_point": "读统计表比较数量",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "调查一周天气，晴4天、阴2天、雨1天，晴比雨多几天？写算式。",
+          "answer": {
+            "value": "4-1=3天，多3天。"
+          },
+          "analysis": "①4-1=3天得2分；②答3天1分；③单位1分。",
+          "difficulty": 4,
+          "knowledge_point": "读统计表比较数量",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "一年中31天的月份共有（  ）个",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "7个大月；A少3，B少2，D多5，所以选C",
+          "difficulty": 1,
+          "knowledge_point": "生日月份与天数记录",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "4个",
+            "5个",
+            "7个",
+            "12个"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "平年2月有28天，闰年2月多（  ）天。",
+          "answer": {
+            "value": "1天"
+          },
+          "analysis": "29-28=1天，填1天。",
+          "difficulty": 2,
+          "knowledge_point": "生日月份与天数记录",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "7月31天、8月31天，两个月共62天，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "31+31=62天，判T",
+          "difficulty": 3,
+          "knowledge_point": "生日月份与天数记录",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "调查同学生日月份，6月8人、7月5人，两月共几人？写算式。",
+          "answer": {
+            "value": "8+5=13人，共13人。"
+          },
+          "analysis": "①8+5=13人得2分；②答13人1分；③单位1分。",
+          "difficulty": 4,
+          "knowledge_point": "生日月份与天数记录",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "投票记录：足球10票、跳绳7票，买器材应先看哪项？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "10-7=3票；B票少，C无据，D随意，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "根据记录作简单推断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "足球",
+            "跳绳",
+            "都不看",
+            "随便"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "记录中蓝球5个、红球9个，红球比蓝球多（  ）个。",
+          "answer": {
+            "value": "4个"
+          },
+          "analysis": "9-5=4个，填4个。",
+          "difficulty": 2,
+          "knowledge_point": "根据记录作简单推断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "调查20人，喜欢阅读12人，剩8人没选阅读，对吗？",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "20-12=8人，判T",
+          "difficulty": 3,
+          "knowledge_point": "根据记录作简单推断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "班级记录：步行9人、乘车6人，共调查多少人？写算式并答。",
+          "answer": {
+            "value": "9+6=15人，共15人。"
+          },
+          "analysis": "①9+6=15人得2分；②答15人1分；③单位1分。",
+          "difficulty": 4,
+          "knowledge_point": "根据记录作简单推断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-11T02:29:22+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

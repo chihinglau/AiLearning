@@ -1,0 +1,2991 @@
+{
+  "subject": "biology",
+  "grade": 7,
+  "version": "人教版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第一单元 生物和细胞",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "科学观察与调查的基本方法",
+      "parent": "第一单元 生物和细胞",
+      "order_index": 1,
+      "explanation": "观察要有明确目的、如实记录，可用放大镜或显微镜；调查需选好范围、分组、设计表格并归类统计，不能凭想象填写。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "生物圈的范围与组成",
+      "parent": "第一单元 生物和细胞",
+      "order_index": 2,
+      "explanation": "生物圈包括大气圈底部、水圈大部和岩石圈表面，厚度约 20 千米；它是所有生物与其环境的总和，是最大的生态系统。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "生态因素与生物对环境的适应",
+      "parent": "第一单元 生物和细胞",
+      "order_index": 3,
+      "explanation": "环境中影响生物的因素分非生物因素（光、温、水、土）和生物因素（捕食、竞争、合作）；生物也能适应并影响环境。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "生态系统的组成与食物链",
+      "parent": "第一单元 生物和细胞",
+      "order_index": 4,
+      "explanation": "生态系统由生物部分（生产者、消费者、分解者）和非生物部分组成；食物链从生产者起，箭头指向捕食者，多条链交织成食物网。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第一章 认识生物",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "生物的基本特征",
+      "parent": "第一章 认识生物",
+      "order_index": 1,
+      "explanation": "生物需营养、能呼吸、能排出废物、能对外界刺激作出反应、能生长繁殖，并有遗传和变异特性；除病毒外都由细胞构成。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "生物与非生物的判断依据",
+      "parent": "第一章 认识生物",
+      "order_index": 2,
+      "explanation": "判断是否为生物，看是否同时具备营养、呼吸、排泄、应激性、生长繁殖等生命现象；会动、会长大未必是生物，如汽车、钟乳石。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "调查周边环境中的生物",
+      "parent": "第一章 认识生物",
+      "order_index": 3,
+      "explanation": "调查是认识生物的常用方法：先选路线与范围，分组观察，记录名称、数量和生活环境，再按形态结构或用途归类，最后整理分析。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "生物的归类方法",
+      "parent": "第一章 认识生物",
+      "order_index": 4,
+      "explanation": "可按形态结构分为植物、动物和其他生物，按生活环境分为陆生和水生生物，按用途分为作物、家禽、家畜、宠物等，归类标准要统一。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二章 认识细胞",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "显微镜的结构与成像",
+      "parent": "第二章 认识细胞",
+      "order_index": 1,
+      "explanation": "放大倍数＝目镜×物镜；成倒像，物像偏哪玻片往哪移；对光用低倍镜、大光圈，光线暗时用凹面镜，观察先粗准焦后细准焦。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "植物细胞的结构",
+      "parent": "第二章 认识细胞",
+      "order_index": 2,
+      "explanation": "植物细胞有细胞壁、细胞膜、细胞质、细胞核、液泡，绿色部分还有叶绿体；细胞壁支持保护，液泡含细胞液，叶绿体进行光合作用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "动物细胞与植物细胞的比较",
+      "parent": "第二章 认识细胞",
+      "order_index": 3,
+      "explanation": "动植物细胞都有细胞膜、细胞质、细胞核；动物细胞无细胞壁、液泡、叶绿体。口腔上皮装片滴生理盐水，洋葱表皮滴清水。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "细胞的生活需要物质和能量",
+      "parent": "第二章 认识细胞",
+      "order_index": 4,
+      "explanation": "细胞膜控制物质进出，细胞核含遗传信息；叶绿体把光能转成化学能，线粒体分解有机物释放能量，二者都是能量转换器。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第三章 从细胞到生物体",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "细胞分裂与染色体变化",
+      "parent": "第三章 从细胞到生物体",
+      "order_index": 1,
+      "explanation": "分裂时细胞核先一分为二，染色体先复制加倍再均分，新细胞与原细胞遗传物质相同；分裂使细胞数目增多，生长使体积增大。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "细胞分化形成组织",
+      "parent": "第三章 从细胞到生物体",
+      "order_index": 2,
+      "explanation": "细胞在形态结构功能上产生差异叫分化，分化形成组织。植物有分生、保护、输导组织；动物有上皮、肌肉、神经、结缔组织。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "植物体和动物体的结构层次",
+      "parent": "第三章 从细胞到生物体",
+      "order_index": 3,
+      "explanation": "植物层次：细胞→组织→器官→植物体；六大器官是根茎叶花果实种子。动物体多一层系统，为细胞→组织→器官→系统→动物体。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "单细胞生物与草履虫",
+      "parent": "第三章 从细胞到生物体",
+      "order_index": 4,
+      "explanation": "草履虫、衣藻、酵母菌等单个细胞就能完成全部生命活动；草履虫靠纤毛运动、表膜呼吸、食物泡消化，对污水有一定净化作用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二单元 多种多样的生物",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "生物多样性的三个层次",
+      "parent": "第二单元 多种多样的生物",
+      "order_index": 1,
+      "explanation": "生物多样性含物种、遗传（基因）和生态系统三个层次；物种多样性最直观，遗传多样性是基础，保护生态系统是根本措施。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "绿色植物是有机物的制造者",
+      "parent": "第二单元 多种多样的生物",
+      "order_index": 2,
+      "explanation": "绿色植物通过光合作用制造有机物并储存能量，不仅供自身，也为人和动物提供食物；叶片是主要器官，淀粉可用碘液检验。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "绿色植物维持碳氧平衡与促进水循环",
+      "parent": "第二单元 多种多样的生物",
+      "order_index": 3,
+      "explanation": "光合作用吸收二氧化碳、释放氧气，呼吸作用相反，二者共同维持碳—氧平衡；蒸腾作用散失大量水分，提高湿度、促进降水和水循环。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "爱护植被与绿化祖国",
+      "parent": "第二单元 多种多样的生物",
+      "order_index": 4,
+      "explanation": "我国主要植被有草原、荒漠、热带雨林、常绿阔叶林、落叶阔叶林和针叶林；人均森林少，应植树造林、退耕还林、节约用纸、护林防火。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第一章 藻类与植物的类群",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "藻类、苔藓和蕨类植物的特征",
+      "parent": "第一章 藻类与植物的类群",
+      "order_index": 1,
+      "explanation": "藻类多水生、无根茎叶分化；苔藓有茎叶无真根和输导组织，可监测空气污染；蕨类有根茎叶与输导组织，靠孢子繁殖。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "种子植物与种子的结构",
+      "parent": "第一章 藻类与植物的类群",
+      "order_index": 2,
+      "explanation": "种子植物分裸子植物（种子裸露，如松、银杏）和被子植物（有果皮包被）；菜豆种子两片子叶，玉米一片子叶且养分储存在胚乳。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "蒸腾作用与气孔",
+      "parent": "第一章 藻类与植物的类群",
+      "order_index": 3,
+      "explanation": "水分以水蒸气形式从植物体内散失叫蒸腾作用，主要经叶片气孔进行；保卫细胞调节气孔开闭，蒸腾能促进根吸水和无机盐运输、降温。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "光合作用与呼吸作用的实验与比较",
+      "parent": "第一章 藻类与植物的类群",
+      "order_index": 4,
+      "explanation": "光合作用需光和叶绿体，把二氧化碳和水合成有机物并放氧；呼吸作用分解有机物释放能量，昼夜都进行，常用碘液检验淀粉。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二章 动物的类群",
+      "order_index": 7
+    },
+    {
+      "node_type": "point",
+      "name": "无脊椎动物主要类群的特征",
+      "parent": "第二章 动物的类群",
+      "order_index": 1,
+      "explanation": "腔肠动物辐射对称、有口无肛门；扁形动物背腹扁平；线形动物细长如线；环节动物由体节组成，蚯蚓靠湿润体壁呼吸、用刚毛运动。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "软体动物与节肢动物",
+      "parent": "第二章 动物的类群",
+      "order_index": 2,
+      "explanation": "软体动物身体柔软、大多有贝壳，如河蚌、蜗牛；节肢动物是最大类群，体表有外骨骼、身体和附肢分节，昆虫有三对足、一般两对翅。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "鱼类与两栖、爬行动物",
+      "parent": "第二章 动物的类群",
+      "order_index": 3,
+      "explanation": "鱼用鳃呼吸、靠躯干部和尾部摆动及鳍游泳；两栖类幼体用鳃、成体用肺兼皮肤；爬行类覆角质鳞片、陆上产卵，摆脱了对水的依赖。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "鸟类与哺乳类",
+      "parent": "第二章 动物的类群",
+      "order_index": 4,
+      "explanation": "鸟类覆羽、前肢成翼，有气囊辅助肺双重呼吸、体温恒定、卵生；哺乳类被毛、有膈，胎生哺乳，大脑发达，体温恒定。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第三章 微生物",
+      "order_index": 8
+    },
+    {
+      "node_type": "point",
+      "name": "细菌的结构与生殖",
+      "parent": "第三章 微生物",
+      "order_index": 1,
+      "explanation": "细菌为单细胞原核生物，有细胞壁膜质、无成形细胞核，靠分裂生殖；有些能形成芽孢抵抗不良环境，芽孢是休眠体不是生殖细胞。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "真菌的结构与生殖",
+      "parent": "第三章 微生物",
+      "order_index": 2,
+      "explanation": "酵母菌为单细胞真菌，青霉、蘑菇为多细胞真菌，都有成形细胞核；无叶绿体，靠孢子繁殖、营腐生或寄生，青霉可提取青霉素。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "病毒的结构与生活方式",
+      "parent": "第三章 微生物",
+      "order_index": 3,
+      "explanation": "病毒无细胞结构，由蛋白质外壳和遗传物质组成，只能寄生在活细胞里；离开寄主会成结晶体，按寄主分动物、植物和细菌病毒。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "微生物与人类的关系及发酵",
+      "parent": "第三章 微生物",
+      "order_index": 4,
+      "explanation": "乳酸菌制酸奶、酵母菌发面酿酒、青霉产青霉素；细菌真菌作分解者，把有机物分解为二氧化碳、水和无机盐，促进物质循环。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第四章 生物分类的方法",
+      "order_index": 9
+    },
+    {
+      "node_type": "point",
+      "name": "生物分类的依据与意义",
+      "parent": "第四章 生物分类的方法",
+      "order_index": 1,
+      "explanation": "分类主要依据形态结构、生理功能等特征的相似程度；分类能弄清生物间亲缘与进化关系，利于认识、利用和保护生物多样性。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "分类等级单位从大到小",
+      "parent": "第四章 生物分类的方法",
+      "order_index": 2,
+      "explanation": "生物分类等级由大到小为界、门、纲、目、科、属、种；界最大包含生物最多，种最基本、共同特征最多；单位越大，亲缘关系越远。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "双名法与生物的命名",
+      "parent": "第四章 生物分类的方法",
+      "order_index": 3,
+      "explanation": "林奈创立双名法，学名＝属名＋种加词，用拉丁文斜体书写，属名首字母大写，可附命名人；统一名称避免了同物异名、异物同名。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "检索表的使用与分类实践",
+      "parent": "第四章 生物分类的方法",
+      "order_index": 4,
+      "explanation": "检索表把生物特征按是否具备逐级二歧排列，使用者逐条对照，直到查到对应类群；编制时选稳定、易观察、互斥的特征。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一单元 生物和细胞",
+      "order_index": 1,
+      "summary": "学会观察与调查生物的基本方法，认识生物圈的范围、生态因素与生态系统的组成。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "调查校园生物时，正确的做法是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "调查要如实记录、如实归类；其余做法都失真，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "科学观察与调查的基本方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "如实记录并归类",
+            "只记喜欢的生物",
+            "凭印象补填",
+            "随意更改数量"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "观察要有明确的（  ），并（  ）记录看到的现象。",
+          "answer": {
+            "value": [
+              "目的",
+              "如实"
+            ]
+          },
+          "analysis": "科学观察需带目的、边看边如实记录，不能凭想象改写。",
+          "difficulty": 2,
+          "knowledge_point": "科学观察与调查的基本方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "调查时遇到不认识的植物，可以先空着不记录。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "应记下位置形态并编号、事后查资料，漏记会使结果不全。",
+          "difficulty": 3,
+          "knowledge_point": "科学观察与调查的基本方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出调查校园生物前的两项准备。",
+          "answer": {
+            "value": "示例：划分调查区域并分好小组；设计记录表，列名称、数量、生活环境。"
+          },
+          "analysis": "评分：写出分区分工得 2 分；写出记录表要素得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "科学观察与调查的基本方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "要把校园调查数据做成统计表，最合理的一步是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "分类别计数才能反映真实分布；其余会丢失或伪造信息，所以选 A",
+          "difficulty": 3,
+          "knowledge_point": "科学观察与调查的基本方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "按生物类别分组计数",
+            "只数开花植物",
+            "把数量写成一样",
+            "删掉不认识的"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "生物圈的范围包括（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "生物圈含大气圈底部、水圈大部、岩石圈表面；其余超界，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "生物圈的范围与组成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "大气圈底部等三层",
+            "仅陆地表面",
+            "整个大气圈",
+            "地核内部"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "生物圈包括大气圈（  ）、水圈大部和岩石圈（  ）。",
+          "answer": {
+            "value": [
+              "底部",
+              "表面"
+            ]
+          },
+          "analysis": "生物只分布在三圈的这些适宜圈层，上下各约十千米。",
+          "difficulty": 2,
+          "knowledge_point": "生物圈的范围与组成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "生物圈是地球上最大的生态系统。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "它包含全部生物及其生活环境，范围最大，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "生物圈的范围与组成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说出生物圈包含的三部分。",
+          "answer": {
+            "value": "示例：大气圈的底部、水圈的大部、岩石圈的表面。"
+          },
+          "analysis": "评分：每答对一层得 1 分，三层全对再得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "生物圈的范围与组成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "池塘里水草、鱼、细菌和阳光、水共同构成一个生态系统。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "含生产者、消费者、分解者和非生物部分，成分齐全，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "生物圈的范围与组成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "影响植物分布的非生物因素是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "光温水属非生物因素；其余都是生物间关系，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "生态因素与生物对环境的适应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "光照和水分",
+            "捕食关系",
+            "同类竞争",
+            "寄生关系"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "环境中影响生物的因素分（  ）因素和生物因素两类。",
+          "answer": {
+            "value": [
+              "非生物"
+            ]
+          },
+          "analysis": "光、温度、水等无生命因素与生物因素共同构成生态因素。",
+          "difficulty": 2,
+          "knowledge_point": "生态因素与生物对环境的适应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "沙漠中仙人掌叶退化成刺，是对干旱环境的适应。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "叶变刺可减少水分散失，利于在缺水环境生存，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "生态因素与生物对环境的适应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "举例说明生物能影响环境。",
+          "answer": {
+            "value": "示例：蚯蚓松土改良土壤；大树遮阴降温、增加空气湿度。"
+          },
+          "analysis": "评分：举出一例得 2 分；说明产生的影响得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "生态因素与生物对环境的适应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "生态系统中能制造有机物的是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "绿色植物是生产者；蘑菇、细菌多为分解者，兔是消费者，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "生态系统的组成与食物链",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "绿色植物",
+            "蘑菇",
+            "兔子",
+            "细菌"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "食物链一般从（  ）开始，箭头指向（  ）者。",
+          "answer": {
+            "value": [
+              "生产者",
+              "捕食"
+            ]
+          },
+          "analysis": "能量沿吃与被吃流动，箭头由被食者指向捕食者。",
+          "difficulty": 2,
+          "knowledge_point": "生态系统的组成与食物链",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "食物链中可以缺少分解者。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "食物链只反映生产者和消费者间的吃与被吃，不含分解者。",
+          "difficulty": 3,
+          "knowledge_point": "生态系统的组成与食物链",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出一条含四个环节的食物链。",
+          "answer": {
+            "value": "示例：草→蝗虫→青蛙→蛇。"
+          },
+          "analysis": "评分：起点为生产者得 2 分；箭头方向正确、环节齐全得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "生态系统的组成与食物链",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第一章 认识生物",
+      "order_index": 2,
+      "summary": "依据营养、呼吸、排泄、应激性、生长繁殖等特征区分生物与非生物，学会调查并归类周围生物。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "下列属于生物的是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "蘑菇能生长繁殖需营养；其余无生命特征，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "生物的基本特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "蘑菇",
+            "钟乳石",
+            "机器人",
+            "珊瑚标本"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "生物能进行（  ），并能排出身体内产生的（  ）。",
+          "answer": {
+            "value": [
+              "呼吸",
+              "废物"
+            ]
+          },
+          "analysis": "呼吸与排泄是生物维持生命的基本特征，非生物不具备。",
+          "difficulty": 2,
+          "knowledge_point": "生物的基本特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "含羞草受碰触叶片合拢，说明生物能对外界刺激作出反应。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "叶片合拢是对触碰的应激反应，属于生物基本特征。",
+          "difficulty": 3,
+          "knowledge_point": "生物的基本特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出生物区别于非生物的两条特征。",
+          "answer": {
+            "value": "示例：需要营养、能生长和繁殖；能呼吸并排出废物。"
+          },
+          "analysis": "评分：每条特征准确得 2 分，共 4 分。",
+          "difficulty": 4,
+          "knowledge_point": "生物的基本特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "雨后墙角长出霉斑，能说明它是生物的依据是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "霉斑能生长繁殖需营养；颜色湿度位置都不是生命特征，所以选 A",
+          "difficulty": 3,
+          "knowledge_point": "生物的基本特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "能生长并繁殖",
+            "颜色是绿的",
+            "摸起来湿",
+            "位置靠墙"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "能自动奔跑却不属于生物的是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "遥控车无呼吸繁殖等生命现象；其余都是动物，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "生物与非生物的判断依据",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "遥控汽车",
+            "猎豹",
+            "蚂蚁",
+            "麻雀"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "判断一个物体是不是生物，要看它有无（  ）现象。",
+          "answer": {
+            "value": [
+              "生命"
+            ]
+          },
+          "analysis": "生命现象如营养、呼吸、繁殖，缺其一就不能算生物。",
+          "difficulty": 2,
+          "knowledge_point": "生物与非生物的判断依据",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "钟乳石能慢慢长大，所以它是生物。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "钟乳石长大是矿物质沉积，不是生长繁殖，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "生物与非生物的判断依据",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明机器人不是生物的理由。",
+          "answer": {
+            "value": "示例：机器人不需营养、不呼吸、不能生长繁殖，只按程序运行。"
+          },
+          "analysis": "评分：写出两条生命特征的缺失各得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "生物与非生物的判断依据",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "调查周边生物时不必做的是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "编造名称违背如实记录；其余都是调查必要步骤，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "调查周边环境中的生物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "给生物编造名字",
+            "选好调查路线",
+            "记录生活环境",
+            "分组观察"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "调查时要记录生物的（  ）、数量和（  ）环境。",
+          "answer": {
+            "value": [
+              "名称",
+              "生活"
+            ]
+          },
+          "analysis": "名称、数量、生活环境是调查表的基本栏目，便于归类。",
+          "difficulty": 2,
+          "knowledge_point": "调查周边环境中的生物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "调查中看到不认识的小虫，也应先记录再查资料。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "先如实记录形态与位置，再查证，可避免遗漏数据。",
+          "difficulty": 3,
+          "knowledge_point": "调查周边环境中的生物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出调查记录表应含的两项内容。",
+          "answer": {
+            "value": "示例：生物名称与数量；发现地点和生活环境。"
+          },
+          "analysis": "评分：每写出一项得 2 分，共 4 分。",
+          "difficulty": 4,
+          "knowledge_point": "调查周边环境中的生物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "调查时把生物按形态结构分成植物、动物和其他生物是可行的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "形态结构是统一明确的归类标准，分类结果互斥，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "调查周边环境中的生物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "按形态结构归类，蘑菇应归入（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "蘑菇是真菌不光合，归其他生物；非动植物也非作物，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "生物的归类方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "其他生物",
+            "植物",
+            "动物",
+            "作物"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "按生活环境可把生物分为（  ）生物和水生生物。",
+          "answer": {
+            "value": [
+              "陆生"
+            ]
+          },
+          "analysis": "生活环境是常用归类标准，陆生与水生相对。",
+          "difficulty": 2,
+          "knowledge_point": "生物的归类方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "按用途分类时，小麦可归为作物。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "小麦是人类栽培的粮食作物，按用途归作物正确。",
+          "difficulty": 3,
+          "knowledge_point": "生物的归类方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出两种给生物归类的标准。",
+          "answer": {
+            "value": "示例：按形态结构分动植物；按生活环境分陆生和水生。"
+          },
+          "analysis": "评分：每写出一种标准并举例得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "生物的归类方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第二章 认识细胞",
+      "order_index": 3,
+      "summary": "练习使用显微镜，辨认植物细胞与动物细胞的结构，理解细胞各结构的功能和细胞的生活需要物质与能量。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "目镜 10×、物镜 40× 时放大倍数是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "放大倍数＝目镜×物镜＝10×40＝400；其余算错，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "显微镜的结构与成像",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "400 倍",
+            "50 倍",
+            "4 倍",
+            "10 倍"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "显微镜下看到的是（  ）像，物像偏左应把玻片向（  ）移。",
+          "answer": {
+            "value": [
+              "倒",
+              "左"
+            ]
+          },
+          "analysis": "成倒像，物像偏向哪边就把玻片移向哪边才能居中。",
+          "difficulty": 2,
+          "knowledge_point": "显微镜的结构与成像",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "视野太暗时可换用大光圈和反光镜的凹面。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "大光圈进光多、凹面镜聚光，都能提高视野亮度。",
+          "difficulty": 3,
+          "knowledge_point": "显微镜的结构与成像",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出低倍镜下找到物像的两个步骤。",
+          "answer": {
+            "value": "示例：转动粗准焦螺旋使镜筒缓降；再左眼观察、反向升镜筒至看清。"
+          },
+          "analysis": "评分：写出调焦与观察方向各得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "显微镜的结构与成像",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "视野中物像偏右上方，要把玻片标本移向（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "显微镜成倒像，物像偏哪就往哪移玻片；其余方向偏离，所以选 A",
+          "difficulty": 3,
+          "knowledge_point": "显微镜的结构与成像",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "右上方",
+            "左下方",
+            "正下方",
+            "正左方"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "对植物细胞起支持和保护作用的是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "细胞壁支持保护；膜控进出、质流动、核遗传，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "植物细胞的结构",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "细胞壁",
+            "细胞膜",
+            "细胞质",
+            "细胞核"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "切西瓜流出的汁水主要来自细胞的（  ），内含（  ）液。",
+          "answer": {
+            "value": [
+              "液泡",
+              "细胞"
+            ]
+          },
+          "analysis": "液泡内的细胞液溶解糖分等物质，切开即流出。",
+          "difficulty": 2,
+          "knowledge_point": "植物细胞的结构",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "所有植物细胞中都含有叶绿体。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "只有见光绿色部分细胞有叶绿体，根细胞一般没有。",
+          "difficulty": 3,
+          "knowledge_point": "植物细胞的结构",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出植物细胞特有的两种结构。",
+          "answer": {
+            "value": "示例：细胞壁和液泡；绿色部分还有叶绿体。"
+          },
+          "analysis": "评分：细胞壁、液泡各得 1 分；写出叶绿体再得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "植物细胞的结构",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "动物细胞不具有的结构是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "动物细胞无细胞壁；膜质核三者都有，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "动物细胞与植物细胞的比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "细胞壁",
+            "细胞膜",
+            "细胞质",
+            "细胞核"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "制作人口腔上皮细胞装片应滴（  ），洋葱表皮滴（  ）。",
+          "answer": {
+            "value": [
+              "生理盐水",
+              "清水"
+            ]
+          },
+          "analysis": "生理盐水维持动物细胞形态，植物细胞有壁可滴清水。",
+          "difficulty": 2,
+          "knowledge_point": "动物细胞与植物细胞的比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "动物细胞和植物细胞都有细胞核。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "两者都是真核细胞，核内都有遗传物质，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "动物细胞与植物细胞的比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说出动植物细胞结构的两点不同。",
+          "answer": {
+            "value": "示例：植物细胞有细胞壁、液泡，动物细胞没有；绿色部分还有叶绿体。"
+          },
+          "analysis": "评分：每写准一点得 2 分，共 4 分。",
+          "difficulty": 4,
+          "knowledge_point": "动物细胞与植物细胞的比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "观察洋葱表皮细胞时滴清水，可保持细胞正常形态。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "植物细胞有细胞壁支持，清水不会使其涨破，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "动物细胞与植物细胞的比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "细胞中控制物质进出的结构是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "膜控物质进出；壁支持、核遗传、泡储液，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "细胞的生活需要物质和能量",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "细胞膜",
+            "细胞壁",
+            "细胞核",
+            "液泡"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "细胞中的遗传信息主要储存在（  ）里，它是（  ）中心。",
+          "answer": {
+            "value": [
+              "细胞核",
+              "控制"
+            ]
+          },
+          "analysis": "细胞核含 DNA，控制发育与遗传，是细胞的控制中心。",
+          "difficulty": 2,
+          "knowledge_point": "细胞的生活需要物质和能量",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "线粒体是呼吸作用释放能量的主要场所。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "线粒体分解有机物释放能量供生命活动，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "细胞的生活需要物质和能量",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出细胞内两种能量转换器及作用。",
+          "answer": {
+            "value": "示例：叶绿体把光能转成化学能；线粒体分解有机物释放能量。"
+          },
+          "analysis": "评分：两种结构各 1 分；作用说清各 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "细胞的生活需要物质和能量",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第三章 从细胞到生物体",
+      "order_index": 4,
+      "summary": "理解细胞通过分裂增多、分化形成组织，认识植物体和动物体的结构层次，并了解单细胞生物能独立完成生命活动。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "细胞分裂过程中变化最明显的是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "染色体先复制再均分；其余结构变化不显著，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "细胞分裂与染色体变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "染色体",
+            "细胞壁",
+            "液泡",
+            "叶绿体"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "细胞分裂使细胞（  ）增多，细胞生长使（  ）增大。",
+          "answer": {
+            "value": [
+              "数目",
+              "体积"
+            ]
+          },
+          "analysis": "分裂增加数量，生长增加体积，二者共同使生物体长大。",
+          "difficulty": 2,
+          "knowledge_point": "细胞分裂与染色体变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "分裂产生的新细胞与原细胞所含遗传物质相同。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "染色体复制后均等分配，保证了遗传信息一致。",
+          "difficulty": 3,
+          "knowledge_point": "细胞分裂与染色体变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "简述细胞分裂时染色体的变化。",
+          "answer": {
+            "value": "示例：先复制加倍，再平均分成两份进入两个新细胞。"
+          },
+          "analysis": "评分：写出复制加倍得 2 分；写出均分得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "细胞分裂与染色体变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "一粒种子长成植株，细胞数目增多主要靠（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "数目增多靠分裂；分化改形态、生长增体积、衰老不增数，所以选 A",
+          "difficulty": 3,
+          "knowledge_point": "细胞分裂与染色体变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "细胞分裂",
+            "细胞分化",
+            "细胞生长",
+            "细胞衰老"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "细胞分化的结果是形成（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "分化形成组织；分裂只增数、器官系统更高层，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "细胞分化形成组织",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "组织",
+            "新细胞",
+            "器官",
+            "系统"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "形态结构功能相同的细胞联合在一起形成（  ）。",
+          "answer": {
+            "value": [
+              "组织"
+            ]
+          },
+          "analysis": "组织是细胞分化的结果，是构成器官的下一层次。",
+          "difficulty": 2,
+          "knowledge_point": "细胞分化形成组织",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "细胞分化会改变细胞内的遗传物质。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "分化只是基因选择性表达，遗传物质不变，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "细胞分化形成组织",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出植物的两种组织。",
+          "answer": {
+            "value": "示例：分生组织、输导组织、保护组织、营养组织。"
+          },
+          "analysis": "评分：每写对一种得 2 分，写满两种即满分。",
+          "difficulty": 4,
+          "knowledge_point": "细胞分化形成组织",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "绿色开花植物的六大器官不包括（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "植物没有系统层次；根茎叶花果实种子是器官，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "植物体和动物体的结构层次",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "系统",
+            "根",
+            "花",
+            "果实"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "植物体结构层次比动物体少了（  ）这一层。",
+          "answer": {
+            "value": [
+              "系统"
+            ]
+          },
+          "analysis": "动物由器官构成系统再成个体，植物由器官直接成个体。",
+          "difficulty": 2,
+          "knowledge_point": "植物体和动物体的结构层次",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "番茄的果实属于器官。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "果实由多种组织构成、行使繁殖功能，属于器官。",
+          "difficulty": 3,
+          "knowledge_point": "植物体和动物体的结构层次",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "按顺序写出植物体的结构层次。",
+          "answer": {
+            "value": "示例：细胞→组织→器官→植物体。"
+          },
+          "analysis": "评分：顺序正确得 2 分；层次齐全得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "植物体和动物体的结构层次",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "掐掉一根枝条，剩下的叶、茎仍属器官层次。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "叶和茎由多种组织构成、各司其职，都是器官。",
+          "difficulty": 3,
+          "knowledge_point": "植物体和动物体的结构层次",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "草履虫依靠什么运动（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "草履虫全身布满纤毛摆动前进；其余非其结构，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "单细胞生物与草履虫",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "纤毛",
+            "鞭毛",
+            "伪足",
+            "刚毛"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "草履虫通过（  ）呼吸，食物在（  ）泡内被消化。",
+          "answer": {
+            "value": [
+              "表膜",
+              "食物"
+            ]
+          },
+          "analysis": "表膜进行气体交换，食物泡完成细胞内消化。",
+          "difficulty": 2,
+          "knowledge_point": "单细胞生物与草履虫",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "单细胞生物一个细胞就能独立完成生命活动。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "虽只有一个细胞，但具备摄食呼吸生殖等全部功能。",
+          "difficulty": 3,
+          "knowledge_point": "单细胞生物与草履虫",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出两种单细胞生物。",
+          "answer": {
+            "value": "示例：草履虫、衣藻、酵母菌、变形虫。"
+          },
+          "analysis": "评分：每写对一种得 2 分，共 4 分。",
+          "difficulty": 4,
+          "knowledge_point": "单细胞生物与草履虫",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第二单元 多种多样的生物",
+      "order_index": 5,
+      "summary": "认识生物多样性的层次，理解绿色植物制造有机物、维持碳氧平衡和促进水循环的作用，形成爱护植被的意识。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "生物多样性的直观体现是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "物种多样性最直观；遗传与生态系统不直观，细胞非层次，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "生物多样性的三个层次",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "物种多样性",
+            "遗传多样性",
+            "生态系统多样性",
+            "细胞多样性"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "生物多样性包括物种、遗传和（  ）多样性。",
+          "answer": {
+            "value": [
+              "生态系统"
+            ]
+          },
+          "analysis": "三个层次由小到大，生态系统多样性包含前两者。",
+          "difficulty": 2,
+          "knowledge_point": "生物多样性的三个层次",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "每种生物都是一个丰富的基因库。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "同种不同个体基因有差异，物种多样性实质是基因多样性。",
+          "difficulty": 3,
+          "knowledge_point": "生物多样性的三个层次",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出生物多样性的三个层次。",
+          "answer": {
+            "value": "示例：物种多样性、遗传多样性、生态系统多样性。"
+          },
+          "analysis": "评分：每答对一个层次得 1 分，全对再得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "生物多样性的三个层次",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "保护生物多样性的根本措施是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "就地保护生态系统才能保住物种与基因；其余不治本，所以选 A",
+          "difficulty": 3,
+          "knowledge_point": "生物多样性的三个层次",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "保护栖息地与生态系统",
+            "只迁地饲养",
+            "只建基因库",
+            "大量捕捉"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "检验叶片是否产生淀粉常滴加（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "淀粉遇碘变蓝；酒精用于脱色、清水漂洗，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "绿色植物是有机物的制造者",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "碘液",
+            "清水",
+            "酒精",
+            "生理盐水"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "光合作用制造的有机物主要是（  ），可用（  ）检验。",
+          "answer": {
+            "value": [
+              "淀粉",
+              "碘液"
+            ]
+          },
+          "analysis": "淀粉遇碘变蓝是检验光合产物的常用方法。",
+          "difficulty": 2,
+          "knowledge_point": "绿色植物是有机物的制造者",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "人和动物的食物最终都来自绿色植物的光合作用。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "食物链起点是生产者，有机物与能量由光合固定。",
+          "difficulty": 3,
+          "knowledge_point": "绿色植物是有机物的制造者",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明绿色植物为什么是生物圈中的生产者。",
+          "answer": {
+            "value": "示例：能用无机物合成有机物、储存能量，供自身和其他生物利用。"
+          },
+          "analysis": "评分：写出制造有机物得 2 分；写出供其他生物利用得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "绿色植物是有机物的制造者",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "维持生物圈碳氧平衡主要依靠（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "光合吸收二氧化碳放氧；蒸腾散水、呼吸耗氧，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "绿色植物维持碳氧平衡与促进水循环",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "光合作用",
+            "蒸腾作用",
+            "呼吸作用",
+            "吸收作用"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "光合作用吸收（  ）、释放（  ）。",
+          "answer": {
+            "value": [
+              "二氧化碳",
+              "氧气"
+            ]
+          },
+          "analysis": "原料是二氧化碳和水，产物有有机物和氧气。",
+          "difficulty": 2,
+          "knowledge_point": "绿色植物维持碳氧平衡与促进水循环",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "植物蒸腾作用能提高大气湿度、促进降水。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "大量水分以水蒸气散失，参与生物圈的水循环。",
+          "difficulty": 3,
+          "knowledge_point": "绿色植物维持碳氧平衡与促进水循环",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出绿色植物在生物圈中的两项作用。",
+          "answer": {
+            "value": "示例：制造有机物；维持碳氧平衡、促进水循环、保持水土。"
+          },
+          "analysis": "评分：每写准一项作用得 2 分，共 4 分。",
+          "difficulty": 4,
+          "knowledge_point": "绿色植物维持碳氧平衡与促进水循环",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "夜间把大量植物放进密闭卧室，可能因呼吸作用耗氧而不宜。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "无光时植物只进行呼吸，消耗氧气放出二氧化碳。",
+          "difficulty": 3,
+          "knowledge_point": "绿色植物维持碳氧平衡与促进水循环",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列属于爱护植被的做法是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "植树、节纸减少木材消耗；其余都破坏植被，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "爱护植被与绿化祖国",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "植树并节约用纸",
+            "大量砍伐森林",
+            "毁林开荒",
+            "随意放牧"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "我国为保护森林颁布了《（  ）法》，并设有全民（  ）节。",
+          "answer": {
+            "value": [
+              "森林",
+              "植树"
+            ]
+          },
+          "analysis": "以法律护林，用植树节动员全民参与绿化。",
+          "difficulty": 2,
+          "knowledge_point": "爱护植被与绿化祖国",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "草原过度放牧不会造成土地荒漠化。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "超载放牧破坏草皮，易导致草场退化、土地沙化。",
+          "difficulty": 3,
+          "knowledge_point": "爱护植被与绿化祖国",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出两条保护植被的措施。",
+          "answer": {
+            "value": "示例：退耕还林还草、植树造林；少用一次性筷子、节约纸张。"
+          },
+          "analysis": "评分：每写出一条具体措施得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "爱护植被与绿化祖国",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第一章 藻类与植物的类群",
+      "order_index": 6,
+      "summary": "比较藻类、苔藓、蕨类和种子植物的特征，认识种子的结构，理解蒸腾作用、光合作用与呼吸作用的具体事实和实验。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "没有根茎叶分化的植物类群是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "藻类结构简单无器官分化；其余都有茎叶或根茎叶，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "藻类、苔藓和蕨类植物的特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "藻类植物",
+            "蕨类植物",
+            "苔藓植物",
+            "种子植物"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "（  ）植物可作监测空气污染程度的指示植物。",
+          "answer": {
+            "value": [
+              "苔藓"
+            ]
+          },
+          "analysis": "苔藓叶只有一层细胞，二氧化硫等易侵入，故敏感。",
+          "difficulty": 2,
+          "knowledge_point": "藻类、苔藓和蕨类植物的特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "蕨类植物靠孢子繁殖，不产生种子。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "蕨类有孢子囊群，用孢子繁殖，属孢子植物。",
+          "difficulty": 3,
+          "knowledge_point": "藻类、苔藓和蕨类植物的特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出藻类与蕨类的一点区别。",
+          "answer": {
+            "value": "示例：藻类无根茎叶分化，多水生；蕨类有根茎叶和输导组织，多陆生。"
+          },
+          "analysis": "评分：写出两类各自特征得 2 分；对比清楚得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "藻类、苔藓和蕨类植物的特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "把天竺葵一叶片部分遮光，滴碘液后见光部分变蓝，说明（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "见光部分才有淀粉遇碘变蓝，遮光处不变，所以选 A",
+          "difficulty": 3,
+          "knowledge_point": "藻类、苔藓和蕨类植物的特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "光是制造淀粉的条件",
+            "遮光处产淀粉",
+            "叶绿素遇碘变蓝",
+            "呼吸产淀粉"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "松树的球果不是果实，因为种子（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "松是裸子植物，种子外无果皮；其余不符，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "种子植物与种子的结构",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "裸露无果皮包被",
+            "有两片子叶",
+            "有胚乳",
+            "靠孢子繁殖"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "菜豆属于（  ）子叶植物，玉米种子的养分储存在（  ）里。",
+          "answer": {
+            "value": [
+              "双",
+              "胚乳"
+            ]
+          },
+          "analysis": "双子叶养分存子叶，单子叶玉米的养分主要存胚乳。",
+          "difficulty": 2,
+          "knowledge_point": "种子植物与种子的结构",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "银杏的种子外有果皮包被，属于被子植物。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "银杏种子裸露，是裸子植物，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "种子植物与种子的结构",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说出裸子植物与被子植物的区别。",
+          "answer": {
+            "value": "示例：裸子植物种子裸露无果皮，如松、杉；被子植物种子外有果皮形成果实。"
+          },
+          "analysis": "评分：写出有无果皮得 2 分；各举一例得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "种子植物与种子的结构",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "植物蒸腾失水的门户主要是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "气孔是失水换气门户；叶脉、表皮、根毛均非，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "蒸腾作用与气孔",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "气孔",
+            "叶脉",
+            "表皮细胞",
+            "根毛"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "气孔的开闭由一对（  ）细胞控制。",
+          "answer": {
+            "value": [
+              "保卫"
+            ]
+          },
+          "analysis": "保卫细胞吸水膨胀气孔张开，失水则闭合。",
+          "difficulty": 2,
+          "knowledge_point": "蒸腾作用与气孔",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "移栽树苗时剪去部分枝叶可降低蒸腾作用。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "减少叶面积能减少水分散失，提高成活率。",
+          "difficulty": 3,
+          "knowledge_point": "蒸腾作用与气孔",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出蒸腾作用对植物的两点意义。",
+          "answer": {
+            "value": "示例：促进根对水分和无机盐的运输；炎热时降温、避免叶片灼伤。"
+          },
+          "analysis": "评分：每写准一点意义得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "蒸腾作用与气孔",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "阴天或夜间移栽植物，比烈日下更容易成活。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "光照弱、温度低时蒸腾减弱，失水少，利于缓苗。",
+          "difficulty": 3,
+          "knowledge_point": "蒸腾作用与气孔",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "验证绿叶在光下制造淀粉前需暗处理，目的是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "暗处理让叶内淀粉运走耗尽；其余与实验无关，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "光合作用与呼吸作用的实验与比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "耗尽原有淀粉",
+            "增加叶绿素",
+            "杀死叶片",
+            "让气孔张开"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "绿叶在光下制造有机物的实验用（  ）隔水加热脱去叶绿素。",
+          "answer": {
+            "value": [
+              "酒精"
+            ]
+          },
+          "analysis": "叶绿素溶于酒精，隔水加热可避免酒精直接燃烧。",
+          "difficulty": 2,
+          "knowledge_point": "光合作用与呼吸作用的实验与比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "植物白天只进行光合作用，夜间只进行呼吸作用。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "呼吸作用昼夜都进行，白天光合与呼吸同时进行。",
+          "difficulty": 3,
+          "knowledge_point": "光合作用与呼吸作用的实验与比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出光合作用所需的两种原料。",
+          "answer": {
+            "value": "示例：二氧化碳和水；条件是光和叶绿体。"
+          },
+          "analysis": "评分：二氧化碳、水各得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "光合作用与呼吸作用的实验与比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第二章 动物的类群",
+      "order_index": 7,
+      "summary": "依据有无脊柱区分无脊椎动物与脊椎动物，辨认腔肠、扁形、线形、环节、软体、节肢动物及鱼、两栖、爬行、鸟、哺乳类的主要特征。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "身体由许多相似体节组成的是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "蚯蚓属环节动物有体节；其余分属腔肠扁形线形，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "无脊椎动物主要类群的特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "蚯蚓",
+            "水螅",
+            "涡虫",
+            "蛔虫"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "水螅属（  ）动物，身体呈（  ）对称、有口无肛门。",
+          "answer": {
+            "value": [
+              "腔肠",
+              "辐射"
+            ]
+          },
+          "analysis": "腔肠动物辐射对称，食物残渣仍由口排出。",
+          "difficulty": 2,
+          "knowledge_point": "无脊椎动物主要类群的特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "蚯蚓靠湿润的体壁进行气体交换。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "体壁分泌黏液保持湿润，氧气溶入后进入毛细血管。",
+          "difficulty": 3,
+          "knowledge_point": "无脊椎动物主要类群的特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出环节动物的两点主要特征。",
+          "answer": {
+            "value": "示例：身体由许多相似体节构成；靠刚毛或疣足辅助运动。"
+          },
+          "analysis": "评分：每写准一点得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "无脊椎动物主要类群的特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "给动物分组时，区分脊椎动物与无脊椎动物的依据是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "有无由脊椎骨组成的脊柱是分类依据；其余会交叉，所以选 A",
+          "difficulty": 3,
+          "knowledge_point": "无脊椎动物主要类群的特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "体内有无脊柱",
+            "是否水生",
+            "体型大小",
+            "会不会飞"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "节肢动物共有的特征是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "外骨骼与分节附肢是共同特征；贝壳属软体，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "软体动物与节肢动物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "外骨骼且附肢分节",
+            "有贝壳",
+            "辐射对称",
+            "有脊椎骨"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "节肢动物体表有坚韧的（  ），身体和（  ）都分节。",
+          "answer": {
+            "value": [
+              "外骨骼",
+              "附肢"
+            ]
+          },
+          "analysis": "外骨骼保护支持并防失水，附肢分节使运动灵活。",
+          "difficulty": 2,
+          "knowledge_point": "软体动物与节肢动物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "蜘蛛属于昆虫，因为它有八条足。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "昆虫为三对足，蜘蛛八足属蛛形纲，不是昆虫。",
+          "difficulty": 3,
+          "knowledge_point": "软体动物与节肢动物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出节肢动物适于陆生的两点特征。",
+          "answer": {
+            "value": "示例：外骨骼防止水分散失；附肢分节、运动灵活，气管呼吸。"
+          },
+          "analysis": "评分：每写准一点并说明作用得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "软体动物与节肢动物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "鱼在水中进行气体交换的器官是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "鳃丝密布毛细血管吸收水中氧；肺属陆生，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "鱼类与两栖、爬行动物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "鳃",
+            "肺",
+            "皮肤",
+            "气囊"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "青蛙幼体用（  ）呼吸，成体主要用（  ）并辅以皮肤。",
+          "answer": {
+            "value": [
+              "鳃",
+              "肺"
+            ]
+          },
+          "analysis": "蝌蚪水生用鳃，变态后上陆主要靠肺呼吸。",
+          "difficulty": 2,
+          "knowledge_point": "鱼类与两栖、爬行动物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "爬行动物的生殖和发育可以脱离水的限制。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "体内受精、产有卵壳的羊膜卵，是真正适应陆生的类群。",
+          "difficulty": 3,
+          "knowledge_point": "鱼类与两栖、爬行动物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出鱼适于水中游泳的两点特征。",
+          "answer": {
+            "value": "示例：身体呈梭形减小阻力；用鳍协调、躯干部和尾部摆动前进。"
+          },
+          "analysis": "评分：每写准一点得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "鱼类与两栖、爬行动物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "哺乳动物特有的生殖发育特点是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "胎生哺乳提高幼仔成活率；其余非哺乳类特征，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "鸟类与哺乳类",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "胎生哺乳",
+            "卵生",
+            "变态发育",
+            "体外受精"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "鸟类有（  ）辅助肺呼吸，吸气呼气时肺里都能进行气体交换。",
+          "answer": {
+            "value": [
+              "气囊"
+            ]
+          },
+          "analysis": "气囊使鸟类形成双重呼吸，满足飞行时的高耗氧。",
+          "difficulty": 2,
+          "knowledge_point": "鸟类与哺乳类",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "蝙蝠会飞，所以属于鸟类。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "蝙蝠体表被毛、胎生哺乳，是哺乳动物。",
+          "difficulty": 3,
+          "knowledge_point": "鸟类与哺乳类",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出鸟类适于飞行的两点形态特征。",
+          "answer": {
+            "value": "示例：前肢变成翼、体表覆羽；骨骼薄而轻、胸肌发达。"
+          },
+          "analysis": "评分：每写准一点得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "鸟类与哺乳类",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "鲸生活在水中，但用肺呼吸、胎生哺乳，属哺乳动物。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "呼吸与生殖方式决定其归类，与水生环境无关。",
+          "difficulty": 3,
+          "knowledge_point": "鸟类与哺乳类",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第三章 微生物",
+      "order_index": 8,
+      "summary": "认识细菌、真菌和病毒的结构与生殖方式，了解它们在发酵、食品制作、物质分解及疾病中的作用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "细菌与动植物细胞的主要区别是没有（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "细菌只有 DNA 集中区无核膜；壁膜质都有，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "细菌的结构与生殖",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "成形的细胞核",
+            "细胞壁",
+            "细胞膜",
+            "细胞质"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "细菌靠（  ）生殖，恶劣环境下可形成休眠体（  ）。",
+          "answer": {
+            "value": [
+              "分裂",
+              "芽孢"
+            ]
+          },
+          "analysis": "一个细菌分裂成两个；芽孢抗高温干燥，非繁殖方式。",
+          "difficulty": 2,
+          "knowledge_point": "细菌的结构与生殖",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "所有细菌都对人有害，应彻底消灭。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "多数细菌有益，如制酸奶、参与物质循环，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "细菌的结构与生殖",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出细菌的两点结构特点。",
+          "answer": {
+            "value": "示例：单细胞、无成形的细胞核；有细胞壁，有的具鞭毛或荚膜。"
+          },
+          "analysis": "评分：每写准一点得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "细菌的结构与生殖",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "食物腐败常由细菌真菌大量繁殖引起，冰箱冷藏能延长保存是因为（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "低温只减慢代谢与繁殖，并非灭菌；其余说法不实，所以选 A",
+          "difficulty": 3,
+          "knowledge_point": "细菌的结构与生殖",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "低温抑制其生长繁殖",
+            "低温杀死全部微生物",
+            "低温使食物脱水",
+            "低温增加营养"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列属于真菌的是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "酵母菌有细胞核属真菌；前两者是细菌、后者是病毒，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "真菌的结构与生殖",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "酵母菌",
+            "乳酸菌",
+            "大肠杆菌",
+            "流感病毒"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "真菌靠（  ）繁殖，细胞内有成形的（  ）。",
+          "answer": {
+            "value": [
+              "孢子",
+              "细胞核"
+            ]
+          },
+          "analysis": "产生大量孢子繁殖；真菌是真核生物，有核膜包被的细胞核。",
+          "difficulty": 2,
+          "knowledge_point": "真菌的结构与生殖",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "蘑菇细胞内含叶绿体，能进行光合作用。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "真菌无叶绿体，靠分解现成有机物获取营养。",
+          "difficulty": 3,
+          "knowledge_point": "真菌的结构与生殖",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出细菌与真菌的一点区别。",
+          "answer": {
+            "value": "示例：细菌无成形细胞核、分裂生殖；真菌有细胞核、多靠孢子繁殖。"
+          },
+          "analysis": "评分：分别写准两类特征得 2 分；对比清楚得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "真菌的结构与生殖",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "病毒的结构组成是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "病毒无细胞结构，仅外壳加核酸；其余是细胞结构，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "病毒的结构与生活方式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "蛋白质外壳和遗传物质",
+            "细胞壁和细胞核",
+            "细胞膜和细胞质",
+            "荚膜和鞭毛"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "病毒不能独立生活，必须（  ）在其他生物的活细胞里。",
+          "answer": {
+            "value": [
+              "寄生"
+            ]
+          },
+          "analysis": "缺乏细胞结构与代谢系统，只能借寄主细胞增殖。",
+          "difficulty": 2,
+          "knowledge_point": "病毒的结构与生活方式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "病毒具有细胞结构，属于单细胞生物。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "病毒无细胞结构，也不属于单细胞生物，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "病毒的结构与生活方式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出病毒的两点特征。",
+          "answer": {
+            "value": "示例：没有细胞结构，仅由蛋白质外壳和遗传物质构成；只能寄生在活细胞内。"
+          },
+          "analysis": "评分：每写准一点得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "病毒的结构与生活方式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "制作馒头时使面团膨松的是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "酵母菌分解糖产二氧化碳使面团起孔；其余不符，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "微生物与人类的关系及发酵",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "酵母菌产气",
+            "乳酸菌产酸",
+            "霉菌产孢",
+            "病毒增殖"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "制作酸奶利用（  ）菌，制醋利用（  ）菌。",
+          "answer": {
+            "value": [
+              "乳酸",
+              "醋酸"
+            ]
+          },
+          "analysis": "乳酸菌把糖转为乳酸，醋酸菌把酒精转为醋酸。",
+          "difficulty": 2,
+          "knowledge_point": "微生物与人类的关系及发酵",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "细菌和真菌在生态系统中常充当分解者。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "腐生种类把遗体有机物分解为无机物，供植物再利用。",
+          "difficulty": 3,
+          "knowledge_point": "微生物与人类的关系及发酵",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出两种利用微生物制作的食品。",
+          "answer": {
+            "value": "示例：用乳酸菌制酸奶、泡菜；用酵母菌做馒头、面包、酿酒。"
+          },
+          "analysis": "评分：每种食品与菌种对应正确各得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "微生物与人类的关系及发酵",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "青霉素是青霉产生的抗生素，可治疗部分细菌性疾病。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "青霉素抑制细菌细胞壁合成，对病毒无效，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "微生物与人类的关系及发酵",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第四章 生物分类的方法",
+      "order_index": 9,
+      "summary": "学会依据形态结构等特征对生物进行分类，掌握从界到种的等级单位、双名法命名规则和检索表的使用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "生物分类主要依据的是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "形态结构与生理特征比较稳定；大小时间地点易变，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "生物分类的依据与意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "形态结构等特征",
+            "个体大小",
+            "发现时间",
+            "生活地点"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "生物分类的最基本单位是（  ）。",
+          "answer": {
+            "value": [
+              "种"
+            ]
+          },
+          "analysis": "种是最基本分类单位，同种生物亲缘最近、可自然交配。",
+          "difficulty": 2,
+          "knowledge_point": "生物分类的依据与意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "分类单位越小，其中生物的共同特征越多。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "单位越小亲缘越近，共有特征和相同基因越多。",
+          "difficulty": 3,
+          "knowledge_point": "生物分类的依据与意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出生物分类的两点意义。",
+          "answer": {
+            "value": "示例：弄清亲缘和进化关系；便于识别、研究和保护生物多样性。"
+          },
+          "analysis": "评分：每写准一点得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "生物分类的依据与意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "狼与狗同属不同种，狼与狐同科不同属，亲缘较近的是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "同属比同科单位小、亲缘近，可判断且不等近，所以选 A",
+          "difficulty": 3,
+          "knowledge_point": "生物分类的依据与意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "狼与狗",
+            "狼与狐",
+            "无法判断",
+            "两者一样近"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列分类等级中最大的是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "界＞门＞纲＞目＞科＞属＞种，其余三级都小于界，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "分类等级单位从大到小",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "界",
+            "门",
+            "科",
+            "属"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "分类等级由大到小依次是界、门、纲、目、科、（  ）、种。",
+          "answer": {
+            "value": [
+              "属"
+            ]
+          },
+          "analysis": "七个等级中属位于科与种之间，种最基本。",
+          "difficulty": 2,
+          "knowledge_point": "分类等级单位从大到小",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "同属生物比同科生物的亲缘关系更近。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "属比科小，分类单位越小亲缘越近、共同特征越多。",
+          "difficulty": 3,
+          "knowledge_point": "分类等级单位从大到小",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "按顺序写出七个分类等级。",
+          "answer": {
+            "value": "示例：界、门、纲、目、科、属、种。"
+          },
+          "analysis": "评分：顺序完全正确得 4 分，错一处扣 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "分类等级单位从大到小",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "双名法中物种学名的组成是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "林奈规定学名由属名＋种加词组成；界名、俗名不用于命名，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "双名法与生物的命名",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "属名加种加词",
+            "界名加门名",
+            "科名加属名",
+            "俗名加产地"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "双名法由瑞典植物学家（  ）创立，学名用（  ）文书写。",
+          "answer": {
+            "value": [
+              "林奈",
+              "拉丁"
+            ]
+          },
+          "analysis": "统一用拉丁文命名，可避免各国俗名不统一。",
+          "difficulty": 2,
+          "knowledge_point": "双名法与生物的命名",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "同一种生物在不同地区可以有完全不同的学名。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "按双名法每种生物只有一个统一学名，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "双名法与生物的命名",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出双名法的两点书写规则。",
+          "answer": {
+            "value": "示例：学名由属名和种加词组成；用拉丁文斜体，属名首字母大写。"
+          },
+          "analysis": "评分：每写准一点得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "双名法与生物的命名",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "给校园植物挂名牌时，写上学名比只写俗名更便于跨地区交流。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "学名全球统一、一物一名，俗名常因地而异。",
+          "difficulty": 3,
+          "knowledge_point": "双名法与生物的命名",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "二歧检索表编制时常选用（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "特征须稳定、易观察、互相排斥；其余不可靠，所以选 A",
+          "difficulty": 1,
+          "knowledge_point": "检索表的使用与分类实践",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "稳定易辨且互斥的特征",
+            "会随季节变的特征",
+            "个体大小差异",
+            "只凭颜色一项"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "使用检索表时要按条目（  ）对照，逐级查到对应（  ）。",
+          "answer": {
+            "value": [
+              "逐条",
+              "类群"
+            ]
+          },
+          "analysis": "二歧式逐级二选一，最终定位到具体类群名称。",
+          "difficulty": 2,
+          "knowledge_point": "检索表的使用与分类实践",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "给生物分类时，只看生活环境就能准确归类。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "环境易变且不同类群可共处，需依据形态结构等综合特征。",
+          "difficulty": 3,
+          "knowledge_point": "检索表的使用与分类实践",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出使用检索表查生物的两个步骤。",
+          "answer": {
+            "value": "示例：先观察标本的稳定特征；再逐条对照二歧条目，逐级缩小范围直到定位。"
+          },
+          "analysis": "评分：观察特征、逐级对照各得 2 分。",
+          "difficulty": 4,
+          "knowledge_point": "检索表的使用与分类实践",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-11T02:29:22+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

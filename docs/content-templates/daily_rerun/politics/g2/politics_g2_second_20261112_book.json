@@ -1,0 +1,1515 @@
+{
+  "subject": "politics",
+  "grade": 2,
+  "version": "部编版",
+  "semester": "second",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第一单元 我乐观我向上",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "认识自己的情绪",
+      "parent": "第一单元 我乐观我向上",
+      "order_index": 1,
+      "explanation": "每个人都会有高兴、生气、难过、害怕等情绪，情绪本身没有好坏。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "学会调节情绪",
+      "parent": "第一单元 我乐观我向上",
+      "order_index": 2,
+      "explanation": "难过时可以倾诉、运动、深呼吸，找到适合自己的调节方式。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "乐观面对困难",
+      "parent": "第一单元 我乐观我向上",
+      "order_index": 3,
+      "explanation": "遇到困难可以这样想：先想办法，再试一试，不轻易放弃。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "欣赏自己与欣赏别人",
+      "parent": "第一单元 我乐观我向上",
+      "order_index": 4,
+      "explanation": "看到自己的长处，也能真诚地为同学的好表现鼓掌。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二单元 大自然，谢谢您",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "大自然给了我们什么",
+      "parent": "第二单元 大自然，谢谢您",
+      "order_index": 1,
+      "explanation": "阳光、空气、水、食物都来自大自然，我们的生活离不开它。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "四季与自然变化",
+      "parent": "第二单元 大自然，谢谢您",
+      "order_index": 2,
+      "explanation": "春夏秋冬各有特点，动植物随季节发生变化。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "爱护身边的一草一木",
+      "parent": "第二单元 大自然，谢谢您",
+      "order_index": 3,
+      "explanation": "不摘花、不折枝、不踩草坪，是小学生能做到的爱护自然。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "感谢大自然",
+      "parent": "第二单元 大自然，谢谢您",
+      "order_index": 4,
+      "explanation": "用行动和语言表达对大自然的感谢，从小事做起。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第三单元 传统美德我弘扬",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "诚实守信",
+      "parent": "第三单元 传统美德我弘扬",
+      "order_index": 1,
+      "explanation": "说实话、不撒谎、答应的事要做到，是诚实守信的表现。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "勤劳节俭",
+      "parent": "第三单元 传统美德我弘扬",
+      "order_index": 2,
+      "explanation": "自己的事自己做，不浪费粮食和物品。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "孝敬长辈",
+      "parent": "第三单元 传统美德我弘扬",
+      "order_index": 3,
+      "explanation": "尊重长辈、关心长辈的身体与心情，是中华民族的传统美德。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "美德在日常小事里",
+      "parent": "第三单元 传统美德我弘扬",
+      "order_index": 4,
+      "explanation": "美德不是空话，体现在每天的行为里，坚持才养成习惯。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第四单元 播下梦想的种子",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "我的梦想",
+      "parent": "第四单元 播下梦想的种子",
+      "order_index": 1,
+      "explanation": "梦想是自己长大后想做的事、想成为的人。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "梦想从哪里来",
+      "parent": "第四单元 播下梦想的种子",
+      "order_index": 2,
+      "explanation": "梦想常来自喜欢的事、身边的人和看到的榜样。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "为梦想做准备",
+      "parent": "第四单元 播下梦想的种子",
+      "order_index": 3,
+      "explanation": "把大梦想拆成小目标，从今天的学习与练习开始。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "坚持与不怕困难",
+      "parent": "第四单元 播下梦想的种子",
+      "order_index": 4,
+      "explanation": "实现梦想的路上会遇到困难，坚持下去才能看到进步。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一单元 我乐观我向上",
+      "order_index": 1,
+      "summary": "认识自己的情绪，学会乐观面对困难与小挫折。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "下列属于情绪表现的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "高兴地跳起来是情绪的表现。",
+          "difficulty": 2,
+          "knowledge_point": "认识自己的情绪",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "高兴得跳起来",
+            "会背古诗",
+            "会算乘法",
+            "会扫地"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "考试没考好，心里难受，这种感受叫（ ）（填一种情绪名称）。",
+          "answer": {
+            "value": "难过"
+          },
+          "analysis": "心里难受属于难过的情绪。",
+          "difficulty": 2,
+          "knowledge_point": "认识自己的情绪",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "人有各种情绪是正常的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "每个人都会有多种情绪，这是正常的。",
+          "difficulty": 2,
+          "knowledge_point": "认识自己的情绪",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列属于常见情绪的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓ 都属于情绪；D ✗ 会唱歌是一种本领。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "认识自己的情绪",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "高兴",
+            "生气",
+            "难过",
+            "会唱歌"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你最近一次感到高兴是因为什么。",
+          "answer": {
+            "value": "示例：我在运动会上跳绳跳了 120 下，超过了自己的记录，心里特别高兴。"
+          },
+          "analysis": "评分要点：说清具体事情与情绪。",
+          "difficulty": 3,
+          "knowledge_point": "认识自己的情绪",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "心里难受的时候，比较好的做法是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "倾诉能减轻心情负担。",
+          "difficulty": 2,
+          "knowledge_point": "学会调节情绪",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "和爸爸妈妈说一说",
+            "一个人躲着谁也不理",
+            "摔东西",
+            "对同学发脾气"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "感到生气时，可以先做几次深（ ），让自己平静下来。",
+          "answer": {
+            "value": "呼吸"
+          },
+          "analysis": "深呼吸有助平复情绪。",
+          "difficulty": 3,
+          "knowledge_point": "学会调节情绪",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "心情不好时可以适当运动来调节。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "运动是常见的调节方式。",
+          "difficulty": 2,
+          "knowledge_point": "学会调节情绪",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "调节情绪的好办法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓ 都是健康的方式；D ✗ 撕本子是不当行为。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "学会调节情绪",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "听听音乐",
+            "找朋友说说话",
+            "跑一跑步",
+            "把作业本撕掉"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你用过的调节坏心情的办法。",
+          "answer": {
+            "value": "示例：我不高兴时会去楼下跳绳，跳一会儿就觉得轻松了；也会和妈妈说说为什么难过。"
+          },
+          "analysis": "评分要点：办法具体且健康。",
+          "difficulty": 4,
+          "knowledge_point": "学会调节情绪",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "遇到不会做的题，乐观的做法是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "想办法、求帮助是积极做法。",
+          "difficulty": 2,
+          "knowledge_point": "乐观面对困难",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "再想想，或者向老师请教",
+            "把题放一边不管",
+            "说自己太笨",
+            "抄同学的答案"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「失败一次不要紧，再（ ）一次就好」是乐观的想法。",
+          "answer": {
+            "value": "试"
+          },
+          "analysis": "再试一次体现乐观与坚持。",
+          "difficulty": 3,
+          "knowledge_point": "乐观面对困难",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "同一件事，换个想法，心情可能就不一样。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "想法影响情绪。",
+          "difficulty": 3,
+          "knowledge_point": "乐观面对困难",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列想法中比较乐观的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓ 积极；B ✗ 否定自己；C ✓ 主动想办法；D ✗ 放弃。所以选 A、C。",
+          "difficulty": 4,
+          "knowledge_point": "乐观面对困难",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "这次没做好，下次我准备得更充分",
+            "我怎么都学不会",
+            "先问同学，再自己练一遍",
+            "反正我不行"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你遇到困难时是怎样鼓励自己的。",
+          "answer": {
+            "value": "示例：学跳绳时我总是绊脚，我就告诉自己再练十分钟，结果慢慢就学会了。"
+          },
+          "analysis": "评分要点：有具体做法与积极想法。",
+          "difficulty": 4,
+          "knowledge_point": "乐观面对困难",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "每个人都有自己的长处，这句话说明（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "每人都有长处，要善于发现。",
+          "difficulty": 2,
+          "knowledge_point": "欣赏自己与欣赏别人",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "要善于发现自己的优点",
+            "每个人都是一样的",
+            "只有学习好才算有长处",
+            "长处不重要"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "同学比赛得了第一，我们应当为他（ ）（填「鼓掌」）。",
+          "answer": {
+            "value": "鼓掌"
+          },
+          "analysis": "为他人成绩鼓掌是欣赏别人。",
+          "difficulty": 2,
+          "knowledge_point": "欣赏自己与欣赏别人",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "夸别人好不算贬低自己。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "欣赏别人与欣赏自己并不冲突。",
+          "difficulty": 3,
+          "knowledge_point": "欣赏自己与欣赏别人",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "体现欣赏别人的行为有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；D ✓ 都是欣赏；C ✗ 贬低别人。所以选 A、B、D。",
+          "difficulty": 2,
+          "knowledge_point": "欣赏自己与欣赏别人",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "真诚地称赞同学画得好",
+            "为同学的进步高兴",
+            "总说别人不行",
+            "学习同学的好方法"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你自己的一处长处和一个想向同学学习的地方。",
+          "answer": {
+            "value": "示例：我的长处是爱劳动，值日时我会把地扫干净；我想向同桌学习他写字认真的样子。"
+          },
+          "analysis": "评分要点：一处长处 + 一个学习点。",
+          "difficulty": 3,
+          "knowledge_point": "欣赏自己与欣赏别人",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第二单元 大自然，谢谢您",
+      "order_index": 2,
+      "summary": "感受大自然给我们的馈赠，初步树立爱护自然的意识。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "我们呼吸需要的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "人呼吸需要空气。",
+          "difficulty": 2,
+          "knowledge_point": "大自然给了我们什么",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "空气",
+            "石头",
+            "纸片",
+            "塑料"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "植物生长需要阳光和（ ）。",
+          "answer": {
+            "value": "水"
+          },
+          "analysis": "植物生长需要水。",
+          "difficulty": 2,
+          "knowledge_point": "大自然给了我们什么",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "我们吃的粮食来自大自然的土地。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "粮食在土地上生长。",
+          "difficulty": 2,
+          "knowledge_point": "大自然给了我们什么",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列来自大自然的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓ 稻米来自土地；D ✗ 铅笔需加工制造，不直接来自自然。所以选 A、B、C。",
+          "difficulty": 4,
+          "knowledge_point": "大自然给了我们什么",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "阳光",
+            "空气",
+            "米饭",
+            "铅笔芯里的石墨"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说大自然给了我们哪些东西（至少两样）。",
+          "answer": {
+            "value": "示例：大自然给了我们清新的空气和干净的河水，还给了我们粮食和水果。"
+          },
+          "analysis": "评分要点：两样以上且具体。",
+          "difficulty": 3,
+          "knowledge_point": "大自然给了我们什么",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "树叶变黄、天气转凉是（ ）季的特点。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "秋叶变黄、天气转凉。",
+          "difficulty": 2,
+          "knowledge_point": "四季与自然变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "秋",
+            "春",
+            "夏",
+            "冬"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "春天来了，小草（ ）（发芽/枯黄，选一个合适的词填空）。",
+          "answer": {
+            "value": "发芽"
+          },
+          "analysis": "春天气温回升，小草发芽。",
+          "difficulty": 2,
+          "knowledge_point": "四季与自然变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "冬天有些树会落叶，有些树仍然常绿。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "落叶树与常绿树不同。",
+          "difficulty": 3,
+          "knowledge_point": "四季与自然变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "属于夏天的现象有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；D ✓；C ✗ 下雪是冬天。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "四季与自然变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "天气炎热",
+            "知了鸣叫",
+            "下雪",
+            "荷花开放"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你最喜欢哪个季节，为什么。",
+          "answer": {
+            "value": "示例：我最喜欢春天，因为天气不冷也不热，公园里的花都开了，可以和朋友一起去放风筝。"
+          },
+          "analysis": "评分要点：季节 + 理由。",
+          "difficulty": 3,
+          "knowledge_point": "四季与自然变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "在公园里看到好看的花，正确的做法是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "欣赏而不采摘才是爱护。",
+          "difficulty": 2,
+          "knowledge_point": "爱护身边的一草一木",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "欣赏但不摘",
+            "摘一朵带回家",
+            "整枝折断",
+            "踩倒一片"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "看见草坪上插着「请勿踩踏」的提示牌，我们应当（ ）（绕行/直接踩过去，选合适的一个）。",
+          "answer": {
+            "value": "绕行"
+          },
+          "analysis": "提示牌要求不踩踏，应绕行。",
+          "difficulty": 2,
+          "knowledge_point": "爱护身边的一草一木",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "给小树浇水、扶正歪倒的小苗是爱护植物的行为。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "照料植物属爱护行为。",
+          "difficulty": 2,
+          "knowledge_point": "爱护身边的一草一木",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "爱护自然的做法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；D ✓；C ✗ 折枝伤害植物。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "爱护身边的一草一木",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "把垃圾带走",
+            "给花坛除草",
+            "随手折树枝",
+            "不往河里扔东西"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你能为身边的花草树木做一件什么事。",
+          "answer": {
+            "value": "示例：我可以每天给教室窗台上的绿萝浇水，看到枯萎的叶子就帮它摘下来。"
+          },
+          "analysis": "评分要点：具体可行。",
+          "difficulty": 3,
+          "knowledge_point": "爱护身边的一草一木",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "感谢大自然，最好的方式是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "行动比口号更重要。",
+          "difficulty": 2,
+          "knowledge_point": "感谢大自然",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "用实际行动保护它",
+            "只说一句谢谢",
+            "多多采摘",
+            "把石头搬回家"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "每年 3 月 12 日是我国的（ ）节，人们在此前后种树。",
+          "answer": {
+            "value": "植树"
+          },
+          "analysis": "3 月 12 日为植树节。",
+          "difficulty": 3,
+          "knowledge_point": "感谢大自然",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "节约用水也是感谢大自然的一种方式。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "节水就是珍惜自然馈赠。",
+          "difficulty": 2,
+          "knowledge_point": "感谢大自然",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "洗手后及时关好水龙头，是在（ ）（节约/浪费，选合适的一个）用水。",
+          "answer": {
+            "value": "节约"
+          },
+          "analysis": "关水龙头是节约用水。",
+          "difficulty": 2,
+          "knowledge_point": "感谢大自然",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写一句话表达你对大自然的感谢。",
+          "answer": {
+            "value": "示例：谢谢您给我们蓝天、绿树和清甜的空气，我会好好爱护您。"
+          },
+          "analysis": "评分要点：表达真诚 + 有行动意识。",
+          "difficulty": 3,
+          "knowledge_point": "感谢大自然",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第三单元 传统美德我弘扬",
+      "order_index": 3,
+      "summary": "认识诚实、勤劳、节俭、孝敬等中华传统美德并落实到行动。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "不小心弄坏了同学的书，正确的做法是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "主动承认是诚实的表现。",
+          "difficulty": 2,
+          "knowledge_point": "诚实守信",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "主动承认并道歉",
+            "藏起来不让人知道",
+            "说是别人弄的",
+            "装作没看见"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "答应同学明天带书给他，就要按时做到，这叫（ ）（填「守信」）。",
+          "answer": {
+            "value": "守信"
+          },
+          "analysis": "做到承诺即守信。",
+          "difficulty": 2,
+          "knowledge_point": "诚实守信",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "说一次小谎没有关系。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "小谎也会失去别人的信任。",
+          "difficulty": 3,
+          "knowledge_point": "诚实守信",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "体现诚实的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；D ✓；C ✗ 隐瞒错误不诚实。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "诚实守信",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "考试不作弊",
+            "捡到东西交给老师",
+            "把错题说成对的",
+            "做错事主动承认"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你答应过别人的一件事，以及你是怎样做到的。",
+          "answer": {
+            "value": "示例：我答应帮同桌带一本《成语故事》，第二天我提前把它放进书包，按时带给了他。"
+          },
+          "analysis": "评分要点：有承诺 + 有兑现。",
+          "difficulty": 3,
+          "knowledge_point": "诚实守信",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列属于勤劳表现的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "自己的事自己做是勤劳。",
+          "difficulty": 2,
+          "knowledge_point": "勤劳节俭",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "自己的书包自己整理",
+            "等父母帮忙整理",
+            "把脏衣服放一周",
+            "作业等人催"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "吃饭时把碗里的饭吃干净，不剩饭，这是（ ）（节约/浪费，选合适的词）。",
+          "answer": {
+            "value": "节约"
+          },
+          "analysis": "不剩饭是节约粮食。",
+          "difficulty": 2,
+          "knowledge_point": "勤劳节俭",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "作业本只用了几页就换新的，是节俭的表现。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "浪费纸张不属节俭。",
+          "difficulty": 3,
+          "knowledge_point": "勤劳节俭",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "节俭的做法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；D ✓；C ✗ 浪费纸张。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "勤劳节俭",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "两面都用纸",
+            "把旧衣服捐出去继续利用",
+            "把没写完的本子扔掉",
+            "随手关灯"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你在家里做过的一件家务活。",
+          "answer": {
+            "value": "示例：我每天饭后帮妈妈擦桌子、把自己的碗筷洗干净。"
+          },
+          "analysis": "评分要点：具体家务 + 主动性。",
+          "difficulty": 2,
+          "knowledge_point": "勤劳节俭",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "奶奶生病了，我们应该（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "关心与照料是孝敬表现。",
+          "difficulty": 2,
+          "knowledge_point": "孝敬长辈",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "关心问候、帮忙做点小事",
+            "照旧只顾自己玩",
+            "大声吵她休息",
+            "不闻不问"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "见到长辈主动问好，是（ ）（尊敬/无视，选合适的词）长辈的表现。",
+          "answer": {
+            "value": "尊敬"
+          },
+          "analysis": "主动问好是尊敬长辈。",
+          "difficulty": 2,
+          "knowledge_point": "孝敬长辈",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "帮爷爷奶奶端水、捶背也是孝敬。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "日常小事也是孝敬。",
+          "difficulty": 2,
+          "knowledge_point": "孝敬长辈",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "孝敬长辈的做法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；D ✓；C ✗ 不理老人不礼貌。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "孝敬长辈",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "给爷爷读报纸",
+            "节日给奶奶做一张贺卡",
+            "嫌老人说话慢就不理",
+            "帮奶奶提东西"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你为家里的长辈做过的一件小事。",
+          "answer": {
+            "value": "示例：周末我帮爷爷把报纸整理好，还给他读了一段新闻。"
+          },
+          "analysis": "评分要点：具体、真诚。",
+          "difficulty": 3,
+          "knowledge_point": "孝敬长辈",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "美德的养成主要靠（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "美德靠日常坚持。",
+          "difficulty": 2,
+          "knowledge_point": "美德在日常小事里",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "平时一点一滴地做",
+            "说几句好听的话",
+            "只在节日做",
+            "别人提醒时才做"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "做好事要坚持，不能只在（ ）（节日/平时，选合适的一个）表现。",
+          "answer": {
+            "value": "平时"
+          },
+          "analysis": "美德体现在平时。",
+          "difficulty": 3,
+          "knowledge_point": "美德在日常小事里",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "同学之间互相帮助，也是一种美德。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "互助是美德之一。",
+          "difficulty": 2,
+          "knowledge_point": "美德在日常小事里",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "校园里体现传统美德的行为有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；D ✓；C ✗ 喧哗影响他人。所以选 A、B、D。",
+          "difficulty": 2,
+          "knowledge_point": "美德在日常小事里",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "排队不插队",
+            "帮同学捡起掉落的书本",
+            "在教室里大声喧哗",
+            "把垃圾放进垃圾桶"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你打算这学期坚持做的一件体现美德的小事。",
+          "answer": {
+            "value": "示例：我打算每天到校后把讲台擦一遍，让老师和同学上课时更清爽。"
+          },
+          "analysis": "评分要点：可坚持的具体小事。",
+          "difficulty": 3,
+          "knowledge_point": "美德在日常小事里",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第四单元 播下梦想的种子",
+      "order_index": 4,
+      "summary": "说说自己的梦想，知道实现梦想需要努力与坚持。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "梦想指的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "梦想是长远的目标。",
+          "difficulty": 2,
+          "knowledge_point": "我的梦想",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "长大后想做的事、想成为的人",
+            "今天想吃的菜",
+            "一次考试分数",
+            "一件玩具"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "我的梦想是长大后当一名（ ）（按自己的想法填一种职业）。",
+          "answer": {
+            "value": "示例：老师"
+          },
+          "analysis": "评分要点：填一种职业即可。",
+          "difficulty": 2,
+          "knowledge_point": "我的梦想",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "小学生的梦想可以很朴素，比如想当一名种树的园林工人。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "梦想没有高低之分。",
+          "difficulty": 3,
+          "knowledge_point": "我的梦想",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于梦想，正确的说法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓ 人人可有梦想；B ✓ 认识变化梦想也会调整；C ✗ 梦想不必与他人相同；D ✓ 需要努力。所以选 A、B、D。",
+          "difficulty": 4,
+          "knowledge_point": "我的梦想",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "每个人都可以有自己的梦想",
+            "梦想可以随着认识变化",
+            "梦想一定要和别人一样",
+            "梦想需要努力才能实现"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你的梦想是什么，为什么这样想。",
+          "answer": {
+            "value": "示例：我想当一名医生，因为爷爷生病时医生帮他减轻了痛苦，我也想帮助别人。"
+          },
+          "analysis": "评分要点：梦想 + 理由。",
+          "difficulty": 3,
+          "knowledge_point": "我的梦想",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "梦想常常来自（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "梦想多源于兴趣与榜样。",
+          "difficulty": 2,
+          "knowledge_point": "梦想从哪里来",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "自己喜欢和敬佩的人和事",
+            "随便说说",
+            "别人的强迫",
+            "一次考试"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "看到航天员的故事，有的同学想做一名（ ）（填职业）。",
+          "answer": {
+            "value": "航天员"
+          },
+          "analysis": "榜样会引发梦想。",
+          "difficulty": 2,
+          "knowledge_point": "梦想从哪里来",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "身边勤劳的人也可以成为我们学习的榜样。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "榜样就在身边。",
+          "difficulty": 2,
+          "knowledge_point": "梦想从哪里来",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "可能启发梦想的来源有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓ 都可启发；D ✗ 无来源。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "梦想从哪里来",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "读一本好书",
+            "看到别人认真工作",
+            "自己动手做的实验",
+            "什么都不看"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说是什么人或什么事让你有了现在这个梦想。",
+          "answer": {
+            "value": "示例：我在电视里看到消防员灭火救人，觉得他们很勇敢，所以我想当消防员。"
+          },
+          "analysis": "评分要点：来源具体。",
+          "difficulty": 3,
+          "knowledge_point": "梦想从哪里来",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "实现梦想，现在最该做的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "现在就要打基础。",
+          "difficulty": 2,
+          "knowledge_point": "为梦想做准备",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "认真学习和练习本领",
+            "等长大再说",
+            "只挂在嘴上",
+            "让别人帮忙"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "把大梦想分成一个个小（ ），一步一步去完成。",
+          "answer": {
+            "value": "目标"
+          },
+          "analysis": "小目标便于落实。",
+          "difficulty": 3,
+          "knowledge_point": "为梦想做准备",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "想当画家，现在就可以练习画画和观察。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "梦想需要当下准备。",
+          "difficulty": 2,
+          "knowledge_point": "为梦想做准备",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "为梦想做准备的做法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；D ✓；C ✗ 放弃无法实现梦想。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "为梦想做准备",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "坚持练字",
+            "每天读课外书",
+            "遇到困难就放弃",
+            "认真上体育课锻炼身体"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "为你的梦想定一个小目标，说说这周打算怎么做到。",
+          "answer": {
+            "value": "示例：我想当作家，这周的目标是每天写 5 句话的日记，写完给妈妈读一遍。"
+          },
+          "analysis": "评分要点：目标具体 + 可执行。",
+          "difficulty": 4,
+          "knowledge_point": "为梦想做准备",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "练习中遇到瓶颈时，较好的态度是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "坚持并改进方法。",
+          "difficulty": 2,
+          "knowledge_point": "坚持与不怕困难",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "坚持练、找方法",
+            "马上放弃",
+            "改成容易的梦想",
+            "只说不想练"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「锲而不舍」的意思是做事（ ）（坚持/中断，选合适的词）。",
+          "answer": {
+            "value": "坚持"
+          },
+          "analysis": "锲而不舍意为坚持不懈。",
+          "difficulty": 4,
+          "knowledge_point": "坚持与不怕困难",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "进步慢的时候，也不要轻易否定自己。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "慢不等于没进步。",
+          "difficulty": 3,
+          "knowledge_point": "坚持与不怕困难",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "一次没考好，我们可以检查哪里没掌握，这叫（ ）（总结/放弃，选合适的词）。",
+          "answer": {
+            "value": "总结"
+          },
+          "analysis": "检查不足属于总结。",
+          "difficulty": 3,
+          "knowledge_point": "坚持与不怕困难",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你坚持做过的一件需要耐心的事，结果怎样。",
+          "answer": {
+            "value": "示例：我练了一个月跳绳才学会连跳，虽然慢，但现在能一口气跳 60 下。"
+          },
+          "analysis": "评分要点：坚持过程 + 结果。",
+          "difficulty": 4,
+          "knowledge_point": "坚持与不怕困难",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-12T08:23:04+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

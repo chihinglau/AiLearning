@@ -1,0 +1,1155 @@
+{
+  "subject": "geography",
+  "grade": 7,
+  "version": "湘教版",
+  "semester": "second",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第七章 认识大洲",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "亚洲的位置与范围",
+      "parent": "第七章 认识大洲",
+      "order_index": 1,
+      "explanation": "亚洲位于亚欧大陆东部，东临太平洋，是世界上面积最大、人口最多的大洲。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "亚洲的地形与气候",
+      "parent": "第七章 认识大洲",
+      "order_index": 2,
+      "explanation": "亚洲地形中部高、四周低，气候以季风气候和温带大陆性气候显著为特征。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "非洲与美洲概述",
+      "parent": "第七章 认识大洲",
+      "order_index": 3,
+      "explanation": "非洲地形以高原为主，被称为高原大陆；美洲分为北美与南美。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "大洲的人文特征",
+      "parent": "第七章 认识大洲",
+      "order_index": 4,
+      "explanation": "各大洲人口分布与经济发展水平差异明显。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第八章 了解地区",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "东南亚",
+      "parent": "第八章 了解地区",
+      "order_index": 1,
+      "explanation": "东南亚位于亚洲与大洋洲、太平洋与印度洋之间的「十字路口」，马六甲海峡位置重要。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "南亚与西亚",
+      "parent": "第八章 了解地区",
+      "order_index": 2,
+      "explanation": "南亚以热带季风气候为主，西亚以干旱气候和丰富的石油资源著称。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "欧洲西部",
+      "parent": "第八章 了解地区",
+      "order_index": 3,
+      "explanation": "欧洲西部以温带海洋性气候为主，畜牧业与旅游业发达。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "极地地区",
+      "parent": "第八章 了解地区",
+      "order_index": 4,
+      "explanation": "北极以海洋为主，南极以大陆为主，南极比北极更寒冷。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第九章 走近国家",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "日本",
+      "parent": "第九章 走近国家",
+      "order_index": 1,
+      "explanation": "日本是岛国，多火山地震，工业集中在太平洋沿岸。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "埃及与俄罗斯",
+      "parent": "第九章 走近国家",
+      "order_index": 2,
+      "explanation": "埃及依赖尼罗河与运河经济，俄罗斯面积最大、资源丰富。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "美国与巴西",
+      "parent": "第九章 走近国家",
+      "order_index": 3,
+      "explanation": "美国是发达农业与工业国家，巴西是拉丁美洲最大国家，有亚马孙雨林。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "澳大利亚与其他国家",
+      "parent": "第九章 走近国家",
+      "order_index": 4,
+      "explanation": "澳大利亚孤立于南半球，特有生物多，被称为骑在羊背上和坐在矿车上的国家。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第七章 认识大洲",
+      "order_index": 1,
+      "summary": "亚洲、非洲、美洲的位置、地形、气候与人文特征。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "世界上面积最大的大洲是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "亚洲面积最大。",
+          "difficulty": 2,
+          "knowledge_point": "亚洲的位置与范围",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "亚洲",
+            "非洲",
+            "北美洲",
+            "南美洲"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "亚洲东临（ ）洋，南临印度洋。",
+          "answer": {
+            "value": "太平"
+          },
+          "analysis": "亚洲东临太平洋。",
+          "difficulty": 2,
+          "knowledge_point": "亚洲的位置与范围",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "亚洲跨寒、温、热三带，气候类型复杂多样。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "亚洲跨纬度广，气候复杂。",
+          "difficulty": 3,
+          "knowledge_point": "亚洲的位置与范围",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "亚洲的地理特征有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D ✗ 亚洲跨寒温热带。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "亚洲的位置与范围",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "面积最大",
+            "人口最多",
+            "跨纬度最广",
+            "全部位于热带"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说出亚洲与欧洲的分界线。",
+          "answer": {
+            "value": "示例：乌拉尔山脉、乌拉尔河、大高加索山脉、土耳其海峡一线为亚欧分界。"
+          },
+          "analysis": "评分要点：至少写出两处界线。",
+          "difficulty": 4,
+          "knowledge_point": "亚洲的位置与范围",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "亚洲的地势特点是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "亚洲地势中部高四周低，河流呈放射状。",
+          "difficulty": 3,
+          "knowledge_point": "亚洲的地形与气候",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "中部高、四周低",
+            "西高东低",
+            "南高北低",
+            "四周高中间低"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "亚洲分布最广的气候类型是（ ）气候。",
+          "answer": {
+            "value": "温带大陆性"
+          },
+          "analysis": "温带大陆性气候分布最广。",
+          "difficulty": 4,
+          "knowledge_point": "亚洲的地形与气候",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "亚洲东部和南部季风气候显著。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "受海陆热力差异影响，季风显著。",
+          "difficulty": 3,
+          "knowledge_point": "亚洲的地形与气候",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "亚洲的主要气候类型有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓ 东南亚有热带雨林气候；D ✗ 亚洲无典型的极地沙漠气候分布。所以选 A、B、C。",
+          "difficulty": 4,
+          "knowledge_point": "亚洲的地形与气候",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "季风气候",
+            "温带大陆性气候",
+            "热带雨林气候",
+            "极地沙漠气候"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明亚洲河流多呈放射状分布的原因。",
+          "answer": {
+            "value": "示例：亚洲地势中部高、四周低，河流从高原山地呈放射状流向四周海洋或内陆盆地。"
+          },
+          "analysis": "评分要点：地势决定流向。",
+          "difficulty": 4,
+          "knowledge_point": "亚洲的地形与气候",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "有「高原大陆」之称的大洲是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "非洲地形以高原为主。",
+          "difficulty": 2,
+          "knowledge_point": "非洲与美洲概述",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "非洲",
+            "欧洲",
+            "南美洲",
+            "大洋洲"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "世界上最长的河流是（ ）河，位于非洲。",
+          "answer": {
+            "value": "尼罗"
+          },
+          "analysis": "尼罗河是世界最长河流。",
+          "difficulty": 3,
+          "knowledge_point": "非洲与美洲概述",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "非洲赤道附近分布有热带雨林气候。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "刚果盆地属热带雨林气候。",
+          "difficulty": 2,
+          "knowledge_point": "非洲与美洲概述",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于美洲的说法正确的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D ✗ 南美洲地跨南北半球。所以选 A、B、C。",
+          "difficulty": 4,
+          "knowledge_point": "非洲与美洲概述",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "北美洲以温带大陆性气候为主",
+            "南美洲有广阔的亚马孙热带雨林",
+            "美洲以巴拿马运河分为南北",
+            "美洲全部位于北半球"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明非洲被称为「热带大陆」的原因。",
+          "answer": {
+            "value": "示例：非洲大部分地区位于南北回归线之间，气温高，以热带气候为主，因此被称为热带大陆。"
+          },
+          "analysis": "评分要点：纬度位置 + 气候特征。",
+          "difficulty": 4,
+          "knowledge_point": "非洲与美洲概述",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "人口最多的大洲是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "亚洲人口最多。",
+          "difficulty": 2,
+          "knowledge_point": "大洲的人文特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "亚洲",
+            "非洲",
+            "欧洲",
+            "北美洲"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "非洲人口主要分布在沿海、河谷和（ ）地区。",
+          "answer": {
+            "value": "高原"
+          },
+          "analysis": "高原地区气候相对适宜。",
+          "difficulty": 4,
+          "knowledge_point": "大洲的人文特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "发达国家多分布在欧洲和北美洲。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "发达国家的分布特点。",
+          "difficulty": 3,
+          "knowledge_point": "大洲的人文特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "影响人口分布的因素有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D ✗ 与人口分布无关。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "大洲的人文特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "地形",
+            "气候",
+            "水源",
+            "海水的颜色"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明亚洲人口稠密区主要分布在哪里。",
+          "answer": {
+            "value": "示例：亚洲人口稠密区主要分布在东部和南部沿海平原，那里地形平坦、气候温和湿润、水源充足、农业发达。"
+          },
+          "analysis": "评分要点：具体区域 + 原因。",
+          "difficulty": 4,
+          "knowledge_point": "大洲的人文特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第八章 了解地区",
+      "order_index": 2,
+      "summary": "东南亚、南亚、西亚、欧洲西部与极地地区。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "被称为海上生命线的海峡是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "马六甲海峡是重要航运通道。",
+          "difficulty": 2,
+          "knowledge_point": "东南亚",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "马六甲海峡",
+            "直布罗陀海峡",
+            "白令海峡",
+            "霍尔木兹海峡"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "东南亚由中南半岛和（ ）群岛两部分组成。",
+          "answer": {
+            "value": "马来"
+          },
+          "analysis": "中南半岛与马来群岛构成东南亚。",
+          "difficulty": 3,
+          "knowledge_point": "东南亚",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "东南亚是世界重要的热带经济作物产区。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "橡胶、棕油等产量大。",
+          "difficulty": 2,
+          "knowledge_point": "东南亚",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "东南亚的气候类型有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "逐项判断：A ✓ 马来群岛多雨林气候；B ✓ 中南半岛多热带季风气候；C ✗；D ✗ 均不在东南亚。所以选 A、B。",
+          "difficulty": 3,
+          "knowledge_point": "东南亚",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "热带雨林气候",
+            "热带季风气候",
+            "温带季风气候",
+            "地中海气候"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明马六甲海峡地理位置的重要性。",
+          "answer": {
+            "value": "示例：它位于马来半岛与苏门答腊岛之间，是连接太平洋与印度洋的最短航道，也是东亚与南亚、欧洲、非洲海运的必经要道。"
+          },
+          "analysis": "评分要点：两洋连接 + 航运要道。",
+          "difficulty": 4,
+          "knowledge_point": "东南亚",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "南亚面积最大的国家是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "印度是南亚面积最大国家。",
+          "difficulty": 2,
+          "knowledge_point": "南亚与西亚",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "印度",
+            "巴基斯坦",
+            "孟加拉国",
+            "尼泊尔"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "西亚最丰富的矿产资源是（ ）。",
+          "answer": {
+            "value": "石油"
+          },
+          "analysis": "西亚石油资源丰富。",
+          "difficulty": 2,
+          "knowledge_point": "南亚与西亚",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "南亚的西南季风带来丰沛降水，但强弱不稳易引发旱涝。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "季风不稳导致旱涝灾害。",
+          "difficulty": 4,
+          "knowledge_point": "南亚与西亚",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "西亚的地理特征有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D ✗ 西亚森林覆盖率低。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "南亚与西亚",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "气候干旱",
+            "石油资源丰富",
+            "沙漠广布",
+            "森林覆盖率高"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明南亚农业受季风影响的表现。",
+          "answer": {
+            "value": "示例：西南季风带来降水，利于水稻等作物生长；若季风来得晚或弱则易旱，来得早或强则易涝，产量波动明显。"
+          },
+          "analysis": "评分要点：季风强弱 + 旱涝影响。",
+          "difficulty": 4,
+          "knowledge_point": "南亚与西亚",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "欧洲西部典型的气候类型是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "温带海洋性气候典型。",
+          "difficulty": 3,
+          "knowledge_point": "欧洲西部",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "温带海洋性气候",
+            "热带雨林气候",
+            "极地气候",
+            "热带沙漠气候"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "欧洲西部受海洋影响，降水比较（ ）（填「均匀」）。",
+          "answer": {
+            "value": "均匀"
+          },
+          "analysis": "全年降水较均匀。",
+          "difficulty": 4,
+          "knowledge_point": "欧洲西部",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "欧洲西部许多国家以畜牧业为主，乳制品发达。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "气候适宜牧草生长。",
+          "difficulty": 3,
+          "knowledge_point": "欧洲西部",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "欧洲西部的优势产业有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；D ✓；C ✗ 石油开采不是该区主导产业。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "欧洲西部",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "畜牧业",
+            "旅游业",
+            "石油开采为主",
+            "制造业"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明欧洲西部发展旅游业的有利条件。",
+          "answer": {
+            "value": "示例：自然景观多样，历史文化遗产丰富，交通便捷，服务业发达，多数国家使用统一货币并互免签证，便于游客流动。"
+          },
+          "analysis": "评分要点：资源 + 交通 + 政策。",
+          "difficulty": 4,
+          "knowledge_point": "欧洲西部",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "南极地区的气候特点是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "南极酷寒、干燥、多烈风。",
+          "difficulty": 2,
+          "knowledge_point": "极地地区",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "酷寒、干燥、烈风",
+            "温暖湿润",
+            "四季如春",
+            "高温多雨"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "南极的代表动物是（ ）。",
+          "answer": {
+            "value": "企鹅"
+          },
+          "analysis": "企鹅是南极代表动物。",
+          "difficulty": 2,
+          "knowledge_point": "极地地区",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "北极地区以海洋为主，周围被大陆包围。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "北极是北冰洋及周边陆地。",
+          "difficulty": 3,
+          "knowledge_point": "极地地区",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "极地科考的意义有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；D ✓；C ✗ 极地不宜大规模开发度假。所以选 A、B、D。",
+          "difficulty": 4,
+          "knowledge_point": "极地地区",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "研究气候变化",
+            "考察生物资源",
+            "开发旅游度假村",
+            "研究地球环境演变"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明南极比北极更冷的原因。",
+          "answer": {
+            "value": "示例：南极以大陆为主，海拔高、冰雪覆盖反射强，加之四周为海洋不易受温暖气流影响，因此气温更低。"
+          },
+          "analysis": "评分要点：海陆性质 + 海拔/冰雪。",
+          "difficulty": 5,
+          "knowledge_point": "极地地区",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第九章 走近国家",
+      "order_index": 3,
+      "summary": "日本、埃及、俄罗斯、美国、巴西、澳大利亚等国家的特征。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "日本多火山地震的原因是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "位于板块交界，地壳活跃。",
+          "difficulty": 3,
+          "knowledge_point": "日本",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "位于板块交界处",
+            "位于板块内部",
+            "地形平坦",
+            "气候湿润"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "日本工业主要分布在太平洋沿岸和（ ）海沿岸。",
+          "answer": {
+            "value": "濑户内"
+          },
+          "analysis": "工业集中分布于太平洋与濑户内海沿岸。",
+          "difficulty": 4,
+          "knowledge_point": "日本",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "日本是群岛国家，海岸线曲折，多优良港湾。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "岛国港湾条件好。",
+          "difficulty": 3,
+          "knowledge_point": "日本",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "日本的地理特征有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；D ✓；C ✗ 日本矿产资源贫乏。所以选 A、B、D。",
+          "difficulty": 4,
+          "knowledge_point": "日本",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "多火山地震",
+            "海运便利",
+            "矿产资源丰富",
+            "渔业发达"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明日本工业集中分布在沿海的原因。",
+          "answer": {
+            "value": "示例：沿海港湾优良便于进口原料和出口产品，海运成本低，平原集中、人口密集、市场与劳动力充足。"
+          },
+          "analysis": "评分要点：原料产品运输 + 市场劳动力。",
+          "difficulty": 4,
+          "knowledge_point": "日本",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "埃及最重要的水源是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "尼罗河是埃及主要水源。",
+          "difficulty": 3,
+          "knowledge_point": "埃及与俄罗斯",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "尼罗河",
+            "幼发拉底河",
+            "恒河",
+            "湄公河"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "世界上面积最大的国家是（ ）。",
+          "answer": {
+            "value": "俄罗斯"
+          },
+          "analysis": "俄罗斯面积最大。",
+          "difficulty": 2,
+          "knowledge_point": "埃及与俄罗斯",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "苏伊士运河沟通了地中海与红海。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "运河连接两海，缩短航程。",
+          "difficulty": 3,
+          "knowledge_point": "埃及与俄罗斯",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "俄罗斯的地理特征有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D ✗ 俄罗斯纬度较高。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "埃及与俄罗斯",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "面积最大",
+            "跨欧亚两洲",
+            "矿产资源丰富",
+            "全部位于热带"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明埃及人口和城市主要集中在尼罗河沿岸的原因。",
+          "answer": {
+            "value": "示例：埃及大部分地区为沙漠，气候干旱，尼罗河提供水源和肥沃冲积土，便于灌溉农业与居住，因此人口集中于河谷和三角洲。"
+          },
+          "analysis": "评分要点：干旱环境 + 水源条件。",
+          "difficulty": 4,
+          "knowledge_point": "埃及与俄罗斯",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "美国农业生产的特点是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "美国农业机械化专业化程度高。",
+          "difficulty": 3,
+          "knowledge_point": "美国与巴西",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "高度机械化、专业化",
+            "以手工劳动为主",
+            "只种水稻",
+            "完全依赖进口"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "世界上面积最大的热带雨林位于（ ）河流域。",
+          "answer": {
+            "value": "亚马孙"
+          },
+          "analysis": "亚马孙雨林面积最大。",
+          "difficulty": 3,
+          "knowledge_point": "美国与巴西",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "巴西是拉丁美洲面积最大、人口最多的国家。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "巴西为拉美最大国家。",
+          "difficulty": 3,
+          "knowledge_point": "美国与巴西",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于美国的说法正确的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D ✗ 美国本土主要位于温带。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "美国与巴西",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "本土位于北美洲中部",
+            "农业生产区域专业化",
+            "是世界主要工业国",
+            "全部位于热带"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明保护亚马孙热带雨林的意义。",
+          "answer": {
+            "value": "示例：雨林是巨大的碳库和物种宝库，调节气候、涵养水源、维持全球碳氧平衡，破坏后会加剧气候变暖与物种减少。"
+          },
+          "analysis": "评分要点：碳氧平衡 + 生物多样性。",
+          "difficulty": 4,
+          "knowledge_point": "美国与巴西",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "澳大利亚特有的动物是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "袋鼠为澳大利亚特有。",
+          "difficulty": 2,
+          "knowledge_point": "澳大利亚与其他国家",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "袋鼠",
+            "熊猫",
+            "斑马",
+            "长颈鹿"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "澳大利亚被称为「骑在羊背上」和「坐在（ ）上」的国家。",
+          "answer": {
+            "value": "矿车"
+          },
+          "analysis": "矿产资源丰富。",
+          "difficulty": 3,
+          "knowledge_point": "澳大利亚与其他国家",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "澳大利亚位于南半球，季节与我国相反。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "南北半球季节相反。",
+          "difficulty": 2,
+          "knowledge_point": "澳大利亚与其他国家",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "澳大利亚的特征有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D ✗ 澳大利亚位于南半球。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "澳大利亚与其他国家",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "特有生物多",
+            "畜牧业发达",
+            "矿产资源丰富",
+            "位于北半球"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明澳大利亚特有生物多的原因。",
+          "answer": {
+            "value": "示例：澳大利亚大陆很早与其他大陆分离，长期孤立，物种独立演化，缺少大型食肉动物竞争，保留了许多古老特有物种。"
+          },
+          "analysis": "评分要点：长期孤立 + 独立演化。",
+          "difficulty": 4,
+          "knowledge_point": "澳大利亚与其他国家",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-12T08:33:22+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

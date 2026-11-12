@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "source": "docs/content-templates/_validate_daily.py",
+  "expects": {
+    "subject": null,
+    "grade": null,
+    "version": null,
+    "semester": null
+  },
+  "totals": {
+    "files": 1,
+    "passed": 1,
+    "failed": 0,
+    "errors": 0,
+    "warnings": 2,
+    "quarantined_skipped": 0
+  },
+  "quarantined_skipped_names": [],
+  "files": [
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\math\\g2\\math_g2_first_20261110_book.json",
+      "name": "math_g2_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    }
+  ]
+}

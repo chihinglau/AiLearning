@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "stamp": "20261112",
+  "out_dir": "docs/content-templates/daily_rerun",
+  "status": "pending_review（入库待评审后决策）",
+  "packs": [
+    {
+      "pack": "chinese_g2_second",
+      "book": "chinese/g2",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\chinese\\g2\\chinese_g2_second_20261112_book.json",
+      "stats": {
+        "chapters": 8,
+        "points": 32,
+        "questions": 160
+      },
+      "errors": []
+    },
+    {
+      "pack": "english_g2_second",
+      "book": "english/g2",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\english\\g2\\english_g2_second_20261112_book.json",
+      "stats": {
+        "chapters": 9,
+        "points": 36,
+        "questions": 180
+      },
+      "errors": []
+    },
+    {
+      "pack": "math_g2_second",
+      "book": "math/g2",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\math\\g2\\math_g2_second_20261112_book.json",
+      "stats": {
+        "chapters": 11,
+        "points": 44,
+        "questions": 220
+      },
+      "errors": []
+    },
+    {
+      "pack": "politics_g2_second",
+      "book": "politics/g2",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g2\\politics_g2_second_20261112_book.json",
+      "stats": {
+        "chapters": 4,
+        "points": 16,
+        "questions": 80
+      },
+      "errors": []
+    }
+  ]
+}

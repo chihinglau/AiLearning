@@ -1,0 +1,2224 @@
+{
+  "subject": "chinese",
+  "grade": 8,
+  "version": "人教版",
+  "semester": "second",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第一单元",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "民俗散文的内容与情感",
+      "parent": "第一单元",
+      "order_index": 1,
+      "explanation": "《社戏》以看戏为线索写童年与乡土人情，《回延安》以信天游形式抒发对延安的深情。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "场面描写与细节描写",
+      "parent": "第一单元",
+      "order_index": 2,
+      "explanation": "场面描写要有点有面、动静结合；细节描写能凸显人物与情感。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "语言品味：叠词、比喻与排比",
+      "parent": "第一单元",
+      "order_index": 3,
+      "explanation": "叠词增强韵律与情味，比喻使形象鲜明，排比增强气势。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "民俗的文化内涵与写作借鉴",
+      "parent": "第一单元",
+      "order_index": 4,
+      "explanation": "民俗描写承载地域文化记忆，写作时可借具体事物寄托情思。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二单元",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "说明对象与说明顺序",
+      "parent": "第二单元",
+      "order_index": 1,
+      "explanation": "说明顺序有时间、空间、逻辑三类，要服务于说明对象的特点。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "说明方法及其作用",
+      "parent": "第二单元",
+      "order_index": 2,
+      "explanation": "举例子、列数字、作比较、打比方、分类别、摹状貌各有其表达作用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "说明文语言的准确性",
+      "parent": "第二单元",
+      "order_index": 3,
+      "explanation": "「大约」「可能」「一般」等限制语体现说明语言的准确性。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "科学小品文的特点与写作",
+      "parent": "第二单元",
+      "order_index": 4,
+      "explanation": "科学小品兼具科学性与文学性，常用故事、比喻增添趣味。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第三单元",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "《桃花源记》的字词与主旨",
+      "parent": "第三单元",
+      "order_index": 1,
+      "explanation": "文章借渔人行踪写理想社会，表达对无战乱、安居生活的向往。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "《小石潭记》的写景与情感",
+      "parent": "第三单元",
+      "order_index": 2,
+      "explanation": "柳宗元以移步换景写小石潭的清幽，乐中见凄，寓贬谪之悲。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "《核舟记》的说明顺序与细节",
+      "parent": "第三单元",
+      "order_index": 3,
+      "explanation": "文章按「总—分—总」、以空间顺序说明核舟，突出雕刻技艺精巧。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "《诗经》二首的比兴与情感",
+      "parent": "第三单元",
+      "order_index": 4,
+      "explanation": "《关雎》《蒹葭》运用比兴与重章叠句，抒写真挚情感。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第四单元",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "演讲词的特点",
+      "parent": "第四单元",
+      "order_index": 1,
+      "explanation": "演讲词有针对性、鼓动性和口语化特点，要面对特定听众说理抒情。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "演讲词的结构与思路",
+      "parent": "第四单元",
+      "order_index": 2,
+      "explanation": "一般有开头（提出问题）、主体（分析论证）、结尾（号召呼吁）的推进。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "演讲语言技巧",
+      "parent": "第四单元",
+      "order_index": 3,
+      "explanation": "善用设问、反问、排比、人称转换增强感染力与现场感。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "撰写演讲稿",
+      "parent": "第四单元",
+      "order_index": 4,
+      "explanation": "先明确场合、对象与目的，再定观点、理材料、设计开头结尾。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第五单元",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "游记的要素与线索",
+      "parent": "第五单元",
+      "order_index": 1,
+      "explanation": "游记写所至、所见、所感，以行踪或情感为线索。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "写景的角度与方法",
+      "parent": "第五单元",
+      "order_index": 2,
+      "explanation": "可从感官、动静、远近、虚实多角度写景，使画面立体。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "游记中的情感与哲理",
+      "parent": "第五单元",
+      "order_index": 3,
+      "explanation": "所见引发所思，景物背后常寄寓人生感悟。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "学写游记",
+      "parent": "第五单元",
+      "order_index": 4,
+      "explanation": "先定线索，再选典型景物，最后融入感受与思考。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第六单元",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "《庄子》二则的寓言与想象",
+      "parent": "第六单元",
+      "order_index": 1,
+      "explanation": "《北冥有鱼》以奇诡想象写鲲鹏，《庄子与惠子游于濠梁》以论辩显机智。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "《礼记》二则的哲理",
+      "parent": "第六单元",
+      "order_index": 2,
+      "explanation": "《虽有嘉肴》讲教学相长，《大道之行也》描绘大同社会。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "《马说》的托物寓意",
+      "parent": "第六单元",
+      "order_index": 3,
+      "explanation": "韩愈以千里马不遇伯乐，喻贤才不被赏识，抒发不平。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "唐诗三首的鉴赏",
+      "parent": "第六单元",
+      "order_index": 4,
+      "explanation": "《茅屋为秋风所破歌》《卖炭翁》《石壕吏》皆由个人苦难见社会现实。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一单元",
+      "order_index": 1,
+      "summary": "民风民俗类散文：社戏、回延安、安塞腰鼓、灯笼。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "《社戏》的作者是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "《社戏》选自鲁迅小说集《呐喊》。",
+          "difficulty": 2,
+          "knowledge_point": "民俗散文的内容与情感",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "鲁迅",
+            "朱自清",
+            "刘成章",
+            "吴伯箫"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "《回延安》采用的形式是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "全诗采用陕北信天游形式。",
+          "difficulty": 2,
+          "knowledge_point": "民俗散文的内容与情感",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "信天游",
+            "散文诗",
+            "小令",
+            "赋"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "《社戏》中「我」看戏的地点是（ ）村。",
+          "answer": {
+            "value": "平桥"
+          },
+          "analysis": "课文写的是到平桥村看社戏。",
+          "difficulty": 3,
+          "knowledge_point": "民俗散文的内容与情感",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《社戏》着重写戏本身精彩，看戏过程并不重要。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "文章重点不在戏，而在看戏前后的人与事、乡土人情。",
+          "difficulty": 4,
+          "knowledge_point": "民俗散文的内容与情感",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说《社戏》结尾「真的，一直到现在，我实在再没有吃到那夜似的好豆」表达了怎样的情感。",
+          "answer": {
+            "value": "示例：借「好豆」表达对童年生活和淳朴乡情的怀念，那份美好其实来自人情而非豆味。"
+          },
+          "analysis": "评分要点：点出怀念童年与乡情。",
+          "difficulty": 4,
+          "knowledge_point": "民俗散文的内容与情感",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《安塞腰鼓》中最突出的描写手法是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "文章以火烈场面和排比反复构成气势。",
+          "difficulty": 3,
+          "knowledge_point": "场面描写与细节描写",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "场面描写与排比反复",
+            "人物对话",
+            "心理独白",
+            "环境说明"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「一捶起来就发狠了，忘情了，没命了」连用短句，主要作用是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "短句急促，强化力度与激情。",
+          "difficulty": 3,
+          "knowledge_point": "场面描写与细节描写",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "表现击鼓的激烈与生命激情",
+            "交代时间",
+            "说明道具",
+            "介绍人物身份"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "《安塞腰鼓》的作者是（ ）。",
+          "answer": {
+            "value": "刘成章"
+          },
+          "analysis": "《安塞腰鼓》为刘成章所作。",
+          "difficulty": 3,
+          "knowledge_point": "场面描写与细节描写",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "场面描写只写整体气氛，不必写个体。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "好场面描写既有面的铺开，也有点的聚焦。",
+          "difficulty": 3,
+          "knowledge_point": "场面描写与细节描写",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "以一次课间活动为例，写一段 100 字左右的场面描写，要求点面结合。",
+          "answer": {
+            "value": "示例：铃声一响，操场立刻热闹起来，跑步的、跳绳的、追逐的散满一地；角落里两个女生面对面踢毽子，毽子起落间数着数，笑声不断。"
+          },
+          "analysis": "评分要点：有整体氛围 + 一处具体细节。",
+          "difficulty": 4,
+          "knowledge_point": "场面描写与细节描写",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「淡黑的起伏的连山，仿佛是踊跃的铁的兽脊似的」运用的修辞是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "把连山比作兽脊，是比喻。",
+          "difficulty": 2,
+          "knowledge_point": "语言品味：叠词、比喻与排比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "比喻",
+            "夸张",
+            "拟人",
+            "反问"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列句子中叠词使用最密集的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "第一句连用多个叠词。",
+          "difficulty": 3,
+          "knowledge_point": "语言品味：叠词、比喻与排比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "月夜行船，弯弯的河道，潺潺的水声",
+            "他慢慢地走过去",
+            "天色很黑",
+            "船开得很快"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「好一个黄土高原！好一个安塞腰鼓！」这样连用句式形成的修辞是（ ）。",
+          "answer": {
+            "value": "反复"
+          },
+          "analysis": "相同句式连用构成反复。",
+          "difficulty": 3,
+          "knowledge_point": "语言品味：叠词、比喻与排比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "叠词只能使语言更整齐，不能表达情感。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "叠词还常带亲昵、轻柔或强调的情感。",
+          "difficulty": 3,
+          "knowledge_point": "语言品味：叠词、比喻与排比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "从《社戏》中找出一处比喻或叠词的例子，说明其表达效果。",
+          "answer": {
+            "value": "示例：「那航船，就像一条大白鱼背着一群孩子在浪花里蹿」，把航船比作大白鱼，写出船行之快和夜航的轻灵。"
+          },
+          "analysis": "评分要点：举例准确 + 效果说清。",
+          "difficulty": 4,
+          "knowledge_point": "语言品味：叠词、比喻与排比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《灯笼》一文借灯笼寄托的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "灯笼串联起乡情与家国情怀。",
+          "difficulty": 3,
+          "knowledge_point": "民俗的文化内涵与写作借鉴",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "对故乡与家国的情思",
+            "对战争的赞美",
+            "对科学的追求",
+            "对财富的渴望"
+          ]
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列作品中属于本单元民风民俗类的是（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✗ 属说明文单元；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "民俗的文化内涵与写作借鉴",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "《社戏》",
+            "《安塞腰鼓》",
+            "《大自然的语言》",
+            "《灯笼》"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "《灯笼》的作者是（ ）。",
+          "answer": {
+            "value": "吴伯箫"
+          },
+          "analysis": "《灯笼》的作者是吴伯箫。",
+          "difficulty": 3,
+          "knowledge_point": "民俗的文化内涵与写作借鉴",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "写民俗不仅要写活动场景，还应写出其中的文化意味。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "场景背后的人情与文化才是核心。",
+          "difficulty": 2,
+          "knowledge_point": "民俗的文化内涵与写作借鉴",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "选一种你家乡的民俗，用两三句话写出它的特点和你对它的感受。",
+          "answer": {
+            "value": "示例：端午包粽子，粽叶一卷、糯米一填，扎紧后入锅；满屋清香里，我尝到的是家人的手温。"
+          },
+          "analysis": "评分要点：特点具体 + 有个人感受。",
+          "difficulty": 4,
+          "knowledge_point": "民俗的文化内涵与写作借鉴",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第二单元",
+      "order_index": 2,
+      "summary": "说明事物：大自然的语言、阿西莫夫短文两篇、时间的脚印。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "《大自然的语言》的说明对象是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "文章说明物候学知识。",
+          "difficulty": 2,
+          "knowledge_point": "说明对象与说明顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "物候现象及其规律",
+            "天文现象",
+            "地质构造",
+            "动物习性"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "《大自然的语言》主要采用的说明顺序是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "由现象到本质、由原因到意义，属逻辑顺序。",
+          "difficulty": 3,
+          "knowledge_point": "说明对象与说明顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "逻辑顺序",
+            "空间顺序",
+            "时间顺序为主",
+            "游览顺序"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "《大自然的语言》的作者是（ ）。",
+          "answer": {
+            "value": "竺可桢"
+          },
+          "analysis": "作者是气象学家竺可桢。",
+          "difficulty": 3,
+          "knowledge_point": "说明对象与说明顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "说明顺序的选择与说明对象的特点无关。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "顺序要契合对象特征与读者认知。",
+          "difficulty": 3,
+          "knowledge_point": "说明对象与说明顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "简述《大自然的语言》从哪几个方面介绍物候学。",
+          "answer": {
+            "value": "示例：先介绍物候现象，再说明决定物候的因素，最后说明研究物候学的意义。"
+          },
+          "analysis": "评分要点：三个层次基本齐全。",
+          "difficulty": 4,
+          "knowledge_point": "说明对象与说明顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「南京桃花要比北京早开二十天」主要运用了（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "两地比较并给出具体天数。",
+          "difficulty": 3,
+          "knowledge_point": "说明方法及其作用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "作比较和列数字",
+            "打比方",
+            "分类别",
+            "摹状貌"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「比如……」「例如……」这类标志词常提示的说明方法是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "标志词提示举例子。",
+          "difficulty": 2,
+          "knowledge_point": "说明方法及其作用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "举例子",
+            "作比较",
+            "打比方",
+            "下定义"
+          ]
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列属于常用说明方法的是（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D ✗ 托物言志是表现手法。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "说明方法及其作用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "列数字",
+            "打比方",
+            "作比较",
+            "托物言志"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "打比方的说明方法能使抽象事物变得具体形象。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "打比方重在形象化。",
+          "difficulty": 2,
+          "knowledge_point": "说明方法及其作用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "找出《时间的脚印》中一处说明方法，说明其作用。",
+          "answer": {
+            "value": "示例：文中用「岩石是一部书」打比方，把岩层的记录比作书页，形象说明岩石能记录时间。"
+          },
+          "analysis": "评分要点：方法名称 + 作用。",
+          "difficulty": 4,
+          "knowledge_point": "说明方法及其作用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「物候现象来临的迟早还有古今差异」中「还有」体现的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「还有」表示补充一层原因，体现层次。",
+          "difficulty": 4,
+          "knowledge_point": "说明文语言的准确性",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "说明的层次推进",
+            "语言的生动",
+            "语言的准确",
+            "情感的抒发"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "说明文中「大约」「可能」等词语的作用是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "限制性词语体现准确性。",
+          "difficulty": 2,
+          "knowledge_point": "说明文语言的准确性",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "使表述更准确严密",
+            "使语言更华丽",
+            "增强感染力",
+            "表示作者不确定随意写"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "说明文语言的基本要求是准确、（ ）（填「严密」或「生动」均可，更常与准确并列的是前者）。",
+          "answer": {
+            "value": "严密"
+          },
+          "analysis": "准确、严密是说明文语言的基本要求。",
+          "difficulty": 3,
+          "knowledge_point": "说明文语言的准确性",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "说明文中删去「大约」不影响表达的准确性。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "删去会使表述绝对化，失去准确性。",
+          "difficulty": 4,
+          "knowledge_point": "说明文语言的准确性",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "从课文中举一例说明限制性词语的作用。",
+          "answer": {
+            "value": "示例：「古代流传下来的许多农谚就包含了丰富的物候知识」中「许多」限定范围，说明并非全部农谚都如此，表述更严密。"
+          },
+          "analysis": "评分要点：举出限制语 + 说明限定作用。",
+          "difficulty": 4,
+          "knowledge_point": "说明文语言的准确性",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "科学小品文最重要的特点是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "科学小品文要求科学准确又生动可读。",
+          "difficulty": 2,
+          "knowledge_point": "科学小品文的特点与写作",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "科学性与文学性结合",
+            "只讲趣味",
+            "只列数据",
+            "完全虚构"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "《被压扁的沙子》用「恐龙灭绝」引出话题，好处是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "借热门话题吸引读者。",
+          "difficulty": 3,
+          "knowledge_point": "科学小品文的特点与写作",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "以悬念激发兴趣，引出科学推理",
+            "增加篇幅",
+            "介绍历史",
+            "抒发情感"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "《阿西莫夫短文两篇》的作者是（ ）（填国籍）科普作家阿西莫夫。",
+          "answer": {
+            "value": "美国"
+          },
+          "analysis": "阿西莫夫是美国科普作家。",
+          "difficulty": 3,
+          "knowledge_point": "科学小品文的特点与写作",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "科普文章可以为了有趣而编造数据。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "科学性优先，不能编造数据。",
+          "difficulty": 3,
+          "knowledge_point": "科学小品文的特点与写作",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "以「为什么天空是蓝色的」为题，写两句科普性说明。",
+          "answer": {
+            "value": "示例：阳光进入大气后，波长较短的蓝光更容易被空气分子散射，因此我们看到的天空呈蓝色。"
+          },
+          "analysis": "评分要点：科学准确 + 表述清晰。",
+          "difficulty": 3,
+          "knowledge_point": "科学小品文的特点与写作",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第三单元",
+      "order_index": 3,
+      "summary": "古诗文：桃花源记、小石潭记、核舟记、《诗经》二首。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「豁然开朗」在文中形容的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "原指洞口由窄变宽、豁然明亮。",
+          "difficulty": 2,
+          "knowledge_point": "《桃花源记》的字词与主旨",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "由狭窄幽暗变得开阔明亮",
+            "心情突然变好",
+            "道路突然变宽",
+            "洞口突然塌陷"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "《桃花源记》的作者是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "作者是东晋陶渊明。",
+          "difficulty": 2,
+          "knowledge_point": "《桃花源记》的字词与主旨",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "陶渊明",
+            "柳宗元",
+            "魏学洢",
+            "韩愈"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「阡陌交通，鸡犬相闻」中「交通」的意思是（ ）。",
+          "answer": {
+            "value": "交错相通"
+          },
+          "analysis": "古义为交错相通，今指运输。",
+          "difficulty": 3,
+          "knowledge_point": "《桃花源记》的字词与主旨",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《桃花源记》是作者亲身经历的真实游记。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "这是虚构的理想境界，寄托作者向往。",
+          "difficulty": 4,
+          "knowledge_point": "《桃花源记》的字词与主旨",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说桃花源寄托了作者怎样的社会理想。",
+          "answer": {
+            "value": "示例：寄托没有战乱、没有剥削、人们安居乐业、淳朴和睦的社会理想。"
+          },
+          "analysis": "评分要点：无战乱 + 安居乐业。",
+          "difficulty": 4,
+          "knowledge_point": "《桃花源记》的字词与主旨",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《小石潭记》的作者是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "柳宗元，属「永州八记」。",
+          "difficulty": 2,
+          "knowledge_point": "《小石潭记》的写景与情感",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "柳宗元",
+            "陶渊明",
+            "欧阳修",
+            "苏轼"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「潭中鱼可百许头，皆若空游无所依」突出水的（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "以鱼「空游」侧面写水之清。",
+          "difficulty": 3,
+          "knowledge_point": "《小石潭记》的写景与情感",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "清澈",
+            "深邃",
+            "湍急",
+            "浑浊"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "文中「凄神寒骨，悄怆幽邃」表现的情感是（ ）（填「悲凉」或「喜悦」）。",
+          "answer": {
+            "value": "悲凉"
+          },
+          "analysis": "由乐转悲，写出孤寂悲凉。",
+          "difficulty": 3,
+          "knowledge_point": "《小石潭记》的写景与情感",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "本文以「移步换景」与「定点特写」相结合的方式写景。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "先移步发现小潭，再定点细写。",
+          "difficulty": 3,
+          "knowledge_point": "《小石潭记》的写景与情感",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明本文「乐」与「悲」是怎样转换的。",
+          "answer": {
+            "value": "示例：初见小潭、观鱼时心情愉悦，坐潭上久视，因环境幽寂联想到自身处境，转而凄神寒骨，由乐生悲。"
+          },
+          "analysis": "评分要点：说清由乐转悲的触发点。",
+          "difficulty": 4,
+          "knowledge_point": "《小石潭记》的写景与情感",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《核舟记》的作者是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "《核舟记》为明代魏学洢所作。",
+          "difficulty": 2,
+          "knowledge_point": "《核舟记》的说明顺序与细节",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "魏学洢",
+            "张岱",
+            "归有光",
+            "袁宏道"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "文章介绍核舟的主体部分采用的顺序是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "按船舱—船头—船尾的空间位置说明。",
+          "difficulty": 3,
+          "knowledge_point": "《核舟记》的说明顺序与细节",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "空间顺序",
+            "时间顺序",
+            "逻辑顺序",
+            "情感线索"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「舟首尾长约八分有奇」中的「奇」读作 jī，意思是（ ）。",
+          "answer": {
+            "value": "零数、余数"
+          },
+          "analysis": "「有奇」表示有余、零数。",
+          "difficulty": 4,
+          "knowledge_point": "《核舟记》的说明顺序与细节",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "文章结尾统计字数，是为了突出核舟体积小、所刻内容多。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "以数据说明技艺之巧。",
+          "difficulty": 3,
+          "knowledge_point": "《核舟记》的说明顺序与细节",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明《核舟记》为什么先总写后分写。",
+          "answer": {
+            "value": "示例：先总述核舟与主题，给读者整体印象；再按部位分写细节，条理清晰，最后总括数目，突出雕刻精巧。"
+          },
+          "analysis": "评分要点：总—分—总的作用。",
+          "difficulty": 4,
+          "knowledge_point": "《核舟记》的说明顺序与细节",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「关关雎鸠，在河之洲」运用的手法是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "以雎鸠起兴，引出君子对淑女的追求。",
+          "difficulty": 3,
+          "knowledge_point": "《诗经》二首的比兴与情感",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "比兴",
+            "夸张",
+            "对偶",
+            "反问"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "《蒹葭》中「蒹葭苍苍，白露为霜」营造的氛围是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "秋晨雾露，清冷朦胧。",
+          "difficulty": 3,
+          "knowledge_point": "《诗经》二首的比兴与情感",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "清冷朦胧",
+            "热烈欢快",
+            "雄浑壮阔",
+            "轻松诙谐"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "《诗经》按内容分为风、雅、（ ）三部分。",
+          "answer": {
+            "value": "颂"
+          },
+          "analysis": "《诗经》分风、雅、颂。",
+          "difficulty": 3,
+          "knowledge_point": "《诗经》二首的比兴与情感",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "重章叠句能增强诗歌的节奏感和抒情效果。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "反复咏唱，情感层层加深。",
+          "difficulty": 2,
+          "knowledge_point": "《诗经》二首的比兴与情感",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "比较《关雎》与《蒹葭》在情感表达上的异同（说一点即可）。",
+          "answer": {
+            "value": "示例：相同点是都写对心中人的思慕与追求；不同点是《关雎》情感明朗热烈，《蒹葭》更朦胧怅惘，可望难即。"
+          },
+          "analysis": "评分要点：异同各一点。",
+          "difficulty": 4,
+          "knowledge_point": "《诗经》二首的比兴与情感",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第四单元",
+      "order_index": 4,
+      "summary": "演讲词：最后一次讲演、应有格物致知精神、我一生中的重要抉择等。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "演讲词最突出的特点之一是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "演讲词要针对具体场合与听众。",
+          "difficulty": 2,
+          "knowledge_point": "演讲词的特点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "针对性强，面向特定听众",
+            "篇幅必须很长",
+            "必须用文言",
+            "只叙事不议论"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "《最后一次讲演》的作者是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "闻一多的著名讲演。",
+          "difficulty": 2,
+          "knowledge_point": "演讲词的特点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "闻一多",
+            "丁肇中",
+            "王选",
+            "顾拜旦"
+          ]
+        },
+        {
+          "q_type": "multiple",
+          "stem": "演讲词常用的表达方式有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D ✗ 罗列数据不是表达方式。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "演讲词的特点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "记叙",
+            "议论",
+            "抒情",
+            "纯数据罗列"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "演讲词的语言应尽量口语化，便于听众听清听懂。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "口语化便于听辨。",
+          "difficulty": 2,
+          "knowledge_point": "演讲词的特点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说为什么演讲词要「有的放矢」。",
+          "answer": {
+            "value": "示例：演讲有具体场合和对象，只有针对听众关心的问题，才能引起共鸣、达到说服效果。"
+          },
+          "analysis": "评分要点：场合对象 + 共鸣效果。",
+          "difficulty": 4,
+          "knowledge_point": "演讲词的特点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《应有格物致知精神》的中心论点是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "题目即中心论点。",
+          "difficulty": 2,
+          "knowledge_point": "演讲词的结构与思路",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "应有格物致知精神",
+            "要重视文学",
+            "要多读书",
+            "要远离实践"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "演讲中「我一生中的重要抉择」主要是以自己的经历说明（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "王选以自身经历讲抉择与机遇。",
+          "difficulty": 3,
+          "knowledge_point": "演讲词的结构与思路",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "选择要顺应时代、抓住机遇",
+            "读书无用",
+            "应当远离科研",
+            "要追求名利"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "演讲词主体部分常用的结构是「提出问题—分析问题—（ ）」。",
+          "answer": {
+            "value": "解决问题"
+          },
+          "analysis": "三段式推进。",
+          "difficulty": 3,
+          "knowledge_point": "演讲词的结构与思路",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "演讲词结尾常以号召、呼吁收束，增强鼓动性。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "结尾多作号召。",
+          "difficulty": 2,
+          "knowledge_point": "演讲词的结构与思路",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "概括《应有格物致知精神》的论证思路。",
+          "answer": {
+            "value": "示例：先由传统教育引出「格物致知」的含义，再举事例说明真正的研究必须重视实验与实践，最后号召青年培养格物致知精神。"
+          },
+          "analysis": "评分要点：引出—论证—号召。",
+          "difficulty": 4,
+          "knowledge_point": "演讲词的结构与思路",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《最后一次讲演》中反复使用「你们」「我们」，作用是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "人称对照使爱憎分明。",
+          "difficulty": 3,
+          "knowledge_point": "演讲语言技巧",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "区分敌我、增强现场感与鼓动性",
+            "节省篇幅",
+            "表示礼貌",
+            "避免重复"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "演讲中多用短句的好处是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "短句有力、易懂。",
+          "difficulty": 2,
+          "knowledge_point": "演讲语言技巧",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "节奏明快、便于听辨",
+            "显得深奥",
+            "便于引用",
+            "减少情感"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「凭什么要杀死李先生？」这句运用了（ ）（填修辞名称）。",
+          "answer": {
+            "value": "反问"
+          },
+          "analysis": "用疑问形式表达肯定判断，是反问。",
+          "difficulty": 3,
+          "knowledge_point": "演讲语言技巧",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "演讲中的排比能增强气势和说服力。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "排比造势。",
+          "difficulty": 2,
+          "knowledge_point": "演讲语言技巧",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "为「节约粮食」写一句适合演讲开头的话，要求口语化、有感染力。",
+          "answer": {
+            "value": "示例：同学们，请看餐盘里剩下的半碗饭——那不是几粒米，而是农民一整季的汗水。"
+          },
+          "analysis": "评分要点：口语化 + 有感染力。",
+          "difficulty": 4,
+          "knowledge_point": "演讲语言技巧",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "写演讲稿第一步应明确（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先明确对象与目的。",
+          "difficulty": 2,
+          "knowledge_point": "撰写演讲稿",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "听众、场合与目的",
+            "字数",
+            "字体",
+            "引文数量"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "演讲稿的标题最好（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "标题应醒目点旨。",
+          "difficulty": 2,
+          "knowledge_point": "撰写演讲稿",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "简洁醒目、点明主旨",
+            "越长越详细",
+            "用生僻词",
+            "不写标题"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "演讲稿中引用事例和名言的目的是增强（ ）和说服力。",
+          "answer": {
+            "value": "感染力"
+          },
+          "analysis": "材料服务于说服与感染。",
+          "difficulty": 3,
+          "knowledge_point": "撰写演讲稿",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "演讲稿可以有观点、有情感，也可以有具体呼吁。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "三者可以结合。",
+          "difficulty": 2,
+          "knowledge_point": "撰写演讲稿",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "为「诚信」主题写一个 80 字以内的演讲结尾。",
+          "answer": {
+            "value": "示例：诚信不在宏大的誓言里，而在每一次按时还书、每一句如实作答。让我们从今天起，把诚信写进日常的每一个小动作。"
+          },
+          "analysis": "评分要点：有主旨 + 有呼吁。",
+          "difficulty": 4,
+          "knowledge_point": "撰写演讲稿",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第五单元",
+      "order_index": 5,
+      "summary": "游记：壶口瀑布、在长江源头各拉丹冬、登勃朗峰、一滴水经过丽江。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "游记的三要素是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "游记写行踪、见闻与感受。",
+          "difficulty": 2,
+          "knowledge_point": "游记的要素与线索",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "所至、所见、所感",
+            "时间、地点、人物",
+            "起因、经过、结果",
+            "论点、论据、论证"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "《壶口瀑布》的作者是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "梁衡作《壶口瀑布》。",
+          "difficulty": 2,
+          "knowledge_point": "游记的要素与线索",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "梁衡",
+            "马丽华",
+            "阿来",
+            "马克·吐温"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "《一滴水经过丽江》以一滴水的行踪为（ ）组织全文。",
+          "answer": {
+            "value": "线索"
+          },
+          "analysis": "以水的游踪为线索。",
+          "difficulty": 3,
+          "knowledge_point": "游记的要素与线索",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "游记必须写真实游历，不能虚构。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "游记可不拘泥于实写，如《一滴水经过丽江》便以拟人化视角虚构行踪，但精神真实。",
+          "difficulty": 4,
+          "knowledge_point": "游记的要素与线索",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "以一次短途出行为例，写出游记的「所至」与「所见」。",
+          "answer": {
+            "value": "示例：所至是城郊的荷塘，所见是夕照下荷叶连片、白鹭掠过水面。"
+          },
+          "analysis": "评分要点：行踪与见闻各一句。",
+          "difficulty": 3,
+          "knowledge_point": "游记的要素与线索",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《壶口瀑布》写水声、水势、水雾，主要调动了（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "声音、形态、水雾并用。",
+          "difficulty": 3,
+          "knowledge_point": "写景的角度与方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "听觉、视觉等多种感官",
+            "只有视觉",
+            "只有嗅觉",
+            "只有触觉"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「河水从五百米宽的河道上排排涌来」突出黄河水的（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "以「排排涌来」写气势。",
+          "difficulty": 3,
+          "knowledge_point": "写景的角度与方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "气势磅礴",
+            "温柔清澈",
+            "细小缓慢",
+            "冰凉刺骨"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "写景时把远景、近景、仰视、俯视结合，通常称为多（ ）写景。",
+          "answer": {
+            "value": "角度"
+          },
+          "analysis": "多角度写景使画面丰富。",
+          "difficulty": 3,
+          "knowledge_point": "写景的角度与方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "化静为动是让静态景物显得有生气的常用写法。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "化静为动增强生命力。",
+          "difficulty": 2,
+          "knowledge_point": "写景的角度与方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用 60 字左右描写一处景物，要求至少调动两种感官。",
+          "answer": {
+            "value": "示例：风掠过竹林，竹叶发出细碎的沙沙声；脚边新竹的青皮泛着水光，摸上去微凉。"
+          },
+          "analysis": "评分要点：两种感官清晰可辨。",
+          "difficulty": 3,
+          "knowledge_point": "写景的角度与方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《登勃朗峰》在写景之余还写了（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "马克·吐温笔下有奇人趣事。",
+          "difficulty": 3,
+          "knowledge_point": "游记中的情感与哲理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "车夫的幽默与旅行的奇趣",
+            "科学考察数据",
+            "战争经历",
+            "农事活动"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "《壶口瀑布》由黄河水想到的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "由物及人，写民族精神。",
+          "difficulty": 4,
+          "knowledge_point": "游记中的情感与哲理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "柔中有刚、坚韧顽强的民族精神",
+            "旅游开发",
+            "水利工程",
+            "气候变迁"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「各拉丹冬」是长江的（ ）（填「源头」或「入海口」）。",
+          "answer": {
+            "value": "源头"
+          },
+          "analysis": "各拉丹冬是长江源头。",
+          "difficulty": 2,
+          "knowledge_point": "游记中的情感与哲理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "游记中的议论与抒情要与所见景物自然衔接。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "强行说理会显得生硬。",
+          "difficulty": 3,
+          "knowledge_point": "游记中的情感与哲理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说《在长江源头各拉丹冬》中作者的身体不适与所见奇景构成了怎样的表达效果。",
+          "answer": {
+            "value": "示例：身体的艰难与雪域奇景形成对照，既显自然之壮美严酷，也显出人对自然的敬畏与坚持。"
+          },
+          "analysis": "评分要点：对照 + 双重意味。",
+          "difficulty": 4,
+          "knowledge_point": "游记中的情感与哲理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "写游记时选择景物应（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "典型景物才能突出重点。",
+          "difficulty": 2,
+          "knowledge_point": "学写游记",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "选最能体现当地特色的典型景物",
+            "见什么写什么全部罗列",
+            "只写商店与美食",
+            "只写自己心情"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "游记中穿插历史、民俗材料的作用是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "材料能深化文化内涵。",
+          "difficulty": 3,
+          "knowledge_point": "学写游记",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "增加文化厚度，深化感受",
+            "凑字数",
+            "代替描写",
+            "显示博学"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "游记结尾常由所见升华到（ ），使文章有余味。",
+          "answer": {
+            "value": "所感"
+          },
+          "analysis": "由景到感，升华主题。",
+          "difficulty": 3,
+          "knowledge_point": "学写游记",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "游记必须按时间顺序逐日记录。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "可按行踪、情感或主题组织，不必逐日流水账。",
+          "difficulty": 3,
+          "knowledge_point": "学写游记",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "拟一个游记标题，并说明你的行踪线索。",
+          "answer": {
+            "value": "示例：标题《沿着河堤走一程》，线索是沿堤自西向东的行踪，依次写桥头、河湾、闸口三处。"
+          },
+          "analysis": "评分要点：标题 + 线索清楚。",
+          "difficulty": 3,
+          "knowledge_point": "学写游记",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第六单元",
+      "order_index": 6,
+      "summary": "古诗文：《庄子》二则、《礼记》二则、《马说》、唐诗三首。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「北冥有鱼，其名为鲲」中「冥」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「冥」通「溟」，指海。",
+          "difficulty": 3,
+          "knowledge_point": "《庄子》二则的寓言与想象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "海",
+            "山",
+            "天",
+            "夜"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "《庄子与惠子游于濠梁》中两人争论的焦点是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "争论「子非鱼，安知鱼之乐」。",
+          "difficulty": 3,
+          "knowledge_point": "《庄子》二则的寓言与想象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "人能否知道鱼的快乐",
+            "鱼是否好吃",
+            "桥是否稳固",
+            "谁更富有"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「鲲之大，不知其几千里也」运用了（ ）（填修辞或手法名称）来写鲲的巨大。",
+          "answer": {
+            "value": "夸张"
+          },
+          "analysis": "以夸张写其大。",
+          "difficulty": 3,
+          "knowledge_point": "《庄子》二则的寓言与想象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "庄子的文章想象奇特、善用寓言说理。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "庄文以寓言寄理。",
+          "difficulty": 2,
+          "knowledge_point": "《庄子》二则的寓言与想象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说《庄子与惠子游于濠梁》中庄子的回答妙在哪里。",
+          "answer": {
+            "value": "示例：庄子巧妙地把「安知」的解释转为「在哪里知道」，以「我是在濠水桥上知道的」化解追问，机智而含诗意。"
+          },
+          "analysis": "评分要点：指出偷换概念/巧辩的巧妙。",
+          "difficulty": 4,
+          "knowledge_point": "《庄子》二则的寓言与想象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「教学相长」出自（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "出自《礼记·学记》的《虽有嘉肴》。",
+          "difficulty": 2,
+          "knowledge_point": "《礼记》二则的哲理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "《虽有嘉肴》",
+            "《大道之行也》",
+            "《马说》",
+            "《北冥有鱼》"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「大道之行也，天下为公」描绘的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「天下为公」即大同。",
+          "difficulty": 2,
+          "knowledge_point": "《礼记》二则的哲理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "大同社会",
+            "小康社会",
+            "山林生活",
+            "宫廷宴会"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「学然后知不足，教然后知（ ）」横线上应填「困」。",
+          "answer": {
+            "value": "困"
+          },
+          "analysis": "原文「教然后知困」。",
+          "difficulty": 3,
+          "knowledge_point": "《礼记》二则的哲理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《虽有嘉肴》以「嘉肴」「至道」设喻引出论点。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "以喻引出教学相长。",
+          "difficulty": 3,
+          "knowledge_point": "《礼记》二则的哲理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用现代汉语说说「天下为公」的含义。",
+          "answer": {
+            "value": "示例：天下是天下人共有的，不是某一家一姓的私产，选贤任能、人尽其力。"
+          },
+          "analysis": "评分要点：公有 + 选贤与能。",
+          "difficulty": 4,
+          "knowledge_point": "《礼记》二则的哲理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《马说》的作者是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "韩愈作《马说》。",
+          "difficulty": 2,
+          "knowledge_point": "《马说》的托物寓意",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "韩愈",
+            "柳宗元",
+            "杜甫",
+            "白居易"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "文中「千里马」比喻的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "以马喻才士。",
+          "difficulty": 3,
+          "knowledge_point": "《马说》的托物寓意",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "有才能的人",
+            "善跑的动物",
+            "伯乐",
+            "养马人"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「食马者不知其能千里而食也」中「食」的意思是（ ）。",
+          "answer": {
+            "value": "喂养"
+          },
+          "analysis": "「食」通「饲」，喂养。",
+          "difficulty": 3,
+          "knowledge_point": "《马说》的托物寓意",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《马说》采用的是托物寓意的手法。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "借马寓人才遭遇。",
+          "difficulty": 2,
+          "knowledge_point": "《马说》的托物寓意",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说《马说》表达了作者怎样的思想感情。",
+          "answer": {
+            "value": "示例：借千里马被埋没，抒发对统治者不识人才、埋没人才的愤懑，以及自己怀才不遇的悲慨。"
+          },
+          "analysis": "评分要点：愤懑 + 怀才不遇。",
+          "difficulty": 4,
+          "knowledge_point": "《马说》的托物寓意",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「安得广厦千万间，大庇天下寒士俱欢颜」出自（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "杜甫此句抒发博大情怀。",
+          "difficulty": 2,
+          "knowledge_point": "唐诗三首的鉴赏",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "《茅屋为秋风所破歌》",
+            "《卖炭翁》",
+            "《石壕吏》",
+            "《春望》"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "《卖炭翁》的作者是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "白居易作《卖炭翁》。",
+          "difficulty": 2,
+          "knowledge_point": "唐诗三首的鉴赏",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "白居易",
+            "杜甫",
+            "韩愈",
+            "柳宗元"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "《石壕吏》中「吏呼一何怒，妇啼一何（ ）」横线上应填「苦」。",
+          "answer": {
+            "value": "苦"
+          },
+          "analysis": "原文「妇啼一何苦」。",
+          "difficulty": 3,
+          "knowledge_point": "唐诗三首的鉴赏",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《卖炭翁》通过「宫市」掠夺揭露社会黑暗。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「半匹红纱一丈绫」写强买。",
+          "difficulty": 3,
+          "knowledge_point": "唐诗三首的鉴赏",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "比较《茅屋为秋风所破歌》与《卖炭翁》在情感落点上的不同。",
+          "answer": {
+            "value": "示例：前者由自身屋破推及天下寒士，情感博大；后者通过老翁被掠夺的遭遇，表达对底层劳动者的同情与对掠夺者的批判。"
+          },
+          "analysis": "评分要点：两首诗的情感落点各说清。",
+          "difficulty": 5,
+          "knowledge_point": "唐诗三首的鉴赏",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-12T08:10:46+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

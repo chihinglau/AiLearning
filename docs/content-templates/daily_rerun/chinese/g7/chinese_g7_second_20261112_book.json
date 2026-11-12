@@ -1,0 +1,2209 @@
+{
+  "subject": "chinese",
+  "grade": 7,
+  "version": "人教版",
+  "semester": "second",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第一单元",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "字词积累与文言基础",
+      "parent": "第一单元",
+      "order_index": 1,
+      "explanation": "掌握本单元重点字音字形，积累文言实词与虚词用法。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "人物形象与精神品质",
+      "parent": "第一单元",
+      "order_index": 2,
+      "explanation": "通过具体事例和细节把握人物形象，理解其精神价值。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "写法与语言品味",
+      "parent": "第一单元",
+      "order_index": 3,
+      "explanation": "体会对比、细节描写、引用等写法的作用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "探究与表达",
+      "parent": "第一单元",
+      "order_index": 4,
+      "explanation": "能结合文本与现实谈自己的认识，表达有条理。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二单元",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "字词与诗文积累",
+      "parent": "第二单元",
+      "order_index": 1,
+      "explanation": "积累本单元重点词语，背诵《木兰诗》名句。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "内容理解与情感体验",
+      "parent": "第二单元",
+      "order_index": 2,
+      "explanation": "把握文章所写的对象与抒发的情感，理解家国情怀的内涵。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "修辞与语言赏析",
+      "parent": "第二单元",
+      "order_index": 3,
+      "explanation": "识别比喻、排比、反复等修辞并说明其表达效果。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "写作与表达",
+      "parent": "第二单元",
+      "order_index": 4,
+      "explanation": "学会借景物或事例表达家国情感，语言要有感染力。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第三单元",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "字词与文言基础",
+      "parent": "第三单元",
+      "order_index": 1,
+      "explanation": "掌握本单元重点字词，积累文言实词与句式。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "人物形象与情感",
+      "parent": "第三单元",
+      "order_index": 2,
+      "explanation": "从平凡小事中读懂人物性格与作者情感。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "细节与叙事角度",
+      "parent": "第三单元",
+      "order_index": 3,
+      "explanation": "留意以小见大的细节和第一人称叙述的效果。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "写人记事的方法",
+      "parent": "第三单元",
+      "order_index": 4,
+      "explanation": "选取典型事例、抓住细节、写出情感变化来写人。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第四单元",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "字词与文言语段",
+      "parent": "第四单元",
+      "order_index": 1,
+      "explanation": "积累本单元重点词语，读懂《短文两篇》的含义。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "内容理解与美德内涵",
+      "parent": "第四单元",
+      "order_index": 2,
+      "explanation": "理解人物身上体现的宽厚、责任、敬业等传统美德。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "论证与说理方法",
+      "parent": "第四单元",
+      "order_index": 3,
+      "explanation": "把握举例、对比、引用等论证方法及其作用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "表达与践行",
+      "parent": "第四单元",
+      "order_index": 4,
+      "explanation": "把美德认识转化为具体行动，学会有条理地表达主张。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第五单元",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "字词与诗歌积累",
+      "parent": "第五单元",
+      "order_index": 1,
+      "explanation": "积累描写景物的词语，背诵古代诗歌名句。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "景物描写与情感",
+      "parent": "第五单元",
+      "order_index": 2,
+      "explanation": "抓住景物特征，理解景与情的关系。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "诗歌鉴赏",
+      "parent": "第五单元",
+      "order_index": 3,
+      "explanation": "读懂意象与情感，把握哲理诗的表达特点。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "哲理表达与写作",
+      "parent": "第五单元",
+      "order_index": 4,
+      "explanation": "从生活小事中提炼道理，用具体描写支撑感悟。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第六单元",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "字词与科技说明",
+      "parent": "第六单元",
+      "order_index": 1,
+      "explanation": "积累本单元重点词语，读懂《活板》的文言表述。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "内容理解与精神内涵",
+      "parent": "第六单元",
+      "order_index": 2,
+      "explanation": "理解探险者的选择与航天员的经历，体会探索精神。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "说明文阅读与写法",
+      "parent": "第六单元",
+      "order_index": 3,
+      "explanation": "把握说明对象的特征与说明顺序、说明方法。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "想象与表达",
+      "parent": "第六单元",
+      "order_index": 4,
+      "explanation": "科幻写作要有科学依据的想象，叙事要有细节和转折。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一单元",
+      "order_index": 1,
+      "summary": "群星闪耀：邓稼先、说和做、回忆鲁迅先生、孙权劝学。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「鞠躬尽瘁」中「瘁」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "瘁指过度劳累。",
+          "difficulty": 3,
+          "knowledge_point": "字词积累与文言基础",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "劳累",
+            "疾病",
+            "忧愁",
+            "死亡"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "《孙权劝学》中「卿今当涂掌事」的「当涂」意思是（ ）。",
+          "answer": {
+            "value": "当道、掌权"
+          },
+          "analysis": "当涂即当权管事。",
+          "difficulty": 4,
+          "knowledge_point": "字词积累与文言基础",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「自以为大有所益」中的「益」意思是好处。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "益在此为益处。",
+          "difficulty": 3,
+          "knowledge_point": "字词积累与文言基础",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「锲而不舍」的「锲」读音是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "锲读 qiè。",
+          "difficulty": 2,
+          "knowledge_point": "字词积累与文言基础",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "qiè",
+            "qì",
+            "qī",
+            "jié"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "解释「士别三日，即更刮目相待」的意思。",
+          "answer": {
+            "value": "示例：读书人分别几天后，就应该用新的眼光重新看待他，说明人是在不断进步的。"
+          },
+          "analysis": "评分要点：字面意思 + 深层含义。",
+          "difficulty": 4,
+          "knowledge_point": "字词积累与文言基础",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《邓稼先》中表现邓稼先品质最突出的一点是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "文章突出其无私奉献。",
+          "difficulty": 3,
+          "knowledge_point": "人物形象与精神品质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "默默奉献、鞠躬尽瘁",
+            "善于言辞",
+            "喜欢热闹",
+            "注重名利"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "《说和做》中闻一多「说了就做」体现的品质是（ ）（填「言行一致」）。",
+          "answer": {
+            "value": "言行一致"
+          },
+          "analysis": "说了就做即言行一致。",
+          "difficulty": 3,
+          "knowledge_point": "人物形象与精神品质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "写人物可以只用评价性语言，不必写具体事例。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "人物形象要靠具体事例支撑。",
+          "difficulty": 3,
+          "knowledge_point": "人物形象与精神品质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "《回忆鲁迅先生》中体现鲁迅性格的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓ 文中均有体现；D ✗ 与鲁迅性格相反。所以选 A、B、C。",
+          "difficulty": 4,
+          "knowledge_point": "人物形象与精神品质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "待人亲切",
+            "工作严谨",
+            "生活节俭",
+            "喜好吹嘘"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合课文说说邓稼先为什么被称为「两弹元勋」。",
+          "answer": {
+            "value": "示例：他长期隐姓埋名，主持核武器研制，为原子弹和氢弹的突破作出决定性贡献，把一生献给了国家。"
+          },
+          "analysis": "评分要点：事迹 + 贡献 + 品格。",
+          "difficulty": 4,
+          "knowledge_point": "人物形象与精神品质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《邓稼先》把邓稼先与奥本海默对比，作用是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "对比突出邓稼先的品格。",
+          "difficulty": 4,
+          "knowledge_point": "写法与语言品味",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "突出邓稼先的朴实谦逊",
+            "说明两人相同",
+            "批评奥本海默",
+            "介绍美国科学"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "用细小动作、神态表现人物，这种写法叫（ ）描写。",
+          "answer": {
+            "value": "细节"
+          },
+          "analysis": "以小见大的写法即细节描写。",
+          "difficulty": 3,
+          "knowledge_point": "写法与语言品味",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "引用传主本人的话可以增强文章的真实性。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "引用增强真实与说服力。",
+          "difficulty": 3,
+          "knowledge_point": "写法与语言品味",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "《孙权劝学》主要通过（ ）描写推动情节。",
+          "answer": {
+            "value": "对话"
+          },
+          "analysis": "全文以人物对话展开。",
+          "difficulty": 3,
+          "knowledge_point": "写法与语言品味",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "举例说明细节描写对表现人物的作用。",
+          "answer": {
+            "value": "示例：文中写鲁迅笑时咳嗽、走路很快，这些细节让人感到他既亲切又忙碌，形象更具体真实。"
+          },
+          "analysis": "评分要点：细节 + 效果。",
+          "difficulty": 4,
+          "knowledge_point": "写法与语言品味",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "阅读人物传记类文章，最应关注的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "传记核心是人物经历与精神。",
+          "difficulty": 2,
+          "knowledge_point": "探究与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "人物的经历与精神",
+            "文章的页数",
+            "作者的照片",
+            "印刷年份"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "表达观点时，一般先说观点，再用（ ）支撑。",
+          "answer": {
+            "value": "事例"
+          },
+          "analysis": "观点要用事例或道理支撑。",
+          "difficulty": 3,
+          "knowledge_point": "探究与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "评价人物应当依据事实，避免凭印象下结论。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "评价须有事实依据。",
+          "difficulty": 3,
+          "knowledge_point": "探究与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "本单元人物身上值得学习的品质有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓ 文中均有体现；D ✗ 与人物品质不符。所以选 A、B、C。",
+          "difficulty": 4,
+          "knowledge_point": "探究与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "爱国奉献",
+            "严谨治学",
+            "勤学上进",
+            "追名逐利"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说邓稼先的精神对今天的我们有什么意义。",
+          "answer": {
+            "value": "示例：他隐姓埋名数十年做一件事，说明真正的价值来自踏实与担当；今天学习也需要这种专注与责任感。"
+          },
+          "analysis": "评分要点：联系现实 + 有具体认识。",
+          "difficulty": 4,
+          "knowledge_point": "探究与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第二单元",
+      "order_index": 2,
+      "summary": "家国情怀：黄河颂、老山界、谁是最可爱的人、土地的誓言、木兰诗。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「澎湃」形容的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "澎湃形容水势汹涌。",
+          "difficulty": 2,
+          "knowledge_point": "字词与诗文积累",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "水势浩大",
+            "声音细小",
+            "光线明亮",
+            "气味芬芳"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "《木兰诗》中「万里赴戎机」的下一句是「关山度若（ ）」。",
+          "answer": {
+            "value": "飞"
+          },
+          "analysis": "原句为「关山度若飞」。",
+          "difficulty": 4,
+          "knowledge_point": "字词与诗文积累",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「可歌可泣」形容事迹感人，值得歌颂。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "词语含义正确。",
+          "difficulty": 3,
+          "knowledge_point": "字词与诗文积累",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「屏障」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "屏障指遮挡、护卫的事物。",
+          "difficulty": 3,
+          "knowledge_point": "字词与诗文积累",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "起遮挡作用的东西",
+            "通道",
+            "缺口",
+            "桥梁"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "默写《木兰诗》中表现木兰行军迅疾的两句。",
+          "answer": {
+            "value": "万里赴戎机，关山度若飞。"
+          },
+          "analysis": "评分要点：默写准确。",
+          "difficulty": 4,
+          "knowledge_point": "字词与诗文积累",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《黄河颂》歌颂黄河，实际是在歌颂（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "借黄河歌颂民族精神。",
+          "difficulty": 3,
+          "knowledge_point": "内容理解与情感体验",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "中华民族的精神",
+            "一条河流的风景",
+            "一种农作物",
+            "一次旅行"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "《老山界》写红军翻山，突出的是（ ）精神。",
+          "answer": {
+            "value": "革命乐观主义"
+          },
+          "analysis": "文中突出红军的乐观与坚韧。",
+          "difficulty": 4,
+          "knowledge_point": "内容理解与情感体验",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《土地的誓言》表达了作者对故乡深沉的思念与热爱。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "文章抒发对故土的深情。",
+          "difficulty": 3,
+          "knowledge_point": "内容理解与情感体验",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "《谁是最可爱的人》中写到的事例有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓ 均为文中事例；D ✗ 属另一篇课文。所以选 A、B、C。",
+          "difficulty": 4,
+          "knowledge_point": "内容理解与情感体验",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "松骨峰战斗",
+            "马玉祥救朝鲜儿童",
+            "防空洞里谈苦与乐",
+            "黄河大合唱"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说《木兰诗》中木兰身上体现的品质。",
+          "answer": {
+            "value": "示例：她代父从军，作战勇敢，功成后不慕荣利、只求还乡，体现出孝顺、勇敢与朴实。"
+          },
+          "analysis": "评分要点：结合情节说出两三点。",
+          "difficulty": 4,
+          "knowledge_point": "内容理解与情感体验",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「黄河！你是中华民族的摇篮」运用的修辞是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "把黄河比作摇篮。",
+          "difficulty": 3,
+          "knowledge_point": "修辞与语言赏析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "比喻",
+            "夸张",
+            "反问",
+            "对偶"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "《木兰诗》中「将军百战死，壮士十年归」运用的修辞是（ ）。",
+          "answer": {
+            "value": "对偶"
+          },
+          "analysis": "两句对称，属对偶。",
+          "difficulty": 4,
+          "knowledge_point": "修辞与语言赏析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "排比可以增强语势，使情感表达更强烈。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "排比增强语势。",
+          "difficulty": 2,
+          "knowledge_point": "修辞与语言赏析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列句子使用反复修辞的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓ 重复呼告；B ✗ 一般陈述；C ✗ 比喻；D ✓ 重复句式。所以选 A、D。",
+          "difficulty": 4,
+          "knowledge_point": "修辞与语言赏析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "黄河！黄河！",
+            "我们向着黄河",
+            "你是摇篮",
+            "保卫黄河！保卫华北！"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "赏析「关山度若飞」的表达效果。",
+          "answer": {
+            "value": "示例：「若飞」用比喻写出行军速度之快，让人感到木兰奔赴战场的急切与军情的紧急。"
+          },
+          "analysis": "评分要点：手法 + 效果。",
+          "difficulty": 4,
+          "knowledge_point": "修辞与语言赏析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "表达家国情感时，最容易打动人的写法是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "具体的人与事更能打动人。",
+          "difficulty": 3,
+          "knowledge_point": "写作与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "结合具体的人与事",
+            "只喊口号",
+            "堆砌形容词",
+            "罗列地名"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "写抒情类文章，常用（ ）的方式让情感更真挚。",
+          "answer": {
+            "value": "借景抒情"
+          },
+          "analysis": "借景物抒发情感是常见方式。",
+          "difficulty": 3,
+          "knowledge_point": "写作与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "抒情可以完全脱离内容，单独写几段感叹。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "抒情要依托内容。",
+          "difficulty": 3,
+          "knowledge_point": "写作与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "补写句子：每当看到黄河的浪涛，我就想起（ ）。",
+          "answer": {
+            "value": "示例：那些为民族奋斗的人们"
+          },
+          "analysis": "评分要点：承接自然、情感一致。",
+          "difficulty": 3,
+          "knowledge_point": "写作与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写一段话表达你对家乡某处景物或某位亲人的感情。",
+          "answer": {
+            "value": "示例：家乡那条小河从我小学一直流到今天。夏天水浅，我们光着脚踩石头；如今回去，河还在，人却长大，我最想留住的正是这份亲切。"
+          },
+          "analysis": "评分要点：具体细节 + 真挚情感。",
+          "difficulty": 4,
+          "knowledge_point": "写作与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第三单元",
+      "order_index": 3,
+      "summary": "凡人小事：阿长与山海经、台阶、卖油翁。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「震悚」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "震悚指受惊而身体颤动。",
+          "difficulty": 3,
+          "knowledge_point": "字词与文言基础",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "因害怕或惊讶而颤动",
+            "高兴",
+            "安静",
+            "生气"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "《卖油翁》中「释担而立」的「释」意思是（ ）。",
+          "answer": {
+            "value": "放下"
+          },
+          "analysis": "释即放下。",
+          "difficulty": 4,
+          "knowledge_point": "字词与文言基础",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「尔安敢轻吾射」中的「安」意思是「怎么」。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "安在此表反问。",
+          "difficulty": 4,
+          "knowledge_point": "字词与文言基础",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「念念不忘」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "念念不忘指时刻挂念。",
+          "difficulty": 2,
+          "knowledge_point": "字词与文言基础",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "一直记在心里",
+            "偶尔想起",
+            "完全忘记",
+            "勉强记住"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "解释《卖油翁》中「我亦无他，惟手熟尔」的意思。",
+          "answer": {
+            "value": "示例：我也没什么别的本事，只是手法熟练罢了，说明技艺来自反复练习。"
+          },
+          "analysis": "评分要点：字面 + 道理。",
+          "difficulty": 4,
+          "knowledge_point": "字词与文言基础",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《阿长与山海经》中阿长的性格特点是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "阿长粗俗但真诚善良。",
+          "difficulty": 3,
+          "knowledge_point": "人物形象与情感",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "粗俗却善良热心",
+            "高雅文静",
+            "精明算计",
+            "冷漠自私"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "《台阶》中父亲终年辛劳，最大的心愿是（ ）（填「造高台阶的新屋」）。",
+          "answer": {
+            "value": "造高台阶的新屋"
+          },
+          "analysis": "父亲一生为造新屋而努力。",
+          "difficulty": 4,
+          "knowledge_point": "人物形象与情感",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "写普通人也能表现出深沉的情感与时代变化。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "凡人小事同样承载深意。",
+          "difficulty": 3,
+          "knowledge_point": "人物形象与情感",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "《阿长与山海经》中体现阿长善良的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "逐项判断：A ✓ 费心买书；B ✓ 讨吉利是善意；C ✗ 讲故事的用意需具体分析，非善良表现；D ✗ 与事实不符。所以选 A、B。",
+          "difficulty": 4,
+          "knowledge_point": "人物形象与情感",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "给「我」买《山海经》",
+            "新年说吉利话",
+            "讲长毛的故事",
+            "故意欺负「我」"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说《台阶》结尾父亲感到失落的原因。",
+          "answer": {
+            "value": "示例：新屋和台阶造好了，父亲却觉得身体不如从前、心里空了，写出了普通劳动者愿望实现后的无奈与失落。"
+          },
+          "analysis": "评分要点：结合结尾 + 情感理解。",
+          "difficulty": 5,
+          "knowledge_point": "人物形象与情感",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《阿长与山海经》用第一人称叙述，好处是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "第一人称使情感真挚。",
+          "difficulty": 3,
+          "knowledge_point": "细节与叙事角度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "情感真实亲切",
+            "便于写多人",
+            "显得客观",
+            "节省字数"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "用一件小事反映人物性格的写法叫（ ）（填「以小见大」）。",
+          "answer": {
+            "value": "以小见大"
+          },
+          "analysis": "以小见大是常见写法。",
+          "difficulty": 3,
+          "knowledge_point": "细节与叙事角度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "叙事中穿插抒情议论可以加深主题。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "抒情议论深化主题。",
+          "difficulty": 3,
+          "knowledge_point": "细节与叙事角度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "《卖油翁》通过（ ）的情节表现熟能生巧的道理。",
+          "answer": {
+            "value": "酌油不湿钱"
+          },
+          "analysis": "以酌油技艺说明手熟。",
+          "difficulty": 4,
+          "knowledge_point": "细节与叙事角度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明《卖油翁》故事所讲的道理及给你的启示。",
+          "answer": {
+            "value": "示例：道理是熟能生巧，技艺来自反复练习；启示是不要恃才自傲，也不要轻视别人，肯练才能精。"
+          },
+          "analysis": "评分要点：道理 + 启示。",
+          "difficulty": 4,
+          "knowledge_point": "细节与叙事角度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "写人时最能表现性格的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "典型事例与细节最有力。",
+          "difficulty": 3,
+          "knowledge_point": "写人记事的方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "典型事例与细节",
+            "外貌罗列",
+            "年龄介绍",
+            "姓名解释"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "写人记事要写清事情的起因、经过和（ ）。",
+          "answer": {
+            "value": "结果"
+          },
+          "analysis": "叙事要素要完整。",
+          "difficulty": 2,
+          "knowledge_point": "写人记事的方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "写人时可以先抑后扬，使人物形象更鲜明。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "欲扬先抑是常见手法。",
+          "difficulty": 3,
+          "knowledge_point": "写人记事的方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "写人时可用的方法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D ✗ 只写外貌不写事难以立人。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "写人记事的方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "抓住语言特点",
+            "描写动作细节",
+            "写出他人评价",
+            "只写外貌不写事"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "写三句话描写你身边一位普通人的一个特点。",
+          "answer": {
+            "value": "示例：张阿姨每天清晨五点就到小区门口扫地。她的扫帚声很轻，怕吵醒住户。冬天她手上贴着创可贴，还是照常扫。"
+          },
+          "analysis": "评分要点：具体细节 + 特点明确。",
+          "difficulty": 4,
+          "knowledge_point": "写人记事的方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第四单元",
+      "order_index": 4,
+      "summary": "中华美德：叶圣陶先生二三事、驿路梨花、最苦与最乐、短文两篇。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「朦胧」形容的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "朦胧指模糊不明。",
+          "difficulty": 2,
+          "knowledge_point": "字词与文言语段",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "模糊不清",
+            "非常清晰",
+            "十分明亮",
+            "极其鲜艳"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「躬行」的意思是亲身（ ）（填「实践」）。",
+          "answer": {
+            "value": "实践"
+          },
+          "analysis": "躬行即亲身去做。",
+          "difficulty": 3,
+          "knowledge_point": "字词与文言语段",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「一以贯之」指用同一个道理贯穿始终。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "词语含义正确。",
+          "difficulty": 3,
+          "knowledge_point": "字词与文言语段",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「达观」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "达观指心胸开阔。",
+          "difficulty": 3,
+          "knowledge_point": "字词与文言语段",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "开朗豁达",
+            "悲观消极",
+            "谨慎小心",
+            "沉默寡言"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "解释「斯是陋室，惟吾德馨」的意思。",
+          "answer": {
+            "value": "示例：这是简陋的屋子，只因我品德高尚而显得芬芳，表达安贫乐道的追求。"
+          },
+          "analysis": "评分要点：字面 + 主旨。",
+          "difficulty": 4,
+          "knowledge_point": "字词与文言语段",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《叶圣陶先生二三事》突出叶圣陶的（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "文章突出其律己宽人。",
+          "difficulty": 3,
+          "knowledge_point": "内容理解与美德内涵",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "严于律己、宽以待人",
+            "能言善辩",
+            "喜爱游玩",
+            "精于经商"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "《最苦与最乐》认为人生最大的快乐是（ ）（填「尽责任」）。",
+          "answer": {
+            "value": "尽责任"
+          },
+          "analysis": "作者认为尽责最乐。",
+          "difficulty": 4,
+          "knowledge_point": "内容理解与美德内涵",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《驿路梨花》中「梨花」既是人名，也象征助人为乐的精神。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "人名与象征意义兼有。",
+          "difficulty": 4,
+          "knowledge_point": "内容理解与美德内涵",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "体现传统美德的行为有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；D ✓；C ✗ 不文明。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "内容理解与美德内涵",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "主动承担责任",
+            "待人以宽",
+            "随手乱扔垃圾",
+            "帮助陌生人"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说《最苦与最乐》中「苦」与「乐」各指什么。",
+          "answer": {
+            "value": "示例：最苦是未尽责任、心里放不下；最乐是尽到责任、心里踏实，两者都围绕责任展开。"
+          },
+          "analysis": "评分要点：苦乐都与责任挂钩。",
+          "difficulty": 4,
+          "knowledge_point": "内容理解与美德内涵",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《最苦与最乐》主要采用的结构是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先分说苦、分说乐，再总结观点。",
+          "difficulty": 4,
+          "knowledge_point": "论证与说理方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "先分说苦与乐再总结",
+            "按时间顺序",
+            "按空间顺序",
+            "问答式"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "为证明观点而举出具体事例，这种论证方法叫（ ）论证。",
+          "answer": {
+            "value": "举例"
+          },
+          "analysis": "举事例即举例论证。",
+          "difficulty": 3,
+          "knowledge_point": "论证与说理方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "引用名言可以增强论证的权威性。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "引用增强说服力。",
+          "difficulty": 3,
+          "knowledge_point": "论证与说理方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "本文使用的论证方法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓ 文中均有；D ✗ 夸张不是论证方法。所以选 A、B、C。",
+          "difficulty": 4,
+          "knowledge_point": "论证与说理方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "举例论证",
+            "道理论证",
+            "对比论证",
+            "夸张论证"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "找出文中一处对比，并说明其作用。",
+          "answer": {
+            "value": "示例：文中把不尽责任的苦与尽责任的乐对比，使观点更鲜明，让人清楚责任与苦乐的关系。"
+          },
+          "analysis": "评分要点：指出对比 + 说明作用。",
+          "difficulty": 4,
+          "knowledge_point": "论证与说理方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "表达关于美德的看法时，最应避免的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "空喊口号说服力弱。",
+          "difficulty": 3,
+          "knowledge_point": "表达与践行",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "空喊口号、没有实例",
+            "举出生活事例",
+            "说清具体做法",
+            "承认自己的不足"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "写倡议类文字，一般要写清倡议的（ ）与具体做法。",
+          "answer": {
+            "value": "理由"
+          },
+          "analysis": "倡议要有理由和做法。",
+          "difficulty": 3,
+          "knowledge_point": "表达与践行",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "美德只有在大事上才能体现。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "小事中同样能体现美德。",
+          "difficulty": 3,
+          "knowledge_point": "表达与践行",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "补写：我打算从今天起，每天（ ），把「宽以待人」落到行动上。",
+          "answer": {
+            "value": "示例：对同学的失误少抱怨、多帮忙"
+          },
+          "analysis": "评分要点：行为具体。",
+          "difficulty": 3,
+          "knowledge_point": "表达与践行",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "就「如何在班级中践行传统美德」提出两条建议。",
+          "answer": {
+            "value": "示例：一是设「每日一善」小记录，把帮助同学的事写在班级墙上；二是同学间发生矛盾时先各自说明情况，再一起想办法，不急着指责。"
+          },
+          "analysis": "评分要点：两条建议 + 可执行。",
+          "difficulty": 4,
+          "knowledge_point": "表达与践行",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第五单元",
+      "order_index": 5,
+      "summary": "生活哲理：紫藤萝瀑布、一棵小桃树、外国诗二首、古代诗歌五首。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「盘虬卧龙」形容枝干（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "盘虬形容枝干弯曲盘旋。",
+          "difficulty": 3,
+          "knowledge_point": "字词与诗歌积累",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "弯曲有力",
+            "细弱柔软",
+            "笔直整齐",
+            "枯干断裂"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「会当凌绝顶」的下一句是「一览众山（ ）」。",
+          "answer": {
+            "value": "小"
+          },
+          "analysis": "原句为「一览众山小」。",
+          "difficulty": 3,
+          "knowledge_point": "字词与诗歌积累",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「不畏浮云遮望眼」出自王安石的《登飞来峰》。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "诗句出自王安石。",
+          "difficulty": 4,
+          "knowledge_point": "字词与诗歌积累",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「忧郁」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "忧郁指心情愁闷。",
+          "difficulty": 2,
+          "knowledge_point": "字词与诗歌积累",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "忧愁郁闷",
+            "高兴开朗",
+            "平静安宁",
+            "激动兴奋"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "默写《游山西村》中蕴含哲理的两句。",
+          "answer": {
+            "value": "山重水复疑无路，柳暗花明又一村。"
+          },
+          "analysis": "评分要点：默写准确。",
+          "difficulty": 4,
+          "knowledge_point": "字词与诗歌积累",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《紫藤萝瀑布》中紫藤萝由衰到盛，象征（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "花盛象征生命力量。",
+          "difficulty": 4,
+          "knowledge_point": "景物描写与情感",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "生命的顽强与希望",
+            "自然的变化无常",
+            "人的懒惰",
+            "城市的繁华"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "《一棵小桃树》中「我」对小桃树的感情是（ ）（填「怜爱与敬佩」）。",
+          "answer": {
+            "value": "怜爱与敬佩"
+          },
+          "analysis": "文中既怜其弱小又敬其顽强。",
+          "difficulty": 4,
+          "knowledge_point": "景物描写与情感",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "写景散文中的景往往寄托着作者的情感。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "景中含情是常见写法。",
+          "difficulty": 3,
+          "knowledge_point": "景物描写与情感",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "《紫藤萝瀑布》中体现生命力的描写有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓ 都是景物描写；D ✗ 不是景物。所以选 A、B、C。",
+          "difficulty": 4,
+          "knowledge_point": "景物描写与情感",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "花朵繁密如瀑布",
+            "枝干盘虬",
+            "花瓣浅紫流动",
+            "写作者的工作"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说《紫藤萝瀑布》中作者由花想到什么。",
+          "answer": {
+            "value": "示例：由花的盛衰想到生命的曲折与延续，感到生命的長河无止无休，从而心情由忧郁转为宁静与振奋。"
+          },
+          "analysis": "评分要点：由花及理 + 情感变化。",
+          "difficulty": 5,
+          "knowledge_point": "景物描写与情感",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《登幽州台歌》中「独怆然而涕下」表达的情感是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "独与涕下写孤独悲慨。",
+          "difficulty": 4,
+          "knowledge_point": "诗歌鉴赏",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "孤独悲慨",
+            "欢快喜悦",
+            "平静闲适",
+            "愤怒不平"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "《望岳》中「造化钟神秀」的「钟」意思是（ ）。",
+          "answer": {
+            "value": "聚集"
+          },
+          "analysis": "钟在此为聚集之意。",
+          "difficulty": 5,
+          "knowledge_point": "诗歌鉴赏",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "哲理诗常常借景物或事理表达人生感悟。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "借景说理是哲理诗特点。",
+          "difficulty": 3,
+          "knowledge_point": "诗歌鉴赏",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "属于杜甫作品的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓ 均为杜甫所作；C ✗ 陈子昂所作；D ✗ 陆游所作。所以选 A、B。",
+          "difficulty": 4,
+          "knowledge_point": "诗歌鉴赏",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "《望岳》",
+            "《春望》",
+            "《登幽州台歌》",
+            "《游山西村》"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说「山重水复疑无路，柳暗花明又一村」给人的启示。",
+          "answer": {
+            "value": "示例：困境中看似无路，只要继续前行常会出现转机，鼓励人在困难时不要轻易放弃。"
+          },
+          "analysis": "评分要点：句意 + 启示。",
+          "difficulty": 4,
+          "knowledge_point": "诗歌鉴赏",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "写作中提炼哲理，最可靠的来源是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "真实体験最能支撑感悟。",
+          "difficulty": 3,
+          "knowledge_point": "哲理表达与写作",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "自己的生活体验",
+            "套用名言",
+            "编造离奇故事",
+            "反复感叹"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "由一件小事引出道理，这种写法常被称为（ ）（填「以小见大」）。",
+          "answer": {
+            "value": "以小见大"
+          },
+          "analysis": "由小及大是常见写法。",
+          "difficulty": 3,
+          "knowledge_point": "哲理表达与写作",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "写哲理类文章可以只讲道理，不写具体事情。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "要有具体事情作依托。",
+          "difficulty": 3,
+          "knowledge_point": "哲理表达与写作",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "补写：那次比赛输了以后，我明白了一个道理：（ ）。",
+          "answer": {
+            "value": "示例：准备不足时，运气帮不上忙"
+          },
+          "analysis": "评分要点：道理与事情相扣。",
+          "difficulty": 3,
+          "knowledge_point": "哲理表达与写作",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写三句话，从一件小事说出你的一个感悟。",
+          "answer": {
+            "value": "示例：我养的绿萝叶子黄了。我把它挪到窗边、少浇了水。两周后新叶长出来了，我才明白很多事不是用力越多越好。"
+          },
+          "analysis": "评分要点：小事 + 感悟自然。",
+          "difficulty": 4,
+          "knowledge_point": "哲理表达与写作",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第六单元",
+      "order_index": 6,
+      "summary": "科幻探险：伟大的悲剧、太空一日、带上她的眼睛、活板。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「吞噬」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "吞噬指吞没。",
+          "difficulty": 3,
+          "knowledge_point": "字词与科技说明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "吞食、吞没",
+            "吐出",
+            "撕裂",
+            "燃烧"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "《活板》中「持就火炀之」的「炀」意思是（ ）。",
+          "answer": {
+            "value": "烤"
+          },
+          "analysis": "炀在此为烘烤。",
+          "difficulty": 5,
+          "knowledge_point": "字词与科技说明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「瞬息」形容时间极短。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "瞬息即一眨眼。",
+          "difficulty": 3,
+          "knowledge_point": "字词与科技说明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「凛冽」形容的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "凛冽指严寒。",
+          "difficulty": 3,
+          "knowledge_point": "字词与科技说明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "寒冷刺骨",
+            "温暖舒适",
+            "闷热潮湿",
+            "干燥多风"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "解释「若止印三二本，未为简易」的意思。",
+          "answer": {
+            "value": "示例：如果只印两三本，还不算简便，说明活板更适合大量印刷。"
+          },
+          "analysis": "评分要点：字面 + 适用条件。",
+          "difficulty": 5,
+          "knowledge_point": "字词与科技说明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《伟大的悲剧》中斯科特一行最终失败的直接原因是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "极寒与补给不足导致失败。",
+          "difficulty": 4,
+          "knowledge_point": "内容理解与精神内涵",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "极寒与补给耗尽",
+            "迷路",
+            "队员生病",
+            "装备错误"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "《太空一日》中杨利伟在返回时经历的最惊险时刻与（ ）有关（填「舷窗裂纹」）。",
+          "answer": {
+            "value": "舷窗裂纹"
+          },
+          "analysis": "文中写到舷窗出现裂纹的惊险。",
+          "difficulty": 5,
+          "knowledge_point": "内容理解与精神内涵",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《带上她的眼睛》是一篇科幻小说，想象了地心探索的情境。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "科幻小说写地心探险。",
+          "difficulty": 4,
+          "knowledge_point": "内容理解与精神内涵",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "体现探索精神的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；D ✓；C ✗ 放弃不体现探索精神。所以选 A、B、D。",
+          "difficulty": 4,
+          "knowledge_point": "内容理解与精神内涵",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "记录真实数据的科考队员",
+            "坚持完成任务的航天员",
+            "遇到困难就放弃",
+            "为同伴留下补给"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说为什么斯科特的失败被称为「伟大的悲剧」。",
+          "answer": {
+            "value": "示例：他们没能第一个到达，却在绝境中保存了资料、照顾同伴、从容面对死亡，失败中显出人格的伟大。"
+          },
+          "analysis": "评分要点：失败 + 伟大之处。",
+          "difficulty": 5,
+          "knowledge_point": "内容理解与精神内涵",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《活板》主要说明的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "说明活板印刷的工序与优势。",
+          "difficulty": 4,
+          "knowledge_point": "说明文阅读与写法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "活字印刷的工序与优点",
+            "纸张的制作",
+            "墨的配方",
+            "书籍的装订"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "按制作工序逐项说明，属于按（ ）顺序说明。",
+          "answer": {
+            "value": "程序"
+          },
+          "analysis": "按操作步骤说明是程序顺序。",
+          "difficulty": 4,
+          "knowledge_point": "说明文阅读与写法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "说明文中使用列数字可以使说明更准确。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "列数字增强准确。",
+          "difficulty": 3,
+          "knowledge_point": "说明文阅读与写法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "《活板》中体现活板「活」的优点有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓ 一字一印是活字特点；D ✗ 与「活」相反。所以选 A、B、C。",
+          "difficulty": 5,
+          "knowledge_point": "说明文阅读与写法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "字印可重复使用",
+            "排版便捷",
+            "一字一印",
+            "只能印一种书"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "概括《活板》说明的活字印刷主要工序。",
+          "answer": {
+            "value": "示例：刻字制印、烧制字印、排字固版、用药烘烤使版固定、印刷、再拆版回收字印，形成一套可重复的流程。"
+          },
+          "analysis": "评分要点：工序完整、顺序清楚。",
+          "difficulty": 5,
+          "knowledge_point": "说明文阅读与写法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "科幻作品与一般想象故事的重要区别是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "科幻需有科学依据。",
+          "difficulty": 4,
+          "knowledge_point": "想象与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "有科学依据的想象",
+            "只写梦境",
+            "不需要情节",
+            "必须写外星人"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "小说中推动情节发展的关键事件常被称为（ ）（填「转折」）。",
+          "answer": {
+            "value": "转折"
+          },
+          "analysis": "转折推动情节。",
+          "difficulty": 4,
+          "knowledge_point": "想象与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "科幻作品也要让人物的选择合乎情感逻辑。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "想象之外仍需情感真实。",
+          "difficulty": 4,
+          "knowledge_point": "想象与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "补写：如果我是「落日六号」的领航员，最想对地面说的是（ ）。",
+          "answer": {
+            "value": "示例：请转告我的家人，我在这里看见了人类从未见过的地心"
+          },
+          "analysis": "评分要点：合乎情境与人物身份。",
+          "difficulty": 4,
+          "knowledge_point": "想象与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写三句话，想象一次太空或深海探险遇到的一个意外。",
+          "answer": {
+            "value": "示例：飞船驶入一片漆黑的谷地。仪表突然全部熄灯。我摸到舱壁上有一层薄薄的霜，才想起温度早已降到零下。"
+          },
+          "analysis": "评分要点：想象合理 + 有细节。",
+          "difficulty": 5,
+          "knowledge_point": "想象与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-12T08:33:22+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

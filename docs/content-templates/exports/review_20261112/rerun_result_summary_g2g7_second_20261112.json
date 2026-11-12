@@ -1,0 +1,152 @@
+{
+  "schema_version": "1",
+  "stamp": "20261112",
+  "semester": "second",
+  "batches": [
+    "g2_second",
+    "g7_second"
+  ],
+  "scope": {
+    "books": 11,
+    "chapters": 69,
+    "points": 276,
+    "questions": 1380
+  },
+  "books": [
+    {
+      "pack": "chinese_g2_second",
+      "stats": {
+        "chapters": 8,
+        "points": 32,
+        "questions": 160
+      },
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\chinese\\g2\\chinese_g2_second_20261112_book.json"
+    },
+    {
+      "pack": "english_g2_second",
+      "stats": {
+        "chapters": 9,
+        "points": 36,
+        "questions": 180
+      },
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\english\\g2\\english_g2_second_20261112_book.json"
+    },
+    {
+      "pack": "math_g2_second",
+      "stats": {
+        "chapters": 11,
+        "points": 44,
+        "questions": 220
+      },
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\math\\g2\\math_g2_second_20261112_book.json"
+    },
+    {
+      "pack": "politics_g2_second",
+      "stats": {
+        "chapters": 4,
+        "points": 16,
+        "questions": 80
+      },
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g2\\politics_g2_second_20261112_book.json"
+    },
+    {
+      "pack": "biology_g7_second",
+      "stats": {
+        "chapters": 9,
+        "points": 36,
+        "questions": 180
+      },
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\biology\\g7\\biology_g7_second_20261112_book.json"
+    },
+    {
+      "pack": "chinese_g7_second",
+      "stats": {
+        "chapters": 6,
+        "points": 24,
+        "questions": 120
+      },
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\chinese\\g7\\chinese_g7_second_20261112_book.json"
+    },
+    {
+      "pack": "english_g7_second",
+      "stats": {
+        "chapters": 6,
+        "points": 24,
+        "questions": 120
+      },
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\english\\g7\\english_g7_second_20261112_book.json"
+    },
+    {
+      "pack": "geography_g7_second",
+      "stats": {
+        "chapters": 3,
+        "points": 12,
+        "questions": 60
+      },
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\geography\\g7\\geography_g7_second_20261112_book.json"
+    },
+    {
+      "pack": "history_g7_second",
+      "stats": {
+        "chapters": 3,
+        "points": 12,
+        "questions": 60
+      },
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\history\\g7\\history_g7_second_20261112_book.json"
+    },
+    {
+      "pack": "math_g7_second",
+      "stats": {
+        "chapters": 6,
+        "points": 24,
+        "questions": 120
+      },
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\math\\g7\\math_g7_second_20261112_book.json"
+    },
+    {
+      "pack": "politics_g7_second",
+      "stats": {
+        "chapters": 4,
+        "points": 16,
+        "questions": 80
+      },
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g7\\politics_g7_second_20261112_book.json"
+    }
+  ],
+  "validate": {
+    "g2": {
+      "files": 4,
+      "passed": 4,
+      "failed": 0,
+      "errors": 0,
+      "warnings": 38,
+      "quarantined_skipped": 0
+    },
+    "g7": {
+      "files": 7,
+      "passed": 7,
+      "failed": 0,
+      "errors": 0,
+      "warnings": 29,
+      "quarantined_skipped": 0
+    }
+  },
+  "gate": {
+    "g2": {
+      "files": 4,
+      "passed": 4,
+      "failed": 0
+    },
+    "g7": {
+      "files": 7,
+      "passed": 7,
+      "failed": 0
+    }
+  },
+  "state": {
+    "stored_to_db": false,
+    "daily_consolidated_written": false,
+    "quarantine_pairs_changed": false,
+    "location": "docs/content-templates/daily_rerun（待评审区）"
+  }
+}

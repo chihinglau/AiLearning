@@ -1,0 +1,2580 @@
+{
+  "subject": "chinese",
+  "grade": 1,
+  "version": "人教版",
+  "semester": "second",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第一单元 识字",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "春夏秋冬的季节词语与画面",
+      "parent": "第一单元 识字",
+      "order_index": 1,
+      "explanation": "春风、夏雨、秋霜、冬雪各有特点，词语与季节要对应。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "姓氏歌里的姓氏识字",
+      "parent": "第一单元 识字",
+      "order_index": 2,
+      "explanation": "「木子李」「弓长张」这类拆字办法，能帮助记住姓氏。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "青字族：清、请、情、晴、睛",
+      "parent": "第一单元 识字",
+      "order_index": 3,
+      "explanation": "同一个「青」加上不同偏旁，变成意思不同的字。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "猜字谜与合体字",
+      "parent": "第一单元 识字",
+      "order_index": 4,
+      "explanation": "把部件的含义合起来想，就能猜出字谜的答案。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二单元 阅读",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "长句的朗读与停顿",
+      "parent": "第二单元 阅读",
+      "order_index": 1,
+      "explanation": "句子长了，要按意思在合适的地方停一下，读起来才顺。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "心愿类句子的理解",
+      "parent": "第二单元 阅读",
+      "order_index": 2,
+      "explanation": "「多想……」写出强烈的愿望，读时要带盼望的语气。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "时间顺序与心情变化",
+      "parent": "第二单元 阅读",
+      "order_index": 3,
+      "explanation": "「正……的时候」「接着」「又」能看出事情先后与心情变化。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "想象与句子仿写",
+      "parent": "第二单元 阅读",
+      "order_index": 4,
+      "explanation": "「我画了个……的太阳」这类句子可以换词仿写。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第三单元 阅读",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "伙伴相处中的帮助与体谅",
+      "parent": "第三单元 阅读",
+      "order_index": 1,
+      "explanation": "故事里谁帮了谁、怎么帮，能看出友好相处的道理。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "叠词的使用与数量词",
+      "parent": "第三单元 阅读",
+      "order_index": 2,
+      "explanation": "「一只、一棵、一个」是数量词，「孤零零」「叽叽喳喳」是叠词。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "有礼貌地提出请求",
+      "parent": "第三单元 阅读",
+      "order_index": 3,
+      "explanation": "「请」「好吗」「可以吗」能让请求听起来有礼貌。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "自然段的识别",
+      "parent": "第三单元 阅读",
+      "order_index": 4,
+      "explanation": "开头空两格的地方就是一个新自然段的开始。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第四单元 阅读",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "古诗的朗读与画面想象",
+      "parent": "第四单元 阅读",
+      "order_index": 1,
+      "explanation": "古诗读要有节奏，边读边想诗中的画面。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "荷叶圆圆里的比喻与叠词",
+      "parent": "第四单元 阅读",
+      "order_index": 2,
+      "explanation": "把荷叶比作摇篮、停机坪，是比喻；「圆圆的」「绿绿的」是叠词。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "下雨前的自然现象",
+      "parent": "第四单元 阅读",
+      "order_index": 3,
+      "explanation": "燕子低飞、蚂蚁搬家、天气闷热，都说明快要下雨。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "动词的准确使用",
+      "parent": "第四单元 阅读",
+      "order_index": 4,
+      "explanation": "「飞、游、跳、爬」不同动物用不同动词。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第五单元 识字",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "动物儿歌的句式与动词",
+      "parent": "第五单元 识字",
+      "order_index": 1,
+      "explanation": "「谁 + 在哪里 + 做什么」是儿歌的常见句式。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "对子与反义词",
+      "parent": "第五单元 识字",
+      "order_index": 2,
+      "explanation": "「古对今」「圆对方」是把意思相对的字配对。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "操场活动的动词搭配",
+      "parent": "第五单元 识字",
+      "order_index": 3,
+      "explanation": "打球、跳绳、踢足球，动词和名词要搭配得当。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "人之初的诵读与道理",
+      "parent": "第五单元 识字",
+      "order_index": 4,
+      "explanation": "「人之初，性本善」讲人出生时本性善良，要好好学习。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第六单元 阅读",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "影子中的方位词",
+      "parent": "第六单元 阅读",
+      "order_index": 1,
+      "explanation": "「前、后、左、右」能说清影子在人哪一边。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "问答句式的读与写",
+      "parent": "第六单元 阅读",
+      "order_index": 2,
+      "explanation": "问句末尾用问号，答句要对应问题来回答。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "标点与语气",
+      "parent": "第六单元 阅读",
+      "order_index": 3,
+      "explanation": "句号表示说完，问号表示提问，感叹号表示强烈感情。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "雨点儿里的量词与变化",
+      "parent": "第六单元 阅读",
+      "order_index": 4,
+      "explanation": "「一滴、一片、一个」是量词，雨点儿让地方发生变化。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第七单元 阅读",
+      "order_index": 7
+    },
+    {
+      "node_type": "point",
+      "name": "心情与愿望的表达",
+      "parent": "第七单元 阅读",
+      "order_index": 1,
+      "explanation": "「睡不着」「翻过来翻过去」写出期待远足的心情。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "成长中的矛盾心理",
+      "parent": "第七单元 阅读",
+      "order_index": 2,
+      "explanation": "「有时候我觉得自己很大，有时候又觉得很小」写出成长的真实感受。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "景物描写中的色彩与顺序",
+      "parent": "第七单元 阅读",
+      "order_index": 3,
+      "explanation": "「雪白的、金黄的」写颜色，从近到远写景有顺序。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "把句子写完整、写通顺",
+      "parent": "第七单元 阅读",
+      "order_index": 4,
+      "explanation": "句子要有「谁 + 做什么」或「什么 + 怎么样」才完整。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第八单元 阅读",
+      "order_index": 8
+    },
+    {
+      "node_type": "point",
+      "name": "动物脚印与画面的对应",
+      "parent": "第八单元 阅读",
+      "order_index": 1,
+      "explanation": "小鸡画竹叶、小狗画梅花，脚印形状和画面要对应。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "遇到困难的解决办法",
+      "parent": "第八单元 阅读",
+      "order_index": 2,
+      "explanation": "乌鸦把小石子放进瓶子，水面升高，就喝到水了。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "量词与季节变化",
+      "parent": "第八单元 阅读",
+      "order_index": 3,
+      "explanation": "「一片、一颗、一只」是量词；小蜗牛按季节看变化。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "按顺序复述故事",
+      "parent": "第八单元 阅读",
+      "order_index": 4,
+      "explanation": "复述要按事情发生的先后说，用「先、接着、最后」。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一单元 识字",
+      "order_index": 1,
+      "summary": "春夏秋冬、姓氏歌、小青蛙、猜字谜等识字课文。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「秋霜」说的是哪个季节的景象？",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "霜出现在秋天，所以「秋霜」写秋景。",
+          "difficulty": 2,
+          "knowledge_point": "春夏秋冬的季节词语与画面",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "春天",
+            "夏天",
+            "秋天",
+            "冬天"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "春风吹，夏雨落，秋霜降，冬雪（ ）。",
+          "answer": {
+            "value": "飘"
+          },
+          "analysis": "课文原句是「冬雪飘」。",
+          "difficulty": 2,
+          "knowledge_point": "春夏秋冬的季节词语与画面",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「夏雨落」中的「落」写出雨从天上下来。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「落」正是写雨下来的样子。",
+          "difficulty": 2,
+          "knowledge_point": "春夏秋冬的季节词语与画面",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用一句话说说你最喜欢哪个季节，为什么。",
+          "answer": {
+            "value": "示例：我最喜欢春天，因为春风吹，花开了"
+          },
+          "analysis": "评分要点：说出季节 + 一条具体理由。",
+          "difficulty": 3,
+          "knowledge_point": "春夏秋冬的季节词语与画面",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "「柳绿花红」描写的是（ ）季的景色。",
+          "answer": {
+            "value": "春"
+          },
+          "analysis": "柳绿花红是春天常见的景色。",
+          "difficulty": 2,
+          "knowledge_point": "春夏秋冬的季节词语与画面",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「木子李」说的是哪个姓？",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "木 + 子 = 李。",
+          "difficulty": 2,
+          "knowledge_point": "姓氏歌里的姓氏识字",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "林",
+            "李",
+            "木",
+            "张"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "弓长（ ），木子（ ）。",
+          "answer": {
+            "value": [
+              "张",
+              "李"
+            ]
+          },
+          "analysis": "课文原句：「弓长张，木子李」。",
+          "difficulty": 2,
+          "knowledge_point": "姓氏歌里的姓氏识字",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「古月胡」是把「胡」字拆开说的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "古 + 月 = 胡。",
+          "difficulty": 3,
+          "knowledge_point": "姓氏歌里的姓氏识字",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用拆字的办法介绍一个你知道的姓。",
+          "answer": {
+            "value": "示例：口天吴（「吴」可拆作口、天）"
+          },
+          "analysis": "评分要点：说法与字的结构相符。",
+          "difficulty": 4,
+          "knowledge_point": "姓氏歌里的姓氏识字",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「河水很清」中的「清」是什么旁？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "和水有关，用三点水。",
+          "difficulty": 2,
+          "knowledge_point": "青字族：清、请、情、晴、睛",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "三点水",
+            "言字旁",
+            "竖心旁",
+            "日字旁"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "天气晴用「晴」，它的偏旁是（ ）字旁。",
+          "answer": {
+            "value": "日"
+          },
+          "analysis": "晴与太阳有关，用日字旁。",
+          "difficulty": 2,
+          "knowledge_point": "青字族：清、请、情、晴、睛",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「请」和「情」都可以用在「今天心（ ）很好」里。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "这里应填「情」，心字旁表示心情。",
+          "difficulty": 3,
+          "knowledge_point": "青字族：清、请、情、晴、睛",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「青、清、晴」三个字各写一个词语。",
+          "answer": {
+            "value": "示例：青草、清水、晴天"
+          },
+          "analysis": "评分要点：三个词都用对字、意思通顺。",
+          "difficulty": 4,
+          "knowledge_point": "青字族：清、请、情、晴、睛",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「日」加上「青」组成的字是（ ）。",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "日加青是晴，表示晴天。",
+          "difficulty": 3,
+          "knowledge_point": "青字族：清、请、情、晴、睛",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "清",
+            "请",
+            "晴",
+            "睛"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「一人一张口，下面长只手」猜的是哪个字？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "上面「合」（一人一口），下面「手」，合起来是「拿」。",
+          "difficulty": 4,
+          "knowledge_point": "猜字谜与合体字",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "拿",
+            "合",
+            "扣",
+            "把"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「日月」合起来是（ ）字。",
+          "answer": {
+            "value": "明"
+          },
+          "analysis": "日 + 月 = 明。",
+          "difficulty": 2,
+          "knowledge_point": "猜字谜与合体字",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "猜字谜时，谜面每个字都要用上才容易猜对。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "谜面每部分通常对应一个部件。",
+          "difficulty": 3,
+          "knowledge_point": "猜字谜与合体字",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "自己编一个字谜给同学猜，并写出答案。",
+          "answer": {
+            "value": "示例：一加一（打一字）——答案「王」"
+          },
+          "analysis": "评分要点：谜面与答案对应成立。",
+          "difficulty": 4,
+          "knowledge_point": "猜字谜与合体字",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第二单元 阅读",
+      "order_index": 2,
+      "summary": "吃水不忘挖井人、我多想去看看、一个接一个、四个太阳。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "读「遥远的北京城，有一座雄伟的天安门」时，应在哪里稍停？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「遥远的北京城」是一个意思完整的部分，后面稍停。",
+          "difficulty": 3,
+          "knowledge_point": "长句的朗读与停顿",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "「北京城」后",
+            "「遥远的」后",
+            "「有」后",
+            "不用停"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "读长句子时要一口气读完，不能停。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "按意思停顿，读起来才清楚。",
+          "difficulty": 2,
+          "knowledge_point": "长句的朗读与停顿",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "读长句时，停顿要按（ ）来停，不能随便停。",
+          "answer": {
+            "value": "意思"
+          },
+          "analysis": "停顿要跟意思走。",
+          "difficulty": 3,
+          "knowledge_point": "长句的朗读与停顿",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "读一读「我多想去看看遥远的北京城」，说说你会在哪里停一下。",
+          "answer": {
+            "value": "示例：在「看看」后稍停，再说「遥远的北京城」"
+          },
+          "analysis": "评分要点：停顿位置合理、说明有依据。",
+          "difficulty": 3,
+          "knowledge_point": "长句的朗读与停顿",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "读长句子时，在逗号处稍稍停顿，读起来更自然。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "逗号提示停顿，朗读时稍停更通顺。",
+          "difficulty": 2,
+          "knowledge_point": "长句的朗读与停顿",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「我多想去看看」表达了什么？",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "「多想」表示愿望很强。",
+          "difficulty": 2,
+          "knowledge_point": "心愿类句子的理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "不想去",
+            "很想去",
+            "已经去过",
+            "让别人去"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「我多想（ ）」可以接「到海边看看」。",
+          "answer": {
+            "value": "去"
+          },
+          "analysis": "「我多想去到海边看看」。",
+          "difficulty": 2,
+          "knowledge_point": "心愿类句子的理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「多想」和「想」表达的愿望一样强烈。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "「多想」程度更强。",
+          "difficulty": 3,
+          "knowledge_point": "心愿类句子的理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「我多想……」说一句你自己的心愿。",
+          "answer": {
+            "value": "示例：我多想快点长高，帮妈妈拿高处的东西"
+          },
+          "analysis": "评分要点：句式正确、心愿具体。",
+          "difficulty": 3,
+          "knowledge_point": "心愿类句子的理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「我多想去看看大海！」这句话表达的是（ ）。",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "「多想」表达强烈的盼望。",
+          "difficulty": 3,
+          "knowledge_point": "心愿类句子的理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "不喜欢的语气",
+            "盼望的心情",
+            "害怕的心情",
+            "生气的语气"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「正玩着，就听见大人叫我回家」中的「正……就」表示（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「正……就」表示紧接着发生。",
+          "difficulty": 3,
+          "knowledge_point": "时间顺序与心情变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "两件事同时或紧接着发生",
+            "先后隔很久",
+            "同一件事",
+            "没有关系"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "按顺序排：①睡觉 ②玩 ③回家。正确顺序是（ ）。",
+          "answer": {
+            "value": [
+              "③",
+              "②",
+              "①"
+            ]
+          },
+          "analysis": "先回家、再玩、后睡觉。",
+          "difficulty": 2,
+          "knowledge_point": "时间顺序与心情变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「一个接一个」写的是同一件事重复做。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "写的是一件事接着一件事地发生。",
+          "difficulty": 3,
+          "knowledge_point": "时间顺序与心情变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你在学校里「一件事接着一件事」的经历。",
+          "answer": {
+            "value": "示例：下课刚玩一会儿，上课铃就响了，又要回教室"
+          },
+          "analysis": "评分要点：有先后顺序、语句通顺。",
+          "difficulty": 4,
+          "knowledge_point": "时间顺序与心情变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「我画了个绿绿的太阳，送给夏天」中「绿绿的」写出了（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「绿绿的」是颜色词。",
+          "difficulty": 2,
+          "knowledge_point": "想象与句子仿写",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "颜色",
+            "声音",
+            "味道",
+            "数量"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "照样子写：我画了个红红的太阳，送给（ ）。",
+          "answer": {
+            "value": "冬天"
+          },
+          "analysis": "红太阳给人温暖，送给冬天合适。",
+          "difficulty": 3,
+          "knowledge_point": "想象与句子仿写",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "叠词「绿绿的」比「绿的」更像小孩子说话。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "叠词读起来更亲切、更有画面感。",
+          "difficulty": 3,
+          "knowledge_point": "想象与句子仿写",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "仿照「我画了个……的太阳，送给……」，写一句你自己的话。",
+          "answer": {
+            "value": "示例：我画了个金黄的太阳，送给秋天"
+          },
+          "analysis": "评分要点：句式一致、颜色与季节搭配合理。",
+          "difficulty": 4,
+          "knowledge_point": "想象与句子仿写",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第三单元 阅读",
+      "order_index": 3,
+      "summary": "小公鸡和小鸭子、树和喜鹊、怎么都快乐。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "小公鸡不会游泳时，小鸭子是怎么做的？",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "小鸭子让小公鸡抓住自己，帮它过河。",
+          "difficulty": 2,
+          "knowledge_point": "伙伴相处中的帮助与体谅",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "自己游走了",
+            "让小公鸡抓住自己",
+            "笑话小公鸡",
+            "不理它"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "朋友之间遇到困难应该互相帮助。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "互相帮助正是故事的道理。",
+          "difficulty": 2,
+          "knowledge_point": "伙伴相处中的帮助与体谅",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "小公鸡和小鸭子是好朋友，它们互相（ ）。",
+          "answer": {
+            "value": "帮助"
+          },
+          "analysis": "互相帮助才成为好朋友。",
+          "difficulty": 2,
+          "knowledge_point": "伙伴相处中的帮助与体谅",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你帮助过同学的一件事。",
+          "answer": {
+            "value": "示例：同桌忘带橡皮，我把自己的橡皮借给他"
+          },
+          "analysis": "评分要点：事情具体、体现帮助。",
+          "difficulty": 3,
+          "knowledge_point": "伙伴相处中的帮助与体谅",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面哪个是数量词？",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "「一棵」是数量词。",
+          "difficulty": 2,
+          "knowledge_point": "叠词的使用与数量词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "叽叽喳喳",
+            "孤零零",
+            "一棵树",
+            "高高兴兴"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "一（ ）树，一（ ）喜鹊。",
+          "answer": {
+            "value": [
+              "棵",
+              "只"
+            ]
+          },
+          "analysis": "树用量词「棵」，鸟用「只」。",
+          "difficulty": 2,
+          "knowledge_point": "叠词的使用与数量词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「叽叽喳喳」写的是鸟叫的声音。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "这个叠词模拟鸟叫声。",
+          "difficulty": 3,
+          "knowledge_point": "叠词的使用与数量词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出三个叠词词语。",
+          "answer": {
+            "value": "示例：高高兴兴、快快乐乐、干干净净"
+          },
+          "analysis": "评分要点：三个都是叠词且意思通顺。",
+          "difficulty": 3,
+          "knowledge_point": "叠词的使用与数量词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "「（ ）的月亮」可以填叠词「弯弯」，也可以写「圆圆的」。这里填一个合适的叠词。",
+          "answer": {
+            "value": "弯弯"
+          },
+          "analysis": "「弯弯的月亮」是常见的叠词说法。",
+          "difficulty": 3,
+          "knowledge_point": "叠词的使用与数量词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面哪句话最有礼貌？",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "有「请」和「好吗」，语气最客气。",
+          "difficulty": 2,
+          "knowledge_point": "有礼貌地提出请求",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "把橡皮给我。",
+            "请把橡皮借给我好吗？",
+            "快拿过来。",
+            "我要橡皮。"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "把「给我一本书」改成有礼貌的说法：请给我一本书，（ ）？",
+          "answer": {
+            "value": "好吗"
+          },
+          "analysis": "加「好吗」就成了商量的口气。",
+          "difficulty": 2,
+          "knowledge_point": "有礼貌地提出请求",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "请求别人帮忙时，说「好吗」比命令更好。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "商量的语气更容易被接受。",
+          "difficulty": 3,
+          "knowledge_point": "有礼貌地提出请求",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "向老师借一支铅笔，请写一句有礼貌的话。",
+          "answer": {
+            "value": "示例：老师，我的铅笔断了，请您借我一支铅笔好吗？"
+          },
+          "analysis": "评分要点：有称呼、有「请」、语气客气。",
+          "difficulty": 3,
+          "knowledge_point": "有礼貌地提出请求",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "想借同学的橡皮，最合适的说法是（ ）。",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "加上「请」和询问语气，最有礼貌。",
+          "difficulty": 2,
+          "knowledge_point": "有礼貌地提出请求",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "把橡皮给我！",
+            "请借我用一下橡皮，好吗？",
+            "你怎么这么小气。",
+            "我自己拿了。"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "判断自然段的主要依据是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "开头空两格是自然段的标志。",
+          "difficulty": 2,
+          "knowledge_point": "自然段的识别",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "开头空两格",
+            "句子长短",
+            "有没有标点",
+            "字数的多少"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "一个自然段的第一行要空（ ）格。",
+          "answer": {
+            "value": "两"
+          },
+          "analysis": "空两格。",
+          "difficulty": 2,
+          "knowledge_point": "自然段的识别",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "一个自然段里只能有一句话。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "一个自然段可以有好几句。",
+          "difficulty": 3,
+          "knowledge_point": "自然段的识别",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "读一段短文，数一数共有几个自然段，并说说你是怎么数的。",
+          "answer": {
+            "value": "按开头空两格处计数"
+          },
+          "analysis": "评分要点：数与依据一致。",
+          "difficulty": 4,
+          "knowledge_point": "自然段的识别",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第四单元 阅读",
+      "order_index": 4,
+      "summary": "古诗二首、荷叶圆圆、要下雨了。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「小娃撑小艇，偷采白莲回」写的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "小娃撑船偷采白莲，写孩子采莲。",
+          "difficulty": 2,
+          "knowledge_point": "古诗的朗读与画面想象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "一个小孩子采莲",
+            "老爷爷钓鱼",
+            "一群鸟飞",
+            "下雨场景"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「小荷才露尖尖角」下一句是「（ ）」",
+          "answer": {
+            "value": "早有蜻蜓立上头"
+          },
+          "analysis": "《小池》原句。",
+          "difficulty": 3,
+          "knowledge_point": "古诗的朗读与画面想象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "读古诗可以按自己的理解随便改字。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "古诗原文不能改字。",
+          "difficulty": 2,
+          "knowledge_point": "古诗的朗读与画面想象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说《小池》里你「看到」的画面。",
+          "answer": {
+            "value": "示例：小荷刚露出尖尖的角，一只蜻蜓已经立在上面"
+          },
+          "analysis": "评分要点：画面具体、与诗句相符。",
+          "difficulty": 4,
+          "knowledge_point": "古诗的朗读与画面想象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "「小荷才露尖尖角」写的是（ ）刚露出水面。",
+          "answer": {
+            "value": "荷叶"
+          },
+          "analysis": "诗句写荷叶初生，尖角冒出水面。",
+          "difficulty": 3,
+          "knowledge_point": "古诗的朗读与画面想象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「荷叶是小水珠的摇篮」把荷叶比作了（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "原句把荷叶比作摇篮。",
+          "difficulty": 2,
+          "knowledge_point": "荷叶圆圆里的比喻与叠词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "摇篮",
+            "小船",
+            "伞",
+            "床"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "荷叶圆圆的，绿绿的。这里的「圆圆的」「绿绿的」都是（ ）词。",
+          "answer": {
+            "value": "叠"
+          },
+          "analysis": "两个相同的字叠用，是叠词。",
+          "difficulty": 2,
+          "knowledge_point": "荷叶圆圆里的比喻与叠词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "小青蛙把荷叶当作歌台。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "课文里小青蛙在荷叶上唱歌，把荷叶当歌台。",
+          "difficulty": 3,
+          "knowledge_point": "荷叶圆圆里的比喻与叠词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "照「荷叶是……的……」写一句话。",
+          "answer": {
+            "value": "示例：荷叶是小鱼的凉棚"
+          },
+          "analysis": "评分要点：句式一致、比喻合理。",
+          "difficulty": 4,
+          "knowledge_point": "荷叶圆圆里的比喻与叠词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面哪种现象说明快要下雨？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "下雨前空气潮湿，虫子飞得低，燕子也跟着低飞。",
+          "difficulty": 2,
+          "knowledge_point": "下雨前的自然现象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "燕子飞得很低",
+            "太阳很大",
+            "树叶变黄",
+            "河水结冰"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "要下雨了，小蚂蚁忙着（ ）家。",
+          "answer": {
+            "value": "搬"
+          },
+          "analysis": "蚂蚁搬家是下雨前的现象。",
+          "difficulty": 2,
+          "knowledge_point": "下雨前的自然现象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "天气闷热也可能是要下雨的前兆。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "闷热潮湿常出现在下雨前。",
+          "difficulty": 3,
+          "knowledge_point": "下雨前的自然现象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你还知道哪些下雨前的现象。",
+          "answer": {
+            "value": "示例：乌云变多、风向变化、蜻蜓低飞"
+          },
+          "analysis": "评分要点：说出一种以上，符合常识。",
+          "difficulty": 3,
+          "knowledge_point": "下雨前的自然现象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "小鸟在天上（ ）",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "鸟用「飞」。",
+          "difficulty": 2,
+          "knowledge_point": "动词的准确使用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "游",
+            "飞",
+            "爬",
+            "跳"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "小鱼在水里（ ）。",
+          "answer": {
+            "value": "游"
+          },
+          "analysis": "鱼用「游」。",
+          "difficulty": 2,
+          "knowledge_point": "动词的准确使用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「青蛙在荷叶上跳」中的「跳」用得合适。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "青蛙善于跳。",
+          "difficulty": 2,
+          "knowledge_point": "动词的准确使用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "给「跑、走、爬」各配一个合适的对象。",
+          "answer": {
+            "value": "示例：马跑、人走、虫爬"
+          },
+          "analysis": "评分要点：搭配合理。",
+          "difficulty": 3,
+          "knowledge_point": "动词的准确使用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面搭配最合适的是（ ）。",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "鱼在水里用「游」。",
+          "difficulty": 2,
+          "knowledge_point": "动词的准确使用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "小鱼在水里跑",
+            "小鱼在水里游",
+            "小鱼在水里飞",
+            "小鱼在水里跳"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第五单元 识字",
+      "order_index": 5,
+      "summary": "动物儿歌、古对今、操场上、人之初。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「蜻蜓半空展翅飞」中「展翅」写的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「展翅」是动作。",
+          "difficulty": 2,
+          "knowledge_point": "动物儿歌的句式与动词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "动作",
+            "颜色",
+            "声音",
+            "数量"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "蝴蝶花间（ ）迷藏。",
+          "answer": {
+            "value": "捉"
+          },
+          "analysis": "课文原句「蝴蝶花间捉迷藏」。",
+          "difficulty": 2,
+          "knowledge_point": "动物儿歌的句式与动词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "儿歌里每个小动物做的事都不一样。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "不同动物有不同本领。",
+          "difficulty": 3,
+          "knowledge_point": "动物儿歌的句式与动词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "仿照儿歌句式，写一句「谁在哪里做什么」。",
+          "answer": {
+            "value": "示例：小鱼水里游得快"
+          },
+          "analysis": "评分要点：三部分齐全、动词合适。",
+          "difficulty": 4,
+          "knowledge_point": "动物儿歌的句式与动词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「古」的反义词是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "古与今相对。",
+          "difficulty": 2,
+          "knowledge_point": "对子与反义词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "今",
+            "老",
+            "远",
+            "大"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「圆对方」，圆对（ ）。",
+          "answer": {
+            "value": "方"
+          },
+          "analysis": "圆与方相对。",
+          "difficulty": 2,
+          "knowledge_point": "对子与反义词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「严寒」和「酷暑」是一对意思相反的词。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "一冷一热，意思相反。",
+          "difficulty": 3,
+          "knowledge_point": "对子与反义词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出三组反义词。",
+          "answer": {
+            "value": "示例：大—小、多—少、早—晚"
+          },
+          "analysis": "评分要点：三组都成立。",
+          "difficulty": 3,
+          "knowledge_point": "对子与反义词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "「古对（ ）」，横线上应填的反义词是（ ）。",
+          "answer": {
+            "value": "今"
+          },
+          "analysis": "古与今是一对反义词。",
+          "difficulty": 2,
+          "knowledge_point": "对子与反义词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面搭配正确的是（ ）",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "足球用「踢」。",
+          "difficulty": 2,
+          "knowledge_point": "操场活动的动词搭配",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "打足球",
+            "踢足球",
+            "踢绳",
+            "跳球"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "操场上有同学在（ ）绳。",
+          "answer": {
+            "value": "跳"
+          },
+          "analysis": "「跳」绳。",
+          "difficulty": 2,
+          "knowledge_point": "操场活动的动词搭配",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「拍皮球」中的「拍」用对了。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "皮球用手拍。",
+          "difficulty": 2,
+          "knowledge_point": "操场活动的动词搭配",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出三项你在操场上做的活动。",
+          "answer": {
+            "value": "示例：跳绳、跑步、拍球"
+          },
+          "analysis": "评分要点：三项都是操场活动、搭配正确。",
+          "difficulty": 3,
+          "knowledge_point": "操场活动的动词搭配",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「人之初，性本善」中「善」的意思是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "这里的「善」是善良。",
+          "difficulty": 3,
+          "knowledge_point": "人之初的诵读与道理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "善良",
+            "擅长",
+            "容易",
+            "好朋友"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「子不学，非所宜」说的是小孩子不学习是不（ ）的。",
+          "answer": {
+            "value": "应该"
+          },
+          "analysis": "「非所宜」即不应该。",
+          "difficulty": 3,
+          "knowledge_point": "人之初的诵读与道理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《人之初》告诉我们小时候要好好学习。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「幼不学，老何为」正是这个意思。",
+          "difficulty": 3,
+          "knowledge_point": "人之初的诵读与道理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你打算怎样做到「好好学习」。",
+          "answer": {
+            "value": "示例：每天按时完成作业，上课认真听讲"
+          },
+          "analysis": "评分要点：有具体做法。",
+          "difficulty": 4,
+          "knowledge_point": "人之初的诵读与道理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「人之初，性本善」的意思是：人刚出生时，本性是善良的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "这是《三字经》开头的意思。",
+          "difficulty": 3,
+          "knowledge_point": "人之初的诵读与道理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第六单元 阅读",
+      "order_index": 6,
+      "summary": "影子、比尾巴、青蛙写诗、雨点儿。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "影子常常在人的（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "太阳位置不同，影子会出现在人的前面或后面。",
+          "difficulty": 2,
+          "knowledge_point": "影子中的方位词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "前面或后面",
+            "头顶",
+            "云上",
+            "水里"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "太阳在左边，影子可能在右边，这句话用到了（ ）位词。",
+          "answer": {
+            "value": "方"
+          },
+          "analysis": "左右是方位词。",
+          "difficulty": 2,
+          "knowledge_point": "影子中的方位词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「影子是我的好朋友」把影子当作人来写。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "把影子比作好朋友，是拟人的写法。",
+          "difficulty": 3,
+          "knowledge_point": "影子中的方位词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「前、后、左、右」说一句你在教室里的话。",
+          "answer": {
+            "value": "示例：我的前面是黑板，后面是同学"
+          },
+          "analysis": "评分要点：方位词用对。",
+          "difficulty": 3,
+          "knowledge_point": "影子中的方位词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "「影子在（ ）」——太阳在左边时，影子就在右边，横线上填方位词。",
+          "answer": {
+            "value": "右边"
+          },
+          "analysis": "影子常出现在太阳相反的一侧。",
+          "difficulty": 3,
+          "knowledge_point": "影子中的方位词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「谁的尾巴长？」这句话末尾应该用什么标点？",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "这是问句，用问号。",
+          "difficulty": 2,
+          "knowledge_point": "问答句式的读与写",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "句号",
+            "问号",
+            "逗号",
+            "感叹号"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「谁的尾巴长？」答句可以是「（ ）的尾巴长」。",
+          "answer": {
+            "value": "猴子"
+          },
+          "analysis": "课文答句：猴子的尾巴长。",
+          "difficulty": 2,
+          "knowledge_point": "问答句式的读与写",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "问句和答句必须互相对应。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "答非所问就说不通。",
+          "difficulty": 3,
+          "knowledge_point": "问答句式的读与写",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写一组问答句，一问一答。",
+          "answer": {
+            "value": "示例：谁的耳朵长？兔子的耳朵长。"
+          },
+          "analysis": "评分要点：问答对应、标点正确。",
+          "difficulty": 3,
+          "knowledge_point": "问答句式的读与写",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「下雨了！」这句话用了什么标点？",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "表示惊喜或强烈语气用感叹号。",
+          "difficulty": 2,
+          "knowledge_point": "标点与语气",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "句号",
+            "问号",
+            "感叹号",
+            "逗号"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "《青蛙写诗》里，雨点儿说「我要给你当个小（ ）。」",
+          "answer": {
+            "value": "逗号"
+          },
+          "analysis": "雨点儿说自己要当小逗号。",
+          "difficulty": 3,
+          "knowledge_point": "标点与语气",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "逗号表示一句话说完了。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "逗号表示句中停顿，句号才表示说完。",
+          "difficulty": 3,
+          "knowledge_point": "标点与语气",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "把「今天真高兴」改写成带感叹号的句子，并说说语气的变化。",
+          "answer": {
+            "value": "今天真高兴！语气更强烈"
+          },
+          "analysis": "评分要点：标点改对、说出语气变化。",
+          "difficulty": 3,
+          "knowledge_point": "标点与语气",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "表示疑问的句子，句末应该用（ ）。",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "疑问句句末用问号。",
+          "difficulty": 2,
+          "knowledge_point": "标点与语气",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "句号",
+            "问号",
+            "逗号",
+            "顿号"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「一（ ）雨点」应填哪个量词？",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "雨点用「滴」。",
+          "difficulty": 2,
+          "knowledge_point": "雨点儿里的量词与变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "只",
+            "滴",
+            "棵",
+            "条"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "雨点儿落下后，有花有草的地方变得更（ ）了。",
+          "answer": {
+            "value": "美"
+          },
+          "analysis": "课文说花更红、草更绿，更美了。",
+          "difficulty": 3,
+          "knowledge_point": "雨点儿里的量词与变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「一片」可以修饰草地。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "一片草地是常见搭配。",
+          "difficulty": 2,
+          "knowledge_point": "雨点儿里的量词与变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说下雨以后你看到的变化。",
+          "answer": {
+            "value": "示例：地面湿了，树叶上挂着水珠，空气变凉"
+          },
+          "analysis": "评分要点：说出两种以上变化。",
+          "difficulty": 3,
+          "knowledge_point": "雨点儿里的量词与变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第七单元 阅读",
+      "order_index": 7,
+      "summary": "明天要远足、大还是小、项链。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「明天要远足」中「我」睡不着是因为（ ）",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "期待明天的活动，兴奋得睡不着。",
+          "difficulty": 2,
+          "knowledge_point": "心情与愿望的表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "害怕",
+            "太期待",
+            "生病了",
+            "天太热"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "因为明天要远足，我翻过来，（ ）过去，睡不着。",
+          "answer": {
+            "value": "翻"
+          },
+          "analysis": "课文原句是翻过来翻过去。",
+          "difficulty": 2,
+          "knowledge_point": "心情与愿望的表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "心里期待一件事时，有时会睡不着。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "期待会让人兴奋。",
+          "difficulty": 3,
+          "knowledge_point": "心情与愿望的表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你期待一件事时是什么样子。",
+          "answer": {
+            "value": "示例：我一直看日历，还反复问妈妈什么时候出发"
+          },
+          "analysis": "评分要点：写出具体表现。",
+          "difficulty": 3,
+          "knowledge_point": "心情与愿望的表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「大还是小」中「我」什么时候觉得自己很大？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "能自己做事情时，觉得自己长大了。",
+          "difficulty": 2,
+          "knowledge_point": "成长中的矛盾心理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "自己穿衣服的时候",
+            "睡觉的时候",
+            "哭的时候",
+            "吃饭的时候"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "我自己穿衣服的时候，我觉得自己很（ ）。",
+          "answer": {
+            "value": "大"
+          },
+          "analysis": "课文原句。",
+          "difficulty": 2,
+          "knowledge_point": "成长中的矛盾心理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "一个人不可能既觉得自己大又觉得自己小。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "不同场合感受会不同，这是正常的。",
+          "difficulty": 3,
+          "knowledge_point": "成长中的矛盾心理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你能自己做的一件事。",
+          "answer": {
+            "value": "示例：我自己整理书包"
+          },
+          "analysis": "评分要点：事情真实、与「长大」相关。",
+          "difficulty": 3,
+          "knowledge_point": "成长中的矛盾心理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「我既想试试，又有点害怕」写出了心里的矛盾。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "既想又怕，正是矛盾心理。",
+          "difficulty": 3,
+          "knowledge_point": "成长中的矛盾心理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「雪白的浪花」中的「雪白」写的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "雪白是颜色。",
+          "difficulty": 2,
+          "knowledge_point": "景物描写中的色彩与顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "颜色",
+            "声音",
+            "味道",
+            "大小"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「金黄的（ ）」是一个常见的短语，括号里可以填什么词？",
+          "answer": {
+            "value": "沙滩"
+          },
+          "analysis": "金黄的沙滩，写沙滩的颜色。",
+          "difficulty": 2,
+          "knowledge_point": "景物描写中的色彩与顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "写景时按顺序写，读者更容易看懂。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "有顺序才有层次。",
+          "difficulty": 3,
+          "knowledge_point": "景物描写中的色彩与顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用两个颜色词描写你在海边看到的景象。",
+          "answer": {
+            "value": "示例：蓝蓝的海水，白白的浪花"
+          },
+          "analysis": "评分要点：颜色词准确、画面清楚。",
+          "difficulty": 3,
+          "knowledge_point": "景物描写中的色彩与顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面哪句是完整的句子？",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "有「谁」也有「做什么」，是完整句子。",
+          "difficulty": 2,
+          "knowledge_point": "把句子写完整、写通顺",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "在操场跑步",
+            "小明在操场跑步。",
+            "跑步很快",
+            "操场上的"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "把「在教室里读书」补充完整：小明（ ）。",
+          "answer": {
+            "value": "在教室里读书"
+          },
+          "analysis": "补上「谁」句子就完整了。",
+          "difficulty": 2,
+          "knowledge_point": "把句子写完整、写通顺",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「花开了。」这句话是完整的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "有「什么 + 怎么样」。",
+          "difficulty": 3,
+          "knowledge_point": "把句子写完整、写通顺",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "把「唱歌」写成一个完整的句子。",
+          "answer": {
+            "value": "示例：小红在音乐教室唱歌。"
+          },
+          "analysis": "评分要点：有主语和动作，句子通顺。",
+          "difficulty": 3,
+          "knowledge_point": "把句子写完整、写通顺",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面句子写得最完整的是（ ）。",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "有主语、有动作、有地点，句子才完整。",
+          "difficulty": 3,
+          "knowledge_point": "把句子写完整、写通顺",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "小鸟。",
+            "小鸟在树上唱歌。",
+            "小鸟树上。",
+            "唱歌小鸟。"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第八单元 阅读",
+      "order_index": 8,
+      "summary": "雪地里的小画家、乌鸦喝水、小蜗牛。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "小鸡的脚印像什么？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文说小鸡画竹叶。",
+          "difficulty": 2,
+          "knowledge_point": "动物脚印与画面的对应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "竹叶",
+            "梅花",
+            "枫叶",
+            "月牙"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "小狗画（ ）花。",
+          "answer": {
+            "value": "梅"
+          },
+          "analysis": "课文原句：小狗画梅花。",
+          "difficulty": 2,
+          "knowledge_point": "动物脚印与画面的对应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "青蛙也来雪地里画画了。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "青蛙冬眠，没有参加。",
+          "difficulty": 3,
+          "knowledge_point": "动物脚印与画面的对应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你还知道哪种动物的脚印像什么。",
+          "answer": {
+            "value": "示例：小鸭的脚印像枫叶"
+          },
+          "analysis": "评分要点：动物与形状对应合理。",
+          "difficulty": 4,
+          "knowledge_point": "动物脚印与画面的对应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "乌鸦喝不到水，最后用什么办法喝到水？",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "放石子让水面升高，就喝到水了。",
+          "difficulty": 2,
+          "knowledge_point": "遇到困难的解决办法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "把瓶子推倒",
+            "往瓶里放小石子",
+            "等水变多",
+            "用嘴啄破瓶子"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "乌鸦把小石子（ ）进瓶子里，水面升高了。",
+          "answer": {
+            "value": "放"
+          },
+          "analysis": "课文用「放」。",
+          "difficulty": 2,
+          "knowledge_point": "遇到困难的解决办法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "乌鸦的办法说明遇到困难要动脑筋。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "想办法才能解决问题。",
+          "difficulty": 3,
+          "knowledge_point": "遇到困难的解决办法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你遇到困难时想出的一个办法。",
+          "answer": {
+            "value": "示例：书包带断了，我用绳子把书捆好带回家"
+          },
+          "analysis": "评分要点：困难与办法都清楚。",
+          "difficulty": 4,
+          "knowledge_point": "遇到困难的解决办法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「一（ ）草莓」应填哪个量词？",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "草莓用「颗」。",
+          "difficulty": 2,
+          "knowledge_point": "量词与季节变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "只",
+            "颗",
+            "片",
+            "条"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "秋天到了，树叶变（ ）了。",
+          "answer": {
+            "value": "黄"
+          },
+          "analysis": "秋叶变黄。",
+          "difficulty": 2,
+          "knowledge_point": "量词与季节变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "小蜗牛爬得慢，所以错过了季节的变化。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "爬得慢，来回一趟季节就变了。",
+          "difficulty": 3,
+          "knowledge_point": "量词与季节变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "按顺序说说一年四季的变化。",
+          "answer": {
+            "value": "示例：春天花开，夏天热，秋天叶黄，冬天雪白"
+          },
+          "analysis": "评分要点：四季顺序正确、各说一个特点。",
+          "difficulty": 3,
+          "knowledge_point": "量词与季节变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「一（ ）树叶」最合适的量词是（ ）。",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "树叶用「片」做量词。",
+          "difficulty": 2,
+          "knowledge_point": "量词与季节变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "只",
+            "片",
+            "条",
+            "把"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "复述故事时，合适的顺序词是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "顺序词才能讲清先后。",
+          "difficulty": 2,
+          "knowledge_point": "按顺序复述故事",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "先……接着……最后……",
+            "因为……所以……",
+            "虽然……但是……",
+            "不但……而且……"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "复述可以随便打乱顺序讲。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "打乱顺序别人听不懂。",
+          "difficulty": 3,
+          "knowledge_point": "按顺序复述故事",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "复述《乌鸦喝水》：「（ ），乌鸦口渴了；接着，它看见一个瓶子；最后，它喝到了水。」",
+          "answer": {
+            "value": "先"
+          },
+          "analysis": "用「先」开头交代起因。",
+          "difficulty": 2,
+          "knowledge_point": "按顺序复述故事",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用三句话复述《雪地里的小画家》。",
+          "answer": {
+            "value": "示例：先下了一场大雪；接着小动物们来到雪地上；最后它们用脚印画出了图画"
+          },
+          "analysis": "评分要点：三句按顺序、内容与课文一致。",
+          "difficulty": 4,
+          "knowledge_point": "按顺序复述故事",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "复述故事时，可以用「先……接着……最后……」把（ ）说清楚。",
+          "answer": {
+            "value": "顺序"
+          },
+          "analysis": "用连接词能说清先后顺序。",
+          "difficulty": 3,
+          "knowledge_point": "按顺序复述故事",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-12T08:10:46+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

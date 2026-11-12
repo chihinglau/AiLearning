@@ -1,0 +1,1314 @@
+{
+  "subject": "politics",
+  "grade": 1,
+  "version": "部编版",
+  "semester": "second",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第一单元 我有新面貌",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "发现自己的成长变化",
+      "parent": "第一单元 我有新面貌",
+      "order_index": 1,
+      "explanation": "个子高了、会做的事多了，都是成长的表现。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "养成生活好习惯",
+      "parent": "第一单元 我有新面貌",
+      "order_index": 2,
+      "explanation": "按时作息、讲究卫生、自己的事情自己做是好习惯。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "我的小目标",
+      "parent": "第一单元 我有新面貌",
+      "order_index": 3,
+      "explanation": "目标要小、能做到，完成后再定新目标。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "做错事要改正",
+      "parent": "第一单元 我有新面貌",
+      "order_index": 4,
+      "explanation": "做错事承认并改正，比掩盖更勇敢。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二单元 我们一起长大",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "和同学友好相处",
+      "parent": "第二单元 我们一起长大",
+      "order_index": 1,
+      "explanation": "会说「请」「谢谢」「对不起」，玩起来才开心。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "一起做事要合作",
+      "parent": "第二单元 我们一起长大",
+      "order_index": 2,
+      "explanation": "分工合作能把事情做得又快又好。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "班级规则一起守",
+      "parent": "第二单元 我们一起长大",
+      "order_index": 3,
+      "explanation": "上课举手、排队、轻声说话，是大家共同的约定。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "遇到困难要求助",
+      "parent": "第二单元 我们一起长大",
+      "order_index": 4,
+      "explanation": "自己解决不了时，及时找老师、家长帮忙。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第三单元 幸福一家人",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "感受家人的爱",
+      "parent": "第三单元 幸福一家人",
+      "order_index": 1,
+      "explanation": "做饭、接送、陪伴都是家人爱的表现。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "我帮家人做家务",
+      "parent": "第三单元 幸福一家人",
+      "order_index": 2,
+      "explanation": "力所能及的家务，如摆碗筷、收拾玩具，也是爱家人。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "家人之间互相体贴",
+      "parent": "第三单元 幸福一家人",
+      "order_index": 3,
+      "explanation": "说话有礼貌、体谅家人的辛苦，家庭更和睦。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "家庭安全要记牢",
+      "parent": "第三单元 幸福一家人",
+      "order_index": 4,
+      "explanation": "不玩插座、不给陌生人开门、记住家长电话。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第四单元 争做中国好儿童",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "爱祖国从身边做起",
+      "parent": "第四单元 争做中国好儿童",
+      "order_index": 1,
+      "explanation": "升国旗时站好、唱国歌、爱护公共设施，都是爱国表现。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "做诚实守信的孩子",
+      "parent": "第四单元 争做中国好儿童",
+      "order_index": 2,
+      "explanation": "不说谎、借东西按时还、答应的事要做到。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "爱护环境与公物",
+      "parent": "第四单元 争做中国好儿童",
+      "order_index": 3,
+      "explanation": "不乱扔垃圾、不损坏公物、节约用水用电。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "安全求助与自我保护",
+      "parent": "第四单元 争做中国好儿童",
+      "order_index": 4,
+      "explanation": "记住家长电话、遇到危险找警察或老师、不去危险地方。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一单元 我有新面貌",
+      "order_index": 1,
+      "summary": "发现自己的成长变化，养成好习惯。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "下面哪件事说明你长大了？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "能自己做以前不会做的事，就是成长。",
+          "difficulty": 2,
+          "knowledge_point": "发现自己的成长变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "会自己系鞋带",
+            "要妈妈喂饭",
+            "哭闹不上学",
+            "把书撕了"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "只有个子长高才算长大。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "会做事、懂道理也是长大。",
+          "difficulty": 3,
+          "knowledge_point": "发现自己的成长变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "我比以前（ ），会自己整理书包了。",
+          "answer": {
+            "value": "能干"
+          },
+          "analysis": "能自己整理书包，说明本领变多了。",
+          "difficulty": 3,
+          "knowledge_point": "发现自己的成长变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说一件你最近学会做的事，以及你是怎么学会的。",
+          "answer": {
+            "value": "示例：学会了系鞋带，是妈妈先示范，我自己练了几次"
+          },
+          "analysis": "评分要点：说清「学会了什么」和「怎么学」。",
+          "difficulty": 3,
+          "knowledge_point": "发现自己的成长变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面哪个是好习惯？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "睡前刷牙保护牙齿，是好习惯。",
+          "difficulty": 2,
+          "knowledge_point": "养成生活好习惯",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "睡前刷牙",
+            "边玩边吃",
+            "熬夜看动画",
+            "作业拖到早上写"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "自己的事情自己（ ），是好习惯。",
+          "answer": {
+            "value": "做"
+          },
+          "analysis": "自己的事自己做，才是好习惯。",
+          "difficulty": 2,
+          "knowledge_point": "养成生活好习惯",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "好习惯要坚持很多天才能养成。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "习惯靠天天坚持，不是一天就能养成。",
+          "difficulty": 3,
+          "knowledge_point": "养成生活好习惯",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你想养成的一个好习惯，以及打算怎么做。",
+          "answer": {
+            "value": "示例：每天睡前整理书包，定好闹钟提醒自己"
+          },
+          "analysis": "评分要点：习惯具体、有可做的方法。",
+          "difficulty": 3,
+          "knowledge_point": "养成生活好习惯",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些是好习惯？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A 按时睡觉 ✓ 作息规律；B 饭前洗手 ✓ 讲究卫生；C 随手乱扔垃圾 ✗ 破坏环境；D 每天坚持读书 ✓ 坚持学习。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "养成生活好习惯",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "按时睡觉",
+            "饭前洗手",
+            "随手乱扔垃圾",
+            "每天坚持读书"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面哪个目标最适合一年级同学？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "目标要小、能做到，一周背 5 首比较合适。",
+          "difficulty": 2,
+          "knowledge_point": "我的小目标",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "一周内背会 5 首古诗",
+            "一天读完十本书",
+            "一个月不睡觉",
+            "考第一名才吃饭"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "定目标要（ ），不能太大。",
+          "answer": {
+            "value": "合适"
+          },
+          "analysis": "目标合适才容易完成。",
+          "difficulty": 3,
+          "knowledge_point": "我的小目标",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "目标定得越大越好。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "目标太大反而做不到，容易放弃。",
+          "difficulty": 3,
+          "knowledge_point": "我的小目标",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "给自己定一个本周能做到的小目标。",
+          "answer": {
+            "value": "示例：这周每天按时完成作业"
+          },
+          "analysis": "评分要点：目标具体、可检查完成。",
+          "difficulty": 3,
+          "knowledge_point": "我的小目标",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "不小心打碎花瓶，最合适的做法是（ ）",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "承认并道歉，才是负责任的做法。",
+          "difficulty": 2,
+          "knowledge_point": "做错事要改正",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "藏起来不承认",
+            "告诉大人，说对不起",
+            "怪别人",
+            "赶紧跑开"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "做错了事要主动（ ），并改正。",
+          "answer": {
+            "value": "承认"
+          },
+          "analysis": "承认错误是改正的第一步。",
+          "difficulty": 2,
+          "knowledge_point": "做错事要改正",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "犯错后改正了，就不用再提醒自己。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "还要记住教训，避免再犯。",
+          "difficulty": 3,
+          "knowledge_point": "做错事要改正",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你做错一件事后是怎么改正的。",
+          "answer": {
+            "value": "示例：把同学的本子弄湿了，我道歉并用纸巾帮他擦干"
+          },
+          "analysis": "评分要点：说清错误、做法和结果。",
+          "difficulty": 4,
+          "knowledge_point": "做错事要改正",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "做错事伤了别人，要说一声（ ）。",
+          "answer": {
+            "value": "对不起"
+          },
+          "analysis": "道歉用「对不起」。",
+          "difficulty": 2,
+          "knowledge_point": "做错事要改正",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第二单元 我们一起长大",
+      "order_index": 2,
+      "summary": "和同学一起玩、一起做事、一起守规则。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "同学想玩你的球，你最合适的回答是（ ）",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "愿意分享又能约定归还，最友好。",
+          "difficulty": 2,
+          "knowledge_point": "和同学友好相处",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "不行，走开",
+            "给你玩一会儿，等下还我",
+            "抢了就跑",
+            "不理他"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "别人帮助了你，要说（ ）。",
+          "answer": {
+            "value": "谢谢"
+          },
+          "analysis": "受到帮助要说谢谢。",
+          "difficulty": 2,
+          "knowledge_point": "和同学友好相处",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "和同学吵架时，先冷静下来再说，是好办法。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "冷静下来才能讲清道理。",
+          "difficulty": 3,
+          "knowledge_point": "和同学友好相处",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你和同学闹别扭时是怎么和好的。",
+          "answer": {
+            "value": "示例：我先说了对不起，我们又一起玩了"
+          },
+          "analysis": "评分要点：有具体做法、结果友好。",
+          "difficulty": 3,
+          "knowledge_point": "和同学友好相处",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "四个人一起布置教室，最好的做法是（ ）",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "分工合作效率高。",
+          "difficulty": 2,
+          "knowledge_point": "一起做事要合作",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "一个人全干",
+            "先分工，各自做一部分",
+            "都站着看",
+            "互相推给别人"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "合作时要（ ）好各自做的事，才不会乱。",
+          "answer": {
+            "value": "分"
+          },
+          "analysis": "先分工再合作。",
+          "difficulty": 3,
+          "knowledge_point": "一起做事要合作",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "合作时别人做得慢，就该替他做完。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "可以帮忙，但也要让对方学着做。",
+          "difficulty": 4,
+          "knowledge_point": "一起做事要合作",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说一件你和同学合作完成的事，你们是怎么分工的。",
+          "answer": {
+            "value": "示例：一起出黑板报，我写字，同学画画"
+          },
+          "analysis": "评分要点：分工清楚、结果完成。",
+          "difficulty": 3,
+          "knowledge_point": "一起做事要合作",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "和同学合作做事时，应该怎样做？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A 先分好工 ✓；B 互相帮忙 ✓；C 只顾自己做完 ✗ 不是合作；D 做完一起检查 ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "一起做事要合作",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "先分好工",
+            "互相帮忙",
+            "只顾自己做完",
+            "做完一起检查"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "上课想发言时应该（ ）",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "举手经老师同意再发言，是课堂规则。",
+          "difficulty": 2,
+          "knowledge_point": "班级规则一起守",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "直接大喊",
+            "先举手，等老师同意",
+            "站起来就走",
+            "拍桌子"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "在走廊里要（ ）说话，不打扰别人。",
+          "answer": {
+            "value": "轻声"
+          },
+          "analysis": "轻声说话是公共场合规则。",
+          "difficulty": 2,
+          "knowledge_point": "班级规则一起守",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "班级规则只管别人，不管自己。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "规则人人遵守。",
+          "difficulty": 3,
+          "knowledge_point": "班级规则一起守",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出两条你们班要遵守的规则。",
+          "answer": {
+            "value": "示例：上课不随便说话；排队不插队"
+          },
+          "analysis": "评分要点：两条都是真实班级规则。",
+          "difficulty": 3,
+          "knowledge_point": "班级规则一起守",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "上课想发言，要先（ ），等老师同意。",
+          "answer": {
+            "value": "举手"
+          },
+          "analysis": "举手是课堂发言的规则。",
+          "difficulty": 2,
+          "knowledge_point": "班级规则一起守",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "在学校找不到教室，应该（ ）",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "求助是最快也最安全的办法。",
+          "difficulty": 2,
+          "knowledge_point": "遇到困难要求助",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "自己乱走",
+            "问老师或同学",
+            "哭着想回家",
+            "躲在角落"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "遇到自己解决不了的困难，要及时（ ）。",
+          "answer": {
+            "value": "求助"
+          },
+          "analysis": "求助不是胆小，是聪明。",
+          "difficulty": 3,
+          "knowledge_point": "遇到困难要求助",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "求助说明自己没本事。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "会求助说明知道怎样解决问题。",
+          "difficulty": 3,
+          "knowledge_point": "遇到困难要求助",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你遇到困难时向谁求助过。",
+          "answer": {
+            "value": "示例：作业不会做，我向同桌和老师请教"
+          },
+          "analysis": "评分要点：对象明确、经过清楚。",
+          "difficulty": 3,
+          "knowledge_point": "遇到困难要求助",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第三单元 幸福一家人",
+      "order_index": 3,
+      "summary": "感受家人的爱，学着体贴家人。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "下面哪件事体现家人的爱？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "接送照顾正是爱的表现。",
+          "difficulty": 2,
+          "knowledge_point": "感受家人的爱",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "每天接送上学",
+            "让你自己走夜路",
+            "不管你吃饭",
+            "从不和你说话"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "家人为我们做了很多事，我们要懂得（ ）。",
+          "answer": {
+            "value": "感恩"
+          },
+          "analysis": "懂得感恩才会珍惜。",
+          "difficulty": 2,
+          "knowledge_point": "感受家人的爱",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "家人照顾我是应该的，不用说谢谢。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "对家人的付出也要表达感谢。",
+          "difficulty": 3,
+          "knowledge_point": "感受家人的爱",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说一件家人为你做的事，以及你想怎么感谢他。",
+          "answer": {
+            "value": "示例：奶奶每天给我做早饭，我想帮她洗碗"
+          },
+          "analysis": "评分要点：事件具体 + 感谢方式可行。",
+          "difficulty": 3,
+          "knowledge_point": "感受家人的爱",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "家人为我们做了很多事，我们要说一声（ ）。",
+          "answer": {
+            "value": "谢谢"
+          },
+          "analysis": "对家人的付出要表达感谢。",
+          "difficulty": 2,
+          "knowledge_point": "感受家人的爱",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面哪项家务适合一年级同学做？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "力所能及的家务才安全。",
+          "difficulty": 2,
+          "knowledge_point": "我帮家人做家务",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "擦桌子、摆碗筷",
+            "拆装电器",
+            "搬重家具",
+            "修理水管"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "帮家人做家务，要选自己（ ）的事。",
+          "answer": {
+            "value": "能做"
+          },
+          "analysis": "做自己能做的事，才安全。",
+          "difficulty": 3,
+          "knowledge_point": "我帮家人做家务",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "做家务是大人的事，小孩不用管。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "孩子也能做力所能及的家务。",
+          "difficulty": 3,
+          "knowledge_point": "我帮家人做家务",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你每天帮家里做的一件小事。",
+          "answer": {
+            "value": "示例：每天把鞋子摆整齐、把碗筷放到桌上"
+          },
+          "analysis": "评分要点：事情真实、力所能及。",
+          "difficulty": 3,
+          "knowledge_point": "我帮家人做家务",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面哪项家务对一年级同学来说是安全的？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "擦桌子是力所能及又安全的家务。",
+          "difficulty": 2,
+          "knowledge_point": "我帮家人做家务",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "擦桌子",
+            "插拔电源插头",
+            "爬高擦窗户",
+            "拿菜刀切菜"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "妈妈下班很累，你最应该（ ）",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "体谅家人的辛苦，先让家人休息。",
+          "difficulty": 3,
+          "knowledge_point": "家人之间互相体贴",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "缠着她陪我玩",
+            "让她先休息，我安静一点",
+            "大声看电视",
+            "让她马上做饭"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "家人累了，我可以帮他们（ ）一点。",
+          "answer": {
+            "value": "分担"
+          },
+          "analysis": "分担家务就是体贴。",
+          "difficulty": 3,
+          "knowledge_point": "家人之间互相体贴",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "和家人说话也要用礼貌用语。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "对家人同样要说「请」「谢谢」。",
+          "difficulty": 2,
+          "knowledge_point": "家人之间互相体贴",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你怎样表达对家人的关心。",
+          "answer": {
+            "value": "示例：爸爸累了，我给他倒水，还帮他拿拖鞋"
+          },
+          "analysis": "评分要点：行为具体、体现关心。",
+          "difficulty": 4,
+          "knowledge_point": "家人之间互相体贴",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面哪种做法是安全的？",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "不玩火和插座才能避免受伤。",
+          "difficulty": 2,
+          "knowledge_point": "家庭安全要记牢",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "用手指抠插座",
+            "不玩火和插座",
+            "自己开煤气灶",
+            "爬阳台栏杆"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "陌生人敲门说「我是你爸爸的朋友」，你应该（ ）。",
+          "answer": {
+            "value": "不开门"
+          },
+          "analysis": "不轻信陌生人，先告诉家长。",
+          "difficulty": 3,
+          "knowledge_point": "家庭安全要记牢",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "记住爸爸妈妈的电话号码很有用。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "遇到紧急情况能及时联系家人。",
+          "difficulty": 2,
+          "knowledge_point": "家庭安全要记牢",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出两条你在家要注意的安全规则。",
+          "answer": {
+            "value": "示例：不玩插座；不给陌生人开门"
+          },
+          "analysis": "评分要点：两条都是真实可做的安全规则。",
+          "difficulty": 3,
+          "knowledge_point": "家庭安全要记牢",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第四单元 争做中国好儿童",
+      "order_index": 4,
+      "summary": "爱国、诚实、爱护环境、注意安全。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "升国旗时最合适的做法是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "升旗要庄重，站好、行礼、唱国歌。",
+          "difficulty": 2,
+          "knowledge_point": "爱祖国从身边做起",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "站直、行注目礼、认真唱国歌",
+            "边说笑边玩",
+            "坐着不动",
+            "背对国旗"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "升国旗、唱国歌时要（ ）肃立。",
+          "answer": {
+            "value": "面向国旗"
+          },
+          "analysis": "面向国旗肃立才庄重。",
+          "difficulty": 3,
+          "knowledge_point": "爱祖国从身边做起",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "爱国是大人的事，和小朋友无关。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "从小爱护公物、遵守规则也是爱国。",
+          "difficulty": 3,
+          "knowledge_point": "爱祖国从身边做起",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你能做的两件爱国小事。",
+          "answer": {
+            "value": "示例：认真参加升旗仪式；爱护校园里的国旗和公物"
+          },
+          "analysis": "评分要点：事情具体、可做。",
+          "difficulty": 3,
+          "knowledge_point": "爱祖国从身边做起",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "借了同学的书，最合适的做法是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "借东西按时归还，是守信。",
+          "difficulty": 2,
+          "knowledge_point": "做诚实守信的孩子",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "看完按时还，并说谢谢",
+            "不还了",
+            "把书弄脏",
+            "说是自己的"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "答应别人的事要（ ）。",
+          "answer": {
+            "value": "做到"
+          },
+          "analysis": "答应的事做到，才叫守信。",
+          "difficulty": 2,
+          "knowledge_point": "做诚实守信的孩子",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "说一次小谎没关系。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "小谎也会失去别人信任。",
+          "difficulty": 3,
+          "knowledge_point": "做诚实守信的孩子",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你答应过别人并做到的一件事。",
+          "answer": {
+            "value": "示例：答应妈妈放学先写作业，我做到了"
+          },
+          "analysis": "评分要点：承诺与做到都说清。",
+          "difficulty": 3,
+          "knowledge_point": "做诚实守信的孩子",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些做法是诚实守信？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A 按时归还 ✓；B 说到做到 ✓；C 不归还 ✗ 是不守信；D 主动承认 ✓ 是诚实。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "做诚实守信的孩子",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "借东西按时归还",
+            "答应的事努力做到",
+            "拿了别人的东西不还",
+            "做错事主动承认"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "看到地上有纸屑，最合适的做法是（ ）",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "捡起纸屑扔进垃圾桶，是爱护环境。",
+          "difficulty": 2,
+          "knowledge_point": "爱护环境与公物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "踢到一边",
+            "捡起来扔进垃圾桶",
+            "装作没看见",
+            "撕得更碎"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "洗完手要（ ）水龙头，节约用水。",
+          "answer": {
+            "value": "关好"
+          },
+          "analysis": "关好水龙头才不会浪费水。",
+          "difficulty": 2,
+          "knowledge_point": "爱护环境与公物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "在墙上乱画是爱护公物的表现。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "乱画损坏公物，是不文明行为。",
+          "difficulty": 3,
+          "knowledge_point": "爱护环境与公物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你在校园里做过的两件爱护环境的事。",
+          "answer": {
+            "value": "示例：把垃圾分类扔；看到纸张捡起来"
+          },
+          "analysis": "评分要点：事情真实、行为正确。",
+          "difficulty": 3,
+          "knowledge_point": "爱护环境与公物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "在马路上遇到危险，应该找谁帮忙？",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "遇险要求助警察等可信人员。",
+          "difficulty": 2,
+          "knowledge_point": "安全求助与自我保护",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "陌生人",
+            "警察或穿制服的工作人员",
+            "自己乱跑",
+            "不理睬"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "和家人在商场走散，可以找（ ）帮忙打电话。",
+          "answer": {
+            "value": "工作人员"
+          },
+          "analysis": "商场工作人员可以帮忙联系家人。",
+          "difficulty": 3,
+          "knowledge_point": "安全求助与自我保护",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "陌生人给的食物可以随便吃。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "不随便接受陌生人的食物，保证安全。",
+          "difficulty": 3,
+          "knowledge_point": "安全求助与自我保护",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出两条自我保护的安全做法。",
+          "answer": {
+            "value": "示例：记住家长电话；不跟陌生人走"
+          },
+          "analysis": "评分要点：两条具体可做。",
+          "difficulty": 3,
+          "knowledge_point": "安全求助与自我保护",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "独自在家，有人敲门说是来修水管的，你应该（ ）。",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "不轻信陌生人，先联系家长确认。",
+          "difficulty": 3,
+          "knowledge_point": "安全求助与自我保护",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "马上开门",
+            "先打电话问家长",
+            "让他进屋等",
+            "告诉他家里没人"
+          ]
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-12T08:10:46+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

@@ -1,0 +1,4296 @@
+{
+  "subject": "math",
+  "grade": 6,
+  "version": "北师大版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第一单元 分数除法",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "倒数的认识与求法",
+      "parent": "第一单元 分数除法",
+      "order_index": 1,
+      "explanation": "乘积是1的两数互为倒数，分数倒数调换分子分母，1的倒数是1，0没有倒数。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "分数除以整数的计算",
+      "parent": "第一单元 分数除法",
+      "order_index": 2,
+      "explanation": "分数除以整数，等于乘这个整数的倒数；分子能整除时也可直接把分子除以整数。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "一个数除以分数的计算",
+      "parent": "第一单元 分数除法",
+      "order_index": 3,
+      "explanation": "除以一个不为零的分数，等于乘这个分数的倒数，再按分数乘法约分计算。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "用方程解分数除法问题",
+      "parent": "第一单元 分数除法",
+      "order_index": 4,
+      "explanation": "已知一个数的几分之几是多少，设这个数为x，按等量关系列方程再求解。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二单元 圆",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "圆规画圆与半径直径关系",
+      "parent": "第二单元 圆",
+      "order_index": 1,
+      "explanation": "圆心定位置，半径定大小；同一圆里直径是半径的2倍，圆有无数条对称轴。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "圆周率与圆的周长计算",
+      "parent": "第二单元 圆",
+      "order_index": 2,
+      "explanation": "圆周长除以直径的商叫圆周率，约取3.14；周长等于圆周率乘直径，也等于二倍圆周率乘半径。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "圆的面积公式与推导",
+      "parent": "第二单元 圆",
+      "order_index": 3,
+      "explanation": "把圆等分拼成近似长方形，长是周长的一半，宽是半径，面积等于圆周率乘半径的平方。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "半圆与圆环的面积",
+      "parent": "第二单元 圆",
+      "order_index": 4,
+      "explanation": "半圆面积是整圆的一半，圆环面积用外圆面积减去内圆面积，计算时先分别求半径。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第三单元 用字母表示（二）",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "含字母式子的合并与化简",
+      "parent": "第三单元 用字母表示（二）",
+      "order_index": 1,
+      "explanation": "含相同字母的项可以合并，如3个a加2个a得5个a，化简时只把系数相加减，字母部分不变。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "等量关系与方程的意义",
+      "parent": "第三单元 用字母表示（二）",
+      "order_index": 2,
+      "explanation": "含有未知数的等式叫方程，列方程先找题目里的等量关系，如总价等于单价乘数量。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "等式的性质与解方程",
+      "parent": "第三单元 用字母表示（二）",
+      "order_index": 3,
+      "explanation": "等式两边同时加减同一个数或同时乘除以同一个不为零的数，等式仍成立，据此求未知数。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "用方程解决实际问题",
+      "parent": "第三单元 用字母表示（二）",
+      "order_index": 4,
+      "explanation": "先设未知数，再根据等量关系列方程，解出后要代回情境检验是否合乎实际。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "综合实践 制订节水方案",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "用水量的测量与记录",
+      "parent": "综合实践 制订节水方案",
+      "order_index": 1,
+      "explanation": "读水表用月末读数减月初读数得本期用量，家庭日用水常用升作单位，记录要定时连续。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "滴水速率与时间换算",
+      "parent": "综合实践 制订节水方案",
+      "order_index": 2,
+      "explanation": "先测若干分钟的滴水量再除以分钟数得每分速率，乘60得每小时，乘1440得每昼夜。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "节水数据的整理与比较",
+      "parent": "综合实践 制订节水方案",
+      "order_index": 3,
+      "explanation": "多户数据求平均数代表一般水平，样本要足够；省水量按每次省量乘次数再乘天数推算。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "节水方案的效果估算",
+      "parent": "综合实践 制订节水方案",
+      "order_index": 4,
+      "explanation": "按分率求省水量用乘法，改器具可算每次差额再乘次数，长期效果按月份数累加。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第四单元 分数的应用",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "求一个数的几分之几是多少",
+      "parent": "第四单元 分数的应用",
+      "order_index": 1,
+      "explanation": "求一个数的几分之几用乘法，用这个数除以分母得一份，再乘分子得所求部分。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "比一个数多几分之几的数",
+      "parent": "第四单元 分数的应用",
+      "order_index": 2,
+      "explanation": "先算多出的分率对应量，再加到原数上；少几分之几则先算减少量再相减。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "已知部分求整体",
+      "parent": "第四单元 分数的应用",
+      "order_index": 3,
+      "explanation": "已知一个数的几分之几是多少，用部分量除以对应分率，或设x列方程求整体。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "分数混合运算的顺序",
+      "parent": "第四单元 分数的应用",
+      "order_index": 4,
+      "explanation": "分数混合运算先乘除后加减，有括号先算括号内，整数运算律在分数范围仍可简算。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第五单元 比的认识",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "比的意义与读写",
+      "parent": "第五单元 比的认识",
+      "order_index": 1,
+      "explanation": "两个数相除又叫两数的比，前项除以后项，后项不能为0；比赛记分只记分不表示相除。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "比值与比、除法、分数的关系",
+      "parent": "第五单元 比的认识",
+      "order_index": 2,
+      "explanation": "比值是前项除以后项所得的商，可写成分数或小数；比的前项相当于被除数或分子。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "比的基本性质与化简比",
+      "parent": "第五单元 比的认识",
+      "order_index": 3,
+      "explanation": "比的前后项同乘或同除以同一个不为零的数，比值不变；化简比结果仍是一个比。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "按比分配问题",
+      "parent": "第五单元 比的认识",
+      "order_index": 4,
+      "explanation": "先求总份数，再用总量除以总份数得每份数，最后按各占份数分别乘出各部分量。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第六单元 确定位置",
+      "order_index": 7
+    },
+    {
+      "node_type": "point",
+      "name": "用方向与角度描述位置",
+      "parent": "第六单元 确定位置",
+      "order_index": 1,
+      "explanation": "确定位置要说清观测点、偏向角度和距离；北偏东30度与东偏北60度指向同一方向。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "用方向和距离确定位置",
+      "parent": "第六单元 确定位置",
+      "order_index": 2,
+      "explanation": "以观测点为中心，按给定的偏向角度画射线，再按距离和单位长度定出物体的点。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "描述简单路线图",
+      "parent": "第六单元 确定位置",
+      "order_index": 3,
+      "explanation": "按行走顺序逐段说清方向和距离，方向改变处是拐弯点；原路返回时各段方向相反距离不变。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "观测点变化与位置相对性",
+      "parent": "第六单元 确定位置",
+      "order_index": 4,
+      "explanation": "互换观测点后方向完全相反，角度和距离保持不变，如北偏东改作南偏西。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "数学好玩 五子棋",
+      "order_index": 8
+    },
+    {
+      "node_type": "point",
+      "name": "棋盘交叉点的数对表示",
+      "parent": "数学好玩 五子棋",
+      "order_index": 1,
+      "explanation": "棋盘横线与纵线相交处为落子点，先读横向序号再读纵向序号，写成数对定位。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "连五方向的横竖斜判定",
+      "parent": "数学好玩 五子棋",
+      "order_index": 2,
+      "explanation": "同色五子沿横向、纵向或两条斜向连成一线即胜，判定时逐方向数连续子数。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "两两对局的场次计算",
+      "parent": "数学好玩 五子棋",
+      "order_index": 3,
+      "explanation": "n名棋手每两人下一局，把每人与其后各人的对局依次相加，得到总场次。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "棋盘交叉点总数计算",
+      "parent": "数学好玩 五子棋",
+      "order_index": 4,
+      "explanation": "标准棋盘横纵各十五路，交叉点按每行十五个乘十五行计算，与小格数不同。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第七单元 百分数的认识与应用（一）",
+      "order_index": 9
+    },
+    {
+      "node_type": "point",
+      "name": "百分数的意义与读写",
+      "parent": "第七单元 百分数的认识与应用（一）",
+      "order_index": 1,
+      "explanation": "百分数表示一个数是另一个数的百分之几，分母固定为一百，不带单位名称。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "百分数与小数互化",
+      "parent": "第七单元 百分数的认识与应用（一）",
+      "order_index": 2,
+      "explanation": "百分数化小数把小数点左移两位去号；小数化百分数右移两位添百分号。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "求一个数是另一数的百分之几",
+      "parent": "第七单元 百分数的认识与应用（一）",
+      "order_index": 3,
+      "explanation": "用比较量除以标准量得到小数，再改写成百分数，标准量作除数。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "合格率与出勤率计算",
+      "parent": "第七单元 百分数的认识与应用（一）",
+      "order_index": 4,
+      "explanation": "合格率是合格数占抽检总数的百分比，出勤率是出勤人数占应到人数的百分比。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第八单元 观察物体（二）",
+      "order_index": 10
+    },
+    {
+      "node_type": "point",
+      "name": "从正面看几何体的形状",
+      "parent": "第八单元 观察物体（二）",
+      "order_index": 1,
+      "explanation": "从正面看时把前后方向压平，只保留每列最高的层数，画出平面形状图。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "从左面与上面看形状图",
+      "parent": "第八单元 观察物体（二）",
+      "order_index": 2,
+      "explanation": "从左面看压缩左右方向，从上面看只记占地位置，二者反映不同方向的排布。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "由三视图确定小正方体个数",
+      "parent": "第八单元 观察物体（二）",
+      "order_index": 3,
+      "explanation": "结合正面图与上面图，在每个占地格上标出可能的层数，再求最少或最多块数。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "观察范围与盲区判断",
+      "parent": "第八单元 观察物体（二）",
+      "order_index": 4,
+      "explanation": "视线沿直线传播，障碍物后形成看不到区域；站得越高或离窗越近看到越多。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第九单元 数据的表示和分析（三）",
+      "order_index": 11
+    },
+    {
+      "node_type": "point",
+      "name": "扇形统计图中部分占整体的百分比",
+      "parent": "第九单元 数据的表示和分析（三）",
+      "order_index": 1,
+      "explanation": "整个圆表示总数百分之百，各扇形大小对应该部分占总数的百分比。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "由圆心角求扇形所占比",
+      "parent": "第九单元 数据的表示和分析（三）",
+      "order_index": 2,
+      "explanation": "扇形圆心角除以三百六十度得到占比；用占比乘三百六十度可求圆心角。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "条形折线扇形图的选用",
+      "parent": "第九单元 数据的表示和分析（三）",
+      "order_index": 3,
+      "explanation": "比数量多少用条形图，看变化趋势用折线图，看部分占整体比例用扇形图。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "平均数与数据波动比较",
+      "parent": "第九单元 数据的表示和分析（三）",
+      "order_index": 4,
+      "explanation": "平均数是总数除以份数，代表一般水平；极差反映一组数据的波动大小。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "综合实践 制订营养食谱",
+      "order_index": 12
+    },
+    {
+      "node_type": "point",
+      "name": "食物营养成分表的百分数读取",
+      "parent": "综合实践 制订营养食谱",
+      "order_index": 1,
+      "explanation": "营养标签以每百克或每份为整体给出各成分占比，读数时先确认整体量。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "按热量比搭配主副食",
+      "parent": "综合实践 制订营养食谱",
+      "order_index": 2,
+      "explanation": "按主食与副食的热量比分配总量，先求总份数，再按各份所占份额计算。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "一日三餐热量分配百分比",
+      "parent": "综合实践 制订营养食谱",
+      "order_index": 3,
+      "explanation": "常见建议早餐三成、午餐四成、晚餐三成，据此把一日总热量分配到各餐。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "用扇形图表示膳食结构",
+      "parent": "综合实践 制订营养食谱",
+      "order_index": 4,
+      "explanation": "把各类食物热量占比换算成圆心角，在同一圆中画出对应扇形形成结构图。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "总复习",
+      "order_index": 13
+    },
+    {
+      "node_type": "point",
+      "name": "分数除法与比的综合复习",
+      "parent": "总复习",
+      "order_index": 1,
+      "explanation": "除以一个分数等于乘它的倒数；比可看作除法，化简时前后项同除以公因数。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "圆的周长面积综合复习",
+      "parent": "总复习",
+      "order_index": 2,
+      "explanation": "周长用直径乘圆周率，面积用半径平方乘圆周率；半圆面积是整圆的一半。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "百分数与分数应用题复习",
+      "parent": "总复习",
+      "order_index": 3,
+      "explanation": "求一个数的几分之几或百分之几用乘法；已知部分求整体用除法，先找单位一。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "统计图与位置的综合复习",
+      "parent": "总复习",
+      "order_index": 4,
+      "explanation": "用数对确定位置先横后纵；看扇形图先认整体，再按百分比比较或求部分量。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一单元 分数除法",
+      "order_index": 1,
+      "summary": "理解倒数，掌握分数除以整数与除以分数，会用方程解决求整体问题。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "3/7的倒数是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "调换分子分母得7/3；B是原数，C取负，D乱加，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "倒数的认识与求法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "7/3",
+            "3/7",
+            "-3/7",
+            "7/10"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "5的倒数写作（  ）",
+          "answer": {
+            "value": "1/5"
+          },
+          "analysis": "5看作5/1，调换后为五分之一。",
+          "difficulty": 2,
+          "knowledge_point": "倒数的认识与求法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "0.25与4互为倒数。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "0.25乘4得1，乘积为1即互为倒数，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "倒数的认识与求法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面哪组数互为倒数（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "第一组乘积为1；B含0，C、D积不为1，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "倒数的认识与求法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "2/3和3/2",
+            "0和1",
+            "1/2和1/4",
+            "5和5"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "一根绳用去3/4后剩6米，原长（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "剩四分之一对应6米，6乘4得24；B误当用去量，C多乘，D误乘，所以选A。",
+          "difficulty": 3,
+          "knowledge_point": "倒数的认识与求法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "24米",
+            "8米",
+            "18米",
+            "4.5米"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "4/5除以2的结果是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "分子4除以2得2；B误乘，C取倒，D乱算，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "分数除以整数的计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "2/5",
+            "8/5",
+            "5/2",
+            "1/10"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "把6/7米绳平均剪3段，每段（  ）",
+          "answer": {
+            "value": "2/7米"
+          },
+          "analysis": "分子6除以3得2，每段为七分之二米。",
+          "difficulty": 2,
+          "knowledge_point": "分数除以整数的计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "3/8除以3就是3/8乘3。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "应乘三分之一而非3，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "分数除以整数的计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "9/10升果汁倒进3个杯，每杯多少",
+          "answer": {
+            "value": "每杯3/10升"
+          },
+          "analysis": "列式1分；分子9除3得3占2分；带升1分",
+          "difficulty": 4,
+          "knowledge_point": "分数除以整数的计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "6除以2/3得（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "6改乘3/2得9；B未变，C取倒，D多乘，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "一个数除以分数的计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "9",
+            "4",
+            "1/9",
+            "12"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "2/3除以4/5的商是（  ）",
+          "answer": {
+            "value": "5/6"
+          },
+          "analysis": "改乘5/4，约分后为六分之五。",
+          "difficulty": 2,
+          "knowledge_point": "一个数除以分数的计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "5/6除以1/3，商大于5/6。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "改乘3得二分之五，比原数大，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "一个数除以分数的计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "3/4除以3/8的商是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "改乘8/3约分得2；B取倒，C误乘，D未算，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "一个数除以分数的计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "2",
+            "1/2",
+            "9/32",
+            "8/3"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "修路队3天修全长的3/8，每天修1/8。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "八分之三除以3得八分之一，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "一个数除以分数的计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "某数的2/3是12，求某数用（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "已知部分求整体用除；B误乘，C误加，D写反，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "用方程解分数除法问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "12除以2/3",
+            "12乘2/3",
+            "12加2/3",
+            "2/3除以12"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "设全书x页，3/5正好30页，x是（  ）",
+          "answer": {
+            "value": "x为50页"
+          },
+          "analysis": "30除以五分之三，得50页。",
+          "difficulty": 2,
+          "knowledge_point": "用方程解分数除法问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "设x的4/7是20，解得x为35。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "20除以七分之四得35，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "用方程解分数除法问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "男生占全班4/7正好20人，求全班人数",
+          "answer": {
+            "value": "全班35人"
+          },
+          "analysis": "设x列方程1分；20除以4/7得35共2分；答1分",
+          "difficulty": 4,
+          "knowledge_point": "用方程解分数除法问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第二单元 圆",
+      "order_index": 2,
+      "summary": "认识圆的各部分，掌握周长与面积公式，会算半圆、圆环及组合图形。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "同圆中直径与半径的关系是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "直径含两条半径；B说反，C、D不符，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "圆规画圆与半径直径关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "直径是半径2倍",
+            "半径是直径2倍",
+            "两者相等",
+            "无法比较"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "半径3厘米的圆，直径是（  ）",
+          "answer": {
+            "value": "6厘米"
+          },
+          "analysis": "半径乘2得6厘米。",
+          "difficulty": 2,
+          "knowledge_point": "圆规画圆与半径直径关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "圆有无数条对称轴。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "过圆心的每条直线都是对称轴，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "圆规画圆与半径直径关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "圆规画半径4厘米的圆，两脚距离（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "两脚距即半径；B取半，C取直径，D不定，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "圆规画圆与半径直径关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "4厘米",
+            "2厘米",
+            "8厘米",
+            "随意"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "圆周率约取（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "周长除以直径约3.14；B、C、D只是数字换位，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "圆周率与圆的周长计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "3.14",
+            "3.41",
+            "1.34",
+            "4.13"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "直径10厘米的圆周长是（  ）",
+          "answer": {
+            "value": "31.4厘米"
+          },
+          "analysis": "3.14乘10得31.4厘米。",
+          "difficulty": 2,
+          "knowledge_point": "圆周率与圆的周长计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "大圆的圆周率比小圆大。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "圆周率是固定常数，与大小无关，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "圆周率与圆的周长计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "半径2分米的圆周长是（  ）分米",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "直径4分米再乘3.14得12.56；B取半，C用半径，D翻倍，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "圆周率与圆的周长计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "12.56",
+            "6.28",
+            "3.14",
+            "25.12"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "车轮半径0.3米，滚一圈前进（  ）米",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "周长3.14乘0.6得1.884；B取半，C用面积，D翻倍，所以选A。",
+          "difficulty": 3,
+          "knowledge_point": "圆周率与圆的周长计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "1.884",
+            "0.942",
+            "0.2826",
+            "3.768"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "圆面积公式是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "拼成长方形推得；B是周长，C、D缺平方或系数，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "圆的面积公式与推导",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "πr²",
+            "2πr",
+            "πd",
+            "πr"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "半径3米的圆面积是（  ）",
+          "answer": {
+            "value": "28.26平方米"
+          },
+          "analysis": "3.14乘3的平方9，得28.26平方米。",
+          "difficulty": 2,
+          "knowledge_point": "圆的面积公式与推导",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "半径扩大到2倍，圆面积也扩大到2倍。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "面积按半径平方变，扩大到4倍，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "圆的面积公式与推导",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "直径8厘米的圆面积是（  ）平方厘米",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "半径4厘米，3.14乘16得50.24；B用周长，C按直径平方，D少乘，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "圆的面积公式与推导",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "50.24",
+            "25.12",
+            "200.96",
+            "12.56"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "半径2厘米的半圆面积是（  ）平方厘米",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "整圆12.56折半得6.28；B未折半，C多折，D翻倍，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "半圆与圆环的面积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "6.28",
+            "12.56",
+            "3.14",
+            "25.12"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "外圆半径5内圆3的圆环面积（  ）",
+          "answer": {
+            "value": "50.24平方厘米"
+          },
+          "analysis": "外圆78.5减内圆28.26，差为50.24平方厘米。",
+          "difficulty": 2,
+          "knowledge_point": "半圆与圆环的面积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "半圆的周长就是整圆周长的一半。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "还要加上一条直径，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "半圆与圆环的面积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "花坛半径4米，外围修1米小路，求路面积",
+          "answer": {
+            "value": "路面约28.26平方米"
+          },
+          "analysis": "外半径5米1分；外圆减内圆2分；得28.26再1分",
+          "difficulty": 4,
+          "knowledge_point": "半圆与圆环的面积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "周长相等的圆和正方形，圆面积更大。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "同周长时圆围出的面积最大，说法正确。",
+          "difficulty": 4,
+          "knowledge_point": "半圆与圆环的面积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第三单元 用字母表示（二）",
+      "order_index": 3,
+      "summary": "用字母表示等量关系，认识方程，会用等式性质解方程并解决实际问题。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "3a加2a化简为（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "系数3加2得5；B误乘，C、D乱加指数，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "含字母式子的合并与化简",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "5a",
+            "6a",
+            "5a²",
+            "a⁵"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "7x减4x的结果是（  ）",
+          "answer": {
+            "value": "3x"
+          },
+          "analysis": "系数7减4得3，字母仍是x。",
+          "difficulty": 2,
+          "knowledge_point": "含字母式子的合并与化简",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "4b与b合起来是5b。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "b的系数看作1，4加1得5，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "含字母式子的合并与化简",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "每盒x支，3盒加2盒共（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "3加2得5盒即5x；B误乘，C写成和，D添指数，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "含字母式子的合并与化简",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "5x",
+            "6x",
+            "5+x",
+            "x⁵"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "哥哥比弟弟大5岁，年龄和25，弟弟（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "和减差得20再折半为10；B为哥哥，C未折半，D是年龄差，所以选A。",
+          "difficulty": 3,
+          "knowledge_point": "含字母式子的合并与化简",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "10岁",
+            "15岁",
+            "20岁",
+            "5岁"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "x的2倍再加1得7，左边写成（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "2倍加1即2x+1；B用减，C倍数反，D添括号，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "等量关系与方程的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "2x+1",
+            "2x-1",
+            "x+2",
+            "2(x+1)"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "比y的3倍少5的式子是（  ）",
+          "answer": {
+            "value": "3y-5"
+          },
+          "analysis": "3倍写成3y，再减5。",
+          "difficulty": 2,
+          "knowledge_point": "等量关系与方程的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "方程一定是等式，等式不一定是方程。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "方程须含未知数，等式可不含，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "等量关系与方程的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "单价a元买6本共48元，等量关系是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "单价乘数量得总价；B用加，C写反，D用减，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "等量关系与方程的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "6a对应48",
+            "a加6对应48",
+            "48a对应6",
+            "a减6对应48"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "解x加8得20，x是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "两边同减8得12；B误加，C误乘，D未解，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "等式的性质与解方程",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "12",
+            "28",
+            "160",
+            "8"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "方程5x的值是35，解是（  ）",
+          "answer": {
+            "value": "x为7"
+          },
+          "analysis": "两边同除以5，得x为7。",
+          "difficulty": 2,
+          "knowledge_point": "等式的性质与解方程",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "等式两边同除以0，等式仍成立。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "0不能作除数，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "等式的性质与解方程",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "解3x减6得12，x是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先加6得18再除以3得6；B该加却减，C忘除3，D乱乘，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "等式的性质与解方程",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "6",
+            "2",
+            "18",
+            "54"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "式子4m减m与3m表示的数量总相等。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "合并后系数都是3，说法正确。",
+          "difficulty": 4,
+          "knowledge_point": "等式的性质与解方程",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "设长为x米，宽比长少3米，宽写作（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "少3用减；B被减数反，C误乘，D用加，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "用方程解决实际问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "x-3",
+            "3-x",
+            "3x",
+            "x+3"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "梨树x棵，苹果树是梨树3倍共60棵，x（  ）",
+          "answer": {
+            "value": "x为15棵"
+          },
+          "analysis": "4份对应60棵，一份为15棵。",
+          "difficulty": 2,
+          "knowledge_point": "用方程解决实际问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "解方程求出的结果都要检验是否符合题意。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "代入情境核对才能排除不合理解，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "用方程解决实际问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "买4支笔加1本6元的本共30元，笔单价几元",
+          "answer": {
+            "value": "每支6元"
+          },
+          "analysis": "设笔价x列式1分；两边减6再除4得6共2分；答1分",
+          "difficulty": 4,
+          "knowledge_point": "用方程解决实际问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "综合实践 制订节水方案",
+      "order_index": 4,
+      "summary": "测量并记录用水量，计算漏水速率，比较数据，估算节水措施的效果。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "记录家庭一天用水量，合适的单位是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "家庭日用水几十到几百升；B太小，C过大，D是质量，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "用水量的测量与记录",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "升",
+            "毫升",
+            "立方米",
+            "克"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "水表月初读125，月末读143，本月用（  ）",
+          "answer": {
+            "value": "18吨"
+          },
+          "analysis": "143减125得18吨。",
+          "difficulty": 2,
+          "knowledge_point": "用水量的测量与记录",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "测用水量只需读一次水表就够了。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "须用末读数减初读数，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "用水量的测量与记录",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "要比较两周用水量，记录应做到（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "定时连续才可比；B、C缺数据，D无依据，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "用水量的测量与记录",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "每天定时记",
+            "想起才记",
+            "只记周末",
+            "只估不读"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "水龙头5分钟滴100毫升，每分钟滴（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "100除以5得20；B误乘，C、D误加减，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "滴水速率与时间换算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "20毫升",
+            "500毫升",
+            "105毫升",
+            "95毫升"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "每分漏20毫升，1小时漏（  ）",
+          "answer": {
+            "value": "1200毫升"
+          },
+          "analysis": "20乘60得1200毫升。",
+          "difficulty": 2,
+          "knowledge_point": "滴水速率与时间换算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "按每分20毫升计，一天漏水超过20升。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "每小时1200毫升，24小时约28.8升，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "滴水速率与时间换算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "每分钟漏25毫升，4小时共漏（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "25乘240分得6000毫升即6升；B未换算，C少乘，D进率错，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "滴水速率与时间换算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "6升",
+            "100升",
+            "1升",
+            "60升"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "漏水龙头每分30毫升，一昼夜约漏（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "30乘1440分得43200毫升，合43.2升；B按小时，C未化升，D差十倍，所以选A。",
+          "difficulty": 3,
+          "knowledge_point": "滴水速率与时间换算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "43.2升",
+            "1.8升",
+            "432升",
+            "4.32升"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "抽查6户日用水量的平均水平，应算（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "总量除以户数得平均；B、C、D不代表整体，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "节水数据的整理与比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "平均数",
+            "最大数",
+            "最小数",
+            "总户数"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "三户日用水12、15、9吨，平均每户（  ）",
+          "answer": {
+            "value": "12吨"
+          },
+          "analysis": "三户和36吨，除以3得12吨。",
+          "difficulty": 2,
+          "knowledge_point": "节水数据的整理与比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "仅凭一户数据就能代表全班家庭用水。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "样本太少偏差大，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "节水数据的整理与比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "擦皂关水每次省2升，一家每天8次，一周省多少",
+          "answer": {
+            "value": "1 周省 112 升"
+          },
+          "analysis": "每次2升乘8次得16升1分；再乘7天得112升共3分",
+          "difficulty": 4,
+          "knowledge_point": "节水数据的整理与比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "原每天用水150升，改节水龙头省1/5，每天省（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "150乘五分之一得30；B为剩水量，C误乘5，D取半，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "节水方案的效果估算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "30升",
+            "120升",
+            "750升",
+            "75升"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "冲厕每次9升改6升，每天10次省（  ）",
+          "answer": {
+            "value": "30升"
+          },
+          "analysis": "每次省3升，乘10次得30升。",
+          "difficulty": 2,
+          "knowledge_point": "节水方案的效果估算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "把漏水的龙头修好属于节水措施。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "减少无谓流失即节水，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "节水方案的效果估算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "班级一月省水1.2吨，照此半年省（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "1.2乘6得7.2；B只算一月，C当两月，D进率错，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "节水方案的效果估算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "7.2吨",
+            "1.2吨",
+            "2.4吨",
+            "72吨"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "方案写清测量方法与计算依据，别人才核得准。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "数据可复算才可信，说法正确。",
+          "difficulty": 4,
+          "knowledge_point": "节水方案的效果估算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第四单元 分数的应用",
+      "order_index": 5,
+      "summary": "会求一个数的几分之几，处理多几分之几与已知部分求整体，掌握分数混合运算。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "40页书的3/5是（  ）页",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "40乘五分之三得24；B只取一份，C忘除5，D未算，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "求一个数的几分之几是多少",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "24",
+            "8",
+            "120",
+            "40"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "60千克的2/3是（  ）",
+          "answer": {
+            "value": "40 千克"
+          },
+          "analysis": "60除以3得20，再乘2得40千克。",
+          "difficulty": 2,
+          "knowledge_point": "求一个数的几分之几是多少",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "求一个数的几分之几用乘法。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "把整体平均分再取份，用乘，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "求一个数的几分之几是多少",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "一根绳长7/8米，用去1/2，用去（  ）米",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "7/8乘1/2得7/16；B误作除，C误作减，D未算，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "求一个数的几分之几是多少",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "7/16",
+            "7/4",
+            "3/8",
+            "7/8"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "苹果的3/5是梨，梨45千克，苹果（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "45除以五分之三得75；B误乘，C只乘2，D取余量，所以选A。",
+          "difficulty": 3,
+          "knowledge_point": "求一个数的几分之几是多少",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "75千克",
+            "27千克",
+            "90千克",
+            "18千克"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "比20多1/4的数是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "20加20的四分之一5得25；B误用减，C未算，D只取增量，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "比一个数多几分之几的数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "25",
+            "16",
+            "20",
+            "5"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "原产量80吨，今年增产1/8，今年（  ）",
+          "answer": {
+            "value": "90吨"
+          },
+          "analysis": "增产10吨，加原产量得90吨。",
+          "difficulty": 2,
+          "knowledge_point": "比一个数多几分之几的数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "比30少1/3的数是20。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "30的三分之一是10，30减10得20，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "比一个数多几分之几的数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "原价120元，降价1/6后是（  ）元",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "降20元后为100；B是降额，C误加，D少降，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "比一个数多几分之几的数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "100",
+            "20",
+            "140",
+            "110"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "读了一本书的2/7正好28页，全书（  ）页",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "28除以七分之二得98；B误乘分率，C只乘2，D只乘7，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "已知部分求整体",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "98",
+            "8",
+            "56",
+            "196"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "一堆沙运走3/4是24吨，这堆沙（  ）",
+          "answer": {
+            "value": "32吨"
+          },
+          "analysis": "24除以四分之三得32吨。",
+          "difficulty": 2,
+          "knowledge_point": "已知部分求整体",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "已知几分之几是多少，求整体用除法。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "部分量除以对应分率得整体，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "已知部分求整体",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "全班女生占4/9，女生20人，全班多少人",
+          "answer": {
+            "value": "全班45人"
+          },
+          "analysis": "设x列式1分；20除以4/9得45共2分；检验答1分",
+          "difficulty": 4,
+          "knowledge_point": "已知部分求整体",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "水结冰体积增1/10，冰化水体积减1/10。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "两次单位一不同，减少的分率不是十分之一，说法错误。",
+          "difficulty": 4,
+          "knowledge_point": "已知部分求整体",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "算1/2加1/3乘3/4，先算（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先乘后加；B先加，C逐次算，D随意，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "分数混合运算的顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "1/3乘3/4",
+            "1/2加1/3",
+            "从左到右",
+            "随便"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "2/5乘(1减1/2)的结果是（  ）",
+          "answer": {
+            "value": "1/5"
+          },
+          "analysis": "括号内得二分之一，再乘得五分之一。",
+          "difficulty": 2,
+          "knowledge_point": "分数混合运算的顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "整数运算律对分数混合运算同样适用。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "分配律结合律在分数范围仍成立，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "分数混合运算的顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "3/7乘5加4/7乘5用简算得（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "提取公因数5，括号内和为1，得5；B误当和，C连乘，D全乘，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "分数混合运算的顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "5",
+            "1",
+            "25",
+            "35"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第五单元 比的认识",
+      "order_index": 6,
+      "summary": "理解比的意义与比值，掌握化简比，会解决按比分配问题。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "3比4记作（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "前项3后项4；B写反，C、D格式错，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "比的意义与读写",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "3:4",
+            "4:3",
+            "3/4:1",
+            "3-4"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "糖5克水50克，糖与水的比是（  ）",
+          "answer": {
+            "value": "1比10"
+          },
+          "analysis": "两项同除以5，得一比十。",
+          "difficulty": 2,
+          "knowledge_point": "比的意义与读写",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "比的后项可以是0。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "后项相当于除数，不能为0，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "比的意义与读写",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "足球赛2比0是数学里的比吗（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "它只记得分不表示相除；B、C、D未分清记分与相比，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "比的意义与读写",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "不是",
+            "是",
+            "看情况",
+            "无法说"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "6:8的比值是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "6除以8化简得四分之三；B取倒，C未求，D误乘，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "比值与比、除法、分数的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "3/4",
+            "4/3",
+            "6:8",
+            "48"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "9:12的比值写成小数是（  ）",
+          "answer": {
+            "value": "0.75"
+          },
+          "analysis": "9除以12得0.75，算式 9/12=0.75。",
+          "difficulty": 2,
+          "knowledge_point": "比值与比、除法、分数的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "比的前项相当于除法里的被除数。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "前项除以后项得比值，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "比值与比、除法、分数的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "甲数是乙数的5/6，甲与乙的比是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "把乙看作6份，甲5份；B写反，C取和，D少算，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "比值与比、除法、分数的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "5:6",
+            "6:5",
+            "5:11",
+            "1:6"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "水泥沙石比2比3比5，配40吨需沙（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "共10份每份4吨，沙占3份得12；B为水泥，C为石，D多算一份，所以选A。",
+          "difficulty": 3,
+          "knowledge_point": "比值与比、除法、分数的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "12吨",
+            "8吨",
+            "20吨",
+            "24吨"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "化简18:24得（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "两项同除以6得3比4；B写反，C、D乱约，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "比的基本性质与化简比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "3:4",
+            "4:3",
+            "18:4",
+            "9:2"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "化简1/2比1/3得（  ）",
+          "answer": {
+            "value": "3比2"
+          },
+          "analysis": "两项同乘6，得三比二。",
+          "difficulty": 2,
+          "knowledge_point": "比的基本性质与化简比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "比的前后项同乘2，比值不变。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "同乘非零数比值不变，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "比的基本性质与化简比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "化简0.5:1.5得（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "同乘2再约得1比3；B写反，C未约，D少除，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "比的基本性质与化简比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "1:3",
+            "3:1",
+            "5:15",
+            "1:2"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "按2:3分20个球，较多一份得（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "共5份每份4个，3份得12；B是较少份，C平分，D多算，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "按比分配问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "12个",
+            "8个",
+            "10个",
+            "15个"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "按1:4配50克盐水，盐需（  ）",
+          "answer": {
+            "value": "10克"
+          },
+          "analysis": "共5份每份10克，盐占1份。",
+          "difficulty": 2,
+          "knowledge_point": "按比分配问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "按3:2分60本，两份相差12本。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "每份12本，差1份即12本，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "按比分配问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "长方形周长48厘米，长宽比3比1，求面积",
+          "answer": {
+            "value": "面积108平方厘米"
+          },
+          "analysis": "长宽和24，分4份得长18宽6共2分；乘得108再2分",
+          "difficulty": 4,
+          "knowledge_point": "按比分配问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "比值是一个数，化简比的结果仍是一个比。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "前者为商，后者保留前后项，说法正确。",
+          "difficulty": 4,
+          "knowledge_point": "按比分配问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第六单元 确定位置",
+      "order_index": 7,
+      "summary": "用方向和角度、距离确定物体位置，会描述路线图，理解观测点变化带来的相对性。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "描述位置除方向外还需说清（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "方向加角度加距离才唯一；B、C、D无关，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "用方向与角度描述位置",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "角度与距离",
+            "颜色",
+            "重量",
+            "温度"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "正北与正东之间的方向记作（  ）",
+          "answer": {
+            "value": "北偏东"
+          },
+          "analysis": "从北向东转，记作北偏东。",
+          "difficulty": 2,
+          "knowledge_point": "用方向与角度描述位置",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "只说在北方就能确定一个点的位置。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "缺角度和距离，位置不唯一，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "用方向与角度描述位置",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "北偏东30度也可说成（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "两角互余为60度；B未换算，C、D方向错，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "用方向与角度描述位置",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "东偏北60度",
+            "东偏北30度",
+            "南偏东30度",
+            "西偏北60度"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "邮局在广场北偏西60度2千米，广场在邮局（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "方向相反角度距离不变；B未换，C偏西，D改角度，所以选A。",
+          "difficulty": 3,
+          "knowledge_point": "用方向与角度描述位置",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "南偏东60度2千米",
+            "北偏西60度2千米",
+            "南偏西60度2千米",
+            "南偏东30度2千米"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "灯塔在船北偏东40度5千米处，定位靠（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "两要素缺一不可；B、C、D不全，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "用方向和距离确定位置",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "方向和距离",
+            "只靠方向",
+            "只靠距离",
+            "船的颜色"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "学校在小明家东偏南25度800米，观测点是（  ）",
+          "answer": {
+            "value": "小明家"
+          },
+          "analysis": "在字后的参照处即观测点，为小明家。",
+          "difficulty": 2,
+          "knowledge_point": "用方向和距离确定位置",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "距离相同方向不同，两处位置相同。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "方向不同落点不同，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "用方向和距离确定位置",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "A在B南偏西35度3千米，标注要含（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "角度距离都要标；B、C缺项，D向错，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "用方向和距离确定位置",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "角度与3千米",
+            "只标3千米",
+            "只标35度",
+            "标成正西"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "描述行走路线要按序说清（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "逐段方向距离才连贯；B、C、D无关，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "描述简单路线图",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "每段方向距离",
+            "总时间",
+            "路的颜色",
+            "同行人数"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "先东行200米再北行200米，转向处是（  ）",
+          "answer": {
+            "value": "拐弯点"
+          },
+          "analysis": "方向改变处即路线的拐弯点。",
+          "difficulty": 2,
+          "knowledge_point": "描述简单路线图",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "去时向东200米，原路返回应向西200米。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "方向相反距离相等，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "描述简单路线图",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "从家东行300米再北偏东40度行500米，说回程",
+          "answer": {
+            "value": "先南偏西40度走500米，再向西走300米"
+          },
+          "analysis": "每段反向1分；距离不变1分；顺序颠倒2分",
+          "difficulty": 4,
+          "knowledge_point": "描述简单路线图",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "画路线图前先定观测点和单位长度，点才标得准。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "基准统一后方向与距离才有意义，说法正确。",
+          "difficulty": 4,
+          "knowledge_point": "描述简单路线图",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "甲在乙北偏东30度，则乙在甲的（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "方向相反角度不变；B未换，C、D偏向错，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "观测点变化与位置相对性",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "南偏西30度",
+            "北偏东30度",
+            "南偏东30度",
+            "北偏西30度"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "A看B是东偏南20度，B看A是（  ）",
+          "answer": {
+            "value": "西偏北20度"
+          },
+          "analysis": "东西南北互换，角度保持20度。",
+          "difficulty": 2,
+          "knowledge_point": "观测点变化与位置相对性",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "换观测点后两人之间的距离会改变。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "只方向相反，距离不变，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "观测点变化与位置相对性",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "站点在广场西偏北45度6千米，广场在站点（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "方向全反距离仍6；B未换，C偏向错，D距错，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "观测点变化与位置相对性",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "东偏南45度6千米",
+            "西偏北45度6千米",
+            "东偏北45度6千米",
+            "东偏南45度3千米"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "数学好玩 五子棋",
+      "order_index": 8,
+      "summary": "以五子棋棋盘为背景，练习数对定位、连珠方向、对局场次与交叉点计数。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "横向第3纵第4落子点写作",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先横后纵得(3,4)，余项错，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "棋盘交叉点的数对表示",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "(3,4)",
+            "(4,3)",
+            "(3,3)",
+            "(4,4)"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "数对(7,2)的落点怎样描述",
+          "answer": {
+            "value": "第7横与第2纵的交点"
+          },
+          "analysis": "数对前项表横向，后项表纵向",
+          "difficulty": 2,
+          "knowledge_point": "棋盘交叉点的数对表示",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "数对(8,8)在十五路棋盘中心",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "十五路中心横纵皆为8，判断为对",
+          "difficulty": 3,
+          "knowledge_point": "棋盘交叉点的数对表示",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出(2,3)向右两格的新数对",
+          "answer": {
+            "value": "示例：(4,3)"
+          },
+          "analysis": "右移只改横向加2，纵数不变，两步计分",
+          "difficulty": 4,
+          "knowledge_point": "棋盘交叉点的数对表示",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "同色五子斜向连成一线算胜吗",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "四个方向均可连五，余项错，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "连五方向的横竖斜判定",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "算胜",
+            "不算",
+            "需横竖",
+            "看颜色"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "只有横向连五才算获胜",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "横竖与两斜共四向均可，故判错",
+          "difficulty": 2,
+          "knowledge_point": "连五方向的横竖斜判定",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "同色连五允许的方向共有几个",
+          "answer": {
+            "value": "4 个方向"
+          },
+          "analysis": "横、竖、两斜合起来共四个方向",
+          "difficulty": 3,
+          "knowledge_point": "连五方向的横竖斜判定",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "黑子在(3,3)到(7,7)成五连吗",
+          "answer": {
+            "value": "示例：连成 5 子"
+          },
+          "analysis": "横纵各加1成斜线，五点同色即连五",
+          "difficulty": 4,
+          "knowledge_point": "连五方向的横竖斜判定",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "4人两两对局共下几局",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "依次加3、2、1得6，余项错，所以选C",
+          "difficulty": 1,
+          "knowledge_point": "两两对局的场次计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "4局",
+            "5局",
+            "6局",
+            "8局"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "5人单循环对局总场次是多少",
+          "answer": {
+            "value": "10 局"
+          },
+          "analysis": "把4、3、2、1相加，累计得到十局",
+          "difficulty": 2,
+          "knowledge_point": "两两对局的场次计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "6人两两对局共有15局",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "把5到1依次相加得15，判断为对",
+          "difficulty": 3,
+          "knowledge_point": "两两对局的场次计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "8人每两人下一局求总场次",
+          "answer": {
+            "value": "示例：28 局"
+          },
+          "analysis": "从7加到1逐步累加，写出结果计分",
+          "difficulty": 4,
+          "knowledge_point": "两两对局的场次计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "五人棋赛每两人一局且分胜负",
+          "answer": {
+            "value": "示例：共 10 局每局 1 胜"
+          },
+          "analysis": "先算场次为十，再定每局一胜，两步计分",
+          "difficulty": 4,
+          "knowledge_point": "两两对局的场次计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "十五路棋盘交叉点共几个",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "十五乘十五得225，余项错，所以选B",
+          "difficulty": 1,
+          "knowledge_point": "棋盘交叉点总数计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "200个",
+            "225个",
+            "240个",
+            "256个"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "十九路棋盘交叉点总数",
+          "answer": {
+            "value": "361 个"
+          },
+          "analysis": "每行十九个乘十九行，分两步相乘",
+          "difficulty": 2,
+          "knowledge_point": "棋盘交叉点总数计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "棋盘格数等于交叉点数",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "十五路只有十四乘十四个小格，故错",
+          "difficulty": 3,
+          "knowledge_point": "棋盘交叉点总数计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "求十三路棋盘交叉点总数",
+          "answer": {
+            "value": "示例：169 个"
+          },
+          "analysis": "先定每行十三个，再乘十三行计分",
+          "difficulty": 4,
+          "knowledge_point": "棋盘交叉点总数计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "十六路棋盘交叉点总数",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "十六乘十六得256，余项错，所以选C",
+          "difficulty": 5,
+          "knowledge_point": "棋盘交叉点总数计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "196个",
+            "225个",
+            "256个",
+            "289个"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第七单元 百分数的认识与应用（一）",
+      "order_index": 9,
+      "summary": "认识百分数意义，练习互化、求百分比以及合格率出勤率等应用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "百分之四十五写作下列哪个",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "分母一百写45%，余项错，所以选C",
+          "difficulty": 1,
+          "knowledge_point": "百分数的意义与读写",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "45",
+            "0.45",
+            "45%",
+            "4.5%"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "把百分之八写成符号形式",
+          "answer": {
+            "value": "8%"
+          },
+          "analysis": "百分之几就在数后添百分号",
+          "difficulty": 2,
+          "knowledge_point": "百分数的意义与读写",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "百分数后面可以带千克单位",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "百分数只表倍比关系，不带单位，故错",
+          "difficulty": 3,
+          "knowledge_point": "百分数的意义与读写",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说出62%在这批棋子中的含义",
+          "answer": {
+            "value": "示例：每 100 个中有 62 个"
+          },
+          "analysis": "点明以一百为整体，再说出占比计分",
+          "difficulty": 4,
+          "knowledge_point": "百分数的意义与读写",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "0.7化成百分数是哪一个",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "右移两位得70%，余项错，所以选B",
+          "difficulty": 1,
+          "knowledge_point": "百分数与小数互化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "7%",
+            "70%",
+            "0.7%",
+            "700%"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "把35%化成小数",
+          "answer": {
+            "value": "0.35"
+          },
+          "analysis": "去掉百分号并把小数点左移两位，35/100=0.35",
+          "difficulty": 2,
+          "knowledge_point": "百分数与小数互化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "1.2化成百分数是120%",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "小数点右移两位得120，添号即对",
+          "difficulty": 3,
+          "knowledge_point": "百分数与小数互化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "把0.06改写成百分数并说明",
+          "answer": {
+            "value": "示例：6%"
+          },
+          "analysis": "右移两位得6，再添百分号，两步计分",
+          "difficulty": 4,
+          "knowledge_point": "百分数与小数互化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "25是50的百分之几",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "商为0.5即50%，余项错，所以选B",
+          "difficulty": 1,
+          "knowledge_point": "求一个数是另一数的百分之几",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "25%",
+            "50%",
+            "75%",
+            "100%"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "18是24的百分之几",
+          "answer": {
+            "value": "75%"
+          },
+          "analysis": "先算18除以24得0.75，再改写",
+          "difficulty": 2,
+          "knowledge_point": "求一个数是另一数的百分之几",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "8是5的百分之六十",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "8除以5得1.6，应是160%，故判错",
+          "difficulty": 3,
+          "knowledge_point": "求一个数是另一数的百分之几",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "求45占60的百分比",
+          "answer": {
+            "value": "示例：75%"
+          },
+          "analysis": "以60作除数求商，再化百分数计分",
+          "difficulty": 4,
+          "knowledge_point": "求一个数是另一数的百分之几",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "男生24人女生26人男生占比",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "24占50的48%，余项错，所以选A",
+          "difficulty": 4,
+          "knowledge_point": "求一个数是另一数的百分之几",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "48%",
+            "50%",
+            "52%",
+            "56%"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "50件中47件合格的合格率",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "商为0.94即94%，余项错，所以选C",
+          "difficulty": 1,
+          "knowledge_point": "合格率与出勤率计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "47%",
+            "90%",
+            "94%",
+            "97%"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "全班40人到38人求出勤率",
+          "answer": {
+            "value": "95%"
+          },
+          "analysis": "38除以40得0.95，再写成百分数",
+          "difficulty": 2,
+          "knowledge_point": "合格率与出勤率计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "发芽率能超过百分之百",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "发芽数不超试验总数，故判错",
+          "difficulty": 3,
+          "knowledge_point": "合格率与出勤率计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "200粒种子发芽186粒求发芽率",
+          "answer": {
+            "value": "示例：93%"
+          },
+          "analysis": "以200作除数求商，再化百分数计分",
+          "difficulty": 4,
+          "knowledge_point": "合格率与出勤率计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "抽检80盒有76盒合格求合格率",
+          "answer": {
+            "value": "示例：95%"
+          },
+          "analysis": "先求合格数与总数之比，再化百分数",
+          "difficulty": 5,
+          "knowledge_point": "合格率与出勤率计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第八单元 观察物体（二）",
+      "order_index": 10,
+      "summary": "从正面左面上面观察小正方体几何体，练习视图辨认与个数还原。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "一列叠3块从正面看有几格高",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "前后压平高3格，余项错，所以选C",
+          "difficulty": 1,
+          "knowledge_point": "从正面看几何体的形状",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "1格",
+            "2格",
+            "3格",
+            "4格"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "前后两排等高时正面图会怎样",
+          "answer": {
+            "value": "重合为 1 列"
+          },
+          "analysis": "前后压平后同列只显示一次",
+          "difficulty": 2,
+          "knowledge_point": "从正面看几何体的形状",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "正面图能看出前后排的块数",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "前后被压平，无法分辨，故判错",
+          "difficulty": 3,
+          "knowledge_point": "从正面看几何体的形状",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "底层横排4块正面图是什么形",
+          "answer": {
+            "value": "示例：1 行 4 格"
+          },
+          "analysis": "只保留横向列数，压平前后计分",
+          "difficulty": 4,
+          "knowledge_point": "从正面看几何体的形状",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "从上面看能反映小正方体的",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "俯视只见占地格，余项错，所以选B",
+          "difficulty": 1,
+          "knowledge_point": "从左面与上面看形状图",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "高度",
+            "占地位置",
+            "颜色",
+            "总重量"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "俯视图只记录什么信息",
+          "answer": {
+            "value": "底面占地位置"
+          },
+          "analysis": "从上往下看只保留底面方格",
+          "difficulty": 2,
+          "knowledge_point": "从左面与上面看形状图",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "左面图与上面图必定相同",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "压缩方向不同，形状常不同，故错",
+          "difficulty": 3,
+          "knowledge_point": "从左面与上面看形状图",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "左看两列各高2和1描述视图",
+          "answer": {
+            "value": "示例：2 列高度不同"
+          },
+          "analysis": "按左右压缩后逐列记高度，分点计分",
+          "difficulty": 4,
+          "knowledge_point": "从左面与上面看形状图",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "俯视3格正视各列高1最少几块",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "每格1块三格得3，余项错，所以选B",
+          "difficulty": 1,
+          "knowledge_point": "由三视图确定小正方体个数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "2块",
+            "3块",
+            "4块",
+            "6块"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "俯视2格且每格叠2层共几块",
+          "answer": {
+            "value": "4 块"
+          },
+          "analysis": "两个占地格各叠两层，逐格相加",
+          "difficulty": 2,
+          "knowledge_point": "由三视图确定小正方体个数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "仅凭正面图能定总块数",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "前后排块数未知，不能确定，故错",
+          "difficulty": 3,
+          "knowledge_point": "由三视图确定小正方体个数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "俯视4格每格都叠2层求总数",
+          "answer": {
+            "value": "示例：8 块"
+          },
+          "analysis": "每格两层四格累计，分步相乘计分",
+          "difficulty": 4,
+          "knowledge_point": "由三视图确定小正方体个数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "俯视3格仅一格叠2层共几块",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "两格各1加一格2得4，余项错，所以选B",
+          "difficulty": 4,
+          "knowledge_point": "由三视图确定小正方体个数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "3块",
+            "4块",
+            "5块",
+            "6块"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "站得更高时观察范围怎样变",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "视点升高范围大，余项错，所以选C",
+          "difficulty": 1,
+          "knowledge_point": "观察范围与盲区判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "变小",
+            "不变",
+            "变大",
+            "先变小"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "障碍物后看不到的区域叫什么",
+          "answer": {
+            "value": "盲区"
+          },
+          "analysis": "视线被遮挡形成的看不见区域",
+          "difficulty": 2,
+          "knowledge_point": "观察范围与盲区判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "离窗越近看到窗外范围越大",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "视角随靠近而增大，判断为对",
+          "difficulty": 3,
+          "knowledge_point": "观察范围与盲区判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说出减小盲区的一种办法",
+          "answer": {
+            "value": "示例：提高观察点"
+          },
+          "analysis": "点明视线直线传播，再给出抬高计分",
+          "difficulty": 4,
+          "knowledge_point": "观察范围与盲区判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "解释楼前盲区为何随楼高变大",
+          "answer": {
+            "value": "示例：遮挡视线增多"
+          },
+          "analysis": "先说视线直线，再说遮挡扩大计分",
+          "difficulty": 5,
+          "knowledge_point": "观察范围与盲区判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第九单元 数据的表示和分析（三）",
+      "order_index": 11,
+      "summary": "认识扇形统计图，练习占比、圆心角、统计图选用与平均数比较。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "扇形图整圆表示百分之几",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "整圆是全部100%，余项错，所以选C",
+          "difficulty": 1,
+          "knowledge_point": "扇形统计图中部分占整体的百分比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "50%",
+            "90%",
+            "100%",
+            "200%"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "某扇形占30%其余部分占多少",
+          "answer": {
+            "value": "70%"
+          },
+          "analysis": "用整体100%减去30%，分步相减",
+          "difficulty": 2,
+          "knowledge_point": "扇形统计图中部分占整体的百分比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "各扇形百分比之和可超100%",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "所有部分恰合成整圆，故判错",
+          "difficulty": 3,
+          "knowledge_point": "扇形统计图中部分占整体的百分比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "总数200份中A占25%求A的数量",
+          "answer": {
+            "value": "示例：50 份"
+          },
+          "analysis": "先求200的四分之一，写出结果计分",
+          "difficulty": 4,
+          "knowledge_point": "扇形统计图中部分占整体的百分比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "圆心角90度的扇形占几成",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "90占360四分之一，余项错，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "由圆心角求扇形所占比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "四分之一",
+            "三分之一",
+            "一半",
+            "三分之二"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "占20%的扇形圆心角是多少度",
+          "answer": {
+            "value": "72 度"
+          },
+          "analysis": "360度乘20%，分两步相乘得出",
+          "difficulty": 2,
+          "knowledge_point": "由圆心角求扇形所占比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "圆心角180度表示占一半",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "180是360的一半，判断为对",
+          "difficulty": 3,
+          "knowledge_point": "由圆心角求扇形所占比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "某扇形圆心角36度求占比",
+          "answer": {
+            "value": "示例：10%"
+          },
+          "analysis": "用36比360，再写成百分数计分",
+          "difficulty": 4,
+          "knowledge_point": "由圆心角求扇形所占比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "占四分之一扇形圆心角几度",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "360四分之一是90，余项错，所以选B",
+          "difficulty": 4,
+          "knowledge_point": "由圆心角求扇形所占比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "60度",
+            "90度",
+            "120度",
+            "180度"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "表示各月气温变化选哪种图",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "折线显升降趋势，余项错，所以选B",
+          "difficulty": 1,
+          "knowledge_point": "条形折线扇形图的选用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "条形图",
+            "折线图",
+            "扇形图",
+            "象形图"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "看部分占总体的比例选哪种图",
+          "answer": {
+            "value": "扇形统计图"
+          },
+          "analysis": "扇形用面积大小显示占比",
+          "difficulty": 2,
+          "knowledge_point": "条形折线扇形图的选用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "条形图最适合看增减趋势",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "趋势应用折线图，故判错",
+          "difficulty": 3,
+          "knowledge_point": "条形折线扇形图的选用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "比较四个班人数应选哪种图并说明",
+          "answer": {
+            "value": "示例：条形统计图"
+          },
+          "analysis": "点明比多少，再说出图名，分点计分",
+          "difficulty": 4,
+          "knowledge_point": "条形折线扇形图的选用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "4、6、8、10的平均数是多少",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "总和28除以4得7，余项错，所以选B",
+          "difficulty": 1,
+          "knowledge_point": "平均数与数据波动比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "6",
+            "7",
+            "8",
+            "9"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "3、5、7三数平均数是多少",
+          "answer": {
+            "value": "平均数为5"
+          },
+          "analysis": "总和15除以3，分步相除得5",
+          "difficulty": 2,
+          "knowledge_point": "平均数与数据波动比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "平均数一定大于每个数据",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "平均数介于最小最大之间，故错",
+          "difficulty": 3,
+          "knowledge_point": "平均数与数据波动比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "两组均分相同如何比稳定性",
+          "answer": {
+            "value": "示例：比较极差或波动"
+          },
+          "analysis": "先算各组极差，再比大小，分点计分",
+          "difficulty": 4,
+          "knowledge_point": "平均数与数据波动比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "五次成绩8、9、7、9、7求平均",
+          "answer": {
+            "value": "示例：平均为 8"
+          },
+          "analysis": "先求总和40，再除以5，分点计分",
+          "difficulty": 5,
+          "knowledge_point": "平均数与数据波动比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "综合实践 制订营养食谱",
+      "order_index": 12,
+      "summary": "运用百分数、比与统计图分析食物营养，搭配三餐并核算热量。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "每百克含蛋白12克占比多少",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "12比100写12%，余项错，所以选B",
+          "difficulty": 1,
+          "knowledge_point": "食物营养成分表的百分数读取",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "1.2%",
+            "12%",
+            "21%",
+            "88%"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "某食品蛋白占18%其余占多少",
+          "answer": {
+            "value": "82%"
+          },
+          "analysis": "用整体100%减去18%，分步相减",
+          "difficulty": 2,
+          "knowledge_point": "食物营养成分表的百分数读取",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "占比越大该成分含量一定越高",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "整体不同不能只比占比，故判错",
+          "difficulty": 3,
+          "knowledge_point": "食物营养成分表的百分数读取",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "读出早餐谷类占40%的含义",
+          "answer": {
+            "value": "示例：每 100 份占 40 份"
+          },
+          "analysis": "点明以一百为整体，再说占比计分",
+          "difficulty": 4,
+          "knowledge_point": "食物营养成分表的百分数读取",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "主食副食热量比3比2共5份主食占",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "主食3份五分之三，余项错，所以选B",
+          "difficulty": 1,
+          "knowledge_point": "按热量比搭配主副食",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "五分之二",
+            "五分之三",
+            "二分之三",
+            "一半"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "按2比3分配总量共分几份",
+          "answer": {
+            "value": "5 份"
+          },
+          "analysis": "把两个比项相加，分步求和得出",
+          "difficulty": 2,
+          "knowledge_point": "按热量比搭配主副食",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "比的前项扩大比值保持不变",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "后项不变时比值随前项变，故错",
+          "difficulty": 3,
+          "knowledge_point": "按热量比搭配主副食",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "按3比2分600千卡求主食热量",
+          "answer": {
+            "value": "示例：360 千卡"
+          },
+          "analysis": "先求总份数5，再算3份，分点计分",
+          "difficulty": 4,
+          "knowledge_point": "按热量比搭配主副食",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "早餐占三成即百分之几",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "三成就是30%，余项错，所以选C",
+          "difficulty": 1,
+          "knowledge_point": "一日三餐热量分配百分比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "3%",
+            "13%",
+            "30%",
+            "300%"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "午餐四成占一日热量的多少",
+          "answer": {
+            "value": "40%"
+          },
+          "analysis": "一成对应10%，四成逐步累加",
+          "difficulty": 2,
+          "knowledge_point": "一日三餐热量分配百分比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "三餐百分比之和应为一百",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "三成四成三成合计十成，判断为对",
+          "difficulty": 3,
+          "knowledge_point": "一日三餐热量分配百分比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "日需2000千卡早餐三成求热量",
+          "answer": {
+            "value": "示例：600 千卡"
+          },
+          "analysis": "先认三成为30%，再乘总量计分",
+          "difficulty": 4,
+          "knowledge_point": "一日三餐热量分配百分比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "日需1800千卡午餐四成是多少",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "四成乘1800得720，余项错，所以选B",
+          "difficulty": 4,
+          "knowledge_point": "一日三餐热量分配百分比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "540千卡",
+            "720千卡",
+            "900千卡",
+            "1080千卡"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "谷类占50%扇形圆心角几度",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "360一半是180，余项错，所以选C",
+          "difficulty": 1,
+          "knowledge_point": "用扇形图表示膳食结构",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "50度",
+            "100度",
+            "180度",
+            "360度"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "蔬菜占25%对应圆心角多少",
+          "answer": {
+            "value": "90 度"
+          },
+          "analysis": "360乘25%，分两步相乘得出",
+          "difficulty": 2,
+          "knowledge_point": "用扇形图表示膳食结构",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "膳食扇形图各部分和为整圆",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "各类占比合成100%，判断为对",
+          "difficulty": 3,
+          "knowledge_point": "用扇形图表示膳食结构",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "把三餐占比画成扇形图的步骤",
+          "answer": {
+            "value": "示例：先算角度再分圆"
+          },
+          "analysis": "先换算角度，再依次画扇形，分点计分",
+          "difficulty": 4,
+          "knowledge_point": "用扇形图表示膳食结构",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "某餐鱼肉占15%求其圆心角",
+          "answer": {
+            "value": "示例：54 度"
+          },
+          "analysis": "先认占比15%，再乘360，分点计分",
+          "difficulty": 5,
+          "knowledge_point": "用扇形图表示膳食结构",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "总复习",
+      "order_index": 13,
+      "summary": "综合复习分数除法、圆、比、百分数、位置、观察物体与统计图。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "求6除以二分之一的商",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "乘倒数2得12，余项错，所以选C",
+          "difficulty": 1,
+          "knowledge_point": "分数除法与比的综合复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "3",
+            "6",
+            "12",
+            "18"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "化简12比18为最简整数比",
+          "answer": {
+            "value": "2:3"
+          },
+          "analysis": "前后项同除以6，分步化简得出",
+          "difficulty": 2,
+          "knowledge_point": "分数除法与比的综合复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "比的后项取零是否允许",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "后项相当于除数不能为零，故错",
+          "difficulty": 3,
+          "knowledge_point": "分数除法与比的综合复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "求四分之三除以二分之一的商",
+          "answer": {
+            "value": "示例：3/2"
+          },
+          "analysis": "先改乘倒数，再约分，分点计分",
+          "difficulty": 4,
+          "knowledge_point": "分数除法与比的综合复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "圆半径为2厘米求直径",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "直径含两半径得4，余项错，所以选B",
+          "difficulty": 1,
+          "knowledge_point": "圆的周长面积综合复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "2厘米",
+            "4厘米",
+            "6厘米",
+            "8厘米"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "圆直径10厘米求周长取3.14",
+          "answer": {
+            "value": "31.4 厘米"
+          },
+          "analysis": "圆周率乘直径，分步相乘得出",
+          "difficulty": 2,
+          "knowledge_point": "圆的周长面积综合复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "半径翻倍圆面积也翻倍吗",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "面积按半径平方变，故判错",
+          "difficulty": 3,
+          "knowledge_point": "圆的周长面积综合复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "求半径3的圆面积取3.14",
+          "answer": {
+            "value": "示例：28.26"
+          },
+          "analysis": "先求半径平方9，再乘3.14计分",
+          "difficulty": 4,
+          "knowledge_point": "圆的周长面积综合复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "圆周长12.56取3.14求半径",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "直径4折半得2，余项错，所以选B",
+          "difficulty": 4,
+          "knowledge_point": "圆的周长面积综合复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "80的25%是多少",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "80乘0.25得20，余项错，所以选B",
+          "difficulty": 1,
+          "knowledge_point": "百分数与分数应用题复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "16",
+            "20",
+            "25",
+            "40"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "某数的30%是24求某数",
+          "answer": {
+            "value": "80"
+          },
+          "analysis": "用24除以0.3得80，算式 24/0.3=80",
+          "difficulty": 2,
+          "knowledge_point": "百分数与分数应用题复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "降价20%后按原价八折出售",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "现价占原价80%，判断为对",
+          "difficulty": 3,
+          "knowledge_point": "百分数与分数应用题复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "120增加10%后是多少",
+          "answer": {
+            "value": "示例：132"
+          },
+          "analysis": "先求增加量12，再加原数，分点计分",
+          "difficulty": 4,
+          "knowledge_point": "百分数与分数应用题复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "数对(4,6)中6表示什么",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "数对后项表纵向，余项错，所以选B",
+          "difficulty": 1,
+          "knowledge_point": "统计图与位置的综合复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "横向",
+            "纵向",
+            "总数",
+            "层数"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "扇形图某部分占25%求圆心角",
+          "answer": {
+            "value": "90 度"
+          },
+          "analysis": "用360乘25%，分步相乘得出",
+          "difficulty": 2,
+          "knowledge_point": "统计图与位置的综合复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "折线图适合显示各月销量变化",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "折线显增减趋势，判断为对",
+          "difficulty": 3,
+          "knowledge_point": "统计图与位置的综合复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "总数300中B占40%求B的数量",
+          "answer": {
+            "value": "示例：120"
+          },
+          "analysis": "先认40%，再乘300，分点计分",
+          "difficulty": 4,
+          "knowledge_point": "统计图与位置的综合复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "班级50人女生占48%求人数",
+          "answer": {
+            "value": "示例：24 人"
+          },
+          "analysis": "先认占比48%，再乘50，分点计分",
+          "difficulty": 5,
+          "knowledge_point": "统计图与位置的综合复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-11T02:29:22+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

@@ -1,0 +1,3317 @@
+{
+  "subject": "english",
+  "grade": 2,
+  "version": "牛津深圳版",
+  "semester": "second",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "Unit 1 Farm animals",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "Farm animals 农场动物词汇",
+      "parent": "Unit 1 Farm animals",
+      "order_index": 1,
+      "explanation": "cow, duck, hen, sheep, pig, horse 是常见农场动物。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Farm animals 询问与回答",
+      "parent": "Unit 1 Farm animals",
+      "order_index": 2,
+      "explanation": "What is it? — It is a … 用来询问单数事物。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Farm animals 冠词与复数",
+      "parent": "Unit 1 Farm animals",
+      "order_index": 3,
+      "explanation": "a / an 按首音选择，复数名词加 s。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Farm animals 农场情境表达",
+      "parent": "Unit 1 Farm animals",
+      "order_index": 4,
+      "explanation": "用 There is / There are 描述农场里的动物。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 2 In the circus",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "In the circus 马戏团词汇",
+      "parent": "Unit 2 In the circus",
+      "order_index": 1,
+      "explanation": "clown, acrobat, elephant, ball, tent 等词描述马戏团。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "In the circus 能力表达 can",
+      "parent": "Unit 2 In the circus",
+      "order_index": 2,
+      "explanation": "can 后接动词原形，表示会做某事。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "In the circus 否定与疑问 can't / Can you …?",
+      "parent": "Unit 2 In the circus",
+      "order_index": 3,
+      "explanation": "否定用 cannot / can't，疑问把 can 提前。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "In the circus 描述动作",
+      "parent": "Unit 2 In the circus",
+      "order_index": 4,
+      "explanation": "用现在进行时描述正在发生的动作。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 3 My room",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "My room 房间物品词汇",
+      "parent": "Unit 3 My room",
+      "order_index": 1,
+      "explanation": "bed, desk, chair, lamp, window, door 是房间常见物品。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "My room 方位介词 in / on / under",
+      "parent": "Unit 3 My room",
+      "order_index": 2,
+      "explanation": "in 在内部，on 在表面，under 在下方。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "My room There is / There are",
+      "parent": "Unit 3 My room",
+      "order_index": 3,
+      "explanation": "单数用 There is，复数用 There are。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "My room 询问位置 Where is …?",
+      "parent": "Unit 3 My room",
+      "order_index": 4,
+      "explanation": "Where is …? 询问单数物品位置，用 It is … 回答。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 4 In the park",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "In the park 公园词汇与活动",
+      "parent": "Unit 4 In the park",
+      "order_index": 1,
+      "explanation": "slide, swing, seesaw, bench, tree 等词描述公园。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "In the park Let's … 提议",
+      "parent": "Unit 4 In the park",
+      "order_index": 2,
+      "explanation": "Let's + 动词原形 提出建议。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "In the park 现在进行时描述",
+      "parent": "Unit 4 In the park",
+      "order_index": 3,
+      "explanation": "be + doing 描述正在进行的活动。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "In the park 礼貌用语与规则",
+      "parent": "Unit 4 In the park",
+      "order_index": 4,
+      "explanation": "用 Please / Thank you / Excuse me 保持礼貌，遵守公园规则。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 5 Wash with water",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "Wash with water 清洁动作词汇",
+      "parent": "Unit 5 Wash with water",
+      "order_index": 1,
+      "explanation": "wash, brush, clean, dry 表示清洁相关动作。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Wash with water 祈使句",
+      "parent": "Unit 5 Wash with water",
+      "order_index": 2,
+      "explanation": "祈使句以动词原形开头，表示请求或要求。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Wash with water 一般现在时与频率",
+      "parent": "Unit 5 Wash with water",
+      "order_index": 3,
+      "explanation": "every day / often 等词搭配一般现在时。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Wash with water 节约用水与卫生常识",
+      "parent": "Unit 5 Wash with water",
+      "order_index": 4,
+      "explanation": "用英语表达节水与讲卫生的小习惯。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 6 Eating and drinking",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "Eating and drinking 食物饮品词汇",
+      "parent": "Unit 6 Eating and drinking",
+      "order_index": 1,
+      "explanation": "rice, noodles, bread, milk, juice, water 是常见食物饮品。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Eating and drinking 喜好表达 like / don't like",
+      "parent": "Unit 6 Eating and drinking",
+      "order_index": 2,
+      "explanation": "like 表示喜欢，don't like 表示不喜欢。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Eating and drinking 询问 Would you like …?",
+      "parent": "Unit 6 Eating and drinking",
+      "order_index": 3,
+      "explanation": "Would you like …? 礼貌地询问对方需要什么。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Eating and drinking 三餐与时间",
+      "parent": "Unit 6 Eating and drinking",
+      "order_index": 4,
+      "explanation": "breakfast / lunch / dinner 对应三餐时间。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 7 Hot summer",
+      "order_index": 7
+    },
+    {
+      "node_type": "point",
+      "name": "Hot summer 天气词汇",
+      "parent": "Unit 7 Hot summer",
+      "order_index": 1,
+      "explanation": "hot, sunny, rainy, windy 描述天气。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Hot summer 询问天气",
+      "parent": "Unit 7 Hot summer",
+      "order_index": 2,
+      "explanation": "What's the weather like? 询问天气，答 It is …。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Hot summer 消暑活动与建议",
+      "parent": "Unit 7 Hot summer",
+      "order_index": 3,
+      "explanation": "用 swim, drink water, wear a hat 等表达夏天的活动。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Hot summer 季节与对比",
+      "parent": "Unit 7 Hot summer",
+      "order_index": 4,
+      "explanation": "用 warm / cool / cold 对比不同季节。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 8 Time",
+      "order_index": 8
+    },
+    {
+      "node_type": "point",
+      "name": "Time 整点表达",
+      "parent": "Unit 8 Time",
+      "order_index": 1,
+      "explanation": "整点用 It is + 数字 + o'clock。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Time 询问时间",
+      "parent": "Unit 8 Time",
+      "order_index": 2,
+      "explanation": "What time is it? 是询问时间的固定问法，答 It is …。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Time 日常作息与介词 at",
+      "parent": "Unit 8 Time",
+      "order_index": 3,
+      "explanation": "具体时刻前用 at，如 at seven o'clock。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Time 数字与时间安排",
+      "parent": "Unit 8 Time",
+      "order_index": 4,
+      "explanation": "掌握 1-12 的数字表达，并能合理安排时间。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 9 Revision",
+      "order_index": 9
+    },
+    {
+      "node_type": "point",
+      "name": "Revision 词汇综合",
+      "parent": "Unit 9 Revision",
+      "order_index": 1,
+      "explanation": "复习农场动物、房间物品、食物饮品、天气与时间词汇。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Revision 句型综合",
+      "parent": "Unit 9 Revision",
+      "order_index": 2,
+      "explanation": "复习 What is it? / There is / Can you …? / What time is it? 等句型。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Revision 情景对话",
+      "parent": "Unit 9 Revision",
+      "order_index": 3,
+      "explanation": "在购物、用餐、问路等情境中正确应答。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Revision 看图与短文表达",
+      "parent": "Unit 9 Revision",
+      "order_index": 4,
+      "explanation": "能根据图片或情境写 2-3 句连贯英语。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "Unit 1 Farm animals",
+      "order_index": 1,
+      "summary": "农场动物名称与 What is it? It is a … 句型。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Which animal gives us milk?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "cow 奶牛产奶。",
+          "difficulty": 2,
+          "knowledge_point": "Farm animals 农场动物词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "cow",
+            "duck",
+            "hen",
+            "pig"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: A ___（鸭子）can swim.",
+          "answer": {
+            "value": "duck"
+          },
+          "analysis": "duck 是鸭子。",
+          "difficulty": 2,
+          "knowledge_point": "Farm animals 农场动物词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「a hen」 means 一只母鸡。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "hen 是母鸡。",
+          "difficulty": 2,
+          "knowledge_point": "Farm animals 农场动物词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which word is NOT a farm animal?",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "tiger 老虎不是农场动物。",
+          "difficulty": 2,
+          "knowledge_point": "Farm animals 农场动物词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "sheep",
+            "horse",
+            "tiger",
+            "pig"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Name three farm animals.",
+          "answer": {
+            "value": "示例：cow, duck, sheep"
+          },
+          "analysis": "评分要点：三个都是农场动物且拼写正确。",
+          "difficulty": 3,
+          "knowledge_point": "Farm animals 农场动物词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "— What is it? — ___ a duck.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "单数回答用 It is。",
+          "difficulty": 2,
+          "knowledge_point": "Farm animals 询问与回答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "It is",
+            "They are",
+            "I am",
+            "You are"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: — What is it? — ___ ___ a pig.（两空）",
+          "answer": {
+            "value": "It is"
+          },
+          "analysis": "单数回答 It is a pig。",
+          "difficulty": 2,
+          "knowledge_point": "Farm animals 询问与回答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「What are they?」 asks about more than one thing.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "they 表示复数。",
+          "difficulty": 3,
+          "knowledge_point": "Farm animals 询问与回答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "— What are they? — ___ cows.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "复数回答用 They are。",
+          "difficulty": 3,
+          "knowledge_point": "Farm animals 询问与回答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "They are",
+            "It is",
+            "She is",
+            "He is"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Ask and answer about a farm animal.",
+          "answer": {
+            "value": "示例：What is it? It is a sheep."
+          },
+          "analysis": "评分要点：问答配对且单复数一致。",
+          "difficulty": 3,
+          "knowledge_point": "Farm animals 询问与回答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Choose the correct phrase: ___ horse",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "horse 以辅音音素开头，用 a。",
+          "difficulty": 2,
+          "knowledge_point": "Farm animals 冠词与复数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "a",
+            "an",
+            "the",
+            "/"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: two ___（猪）",
+          "answer": {
+            "value": "pigs"
+          },
+          "analysis": "two 后接复数 pigs。",
+          "difficulty": 2,
+          "knowledge_point": "Farm animals 冠词与复数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "We say「an egg」 but「a duck」.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "egg 元音音素开头用 an，duck 用 a。",
+          "difficulty": 3,
+          "knowledge_point": "Farm animals 冠词与复数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which phrases are correct?",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✗ sheep 复数是 sheep；D ✓。所以选 A、B、D。",
+          "difficulty": 4,
+          "knowledge_point": "Farm animals 冠词与复数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "a cow",
+            "an apple",
+            "two sheeps",
+            "three ducks"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write a sentence with a number and an animal.",
+          "answer": {
+            "value": "示例：I can see two horses on the farm."
+          },
+          "analysis": "评分要点：数词 + 复数正确。",
+          "difficulty": 3,
+          "knowledge_point": "Farm animals 冠词与复数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "There ___ a cow on the farm.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "单数用 There is。",
+          "difficulty": 2,
+          "knowledge_point": "Farm animals 农场情境表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "is",
+            "are",
+            "am",
+            "be"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: There ___（复数用 are）three ducks in the pond.",
+          "answer": {
+            "value": "are"
+          },
+          "analysis": "three 为复数，用 are。",
+          "difficulty": 2,
+          "knowledge_point": "Farm animals 农场情境表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「There are a pig.」 is correct.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "a pig 是单数，应用 There is。",
+          "difficulty": 3,
+          "knowledge_point": "Farm animals 农场情境表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which sentence is correct?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "复数 two hens 用 There are。",
+          "difficulty": 3,
+          "knowledge_point": "Farm animals 农场情境表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "There are two hens.",
+            "There is two hens.",
+            "There are a hen.",
+            "There am two hens."
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Describe your dream farm in one sentence.",
+          "answer": {
+            "value": "示例：There are five cows and ten ducks on my farm."
+          },
+          "analysis": "评分要点：There are/is 使用正确。",
+          "difficulty": 4,
+          "knowledge_point": "Farm animals 农场情境表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 2 In the circus",
+      "order_index": 2,
+      "summary": "马戏团人物与动作，用 I can … 表达能力。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Who makes people laugh in a circus?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "clown 小丑引人发笑。",
+          "difficulty": 2,
+          "knowledge_point": "In the circus 马戏团词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "a clown",
+            "a teacher",
+            "a doctor",
+            "a driver"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: The ___（大象）is very big.",
+          "answer": {
+            "value": "elephant"
+          },
+          "analysis": "elephant 是大象。",
+          "difficulty": 2,
+          "knowledge_point": "In the circus 马戏团词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「acrobat」 means 杂技演员。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "acrobat 是杂技演员。",
+          "difficulty": 3,
+          "knowledge_point": "In the circus 马戏团词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which thing can a clown play with?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "ball 球是小丑常玩的道具。",
+          "difficulty": 2,
+          "knowledge_point": "In the circus 马戏团词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "a ball",
+            "a desk",
+            "a bed",
+            "a door"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Name two things you can see in a circus.",
+          "answer": {
+            "value": "示例：a clown, an elephant"
+          },
+          "analysis": "评分要点：两个词合理且拼写正确。",
+          "difficulty": 3,
+          "knowledge_point": "In the circus 马戏团词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "I ___ jump high.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "can 没有人称变化。",
+          "difficulty": 2,
+          "knowledge_point": "In the circus 能力表达 can",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "can",
+            "cans",
+            "am",
+            "is"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: She can ___（跳舞）.",
+          "answer": {
+            "value": "dance"
+          },
+          "analysis": "can 后接动词原形 dance。",
+          "difficulty": 2,
+          "knowledge_point": "In the circus 能力表达 can",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「He can sings.」 is correct.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "can 后要用动词原形 sing。",
+          "difficulty": 3,
+          "knowledge_point": "In the circus 能力表达 can",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which sentence about the clown is correct?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "can + 动词原形。",
+          "difficulty": 3,
+          "knowledge_point": "In the circus 能力表达 can",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "The clown can run fast.",
+            "The clown can runs fast.",
+            "The clown cans run fast.",
+            "The clown can running fast."
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write what you can do.",
+          "answer": {
+            "value": "示例：I can swim and I can sing."
+          },
+          "analysis": "评分要点：can 后动词原形。",
+          "difficulty": 3,
+          "knowledge_point": "In the circus 能力表达 can",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "— Can you swim? — No, I ___.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "否定回答用 can't。",
+          "difficulty": 2,
+          "knowledge_point": "In the circus 否定与疑问 can't / Can you …?",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "can't",
+            "can",
+            "don't",
+            "am not"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: The elephant ___（不能）fly.",
+          "answer": {
+            "value": "can't"
+          },
+          "analysis": "不能 flying 的能力否定用 can't。",
+          "difficulty": 3,
+          "knowledge_point": "In the circus 否定与疑问 can't / Can you …?",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「Can you sing?」 is a question about ability.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "can 问句询问能力。",
+          "difficulty": 2,
+          "knowledge_point": "In the circus 否定与疑问 can't / Can you …?",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which is a correct question?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "疑问句把 can 放句首。",
+          "difficulty": 3,
+          "knowledge_point": "In the circus 否定与疑问 can't / Can you …?",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Can he jump?",
+            "He can jump?",
+            "Can he jumps?",
+            "Does he can jump?"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Ask your friend about one ability and answer.",
+          "answer": {
+            "value": "示例：Can you dance? Yes, I can. / No, I can't."
+          },
+          "analysis": "评分要点：问句与答句都正确。",
+          "difficulty": 4,
+          "knowledge_point": "In the circus 否定与疑问 can't / Can you …?",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Look! The clown ___ jumping.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "单数主语用 is。",
+          "difficulty": 2,
+          "knowledge_point": "In the circus 描述动作",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "is",
+            "are",
+            "am",
+            "be"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: The acrobats are ___（走）on the rope.",
+          "answer": {
+            "value": "walking"
+          },
+          "analysis": "进行时为 be + doing。",
+          "difficulty": 2,
+          "knowledge_point": "In the circus 描述动作",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「They are sing.」 is correct.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "应为 They are singing。",
+          "difficulty": 3,
+          "knowledge_point": "In the circus 描述动作",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which sentence describes a picture now?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "is dancing 表示正在进行的动作。",
+          "difficulty": 3,
+          "knowledge_point": "In the circus 描述动作",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "The elephant is dancing.",
+            "The elephant dances every day.",
+            "The elephant danced.",
+            "The elephant will dance."
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Describe what is happening in the circus now.",
+          "answer": {
+            "value": "示例：A clown is riding a bike and two acrobats are flying."
+          },
+          "analysis": "评分要点：现在进行时正确。",
+          "difficulty": 4,
+          "knowledge_point": "In the circus 描述动作",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 3 My room",
+      "order_index": 3,
+      "summary": "房间物品与 There is / There are，方位介词。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "We sleep on a ___",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "bed 是床。",
+          "difficulty": 2,
+          "knowledge_point": "My room 房间物品词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "bed",
+            "desk",
+            "chair",
+            "door"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: Turn on the ___（灯）.",
+          "answer": {
+            "value": "lamp"
+          },
+          "analysis": "lamp 是灯。",
+          "difficulty": 2,
+          "knowledge_point": "My room 房间物品词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「window」 means 窗户。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "window 是窗户。",
+          "difficulty": 2,
+          "knowledge_point": "My room 房间物品词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which is NOT in a room?",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "bus 是公共汽车。",
+          "difficulty": 2,
+          "knowledge_point": "My room 房间物品词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "bed",
+            "desk",
+            "bus",
+            "chair"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Name four things in your room.",
+          "answer": {
+            "value": "示例：a bed, a desk, a chair, a lamp"
+          },
+          "analysis": "评分要点：四个词拼写正确。",
+          "difficulty": 3,
+          "knowledge_point": "My room 房间物品词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "The book is ___ the desk.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "书在桌面上用 on。",
+          "difficulty": 2,
+          "knowledge_point": "My room 方位介词 in / on / under",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "on",
+            "in",
+            "under",
+            "at"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: The cat is ___（在……下面）the bed.",
+          "answer": {
+            "value": "under"
+          },
+          "analysis": "under 表示在下方。",
+          "difficulty": 2,
+          "knowledge_point": "My room 方位介词 in / on / under",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「The pen is in the box.」 means 笔在盒子里。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "in 表示在内部。",
+          "difficulty": 2,
+          "knowledge_point": "My room 方位介词 in / on / under",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Where is the lamp? It is ___ the desk.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "台灯通常放在桌面上。",
+          "difficulty": 3,
+          "knowledge_point": "My room 方位介词 in / on / under",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "on",
+            "in",
+            "under the desk inside",
+            "at"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Say where your bag is.",
+          "answer": {
+            "value": "示例：My bag is on the chair."
+          },
+          "analysis": "评分要点：介词使用正确。",
+          "difficulty": 3,
+          "knowledge_point": "My room 方位介词 in / on / under",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "There ___ two chairs in my room.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "two chairs 复数用 are。",
+          "difficulty": 2,
+          "knowledge_point": "My room There is / There are",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "are",
+            "is",
+            "am",
+            "be"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: There ___ a big window in my room.",
+          "answer": {
+            "value": "is"
+          },
+          "analysis": "a big window 单数用 is。",
+          "difficulty": 2,
+          "knowledge_point": "My room There is / There are",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「There are a bed.」 is correct.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "a bed 是单数，应用 There is。",
+          "difficulty": 3,
+          "knowledge_point": "My room There is / There are",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which sentences are correct?",
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✗ a chair 单数；D ✗ two doors 复数应用 are。所以选 A、B。",
+          "difficulty": 4,
+          "knowledge_point": "My room There is / There are",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "There is a desk.",
+            "There are three lamps.",
+            "There are a chair.",
+            "There is two doors."
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Describe your room with There is / There are.",
+          "answer": {
+            "value": "示例：There is a bed and there are two chairs in my room."
+          },
+          "analysis": "评分要点：单复数各用对一次。",
+          "difficulty": 4,
+          "knowledge_point": "My room There is / There are",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "— Where is my book? — ___ on the desk.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "单数回答用 It is。",
+          "difficulty": 2,
+          "knowledge_point": "My room 询问位置 Where is …?",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "It is",
+            "They are",
+            "There is",
+            "I am"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: ___（在哪里）are the keys?",
+          "answer": {
+            "value": "Where"
+          },
+          "analysis": "复数询问用 Where are。",
+          "difficulty": 3,
+          "knowledge_point": "My room 询问位置 Where is …?",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「Where are the pens?」 asks about more than one pen.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "复数用 are。",
+          "difficulty": 3,
+          "knowledge_point": "My room 询问位置 Where is …?",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Choose the correct answer: Where are the toys? ___",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "复数回答用 They are。",
+          "difficulty": 3,
+          "knowledge_point": "My room 询问位置 Where is …?",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "They are under the bed.",
+            "It is under the bed.",
+            "There is under the bed.",
+            "Where under the bed."
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Ask and answer about a thing in your room.",
+          "answer": {
+            "value": "示例：Where is my cap? It is on the bed."
+          },
+          "analysis": "评分要点：问句与答句匹配。",
+          "difficulty": 4,
+          "knowledge_point": "My room 询问位置 Where is …?",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 4 In the park",
+      "order_index": 4,
+      "summary": "公园活动与常见游乐设施，用 Let's … 提议。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Children like to play on the ___",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "slide 滑梯。",
+          "difficulty": 2,
+          "knowledge_point": "In the park 公园词汇与活动",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "slide",
+            "desk",
+            "fridge",
+            "cup"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: We sit on a ___（长椅）in the park.",
+          "answer": {
+            "value": "bench"
+          },
+          "analysis": "bench 是长椅。",
+          "difficulty": 2,
+          "knowledge_point": "In the park 公园词汇与活动",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「seesaw」 means 跷跷板。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "seesaw 是跷跷板。",
+          "difficulty": 3,
+          "knowledge_point": "In the park 公园词汇与活动",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which activity is for a park?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "放风筝是公园活动。",
+          "difficulty": 2,
+          "knowledge_point": "In the park 公园词汇与活动",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "flying a kite",
+            "writing on the board",
+            "cooking rice",
+            "sleeping in bed"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Name three things you can do in a park.",
+          "answer": {
+            "value": "示例：fly a kite, play on the slide, sit on a bench"
+          },
+          "analysis": "评分要点：三个活动合理。",
+          "difficulty": 3,
+          "knowledge_point": "In the park 公园词汇与活动",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "___ go to the park!",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "Let's 后接动词原形。",
+          "difficulty": 2,
+          "knowledge_point": "In the park Let's … 提议",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Let's",
+            "Let",
+            "Lets",
+            "Let us to"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: Let's ___（玩）football.",
+          "answer": {
+            "value": "play"
+          },
+          "analysis": "Let's 后接动词原形 play。",
+          "difficulty": 2,
+          "knowledge_point": "In the park Let's … 提议",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「Let's to go.」 is correct.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "Let's 后不加 to。",
+          "difficulty": 3,
+          "knowledge_point": "In the park Let's … 提议",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which is a good answer to「Let's fly a kite.」?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "同意提议说 Good idea。",
+          "difficulty": 3,
+          "knowledge_point": "In the park Let's … 提议",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Good idea!",
+            "I am a kite.",
+            "Yes, it is a kite.",
+            "No, I am fine."
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Make a suggestion about a park activity.",
+          "answer": {
+            "value": "示例：Let's play on the swing."
+          },
+          "analysis": "评分要点：Let's + 动词原形。",
+          "difficulty": 3,
+          "knowledge_point": "In the park Let's … 提议",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "The children ___ flying kites.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "复数主语用 are。",
+          "difficulty": 2,
+          "knowledge_point": "In the park 现在进行时描述",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "are",
+            "is",
+            "am",
+            "be"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: He is ___（跑）in the park.",
+          "answer": {
+            "value": "running"
+          },
+          "analysis": "run 变 running 双写 n。",
+          "difficulty": 3,
+          "knowledge_point": "In the park 现在进行时描述",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「She is sit on the bench.」 is correct.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "应为 She is sitting on the bench。",
+          "difficulty": 3,
+          "knowledge_point": "In the park 现在进行时描述",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Choose the correct sentence.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "be + doing 完整。",
+          "difficulty": 3,
+          "knowledge_point": "In the park 现在进行时描述",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "They are playing on the slide.",
+            "They is playing on the slide.",
+            "They are play on the slide.",
+            "They playing on the slide."
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Describe two things people are doing in the park.",
+          "answer": {
+            "value": "示例：A boy is running and two girls are flying a kite."
+          },
+          "analysis": "评分要点：两处进行时都正确。",
+          "difficulty": 4,
+          "knowledge_point": "In the park 现在进行时描述",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "When someone helps you, you say ___",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "得到帮助说 Thank you。",
+          "difficulty": 2,
+          "knowledge_point": "In the park 礼貌用语与规则",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Thank you.",
+            "Sorry.",
+            "Hello.",
+            "Goodbye."
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: ___（请）come here.",
+          "answer": {
+            "value": "Please"
+          },
+          "analysis": "请求用 Please。",
+          "difficulty": 2,
+          "knowledge_point": "In the park 礼貌用语与规则",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "We should keep the park clean.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "公园要保持清洁。",
+          "difficulty": 2,
+          "knowledge_point": "In the park 礼貌用语与规则",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Good behaviour in the park includes",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；D ✓；C ✗ 随意摘花不文明。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "In the park 礼貌用语与规则",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "waiting for your turn",
+            "putting rubbish in the bin",
+            "picking flowers everywhere",
+            "helping small children"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write one park rule in English.",
+          "answer": {
+            "value": "示例：Don't pick flowers in the park."
+          },
+          "analysis": "评分要点：规则清楚、句法正确。",
+          "difficulty": 3,
+          "knowledge_point": "In the park 礼貌用语与规则",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 5 Wash with water",
+      "order_index": 5,
+      "summary": "用水清洁的动作与祈使句，日常卫生习惯。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "We ___ our hands before eating.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "洗手用 wash。",
+          "difficulty": 2,
+          "knowledge_point": "Wash with water 清洁动作词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "wash",
+            "read",
+            "draw",
+            "count"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: I ___（刷）my teeth every day.",
+          "answer": {
+            "value": "brush"
+          },
+          "analysis": "刷牙用 brush。",
+          "difficulty": 2,
+          "knowledge_point": "Wash with water 清洁动作词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「clean」 means 弄干净。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "clean 作动词是清洁。",
+          "difficulty": 2,
+          "knowledge_point": "Wash with water 清洁动作词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which do we use to wash our face?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "洗脸用水。",
+          "difficulty": 2,
+          "knowledge_point": "Wash with water 清洁动作词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "water",
+            "bread",
+            "paper",
+            "a book"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Name two things you wash every day.",
+          "answer": {
+            "value": "示例：my hands and my face"
+          },
+          "analysis": "评分要点：两个都说清。",
+          "difficulty": 3,
+          "knowledge_point": "Wash with water 清洁动作词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "___ your hands, please.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "祈使句用动词原形。",
+          "difficulty": 2,
+          "knowledge_point": "Wash with water 祈使句",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Wash",
+            "Washes",
+            "Washing",
+            "Washed"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: ___（不要）waste water.",
+          "answer": {
+            "value": "Don't"
+          },
+          "analysis": "否定祈使句用 Don't。",
+          "difficulty": 2,
+          "knowledge_point": "Wash with water 祈使句",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「Brush your teeth.」 is an imperative sentence.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "动词原形开头是祈使句。",
+          "difficulty": 3,
+          "knowledge_point": "Wash with water 祈使句",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which is a negative instruction?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "Don't 开头表示否定祈使。",
+          "difficulty": 3,
+          "knowledge_point": "Wash with water 祈使句",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Don't play with water.",
+            "Play with water.",
+            "You play with water.",
+            "Playing with water."
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Give two instructions about washing.",
+          "answer": {
+            "value": "示例：Wash your hands. Don't waste water."
+          },
+          "analysis": "评分要点：一句肯定一句否定。",
+          "difficulty": 3,
+          "knowledge_point": "Wash with water 祈使句",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "I ___ my face every morning.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "主语 I 用动词原形。",
+          "difficulty": 2,
+          "knowledge_point": "Wash with water 一般现在时与频率",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "wash",
+            "washes",
+            "washing",
+            "washed"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: She ___（洗）her hands after school.",
+          "answer": {
+            "value": "washes"
+          },
+          "analysis": "第三人称单数加 es。",
+          "difficulty": 3,
+          "knowledge_point": "Wash with water 一般现在时与频率",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「He brush his teeth every day.」 is correct.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "第三人称应为 brushes。",
+          "difficulty": 3,
+          "knowledge_point": "Wash with water 一般现在时与频率",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which sentence about washing is correct?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "第三人称单数 + 频率状语。",
+          "difficulty": 3,
+          "knowledge_point": "Wash with water 一般现在时与频率",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "My mother washes the dishes every day.",
+            "My mother wash the dishes every day.",
+            "My mother washing the dishes every day.",
+            "My mother washes the dishes every days."
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write one thing you do every day with water.",
+          "answer": {
+            "value": "示例：I wash my hands with water before dinner."
+          },
+          "analysis": "评分要点：一般现在时正确。",
+          "difficulty": 3,
+          "knowledge_point": "Wash with water 一般现在时与频率",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "We should ___ water.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "save water 节约用水。",
+          "difficulty": 2,
+          "knowledge_point": "Wash with water 节约用水与卫生常识",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "save",
+            "throw",
+            "eat",
+            "cut"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: Turn ___ the tap after washing.",
+          "answer": {
+            "value": "off"
+          },
+          "analysis": "关水龙头用 turn off。",
+          "difficulty": 3,
+          "knowledge_point": "Wash with water 节约用水与卫生常识",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Washing hands can keep us healthy.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "洗手有助健康。",
+          "difficulty": 2,
+          "knowledge_point": "Wash with water 节约用水与卫生常识",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Ways to save water include",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；D ✓；C ✗ 一直放水浪费。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "Wash with water 节约用水与卫生常识",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "turning off the tap",
+            "taking a short shower",
+            "keeping water running",
+            "reusing water for plants"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write one tip to save water.",
+          "answer": {
+            "value": "示例：Turn off the tap when you brush your teeth."
+          },
+          "analysis": "评分要点：建议具体可行。",
+          "difficulty": 3,
+          "knowledge_point": "Wash with water 节约用水与卫生常识",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 6 Eating and drinking",
+      "order_index": 6,
+      "summary": "食物饮品词汇与 I like / I don't like 表达。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "We drink ___ every day.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "water 是饮品。",
+          "difficulty": 2,
+          "knowledge_point": "Eating and drinking 食物饮品词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "water",
+            "rice",
+            "bread",
+            "cake"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: I eat ___（面条）for lunch.",
+          "answer": {
+            "value": "noodles"
+          },
+          "analysis": "noodles 是面条。",
+          "difficulty": 2,
+          "knowledge_point": "Eating and drinking 食物饮品词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「juice」 means 果汁。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "juice 是果汁。",
+          "difficulty": 2,
+          "knowledge_point": "Eating and drinking 食物饮品词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which is NOT a drink?",
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "rice 米饭是食物。",
+          "difficulty": 2,
+          "knowledge_point": "Eating and drinking 食物饮品词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "milk",
+            "juice",
+            "water",
+            "rice"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Name two things you eat and one thing you drink.",
+          "answer": {
+            "value": "示例：I eat rice and bread. I drink milk."
+          },
+          "analysis": "评分要点：食物饮品分类正确。",
+          "difficulty": 3,
+          "knowledge_point": "Eating and drinking 食物饮品词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "I ___ apples. They are sweet.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "主语 I 用 like。",
+          "difficulty": 2,
+          "knowledge_point": "Eating and drinking 喜好表达 like / don't like",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "like",
+            "likes",
+            "liking",
+            "liked"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: He ___（喜欢）milk.",
+          "answer": {
+            "value": "likes"
+          },
+          "analysis": "第三人称单数 like 加 s。",
+          "difficulty": 3,
+          "knowledge_point": "Eating and drinking 喜好表达 like / don't like",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「I don't like cola.」 means 我不喜欢可乐。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "don't like 表示不喜欢。",
+          "difficulty": 2,
+          "knowledge_point": "Eating and drinking 喜好表达 like / don't like",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which sentence about food is correct?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "第三人称单数用 likes。",
+          "difficulty": 3,
+          "knowledge_point": "Eating and drinking 喜好表达 like / don't like",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "She likes juice.",
+            "She like juice.",
+            "She likes juices.",
+            "She is like juice."
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Say what you like and what you don't like.",
+          "answer": {
+            "value": "示例：I like noodles, but I don't like cola."
+          },
+          "analysis": "评分要点：两种表达各用一次。",
+          "difficulty": 4,
+          "knowledge_point": "Eating and drinking 喜好表达 like / don't like",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "— Would you like some milk? — ___",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "接受时答 Yes, please。",
+          "difficulty": 3,
+          "knowledge_point": "Eating and drinking 询问 Would you like …?",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Yes, please.",
+            "Yes, I am.",
+            "No, I don't.",
+            "It is milk."
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: Would you like ___（一些）juice?",
+          "answer": {
+            "value": "some"
+          },
+          "analysis": "肯定提议用 some。",
+          "difficulty": 3,
+          "knowledge_point": "Eating and drinking 询问 Would you like …?",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「Would you like a cake?」 is a polite offer.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "Would you like 是礼貌提议。",
+          "difficulty": 3,
+          "knowledge_point": "Eating and drinking 询问 Would you like …?",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which is a polite refusal?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "礼貌拒绝用 No, thank you。",
+          "difficulty": 3,
+          "knowledge_point": "Eating and drinking 询问 Would you like …?",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "No, thank you.",
+            "No, it is bad.",
+            "I don't want.",
+            "Give me nothing."
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Offer your friend something to drink.",
+          "answer": {
+            "value": "示例：Would you like some water? Yes, please."
+          },
+          "analysis": "评分要点：提议与应答都礼貌。",
+          "difficulty": 3,
+          "knowledge_point": "Eating and drinking 询问 Would you like …?",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "We have ___ in the morning.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "早餐在早晨。",
+          "difficulty": 2,
+          "knowledge_point": "Eating and drinking 三餐与时间",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "breakfast",
+            "dinner",
+            "lunch",
+            "supper at night"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: We have ___（午餐）at twelve.",
+          "answer": {
+            "value": "lunch"
+          },
+          "analysis": "午餐是 lunch。",
+          "difficulty": 2,
+          "knowledge_point": "Eating and drinking 三餐与时间",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「dinner」 is usually in the evening.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "晚餐在傍晚。",
+          "difficulty": 2,
+          "knowledge_point": "Eating and drinking 三餐与时间",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which are meals?",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓ 都是三餐；D ✗ apple 是水果。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "Eating and drinking 三餐与时间",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "breakfast",
+            "lunch",
+            "dinner",
+            "apple"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write what you have for breakfast.",
+          "answer": {
+            "value": "示例：I have bread and milk for breakfast."
+          },
+          "analysis": "评分要点：三餐表达正确。",
+          "difficulty": 3,
+          "knowledge_point": "Eating and drinking 三餐与时间",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 7 Hot summer",
+      "order_index": 7,
+      "summary": "夏天天气与消暑活动，用 It is hot. 表达天气。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "In summer it is usually ___",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "夏天通常炎热。",
+          "difficulty": 2,
+          "knowledge_point": "Hot summer 天气词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "hot",
+            "cold",
+            "snowy",
+            "icy"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: It is ___（晴朗的）today.",
+          "answer": {
+            "value": "sunny"
+          },
+          "analysis": "晴用 sunny。",
+          "difficulty": 2,
+          "knowledge_point": "Hot summer 天气词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「It is windy.」 means 今天有风。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "windy 表示有风。",
+          "difficulty": 2,
+          "knowledge_point": "Hot summer 天气词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which weather word goes with summer?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "hot 与夏天相配。",
+          "difficulty": 2,
+          "knowledge_point": "Hot summer 天气词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "hot",
+            "snowy",
+            "frosty",
+            "icy"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Describe today's weather in one sentence.",
+          "answer": {
+            "value": "示例：It is hot and sunny today."
+          },
+          "analysis": "评分要点：It is + 天气词。",
+          "difficulty": 3,
+          "knowledge_point": "Hot summer 天气词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "— What's the weather like? — ___",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "天气回答用 It is。",
+          "difficulty": 2,
+          "knowledge_point": "Hot summer 询问天气",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "It is hot.",
+            "I am hot.",
+            "They are hot.",
+            "Weather hot."
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: What's the weather ___（像）in summer?",
+          "answer": {
+            "value": "like"
+          },
+          "analysis": "What's the weather like 是固定问法。",
+          "difficulty": 3,
+          "knowledge_point": "Hot summer 询问天气",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Weather questions are answered with「It is …」.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "天气用 It 作主语。",
+          "difficulty": 3,
+          "knowledge_point": "Hot summer 询问天气",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Choose the correct question.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "固定问法为 What's the weather like。",
+          "difficulty": 3,
+          "knowledge_point": "Hot summer 询问天气",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "What's the weather like today?",
+            "How is weather today?",
+            "What weather today?",
+            "Weather is what like?"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Ask and answer about the weather.",
+          "answer": {
+            "value": "示例：What's the weather like? It is rainy."
+          },
+          "analysis": "评分要点：问答正确。",
+          "difficulty": 3,
+          "knowledge_point": "Hot summer 询问天气",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "In hot weather we can ___",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "天热可以游泳。",
+          "difficulty": 2,
+          "knowledge_point": "Hot summer 消暑活动与建议",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "go swimming",
+            "wear a coat",
+            "make a snowman",
+            "sit by the fire"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: Drink more ___（水）in summer.",
+          "answer": {
+            "value": "water"
+          },
+          "analysis": "夏天要多喝水。",
+          "difficulty": 2,
+          "knowledge_point": "Hot summer 消暑活动与建议",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "We should wear a hat in strong sun.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "强光下应遮阳。",
+          "difficulty": 2,
+          "knowledge_point": "Hot summer 消暑活动与建议",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Good things to do on a hot day include",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；D ✓；C ✗ 厚外套不合炎热天气。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "Hot summer 消暑活动与建议",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "drink water",
+            "stay in the shade",
+            "wear thick coats",
+            "go swimming"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Give one tip for a hot summer day.",
+          "answer": {
+            "value": "示例：Drink more water and stay in the shade at noon."
+          },
+          "analysis": "评分要点：建议合理。",
+          "difficulty": 3,
+          "knowledge_point": "Hot summer 消暑活动与建议",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Summer is ___ than spring.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "比较两者用 hotter。",
+          "difficulty": 4,
+          "knowledge_point": "Hot summer 季节与对比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "hotter",
+            "hot",
+            "hottest",
+            "more hot"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: It is cool in ___（秋天）.",
+          "answer": {
+            "value": "autumn"
+          },
+          "analysis": "秋天凉爽。",
+          "difficulty": 2,
+          "knowledge_point": "Hot summer 季节与对比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「Winter is colder than summer.」 is true.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "冬天比夏天冷。",
+          "difficulty": 3,
+          "knowledge_point": "Hot summer 季节与对比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which season is the hottest?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "夏天最热。",
+          "difficulty": 2,
+          "knowledge_point": "Hot summer 季节与对比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "summer",
+            "spring",
+            "autumn",
+            "winter"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Compare summer and winter in one sentence.",
+          "answer": {
+            "value": "示例：Summer is hotter than winter, and winter is colder than summer."
+          },
+          "analysis": "评分要点：比较级正确。",
+          "difficulty": 4,
+          "knowledge_point": "Hot summer 季节与对比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 8 Time",
+      "order_index": 8,
+      "summary": "整点时间表达与 What time is it? 句型。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "It is seven ___.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "整点用 o'clock。",
+          "difficulty": 2,
+          "knowledge_point": "Time 整点表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "o'clock",
+            "hour",
+            "time",
+            "clock"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: 8:00 读作 It is eight ___。",
+          "answer": {
+            "value": "o'clock"
+          },
+          "analysis": "8 点整用 o'clock。",
+          "difficulty": 2,
+          "knowledge_point": "Time 整点表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「It is nine o'clock.」 means 九点整。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "九点整。",
+          "difficulty": 2,
+          "knowledge_point": "Time 整点表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which is the correct way to say 6:00?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "数字在 o'clock 前。",
+          "difficulty": 2,
+          "knowledge_point": "Time 整点表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "It is six o'clock.",
+            "It is six clock.",
+            "It is o'clock six.",
+            "It six o'clock."
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Say the time now in English (to the hour).",
+          "answer": {
+            "value": "示例：It is ten o'clock."
+          },
+          "analysis": "评分要点：格式正确。",
+          "difficulty": 3,
+          "knowledge_point": "Time 整点表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "— What time is it? — ___",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "答句用 It is。",
+          "difficulty": 2,
+          "knowledge_point": "Time 询问时间",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "It is nine.",
+            "I am nine.",
+            "They are nine.",
+            "Time nine."
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: What ___ is it now?",
+          "answer": {
+            "value": "time"
+          },
+          "analysis": "问时间用 What time。",
+          "difficulty": 2,
+          "knowledge_point": "Time 询问时间",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「What time is it?」 asks about the clock.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "询问几点。",
+          "difficulty": 2,
+          "knowledge_point": "Time 询问时间",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which question is correct?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "疑问语序需倒装。",
+          "difficulty": 3,
+          "knowledge_point": "Time 询问时间",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "What time is it?",
+            "What time it is?",
+            "How time is it?",
+            "What is time it?"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Ask and answer about the time.",
+          "answer": {
+            "value": "示例：What time is it? It is eight o'clock."
+          },
+          "analysis": "评分要点：问答正确。",
+          "difficulty": 3,
+          "knowledge_point": "Time 询问时间",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "I get up ___ six o'clock.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "具体时刻前用 at。",
+          "difficulty": 3,
+          "knowledge_point": "Time 日常作息与介词 at",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "at",
+            "in",
+            "on",
+            "to"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: We go to school ___（在）seven thirty.",
+          "answer": {
+            "value": "at"
+          },
+          "analysis": "时刻前用 at。",
+          "difficulty": 3,
+          "knowledge_point": "Time 日常作息与介词 at",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「I go to bed at nine o'clock.」 is correct.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "时刻前用 at。",
+          "difficulty": 2,
+          "knowledge_point": "Time 日常作息与介词 at",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "When do you have lunch? ___ twelve o'clock.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "时刻前用 At。",
+          "difficulty": 3,
+          "knowledge_point": "Time 日常作息与介词 at",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "At",
+            "In",
+            "On",
+            "Of"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write your daily routine with two times.",
+          "answer": {
+            "value": "示例：I get up at seven o'clock and go to bed at nine o'clock."
+          },
+          "analysis": "评分要点：两个时刻都用 at。",
+          "difficulty": 4,
+          "knowledge_point": "Time 日常作息与介词 at",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which number is「十二」?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "twelve 是十二。",
+          "difficulty": 2,
+          "knowledge_point": "Time 数字与时间安排",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "twelve",
+            "twenty",
+            "two",
+            "ten"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: 11 用英语写作 ___。",
+          "answer": {
+            "value": "eleven"
+          },
+          "analysis": "eleven 是十一。",
+          "difficulty": 2,
+          "knowledge_point": "Time 数字与时间安排",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「thirteen」 is「十三」.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "thirteen 是十三。",
+          "difficulty": 2,
+          "knowledge_point": "Time 数字与时间安排",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which are correct time phrases?",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；D ✓；C ✗ 时刻前不用 in。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "Time 数字与时间安排",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "at six o'clock",
+            "at seven o'clock",
+            "in six o'clock",
+            "at nine o'clock"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Plan your evening with two times.",
+          "answer": {
+            "value": "示例：I do my homework at six o'clock and read at eight o'clock."
+          },
+          "analysis": "评分要点：时间安排合理。",
+          "difficulty": 4,
+          "knowledge_point": "Time 数字与时间安排",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 9 Revision",
+      "order_index": 9,
+      "summary": "全册复习：词汇、句型与日常表达综合运用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Which word is about weather?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "rainy 是天气词。",
+          "difficulty": 2,
+          "knowledge_point": "Revision 词汇综合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "rainy",
+            "sheep",
+            "chair",
+            "juice"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: We sleep on a ___（床）. ",
+          "answer": {
+            "value": "bed"
+          },
+          "analysis": "bed 是床。",
+          "difficulty": 2,
+          "knowledge_point": "Revision 词汇综合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「hen」 and「cow」 are both farm animals.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "两者都是农场动物。",
+          "difficulty": 2,
+          "knowledge_point": "Revision 词汇综合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which words are drinks?",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；D ✓；C ✗ rice 是食物。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "Revision 词汇综合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "milk",
+            "juice",
+            "rice",
+            "water"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write five words you learned this book.",
+          "answer": {
+            "value": "示例：cow, bed, noodles, sunny, twelve"
+          },
+          "analysis": "评分要点：五个词正确。",
+          "difficulty": 3,
+          "knowledge_point": "Revision 词汇综合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "— What are they? — ___ two ducks.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "单数回答 It is。",
+          "difficulty": 2,
+          "knowledge_point": "Revision 句型综合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "It is",
+            "They are",
+            "There are",
+            "I am"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: ___ you swim? Yes, I can.",
+          "answer": {
+            "value": "Can"
+          },
+          "analysis": "询问能力用 Can。",
+          "difficulty": 2,
+          "knowledge_point": "Revision 句型综合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「There are two beds.」 is correct.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "复数用 There are。",
+          "difficulty": 2,
+          "knowledge_point": "Revision 句型综合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "— What time do you get up? — ___",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "询问几点起床，回答用 at + 时刻，故选 At six o'clock。",
+          "difficulty": 3,
+          "knowledge_point": "Revision 句型综合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "At six o'clock.",
+            "It is six clock.",
+            "There is six.",
+            "I am six."
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write a question and an answer you learned.",
+          "answer": {
+            "value": "示例：Can you dance? No, I can't."
+          },
+          "analysis": "评分要点：问答都正确。",
+          "difficulty": 3,
+          "knowledge_point": "Revision 句型综合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "— Would you like some juice? — ___",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "礼貌接受用 Yes, please。",
+          "difficulty": 3,
+          "knowledge_point": "Revision 情景对话",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Yes, please.",
+            "Yes, I am.",
+            "It is juice.",
+            "No, I don't like water."
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: ___（谢谢）for your help.",
+          "answer": {
+            "value": "Thanks"
+          },
+          "analysis": "致谢用 Thanks。",
+          "difficulty": 2,
+          "knowledge_point": "Revision 情景对话",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「Good idea!」 can answer a suggestion.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "可以表示赞同提议。",
+          "difficulty": 3,
+          "knowledge_point": "Revision 情景对话",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Someone says「Thank you.」You answer ___",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "回应致谢用 You're welcome。",
+          "difficulty": 3,
+          "knowledge_point": "Revision 情景对话",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "You're welcome.",
+            "Thank you too.",
+            "Yes, I do.",
+            "I am fine."
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write a short dialogue about having lunch.",
+          "answer": {
+            "value": "示例：— Would you like some rice? — Yes, please. — Here you are. — Thank you."
+          },
+          "analysis": "评分要点：对话连贯、礼貌。",
+          "difficulty": 4,
+          "knowledge_point": "Revision 情景对话",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which sentence describes a sunny park?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "晴天在公园放风筝最贴切。",
+          "difficulty": 3,
+          "knowledge_point": "Revision 看图与短文表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Children are flying a kite.",
+            "It is snowy and cold.",
+            "We are sleeping in bed.",
+            "I am washing my hands."
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: There ___ a big tree in the park.",
+          "answer": {
+            "value": "is"
+          },
+          "analysis": "单数用 is。",
+          "difficulty": 2,
+          "knowledge_point": "Revision 看图与短文表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Short English writing should have complete sentences.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "句子要完整。",
+          "difficulty": 2,
+          "knowledge_point": "Revision 看图与短文表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "补写：It is hot today. The children are ___（游泳）in the pool.",
+          "answer": {
+            "value": "swimming"
+          },
+          "analysis": "swim 变 swimming。",
+          "difficulty": 3,
+          "knowledge_point": "Revision 看图与短文表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write two sentences about a picture of your room.",
+          "answer": {
+            "value": "示例：There is a bed and a desk in my room. My bag is on the chair."
+          },
+          "analysis": "评分要点：两句话完整、介词正确。",
+          "difficulty": 4,
+          "knowledge_point": "Revision 看图与短文表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-12T08:23:04+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "source": "docs/content-templates/_validate_daily.py",
+  "expects": {
+    "subject": null,
+    "grade": null,
+    "version": null,
+    "semester": "first"
+  },
+  "totals": {
+    "files": 3,
+    "passed": 3,
+    "failed": 0,
+    "errors": 0,
+    "warnings": 8,
+    "quarantined_skipped": 0
+  },
+  "quarantined_skipped_names": [],
+  "files": [
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\history\\g9\\history_g9_first_20261112_book.json",
+      "name": "history_g9_first_20261112_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 4,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g5\\politics_g5_first_20261112_book.json",
+      "name": "politics_g5_first_20261112_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 1,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g9\\politics_g9_first_20261112_book.json",
+      "name": "politics_g9_first_20261112_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 3,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    }
+  ]
+}

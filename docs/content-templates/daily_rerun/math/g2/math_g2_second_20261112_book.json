@@ -1,0 +1,3922 @@
+{
+  "subject": "math",
+  "grade": 2,
+  "version": "北师大版",
+  "semester": "second",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第一单元 100以内数加与减（三）",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "两位数加两位数的进位加法",
+      "parent": "第一单元 100以内数加与减（三）",
+      "order_index": 1,
+      "explanation": "个位相加满十向十位进一，竖式对齐个位。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "两位数减两位数的退位减法",
+      "parent": "第一单元 100以内数加与减（三）",
+      "order_index": 2,
+      "explanation": "个位不够减时从十位借一当十。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "连加连减与加减混合",
+      "parent": "第一单元 100以内数加与减（三）",
+      "order_index": 3,
+      "explanation": "按从左到右顺序计算，有小括号先算括号内。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "估算与解决实际问题",
+      "parent": "第一单元 100以内数加与减（三）",
+      "order_index": 4,
+      "explanation": "把数看成接近的整十数快速估算，再判断够不够。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二单元 图形大变身（二）",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "认识平移",
+      "parent": "第二单元 图形大变身（二）",
+      "order_index": 1,
+      "explanation": "物体沿直线移动，方向和形状大小都不变。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "认识旋转",
+      "parent": "第二单元 图形大变身（二）",
+      "order_index": 2,
+      "explanation": "物体绕一个点或轴转动，是旋转现象。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "认识轴对称图形",
+      "parent": "第二单元 图形大变身（二）",
+      "order_index": 3,
+      "explanation": "沿一条直线对折后两边完全重合的图形是轴对称图形。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "图形的拼组与变化",
+      "parent": "第二单元 图形大变身（二）",
+      "order_index": 4,
+      "explanation": "用基本图形拼组新图形，观察图形的位置与方向变化。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第三单元 除法的应用",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "平均分与除法",
+      "parent": "第三单元 除法的应用",
+      "order_index": 1,
+      "explanation": "把一些物品平均分成几份，求每份是多少，用除法计算。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "包含除：求份数",
+      "parent": "第三单元 除法的应用",
+      "order_index": 2,
+      "explanation": "总数里包含几个每份数，用除法求份数。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "有余数的除法",
+      "parent": "第三单元 除法的应用",
+      "order_index": 3,
+      "explanation": "不能正好分完时产生余数，余数必须小于除数。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "用除法解决实际问题",
+      "parent": "第三单元 除法的应用",
+      "order_index": 4,
+      "explanation": "读清条件，判断是求每份数、份数还是余数。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "综合实践 参加趣味运动会",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "统计人数与分组",
+      "parent": "综合实践 参加趣味运动会",
+      "order_index": 1,
+      "explanation": "先求总人数，再按每组人数求组数。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "比较多少与求差",
+      "parent": "综合实践 参加趣味运动会",
+      "order_index": 2,
+      "explanation": "求两个数量相差多少用减法。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "比赛成绩的记录与整理",
+      "parent": "综合实践 参加趣味运动会",
+      "order_index": 3,
+      "explanation": "用表格记录成绩，能清楚比较与汇总。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "综合问题的解决",
+      "parent": "综合实践 参加趣味运动会",
+      "order_index": 4,
+      "explanation": "多步问题要先理清顺序，分步计算。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第四单元 生活中的大数",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "千以内数的认识",
+      "parent": "第四单元 生活中的大数",
+      "order_index": 1,
+      "explanation": "10 个一百是一千，数位从右起为个、十、百、千。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "数的读写",
+      "parent": "第四单元 生活中的大数",
+      "order_index": 2,
+      "explanation": "读数从高位起，中间有 0 读零，末尾的 0 不读。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "数的大小比较",
+      "parent": "第四单元 生活中的大数",
+      "order_index": 3,
+      "explanation": "先比百位，再比十位，最后比个位。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "整百整十数的加减",
+      "parent": "第四单元 生活中的大数",
+      "order_index": 4,
+      "explanation": "整百数加减可先按百计算，再补零。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第五单元 有趣的平面图形（二）",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "认识角与直角",
+      "parent": "第五单元 有趣的平面图形（二）",
+      "order_index": 1,
+      "explanation": "角由一个顶点和两条边组成，方方正正的角是直角。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "长方形与正方形的特征",
+      "parent": "第五单元 有趣的平面图形（二）",
+      "order_index": 2,
+      "explanation": "长方形对边相等、四个直角；正方形四边相等、四个直角。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "三角形与多边形",
+      "parent": "第五单元 有趣的平面图形（二）",
+      "order_index": 3,
+      "explanation": "三角形有三条边三个角，多边形按边的条数命名。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "图形的观察与想象",
+      "parent": "第五单元 有趣的平面图形（二）",
+      "order_index": 4,
+      "explanation": "从不同方向或部分观察图形，发展空间想象。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "数学好玩 有趣的推理",
+      "order_index": 7
+    },
+    {
+      "node_type": "point",
+      "name": "排除法推理",
+      "parent": "数学好玩 有趣的推理",
+      "order_index": 1,
+      "explanation": "先找确定信息，再用排除法排除不可能的情况。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "列表法整理信息",
+      "parent": "数学好玩 有趣的推理",
+      "order_index": 2,
+      "explanation": "把人物与信息列成表格，交叉对照更清楚。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "推理与验证",
+      "parent": "数学好玩 有趣的推理",
+      "order_index": 3,
+      "explanation": "得出结论后要回到条件检验是否都满足。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "生活中的推理问题",
+      "parent": "数学好玩 有趣的推理",
+      "order_index": 4,
+      "explanation": "排队、座位、身份等问题都可用逻辑推理解决。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第六单元 大数加与减（一）",
+      "order_index": 8
+    },
+    {
+      "node_type": "point",
+      "name": "三位数加法",
+      "parent": "第六单元 大数加与减（一）",
+      "order_index": 1,
+      "explanation": "相同数位对齐，从个位加起，满十进一。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "三位数减法",
+      "parent": "第六单元 大数加与减（一）",
+      "order_index": 2,
+      "explanation": "数位对齐，从个位减起，不够减向前一位借一。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "加减法的验算",
+      "parent": "第六单元 大数加与减（一）",
+      "order_index": 3,
+      "explanation": "加法用减法验算，减法用加法验算。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "解决实际问题",
+      "parent": "第六单元 大数加与减（一）",
+      "order_index": 4,
+      "explanation": "分析数量关系，判断用加还是用减。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第七单元 分类",
+      "order_index": 9
+    },
+    {
+      "node_type": "point",
+      "name": "按一个标准分类",
+      "parent": "第七单元 分类",
+      "order_index": 1,
+      "explanation": "按形状、颜色、用途等单一标准把物体分组。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "按多个标准分类",
+      "parent": "第七单元 分类",
+      "order_index": 2,
+      "explanation": "可以按两个特征同时分类，如既看颜色又看形状。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "分类与统计表",
+      "parent": "第七单元 分类",
+      "order_index": 3,
+      "explanation": "把分类结果填入统计表，便于比较多少。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "分类的意义",
+      "parent": "第七单元 分类",
+      "order_index": 4,
+      "explanation": "分类使杂乱的信息变清楚，便于查找与分析。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "综合实践 发现身体上的尺子",
+      "order_index": 10
+    },
+    {
+      "node_type": "point",
+      "name": "认识身体上的「尺子」",
+      "parent": "综合实践 发现身体上的尺子",
+      "order_index": 1,
+      "explanation": "一拃、一步、一庹都可以用来估测长度。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "用身体尺估测",
+      "parent": "综合实践 发现身体上的尺子",
+      "order_index": 2,
+      "explanation": "估测时注意首尾相接、不要重叠或留空。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "估测与准确测量",
+      "parent": "综合实践 发现身体上的尺子",
+      "order_index": 3,
+      "explanation": "估测快，准确测量更精确，二者各有用途。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "记录与交流估测结果",
+      "parent": "综合实践 发现身体上的尺子",
+      "order_index": 4,
+      "explanation": "把估测数据记录下来，与同伴比较，体会误差。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "总复习",
+      "order_index": 11
+    },
+    {
+      "node_type": "point",
+      "name": "计算综合",
+      "parent": "总复习",
+      "order_index": 1,
+      "explanation": "加减法要数位对齐，乘除要熟练口诀，注意运算顺序。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "图形与分类综合",
+      "parent": "总复习",
+      "order_index": 2,
+      "explanation": "辨认图形特征，按标准分类并统计。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "解决问题综合",
+      "parent": "总复习",
+      "order_index": 3,
+      "explanation": "读题找条件，判断运算，分步作答。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "数学思考与表达",
+      "parent": "总复习",
+      "order_index": 4,
+      "explanation": "能说清算理与思路，是学好数学的重要能力。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一单元 100以内数加与减（三）",
+      "order_index": 1,
+      "summary": "两位数加减两位数的进位加与退位减，竖式与估算。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "38 + 27 的得数是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "个位 8+7=15，向十位进 1，30+20+10=60，60+5=65。",
+          "difficulty": 2,
+          "knowledge_point": "两位数加两位数的进位加法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "65",
+            "55",
+            "66",
+            "75"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "46 + 35 =（ ）。",
+          "answer": {
+            "value": "81"
+          },
+          "analysis": "个位 6+5=11 进 1，十位 4+3+1=8，所以 81。",
+          "difficulty": 2,
+          "knowledge_point": "两位数加两位数的进位加法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "58 + 24 =（ ）。",
+          "answer": {
+            "value": "82"
+          },
+          "analysis": "个位 8+4=12 进 1，十位 5+2+1=8，得 82。",
+          "difficulty": 3,
+          "knowledge_point": "两位数加两位数的进位加法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "竖式加法时个位满十，要在十位上加 1。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "满十进一是基本规则。",
+          "difficulty": 2,
+          "knowledge_point": "两位数加两位数的进位加法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "小明有 27 张卡片，小红比小明多 16 张，小红有多少张？",
+          "answer": {
+            "value": "43 张"
+          },
+          "analysis": "27+16：个位 7+6=13 进 1，十位 2+1+1=4，所以 43。",
+          "difficulty": 3,
+          "knowledge_point": "两位数加两位数的进位加法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "52 - 27 的得数是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "个位 2 减 7 不够，借十后 12-7=5，十位剩 4，4-2=2，得 25。",
+          "difficulty": 3,
+          "knowledge_point": "两位数减两位数的退位减法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "25",
+            "35",
+            "24",
+            "15"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "63 - 28 =（ ）。",
+          "answer": {
+            "value": "35"
+          },
+          "analysis": "个位 13-8=5，十位 5-2=3，得 35。",
+          "difficulty": 2,
+          "knowledge_point": "两位数减两位数的退位减法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "81 - 46 =（ ）。",
+          "answer": {
+            "value": "35"
+          },
+          "analysis": "个位 11-6=5，十位 7-4=3，得 35。",
+          "difficulty": 3,
+          "knowledge_point": "两位数减两位数的退位减法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "退位减法中从十位借的 1 表示 10 个一。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "一个十等于十个一。",
+          "difficulty": 2,
+          "knowledge_point": "两位数减两位数的退位减法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "书架上有 60 本书，借走 34 本，还剩多少本？",
+          "answer": {
+            "value": "26 本"
+          },
+          "analysis": "60-34：个位 0 借十后 10-4=6，十位 5-3=2，剩 26 本。",
+          "difficulty": 3,
+          "knowledge_point": "两位数减两位数的退位减法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "45 + 28 - 19 的结果是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先算 45+28=73，再算 73-19=54。",
+          "difficulty": 3,
+          "knowledge_point": "连加连减与加减混合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "54",
+            "44",
+            "64",
+            "34"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "72 - 35 + 18 =（ ）。",
+          "answer": {
+            "value": "55"
+          },
+          "analysis": "72-35=37，37+18=55。",
+          "difficulty": 3,
+          "knowledge_point": "连加连减与加减混合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "90 -（25 + 36）=（ ）。",
+          "answer": {
+            "value": "29"
+          },
+          "analysis": "先算括号 25+36=61，再算 90-61=29。",
+          "difficulty": 4,
+          "knowledge_point": "连加连减与加减混合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "有小括号的算式要先算括号里面的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "括号优先。",
+          "difficulty": 2,
+          "knowledge_point": "连加连减与加减混合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "一年级有 38 人，二年级比一年级多 15 人，两个年级共多少人？",
+          "answer": {
+            "value": "91 人"
+          },
+          "analysis": "二年级 38+15=53 人，合计 38+53=91 人。",
+          "difficulty": 4,
+          "knowledge_point": "连加连减与加减混合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "39 + 42 大约是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "39 约 40，42 约 40，和约 80。",
+          "difficulty": 3,
+          "knowledge_point": "估算与解决实际问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "80",
+            "70",
+            "90",
+            "100"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "把 58 看成整十数大约是（ ）。",
+          "answer": {
+            "value": "60"
+          },
+          "analysis": "58 接近 60。",
+          "difficulty": 2,
+          "knowledge_point": "估算与解决实际问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "估算结果一定与准确结果相同。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "估算只是接近的近似值。",
+          "difficulty": 3,
+          "knowledge_point": "估算与解决实际问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列算式中得数大于 80 的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓ 45+38=83；B ✗ 90-15=75；C ✓ 27+54=81；D ✗ 60-25=35。所以选 A、C。",
+          "difficulty": 4,
+          "knowledge_point": "估算与解决实际问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "45+38",
+            "90-15",
+            "27+54",
+            "60-25"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "妈妈带 100 元，买 48 元的米和 39 元的油，钱够吗？",
+          "answer": {
+            "value": "够，还剩 13 元。"
+          },
+          "analysis": "48+39=87，100-87=13，所以够用。",
+          "difficulty": 4,
+          "knowledge_point": "估算与解决实际问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第二单元 图形大变身（二）",
+      "order_index": 2,
+      "summary": "图形的平移、旋转与对称现象。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "推拉窗的移动属于（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "沿直线移动是平移。",
+          "difficulty": 2,
+          "knowledge_point": "认识平移",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "平移",
+            "旋转",
+            "翻转",
+            "缩放"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "平移后图形的形状和大小都不变。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "平移只改变位置。",
+          "difficulty": 2,
+          "knowledge_point": "认识平移",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "电梯上下运动是（ ）现象。",
+          "answer": {
+            "value": "平移"
+          },
+          "analysis": "上下直线运动属平移。",
+          "difficulty": 2,
+          "knowledge_point": "认识平移",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列属于平移的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "抽屉沿直线移动。",
+          "difficulty": 3,
+          "knowledge_point": "认识平移",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "抽屉拉开",
+            "风扇转动",
+            "钟表指针走动",
+            "陀螺旋转"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "举出生活中两个平移的例子。",
+          "answer": {
+            "value": "示例：电梯上下、抽屉推拉、商场扶梯的移动。"
+          },
+          "analysis": "评分要点：两个都属直线移动。",
+          "difficulty": 3,
+          "knowledge_point": "认识平移",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "风扇叶片的运动是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "叶片绕中心转动。",
+          "difficulty": 2,
+          "knowledge_point": "认识旋转",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "旋转",
+            "平移",
+            "对称",
+            "放大"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "旋转时物体的形状和大小不变。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "旋转只改变方向。",
+          "difficulty": 2,
+          "knowledge_point": "认识旋转",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "钟表指针的运动是（ ）现象。",
+          "answer": {
+            "value": "旋转"
+          },
+          "analysis": "指针绕中心转动。",
+          "difficulty": 2,
+          "knowledge_point": "认识旋转",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列属于旋转现象的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓ 绕轴转动；B ✓ 绕轴转动；C ✗ 电梯上升是平移；D ✓ 风车绕轴转动。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "认识旋转",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "拧开瓶盖",
+            "转动方向盘",
+            "电梯上升",
+            "风车转动"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说出旋转与平移的一个不同点。",
+          "answer": {
+            "value": "示例：平移是沿直线整体移动，方向不变；旋转是绕一个点或轴转动，方向会改变。"
+          },
+          "analysis": "评分要点：指出运动方式差别。",
+          "difficulty": 3,
+          "knowledge_point": "认识旋转",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列图形是轴对称图形的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "正方形沿对边中点连线对折可重合。",
+          "difficulty": 2,
+          "knowledge_point": "认识轴对称图形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "正方形",
+            "平行四边形",
+            "任意三角形",
+            "不规则四边形"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "把图形沿一条直线对折，两边能完全重合，这样的图形叫（ ）图形。",
+          "answer": {
+            "value": "轴对称"
+          },
+          "analysis": "这是轴对称图形的定义。",
+          "difficulty": 3,
+          "knowledge_point": "认识轴对称图形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "圆有无数条对称轴。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "过圆心的任一直线都是对称轴。",
+          "difficulty": 3,
+          "knowledge_point": "认识轴对称图形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "长方形有几条对称轴？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "长方形有对边中点连线两条对称轴。",
+          "difficulty": 3,
+          "knowledge_point": "认识轴对称图形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "2 条",
+            "1 条",
+            "4 条",
+            "0 条"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "在方格纸上画一个轴对称图形，并说明它的对称轴在哪。",
+          "answer": {
+            "value": "示例：画一个等腰三角形，它的对称轴是顶角顶点到底边中点的连线。"
+          },
+          "analysis": "评分要点：图形对称 + 对称轴说明正确。",
+          "difficulty": 4,
+          "knowledge_point": "认识轴对称图形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "两个完全一样的等腰直角三角形可以拼成（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "沿斜边拼合可成正方形。",
+          "difficulty": 3,
+          "knowledge_point": "图形的拼组与变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "正方形",
+            "圆形",
+            "梯形不能拼",
+            "三角形不能拼"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "用 4 个同样的小正方形可以拼成一个大（ ）。",
+          "answer": {
+            "value": "正方形"
+          },
+          "analysis": "2×2 拼合成大正方形。",
+          "difficulty": 2,
+          "knowledge_point": "图形的拼组与变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "图形经过平移或旋转后，面积不会改变。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "位置或方向变化不影响面积。",
+          "difficulty": 3,
+          "knowledge_point": "图形的拼组与变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "用七巧板可以拼出的图形有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓ 七巧板可拼图案；D ✗ 七巧板不能拼出圆。所以选 A、B、C。",
+          "difficulty": 4,
+          "knowledge_point": "图形的拼组与变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "正方形",
+            "三角形",
+            "小动物图案",
+            "圆形"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "把一张长方形纸剪一刀，能拼成什么图形？说出一种。",
+          "answer": {
+            "value": "示例：沿对角线剪开，可拼成一个大三角形或平行四边形。"
+          },
+          "analysis": "评分要点：图形合理 + 说明拼法。",
+          "difficulty": 4,
+          "knowledge_point": "图形的拼组与变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第三单元 除法的应用",
+      "order_index": 3,
+      "summary": "用除法解决平均分、包含除与有余数的问题。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "把 24 个苹果平均放在 4 个盘子里，每盘放（ ）个。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "24÷4=6。",
+          "difficulty": 2,
+          "knowledge_point": "平均分与除法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "6",
+            "4",
+            "8",
+            "5"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "36÷6 =（ ）。",
+          "answer": {
+            "value": "6"
+          },
+          "analysis": "六六三十六，所以得 6。",
+          "difficulty": 2,
+          "knowledge_point": "平均分与除法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "把 45 颗糖平均分给 5 个小朋友，每人（ ）颗。",
+          "answer": {
+            "value": "9"
+          },
+          "analysis": "45÷5=9。",
+          "difficulty": 3,
+          "knowledge_point": "平均分与除法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "除法算式 18÷3 表示把 18 平均分成 3 份。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "除号前是被分的总数。",
+          "difficulty": 2,
+          "knowledge_point": "平均分与除法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "有 28 支铅笔，每盒装 4 支，可以装几盒？",
+          "answer": {
+            "value": "7 盒"
+          },
+          "analysis": "28÷4=7，可以装 7 盒。",
+          "difficulty": 3,
+          "knowledge_point": "平均分与除法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "30 里面有几个 5？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "30÷5=6。",
+          "difficulty": 2,
+          "knowledge_point": "包含除：求份数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "6",
+            "5",
+            "7",
+            "4"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "有 42 人，每 6 人一组，可以分成（ ）组。",
+          "answer": {
+            "value": "7"
+          },
+          "analysis": "42÷6=7。",
+          "difficulty": 3,
+          "knowledge_point": "包含除：求份数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "56 元可以买几个 8 元的笔记本？",
+          "answer": {
+            "value": "7 个"
+          },
+          "analysis": "56÷8=7。",
+          "difficulty": 3,
+          "knowledge_point": "包含除：求份数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「每 8 个装一袋，48 个能装 6 袋」是对的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "48÷8=6。",
+          "difficulty": 3,
+          "knowledge_point": "包含除：求份数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "一根 63 厘米的绳子，每 9 厘米剪一段，可以剪成几段？",
+          "answer": {
+            "value": "7 段"
+          },
+          "analysis": "63÷9=7，可以剪 7 段。",
+          "difficulty": 3,
+          "knowledge_point": "包含除：求份数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "23÷5 的商和余数分别是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "5×4=20，23-20=3，商 4 余 3。",
+          "difficulty": 3,
+          "knowledge_point": "有余数的除法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "4 和 3",
+            "3 和 8",
+            "5 和 3",
+            "4 和 4"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "37÷6 的余数是（ ）。",
+          "answer": {
+            "value": "1"
+          },
+          "analysis": "6×6=36，37-36=1。",
+          "difficulty": 3,
+          "knowledge_point": "有余数的除法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "余数可以等于除数。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "余数必须小于除数。",
+          "difficulty": 2,
+          "knowledge_point": "有余数的除法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "29 个鸡蛋，每 4 个装一盒，最多装满（ ）盒。",
+          "answer": {
+            "value": "7"
+          },
+          "analysis": "4×7=28，剩 1 个，装满 7 盒。",
+          "difficulty": 4,
+          "knowledge_point": "有余数的除法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "有 25 块饼干，每盘放 6 块，最多能放几盘？还剩几块？",
+          "answer": {
+            "value": "4 盘，剩 1 块"
+          },
+          "analysis": "25÷6=4 余 1，放 4 盘剩 1 块。",
+          "difficulty": 4,
+          "knowledge_point": "有余数的除法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "每支笔 3 元，27 元最多能买几支？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "27÷3=9，正好买 9 支。",
+          "difficulty": 3,
+          "knowledge_point": "用除法解决实际问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "9 支",
+            "8 支",
+            "7 支",
+            "10 支"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "40 名同学去划船，每条船坐 6 人，至少需要（ ）条船。",
+          "answer": {
+            "value": "7"
+          },
+          "analysis": "6×6=36 还差 4 人，需 7 条船。",
+          "difficulty": 5,
+          "knowledge_point": "用除法解决实际问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「至少需要几条船」这类问题，余下的也要再多用一条。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "剩余的人仍需安排。",
+          "difficulty": 4,
+          "knowledge_point": "用除法解决实际问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列问题能用 32÷4 解决的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓ 求每份数；B ✓ 求份数；C ✓ 求份数；D ✗ 求差用减法。所以选 A、B、C。",
+          "difficulty": 4,
+          "knowledge_point": "用除法解决实际问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "把 32 个橘子平均放 4 盘，每盘几个",
+            "32 元买 4 元一个的本子能买几个",
+            "32 人每 4 人一组可分几组",
+            "32 与 4 相差多少"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "编一道用 45÷5 解决的生活问题并解答。",
+          "answer": {
+            "value": "示例：45 本作业本平均发给 5 个小组，每组几本？45÷5=9，每组 9 本。"
+          },
+          "analysis": "评分要点：情境合理 + 答案正确。",
+          "difficulty": 4,
+          "knowledge_point": "用除法解决实际问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "综合实践 参加趣味运动会",
+      "order_index": 4,
+      "summary": "在运动会情境中运用加减与除法解决人数、分组问题。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "三个班分别有 32、35、28 人，共（ ）人。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "32+35=67，67+28=95。",
+          "difficulty": 2,
+          "knowledge_point": "统计人数与分组",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "95",
+            "85",
+            "96",
+            "90"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "48 人参加比赛，每 6 人一组，共（ ）组。",
+          "answer": {
+            "value": "8"
+          },
+          "analysis": "48÷6=8。",
+          "difficulty": 2,
+          "knowledge_point": "统计人数与分组",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "统计总人数时要把各班人数相加。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "求总数用加法。",
+          "difficulty": 2,
+          "knowledge_point": "统计人数与分组",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "共有 90 人，其中 52 人参加跑步，其余参加跳远，跳远有（ ）人。",
+          "answer": {
+            "value": "38"
+          },
+          "analysis": "90-52=38。",
+          "difficulty": 2,
+          "knowledge_point": "统计人数与分组",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "运动会共有 96 人，每 8 人一组做游戏，能分几组？",
+          "answer": {
+            "value": "12 组"
+          },
+          "analysis": "96÷8=12，能分 12 组。",
+          "difficulty": 3,
+          "knowledge_point": "统计人数与分组",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "甲队得 45 分，乙队得 38 分，甲队多（ ）分。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "45-38=7。",
+          "difficulty": 2,
+          "knowledge_point": "比较多少与求差",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "7",
+            "8",
+            "13",
+            "6"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "跳绳比赛中，小红跳 62 下，小刚跳 48 下，小红多跳（ ）下。",
+          "answer": {
+            "value": "14"
+          },
+          "analysis": "62-48=14。",
+          "difficulty": 2,
+          "knowledge_point": "比较多少与求差",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "求「多多少」要用加法。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "求相差多少用减法。",
+          "difficulty": 2,
+          "knowledge_point": "比较多少与求差",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列问题用减法解决的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "求相差用减法。",
+          "difficulty": 3,
+          "knowledge_point": "比较多少与求差",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "甲比乙多几个",
+            "两人一共几个",
+            "平均每人几个",
+            "每盒装几个"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "一班得 58 分，二班得 47 分，两班相差多少分？",
+          "answer": {
+            "value": "11 分"
+          },
+          "analysis": "58-47=11，相差 11 分。",
+          "difficulty": 2,
+          "knowledge_point": "比较多少与求差",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "记录成绩最清楚的方式是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "表格便于比较与汇总。",
+          "difficulty": 2,
+          "knowledge_point": "比赛成绩的记录与整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "用表格分类记录",
+            "随便写在纸上",
+            "只记在心里",
+            "只记第一名"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "整理数据时要把同类项目放在一起。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "分类便于统计。",
+          "difficulty": 2,
+          "knowledge_point": "比赛成绩的记录与整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "统计表一般要有项目名称和数据两栏，这样便于（ ）数据。",
+          "answer": {
+            "value": "比较"
+          },
+          "analysis": "分类记录便于比较。",
+          "difficulty": 3,
+          "knowledge_point": "比赛成绩的记录与整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "记录运动会成绩时需要写清的信息有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D ✗ 与成绩记录无关。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "比赛成绩的记录与整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "项目名称",
+            "姓名",
+            "成绩",
+            "喜欢的颜色"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "设计一个记录三项比赛成绩的简单表格（写出表头）。",
+          "answer": {
+            "value": "示例：表头为「项目｜姓名｜成绩」，下面按项目分行填写。"
+          },
+          "analysis": "评分要点：三列表头合理。",
+          "difficulty": 3,
+          "knowledge_point": "比赛成绩的记录与整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "买 5 瓶水每瓶 3 元，付 20 元应找回（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "5×3=15，20-15=5。",
+          "difficulty": 3,
+          "knowledge_point": "综合问题的解决",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "5 元",
+            "4 元",
+            "6 元",
+            "3 元"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "每张票 8 元，45 元最多能买（ ）张。",
+          "answer": {
+            "value": "5"
+          },
+          "analysis": "8×5=40，剩 5 元不够再买一张。",
+          "difficulty": 4,
+          "knowledge_point": "综合问题的解决",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "解决多步问题时，可以先把能算的一步算出来。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "分步计算便于理清关系。",
+          "difficulty": 3,
+          "knowledge_point": "综合问题的解决",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "3 箱水每箱 12 瓶，共（ ）瓶。",
+          "answer": {
+            "value": "36"
+          },
+          "analysis": "12×3=36。",
+          "difficulty": 3,
+          "knowledge_point": "综合问题的解决",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "运动会买奖品：每本 4 元买 6 本，付 30 元，够吗？还剩多少？",
+          "answer": {
+            "value": "够，还剩 6 元"
+          },
+          "analysis": "4×6=24，30-24=6，所以够且剩 6 元。",
+          "difficulty": 4,
+          "knowledge_point": "综合问题的解决",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第四单元 生活中的大数",
+      "order_index": 5,
+      "summary": "千以内数的认识、读写与比较。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "10 个一百是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "10 个 100 是 1000。",
+          "difficulty": 2,
+          "knowledge_point": "千以内数的认识",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "一千",
+            "一百",
+            "一十",
+            "一万"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "5 个百、3 个十和 7 个一组成的数是（ ）。",
+          "answer": {
+            "value": "537"
+          },
+          "analysis": "500+30+7=537。",
+          "difficulty": 3,
+          "knowledge_point": "千以内数的认识",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "八百零六写作（ ）。",
+          "answer": {
+            "value": "806"
+          },
+          "analysis": "百位 8，十位 0，个位 6。",
+          "difficulty": 3,
+          "knowledge_point": "千以内数的认识",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "406 读作四百零六。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "中间的 0 要读出来。",
+          "difficulty": 3,
+          "knowledge_point": "千以内数的认识",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说出 999 再添 1 是多少，并说明为什么。",
+          "answer": {
+            "value": "1000"
+          },
+          "analysis": "个位满十进一，连续进位后为 1000。",
+          "difficulty": 4,
+          "knowledge_point": "千以内数的认识",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "520 读作（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "末尾 0 不读，读五百二十。",
+          "difficulty": 2,
+          "knowledge_point": "数的读写",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "五百二十",
+            "五百二零",
+            "五十二",
+            "五百零二十"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "三百五十写作（ ）。",
+          "answer": {
+            "value": "350"
+          },
+          "analysis": "三百五十即 350。",
+          "difficulty": 2,
+          "knowledge_point": "数的读写",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "一千写作（ ）。",
+          "answer": {
+            "value": "1000"
+          },
+          "analysis": "一千为 1000。",
+          "difficulty": 2,
+          "knowledge_point": "数的读写",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "读数时末尾的零要读出来。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "末尾的 0 不读。",
+          "difficulty": 3,
+          "knowledge_point": "数的读写",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出 3 个百位是 4 的三位数。",
+          "answer": {
+            "value": "示例：401、430、456。"
+          },
+          "analysis": "评分要点：百位都是 4。",
+          "difficulty": 3,
+          "knowledge_point": "数的读写",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列数中最大的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "989 的百位与十位组合最大。",
+          "difficulty": 3,
+          "knowledge_point": "数的大小比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "899",
+            "989",
+            "889",
+            "980"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "在 405 和 450 中，较大的数是（ ）。",
+          "answer": {
+            "value": "450"
+          },
+          "analysis": "百位相同，450 的十位 5 大于 0。",
+          "difficulty": 2,
+          "knowledge_point": "数的大小比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "位数相同的两个数，从最高位开始比较。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "同位数从高位比起。",
+          "difficulty": 2,
+          "knowledge_point": "数的大小比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列数中介于 300 和 400 之间的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓ 在区间内；B ✗ 小于 300；C ✓ 在区间内；D ✗ 大于 400。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "数的大小比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "305",
+            "298",
+            "389",
+            "401"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "把 508、580、850 按从小到大排列。",
+          "answer": {
+            "value": "508 < 580 < 850"
+          },
+          "analysis": "百位 5、5、8，先比百位再看十位。",
+          "difficulty": 3,
+          "knowledge_point": "数的大小比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "300 + 500 =（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "3 个百加 5 个百是 8 个百。",
+          "difficulty": 2,
+          "knowledge_point": "整百整十数的加减",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "800",
+            "700",
+            "900",
+            "600"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "700 - 200 =（ ）。",
+          "answer": {
+            "value": "500"
+          },
+          "analysis": "7 个百减 2 个百得 5 个百。",
+          "difficulty": 2,
+          "knowledge_point": "整百整十数的加减",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "40 + 60 =（ ）。",
+          "answer": {
+            "value": "100"
+          },
+          "analysis": "4 个十加 6 个十是 10 个十，即 100。",
+          "difficulty": 3,
+          "knowledge_point": "整百整十数的加减",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "计算 800-300 时，可以想 8-3=5，结果是 500。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "按百计算再补两个零。",
+          "difficulty": 3,
+          "knowledge_point": "整百整十数的加减",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "学校有 600 本图书，又买来 200 本，现在有多少本？",
+          "answer": {
+            "value": "800 本"
+          },
+          "analysis": "600+200=800 本。",
+          "difficulty": 2,
+          "knowledge_point": "整百整十数的加减",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第五单元 有趣的平面图形（二）",
+      "order_index": 6,
+      "summary": "认识角、直角与常见平面图形的特征。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "一个角有（ ）个顶点。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "角由一个顶点两条边组成。",
+          "difficulty": 2,
+          "knowledge_point": "认识角与直角",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "直角的两条边互相垂直。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "直角两边垂直。",
+          "difficulty": 2,
+          "knowledge_point": "认识角与直角",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "三角尺上最大的角是（ ）角。",
+          "answer": {
+            "value": "直"
+          },
+          "analysis": "三角尺最大角是直角。",
+          "difficulty": 3,
+          "knowledge_point": "认识角与直角",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "比直角小的角叫（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "小于直角的角是锐角。",
+          "difficulty": 3,
+          "knowledge_point": "认识角与直角",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "锐角",
+            "钝角",
+            "直角",
+            "平角"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用三角尺怎样判断一个角是不是直角？",
+          "answer": {
+            "value": "示例：把三角尺的直角顶点与角的顶点对齐，一条边对齐，若另一条边也与三角尺的边重合，就是直角。"
+          },
+          "analysis": "评分要点：对齐顶点与边。",
+          "difficulty": 4,
+          "knowledge_point": "认识角与直角",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "长方形的四个角都是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "长方形四个角均为直角。",
+          "difficulty": 2,
+          "knowledge_point": "长方形与正方形的特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "直角",
+            "锐角",
+            "钝角",
+            "不确定"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "正方形的特点是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "正方形四边等长且四角直角。",
+          "difficulty": 2,
+          "knowledge_point": "长方形与正方形的特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "四条边都相等、四个直角",
+            "对边相等、无直角",
+            "只有一个直角",
+            "边都不同"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "长方形有（ ）条边，对边相等。",
+          "answer": {
+            "value": "4"
+          },
+          "analysis": "长方形有四条边。",
+          "difficulty": 2,
+          "knowledge_point": "长方形与正方形的特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "正方形是特殊的长方形。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "正方形满足长方形所有特征。",
+          "difficulty": 3,
+          "knowledge_point": "长方形与正方形的特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说长方形和正方形的相同点与不同点。",
+          "answer": {
+            "value": "示例：相同点是都有四条边、四个直角、对边相等；不同点是正方形四条边都相等，长方形只有对边相等。"
+          },
+          "analysis": "评分要点：异同各一点。",
+          "difficulty": 4,
+          "knowledge_point": "长方形与正方形的特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "三角形有（ ）条边。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "三角形三边三角。",
+          "difficulty": 2,
+          "knowledge_point": "三角形与多边形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "3",
+            "4",
+            "5",
+            "2"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "五边形有（ ）条边。",
+          "answer": {
+            "value": "5"
+          },
+          "analysis": "五边形由五条边组成。",
+          "difficulty": 2,
+          "knowledge_point": "三角形与多边形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "三角形具有稳定性。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "三角形结构稳定。",
+          "difficulty": 3,
+          "knowledge_point": "三角形与多边形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下列图形属于多边形的是（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓ 都由线段围成；D ✗ 圆由曲线围成。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "三角形与多边形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "三角形",
+            "四边形",
+            "五边形",
+            "圆形"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "为什么自行车的车架做成三角形？",
+          "answer": {
+            "value": "示例：三角形具有稳定性，受力时不易变形，车架更牢固安全。"
+          },
+          "analysis": "评分要点：稳定性 + 安全。",
+          "difficulty": 3,
+          "knowledge_point": "三角形与多边形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "把一个正方形纸片对折一次，折痕两边的图形（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "沿对称轴对折可重合。",
+          "difficulty": 3,
+          "knowledge_point": "图形的观察与想象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "完全重合",
+            "大小不同",
+            "形状不同",
+            "不能比较"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "把一个长方形沿对角线剪开，可以得到两个完全一样的（ ）形。",
+          "answer": {
+            "value": "三角"
+          },
+          "analysis": "沿对角线剪开得两个三角形。",
+          "difficulty": 3,
+          "knowledge_point": "图形的观察与想象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "只看图形的一部分，也可能猜出整个图形。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "根据部分特征可推测整体。",
+          "difficulty": 3,
+          "knowledge_point": "图形的观察与想象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "用 6 个同样的小正方形可以拼成一个长 3、宽（ ）的长方形。",
+          "answer": {
+            "value": "2"
+          },
+          "analysis": "3×2=6。",
+          "difficulty": 3,
+          "knowledge_point": "图形的观察与想象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用 4 个小正方形能拼出几种不同形状？说出一种。",
+          "answer": {
+            "value": "示例：可以拼成一个大正方形，也可以拼成一排长条长方形。"
+          },
+          "analysis": "评分要点：形状描述合理。",
+          "difficulty": 4,
+          "knowledge_point": "图形的观察与想象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "数学好玩 有趣的推理",
+      "order_index": 7,
+      "summary": "用排除法、列表法进行简单逻辑推理。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "小红、小明、小刚各戴一顶帽子，颜色是红、黄、蓝。小红不戴红也不戴蓝，她戴（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "排除红和蓝，只剩黄。",
+          "difficulty": 2,
+          "knowledge_point": "排除法推理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "黄",
+            "红",
+            "蓝",
+            "不确定"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "三个数 5、8、12 分别对应 甲、乙、丙，甲不是最大也不是最小，甲是（ ）。",
+          "answer": {
+            "value": "8"
+          },
+          "analysis": "排除 12 和 5，剩 8。",
+          "difficulty": 3,
+          "knowledge_point": "排除法推理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "推理时先利用确定的信息更容易得出结论。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "从确定信息入手。",
+          "difficulty": 2,
+          "knowledge_point": "排除法推理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "小明、小华、小刚赛跑。小明不是第一，小华在小明后面。第一名是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "小明不是第一，小华在小明后面，所以小明只能是第二、小华第三，剩下的第一是小刚。",
+          "difficulty": 4,
+          "knowledge_point": "排除法推理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "小刚",
+            "小明",
+            "小华",
+            "无法确定"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说用排除法推理的步骤。",
+          "answer": {
+            "value": "示例：先列出所有可能情况，再根据已知条件逐个排除不可能的，最后剩下的就是答案。"
+          },
+          "analysis": "评分要点：列可能 + 逐步排除。",
+          "difficulty": 3,
+          "knowledge_point": "排除法推理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "整理多个对应关系时最有效的方法是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "表格能清晰对照。",
+          "difficulty": 2,
+          "knowledge_point": "列表法整理信息",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "列表对照",
+            "凭记忆",
+            "随便猜",
+            "只看第一条"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "列表时行和列的含义要写清楚。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "明确行列才能对照。",
+          "difficulty": 2,
+          "knowledge_point": "列表法整理信息",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "三人三物的配对问题，用表格逐行逐列排除，最后每行每列各剩（ ）个。",
+          "answer": {
+            "value": "1"
+          },
+          "analysis": "一一对应后每行每列各一个。",
+          "difficulty": 3,
+          "knowledge_point": "列表法整理信息",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "甲、乙、丙分别住 1、2、3 楼，甲不住 1 楼也不住 3 楼，甲住（ ）楼。",
+          "answer": {
+            "value": "2"
+          },
+          "analysis": "排除 1 和 3，剩 2。",
+          "difficulty": 3,
+          "knowledge_point": "列表法整理信息",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "编一道三人三物的配对题并给出答案。",
+          "answer": {
+            "value": "示例：三人各有一种爱好（画画、下棋、跑步），甲不爱画画也不爱跑步，所以甲爱下棋。"
+          },
+          "analysis": "评分要点：条件清楚 + 答案唯一。",
+          "difficulty": 4,
+          "knowledge_point": "列表法整理信息",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "推理得出结论后应当（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "检验能避免错误。",
+          "difficulty": 2,
+          "knowledge_point": "推理与验证",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "回代检验条件",
+            "直接写答案",
+            "换一道题",
+            "不再检查"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "一个结论只要自己觉得对就一定正确。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "必须与所有条件相符才算正确。",
+          "difficulty": 3,
+          "knowledge_point": "推理与验证",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "把答案代回题目条件逐一核对，这一步叫（ ）。",
+          "answer": {
+            "value": "检验"
+          },
+          "analysis": "回代核对称为检验。",
+          "difficulty": 3,
+          "knowledge_point": "推理与验证",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "推理时容易出现的错误有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓ 都是常见错误；D ✗ 核对是正确做法。所以选 A、B、C。",
+          "difficulty": 4,
+          "knowledge_point": "推理与验证",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "漏看一个条件",
+            "把可能当必然",
+            "结论与条件矛盾",
+            "认真核对"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说为什么推理后要检验。",
+          "answer": {
+            "value": "示例：条件多时容易漏看或误判，检验能把答案代回所有条件，确认没有矛盾，避免答错。"
+          },
+          "analysis": "评分要点：防漏看 + 确认无矛盾。",
+          "difficulty": 3,
+          "knowledge_point": "推理与验证",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "四人排队，小明前面有 2 人，小明排第（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "前面 2 人，自己是第 3 个。",
+          "difficulty": 2,
+          "knowledge_point": "生活中的推理问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "3",
+            "2",
+            "4",
+            "1"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "从前往后数小红第 4，从后往前数第 3，这一排共有（ ）人。",
+          "answer": {
+            "value": "6"
+          },
+          "analysis": "4+3-1=6。",
+          "difficulty": 4,
+          "knowledge_point": "生活中的推理问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "排队问题中同一个人被数了两次，要减 1。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "重复计算需减一。",
+          "difficulty": 4,
+          "knowledge_point": "生活中的推理问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "5 个人握手，每两人握一次，共握（ ）次。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "4+3+2+1=10 次。",
+          "difficulty": 5,
+          "knowledge_point": "生活中的推理问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "10",
+            "5",
+            "20",
+            "15"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "教室里有 3 排座位，每排 6 个，第 2 排第 4 个是小红，她前面有几人？",
+          "answer": {
+            "value": "示例：她前面有 1 排 6 人。"
+          },
+          "analysis": "评分要点：说明排与位置关系。",
+          "difficulty": 3,
+          "knowledge_point": "生活中的推理问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第六单元 大数加与减（一）",
+      "order_index": 8,
+      "summary": "三位数的加减法及验算。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "256 + 137 =（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "个位 6+7=13 进 1，十位 5+3+1=9，百位 2+1=3，得 393。",
+          "difficulty": 3,
+          "knowledge_point": "三位数加法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "393",
+            "383",
+            "394",
+            "293"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "345 + 218 =（ ）。",
+          "answer": {
+            "value": "563"
+          },
+          "analysis": "个位 3+8=11 进 1，十位 4+1+1=6，百位 3+2=5，得 563。",
+          "difficulty": 3,
+          "knowledge_point": "三位数加法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "三位数加法竖式中，相同数位要对齐。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "数位对齐是基本要求。",
+          "difficulty": 2,
+          "knowledge_point": "三位数加法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "407 + 295 =（ ）。",
+          "answer": {
+            "value": "702"
+          },
+          "analysis": "个位 7+5=12 进 1，十位 0+9+1=10 进 1，百位 4+2+1=7，得 702。",
+          "difficulty": 4,
+          "knowledge_point": "三位数加法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "果园有 268 棵苹果树，梨树比苹果树多 145 棵，梨树有多少棵？",
+          "answer": {
+            "value": "413 棵"
+          },
+          "analysis": "268+145：个位 8+5=13 进 1，十位 6+4+1=11 进 1，百位 2+1+1=4，得 413。",
+          "difficulty": 4,
+          "knowledge_point": "三位数加法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "532 - 268 =（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "个位 12-8=4，十位 12-6=6，百位 4-2=2，得 264。",
+          "difficulty": 4,
+          "knowledge_point": "三位数减法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "264",
+            "274",
+            "364",
+            "254"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "700 - 356 =（ ）。",
+          "answer": {
+            "value": "344"
+          },
+          "analysis": "个位 10-6=4，十位 9-5=4，百位 6-3=3，得 344。",
+          "difficulty": 4,
+          "knowledge_point": "三位数减法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "减法中某一位不够减，要从前一位借 1 当 10。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "退位规则。",
+          "difficulty": 2,
+          "knowledge_point": "三位数减法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "845 - 379 =（ ）。",
+          "answer": {
+            "value": "466"
+          },
+          "analysis": "个位 15-9=6，十位 13-7=6，百位 7-3=4，得 466。",
+          "difficulty": 4,
+          "knowledge_point": "三位数减法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "学校有 620 本故事书，借出 358 本，还剩多少本？",
+          "answer": {
+            "value": "262 本"
+          },
+          "analysis": "620-358：个位 10-8=2，十位 11-5=6，百位 5-3=2，得 262。",
+          "difficulty": 4,
+          "knowledge_point": "三位数减法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "验算 345+218=563，可以算（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "和减一个加数得另一个加数。",
+          "difficulty": 3,
+          "knowledge_point": "加减法的验算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "563-218",
+            "345+563",
+            "563+218",
+            "345-218"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "验算 620-358=262，可以算 262 +（ ）。",
+          "answer": {
+            "value": "358"
+          },
+          "analysis": "差加减数得被减数。",
+          "difficulty": 3,
+          "knowledge_point": "加减法的验算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "验算可以帮助发现计算错误。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "验算是检查手段。",
+          "difficulty": 2,
+          "knowledge_point": "加减法的验算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "456 + 234 = 690，用减法验算应为 690 - 456 =（ ）。",
+          "answer": {
+            "value": "234"
+          },
+          "analysis": "和减一个加数得另一个加数。",
+          "difficulty": 3,
+          "knowledge_point": "加减法的验算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说加法和减法怎样互相验算。",
+          "answer": {
+            "value": "示例：加法用「和减一个加数等于另一个加数」验算；减法用「差加减数等于被减数」验算。"
+          },
+          "analysis": "评分要点：两种关系都说清。",
+          "difficulty": 4,
+          "knowledge_point": "加减法的验算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "车上原有 320 人，下去 156 人，又上来 89 人，现在有（ ）人。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "320-156=164，164+89=253。",
+          "difficulty": 4,
+          "knowledge_point": "解决实际问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "253",
+            "245",
+            "265",
+            "343"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "第一天卖 285 瓶，第二天卖 196 瓶，两天共卖（ ）瓶。",
+          "answer": {
+            "value": "481"
+          },
+          "analysis": "285+196=481。",
+          "difficulty": 3,
+          "knowledge_point": "解决实际问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「还剩多少」一般用减法计算。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "从总数中去掉部分用减法。",
+          "difficulty": 2,
+          "knowledge_point": "解决实际问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "一箱有 480 个鸡蛋，坏了 127 个，好的有（ ）个。",
+          "answer": {
+            "value": "353"
+          },
+          "analysis": "480-127=353。",
+          "difficulty": 3,
+          "knowledge_point": "解决实际问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "商场上午卖出 236 件衣服，下午比上午少卖 78 件，下午卖多少件？",
+          "answer": {
+            "value": "158 件"
+          },
+          "analysis": "236-78=158。",
+          "difficulty": 3,
+          "knowledge_point": "解决实际问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第七单元 分类",
+      "order_index": 9,
+      "summary": "按不同标准分类统计，体会分类标准不同结果不同。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "把图形按「有没有直角」分类，属于按（ ）分类。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "只按一个特征分类。",
+          "difficulty": 2,
+          "knowledge_point": "按一个标准分类",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "一个标准",
+            "两个标准",
+            "三个标准",
+            "无法分类"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "把 10 个水果按颜色分成红、黄、绿三组，这是按（ ）分类。",
+          "answer": {
+            "value": "颜色"
+          },
+          "analysis": "按颜色这一标准分组。",
+          "difficulty": 2,
+          "knowledge_point": "按一个标准分类",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "分类时同一物品只能放进一个组。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "同标准下互斥。",
+          "difficulty": 2,
+          "knowledge_point": "按一个标准分类",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "给书本分类可以采用的标准有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓ 均可作为标准；D ✗ 价格不属书本固有属性，作为分类标准不合适。所以选 A、B、C。",
+          "difficulty": 4,
+          "knowledge_point": "按一个标准分类",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "按大小",
+            "按科目",
+            "按颜色",
+            "按价格"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "把 8 支笔按长短分成两组，说说你的分法。",
+          "answer": {
+            "value": "示例：比 10 厘米长的放一组，比 10 厘米短的放另一组。"
+          },
+          "analysis": "评分要点：标准明确。",
+          "difficulty": 3,
+          "knowledge_point": "按一个标准分类",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "既按颜色又按形状分组，属于（ ）分类。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "同时用两个标准。",
+          "difficulty": 3,
+          "knowledge_point": "按多个标准分类",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "两个标准",
+            "一个标准",
+            "随机",
+            "无法进行"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "把图形按「红色且是三角形」找出来，这里用了（ ）个标准。",
+          "answer": {
+            "value": "2"
+          },
+          "analysis": "颜色与形状两个标准。",
+          "difficulty": 3,
+          "knowledge_point": "按多个标准分类",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "分类标准越多，分出的组通常也越细。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "标准细化分组变细。",
+          "difficulty": 3,
+          "knowledge_point": "按多个标准分类",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "有 6 个红色图形、4 个蓝色图形，红色比蓝色多（ ）个。",
+          "answer": {
+            "value": "2"
+          },
+          "analysis": "6-4=2。",
+          "difficulty": 2,
+          "knowledge_point": "按多个标准分类",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说按两个标准分类的好处。",
+          "answer": {
+            "value": "示例：能同时看出两个特征的分布，比如既知道每种颜色有多少，也知道每种形状有多少，信息更清楚。"
+          },
+          "analysis": "评分要点：信息更细。",
+          "difficulty": 3,
+          "knowledge_point": "按多个标准分类",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "分类结果最适合记录在（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "统计表便于比较。",
+          "difficulty": 2,
+          "knowledge_point": "分类与统计表",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "统计表",
+            "日记",
+            "图画",
+            "口头上"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "统计表中「合计」一栏表示各类数量的（ ）。",
+          "answer": {
+            "value": "总数"
+          },
+          "analysis": "合计即总和。",
+          "difficulty": 2,
+          "knowledge_point": "分类与统计表",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "统计表中的数据要与分类结果一致。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "数据须真实对应。",
+          "difficulty": 2,
+          "knowledge_point": "分类与统计表",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "统计表通常包括的内容有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓ 是统计表常见栏目；D ✗ 与数据无关。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "分类与统计表",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "类别",
+            "数量",
+            "合计",
+            "作者姓名"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "把全班同学按「喜欢数学」和「喜欢语文」分成两类，写出统计表的两行内容。",
+          "answer": {
+            "value": "示例：第一行「类别｜喜欢数学｜喜欢语文」，第二行「人数｜…｜…」。"
+          },
+          "analysis": "评分要点：分类清楚 + 有数量栏。",
+          "difficulty": 3,
+          "knowledge_point": "分类与统计表",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "分类的主要作用是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "分类便于整理比较。",
+          "difficulty": 2,
+          "knowledge_point": "分类的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "使信息清楚、便于比较",
+            "增加数量",
+            "改变物品性质",
+            "让物品变多"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "同样的物品用不同标准分类，结果可能不同。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "标准不同分组不同。",
+          "difficulty": 3,
+          "knowledge_point": "分类的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "整理书包时把书和本子分开，这是按（ ）分类。",
+          "answer": {
+            "value": "类别"
+          },
+          "analysis": "按物品类别分类。",
+          "difficulty": 3,
+          "knowledge_point": "分类的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "把 12 块积木分成 3 组，平均每组（ ）块。",
+          "answer": {
+            "value": "4"
+          },
+          "analysis": "12÷3=4。",
+          "difficulty": 3,
+          "knowledge_point": "分类的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你在生活中怎样给物品分类。",
+          "answer": {
+            "value": "示例：衣柜按季节分，夏天衣服放一层、冬天衣服放一层；书桌按用途分，课本、练习本、文具各归一处。"
+          },
+          "analysis": "评分要点：实例 + 标准。",
+          "difficulty": 3,
+          "knowledge_point": "分类的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "综合实践 发现身体上的尺子",
+      "order_index": 10,
+      "summary": "用身体的长度（拃、步、庹）估测长度。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "张开拇指与中指的距离叫（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "一拃是手指张开的距离。",
+          "difficulty": 2,
+          "knowledge_point": "认识身体上的「尺子」",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "一拃",
+            "一步",
+            "一庹",
+            "一尺"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "两臂平伸的长度叫（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "两臂平伸为一庹。",
+          "difficulty": 2,
+          "knowledge_point": "认识身体上的「尺子」",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "一庹",
+            "一拃",
+            "一步",
+            "一寸"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "走两步之间的距离可以用（ ）来估测。",
+          "answer": {
+            "value": "步长"
+          },
+          "analysis": "用一步的长度估算。",
+          "difficulty": 3,
+          "knowledge_point": "认识身体上的「尺子」",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "每个人的拃长不一样，所以估测结果会有差别。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "身体尺因人而异。",
+          "difficulty": 2,
+          "knowledge_point": "认识身体上的「尺子」",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用拃量课桌长，大约几拃？说说怎样量。",
+          "answer": {
+            "value": "示例：从一端开始，一拃接一拃量到另一端，记住量了几次，就是几拃。"
+          },
+          "analysis": "评分要点：首尾相接 + 计数。",
+          "difficulty": 3,
+          "knowledge_point": "认识身体上的「尺子」",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "用拃量长度时要注意（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "首尾相接才准确。",
+          "difficulty": 2,
+          "knowledge_point": "用身体尺估测",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "每拃首尾相接",
+            "随意量",
+            "只看一眼",
+            "越量越大"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "课桌长约 5 拃，一拃约 15 厘米，课桌大约长（ ）厘米。",
+          "answer": {
+            "value": "75"
+          },
+          "analysis": "5×15=75。",
+          "difficulty": 3,
+          "knowledge_point": "用身体尺估测",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "估测结果可以作为参考，但与准确测量会有差别。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "估测是近似值。",
+          "difficulty": 2,
+          "knowledge_point": "用身体尺估测",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "教室长约 10 步，一步约 50 厘米，教室大约长（ ）米。",
+          "answer": {
+            "value": "5"
+          },
+          "analysis": "10×50=500 厘米=5 米。",
+          "difficulty": 4,
+          "knowledge_point": "用身体尺估测",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用步长估测操场一圈，说说你的做法。",
+          "answer": {
+            "value": "示例：先量出自己一步的长度，再沿着跑道走一圈数步数，用一步长度乘步数得到大约的米数。"
+          },
+          "analysis": "评分要点：测步长 + 数步数 + 相乘。",
+          "difficulty": 4,
+          "knowledge_point": "用身体尺估测",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "测量需要精确时应该（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "精确测量需用尺。",
+          "difficulty": 2,
+          "knowledge_point": "估测与准确测量",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "用尺子准确测量",
+            "用眼睛看",
+            "用步子走",
+            "用手比"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "估测在生活和学习中也有用处。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "估测可快速判断。",
+          "difficulty": 2,
+          "knowledge_point": "估测与准确测量",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "用尺子量出课桌长 80 厘米，用拃量约 5 拃，说明估测结果与准确结果（ ）（相同/接近）。",
+          "answer": {
+            "value": "接近"
+          },
+          "analysis": "估测是近似。",
+          "difficulty": 3,
+          "knowledge_point": "估测与准确测量",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "适合用身体尺估测的情况有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓ 可用步长；B ✓；C ✗ 裁衣需精确尺寸；D ✓ 可用庹。所以选 A、B、D。",
+          "difficulty": 4,
+          "knowledge_point": "估测与准确测量",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "估计教室长度",
+            "估计走廊宽度",
+            "裁衣服需要精确尺寸",
+            "估计大树粗细"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "比较估测与准确测量的一个相同点和一点不同。",
+          "answer": {
+            "value": "示例：相同点是都在表示长度；不同点是估测是近似值、可能有误差，准确测量用尺子得出较准确的数据。"
+          },
+          "analysis": "评分要点：同与不同各一点。",
+          "difficulty": 4,
+          "knowledge_point": "估测与准确测量",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "记录估测结果时应写清（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "要写对象与次数。",
+          "difficulty": 2,
+          "knowledge_point": "记录与交流估测结果",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "量的是什么、用了几拃（步）",
+            "只写数字",
+            "只写名字",
+            "不记录"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "同一张桌子，小红量 5 拃，小明量 6 拃，是因为他们的拃长（ ）。",
+          "answer": {
+            "value": "不同"
+          },
+          "analysis": "拃长不同导致结果不同。",
+          "difficulty": 3,
+          "knowledge_point": "记录与交流估测结果",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "同伴之间结果不同，可能因为测量方法或身体尺不同。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "差异有合理原因。",
+          "difficulty": 3,
+          "knowledge_point": "记录与交流估测结果",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "要让估测更接近真实长度，可以多次测量后取（ ）（填「平均」或「最大」）。",
+          "answer": {
+            "value": "平均"
+          },
+          "analysis": "多次取平均更接近真实值。",
+          "difficulty": 4,
+          "knowledge_point": "记录与交流估测结果",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "小组里三人量同一根绳子，结果分别是 4、5、4 拃，怎样得到一个较可靠的结果？",
+          "answer": {
+            "value": "示例：取平均值，(4+5+4)÷3≈4 拃多，或统一用同一个人的拃再量。"
+          },
+          "analysis": "评分要点：取平均或统一标准。",
+          "difficulty": 4,
+          "knowledge_point": "记录与交流估测结果",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "总复习",
+      "order_index": 11,
+      "summary": "全册计算、图形、分类与推理的综合复习。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "56 + 37 - 28 =（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "56+37=93，93-28=65。",
+          "difficulty": 3,
+          "knowledge_point": "计算综合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "65",
+            "55",
+            "75",
+            "45"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "72 ÷ 8 =（ ）。",
+          "answer": {
+            "value": "9"
+          },
+          "analysis": "八九七十二，得 9。",
+          "difficulty": 2,
+          "knowledge_point": "计算综合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "400 + 350 =（ ）。",
+          "answer": {
+            "value": "750"
+          },
+          "analysis": "400+350=750。",
+          "difficulty": 2,
+          "knowledge_point": "计算综合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "计算混合运算时要从左往右依次算，有括号先算括号。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "运算顺序规则。",
+          "difficulty": 2,
+          "knowledge_point": "计算综合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "小明有 85 元，买了 3 本 8 元的书，还剩多少元？",
+          "answer": {
+            "value": "61 元"
+          },
+          "analysis": "3×8=24，85-24=61，还剩 61 元。",
+          "difficulty": 4,
+          "knowledge_point": "计算综合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列图形中对称轴最多的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "圆有无数条对称轴。",
+          "difficulty": 3,
+          "knowledge_point": "图形与分类综合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "圆",
+            "正方形",
+            "长方形",
+            "等腰三角形"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "把 9 个图形按颜色分成 3 组，平均每组（ ）个。",
+          "answer": {
+            "value": "3"
+          },
+          "analysis": "9÷3=3。",
+          "difficulty": 3,
+          "knowledge_point": "图形与分类综合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "正方形既是轴对称图形，也是长方形的一种。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "正方形具备两者特征。",
+          "difficulty": 3,
+          "knowledge_point": "图形与分类综合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "属于轴对称图形的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D ✗ 任意梯形一般不对称。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "图形与分类综合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "正方形",
+            "等腰三角形",
+            "圆",
+            "任意梯形"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "把 12 个图形按形状分成 4 组，每组几个？",
+          "answer": {
+            "value": "3 个"
+          },
+          "analysis": "12÷4=3。",
+          "difficulty": 3,
+          "knowledge_point": "图形与分类综合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "一盒 6 支笔，买 4 盒共（ ）支。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "6×4=24。",
+          "difficulty": 2,
+          "knowledge_point": "解决问题综合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "24",
+            "10",
+            "20",
+            "28"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "30 人每 5 人一组，可分（ ）组。",
+          "answer": {
+            "value": "6"
+          },
+          "analysis": "30÷5=6。",
+          "difficulty": 2,
+          "knowledge_point": "解决问题综合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "一根绳子长 90 厘米，剪去 35 厘米，还剩（ ）厘米。",
+          "answer": {
+            "value": "55"
+          },
+          "analysis": "90-35=55。",
+          "difficulty": 2,
+          "knowledge_point": "解决问题综合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "解决问题时先弄清求什么，再选择算法。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "明确问题再选算法。",
+          "difficulty": 2,
+          "knowledge_point": "解决问题综合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "图书角有 128 本书，又借来 76 本，分给 4 个班，每班多少本？",
+          "answer": {
+            "value": "51 本"
+          },
+          "analysis": "128+76=204，204÷4=51，每班 51 本。",
+          "difficulty": 5,
+          "knowledge_point": "解决问题综合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "说清算理指的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "说清算理即讲理由。",
+          "difficulty": 2,
+          "knowledge_point": "数学思考与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "讲清为什么这样算",
+            "只报答案",
+            "只说结果对",
+            "不用说明"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "把自己的解题过程讲给同学听，可以帮助自己发现问题。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "表达促进反思。",
+          "difficulty": 2,
+          "knowledge_point": "数学思考与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "用「先……再……」把两步计算的过程说清楚，这种表达方式叫（ ）（填「分步」）。",
+          "answer": {
+            "value": "分步"
+          },
+          "analysis": "分步叙述思路。",
+          "difficulty": 3,
+          "knowledge_point": "数学思考与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "估算 298+305 约等于（ ）。",
+          "answer": {
+            "value": "600"
+          },
+          "analysis": "298≈300，305≈300，和约 600。",
+          "difficulty": 3,
+          "knowledge_point": "数学思考与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你最喜欢本册的哪个单元，为什么。",
+          "answer": {
+            "value": "示例：我最喜欢分类单元，因为整理书包和书架时用得上，能让东西一眼找到。"
+          },
+          "analysis": "评分要点：说清单元与理由。",
+          "difficulty": 3,
+          "knowledge_point": "数学思考与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-12T08:23:04+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

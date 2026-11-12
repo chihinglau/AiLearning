@@ -1,0 +1,2009 @@
+{
+  "subject": "math",
+  "grade": 8,
+  "version": "北师大版",
+  "semester": "second",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第一章 三角形的证明及其应用",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "全等三角形的判定方法",
+      "parent": "第一章 三角形的证明及其应用",
+      "order_index": 1,
+      "explanation": "SSS、SAS、ASA、AAS、HL 能判定全等；SSA 与 AAA 不能。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "等腰三角形与等边三角形的性质与判定",
+      "parent": "第一章 三角形的证明及其应用",
+      "order_index": 2,
+      "explanation": "等边对等角、三线合一；有两个角相等则是等腰三角形。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "线段垂直平分线与角平分线的性质",
+      "parent": "第一章 三角形的证明及其应用",
+      "order_index": 3,
+      "explanation": "垂直平分线上的点到两端点距离相等；角平分线上的点到两边距离相等。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "命题、逆命题与反证法",
+      "parent": "第一章 三角形的证明及其应用",
+      "order_index": 4,
+      "explanation": "逆命题是把结论与条件互换；反证法是先假设结论的反面成立。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二章 不等式与不等式组",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "不等式的基本性质",
+      "parent": "第二章 不等式与不等式组",
+      "order_index": 1,
+      "explanation": "两边同乘（除以）负数，不等号方向必须改变。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "一元一次不等式的解法",
+      "parent": "第二章 不等式与不等式组",
+      "order_index": 2,
+      "explanation": "去分母、去括号、移项、合并、系数化为 1；系数为负要变号。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "一元一次不等式组及其解集",
+      "parent": "第二章 不等式与不等式组",
+      "order_index": 3,
+      "explanation": "解集是各个不等式解集的公共部分，无公共部分则无解。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "一元一次不等式的实际应用",
+      "parent": "第二章 不等式与不等式组",
+      "order_index": 4,
+      "explanation": "把「不超过」「不少于」等文字准确翻译为不等式。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第三章 图形的平移与旋转",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "平移的性质与作图",
+      "parent": "第三章 图形的平移与旋转",
+      "order_index": 1,
+      "explanation": "平移由方向和距离决定，图形的形状、大小、方向都不变。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "旋转的性质与作图",
+      "parent": "第三章 图形的平移与旋转",
+      "order_index": 2,
+      "explanation": "旋转由旋转中心、方向、角度决定，对应点到中心距离相等。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "中心对称与中心对称图形",
+      "parent": "第三章 图形的平移与旋转",
+      "order_index": 3,
+      "explanation": "绕某点旋转 180° 与原图形重合，该点是对称中心。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "平移、旋转与坐标变化",
+      "parent": "第三章 图形的平移与旋转",
+      "order_index": 4,
+      "explanation": "左右平移改横坐标，上下平移改纵坐标；绕原点旋转 180° 坐标都变号。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第四章 因式分解",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "提公因式法",
+      "parent": "第四章 因式分解",
+      "order_index": 1,
+      "explanation": "公因式取各项系数的最大公约数与相同字母的最低次数。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "公式法（平方差与完全平方）",
+      "parent": "第四章 因式分解",
+      "order_index": 2,
+      "explanation": "a²-b²=(a+b)(a-b)；a²±2ab+b²=(a±b)²。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "十字相乘与分组分解",
+      "parent": "第四章 因式分解",
+      "order_index": 3,
+      "explanation": "x²+px+q 型可拆成两数积为 q、和为 p；四项式常先分组再提公因式。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "因式分解的应用",
+      "parent": "第四章 因式分解",
+      "order_index": 4,
+      "explanation": "用因式分解简化计算、判断整除与奇偶性。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第五章 分式与分式方程",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "分式的意义与基本性质",
+      "parent": "第五章 分式与分式方程",
+      "order_index": 1,
+      "explanation": "分母不为 0 时才有意义；分子分母同乘除非零整式值不变。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "分式的乘除",
+      "parent": "第五章 分式与分式方程",
+      "order_index": 2,
+      "explanation": "乘法分子乘分子、分母乘分母；除法转成乘以倒数，结果要约成最简。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "分式的加减",
+      "parent": "第五章 分式与分式方程",
+      "order_index": 3,
+      "explanation": "同分母直接合并分子；异分母先通分再加减。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "分式方程及其应用",
+      "parent": "第五章 分式与分式方程",
+      "order_index": 4,
+      "explanation": "去分母化为整式方程，解完必须验根，防止增根。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第六章 平行四边形",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "平行四边形的性质",
+      "parent": "第六章 平行四边形",
+      "order_index": 1,
+      "explanation": "对边平行且相等、对角相等、对角线互相平分。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "平行四边形的判定",
+      "parent": "第六章 平行四边形",
+      "order_index": 2,
+      "explanation": "两组对边分别平行（或相等）、一组对边平行且相等、对角线互相平分都可判定。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "三角形中位线定理",
+      "parent": "第六章 平行四边形",
+      "order_index": 3,
+      "explanation": "中位线平行于第三边，且等于第三边的一半。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "矩形、菱形、正方形与平行四边形的关系",
+      "parent": "第六章 平行四边形",
+      "order_index": 4,
+      "explanation": "三者都是特殊的平行四边形，靠「直角」「邻边相等」区分。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一章 三角形的证明及其应用",
+      "order_index": 1,
+      "summary": "用全等、等腰与垂直平分线、角平分线的性质完成几何证明。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "下列条件中，不能判定两个三角形全等的是（ ）。",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "「两边及其中一边的对角」即 SSA，不一定全等。",
+          "difficulty": 3,
+          "knowledge_point": "全等三角形的判定方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "三边对应相等",
+            "两边及夹角对应相等",
+            "两边及其中一边的对角对应相等",
+            "两角及夹边对应相等"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "在△ABC 和△DEF 中，AB=DE，∠B=∠E，BC=EF，判定全等的依据是（ ）。",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "两边及其夹角对应相等，用 SAS。",
+          "difficulty": 2,
+          "knowledge_point": "全等三角形的判定方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "SSS",
+            "SAS",
+            "ASA",
+            "AAS"
+          ]
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些条件组合可以判定两个三角形全等？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A SSS ✓；B SAS ✓；C SSA ✗ 不一定全等；D AAS ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "全等三角形的判定方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "SSS",
+            "SAS",
+            "SSA",
+            "AAS"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "三个角分别相等的两个三角形一定全等。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "AAA 只能保证形状相同，大小可以不同。",
+          "difficulty": 2,
+          "knowledge_point": "全等三角形的判定方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "判定两个直角三角形全等，除一般方法外，还可以用「斜边和一条直角边对应相等」，简写为（ ）。",
+          "answer": {
+            "value": "HL"
+          },
+          "analysis": "直角三角形特有的判定方法简写为 HL。",
+          "difficulty": 2,
+          "knowledge_point": "全等三角形的判定方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "等腰三角形的顶角为 80°，它的一个底角是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "两底角相等，(180°-80°)÷2=50°。",
+          "difficulty": 3,
+          "knowledge_point": "等腰三角形与等边三角形的性质与判定",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "50°",
+            "80°",
+            "100°",
+            "40°"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "等腰三角形两边长为 3 和 7，它的周长是（ ）。",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "3 作腰时 3+3<7 不能构成三角形，所以腰为 7，周长 7+7+3=17。",
+          "difficulty": 4,
+          "knowledge_point": "等腰三角形与等边三角形的性质与判定",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "13",
+            "17",
+            "13 或 17",
+            "10"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "等边三角形的每个内角都是（ ）°。",
+          "answer": {
+            "value": "60"
+          },
+          "analysis": "等边三角形三个角相等，各为 180°÷3=60°。",
+          "difficulty": 2,
+          "knowledge_point": "等腰三角形与等边三角形的性质与判定",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "等腰三角形顶角的平分线垂直平分底边。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "这就是「三线合一」的性质。",
+          "difficulty": 3,
+          "knowledge_point": "等腰三角形与等边三角形的性质与判定",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "已知等腰三角形有一个角是 100°，求另外两个角的度数。",
+          "answer": {
+            "value": "另外两个角都是 40°"
+          },
+          "analysis": "100° 只能是顶角（若为底角则两底角和已超 180°），故底角 (180°-100°)÷2=40°。",
+          "difficulty": 4,
+          "knowledge_point": "等腰三角形与等边三角形的性质与判定",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "线段垂直平分线上的点到这条线段两个端点的距离（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "垂直平分线的性质：到两端点距离相等。",
+          "difficulty": 2,
+          "knowledge_point": "线段垂直平分线与角平分线的性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "相等",
+            "互补",
+            "相差一半",
+            "无法确定"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "到角的两边距离相等的点一定在（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "到两边距离相等，即为角平分线。",
+          "difficulty": 3,
+          "knowledge_point": "线段垂直平分线与角平分线的性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "这个角的平分线上",
+            "这个角的外部",
+            "角的顶点上",
+            "角的一条边上"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "在△ABC 中，AB 的垂直平分线交 AC 于点 D，若 AD=3，则 BD=（ ）。",
+          "answer": {
+            "value": "3"
+          },
+          "analysis": "D 在 AB 的垂直平分线上，所以 BD=AD=3。",
+          "difficulty": 3,
+          "knowledge_point": "线段垂直平分线与角平分线的性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "三角形三条边的垂直平分线交于一点，这点到三个顶点的距离相等。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "该点即外接圆圆心。",
+          "difficulty": 3,
+          "knowledge_point": "线段垂直平分线与角平分线的性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "命题「对顶角相等」的逆命题是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "条件与结论互换即得逆命题。",
+          "difficulty": 3,
+          "knowledge_point": "命题、逆命题与反证法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "相等的角是对顶角",
+            "对顶角不相等",
+            "不相等的角不是对顶角",
+            "没有逆命题"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "用反证法证明「三角形中最多有一个直角」，应假设（ ）。",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "反证法先假设结论的反面成立：不止一个直角。",
+          "difficulty": 4,
+          "knowledge_point": "命题、逆命题与反证法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "三角形中有一个直角",
+            "三角形中至少有两个直角",
+            "三角形中没有直角",
+            "三角形三个角都是锐角"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "命题「两直线平行，同位角相等」的逆命题是「同位角相等，（ ）」。",
+          "answer": {
+            "value": "两直线平行"
+          },
+          "analysis": "把结论与条件互换即得。",
+          "difficulty": 3,
+          "knowledge_point": "命题、逆命题与反证法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "举一个「原命题为真、逆命题为假」的例子，并说明理由。",
+          "answer": {
+            "value": "示例：原命题「对顶角相等」为真，逆命题「相等的角是对顶角」为假，因为两个直角相等却不是对顶角。"
+          },
+          "analysis": "评分要点：给出真原命题 + 假逆命题 + 反例。",
+          "difficulty": 4,
+          "knowledge_point": "命题、逆命题与反证法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第二章 不等式与不等式组",
+      "order_index": 2,
+      "summary": "掌握不等式性质、一元一次不等式（组）的解法与应用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "若 a>b，则下列一定成立的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "两边同减 3，不等号方向不变。",
+          "difficulty": 3,
+          "knowledge_point": "不等式的基本性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "a-3>b-3",
+            "-a>-b",
+            "a÷3<b÷3",
+            "-2a>-2b"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "不等式两边都乘（或除以）同一个负数，不等号的方向（ ）。",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "乘除负数必须变号。",
+          "difficulty": 2,
+          "knowledge_point": "不等式的基本性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "不变",
+            "改变",
+            "可能改变",
+            "消失"
+          ]
+        },
+        {
+          "q_type": "multiple",
+          "stem": "若 a>b，下列变形正确的是（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "逐项判断：A ✓ 两边加 2 不变号；B ✓ 两边减 5 不变号；C ✗ 乘 -3 应变号得 -3a<-3b；D ✗ 除以 -4 应变号。所以选 A、B。",
+          "difficulty": 4,
+          "knowledge_point": "不等式的基本性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "a+2>b+2",
+            "a-5>b-5",
+            "-3a>-3b",
+            "a÷(-4)>b÷(-4)"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "若 a>b，则 ac²>bc² 一定成立。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "c=0 时两边都为 0，不成立。",
+          "difficulty": 4,
+          "knowledge_point": "不等式的基本性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "由 x+3>5 可得 x>（ ）。",
+          "answer": {
+            "value": "2"
+          },
+          "analysis": "两边同减 3，得 x>2。",
+          "difficulty": 2,
+          "knowledge_point": "不等式的基本性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "不等式 2x-1<5 的解集是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "移项得 2x<6，两边除以 2 得 x<3。",
+          "difficulty": 3,
+          "knowledge_point": "一元一次不等式的解法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "x<3",
+            "x>3",
+            "x<2",
+            "x>2"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "解不等式 3x+1≥7，得 x≥（ ）。",
+          "answer": {
+            "value": "2"
+          },
+          "analysis": "移项得 3x≥6，两边除以 3 得 x≥2。",
+          "difficulty": 2,
+          "knowledge_point": "一元一次不等式的解法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "不等式 -x>2 的解集是 x>-2。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "两边除以 -1 要变号，解集应为 x<-2。",
+          "difficulty": 4,
+          "knowledge_point": "一元一次不等式的解法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "解不等式 (x-1)/2≤3，并写出解集。",
+          "answer": {
+            "value": "x≤7"
+          },
+          "analysis": "两边乘 2 得 x-1≤6，移项得 x≤7。",
+          "difficulty": 3,
+          "knowledge_point": "一元一次不等式的解法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "不等式组 x>1 且 x<3 的解集是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "两个解集的公共部分是 1<x<3。",
+          "difficulty": 2,
+          "knowledge_point": "一元一次不等式组及其解集",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "1<x<3",
+            "x>3",
+            "x<1",
+            "无解"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "不等式组 x>2 且 x<1 的解集是（ ）。",
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "两个解集没有公共部分，所以无解。",
+          "difficulty": 3,
+          "knowledge_point": "一元一次不等式组及其解集",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "1<x<2",
+            "x>2",
+            "x<1",
+            "无解"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "不等式组 x≥2 且 x≤5 的整数解共有（ ）个。",
+          "answer": {
+            "value": "4"
+          },
+          "analysis": "整数解为 2、3、4、5，共 4 个。",
+          "difficulty": 3,
+          "knowledge_point": "一元一次不等式组及其解集",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "不等式组的解集是组成它的各个不等式解集的公共部分。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "这是解不等式组的基本口径。",
+          "difficulty": 2,
+          "knowledge_point": "一元一次不等式组及其解集",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "求不等式组 x-1>0 且 2x≤6 的解集。",
+          "answer": {
+            "value": "1<x≤3"
+          },
+          "analysis": "由 x-1>0 得 x>1，由 2x≤6 得 x≤3，公共部分为 1<x≤3。",
+          "difficulty": 4,
+          "knowledge_point": "一元一次不等式组及其解集",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "某商品每件 20 元，带 100 元最多可买（ ）件。",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "20x≤100 得 x≤5，最多买 5 件。",
+          "difficulty": 3,
+          "knowledge_point": "一元一次不等式的实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "4",
+            "5",
+            "6",
+            "7"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "「不超过 3 个」用不等式表示是 x<3。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "「不超过」含等于，应为 x≤3。",
+          "difficulty": 4,
+          "knowledge_point": "一元一次不等式的实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "某数的 3 倍减去 2 不小于 7，设该数为 x，列出的不等式是 3x-2≥（ ）。",
+          "answer": {
+            "value": "7"
+          },
+          "analysis": "「不小于 7」即大于或等于 7。",
+          "difficulty": 3,
+          "knowledge_point": "一元一次不等式的实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "长方形长 8 cm，宽 x cm，周长不超过 30 cm，求 x 的取值范围。",
+          "answer": {
+            "value": "0<x≤7"
+          },
+          "analysis": "周长 2(x+8)≤30，得 x≤7，且宽为正数。",
+          "difficulty": 4,
+          "knowledge_point": "一元一次不等式的实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第三章 图形的平移与旋转",
+      "order_index": 3,
+      "summary": "掌握平移、旋转、中心对称的性质与坐标变化规律。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "平移后图形的形状和大小（ ）。",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "平移是刚体运动，形状大小都不变。",
+          "difficulty": 2,
+          "knowledge_point": "平移的性质与作图",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "都改变",
+            "都不变",
+            "形状变、大小不变",
+            "形状不变、大小变"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "决定一次平移的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "平移由方向和距离唯一确定。",
+          "difficulty": 2,
+          "knowledge_point": "平移的性质与作图",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "平移的方向和距离",
+            "旋转中心和旋转角",
+            "对称轴",
+            "顶点个数"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "把点 A(1,2) 向右平移 3 个单位长度，得到的点的坐标是（ ）。",
+          "answer": {
+            "value": "(4,2)"
+          },
+          "analysis": "横坐标加 3，纵坐标不变。",
+          "difficulty": 3,
+          "knowledge_point": "平移的性质与作图",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "平移后，连接各组对应点的线段平行（或在同一直线上）且相等。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "这是平移的基本性质。",
+          "difficulty": 3,
+          "knowledge_point": "平移的性质与作图",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明平移与轴对称在改变图形位置上的不同。",
+          "answer": {
+            "value": "示例：平移后图形方向不变，轴对称后图形方向发生翻转（左右互换）。"
+          },
+          "analysis": "评分要点：说出方向是否改变。",
+          "difficulty": 3,
+          "knowledge_point": "平移的性质与作图",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "旋转的三要素是旋转中心、旋转方向和（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "旋转三要素：中心、方向、角度。",
+          "difficulty": 2,
+          "knowledge_point": "旋转的性质与作图",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "旋转角",
+            "对称轴",
+            "平移距离",
+            "边的长度"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "旋转后，对应点到旋转中心的距离（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "对应点到旋转中心的距离相等。",
+          "difficulty": 2,
+          "knowledge_point": "旋转的性质与作图",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "相等",
+            "成倍数关系",
+            "互补",
+            "不确定"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "把点 (1,0) 绕原点逆时针旋转 90°，得到的点的坐标是（ ）。",
+          "answer": {
+            "value": "(0,1)"
+          },
+          "analysis": "逆时针 90° 时 (x,y)→(-y,x)。",
+          "difficulty": 4,
+          "knowledge_point": "旋转的性质与作图",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "旋转后图形的形状和大小都不变。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "旋转只改变位置和方向。",
+          "difficulty": 2,
+          "knowledge_point": "旋转的性质与作图",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "简述把△ABC 绕点 O 顺时针旋转 90° 的作图步骤。",
+          "answer": {
+            "value": "示例：连接 OA，以 O 为顶点作∠AOA′=90° 且 OA′=OA 得 A′；同法得 B′、C′；顺次连接 A′B′C′。"
+          },
+          "analysis": "评分要点：说清作对应点的两条条件（角度、距离）。",
+          "difficulty": 4,
+          "knowledge_point": "旋转的性质与作图",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "点 A(a,b) 关于原点成中心对称的点的坐标是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "关于原点对称，横纵坐标都变为相反数。",
+          "difficulty": 3,
+          "knowledge_point": "中心对称与中心对称图形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "(-a,-b)",
+            "(a,-b)",
+            "(-a,b)",
+            "(b,a)"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "平行四边形是中心对称图形，它的对称中心是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "平行四边形绕对角线交点旋转 180° 与自身重合。",
+          "difficulty": 3,
+          "knowledge_point": "中心对称与中心对称图形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "对角线的交点",
+            "任意一个顶点",
+            "一条边的中点",
+            "没有对称中心"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "点 A(-2,3) 关于原点对称的点的坐标是（ ）。",
+          "answer": {
+            "value": "(2,-3)"
+          },
+          "analysis": "横纵坐标都变为相反数。",
+          "difficulty": 2,
+          "knowledge_point": "中心对称与中心对称图形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "成中心对称的两个图形是全等形。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "中心对称只改变位置和方向，形状大小不变。",
+          "difficulty": 2,
+          "knowledge_point": "中心对称与中心对称图形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "点 P(2,-1) 向左平移 2 个单位、再向上平移 3 个单位后，坐标是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "横坐标 2-2=0，纵坐标 -1+3=2。",
+          "difficulty": 3,
+          "knowledge_point": "平移、旋转与坐标变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "(0,2)",
+            "(4,-4)",
+            "(0,-4)",
+            "(4,2)"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "把点 (x,y) 绕原点旋转 180°，得到的点的坐标是（ ）。",
+          "answer": {
+            "value": "(-x,-y)"
+          },
+          "analysis": "旋转 180° 等价于关于原点中心对称。",
+          "difficulty": 3,
+          "knowledge_point": "平移、旋转与坐标变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "用平移和旋转可以设计出重复排列的花边图案。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "沿直线反复平移即可得到连续花边。",
+          "difficulty": 2,
+          "knowledge_point": "平移、旋转与坐标变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "设计一个由平移得到的图案，并说明它的排列规律。",
+          "answer": {
+            "value": "示例：把一个正方形沿水平方向每次平移 3 cm，重复 8 次，得到一排整齐的方砖花边。"
+          },
+          "analysis": "评分要点：说明平移方向、距离与重复次数。",
+          "difficulty": 3,
+          "knowledge_point": "平移、旋转与坐标变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第四章 因式分解",
+      "order_index": 4,
+      "summary": "把一个多项式化为几个整式积的形式，常用于简化计算。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "把 6x²-3x 因式分解，结果是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "公因式是 3x，提取后剩 2x-1。",
+          "difficulty": 3,
+          "knowledge_point": "提公因式法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "3x(2x-1)",
+            "3x(2x)",
+            "3(2x²-x)",
+            "2x(3x-1)"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "把 -4a²+8ab 因式分解，结果是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "公因式取 -4a，提取后为 a-2b。",
+          "difficulty": 3,
+          "knowledge_point": "提公因式法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "-4a(a-2b)",
+            "4a(-a+2b)",
+            "-4a(a+2b)",
+            "-2a(2a-4b)"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "分解因式：x²+xy=x( )。",
+          "answer": {
+            "value": "x+y"
+          },
+          "analysis": "公因式是 x，提取后剩 x+y。",
+          "difficulty": 2,
+          "knowledge_point": "提公因式法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "提公因式后，括号内多项式的项数与原多项式的项数相同。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "每项都提取一次，项数不变。",
+          "difficulty": 3,
+          "knowledge_point": "提公因式法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "分解因式：3a²b-6ab²。",
+          "answer": {
+            "value": "3ab(a-2b)"
+          },
+          "analysis": "公因式 3ab，提取后剩 a-2b。",
+          "difficulty": 3,
+          "knowledge_point": "提公因式法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "把 x²-9 因式分解，结果是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "平方差公式，a²-b²=(a+b)(a-b)。",
+          "difficulty": 2,
+          "knowledge_point": "公式法（平方差与完全平方）",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "(x-3)(x+3)",
+            "(x-9)(x+1)",
+            "(x-3)²",
+            "(x+3)²"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "把 x²+6x+9 因式分解，结果是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "符合完全平方式 a²+2ab+b²。",
+          "difficulty": 2,
+          "knowledge_point": "公式法（平方差与完全平方）",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "(x+3)²",
+            "(x-3)²",
+            "(x+9)²",
+            "(x+3)(x-3)"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "平方差公式：a²-b²=( )（a+b）。",
+          "answer": {
+            "value": "a-b"
+          },
+          "analysis": "a²-b²=(a+b)(a-b)。",
+          "difficulty": 2,
+          "knowledge_point": "公式法（平方差与完全平方）",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "4x²-1=(2x-1)(2x+1) 是正确的因式分解。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "4x²-1=(2x)²-1²，套平方差公式。",
+          "difficulty": 3,
+          "knowledge_point": "公式法（平方差与完全平方）",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "分解因式：9m²-6m+1。",
+          "answer": {
+            "value": "(3m-1)²"
+          },
+          "analysis": "9m²-6m+1=(3m)²-2·3m·1+1²。",
+          "difficulty": 3,
+          "knowledge_point": "公式法（平方差与完全平方）",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "把 x²+5x+6 因式分解，结果是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "2+3=5，2×3=6。",
+          "difficulty": 3,
+          "knowledge_point": "十字相乘与分组分解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "(x+2)(x+3)",
+            "(x+1)(x+6)",
+            "(x-2)(x-3)",
+            "(x+6)(x-1)"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "x²-7x+12=(x-3)(x- )。",
+          "answer": {
+            "value": "4"
+          },
+          "analysis": "3+4=7，3×4=12。",
+          "difficulty": 3,
+          "knowledge_point": "十字相乘与分组分解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "因式分解要分解到每个因式都不能再分解为止。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "分解要彻底。",
+          "difficulty": 2,
+          "knowledge_point": "十字相乘与分组分解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "分解因式：x²+2x-3。",
+          "answer": {
+            "value": "(x+3)(x-1)"
+          },
+          "analysis": "3+(-1)=2，3×(-1)=-3。",
+          "difficulty": 4,
+          "knowledge_point": "十字相乘与分组分解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "计算 99²-1 的值是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "99²-1=(99+1)(99-1)=100×98=9800。",
+          "difficulty": 3,
+          "knowledge_point": "因式分解的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "9800",
+            "9801",
+            "10000",
+            "9900"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "若 a+b=5，a-b=3，则 a²-b²=（ ）。",
+          "answer": {
+            "value": "15"
+          },
+          "analysis": "a²-b²=(a+b)(a-b)=5×3=15。",
+          "difficulty": 3,
+          "knowledge_point": "因式分解的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "利用因式分解可以简化某些数值计算。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "化差为积，计算更快。",
+          "difficulty": 2,
+          "knowledge_point": "因式分解的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明：n 为整数时，n²-n 一定是偶数。",
+          "answer": {
+            "value": "示例：n²-n=n(n-1)，n 与 n-1 是相邻整数，其中必有一个偶数，所以乘积一定是偶数。"
+          },
+          "analysis": "评分要点：完成因式分解并说明奇偶性。",
+          "difficulty": 4,
+          "knowledge_point": "因式分解的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第五章 分式与分式方程",
+      "order_index": 5,
+      "summary": "掌握分式的意义、运算与分式方程的解法。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "分式 (x-1)/(x-2) 有意义的条件是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "分母 x-2≠0，即 x≠2。",
+          "difficulty": 2,
+          "knowledge_point": "分式的意义与基本性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "x≠2",
+            "x≠1",
+            "x≠0",
+            "x 为任意实数"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "分式的值为 0 的条件是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "分子为 0、分母不为 0 时分式值为 0。",
+          "difficulty": 3,
+          "knowledge_point": "分式的意义与基本性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "分子为 0 且分母不为 0",
+            "分母为 0",
+            "分子分母都为 0",
+            "分子为 1"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "当 x=（ ）时，分式 (x-3)/(x+1) 的值为 0。",
+          "answer": {
+            "value": "3"
+          },
+          "analysis": "x-3=0 得 x=3，且此时分母不为 0。",
+          "difficulty": 3,
+          "knowledge_point": "分式的意义与基本性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "分式的分子与分母同乘一个不为 0 的整式，分式的值不变。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "这是分式的基本性质。",
+          "difficulty": 2,
+          "knowledge_point": "分式的意义与基本性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "约分：(6x²y)/(9xy²)。",
+          "answer": {
+            "value": "2x/(3y)"
+          },
+          "analysis": "分子分母同除以 3xy，得 2x/(3y)。",
+          "difficulty": 3,
+          "knowledge_point": "分式的意义与基本性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "(a/b)·(b/a) 的值是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "分子分母互为倒数，约分得 1（a、b 不为 0）。",
+          "difficulty": 2,
+          "knowledge_point": "分式的乘除",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "1",
+            "0",
+            "ab",
+            "a²/b²"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "(x²/y)÷(x/y²)=（ ）。",
+          "answer": {
+            "value": "xy"
+          },
+          "analysis": "除以 x/y² 即乘 y²/x，得 x²y²/(xy)=xy。",
+          "difficulty": 3,
+          "knowledge_point": "分式的乘除",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "分式的乘除运算结果要化成最简分式或整式。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "结果必须化简。",
+          "difficulty": 2,
+          "knowledge_point": "分式的乘除",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "计算：(2x/3y)·(9y²/4x²)。",
+          "answer": {
+            "value": "3y/(2x)"
+          },
+          "analysis": "分子 2x·9y²=18xy²，分母 3y·4x²=12x²y，约分得 3y/(2x)。",
+          "difficulty": 4,
+          "knowledge_point": "分式的乘除",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "1/x+1/y 的结果是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "通分为 y/(xy)+x/(xy)=(x+y)/(xy)。",
+          "difficulty": 3,
+          "knowledge_point": "分式的加减",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "(x+y)/(xy)",
+            "2/(x+y)",
+            "1/(x+y)",
+            "xy/(x+y)"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "2/(x-1)-2/(x-1) 的结果是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "同分母相减，分子为 0，结果为 0。",
+          "difficulty": 2,
+          "knowledge_point": "分式的加减",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "0",
+            "4/(x-1)",
+            "2",
+            "1"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "a/(a-b)-b/(a-b)=（ ）。",
+          "answer": {
+            "value": "1"
+          },
+          "analysis": "同分母相减得 (a-b)/(a-b)=1。",
+          "difficulty": 3,
+          "knowledge_point": "分式的加减",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "异分母分式相加减，必须先通分。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "通分后才能合并分子。",
+          "difficulty": 2,
+          "knowledge_point": "分式的加减",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "计算：1/(x+1)+1/(x-1)。",
+          "answer": {
+            "value": "2x/(x²-1)"
+          },
+          "analysis": "通分得 (x-1+x+1)/((x+1)(x-1))=2x/(x²-1)。",
+          "difficulty": 4,
+          "knowledge_point": "分式的加减",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "解分式方程时，求出解后必须（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "分式方程可能产生增根，必须验根。",
+          "difficulty": 3,
+          "knowledge_point": "分式方程及其应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "代入原方程检验",
+            "再约分一次",
+            "再通分一次",
+            "直接写出答案"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "方程 1/x=2 的解是 x=（ ）。",
+          "answer": {
+            "value": "1/2"
+          },
+          "analysis": "两边乘 x 得 1=2x，x=1/2。",
+          "difficulty": 3,
+          "knowledge_point": "分式方程及其应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "分式方程出现增根，是因为去分母时两边乘了值为 0 的式子。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "乘以 0 会使原方程变形。",
+          "difficulty": 4,
+          "knowledge_point": "分式方程及其应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "一项工程甲单独做需 6 天，乙单独做需 12 天，两人合作需几天完成？",
+          "answer": {
+            "value": "4 天"
+          },
+          "analysis": "合作每天完成六分之一加十二分之一，等于十二分之三，即每天完成全工程的四分之一，所以需 4 天。",
+          "difficulty": 4,
+          "knowledge_point": "分式方程及其应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第六章 平行四边形",
+      "order_index": 6,
+      "summary": "掌握平行四边形的性质、判定与三角形中位线定理。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "平行四边形的对角（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "平行四边形对角相等。",
+          "difficulty": 2,
+          "knowledge_point": "平行四边形的性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "相等",
+            "互补",
+            "互余",
+            "不相等"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "平行四边形的对角线（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "对角线互相平分是平行四边形的性质。",
+          "difficulty": 2,
+          "knowledge_point": "平行四边形的性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "互相平分",
+            "一定相等",
+            "一定垂直",
+            "无法确定"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "平行四边形相邻两个内角的和是（ ）°。",
+          "answer": {
+            "value": "180"
+          },
+          "analysis": "邻角互补，和为 180°。",
+          "difficulty": 2,
+          "knowledge_point": "平行四边形的性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "平行四边形的对边平行且相等。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "这是最基本的性质。",
+          "difficulty": 2,
+          "knowledge_point": "平行四边形的性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "平行四边形的周长是 20，一条边长 6，求它相邻的另一边长。",
+          "answer": {
+            "value": "4"
+          },
+          "analysis": "两组对边相等，邻边和为 10，10-6=4。",
+          "difficulty": 4,
+          "knowledge_point": "平行四边形的性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列条件中，不能判定四边形是平行四边形的是（ ）。",
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "等腰梯形也满足最后一种，却不是平行四边形。",
+          "difficulty": 4,
+          "knowledge_point": "平行四边形的判定",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "两组对边分别平行",
+            "一组对边平行且相等",
+            "对角线互相平分",
+            "一组对边平行，另一组对边相等"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "两组对边分别（ ）的四边形是平行四边形。",
+          "answer": {
+            "value": "相等"
+          },
+          "analysis": "对边相等即可判定。",
+          "difficulty": 2,
+          "knowledge_point": "平行四边形的判定",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "两组对角分别相等的四边形是平行四边形。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "由对角相等可推出对边平行。",
+          "difficulty": 3,
+          "knowledge_point": "平行四边形的判定",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明为什么「一组对边平行、另一组对边相等」不能判定平行四边形。",
+          "answer": {
+            "value": "示例：等腰梯形的一组对边（上下底）平行，两腰相等，但两腰这组对边相等并不平行，所以它不是平行四边形。"
+          },
+          "analysis": "评分要点：给出等腰梯形反例。",
+          "difficulty": 4,
+          "knowledge_point": "平行四边形的判定",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "三角形的中位线平行于第三边，并且等于第三边的（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "中位线定理：等于第三边的一半。",
+          "difficulty": 2,
+          "knowledge_point": "三角形中位线定理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "一半",
+            "两倍",
+            "三分之一",
+            "相等"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "三角形三条中位线围成的三角形，周长是原三角形周长的（ ）。",
+          "answer": {
+            "value": "一半"
+          },
+          "analysis": "三边都减半，所以周长减半。",
+          "difficulty": 3,
+          "knowledge_point": "三角形中位线定理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "一个三角形有三条中位线。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "三边各有一条对应的中位线。",
+          "difficulty": 2,
+          "knowledge_point": "三角形中位线定理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "在△ABC 中，D、E 分别是 AB、AC 的中点，BC=8，求 DE。",
+          "answer": {
+            "value": "4"
+          },
+          "analysis": "DE 是中位线，DE=BC÷2=4。",
+          "difficulty": 3,
+          "knowledge_point": "三角形中位线定理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "矩形具有而一般平行四边形不一定具有的性质是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "矩形的对角线相等。",
+          "difficulty": 3,
+          "knowledge_point": "矩形、菱形、正方形与平行四边形的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "对角线相等",
+            "对边相等",
+            "对角相等",
+            "对角线互相平分"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "菱形具有而矩形不一定具有的性质是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "菱形对角线互相垂直。",
+          "difficulty": 3,
+          "knowledge_point": "矩形、菱形、正方形与平行四边形的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "对角线互相垂直",
+            "四个角都是直角",
+            "对角线相等",
+            "对边平行"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "正方形的四条边都（ ），四个角都是直角。",
+          "answer": {
+            "value": "相等"
+          },
+          "analysis": "正方形四边相等、四角为直角。",
+          "difficulty": 2,
+          "knowledge_point": "矩形、菱形、正方形与平行四边形的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "正方形既是矩形又是菱形。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "正方形同时满足矩形与菱形的条件。",
+          "difficulty": 2,
+          "knowledge_point": "矩形、菱形、正方形与平行四边形的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "简述矩形、菱形、正方形与平行四边形的关系。",
+          "answer": {
+            "value": "示例：三者都是平行四边形；平行四边形加「一个直角」成矩形，加「一组邻边相等」成菱形，同时满足两者即为正方形。"
+          },
+          "analysis": "评分要点：说清包含关系与判别条件。",
+          "difficulty": 4,
+          "knowledge_point": "矩形、菱形、正方形与平行四边形的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-12T08:10:46+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

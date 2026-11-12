@@ -367,7 +367,7 @@
           "ok": true,
           "value": 0.0,
           "hits": 0,
-          "questions": 144,
+          "questions": 149,
           "max": 0.05
         },
         "same_stem_unique_answer": {
@@ -382,7 +382,7 @@
         "chapters": 8,
         "sections": 8,
         "points": 32,
-        "questions": 144,
+        "questions": 149,
         "cliche_hits": 0,
         "unresolved_kp": 0
       },
@@ -1208,7 +1208,7 @@
         }
       },
       "warnings": [
-        "校验器提醒 22 条（不阻断）"
+        "校验器提醒 20 条（不阻断）"
       ],
       "stats": {
         "chapters": 13,
@@ -1221,7 +1221,7 @@
       "validator": {
         "status": "ok",
         "errors": 0,
-        "warnings": 22,
+        "warnings": 20,
         "passed": true
       }
     },

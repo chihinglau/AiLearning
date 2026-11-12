@@ -1,0 +1,3400 @@
+{
+  "subject": "biology",
+  "grade": 7,
+  "version": "人教版",
+  "semester": "second",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第三单元 植物的生活",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "植物的生活总览",
+      "parent": "第三单元 植物的生活",
+      "order_index": 1,
+      "explanation": "绿色植物通过光合作用制造有机物，通过呼吸作用分解有机物释放能量。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "植物体的结构层次",
+      "parent": "第三单元 植物的生活",
+      "order_index": 2,
+      "explanation": "细胞构成组织，组织构成器官，六大器官构成植物体。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "光合作用与呼吸作用的关系",
+      "parent": "第三单元 植物的生活",
+      "order_index": 3,
+      "explanation": "光合作用储存能量，呼吸作用释放能量，二者相互依存。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "蒸腾作用与水盐运输",
+      "parent": "第三单元 植物的生活",
+      "order_index": 4,
+      "explanation": "蒸腾作用促进水和无机盐运输，也能降低叶片温度。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第一章 被子植物的一生",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "种子的结构与萌发",
+      "parent": "第一章 被子植物的一生",
+      "order_index": 1,
+      "explanation": "种子由种皮和胚构成，萌发需要适宜温度、一定水分和充足空气。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "植株的生长",
+      "parent": "第一章 被子植物的一生",
+      "order_index": 2,
+      "explanation": "根尖伸长区生长最快，成熟区吸收水和无机盐；茎加粗与形成层有关。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "开花与结果",
+      "parent": "第一章 被子植物的一生",
+      "order_index": 3,
+      "explanation": "花的主要结构是雄蕊和雌蕊，经传粉、受精后子房发育成果实。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "植物的衰老与生命周期",
+      "parent": "第一章 被子植物的一生",
+      "order_index": 4,
+      "explanation": "一年生、二年生与多年生植物生命周期不同，衰老是正常过程。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二章 植物体内的物质与能量变化",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "光合作用的探究实验",
+      "parent": "第二章 植物体内的物质与能量变化",
+      "order_index": 1,
+      "explanation": "通过遮光、碘液检验淀粉等方法探究光合作用的条件与产物。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "有机物的运输与储存",
+      "parent": "第二章 植物体内的物质与能量变化",
+      "order_index": 2,
+      "explanation": "有机物通过筛管运输，可储存在根、茎、果实和种子中。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "能量转化与农业生产",
+      "parent": "第二章 植物体内的物质与能量变化",
+      "order_index": 3,
+      "explanation": "光合作用把光能转化为化学能储存在有机物中，农业措施可提高产量。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "碳氧平衡与植物作用",
+      "parent": "第二章 植物体内的物质与能量变化",
+      "order_index": 4,
+      "explanation": "植物光合作用吸收二氧化碳释放氧气，有助于维持大气碳氧平衡。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第四单元 人体生理与健康(一)",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "人体的结构层次",
+      "parent": "第四单元 人体生理与健康(一)",
+      "order_index": 1,
+      "explanation": "人体由细胞构成组织、器官、系统，最终构成人体。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "人体健康的基本要素",
+      "parent": "第四单元 人体生理与健康(一)",
+      "order_index": 2,
+      "explanation": "合理营养、适量运动、良好作息与心理平衡是健康的基础。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "人体生理活动的基本条件",
+      "parent": "第四单元 人体生理与健康(一)",
+      "order_index": 3,
+      "explanation": "氧气、营养物质、水分与适宜温度是维持生命活动的基本条件。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "生理健康与疾病预防",
+      "parent": "第四单元 人体生理与健康(一)",
+      "order_index": 4,
+      "explanation": "养成卫生习惯、按时接种疫苗、定期体检有助于预防疾病。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第一章 人的生殖和发育",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "生殖系统的组成",
+      "parent": "第一章 人的生殖和发育",
+      "order_index": 1,
+      "explanation": "男性主要生殖器官是睾丸，女性主要生殖器官是卵巢。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "受精与胚胎发育",
+      "parent": "第一章 人的生殖和发育",
+      "order_index": 2,
+      "explanation": "精子与卵细胞在输卵管结合形成受精卵，胚胎在子宫内发育。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "青春期的发育特点",
+      "parent": "第一章 人的生殖和发育",
+      "order_index": 3,
+      "explanation": "青春期身高突增、性器官迅速发育、出现第二性征。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "遗传与优生常识",
+      "parent": "第一章 人的生殖和发育",
+      "order_index": 4,
+      "explanation": "性状由基因控制，近亲结婚会增加遗传病风险。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二章 人体的营养",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "营养物质及其作用",
+      "parent": "第二章 人体的营养",
+      "order_index": 1,
+      "explanation": "糖类供能，蛋白质构建身体，脂肪储能，水、无机盐、维生素调节生理活动。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "消化与吸收",
+      "parent": "第二章 人体的营养",
+      "order_index": 2,
+      "explanation": "食物在消化道内被分解为可吸收的小分子物质，小肠是主要吸收场所。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "合理膳食与食品安全",
+      "parent": "第二章 人体的营养",
+      "order_index": 3,
+      "explanation": "膳食要均衡多样，购买和保存食物要注意安全。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "饮食与健康的关系",
+      "parent": "第二章 人体的营养",
+      "order_index": 4,
+      "explanation": "偏食、暴饮暴食、过量摄入高糖高脂食物都会损害健康。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第三章 人体的呼吸",
+      "order_index": 7
+    },
+    {
+      "node_type": "point",
+      "name": "呼吸系统的组成",
+      "parent": "第三章 人体的呼吸",
+      "order_index": 1,
+      "explanation": "呼吸道由鼻、咽、喉、气管、支气管组成，肺是气体交换的场所。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "呼吸运动与气体交换",
+      "parent": "第三章 人体的呼吸",
+      "order_index": 2,
+      "explanation": "吸气时肋间肌和膈肌收缩，胸廓扩大；气体交换在肺泡处进行。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "呼吸与健康",
+      "parent": "第三章 人体的呼吸",
+      "order_index": 3,
+      "explanation": "吸烟、空气污染损害呼吸系统，体育锻炼可增强呼吸功能。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "呼吸系统与其他系统的联系",
+      "parent": "第三章 人体的呼吸",
+      "order_index": 4,
+      "explanation": "呼吸系统获取氧气，循环系统运输，共同保障细胞呼吸。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第四章 人体内物质的运输",
+      "order_index": 8
+    },
+    {
+      "node_type": "point",
+      "name": "血液的组成与功能",
+      "parent": "第四章 人体内物质的运输",
+      "order_index": 1,
+      "explanation": "血液由血浆和血细胞组成，红细胞运输氧，白细胞防御，血小板止血。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "血管与心脏",
+      "parent": "第四章 人体内物质的运输",
+      "order_index": 2,
+      "explanation": "动脉把血液送出心脏，静脉把血液送回心脏，心脏是血液循环的动力器官。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "血液循环途径",
+      "parent": "第四章 人体内物质的运输",
+      "order_index": 3,
+      "explanation": "体循环把氧气送往组织，肺循环使血液与肺泡交换气体。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "输血与血型常识",
+      "parent": "第四章 人体内物质的运输",
+      "order_index": 4,
+      "explanation": "输血以输同型血为原则，献血有严格条件限制。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第五章 人体内废物的排出",
+      "order_index": 9
+    },
+    {
+      "node_type": "point",
+      "name": "泌尿系统的组成",
+      "parent": "第五章 人体内废物的排出",
+      "order_index": 1,
+      "explanation": "肾脏形成尿液，输尿管输送，膀胱暂存，尿道排出。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "尿的形成",
+      "parent": "第五章 人体内废物的排出",
+      "order_index": 2,
+      "explanation": "肾小球和肾小囊内壁起滤过作用形成原尿，肾小管重吸收形成尿液。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "排泄的意义与途径",
+      "parent": "第五章 人体内废物的排出",
+      "order_index": 3,
+      "explanation": "排泄排出代谢废物，调节水盐平衡，维持内环境稳定。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "泌尿系统保健",
+      "parent": "第五章 人体内废物的排出",
+      "order_index": 4,
+      "explanation": "多喝水、不憋尿、注意卫生可减少泌尿系统疾病。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第三单元 植物的生活",
+      "order_index": 1,
+      "summary": "植物体结构层次、光合与呼吸、蒸腾作用的总览。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "绿色植物制造有机物的过程叫（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "制造有机物是光合作用。",
+          "difficulty": 2,
+          "knowledge_point": "植物的生活总览",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "光合作用",
+            "呼吸作用",
+            "蒸腾作用",
+            "吸收作用"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "植物分解有机物、释放能量的过程叫（ ）作用。",
+          "answer": {
+            "value": "呼吸"
+          },
+          "analysis": "呼吸作用分解有机物释放能量。",
+          "difficulty": 3,
+          "knowledge_point": "植物的生活总览",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "植物白天只进行光合作用，夜间只进行呼吸作用。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "白天两者同时进行，夜间只进行呼吸作用。",
+          "difficulty": 4,
+          "knowledge_point": "植物的生活总览",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "植物生活必需的条件有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D ✗ 酒精不是植物生活必需条件。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "植物的生活总览",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "水分",
+            "光照",
+            "适宜温度",
+            "酒精"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "简述绿色植物在生物圈中的作用。",
+          "answer": {
+            "value": "示例：绿色植物通过光合作用制造有机物、释放氧气，是生物圈中有机物和能量的主要来源，还通过蒸腾作用参与水循环。"
+          },
+          "analysis": "评分要点：有机物来源 + 氧气 + 水循环。",
+          "difficulty": 4,
+          "knowledge_point": "植物的生活总览",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "植物体的结构层次由小到大依次是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "植物无系统层次，顺序为细胞、组织、器官、植物体。",
+          "difficulty": 3,
+          "knowledge_point": "植物体的结构层次",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "细胞→组织→器官→植物体",
+            "器官→组织→细胞",
+            "组织→细胞→器官",
+            "细胞→器官→组织"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "植物六大器官中属于生殖器官的是花、果实和（ ）。",
+          "answer": {
+            "value": "种子"
+          },
+          "analysis": "花、果实、种子为生殖器官。",
+          "difficulty": 3,
+          "knowledge_point": "植物体的结构层次",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "植物体没有系统这一结构层次。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "植物由器官直接构成植物体。",
+          "difficulty": 3,
+          "knowledge_point": "植物体的结构层次",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "属于植物营养器官的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓ 根茎叶为营养器官；D ✗ 花是生殖器官。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "植物体的结构层次",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "根",
+            "茎",
+            "叶",
+            "花"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "举例说明什么是植物组织。",
+          "answer": {
+            "value": "示例：保护组织覆盖在叶片表面起保护作用，输导组织运输水和有机物，营养组织储存营养物质。"
+          },
+          "analysis": "评分要点：举例 + 功能。",
+          "difficulty": 4,
+          "knowledge_point": "植物体的结构层次",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "光合作用的原料是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "光合作用以二氧化碳和水为原料。",
+          "difficulty": 2,
+          "knowledge_point": "光合作用与呼吸作用的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "二氧化碳和水",
+            "氧气和有机物",
+            "水和氧气",
+            "有机物和二氧化碳"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "光合作用的场所是细胞内的（ ）。",
+          "answer": {
+            "value": "叶绿体"
+          },
+          "analysis": "叶绿体是光合作用场所。",
+          "difficulty": 3,
+          "knowledge_point": "光合作用与呼吸作用的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "呼吸作用释放的能量可用于植物各项生命活动。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "能量供给生命活动。",
+          "difficulty": 3,
+          "knowledge_point": "光合作用与呼吸作用的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "呼吸作用的主要场所是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "线粒体是呼吸作用主要场所。",
+          "difficulty": 3,
+          "knowledge_point": "光合作用与呼吸作用的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "线粒体",
+            "叶绿体",
+            "细胞核",
+            "液泡"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明光合作用与呼吸作用的关系。",
+          "answer": {
+            "value": "示例：光合作用制造有机物、储存能量并释放氧气；呼吸作用分解有机物、释放能量并产生二氧化碳；二者原料与产物互补，相互依存。"
+          },
+          "analysis": "评分要点：互补关系说清。",
+          "difficulty": 5,
+          "knowledge_point": "光合作用与呼吸作用的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "植物体内运输水和无机盐的结构是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "导管运输水和无机盐。",
+          "difficulty": 3,
+          "knowledge_point": "蒸腾作用与水盐运输",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "导管",
+            "筛管",
+            "气孔",
+            "表皮细胞"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "植物体内运输有机物的结构是（ ）。",
+          "answer": {
+            "value": "筛管"
+          },
+          "analysis": "筛管运输有机物。",
+          "difficulty": 3,
+          "knowledge_point": "蒸腾作用与水盐运输",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "蒸腾作用主要通过叶片上的气孔进行。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "气孔是蒸腾失水的主要通道。",
+          "difficulty": 3,
+          "knowledge_point": "蒸腾作用与水盐运输",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "蒸腾作用的意义有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D ✗ 制造有机物属光合作用。所以选 A、B、C。",
+          "difficulty": 4,
+          "knowledge_point": "蒸腾作用与水盐运输",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "促进水分和无机盐运输",
+            "降低叶片温度",
+            "参与水循环",
+            "直接制造有机物"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明移栽植物时去掉部分叶片的原因。",
+          "answer": {
+            "value": "示例：去掉部分叶片可减少蒸腾失水，降低对水分的需求，便于根系恢复时成活。"
+          },
+          "analysis": "评分要点：减少蒸腾 + 提高成活率。",
+          "difficulty": 4,
+          "knowledge_point": "蒸腾作用与水盐运输",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第一章 被子植物的一生",
+      "order_index": 2,
+      "summary": "种子萌发、植株生长、开花结果与衰老。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "种子中最主要的结构是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "胚是新植物体的幼体。",
+          "difficulty": 2,
+          "knowledge_point": "种子的结构与萌发",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "胚",
+            "种皮",
+            "胚乳",
+            "子叶"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "种子萌发需要适宜的温度、一定的水分和充足的（ ）。",
+          "answer": {
+            "value": "空气"
+          },
+          "analysis": "萌发需要空气（氧气）。",
+          "difficulty": 2,
+          "knowledge_point": "种子的结构与萌发",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "所有种子萌发都必须有光照。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "多数种子萌发不需要光照。",
+          "difficulty": 3,
+          "knowledge_point": "种子的结构与萌发",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "种子萌发的自身条件包括（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓ 都是自身条件；D ✗ 土壤肥力不属自身条件。所以选 A、B、C。",
+          "difficulty": 4,
+          "knowledge_point": "种子的结构与萌发",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "胚是完整的",
+            "胚是活的",
+            "已度过休眠期",
+            "土壤十分肥沃"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明播种前浇水但水不能过多的原因。",
+          "answer": {
+            "value": "示例：浇水提供萌发所需水分；水过多会使土壤中空气不足，种子缺氧无法呼吸，容易腐烂不发芽。"
+          },
+          "analysis": "评分要点：水分 + 空气两方面。",
+          "difficulty": 4,
+          "knowledge_point": "种子的结构与萌发",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "根尖生长最快的部位是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "伸长区细胞迅速伸长，生长最快。",
+          "difficulty": 3,
+          "knowledge_point": "植株的生长",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "伸长区",
+            "根冠",
+            "分生区",
+            "成熟区"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根尖吸收水分和无机盐的主要部位是（ ）。",
+          "answer": {
+            "value": "成熟区"
+          },
+          "analysis": "成熟区有大量根毛，是吸收主要部位。",
+          "difficulty": 3,
+          "knowledge_point": "植株的生长",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "木本植物的茎能逐年加粗，与形成层有关。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "形成层细胞分裂使茎加粗。",
+          "difficulty": 3,
+          "knowledge_point": "植株的生长",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "植物生长需要量最大的无机盐是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "氮、磷、钾是植物需要量最大的无机盐。",
+          "difficulty": 3,
+          "knowledge_point": "植株的生长",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "含氮、磷、钾的无机盐",
+            "含铁的无机盐",
+            "含钙的无机盐",
+            "含碘的无机盐"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明缺氮时植物会出现的表现及原因。",
+          "answer": {
+            "value": "示例：缺氮时植株矮小、叶片发黄；因为氮是构成蛋白质和叶绿素的重要元素，缺氮会影响生长和光合作用。"
+          },
+          "analysis": "评分要点：表现 + 原因。",
+          "difficulty": 4,
+          "knowledge_point": "植株的生长",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "花的主要结构是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "雄蕊和雌蕊与生殖直接相关。",
+          "difficulty": 2,
+          "knowledge_point": "开花与结果",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "雄蕊和雌蕊",
+            "花瓣和萼片",
+            "花柄和花托",
+            "花冠和花萼"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "受精后，子房发育成（ ）。",
+          "answer": {
+            "value": "果实"
+          },
+          "analysis": "子房发育成果实。",
+          "difficulty": 3,
+          "knowledge_point": "开花与结果",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "胚珠受精后发育成种子。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "胚珠发育为种子。",
+          "difficulty": 3,
+          "knowledge_point": "开花与结果",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "果实和种子的形成需要经过（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓ 都是必经过程；D ✗ 与结果无直接关系。所以选 A、B、C。",
+          "difficulty": 4,
+          "knowledge_point": "开花与结果",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "传粉",
+            "受精",
+            "子房发育",
+            "叶片脱落"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明为什么开花季节遇到连阴雨可能导致减产。",
+          "answer": {
+            "value": "示例：阴雨天昆虫活动少、花粉易被雨水冲刷，传粉不足导致受精率下降，果实和种子形成减少，从而减产。"
+          },
+          "analysis": "评分要点：传粉受阻 + 结果减少。",
+          "difficulty": 5,
+          "knowledge_point": "开花与结果",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "一年生植物的特点是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "一年生植物在一年内完成生活史。",
+          "difficulty": 3,
+          "knowledge_point": "植物的衰老与生命周期",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "在一个生长季内完成生命周期",
+            "多年不死",
+            "只开花不结果",
+            "没有种子"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "小麦、玉米属于（ ）年生植物。",
+          "answer": {
+            "value": "一"
+          },
+          "analysis": "小麦玉米为一年生。",
+          "difficulty": 2,
+          "knowledge_point": "植物的衰老与生命周期",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "植物衰老是正常的生命现象。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "衰老属正常发育过程。",
+          "difficulty": 2,
+          "knowledge_point": "植物的衰老与生命周期",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列属于多年生植物的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "桃树能存活多年。",
+          "difficulty": 3,
+          "knowledge_point": "植物的衰老与生命周期",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "桃树",
+            "水稻",
+            "玉米",
+            "白菜（通常一年生栽培）"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说延长蔬菜采收期可以采用的一种办法。",
+          "answer": {
+            "value": "示例：及时摘除老叶、病叶，合理施肥浇水，保持植株生长旺盛，可延缓衰老、延长采收期。"
+          },
+          "analysis": "评分要点：办法具体合理。",
+          "difficulty": 4,
+          "knowledge_point": "植物的衰老与生命周期",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第二章 植物体内的物质与能量变化",
+      "order_index": 3,
+      "summary": "光合作用的探究、有机物的运输与能量转化。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "检验叶片中是否有淀粉常用（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "淀粉遇碘变蓝。",
+          "difficulty": 2,
+          "knowledge_point": "光合作用的探究实验",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "碘液",
+            "酒精",
+            "石灰水",
+            "盐水"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "把叶片放入酒精中隔水加热的目的是溶解叶片中的（ ）。",
+          "answer": {
+            "value": "叶绿素"
+          },
+          "analysis": "酒精可溶解叶绿素便于观察颜色变化。",
+          "difficulty": 4,
+          "knowledge_point": "光合作用的探究实验",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "遮光部分与见光部分对照，可说明光合作用需要光。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "对照实验说明光的必要性。",
+          "difficulty": 3,
+          "knowledge_point": "光合作用的探究实验",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "探究光合作用时需要的对照条件有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；D ✓ 控制变量；C ✗ 这样比较无法单独说明光合作用条件。所以选 A、B、D。",
+          "difficulty": 4,
+          "knowledge_point": "光合作用的探究实验",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "有光与无光",
+            "有二氧化碳与无二氧化碳",
+            "有叶与无叶的植株整体比较",
+            "温度相同"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "设计一个简单实验说明光合作用需要光。",
+          "answer": {
+            "value": "示例：取一盆植物暗处理一昼夜，用黑纸片遮住一片叶的一部分，光照几小时后摘叶、酒精脱色、滴碘液，见光部分变蓝、遮光部分不变蓝，说明光合作用需要光。"
+          },
+          "analysis": "评分要点：暗处理 + 部分遮光 + 碘液检验。",
+          "difficulty": 5,
+          "knowledge_point": "光合作用的探究实验",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "有机物在植物体内运输的通道是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "筛管运输有机物。",
+          "difficulty": 3,
+          "knowledge_point": "有机物的运输与储存",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "筛管",
+            "导管",
+            "气孔",
+            "木质部纤维"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "萝卜储存营养物质的器官是（ ）。",
+          "answer": {
+            "value": "根"
+          },
+          "analysis": "萝卜的食用部分是根。",
+          "difficulty": 2,
+          "knowledge_point": "有机物的运输与储存",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "环剥树皮会阻断有机物向下运输。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "树皮中有筛管。",
+          "difficulty": 4,
+          "knowledge_point": "有机物的运输与储存",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "可以储存有机物的器官有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓ 都可储存；D ✗ 花瓣一般不储存有机物。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "有机物的运输与储存",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "块根",
+            "块茎",
+            "种子",
+            "花瓣"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明果树环剥后为什么上部果实会更大。",
+          "answer": {
+            "value": "示例：环剥阻断了有机物向下运输，叶片制造的有机物更多留在上部供给果实，因此果实长得更大。"
+          },
+          "analysis": "评分要点：运输受阻 + 供给果实。",
+          "difficulty": 5,
+          "knowledge_point": "有机物的运输与储存",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "光合作用中能量的转化是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "光能被固定为有机物中的化学能。",
+          "difficulty": 3,
+          "knowledge_point": "能量转化与农业生产",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "光能转化为化学能",
+            "化学能转化为光能",
+            "热能转化为光能",
+            "电能转化为化学能"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "合理密植可以提高产量，原因是充分利用（ ）（填「光照」）。",
+          "answer": {
+            "value": "光照"
+          },
+          "analysis": "合理密植能充分利用光照。",
+          "difficulty": 3,
+          "knowledge_point": "能量转化与农业生产",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "温室中适当增加二氧化碳浓度可提高光合作用效率。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "二氧化碳是光合作用原料。",
+          "difficulty": 3,
+          "knowledge_point": "能量转化与农业生产",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "提高农作物产量的措施有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D ✗ 遮光抑制光合作用。所以选 A、B、C。",
+          "difficulty": 4,
+          "knowledge_point": "能量转化与农业生产",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "合理密植",
+            "适时浇水施肥",
+            "温室补充二氧化碳",
+            "整天遮光"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明夜间适当降低温室温度对作物有什么好处。",
+          "answer": {
+            "value": "示例：夜间降温可减弱呼吸作用对有机物的消耗，使白天积累的有机物更多保留下来，有利于增产。"
+          },
+          "analysis": "评分要点：减弱呼吸消耗 + 积累有机物。",
+          "difficulty": 4,
+          "knowledge_point": "能量转化与农业生产",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "大气中二氧化碳的主要消耗途径之一是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "光合作用消耗二氧化碳。",
+          "difficulty": 3,
+          "knowledge_point": "碳氧平衡与植物作用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "绿色植物的光合作用",
+            "动物呼吸",
+            "燃烧燃料",
+            "微生物分解"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "大量植树造林有助于维持大气中的（ ）平衡。",
+          "answer": {
+            "value": "碳氧"
+          },
+          "analysis": "植树有助碳氧平衡。",
+          "difficulty": 3,
+          "knowledge_point": "碳氧平衡与植物作用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "植物呼吸作用会释放二氧化碳。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "呼吸作用产生二氧化碳。",
+          "difficulty": 2,
+          "knowledge_point": "碳氧平衡与植物作用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列会明显增加大气二氧化碳的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "燃烧燃料释放大量二氧化碳。",
+          "difficulty": 2,
+          "knowledge_point": "碳氧平衡与植物作用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "大量燃烧煤炭",
+            "植树造林",
+            "保护湿地",
+            "种植草坪"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明城市增加绿地面积的意义。",
+          "answer": {
+            "value": "示例：绿地中的植物通过光合作用吸收二氧化碳、释放氧气，还能降低空气温度和吸附部分尘埃，改善空气质量。"
+          },
+          "analysis": "评分要点：碳氧平衡 + 环境改善。",
+          "difficulty": 4,
+          "knowledge_point": "碳氧平衡与植物作用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第四单元 人体生理与健康(一)",
+      "order_index": 4,
+      "summary": "人体生殖发育、营养、呼吸、运输与排泄的总览。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "人体结构层次由小到大依次是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "人体有系统这一层次。",
+          "difficulty": 2,
+          "knowledge_point": "人体的结构层次",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "细胞→组织→器官→系统→人体",
+            "细胞→器官→组织→人体",
+            "组织→细胞→系统→人体",
+            "器官→系统→细胞→人体"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "人体有八大系统，其中负责运输物质的是（ ）系统。",
+          "answer": {
+            "value": "循环"
+          },
+          "analysis": "循环系统负责运输。",
+          "difficulty": 3,
+          "knowledge_point": "人体的结构层次",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "人体各系统既分工又相互配合。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "各系统协调活动。",
+          "difficulty": 2,
+          "knowledge_point": "人体的结构层次",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "属于人体系统的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D ✗ 叶片属植物结构。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "人体的结构层次",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "消化系统",
+            "呼吸系统",
+            "循环系统",
+            "叶片系统"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明为什么说人体是一个统一的整体。",
+          "answer": {
+            "value": "示例：各系统在神经和内分泌的调节下分工协作，例如呼吸系统获得氧气、循环系统运输、消化系统提供营养，共同维持生命活动。"
+          },
+          "analysis": "评分要点：分工 + 协调。",
+          "difficulty": 4,
+          "knowledge_point": "人体的结构层次",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "健康的生活方式不包括（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "长期熬夜不利健康。",
+          "difficulty": 2,
+          "knowledge_point": "人体健康的基本要素",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "长期熬夜",
+            "合理膳食",
+            "适量运动",
+            "心理平衡"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "青少年每天应保证充足的（ ）（填「睡眠」），有利生长发育。",
+          "answer": {
+            "value": "睡眠"
+          },
+          "analysis": "充足睡眠利于生长。",
+          "difficulty": 2,
+          "knowledge_point": "人体健康的基本要素",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "健康只指身体没有疾病。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "健康还包括心理与社会适应良好。",
+          "difficulty": 3,
+          "knowledge_point": "人体健康的基本要素",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "有利于健康的行为有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D ✗ 长时间用手机不利健康。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "人体健康的基本要素",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "按时作息",
+            "均衡饮食",
+            "坚持锻炼",
+            "长时间玩手机"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你打算改进的一项生活习惯。",
+          "answer": {
+            "value": "示例：我常在睡前刷手机，打算把手机放到书桌上，十点前上床，保证八小时睡眠。"
+          },
+          "analysis": "评分要点：具体可行。",
+          "difficulty": 3,
+          "knowledge_point": "人体健康的基本要素",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "人体生命活动需要的能量主要来自（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "有机物氧化分解释放能量。",
+          "difficulty": 2,
+          "knowledge_point": "人体生理活动的基本条件",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "食物中的有机物",
+            "空气中的氮气",
+            "水",
+            "无机盐"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "人体细胞获得氧气依靠（ ）系统与循环系统配合。",
+          "answer": {
+            "value": "呼吸"
+          },
+          "analysis": "呼吸系统摄取氧气。",
+          "difficulty": 3,
+          "knowledge_point": "人体生理活动的基本条件",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "水是构成人体细胞的重要成分。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "水占体重较大比例。",
+          "difficulty": 2,
+          "knowledge_point": "人体生理活动的基本条件",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "维持生命活动必需的条件有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D ✗ 吸烟有害。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "人体生理活动的基本条件",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "氧气",
+            "营养物质",
+            "水",
+            "香烟"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明人为什么要每天喝水。",
+          "answer": {
+            "value": "示例：水是细胞的主要成分，参与物质运输、体温调节和代谢反应，每天通过排尿、呼吸和出汗流失水分，需要及时补充。"
+          },
+          "analysis": "评分要点：作用 + 流失需补充。",
+          "difficulty": 4,
+          "knowledge_point": "人体生理活动的基本条件",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "预防传染病的重要措施是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "疫苗与洗手能有效预防。",
+          "difficulty": 2,
+          "knowledge_point": "生理健康与疾病预防",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "接种疫苗、勤洗手",
+            "共用毛巾",
+            "生吃未洗净的蔬菜",
+            "随地吐痰"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "饭前便后要（ ）（填「洗手」），可减少病从口入。",
+          "answer": {
+            "value": "洗手"
+          },
+          "analysis": "洗手是基础卫生习惯。",
+          "difficulty": 2,
+          "knowledge_point": "生理健康与疾病预防",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "定期体检有助于早发现健康问题。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "体检有助早期发现。",
+          "difficulty": 2,
+          "knowledge_point": "生理健康与疾病预防",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "预防消化道传染病的做法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D ✗ 共用餐具增加传播风险。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "生理健康与疾病预防",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "饭前洗手",
+            "不喝生水",
+            "食物煮熟再吃",
+            "与他人共用餐具"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "列举三条你能做到的健康防病习惯。",
+          "answer": {
+            "value": "示例：勤洗手、按时睡觉不熬夜、每周运动三次；咳嗽时用手肘遮挡，不与他人共用毛巾。"
+          },
+          "analysis": "评分要点：三条具体。",
+          "difficulty": 3,
+          "knowledge_point": "生理健康与疾病预防",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第一章 人的生殖和发育",
+      "order_index": 5,
+      "summary": "生殖系统组成、受精与胚胎发育、青春期发育特点。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "男性产生精子的器官是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "睾丸产生精子并分泌雄性激素。",
+          "difficulty": 2,
+          "knowledge_point": "生殖系统的组成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "睾丸",
+            "前列腺",
+            "输精管",
+            "附睾"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "女性产生卵细胞的器官是（ ）。",
+          "answer": {
+            "value": "卵巢"
+          },
+          "analysis": "卵巢产生卵细胞。",
+          "difficulty": 2,
+          "knowledge_point": "生殖系统的组成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "睾丸和卵巢都能分泌性激素。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "两者兼具生殖与内分泌功能。",
+          "difficulty": 3,
+          "knowledge_point": "生殖系统的组成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "属于男性生殖系统的器官有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D ✗ 卵巢属女性生殖系统。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "生殖系统的组成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "睾丸",
+            "输精管",
+            "附睾",
+            "卵巢"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明为什么把睾丸和卵巢称为主要生殖器官。",
+          "answer": {
+            "value": "示例：它们能产生生殖细胞（精子和卵细胞），并分泌性激素，既承担生殖功能又调节性发育，因此是主要生殖器官。"
+          },
+          "analysis": "评分要点：产生生殖细胞 + 分泌激素。",
+          "difficulty": 4,
+          "knowledge_point": "生殖系统的组成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "受精卵形成的场所是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "受精在输卵管中进行。",
+          "difficulty": 3,
+          "knowledge_point": "受精与胚胎发育",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "输卵管",
+            "子宫",
+            "卵巢",
+            "阴道"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "胚胎发育的主要场所是（ ）。",
+          "answer": {
+            "value": "子宫"
+          },
+          "analysis": "子宫是胚胎发育场所。",
+          "difficulty": 2,
+          "knowledge_point": "受精与胚胎发育",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "胎儿与母体通过胎盘和脐带进行物质交换。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "胎盘是物质交换器官。",
+          "difficulty": 3,
+          "knowledge_point": "受精与胚胎发育",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "受精卵开始进行细胞分裂的场所是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "受精卵在输卵管内即开始分裂。",
+          "difficulty": 4,
+          "knowledge_point": "受精与胚胎发育",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "输卵管",
+            "子宫",
+            "卵巢",
+            "胎盘"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "简述从受精卵到胎儿出生的主要过程。",
+          "answer": {
+            "value": "示例：精子与卵细胞在输卵管结合形成受精卵，受精卵分裂形成胚泡，植入子宫内膜后发育为胚胎，再发育为胎儿，约 38 周后经分娩出生。"
+          },
+          "analysis": "评分要点：受精—植入—胚胎—胎儿—分娩。",
+          "difficulty": 5,
+          "knowledge_point": "受精与胚胎发育",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "青春期最明显的变化之一是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "身高突增是显著特征。",
+          "difficulty": 2,
+          "knowledge_point": "青春期的发育特点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "身高突增",
+            "视力下降",
+            "牙齿脱落",
+            "食量减少"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "青春期性器官迅速发育，这与性（ ）的分泌有关。",
+          "answer": {
+            "value": "激素"
+          },
+          "analysis": "性激素促进性器官发育。",
+          "difficulty": 3,
+          "knowledge_point": "青春期的发育特点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "男女青春期发育的时间早晚存在差异。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "发育时间存在个体与性别差异。",
+          "difficulty": 3,
+          "knowledge_point": "青春期的发育特点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "青春期出现的正常变化有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓ 均属常见变化；D ✗ 青春期是生长加快阶段。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "青春期的发育特点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "身高体重增长",
+            "声音变化",
+            "情绪波动",
+            "骨骼停止生长"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说青春期应该注意哪些卫生与保健事项。",
+          "answer": {
+            "value": "示例：注意个人卫生、保证充足睡眠与均衡营养、坚持体育锻炼，遇到困惑主动向家长或老师请教。"
+          },
+          "analysis": "评分要点：两条以上具体事项。",
+          "difficulty": 4,
+          "knowledge_point": "青春期的发育特点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "亲代把性状传给子代的现象叫（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "亲代性状传给子代是遗传。",
+          "difficulty": 2,
+          "knowledge_point": "遗传与优生常识",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "遗传",
+            "变异",
+            "进化",
+            "适应"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "控制生物性状的基本单位是（ ）。",
+          "answer": {
+            "value": "基因"
+          },
+          "analysis": "基因控制性状。",
+          "difficulty": 3,
+          "knowledge_point": "遗传与优生常识",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "近亲结婚会增加后代患遗传病的机会。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "近亲携带相同隐性基因概率高。",
+          "difficulty": 3,
+          "knowledge_point": "遗传与优生常识",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "有利于优生的做法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；D ✓；C ✗ 近亲结婚不利优生。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "遗传与优生常识",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "适龄生育",
+            "孕期定期检查",
+            "近亲结婚",
+            "孕期避免有害因素"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明为什么我国法律禁止近亲结婚。",
+          "answer": {
+            "value": "示例：近亲之间携带相同隐性致病基因的可能性大，后代隐性遗传病发病率明显升高，为保护后代健康，法律予以禁止。"
+          },
+          "analysis": "评分要点：隐性基因 + 后代风险。",
+          "difficulty": 4,
+          "knowledge_point": "遗传与优生常识",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第二章 人体的营养",
+      "order_index": 6,
+      "summary": "营养物质的作用、消化吸收与合理膳食。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "人体最主要的供能物质是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "糖类是主要供能物质。",
+          "difficulty": 2,
+          "knowledge_point": "营养物质及其作用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "糖类",
+            "蛋白质",
+            "脂肪",
+            "维生素"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "建造和修复身体的重要原料是（ ）。",
+          "answer": {
+            "value": "蛋白质"
+          },
+          "analysis": "蛋白质是构成细胞的基本物质。",
+          "difficulty": 3,
+          "knowledge_point": "营养物质及其作用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "维生素虽然需要量少，但对人体很重要。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "维生素参与调节生理活动。",
+          "difficulty": 2,
+          "knowledge_point": "营养物质及其作用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "长期缺乏维生素 C 可能引起（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "缺乏维生素 C 易患坏血病。",
+          "difficulty": 3,
+          "knowledge_point": "营养物质及其作用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "坏血病",
+            "夜盲症",
+            "佝偻病",
+            "贫血"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明为什么青少年要多吃含蛋白质丰富的食物。",
+          "answer": {
+            "value": "示例：青少年生长发育快，需要大量蛋白质构建新的细胞和组织，缺乏会影响身高和体能发育。"
+          },
+          "analysis": "评分要点：生长需要 + 后果。",
+          "difficulty": 4,
+          "knowledge_point": "营养物质及其作用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "人体消化和吸收的主要器官是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "小肠是消化吸收主要器官。",
+          "difficulty": 2,
+          "knowledge_point": "消化与吸收",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "小肠",
+            "胃",
+            "大肠",
+            "食道"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "淀粉在消化道内最终被分解为（ ）。",
+          "answer": {
+            "value": "葡萄糖"
+          },
+          "analysis": "淀粉最终分解为葡萄糖。",
+          "difficulty": 3,
+          "knowledge_point": "消化与吸收",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "蛋白质在胃内开始被初步消化。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "胃液中的胃蛋白酶初步消化蛋白质。",
+          "difficulty": 3,
+          "knowledge_point": "消化与吸收",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "参与消化淀粉的消化液有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓ 都含消化淀粉的酶；D ✗ 胆汁不含消化酶，主要乳化脂肪。所以选 A、B、C。",
+          "difficulty": 4,
+          "knowledge_point": "消化与吸收",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "唾液",
+            "胰液",
+            "肠液",
+            "胆汁"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明小肠适于吸收的结构特点。",
+          "answer": {
+            "value": "示例：小肠很长，内表面有环形皱襞和小肠绒毛，绒毛内有丰富的毛细血管，大大增加了吸收面积。"
+          },
+          "analysis": "评分要点：长 + 皱襞绒毛 + 毛细血管。",
+          "difficulty": 5,
+          "knowledge_point": "消化与吸收",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "合理膳食的基本要求是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "食物多样、比例合理。",
+          "difficulty": 2,
+          "knowledge_point": "合理膳食与食品安全",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "食物多样、营养均衡",
+            "只吃肉类",
+            "只吃蔬菜",
+            "多吃油炸食品"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "青少年应少吃高糖高脂食品，多吃蔬菜水果，以保持（ ）（填「营养均衡」）。",
+          "answer": {
+            "value": "营养均衡"
+          },
+          "analysis": "膳食要均衡。",
+          "difficulty": 3,
+          "knowledge_point": "合理膳食与食品安全",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "发芽变绿的土豆削皮后仍可安全食用。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "发芽土豆含龙葵素，有中毒风险。",
+          "difficulty": 4,
+          "knowledge_point": "合理膳食与食品安全",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "保障食品安全的做法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；D ✓；C ✗ 过期食品有风险。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "合理膳食与食品安全",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "购买有生产日期和保质期的食品",
+            "生熟食品分开存放",
+            "食用过期食品",
+            "食物充分加热"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "为自己设计一份包含三类以上食物的早餐。",
+          "answer": {
+            "value": "示例：一份燕麦粥（谷类）、一个鸡蛋（蛋白质）、一杯牛奶、一小碟炒青菜（蔬菜），搭配合理、营养较全面。"
+          },
+          "analysis": "评分要点：三类以上 + 搭配合理。",
+          "difficulty": 4,
+          "knowledge_point": "合理膳食与食品安全",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "长期只吃肉类、不吃蔬菜容易导致（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "蔬菜是维生素和膳食纤维来源。",
+          "difficulty": 3,
+          "knowledge_point": "饮食与健康的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "维生素和膳食纤维不足",
+            "蛋白质不足",
+            "水分过多",
+            "睡眠过多"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "暴饮暴食会加重（ ）（填「胃肠」）的负担。",
+          "answer": {
+            "value": "胃肠"
+          },
+          "analysis": "暴食加重消化系统负担。",
+          "difficulty": 2,
+          "knowledge_point": "饮食与健康的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "过量摄入高糖食物会增加肥胖风险。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "能量过剩易致肥胖。",
+          "difficulty": 2,
+          "knowledge_point": "饮食与健康的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "不利于健康的饮食习惯有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；D ✓；C ✗ 定时定量是有利健康的。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "饮食与健康的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "偏食挑食",
+            "常吃油炸食品",
+            "定时定量进餐",
+            "大量喝含糖饮料"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你打算怎样改善自己的一餐搭配。",
+          "answer": {
+            "value": "示例：我以前午餐只吃米饭和肉，打算每天加一份青菜和一个水果，并减少含糖饮料。"
+          },
+          "analysis": "评分要点：改进具体。",
+          "difficulty": 3,
+          "knowledge_point": "饮食与健康的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第三章 人体的呼吸",
+      "order_index": 7,
+      "summary": "呼吸系统组成、气体交换过程与呼吸保健。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "气体交换的主要器官是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "肺是气体交换场所。",
+          "difficulty": 2,
+          "knowledge_point": "呼吸系统的组成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "肺",
+            "气管",
+            "鼻",
+            "咽"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "呼吸道中能温暖、湿润和清洁空气的结构主要是（ ）。",
+          "answer": {
+            "value": "鼻"
+          },
+          "analysis": "鼻腔有黏膜和鼻毛。",
+          "difficulty": 3,
+          "knowledge_point": "呼吸系统的组成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "气管内表面的纤毛可以帮助清除灰尘和细菌。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "纤毛有清扫作用。",
+          "difficulty": 3,
+          "knowledge_point": "呼吸系统的组成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "属于呼吸道组成的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓ 均为呼吸道组成；D ✗ 食道属于消化道。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "呼吸系统的组成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "鼻",
+            "咽",
+            "气管",
+            "食道"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明用鼻呼吸比用口呼吸更卫生的原因。",
+          "answer": {
+            "value": "示例：鼻腔内有鼻毛和黏膜，能过滤灰尘、温暖湿润空气，减少干冷和带菌空气直接刺激呼吸道，因此比用口呼吸更卫生。"
+          },
+          "analysis": "评分要点：过滤 + 温湿化。",
+          "difficulty": 4,
+          "knowledge_point": "呼吸系统的组成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "吸气时膈肌的状态是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "吸气时膈肌收缩下降，胸廓扩大。",
+          "difficulty": 4,
+          "knowledge_point": "呼吸运动与气体交换",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "收缩、膈顶下降",
+            "舒张、膈顶上升",
+            "不变",
+            "先舒张后收缩"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "吸气时肋间肌收缩，胸廓容积（ ）。",
+          "answer": {
+            "value": "增大"
+          },
+          "analysis": "胸廓容积增大。",
+          "difficulty": 3,
+          "knowledge_point": "呼吸运动与气体交换",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "呼气时肺内气压低于外界气压。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "呼气时肺内气压高于外界气压。",
+          "difficulty": 4,
+          "knowledge_point": "呼吸运动与气体交换",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "肺泡与血液之间氧气进入血液的原因是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "气体由高浓度向低浓度扩散。",
+          "difficulty": 5,
+          "knowledge_point": "呼吸运动与气体交换",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "肺泡内氧浓度高于血液",
+            "血液中氧浓度更高",
+            "氧由血红蛋白排斥",
+            "与浓度无关"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明肺泡适于气体交换的结构特点。",
+          "answer": {
+            "value": "示例：肺泡数量多、总面积大，壁很薄只有一层细胞，外面缠绕丰富毛细血管，利于氧气和二氧化碳迅速扩散。"
+          },
+          "analysis": "评分要点：数量 + 壁薄 + 毛细血管。",
+          "difficulty": 5,
+          "knowledge_point": "呼吸运动与气体交换",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "长期吸烟对呼吸系统的主要危害是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "吸烟损害呼吸系统。",
+          "difficulty": 2,
+          "knowledge_point": "呼吸与健康",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "损害呼吸道和肺，增加患病风险",
+            "增强肺功能",
+            "使空气更清新",
+            "提高肺活量"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "经常参加体育锻炼可以增强（ ）（填「肺活量」）。",
+          "answer": {
+            "value": "肺活量"
+          },
+          "analysis": "锻炼可增大肺活量。",
+          "difficulty": 3,
+          "knowledge_point": "呼吸与健康",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "房间应定期开窗通风，保持空气新鲜。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "通风有助改善空气质量。",
+          "difficulty": 2,
+          "knowledge_point": "呼吸与健康",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "保护呼吸系统的做法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；D ✓；C ✗ 密闭烧炭有一氧化碳中毒风险。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "呼吸与健康",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "不吸烟、远离二手烟",
+            "戴口罩防粉尘",
+            "在密闭房间烧炭取暖",
+            "坚持有氧运动"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说雾霾天应如何保护呼吸道。",
+          "answer": {
+            "value": "示例：减少户外活动，外出佩戴防护口罩，回家后清洗面部和鼻腔，室内关窗并使用空气净化设备。"
+          },
+          "analysis": "评分要点：两条以上措施。",
+          "difficulty": 4,
+          "knowledge_point": "呼吸与健康",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "氧气最终被运送到（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "氧气最终供组织细胞利用。",
+          "difficulty": 3,
+          "knowledge_point": "呼吸系统与其他系统的联系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "全身各处的组织细胞",
+            "肺泡",
+            "气管",
+            "鼻腔"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "人体细胞利用氧气分解有机物，这个过程主要在细胞的（ ）中进行。",
+          "answer": {
+            "value": "线粒体"
+          },
+          "analysis": "线粒体是呼吸作用场所。",
+          "difficulty": 4,
+          "knowledge_point": "呼吸系统与其他系统的联系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "呼吸系统与循环系统在气体运输中密切配合。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "两者协同运输气体。",
+          "difficulty": 3,
+          "knowledge_point": "呼吸系统与其他系统的联系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "细胞进行呼吸作用需要（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D ✗ 氮气不参与呼吸作用。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "呼吸系统与其他系统的联系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "氧气",
+            "有机物",
+            "适宜温度",
+            "氮气"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明运动时呼吸和心跳同时加快的原因。",
+          "answer": {
+            "value": "示例：运动时肌肉耗氧增多、产生二氧化碳增多，呼吸加快以获取更多氧气，心跳加快以加速血液运输，两者共同满足机体需要。"
+          },
+          "analysis": "评分要点：耗氧增加 + 运输加快。",
+          "difficulty": 4,
+          "knowledge_point": "呼吸系统与其他系统的联系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第四章 人体内物质的运输",
+      "order_index": 8,
+      "summary": "血液组成、血管与心脏、血液循环。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "运输氧气的主要是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "红细胞含血红蛋白运输氧。",
+          "difficulty": 2,
+          "knowledge_point": "血液的组成与功能",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "红细胞",
+            "白细胞",
+            "血小板",
+            "血浆"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "能吞噬病菌、具有防御功能的是（ ）细胞。",
+          "answer": {
+            "value": "白"
+          },
+          "analysis": "白细胞有防御功能。",
+          "difficulty": 2,
+          "knowledge_point": "血液的组成与功能",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "血小板过少可能导致止血困难。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "血小板参与凝血。",
+          "difficulty": 3,
+          "knowledge_point": "血液的组成与功能",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "血液的功能有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D ✗ 人体不能制造有机物。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "血液的组成与功能",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "运输氧气和养料",
+            "运输废物",
+            "防御保护",
+            "制造有机物"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明贫血的可能原因。",
+          "answer": {
+            "value": "示例：红细胞数量过少或血红蛋白含量偏低，可能与缺铁、营养不良或失血有关，导致运输氧能力下降。"
+          },
+          "analysis": "评分要点：红细胞/血红蛋白不足 + 原因。",
+          "difficulty": 4,
+          "knowledge_point": "血液的组成与功能",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "把血液从心脏送往全身的血管是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "动脉输出血液。",
+          "difficulty": 2,
+          "knowledge_point": "血管与心脏",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "动脉",
+            "静脉",
+            "毛细血管",
+            "淋巴管"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "管壁最薄、血流最慢的血管是（ ）。",
+          "answer": {
+            "value": "毛细血管"
+          },
+          "analysis": "毛细血管管壁仅一层细胞。",
+          "difficulty": 3,
+          "knowledge_point": "血管与心脏",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "心脏四个腔中左心室壁最厚。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "左心室要把血泵向全身，壁最厚。",
+          "difficulty": 4,
+          "knowledge_point": "血管与心脏",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "属于心脏四个腔的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D ✗ 主动脉是血管不是心腔。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "血管与心脏",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "左心房",
+            "右心房",
+            "左心室",
+            "主动脉"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明静脉内有静脉瓣的意义。",
+          "answer": {
+            "value": "示例：静脉瓣能防止血液倒流，保证血液朝心脏方向单向流动，尤其在四肢血液回流时作用明显。"
+          },
+          "analysis": "评分要点：防倒流 + 单向流动。",
+          "difficulty": 4,
+          "knowledge_point": "血管与心脏",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "体循环的起点是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "体循环从左心室开始。",
+          "difficulty": 4,
+          "knowledge_point": "血液循环途径",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "左心室",
+            "右心室",
+            "左心房",
+            "右心房"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "肺循环的起点是（ ）心室。",
+          "answer": {
+            "value": "右"
+          },
+          "analysis": "肺循环从右心室开始。",
+          "difficulty": 4,
+          "knowledge_point": "血液循环途径",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "经过肺循环后血液由静脉血变为动脉血。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "肺部交换后血液含氧增多。",
+          "difficulty": 3,
+          "knowledge_point": "血液循环途径",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "体循环结束后血液回到（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "体循环止于右心房。",
+          "difficulty": 4,
+          "knowledge_point": "血液循环途径",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "右心房",
+            "左心房",
+            "右心室",
+            "左心室"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明血液循环的意义。",
+          "answer": {
+            "value": "示例：血液循环把氧气、营养物质运送到全身细胞，把二氧化碳和废物运走，保证细胞正常代谢和体温调节。"
+          },
+          "analysis": "评分要点：运输物质 + 维持代谢。",
+          "difficulty": 4,
+          "knowledge_point": "血液循环途径",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "输血的基本原则是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "以输同型血为原则。",
+          "difficulty": 3,
+          "knowledge_point": "输血与血型常识",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "输同型血",
+            "任意血型都可",
+            "只输 O 型",
+            "只输 AB 型"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "ABO 血型系统包括 A 型、B 型、AB 型和（ ）型。",
+          "answer": {
+            "value": "O"
+          },
+          "analysis": "四种血型。",
+          "difficulty": 2,
+          "knowledge_point": "输血与血型常识",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "健康成年人适量献血不会影响健康。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "适量献血可由造血功能补充。",
+          "difficulty": 3,
+          "knowledge_point": "输血与血型常识",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "献血者需满足的条件有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D ✗ 术后不宜献血。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "输血与血型常识",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "身体健康",
+            "年龄符合规定",
+            "体重达到标准",
+            "刚做完大手术"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明为什么输血前必须做血型鉴定和交叉配血。",
+          "answer": {
+            "value": "示例：不同血型之间可能发生红细胞凝集反应，输入不相合的血液会引起严重反应，因此需先鉴定血型并交叉配血以保证安全。"
+          },
+          "analysis": "评分要点：凝集反应 + 安全。",
+          "difficulty": 5,
+          "knowledge_point": "输血与血型常识",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第五章 人体内废物的排出",
+      "order_index": 9,
+      "summary": "泌尿系统组成、尿液形成与排泄的意义。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "形成尿液的器官是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "肾脏形成尿液。",
+          "difficulty": 2,
+          "knowledge_point": "泌尿系统的组成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "肾脏",
+            "输尿管",
+            "膀胱",
+            "尿道"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "暂存尿液的器官是（ ）。",
+          "answer": {
+            "value": "膀胱"
+          },
+          "analysis": "膀胱有暂时储尿功能。",
+          "difficulty": 2,
+          "knowledge_point": "泌尿系统的组成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "输尿管把尿液从肾脏送到膀胱。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "输尿管起输送作用。",
+          "difficulty": 2,
+          "knowledge_point": "泌尿系统的组成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "属于泌尿系统组成的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D ✗ 肺属呼吸系统。所以选 A、B、C。",
+          "difficulty": 2,
+          "knowledge_point": "泌尿系统的组成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "肾脏",
+            "输尿管",
+            "膀胱",
+            "肺"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说出泌尿系统四个主要器官的名称。",
+          "answer": {
+            "value": "肾脏、输尿管、膀胱、尿道。"
+          },
+          "analysis": "评分要点：四个器官齐全。",
+          "difficulty": 3,
+          "knowledge_point": "泌尿系统的组成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "形成原尿的主要过程是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "滤过作用形成原尿。",
+          "difficulty": 4,
+          "knowledge_point": "尿的形成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "肾小球和肾小囊内壁的滤过作用",
+            "肾小管的重吸收作用",
+            "膀胱的储存作用",
+            "尿道的排出作用"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "肾小管把原尿中对人体有用的物质重新吸收回血液，这个过程叫（ ）作用。",
+          "answer": {
+            "value": "重吸收"
+          },
+          "analysis": "肾小管重吸收形成尿液。",
+          "difficulty": 4,
+          "knowledge_point": "尿的形成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "正常人的尿液中不含葡萄糖和血细胞。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "葡萄糖被重吸收，血细胞不滤过。",
+          "difficulty": 3,
+          "knowledge_point": "尿的形成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "尿液中检测到葡萄糖可能提示（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "尿糖可能提示肾小管或胰岛素相关问题。",
+          "difficulty": 5,
+          "knowledge_point": "尿的形成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "肾脏或内分泌功能异常",
+            "肺功能异常",
+            "胃功能异常",
+            "皮肤问题"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明为什么大量出汗后尿量会减少。",
+          "answer": {
+            "value": "示例：大量出汗使体内水分减少，肾脏为维持水盐平衡会减少尿量、重吸收更多水分，因此尿量减少。"
+          },
+          "analysis": "评分要点：水分减少 + 重吸收增加。",
+          "difficulty": 4,
+          "knowledge_point": "尿的形成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "人体排泄的主要途径之一是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "排尿是主要排泄途径。",
+          "difficulty": 2,
+          "knowledge_point": "排泄的意义与途径",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "排尿",
+            "排便",
+            "出汗至皮肤内的储存",
+            "脱落头发"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "人体还能通过呼出气体排出（ ）和少量水。",
+          "answer": {
+            "value": "二氧化碳"
+          },
+          "analysis": "呼吸排出二氧化碳。",
+          "difficulty": 3,
+          "knowledge_point": "排泄的意义与途径",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "排遗（排出食物残渣）不属于排泄。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "食物残渣未经细胞代谢，属排遗。",
+          "difficulty": 4,
+          "knowledge_point": "排泄的意义与途径",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "排泄的意义有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D ✗ 制造有机物不是人体功能。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "排泄的意义与途径",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "排出代谢废物",
+            "调节体内水盐平衡",
+            "维持内环境稳定",
+            "制造营养物质"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明肾脏功能严重受损时为什么要进行血液透析。",
+          "answer": {
+            "value": "示例：肾脏不能正常滤过和重吸收，代谢废物与多余水分会在体内积累，透析可代替部分肾功能清除废物、调节水盐平衡。"
+          },
+          "analysis": "评分要点：废物积累 + 替代滤过。",
+          "difficulty": 5,
+          "knowledge_point": "排泄的意义与途径",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "有利于泌尿系统健康的行为是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "多喝水稀释尿液冲刷尿路。",
+          "difficulty": 2,
+          "knowledge_point": "泌尿系统保健",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "适量多喝水",
+            "长时间憋尿",
+            "少喝水",
+            "不注意个人卫生"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "每天保证足够的（ ）（填「饮水」）量，有助于排出废物。",
+          "answer": {
+            "value": "饮水"
+          },
+          "analysis": "足量饮水有利排泄。",
+          "difficulty": 3,
+          "knowledge_point": "泌尿系统保健",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "长期憋尿可能增加泌尿系统感染风险。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "憋尿不利尿路健康。",
+          "difficulty": 3,
+          "knowledge_point": "泌尿系统保健",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "保护肾脏的做法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D ✗ 长期熬夜不利健康。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "泌尿系统保健",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "不滥用药物",
+            "及时治疗感染",
+            "控制高盐饮食",
+            "长期熬夜"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "给同学提出两条保护泌尿系统健康的建议。",
+          "answer": {
+            "value": "示例：每天喝足量白开水、有尿意及时上厕所不憋尿；注意个人卫生，勤换内衣，出现尿痛及时就医。"
+          },
+          "analysis": "评分要点：两条具体可行。",
+          "difficulty": 3,
+          "knowledge_point": "泌尿系统保健",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-12T08:33:22+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

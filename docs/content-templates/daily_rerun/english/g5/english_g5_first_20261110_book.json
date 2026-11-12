@@ -1,0 +1,2642 @@
+{
+  "subject": "english",
+  "grade": 5,
+  "version": "牛津深圳版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "Unit 1 What do we do at the weekend?",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "Weekend verbs",
+      "parent": "Unit 1 What do we do at the weekend?",
+      "order_index": 1,
+      "explanation": "play、read、visit 都是周末常见活动动词。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Frequency adverbs",
+      "parent": "Unit 1 What do we do at the weekend?",
+      "order_index": 2,
+      "explanation": "always、usually、often、never 表频率高低。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Present simple: I and We",
+      "parent": "Unit 1 What do we do at the weekend?",
+      "order_index": 3,
+      "explanation": "I、We 后动词用原形，He、She 后加 s 或 es。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Sound /eɪ/ in play",
+      "parent": "Unit 1 What do we do at the weekend?",
+      "order_index": 4,
+      "explanation": "play、day、rain 含 /eɪ/，cat 发 /æ/。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 2 How do we stay healthy?",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "Healthy food words",
+      "parent": "Unit 2 How do we stay healthy?",
+      "order_index": 1,
+      "explanation": "vegetables、fruit、water 都是健康食物。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Should for habits",
+      "parent": "Unit 2 How do we stay healthy?",
+      "order_index": 2,
+      "explanation": "should 后接动词原形，shouldn't 表不该做。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Sound /iː/ in eat",
+      "parent": "Unit 2 How do we stay healthy?",
+      "order_index": 3,
+      "explanation": "eat、teeth、sleep 中 ee 或 ea 发 /iː/。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Daily routine lines",
+      "parent": "Unit 2 How do we stay healthy?",
+      "order_index": 4,
+      "explanation": "before、every day 描述日常作息句型。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 3 What do you know about different countries?",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "Country words",
+      "parent": "Unit 3 What do you know about different countries?",
+      "order_index": 1,
+      "explanation": "China、Japan、the UK 都是国家名。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Be from questions",
+      "parent": "Unit 3 What do you know about different countries?",
+      "order_index": 2,
+      "explanation": "be from 表来自，Where 问出处，答用 I am from。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Sound /tʃ/ in China",
+      "parent": "Unit 3 What do you know about different countries?",
+      "order_index": 3,
+      "explanation": "China、chair、lunch 中 ch 发 /tʃ/。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Flags and food",
+      "parent": "Unit 3 What do you know about different countries?",
+      "order_index": 4,
+      "explanation": "flag、capital、rice、sushi 用来介绍国家。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 4 What's interesting about holidays?",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "Holiday places",
+      "parent": "Unit 4 What's interesting about holidays?",
+      "order_index": 1,
+      "explanation": "beach、museum、camp 都是度假地点。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Past tense went",
+      "parent": "Unit 4 What's interesting about holidays?",
+      "order_index": 2,
+      "explanation": "yesterday 用 went、saw、ate 等过去式。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Sound /əʊ/ in go",
+      "parent": "Unit 4 What's interesting about holidays?",
+      "order_index": 3,
+      "explanation": "go、boat、home 含 /əʊ/，hot 发 /ɒ/。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Holiday postcards",
+      "parent": "Unit 4 What's interesting about holidays?",
+      "order_index": 4,
+      "explanation": "明信片用过去式写见闻，Dear 开头表称呼。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 5 What are living things?",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "Living things",
+      "parent": "Unit 5 What are living things?",
+      "order_index": 1,
+      "explanation": "plant、animal 会生长，rock、water 不会。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Need plus noun",
+      "parent": "Unit 5 What are living things?",
+      "order_index": 2,
+      "explanation": "need 后接名词，生物需要 water 与 air。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Sound /ŋ/ in growing",
+      "parent": "Unit 5 What are living things?",
+      "order_index": 3,
+      "explanation": "grow、thing、sing、long 中 ng 发 /ŋ/。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Can for ability",
+      "parent": "Unit 5 What are living things?",
+      "order_index": 4,
+      "explanation": "can 后接动词原形，表生物具备的能力。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 6 Why should we take care of the Earth?",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "Earth words",
+      "parent": "Unit 6 Why should we take care of the Earth?",
+      "order_index": 1,
+      "explanation": "rubbish、river、air、tree 是环境名词。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Should and reuse",
+      "parent": "Unit 6 Why should we take care of the Earth?",
+      "order_index": 2,
+      "explanation": "should 表该做，reuse、save 是环保动作。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Sound /ɜː/ in earth",
+      "parent": "Unit 6 Why should we take care of the Earth?",
+      "order_index": 3,
+      "explanation": "earth、bird、nurse 含 /ɜː/ 音。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Green imperatives",
+      "parent": "Unit 6 Why should we take care of the Earth?",
+      "order_index": 4,
+      "explanation": "祈使句用动词原形开头，Don't 表禁止。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 7 How do we celebrate festivals?",
+      "order_index": 7
+    },
+    {
+      "node_type": "point",
+      "name": "Festival objects",
+      "parent": "Unit 7 How do we celebrate festivals?",
+      "order_index": 1,
+      "explanation": "lantern、gift、mooncake 是节日物品。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Customs in present simple",
+      "parent": "Unit 7 How do we celebrate festivals?",
+      "order_index": 2,
+      "explanation": "We eat、People watch 用现在时说习俗。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Sound /æ/ in lantern",
+      "parent": "Unit 7 How do we celebrate festivals?",
+      "order_index": 3,
+      "explanation": "lantern、happy、flag 中 a 发 /æ/。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "First and then",
+      "parent": "Unit 7 How do we celebrate festivals?",
+      "order_index": 4,
+      "explanation": "First、Next、Then、Finally 给步骤排序。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 8 How does music make us feel?",
+      "order_index": 8
+    },
+    {
+      "node_type": "point",
+      "name": "Instrument words",
+      "parent": "Unit 8 How does music make us feel?",
+      "order_index": 1,
+      "explanation": "piano、drum、violin、flute 都是乐器。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Feeling words",
+      "parent": "Unit 8 How does music make us feel?",
+      "order_index": 2,
+      "explanation": "happy、calm、sad、excited 描述音乐感受。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Sound /juː/ in music",
+      "parent": "Unit 8 How does music make us feel?",
+      "order_index": 3,
+      "explanation": "music、tune、cute、use 中 u 发 /juː/。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Make plus adjective",
+      "parent": "Unit 8 How does music make us feel?",
+      "order_index": 4,
+      "explanation": "make 加宾语加形容词，问句用 How does。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "Unit 1 What do we do at the weekend?",
+      "order_index": 1,
+      "summary": "周末活动词、频度副词、一般现在时与 /eɪ/ 发音。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Which is a weekend game?",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "球类玩耍属周末游戏，其余不合，所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "Weekend verbs",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Sleep",
+            "Play",
+            "Cook",
+            "Drive"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "I ___ books on Sunday.",
+          "answer": {
+            "value": "read"
+          },
+          "analysis": "read books 意为读书，用动词原形。",
+          "difficulty": 2,
+          "knowledge_point": "Weekend verbs",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Swim is a weekend verb.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "swim 表游泳活动，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "Weekend verbs",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Name a weekend activity.",
+          "answer": {
+            "value": "I play football."
+          },
+          "analysis": "评分：写出活动得 1 分，动词准确得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "Weekend verbs",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Why rest at the weekend?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "休息为放松，其余是忙碌，所以选 A。",
+          "difficulty": 3,
+          "knowledge_point": "Weekend verbs",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Relax",
+            "Work",
+            "Rush",
+            "Worry"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which means every time?",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "always 表总是，其余非全频，所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "Frequency adverbs",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Never",
+            "Always",
+            "Seldom",
+            "Once"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "I ___ play on Sundays.",
+          "answer": {
+            "value": "usually"
+          },
+          "analysis": "usually 表通常，置于动词前。",
+          "difficulty": 2,
+          "knowledge_point": "Frequency adverbs",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Never means not ever.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "never 表从不，句意正确。",
+          "difficulty": 3,
+          "knowledge_point": "Frequency adverbs",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write how often you read.",
+          "answer": {
+            "value": "I often read at night."
+          },
+          "analysis": "评分：用频度副词得 1 分，句子通顺得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "Frequency adverbs",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write your Sunday plan.",
+          "answer": {
+            "value": "I always read and play football."
+          },
+          "analysis": "评分：用频度副词得 1 分，活动具体得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "Frequency adverbs",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "We ___ TV on Saturday.",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "We 后用原形，其余形式不对，所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "Present simple: I and We",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "watches",
+            "watch",
+            "watching",
+            "watched"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "She ___ football.",
+          "answer": {
+            "value": "plays"
+          },
+          "analysis": "主语 She 为三单，动词加 s。",
+          "difficulty": 2,
+          "knowledge_point": "Present simple: I and We",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "He play chess every week.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "He 后须用 plays，原形错误。",
+          "difficulty": 3,
+          "knowledge_point": "Present simple: I and We",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write about your Sunday.",
+          "answer": {
+            "value": "We visit the park on Sunday."
+          },
+          "analysis": "评分：用动词原形得 1 分，写清时间得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "Present simple: I and We",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which word has /eɪ/?",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "day 含 /eɪ/，其余是短音，所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "Sound /eɪ/ in play",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Cat",
+            "Day",
+            "Bed",
+            "Pig"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Play and ___ rhyme.",
+          "answer": {
+            "value": "day"
+          },
+          "analysis": "day 与 play 同押 /eɪ/ 韵。",
+          "difficulty": 2,
+          "knowledge_point": "Sound /eɪ/ in play",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Rain and cat sound alike.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "rain 发 /eɪ/，cat 发 /æ/，不同。",
+          "difficulty": 3,
+          "knowledge_point": "Sound /eɪ/ in play",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Find the /eɪ/ word.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "game 发 /eɪ/，其余发 /æ/，所以选 A。",
+          "difficulty": 4,
+          "knowledge_point": "Sound /eɪ/ in play",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "game",
+            "map",
+            "bag",
+            "hat"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Unit 2 How do we stay healthy?",
+      "order_index": 2,
+      "summary": "健康食物、should 建议、/iː/ 发音与作息句型。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Which keeps you healthy?",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "水果有益健康，其余是零食，所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "Healthy food words",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Candy",
+            "Fruit",
+            "Chips",
+            "Cola"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Drink ___ every day.",
+          "answer": {
+            "value": "water"
+          },
+          "analysis": "每天喝水是健康习惯。",
+          "difficulty": 2,
+          "knowledge_point": "Healthy food words",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Candy is a healthy snack.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "糖果多糖，不算健康零食。",
+          "difficulty": 3,
+          "knowledge_point": "Healthy food words",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Name two healthy foods.",
+          "answer": {
+            "value": "Milk and apples."
+          },
+          "analysis": "评分：两种食物各得 1 分，拼写得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "Healthy food words",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Pick a healthy drink.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "水最健康，其余含糖多，所以选 A。",
+          "difficulty": 3,
+          "knowledge_point": "Healthy food words",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Water",
+            "Cola",
+            "Soda",
+            "Syrup"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "You ___ eat more fruit.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "该做用 should，其余否定，所以选 A。",
+          "difficulty": 1,
+          "knowledge_point": "Should for habits",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "should",
+            "mustn't",
+            "can't",
+            "needn't"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "We ___ eat much candy.",
+          "answer": {
+            "value": "shouldn't"
+          },
+          "analysis": "不该多吃糖，用 shouldn't。",
+          "difficulty": 2,
+          "knowledge_point": "Should for habits",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Should takes a base verb.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "should 后接动词原形，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "Should for habits",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Pick the healthy habit.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "运动是健康习惯，其余是零食，所以选 A。",
+          "difficulty": 4,
+          "knowledge_point": "Should for habits",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Exercise",
+            "Candy",
+            "Cola",
+            "Chips"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Give one health tip.",
+          "answer": {
+            "value": "You should sleep nine hours."
+          },
+          "analysis": "评分：建议合理得 1 分，语句通顺得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "Should for habits",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which word has /iː/?",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "teeth 含 /iː/，其余短音，所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "Sound /iː/ in eat",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Bed",
+            "Teeth",
+            "Cup",
+            "Dog"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Eat and ___ share /iː/.",
+          "answer": {
+            "value": "sleep"
+          },
+          "analysis": "sleep 与 eat 同发 /iː/。",
+          "difficulty": 2,
+          "knowledge_point": "Sound /iː/ in eat",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Green rhymes with pen.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "green 发 /iː/，pen 发 /e/，不押韵。",
+          "difficulty": 3,
+          "knowledge_point": "Sound /iː/ in eat",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Find the long /iː/ word.",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "see 发 /iː/，其余是短音，所以选 B。",
+          "difficulty": 4,
+          "knowledge_point": "Sound /iː/ in eat",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "sit",
+            "see",
+            "set",
+            "sat"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "When do we brush teeth?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "睡前与早起刷牙，其余时间不合，所以选 A。",
+          "difficulty": 1,
+          "knowledge_point": "Daily routine lines",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "At night",
+            "At noon",
+            "In May",
+            "On ice"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "I sleep ___ ten o'clock.",
+          "answer": {
+            "value": "before"
+          },
+          "analysis": "before 表在某时之前。",
+          "difficulty": 2,
+          "knowledge_point": "Daily routine lines",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "We need sleep every day.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "每天都要睡眠，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "Daily routine lines",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write one healthy habit.",
+          "answer": {
+            "value": "I brush my teeth twice a day."
+          },
+          "analysis": "评分：写出习惯得 1 分，用现在时得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "Daily routine lines",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 3 What do you know about different countries?",
+      "order_index": 3,
+      "summary": "国家名词、be from 句型、/tʃ/ 发音与风物介绍。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Which is a country?",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "日本是国家，其余是城市，所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "Country words",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "London",
+            "Japan",
+            "Paris",
+            "Sydney"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Beijing is in ___.",
+          "answer": {
+            "value": "China"
+          },
+          "analysis": "北京是中国的首都。",
+          "difficulty": 2,
+          "knowledge_point": "Country words",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Paris is a country.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "巴黎是法国城市，不是国家。",
+          "difficulty": 3,
+          "knowledge_point": "Country words",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Name two countries.",
+          "answer": {
+            "value": "China and Japan."
+          },
+          "analysis": "评分：写出两国各得 1 分，拼写对得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "Country words",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Where is the Great Wall?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "长城在中国，其余国家不符，所以选 A。",
+          "difficulty": 3,
+          "knowledge_point": "Country words",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "China",
+            "Japan",
+            "France",
+            "Spain"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "Where ___ you from?",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "you 配 are，其余不搭配，所以选 C。",
+          "difficulty": 1,
+          "knowledge_point": "Be from questions",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "is",
+            "am",
+            "are",
+            "be"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "I am ___ China.",
+          "answer": {
+            "value": "from"
+          },
+          "analysis": "be from 表来自某地。",
+          "difficulty": 2,
+          "knowledge_point": "Be from questions",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "She are from Japan.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "She 后须用 is，are 错误。",
+          "difficulty": 3,
+          "knowledge_point": "Be from questions",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Ask where he is from.",
+          "answer": {
+            "value": "Where is he from?"
+          },
+          "analysis": "评分：疑问词对得 1 分，搭配对得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "Be from questions",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Ask about her country.",
+          "answer": {
+            "value": "Where is she from?"
+          },
+          "analysis": "评分：疑问词对得 1 分，搭配对得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "Be from questions",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which starts with /tʃ/?",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "该词含 /tʃ/，其余不符，所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "Sound /tʃ/ in China",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Ship",
+            "Chair",
+            "Fish",
+            "Sun"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "China and ___ share /tʃ/.",
+          "answer": {
+            "value": "lunch"
+          },
+          "analysis": "lunch 的 ch 也发 /tʃ/。",
+          "difficulty": 2,
+          "knowledge_point": "Sound /tʃ/ in China",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Chair starts like ship.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "chair 发 /tʃ/，ship 发 /ʃ/，不同。",
+          "difficulty": 3,
+          "knowledge_point": "Sound /tʃ/ in China",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Find the ch word.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "该词 ch 发 /tʃ/，其余不符，所以选 A。",
+          "difficulty": 4,
+          "knowledge_point": "Sound /tʃ/ in China",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "cheese",
+            "sheep",
+            "shoe",
+            "sun"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which is Japanese food?",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "寿司源自日本，其余是别国食物，所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "Flags and food",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Pizza",
+            "Sushi",
+            "Taco",
+            "Pasta"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "The flag of China is ___.",
+          "answer": {
+            "value": "red"
+          },
+          "analysis": "中国国旗主色是红色。",
+          "difficulty": 2,
+          "knowledge_point": "Flags and food",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "A capital is a city.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "首都是一国主要城市，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "Flags and food",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Tell about one country.",
+          "answer": {
+            "value": "Japan has sushi and cherry trees."
+          },
+          "analysis": "评分：写出国家得 1 分，举出特色得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "Flags and food",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 4 What's interesting about holidays?",
+      "order_index": 4,
+      "summary": "度假地点、一般过去时、/əʊ/ 发音与明信片。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Which is a holiday place?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "海滩可度假，其余是室内场所，所以选 A。",
+          "difficulty": 1,
+          "knowledge_point": "Holiday places",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Beach",
+            "Library",
+            "Lift",
+            "Desk"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "We climbed a ___.",
+          "answer": {
+            "value": "mountain"
+          },
+          "analysis": "climb 后接山，用 mountain。",
+          "difficulty": 2,
+          "knowledge_point": "Holiday places",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "We can sleep at a camp.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "营地可住宿，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "Holiday places",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Name two holiday places.",
+          "answer": {
+            "value": "A beach and a mountain."
+          },
+          "analysis": "评分：写出两地各得 1 分，拼写对得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "Holiday places",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Why climb a mountain?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "为看风景，其余是负面体验，所以选 A。",
+          "difficulty": 3,
+          "knowledge_point": "Holiday places",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Views",
+            "Noise",
+            "Traffic",
+            "Queues"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "Last week we ___ away.",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "过去时间用 went，其余形式错，所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "Past tense went",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "go",
+            "went",
+            "goes",
+            "going"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "We ___ a museum then.",
+          "answer": {
+            "value": "visited"
+          },
+          "analysis": "then 表过去，动词用 visited。",
+          "difficulty": 2,
+          "knowledge_point": "Past tense went",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "We go camping yesterday.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "yesterday 须用 went，原形错误。",
+          "difficulty": 3,
+          "knowledge_point": "Past tense went",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write where you went.",
+          "answer": {
+            "value": "I went to the mountains."
+          },
+          "analysis": "评分：用过去式得 1 分，写出地点得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "Past tense went",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write a past holiday act.",
+          "answer": {
+            "value": "We visited an old town."
+          },
+          "analysis": "评分：用过去式得 1 分，动作清楚得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "Past tense went",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which word has /əʊ/?",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "boat 含 /əʊ/，其余是短音，所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "Sound /əʊ/ in go",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Hot",
+            "Boat",
+            "Cup",
+            "Pig"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Go and ___ share /əʊ/.",
+          "answer": {
+            "value": "home"
+          },
+          "analysis": "home 与 go 同发 /əʊ/。",
+          "difficulty": 2,
+          "knowledge_point": "Sound /əʊ/ in go",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Nose rhymes with rose.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "两词都含 /əʊ/，押韵正确。",
+          "difficulty": 3,
+          "knowledge_point": "Sound /əʊ/ in go",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Find the /əʊ/ word.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "go 发 /əʊ/，其余发短音，所以选 A。",
+          "difficulty": 4,
+          "knowledge_point": "Sound /əʊ/ in go",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "go",
+            "got",
+            "gun",
+            "gas"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "How to start a postcard?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "Dear 用于开头，其余不合，所以选 A。",
+          "difficulty": 1,
+          "knowledge_point": "Holiday postcards",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Dear",
+            "Bye",
+            "Yes",
+            "End"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "We ___ many photos there.",
+          "answer": {
+            "value": "took"
+          },
+          "analysis": "take photos 的过去式是 took。",
+          "difficulty": 2,
+          "knowledge_point": "Holiday postcards",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "A postcard tells a trip.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "明信片常写旅途见闻，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "Holiday postcards",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write one holiday line.",
+          "answer": {
+            "value": "I saw a big blue lake."
+          },
+          "analysis": "评分：用过去式得 1 分，写出见闻得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "Holiday postcards",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 5 What are living things?",
+      "order_index": 5,
+      "summary": "生物辨别、need 句型、/ŋ/ 发音与 can 表能力。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Which is a living thing?",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "树会生长，其余是无生物，所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "Living things",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Rock",
+            "Tree",
+            "Chair",
+            "Pen"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "A ___ can grow tall.",
+          "answer": {
+            "value": "plant"
+          },
+          "analysis": "植物能生长，用 plant。",
+          "difficulty": 2,
+          "knowledge_point": "Living things",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "A rock needs no food.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "石头非生物，不需进食。",
+          "difficulty": 3,
+          "knowledge_point": "Living things",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Name two living things.",
+          "answer": {
+            "value": "A tree and a bird."
+          },
+          "analysis": "评分：写出两物各得 1 分，判断对得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "Living things",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Why is a tree alive?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "树能生长，其余不是生命特征，所以选 A。",
+          "difficulty": 3,
+          "knowledge_point": "Living things",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "It grows",
+            "It melts",
+            "It rolls",
+            "It rings"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "What do all plants need?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "植物需水，其余非必需，所以选 A。",
+          "difficulty": 1,
+          "knowledge_point": "Need plus noun",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Water",
+            "Candy",
+            "Books",
+            "Coins"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fish need clean ___.",
+          "answer": {
+            "value": "water"
+          },
+          "analysis": "鱼需要干净的水。",
+          "difficulty": 2,
+          "knowledge_point": "Need plus noun",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "A seed needs soil.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "种子需土壤才能发芽。",
+          "difficulty": 3,
+          "knowledge_point": "Need plus noun",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Pick what a bird needs.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "鸟需空气，其余非生物所需，所以选 A。",
+          "difficulty": 4,
+          "knowledge_point": "Need plus noun",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Air",
+            "Pens",
+            "Toys",
+            "Bells"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write what a cat needs.",
+          "answer": {
+            "value": "A cat needs milk and warmth."
+          },
+          "analysis": "评分：用 need 得 1 分，名词正确得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "Need plus noun",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which ends with /ŋ/?",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "该词以 /ŋ/ 收尾，其余不符，所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "Sound /ŋ/ in growing",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Sit",
+            "Sing",
+            "Sip",
+            "Sun"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Thing and ___ share /ŋ/.",
+          "answer": {
+            "value": "king"
+          },
+          "analysis": "king 与 thing 同押 /ŋ/。",
+          "difficulty": 2,
+          "knowledge_point": "Sound /ŋ/ in growing",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Long rhymes with log.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "long 收 /ŋ/，log 收 /g/，不同。",
+          "difficulty": 3,
+          "knowledge_point": "Sound /ŋ/ in growing",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Find the ng word.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "该词含 /ŋ/，其余不符，所以选 A。",
+          "difficulty": 4,
+          "knowledge_point": "Sound /ŋ/ in growing",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "ring",
+            "run",
+            "red",
+            "rat"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "A seed ___ grow.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "can 后接原形，其余不搭配，所以选 A。",
+          "difficulty": 1,
+          "knowledge_point": "Can for ability",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "can",
+            "is",
+            "are",
+            "do"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Birds ___ fly high.",
+          "answer": {
+            "value": "can"
+          },
+          "analysis": "can 表具备飞行能力。",
+          "difficulty": 2,
+          "knowledge_point": "Can for ability",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "A stone can grow.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "石头非生物，不能生长。",
+          "difficulty": 3,
+          "knowledge_point": "Can for ability",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write what a seed can do.",
+          "answer": {
+            "value": "A seed can grow into a plant."
+          },
+          "analysis": "评分：用 can 得 1 分，写出能力得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "Can for ability",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 6 Why should we take care of the Earth?",
+      "order_index": 6,
+      "summary": "环境名词、环保建议、/ɜː/ 发音与祈使句。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Which cleans the air?",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "树木净化空气，其余是污染物，所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "Earth words",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Smoke",
+            "Trees",
+            "Rubbish",
+            "Dust"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Pick up the ___.",
+          "answer": {
+            "value": "rubbish"
+          },
+          "analysis": "捡起垃圾用 rubbish。",
+          "difficulty": 2,
+          "knowledge_point": "Earth words",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "A clean river helps fish.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "干净河水利于鱼类生存。",
+          "difficulty": 3,
+          "knowledge_point": "Earth words",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Name one green place.",
+          "answer": {
+            "value": "The forest near my school."
+          },
+          "analysis": "评分：写出场所得 1 分，拼写正确得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "Earth words",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Why keep rivers clean?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "净水利于鱼，其余是污染，所以选 A。",
+          "difficulty": 3,
+          "knowledge_point": "Earth words",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "For fish",
+            "For dust",
+            "For soot",
+            "For dirt"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "We ___ save every drop.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "该节水用 should，其余否定，所以选 A。",
+          "difficulty": 1,
+          "knowledge_point": "Should and reuse",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "should",
+            "never",
+            "can't",
+            "mustn't"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "___ old bags again.",
+          "answer": {
+            "value": "Reuse"
+          },
+          "analysis": "reuse 表重复使用，祈使句用原形。",
+          "difficulty": 2,
+          "knowledge_point": "Should and reuse",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "We should waste paper.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "浪费纸张不对，应用 save。",
+          "difficulty": 3,
+          "knowledge_point": "Should and reuse",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Pick the green action.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "重复使用环保，其余是浪费，所以选 A。",
+          "difficulty": 4,
+          "knowledge_point": "Should and reuse",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Reuse",
+            "Waste",
+            "Burn",
+            "Drop"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write a water-saving tip.",
+          "answer": {
+            "value": "We should turn off the tap."
+          },
+          "analysis": "评分：做法具体得 1 分，用情态词得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "Should and reuse",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which word has /ɜː/?",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "bird 含 /ɜː/，其余是短音，所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "Sound /ɜː/ in earth",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Cat",
+            "Bird",
+            "Bed",
+            "Pig"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Earth and ___ share /ɜː/.",
+          "answer": {
+            "value": "nurse"
+          },
+          "analysis": "nurse 的 ur 也发 /ɜː/。",
+          "difficulty": 2,
+          "knowledge_point": "Sound /ɜː/ in earth",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Her rhymes with here.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "her 发 /ɜː/，here 发 /ɪə/，不同。",
+          "difficulty": 3,
+          "knowledge_point": "Sound /ɜː/ in earth",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Find the /ɜː/ word.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "该词 ir 发 /ɜː/，其余不符，所以选 A。",
+          "difficulty": 4,
+          "knowledge_point": "Sound /ɜː/ in earth",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "girl",
+            "gate",
+            "goat",
+            "game"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "'No litter!' is a ___.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "该句是环保规矩，其余不合，所以选 A。",
+          "difficulty": 1,
+          "knowledge_point": "Green imperatives",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "rule",
+            "song",
+            "game",
+            "map"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "___ off the tap, please.",
+          "answer": {
+            "value": "Turn"
+          },
+          "analysis": "turn off 表关水龙头。",
+          "difficulty": 2,
+          "knowledge_point": "Green imperatives",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "'Don't' shows a ban.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "Don't 加原形表禁止，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "Green imperatives",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write one green tip.",
+          "answer": {
+            "value": "Turn off the lights when you leave."
+          },
+          "analysis": "评分：用祈使句得 1 分，内容环保得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "Green imperatives",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 7 How do we celebrate festivals?",
+      "order_index": 7,
+      "summary": "节庆物品、习俗现在时、/æ/ 发音与步骤词。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Which is a festival food?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "月饼是节庆食品，其余是用品，所以选 A。",
+          "difficulty": 1,
+          "knowledge_point": "Festival objects",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Mooncake",
+            "Pencil",
+            "Spoon",
+            "Chair"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "We hang red ___.",
+          "answer": {
+            "value": "lanterns"
+          },
+          "analysis": "春节挂红灯笼。",
+          "difficulty": 2,
+          "knowledge_point": "Festival objects",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Gifts are festival items.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "礼物常作节庆物品，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "Festival objects",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Name two festival things.",
+          "answer": {
+            "value": "A lantern and a mooncake."
+          },
+          "analysis": "评分：写出两物各得 1 分，拼写对得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "Festival objects",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Why hang red lanterns?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "红灯笼象征好运，其余不相关，所以选 A。",
+          "difficulty": 3,
+          "knowledge_point": "Festival objects",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "For luck",
+            "For rain",
+            "For rest",
+            "For news"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "People ___ fireworks.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "复数主语用原形，其余错，所以选 A。",
+          "difficulty": 1,
+          "knowledge_point": "Customs in present simple",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "watch",
+            "watches",
+            "watching",
+            "watched"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "We ___ mooncakes.",
+          "answer": {
+            "value": "eat"
+          },
+          "analysis": "主语 We 后用动词原形 eat。",
+          "difficulty": 2,
+          "knowledge_point": "Customs in present simple",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "He watch the parade.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "He 后须用 watches，原形错误。",
+          "difficulty": 3,
+          "knowledge_point": "Customs in present simple",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write a festival custom.",
+          "answer": {
+            "value": "We eat dumplings with family."
+          },
+          "analysis": "评分：用现在时得 1 分，写出习俗得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "Customs in present simple",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write a New Year custom.",
+          "answer": {
+            "value": "We eat dumplings with Grandma."
+          },
+          "analysis": "评分：用现在时得 1 分，习俗具体得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "Customs in present simple",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which word has /æ/?",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "flag 含 /æ/，其余是双元音，所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "Sound /æ/ in lantern",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Cake",
+            "Flag",
+            "Bike",
+            "Note"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Cat and ___ share /æ/.",
+          "answer": {
+            "value": "flag"
+          },
+          "analysis": "flag 的 a 也发 /æ/。",
+          "difficulty": 2,
+          "knowledge_point": "Sound /æ/ in lantern",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Happy starts with /æ/.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "happy 首音是 /æ/，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "Sound /æ/ in lantern",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Find the /æ/ word.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "该词 a 发 /æ/，其余不符，所以选 A。",
+          "difficulty": 4,
+          "knowledge_point": "Sound /æ/ in lantern",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "map",
+            "make",
+            "mate",
+            "mice"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which starts a plan?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "First 表第一步，其余不合，所以选 A。",
+          "difficulty": 1,
+          "knowledge_point": "First and then",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "First",
+            "Last",
+            "Never",
+            "Again"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "___, we clean the room.",
+          "answer": {
+            "value": "First"
+          },
+          "analysis": "first 表首先，置于句首。",
+          "difficulty": 2,
+          "knowledge_point": "First and then",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Then means after that.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "then 表随后，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "First and then",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write two steps in order.",
+          "answer": {
+            "value": "First we clean. Then we decorate."
+          },
+          "analysis": "评分：用顺序词得 1 分，两步清楚得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "First and then",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 8 How does music make us feel?",
+      "order_index": 8,
+      "summary": "乐器名词、感受形容词、/juː/ 发音与 make 句型。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Which has many keys?",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "钢琴有琴键，其余乐器不符，所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "Instrument words",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Drum",
+            "Piano",
+            "Flute",
+            "Bell"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Beat the ___ loudly.",
+          "answer": {
+            "value": "drum"
+          },
+          "analysis": "鼓用鼓槌敲击发声。",
+          "difficulty": 2,
+          "knowledge_point": "Instrument words",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "A flute is blown.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "长笛靠吹气发声，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "Instrument words",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Name two instruments.",
+          "answer": {
+            "value": "A piano and a drum."
+          },
+          "analysis": "评分：写出两件各得 1 分，拼写对得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "Instrument words",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Why do bands play drums?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "鼓给出节拍，其余感官不符，所以选 A。",
+          "difficulty": 3,
+          "knowledge_point": "Instrument words",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Beat",
+            "Light",
+            "Heat",
+            "Taste"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "Soft music makes us ___.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "轻音乐让人平静，其余感受不合，所以选 A。",
+          "difficulty": 1,
+          "knowledge_point": "Feeling words",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "calm",
+            "angry",
+            "hungry",
+            "noisy"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fast tunes make me ___.",
+          "answer": {
+            "value": "excited"
+          },
+          "analysis": "快节奏令人兴奋。",
+          "difficulty": 2,
+          "knowledge_point": "Feeling words",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "A lullaby feels lively.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "摇篮曲柔和，不显活泼。",
+          "difficulty": 3,
+          "knowledge_point": "Feeling words",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Name one music feeling.",
+          "answer": {
+            "value": "Music makes me happy."
+          },
+          "analysis": "评分：用形容词得 1 分，句子通顺得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "Feeling words",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write how a song feels.",
+          "answer": {
+            "value": "The slow song makes me calm."
+          },
+          "analysis": "评分：用形容词得 1 分，句子通顺得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "Feeling words",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which word has /juː/?",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "cute 含 /juː/，其余发 /ʌ/，所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "Sound /juː/ in music",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Cup",
+            "Cute",
+            "Cut",
+            "Cub"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Music and ___ share /juː/.",
+          "answer": {
+            "value": "tune"
+          },
+          "analysis": "tune 的 u 也发 /juː/。",
+          "difficulty": 2,
+          "knowledge_point": "Sound /juː/ in music",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Use rhymes with bus.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "use 发 /juː/，bus 发 /ʌ/，不同。",
+          "difficulty": 3,
+          "knowledge_point": "Sound /juː/ in music",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Find the /juː/ word.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "该词 u 发 /juː/，其余不符，所以选 A。",
+          "difficulty": 4,
+          "knowledge_point": "Sound /juː/ in music",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "use",
+            "us",
+            "up",
+            "ugly"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "How ___ it make you feel?",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "it 用 does，其余不搭配，所以选 B。",
+          "difficulty": 1,
+          "knowledge_point": "Make plus adjective",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "do",
+            "does",
+            "is",
+            "are"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Music makes ___ happy.",
+          "answer": {
+            "value": "me"
+          },
+          "analysis": "make 后接宾语 me。",
+          "difficulty": 2,
+          "knowledge_point": "Make plus adjective",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Feel is a verb here.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "feel 在此作系动词，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "Make plus adjective",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Ask about a song's mood.",
+          "answer": {
+            "value": "How does this song make you feel?"
+          },
+          "analysis": "评分：疑问词对得 1 分，句型完整得 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "Make plus adjective",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-11T02:29:22+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

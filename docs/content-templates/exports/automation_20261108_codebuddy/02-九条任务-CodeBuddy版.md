@@ -25,6 +25,18 @@
 > - 因此 `-Shift 22`（或 `--shift 22`）表示「第三班的补漏职责」，不要求在 22:00 才动手；手动在任意时刻跑都合法，只要 `--date` 与班次职责对得上。
 > - 本文件与 `01-主提示词.md` 是**会话直接照办的现行口径**（`run_all.*` 生成的提示词也以这两份为准），不是历史记录；历史变更、评审判定、验证记录只在 `00-CodeBuddy执行说明.md`，不要用那边的历史条目覆盖这两份现行规则。
 
+## 生成侧结构硬约束（2026-11-11 定稿，9 段共用，各段末尾已各带一句）
+
+来源是 11-11 那轮 31 册入库暴露的三个真问题，不是假想规则；违反任一条，数据在入库侧就是硬失败或制造垃圾节点。
+
+| # | 约束 | 违反的后果 | 落地检查 |
+|---|---|---|---|
+| 1 | **知识点名唯一**：同一 `(学科, 年级, 知识点名)` 全库只能一个节点，本册内也不许重名/近似别名 | `import_content` 查到多个同名节点直接 `ValueError`，**整册导入中止**，同批其他年级一起被卡 | 生成前用 `context` 的「已用知识点名」比对；`validate` 通过后仍要人工扫一遍点名 |
+| 2 | **禁止「样章·…」演示分组**：`section` 只能用本册真实章节名（取大纲 `chapters`） | 制造 0 题占位节点。11-07 遗留 55 组 / 165 节点就是这样来的，2026-11-11 才整棵删掉（`05` §5.x.7） | 点名里出现「样章」「示例」「演示」「占位」一律返工 |
+| 3 | **point 必须挂 section**：`node_type='point'` 的 `parent` 非空且指向本文件已声明的 section | 悬空 point（全库曾出现 5 个，11-11 已归并）；导出/检索时层级断裂 | `validate` 报 parent 相关错误不许当提醒放过 |
+
+补充口径：`section` 自身允许根级，**这不是缺陷**，不要为了让 hierarchy 好看而硬造一层假父节点（全库 556 个 section 现在全是根级，设计如此）。
+
 ---
 
 ## 1. 数学1-9上每日教研
@@ -36,7 +48,7 @@ $PY='D:\ai\prj\trae\HuaWei\AiLearning\backend\.venv\Scripts\python.exe'; $RUN='D
 固定：subject=math；数学；version=北师大版；semester=first（上册）；grades=1,2,3,4,5,6,7,8（按此顺序）；content_root=D:\ai\prj\trae\HuaWei\AiLearning\docs\content-templates。
 大纲硬约束：baseline\_outline_math_first_latest.md 中本年级那一节；章节名用教材原名，order_index 取大纲序号；清单外不写，缺年级就停止并报告。
 开工：& $PY $RUN plan --subject math --shift <班次> --date <BATCH_DATE> --json → idle 则只追加 idle_log_line 并结束；否则 lock acquire → 对 todos 逐年级 context → write_to_file 生成 JSON → validate → commit → finish。
-边界：只产出 JSON + 追加台账/日志；不执行 import_content、不跑 --dry-run、不连数据库、不跑 alembic、不改已有文件、不读写其他学科文件；无可新增内容时台账记「无新增：原因」，不产空 JSON。硬约束：禁止调用 db_ops.py、禁止 ops.* / db_ops.py（run_all.* 已无入库 Action）、禁止任何入库或回退动作、禁止执行 ledger-sync / log-sync（人工运维命令，写动作均需 --confirm I_KNOW；_run_daily.py 已无 import/restore 子命令）。生成期约束：出题时就按住「每点 ≥4 题、难度 40/40/20 ±15pp」，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例。
+边界：只产出 JSON + 追加台账/日志；不执行 import_content、不跑 --dry-run、不连数据库、不跑 alembic、不改已有文件、不读写其他学科文件；无可新增内容时台账记「无新增：原因」，不产空 JSON。硬约束：禁止调用 db_ops.py、禁止 ops.* / db_ops.py（run_all.* 已无入库 Action）、禁止任何入库或回退动作、禁止执行 ledger-sync / log-sync（人工运维命令，写动作均需 --confirm I_KNOW；_run_daily.py 已无 import/restore 子命令）。生成期约束：出题时就按住「每点 ≥4 题、难度 40/40/20 ±15pp」，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例。结构约束：本年级知识点名唯一且不与库内既有名重复（同名会让 import_content 抛 ValueError 中止整册）；section 只用本册真实章节名、禁止「样章·…」演示分组；point 的 parent 必须指向本文件已声明的 section、不得留空。
 ```
 
 ## 2. 语文1-9上每日教研
@@ -48,7 +60,7 @@ $PY='D:\ai\prj\trae\HuaWei\AiLearning\backend\.venv\Scripts\python.exe'; $RUN='D
 固定：subject=chinese；语文；version=人教版；semester=first；grades=1..9（按此顺序）；大纲 baseline\_outline_chinese_first_latest.md 中本年级那一节。
 学科要求：字词、古诗文、现代文阅读、写作素材分开覆盖；材料题材料自带；古诗文原文不得写错字；阅读题解析写清答题切入角度。
 开工：& $PY $RUN plan --subject chinese --shift <班次> --date <BATCH_DATE> --json → idle 则只追加 idle_log_line 并结束；否则 lock acquire → 对 todos 逐年级 context → write_to_file 生成 JSON → validate → commit → finish。
-边界：只产出 JSON + 追加台账/日志；不执行 import_content、不跑 --dry-run、不连数据库、不跑 alembic、不改已有文件、不读写其他学科文件；无可新增内容时台账记「无新增：原因」。硬约束：禁止调用 db_ops.py、禁止 ops.* / db_ops.py（run_all.* 已无入库 Action）、禁止任何入库或回退动作、禁止执行 ledger-sync / log-sync（人工运维命令，写动作均需 --confirm I_KNOW；_run_daily.py 已无 import/restore 子命令）。生成期约束：出题时就按住「每点 ≥4 题、难度 40/40/20 ±15pp」，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例。
+边界：只产出 JSON + 追加台账/日志；不执行 import_content、不跑 --dry-run、不连数据库、不跑 alembic、不改已有文件、不读写其他学科文件；无可新增内容时台账记「无新增：原因」。硬约束：禁止调用 db_ops.py、禁止 ops.* / db_ops.py（run_all.* 已无入库 Action）、禁止任何入库或回退动作、禁止执行 ledger-sync / log-sync（人工运维命令，写动作均需 --confirm I_KNOW；_run_daily.py 已无 import/restore 子命令）。生成期约束：出题时就按住「每点 ≥4 题、难度 40/40/20 ±15pp」，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例。结构约束：本年级知识点名唯一且不与库内既有名重复（同名会让 import_content 抛 ValueError 中止整册）；section 只用本册真实章节名、禁止「样章·…」演示分组；point 的 parent 必须指向本文件已声明的 section、不得留空。
 ```
 
 ## 3. 英语1-9上每日教研
@@ -60,7 +72,7 @@ $PY='D:\ai\prj\trae\HuaWei\AiLearning\backend\.venv\Scripts\python.exe'; $RUN='D
 固定：subject=english；英语；version=牛津深圳版；semester=first；grades=1..9；大纲 baseline\_outline_english_first_latest.md 中本年级那一节（英文原样、保留问号大小写；一个板块一天，做完一个单元再进下一个）。**英语 section 必须写「Unit N 标题 / 板块」复合名**（如 `Unit 1 What is your family like? / Ready Go`），point 的 parent 与它一致，chapters[].name 仍是完整单元名；纯板块名 `Ready Go` / `Story` 在多个单元重复，自检按 (单元,板块) 二元组校验并判 error，台账/日志的下一节计划也用复合名（大纲只有单元名的年级沿用单元名，不拼 `X / X`）。
 学科要求：题干与选项用英文、解析用中文；不写依赖音频的听力题；覆盖词汇、语法、完形/阅读、写作四类；小学控词量，初中覆盖深圳中考常考语法（时态、被动、从句、非谓语）；多选解析逐项写 A/B/C/D 与 ✓/✗。
 开工：& $PY $RUN plan --subject english --shift <班次> --date <BATCH_DATE> --json → idle 则只追加 idle_log_line 并结束；否则 lock acquire → 对 todos 逐年级 context → write_to_file 生成 JSON → validate → commit → finish。
-边界：只产出 JSON + 追加台账/日志；不执行 import_content、不跑 --dry-run、不连数据库、不跑 alembic、不改已有文件、不读写其他学科文件；无可新增内容时台账记「无新增：原因」。硬约束：禁止调用 db_ops.py、禁止 ops.* / db_ops.py（run_all.* 已无入库 Action）、禁止任何入库或回退动作、禁止执行 ledger-sync / log-sync（人工运维命令，写动作均需 --confirm I_KNOW；_run_daily.py 已无 import/restore 子命令）。生成期约束：出题时就按住「每点 ≥4 题、难度 40/40/20 ±15pp」，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例。
+边界：只产出 JSON + 追加台账/日志；不执行 import_content、不跑 --dry-run、不连数据库、不跑 alembic、不改已有文件、不读写其他学科文件；无可新增内容时台账记「无新增：原因」。硬约束：禁止调用 db_ops.py、禁止 ops.* / db_ops.py（run_all.* 已无入库 Action）、禁止任何入库或回退动作、禁止执行 ledger-sync / log-sync（人工运维命令，写动作均需 --confirm I_KNOW；_run_daily.py 已无 import/restore 子命令）。生成期约束：出题时就按住「每点 ≥4 题、难度 40/40/20 ±15pp」，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例。结构约束：本年级知识点名唯一且不与库内既有名重复（同名会让 import_content 抛 ValueError 中止整册）；section 只用本册真实章节名、禁止「样章·…」演示分组；point 的 parent 必须指向本文件已声明的 section、不得留空。
 ```
 
 ## 4. 道法1-9上每日教研
@@ -72,7 +84,7 @@ $PY='D:\ai\prj\trae\HuaWei\AiLearning\backend\.venv\Scripts\python.exe'; $RUN='D
 固定：subject=politics；道德与法治；version=部编版；semester=first；grades=1..9；大纲 baseline\_outline_politics_first_latest.md 中本年级那一节。
 学科要求：小学与初中均写「道德与法治」，高中才叫「思想政治」；观点题材料自包含；法律条文只用教材表述，不引申、不评论；情境优先校园/家庭/深圳公共生活；多选解析逐项写 A/B/C/D 与 ✓/✗。
 开工：& $PY $RUN plan --subject politics --shift <班次> --date <BATCH_DATE> --json → idle 则只追加 idle_log_line 并结束；否则 lock acquire → 对 todos 逐年级 context → write_to_file 生成 JSON → validate → commit → finish。
-边界：只产出 JSON + 追加台账/日志；不执行 import_content、不跑 --dry-run、不连数据库、不跑 alembic、不改已有文件、不读写其他学科文件；无可新增内容时台账记「无新增：原因」。硬约束：禁止调用 db_ops.py、禁止 ops.* / db_ops.py（run_all.* 已无入库 Action）、禁止任何入库或回退动作、禁止执行 ledger-sync / log-sync（人工运维命令，写动作均需 --confirm I_KNOW；_run_daily.py 已无 import/restore 子命令）。生成期约束：出题时就按住「每点 ≥4 题、难度 40/40/20 ±15pp」，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例。
+边界：只产出 JSON + 追加台账/日志；不执行 import_content、不跑 --dry-run、不连数据库、不跑 alembic、不改已有文件、不读写其他学科文件；无可新增内容时台账记「无新增：原因」。硬约束：禁止调用 db_ops.py、禁止 ops.* / db_ops.py（run_all.* 已无入库 Action）、禁止任何入库或回退动作、禁止执行 ledger-sync / log-sync（人工运维命令，写动作均需 --confirm I_KNOW；_run_daily.py 已无 import/restore 子命令）。生成期约束：出题时就按住「每点 ≥4 题、难度 40/40/20 ±15pp」，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例。结构约束：本年级知识点名唯一且不与库内既有名重复（同名会让 import_content 抛 ValueError 中止整册）；section 只用本册真实章节名、禁止「样章·…」演示分组；point 的 parent 必须指向本文件已声明的 section、不得留空。
 ```
 
 ## 5. 物理8-9上每日教研
@@ -84,7 +96,7 @@ $PY='D:\ai\prj\trae\HuaWei\AiLearning\backend\.venv\Scripts\python.exe'; $RUN='D
 固定：subject=physics；物理；version=人教版；semester=first；grades=8,9；仅 8-9 年级开设，其他年级跳过并报告；大纲 baseline\_outline_physics_first_latest.md 中本年级那一节（九年级为「全一册」，按章序正常推进，不要跳过后半册）。
 学科要求：物理量带单位，计算题公式→代入→结果三步且结果带单位；不用看图题；实验题用文字描述器材与现象；数据取常见可核验值（g=10 N/kg，若用 9.8 需在题干说明）；多选解析逐项写 A/B/C/D 与 ✓/✗。
 开工：& $PY $RUN plan --subject physics --shift <班次> --date <BATCH_DATE> --json → idle 则只追加 idle_log_line 并结束；否则 lock acquire → 对 todos 逐年级 context → write_to_file 生成 JSON → validate → commit → finish。
-边界：只产出 JSON + 追加台账/日志；不执行 import_content、不跑 --dry-run、不连数据库、不跑 alembic、不改已有文件、不读写其他学科文件；无可新增内容时台账记「无新增：原因」。硬约束：禁止调用 db_ops.py、禁止 ops.* / db_ops.py（run_all.* 已无入库 Action）、禁止任何入库或回退动作、禁止执行 ledger-sync / log-sync（人工运维命令，写动作均需 --confirm I_KNOW；_run_daily.py 已无 import/restore 子命令）。生成期约束：出题时就按住「每点 ≥4 题、难度 40/40/20 ±15pp」，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例。
+边界：只产出 JSON + 追加台账/日志；不执行 import_content、不跑 --dry-run、不连数据库、不跑 alembic、不改已有文件、不读写其他学科文件；无可新增内容时台账记「无新增：原因」。硬约束：禁止调用 db_ops.py、禁止 ops.* / db_ops.py（run_all.* 已无入库 Action）、禁止任何入库或回退动作、禁止执行 ledger-sync / log-sync（人工运维命令，写动作均需 --confirm I_KNOW；_run_daily.py 已无 import/restore 子命令）。生成期约束：出题时就按住「每点 ≥4 题、难度 40/40/20 ±15pp」，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例。结构约束：本年级知识点名唯一且不与库内既有名重复（同名会让 import_content 抛 ValueError 中止整册）；section 只用本册真实章节名、禁止「样章·…」演示分组；point 的 parent 必须指向本文件已声明的 section、不得留空。
 ```
 
 ## 6. 化学9上每日教研
@@ -96,7 +108,7 @@ $PY='D:\ai\prj\trae\HuaWei\AiLearning\backend\.venv\Scripts\python.exe'; $RUN='D
 固定：subject=chemistry；化学；version=人教版；semester=first；grades=9；化学仅 9 年级（初中）开设，其余年级跳过并汇报；大纲 baseline\_outline_chemistry_first_latest.md 中九年级那一节。
 学科要求：化学式用纯文本（H2O、CO2、CaCO3），上下标不得用富文本；方程式配平并标条件（点燃/加热）；计算题写明相对原子质量取值；不用看图或读装置图的题；多选解析逐项写 A/B/C/D 与 ✓/✗。
 开工：& $PY $RUN plan --subject chemistry --shift <班次> --date <BATCH_DATE> --json → idle 则只追加 idle_log_line 并结束；否则 lock acquire → 对 todos 逐年级 context → write_to_file 生成 JSON → validate → commit → finish。
-边界：只产出 JSON + 追加台账/日志；不执行 import_content、不跑 --dry-run、不连数据库、不跑 alembic、不改已有文件、不读写其他学科文件；无可新增内容时台账记「无新增：原因」。硬约束：禁止调用 db_ops.py、禁止 ops.* / db_ops.py（run_all.* 已无入库 Action）、禁止任何入库或回退动作、禁止执行 ledger-sync / log-sync（人工运维命令，写动作均需 --confirm I_KNOW；_run_daily.py 已无 import/restore 子命令）。生成期约束：出题时就按住「每点 ≥4 题、难度 40/40/20 ±15pp」，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例。
+边界：只产出 JSON + 追加台账/日志；不执行 import_content、不跑 --dry-run、不连数据库、不跑 alembic、不改已有文件、不读写其他学科文件；无可新增内容时台账记「无新增：原因」。硬约束：禁止调用 db_ops.py、禁止 ops.* / db_ops.py（run_all.* 已无入库 Action）、禁止任何入库或回退动作、禁止执行 ledger-sync / log-sync（人工运维命令，写动作均需 --confirm I_KNOW；_run_daily.py 已无 import/restore 子命令）。生成期约束：出题时就按住「每点 ≥4 题、难度 40/40/20 ±15pp」，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例。结构约束：本年级知识点名唯一且不与库内既有名重复（同名会让 import_content 抛 ValueError 中止整册）；section 只用本册真实章节名、禁止「样章·…」演示分组；point 的 parent 必须指向本文件已声明的 section、不得留空。
 ```
 
 ## 7. 生物7-8上每日教研
@@ -108,7 +120,7 @@ $PY='D:\ai\prj\trae\HuaWei\AiLearning\backend\.venv\Scripts\python.exe'; $RUN='D
 固定：subject=biology；生物；version=人教版；semester=first；grades=7,8；初中生物 7-8 开设，9 年级不开设；大纲 baseline\_outline_biology_first_latest.md 中本年级那一节（单元→章→节三级）。
 学科要求：概念题与识图题不依赖图片，用文字描述结构；探究题写清变量控制与对照；生物名词用规范全称，首次出现可附简称；多选解析逐项写 A/B/C/D 与 ✓/✗。
 开工：& $PY $RUN plan --subject biology --shift <班次> --date <BATCH_DATE> --json → idle 则只追加 idle_log_line 并结束；否则 lock acquire → 对 todos 逐年级 context → write_to_file 生成 JSON → validate → commit → finish。
-边界：只产出 JSON + 追加台账/日志；不执行 import_content、不跑 --dry-run、不连数据库、不跑 alembic、不改已有文件、不读写其他学科文件；无可新增内容时台账记「无新增：原因」。硬约束：禁止调用 db_ops.py、禁止 ops.* / db_ops.py（run_all.* 已无入库 Action）、禁止任何入库或回退动作、禁止执行 ledger-sync / log-sync（人工运维命令，写动作均需 --confirm I_KNOW；_run_daily.py 已无 import/restore 子命令）。生成期约束：出题时就按住「每点 ≥4 题、难度 40/40/20 ±15pp」，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例。
+边界：只产出 JSON + 追加台账/日志；不执行 import_content、不跑 --dry-run、不连数据库、不跑 alembic、不改已有文件、不读写其他学科文件；无可新增内容时台账记「无新增：原因」。硬约束：禁止调用 db_ops.py、禁止 ops.* / db_ops.py（run_all.* 已无入库 Action）、禁止任何入库或回退动作、禁止执行 ledger-sync / log-sync（人工运维命令，写动作均需 --confirm I_KNOW；_run_daily.py 已无 import/restore 子命令）。生成期约束：出题时就按住「每点 ≥4 题、难度 40/40/20 ±15pp」，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例。结构约束：本年级知识点名唯一且不与库内既有名重复（同名会让 import_content 抛 ValueError 中止整册）；section 只用本册真实章节名、禁止「样章·…」演示分组；point 的 parent 必须指向本文件已声明的 section、不得留空。
 ```
 
 ## 8. 历史7-9上每日教研
@@ -120,7 +132,7 @@ $PY='D:\ai\prj\trae\HuaWei\AiLearning\backend\.venv\Scripts\python.exe'; $RUN='D
 固定：subject=history；历史；version=部编版；semester=first；grades=7,8,9；大纲 baseline\_outline_history_first_latest.md 中本年级那一节。
 学科要求：时间、人物、事件、影响四要素准确；材料题材料自包含（引用原文 ≤150 字）；不得编造史料原文、年代或人物言论；评价只用主流教材口径，不做争议性引申。
 开工：& $PY $RUN plan --subject history --shift <班次> --date <BATCH_DATE> --json → idle 则只追加 idle_log_line 并结束；否则 lock acquire → 对 todos 逐年级 context → write_to_file 生成 JSON → validate → commit → finish。
-边界：只产出 JSON + 追加台账/日志；不执行 import_content、不跑 --dry-run、不连数据库、不跑 alembic、不改已有文件、不读写其他学科文件；无可新增内容时台账记「无新增：原因」。硬约束：禁止调用 db_ops.py、禁止 ops.* / db_ops.py（run_all.* 已无入库 Action）、禁止任何入库或回退动作、禁止执行 ledger-sync / log-sync（人工运维命令，写动作均需 --confirm I_KNOW；_run_daily.py 已无 import/restore 子命令）。生成期约束：出题时就按住「每点 ≥4 题、难度 40/40/20 ±15pp」，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例。
+边界：只产出 JSON + 追加台账/日志；不执行 import_content、不跑 --dry-run、不连数据库、不跑 alembic、不改已有文件、不读写其他学科文件；无可新增内容时台账记「无新增：原因」。硬约束：禁止调用 db_ops.py、禁止 ops.* / db_ops.py（run_all.* 已无入库 Action）、禁止任何入库或回退动作、禁止执行 ledger-sync / log-sync（人工运维命令，写动作均需 --confirm I_KNOW；_run_daily.py 已无 import/restore 子命令）。生成期约束：出题时就按住「每点 ≥4 题、难度 40/40/20 ±15pp」，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例。结构约束：本年级知识点名唯一且不与库内既有名重复（同名会让 import_content 抛 ValueError 中止整册）；section 只用本册真实章节名、禁止「样章·…」演示分组；point 的 parent 必须指向本文件已声明的 section、不得留空。
 ```
 
 ## 9. 地理7-8上每日教研
@@ -132,7 +144,7 @@ $PY='D:\ai\prj\trae\HuaWei\AiLearning\backend\.venv\Scripts\python.exe'; $RUN='D
 固定：subject=geography；地理；version=湘教版；semester=first；grades=7,8；大纲 baseline\_outline_geography_first_latest.md 中本年级那一节（章→节两级、无单元层）；高中地理 10-12「人教版」属另一条任务，不得越界。
 学科要求：不依赖地图/景观图，经纬度、地形、气候信息用文字写进题干；可用深圳本地素材（气候、海岸线、台风、红树林）；数据必须真实可核验，拿不准不写具体数字。
 开工：& $PY $RUN plan --subject geography --shift <班次> --date <BATCH_DATE> --json → idle 则只追加 idle_log_line 并结束；否则 lock acquire → 对 todos 逐年级 context → write_to_file 生成 JSON → validate → commit → finish。
-边界：只产出 JSON + 追加台账/日志；不执行 import_content、不跑 --dry-run、不连数据库、不跑 alembic、不改已有文件、不读写其他学科文件；无可新增内容时台账记「无新增：原因」。硬约束：禁止调用 db_ops.py、禁止 ops.* / db_ops.py（run_all.* 已无入库 Action）、禁止任何入库或回退动作、禁止执行 ledger-sync / log-sync（人工运维命令，写动作均需 --confirm I_KNOW；_run_daily.py 已无 import/restore 子命令）。生成期约束：出题时就按住「每点 ≥4 题、难度 40/40/20 ±15pp」，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例。
+边界：只产出 JSON + 追加台账/日志；不执行 import_content、不跑 --dry-run、不连数据库、不跑 alembic、不改已有文件、不读写其他学科文件；无可新增内容时台账记「无新增：原因」。硬约束：禁止调用 db_ops.py、禁止 ops.* / db_ops.py（run_all.* 已无入库 Action）、禁止任何入库或回退动作、禁止执行 ledger-sync / log-sync（人工运维命令，写动作均需 --confirm I_KNOW；_run_daily.py 已无 import/restore 子命令）。生成期约束：出题时就按住「每点 ≥4 题、难度 40/40/20 ±15pp」，分布不达标只能补题或换题，禁止事后批量调整已有题的 difficulty 凑比例。结构约束：本年级知识点名唯一且不与库内既有名重复（同名会让 import_content 抛 ValueError 中止整册）；section 只用本册真实章节名、禁止「样章·…」演示分组；point 的 parent 必须指向本文件已声明的 section、不得留空。
 ```
 
 ---

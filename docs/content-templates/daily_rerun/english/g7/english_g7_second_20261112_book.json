@@ -1,0 +1,2222 @@
+{
+  "subject": "english",
+  "grade": 7,
+  "version": "牛津深圳版",
+  "semester": "second",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "Unit 1 Music",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "Music 音乐词汇",
+      "parent": "Unit 1 Music",
+      "order_index": 1,
+      "explanation": "pop, rock, classical, jazz 表示音乐类型；piano, guitar, violin 是乐器。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Music 表达喜好与理由",
+      "parent": "Unit 1 Music",
+      "order_index": 2,
+      "explanation": "用 like / enjoy / prefer 表达喜好，用 because 说明理由。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Music 一般过去时描述经历",
+      "parent": "Unit 1 Music",
+      "order_index": 3,
+      "explanation": "谈论过去的音乐活动要用一般过去时。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Music 音乐的作用与表达",
+      "parent": "Unit 1 Music",
+      "order_index": 4,
+      "explanation": "用英语谈论音乐带来的感受与作用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 2 Language and communication",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "Language 交流方式词汇",
+      "parent": "Unit 2 Language and communication",
+      "order_index": 1,
+      "explanation": "spoken, written, gesture, sign, body language 表示交流方式。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Language 礼貌请求与回应",
+      "parent": "Unit 2 Language and communication",
+      "order_index": 2,
+      "explanation": "用 Could you …? / Would you mind …? 礼貌请求。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Language 宾语从句与间接引语",
+      "parent": "Unit 2 Language and communication",
+      "order_index": 3,
+      "explanation": "转述别人的话要注意时态与人称的变化。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Language 跨文化交流",
+      "parent": "Unit 2 Language and communication",
+      "order_index": 4,
+      "explanation": "了解不同文化中的交流习惯差异，避免误解。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 3 A helping hand",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "Helping hand 帮助相关词汇",
+      "parent": "Unit 3 A helping hand",
+      "order_index": 1,
+      "explanation": "volunteer, donate, support, raise money 等词与助人相关。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Helping hand 提供与请求帮助",
+      "parent": "Unit 3 A helping hand",
+      "order_index": 2,
+      "explanation": "用 Can I help you? / What can I do for you? 提供帮助，用 I need help with … 请求帮助。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Helping hand 志愿活动的表达",
+      "parent": "Unit 3 A helping hand",
+      "order_index": 3,
+      "explanation": "用过去时和现在完成时描述参加志愿活动的经历。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Helping hand 助人的意义",
+      "parent": "Unit 3 A helping hand",
+      "order_index": 4,
+      "explanation": "用英语表达帮助他人的价值与感受。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 4 Honesty",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "Honesty 诚实相关词汇",
+      "parent": "Unit 4 Honesty",
+      "order_index": 1,
+      "explanation": "honest, truth, trust, lie, cheat 等词与诚实主题相关。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Honesty 条件句表达后果",
+      "parent": "Unit 4 Honesty",
+      "order_index": 2,
+      "explanation": "用 if 引导的条件句表达行为与后果的关系。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Honesty 情境判断与表达",
+      "parent": "Unit 4 Honesty",
+      "order_index": 3,
+      "explanation": "在具体情境中判断诚实的做法并说明理由。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Honesty 与信任的关系",
+      "parent": "Unit 4 Honesty",
+      "order_index": 4,
+      "explanation": "诚实能建立信任，失信会破坏关系。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 5 Wild animals",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "Wild animals 动物词汇与特征",
+      "parent": "Unit 5 Wild animals",
+      "order_index": 1,
+      "explanation": "掌握常见野生动物名称及描述特征的形容词。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Wild animals 保护与濒危原因",
+      "parent": "Unit 5 Wild animals",
+      "order_index": 2,
+      "explanation": "用被动语态和原因表达谈论动物面临的威胁。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Wild animals 提出保护建议",
+      "parent": "Unit 5 Wild animals",
+      "order_index": 3,
+      "explanation": "用 should / shouldn't 提出保护动物的建议。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Wild animals 说明与介绍",
+      "parent": "Unit 5 Wild animals",
+      "order_index": 4,
+      "explanation": "用一般现在时介绍一种动物的习性。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 6 Trees",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "Trees 树木的结构与词汇",
+      "parent": "Unit 6 Trees",
+      "order_index": 1,
+      "explanation": "root, trunk, branch, leaf 是树的组成部分。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Trees 树木的作用",
+      "parent": "Unit 6 Trees",
+      "order_index": 2,
+      "explanation": "树能提供氧气、遮阳、保持水土，也是许多动物的家。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Trees 保护树木的表达",
+      "parent": "Unit 6 Trees",
+      "order_index": 3,
+      "explanation": "用祈使句与情态动词表达保护树木的做法。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Trees 描述与比较",
+      "parent": "Unit 6 Trees",
+      "order_index": 4,
+      "explanation": "用比较级描述树木之间的差异。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "Unit 1 Music",
+      "order_index": 1,
+      "summary": "音乐类型、乐器与表达喜好。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Which one is a musical instrument?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "guitar 吉他属乐器。",
+          "difficulty": 2,
+          "knowledge_point": "Music 音乐词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "guitar",
+            "painting",
+            "novel",
+            "poster"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: She plays the ___（钢琴）very well.",
+          "answer": {
+            "value": "piano"
+          },
+          "analysis": "piano 是钢琴。",
+          "difficulty": 2,
+          "knowledge_point": "Music 音乐词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「classical music」 means 古典音乐。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "classical music 是古典音乐。",
+          "difficulty": 3,
+          "knowledge_point": "Music 音乐词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which word is a kind of music?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "jazz 爵士乐属音乐类型。",
+          "difficulty": 3,
+          "knowledge_point": "Music 音乐词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "jazz",
+            "violin",
+            "drum",
+            "concert"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Name two kinds of music you know.",
+          "answer": {
+            "value": "示例：pop music and classical music"
+          },
+          "analysis": "评分要点：两个都是音乐类型。",
+          "difficulty": 3,
+          "knowledge_point": "Music 音乐词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "I ___ listening to pop music.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "主语 I 后用 enjoy。",
+          "difficulty": 2,
+          "knowledge_point": "Music 表达喜好与理由",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "enjoy",
+            "enjoys",
+            "enjoying",
+            "to enjoy"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: I like jazz ___（因为）it is relaxing.",
+          "answer": {
+            "value": "because"
+          },
+          "analysis": "表示原因用 because。",
+          "difficulty": 2,
+          "knowledge_point": "Music 表达喜好与理由",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「She prefers rock music.」 means 她更喜欢摇滚乐。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "prefer 表示更喜欢。",
+          "difficulty": 3,
+          "knowledge_point": "Music 表达喜好与理由",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which sentence is correct?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "第三人称单数用 enjoys，后接 doing。",
+          "difficulty": 3,
+          "knowledge_point": "Music 表达喜好与理由",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "He enjoys playing the violin.",
+            "He enjoy playing the violin.",
+            "He enjoys play the violin.",
+            "He is enjoy playing the violin."
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Say what kind of music you like and why.",
+          "answer": {
+            "value": "示例：I like pop music because the songs are easy to sing along with."
+          },
+          "analysis": "评分要点：喜好 + because 理由。",
+          "difficulty": 3,
+          "knowledge_point": "Music 表达喜好与理由",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "I ___ to a concert last night.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "last night 提示过去，用 went。",
+          "difficulty": 3,
+          "knowledge_point": "Music 一般过去时描述经历",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "went",
+            "go",
+            "goes",
+            "going"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: They ___（听）to music for two hours yesterday.",
+          "answer": {
+            "value": "listened"
+          },
+          "analysis": "yesterday 提示过去时。",
+          "difficulty": 3,
+          "knowledge_point": "Music 一般过去时描述经历",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「I have seen the band last week.」 is correct.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "last week 是过去时间，应与一般过去时连用。",
+          "difficulty": 4,
+          "knowledge_point": "Music 一般过去时描述经历",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which is a past time expression?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "yesterday 表示过去时间。",
+          "difficulty": 2,
+          "knowledge_point": "Music 一般过去时描述经历",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "yesterday",
+            "tomorrow",
+            "now",
+            "next week"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write one sentence about a concert you went to.",
+          "answer": {
+            "value": "示例：Last month I went to a concert with my father and we enjoyed the violin solo."
+          },
+          "analysis": "评分要点：过去时正确 + 内容完整。",
+          "difficulty": 4,
+          "knowledge_point": "Music 一般过去时描述经历",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Music can help us ___",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "音乐能让人放松。",
+          "difficulty": 2,
+          "knowledge_point": "Music 音乐的作用与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "relax",
+            "forget eating",
+            "break rules",
+            "waste time"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: Listening to soft music makes me feel ___（平静的）.",
+          "answer": {
+            "value": "calm"
+          },
+          "analysis": "calm 表示平静。",
+          "difficulty": 3,
+          "knowledge_point": "Music 音乐的作用与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Different people may like different kinds of music.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "喜好因人而异。",
+          "difficulty": 2,
+          "knowledge_point": "Music 音乐的作用与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which can music do for people?",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；D ✓；C ✗ 音乐不能改变身高。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "Music 音乐的作用与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "help them relax",
+            "bring people together",
+            "make them taller",
+            "cheer them up"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write two sentences about how music helps you.",
+          "answer": {
+            "value": "示例：When I am tired, I listen to light music to relax. When I feel sad, a cheerful song can cheer me up."
+          },
+          "analysis": "评分要点：两句都具体。",
+          "difficulty": 4,
+          "knowledge_point": "Music 音乐的作用与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 2 Language and communication",
+      "order_index": 2,
+      "summary": "语言与交流方式，包括肢体语言与礼貌表达。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Which is a way of communicating without words?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "肢体语言可不用词语交流。",
+          "difficulty": 2,
+          "knowledge_point": "Language 交流方式词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "body language",
+            "spelling",
+            "grammar",
+            "dictionary"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: He gave me a ___（手势）to come closer.",
+          "answer": {
+            "value": "gesture"
+          },
+          "analysis": "gesture 是手势。",
+          "difficulty": 3,
+          "knowledge_point": "Language 交流方式词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「sign language」 is used by some deaf people.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "手语供听障人士使用。",
+          "difficulty": 3,
+          "knowledge_point": "Language 交流方式词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which is written communication?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "发邮件属书面交流。",
+          "difficulty": 3,
+          "knowledge_point": "Language 交流方式词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "sending an email",
+            "nodding your head",
+            "waving your hand",
+            "smiling"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Name two ways people communicate.",
+          "answer": {
+            "value": "示例：speaking and writing; also body language and gestures"
+          },
+          "analysis": "评分要点：两种方式清楚。",
+          "difficulty": 3,
+          "knowledge_point": "Language 交流方式词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "___ you please close the window?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "礼貌请求用 Could you please …。",
+          "difficulty": 2,
+          "knowledge_point": "Language 礼貌请求与回应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Could",
+            "Do",
+            "Are",
+            "Have"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: Would you mind ___（重复）that, please?",
+          "answer": {
+            "value": "repeating"
+          },
+          "analysis": "mind 后接动词 ing 形式。",
+          "difficulty": 4,
+          "knowledge_point": "Language 礼貌请求与回应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「Give me the book.」 sounds more polite than「Could you pass me the book?」",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "后者更礼貌。",
+          "difficulty": 3,
+          "knowledge_point": "Language 礼貌请求与回应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which is the most polite request?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "加 please 与 could 的请求最礼貌。",
+          "difficulty": 3,
+          "knowledge_point": "Language 礼貌请求与回应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Could you help me, please?",
+            "Help me now.",
+            "You must help me.",
+            "Help!"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Make a polite request to a classmate.",
+          "answer": {
+            "value": "示例：Could you please lend me your dictionary for a minute?"
+          },
+          "analysis": "评分要点：句式礼貌 + 内容清楚。",
+          "difficulty": 3,
+          "knowledge_point": "Language 礼貌请求与回应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "He said, 「I am busy.」 He said that he ___ busy.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "主句为过去时，从句时态后移为 was。",
+          "difficulty": 4,
+          "knowledge_point": "Language 宾语从句与间接引语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "was",
+            "is",
+            "were",
+            "be"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: She told me she ___（会）come the next day.",
+          "answer": {
+            "value": "would"
+          },
+          "analysis": "转述将来的事用 would。",
+          "difficulty": 4,
+          "knowledge_point": "Language 宾语从句与间接引语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "转述时人称要根据说话人调整。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "人称需相应变化。",
+          "difficulty": 3,
+          "knowledge_point": "Language 宾语从句与间接引语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which is correct?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "宾语从句用陈述语序。",
+          "difficulty": 4,
+          "knowledge_point": "Language 宾语从句与间接引语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "She asked me where I lived.",
+            "She asked me where did I live.",
+            "She asked me where I live?",
+            "She asked me where do I live."
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Report this sentence: 「I will call you tomorrow,」 she said.",
+          "answer": {
+            "value": "示例：She said she would call me the next day."
+          },
+          "analysis": "评分要点：时态与人称转换正确。",
+          "difficulty": 5,
+          "knowledge_point": "Language 宾语从句与间接引语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "In some countries, looking at someone's eyes shows ___",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "许多文化中目光交流表示尊重。",
+          "difficulty": 3,
+          "knowledge_point": "Language 跨文化交流",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "respect",
+            "anger",
+            "boredom",
+            "fear"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: Body language may mean different things in different ___（文化）.",
+          "answer": {
+            "value": "cultures"
+          },
+          "analysis": "不同文化中含义不同。",
+          "difficulty": 3,
+          "knowledge_point": "Language 跨文化交流",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "A gesture that is polite in one country may be rude in another.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "手势含义因文化而异。",
+          "difficulty": 3,
+          "knowledge_point": "Language 跨文化交流",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Good ways to avoid misunderstanding include",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；D ✓；C ✗ 嘲笑差异会造成误会。所以选 A、B、D。",
+          "difficulty": 4,
+          "knowledge_point": "Language 跨文化交流",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "asking politely",
+            "learning about local customs",
+            "laughing at differences",
+            "watching body language"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write one tip for communicating with people from other cultures.",
+          "answer": {
+            "value": "示例：Speak slowly and clearly, and ask politely when you are not sure what a gesture means."
+          },
+          "analysis": "评分要点：建议可行。",
+          "difficulty": 4,
+          "knowledge_point": "Language 跨文化交流",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 3 A helping hand",
+      "order_index": 3,
+      "summary": "帮助他人、志愿服务与请求帮助的表达。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "A person who works without pay to help others is a ___",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "volunteer 志愿者。",
+          "difficulty": 2,
+          "knowledge_point": "Helping hand 帮助相关词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "volunteer",
+            "visitor",
+            "customer",
+            "stranger"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: They ___（捐）books to the village school.",
+          "answer": {
+            "value": "donated"
+          },
+          "analysis": "donate 表示捐赠。",
+          "difficulty": 3,
+          "knowledge_point": "Helping hand 帮助相关词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「raise money」 means 筹钱。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "raise money 是筹款。",
+          "difficulty": 3,
+          "knowledge_point": "Helping hand 帮助相关词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which action shows a helping hand?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "帮老人提东西属助人行为。",
+          "difficulty": 2,
+          "knowledge_point": "Helping hand 帮助相关词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "carrying bags for an old man",
+            "laughing at a fallen boy",
+            "taking others' seats",
+            "ignoring a lost child"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Name two things volunteers can do.",
+          "answer": {
+            "value": "示例：help clean the park and teach children in a village school"
+          },
+          "analysis": "评分要点：两项具体。",
+          "difficulty": 3,
+          "knowledge_point": "Helping hand 帮助相关词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "— Can I help you? — ___",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "被问是否需要帮助时，接受就说明需要什么。",
+          "difficulty": 3,
+          "knowledge_point": "Helping hand 提供与请求帮助",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Yes, please. I need a hand.",
+            "Yes, I can.",
+            "No, I am help.",
+            "I am fine, thanks for asking."
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: I need help ___（做）my homework.",
+          "answer": {
+            "value": "with"
+          },
+          "analysis": "need help with sth 是固定搭配。",
+          "difficulty": 3,
+          "knowledge_point": "Helping hand 提供与请求帮助",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Offering help politely makes people feel comfortable.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "礼貌提供帮助让人舒服。",
+          "difficulty": 3,
+          "knowledge_point": "Helping hand 提供与请求帮助",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which is a polite offer of help?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "Would you like a hand 是礼貌提议。",
+          "difficulty": 3,
+          "knowledge_point": "Helping hand 提供与请求帮助",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Would you like a hand with that?",
+            "You should do it yourself.",
+            "Give it to me.",
+            "Why are you so slow?"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Offer help to a friend who is carrying heavy boxes.",
+          "answer": {
+            "value": "示例：Those boxes look heavy. Would you like a hand?"
+          },
+          "analysis": "评分要点：礼貌 + 具体。",
+          "difficulty": 3,
+          "knowledge_point": "Helping hand 提供与请求帮助",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "I ___ in a charity run last Sunday.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "last Sunday 用一般过去时 took part。",
+          "difficulty": 3,
+          "knowledge_point": "Helping hand 志愿活动的表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "took part",
+            "take part",
+            "taking part",
+            "have taken part in last Sunday"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: We have ___（已经）raised 500 yuan for the children.",
+          "answer": {
+            "value": "already"
+          },
+          "analysis": "现在完成时常与 already 连用。",
+          "difficulty": 4,
+          "knowledge_point": "Helping hand 志愿活动的表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「I have joined the club two years ago.」 is correct.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "ago 是过去时间标志，应用一般过去时。",
+          "difficulty": 4,
+          "knowledge_point": "Helping hand 志愿活动的表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which sentence uses the present perfect correctly?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "三次经历可用现在完成时。",
+          "difficulty": 4,
+          "knowledge_point": "Helping hand 志愿活动的表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "I have helped at the food bank three times.",
+            "I have helped at the food bank last week.",
+            "I helped at the food bank since 2020.",
+            "I have help at the food bank."
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Describe a volunteer activity you have done.",
+          "answer": {
+            "value": "示例：I have helped at the school library twice. I put books back on the shelves and helped younger students find stories."
+          },
+          "analysis": "评分要点：时态正确 + 内容具体。",
+          "difficulty": 4,
+          "knowledge_point": "Helping hand 志愿活动的表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Helping others can make us feel ___",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "助人带来正面感受。",
+          "difficulty": 2,
+          "knowledge_point": "Helping hand 助人的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "good",
+            "angry",
+            "tired of people",
+            "proud of nothing"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: A small act of kindness can make a big ___（不同）.",
+          "answer": {
+            "value": "difference"
+          },
+          "analysis": "make a difference 是常用搭配。",
+          "difficulty": 3,
+          "knowledge_point": "Helping hand 助人的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Only adults can help others.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "学生同样可以帮助他人。",
+          "difficulty": 3,
+          "knowledge_point": "Helping hand 助人的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which are good reasons to help others?",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；D ✓；C ✗ 助人不应为了得到所有人夸奖。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "Helping hand 助人的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "it makes life better for someone",
+            "we learn new skills",
+            "we get praise from everyone",
+            "it builds a kinder community"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write two sentences about why helping others matters.",
+          "answer": {
+            "value": "示例：Helping others makes their day easier. It also teaches us to care about people around us."
+          },
+          "analysis": "评分要点：两句有内容。",
+          "difficulty": 4,
+          "knowledge_point": "Helping hand 助人的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 4 Honesty",
+      "order_index": 4,
+      "summary": "诚实守信的价值与相关表达。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "A person who always tells the truth is ___",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "honest 表示诚实。",
+          "difficulty": 2,
+          "knowledge_point": "Honesty 诚实相关词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "honest",
+            "lazy",
+            "rude",
+            "noisy"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: Please tell me the ___（真相）.",
+          "answer": {
+            "value": "truth"
+          },
+          "analysis": "truth 是真相。",
+          "difficulty": 2,
+          "knowledge_point": "Honesty 诚实相关词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「cheat in a test」 is a dishonest act.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "考试作弊是不诚实行为。",
+          "difficulty": 3,
+          "knowledge_point": "Honesty 诚实相关词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which word means the opposite of「honest」?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "dishonest 是 honest 的反义词。",
+          "difficulty": 3,
+          "knowledge_point": "Honesty 诚实相关词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "dishonest",
+            "careful",
+            "kind",
+            "brave"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Explain what「trust」 means in your own words.",
+          "answer": {
+            "value": "示例：Trust means believing that someone will do what he or she says."
+          },
+          "analysis": "评分要点：解释清楚。",
+          "difficulty": 4,
+          "knowledge_point": "Honesty 诚实相关词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "If you lie, people ___ trust you.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "if 从句用一般现在时，主句用 will。",
+          "difficulty": 3,
+          "knowledge_point": "Honesty 条件句表达后果",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "will not",
+            "not",
+            "will",
+            "do not will"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: If you tell the truth, you ___（会）feel better.",
+          "answer": {
+            "value": "will"
+          },
+          "analysis": "主句用 will 表示将来结果。",
+          "difficulty": 3,
+          "knowledge_point": "Honesty 条件句表达后果",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「If it will rain, we will stay home.」 is correct.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "if 从句用一般现在时，应为 If it rains。",
+          "difficulty": 4,
+          "knowledge_point": "Honesty 条件句表达后果",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which condition sentence is correct?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "条件句主将从现。",
+          "difficulty": 4,
+          "knowledge_point": "Honesty 条件句表达后果",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "If he studies hard, he will pass.",
+            "If he will study hard, he passes.",
+            "If he study hard, he will pass.",
+            "If he studied hard, he will pass yesterday."
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write a sentence with if about being honest.",
+          "answer": {
+            "value": "示例：If you are honest with your friends, they will trust you more."
+          },
+          "analysis": "评分要点：主将从现 + 内容合理。",
+          "difficulty": 4,
+          "knowledge_point": "Honesty 条件句表达后果",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "You broke a window by accident. The honest choice is to ___",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "诚实做法是说明事实并道歉。",
+          "difficulty": 3,
+          "knowledge_point": "Honesty 情境判断与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "tell the truth and say sorry",
+            "run away",
+            "blame a friend",
+            "hide the pieces"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: He ___（承认）that he had made a mistake.",
+          "answer": {
+            "value": "admitted"
+          },
+          "analysis": "admit 表示承认。",
+          "difficulty": 4,
+          "knowledge_point": "Honesty 情境判断与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Being honest sometimes takes courage.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "承认错误需要勇气。",
+          "difficulty": 3,
+          "knowledge_point": "Honesty 情境判断与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which acts are honest?",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；D ✓；C ✗ 抄答案是作弊。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "Honesty 情境判断与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "returning money you found",
+            "telling the teacher you forgot homework",
+            "copying a friend's answers",
+            "saying sorry for being late"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Describe a situation where telling the truth was hard but right.",
+          "answer": {
+            "value": "示例：I once lost a library book. I was afraid, but I told the librarian the truth and paid for it. She thanked me for being honest."
+          },
+          "analysis": "评分要点：情境 + 选择 + 理由。",
+          "difficulty": 5,
+          "knowledge_point": "Honesty 情境判断与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "If someone lies often, others will ___",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "常说谎会失去信任。",
+          "difficulty": 2,
+          "knowledge_point": "Honesty 与信任的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "stop trusting him",
+            "like him more",
+            "give him prizes",
+            "forget everything"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: Trust is easy to lose but hard to ___（重建）.",
+          "answer": {
+            "value": "rebuild"
+          },
+          "analysis": "信任失去后难重建。",
+          "difficulty": 4,
+          "knowledge_point": "Honesty 与信任的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "One honest act can help build a good relationship.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "诚实有助建立关系。",
+          "difficulty": 2,
+          "knowledge_point": "Honesty 与信任的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Ways to build trust include",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；D ✓；C ✗ 泄露他人秘密破坏信任。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "Honesty 与信任的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "keeping promises",
+            "telling the truth",
+            "sharing secrets of others",
+            "admitting mistakes"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write two sentences about honesty and trust.",
+          "answer": {
+            "value": "示例：Honest people are trusted by others. If you keep your promises, your friends will believe you."
+          },
+          "analysis": "评分要点：两句相关且语法正确。",
+          "difficulty": 4,
+          "knowledge_point": "Honesty 与信任的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 5 Wild animals",
+      "order_index": 5,
+      "summary": "野生动物、濒危动物与保护。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Which animal is a wild animal?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "tiger 属野生动物。",
+          "difficulty": 2,
+          "knowledge_point": "Wild animals 动物词汇与特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "tiger",
+            "cow",
+            "sheep",
+            "hen"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: Pandas eat ___（竹子）.",
+          "answer": {
+            "value": "bamboo"
+          },
+          "analysis": "熊猫吃竹子。",
+          "difficulty": 3,
+          "knowledge_point": "Wild animals 动物词汇与特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「endangered」 means 濒危的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "endangered 表示濒危。",
+          "difficulty": 3,
+          "knowledge_point": "Wild animals 动物词汇与特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which word describes a dolphin?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "dolphin 常被形容为聪明。",
+          "difficulty": 3,
+          "knowledge_point": "Wild animals 动物词汇与特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "smart",
+            "furry",
+            "winged",
+            "horned"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Name two wild animals and one fact about each.",
+          "answer": {
+            "value": "示例：Tigers are strong hunters. Pandas live mainly on bamboo."
+          },
+          "analysis": "评分要点：两种动物 + 各一事实。",
+          "difficulty": 4,
+          "knowledge_point": "Wild animals 动物词汇与特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Many wild animals ___ by hunting.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "被动语态表示动物「受到威胁」。",
+          "difficulty": 4,
+          "knowledge_point": "Wild animals 保护与濒危原因",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "are endangered",
+            "endanger",
+            "endangering",
+            "is endanger"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: Their homes ___（被破坏）by people cutting down trees.",
+          "answer": {
+            "value": "are destroyed"
+          },
+          "analysis": "被动语态 are destroyed。",
+          "difficulty": 4,
+          "knowledge_point": "Wild animals 保护与濒危原因",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Losing natural habitats is a main threat to wild animals.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "栖息地丧失是主要威胁。",
+          "difficulty": 3,
+          "knowledge_point": "Wild animals 保护与濒危原因",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Reasons some animals are endangered include",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；D ✓；C ✗ 保护不会导致濒危。所以选 A、B、D。",
+          "difficulty": 4,
+          "knowledge_point": "Wild animals 保护与濒危原因",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "habitat loss",
+            "illegal hunting",
+            "too much protection",
+            "pollution"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Give one reason why some animals are in danger.",
+          "answer": {
+            "value": "示例：Some animals are in danger because people cut down forests, so they lose their homes."
+          },
+          "analysis": "评分要点：原因具体。",
+          "difficulty": 4,
+          "knowledge_point": "Wild animals 保护与濒危原因",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "We ___ protect wild animals.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "应当保护野生动物。",
+          "difficulty": 2,
+          "knowledge_point": "Wild animals 提出保护建议",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "should",
+            "shouldn't",
+            "must not",
+            "need not"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: We shouldn't ___（买）products made from wild animals.",
+          "answer": {
+            "value": "buy"
+          },
+          "analysis": "shouldn't 后接动词原形。",
+          "difficulty": 3,
+          "knowledge_point": "Wild animals 提出保护建议",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「We should feed wild animals in the park.」 is a good suggestion.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "随意投喂野生动物不利其健康。",
+          "difficulty": 4,
+          "knowledge_point": "Wild animals 提出保护建议",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which is a good way to help wild animals?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "保护栖息地最有效。",
+          "difficulty": 3,
+          "knowledge_point": "Wild animals 提出保护建议",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "protecting their habitats",
+            "keeping them as pets",
+            "buying ivory products",
+            "feeding them junk food"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write two suggestions about protecting wild animals.",
+          "answer": {
+            "value": "示例：We should protect forests so animals have homes. We shouldn't buy things made from endangered animals."
+          },
+          "analysis": "评分要点：两条建议各用一种句式。",
+          "difficulty": 4,
+          "knowledge_point": "Wild animals 提出保护建议",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Pandas ___ bamboo every day.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "pandas 为复数主语，用 eat。",
+          "difficulty": 2,
+          "knowledge_point": "Wild animals 说明与介绍",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "eat",
+            "eats",
+            "eating",
+            "ate"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: A tiger ___（跑）very fast.",
+          "answer": {
+            "value": "runs"
+          },
+          "analysis": "第三人称单数 run 加 s。",
+          "difficulty": 3,
+          "knowledge_point": "Wild animals 说明与介绍",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "介绍动物习性通常用一般现在时。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "习性描述用一般现在时。",
+          "difficulty": 3,
+          "knowledge_point": "Wild animals 说明与介绍",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "补写：The elephant is the ___（最重的）animal on land.",
+          "answer": {
+            "value": "heaviest"
+          },
+          "analysis": "最高级用 heaviest。",
+          "difficulty": 4,
+          "knowledge_point": "Wild animals 说明与介绍",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write three sentences introducing an animal you like.",
+          "answer": {
+            "value": "示例：The panda is black and white. It lives in the mountains of China. It eats bamboo and sleeps a lot."
+          },
+          "analysis": "评分要点：三句连贯、时态正确。",
+          "difficulty": 4,
+          "knowledge_point": "Wild animals 说明与介绍",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 6 Trees",
+      "order_index": 6,
+      "summary": "树木的作用、结构与保护。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "Which part of a tree is under the ground?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "root 根在地下。",
+          "difficulty": 2,
+          "knowledge_point": "Trees 树木的结构与词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "root",
+            "branch",
+            "leaf",
+            "flower"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: The ___（树干）is the thick main part of a tree.",
+          "answer": {
+            "value": "trunk"
+          },
+          "analysis": "trunk 是树干。",
+          "difficulty": 3,
+          "knowledge_point": "Trees 树木的结构与词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Leaves make food for the tree with sunlight.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "树叶通过光合作用制造养分。",
+          "difficulty": 3,
+          "knowledge_point": "Trees 树木的结构与词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which is the plural form of「leaf」?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "leaf 的复数是 leaves。",
+          "difficulty": 3,
+          "knowledge_point": "Trees 树木的结构与词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "leaves",
+            "leafs",
+            "leafes",
+            "leave"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Name three parts of a tree.",
+          "answer": {
+            "value": "示例：roots, trunk, branches"
+          },
+          "analysis": "评分要点：三部分正确。",
+          "difficulty": 3,
+          "knowledge_point": "Trees 树木的结构与词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Trees give out the gas we need, which is ___",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "树释放氧气。",
+          "difficulty": 3,
+          "knowledge_point": "Trees 树木的作用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "oxygen",
+            "smoke",
+            "steam",
+            "dust"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: Trees help keep the ___（土壤）in place.",
+          "answer": {
+            "value": "soil"
+          },
+          "analysis": "树根固土。",
+          "difficulty": 3,
+          "knowledge_point": "Trees 树木的作用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Trees provide homes for birds and insects.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "树是许多生物的家。",
+          "difficulty": 2,
+          "knowledge_point": "Trees 树木的作用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "What do trees do for us?",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D ✗ 树不制造污染。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "Trees 树木的作用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "give shade",
+            "produce oxygen",
+            "hold soil",
+            "create pollution"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write two sentences about why trees are important.",
+          "answer": {
+            "value": "示例：Trees produce oxygen so we can breathe. They also give shade on hot days."
+          },
+          "analysis": "评分要点：两点作用。",
+          "difficulty": 3,
+          "knowledge_point": "Trees 树木的作用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "___ plant more trees in spring.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "Let's 后接动词原形。",
+          "difficulty": 2,
+          "knowledge_point": "Trees 保护树木的表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Let's",
+            "Let",
+            "We are",
+            "Us"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: We must not ___（砍）down trees without permission.",
+          "answer": {
+            "value": "cut"
+          },
+          "analysis": "must not 后接动词原形。",
+          "difficulty": 3,
+          "knowledge_point": "Trees 保护树木的表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "Using both sides of paper can save trees.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "节约纸张就是保护树木。",
+          "difficulty": 2,
+          "knowledge_point": "Trees 保护树木的表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which action protects trees?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "给树苗浇水是保护行为。",
+          "difficulty": 2,
+          "knowledge_point": "Trees 保护树木的表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "watering young trees",
+            "carving names on trunks",
+            "breaking branches",
+            "picking all leaves"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write one thing you can do to protect trees.",
+          "answer": {
+            "value": "示例：I can use both sides of paper and join tree-planting activities with my class."
+          },
+          "analysis": "评分要点：具体可行。",
+          "difficulty": 3,
+          "knowledge_point": "Trees 保护树木的表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "This tree is ___ than that one.",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "比较两者用 taller。",
+          "difficulty": 3,
+          "knowledge_point": "Trees 描述与比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "taller",
+            "tall",
+            "tallest",
+            "more tall"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Fill in: The pine is the ___（最高）tree in our school.",
+          "answer": {
+            "value": "tallest"
+          },
+          "analysis": "三者以上比较用最高级。",
+          "difficulty": 3,
+          "knowledge_point": "Trees 描述与比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「more taller」 is correct English.",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "比较级不能重复，应为 taller。",
+          "difficulty": 4,
+          "knowledge_point": "Trees 描述与比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which comparison is correct?",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "单音节形容词比较级加 er。",
+          "difficulty": 4,
+          "knowledge_point": "Trees 描述与比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "The old tree is thicker than the young one.",
+            "The old tree is more thick than the young one.",
+            "The old tree is thickest than the young one.",
+            "The old tree is thick than the young one."
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Compare two trees you know.",
+          "answer": {
+            "value": "示例：The tree in our school yard is taller and thicker than the young tree by the gate."
+          },
+          "analysis": "评分要点：比较级正确。",
+          "difficulty": 4,
+          "knowledge_point": "Trees 描述与比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-12T08:33:22+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

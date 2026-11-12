@@ -1,0 +1,397 @@
+{
+  "schema_version": 1,
+  "source": "docs/content-templates/_check_book_gate.py",
+  "review": "docs/content-templates/exports/review_20261110/daily_consolidated-评审_20261110.md §五 P3",
+  "policy_source": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\tasks.json",
+  "validator_status": "ok",
+  "include_quarantined": false,
+  "hard_gates": [
+    "validator_0_errors",
+    "cross_chapter_duplicate_stems_0",
+    "section_shared_questions_0",
+    "cliche_ratio_le_5pct",
+    "same_stem_unique_answer"
+  ],
+  "negative_stems": [
+    "更可取的学习做法",
+    "可以先梳理",
+    "举一个生活中用到",
+    "结合实例分析比单纯背诵",
+    "值得提倡的",
+    "先理解概念再结合实例分析",
+    "知识脉络",
+    "·概念理解",
+    "·认知"
+  ],
+  "totals": {
+    "files": 7,
+    "passed": 7,
+    "failed": 0
+  },
+  "files": [
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\biology\\g7\\biology_g7_second_20261112_book.json",
+      "name": "biology_g7_second_20261112_book.json",
+      "relative": "biology_g7_second_20261112_book.json",
+      "passed": true,
+      "failed_gates": [],
+      "hard": {
+        "validator_0_errors": {
+          "ok": true,
+          "value": 0,
+          "detail": ""
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": true,
+          "value": 0,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": true,
+          "value": 0,
+          "shared_sections": 0
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 180,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "校验器提醒 1 条（不阻断）"
+      ],
+      "stats": {
+        "chapters": 9,
+        "sections": 9,
+        "points": 36,
+        "questions": 180,
+        "cliche_hits": 0,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 0,
+        "warnings": 1,
+        "passed": true
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\chinese\\g7\\chinese_g7_second_20261112_book.json",
+      "name": "chinese_g7_second_20261112_book.json",
+      "relative": "chinese_g7_second_20261112_book.json",
+      "passed": true,
+      "failed_gates": [],
+      "hard": {
+        "validator_0_errors": {
+          "ok": true,
+          "value": 0,
+          "detail": ""
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": true,
+          "value": 0,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": true,
+          "value": 0,
+          "shared_sections": 0
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 120,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "校验器提醒 3 条（不阻断）"
+      ],
+      "stats": {
+        "chapters": 6,
+        "sections": 6,
+        "points": 24,
+        "questions": 120,
+        "cliche_hits": 0,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 0,
+        "warnings": 3,
+        "passed": true
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\english\\g7\\english_g7_second_20261112_book.json",
+      "name": "english_g7_second_20261112_book.json",
+      "relative": "english_g7_second_20261112_book.json",
+      "passed": true,
+      "failed_gates": [],
+      "hard": {
+        "validator_0_errors": {
+          "ok": true,
+          "value": 0,
+          "detail": ""
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": true,
+          "value": 0,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": true,
+          "value": 0,
+          "shared_sections": 0
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 120,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "校验器提醒 2 条（不阻断）"
+      ],
+      "stats": {
+        "chapters": 6,
+        "sections": 6,
+        "points": 24,
+        "questions": 120,
+        "cliche_hits": 0,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 0,
+        "warnings": 2,
+        "passed": true
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\geography\\g7\\geography_g7_second_20261112_book.json",
+      "name": "geography_g7_second_20261112_book.json",
+      "relative": "geography_g7_second_20261112_book.json",
+      "passed": true,
+      "failed_gates": [],
+      "hard": {
+        "validator_0_errors": {
+          "ok": true,
+          "value": 0,
+          "detail": ""
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": true,
+          "value": 0,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": true,
+          "value": 0,
+          "shared_sections": 0
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 60,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "校验器提醒 2 条（不阻断）"
+      ],
+      "stats": {
+        "chapters": 3,
+        "sections": 3,
+        "points": 12,
+        "questions": 60,
+        "cliche_hits": 0,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 0,
+        "warnings": 2,
+        "passed": true
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\history\\g7\\history_g7_second_20261112_book.json",
+      "name": "history_g7_second_20261112_book.json",
+      "relative": "history_g7_second_20261112_book.json",
+      "passed": true,
+      "failed_gates": [],
+      "hard": {
+        "validator_0_errors": {
+          "ok": true,
+          "value": 0,
+          "detail": ""
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": true,
+          "value": 0,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": true,
+          "value": 0,
+          "shared_sections": 0
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 60,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "校验器提醒 4 条（不阻断）"
+      ],
+      "stats": {
+        "chapters": 3,
+        "sections": 3,
+        "points": 12,
+        "questions": 60,
+        "cliche_hits": 0,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 0,
+        "warnings": 4,
+        "passed": true
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\math\\g7\\math_g7_second_20261112_book.json",
+      "name": "math_g7_second_20261112_book.json",
+      "relative": "math_g7_second_20261112_book.json",
+      "passed": true,
+      "failed_gates": [],
+      "hard": {
+        "validator_0_errors": {
+          "ok": true,
+          "value": 0,
+          "detail": ""
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": true,
+          "value": 0,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": true,
+          "value": 0,
+          "shared_sections": 0
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 120,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "校验器提醒 16 条（不阻断）"
+      ],
+      "stats": {
+        "chapters": 6,
+        "sections": 6,
+        "points": 24,
+        "questions": 120,
+        "cliche_hits": 0,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 0,
+        "warnings": 16,
+        "passed": true
+      }
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g7\\politics_g7_second_20261112_book.json",
+      "name": "politics_g7_second_20261112_book.json",
+      "relative": "politics_g7_second_20261112_book.json",
+      "passed": true,
+      "failed_gates": [],
+      "hard": {
+        "validator_0_errors": {
+          "ok": true,
+          "value": 0,
+          "detail": ""
+        },
+        "cross_chapter_duplicate_stems_0": {
+          "ok": true,
+          "value": 0,
+          "same_chapter_duplicates_warn": 0
+        },
+        "section_shared_questions_0": {
+          "ok": true,
+          "value": 0,
+          "shared_sections": 0
+        },
+        "cliche_ratio_le_5pct": {
+          "ok": true,
+          "value": 0.0,
+          "hits": 0,
+          "questions": 80,
+          "max": 0.05
+        },
+        "same_stem_unique_answer": {
+          "ok": true,
+          "value": 0
+        }
+      },
+      "warnings": [
+        "校验器提醒 1 条（不阻断）"
+      ],
+      "stats": {
+        "chapters": 4,
+        "sections": 4,
+        "points": 16,
+        "questions": 80,
+        "cliche_hits": 0,
+        "unresolved_kp": 0
+      },
+      "validator": {
+        "status": "ok",
+        "errors": 0,
+        "warnings": 1,
+        "passed": true
+      }
+    }
+  ]
+}

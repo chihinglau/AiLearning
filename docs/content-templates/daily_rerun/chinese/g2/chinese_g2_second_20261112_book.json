@@ -1,0 +1,2882 @@
+{
+  "subject": "chinese",
+  "grade": 2,
+  "version": "人教版",
+  "semester": "second",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第一单元",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "生字词与读音",
+      "parent": "第一单元",
+      "order_index": 1,
+      "explanation": "本单元要求会认会写春天的常见字词，读准前后鼻音。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "古诗与课文理解",
+      "parent": "第一单元",
+      "order_index": 2,
+      "explanation": "《村居》《咏柳》写春天景色，要读懂画面与情感。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "朗读与想象画面",
+      "parent": "第一单元",
+      "order_index": 3,
+      "explanation": "边读边想，把文字变成画面，读出春天的语气。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "写话：春天来了",
+      "parent": "第一单元",
+      "order_index": 4,
+      "explanation": "按观察顺序写，用上表示颜色、动作的词语。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二单元",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "生字词积累",
+      "parent": "第二单元",
+      "order_index": 1,
+      "explanation": "掌握本单元生字的读音、结构和意思。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "课文内容与情感",
+      "parent": "第二单元",
+      "order_index": 2,
+      "explanation": "《雷锋叔叔，你在哪里》赞颂助人精神；《千人糕》讲劳动合作。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "句子理解与表达",
+      "parent": "第二单元",
+      "order_index": 3,
+      "explanation": "读懂句子的意思，学会用完整的话表达感受。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "写话：我做过的好事",
+      "parent": "第二单元",
+      "order_index": 4,
+      "explanation": "写清时间、做了什么、心情怎样。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第三单元",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "生字与词语",
+      "parent": "第三单元",
+      "order_index": 1,
+      "explanation": "认识与传统节日、美食、汉字有关的字词。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "课文内容与传统节日",
+      "parent": "第三单元",
+      "order_index": 2,
+      "explanation": "了解春节、元宵、端午、中秋等节日的习俗。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "汉字的故事",
+      "parent": "第三单元",
+      "order_index": 3,
+      "explanation": "汉字由图画演变而来，贝字反映了古代用贝壳作货币的历史。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "介绍一种中国美食",
+      "parent": "第三单元",
+      "order_index": 4,
+      "explanation": "按做法和味道介绍，用上表示动作、味道的词。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第四单元",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "生字词与想象",
+      "parent": "第四单元",
+      "order_index": 1,
+      "explanation": "本单元想象丰富，要积累描写色彩和动作的词。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "童话的情节与人物",
+      "parent": "第四单元",
+      "order_index": 2,
+      "explanation": "读童话要理清谁做了什么，结局怎样。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "有感情地朗读",
+      "parent": "第四单元",
+      "order_index": 3,
+      "explanation": "读童话要读出角色的语气和心情。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "写话：编一个童话",
+      "parent": "第四单元",
+      "order_index": 4,
+      "explanation": "有角色、有事情、有结局，可以大胆想象。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第五单元",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "寓言与道理",
+      "parent": "第五单元",
+      "order_index": 1,
+      "explanation": "寓言用短故事讲道理，要读懂寓意。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "换个角度想问题",
+      "parent": "第五单元",
+      "order_index": 2,
+      "explanation": "《画杨桃》说明同一事物从不同角度看结果不同。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "句子与词语理解",
+      "parent": "第五单元",
+      "order_index": 3,
+      "explanation": "联系上下文理解词句，体会人物的想法。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "写话：我遇到的一件事和办法",
+      "parent": "第五单元",
+      "order_index": 4,
+      "explanation": "写清遇到什么困难、想了什么办法、结果如何。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第六单元",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "古诗与生字",
+      "parent": "第六单元",
+      "order_index": 1,
+      "explanation": "《晓出净慈寺送林子方》《绝句》写夏日景色，注意字词读音。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "课文内容与自然知识",
+      "parent": "第六单元",
+      "order_index": 2,
+      "explanation": "《雷雨》写雷雨前后的变化，野外迷路可借助自然辨别方向。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "朗读与词句品味",
+      "parent": "第六单元",
+      "order_index": 3,
+      "explanation": "读描写雷雨的句子，体会用词的准确与生动。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "太空生活与科学想象",
+      "parent": "第六单元",
+      "order_index": 4,
+      "explanation": "了解太空生活的有趣现象，激发科学兴趣。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第七单元",
+      "order_index": 7
+    },
+    {
+      "node_type": "point",
+      "name": "生字词与故事角色",
+      "parent": "第七单元",
+      "order_index": 1,
+      "explanation": "本单元故事主角多要改变，注意积累描写心情的词。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "故事情节与道理",
+      "parent": "第七单元",
+      "order_index": 2,
+      "explanation": "读故事要想清角色遇到什么、怎么改变、结果怎样。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "句式与表达",
+      "parent": "第七单元",
+      "order_index": 3,
+      "explanation": "练习用「因为……所以……」「要是……就……」表达想法。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "写话：我的小改变",
+      "parent": "第七单元",
+      "order_index": 4,
+      "explanation": "写出以前怎样、现在怎样，说明改变的原因。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第八单元",
+      "order_index": 8
+    },
+    {
+      "node_type": "point",
+      "name": "远古景象的词语",
+      "parent": "第八单元",
+      "order_index": 1,
+      "explanation": "本单元充满想象，积累描写远古与神奇景象的词。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "课文内容与神话",
+      "parent": "第八单元",
+      "order_index": 2,
+      "explanation": "《羿射九日》是神话故事，要知道起因、经过、结果。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "朗读与复述",
+      "parent": "第八单元",
+      "order_index": 3,
+      "explanation": "读神话要有气势，复述要按顺序讲清起因经过结果。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "写话：我想象的世界之初",
+      "parent": "第八单元",
+      "order_index": 4,
+      "explanation": "大胆想象，用「从前」「那时候」等词开头。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一单元",
+      "order_index": 1,
+      "summary": "春天主题：古诗二首、找春天、开满鲜花的小路、植树。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「莺」的读音是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「莺」读 yīng，一声。",
+          "difficulty": 2,
+          "knowledge_point": "生字词与读音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "yīng",
+            "yīn",
+            "yíng",
+            "yǐng"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列加点字读音正确的一组是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "柳读 liǔ，脱读 tuō。",
+          "difficulty": 3,
+          "knowledge_point": "生字词与读音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "柳 liǔ、脱 tuō",
+            "柳 liú、脱 tuò",
+            "柳 lǔ、脱 tuō",
+            "柳 liǔ、脱 tuò"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「碧玉妆成一树高」中「妆」的意思是（ ）。",
+          "answer": {
+            "value": "打扮"
+          },
+          "analysis": "妆即装扮、打扮。",
+          "difficulty": 3,
+          "knowledge_point": "生字词与读音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「裁」和「栽」读音相同，意思也相同。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "两字读音相同但意思不同，裁是剪裁，栽是栽种。",
+          "difficulty": 4,
+          "knowledge_point": "生字词与读音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出三个带有「艹」字头的字。",
+          "answer": {
+            "value": "示例：花、草、苗。"
+          },
+          "analysis": "评分要点：三个都是草字头。",
+          "difficulty": 3,
+          "knowledge_point": "生字词与读音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《村居》的作者是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "《村居》为清代高鼎所作。",
+          "difficulty": 3,
+          "knowledge_point": "古诗与课文理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "高鼎",
+            "贺知章",
+            "李白",
+            "杜甫"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「二月春风似剪刀」把春风比作（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "把春风比作剪刀，裁出柳叶。",
+          "difficulty": 2,
+          "knowledge_point": "古诗与课文理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "剪刀",
+            "梳子",
+            "画笔",
+            "丝带"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「草长莺飞二月天」的下一句是「拂堤杨柳醉（ ）」。",
+          "answer": {
+            "value": "春烟"
+          },
+          "analysis": "原句为「拂堤杨柳醉春烟」。",
+          "difficulty": 3,
+          "knowledge_point": "古诗与课文理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《咏柳》主要写夏天的荷花。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "《咏柳》写的是春天的柳树。",
+          "difficulty": 2,
+          "knowledge_point": "古诗与课文理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说《咏柳》中作者是怎样赞美柳树的。",
+          "answer": {
+            "value": "示例：把柳树比作碧玉装扮的美人，把柳条比作丝带，又把春风比作剪刀，赞美春天的创造力。"
+          },
+          "analysis": "评分要点：比喻 + 赞美春天。",
+          "difficulty": 4,
+          "knowledge_point": "古诗与课文理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "读「小草从地下探出头来」时，语气应当是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "写出惊喜之感，读得轻快。",
+          "difficulty": 3,
+          "knowledge_point": "朗读与想象画面",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "轻快、惊喜",
+            "沉重、悲伤",
+            "平淡无起伏",
+            "快速含糊"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「树木吐出点点嫩芽」中的「吐」写出了春天植物（ ）的样子。",
+          "answer": {
+            "value": "生长"
+          },
+          "analysis": "「吐」写出嫩芽冒出的动态。",
+          "difficulty": 3,
+          "knowledge_point": "朗读与想象画面",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "朗读时可以根据句子的意思调整语速和轻重。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "朗读要与内容情感相配。",
+          "difficulty": 2,
+          "knowledge_point": "朗读与想象画面",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "《找春天》中孩子们找到的春天有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D ✗ 雪花不是春天景物。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "朗读与想象画面",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "小草",
+            "野花",
+            "嫩芽",
+            "雪花"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用一两句话说说你看到的春天。",
+          "answer": {
+            "value": "示例：柳条绿了，桃花开了，风里带着泥土的香味，小鸟在树上唱歌。"
+          },
+          "analysis": "评分要点：有具体景物。",
+          "difficulty": 3,
+          "knowledge_point": "朗读与想象画面",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "写春天的景物，下面用词最生动的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "有动作有颜色更生动。",
+          "difficulty": 2,
+          "knowledge_point": "写话：春天来了",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "嫩绿的小草探出头",
+            "小草是草",
+            "有草",
+            "草很多"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "写话时可以用「先……再……最后……」来安排（ ）。",
+          "answer": {
+            "value": "顺序"
+          },
+          "analysis": "表示先后顺序。",
+          "difficulty": 3,
+          "knowledge_point": "写话：春天来了",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "写话只要句子多就好，不必管顺序。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "写话要有清楚顺序。",
+          "difficulty": 3,
+          "knowledge_point": "写话：春天来了",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "补写句子：春风一吹，柳条就（ ）。",
+          "answer": {
+            "value": "示例：轻轻摇摆起来"
+          },
+          "analysis": "评分要点：补出动作即可。",
+          "difficulty": 3,
+          "knowledge_point": "写话：春天来了",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写三句话介绍春天里你最喜欢的一处景物。",
+          "answer": {
+            "value": "示例：我家门前有一棵桃树。春天一到，满树粉红。风一吹，花瓣落在地上像铺了一层花毯。"
+          },
+          "analysis": "评分要点：三句连贯 + 有画面。",
+          "difficulty": 4,
+          "knowledge_point": "写话：春天来了",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第二单元",
+      "order_index": 2,
+      "summary": "关爱主题：雷锋叔叔你在哪里、千人糕、一匹出色的马。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「泞」的读音是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「泥泞」的泞读 nìng。",
+          "difficulty": 3,
+          "knowledge_point": "生字词积累",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "nìng",
+            "níng",
+            "nìn",
+            "lìng"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「糕」字的部首是（ ）。",
+          "answer": {
+            "value": "米"
+          },
+          "analysis": "「糕」是米字旁。",
+          "difficulty": 2,
+          "knowledge_point": "生字词积累",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「寻觅」的「觅」意思是找。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "觅即寻找。",
+          "difficulty": 2,
+          "knowledge_point": "生字词积累",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「荆棘」指的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "荆棘指带刺的小灌木。",
+          "difficulty": 3,
+          "knowledge_point": "生字词积累",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "带刺的灌木",
+            "花朵",
+            "果实",
+            "树根"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「寻找」造一个句子。",
+          "answer": {
+            "value": "示例：小明在教室里寻找丢失的橡皮。"
+          },
+          "analysis": "评分要点：句子完整、用词正确。",
+          "difficulty": 3,
+          "knowledge_point": "生字词积累",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《千人糕》告诉我们（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文讲劳动的合作。",
+          "difficulty": 3,
+          "knowledge_point": "课文内容与情感",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "一块糕要经过很多人的劳动",
+            "糕很容易做",
+            "只有一个人做糕",
+            "糕不需要粮食"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "诗中「雷锋叔叔」象征的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "雷锋象征无私奉献精神。",
+          "difficulty": 3,
+          "knowledge_point": "课文内容与情感",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "乐于助人的精神",
+            "一个普通的名字",
+            "一种食物",
+            "一处风景"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "《千人糕》中做糕需要大米和（ ）（填一样原料）。",
+          "answer": {
+            "value": "糖"
+          },
+          "analysis": "原文提到大米和糖。",
+          "difficulty": 2,
+          "knowledge_point": "课文内容与情感",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "帮助别人后不图回报，是雷锋精神的表现。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "无私奉献是雷锋精神。",
+          "difficulty": 2,
+          "knowledge_point": "课文内容与情感",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说为什么一块普通的糕被称为「千人糕」。",
+          "answer": {
+            "value": "示例：因为从种稻、磨粉、榨糖到运输、制作，要经过许多人的劳动，所以叫千人糕。"
+          },
+          "analysis": "评分要点：多环节多劳动者。",
+          "difficulty": 4,
+          "knowledge_point": "课文内容与情感",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「哪里需要爱心，雷锋叔叔就出现在哪里」意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "强调处处助人。",
+          "difficulty": 3,
+          "knowledge_point": "句子理解与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "雷锋到处帮助人",
+            "雷锋只在一个地方",
+            "雷锋不帮助人",
+            "雷锋在找地方"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「一匹出色的马」在文中指的是（ ）（填一样东西）。",
+          "answer": {
+            "value": "柳枝"
+          },
+          "analysis": "爸爸把柳枝当马给孩子骑。",
+          "difficulty": 4,
+          "knowledge_point": "句子理解与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "读课文时遇到不懂的词，可以联系上下文猜意思。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "联系上下文是常用方法。",
+          "difficulty": 2,
+          "knowledge_point": "句子理解与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "体现关爱的行为有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；D ✓；C ✗ 乱扔垃圾不文明。所以选 A、B、D。",
+          "difficulty": 2,
+          "knowledge_point": "句子理解与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "帮同学捡起文具",
+            "给老人让座",
+            "把垃圾扔在地上",
+            "扶起摔倒的小朋友"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "写一句话夸夸身边爱帮助别人的人。",
+          "answer": {
+            "value": "示例：小红常常帮同学讲解难题，她就像我们班的小雷锋。"
+          },
+          "analysis": "评分要点：有具体事 + 有赞美。",
+          "difficulty": 4,
+          "knowledge_point": "句子理解与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "写一件自己做的好事，应该先写（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先交代时间地点。",
+          "difficulty": 2,
+          "knowledge_point": "写话：我做过的好事",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "什么时候、在哪里",
+            "别人的评价",
+            "自己的姓",
+            "天气以外的猜想"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "写事时要写清楚「谁、做什么、（ ）」。",
+          "answer": {
+            "value": "结果"
+          },
+          "analysis": "写清人物、事情与结果。",
+          "difficulty": 3,
+          "knowledge_point": "写话：我做过的好事",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "写话时可以只写一句话就结束。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "要有完整的过程和感受。",
+          "difficulty": 3,
+          "knowledge_point": "写话：我做过的好事",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "补写：我帮奶奶提菜，奶奶笑着说（ ）。",
+          "answer": {
+            "value": "示例：「谢谢你，好孩子！」"
+          },
+          "analysis": "评分要点：补出人物语言。",
+          "difficulty": 3,
+          "knowledge_point": "写话：我做过的好事",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写三句话说说你帮别人做过的一件事和当时的感受。",
+          "answer": {
+            "value": "示例：上周我帮同桌捡起了掉在地上的铅笔。他说了声谢谢。我心里觉得暖暖的。"
+          },
+          "analysis": "评分要点：事情 + 结果 + 感受。",
+          "difficulty": 4,
+          "knowledge_point": "写话：我做过的好事",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第三单元",
+      "order_index": 3,
+      "summary": "传统文化：神州谣、传统节日、贝的故事、中国美食。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「宵」的读音是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「元宵」的宵读 xiāo。",
+          "difficulty": 2,
+          "knowledge_point": "生字与词语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "xiāo",
+            "xiào",
+            "shāo",
+            "qiāo"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「甲」字的笔顺第一笔是（ ）。",
+          "answer": {
+            "value": "竖"
+          },
+          "analysis": "「甲」先写竖。",
+          "difficulty": 3,
+          "knowledge_point": "生字与词语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「贝」字旁的汉字多与钱财有关。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "贝曾作货币，贝字旁多与财货有关。",
+          "difficulty": 3,
+          "knowledge_point": "生字与词语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「煎」字的部首是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「煎」下部是四点底。",
+          "difficulty": 3,
+          "knowledge_point": "生字与词语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "灬",
+            "前",
+            "刂",
+            "火"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出三个带「贝」字旁的字。",
+          "answer": {
+            "value": "示例：财、货、贵。"
+          },
+          "analysis": "评分要点：三个都对。",
+          "difficulty": 3,
+          "knowledge_point": "生字与词语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "端午节吃的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "端午吃粽子。",
+          "difficulty": 2,
+          "knowledge_point": "课文内容与传统节日",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "粽子",
+            "月饼",
+            "饺子",
+            "汤圆"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "中秋节的传统习俗是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "中秋赏月吃月饼。",
+          "difficulty": 2,
+          "knowledge_point": "课文内容与传统节日",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "赏月吃月饼",
+            "贴春联",
+            "赛龙舟",
+            "登高"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "元宵节是农历正月（ ）日。",
+          "answer": {
+            "value": "十五"
+          },
+          "analysis": "元宵为正月十五。",
+          "difficulty": 3,
+          "knowledge_point": "课文内容与传统节日",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "春节贴春联、放鞭炮是传统习俗。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "春节有贴春联等习俗。",
+          "difficulty": 2,
+          "knowledge_point": "课文内容与传统节日",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说出你家乡一个节日的习俗（写出两点）。",
+          "answer": {
+            "value": "示例：端午节包粽子、看赛龙舟；中秋一家人一起赏月吃月饼。"
+          },
+          "analysis": "评分要点：两点具体习俗。",
+          "difficulty": 3,
+          "knowledge_point": "课文内容与传统节日",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "汉字最初多由（ ）演变而来。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "汉字起源于图画。",
+          "difficulty": 2,
+          "knowledge_point": "汉字的故事",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "图画",
+            "字母",
+            "数字",
+            "音乐"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "古代曾用贝壳作（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "贝壳曾作货币使用。",
+          "difficulty": 3,
+          "knowledge_point": "汉字的故事",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "货币",
+            "食物",
+            "工具",
+            "衣服"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「财、货、贵」都有贝字旁，说明它们与（ ）有关。",
+          "answer": {
+            "value": "钱财"
+          },
+          "analysis": "贝字旁与财货相关。",
+          "difficulty": 3,
+          "knowledge_point": "汉字的故事",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "汉字的字形在漫长历史中发生过变化。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "汉字形体不断演变。",
+          "difficulty": 2,
+          "knowledge_point": "汉字的故事",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说为什么很多带贝字旁的字和钱财有关。",
+          "answer": {
+            "value": "示例：古代用贝壳当钱，所以造字时把贝放在与财货有关的字里，慢慢形成贝字旁表示钱财的规律。"
+          },
+          "analysis": "评分要点：贝曾作货币 + 造字规律。",
+          "difficulty": 4,
+          "knowledge_point": "汉字的故事",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "介绍美食时最应写清的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "做法味道是核心。",
+          "difficulty": 2,
+          "knowledge_point": "介绍一种中国美食",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "做法和味道",
+            "价格",
+            "店名",
+            "座位号"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「炒、煎、蒸、煮」都是表示（ ）的词。",
+          "answer": {
+            "value": "烹饪"
+          },
+          "analysis": "这些是烹饪方式。",
+          "difficulty": 3,
+          "knowledge_point": "介绍一种中国美食",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "介绍美食可以用「先……再……」说清做法。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "顺序词便于说清步骤。",
+          "difficulty": 2,
+          "knowledge_point": "介绍一种中国美食",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "补写：我最爱吃（ ），因为它又香又软。",
+          "answer": {
+            "value": "示例：红烧肉"
+          },
+          "analysis": "评分要点：美食名称 + 理由。",
+          "difficulty": 3,
+          "knowledge_point": "介绍一种中国美食",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用三句话介绍一种你喜欢的中国美食。",
+          "answer": {
+            "value": "示例：我最喜欢饺子。先把面和好擀成皮，再把肉馅包进去。煮熟后蘸上醋，又香又鲜。"
+          },
+          "analysis": "评分要点：做法 + 味道。",
+          "difficulty": 4,
+          "knowledge_point": "介绍一种中国美食",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第四单元",
+      "order_index": 4,
+      "summary": "童话世界：彩色的梦、枫树上的喜鹊、沙滩上的童话、我是一只小虫子。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「葱郁」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "葱郁指草木青翠茂盛。",
+          "difficulty": 3,
+          "knowledge_point": "生字词与想象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "青翠茂盛",
+            "枯黄",
+            "稀疏",
+            "干枯"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「彩色的梦」中「梦」指的是孩子的（ ）。",
+          "answer": {
+            "value": "想象"
+          },
+          "analysis": "梦即想象的世界。",
+          "difficulty": 3,
+          "knowledge_point": "生字词与想象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「叮咛」表示反复地嘱咐。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "叮咛意为再三嘱咐。",
+          "difficulty": 3,
+          "knowledge_point": "生字词与想象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列词语描写颜色的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "碧绿是颜色词。",
+          "difficulty": 2,
+          "knowledge_point": "生字词与想象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "碧绿",
+            "快乐",
+            "飞快",
+            "安静"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出三个描写颜色的词语。",
+          "answer": {
+            "value": "示例：火红、金黄、雪白。"
+          },
+          "analysis": "评分要点：三个都是颜色词。",
+          "difficulty": 2,
+          "knowledge_point": "生字词与想象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《沙滩上的童话》中孩子们在沙滩上（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "孩子们在沙滩上编织故事。",
+          "difficulty": 2,
+          "knowledge_point": "童话的情节与人物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "编童话故事",
+            "游泳",
+            "钓鱼",
+            "睡觉"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "《我是一只小虫子》以（ ）的口吻来写。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "以小虫子第一人称写。",
+          "difficulty": 3,
+          "knowledge_point": "童话的情节与人物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "小虫子",
+            "老师",
+            "大树",
+            "妈妈"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "《枫树上的喜鹊》中「我」喜欢看喜鹊的（ ）。",
+          "answer": {
+            "value": "窝"
+          },
+          "analysis": "文中喜欢看喜鹊的窝和活动。",
+          "difficulty": 3,
+          "knowledge_point": "童话的情节与人物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "童话里常常把动物当作会说话的人物来写。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "拟人是童话常用手法。",
+          "difficulty": 2,
+          "knowledge_point": "童话的情节与人物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说《我是一只小虫子》中小虫子为什么觉得当小虫子也不错。",
+          "answer": {
+            "value": "示例：因为它可以在草叶上睡觉、和露珠做伴，生活自由又有趣。"
+          },
+          "analysis": "评分要点：结合课文细节。",
+          "difficulty": 4,
+          "knowledge_point": "童话的情节与人物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "读小虫子高兴的话时，语气应该是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "高兴处读得轻快。",
+          "difficulty": 2,
+          "knowledge_point": "有感情地朗读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "轻快得意",
+            "低沉悲伤",
+            "生气",
+            "冷淡"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "朗读对话时，要注意读出人物的（ ）（填「语气」）。",
+          "answer": {
+            "value": "语气"
+          },
+          "analysis": "对话要读出语气。",
+          "difficulty": 3,
+          "knowledge_point": "有感情地朗读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "朗读时可以加上适当的表情和动作。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "表情动作有助表达。",
+          "difficulty": 2,
+          "knowledge_point": "有感情地朗读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "朗读前要做的事有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D ✗ 随意快读不利理解。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "有感情地朗读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "读准字音",
+            "读通句子",
+            "想想人物的心情",
+            "随便快读一遍"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "选一句你喜欢的童话句子，说说该用什么语气读。",
+          "answer": {
+            "value": "示例：「我是一只快乐的小虫子！」这句应读得轻快、得意，声音亮一些。"
+          },
+          "analysis": "评分要点：句子 + 语气理由。",
+          "difficulty": 3,
+          "knowledge_point": "有感情地朗读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "编童话时最重要的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "故事完整与想象合理。",
+          "difficulty": 3,
+          "knowledge_point": "写话：编一个童话",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "想象合理、故事完整",
+            "字数多",
+            "用生僻字",
+            "只写对话"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "童话里让动物会说话，这种手法叫（ ）。",
+          "answer": {
+            "value": "拟人"
+          },
+          "analysis": "把物当作人来写是拟人。",
+          "difficulty": 3,
+          "knowledge_point": "写话：编一个童话",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "编故事时角色可以自己创造。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "童话允许创造角色。",
+          "difficulty": 2,
+          "knowledge_point": "写话：编一个童话",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "补写故事开头：一天，森林里的小兔捡到了一支（ ）。",
+          "answer": {
+            "value": "示例：神奇的画笔"
+          },
+          "analysis": "评分要点：接上有想象力的物品。",
+          "difficulty": 3,
+          "knowledge_point": "写话：编一个童话",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "编一个三句话的小童话。",
+          "answer": {
+            "value": "示例：小蚂蚁拾到一颗大西瓜籽。它把籽种在洞口，天天浇水。秋天到了，洞口结出了一个小西瓜，大家一起分着吃。"
+          },
+          "analysis": "评分要点：角色 + 事情 + 结局。",
+          "difficulty": 4,
+          "knowledge_point": "写话：编一个童话",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第五单元",
+      "order_index": 5,
+      "summary": "办法与道理：寓言二则、画杨桃、小马过河。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "《亡羊补牢》告诉我们的道理是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "及时补救为时未晚。",
+          "difficulty": 2,
+          "knowledge_point": "寓言与道理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "出了问题及时补救还不晚",
+            "羊丢了就算了",
+            "圈不用修",
+            "要多多养羊"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "《揠苗助长》中农夫错在（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "急于求成违背规律。",
+          "difficulty": 3,
+          "knowledge_point": "寓言与道理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "违背禾苗生长规律",
+            "浇水太多",
+            "除草太少",
+            "种得太晚"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「亡羊补牢」中「亡」的意思是（ ）。",
+          "answer": {
+            "value": "丢失"
+          },
+          "analysis": "亡在此为丢失。",
+          "difficulty": 3,
+          "knowledge_point": "寓言与道理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "寓言故事一般篇幅短小，含有一个道理。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "寓言特点是以小故事讲道理。",
+          "difficulty": 2,
+          "knowledge_point": "寓言与道理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说《揠苗助长》给你的启示。",
+          "answer": {
+            "value": "示例：做事要按规律来，急于求成反而会把事情弄坏。"
+          },
+          "analysis": "评分要点：按规律 + 反急于求成。",
+          "difficulty": 4,
+          "knowledge_point": "寓言与道理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《画杨桃》中「我」把杨桃画成五角星，是因为（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "角度不同看到的形状不同。",
+          "difficulty": 3,
+          "knowledge_point": "换个角度想问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "从自己的角度看到的就是这样",
+            "画错了",
+            "故意捣乱",
+            "没看清"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "看事物要站在别人的（ ）想一想。",
+          "answer": {
+            "value": "角度"
+          },
+          "analysis": "换位思考要看角度。",
+          "difficulty": 3,
+          "knowledge_point": "换个角度想问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "别人看到的不同，可能因为他站的位置不同。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "位置影响观察结果。",
+          "difficulty": 2,
+          "knowledge_point": "换个角度想问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "遇到与别人看法不同时，正确的做法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；D ✓；C ✗ 直接指责不利沟通。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "换个角度想问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "先问清对方看到了什么",
+            "换到对方位置看一看",
+            "马上指责对方错",
+            "耐心讨论"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说《画杨桃》告诉我们的道理。",
+          "answer": {
+            "value": "示例：同一事物从不同角度看会有不同样子，不能只按自己的看法判断别人对错。"
+          },
+          "analysis": "评分要点：角度不同 + 不轻易否定。",
+          "difficulty": 4,
+          "knowledge_point": "换个角度想问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《小马过河》中老牛说水很浅，松鼠说水很深，原因是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "身材不同感受不同。",
+          "difficulty": 3,
+          "knowledge_point": "句子与词语理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "它们身高不同",
+            "水会变",
+            "它们在说谎",
+            "河水涨落"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「为难」的意思是感到（ ）。",
+          "answer": {
+            "value": "难办"
+          },
+          "analysis": "为难即不知怎么办。",
+          "difficulty": 3,
+          "knowledge_point": "句子与词语理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "小马最后自己试着过了河，发现水不深也不浅。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "亲自尝试得出结论。",
+          "difficulty": 2,
+          "knowledge_point": "句子与词语理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "「光听别人说，自己不动脑筋，是不行的」这句话说明要（ ）（填「动脑」）。",
+          "answer": {
+            "value": "动脑"
+          },
+          "analysis": "强调自己思考。",
+          "difficulty": 3,
+          "knowledge_point": "句子与词语理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说《小马过河》的道理。",
+          "answer": {
+            "value": "示例：别人的经验只能参考，遇到事情要自己动脑思考、亲自尝试，才能找到合适的办法。"
+          },
+          "analysis": "评分要点：参考 + 亲历。",
+          "difficulty": 4,
+          "knowledge_point": "句子与词语理解",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "写「遇到困难」的写话，应该写清（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "三部分齐全才完整。",
+          "difficulty": 3,
+          "knowledge_point": "写话：我遇到的一件事和办法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "困难是什么、怎么办的、结果怎样",
+            "只写困难",
+            "只写结果",
+            "只写心情"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "写话中可以用「后来」「最后」来表示（ ）。",
+          "answer": {
+            "value": "经过"
+          },
+          "analysis": "表示事情经过与结局。",
+          "difficulty": 2,
+          "knowledge_point": "写话：我遇到的一件事和办法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "写话时把自己的想法写进去会更真实。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "加入想法更真实。",
+          "difficulty": 2,
+          "knowledge_point": "写话：我遇到的一件事和办法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "补写：我的作业本找不到了，我先（ ），后来在书包夹层里找到。",
+          "answer": {
+            "value": "示例：把书包里的东西一件件拿出来看"
+          },
+          "analysis": "评分要点：写出具体办法。",
+          "difficulty": 3,
+          "knowledge_point": "写话：我遇到的一件事和办法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写三句话说说你遇到的一件难事和你的办法。",
+          "answer": {
+            "value": "示例：跳绳时我总是绊到脚。我先放慢速度练习。练了一周，就能连着跳二十下了。"
+          },
+          "analysis": "评分要点：困难 + 办法 + 结果。",
+          "difficulty": 4,
+          "knowledge_point": "写话：我遇到的一件事和办法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第六单元",
+      "order_index": 6,
+      "summary": "自然与科学：古诗二首、雷雨、要是你在野外迷了路、太空生活趣事多。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「接天莲叶无穷碧」的下一句是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "原句为「映日荷花别样红」。",
+          "difficulty": 2,
+          "knowledge_point": "古诗与生字",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "映日荷花别样红",
+            "疑是银河落九天",
+            "霜叶红于二月花",
+            "万条垂下绿丝绦"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「毕竟西湖六月中」中「毕竟」的意思是（ ）。",
+          "answer": {
+            "value": "到底"
+          },
+          "analysis": "毕竟即到底、终归。",
+          "difficulty": 3,
+          "knowledge_point": "古诗与生字",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《绝句》中「窗含西岭千秋雪」写的是窗外的雪山。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "写窗外西岭的积雪。",
+          "difficulty": 2,
+          "knowledge_point": "古诗与生字",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「泊」在「门泊东吴万里船」中读（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "泊读 bó，停靠之意。",
+          "difficulty": 3,
+          "knowledge_point": "古诗与生字",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "bó",
+            "pō",
+            "bò",
+            "bāo"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出《晓出净慈寺送林子方》中描写荷花的一句。",
+          "answer": {
+            "value": "示例：接天莲叶无穷碧，映日荷花别样红。"
+          },
+          "analysis": "评分要点：默写正确。",
+          "difficulty": 3,
+          "knowledge_point": "古诗与生字",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "雷雨前常见的现象是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "雷雨前乌云密布。",
+          "difficulty": 2,
+          "knowledge_point": "课文内容与自然知识",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "乌云密布、风大",
+            "天空晴朗无云",
+            "树叶不动",
+            "太阳更亮"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "在野外迷了路，白天可以靠（ ）辨别方向。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "白天靠太阳定方向。",
+          "difficulty": 3,
+          "knowledge_point": "课文内容与自然知识",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "太阳",
+            "月亮",
+            "星星",
+            "风"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "大树枝叶稠密的一面通常是（ ）（填「南」或「北」）。",
+          "answer": {
+            "value": "南"
+          },
+          "analysis": "北半球树叶稠密的一侧多朝南。",
+          "difficulty": 4,
+          "knowledge_point": "课文内容与自然知识",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "北极星可以帮助人在夜间辨别北方。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "北极星指示北方。",
+          "difficulty": 3,
+          "knowledge_point": "课文内容与自然知识",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说出两种在野外辨别方向的办法。",
+          "answer": {
+            "value": "示例：白天看太阳的位置与影子；夜里找北极星；也可观察树干苔藓多的一面（北侧）。"
+          },
+          "analysis": "评分要点：两种办法具体。",
+          "difficulty": 4,
+          "knowledge_point": "课文内容与自然知识",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「满天的乌云，黑沉沉地压下来」中「压」字写出了（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「压」写出低垂沉重。",
+          "difficulty": 3,
+          "knowledge_point": "朗读与词句品味",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "乌云低垂、气势逼人",
+            "风很轻",
+            "天很亮",
+            "云很白"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「蜘蛛从网上垂下来，逃走了」中的「垂」写出了蜘蛛（ ）的样子。",
+          "answer": {
+            "value": "直落"
+          },
+          "analysis": "垂即直直落下。",
+          "difficulty": 3,
+          "knowledge_point": "朗读与词句品味",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "写景时用准动词能让画面更生动。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "动词精准则画面活。",
+          "difficulty": 2,
+          "knowledge_point": "朗读与词句品味",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "描写下雨的词语有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；D ✓；C ✗ 风和日丽不是下雨。所以选 A、B、D。",
+          "difficulty": 2,
+          "knowledge_point": "朗读与词句品味",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "倾盆大雨",
+            "蒙蒙细雨",
+            "风和日丽",
+            "大雨如注"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用一两句话描写下雨前的景象。",
+          "answer": {
+            "value": "示例：天忽然暗下来，风把树叶吹得哗哗响，几只燕子贴着地面飞过。"
+          },
+          "analysis": "评分要点：有变化 + 有细节。",
+          "difficulty": 3,
+          "knowledge_point": "朗读与词句品味",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "航天员在太空中睡觉要（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "失重环境下需固定身体。",
+          "difficulty": 3,
+          "knowledge_point": "太空生活与科学想象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "把自己固定住",
+            "躺在床上",
+            "盖厚被子",
+            "开窗通风"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "在太空中，水会变成（ ）在空中飘。",
+          "answer": {
+            "value": "球"
+          },
+          "analysis": "失重时水聚成球状漂浮。",
+          "difficulty": 3,
+          "knowledge_point": "太空生活与科学想象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "太空中的失重现象与地球引力有关。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "失重源于在轨运动与引力共同作用。",
+          "difficulty": 4,
+          "knowledge_point": "太空生活与科学想象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "航天员在太空中喝水要用（ ）（填「吸管」或「袋子」，常用带吸管的容器）。",
+          "answer": {
+            "value": "吸管"
+          },
+          "analysis": "用带吸管的容器防止水漂浮。",
+          "difficulty": 3,
+          "knowledge_point": "太空生活与科学想象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你最想了解的太空生活现象。",
+          "answer": {
+            "value": "示例：我想知道航天员怎样在太空里洗澡和锻炼，因为失重时水会到处飘。"
+          },
+          "analysis": "评分要点：现象 + 理由。",
+          "difficulty": 3,
+          "knowledge_point": "太空生活与科学想象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第七单元",
+      "order_index": 7,
+      "summary": "成长与改变：大象的耳朵、蜘蛛开店、青蛙卖泥塘、小毛虫。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "《大象的耳朵》中大象最后明白（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "适合自己的才最好。",
+          "difficulty": 3,
+          "knowledge_point": "生字词与故事角色",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "自己的耳朵耷拉着也很正常",
+            "耳朵必须竖起来",
+            "别人说的都对",
+            "耳朵没有用"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "小毛虫经过努力变成了（ ）。",
+          "answer": {
+            "value": "蝴蝶"
+          },
+          "analysis": "小毛虫最终变成蝴蝶。",
+          "difficulty": 2,
+          "knowledge_point": "生字词与故事角色",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《蜘蛛开店》中蜘蛛因为招牌换来换去而吃了苦头。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "频繁改变招牌导致麻烦。",
+          "difficulty": 3,
+          "knowledge_point": "生字词与故事角色",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「吆喝」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "吆喝即大声叫卖。",
+          "difficulty": 3,
+          "knowledge_point": "生字词与故事角色",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "大声叫卖",
+            "小声说话",
+            "唱歌",
+            "哭喊"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出三个描写心情的词语。",
+          "answer": {
+            "value": "示例：高兴、难过、着急。"
+          },
+          "analysis": "评分要点：三个都是心情词。",
+          "difficulty": 2,
+          "knowledge_point": "生字词与故事角色",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《青蛙卖泥塘》中青蛙最后不卖泥塘了，因为（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "改善后环境变美。",
+          "difficulty": 3,
+          "knowledge_point": "故事情节与道理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "泥塘变得很美，自己舍不得",
+            "没人买",
+            "太贵",
+            "忘了卖"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "《小毛虫》告诉我们（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "尽心做好本分、耐心等待成长。",
+          "difficulty": 3,
+          "knowledge_point": "故事情节与道理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "要耐心做好自己的事",
+            "什么都不用做",
+            "越快越好",
+            "别人的事更重要"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "蜘蛛第一次开店卖的是（ ）（填物品）。",
+          "answer": {
+            "value": "口罩"
+          },
+          "analysis": "《蜘蛛开店》先卖口罩。",
+          "difficulty": 3,
+          "knowledge_point": "故事情节与道理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "别人的意见可以参考，但不必完全照搬。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "参考他人又要有主见。",
+          "difficulty": 3,
+          "knowledge_point": "故事情节与道理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说《大象的耳朵》给你的启示。",
+          "answer": {
+            "value": "示例：别人说的不一定适合自己，不能因为别人一句话就否定自己原本的样子。"
+          },
+          "analysis": "评分要点：有主见 + 适合自己。",
+          "difficulty": 4,
+          "knowledge_point": "故事情节与道理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下列句子中表示原因的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「因为」引出原因。",
+          "difficulty": 2,
+          "knowledge_point": "句式与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "因为泥塘太脏，所以青蛙想卖掉它。",
+            "青蛙去卖泥塘。",
+            "泥塘很美。",
+            "青蛙住在这里。"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "补写句子：要是泥塘里有荷花，就（ ）。",
+          "answer": {
+            "value": "示例：会有更多小动物来玩"
+          },
+          "analysis": "评分要点：前后逻辑通顺。",
+          "difficulty": 3,
+          "knowledge_point": "句式与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「因为……所以……」的句子前后要有因果关系。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "关联词表示因果。",
+          "difficulty": 2,
+          "knowledge_point": "句式与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "把句子补充完整：小毛虫很笨拙，但是它（ ）。",
+          "answer": {
+            "value": "示例：一点也不灰心"
+          },
+          "analysis": "评分要点：转折合理。",
+          "difficulty": 3,
+          "knowledge_point": "句式与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「要是……就……」写一句话，说说你想怎样改善教室环境。",
+          "answer": {
+            "value": "示例：要是在窗台摆几盆绿植，教室就会更有生气。"
+          },
+          "analysis": "评分要点：句式正确 + 内容合理。",
+          "difficulty": 3,
+          "knowledge_point": "句式与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "写「我的改变」要写清（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "要有前后对比。",
+          "difficulty": 2,
+          "knowledge_point": "写话：我的小改变",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "以前和现在的不同",
+            "只写现在",
+            "只写别人",
+            "只写天气"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "写对比时常用「以前……现在……」这样的（ ）（填「句式」或「词」均可，此处为句式）。",
+          "answer": {
+            "value": "句式"
+          },
+          "analysis": "对比句式清楚。",
+          "difficulty": 3,
+          "knowledge_point": "写话：我的小改变",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "写话中说明改变的原因会让文章更可信。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "原因让内容可信。",
+          "difficulty": 2,
+          "knowledge_point": "写话：我的小改变",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "补写：以前我不敢举手发言，现在（ ）。",
+          "answer": {
+            "value": "示例：我每节课都愿意说一说自己的想法"
+          },
+          "analysis": "评分要点：与前半句形成对比。",
+          "difficulty": 3,
+          "knowledge_point": "写话：我的小改变",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写三句话说说你的一个小改变。",
+          "answer": {
+            "value": "示例：以前我写字很潦草。妈妈教我每天练十分钟。现在我的作业本干净多了。"
+          },
+          "analysis": "评分要点：前后对比 + 原因。",
+          "difficulty": 4,
+          "knowledge_point": "写话：我的小改变",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第八单元",
+      "order_index": 8,
+      "summary": "世界之初：祖先的摇篮、当世界年纪还小的时候、羿射九日。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「祖先的摇篮」中「摇篮」指的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文把原始森林比作摇篮。",
+          "difficulty": 2,
+          "knowledge_point": "远古景象的词语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "原始森林",
+            "婴儿床",
+            "学校",
+            "河流"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「苍苍茫茫」形容的是（ ）（填「森林」）。",
+          "answer": {
+            "value": "森林"
+          },
+          "analysis": "形容森林辽阔。",
+          "difficulty": 3,
+          "knowledge_point": "远古景象的词语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「一望无边」形容范围非常广大。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "一望无边即看不到边。",
+          "difficulty": 2,
+          "knowledge_point": "远古景象的词语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「炙」在「炙烤」中的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "炙即烤。",
+          "difficulty": 4,
+          "knowledge_point": "远古景象的词语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "烤",
+            "晒干",
+            "冷冻",
+            "洗净"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出两个描写「很大、很多」的词语。",
+          "answer": {
+            "value": "示例：无边无际、密密麻麻。"
+          },
+          "analysis": "评分要点：两个词语合适。",
+          "difficulty": 3,
+          "knowledge_point": "远古景象的词语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《羿射九日》中羿射日的原因是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "十日并出造成灾难。",
+          "difficulty": 3,
+          "knowledge_point": "课文内容与神话",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "十个太阳把大地烤得太热",
+            "太阳太多很好看",
+            "想显示本领",
+            "太阳挡住了路"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "神话故事的特点是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "神话以想象解释自然。",
+          "difficulty": 3,
+          "knowledge_point": "课文内容与神话",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "想象神奇、解释自然现象",
+            "全部真实",
+            "只写动物",
+            "没有人物"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "羿射下九个太阳后，大地变得（ ）（填「清凉」）。",
+          "answer": {
+            "value": "清凉"
+          },
+          "analysis": "射日后大地恢复正常。",
+          "difficulty": 3,
+          "knowledge_point": "课文内容与神话",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《当世界年纪还小的时候》用想象解释世界的样子。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "课文以想象写世界初成。",
+          "difficulty": 2,
+          "knowledge_point": "课文内容与神话",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说神话故事为什么吸引人。",
+          "answer": {
+            "value": "示例：因为它想象奇特，有本领高强的英雄，还能解释日月山河的来历，读起来很有意思。"
+          },
+          "analysis": "评分要点：想象 + 英雄 + 解释。",
+          "difficulty": 4,
+          "knowledge_point": "课文内容与神话",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "读羿射日的情节时，语气应当（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "英雄情节要有力。",
+          "difficulty": 2,
+          "knowledge_point": "朗读与复述",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "有力、坚定",
+            "柔弱",
+            "含糊",
+            "急躁"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "复述故事要按（ ）的顺序讲。",
+          "answer": {
+            "value": "事情发展"
+          },
+          "analysis": "按起因经过结果顺序。",
+          "difficulty": 3,
+          "knowledge_point": "朗读与复述",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "复述时可以用自己的话，但主要情节不能丢。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "主要情节要保留。",
+          "difficulty": 3,
+          "knowledge_point": "朗读与复述",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "复述《羿射九日》，先说（ ）：天上同时出现十个太阳。",
+          "answer": {
+            "value": "起因"
+          },
+          "analysis": "先说起因。",
+          "difficulty": 3,
+          "knowledge_point": "朗读与复述",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用三句话复述《羿射九日》。",
+          "answer": {
+            "value": "示例：天上有十个太阳，把河水晒干、庄稼烤焦。羿拉弓射下九个太阳。大地恢复了生机，人们又能安居乐业。"
+          },
+          "analysis": "评分要点：起因经过结果齐全。",
+          "difficulty": 4,
+          "knowledge_point": "朗读与复述",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "写想象类写话，开头常用（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "想象故事常用「从前」。",
+          "difficulty": 2,
+          "knowledge_point": "写话：我想象的世界之初",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "从前、那时候",
+            "首先、其次",
+            "因为、所以",
+            "总之"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "写想象要有具体（ ），不能只说「很奇怪」。",
+          "answer": {
+            "value": "情形"
+          },
+          "analysis": "要有具体画面细节。",
+          "difficulty": 3,
+          "knowledge_point": "写话：我想象的世界之初",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "想象也要合乎基本逻辑，让人读得懂。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "想象需内部自洽。",
+          "difficulty": 3,
+          "knowledge_point": "写话：我想象的世界之初",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "补写：世界年纪还小的时候，月亮还不会（ ）。",
+          "answer": {
+            "value": "示例：发光"
+          },
+          "analysis": "评分要点：接上与月亮相关的动作。",
+          "difficulty": 3,
+          "knowledge_point": "写话：我想象的世界之初",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写三句话想象「世界刚出现时」的样子。",
+          "answer": {
+            "value": "示例：那时候山还不会长高，只在夜里慢慢往上冒。河水刚学会流动，走得很慢。星星第一次点亮，把自己吓了一跳。"
+          },
+          "analysis": "评分要点：想象具体 + 有画面。",
+          "difficulty": 4,
+          "knowledge_point": "写话：我想象的世界之初",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-12T08:23:04+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

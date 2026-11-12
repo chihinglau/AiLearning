@@ -1,0 +1,3988 @@
+{
+  "subject": "math",
+  "grade": 5,
+  "version": "北师大版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第一单元 小数的再认识和加减法",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "小数的数位与计数单位",
+      "parent": "第一单元 小数的再认识和加减法",
+      "order_index": 1,
+      "explanation": "小数点右边依次是十分位、百分位、千分位，计数单位分别是0.1、0.01、0.001，相邻单位进率是10。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "小数大小的比较",
+      "parent": "第一单元 小数的再认识和加减法",
+      "order_index": 2,
+      "explanation": "先比整数部分，再依次比十分位、百分位；位数不同可末尾补0，从高位到低位逐位比较。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "小数加减法的竖式计算",
+      "parent": "第一单元 小数的再认识和加减法",
+      "order_index": 3,
+      "explanation": "列竖式时小数点对齐即相同数位对齐，按整数加减法算，得数里点上小数点，末尾0可化简。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "小数加减混合运算与简算",
+      "parent": "第一单元 小数的再认识和加减法",
+      "order_index": 4,
+      "explanation": "小数加减混合从左到右算，整数加法交换律和结合律对小数同样适用，可先凑整再算。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二单元 三角形的再认识",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "三角形的特征与各部分名称",
+      "parent": "第二单元 三角形的再认识",
+      "order_index": 1,
+      "explanation": "三角形由三条线段首尾相接围成，有三个顶点三条边三个角，具有稳定性，顶点到对边的垂线段叫高。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "三角形按角和按边分类",
+      "parent": "第二单元 三角形的再认识",
+      "order_index": 2,
+      "explanation": "按角分锐角、直角、钝角三角形；按边分不等边、等腰、等边三角形，等边是特殊的等腰三角形。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "三角形内角和",
+      "parent": "第二单元 三角形的再认识",
+      "order_index": 3,
+      "explanation": "任意三角形内角和是180度，已知两角可依次减去求第三角，直角三角形两锐角互余。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "三角形三边关系",
+      "parent": "第二单元 三角形的再认识",
+      "order_index": 4,
+      "explanation": "任意两边之和大于第三边，判断时只验两条较短边之和是否大于最长边，等于或小于都围不成。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "综合实践 小小设计师",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "轴对称图案的设计与对称轴",
+      "parent": "综合实践 小小设计师",
+      "order_index": 1,
+      "explanation": "对折后两边完全重合的图案是轴对称图案，折痕所在直线叫对称轴，可先画一半再翻折补全。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "用平移复制基本图形",
+      "parent": "综合实践 小小设计师",
+      "order_index": 2,
+      "explanation": "平移只改变位置，形状大小方向都不变；做连续花边先定基本图形，再按相同方向和格数逐次平移。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "用旋转设计重复图案",
+      "parent": "综合实践 小小设计师",
+      "order_index": 3,
+      "explanation": "旋转要定中心点、方向和角度，绕中心每次转相同角度重复画基本图形，可得放射状图案。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "方格纸上的尺寸与图案记录",
+      "parent": "综合实践 小小设计师",
+      "order_index": 4,
+      "explanation": "在方格纸上设计先数格定边长与间距，记录基本图形占几格、平移几格、旋转几度，便于同伴复原。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第三单元 小数乘法",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "小数乘整数的意义与算法",
+      "parent": "第三单元 小数乘法",
+      "order_index": 1,
+      "explanation": "小数乘整数表示几个相同小数的和，先按整数乘法算，再看因数有几位小数就从积右边数出几位点小数点。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "小数乘小数与积的小数位数",
+      "parent": "第三单元 小数乘法",
+      "order_index": 2,
+      "explanation": "两因数共有几位小数，积就有几位小数，按整数乘法算完再点小数点，位数不够要在前面补0。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "积的近似值与四舍五入",
+      "parent": "第三单元 小数乘法",
+      "order_index": 3,
+      "explanation": "求积的近似值先算准确积，再按保留位数看下一位四舍五入，钱数常保留两位小数精确到分。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "小数乘法简算与解决实际问题",
+      "parent": "第三单元 小数乘法",
+      "order_index": 4,
+      "explanation": "整数乘法交换律结合律分配律对小数同样适用，购物面积等问题先列式再算，可用估算检验量级。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第四单元 用字母表示（一）",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "用字母表示数与数量关系",
+      "parent": "第四单元 用字母表示（一）",
+      "order_index": 1,
+      "explanation": "字母可表示未知或变化的数，比a多5写作a加5，a的3倍写作3a，用式子能概括一类数量关系。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "含字母式子的简写规则",
+      "parent": "第四单元 用字母表示（一）",
+      "order_index": 2,
+      "explanation": "字母与字母、数字与字母相乘时乘号可省略，数字写在字母前，1乘a写成a，相同字母相乘写成平方。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "用字母表示运算律与公式",
+      "parent": "第四单元 用字母表示（一）",
+      "order_index": 3,
+      "explanation": "加法交换律用a加b等于b加a表示，乘法分配律用括号和字母表示，长方形面积用S表示即长乘宽。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "求含字母式子的值",
+      "parent": "第四单元 用字母表示（一）",
+      "order_index": 4,
+      "explanation": "把字母代表的数代入式子，按运算顺序计算，代入时写清哪个字母换成哪个数。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第五单元 多边形的面积",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "平行四边形面积公式与推导",
+      "parent": "第五单元 多边形的面积",
+      "order_index": 1,
+      "explanation": "沿高剪开平移可把平行四边形拼成长方形，面积等于底乘高，底与高必须互相垂直对应。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "三角形面积公式与底高对应",
+      "parent": "第五单元 多边形的面积",
+      "order_index": 2,
+      "explanation": "两个完全相同的三角形可拼成平行四边形，面积为底乘高再除以2，底与高必须对应。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "梯形面积公式与上下底",
+      "parent": "第五单元 多边形的面积",
+      "order_index": 3,
+      "explanation": "两个相同梯形可拼成平行四边形，面积为上底加下底的和乘高再除以2，平行的两边叫上下底。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "组合图形面积的分割与添补",
+      "parent": "第五单元 多边形的面积",
+      "order_index": 4,
+      "explanation": "组合图形可分割成长方形三角形梯形分别求和，也可添补成大图形再减空缺，计算前统一单位。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "数学好玩 鸡兔同笼",
+      "order_index": 7
+    },
+    {
+      "node_type": "point",
+      "name": "列表法枚举头数",
+      "parent": "数学好玩 鸡兔同笼",
+      "order_index": 1,
+      "explanation": "固定总头数，逐行列出鸡兔数与腿数，找相符的一组。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "假设全是鸡求兔数",
+      "parent": "数学好玩 鸡兔同笼",
+      "order_index": 2,
+      "explanation": "先按全鸡算腿，多出的腿每2条换一只兔。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "假设全是兔求鸡数",
+      "parent": "数学好玩 鸡兔同笼",
+      "order_index": 3,
+      "explanation": "按全兔算腿偏多，多出的腿每2条换一只鸡。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "腿数差与只数换算",
+      "parent": "数学好玩 鸡兔同笼",
+      "order_index": 4,
+      "explanation": "一只兔比鸡多2条腿，总差除以2完成只数换算。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第六单元 图形的位置与运动（一）",
+      "order_index": 8
+    },
+    {
+      "node_type": "point",
+      "name": "数对中列与行的顺序",
+      "parent": "第六单元 图形的位置与运动（一）",
+      "order_index": 1,
+      "explanation": "数对先写列数再写行数，逗号隔开并加小括号。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "按数对在方格中定位",
+      "parent": "第六单元 图形的位置与运动（一）",
+      "order_index": 2,
+      "explanation": "方格图上先找列再找行，交叉点即该数对的位置。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "图形平移的方向与格数",
+      "parent": "第六单元 图形的位置与运动（一）",
+      "order_index": 3,
+      "explanation": "平移说清方向与格数，形状大小不变，各点移动相同。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "轴对称与对称轴条数",
+      "parent": "第六单元 图形的位置与运动（一）",
+      "order_index": 4,
+      "explanation": "对折完全重合的是轴对称图形，折痕直线是对称轴。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第七单元 倍数与因数",
+      "order_index": 9
+    },
+    {
+      "node_type": "point",
+      "name": "倍数与因数的相互依存",
+      "parent": "第七单元 倍数与因数",
+      "order_index": 1,
+      "explanation": "两数相乘得积，两数是积的因数，积是两数的倍数。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "2和5的倍数特征",
+      "parent": "第七单元 倍数与因数",
+      "order_index": 2,
+      "explanation": "个位0、2、4、6、8是2倍数，个位0或5是5倍数。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "3的倍数特征",
+      "parent": "第七单元 倍数与因数",
+      "order_index": 3,
+      "explanation": "各位数字之和是3的倍数，这个数就是3的倍数。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "质数与合数",
+      "parent": "第七单元 倍数与因数",
+      "order_index": 4,
+      "explanation": "只有1和本身两因数是质数，1既非质数也非合数。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第八单元 可能性",
+      "order_index": 10
+    },
+    {
+      "node_type": "point",
+      "name": "用一定可能不可能描述事件",
+      "parent": "第八单元 可能性",
+      "order_index": 1,
+      "explanation": "确定发生用一定，绝不发生用不可能，其余用可能。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "根据数量判断可能性大小",
+      "parent": "第八单元 可能性",
+      "order_index": 2,
+      "explanation": "总数中占比越大的结果，被摸到的可能性就越大。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "游戏规则的公平性",
+      "parent": "第八单元 可能性",
+      "order_index": 3,
+      "explanation": "双方获胜可能性相等才公平，否则要调数量到均等。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "按指定可能性设计放球方案",
+      "parent": "第八单元 可能性",
+      "order_index": 4,
+      "explanation": "要最可能就放最多，要不可能就一个不放，按目标调配。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "综合实践 多少落叶能铺满",
+      "order_index": 11
+    },
+    {
+      "node_type": "point",
+      "name": "用方格纸估计不规则图形面积",
+      "parent": "综合实践 多少落叶能铺满",
+      "order_index": 1,
+      "explanation": "每格1平方厘米，满格计1零头凑半，合计得近似面积。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "单位面积落叶片数的估计",
+      "parent": "综合实践 多少落叶能铺满",
+      "order_index": 2,
+      "explanation": "先数清一小块面积内的片数，作为一份推算更大面积。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "大面积除以单片面积求片数",
+      "parent": "综合实践 多少落叶能铺满",
+      "order_index": 3,
+      "explanation": "铺满总面积除以一片盖住的面积，商即大约片数。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "取样估计与误差",
+      "parent": "综合实践 多少落叶能铺满",
+      "order_index": 4,
+      "explanation": "各处疏密不同，多取几处求平均，估计值只是近似数。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "总复习",
+      "order_index": 12
+    },
+    {
+      "node_type": "point",
+      "name": "小数加减与乘法的复习",
+      "parent": "总复习",
+      "order_index": 1,
+      "explanation": "加减对齐小数点，乘法先按整数乘再数小数位定点。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "倍数与因数的综合判断",
+      "parent": "总复习",
+      "order_index": 2,
+      "explanation": "合用2、3、5特征与质合数定义，对自然数快速分类。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "多边形面积的综合计算",
+      "parent": "总复习",
+      "order_index": 3,
+      "explanation": "复习平行四边形、三角形、梯形公式，找准底和高。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "可能性与位置的综合",
+      "parent": "总复习",
+      "order_index": 4,
+      "explanation": "同一情境里用数对报位置、按数量判可能性大小。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一单元 小数的再认识和加减法",
+      "order_index": 1,
+      "summary": "认识小数数位与性质，会比较大小，掌握小数点对齐的加减竖式及简算。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "0.36中的6表示（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "6在百分位是6个0.01，余项错，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "小数的数位与计数单位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "6个0.01",
+            "6个0.1",
+            "6个一",
+            "6个十"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "3角5分改写成以元为单位是（  ）",
+          "answer": {
+            "value": "0.35元"
+          },
+          "analysis": "先算3角得0.3元，加5分得0.35元。",
+          "difficulty": 2,
+          "knowledge_point": "小数的数位与计数单位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "0.5和0.50的大小相等，意义也相同。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "数值相等，但计数单位不同，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "小数的数位与计数单位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "把0.8改写成三位小数是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "末尾添两个0大小不变，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "小数的数位与计数单位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "0.800",
+            "0.008",
+            "8.000",
+            "0.080"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "小明买笔3.5元、本2.8元，共花（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "3.5加2.8得6.3元，余项错，所以选A。",
+          "difficulty": 3,
+          "knowledge_point": "小数的数位与计数单位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "6.3元",
+            "5.3元",
+            "6.13元",
+            "6.8元"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "0.7与0.65相比，较大的数是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "0.7是0.70，比0.65大，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "小数大小的比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "0.7",
+            "0.65",
+            "一样大",
+            "无法比"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "1.02、1.2、1.002中最大的是（  ）",
+          "answer": {
+            "value": "最大为1.2"
+          },
+          "analysis": "补0后1.2即1.200，十分位2最大。",
+          "difficulty": 2,
+          "knowledge_point": "小数大小的比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "小数位数越多，这个小数就越大。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "大小看数位值，0.9大于0.88即为例。",
+          "difficulty": 3,
+          "knowledge_point": "小数大小的比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "比2.3大且比2.4小的两位小数有几个？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "从2.31到2.39共9个，余项错，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "小数大小的比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "9个",
+            "10个",
+            "1个",
+            "无数个"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "0.9米与0.85米相比，0.9米更长。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "0.9米即0.90米，大于0.85米，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "小数大小的比较",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "计算3.6加2.7，结果是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "6加7得13进1，结果6.3，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "小数加减法的竖式计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "6.3",
+            "5.3",
+            "6.13",
+            "5.13"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "5.2元减1.8元还剩（  ）",
+          "answer": {
+            "value": "3.4元"
+          },
+          "analysis": "借1当10，12减8得4，结果3.4元。",
+          "difficulty": 2,
+          "knowledge_point": "小数加减法的竖式计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "计算小数加减法要把末位对齐。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "应对齐小数点即相同数位，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "小数加减法的竖式计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "8减2.35的正确结果是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "8写成8.00，减后得5.65，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "小数加减法的竖式计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "5.65",
+            "6.65",
+            "5.35",
+            "6.35"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "1.8加3.7加6.3用简算，先算（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "3.7与6.3凑成10，再算更简便，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "小数加减混合运算与简算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "3.7加6.3",
+            "1.8加3.7",
+            "1.8加6.3",
+            "依次加"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "10元减3.6元再减2.4元剩（  ）",
+          "answer": {
+            "value": "4元"
+          },
+          "analysis": "先算3.6加2.4得6，再用10减6得4元。",
+          "difficulty": 2,
+          "knowledge_point": "小数加减混合运算与简算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "整数加法运算律对小数加法不适用。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "交换律结合律对小数同样成立，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "小数加减混合运算与简算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "4.5减(2.5减0.8)等于（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "括号内1.7，4.5减得2.8，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "小数加减混合运算与简算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "2.8",
+            "1.2",
+            "2.2",
+            "1.8"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第二单元 三角形的再认识",
+      "order_index": 2,
+      "summary": "认识三角形特征与分类，探究内角和180度与三边关系，会作高。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "下面具有稳定性的图形是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "三角形三边定形不易变形，余项错，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "三角形的特征与各部分名称",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "三角形",
+            "长方形",
+            "平行四边形",
+            "圆"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "三角形有（  ）条高。",
+          "answer": {
+            "value": "三条"
+          },
+          "analysis": "每个顶点向对边作垂线，共得三条高。",
+          "difficulty": 2,
+          "knowledge_point": "三角形的特征与各部分名称",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "自行车的三角车架利用了三角形的稳定性。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "三角结构不易变形，故车架常用，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "三角形的特征与各部分名称",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "从三角形一个顶点向对边画垂线，这条线段叫（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "顶点到对边的垂线段叫高，余项错，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "三角形的特征与各部分名称",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "高",
+            "中线",
+            "角平分线",
+            "边"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "篱笆加一根斜木条后不晃，用的是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "斜木把四边形分成三角形，不易变形，所以选A。",
+          "difficulty": 3,
+          "knowledge_point": "三角形的特征与各部分名称",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "三角形稳定性",
+            "长方形对称",
+            "平行四边形",
+            "圆的滚动"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "有一个角是直角的三角形叫（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "含90度角即直角三角形，余项错，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "三角形按角和按边分类",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "直角三角形",
+            "锐角三角形",
+            "钝角三角形",
+            "等腰三角形"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "三条边都相等的三角形叫（  ）三角形。",
+          "answer": {
+            "value": "等边"
+          },
+          "analysis": "三边相等也叫正三角形，每个角60度。",
+          "difficulty": 2,
+          "knowledge_point": "三角形按角和按边分类",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "等边三角形一定是锐角三角形。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "三个角都是60度，均小于90度，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "三角形按角和按边分类",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "一个三角形最大的角是89度，它是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "最大角小于90度，三角皆锐，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "三角形按角和按边分类",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "锐角三角形",
+            "直角三角形",
+            "钝角三角形",
+            "无法确定"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "三角形三个内角的和是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "撕角拼成平角即180度，余项错，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "三角形内角和",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "180度",
+            "90度",
+            "360度",
+            "270度"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "三角形两角为50度和60度，第三角是（  ）",
+          "answer": {
+            "value": "70度"
+          },
+          "analysis": "180度依次减50度再减60度，余70度。",
+          "difficulty": 2,
+          "knowledge_point": "三角形内角和",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "大三角形的内角和比小三角形大。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "内角和恒为180度，与大小无关，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "三角形内角和",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "直角三角形中一个锐角35度，另一锐角是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "两锐角互余，90度减35度得55度，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "三角形内角和",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "55度",
+            "65度",
+            "45度",
+            "35度"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "正方形沿对角线分成三角形，内角和90度。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "分割后仍是三角形，内角和180度，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "三角形内角和",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "3、4、5厘米的小棒能围成三角形吗？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "3加4得7大于5，余项错，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "三角形三边关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "能",
+            "不能",
+            "只围直角",
+            "不确定"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "两边2和6，第三边取整最大是（  ）",
+          "answer": {
+            "value": "7厘米"
+          },
+          "analysis": "2加6得8，要小于8，最大取整为7厘米。",
+          "difficulty": 2,
+          "knowledge_point": "三角形三边关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "1厘米、2厘米、3厘米的小棒能围成三角形。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "1加2等于3，不大于第三边，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "三角形三边关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "等腰三角形两边为3和7，周长是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "3为腰不成立，腰须7，周长17，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "三角形三边关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "17",
+            "13",
+            "10或17",
+            "无法确定"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "综合实践 小小设计师",
+      "order_index": 3,
+      "summary": "综合运用轴对称、平移与旋转设计图案，在方格纸上量格记录并写清设计说明。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "设计轴对称图案时，对折的折痕是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "折痕两侧完全重合，即为对称轴，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "轴对称图案的设计与对称轴",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "对称轴",
+            "边线",
+            "中线",
+            "底边"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "正方形图案有（  ）条对称轴。",
+          "answer": {
+            "value": "四条"
+          },
+          "analysis": "两条对边中点连线加两条对角线，共四条。",
+          "difficulty": 2,
+          "knowledge_point": "轴对称图案的设计与对称轴",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "轴对称图案沿对称轴对折后两边完全重合。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "完全重合是轴对称的判定依据，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "轴对称图案的设计与对称轴",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "要补全半个蝴蝶图案，最简便的做法是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "翻折描出对应点即成，余项错，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "轴对称图案的设计与对称轴",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "沿对称轴翻折描画",
+            "随意补画",
+            "平移半边",
+            "旋转半边"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "把基本图形向右平移3格，改变的是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "平移只挪位置，形状大小方向不变，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "用平移复制基本图形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "位置",
+            "形状",
+            "大小",
+            "方向"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "花边每次右移4格，移3次共移（  ）格。",
+          "answer": {
+            "value": "12格"
+          },
+          "analysis": "每次4格，连移3次，累计为12格。",
+          "difficulty": 2,
+          "knowledge_point": "用平移复制基本图形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "平移后基本图形的方向会跟着改变。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "平移不转向，方向保持不变，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "用平移复制基本图形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "做花边时每次平移的格数应当（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "格数相同才能等距重复，余项错，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "用平移复制基本图形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "保持相同",
+            "逐次加1",
+            "随意变化",
+            "逐次减半"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "做二方连续花边，先画基本图形再（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "定格平移才连续，余项错，所以选A。",
+          "difficulty": 3,
+          "knowledge_point": "用平移复制基本图形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "按固定格数平移",
+            "每次换图形",
+            "随机摆放",
+            "只涂不改"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "设计风车图案时，叶片绕着（  ）转动。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "旋转先定中心点，再定角度，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "用旋转设计重复图案",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "中心点",
+            "一条边",
+            "对称轴",
+            "方格线"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "每次转90度，转（  ）次回到原位。",
+          "answer": {
+            "value": "4次"
+          },
+          "analysis": "四次90度累计一周，回到起始位置。",
+          "difficulty": 2,
+          "knowledge_point": "用旋转设计重复图案",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "旋转会改变基本图形的大小。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "旋转只转方向和位置，大小不变，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "用旋转设计重复图案",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "四叶图案每次应绕中心旋转（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "四等分一周，每份90度，余项错，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "用旋转设计重复图案",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "90度",
+            "60度",
+            "120度",
+            "45度"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "方格纸设计里，1格边长代表的长度要先（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先约定每格长度，尺寸才可核对，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "方格纸上的尺寸与图案记录",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "约定",
+            "忽略",
+            "加倍",
+            "涂色"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "图形横3格竖2格，共占（  ）格。",
+          "answer": {
+            "value": "6格"
+          },
+          "analysis": "横3格乘竖2格，累计占6格。",
+          "difficulty": 2,
+          "knowledge_point": "方格纸上的尺寸与图案记录",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "设计说明只写好看，不必记格数和角度。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "不记格数角度，同伴难以复原，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "方格纸上的尺寸与图案记录",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "同学按说明复原图案，最该核对的是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "格数角度决定位置形状，余项错，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "方格纸上的尺寸与图案记录",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "格数与角度",
+            "纸张颜色",
+            "画笔粗细",
+            "名字写法"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "给图案写清每格边长，别人才能量出实际尺寸。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "格长与格数相乘得实际尺寸，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "方格纸上的尺寸与图案记录",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第三单元 小数乘法",
+      "order_index": 4,
+      "summary": "理解小数乘法的算理，会定积的小数位数、取近似值，并用运算律简算解题。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "0.8乘3表示（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "乘整数即求几个相同加数的和，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "小数乘整数的意义与算法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "3个0.8相加",
+            "3个8相加",
+            "0.8加3",
+            "3除0.8"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "每支笔0.6元，买4支要（  ）",
+          "answer": {
+            "value": "2.4元"
+          },
+          "analysis": "先算6乘4得24，再点一位小数得2.4元。",
+          "difficulty": 2,
+          "knowledge_point": "小数乘整数的意义与算法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "0.5乘4的积是20。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "5乘4得20，点一位小数应为2，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "小数乘整数的意义与算法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "1.25乘8的结果是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "125乘8得1000，化简为10，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "小数乘整数的意义与算法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "10",
+            "1",
+            "100",
+            "0.1"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "每本练习本1.5元，买6本应付（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "15乘6得90，点一位小数得9元，所以选A。",
+          "difficulty": 3,
+          "knowledge_point": "小数乘整数的意义与算法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "9元",
+            "8元",
+            "9.5元",
+            "0.9元"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "0.3乘0.2的积是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "3乘2得6，两因数共两位小数，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "小数乘小数与积的小数位数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "0.06",
+            "0.6",
+            "0.006",
+            "6"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "长1.2米宽0.4米的长方形面积（  ）",
+          "answer": {
+            "value": "0.48平方米"
+          },
+          "analysis": "12乘4得48，点两位得0.48平方米。",
+          "difficulty": 2,
+          "knowledge_point": "小数乘小数与积的小数位数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "0.25乘0.4按整数算得100，积是1。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "共三位小数，应得0.100即0.1，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "小数乘小数与积的小数位数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "0.04乘0.5的积是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "4乘5得20，点三位得0.02，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "小数乘小数与积的小数位数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "0.02",
+            "0.2",
+            "0.002",
+            "2"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "3.14保留一位小数约是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "百分位是4，舍去后为3.1，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "积的近似值与四舍五入",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "3.1",
+            "3.2",
+            "3.0",
+            "4.0"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "2.68元保留一位小数约是（  ）",
+          "answer": {
+            "value": "2.7元"
+          },
+          "analysis": "百分位8大于5，向十分位进1得2.7元。",
+          "difficulty": 2,
+          "knowledge_point": "积的近似值与四舍五入",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "保留两位小数时，要看千分位上的数。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "保留两位看下一位即千分位，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "积的近似值与四舍五入",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "0.996保留两位小数约是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "千分位6进1，连续进位得1.00，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "积的近似值与四舍五入",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "1.00",
+            "0.99",
+            "0.90",
+            "1.10"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "0.25乘4.8乘4可先算（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "0.25与4凑成1，再乘简便，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "小数乘法简算与解决实际问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "0.25乘4",
+            "4.8乘4",
+            "0.25乘4.8",
+            "依次乘"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "每千克苹果3.5元，买2.4千克需（  ）",
+          "answer": {
+            "value": "8.4元"
+          },
+          "analysis": "35乘24得840，点两位小数得8.4元。",
+          "difficulty": 2,
+          "knowledge_point": "小数乘法简算与解决实际问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "乘法分配律对小数乘法不适用。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "整数运算律对小数同样成立，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "小数乘法简算与解决实际问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "2.5乘3.2用简便方法，先把3.2分成（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "拆1.6为4乘0.4，凑整得4，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "小数乘法简算与解决实际问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "4乘0.8",
+            "3加0.2",
+            "2加1.2",
+            "1.6乘2"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "买3.2千克单价2元的米，付6元足够。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "3.2乘2得6.4元，6元不够，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "小数乘法简算与解决实际问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第四单元 用字母表示（一）",
+      "order_index": 5,
+      "summary": "用字母表示数、数量关系和公式，掌握简写规则，会代入求值。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "比a多5的数写作（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "多5用加法，写成a加5，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "用字母表示数与数量关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "a+5",
+            "a-5",
+            "5a",
+            "5-a"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "每本b元，买7本共（  ）元。",
+          "answer": {
+            "value": "7b"
+          },
+          "analysis": "单价乘数量，7乘b简写为7b。",
+          "difficulty": 2,
+          "knowledge_point": "用字母表示数与数量关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "用字母表示数时，同一个字母在同一式子中表示同一个数。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "同一式子字母取值须一致，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "用字母表示数与数量关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "小明今年a岁，爸爸比他大28岁，爸爸是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "大28岁用加法，得a加28岁，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "用字母表示数与数量关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "a+28岁",
+            "a-28岁",
+            "28a岁",
+            "28-a岁"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "每盒彩笔x支，4盒再加3支共（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "4盒即4x，再加3支，余项错，所以选A。",
+          "difficulty": 3,
+          "knowledge_point": "用字母表示数与数量关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "4x+3",
+            "4x-3",
+            "7x",
+            "x+7"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "a乘5的简写形式是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "数字写在字母前，乘号省略，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "含字母式子的简写规则",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "5a",
+            "a5",
+            "5+a",
+            "a÷5"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "b乘b的简写形式是（  ）",
+          "answer": {
+            "value": "b²"
+          },
+          "analysis": "两个相同字母相乘写成平方，即b²。",
+          "difficulty": 2,
+          "knowledge_point": "含字母式子的简写规则",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "1乘c可以简写成1c。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "系数1省略不写，应直接写c，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "含字母式子的简写规则",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "x乘y乘3的简写是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "数字前置，字母按序连写，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "含字母式子的简写规则",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "3xy",
+            "xy3",
+            "3+x+y",
+            "x3y"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "加法交换律用字母表示为（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "交换加数位置和不变，余项错，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "用字母表示运算律与公式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "a+b=b+a",
+            "a+b=b-a",
+            "ab=ba",
+            "a-b=b-a"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "长方形长a宽b，面积S写成（  ）",
+          "answer": {
+            "value": "S=ab"
+          },
+          "analysis": "面积等于长乘宽，字母连写省略乘号。",
+          "difficulty": 2,
+          "knowledge_point": "用字母表示运算律与公式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "乘法分配律可写成(a+b)c=ac+bc。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "展开后两项分别相乘再相加，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "用字母表示运算律与公式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "正方形边长a，周长C是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "四条边相加即4乘a，余项错，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "用字母表示运算律与公式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "4a",
+            "a+4",
+            "a²",
+            "2a"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "当a=3时，2a+1的值是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先算2乘3得6，再加1得7，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "求含字母式子的值",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "7",
+            "6",
+            "5",
+            "8"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "x=5时，3x-4的结果是（  ）",
+          "answer": {
+            "value": "结果为11"
+          },
+          "analysis": "3乘5得15，再减4得11。",
+          "difficulty": 2,
+          "knowledge_point": "求含字母式子的值",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "a=0时，5a+2的值等于2。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "5乘0得0，加2仍为2，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "求含字母式子的值",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "a=4，b=2时，a²+b的值是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "4的平方得16，再加2得18，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "求含字母式子的值",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "18",
+            "10",
+            "12",
+            "16"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "式子5m中m取6，代入后得30。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "5乘6得30，代入结果正确，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "求含字母式子的值",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第五单元 多边形的面积",
+      "order_index": 6,
+      "summary": "用割补推导平行四边形、三角形、梯形面积公式，会算组合图形面积。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "平行四边形面积公式是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "割补成长方形，长底宽高，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "平行四边形面积公式与推导",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "底×高",
+            "底×底",
+            "高×高",
+            "边长×4"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "底6厘米高4厘米的平行四边形面积（  ）",
+          "answer": {
+            "value": "24平方厘米"
+          },
+          "analysis": "6乘4得24，单位用平方厘米。",
+          "difficulty": 2,
+          "knowledge_point": "平行四边形面积公式与推导",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "平行四边形拉成长方形后面积不变。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "底不变但高改变，面积随之改变，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "平行四边形面积公式与推导",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "面积24平方厘米、底8厘米，高是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "24除以8得3，余项错，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "平行四边形面积公式与推导",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "3厘米",
+            "4厘米",
+            "6厘米",
+            "2厘米"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "三角形面积等于（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "两三角形拼成平行四边形，取一半，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "三角形面积公式与底高对应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "底×高÷2",
+            "底×高",
+            "底×高×2",
+            "底+高"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "底5厘米高4厘米的三角形面积是（  ）",
+          "answer": {
+            "value": "10平方厘米"
+          },
+          "analysis": "5乘4得20，折半得10平方厘米。",
+          "difficulty": 2,
+          "knowledge_point": "三角形面积公式与底高对应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "三角形面积是平行四边形面积的一半。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "须等底等高才成立，缺条件，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "三角形面积公式与底高对应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "面积12平方厘米、底6厘米，高是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "12乘2得24，再除以6得4，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "三角形面积公式与底高对应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "4厘米",
+            "2厘米",
+            "3厘米",
+            "6厘米"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "等底等高的平行四边形与三角形，面积比是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "三角形占一半，比为2比1，所以选A。",
+          "difficulty": 3,
+          "knowledge_point": "三角形面积公式与底高对应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "2比1",
+            "1比1",
+            "1比2",
+            "3比1"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "梯形上底a下底b高h，面积是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "两梯形拼成平行四边形，取一半，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "梯形面积公式与上下底",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "(a+b)h÷2",
+            "(a+b)h",
+            "abh",
+            "ah÷2"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "上底3下底5高4的梯形面积是（  ）",
+          "answer": {
+            "value": "16平方厘米"
+          },
+          "analysis": "3加5得8，乘4折半得16平方厘米。",
+          "difficulty": 2,
+          "knowledge_point": "梯形面积公式与上下底",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "梯形只有一组对边平行。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "平行的两边叫上下底，另一组不平行，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "梯形面积公式与上下底",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "面积18、上底4下底5，高是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "4加5得9，18乘2除以9得4，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "梯形面积公式与上下底",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "4",
+            "3",
+            "6",
+            "2"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "求组合图形面积常用的方法是（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "分成已学图形分别算再相加，所以选A。",
+          "difficulty": 1,
+          "knowledge_point": "组合图形面积的分割与添补",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "分割求和",
+            "直接猜",
+            "只量一边",
+            "取整估算"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "1平方米等于（  ）平方分米。",
+          "answer": {
+            "value": "100平方分米"
+          },
+          "analysis": "10乘10得100，故为100平方分米。",
+          "difficulty": 2,
+          "knowledge_point": "组合图形面积的分割与添补",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "添补法要用大图形面积减去空缺面积。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "补成规则图形后再减多余部分，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "组合图形面积的分割与添补",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "长方形挖去一个三角形，面积应（  ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "整体减挖去部分即剩余，余项错，所以选A。",
+          "difficulty": 4,
+          "knowledge_point": "组合图形面积的分割与添补",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "相减",
+            "相加",
+            "相乘",
+            "取平均"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "L形花坛可分成两个长方形求总面积。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "分割后分别算面积再相加，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "组合图形面积的分割与添补",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "数学好玩 鸡兔同笼",
+      "order_index": 7,
+      "summary": "用列表与假设法解鸡兔同笼，理清头数与腿数。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "头共8个鸡3只兔几只",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "头8减鸡3得兔5，所以选C，余非5",
+          "difficulty": 1,
+          "knowledge_point": "列表法枚举头数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "3只",
+            "4只",
+            "5只",
+            "6只"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "鸡增1兔减1腿数少2",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "鸡换兔少2条腿，所以判T",
+          "difficulty": 2,
+          "knowledge_point": "列表法枚举头数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "头8腿26试得兔几只",
+          "answer": {
+            "value": "5只"
+          },
+          "analysis": "试到鸡3兔5腿正好26",
+          "difficulty": 3,
+          "knowledge_point": "列表法枚举头数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "头6腿20列表求鸡兔各几",
+          "answer": {
+            "value": "鸡2只兔4只"
+          },
+          "analysis": "列全6种2分；定鸡2兔4再2分",
+          "difficulty": 4,
+          "knowledge_point": "列表法枚举头数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "头8腿26全设鸡兔几只",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "全鸡16多10，除2得5，所以选C",
+          "difficulty": 1,
+          "knowledge_point": "假设全是鸡求兔数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "3只",
+            "4只",
+            "5只",
+            "6只"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "全设鸡算出的腿数偏少",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "每只鸡比兔少2腿，故偏少，判T",
+          "difficulty": 2,
+          "knowledge_point": "假设全是鸡求兔数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "头10腿28全设鸡兔几只",
+          "answer": {
+            "value": "4只"
+          },
+          "analysis": "全鸡腿20多8，每兔补2得4只",
+          "difficulty": 3,
+          "knowledge_point": "假设全是鸡求兔数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "头10腿32全设鸡求兔数",
+          "answer": {
+            "value": "全鸡20条，多12条，除2得兔6只"
+          },
+          "analysis": "全鸡腿1分；求差1分；换算2分",
+          "difficulty": 4,
+          "knowledge_point": "假设全是鸡求兔数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "头8腿26全设兔鸡几只",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "全兔腿32多6，除2得3，所以选B",
+          "difficulty": 1,
+          "knowledge_point": "假设全是兔求鸡数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "2只",
+            "3只",
+            "4只",
+            "5只"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "头8腿26全设兔腿偏多",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "兔比鸡多2腿，32比26多，判T",
+          "difficulty": 2,
+          "knowledge_point": "假设全是兔求鸡数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "头6腿20全设兔鸡几只",
+          "answer": {
+            "value": "2只"
+          },
+          "analysis": "全兔腿24多4，除2得鸡2只",
+          "difficulty": 3,
+          "knowledge_point": "假设全是兔求鸡数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "头12腿38全设兔求鸡数",
+          "answer": {
+            "value": "全兔48条，多10条，除2得鸡5只兔7只"
+          },
+          "analysis": "全兔腿1分；求差1分；回代2分",
+          "difficulty": 4,
+          "knowledge_point": "假设全是兔求鸡数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "笼里头9腿30鸡兔各几",
+          "answer": {
+            "value": "全鸡18条，多12条，除2得兔6只鸡3只"
+          },
+          "analysis": "设全鸡1分；求差1分；换算验算2分",
+          "difficulty": 3,
+          "knowledge_point": "假设全是兔求鸡数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "兔比鸡每只多几条腿",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "兔4腿鸡2腿差2，所以选B，余差错",
+          "difficulty": 1,
+          "knowledge_point": "腿数差与只数换算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "1条",
+            "2条",
+            "3条",
+            "4条"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "全设鸡后差除以2得兔数",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "每换一兔补2腿，差除2即兔数，判T",
+          "difficulty": 2,
+          "knowledge_point": "腿数差与只数换算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "全鸡多12条腿兔几只",
+          "answer": {
+            "value": "6只"
+          },
+          "analysis": "每兔多2腿，12里有6个2",
+          "difficulty": 3,
+          "knowledge_point": "腿数差与只数换算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "鸡5只兔7只共几条腿",
+          "answer": {
+            "value": "38条腿"
+          },
+          "analysis": "鸡兔腿分别1分；合38得2分",
+          "difficulty": 4,
+          "knowledge_point": "腿数差与只数换算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "头7腿22全设兔求鸡数",
+          "answer": {
+            "value": "3只"
+          },
+          "analysis": "全兔28多6，除2得鸡3只",
+          "difficulty": 4,
+          "knowledge_point": "腿数差与只数换算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第六单元 图形的位置与运动（一）",
+      "order_index": 8,
+      "summary": "用数对定位置，认识平移与轴对称，描述图形运动。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "数对(3,5)表示第几列",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "先列后行，3在前，所以选B",
+          "difficulty": 1,
+          "knowledge_point": "数对中列与行的顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "第2列",
+            "第3列",
+            "第5列",
+            "第8列"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "数对(4,2)在第4列第2行",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "先列后行，即4列2行，判T",
+          "difficulty": 2,
+          "knowledge_point": "数对中列与行的顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "第6列第3行数对怎么写",
+          "answer": {
+            "value": "(6,3)"
+          },
+          "analysis": "先写列6再写行3",
+          "difficulty": 3,
+          "knowledge_point": "数对中列与行的顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出第2列第7行的数对",
+          "answer": {
+            "value": "(2,7)，先列后行"
+          },
+          "analysis": "写对2分；说清先列后行2分",
+          "difficulty": 4,
+          "knowledge_point": "数对中列与行的顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "影院座位(5,8)在第几排",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "数对后一位是排，8排，所以选C",
+          "difficulty": 3,
+          "knowledge_point": "数对中列与行的顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "第3排",
+            "第5排",
+            "第8排",
+            "第13排"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "数对(5,1)在方格第几行",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "逗号后是行，1为第1行，所以选A",
+          "difficulty": 1,
+          "knowledge_point": "按数对在方格中定位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "第1行",
+            "第4行",
+            "第5行",
+            "第6行"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "(2,6)与(6,2)同一位置吗",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "列行数交换，位置不同，判F",
+          "difficulty": 2,
+          "knowledge_point": "按数对在方格中定位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "从(3,2)右移2列到哪",
+          "answer": {
+            "value": "(5,2)"
+          },
+          "analysis": "右移列加2得5，行不变",
+          "difficulty": 3,
+          "knowledge_point": "按数对在方格中定位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "数对(7,3)上移3行到哪",
+          "answer": {
+            "value": "(7,6)，列不变行加3"
+          },
+          "analysis": "列不变1分；行加3得6共3分",
+          "difficulty": 4,
+          "knowledge_point": "按数对在方格中定位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "图形平移后什么不变",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "平移只换位置，形状大小不变，所以选C",
+          "difficulty": 1,
+          "knowledge_point": "图形平移的方向与格数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "方向",
+            "位置",
+            "形状大小",
+            "格数"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "平移会改变图形大小吗",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "平移只动位置，大小不变，判F",
+          "difficulty": 2,
+          "knowledge_point": "图形平移的方向与格数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "右移4格数对列加几",
+          "answer": {
+            "value": "加4"
+          },
+          "analysis": "右移几格列就加几",
+          "difficulty": 3,
+          "knowledge_point": "图形平移的方向与格数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "三角形下移3格怎样描述",
+          "answer": {
+            "value": "向下平移3格，各顶点都下移3格"
+          },
+          "analysis": "方向1分；3格1分；顶点一致2分",
+          "difficulty": 4,
+          "knowledge_point": "图形平移的方向与格数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "正方形有几条对称轴",
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "横竖两对角共4，所以选D，余漏数",
+          "difficulty": 1,
+          "knowledge_point": "轴对称与对称轴条数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "1条",
+            "2条",
+            "3条",
+            "4条"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "长方形有2条对称轴",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "沿长宽中线各对折1条，共2，判T",
+          "difficulty": 2,
+          "knowledge_point": "轴对称与对称轴条数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "等边三角形几条对称轴",
+          "answer": {
+            "value": "3条"
+          },
+          "analysis": "每个顶点到对边各1条",
+          "difficulty": 3,
+          "knowledge_point": "轴对称与对称轴条数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "圆有多少条对称轴",
+          "answer": {
+            "value": "无数条，过圆心的直线都是"
+          },
+          "analysis": "答无数条2分；说过圆心2分",
+          "difficulty": 4,
+          "knowledge_point": "轴对称与对称轴条数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "右移3格再下移2格形状变吗",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "两次平移仍只换位置，形状不变，判F",
+          "difficulty": 4,
+          "knowledge_point": "轴对称与对称轴条数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第七单元 倍数与因数",
+      "order_index": 9,
+      "summary": "认识倍数因数，掌握2、5、3的倍数特征与质合数。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "24的因数共有几个",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "成对找得8个，所以选C，余漏对",
+          "difficulty": 1,
+          "knowledge_point": "倍数与因数的相互依存",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "4个",
+            "6个",
+            "8个",
+            "10个"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "3乘8得24所以3是倍数",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "3是24的因数，不能单说倍数，判F",
+          "difficulty": 2,
+          "knowledge_point": "倍数与因数的相互依存",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "36除以4得9，4是36的什么",
+          "answer": {
+            "value": "因数"
+          },
+          "analysis": "36能被4整除，4是因数",
+          "difficulty": 3,
+          "knowledge_point": "倍数与因数的相互依存",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出18的全部因数",
+          "answer": {
+            "value": "1、2、3、6、9、18共6个"
+          },
+          "analysis": "成对列举2分；不重不漏2分",
+          "difficulty": 4,
+          "knowledge_point": "倍数与因数的相互依存",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "24个球每盒同样多几种装法",
+          "answer": {
+            "value": "8种，因数是1、2、3、4、6、8、12、24"
+          },
+          "analysis": "列全因数2分；答8种2分",
+          "difficulty": 3,
+          "knowledge_point": "倍数与因数的相互依存",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面哪个数是5的倍数",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "个位5才合，所以选C，余个位不符",
+          "difficulty": 1,
+          "knowledge_point": "2和5的倍数特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "23",
+            "34",
+            "45",
+            "56"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "个位0既合2也合5特征",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "0同合两种特征，所以判T",
+          "difficulty": 2,
+          "knowledge_point": "2和5的倍数特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "同是2和5倍数个位是几",
+          "answer": {
+            "value": "零"
+          },
+          "analysis": "个位须同合两特征，只能是零",
+          "difficulty": 3,
+          "knowledge_point": "2和5的倍数特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用2、5、0组2的倍数两位数",
+          "answer": {
+            "value": "20、50、52"
+          },
+          "analysis": "写全3个2分；说清个位2分",
+          "difficulty": 4,
+          "knowledge_point": "2和5的倍数特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面哪个数是3的倍数",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "201各位和3，所以选B，余和不符",
+          "difficulty": 1,
+          "knowledge_point": "3的倍数特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "124",
+            "201",
+            "332",
+            "415"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "个位是3就是3的倍数吗",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "13个位3但和4，不是3倍数，判F",
+          "difficulty": 2,
+          "knowledge_point": "3的倍数特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "5□1是3的倍数□可填几",
+          "answer": {
+            "value": "0、3、6、9"
+          },
+          "analysis": "5加1得6，填这四个都合",
+          "difficulty": 3,
+          "knowledge_point": "3的倍数特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "369是3的倍数吗说明理由",
+          "answer": {
+            "value": "是，各位和18，18是3的倍数"
+          },
+          "analysis": "求和1分；判18为3倍数2分；结论1分",
+          "difficulty": 4,
+          "knowledge_point": "3的倍数特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面哪个数是质数",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "29只有1和本身，所以选C，余可分解",
+          "difficulty": 1,
+          "knowledge_point": "质数与合数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "21",
+            "27",
+            "29",
+            "33"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "1是最小的质数吗",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "1只有1个因数，非质非合，判F",
+          "difficulty": 2,
+          "knowledge_point": "质数与合数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "20以内最大质数是几",
+          "answer": {
+            "value": "十九"
+          },
+          "analysis": "19只有1和19两个因数",
+          "difficulty": 3,
+          "knowledge_point": "质数与合数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "把2、9、11、15分质合数",
+          "answer": {
+            "value": "质数2和11；合数9和15"
+          },
+          "analysis": "质数2个1分；合数2个1分；全对2分",
+          "difficulty": 4,
+          "knowledge_point": "质数与合数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "既2又3倍数最小两位数",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "12个位偶且各位和3，所以选B",
+          "difficulty": 4,
+          "knowledge_point": "质数与合数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "10",
+            "12",
+            "14",
+            "16"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第八单元 可能性",
+      "order_index": 10,
+      "summary": "用一定可能不可能描述事件，比大小并设计公平规则。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "太阳从西边升起是什么事件",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "太阳东升西落，西升不可能，所以选C",
+          "difficulty": 1,
+          "knowledge_point": "用一定可能不可能描述事件",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "一定",
+            "可能",
+            "不可能",
+            "无法确定"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "掷骰子掷出7点不可能",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "骰子最大6点，7点不可能，判T",
+          "difficulty": 2,
+          "knowledge_point": "用一定可能不可能描述事件",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "盒里全红球摸红球属什么",
+          "answer": {
+            "value": "一定"
+          },
+          "analysis": "全是红球，摸出必红",
+          "difficulty": 3,
+          "knowledge_point": "用一定可能不可能描述事件",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "明天本地下雨用哪个词",
+          "answer": {
+            "value": "可能，天气有变数不肯定"
+          },
+          "analysis": "答可能2分；说清不确定2分",
+          "difficulty": 4,
+          "knowledge_point": "用一定可能不可能描述事件",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "5红1白摸哪种球可能大",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "红5白1红多，所以选A，余说反",
+          "difficulty": 1,
+          "knowledge_point": "根据数量判断可能性大小",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "红球",
+            "白球",
+            "一样大",
+            "说不清"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "3黄3蓝摸两色可能性等吗",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "两色各3数量同，机会相等，判T",
+          "difficulty": 2,
+          "knowledge_point": "根据数量判断可能性大小",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "9绿1红摸哪种球可能小",
+          "answer": {
+            "value": "红球"
+          },
+          "analysis": "红只1个占比小",
+          "difficulty": 3,
+          "knowledge_point": "根据数量判断可能性大小",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "2黄8紫摸一次最可能啥",
+          "answer": {
+            "value": "紫球，紫球数量多"
+          },
+          "analysis": "答紫球2分；举数量对比2分",
+          "difficulty": 4,
+          "knowledge_point": "根据数量判断可能性大小",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "转盘红区大半停哪最可能",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "红区域占比最大，所以选A",
+          "difficulty": 3,
+          "knowledge_point": "根据数量判断可能性大小",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "红色",
+            "蓝色",
+            "一样",
+            "说不准"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "抛硬币定先后公平吗",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "正反各半机会等，所以选A，余判断错",
+          "difficulty": 1,
+          "knowledge_point": "游戏规则的公平性",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "公平",
+            "不公平",
+            "看运气",
+            "无法判断"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "4红1白摸红甲赢公平吗",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "红白数量不等，甲更易赢，判F",
+          "difficulty": 2,
+          "knowledge_point": "游戏规则的公平性",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "摸球公平两色数量要怎样",
+          "answer": {
+            "value": "同样多"
+          },
+          "analysis": "机会相等须数量相同",
+          "difficulty": 3,
+          "knowledge_point": "游戏规则的公平性",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "3红2白怎样改才公平",
+          "answer": {
+            "value": "添1个白球使红白各3"
+          },
+          "analysis": "点出不等1分；添法2分；说等可能1分",
+          "difficulty": 4,
+          "knowledge_point": "游戏规则的公平性",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "3大3小比大小公平吗",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "大小牌各3张，机会相等，判T",
+          "difficulty": 4,
+          "knowledge_point": "游戏规则的公平性",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "摸出蓝球不可能怎么放",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "一个蓝都不放才不可能，所以选B",
+          "difficulty": 1,
+          "knowledge_point": "按指定可能性设计放球方案",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "只放蓝",
+            "不放蓝",
+            "蓝最多",
+            "蓝最少"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "全放黄球一定摸黄吗",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "全是黄球必摸黄，所以判T",
+          "difficulty": 2,
+          "knowledge_point": "按指定可能性设计放球方案",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "红黄共10球红最可能红几个",
+          "answer": {
+            "value": "至少6个"
+          },
+          "analysis": "红要比黄多，至少6个",
+          "difficulty": 3,
+          "knowledge_point": "按指定可能性设计放球方案",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "设计摸白球可能性最小的放法",
+          "answer": {
+            "value": "放1个白球和9个红球"
+          },
+          "analysis": "白球只放1个2分；其余放红2分",
+          "difficulty": 4,
+          "knowledge_point": "按指定可能性设计放球方案",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "综合实践 多少落叶能铺满",
+      "order_index": 11,
+      "summary": "方格法估落叶面积，按单位面积片数推算铺满所需。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "方格法不满格按几格算",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "零头按半格凑，所以选B，余偏差大",
+          "difficulty": 1,
+          "knowledge_point": "用方格纸估计不规则图形面积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "1格",
+            "半格",
+            "2格",
+            "不算"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "满格加半格得估计面积",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "满格计1零头计半，合计即估，判T",
+          "difficulty": 2,
+          "knowledge_point": "用方格纸估计不规则图形面积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "8满格6半格约几平方厘米",
+          "answer": {
+            "value": "11平方厘米"
+          },
+          "analysis": "6个半格凑3格，加8得11",
+          "difficulty": 3,
+          "knowledge_point": "用方格纸估计不规则图形面积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "落叶约占6平方厘米怎么估",
+          "answer": {
+            "value": "数满格与半格，凑整得6"
+          },
+          "analysis": "说数格1分；半格凑整2分；得6再1分",
+          "difficulty": 4,
+          "knowledge_point": "用方格纸估计不规则图形面积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "12满格8半格约几平方厘米",
+          "answer": {
+            "value": "16平方厘米"
+          },
+          "analysis": "8半格凑4格，加12得16",
+          "difficulty": 3,
+          "knowledge_point": "用方格纸估计不规则图形面积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "1平方分米4片1平米几片",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "百个平方分米各4片，得400，所以选C",
+          "difficulty": 1,
+          "knowledge_point": "单位面积落叶片数的估计",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "40片",
+            "100片",
+            "400片",
+            "4000片"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "数小块再推算叫取样估计吗",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "以小推大即取样估计，判T",
+          "difficulty": 2,
+          "knowledge_point": "单位面积落叶片数的估计",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "1平米1600片2平米几片",
+          "answer": {
+            "value": "3200片"
+          },
+          "analysis": "两份1600合起来得3200",
+          "difficulty": 3,
+          "knowledge_point": "单位面积落叶片数的估计",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "怎样估1平方米落叶片数",
+          "answer": {
+            "value": "先数1平方分米片数，再乘100"
+          },
+          "analysis": "先量小块2分；说清乘100再2分",
+          "difficulty": 4,
+          "knowledge_point": "单位面积落叶片数的估计",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "1平米每片5平方厘米需几片",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "万平方厘米除5得2000，所以选B",
+          "difficulty": 1,
+          "knowledge_point": "大面积除以单片面积求片数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "200片",
+            "2000片",
+            "20000片",
+            "20片"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "总面积除单片面积得片数吗",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "看总面积含几片面积，故相除，判T",
+          "difficulty": 2,
+          "knowledge_point": "大面积除以单片面积求片数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "600平方厘米每片6几片",
+          "answer": {
+            "value": "100片"
+          },
+          "analysis": "600里含100个6",
+          "difficulty": 3,
+          "knowledge_point": "大面积除以单片面积求片数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "2平米花坛每片4平方厘米估片数",
+          "answer": {
+            "value": "约5000片，2平米是2万平方厘米再除4"
+          },
+          "analysis": "换算2分；列除2分；得5000片2分",
+          "difficulty": 4,
+          "knowledge_point": "大面积除以单片面积求片数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "1平米2000片铺5平米几片",
+          "answer": {
+            "value": "10000片"
+          },
+          "analysis": "5份2000合起来得10000",
+          "difficulty": 4,
+          "knowledge_point": "大面积除以单片面积求片数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "估计值与实际片数关系",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "取样有误差只求接近，所以选C",
+          "difficulty": 1,
+          "knowledge_point": "取样估计与误差",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "完全相等",
+            "一定更多",
+            "比较接近",
+            "一定更少"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "只取一处估计最准吗",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "多处取样求平均才更准，判F",
+          "difficulty": 2,
+          "knowledge_point": "取样估计与误差",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "多处取样后怎样处理数据",
+          "answer": {
+            "value": "求平均数"
+          },
+          "analysis": "求平均能减小误差",
+          "difficulty": 3,
+          "knowledge_point": "取样估计与误差",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "估计片数为什么用约字",
+          "answer": {
+            "value": "落叶大小疏密不一，结果是近似数"
+          },
+          "analysis": "指出不匀1分；说近似数2分；用约字1分",
+          "difficulty": 4,
+          "knowledge_point": "取样估计与误差",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "总复习",
+      "order_index": 12,
+      "summary": "综合复习小数运算、因数、面积与可能性，沟通方法。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "复习课口算5.4加3.8",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "对齐小数点，进1得9.2，所以选B",
+          "difficulty": 1,
+          "knowledge_point": "小数加减与乘法的复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "8.2",
+            "9.2",
+            "9.12",
+            "8.12"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "复习0.8乘0.7积是0.56",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "8乘7得56，两位小数定0.56，判T",
+          "difficulty": 2,
+          "knowledge_point": "小数加减与乘法的复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "2.5乘4积末尾几个0",
+          "answer": {
+            "value": "1个"
+          },
+          "analysis": "25乘4得100，点一位成10",
+          "difficulty": 3,
+          "knowledge_point": "小数加减与乘法的复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "7.2减3.5得几并说算法",
+          "answer": {
+            "value": "3.7，小数点对齐再退位减"
+          },
+          "analysis": "对齐1分；退位2分；得3.7再1分",
+          "difficulty": 4,
+          "knowledge_point": "小数加减与乘法的复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "哪个数同时是2和3倍数",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "18偶且各位和9，所以选B，余缺一",
+          "difficulty": 1,
+          "knowledge_point": "倍数与因数的综合判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "14",
+            "18",
+            "25",
+            "35"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "两质数相乘的积是合数吗",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "积除1和本身还有质因数，故合数，判T",
+          "difficulty": 2,
+          "knowledge_point": "倍数与因数的综合判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "30以内最大质数是几",
+          "answer": {
+            "value": "二十九"
+          },
+          "analysis": "29只有1和29两个因数",
+          "difficulty": 3,
+          "knowledge_point": "倍数与因数的综合判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出30的全部因数",
+          "answer": {
+            "value": "1、2、3、5、6、10、15、30"
+          },
+          "analysis": "成对列举2分；不漏2分",
+          "difficulty": 4,
+          "knowledge_point": "倍数与因数的综合判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "复习底6高4平行四边形面积",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "底乘高6乘4得24，所以选C",
+          "difficulty": 1,
+          "knowledge_point": "多边形面积的综合计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "10",
+            "12",
+            "24",
+            "48"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "三角形面积是底乘高吗",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "还要再除以2，所以判F",
+          "difficulty": 2,
+          "knowledge_point": "多边形面积的综合计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "上底2下底4高3梯形面积",
+          "answer": {
+            "value": "9平方厘米"
+          },
+          "analysis": "两底和6乘3得18，折半为9",
+          "difficulty": 3,
+          "knowledge_point": "多边形面积的综合计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "底8高5三角形面积并写式",
+          "answer": {
+            "value": "20，先用底乘高再除以2"
+          },
+          "analysis": "写式1分；代入2分；得20再1分",
+          "difficulty": 4,
+          "knowledge_point": "多边形面积的综合计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "梯形上底3下底5高4面积",
+          "answer": {
+            "value": "16平方厘米"
+          },
+          "analysis": "两底和8乘4得32，折半16",
+          "difficulty": 3,
+          "knowledge_point": "多边形面积的综合计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "袋中4红2白摸红可能性",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "红4比白2多，所以选A，余说反",
+          "difficulty": 1,
+          "knowledge_point": "可能性与位置的综合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "较大",
+            "较小",
+            "不可能",
+            "一定"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "数对(6,1)与(1,6)同格吗",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "列行颠倒位置不同，判F",
+          "difficulty": 2,
+          "knowledge_point": "可能性与位置的综合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "fill",
+          "stem": "第5列第2行数对记作啥",
+          "answer": {
+            "value": "(5,2)"
+          },
+          "analysis": "先列5后行2",
+          "difficulty": 3,
+          "knowledge_point": "可能性与位置的综合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "3红3白摸球规则公平吗说明",
+          "answer": {
+            "value": "公平，两色数量相同机会等"
+          },
+          "analysis": "判公平1分；举数量相等2分；说机会1分",
+          "difficulty": 4,
+          "knowledge_point": "可能性与位置的综合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "方格(3,4)的点在第几列",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先列后行，3是列，所以选A",
+          "difficulty": 4,
+          "knowledge_point": "可能性与位置的综合",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "第3列",
+            "第4列",
+            "第7列",
+            "第1列"
+          ]
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-11T02:29:22+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

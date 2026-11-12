@@ -152,9 +152,47 @@
    "review": "docs/content-templates/exports/review_20261110/daily_consolidated-评审_20261110.md",
    "manifest": "docs/content-templates/exports/review_20261110/quarantine_manifest_20261110.json",
    "stamp": "20261109",
-   "keep_grades": [1, 8],
+   "keep_grades": [
+    1,
+    8
+   ],
    "output_suffix": ".quarantined.json",
-   "pairs": ["biology:7", "chemistry:9", "chinese:2", "chinese:3", "chinese:4", "chinese:5", "chinese:6", "chinese:7", "chinese:9", "english:2", "english:3", "english:4", "english:5", "english:6", "english:7", "english:9", "geography:7", "history:7", "history:9", "math:2", "math:3", "math:4", "math:5", "math:6", "math:7", "math:9", "physics:9", "politics:2", "politics:3", "politics:4", "politics:5", "politics:6", "politics:7", "politics:9"],
+   "pairs": [
+    "biology:7",
+    "chemistry:9",
+    "chinese:2",
+    "chinese:3",
+    "chinese:4",
+    "chinese:5",
+    "chinese:6",
+    "chinese:7",
+    "chinese:9",
+    "english:2",
+    "english:3",
+    "english:4",
+    "english:5",
+    "english:6",
+    "english:7",
+    "english:9",
+    "geography:7",
+    "history:7",
+    "history:9",
+    "math:2",
+    "math:3",
+    "math:4",
+    "math:5",
+    "math:6",
+    "math:7",
+    "math:9",
+    "physics:9",
+    "politics:2",
+    "politics:3",
+    "politics:4",
+    "politics:5",
+    "politics:6",
+    "politics:7",
+    "politics:9"
+   ],
    "release_condition": "重跑册通过 policy.book_acceptance_gate 全部硬门槛、并经人工确认后，才从 pairs 删除该 (subject,grade)；未删除前 import-books 一律不得纳入该册"
   },
   "book_acceptance_gate": {
@@ -171,9 +209,21 @@
     "section 数 >= 章数 - 1",
     "point 数 >= 章数 * 4（结构目标，不达标只告警并登记豁免，不阻断已入库历史合格册）"
    ],
-   "structural_exemptions": ["math:1：point 20 < 6*4=24，属 2026-11-09 已入库历史合格册口径"],
+   "structural_exemptions": [
+    "math:1：point 20 < 6*4=24，属 2026-11-09 已入库历史合格册口径"
+   ],
    "cliche_max_ratio": 0.05,
-   "negative_stems": ["更可取的学习做法", "可以先梳理", "举一个生活中用到", "结合实例分析比单纯背诵", "值得提倡的", "先理解概念再结合实例分析", "知识脉络", "·概念理解", "·认知"],
+   "negative_stems": [
+    "更可取的学习做法",
+    "可以先梳理",
+    "举一个生活中用到",
+    "结合实例分析比单纯背诵",
+    "值得提倡的",
+    "先理解概念再结合实例分析",
+    "知识脉络",
+    "·概念理解",
+    "·认知"
+   ],
    "note_2": "结构目标按 2026-11-10 对 12 册合格册只读校准：section 5~35、point 16~35、章 4~8；math/g1 的 point=20 低于章数×4，故该项列为目标而非硬门槛。"
   },
   "book_rerun_queue": {
@@ -187,9 +237,69 @@
     "多选题解析逐项写出 A/B/C/D 与 ✓/✗（校验器硬门槛）",
     "重跑后先过 _check_book_gate.py，再从 policy.quarantine_books.pairs 移除该册并单册 import-books"
    ],
-   "status": "31 册实质重跑完成（222 章 / 888 点 / 3997 题）：_validate_daily 31 通过 0 错误、_check_book_gate 31 PASS；2026-11-10 独立评审结论为可入库，待按 -Stamp 20261110 单册试点后分批 import-books。另有 3 册转人工教研，见 excluded_books。",
-   "excluded_books": ["history:9", "politics:5", "politics:9"],
-   "excluded_books_note": "2026-11-10 评审处置：这 3 册题材按内容合规边界不纳入 AI 批量生成，改由人工教研出题；如确需 AI 辅助，仅限教材原文识记型的直接对应，禁止评价性、立场性题干，且必须 100% 人工复核。下一轮批量生成须先读本字段并从生成清单中剔除，避免重复撞到同一处。本批次 31 册内容包在 rerun_packs/，待评审整册在 daily_rerun/，均未入库。"
+   "status": "2026-11-11 已入库：31 册经四轮评审（校验 31/31、闸门 31 PASS、222 章 / 1110 节点 / 4002 题）后按 -Stamp 20261110 先 math:2 单册试点、再整批 import-books 导入成功；questions 2434→6436、knowledge_points 1104→2206、章 0 新建、空挂 0、外键 0、题干全可查。policy.quarantine_books.pairs 保留 34 项未撤（用于继续挡住 11-09 旧分片回流），其中 3 册（history:9 / politics:5 / politics:9）仍待人工教研。",
+   "legacy_questions_note": "2026-11-11 评审认可方案 A：31 册覆盖章内已有 573 道 11-07 旧题，导入后与新题语义相近但题干不同；保留旧题、新旧双体系并存，登记 backlog 后续归并，禁止导入前归档旧题（动库且不可逆）。跨册复用题干与旧题去重按题干预判无法拦截，需人工归并时按语义处理。",
+   "accepted_backlog": [
+    "30 册缺 multiple 题型、语文表达题已补 5 道 answer 型；其余题型缺口接受现状并登记 backlog",
+    "难度 5 级题偏少（现 8 道）与跨册同题干 2 对属正常复用，非阻断"
+   ],
+   "excluded_books": [
+    "history:9",
+    "politics:5",
+    "politics:9"
+   ],
+   "excluded_books_note": "2026-11-10 评审处置：这 3 册题材按内容合规边界不纳入 AI 批量生成，改由人工教研出题；如确需 AI 辅助，仅限教材原文识记型的直接对应，禁止评价性、立场性题干，且必须 100% 人工复核。下一轮批量生成须先读本字段并从生成清单中剔除，避免重复撞到同一处。本批次 31 册内容包在 rerun_packs/，待评审整册在 daily_rerun/，均未入库。",
+   "import_record": {
+    "date": "2026-11-11",
+    "stamp": "20261110",
+    "pilot": "math:2（先 import-books-dry 再 import-books，-Only math_g2_first_20261110_book.json）",
+    "batch": "其余 30 册一次 import-books -Stamp 20261110",
+    "stats": {
+     "textbooks": 146,
+     "chapters": 618,
+     "knowledge_points": 2206,
+     "questions": 6436
+    },
+    "delta": {
+     "knowledge_points": 1102,
+     "questions": 4002,
+     "chapters": 0,
+     "textbooks": 0
+    },
+    "backups": [
+     "backend/build/backups/ailearning-backup-20261111-024557.db（试点前，kp 1104 / q 2434）",
+     "backend/build/backups/ailearning-backup-20261111-024633.db（整批前，kp 1144 / q 2578）"
+    ],
+    "reports": [
+     "exports/automation_20261108_codebuddy/import_report_books_20261111_024559.json（试点）",
+     "exports/automation_20261108_codebuddy/import_report_books_20261111_024637.json（整批）"
+    ],
+    "restore_hint": "Copy-Item -Force \"<backup.db>\" \"backend/ailearning_dev.db\""
+   },
+   "manual_review_books": [
+    {
+     "pair": "history:9",
+     "chapters": 6,
+     "reason": "题材涉及近现代史敏感叙事，属合规边界，AI 批量生成不纳入",
+     "route": "人工教研：由教研老师按大纲逐章编写题干与答案，走 import-books 前先过 _validate_daily + _check_book_gate",
+     "db_state": "库内 6 章已存在且为 0 题，等人工内容填入"
+    },
+    {
+     "pair": "politics:5",
+     "chapters": 3,
+     "reason": "政治题材涉价值导向，AI 批量生成不纳入",
+     "route": "人工教研",
+     "db_state": "库内 3 章已存在且为 0 题"
+    },
+    {
+     "pair": "politics:9",
+     "chapters": 3,
+     "reason": "政治题材涉价值导向，AI 批量生成不纳入",
+     "route": "人工教研",
+     "db_state": "库内 3 章已存在且为 0 题"
+    }
+   ],
+   "manual_review_books_note": "2026-11-11 定：31 册 AI 入库后，全库 0 题章只剩这 12 个，正好对应这 3 册，其他章无空缺。三册继续留在 policy.quarantine_books.pairs 内，不得由 _consolidate_daily.py 自动生成整册；人工写好的内容按单册 import-books 导入。"
   },
   "known_gaps_20261109": [
    "62 份 daily/**/*_rN.json 分片仍未登记 manifest（文件名末段是 rN，--pattern \"*_<batch>.json\" 扫不到）；须每轮跑 _consolidate_daily.py 归集后再入库",
@@ -201,7 +311,7 @@
    "g1/g8 有 10 个空壳知识点待补题（math g8 勾股定理 5 / chinese g8 新闻 5），补题须走生成规则"
   ],
   "kp_cleanup_note": "2026-11-09 晚知识点层清理（A–D）。执行脚本 exports/review_20261109/kp-cleanup_20261109.py，等价 SQL exports/review_20261109/cleanup-kp-20261109.sql，备份 backend/_backup/ailearning_dev_20261109-050711.db。A 删 9 个「样章·…」占位分组 + 18 子点（0 题 0 引用）；B 5 个实践类节点 section→point；C 2 个中文点名去 ?；D 156 个 point 补 prerequisites。knowledge_points 1120→1093，questions 2434 不变。同步：baseline/_knowledge-points-baseline_latest 已用 _build_kp_baseline.py 重算（703 名 / 0 歧义）。",
-  "kp_reconcile_20261110_note": "2026-11-10 只读对账（评审复评 §八-3 / §九-②）：实测 knowledge_points 1104，比 04 手册与本文件 kp_cleanup_note 的 1093 多 11；差异恰为 11-08 21:38 建的 11 个存量节点（biology g8 综合实践 section×2、chinese g8 新闻采访/写作 section×2+point×4、geography g8 探究与实践 section×3），其中 7 个 0 题 0 子点 0 先修引用；基线 703 名逐项比对「库内缺 0、库内多 4」（多的是 chinese g8 新闻 4 个点名）。留痕 exports/review_20261110/kp_reconciliation_20261110.json（脚本 _kp_reconcile_20261110.py，sqlite mode=ro）。当前口径以 1104 为准；补清理这 11 个节点使库回到 1093 属写库动作，需另行授权并先备份，本次未改库。",
+  "kp_reconcile_20261110_note": "2026-11-10 只读对账（评审复评 §八-3 / §九-②）：实测 knowledge_points 1104，比 04 手册与本文件 kp_cleanup_note 的 1093 多 11；差异恰为 11-08 21:38 建的 11 个存量节点（biology g8 综合实践 section×2、chinese g8 新闻采访/写作 section×2+point×4、geography g8 探究与实践 section×3），其中 7 个 0 题 0 子点 0 先修引用；基线 703 名逐项比对「库内缺 0、库内多 4」（多的是 chinese g8 新闻 4 个点名）。留痕 exports/review_20261110/kp_reconciliation_20261110.json（脚本 _kp_reconcile_20261110.py，sqlite mode=ro）。当前口径以 1104 为准；补清理这 11 个节点使库回到 1093 属写库动作，需另行授权并先备份，本次未改库。 | 2026-11-11 复核：全库 1104 与手册 1093 的 11 个差额来自 11-08 20:33/21:38 两轮节点生成，其中 5 组是 section 与 point 同名（biology:g8 2 组、geography:g8 3 组）。已归并：把 5 个悬空 point 挂到同名 section 下并按既有约定改名为「…（要点）」，未删节点、未动题目；归并后 knowledge_points 仍 2206、questions 仍 6436、同名节点 0、point 悬空 0。备份 backend/build/backups/ailearning-backup-20261111-0255-kpmerge.db",
   "import_books_note_20261110": "评审 P0-2 / P1 / 复评 §八-4 已落地：db_ops.py import-books 支持 --subjects/--grades/--only（校验与导入同一个文件集合）、失败文件清单、books_validation_*.json 机读汇总；import_content.py 支持 --only；ops.ps1 / ops.cmd 透传 -Subjects/-Grades/-Only；报告新增 per_book / per_book_summary，dry-run 也写 import_report_books_*_dry.json，控制台只打汇总。P3 闸门 _check_book_gate.py 于 2026-11-10 实测：未隔离 12 册全 PASS（EXIT=0），含隔离件 46 册 12 PASS / 34 FAIL（EXIT=1），失败名单与 policy.quarantine_books.pairs 完全一致。",
   "kp_backlog": {
    "note": "g1/g8 中仍有 37 个 0 题 point，其中 10 个是\"内容缺口\"而非常规概览点，需按生成规则补题（不要直接写库手造题目）。",
@@ -230,7 +340,8 @@
      ],
      "why": "1107 旧文件里这几条被判\"每点<4 题\"并降级为提醒，1108 新内容未覆盖"
     }
-   ]
+   ],
+   "resolved_20261111": "① 5 组同名节点（g8）已按 section←point 层级归并（改名「…（要点）」，未删节点未动题）；② 55 个「样章·…」演示节点 + 其 110 个子节点（0 题、无引用）已整棵删除，knowledge_points 2206→2041，questions 仍 6436，留痕 exports/review_20261110/db_op_placeholder_kp_20261111.json；③ 仍存：12 个 0 题 point 的内容缺口（见 items，需按生成规则补题，不得手造）。"
   }
  },
  "shifts": {

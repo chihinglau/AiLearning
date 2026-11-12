@@ -1,0 +1,331 @@
+{
+  "schema_version": 1,
+  "source": "docs/content-templates/_validate_daily.py",
+  "expects": {
+    "subject": null,
+    "grade": null,
+    "version": null,
+    "semester": null
+  },
+  "totals": {
+    "files": 31,
+    "passed": 31,
+    "failed": 0,
+    "errors": 0,
+    "warnings": 92,
+    "quarantined_skipped": 0
+  },
+  "quarantined_skipped_names": [],
+  "files": [
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\biology\\g7\\biology_g7_first_20261110_book.json",
+      "name": "biology_g7_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\chemistry\\g9\\chemistry_g9_first_20261110_book.json",
+      "name": "chemistry_g9_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\chinese\\g2\\chinese_g2_first_20261110_book.json",
+      "name": "chinese_g2_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\chinese\\g3\\chinese_g3_first_20261110_book.json",
+      "name": "chinese_g3_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\chinese\\g4\\chinese_g4_first_20261110_book.json",
+      "name": "chinese_g4_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\chinese\\g5\\chinese_g5_first_20261110_book.json",
+      "name": "chinese_g5_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\chinese\\g6\\chinese_g6_first_20261110_book.json",
+      "name": "chinese_g6_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\chinese\\g7\\chinese_g7_first_20261110_book.json",
+      "name": "chinese_g7_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\chinese\\g9\\chinese_g9_first_20261110_book.json",
+      "name": "chinese_g9_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\english\\g2\\english_g2_first_20261110_book.json",
+      "name": "english_g2_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 6,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\english\\g3\\english_g3_first_20261110_book.json",
+      "name": "english_g3_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 3,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\english\\g4\\english_g4_first_20261110_book.json",
+      "name": "english_g4_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\english\\g5\\english_g5_first_20261110_book.json",
+      "name": "english_g5_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\english\\g6\\english_g6_first_20261110_book.json",
+      "name": "english_g6_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\english\\g7\\english_g7_first_20261110_book.json",
+      "name": "english_g7_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\english\\g9\\english_g9_first_20261110_book.json",
+      "name": "english_g9_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\geography\\g7\\geography_g7_first_20261110_book.json",
+      "name": "geography_g7_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\history\\g7\\history_g7_first_20261110_book.json",
+      "name": "history_g7_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\math\\g2\\math_g2_first_20261110_book.json",
+      "name": "math_g2_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unchanged",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\math\\g3\\math_g3_first_20261110_book.json",
+      "name": "math_g3_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\math\\g4\\math_g4_first_20261110_book.json",
+      "name": "math_g4_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 3,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\math\\g5\\math_g5_first_20261110_book.json",
+      "name": "math_g5_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 5,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\math\\g6\\math_g6_first_20261110_book.json",
+      "name": "math_g6_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 20,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\math\\g7\\math_g7_first_20261110_book.json",
+      "name": "math_g7_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 3,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\math\\g9\\math_g9_first_20261110_book.json",
+      "name": "math_g9_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\physics\\g9\\physics_g9_first_20261110_book.json",
+      "name": "physics_g9_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\politics\\g2\\politics_g2_first_20261110_book.json",
+      "name": "politics_g2_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 3,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\politics\\g3\\politics_g3_first_20261110_book.json",
+      "name": "politics_g3_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 3,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\politics\\g4\\politics_g4_first_20261110_book.json",
+      "name": "politics_g4_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\politics\\g6\\politics_g6_first_20261110_book.json",
+      "name": "politics_g6_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    },
+    {
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_consolidated\\politics\\g7\\politics_g7_first_20261110_book.json",
+      "name": "politics_g7_first_20261110_book.json",
+      "passed": true,
+      "errors": 0,
+      "warnings": 2,
+      "error_messages": [],
+      "import_state": "unknown",
+      "book": true
+    }
+  ]
+}
