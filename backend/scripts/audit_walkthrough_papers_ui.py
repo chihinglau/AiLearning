@@ -173,9 +173,12 @@ def audit_paper(exam: Exam, bank: dict[int, dict]) -> tuple[dict, list[dict]]:
                 if dup:
                     add("LR-2", "P1", i, f"选项文本重复: {dup[:2]}")
 
-        # LR-3 填空题必须留作答空位；解答题靠空白处作答，不判
+        # LR-3 填空题必须留作答空位；解答题靠空白处作答，不判。
+        # 判据收录「任意下划线（含单/双下划线）」与「任意括号」——语文成语题
+        # 写的是「画蛇添__」（双下划线），英语翻译题写的是「（写英文）」，
+        # 都在正常交代作答位，早先只认 `____` 与空括号属于误判。
         if qt == "fill":
-            if not re.search(r"____|＿|（\s*）|\(\s*\)|___|＿", stem):
+            if not re.search(r"_|＿|[（(]", stem):
                 add("LR-3", "P2", i, "填空题干未留作答空位（无下划线/括号）")
 
         # LR-4 习作/作文要有要求。主判据只认「是否写了字数/篇幅要求」；
@@ -190,9 +193,12 @@ def audit_paper(exam: Exam, bank: dict[int, dict]) -> tuple[dict, list[dict]]:
 
         # LR-5 答案泄露。阅读理解题的答案本来就在原文里，跳过；只有纯选择题
         # 且「答案文本本身」出现在题干里才算泄露。
+        # 例外：纯数字 / 数字＋单位型答案（如「4元」「2个」）在数学题干里必然
+        # 与题给条件构成子串重叠（「2.4元」里就含「4元」），那是题面条件不是泄露。
         ans = _answer_text(q).strip()
         body = q.get("content") or {}
-        if qt in ("choice", "fill") and ans and not body.get("passage"):
+        numeric_ans = bool(re.fullmatch(r"[0-9０-９\.\/百分]+[\u4e00-\u9fff]{0,3}", ans))
+        if qt in ("choice", "fill") and ans and not body.get("passage") and not numeric_ans:
             zh = bool(re.search(r"[\u4e00-\u9fff]", ans))
             hit = False
             if zh and len(ans) >= 2:
