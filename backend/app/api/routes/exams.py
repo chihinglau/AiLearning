@@ -3,8 +3,8 @@
 from datetime import datetime
 from typing import Any, Optional
 
-from fastapi import APIRouter, Body, Depends, HTTPException, Query, status
-from sqlalchemy import or_, select
+from fastapi import APIRouter, Body, Depends, HTTPException, Query, Response, status
+from sqlalchemy import and_, func, or_, select
 from sqlalchemy.orm import Session
 
 from app.api.deps import get_current_user, require_permission
@@ -15,13 +15,14 @@ from app.models.content import KnowledgePoint, Question
 from app.models.exam import Exam, ExamAnswer, ExamAttempt, ExamBlueprint
 from app.models.org import ClassMember, SchoolClass
 from app.models.practice import StudentQuestionRecord
-from app.models.user import User
+from app.models.user import AuditLog, User
 from app.schemas.content import QuestionPublic
 from app.schemas.exam import (
     ExamAbilityStatOut,
     ExamAnswerOut,
     ExamAnswerSaveIn,
     ExamAttemptBriefOut,
+    ExamAttemptHistoryOut,
     ExamAttemptOut,
     ExamAttemptStartIn,
     ExamClassAverageOut,
@@ -32,6 +33,10 @@ from app.schemas.exam import (
     ExamNextActionOut,
     ExamQuestionOut,
     ExamReportOut,
+    ExamReviewActionOut,
+    ExamReviewIn,
+    ExamReviewNoteIn,
+    ExamReviewOut,
     ExamSaveIn,
     ExamSaveOut,
     ExamSelfAssessIn,
@@ -40,19 +45,30 @@ from app.schemas.exam import (
     ExamSubmitIn,
     ExamSubmitOut,
     ExamSummaryOut,
+    ExamSampleReviewIn,
+    ExamSamplingItemOut,
+    ExamSamplingOut,
     ExamTrendOut,
     ExamTrendPointOut,
     ExamTypeStatOut,
     ExamWrongItemOut,
     MockExamAssignIn,
     MockExamAssignOut,
+    PastPaperDetailOut,
+    PastPaperFiltersOut,
     PastPaperOut,
 )
 from app.services import learning as engine
 from app.services import wrong_reason as wrong_reason_service
 from app.services.assignment import class_authorized
 from app.services.audit import record_audit
-from app.services.exam_paper import generate_paper
+from app.services.exam_paper import generate_paper, resolve_scope_chapters
+from app.services.exam_paper_docs import (
+    build_spec_table,
+    recent_question_ids,
+    render_answer_sheet_html,
+    sample_exams,
+)
 from app.services.recommendation import student_visible_exam_clauses
 from app.services.usage import (
     daily_limit_status,
@@ -65,9 +81,10 @@ router = APIRouter(prefix="/exams", tags=["考试"])
 # 客观题：交卷即判；其余题型（calc/answer/listen 等）一期进入待批/自评
 OBJECTIVE_TYPES = {"choice", "multiple", "fill", "judge"}
 
-# 考试回流掌握度权重：单元测 0.8、期中 0.6、期末 0.5（其余按 0.8）
-EXAM_TYPE_WEIGHT = {"unit": 0.8, "midterm": 0.6, "final": 0.5}
-DEFAULT_EXAM_WEIGHT = 0.8
+# PG-04（2026-11-16 PM 裁决）：作废按考试类型区分的回流权重系数。
+# 掌握度回流统一按 1.0 计入，避免「单元测 0.8 / 期中 0.6 / 期末 0.5」这类无依据的衰减。
+EXAM_TYPE_WEIGHT: dict[str, float] = {}
+DEFAULT_EXAM_WEIGHT = 1.0
 
 # 能力维度（D-04 §8.5）：默认按题型映射，学科可覆盖
 ABILITY_LABELS = {
@@ -222,10 +239,22 @@ def _ensure_takeable(exam: Exam, user: User, db: Optional[Session] = None) -> No
             )
 
 
+def _license_note_for(exam: Exam, viewer: Optional[User]) -> Optional[str]:
+    """授权说明属 R-07 台账内部信息（评审 R2-06 遗留项）：仅管理侧可见。
+
+    学生端只保留 `source_name`（来源标签），不接收授权条款原文，避免把台账
+    细节当作对外授权凭证展示。
+    """
+    if viewer is not None and viewer.role == "student":
+        return None
+    return exam.license_note
+
+
 def _detail_out(
     db: Session,
     exam: Exam,
     now: Optional[datetime] = None,
+    viewer: Optional[User] = None,
 ) -> ExamDetailOut:
     items = _paper_items(exam)
     questions = _question_map(db, [item["question_id"] for item in items])
@@ -261,6 +290,9 @@ def _detail_out(
         region=exam.region,
         is_past_paper=bool(exam.is_past_paper),
         class_id=exam.class_id,
+        source_name=exam.source_name,
+        license_note=_license_note_for(exam, viewer),
+        adapted_from=exam.adapted_from,
         questions=out,
     )
 
@@ -322,6 +354,7 @@ def _attempt_out(
     exam: Exam,
     attempt: ExamAttempt,
     now: datetime,
+    viewer: Optional[User] = None,
 ) -> ExamAttemptOut:
     paper = _paper_items(exam)
     answers = _answers_out(db, attempt, paper)
@@ -346,7 +379,7 @@ def _attempt_out(
         submit_token=attempt.submit_token,
         remaining_seconds=_remaining_seconds(exam, attempt, now),
         server_now=now,
-        exam=_detail_out(db, exam, now),
+        exam=_detail_out(db, exam, now, viewer),
         answers=answers,
         next_index=next_index,
     )
@@ -359,13 +392,27 @@ def _attempt_out(
 
 @router.get("", response_model=list[ExamSummaryOut])
 def list_exams(
+    response: Response,
     exam_type: Optional[str] = Query(default=None, alias="type"),
     status_filter: Optional[str] = Query(
         default=None, alias="status", pattern=r"^(available|in_progress|completed)$"
     ),
+    subject: Optional[str] = Query(default=None, max_length=20),
+    window_state: Optional[str] = Query(
+        default=None, pattern=r"^(open|scheduled|closed|unscheduled)$"
+    ),
+    q: Optional[str] = Query(default=None, max_length=80),
+    page: Optional[int] = Query(default=None, ge=1),
+    page_size: Optional[int] = Query(default=None, ge=1, le=100),
     current: User = Depends(get_current_user),
     db: Session = Depends(get_db),
 ) -> list[ExamSummaryOut]:
+    """考试中心列表（D-09 §4.3）：新增筛选均为可见性谓词之后的 AND 收窄。
+
+    评审 R2-06（2026-11-14）：作答状态与窗口状态改为 SQL 条件后再取数与计数，
+    修正旧实现「先按 hard_limit 截断、后在内存里过滤」导致的漏卷与总数失真；
+    不带 page 时仍保持 CR-003 验收态（最多 100 条），响应体保持数组。
+    """
     stmt = select(Exam)
     # 班级作业卷通过 /api/assignments 暴露，避免在通用考试列表中重复出现
     stmt = stmt.where(Exam.source != "assignment")
@@ -374,7 +421,54 @@ def list_exams(
         stmt = stmt.where(*student_visible_exam_clauses(current))
     if exam_type:
         stmt = stmt.where(Exam.exam_type == exam_type)
-    exams = list(db.scalars(stmt.order_by(Exam.id.desc()).limit(100)))
+    if subject:
+        stmt = stmt.where(Exam.subject == subject)
+    if q and q.strip():
+        stmt = stmt.where(func.lower(Exam.title).contains(q.strip().lower()))
+
+    now = datetime.utcnow()
+    my_attempt = select(ExamAttempt.id).where(
+        ExamAttempt.exam_id == Exam.id,
+        ExamAttempt.user_id == current.id,
+    )
+    if status_filter == "available":
+        stmt = stmt.where(~my_attempt.exists())
+    elif status_filter == "in_progress":
+        stmt = stmt.where(
+            my_attempt.where(ExamAttempt.status == "in_progress").exists()
+        )
+    elif status_filter == "completed":
+        stmt = stmt.where(my_attempt.where(ExamAttempt.status != "in_progress").exists())
+    if window_state == "unscheduled":
+        stmt = stmt.where(Exam.window_start.is_(None), Exam.window_end.is_(None))
+    elif window_state == "scheduled":
+        stmt = stmt.where(Exam.window_start.is_not(None), Exam.window_start > now)
+    elif window_state == "closed":
+        stmt = stmt.where(Exam.window_end.is_not(None), Exam.window_end <= now)
+    elif window_state == "open":
+        stmt = stmt.where(
+            or_(
+                and_(
+                    Exam.window_start.is_(None),
+                    Exam.window_end.is_not(None),
+                    Exam.window_end > now,
+                ),
+                and_(
+                    Exam.window_start.is_not(None),
+                    Exam.window_start <= now,
+                    or_(Exam.window_end.is_(None), Exam.window_end > now),
+                ),
+            )
+        )
+
+    total = db.scalar(select(func.count()).select_from(stmt.subquery())) or 0
+    response.headers["X-Total-Count"] = str(total)
+    if page is not None:
+        size = page_size or 20
+        stmt = stmt.offset((page - 1) * size).limit(size)
+    else:
+        stmt = stmt.limit(100)
+    exams = list(db.scalars(stmt.order_by(Exam.id.desc())))
     if not exams:
         return []
 
@@ -389,8 +483,10 @@ def list_exams(
         )
     )
     latest: dict[int, ExamAttempt] = {}
+    attempt_counts: dict[int, int] = {}
     for attempt in attempts:
         latest[attempt.exam_id] = attempt
+        attempt_counts[attempt.exam_id] = attempt_counts.get(attempt.exam_id, 0) + 1
 
     now = datetime.utcnow()
     result: list[ExamSummaryOut] = []
@@ -402,8 +498,7 @@ def list_exams(
             category = "completed"
         else:
             category = "available"
-        if status_filter and category != status_filter:
-            continue
+        state = _window_state(exam, now)
         brief = None
         if attempt is not None:
             brief = ExamAttemptBriefOut(
@@ -432,11 +527,15 @@ def list_exams(
                 category=category,
                 window_start=exam.window_start,
                 window_end=exam.window_end,
-                window_state=_window_state(exam, now),
+                window_state=state,
                 region=exam.region,
                 is_past_paper=bool(exam.is_past_paper),
                 class_id=exam.class_id,
                 attempt=brief,
+                source_name=exam.source_name,
+                license_note=_license_note_for(exam, current),
+                adapted_from=exam.adapted_from,
+                attempt_count=attempt_counts.get(exam.id, 0),
             )
         )
     return result
@@ -470,15 +569,478 @@ def list_blueprints(
     ]
 
 
+@router.get("/past-papers/filters", response_model=PastPaperFiltersOut)
+def past_paper_filters(
+    current: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+) -> PastPaperFiltersOut:
+    """真题库可用筛选项（D-09 §5.3）：避免前端硬编码年份/学科/地区。"""
+    stmt = select(
+        Exam.year, Exam.subject, Exam.region, Exam.grade, Exam.exam_type
+    ).where(
+        Exam.status == "published",
+        Exam.is_past_paper.is_(True),
+        Exam.class_id.is_(None),
+    )
+    if current.role == "student" and current.grade:
+        stmt = stmt.where(Exam.grade == current.grade)
+    rows = db.execute(stmt).all()
+    return PastPaperFiltersOut(
+        years=sorted({int(row[0]) for row in rows if row[0] is not None}, reverse=True),
+        subjects=sorted({str(row[1]) for row in rows if row[1]}),
+        regions=sorted({str(row[2]) for row in rows if row[2]}),
+        grades=sorted({int(row[3]) for row in rows if row[3] is not None}),
+        exam_types=sorted({str(row[4]) for row in rows if row[4]}),
+    )
+
+
+@router.get("/attempts", response_model=list[ExamAttemptHistoryOut])
+def list_attempt_history(
+    response: Response,
+    exam_id: Optional[int] = Query(default=None, ge=1),
+    page: Optional[int] = Query(default=None, ge=1),
+    page_size: Optional[int] = Query(default=None, ge=1, le=100),
+    current: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+) -> list[ExamAttemptHistoryOut]:
+    """本人历次考试作答（D-09 §4.7）。必须注册在 /{exam_id} 之前。
+
+    评审 §9.5-1：历史作答改为服务端分页，X-Total-Count 为分页前真实总数；
+    不带 page 时保持旧行为（最多 200 条）。
+    """
+    stmt = (
+        select(ExamAttempt, Exam)
+        .join(Exam, Exam.id == ExamAttempt.exam_id)
+        .where(ExamAttempt.user_id == current.id)
+    )
+    if exam_id is not None:
+        stmt = stmt.where(ExamAttempt.exam_id == exam_id)
+    total = db.scalar(select(func.count()).select_from(stmt.subquery())) or 0
+    response.headers["X-Total-Count"] = str(total)
+    if page is not None:
+        size = page_size or 20
+        stmt = stmt.offset((page - 1) * size).limit(size)
+    else:
+        stmt = stmt.limit(200)
+    rows = list(db.execute(stmt.order_by(ExamAttempt.id.desc())))
+    return [
+        ExamAttemptHistoryOut(
+            attempt_id=attempt.id,
+            exam_id=exam.id,
+            exam_title=exam.title,
+            exam_type=exam.exam_type,
+            status=attempt.status,
+            total_score=attempt.total_score,
+            full_score=exam.total_score,
+            started_at=attempt.started_at,
+            submitted_at=attempt.submitted_at,
+            duration_ms=attempt.duration_ms,
+        )
+        for attempt, exam in rows
+    ]
+
+
+# ---------------------------------------------------------------------------
+# 真题审核发布流（D-09 §5.7 P2 / CR-005）：仅 is_past_paper=true 生效。
+# 静态路径 /reviews 必须注册在 /{exam_id} 之前；普通卷不进入本流程。
+# ---------------------------------------------------------------------------
+
+EXAM_REVIEW_STATES = ("draft", "pending_review", "published", "offline")
+
+
+def _reviewable_or_404(db: Session, exam_id: int) -> Exam:
+    exam = db.get(Exam, exam_id)
+    if exam is None or not exam.is_past_paper:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail={"code": "EXAM_REVIEW_NOT_FOUND", "message": "待复核真题不存在"},
+        )
+    # 评审 §9.5-2：班级派发副本（class_id 非空）是模板卷的下游产物，
+    # 复核对象应始终是模板卷本身，避免同一张真题在多个班级副本上重复走审核流。
+    if exam.class_id is not None:
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail={
+                "code": "EXAM_CLASS_COPY_NOT_REVIEWABLE",
+                "message": "班级派发的真题副本不进入审核队列，请操作其模板卷",
+            },
+        )
+    return exam
+
+
+def _require_exam_source(exam: Exam) -> None:
+    """真题来源卡口：缺来源不得提交复核、更不得发布（R-07 台账）。"""
+    if not (exam.source_name and exam.source_name.strip()):
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail={
+                "code": "EXAM_SOURCE_REQUIRED",
+                "message": "历年真题必须补录来源名称后才可提交复核或发布",
+            },
+        )
+
+
+@router.get("/reviews", response_model=list[ExamReviewOut])
+def list_exam_reviews(
+    response: Response,
+    review_status: str = Query(default="pending_review"),
+    page: Optional[int] = Query(default=None, ge=1),
+    page_size: Optional[int] = Query(default=None, ge=1, le=100),
+    current: User = Depends(require_permission("content:review:decide")),
+    db: Session = Depends(get_db),
+) -> list[ExamReviewOut]:
+    """审核队列：默认只列待复核真题，可按状态查看历史（不含答案）。
+
+    评审 §9.5-1：队列改为服务端分页，X-Total-Count 为分页前真实总数；
+    不带 page 时保持旧行为（最多 200 条）。
+    """
+    if review_status not in EXAM_REVIEW_STATES:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail={
+                "code": "EXAM_REVIEW_STATUS_INVALID",
+                "message": "审核状态不合法",
+            },
+        )
+    stmt = select(Exam).where(
+        Exam.is_past_paper.is_(True), Exam.status == review_status
+    )
+    total = db.scalar(select(func.count()).select_from(stmt.subquery())) or 0
+    response.headers["X-Total-Count"] = str(total)
+    if page is not None:
+        size = page_size or 20
+        stmt = stmt.offset((page - 1) * size).limit(size)
+    else:
+        stmt = stmt.limit(200)
+    rows = db.scalars(stmt.order_by(Exam.id.desc())).unique().all()
+    return [
+        ExamReviewOut(
+            id=exam.id,
+            title=exam.title,
+            subject=exam.subject,
+            grade=exam.grade,
+            year=exam.year,
+            region=exam.region,
+            status=exam.status,
+            is_past_paper=exam.is_past_paper,
+            source_name=exam.source_name,
+            license_note=exam.license_note,
+            adapted_from=exam.adapted_from,
+            reviewed_by=exam.reviewed_by,
+            reviewed_at=exam.reviewed_at,
+            published_by=exam.published_by,
+            published_at=exam.published_at,
+            review_note=exam.review_note,
+            created_at=exam.created_at,
+        )
+        for exam in rows
+    ]
+
+
+@router.get("/review-sampling", response_model=ExamSamplingOut)
+def list_review_sampling(
+    ratio: float = Query(default=0.1, gt=0, le=1),
+    seed: Optional[int] = Query(default=None),
+    only_unreviewed: bool = Query(default=True),
+    limit: int = Query(default=500, ge=1, le=2000),
+    current: User = Depends(require_permission("content:exam:write")),
+    db: Session = Depends(get_db),
+) -> ExamSamplingOut:
+    """抽检队列（PG-05）：自建卷按比例稳定随机抽样，默认只抽未复核的。
+
+    PM 口径为 10%；`seed` 相同则抽样结果一致，便于复现与留痕。
+    """
+    stmt = select(Exam).where(
+        Exam.source == "generated", Exam.status == "published"
+    )
+    if only_unreviewed:
+        stmt = stmt.where(Exam.reviewed_at.is_(None))
+    rows = db.scalars(stmt.order_by(Exam.id.asc()).limit(limit)).all()
+    effective_seed = int(seed if seed is not None else datetime.now().strftime("%Y%m%d"))
+    sampled = sample_exams(rows, ratio, effective_seed)
+    return ExamSamplingOut(
+        total_candidates=len(rows),
+        sampled_count=len(sampled),
+        ratio=ratio,
+        seed=effective_seed,
+        items=[
+            ExamSamplingItemOut(
+                exam_id=exam.id,
+                title=exam.title,
+                subject=exam.subject,
+                grade=exam.grade,
+                exam_type=exam.exam_type,
+                question_count=len(exam.questions or []),
+                total_score=exam.total_score,
+                reviewed_at=exam.reviewed_at,
+            )
+            for exam in sampled
+        ],
+    )
+
+
+@router.post("/{exam_id}/sample-review", response_model=ExamReviewActionOut)
+def submit_sample_review(
+    exam_id: int,
+    payload: ExamSampleReviewIn,
+    current: User = Depends(require_permission("content:exam:write")),
+    db: Session = Depends(get_db),
+) -> ExamReviewActionOut:
+    """登记抽检结论：通过则留痕；不通过回草稿待整改，并写入抽检意见。"""
+    exam = db.get(Exam, exam_id)
+    if exam is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="试卷不存在")
+    if exam.is_past_paper:
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail={
+                "code": "EXAM_SAMPLE_SCOPE_INVALID",
+                "message": "抽检仅适用于自建卷，真题请走双人复核流",
+            },
+        )
+    exam.reviewed_by = current.id
+    exam.reviewed_at = datetime.utcnow()
+    exam.review_note = (
+        ("[抽检通过] " if payload.passed else "[抽检退回] ") + payload.note.strip()
+    )
+    if not payload.passed:
+        exam.status = "draft"
+        exam.published_by = None
+        exam.published_at = None
+    record_audit(
+        db,
+        user_id=current.id,
+        action="exam.sample_review",
+        message=f"抽检{'通过' if payload.passed else '退回'}：{payload.note[:200]}",
+        after={"exam_id": exam.id, "passed": payload.passed},
+        commit=False,
+    )
+    db.commit()
+    return ExamReviewActionOut(
+        exam_id=exam.id,
+        status=exam.status,
+        reviewed_by=exam.reviewed_by,
+        reviewed_at=exam.reviewed_at,
+        review_note=exam.review_note,
+        action="sample_review",
+    )
+
+
+@router.post("/{exam_id}/submit-review", response_model=ExamReviewActionOut)
+def submit_exam_review(
+    exam_id: int,
+    payload: ExamReviewNoteIn,
+    current: User = Depends(require_permission("content:exam:write")),
+    db: Session = Depends(get_db),
+) -> ExamReviewActionOut:
+    exam = _reviewable_or_404(db, exam_id)
+    if exam.status != "draft":
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail={
+                "code": "EXAM_INVALID_STATE",
+                "message": "仅草稿真题可提交复核",
+            },
+        )
+    _require_exam_source(exam)
+    exam.status = "pending_review"
+    exam.review_note = payload.note
+    exam.reviewed_by = None
+    exam.reviewed_at = None
+    record_audit(
+        db,
+        user_id=current.id,
+        action="exam.review.submit",
+        message=f"exam={exam.id}, from=draft, to=pending_review",
+    )
+    db.commit()
+    return ExamReviewActionOut(
+        exam_id=exam.id, status=exam.status, action="submit"
+    )
+
+
+def _last_submitter_id(db: Session, exam_id: int) -> Optional[int]:
+    """取最近一次「提交复核」的操作人（评审 R2-03：approve 必须换人复核）。
+
+    审计 detail 为 JSON（含 message="exam={id}, from=..., to=..."），用包含匹配即可
+    精确到本卷（逗号可防止 exam=5 命中 exam=50）。
+    """
+    row = db.scalar(
+        select(AuditLog)
+        .where(
+            AuditLog.action == "exam.review.submit",
+            AuditLog.detail.contains(f"exam={exam_id},"),
+        )
+        .order_by(AuditLog.id.desc())
+        .limit(1)
+    )
+    return row.user_id if row is not None else None
+
+
+@router.post("/{exam_id}/review", response_model=ExamReviewActionOut)
+def decide_exam_review(
+    exam_id: int,
+    payload: ExamReviewIn,
+    current: User = Depends(require_permission("content:review:decide")),
+    db: Session = Depends(get_db),
+) -> ExamReviewActionOut:
+    expected = {
+        "approve": "pending_review",
+        "reject": "pending_review",
+        "offline": "published",
+        "restore": "offline",
+    }[payload.decision]
+    exam = _reviewable_or_404(db, exam_id)
+    if exam.status != expected:
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail={
+                "code": "EXAM_INVALID_STATE",
+                "message": (
+                    f"{payload.decision} 需要 {expected} 状态，当前为 {exam.status}"
+                ),
+            },
+        )
+    now = datetime.utcnow()
+    if payload.decision == "approve":
+        _require_exam_source(exam)
+        submitter_id = _last_submitter_id(db, exam.id)
+        # 评审 R2-03：同一个人不能既提交又复核发布（双人复核），避免留痕自审自发。
+        if submitter_id is not None and submitter_id == current.id:
+            raise HTTPException(
+                status_code=status.HTTP_409_CONFLICT,
+                detail={
+                    "code": "EXAM_REVIEW_SELF",
+                    "message": "双人复核：提交人与复核发布人不能是同一账号",
+                },
+            )
+        exam.status = "published"
+        exam.reviewed_by = current.id
+        exam.reviewed_at = now
+        exam.published_by = current.id
+        exam.published_at = now
+    elif payload.decision == "reject":
+        # 评审 R2-04：退回必须给理由，否则前端无从整改。
+        if not (payload.note and payload.note.strip()):
+            raise HTTPException(
+                status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+                detail={
+                    "code": "EXAM_REVIEW_NOTE_REQUIRED",
+                    "message": "退回（reject）必须填写复核意见",
+                },
+            )
+        exam.status = "draft"
+        exam.reviewed_by = current.id
+        exam.reviewed_at = now
+        exam.published_by = None
+        exam.published_at = None
+    elif payload.decision == "restore":
+        # 评审 R2-05：误下线可回草稿，但必须重新走提交复核与发布（不直接复原 published）。
+        exam.status = "draft"
+        exam.reviewed_by = None
+        exam.reviewed_at = None
+        exam.published_by = None
+        exam.published_at = None
+    else:
+        exam.status = "offline"
+    if payload.note:
+        exam.review_note = payload.note
+    record_audit(
+        db,
+        user_id=current.id,
+        action=f"exam.review.{payload.decision}",
+        message=f"exam={exam.id}, from={expected}, to={exam.status}",
+    )
+    db.commit()
+    return ExamReviewActionOut(
+        exam_id=exam.id,
+        status=exam.status,
+        action=payload.decision,
+        reviewed_by=exam.reviewed_by,
+        published_by=exam.published_by if payload.decision == "approve" else None,
+    )
+
+
+@router.get("/past-papers/{paper_id}", response_model=PastPaperDetailOut)
+def past_paper_detail(
+    paper_id: int,
+    current: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+) -> PastPaperDetailOut:
+    """真题详情/预览：不含答案，附完整溯源（D-09 §5.5）。"""
+    exam = db.get(Exam, paper_id)
+    if (
+        exam is None
+        or exam.status != "published"
+        or not exam.is_past_paper
+        or exam.class_id is not None
+    ):
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="真题不存在")
+    if current.role == "student" and current.grade and exam.grade != current.grade:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail={"code": "GRADE_MISMATCH", "message": "试卷年级与当前年级不一致"},
+        )
+    attempt_count = len(
+        list(
+            db.scalars(
+                select(ExamAttempt.id).where(
+                    ExamAttempt.user_id == current.id,
+                    ExamAttempt.exam_id == exam.id,
+                )
+            )
+        )
+    )
+    base = PastPaperOut(
+        id=exam.id,
+        title=exam.title,
+        subject=exam.subject,
+        grade=exam.grade,
+        year=exam.year,
+        region=exam.region,
+        exam_type=exam.exam_type,
+        total_score=exam.total_score,
+        time_limit_min=exam.time_limit_min,
+        question_count=len(_paper_items(exam)),
+        window_start=exam.window_start,
+        window_end=exam.window_end,
+        window_state=_window_state(exam, datetime.utcnow()),
+        source_name=exam.source_name,
+        license_note=_license_note_for(exam, current),
+        adapted_from=exam.adapted_from,
+    )
+    return PastPaperDetailOut(
+        **base.model_dump(),
+        source=exam.source,
+        attempt_count=attempt_count,
+        reviewed_by=exam.reviewed_by,
+        reviewed_at=exam.reviewed_at,
+        published_by=exam.published_by,
+        published_at=exam.published_at,
+    )
+
+
 @router.get("/past-papers", response_model=list[PastPaperOut])
 def list_past_papers(
+    response: Response,
     subject: Optional[str] = Query(default=None, max_length=20),
     year: Optional[int] = Query(default=None, ge=2000, le=2100),
     region: Optional[str] = Query(default=None, max_length=40),
+    grade: Optional[int] = Query(default=None, ge=1, le=12),
+    exam_type: Optional[str] = Query(default=None, max_length=20),
+    attempt_status: Optional[str] = Query(
+        default=None, pattern=r"^(none|in_progress|completed)$"
+    ),
+    q: Optional[str] = Query(default=None, max_length=80),
+    page: Optional[int] = Query(default=None, ge=1),
+    page_size: Optional[int] = Query(default=None, ge=1, le=100),
     current: User = Depends(get_current_user),
     db: Session = Depends(get_db),
 ) -> list[PastPaperOut]:
-    """真题库：已发布的历年真题/模考卷，学生按年级过滤。"""
+    """真题库（D-09 §5.3）：年份/学科/地区/类型/状态均由服务端过滤。
+
+    学生仍锁定 current.grade（§11 Q4 维持现状），grade 参数仅对非学生生效。
+    """
     stmt = select(Exam).where(
         Exam.status == "published",
         Exam.is_past_paper.is_(True),
@@ -486,32 +1048,104 @@ def list_past_papers(
     )
     if current.role == "student" and current.grade:
         stmt = stmt.where(Exam.grade == current.grade)
+    elif grade is not None:
+        stmt = stmt.where(Exam.grade == grade)
     if subject:
         stmt = stmt.where(Exam.subject == subject)
     if year is not None:
         stmt = stmt.where(Exam.year == year)
     if region:
         stmt = stmt.where(Exam.region == region)
-    exams = list(db.scalars(stmt.order_by(Exam.year.desc(), Exam.id.desc()).limit(60)))
-    now = datetime.utcnow()
-    return [
-        PastPaperOut(
-            id=exam.id,
-            title=exam.title,
-            subject=exam.subject,
-            grade=exam.grade,
-            year=exam.year,
-            region=exam.region,
-            exam_type=exam.exam_type,
-            total_score=exam.total_score,
-            time_limit_min=exam.time_limit_min,
-            question_count=len(_paper_items(exam)),
-            window_start=exam.window_start,
-            window_end=exam.window_end,
-            window_state=_window_state(exam, now),
+    if exam_type:
+        stmt = stmt.where(Exam.exam_type == exam_type)
+    if q and q.strip():
+        stmt = stmt.where(func.lower(Exam.title).contains(q.strip().lower()))
+    my_attempt = select(ExamAttempt.id).where(
+        ExamAttempt.exam_id == Exam.id,
+        ExamAttempt.user_id == current.id,
+    )
+    if attempt_status == "none":
+        stmt = stmt.where(~my_attempt.exists())
+    elif attempt_status == "in_progress":
+        stmt = stmt.where(
+            my_attempt.where(ExamAttempt.status == "in_progress").exists()
         )
-        for exam in exams
-    ]
+    elif attempt_status == "completed":
+        stmt = stmt.where(my_attempt.where(ExamAttempt.status != "in_progress").exists())
+
+    total = db.scalar(select(func.count()).select_from(stmt.subquery())) or 0
+    response.headers["X-Total-Count"] = str(total)
+    if page is not None:
+        size = page_size or 20
+        stmt = stmt.offset((page - 1) * size).limit(size)
+    else:
+        stmt = stmt.limit(60)
+    exams = list(db.scalars(stmt.order_by(Exam.year.desc(), Exam.id.desc())))
+    now = datetime.utcnow()
+    attempts = (
+        list(
+            db.scalars(
+                select(ExamAttempt)
+                .where(
+                    ExamAttempt.user_id == current.id,
+                    ExamAttempt.exam_id.in_([exam.id for exam in exams]),
+                )
+                .order_by(ExamAttempt.id)
+            )
+        )
+        if exams
+        else []
+    )
+    latest: dict[int, ExamAttempt] = {}
+    for attempt in attempts:
+        latest[attempt.exam_id] = attempt
+
+    result: list[PastPaperOut] = []
+    for exam in exams:
+        attempt = latest.get(exam.id)
+        if attempt is not None and attempt.status == "in_progress":
+            category = "in_progress"
+        elif attempt is not None:
+            category = "completed"
+        else:
+            category = "available"
+        brief = None
+        if attempt is not None:
+            brief = ExamAttemptBriefOut(
+                id=attempt.id,
+                status=attempt.status,
+                seed=attempt.seed,
+                started_at=attempt.started_at,
+                submitted_at=attempt.submitted_at,
+                duration_ms=attempt.duration_ms,
+                objective_score=attempt.objective_score,
+                subjective_score=attempt.subjective_score,
+                total_score=attempt.total_score,
+                remaining_seconds=_remaining_seconds(exam, attempt, now),
+            )
+        result.append(
+            PastPaperOut(
+                id=exam.id,
+                title=exam.title,
+                subject=exam.subject,
+                grade=exam.grade,
+                year=exam.year,
+                region=exam.region,
+                exam_type=exam.exam_type,
+                total_score=exam.total_score,
+                time_limit_min=exam.time_limit_min,
+                question_count=len(_paper_items(exam)),
+                window_start=exam.window_start,
+                window_end=exam.window_end,
+                window_state=_window_state(exam, now),
+                category=category,
+                attempt=brief,
+                source_name=exam.source_name,
+                license_note=_license_note_for(exam, current),
+                adapted_from=exam.adapted_from,
+            )
+        )
+    return result
 
 
 @router.post("/mock", response_model=MockExamAssignOut)
@@ -622,7 +1256,7 @@ def exam_detail(
 ) -> ExamDetailOut:
     exam = _exam_or_404(db, exam_id)
     _ensure_takeable(exam, current, db)
-    return _detail_out(db, exam)
+    return _detail_out(db, exam, viewer=current)
 
 
 # ---------------------------------------------------------------------------
@@ -793,7 +1427,7 @@ def _finalize(
     db.flush()
 
     # P0-30 数据回流：客观题写入答题记录、错题本与掌握度（考试权重）
-    kp_weight = EXAM_TYPE_WEIGHT.get(exam.exam_type, DEFAULT_EXAM_WEIGHT)
+    kp_weight = DEFAULT_EXAM_WEIGHT  # PG-04：已作废按卷型加权
     for item in paper:
         question = questions.get(item["question_id"])
         if question is None or question.q_type not in OBJECTIVE_TYPES:
@@ -880,7 +1514,7 @@ def start_attempt(
     )
     if in_progress is not None:
         if _remaining_seconds(exam, in_progress, now) > 0:
-            return _attempt_out(db, exam, in_progress, now)
+            return _attempt_out(db, exam, in_progress, now, current)
         _finalize(
             db,
             attempt=in_progress,
@@ -924,7 +1558,7 @@ def start_attempt(
     db.add(attempt)
     db.commit()
     db.refresh(attempt)
-    return _attempt_out(db, exam, attempt, datetime.utcnow())
+    return _attempt_out(db, exam, attempt, datetime.utcnow(), current)
 
 
 @router.patch("/attempts/{attempt_id}", response_model=ExamSaveOut)
@@ -1437,7 +2071,7 @@ def self_assess(
         assessed.append((question, full_score, item.score, first_assessment))
 
     # 成绩回写：首次自评按 60% 及格线回流掌握度与错题本
-    kp_weight = EXAM_TYPE_WEIGHT.get(exam.exam_type, DEFAULT_EXAM_WEIGHT)
+    kp_weight = DEFAULT_EXAM_WEIGHT  # PG-04：已作废按卷型加权
     for question, full_score, score, first_assessment in assessed:
         if not first_assessment:
             continue
@@ -1526,13 +2160,89 @@ def generate_exam(
             detail="试卷蓝图不存在或已停用",
         )
 
+    # D-09 §5.5 / L24：历年真题必须带来源，否则不允许发布（普通卷不受影响）。
+    # 放在组卷之前快速失败，避免生成无来源的卷或白跑一次选题。
+    if payload.is_past_paper and not (
+        payload.source_name and payload.source_name.strip()
+    ):
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail={
+                "code": "EXAM_SOURCE_REQUIRED",
+                "message": "历年真题必须填写来源名称（source_name）",
+            },
+        )
+
+    # PG-03 scope 抽象：有 textbook_id + scope 时按册/半册/单元推导章节；否则沿用 chapter_ids
+    chapter_ids = list(payload.chapter_ids or [])
+    if payload.textbook_id and payload.scope:
+        chapter_ids = resolve_scope_chapters(
+            db,
+            textbook_id=payload.textbook_id,
+            scope=payload.scope,
+            unit_index=payload.unit_index,
+        )
+    if not chapter_ids:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail={"code": "CHAPTER_SCOPE_EMPTY", "message": "所选范围没有章节"},
+        )
+
+    # PG-05 跨卷重题去重：排除同年级同学科同卷型最近 3 张卷 + 手动排除清单
+    exclude_ids = list(payload.exclude_question_ids or [])
+    recent_ids: list[int] = []
+    # 真题卷（外部录入）不参与自建卷去重，避免误删真题题号
+    if payload.avoid_recent_repeats and not payload.is_past_paper:
+        recent_ids = recent_question_ids(
+            db,
+            subject=blueprint.subject,
+            grade=blueprint.grade or current.grade or 1,
+            exam_type=blueprint.exam_type,
+            limit=3,
+        )
+    exclude_all = sorted(set(exclude_ids) | set(recent_ids))
+
+    # 期末卷按「本册必考核心考点清单」优先组卷：一张期末卷放不下全册 40-66 个
+    # 知识点，按全量覆盖衡量是不可能达标的（要 47-53 题），改按核心清单考核。
+    # 单元/期中卷不出清单，行为完全不变。
+    core_kps = None
+    if blueprint.exam_type == "final" and payload.textbook_id:
+        from app.services.core_kp_list import core_kps_for_scope
+
+        core_kps = core_kps_for_scope(
+            db,
+            textbook_id=payload.textbook_id,
+            chapter_ids=chapter_ids,
+        ) or None
+
     paper = generate_paper(
         db,
         user=current,
         blueprint=blueprint,
-        chapter_ids=payload.chapter_ids,
+        chapter_ids=chapter_ids,
         seed=payload.seed,
+        exclude_question_ids=exclude_all or None,
+        core_kps=core_kps,
     )
+    # PG-01：不接受降级卷——题型/题量/难度不足直接拒绝，不落库
+    if paper.refused:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail={
+                "code": "EXAM_PAPER_UNSUPPORTED",
+                "message": paper.refuse_reason or "题库不满足该蓝图要求，拒绝出卷",
+                "shortages": [
+                    {
+                        "section": item.section_name,
+                        "q_type": item.q_type,
+                        "wanted": item.wanted,
+                        "got": item.got,
+                        "reason": item.reason,
+                    }
+                    for item in paper.shortages
+                ],
+            },
+        )
     if not paper.items:
         raise HTTPException(
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
@@ -1540,11 +2250,24 @@ def generate_exam(
         )
 
     title = payload.title or blueprint.name
+    # PG-01 命名合规：普通卷不得出现「真题」字样
+    if not payload.is_past_paper and "真题" in title:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail={
+                "code": "EXAM_TITLE_MISLEADING",
+                "message": "自主题库生成卷不得命名为「真题」",
+            },
+        )
     exam = Exam(
         title=title,
         subject=blueprint.subject,
         grade=blueprint.grade or current.grade or 1,
         source="generated",
+        year=payload.year,
+        source_name=payload.source_name.strip() if payload.source_name else None,
+        license_note=payload.license_note,
+        adapted_from=payload.adapted_from,
         total_score=int(round(paper.total_score)),
         time_limit_min=blueprint.time_limit_min,
         questions=[
@@ -1558,8 +2281,10 @@ def generate_exam(
         ],
         blueprint_id=blueprint.id,
         exam_type=blueprint.exam_type,
-        chapter_ids=payload.chapter_ids,
-        status="published",
+        chapter_ids=chapter_ids,
+        # D-09 §5.7 / CR-005：真题生成即草稿，须复核后才可发布；
+        # 普通卷维持 L20「生成即入库可见」行为不变。
+        status="draft" if payload.is_past_paper else "published",
         window_start=payload.window_start,
         window_end=payload.window_end,
         region=payload.region,
@@ -1573,9 +2298,47 @@ def generate_exam(
         title=exam.title,
         seed=paper.seed,
         question_count=len(paper.items),
+        status=exam.status,
         total_score=round(paper.total_score, 2),
         kp_coverage=paper.kp_coverage,
         difficulty_mix=paper.difficulty_mix,
-        fallback_count=paper.fallback_count,
+        fallback_count=0,
         insufficient=paper.insufficient,
+        refused=paper.refused,
+        refuse_reason=paper.refuse_reason or None,
+        excluded_recent_count=len(recent_ids),
+        excluded_manual_count=len(exclude_ids),
+    )
+
+
+@router.get("/{exam_id}/spec-table")
+def get_exam_spec_table(
+    exam_id: int,
+    current: User = Depends(require_permission("content:exam:write")),
+    db: Session = Depends(get_db),
+) -> dict[str, Any]:
+    """双向细目表：逐节列出计划题量/分值、实际题量/分值、题型、难度带、知识点与章节。"""
+    exam = db.get(Exam, exam_id)
+    if exam is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="试卷不存在")
+    blueprint = db.get(ExamBlueprint, exam.blueprint_id) if exam.blueprint_id else None
+    return build_spec_table(db, exam, blueprint)
+
+
+@router.get("/{exam_id}/answer-sheet")
+def get_exam_answer_sheet(
+    exam_id: int,
+    current: User = Depends(require_permission("content:exam:write")),
+    db: Session = Depends(get_db),
+) -> Response:
+    """A4 打印版答题卡（HTML）：只含题号与作答区，不含题干与答案。"""
+    exam = db.get(Exam, exam_id)
+    if exam is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="试卷不存在")
+    return Response(
+        content=render_answer_sheet_html(db, exam),
+        media_type="text/html; charset=utf-8",
+        headers={
+            "Content-Disposition": f'inline; filename="answer-sheet-{exam.id}.html"'
+        },
     )
