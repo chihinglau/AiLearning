@@ -317,16 +317,20 @@ def student_visible_exam_clauses(user: User) -> list[Any]:
     ]
 
 
-def build_pending_exams(
-    db: Session, *, user: User, now: datetime, limit: int = 3
+def collect_pending_exams(
+    db: Session, *, user: User, now: datetime, scan_limit: int = 200
 ) -> list[dict[str, Any]]:
-    """待办考试：学生可见、窗口未关闭且尚未交卷的试卷。"""
+    """待办考试全量：学生可见、窗口未关闭且尚未交卷的试卷。
+
+    供首页计数与前 N 条预览共用，避免「显示 3 场、实际 9 场」的口径错位
+    （build_pending_exams 只截取前 N 条用于卡片，计数必须取本函数长度）。
+    """
     exams = list(
         db.scalars(
             select(Exam)
             .where(*student_visible_exam_clauses(user))
             .order_by(Exam.id.desc())
-            .limit(20)
+            .limit(scan_limit)
         )
     )
     if not exams:
@@ -358,6 +362,11 @@ def build_pending_exams(
                 "subject": exam.subject,
             }
         )
-        if len(result) >= limit:
-            break
     return result
+
+
+def build_pending_exams(
+    db: Session, *, user: User, now: datetime, limit: int = 3
+) -> list[dict[str, Any]]:
+    """待办考试前 limit 条，只用于首页卡片预览；计数请用 collect_pending_exams。"""
+    return collect_pending_exams(db, user=user, now=now)[:limit]

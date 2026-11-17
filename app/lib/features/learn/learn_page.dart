@@ -407,7 +407,7 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
                 title: '考试中心',
                 subtitle: _home!.pendingExams.isEmpty
                     ? '暂无待考考试，可查看全部考试'
-                    : '${_home!.pendingExams.length} 场考试待完成',
+                    : '${_home!.pendingExamsTotal} 场考试待完成',
                 onTap: () => context.push('/exams'),
               ),
               const SizedBox(height: 8),

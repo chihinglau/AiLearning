@@ -1511,3 +1511,57 @@ flowchart LR
 - 扰动 9 张分两类：A 类（数学 5 张）该考点**没有 fill 题**，fill 节选不到；B 类（语文 4 张）单元内只有 1 道 fill。A 类不能靠抬跨带配额解决——v2.24 已因此返工三次、打出 12 张全拒，宁可保留 0.05% 的 0.875。
 - 全库扫描出 **21 个「卷面题型题量 ≥10 且每章 ≤1 道」的考点、1229 道题**，是下一轮补量的完整清单（kp4504 量词、kp4508 近义词 4-6 年级、kp4529/4530 信息提取等）。
 - 972 条期末清单、单元 8 条、22 道补题内容，均未经教研确认。
+## v2.26 真机走查（EBG-AN00）与考试中心作答页缺陷收口（2026-11-18）
+
+**结论**：81 张走查卷（9 年级×3 科×3 阶段）结构全部正确（题量/满分/大题分组与蓝图 81/81 一致），内容与交互侧共登记 **454 条数据问题 + 9 项代码缺陷**。英语卷因听力题无音频（252 题）目前不可交付学生作答。
+
+**数据侧全量审计（81 张 / 1708 题 100% 覆盖）**
+- LR-1 听力无音频 252 题（P0，27 张英语卷全中）
+- LR-6 同卷重题 83（P1）：组卷按 `question_id` 去重，库内同题干不同 id 未被识别，如 exam14 第 3/9 题同为「在括号里填上合适的量词：一（　）纸。」
+- LR-4 习作无字数要求 54（P1）
+- LR-5 答案入题干 4、LR-2 选项重复 1（P1）
+- LR-3 填空题干无空位 60（P2）
+- 18 张卷结构层面零问题
+
+**代码级缺陷（含行号）**
+- D-1 P0 听力无音频：`models/content.py:47-76` 无 audio 列；作答页无播放控件（`shots/ebg/24_en_final_enter.png`）
+- D-2 P1 底部操作栏命中区偏移（y=2165/2135 失效、y=2105 生效）：`exam_page.dart:527`、`:839-878`
+- D-3/D-4 P1 考试中心筛选与列表手势间歇无响应：`exam_list_page.dart:172-235`
+- D-5 P1 待办计数错（显示 3、实际 9）：`recommendation.py:321`(limit=3)、`:361`；`learn_page.dart:410`
+- D-6 P1 卡片标题单行截断：`feature_card.dart:78`
+- D-7 P2 39 题答题卡被屏底裁切：`exam_page.dart:619-624`
+- D-8 P2 短题干版面留白 500px：`exam_page.dart:590-637`
+- D-9 P2 历史演示卷污染（卷名「153」、满分 58、时限文案矛盾）
+
+**覆盖限制（如实）**：真机逐屏只到 g1 英语期末/语文单元、g5 数学单元与列表/待办/筛选；g2–g9 余 72 张因 D-3/D-4 手势不稳未逐张打开，由结构审计全量兜底。跨年级用临时改 `User.grade`(1→5→1) 实现（学生列表按 `exams.py:585-586` 锁年级），测试账号已恢复 grade=1。
+
+**产物**：`docs/exam-ui-walkthrough-ebg-20261118.md`（完整报告 + 10 项整改清单）；`backend/scripts/gen_walkthrough_papers.py`（造卷/清理）；`backend/scripts/audit_walkthrough_papers_ui.py`（审计）；`docs/content-templates/exports/ui_audit_20261118/*.csv`；截图 `docs/content-templates/shots/ebg/01-49*.png`。
+
+**下一步**：先拍板听力题处置（补音频 / 约定 audio_url / 暂停 listening 出题），再修 D-2/D-3/D-4，然后按同口径重跑逐张走查；走查卷保留作回归样本，勿先 `--clean`。
+## v2.27 走查缺陷修复（P0 清零 + 前端真机验证，2026-11-18）
+
+**前置纠错**：上轮「flutter 工具链不可用」是错的——执行环境 PATH 被裁掉 System32 与 Git，补回后 `flutter build apk --debug` 32.6s 成功。本轮所有前端改动均已完成重编、真机安装、真机验证。
+
+**已修并验证**
+- **D-1（P0）听力不可作答**：`exam_blueprint_matrix.py` 加 `LISTENING_AS_CHOICE=True`，英语「一、听力」等题量等分改为「一、基础选择」（choice），总分与题量不变；题库 listening 数据保留，音频资产（audio_url + 播放控件 + 逐题音频）到位后置 False 即恢复。`apply_matrix` 已同步 81 条蓝图（updated=81）。
+- **LR-6 同卷重题**：`exam_paper.py` 新增 `stem_fingerprint()` 与卷级 `seen_stems`（跨大题共享），`_pick()` 的 `allow`/`take` 均接入。83 → 0。
+- **LR-4 习作无字数**：236 道习作题按库存 `content.min_words` 在题干尾部补「（不少于 N 字/词）」，语英分别用字/词，改 138 条。备份 `build/backups/ailearning-backup-20261118-023402-pre-compword.db`。
+- **D-5 待办计数**：`recommendation.collect_pending_exams()` 返回全量（scan 200 不复位到 3），`HomeOut.pending_exams_total` 新增，前端 `learn.dart:HomeData.pendingExamsTotal` + `learn_page.dart:410` 改用；真机首页由「3 场」变「12 场」。
+- **D-6 标题截断**：`feature_card.dart:78` maxLines 1→2，真机完整显示卷名。
+- **D-7 答题卡裁切**：`_AnswerSheet` 改 StatefulWidget，默认 12 格两行 + 「展开全部 N 题」，39 题卷不再被屏底裁。
+- **D-2 底部栏热区**：`_buildBottomBar` 固定 52dp 命中高度 + 显式并入 `viewPadding.bottom`。
+
+**撤销两项（重要方法学纠正）**
+- D-3 筛选点击无响应、D-4 列表滚动失效，经 `uiautomator dump` 取 Flutter 语义树真实 bounds 后**确认为走查坐标误差**：`语文` chip 实为 `[403,834][590,978]`，当时点的 (540,690) 落在 chip 间隙；列表上滑在精确坐标下正常位移。根因是截图高 2340 而 Flutter 视图仅 2202（差 138px）。**结论：EBG 上定位控件必须先 dump bounds，禁止按截图目测。**
+
+**修复后全量审计（同脚本同口径）**：454 → **58** 条，P0 252 → **0**，全净卷 18 → **51/81**。剩余 LR-3 57（填空无空位，P2）、LR-5 1（exam53 q6 答案入题干，P1），均需教研逐条改写，不做机械补括号。快照 `exports/ui_audit_20261118_after_fix/`。
+
+**口径诚实说明**：LR-4 54→0 中有 8 条是规则过严误判（原判据把「题干短于 25 字」也算 P1，英语「用 6 句话…（不少于 35 词）」被误伤），已把长度改为 <12 字兜底；真实内容改善为 46 条。LR-3 60→57 仅是随机换题，不代表缓解。
+
+**环境坑**
+- 后端曾有两个 uvicorn（venv 的 + 系统 Python 的）同绑 18080，改代码后仍返回旧字段；已统一为一个 `backend\.venv` + `--reload` 实例。
+- `gen_walkthrough_papers.py --clean` 依赖的 `DELETE /api/exams/{id}` 不存在（405）；实际清理走库，首次清出 **150 张**（多轮生成累积）。旧卷未删 + 新卷 `avoid_recent_repeats` 会把题池占满，导致 11 张回「题量不足」——清理与生成必须串行。
+
+**产物**：`docs/exam-ui-walkthrough-ebg-20261118.md` 第八节（含构建命令与逐项真机证据）；截图 `shots/ebg/50_recheck_entry.png`、`51_fix_home.png`、`52_fix_answer_page.png`；走查卷 81 张（id 14–94）已按新蓝图重生成，0 失败。
+
+**下一步**：① 听力三件套（audio_url/资产/播放控件）接入后关掉 `LISTENING_AS_CHOICE`；② LR-3/LR-5 教研改写；③ 历史演示卷「153」「满分 58」清理需产品点头；④ 修完后按同口径整轮真机逐张走查（本轮受时间限制仍是抽样）。

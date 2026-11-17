@@ -75,7 +75,9 @@ class FeatureCard extends StatelessWidget {
                         children: [
                           Text(
                             title,
-                            maxLines: 1,
+                            // 卷名类标题较长（「N年级XX期末走查卷（自建题库）」），
+                            // 单行会在括号处截断导致主体丢失，这里放行两行。
+                            maxLines: 2,
                             overflow: TextOverflow.ellipsis,
                             style: TextStyle(
                               fontSize: 15,

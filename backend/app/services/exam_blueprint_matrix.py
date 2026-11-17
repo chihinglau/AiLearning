@@ -87,6 +87,27 @@ _SECTIONS: dict[str, dict[str, list[dict]]] = {
 
 MIX = {"easy": 0.6, "medium": 0.3, "hard": 0.1}
 
+# 听力节暂以选择题替代（走查 D-1，2026-11-18）：
+# 题库 listening 题型已建设，但 Question 没有音频字段、作答页也没有播放控件，
+# 学生打开「听录音，选出……」只能盲选，属于 P0 不可作答缺陷。
+# 音频资产（Question.audio_url + 播放控件 + 逐题音频）接入后，把该开关置 False
+# 即恢复原 listening 分节；题量/分值不变，因此不影响总分与蓝图口径。
+LISTENING_AS_CHOICE = True
+
+
+def _apply_listening_fallback() -> None:
+    """把英语分节里的 listening 换成等题量等分的 choice，名称同步改为非听力表述。"""
+    if not LISTENING_AS_CHOICE:
+        return
+    for sections in _SECTIONS.get("english", {}).values():
+        for section in sections:
+            if section.get("q_type") == "listening":
+                section["q_type"] = "choice"
+                section["name"] = str(section["name"]).replace("听力", "基础选择")
+
+
+_apply_listening_fallback()
+
 LEGACY_CODES = [
     "math_primary_unit", "chinese_primary_unit", "english_primary_unit",
     "math_primary_midterm", "math_primary_final",

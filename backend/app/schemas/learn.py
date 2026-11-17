@@ -316,6 +316,8 @@ class HomeOut(BaseModel):
     continue_learning: Optional[HomeContinue] = None
     recommendation: HomeRecommendation
     pending_exams: list[dict[str, Any]] = []
+    # 待办考试总数（不受 pending_exams 的预览条数截断），前端文案必须用它
+    pending_exams_total: int = 0
 
 
 class QuestionBundleOut(BaseModel):

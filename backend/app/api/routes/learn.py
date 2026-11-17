@@ -1475,7 +1475,8 @@ def home(
         chapter_name=rec.get("chapter_name"),
         exam_id=rec.get("exam_id"),
     )
-    pending_exams = recommendation.build_pending_exams(db, user=current, now=now)
+    pending_all = recommendation.collect_pending_exams(db, user=current, now=now)
+    pending_exams = pending_all[:3]
 
     result = HomeOut(
         grade=grade,
@@ -1496,6 +1497,7 @@ def home(
         continue_learning=continue_learning,
         recommendation=recommendation_out,
         pending_exams=pending_exams,
+        pending_exams_total=len(pending_all),
     )
     cache.set(cache_key, result)
     return result

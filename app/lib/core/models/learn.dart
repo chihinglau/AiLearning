@@ -406,6 +406,7 @@ class HomeData {
     this.mismatchSubjects = const [],
     this.continueLearning,
     this.pendingExams = const [],
+    this.pendingExamsTotal = 0,
   });
 
   final int grade;
@@ -421,6 +422,8 @@ class HomeData {
   final HomeContinue? continueLearning;
   final HomeRecommendation recommendation;
   final List<Map<String, dynamic>> pendingExams;
+  /// 待办考试总数；pendingExams 只是前 3 条预览，计数一律用本字段。
+  final int pendingExamsTotal;
 
   Stage? get stageEnum => Stage.fromCode(stage);
 
@@ -464,6 +467,8 @@ class HomeData {
       pendingExams: rawExams
           .map((item) => item as Map<String, dynamic>)
           .toList(),
+      pendingExamsTotal:
+          json['pending_exams_total'] as int? ?? rawExams.length,
     );
   }
 }

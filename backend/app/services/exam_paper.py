@@ -10,6 +10,7 @@
 """
 
 import random
+import re
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -35,6 +36,20 @@ KP_CAP_PER_SECTION = 2   # 同一大题内同一知识点上限。曾两次尝�
 # 应视为「拿难度换覆盖」过度，需要在审计里拦下而不是静默接受。
 MAX_KP_CROSS_BAND_RATIO = 0.25
 CROSS_MIN_ITEMS = 4  # 小卷跨带题数地板：12 题卷按 25% 只给 3 题，与分位切档冲突
+
+# 题干指纹归一化：去掉空白与常见标点，只留文字与数字。
+# 用途是卷内同题去重——题库里同一道题可能被录入成不同 id（不同来源批次），
+# 只按 question_id 去重时，卷面会出现两道一模一样的题（走查 exam14 q3/q9 即此因）。
+_STEM_NOISE = re.compile(
+    r"[\s\u3000（）()【】\[\]{}<>《》，,。.、；;：:！!？?“”\"'‘’`~\-—_/\\|*#&]+"
+)
+
+
+def stem_fingerprint(question: Question) -> str:
+    """题干指纹（去空白标点后的文本）；无题干时返回空串，不参与去重。"""
+    content = question.content if isinstance(question.content, dict) else {}
+    stem = str(content.get("stem") or "")
+    return _STEM_NOISE.sub("", stem)
 
 
 @dataclass
@@ -175,16 +190,33 @@ def _pick(
     priority_kps: Optional[set[int]] = None,
     core_kps: Optional[set[int]] = None,
     core_cross_budget: int = 0,
+    seen_stems: Optional[set[str]] = None,
 ) -> list[Question]:
-    """核心考点优先 → 章节覆盖优先 → 知识点覆盖优先 → 补足；同知识点次数受上限约束。"""
+    """核心考点优先 → 章节覆盖优先 → 知识点覆盖优先 → 补足；同知识点次数受上限约束。
+
+    seen_stems：整卷共享的题干指纹集合（跨大题传递），防止同一题干被录入成多个
+    题号后在同卷重复出现。传 None 时退化为只按题目 id 去重（旧行为）。
+    """
     covered_chapters = covered_chapters if covered_chapters is not None else set()
     picked: list[Question] = []
     picked_ids: set[int] = set()
     section_kp: dict[int, int] = {}
+    fp_cache: dict[int, str] = {}
+
+    def fingerprint(q: Question) -> str:
+        fp = fp_cache.get(q.id)
+        if fp is None:
+            fp = stem_fingerprint(q)
+            fp_cache[q.id] = fp
+        return fp
 
     def allow(q: Question) -> bool:
         if q.id in picked_ids:
             return False
+        if seen_stems is not None:
+            fp = fingerprint(q)
+            if fp and fp in seen_stems:
+                return False
         kp = q.knowledge_point_id
         if kp is None:
             return True
@@ -195,6 +227,10 @@ def _pick(
     def take(question: Question) -> None:
         picked.append(question)
         picked_ids.add(question.id)
+        if seen_stems is not None:
+            fp = fingerprint(question)
+            if fp:
+                seen_stems.add(fp)
         kp = question.knowledge_point_id
         kp_counts[kp] = kp_counts.get(kp, 0) + 1
         section_kp[kp] = section_kp.get(kp, 0) + 1
@@ -476,6 +512,9 @@ def generate_paper(
     # 核心考点的跨带额度：整卷共享，上限 4 次（与期末卷实测值一致）
     core_cross_budget = min(4, cross_budget)
 
+    # 卷级题干指纹：同一题干被录入成多个题号时也要去重（走查 LR-6）
+    seen_stems: set[str] = set()
+
     for index, section in enumerate(sections):
         wanted = int(section.get("count", 0))
         q_type = section.get("q_type")
@@ -528,7 +567,7 @@ def generate_paper(
         uncovered_pass = [q for q in typed if q.chapter_id not in chapter_hit]
         head = _pick(uncovered_pass, min(wanted, chapter_total - len(chapter_hit)),
                      covered, pick_counts, chapter_hit, kp_cap_for_section, section_kp_cap,
-                     core_kps=core_kps) if required_chapters else []
+                     core_kps=core_kps, seen_stems=seen_stems) if required_chapters else []
         picked = list(head)
         # 注意：章节覆盖轮的跨带是蓝图结构性必然（一册 40-66 个知识点、每章至少 1 题，
         # 必然有题落在带外），它不属于「拿难度换覆盖」，不计入 cross_stat。
@@ -542,19 +581,20 @@ def generate_paper(
                                 beyond=[q for q in beyond if q.id not in head_ids],
                                 cross_limit=cross_limit, cross_stat=cross_stat,
                                 priority_kps=priority_kps, core_kps=core_kps,
-                                core_cross_budget=core_cross_budget))
+                                core_cross_budget=core_cross_budget,
+                                seen_stems=seen_stems))
         kp_cross_band += cross_stat.get("used", 0)
         cross_budget = max(0, cross_budget - cross_stat.get("used", 0))
         core_cross_budget = max(0, core_cross_budget - cross_stat.get("used", 0))
         if len(picked) < wanted and allow_band_relax:
             # 只放宽「难度带」，绝不放宽「题型」：同题型内的其余题目补位
             leftovers = [q for q in typed if q.id not in {p.id for p in picked}]
-            extra = _pick(leftovers, wanted - len(picked), covered, pick_counts, chapter_hit, kp_cap_for_section, section_kp_cap)
+            extra = _pick(leftovers, wanted - len(picked), covered, pick_counts, chapter_hit, kp_cap_for_section, section_kp_cap, seen_stems=seen_stems)
             band_relaxed += len(extra)
             picked.extend(extra)
         if len(picked) < wanted and allow_fallback:
             extras = [q for q in remaining if q.id not in {p.id for p in picked}]
-            picked.extend(_pick(extras, wanted - len(picked), covered, pick_counts, chapter_hit, kp_cap_for_section, section_kp_cap))
+            picked.extend(_pick(extras, wanted - len(picked), covered, pick_counts, chapter_hit, kp_cap_for_section, section_kp_cap, seen_stems=seen_stems))
 
         if len(picked) < wanted:
             shortages.append(Shortage(

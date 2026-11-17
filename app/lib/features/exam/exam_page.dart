@@ -838,40 +838,58 @@ class _ExamPageState extends ConsumerState<ExamPage> {
 
   Widget _buildBottomBar(BuildContext context) {
     final isLast = _index + 1 >= _questions.length;
+    // 真机走查 D-2（EBG-AN00）：底部栏按钮实际高度只有约 38dp，下沿落进
+    // 全面屏手势区，同一屏上 y=2165 / y=2135 点击无效、y=2105 才生效。
+    // 这里固定 52dp 命中高度，并把手势区高度显式并入下边距。
+    final bottomInset = MediaQuery.of(context).viewPadding.bottom;
     return SafeArea(
+      top: false,
+      bottom: false,
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
-        child: Row(
-          children: [
-            OutlinedButton(
-              onPressed: _index == 0 ? null : () => setState(() => _index -= 1),
-              child: const Text('上一题'),
-            ),
-            const SizedBox(width: 12),
-            Expanded(
-              child: FilledButton(
-                onPressed: _submitting
-                    ? null
-                    : isLast
-                        ? _confirmSubmit
-                        : () => setState(() => _index += 1),
-                child: _submitting
-                    ? const SizedBox(
-                        width: 20,
-                        height: 20,
-                        child: CircularProgressIndicator(strokeWidth: 2),
-                      )
-                    : Text(isLast ? '交卷' : '下一题'),
+        padding: EdgeInsets.fromLTRB(16, 8, 16, 8 + bottomInset),
+        child: SizedBox(
+          height: 52,
+          child: Row(
+            children: [
+              OutlinedButton(
+                style: OutlinedButton.styleFrom(
+                  minimumSize: const Size(0, 52),
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                ),
+                onPressed: _index == 0 ? null : () => setState(() => _index -= 1),
+                child: const Text('上一题'),
               ),
-            ),
-            if (!isLast) ...[
               const SizedBox(width: 12),
-              TextButton(
-                onPressed: _submitting ? null : _confirmSubmit,
-                child: const Text('交卷'),
+              Expanded(
+                child: FilledButton(
+                  style: FilledButton.styleFrom(minimumSize: const Size(0, 52)),
+                  onPressed: _submitting
+                      ? null
+                      : isLast
+                          ? _confirmSubmit
+                          : () => setState(() => _index += 1),
+                  child: _submitting
+                      ? const SizedBox(
+                          width: 20,
+                          height: 20,
+                          child: CircularProgressIndicator(strokeWidth: 2),
+                        )
+                      : Text(isLast ? '交卷' : '下一题'),
+                ),
               ),
+              if (!isLast) ...[
+                const SizedBox(width: 12),
+                TextButton(
+                  style: TextButton.styleFrom(
+                    minimumSize: const Size(0, 52),
+                    padding: const EdgeInsets.symmetric(horizontal: 12),
+                  ),
+                  onPressed: _submitting ? null : _confirmSubmit,
+                  child: const Text('交卷'),
+                ),
+              ],
             ],
-          ],
+          ),
         ),
       ),
     );
@@ -981,7 +999,7 @@ class _CountdownBadge extends StatelessWidget {
   }
 }
 
-class _AnswerSheet extends StatelessWidget {
+class _AnswerSheet extends StatefulWidget {
   const _AnswerSheet({
     required this.questions,
     required this.answers,
@@ -995,32 +1013,64 @@ class _AnswerSheet extends StatelessWidget {
   final ValueChanged<int> onSelect;
 
   @override
+  State<_AnswerSheet> createState() => _AnswerSheetState();
+}
+
+class _AnswerSheetState extends State<_AnswerSheet> {
+  /// 真机走查 D-7：39 题卷的答题卡铺 7 行，下半部分被屏幕底部裁掉，
+  /// 学生必须先滚动才能点到后面的题号。默认只展示两行，按需展开。
+  static const _collapsedCells = 12;
+  bool _expanded = false;
+
+  @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final questions = widget.questions;
     final answeredCount = questions
-        .where((item) => answers[item.question.id] != null)
+        .where((item) => widget.answers[item.question.id] != null)
         .length;
+    final visible = _expanded
+        ? questions.length
+        : (questions.length < _collapsedCells ? questions.length : _collapsedCells);
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(12),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              '答题卡 · 已答 $answeredCount / ${questions.length}',
-              style: theme.textTheme.titleSmall,
+            Row(
+              children: [
+                Expanded(
+                  child: Text(
+                    '答题卡 · 已答 $answeredCount / ${questions.length}',
+                    style: theme.textTheme.titleSmall,
+                  ),
+                ),
+                if (questions.length > _collapsedCells)
+                  TextButton(
+                    style: TextButton.styleFrom(
+                      minimumSize: const Size(0, 40),
+                      padding: const EdgeInsets.symmetric(horizontal: 8),
+                    ),
+                    onPressed: () => setState(() => _expanded = !_expanded),
+                    child: Text(
+                      _expanded ? '收起' : '展开全部 ${questions.length} 题',
+                    ),
+                  ),
+              ],
             ),
             const SizedBox(height: 8),
             Wrap(
               spacing: 8,
               runSpacing: 8,
               children: [
-                for (var i = 0; i < questions.length; i++)
+                for (var i = 0; i < visible; i++)
                   _SheetCell(
                     index: i,
-                    answered: answers[questions[i].question.id] != null,
-                    current: i == currentIndex,
-                    onTap: () => onSelect(i),
+                    answered:
+                        widget.answers[questions[i].question.id] != null,
+                    current: i == widget.currentIndex,
+                    onTap: () => widget.onSelect(i),
                   ),
               ],
             ),
