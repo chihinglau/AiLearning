@@ -34,6 +34,7 @@ KP_CAP_PER_SECTION = 2   # 同一大题内同一知识点上限。曾两次尝�
 # 为补知识点覆盖而跨出难度带的比例上限：超过该比例，卷面难度配比会明显偏离蓝图声明，
 # 应视为「拿难度换覆盖」过度，需要在审计里拦下而不是静默接受。
 MAX_KP_CROSS_BAND_RATIO = 0.25
+CROSS_MIN_ITEMS = 4  # 小卷跨带题数地板：12 题卷按 25% 只给 3 题，与分位切档冲突
 
 
 @dataclass
@@ -173,6 +174,7 @@ def _pick(
     cross_stat: Optional[dict] = None,
     priority_kps: Optional[set[int]] = None,
     core_kps: Optional[set[int]] = None,
+    core_cross_budget: int = 0,
 ) -> list[Question]:
     """核心考点优先 → 章节覆盖优先 → 知识点覆盖优先 → 补足；同知识点次数受上限约束。"""
     covered_chapters = covered_chapters if covered_chapters is not None else set()
@@ -218,9 +220,17 @@ def _pick(
         # 覆盖缺口就不是题量问题而是分位问题。核心跨带单独计 4 次额度并计入
         # cross_stat，卷级仍有 25% 的 crossed_ratio 兜底。
         if beyond:
+            # 额度优先用「整卷共享预算」：按本节题量算会被小节卡死——fill 节 8 题
+            # 只给 2 次跨带，而一个单元可能有 3 个核心考点全落在带外，必然缺 1 个
+            # （g1 语文各单元核心覆盖卡 0.625 即此因）。未传预算时退回按节缩放。
+            used = cross_stat.get("used", 0) if cross_stat is not None else 0
+            if core_cross_budget:
+                core_cross_cap = max(0, min(4, core_cross_budget) - used)
+            else:
+                core_cross_cap = max(1, min(4, int(wanted * 0.25)))
             core_cross = 0
             for question in beyond:
-                if len(picked) >= wanted or core_cross >= 4:
+                if len(picked) >= wanted or core_cross >= core_cross_cap:
                     break
                 kp = question.knowledge_point_id
                 if not kp or kp not in core_kps or kp in covered_kps:
@@ -463,6 +473,8 @@ def generate_paper(
     kp_cross_band = 0
     # 整卷跨带预算：为补知识点覆盖最多牺牲 MAX_KP_CROSS_BAND_RATIO 比例的题量
     cross_budget = max(1, int(requested * MAX_KP_CROSS_BAND_RATIO))
+    # 核心考点的跨带额度：整卷共享，上限 4 次（与期末卷实测值一致）
+    core_cross_budget = min(4, cross_budget)
 
     for index, section in enumerate(sections):
         wanted = int(section.get("count", 0))
@@ -478,7 +490,12 @@ def generate_paper(
         # 难度带外的同题型题：只用于「补知识点覆盖」，不做常规补题。
         # 每节最多 2 题，且整卷受 cross_budget（≈25% 题量）约束，避免难度配比被大幅打散。
         beyond = [q for q in typed if allowed_ids is not None and q.id not in allowed_ids]
-        cross_limit = 0 if q_type in STRICT_Q_TYPES else min(2, cross_budget)
+        # 传了核心清单时，跨带配额统一交给核心轮按本节题量缩放占用；
+        # 否则两条通道各跨一次就会顶破卷级 25% 的 crossed_ratio 上限（单元卷 12 题时
+        # 4 题即 0.33，整卷直接被拒）。
+        cross_limit = (
+            0 if (q_type in STRICT_Q_TYPES or core_kps) else min(2, cross_budget)
+        )
         cross_stat: dict = {}
         # 该题型独占的知识点（其他题型完全没有题）：只有本节能覆盖，优先占位
         other_kps: set[int] = set()
@@ -513,6 +530,9 @@ def generate_paper(
                      covered, pick_counts, chapter_hit, kp_cap_for_section, section_kp_cap,
                      core_kps=core_kps) if required_chapters else []
         picked = list(head)
+        # 注意：章节覆盖轮的跨带是蓝图结构性必然（一册 40-66 个知识点、每章至少 1 题，
+        # 必然有题落在带外），它不属于「拿难度换覆盖」，不计入 cross_stat。
+        # 曾试过如实计入，期末卷立刻 8-9/25=0.32 全部被拒（v2.24 回退）。
         head_ids = {q.id for q in head}
         candidates = [q for q in candidates if q.id not in head_ids]
         remaining_wanted = wanted - len(picked)
@@ -521,9 +541,11 @@ def generate_paper(
                                 kp_cap_for_section, section_kp_cap,
                                 beyond=[q for q in beyond if q.id not in head_ids],
                                 cross_limit=cross_limit, cross_stat=cross_stat,
-                                priority_kps=priority_kps, core_kps=core_kps))
+                                priority_kps=priority_kps, core_kps=core_kps,
+                                core_cross_budget=core_cross_budget))
         kp_cross_band += cross_stat.get("used", 0)
         cross_budget = max(0, cross_budget - cross_stat.get("used", 0))
+        core_cross_budget = max(0, core_cross_budget - cross_stat.get("used", 0))
         if len(picked) < wanted and allow_band_relax:
             # 只放宽「难度带」，绝不放宽「题型」：同题型内的其余题目补位
             leftovers = [q for q in typed if q.id not in {p.id for p in picked}]
@@ -605,8 +627,16 @@ def generate_paper(
 
     # 硬约束：补覆盖允许跨难度带，但比例超过上限即「拿难度换覆盖」过度，拒绝出卷。
     # 预算层已保证不会超，这里作为兜底，防止后续改预算公式时静默突破。
+    # 硬约束：补覆盖允许跨难度带，但比例超过上限即「拿难度换覆盖」过度，拒绝出卷。
+    # 预算层已保证不会超，这里作为兜底，防止后续改预算公式时静默突破。
+    # 题数地板：12 题的数学单元卷分 3 节、每节 4-5 题，按排名分位切三档后带内
+    # 每档只剩 1-2 题，与 25% 的 3 题上限叠加必然冲突（实测 4 张卷卡死在 4/12）。
+    # 小卷按「至少 4 题」放行，大卷仍按 25% 比例。
     crossed_ratio = round(kp_cross_band / len(items), 3) if items else 0.0
-    if not refused and crossed_ratio > MAX_KP_CROSS_BAND_RATIO:
+    crossed_allow = max(
+        CROSS_MIN_ITEMS, int(len(items) * MAX_KP_CROSS_BAND_RATIO)
+    ) if items else 0
+    if not refused and kp_cross_band > crossed_allow:
         refused = True
         reason = (
             f"跨带补覆盖超限（{kp_cross_band}/{len(items)}={crossed_ratio:.2f}，"

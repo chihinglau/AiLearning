@@ -26,6 +26,7 @@ from sqlalchemy import func, select
 from app.models.content import Chapter, KnowledgePoint, Question, Textbook
 
 CORE_LIMIT = 18
+CORE_LIMIT_UNIT = 8
 
 _VARIANT_SUFFIX = re.compile(r"·变式[一二三四五六七八九十\d]+$")
 _POINT_SUFFIX = re.compile(r"（要点）$")
@@ -83,6 +84,27 @@ def build_core_list(db, textbook: Textbook, limit: int = CORE_LIMIT) -> list[dic
     ).all()
     if not chapters:
         return []
+    return _build_core(db, chapters, textbook, limit=limit)
+
+
+def build_core_list_for_chapters(
+    db,
+    chapter_ids: list[int],
+    textbook: Textbook,
+    limit: int = CORE_LIMIT_UNIT,
+) -> list[dict]:
+    """按指定章节范围（单元卷）生成核心考点清单，规则与整册一致。"""
+    chapters = db.scalars(
+        select(Chapter)
+        .where(Chapter.id.in_(chapter_ids), Chapter.is_placeholder == 0)
+        .order_by(Chapter.order_index, Chapter.id)
+    ).all()
+    if not chapters:
+        return []
+    return _build_core(db, chapters, textbook, limit=limit)
+
+
+def _build_core(db, chapters, textbook: Textbook, limit: int) -> list[dict]:
 
     chapter_ids = [c.id for c in chapters]
     chapter_names = {c.id: c.name for c in chapters}
@@ -146,6 +168,25 @@ def core_kps_for_textbook(db, textbook_id: int, limit: int = CORE_LIMIT) -> set[
     if textbook is None:
         return set()
     return {row["kp_id"] for row in build_core_list(db, textbook, limit=limit)}
+
+
+def core_kps_for_chapters(
+    db,
+    *,
+    textbook_id: int,
+    chapter_ids: list[int],
+    limit: int = CORE_LIMIT_UNIT,
+) -> set[int]:
+    """单元卷的核心考点集合（按该单元的章节单独建清单）。"""
+    textbook = db.get(Textbook, textbook_id)
+    if textbook is None:
+        return set()
+    return {
+        row["kp_id"]
+        for row in build_core_list_for_chapters(
+            db, chapter_ids, textbook, limit=limit
+        )
+    }
 
 
 def core_kps_for_scope(
