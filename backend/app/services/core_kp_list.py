@@ -31,6 +31,12 @@ CORE_LIMIT_UNIT = 8
 _VARIANT_SUFFIX = re.compile(r"·变式[一二三四五六七八九十\d]+$")
 _POINT_SUFFIX = re.compile(r"（要点）$")
 
+# 只有这些题型会出现在单元/期中/期末的蓝图里（见 exam_blueprint_matrix.py 的
+# _SECTIONS）。judge/multiple 在所有卷型里都不出题，若把它们的题量算进「代表考点」
+# 的排序依据，会选出让整张卷永远覆盖不到的考点——g1 语文下册期末卡在 17/18 就是
+# 这样：kp4227 册内 4 道题里 2 道是 judge，剩下 2 道 fill 又不在 easy 带。
+EXAM_Q_TYPES = {"fill", "choice", "answer", "composition", "listening", "experiment"}
+
 
 def family_of(name: str) -> str:
     """考点家族名：去掉「·变式N」与「（要点）」后缀。"""
@@ -50,6 +56,9 @@ def _kp_pool(db, chapter_ids: list[int]):
         .where(
             Question.chapter_id.in_(chapter_ids),
             Question.knowledge_point_id.isnot(None),
+            Question.q_type.in_(EXAM_Q_TYPES),
+            Question.status == "published",
+            Question.answer.isnot(None),
         )
         .group_by(Question.chapter_id, Question.knowledge_point_id)
     ).all()

@@ -2204,12 +2204,21 @@ def generate_exam(
 
     # 期末卷按「本册必考核心考点清单」优先组卷：一张期末卷放不下全册 40-66 个
     # 知识点，按全量覆盖衡量是不可能达标的（要 47-53 题），改按核心清单考核。
-    # 单元/期中卷不出清单，行为完全不变。
+    # 单元卷同性质（12-15 题对 19-26 个知识点），但清单要按该单元的章节单独建，
+    # 不能拿全册 18 条取交集（一个单元只落得进 3-4 条）。期中卷不出清单。
     core_kps = None
     if blueprint.exam_type == "final" and payload.textbook_id:
         from app.services.core_kp_list import core_kps_for_scope
 
         core_kps = core_kps_for_scope(
+            db,
+            textbook_id=payload.textbook_id,
+            chapter_ids=chapter_ids,
+        ) or None
+    elif blueprint.exam_type == "unit" and payload.textbook_id:
+        from app.services.core_kp_list import core_kps_for_chapters
+
+        core_kps = core_kps_for_chapters(
             db,
             textbook_id=payload.textbook_id,
             chapter_ids=chapter_ids,
