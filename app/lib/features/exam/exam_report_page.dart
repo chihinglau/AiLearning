@@ -583,8 +583,14 @@ class _ExamReportPageState extends ConsumerState<ExamReportPage> {
         return '解答题';
       case 'listen':
         return '听力题';
-      default:
+      case 'composition':
+      case 'essay':
+      case 'writing':
+        return '习作题';
+      case 'choice':
         return '单选题';
+      default:
+        return '本题';
     }
   }
 }

@@ -1578,4 +1578,30 @@ v2.27 收在 58 条（LR-3 57 / LR-5 1），当时判定「只能教研逐条改
 
 **复现**：`scripts/audit_walkthrough_papers_ui.py`（判据已改两处：LR-3 第 176 行附近、LR-5 第 196 行附近）。清卷→生成→审计三段串行执行，81/0 全成功。
 
-**下一步**：① 教研室复核 `answer_leak_review.csv` 99 条；② 听力三件套接入后关掉 `LISTENING_AS_CHOICE`；③ 历史演示卷脏数据清理待产品点头；④ 全量真机逐张走查（本轮仍为抽样）。
+**下一步**：① 教研室复核 `answer_leak_review.csv` 99 条；② 听力三件套接入后关掉 `LISTENING_AS_CHOICE`；③ 历史演示卷脏数据清理待产品点头；④ 全量真机逐张走查（本轮仍为抽样）。## v2.29 真机收尾复验：退出确认 / 倒计时证伪 / 脏卷下架 / D-9（2026-11-18 03:30）
+
+v2.28 之后补做 v2.27 遗留的三项，并在 EBG-AN00（1080×2340，Android 12，学生「小深」grade=1）上逐条留证。
+
+**1. 退出二次确认（PopScope）—— 已实现并真机验证**
+`exam_page.dart` 增 `bool _allowPop`，`build` 包成 `PopScope(canPop: _allowPop || _loading || _error != null, onPopInvokedWithResult: … _confirmExit(), child: _buildScaffold(...))`，确认退出后置 `_allowPop = true` 再 `context.pop()`。
+真机：进入英语期末走查卷 → 倒计时 89:52 → 静置 12 秒变 89:30 → 按系统返回键弹出「退出考试？」「退出后计时不会暂停，已作答内容会自动保存，可在考试中心继续作答。」+「继续考试」「退出」→ 点「退出」干净退回列表。
+
+**2. 「返回后倒计时重置」—— 实测为误判，撤销**
+首进 89:52 → 12 秒后 89:30 → 退出后重进同一卷 **88:46**（不是 90:00）→ 再从考试中心「继续作答」进入 **85:45**，23 秒后 **85:22**；列表显示「进行中 · 剩余 85 分钟」。
+服务端 `_remaining_seconds()` 由 `attempt.started_at` + `time_limit_min` 推算，`/start` 对 in_progress 且 remaining>0 的 attempt 直接复用、不改 `started_at`，客户端只做展示，不存在重置路径。原判断属把「首次进入未走满一刻钟」误读成归零。
+
+**3. 历史脏卷 —— 置 offline，不删**
+94 张卷分值合计全部一致，唯 3 张早期演示遗留：id1「深圳市一年级数学期末模拟卷（2025）」24 题 58 分（有 3 条作答记录）、id3「…三年级数学期末模拟卷（2024）」24 题 58 分、id8 标题「153」18 题 100 分。统一 `status='offline'`：不删、不改分、保留作答历史，学生端不再出现。published 93 → 90。
+
+**4. 新缺陷 D-9：习作题被标成「单选题」—— 已修并真机复验**
+语文卷第 28/28 题（「如果让你当一天家…（不少于 70 字）」）题型行显示「单选题 · 30 分」。属题型映射缺分支：`composition` 落进 `default`，而 `default` 返回「单选题」。
+改 3 处 `_typeLabel`：`exam_page.dart`（约 :919–941）、`exam_report_page.dart`（约 :578–589）、`session_page.dart`（约 :744–755），补 `composition/essay/writing → 习作题`、`choice → 单选题`，兜底由「单选题」改为「本题」（认不出类型时不该替学生假定题式）。
+`flutter analyze` → No issues found；`flutter build apk --debug` 成功（~12s）；`adb install -r -d` Success 后重进同卷第 28 题，显示「第 28 / 28 题 · **习作题** · 30 分」。
+过程记录：首次改 `exam_page.dart` 时替换 switch 尾部漏了三个闭合花括号，analyze 报 `exam_page.dart:1149 expected_token`、gradle 打包失败，补回后通过 —— 改 Dart switch 尾必须 analyze 通过再打包。
+
+**5. 题库大改后的真机渲染抽检**
+语文卷 Q1「「多」的反义词是（ ）。」空位渲染正常（v2.28 补的「（　）」可见）；Q28 字数要求完整；英语卷节标题为「一、基础选择」（listening→choice 降级生效）；答题卡「展开全部 28 题」可展开、可点格 28 跳转、出现「收起」。
+
+**产物**：`docs/exam-ui-walkthrough-ebg-20261118.md` 新增 8.8 节，并把 8.6 的三条遗留标记为已处置；截图 `shots/ebg/53_reentry_timer.png`、`54_chinese_q28.png`、`55_q28_typefixed.png`。
+
+**下一步**：① 听力三件套（audio_url / 音频资产 / 播放控件）齐后关 `LISTENING_AS_CHOICE`；② 教研复核 `answer_leak_review.csv` 99 条；③ 全量 81 张逐张真机走查（仍为抽样）。

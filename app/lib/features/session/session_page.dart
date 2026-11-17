@@ -749,8 +749,16 @@ class _SessionPageState extends ConsumerState<SessionPage> {
         return '判断题';
       case 'fill':
         return '填空题';
-      default:
+      case 'listen':
+        return '听力题';
+      case 'composition':
+      case 'essay':
+      case 'writing':
+        return '习作题';
+      case 'choice':
         return '单选题';
+      default:
+        return '本题';
     }
   }
 }

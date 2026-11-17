@@ -44,6 +44,7 @@ class _ExamPageState extends ConsumerState<ExamPage> {
   bool _submitting = false;
   bool _offline = false;
   bool _syncing = false;
+  bool _allowPop = false;
   bool _offlineSubmitQueued = false;
   int _pendingSync = 0;
   Map<String, dynamic>? _rawAttempt;
@@ -497,6 +498,7 @@ class _ExamPageState extends ConsumerState<ExamPage> {
     _saveTimer?.cancel();
     await _flushSave();
     _ticker?.cancel();
+    _allowPop = true;
     if (mounted) context.pop();
   }
 
@@ -507,6 +509,20 @@ class _ExamPageState extends ConsumerState<ExamPage> {
   @override
   Widget build(BuildContext context) {
     final attempt = _attempt;
+    // 系统返回键/侧滑手势也要走确认，否则误触一次就把作答页关掉；
+    // _allowPop 用于放行「确认退出」之后的真正 pop。
+    return PopScope(
+      // 未加载完/报错时没有作答可丢，直接放行，不必弹确认。
+      canPop: _allowPop || _loading || _error != null,
+      onPopInvokedWithResult: (didPop, result) {
+        if (didPop) return;
+        _confirmExit();
+      },
+      child: _buildScaffold(context, attempt),
+    );
+  }
+
+  Widget _buildScaffold(BuildContext context, ExamAttempt? attempt) {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -914,8 +930,15 @@ class _ExamPageState extends ConsumerState<ExamPage> {
         return '解答题';
       case 'listen':
         return '听力题';
-      default:
+      case 'composition':
+      case 'essay':
+      case 'writing':
+        return '习作题';
+      case 'choice':
         return '单选题';
+      default:
+        // 认不出类型时不要把习作/解答硬标成单选题，这会误导学生用选择题的思路作答。
+        return '本题';
     }
   }
 }
