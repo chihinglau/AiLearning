@@ -8,8 +8,10 @@ blueprint → scope 章节 → 核心清单注入 → 跨带校验，不做任�
     python scripts/gen_walkthrough_papers.py --apply
 不加 --apply 只做 dry-run，打印计划。
 
-卷标题统一为「<年级><科目><阶段>走查卷（自建题库）」，便于在考试中心一眼识别，
-也便于走查完一键清理（--clean）。
+卷标题统一为「<年级><科目><阶段>卷」，与面向学生的正式命名一致：
+走查是内部流程词，不能出现在学生端考试中心的卷名里。批量清理请用 --clean
+配合 `--title-keyword` 指定匹配串（默认「卷」用于脚本自身生成的卷时请谨慎，
+建议先用数据库侧台账确认）。
 """
 
 from __future__ import annotations
@@ -62,7 +64,7 @@ def main() -> int:
             items = r.json()
             n = 0
             for it in items:
-                if "走查卷" in (it.get("title") or ""):
+                if "走查" in (it.get("title") or ""):
                     d = c.delete(f"/api/exams/{it['id']}", headers=h)
                     if d.status_code < 400:
                         n += 1
@@ -86,7 +88,7 @@ def main() -> int:
                         "textbook_id": tid,
                         "scope": "unit" if st == "unit" else "book",
                         "unit_index": 1 if st == "unit" else None,
-                        "title": f"{g}年级{SUBJECT_CN[s]}{STAGE_CN[st]}走查卷（自建题库）",
+                        "title": f"{g}年级{SUBJECT_CN[s]}{STAGE_CN[st]}",
                         "avoid_recent_repeats": True,
                     }
                     if not args.apply:
