@@ -1,6 +1,8 @@
 /// 首页「待办考试」入口的纯逻辑（D-04 §8.7.2），便于单测覆盖。
 library;
 
+import '../constants/app_constants.dart';
+
 const Map<String, String> kExamTypeLabels = <String, String>{
   'unit': '单元测',
   'midterm': '期中考试',
@@ -8,6 +10,14 @@ const Map<String, String> kExamTypeLabels = <String, String>{
   'mock': '模拟考',
   'past_paper': '历年真题',
 };
+
+/// 学科代码转中文名；未知代码原样返回，避免把新学科误显示成数学。
+String kSubjectLabelOf(String code) {
+  for (final subject in Subject.values) {
+    if (subject.code == code) return subject.label;
+  }
+  return code;
+}
 
 /// 返回待办考试卡的跳转路由；窗口已关闭时返回 null（由调用方给提示）。
 String? pendingExamRoute(Map<String, dynamic> item) {
@@ -27,7 +37,7 @@ String pendingExamSubtitle(Map<String, dynamic> item) {
       kExamTypeLabels[rawType] ?? rawType,
   ];
   final subject = item['subject']?.toString();
-  if (subject != null && subject.isNotEmpty) parts.add(subject);
+  if (subject != null && subject.isNotEmpty) parts.add(kSubjectLabelOf(subject));
   final state = item['window_state']?.toString();
   if (state == 'scheduled') parts.add('尚未开始');
   if (state == 'open') parts.add('点击进卷');

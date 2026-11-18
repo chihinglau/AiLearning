@@ -50,8 +50,19 @@ void main() {
         'window_state': 'open',
       });
       expect(text, contains('期末考试'));
-      expect(text, contains('math'));
+      expect(text, contains('数学'));
       expect(text, contains('点击进卷'));
+    });
+
+    test('学科代码一律本地化为中文，未知代码原样保留', () {
+      expect(
+        pendingExamSubtitle({'exam_type': 'final', 'subject': 'english'}),
+        contains('英语'),
+      );
+      expect(
+        pendingExamSubtitle({'exam_type': 'unit', 'subject': 'science'}),
+        contains('science'),
+      );
     });
 
     test('旧数据缺字段不抛异常', () {
