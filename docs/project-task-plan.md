@@ -1838,3 +1838,29 @@ v2.28 之后补做 v2.27 遗留的三项，并在 EBG-AN00（1080×2340，Androi
 | 未完成 | 听力播放次数限制（后端 attempt 记账） |
 | 待表态 | 4–9 年级英语读题音频是否扩产、qid 5585 答案变更追认、12882 类辨识题「改题型 / 白名单」口径 |
 | 交付物 | `exports/answer_leak_gate_20261118/answer_leak_gate.csv`（205 行，最终口径）、`exports/answer_leak_review_cr008_20261118/answer_leak_worklist.csv`（43 行工单） |
+### 6.29.13 听力播放额度（CR-008 第三项）
+
+**目标**：英语练习/试卷听力材料从「可无限重播」改为「试卷作答每卷每题最多 2 次」，练习与复习不限次；恢复「听力功能被改没了」的可用性。
+
+**后端**
+- 配置 `settings.listening_play_limit_per_attempt`（默认 2）。
+- 表 `listening_plays`（迁移 `d6e7f8g9h0a1`）：`attempt_id + question_id` 唯一，记 `play_count / first_played_at / last_played_at`。迁移 PK 用 `BigInteger().with_variant(Integer, "sqlite")`，否则 SQLite 下不自增、insert 报 `NOT NULL constraint failed: listening_plays.id`。
+- `POST /api/exams/attempts/{attempt_id}/listening-plays?question_id=`：占额度入口（客户端每次点播放先占，缓存命中也能记账），超限 429 `LISTENING_PLAY_LIMIT`，响应体带 `limit/played/remaining`；题目不在本卷 404 `QUESTION_NOT_IN_PAPER`。
+- `GET /api/learn/questions/{id}/audio?kind=listening&attempt_id=`：兜底记账，响应头 `X-Listening-Play-Remaining`。练习/复习不传 `attempt_id` → 不记账、不限次。
+
+**前端**
+- `exam_service.takeListeningPlay(attemptId, questionId)`；`SpeechButton` 新增 `attemptId`，点播放先占额度，429 时 SnackBar 提示并中断播放；`QuestionSpeechButton` 透传；`exam_page` 听力按钮传 `attemptId: _attempt?.id`。
+
+**验证**
+| 环节 | 结果 |
+|---|---|
+| `flutter analyze` | No issues found |
+| `pytest -q`（含 `test_listening_play_quota.py` 3 例） | 全绿 |
+| dev 库真实 HTTP | 第 1 次 200（remaining 1）、第 2 次 200（remaining 0）、第 3 次 429 |
+| 真机 EBG（g1 英语单元卷 第 1/28 听力题） | 三次点击 → `listening-plays` 200 / 200 / 429，第 3 次底部 SnackBar「该题听力材料最多播放 2 次」，按钮回到未播放态 |
+
+**新发现缺陷（P2，本轮未修）**
+- 作答页「退出考试？」弹窗里点「退出」两次无效（坐标 1080×2340，(775,1270) 命中按钮但无响应），只能 force-stop 退出。建议排查 `PopScope` 重入或弹窗按钮 hit-test。
+
+**未完成**
+- 练习页「不限次」仅代码路径 + 单测覆盖，未做真机旁证（同一会话内退出受阻，改用 force-stop 重启）。

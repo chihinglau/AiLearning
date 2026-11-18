@@ -69,6 +69,9 @@ class Settings(BaseSettings):
     question_audio_default_speed: float = 1.0
     question_audio_rate_limit_per_minute: int = 60
     question_audio_cache_control: str = "public, max-age=2592000"
+    # CR-008 听力材料播放限额：同一份试卷作答内，同一道听力题最多播 N 次。
+    # 仅对试卷作答（带 attempt_id）生效，练习/复习不限。
+    listening_play_limit_per_attempt: int = 2
 
     @property
     def is_production(self) -> bool:

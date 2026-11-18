@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:ai_learning/core/providers.dart';
+import 'package:ai_learning/core/services/api_client.dart';
 import 'package:ai_learning/core/speech/question_audio.dart';
 import 'package:ai_learning/core/speech/tts_service.dart';
 import 'package:flutter/material.dart';
@@ -22,6 +23,7 @@ class SpeechButton extends ConsumerStatefulWidget {
     this.audioKind = QuestionAudioKind.reading,
     this.showLabel = false,
     this.idleLabel = '朗读题目',
+    this.attemptId,
   });
 
   /// 已按读法规则清洗过的朗读文本；听力题传 `content.script`，仅作 TTS 兜底。
@@ -41,6 +43,9 @@ class SpeechButton extends ConsumerStatefulWidget {
 
   /// 未播放时展示的文案。
   final String idleLabel;
+
+  /// 试卷作答 id：听力材料播放次数按 (attempt, question) 记账，练习场景传 null。
+  final int? attemptId;
 
   @override
   ConsumerState<SpeechButton> createState() => _SpeechButtonState();
@@ -88,8 +93,29 @@ class _SpeechButtonState extends ConsumerState<SpeechButton> {
       await _stopAll();
       return;
     }
-    final speed = await ref.read(speechSettingsStoreProvider).speed();
     final questionId = widget.questionId;
+    // 试卷听力：先占播放额度。音频命中本地缓存时不会发音频请求，
+    // 所以次数必须由这个专门的接口累计（后端按 attempt+question 记账）。
+    final attemptId = widget.attemptId;
+    if (_isListening && attemptId != null && questionId != null) {
+      try {
+        await ref
+            .read(examServiceProvider)
+            .takeListeningPlay(attemptId, questionId);
+      } on ApiException catch (error) {
+        if (!mounted) return;
+        if (error.code == 'LISTENING_PLAY_LIMIT') {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text(error.message)),
+          );
+          return;
+        }
+        // 其它错误（离线、网络抖动）不阻断作答，继续尝试播放本地/服务端音频。
+      } catch (_) {
+        // 同上：额度接口不可用时不让听力功能整体失效。
+      }
+    }
+    final speed = await ref.read(speechSettingsStoreProvider).speed();
     if (questionId != null) {
       final played = await _audio.play(questionId, speed: speed);
       if (played) return;

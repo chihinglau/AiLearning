@@ -9,10 +9,11 @@ from sqlalchemy.orm import Session
 
 from app.api.deps import get_current_user, require_permission
 from app.core import cache
+from app.core.config import settings
 from app.db.session import get_db
 from app.models.assignment import Assignment
 from app.models.content import KnowledgePoint, Question
-from app.models.exam import Exam, ExamAnswer, ExamAttempt, ExamBlueprint
+from app.models.exam import Exam, ExamAnswer, ExamAttempt, ExamBlueprint, ListeningPlay
 from app.models.org import ClassMember, SchoolClass
 from app.models.practice import StudentQuestionRecord
 from app.models.user import AuditLog, User
@@ -1611,6 +1612,75 @@ def save_answers(
         remaining_seconds=_remaining_seconds(exam, attempt, now),
         answers=_answers_out(db, attempt, paper),
     )
+
+
+@router.post("/attempts/{attempt_id}/listening-plays")
+def take_listening_play(
+    attempt_id: int,
+    question_id: int = Query(..., description="听力题 id"),
+    current: User = Depends(require_permission("learn:exam:take")),
+    db: Session = Depends(get_db),
+) -> dict[str, Any]:
+    """占用一次听力材料播放额度（CR-008）。
+
+    客户端每次点「播放听力材料」先调本接口占额度，再播放本地缓存或下载音频，
+    这样即使音频命中本地缓存，次数依然被正确累计。
+
+    返回 `remaining` = 本次播放后剩余次数；超出上限抛 429
+    `LISTENING_PLAY_LIMIT`，`detail` 带 limit / played / remaining。
+    上限取 `settings.listening_play_limit_per_attempt`（默认 2）。
+    """
+    attempt = _attempt_or_404(db, attempt_id, current)
+    exam = _exam_or_404(db, attempt.exam_id)
+    paper = _paper_items(exam)
+    if question_id not in {int(item["question_id"]) for item in paper}:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail={"code": "QUESTION_NOT_IN_PAPER", "message": "该题不在本卷内"},
+        )
+
+    limit = max(settings.listening_play_limit_per_attempt, 1)
+    play = db.execute(
+        select(ListeningPlay).where(
+            ListeningPlay.attempt_id == attempt_id,
+            ListeningPlay.question_id == question_id,
+        )
+    ).scalar_one_or_none()
+    now = datetime.utcnow()
+    if play is None:
+        play = ListeningPlay(
+            attempt_id=attempt_id,
+            question_id=question_id,
+            user_id=current.id,
+            play_count=1,
+            first_played_at=now,
+            last_played_at=now,
+        )
+        db.add(play)
+    elif play.play_count >= limit:
+        db.commit()
+        raise HTTPException(
+            status_code=status.HTTP_429_TOO_MANY_REQUESTS,
+            detail={
+                "code": "LISTENING_PLAY_LIMIT",
+                "message": f"该题听力材料最多播放 {limit} 次",
+                "limit": limit,
+                "played": play.play_count,
+                "remaining": 0,
+            },
+        )
+    else:
+        play.play_count += 1
+        play.last_played_at = now
+    db.commit()
+    db.refresh(play)
+    return {
+        "attempt_id": attempt_id,
+        "question_id": question_id,
+        "limit": limit,
+        "played": play.play_count,
+        "remaining": max(limit - play.play_count, 0),
+    }
 
 
 @router.post("/attempts/{attempt_id}/submit", response_model=ExamSubmitOut)

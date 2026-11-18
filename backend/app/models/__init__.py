@@ -6,7 +6,14 @@ from app.models.auth_token import RefreshToken
 from app.models.content import Chapter, KnowledgePoint, Question, Textbook
 from app.models.content_report import ContentReport
 from app.models.content_review import ContentReview
-from app.models.exam import Exam, ExamAnswer, ExamAttempt, ExamBlueprint, ExamSubmission
+from app.models.exam import (
+    Exam,
+    ExamAnswer,
+    ExamAttempt,
+    ExamBlueprint,
+    ExamSubmission,
+    ListeningPlay,
+)
 from app.models.legal import ConsentRecord
 from app.models.org import ClassMember, School, SchoolClass, TeacherClassAssignment
 from app.models.practice import (
@@ -43,6 +50,7 @@ __all__ = [
     "ExamAttempt",
     "ExamAnswer",
     "ExamSubmission",
+    "ListeningPlay",
     "School",
     "SchoolClass",
     "ClassMember",

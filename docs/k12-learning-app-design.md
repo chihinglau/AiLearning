@@ -703,6 +703,8 @@ AccentCard(
 | 生产脚本 | `scripts/build_question_audio.py --subject --grade --dry-run`，调用本地开源 TTS（sherpa-onnx/Piper）+ `ffmpeg` 转 Opus，按缓存键增量合成，支持并发/重试/失败清单 |
 | 听力音频（CR-008） | 听力题由 q_type='listening' 识别（content.script 即听力原文），kind=listening 分支要求 q_type=='listening'、年级 1–9、科目 english，否则 404；产物落 udio/listening/{hash前2}/{hash}.opus；全库 1348 条听力题已合成 1294 条（跳过 6、失败 0），opus 1166 文件 / 5.92 MB；实测 GET /api/learn/questions/15755/audio?kind=listening → 200 udio/ogg |
 | 生成范围 | 仅 `grade in (1,2,3)` 且 `subject in (chinese, math, english)`；其余返回 404 `AUDIO_NOT_READY`，客户端直接走系统 TTS。**4–9 年级英语按 CR-007 允许读题但不出预生成音频**，稳定走系统 TTS 兜底（真机已验：`TtsSystemService onSynthesizeText lang=eng` → AudioTrack started，无报错） |
+| 听力播放额度（CR-008 收尾） | `POST /api/exams/attempts/{attempt_id}/listening-plays?question_id=` 占额度，返回 `{limit, played, remaining}`；上限 `settings.listening_play_limit_per_attempt`（默认 2），超出 429 `LISTENING_PLAY_LIMIT`。记于 `listening_plays` 表（唯一键 `attempt_id + question_id`）。音频接口 `GET .../audio?kind=listening&attempt_id=` 亦做兜底记账，响应头带 `X-Listening-Play-Remaining`。**练习/复习不传 attempt_id → 不限次** |
+| 客户端额度调用 | `SpeechButton` 在听力播放前先调占额度接口（命中本地缓存同样记账），教务/离线异常不阻断播放，仅额度耗尽时弹 SnackBar |
 
 #### 3.9.8 成本与容量测算
 

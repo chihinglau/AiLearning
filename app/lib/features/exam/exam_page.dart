@@ -684,6 +684,7 @@ class _ExamPageState extends ConsumerState<ExamPage> {
                 key: ValueKey('exam-listening-${item.question.id}-$_index'),
                 question: item.question,
                 showLabel: true,
+                attemptId: _attempt?.id,
               ),
             ),
           ],

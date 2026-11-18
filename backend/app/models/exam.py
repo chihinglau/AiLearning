@@ -8,6 +8,7 @@ from sqlalchemy import (
     ForeignKey,
     Integer,
     String,
+    Text,
     UniqueConstraint,
 )
 from sqlalchemy.orm import Mapped, mapped_column
@@ -21,7 +22,9 @@ class ExamBlueprint(Base):
 
     __tablename__ = "exam_blueprints"
 
-    id: Mapped[int] = mapped_column(BigInteger().with_variant(Integer, "sqlite"), primary_key=True)
+    id: Mapped[int] = mapped_column(
+        BigInteger().with_variant(Integer, "sqlite"), primary_key=True
+    )
     code: Mapped[str] = mapped_column(String(80), unique=True, index=True)
     name: Mapped[str] = mapped_column(String(120))
     subject: Mapped[str] = mapped_column(String(20), index=True)
@@ -41,7 +44,9 @@ class Exam(Base):
 
     __tablename__ = "exams"
 
-    id: Mapped[int] = mapped_column(BigInteger().with_variant(Integer, "sqlite"), primary_key=True)
+    id: Mapped[int] = mapped_column(
+        BigInteger().with_variant(Integer, "sqlite"), primary_key=True
+    )
     title: Mapped[str] = mapped_column(String(200))
     subject: Mapped[str] = mapped_column(String(20), index=True)
     grade: Mapped[int] = mapped_column(index=True)
@@ -66,6 +71,20 @@ class Exam(Base):
     class_id: Mapped[Optional[int]] = mapped_column(
         ForeignKey("classes.id"), nullable=True, index=True
     )
+    # D-09 §7.1 / EX-06：真题溯源与授权留痕（可空，存量卷由教研按 R-07 台账补录）
+    source_name: Mapped[Optional[str]] = mapped_column(String(200), nullable=True)
+    license_note: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    adapted_from: Mapped[Optional[str]] = mapped_column(String(200), nullable=True)
+    # D-09 §7.2 / EX-09：仅真题走「草稿 → 复核 → 发布」，普通卷不使用这些列
+    reviewed_by: Mapped[Optional[int]] = mapped_column(nullable=True)
+    reviewed_at: Mapped[Optional[datetime]] = mapped_column(
+        DateTime, nullable=True
+    )
+    published_by: Mapped[Optional[int]] = mapped_column(nullable=True)
+    published_at: Mapped[Optional[datetime]] = mapped_column(
+        DateTime, nullable=True
+    )
+    review_note: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
 
 
@@ -74,10 +93,14 @@ class ExamAttempt(Base):
 
     __tablename__ = "exam_attempts"
     __table_args__ = (
-        UniqueConstraint("user_id", "exam_id", "seed", name="uq_attempt_user_exam_seed"),
+        UniqueConstraint(
+            "user_id", "exam_id", "seed", name="uq_attempt_user_exam_seed"
+        ),
     )
 
-    id: Mapped[int] = mapped_column(BigInteger().with_variant(Integer, "sqlite"), primary_key=True)
+    id: Mapped[int] = mapped_column(
+        BigInteger().with_variant(Integer, "sqlite"), primary_key=True
+    )
     user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
     exam_id: Mapped[int] = mapped_column(ForeignKey("exams.id"), index=True)
     seed: Mapped[int] = mapped_column(BigInteger)
@@ -96,13 +119,19 @@ class ExamAnswer(Base):
 
     __tablename__ = "exam_answers"
     __table_args__ = (
-        UniqueConstraint("attempt_id", "question_id", name="uq_answer_attempt_question"),
+        UniqueConstraint(
+            "attempt_id", "question_id", name="uq_answer_attempt_question"
+        ),
     )
 
-    id: Mapped[int] = mapped_column(BigInteger().with_variant(Integer, "sqlite"), primary_key=True)
+    id: Mapped[int] = mapped_column(
+        BigInteger().with_variant(Integer, "sqlite"), primary_key=True
+    )
     attempt_id: Mapped[int] = mapped_column(ForeignKey("exam_attempts.id"), index=True)
     question_id: Mapped[int] = mapped_column(ForeignKey("questions.id"), index=True)
-    user_answer: Mapped[Optional[dict[str, Any]]] = mapped_column(JSONType, nullable=True)
+    user_answer: Mapped[Optional[dict[str, Any]]] = mapped_column(
+        JSONType, nullable=True
+    )
     is_correct: Mapped[Optional[bool]] = mapped_column(Boolean, nullable=True)
     score: Mapped[Optional[float]] = mapped_column(nullable=True)
     self_score: Mapped[Optional[float]] = mapped_column(nullable=True)
@@ -118,10 +147,42 @@ class ExamAnswer(Base):
 class ExamSubmission(Base):
     __tablename__ = "exam_submissions"
 
-    id: Mapped[int] = mapped_column(BigInteger().with_variant(Integer, "sqlite"), primary_key=True)
+    id: Mapped[int] = mapped_column(
+        BigInteger().with_variant(Integer, "sqlite"), primary_key=True
+    )
     user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
     exam_id: Mapped[int] = mapped_column(ForeignKey("exams.id"), index=True)
     answers: Mapped[dict[str, Any]] = mapped_column(JSONType)
     score: Mapped[float] = mapped_column(default=0.0)
     duration_ms: Mapped[int] = mapped_column(Integer, default=0)
     submitted_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+
+
+class ListeningPlay(Base):
+    """试卷作答内听力材料的播放次数记账（CR-008）。
+
+    按 (attempt_id, question_id) 唯一累计，接口侧按
+    `settings.listening_play_limit_per_attempt` 拦截超出次数的重播请求。
+    练习页不写这张表（不限额，也不占试卷的额度）。
+    """
+
+    __tablename__ = "listening_plays"
+    __table_args__ = (
+        UniqueConstraint(
+            "attempt_id", "question_id", name="uq_listening_play_attempt_question"
+        ),
+    )
+
+    id: Mapped[int] = mapped_column(
+        BigInteger().with_variant(Integer, "sqlite"), primary_key=True
+    )
+    attempt_id: Mapped[int] = mapped_column(
+        ForeignKey("exam_attempts.id"), index=True
+    )
+    question_id: Mapped[int] = mapped_column(ForeignKey("questions.id"), index=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
+    play_count: Mapped[int] = mapped_column(Integer, default=0)
+    first_played_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+    last_played_at: Mapped[datetime] = mapped_column(
+        DateTime, default=datetime.utcnow, onupdate=datetime.utcnow
+    )

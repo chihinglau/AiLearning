@@ -21,6 +21,7 @@ from app.core.rate_limit import rate_limiter
 from app.core.scope import StudentAccess
 from app.db.session import get_db
 from app.models.content import Chapter, KnowledgePoint, Question, Textbook
+from app.models.exam import ExamAttempt, ListeningPlay
 from app.models.practice import (
     MasteryScore,
     PracticeSession,
@@ -1528,6 +1529,14 @@ def question_audio(
         pattern="^(reading|listening)$",
         description="reading=读题音频（题干+选项）；listening=听力材料音频（content.script）",
     ),
+    attempt_id: Optional[int] = Query(
+        default=None,
+        description=(
+            "试卷作答 attempt id。传入且 kind=listening 时按次记账，"
+            "同一 attempt 内同一题最多播 listening_play_limit_per_attempt 次；"
+            "练习场景不传，不限次也不占额度"
+        ),
+    ),
     current: User = Depends(require_permission("learn:content:read")),
     db: Session = Depends(get_db),
 ) -> Response:
@@ -1535,6 +1544,10 @@ def question_audio(
 
     CR-008 起支持 `kind=listening`：听力题播 `content.script`，与读题音频分目录、
     分缓存键，互不覆盖；解除了 1–3 年级限制（听力题覆盖英语 1–9 年级）。
+
+    CR-008 收尾：带 `attempt_id` 的听力播放按 (attempt, question) 记账，
+    超出 `listening_play_limit_per_attempt` 返回 429 `LISTENING_PLAY_LIMIT`，
+    剩余次数放在响应头 `X-Listening-Play-Remaining`。
     """
     allowed, retry_after = rate_limiter.allow(
         f"question-audio:{current.id}",
@@ -1606,6 +1619,63 @@ def question_audio(
         "ETag": etag,
         "Cache-Control": settings.question_audio_cache_control,
     }
+
+    # 听力播放次数记账：只对试卷作答（带 attempt_id）生效，练习不限额。
+    # 记账放在 304 之前——命中缓存也意味着「又播了一遍」，同样占额度。
+    if kind == "listening" and attempt_id is not None:
+        limit = max(settings.listening_play_limit_per_attempt, 1)
+        attempt = db.execute(
+            select(ExamAttempt).where(
+                ExamAttempt.id == attempt_id, ExamAttempt.user_id == current.id
+            )
+        ).scalar_one_or_none()
+        if attempt is None:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail={
+                    "code": "ATTEMPT_NOT_FOUND",
+                    "message": "作答记录不存在或不属于当前用户",
+                },
+            )
+        play = db.execute(
+            select(ListeningPlay).where(
+                ListeningPlay.attempt_id == attempt_id,
+                ListeningPlay.question_id == question_id,
+            )
+        ).scalar_one_or_none()
+        now = datetime.utcnow()
+        if play is None:
+            play = ListeningPlay(
+                attempt_id=attempt_id,
+                question_id=question_id,
+                user_id=current.id,
+                play_count=1,
+                first_played_at=now,
+                last_played_at=now,
+            )
+            db.add(play)
+        elif play.play_count >= limit:
+            db.commit()
+            raise HTTPException(
+                status_code=status.HTTP_429_TOO_MANY_REQUESTS,
+                detail={
+                    "code": "LISTENING_PLAY_LIMIT",
+                    "message": f"该题听力材料最多播放 {limit} 次",
+                    "limit": limit,
+                    "played": play.play_count,
+                    "remaining": 0,
+                },
+                headers={"X-Listening-Play-Remaining": "0"},
+            )
+        else:
+            play.play_count += 1
+            play.last_played_at = now
+        db.commit()
+        db.refresh(play)
+        headers["X-Listening-Play-Remaining"] = str(
+            max(limit - play.play_count, 0)
+        )
+
     if question_audio_service.etag_matches(
         request.headers.get("if-none-match"), etag
     ):
