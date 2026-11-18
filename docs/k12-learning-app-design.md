@@ -623,7 +623,9 @@ AccentCard(
 >
 > **评审结论（2026-11-10，PM）**：采用 **方案 C（开源 TTS 批量预生成，零 API 费用）+ 方案 A（系统 TTS）兜底**；音频**默认不随整册包下发**，按用户播放需求按需下载并缓存；首期只覆盖 **1–3 年级语文 / 数学 / 英语**；方案 B（付费云端）与方案 D（端侧模型入包）不采用。
 >
-> **范围修订（2026-11-18，CR-007）**：阅读范围改为 **1–3 年级语文 / 数学 + 全年级（1–9）英语**。英语是「看词读音」的刚需科目，4 年级以上仍需单词点读与题干跟读；语文/数学维持低年级口径（4 年级以上识字量足够，读题价值低）。判定统一收敛到 `app/lib/core/speech/speech_policy.dart`，页面不得各自写死年级条件。预生成音频仍只覆盖 1–3 年级语数英 653 题，4–9 年级英语走系统 TTS 兜底（音质略低但可用，无 404 报错、无等待）。
+> **范围修订（2026-11-18，CR-007）**：阅读范围改为 **1–3 年级语文 / 数学 + 全年级（1–9）英语**。英语是「看词读音」的刚需科目，4 年级以上仍需单词点读与题干跟读；语文/数学维持低年级口径（4 年级以上识字量足够，读题价值低）。判定统一收敛到 `app/lib/core/speech/speech_policy.dart`，页面不得各自写死年级条件。
+>
+> **音频范围追平（2026-11-19，CR-009/CR-010）**：CR-007 当时只放开「能力」不放开「音频」（4–9 年级英语走系统 TTS）。后续已把预生成音频同步扩到英语 1–9 年级，并按语种分段合成解决中英混排；现行可读 10224 题（英语 7408 + 语文/数学 1–3 年级）全部有服务端音频，「4–9 英语零音频」属已作废口径。详见 §3.9.14。
 
 #### 3.9.1 目标与非目标
 
@@ -688,6 +690,9 @@ AccentCard(
 | 文件路径 | `audio/{hash前2位}/{hash}.opus`，与教材目录同生命周期 |
 | 整册包 | **默认不含音频**，不写入 bundle；保持现有整册包体积不变 |
 | 按需下载 | 首次点击播放时请求音频接口并落缓存；失败降级系统 TTS 并异步重试 |
+| 条件校验 | 本次启动首次播放时带 `If-None-Match`；304 复用本地、200 覆盖并更新旁挂 `.etag`（`q_<id>[_listen].etag`）；校验失败但有本地文件则继续用本地 |
+| 校验频次 | 每题每次启动只校验一次（`_revalidated` 集合），后续连点直接命中缓存，避免打满 60 次/分限流 |
+| 资产版本 | `questionAudioAssetVersion = 2`，目录 `question_audio_v2/`；仅合成规则整体变更时递增，单题变更靠 ETag |
 | 容量控制 | 按教材 LRU，默认上限 200 MB；删除教材/更新教材同步清理 |
 | 失效 | 题干修订导致文本变化即缓存键变化，旧音频由 LRU 淘汰 |
 
@@ -701,8 +706,9 @@ AccentCard(
 | 未就绪 | 404 `AUDIO_NOT_READY`，客户端降级系统 TTS 并异步重试 |
 | 限流 | 单用户 60 次/分钟（防批量抓取） |
 | 生产脚本 | `scripts/build_question_audio.py --subject --grade --dry-run`，调用本地开源 TTS（sherpa-onnx/Piper）+ `ffmpeg` 转 Opus，按缓存键增量合成，支持并发/重试/失败清单 |
-| 听力音频（CR-008） | 听力题由 q_type='listening' 识别（content.script 即听力原文），kind=listening 分支要求 q_type=='listening'、年级 1–9、科目 english，否则 404；产物落 udio/listening/{hash前2}/{hash}.opus；全库 1348 条听力题已合成 1294 条（跳过 6、失败 0），opus 1166 文件 / 5.92 MB；实测 GET /api/learn/questions/15755/audio?kind=listening → 200 udio/ogg |
-| 生成范围 | 仅 `grade in (1,2,3)` 且 `subject in (chinese, math, english)`；其余返回 404 `AUDIO_NOT_READY`，客户端直接走系统 TTS。**4–9 年级英语按 CR-007 允许读题但不出预生成音频**，稳定走系统 TTS 兜底（真机已验：`TtsSystemService onSynthesizeText lang=eng` → AudioTrack started，无报错） |
+| 听力音频（CR-008） | 听力题由 q_type='listening' 识别（content.script 即听力原文），kind=listening 分支要求 q_type=='listening'、年级 1–9、科目 english，否则 404；产物落 audio/listening/{hash前2}/{hash}.opus；全库 1348 条听力题已合成 1294 条（跳过 6、失败 0），opus 1166 文件 / 5.92 MB；实测 GET /api/learn/questions/15755/audio?kind=listening → 200 udio/ogg |
+| 生成范围 | 按学科分年级上限（`question_speech.READING_GRADES_BY_SUBJECT`）：**英语 1–9 年级**（`reading_grades("english")`）、**语文/数学 1–3 年级**；其它组合 404 `AUDIO_NOT_READY`，客户端直接走系统 TTS。2026-11-19 实测：published 18746 题中可读 10224 题（英语 7408 + 语数低年级）已全量预生成，无 404 缺口 |
+| 中英混排分段（CR-010） | 英语题大量题干夹中文指令（7408 道里 4435 道含中文），整段用英文音色会把中文读成拼音。改为按 CJK/ASCII 边界分段，中文段走 `zh_CN` 音色、英文段走 `en_US`；单段退化为原缓存键，多段用组合键 `RULES_VERSION\|mix\|{speed}\|{voice}`。全量 7162 题重生成，失败 0 |
 | 听力播放额度（CR-008 收尾） | `POST /api/exams/attempts/{attempt_id}/listening-plays?question_id=` 占额度，返回 `{limit, played, remaining}`；上限 `settings.listening_play_limit_per_attempt`（默认 2），超出 429 `LISTENING_PLAY_LIMIT`。记于 `listening_plays` 表（唯一键 `attempt_id + question_id`）。音频接口 `GET .../audio?kind=listening&attempt_id=` 亦做兜底记账，响应头带 `X-Listening-Play-Remaining`。**练习/复习不传 attempt_id → 不限次** |
 | 客户端额度调用 | `SpeechButton` 在听力播放前先调占额度接口（命中本地缓存同样记账），教务/离线异常不阻断播放，仅额度耗尽时弹 SnackBar |
 
@@ -711,14 +717,14 @@ AccentCard(
 | 项 | 量级 |
 |---|---|
 | 合成成本 | **0 元**（开源引擎本地合成，无 API 调用；仅消耗构建机 CPU 时间） |
-| 覆盖范围 | 1–3 年级 × 语文/数学/英语 × 2 学期 = 18 册 |
-| 音频体积 | Opus 24 kbps，单册约 80 MB，全范围约 **1.4 GB** |
+| 覆盖范围 | 读题音频：英语 1–9 年级（9 个年级 × 2 学期）+ 语文/数学 1–3 年级（6 册 × 2 科）；听力音频：英语 1–9 年级 |
+| 音频体积 | Opus 24 kbps；读题产物实测约 **1.7 GB**（15778 个 opus，含 mix 分段与历史单语种版本）；听力 1166 文件 / 5.92 MB |
 | 存储/CDN | 按实际播放量产生 CDN 流量；未播放不产生流量，对象存储成本约每月 1 元级 |
 | 人力成本 | 引擎接入与试听抽检计入 TT-03/TT-07 |
 
-无持续付费；后续扩到 4–9 年级其他学科时按 CR 评估。
+无持续付费；扩到语文/数学 4–9 年级时按 CR 评估（长题干合成耗时与播放时长会明显上升）。
 
-> CR-007 已把**英语**扩到全年级，但不扩预生成音频：4–9 年级英语题走系统 TTS，零存储增量。若后续要统一音质，可再按 CR 评估把这部分纳入批量合成（题量约 4–9 年级 × 英语 × 2 学期，需重新测算体积与抽检人力）。
+> 口径演进：CR-007 先把**英语**读题能力放开到全年级但不出音频（走系统 TTS）；CR-009/CR-010 已把预生成音频同步扩到英语 1–9 年级并按语种分段合成，上面「生成范围」按现行实现为准 —— 旧口径（4–9 英语零音频）已作废。
 
 #### 3.9.9 合规与隐私
 
@@ -734,6 +740,7 @@ AccentCard(
 | T1 | 题干喇叭可播放/停止/重听，长按停止，状态与图标一致 |
 | T2 | 分数、幂、运算符号、单位、选项读法符合 §3.9.5，规则单测 ≥15 条 |
 | T3 | 音频接口 `ETag` 命中返回 304，未就绪返回 404 `AUDIO_NOT_READY`，越权 403 |
+| T3b | 客户端按 ETag 条件校验：本地有音频无 `.etag` 时首次播放重下并落 ETag（200）；重启后再播同题走 304 复用本地；每题每次启动只校验一次；条件请求失败但有本地文件仍可播放 |
 | T4 | 断网可播放已缓存音频；无缓存时降级系统 TTS；两者都不可用时按钮禁用并给出提示 |
 | T5 | 1–3 年级默认自动读题且可关闭；TalkBack 能正确播报喇叭按钮语义 |
 | T6 | 抽检每单元 ≥5 题试听：多音字、分数、单位、英文单词读音正确率 ≥95%；不达标题目回退系统 TTS 并登记返工清单 |
@@ -830,7 +837,7 @@ AccentCard(
 | 判定入口 | 新增 `app/lib/core/speech/speech_policy.dart`：`enabled({grade, subject})` / `autoReadByDefault({grade})`；三个页面统一调用，禁止各页自写年级条件 |
 | 考试页 | `exam_page.dart` 接入：题干 `Row` + `ReadableQuestionText` + `SpeechButton`；新增 `_speechEnabled` / `_stopSpeaking` / `_goTo`；上一题/下一题/答题卡三处切题统一走 `_goTo`（先停读再切），`_confirmExit` 与 `dispose` 也停读（防音频串到考试中心列表） |
 | 考试页自动朗读 | **不做**。考试计时中突然出声会干扰考场秩序，只提供手动喇叭；练习/复习页保持自动读题 |
-| 预生成音频 | 范围不变（仍 1–3 年级语数英 653 题）。4–9 年级英语请求 `/audio` 返回 404 `AUDIO_NOT_READY`，客户端静默回退系统 TTS，真机已验证出声（`onSynthesizeText lang=eng`） |
+| 预生成音频 | 本节记录的是 CR-007 时点口径（当时仅 1–3 年级语数英 653 题有音频，4–9 英语请求 `/audio` 404 → 回退系统 TTS）。**该口径已被 CR-009/CR-010 取代**：现英语 1–9 年级全部有预生成音频，404 只剩「未发布/非听力题/返工清单」等真实异常场景，见 §3.9.7 与 §3.9.14 |
 | 测试 | 新增 `app/test/speech_policy_test.dart` 7 例：低年级三科开放、4–9 英语开放、4–9 语数不开放、其他学科不开放、空/null 与大小写容错、`autoReadByDefault` 仅 1–3 |
 
 **真机验收（EBG-AN00，2026-11-18）**
@@ -877,6 +884,44 @@ AccentCard(
 | 人工试听未执行 | TT-07 合格率（≥95%）暂无人工结论 | 按 `qa_audio_checklist.md` 试听后 `--apply` 生成返工清单（§4.3 B-001） |
 | 字级时间戳缺失 | 高亮为句级估算，长句内定位不精确 | 若需精确高亮，改 Piper 音素级对齐或改用带时间戳的 TTS 引擎 |
 | 鸿蒙播放 | 依赖插件可用性，缺失时只能走系统 TTS | 随 OHOS 端 `just_audio` 支持情况评估 |
+
+#### 3.9.14 2026-11-18 落地补记：英语全年级读题、中英混排分段与 ETag 条件校验
+
+**读题范围（CR-009）**
+`SpeechPolicy.enabled(grade, subject)` 的口径从「非英语须 1–3 年级」放开为「英语 1–9 年级；语文/数学仍限 1–3 年级」，服务端 `READING_GRADES_BY_SUBJECT` 同步放开，否则 4–9 年级英语读题会 404。**预生成音频随后也扩到英语 1–9 年级**（CR-009/CR-010），因此 CR-007 当时「4–9 英语走系统 TTS、零音频增量」的口径已作废；系统 TTS 现在的角色是纯粹的兜底（服务端没音频、离线、或鸿蒙缺 `just_audio` 时）。
+
+**中英混排分段（CR-010）**
+英语题干里 7408 道有 **4435 道含中文**（「听录音，选出你听到的单词」这类指令语），整段用英文音色读会把中文读成拼音。改法是**按语种分段合成**：
+
+| 项 | 规则 |
+|---|---|
+| 分段 | 题干与选项按 CJK / ASCII 边界切成若干段，中文段走 `zh_CN` 音色、英文段走 `en_US` 音色 |
+| 缓存键 | 单段退化为原键 `RULES_VERSION\|{speed}\|{voice}`；多段用组合键 `RULES_VERSION\|mix\|{speed}\|{voice}`，避免与旧单语种产物混用 |
+| 文本本地化 | 英语题的「选项 A，」→「Option A, 」、占位词「空格」→ `blank`，避免中文提示混进英文朗读 |
+| 重生成 | 全量 **7162/7162** 已重生成，失败 0 |
+| 分段分布 | 1 段 2817 / 2 段 2151 / 3 段 962 |
+
+**客户端缓存版本**
+新增 `questionAudioAssetVersion = 2`：缓存目录由 `question_audio/` 切到 `question_audio_v2/`，并在启动时清理其它版本目录。这是**在 ETag 条件校验落地之前**的兜底手段——服务端换成组合键产物后，旧客户端只认「文件存在」，不换目录就永远播旧读音。
+
+**ETag 条件校验（本轮补齐）**
+服务端早已支持 `ETag` + `If-None-Match` → 304，但客户端只判「本地文件是否存在」，属设计契约未落到实现。补齐后的客户端行为：
+
+| 场景 | 客户端行为 |
+|---|---|
+| 本次启动首次播放该题 | 带 `If-None-Match` 发条件请求 |
+| 服务端返回 304 | 直接复用本地文件，不重下 |
+| 服务端返回 200 | 覆盖本地音频，同时落地 `.etag` 旁挂文件（`q_<id>[_listen].etag`） |
+| 条件请求失败（断网/504）且本地有文件 | 继续用本地播放，不阻断 |
+| 同一题后续连点 | 命中本地缓存，**本次启动内不再校验**（`_revalidated` 集合），避免把 60 次/分限流打满 |
+
+两个容易踩的点：
+- 音频条件请求**刻意不带 `attempt_id`** —— 听力额度由 `takeListeningPlay` 单独记账，两处都带会重复扣额度；
+- 注入 `fetcher` 走替身（单测/离线包）时自动关闭条件通道，避免单测打真实网络。
+
+**真机证据（EBG-AN00）**：本地有音频但无 `.etag` 时首次播放 → `200`（重下并落 ETag）；重启 App 后再播同题 → 同 URL `304`，直接复用本地文件。
+
+**遗留**：`questionAudioAssetVersion` 保留，仅用于「合成规则整体变更」时换目录；单题内容变更从此不再需要它。
 
 ---
 
@@ -1013,6 +1058,8 @@ AccentCard(
 > v0.7（CR-003）实际字段补充：`exams` 还含 `status / is_past_paper / source（assignment|generated|blueprint）/ class_id / window_start / window_end / blueprint_id / exam_type / chapter_ids / region`；另有 `exam_blueprints`（`code/name/subject/grade/exam_type/total_score/time_limit_min/sections/difficulty_mix/is_active`）。`student_visible_exam_clauses()` 依赖 `status/is_past_paper/source/class_id/grade`，与 `GET /api/exams` 共用（D-04 §8.7.1）。
 >
 > v0.8（CR-004 / D-09 §7.1）补充：`exams` 新增 3 个可空溯源字段 `source_name / license_note / adapted_from`（迁移 `b4c5d6e7f8g9_exam_provenance.py`），用于真题来源、授权说明与改编来源登记；`is_past_paper=true` 的卷必须填写 `source_name` 才能发布，存量卷由内容教研按 R-07 台账补录，不猜测来源。新增响应模型 `PastPaperFiltersOut / ExamAttemptHistoryOut / PastPaperDetailOut`。
+>
+> v0.9（2026-11-18 核对实现）补充：上图「exam_submissions」在实现中为 **`exam_attempts`**（字段 `status / seed / started_at / submitted_at / duration_ms / objective_score / subjective_score / total_score / submit_token`）；试卷题目 `exams.questions` 为 JSON 数组 `{question_id, score, section_index, section_name}`，**不存在 `ExamPaperItem` 子表**；听力额度落表 `listening_plays`（唯一键 `attempt_id + question_id`）。接口侧一条硬规则：作答详情下发题目的路径是 `data["exam"]["questions"]`，而不是 `data["questions"]`（`backend/app/schemas/exam.py` 的 `ExamAttemptOut`）。
 
 ┌──────────────────────┐
 │ knowledge_points     │   ← 知识点图谱
@@ -1077,6 +1124,9 @@ POST /api/exams/{id}/attempts            开始/续答
 PATCH /api/exams/attempts/{id}           自动保存答案
 POST /api/exams/attempts/{id}/submit     交卷（幂等）
 POST /api/exams/attempts/{id}/self-assess 主观题自评（v0.8 修正旧 self-grade 漂移）
+POST /api/exams/attempts/{id}/listening-plays 听力播放占额度，返回 {limit, played, remaining}，超限 429 LISTENING_PLAY_LIMIT（仅试卷口径，练习不传 attempt_id 不限次）
+GET  /api/exams/{id}/spec-table            双向细目表（考点 × 题型 × 分值）
+GET  /api/exams/{id}/answer-sheet          答题卡结构（题号/分节/分值）
 GET  /api/exams/attempts/{id}/report     考试报告
 
 # —— 学习首页聚合 ——
@@ -1239,6 +1289,57 @@ mastery_score = f(
 - **术语必现题**：概念定义类（`复式折线统计图中不同的（　）表示不同的数据` → 答「折线」）改题干会破坏题意，不做自动改写，转教研工单决定「改题型 or 白名单」。
 
 运维入口：`backend/scripts/audit_answer_leak.py --subject/--grade/--out <目录>`（`--out` 是目录不是文件），产物字段 `level, question_id, subject, grade, q_type, answer, stem_head, reason`；教研工单模板见 `exports/answer_leak_review_cr008_20261118/answer_leak_worklist.csv`（含 `suggested_action / owner`）。
+
+### 5.3 试卷库：自建题库组卷与质量流水线（2026-11-18）
+
+> 前提口径：**不接入版权真题**。所有试卷由自建知识点题库按蓝图组卷生成，题干为原创或改编，来源与授权字段留空且不下发学生端；「真题库」保留为产品入口，库内无收录时按空态文案展示。
+
+#### 5.3.1 试卷库现状（与实现一致）
+
+| 项 | 事实 |
+|---|---|
+| 规模 | **81 张已发布卷 = 9 年级 × 3 科（语文/数学/英语）× 3 阶段（单元/期中/期末）**，published 81 张对应 81 组，无重复组 |
+| 卷名规则 | `{年级}年级{科目}{阶段卷}`，如「5年级英语期末卷」；**不带**来源标识、内部流程词（「走查」「自建题库」已清零） |
+| 题量 | 语文 28 / 24 / 15、英语 39 / 39 / 28、数学 25 / 22 / 12（顺序对应期末 / 期中 / 单元），1–9 年级完全一致 |
+| 分值与时长 | 单元卷 60 分 / 40 分钟；期中卷 100 分 / 60 分钟；期末卷 100 分 / 90 分钟 |
+| 组卷脚本 | `backend/scripts/gen_walkthrough_papers.py`；蓝图与配比见 [paper-generation-blueprint-design.md](./paper-generation-blueprint-design.md) |
+| 题面结构 | `exams.questions` 为 JSON 数组，元素 `{question_id, score, section_index, section_name}`，**无子表** |
+
+#### 5.3.2 四层质量流水线
+
+| 层 | 脚本 / 手段 | 关注点 | 本轮结果 |
+|---|---|---|---|
+| L1 数据体检 | `backend/scripts/audit_published_papers.py` | 7 类硬问题（DUP / ORPHAN / EMPTY_STEM / EMPTY_ANSWER / GRADE_MISMATCH / SUBJECT_MISMATCH / AUDIO_MISSING）+ 答案泄漏门禁 | 81 卷：硬问题 **0**，INFO 16（均为题型必然） |
+| L2 开考实测 | `backend/scripts/verify_papers_takeable.py` | 真实链路：鉴权 → 年级过滤 → `POST /attempts` → 下发题数 → 首题题干 → 听力音频 | **81/81 开考 200**，空卷 0、首题空 0、英语听力音频非 200 为 0 |
+| L3 形态走查 | 真机 g1–g9 逐级截图判读 | 卷名、学科、题量、满分、时限的展示一致性 | 9 个年级全部合规 |
+| L4 题目快照 | `backend/scripts/snapshot_papers.py` | 每题落成文本 + 8 类机检（空题干 / 题干过短 / 占位词残留 / 选择题选项不足 / 答案对不上选项 / 选项重复 / 填空无空位 / 题号不在题库） | **2088 题，0 异常**；同时产出 81 份按卷 Markdown 供教研逐卷扫 |
+
+产物统一落在 `docs/content-templates/exports/paper_audit_20261118/`：`paper_summary.csv`、`issue_detail.csv`、`summary.json`、`takeable_matrix.csv`（81 行）、`question_snapshot.csv`（2088 行）、`snapshot_issues.csv`、`snapshots/`（81 份 Markdown + 索引）。
+
+#### 5.3.3 答案泄漏分档口径
+
+`LEAK_BLOCK` 是硬伤（答案成段出现在题干），必须改题干或下架；`LEAK_WARN` / `LEAK_INFO` 是可解释的软提示，其中 `LEAK_INFO` 三类由题型决定、无法消除：
+
+1. 答案取自短文原文（阅读理解必然）；
+2. 答案落在候选括号内（「填『是』或『否』」这类提示题型）；
+3. 单字答案只是题干更长词的组成部分（「语」出现在「成语」里）。
+
+`LEAK_INFO` 不计入待修问题但原样保留 reason，因为这一档仍可能混真提示（例如答案「挡」而题干后文出现「挡住落叶」）—— 这类需教研逐条判断，不做自动改写，避免破坏课文原句。
+
+#### 5.3.4 客户端相关口径
+
+| 点 | 实现 |
+|---|---|
+| 考试中心筛选器 | 只渲染「当前年级实际有卷的学科/类型」：首屏加载时记录可用集合，之后筛选不再重算（避免选项随结果跳动）；无数据时退回全量兜底 |
+| 首页「真题库」入口 | 并行探一次（只取 1 条），库内为空时副标题显示「当前年级暂未收录真题」，探测失败保持原文案；入口本身保留（空态页已有「当前年级暂未收录真题」文案） |
+| 听力播放额度 | 每 attempt 上限 2 次（`settings.listening_play_limit_per_attempt`），练习/复习不传 `attempt_id` 即不限次；两者互不污染 |
+| 作答页返回 | 系统返回键与左上角箭头均弹「退出考试？」确认框，文案明确「退出后计时不会暂停，已作答内容会自动保存」 |
+
+#### 5.3.5 维护节奏
+
+- **数据变更后**：重跑 L1（体检）→ L2（开考实测）→ L4（快照），三者均应为 0 异常 / 全通过，否则不发布。
+- **教研侧**：按周抽 3 卷，打开 `snapshots/g{年级}-{学科}-{阶段}.md` 逐题目视复核；抽检结论回填到 `exports` 的 README。
+- **改名或增删卷**：同步更新卷名规则与 `X-Total-Count` 口径，禁止在卷名里夹内部流程词。
 
 ---
 
@@ -1506,6 +1607,8 @@ Phase 1 ────────────────────────
 | 2026-11-10 | — | 待评审 | 新增 §3.9 读题（TTS）方案（A–E 对比、分阶段路线、离线与缓存契约），未实施 |
 | 2026-11-10 | PM | 已通过 | 读题方案定稿：C 开源 TTS 预生成（零 API 费用）+ A 系统 TTS 兜底；默认不含音频、按需下载；首期仅 1–3 年级语文/数学/英语；待排期实施 |
 | 2026-11-18 | 用户 + 开发 | 已通过（CR-007） | 读题范围修订为「1–3 年级语文/数学 + 全年级英语」；考试页补喇叭（不自动朗读）；门禁收敛到 `SpeechPolicy`；预生成音频范围不变，4–9 英语走系统 TTS。真机已验证 g1 英语/G8 英语有喇叭、G8 语文无喇叭 |
+| 2026-11-18 | 用户 + 开发 | 已落地（CR-008~CR-010） | 听力音频 `kind=listening` 接入、听力额度 2 次/attempt（练习不限）；英语题干中英混排按语种分段合成（缓存键 `RULES_VERSION\|mix\|…`）、全量 7162 题重生成；客户端 `questionAudioAssetVersion=2` 切缓存目录。新增 §3.9.14 |
+| 2026-11-19 | 用户 + 开发 | 已落地 | 读题音频补齐 **ETag 条件校验**（`If-None-Match` → 304 复用、200 覆盖并落 `.etag`、每题每次启动只校验一次）；新增 §5.3 试卷库四层质量流水线（81 卷 / 2088 题全量体检与快照 0 异常）；考试中心筛选器与首页真题库空态按实际数据收敛 |
 
 ---
 
