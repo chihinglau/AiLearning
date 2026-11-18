@@ -36,6 +36,23 @@ from app.services import question_quality, question_speech as speech  # noqa: E4
 REPO_DIR = Path(__file__).resolve().parents[2]
 AUDIO_DIR = REPO_DIR / "backend" / "build" / "question_audio"
 
+# 以下几类由题型决定，属信息项而非缺陷，不计入待修问题：
+#   - 阅读理解题：答案本来就取自短文原文，学生必须读完整段才找得到；
+#   - 候选括号提示：「填『是』或『否』」这类题型把选项印在括号里；
+#   - 单字构词包含：「语」出现在「成语」里、「雪」出现在「雪花」里，答案不是独立出现的词。
+# 注意：构词包含里仍可能混有真提示（如答案「挡」而题干后文整词出现「挡住」），
+# 报告会原样保留 reason，教研可逐条抽查。
+_INFO_MARKERS = (
+    "取自短文原文",
+    "阅读理解题型必然",
+    "属提示题型，非缺陷",
+    "构词包含",
+)
+
+
+def _is_passage_derived(reason: str) -> bool:
+    return any(marker in reason for marker in _INFO_MARKERS)
+
 
 def _stem(question: Question) -> str:
     content = question.content or {}
@@ -128,6 +145,10 @@ def main(argv: list[str] | None = None) -> int:
         total_score = sum(float(it.get("score") or 0) for it in items)
         block = [x for x in leaks if x[1] == "block"]
         warn = [x for x in leaks if x[1] == "warn"]
+        # 阅读理解题「答案取自短文原文」是题型必然：答案本来就在短文里，学生必须读完才找得到。
+        # 归入 INFO 档，不计入待修问题，避免体检报告长期挂着无法消除的噪声。
+        info = [x for x in warn if _is_passage_derived(x[2])]
+        warn = [x for x in warn if not _is_passage_derived(x[2])]
 
         paper_rows.append(
             {
@@ -175,6 +196,9 @@ def main(argv: list[str] | None = None) -> int:
                     }
                 )
         for qid, level, reason in leaks:
+            bucket = "LEAK_" + level.upper()
+            if level == "warn" and _is_passage_derived(reason):
+                bucket = "LEAK_INFO"
             issue_rows.append(
                 {
                     "exam_id": exam.id,
@@ -183,11 +207,10 @@ def main(argv: list[str] | None = None) -> int:
                     "subject": exam.subject,
                     "exam_type": exam.exam_type,
                     "question_id": qid,
-                    "issue": "LEAK_" + level.upper(),
+                    "issue": bucket,
                     "detail": reason,
                 }
             )
-
     paper_csv = out_dir / "paper_summary.csv"
     issue_csv = out_dir / "issue_detail.csv"
     with paper_csv.open("w", newline="", encoding="utf-8-sig") as handle:
@@ -202,10 +225,12 @@ def main(argv: list[str] | None = None) -> int:
         writer.writerows(issue_rows)
 
     kinds = Counter(row["issue"] for row in issue_rows)
+    hard_rows = [row for row in issue_rows if row["issue"] != "LEAK_INFO"]
     summary = {
         "generated_at": datetime.now().isoformat(timespec="seconds"),
         "papers": len(paper_rows),
-        "issues": len(issue_rows),
+        "issues": len(hard_rows),
+        "info": len(issue_rows) - len(hard_rows),
         "by_kind": dict(kinds),
         "papers_with_issues": sum(
             1
