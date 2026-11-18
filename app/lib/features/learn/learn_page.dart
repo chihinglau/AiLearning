@@ -43,7 +43,18 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
   _LastPractice? _lastPractice;
   bool _loading = true;
   bool _offline = false;
+  bool? _hasPastPapers;
   String? _error;
+
+  /// 真题库是否有当前年级可看的卷：只探 1 条，失败时返回 null（保持默认文案）。
+  Future<bool?> _probePastPapers() async {
+    try {
+      final papers = await ref.read(examServiceProvider).pastPapers(pageSize: 1);
+      return papers.isNotEmpty;
+    } catch (_) {
+      return null;
+    }
+  }
 
   @override
   void initState() {
@@ -57,12 +68,18 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
       _error = null;
     });
     try {
-      final home = await ref.read(learnServiceProvider).home();
-      final lastPractice = await _loadLastPractice();
+      // 三个请求同时发起，避免串行拖慢首页
+      final homeFuture = ref.read(learnServiceProvider).home();
+      final lastPracticeFuture = _loadLastPractice();
+      final pastPapersFuture = _probePastPapers();
+      final home = await homeFuture;
+      final lastPractice = await lastPracticeFuture;
+      final hasPastPapers = await pastPapersFuture;
       if (!mounted) return;
       setState(() {
         _home = home;
         _lastPractice = lastPractice;
+        _hasPastPapers = hasPastPapers;
         _offline = false;
         _loading = false;
       });
@@ -458,7 +475,9 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
                 icon: Icons.history_edu_outlined,
                 accent: accents.exam,
                 title: '真题库',
-                subtitle: '按学科、年份与地区查看历年真题',
+                subtitle: _hasPastPapers == false
+                    ? '当前年级暂未收录真题'
+                    : '按学科、年份与地区查看历年真题',
                 onTap: () => context.push('/past-papers'),
               ),
               const SizedBox(height: 8),

@@ -109,10 +109,13 @@ void main() {
     await tester.pumpWidget(_app(service));
     await tester.pumpAndSettle();
 
+    // 学科 chip 只展示当前年级实际有卷的学科：没有物理卷时不应出现物理
+    expect(find.text('物理'), findsNothing);
     expect(find.text('单元测'), findsOneWidget);
     expect(find.text('期中'), findsOneWidget);
     expect(find.text('期末'), findsOneWidget);
-    expect(find.text('模考'), findsOneWidget);
+    // 类型 chip 只展示当前年级实际有卷的类型：假数据里没有模考卷，故不出现
+    expect(find.text('模考'), findsNothing);
 
     expect(find.text('第一单元测试'), findsOneWidget);
     expect(find.text('三年级数学期中'), findsOneWidget);

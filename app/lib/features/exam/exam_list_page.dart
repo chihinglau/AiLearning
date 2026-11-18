@@ -45,6 +45,8 @@ class _ExamListPageState extends ConsumerState<ExamListPage> {
 
   final _query = TextEditingController();
   List<ExamSummary> _exams = const [];
+  Set<String> _subjectOptions = const {};
+  Set<String> _typeOptions = const {};
   String _filter = 'all';
   String _type = 'all';
   String? _subject;
@@ -88,6 +90,14 @@ class _ExamListPageState extends ConsumerState<ExamListPage> {
       setState(() {
         _exams = exams;
         _loading = false;
+        // 首屏（未加任何筛选）时记录「当前年级实际有卷的学科/类型」，
+        // 之后筛选时不再重算，避免选项随结果跳动。
+        if (_subject == null && _type == 'all' && _filter == 'all' && _query.text.trim().isEmpty) {
+          final subjects = exams.map((e) => e.subject).where((s) => s.isNotEmpty).toSet();
+          if (subjects.isNotEmpty) _subjectOptions = subjects;
+          final types = exams.map((e) => e.examType).where((t) => t.isNotEmpty).toSet();
+          if (types.isNotEmpty) _typeOptions = types;
+        }
       });
     } on ApiException catch (error) {
       if (!mounted) return;
@@ -188,15 +198,32 @@ class _ExamListPageState extends ConsumerState<ExamListPage> {
             const SizedBox(height: 8),
             Wrap(
               spacing: 8,
-              children: _typeFilters.entries
-                  .map(
-                    (entry) => FilterChip(
-                      label: Text(entry.value),
-                      selected: _type == entry.key,
-                      onSelected: (_) => _reloadWith(() => _type = entry.key),
-                    ),
-                  )
-                  .toList(),
+              children: _typeOptions.isEmpty
+                  ? _typeFilters.entries
+                      .map(
+                        (entry) => FilterChip(
+                          label: Text(entry.value),
+                          selected: _type == entry.key,
+                          onSelected: (_) => _reloadWith(() => _type = entry.key),
+                        ),
+                      )
+                      .toList()
+                  : [
+                      FilterChip(
+                        label: const Text('全部类型'),
+                        selected: _type == 'all',
+                        onSelected: (_) => _reloadWith(() => _type = 'all'),
+                      ),
+                      ..._typeFilters.entries
+                          .where((entry) => entry.key != 'all' && _typeOptions.contains(entry.key))
+                          .map(
+                            (entry) => FilterChip(
+                              label: Text(entry.value),
+                              selected: _type == entry.key,
+                              onSelected: (_) => _reloadWith(() => _type = entry.key),
+                            ),
+                          ),
+                    ],
             ),
             const SizedBox(height: 8),
             Wrap(
@@ -207,7 +234,9 @@ class _ExamListPageState extends ConsumerState<ExamListPage> {
                   selected: _subject == null,
                   onSelected: (_) => _reloadWith(() => _subject = null),
                 ),
-                for (final subject in Subject.values)
+                for (final subject in Subject.values.where(
+                  (s) => _subjectOptions.isEmpty || _subjectOptions.contains(s.code),
+                ))
                   FilterChip(
                     label: Text(subject.label),
                     selected: _subject == subject.code,
