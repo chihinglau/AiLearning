@@ -1,9 +1,9 @@
 # 深爱学（AiLearning）—— 深圳中小学跨平台学习辅助应用 软件开发方案
 
 > **文档性质**：项目整体设计方案（M1 技术底座已落地，持续迭代）
-> **版本**：v0.7（2026-11-12 按 CR-003 回写考试入口闭环：§3.6.4 首页入口、§4.5 数据模型、§4.6 API 分组、§8.3 质量门禁 L18~L20；EX-01~EX-03 已交付）
+> **版本**：v0.9（2026-11-14 按 CR-005 / D-09 v1.1 同步：§4.5 审核留痕字段、§4.6 三个审核接口、§8.3 质量门禁 L27~L30；EX-09~EX-11 已交付。v0.8 为 CR-004：§4.5 溯源字段、§4.6 考试域 API 扩展、§8.3 L21~L26）
 > **日期**：2026-11-05
-> **最后更新**：2026-11-12（对应主计划 CR-003 / §3.9 / §6.22 验收记录）
+> **最后更新**：2026-11-14（对应主计划 CR-005 / §3.11 / §6.24 验收记录；CR-004 见 §6.23）
 > **适用范围**：深圳市小学 / 初中 / 高中全学段学习辅助
 > **目标平台**：Android（安卓）+ HarmonyOS NEXT（鸿蒙）双端
 > **文档约束**：本方案为实施蓝本；M1 技术底座（双端工程 + 后端 API + 账号/教材/练习闭环）已完成并通过真机验证
@@ -622,13 +622,15 @@ AccentCard(
 > 背景：1–3 年级识字量有限，题干需要家长/老师代读；当前题库、整册离线包与 `pubspec.yaml` 均无音频能力。本方案只做「读题」，不做语音答题与跟读评分。
 >
 > **评审结论（2026-11-10，PM）**：采用 **方案 C（开源 TTS 批量预生成，零 API 费用）+ 方案 A（系统 TTS）兜底**；音频**默认不随整册包下发**，按用户播放需求按需下载并缓存；首期只覆盖 **1–3 年级语文 / 数学 / 英语**；方案 B（付费云端）与方案 D（端侧模型入包）不采用。
+>
+> **范围修订（2026-11-18，CR-007）**：阅读范围改为 **1–3 年级语文 / 数学 + 全年级（1–9）英语**。英语是「看词读音」的刚需科目，4 年级以上仍需单词点读与题干跟读；语文/数学维持低年级口径（4 年级以上识字量足够，读题价值低）。判定统一收敛到 `app/lib/core/speech/speech_policy.dart`，页面不得各自写死年级条件。预生成音频仍只覆盖 1–3 年级语数英 653 题，4–9 年级英语走系统 TTS 兜底（音质略低但可用，无 404 报错、无等待）。
 
 #### 3.9.1 目标与非目标
 
 | 类型 | 内容 |
 |---|---|
-| 目标 | 1–3 年级语文/数学/英语：题干与选项朗读、低年级默认自动读题、可重听、语速可调、英语单词点读、离线可播（已缓存） |
-| 非目标 | 4–9 年级与其他学科首期不覆盖；语音答题/跟读评分（需麦克风 + ASR，另立需求）、解析全文朗读、听力题音频（属内容生产）、个性化音色 |
+| 目标 | **1–3 年级语文/数学 + 全年级（1–9）英语**：题干与选项朗读、低年级默认自动读题、可重听、语速可调、英语单词点读、离线可播（已缓存）；**考试页也提供喇叭**（手动触发） |
+| 非目标 | 4–9 年级语文/数学不覆盖（要放开须走 CR 评估）；语音答题/跟读评分（需麦克风 + ASR，另立需求）、解析全文朗读、听力题音频（属内容生产）、个性化音色 |
 
 #### 3.9.2 方案对比与决策
 
@@ -655,8 +657,8 @@ AccentCard(
 
 | 场景 | 规格 |
 |---|---|
-| 入口 | 题干预览与答题页题干右上角喇叭按钮（24dp），播放中切换为停止态 |
-| 自动读题 | 1–3 年级默认开启，进入题目自动播放；开关位于「我的 → 学习设置」 |
+| 入口 | 题干右上角喇叭按钮（24dp），播放中切换为停止态；**覆盖三处作答场景：练习页、复习/会话页、考试页（exam_page）** |
+| 自动读题 | 1–3 年级默认开启，进入题目自动播放；开关位于「我的 → 学习设置」。**考试页刻意不自动朗读**（计时中突然出声会干扰考场秩序），只提供手动喇叭 |
 | 语速 | 默认 0.85，可选 0.7 / 1.0；记入本地设置，随音频缓存键 |
 | 选项 | 按「选项 A，……」逐项朗读，不读选项字母以外的符号 |
 | 图片题 | 只读题干文字并提示「请看图片」，不对图片内容合成 |
@@ -698,7 +700,7 @@ AccentCard(
 | 未就绪 | 404 `AUDIO_NOT_READY`，客户端降级系统 TTS 并异步重试 |
 | 限流 | 单用户 60 次/分钟（防批量抓取） |
 | 生产脚本 | `scripts/build_question_audio.py --subject --grade --dry-run`，调用本地开源 TTS（sherpa-onnx/Piper）+ `ffmpeg` 转 Opus，按缓存键增量合成，支持并发/重试/失败清单 |
-| 生成范围 | 仅 `grade in (1,2,3)` 且 `subject in (chinese, math, english)`；其余返回 404 `AUDIO_NOT_READY`，客户端直接走系统 TTS |
+| 生成范围 | 仅 `grade in (1,2,3)` 且 `subject in (chinese, math, english)`；其余返回 404 `AUDIO_NOT_READY`，客户端直接走系统 TTS。**4–9 年级英语按 CR-007 允许读题但不出预生成音频**，稳定走系统 TTS 兜底（真机已验：`TtsSystemService onSynthesizeText lang=eng` → AudioTrack started，无报错） |
 
 #### 3.9.8 成本与容量测算
 
@@ -710,7 +712,9 @@ AccentCard(
 | 存储/CDN | 按实际播放量产生 CDN 流量；未播放不产生流量，对象存储成本约每月 1 元级 |
 | 人力成本 | 引擎接入与试听抽检计入 TT-03/TT-07 |
 
-无持续付费；后续扩到 4–9 年级或其他学科时按 CR 评估。
+无持续付费；后续扩到 4–9 年级其他学科时按 CR 评估。
+
+> CR-007 已把**英语**扩到全年级，但不扩预生成音频：4–9 年级英语题走系统 TTS，零存储增量。若后续要统一音质，可再按 CR 评估把这部分纳入批量合成（题量约 4–9 年级 × 英语 × 2 学期，需重新测算体积与抽检人力）。
 
 #### 3.9.9 合规与隐私
 
@@ -732,7 +736,7 @@ AccentCard(
 
 #### 3.9.11 任务映射
 
-实施任务见 [project-task-plan.md](./project-task-plan.md) §3.8（TT-01~TT-07；评审已通过，阶段 1 已开工）。阶段 1（TT-01/TT-02）的落地拆解见 §3.9.12。
+实施任务见 [project-task-plan.md](./project-task-plan.md) §3.8（TT-01~TT-08；评审已通过，全部 `DONE`）。阶段 1（TT-01/TT-02）的落地拆解见 §3.9.12；读题范围修订（CR-007，含考试页接入）见 §3.9.12 末尾「范围修订」小节。
 
 #### 3.9.12 阶段 1 实施拆解（TT-01/TT-02，2026-11-10 已落地）
 
@@ -746,14 +750,14 @@ AccentCard(
 | 2 | 系统 TTS 封装 | 新增 `app/lib/core/speech/tts_service.dart` | 包装 `flutter_tts`：`speak / stop / isAvailable / speaking 状态流`；中文题 `zh-CN`、英语题 `en-US`；引擎异常统一按「不可用」处理 |
 | 3 | 语速设置 | 新增 `app/lib/core/speech/speech_settings.dart` | 经 `StoragePal` 持久化，键 `speech.speed`；默认 0.85，可选 0.7 / 1.0；读写失败回落默认值，不阻断答题 |
 | 4 | 喇叭按钮 | 新增 `app/lib/features/speech/speech_button.dart` | 24dp，`volume_up` ↔ `stop`；点击播放/停止，长按立即停止并复位；`Semantics` 提供「朗读题目 / 停止朗读」语义（TalkBack 完整验收归 TT-05） |
-| 5 | 答题页集成 | `app/lib/features/session/session_page.dart`、`app/lib/features/practice/practice_page.dart` | 题干右上角放喇叭；朗读内容 = 题干 + 逐项「选项 A，……」 |
+| 5 | 答题页集成 | `app/lib/features/session/session_page.dart`、`app/lib/features/practice/practice_page.dart`、`app/lib/features/exam/exam_page.dart` | 题干右上角放喇叭；朗读内容 = 题干 + 逐项「选项 A，……」；考试页由 CR-007 补齐（见本节末「范围修订」） |
 | 6 | 设置入口 | `app/lib/features/profile/profile_page.dart`、新增 `app/lib/features/profile/learning_settings_page.dart`、`app.dart` 路由 `/settings/learning` | 「我的 → 学习设置」；语速三选一，修改即生效并落盘 |
 | 7 | 依赖 | `app/pubspec.yaml` | 新增 `flutter_tts`（当前镜像可解析 4.2.5）；解析会联动 `matcher/meta/test_api/vector_math` 版本，开工首步需先跑既有测试建立基线 |
-| 8 | 单测 | 新增 `app/test/question_speech_test.dart` | ≥15 例，覆盖 §3.9.5 全表 + 组合与幂等 |
+| 8 | 单测 | 新增 `app/test/question_speech_test.dart`、`app/test/speech_policy_test.dart` | 前者 ≥15 例覆盖 §3.9.5 全表 + 组合与幂等；后者 7 例锁定读题范围（CR-007） |
 
 **生效条件（前端判定）**
 
-1. 仅当 `currentUser.grade ∈ {1,2,3}` 且题目 `subject ∈ {chinese, math, english}` 时展示喇叭；其余年级/科目不展示。
+1. 仅当 `SpeechPolicy.enabled(grade, subject)` 为真时展示喇叭：**`subject=english` 时任意年级为真**；非英语须 `currentUser.grade ∈ {1,2,3}` 且 `subject ∈ {chinese, math, english}`。判定集中在 `app/lib/core/speech/speech_policy.dart`，页面禁止自行写年级条件（2026-11-18 CR-007）。
 2. 系统 TTS 不依赖网络，离线与未登录均可用；引擎不可用时按钮禁用并提示「当前设备暂不支持朗读」。
 3. 切换题目、提交答案、离开页面时停止朗读。
 
@@ -812,6 +816,28 @@ AccentCard(
 | 依赖联动降级 | 添加 `flutter_tts` 会把 `matcher/meta/test_api/vector_math` 回退到兼容版本 | 开工首步先跑 `flutter test` 建立基线，失败先处理依赖再改业务代码 |
 | 图片题 | 现有题目模型无图片字段，无法可靠识别图片题 | 阶段 1 不追加「请看图片」，随 TT-06 图片能力一并实现 |
 
+**范围修订（CR-007，2026-11-18）**
+
+> 触发：用户反馈「低年级语文/数学读题、全年龄英语读题被改没了」。核实结论——读题代码零删除（`question_speech/tts_service/speech_settings/speech_button/question_audio/question_reader/readable_question_text` 与 `flutter_tts` 依赖全在，git 无删除提交），真实缺口只有两处：① 门禁在 `session_page`/`practice_page` 里写死 `grade 1..3` 且限语数英，导致 4–9 年级英语无喇叭；② `exam_page.dart` 从未接入读题，学生在考试中心卷子上看不到喇叭。
+
+| 项 | 修订后 |
+|---|---|
+| 读题范围 | 1–3 年级语文/数学 **+ 全年级（1–9）英语**；4–9 年级语文/数学不开放（识字量足够，读题价值低；要放开须另立 CR） |
+| 判定入口 | 新增 `app/lib/core/speech/speech_policy.dart`：`enabled({grade, subject})` / `autoReadByDefault({grade})`；三个页面统一调用，禁止各页自写年级条件 |
+| 考试页 | `exam_page.dart` 接入：题干 `Row` + `ReadableQuestionText` + `SpeechButton`；新增 `_speechEnabled` / `_stopSpeaking` / `_goTo`；上一题/下一题/答题卡三处切题统一走 `_goTo`（先停读再切），`_confirmExit` 与 `dispose` 也停读（防音频串到考试中心列表） |
+| 考试页自动朗读 | **不做**。考试计时中突然出声会干扰考场秩序，只提供手动喇叭；练习/复习页保持自动读题 |
+| 预生成音频 | 范围不变（仍 1–3 年级语数英 653 题）。4–9 年级英语请求 `/audio` 返回 404 `AUDIO_NOT_READY`，客户端静默回退系统 TTS，真机已验证出声（`onSynthesizeText lang=eng`） |
+| 测试 | 新增 `app/test/speech_policy_test.dart` 7 例：低年级三科开放、4–9 英语开放、4–9 语数不开放、其他学科不开放、空/null 与大小写容错、`autoReadByDefault` 仅 1–3 |
+
+**真机验收（EBG-AN00，2026-11-18）**
+
+| 场景 | 结果 |
+|---|---|
+| g1 英语单元走查卷（考试页） | 题干右侧「朗读题目」`[936,492][1032,588]`；点击后切「停止朗读」，`AudioTrack start(1566)` + `content=CONTENT_TYPE_SPEECH` |
+| g8 英语期末卷（考试页，账号 grade 临时改 8） | 同样出现「朗读题目」；点击走系统 TTS（`TtsSystemService onSynthesizeText lang=eng`）并出声，无 404 报错、无等待 |
+| g8 语文期末卷（考试页） | 无喇叭（门禁仍生效，符合口径） |
+| 恢复 | 验证后 `users.grade` 已改回 1，测试账号口径未被污染 |
+
 #### 3.9.13 阶段 2~4 实施落地（TT-03~TT-07、UX-03，2026-11-10）
 
 > 本节记录已落地实现与设计契约的对应关系，以及实现中确认的偏差；任务状态与证据见 [project-task-plan.md](./project-task-plan.md) §3.8/§6.20。
@@ -834,7 +860,8 @@ AccentCard(
 | 下载 | `ApiClient.getBytes(path, ifNoneMatch:)`；`QuestionAudioCache` 落盘 `q_<id>.opus`，命中刷新 mtime，LRU 上限 200 MB |
 | 播放 | `just_audio ^0.10.6` + `path_provider ^2.1.5`；生成音频固定 1.0 倍速，客户端 `setSpeed` 变速，避免多语速重复合成 |
 | 降级 | OHOS 无 `just_audio` 实现时抛 `MissingPluginException`，`QuestionAudioService.play` 捕获返回 false → 回退系统 TTS（`QuestionReader`/`SpeechButton`） |
-| 自动读题 | 1–3 年级默认开启（`speech.autoRead`），设置页可关闭；进入新题按题目 ID + 下标去重，朗读异常静默 |
+| 自动读题 | 1–3 年级默认开启（`speech.autoRead`），设置页可关闭；进入新题按题目 ID + 下标去重，朗读异常静默。考试页不自动朗读（见 §3.9.4） |
+| 读题范围 | 唯一判定入口 `SpeechPolicy.enabled(grade, subject)`：英语任意年级为真，非英语须 1–3 年级且属语文/数学/英语；`session_page`、`practice_page`、`exam_page` 三处统一调用，禁止各页自写年级条件（`app/test/speech_policy_test.dart` 7 例守护） |
 | 句级高亮 | 按「题干字符占比 × 播放进度」估算当前句，**不是字级时间戳**；播放进度取自 `just_audio.positionStream`，TTS 兜底路径无高亮 |
 | 单词点读 | 英语题将字母词切分为可点击 `TextSpan`，点击走系统 TTS（`en-US`），不依赖服务端逐词音频 |
 | 服务地址 | `server.baseUrl` 持久化并在 `main()` 启动时覆盖 `initialBaseUrlProvider`；「我的 → 环境诊断」可改地址、查看 `/health` 连通性与耗时、自动读题状态 |
@@ -980,6 +1007,8 @@ AccentCard(
 └──────────────────────┘
 
 > v0.7（CR-003）实际字段补充：`exams` 还含 `status / is_past_paper / source（assignment|generated|blueprint）/ class_id / window_start / window_end / blueprint_id / exam_type / chapter_ids / region`；另有 `exam_blueprints`（`code/name/subject/grade/exam_type/total_score/time_limit_min/sections/difficulty_mix/is_active`）。`student_visible_exam_clauses()` 依赖 `status/is_past_paper/source/class_id/grade`，与 `GET /api/exams` 共用（D-04 §8.7.1）。
+>
+> v0.8（CR-004 / D-09 §7.1）补充：`exams` 新增 3 个可空溯源字段 `source_name / license_note / adapted_from`（迁移 `b4c5d6e7f8g9_exam_provenance.py`），用于真题来源、授权说明与改编来源登记；`is_past_paper=true` 的卷必须填写 `source_name` 才能发布，存量卷由内容教研按 R-07 台账补录，不猜测来源。新增响应模型 `PastPaperFiltersOut / ExamAttemptHistoryOut / PastPaperDetailOut`。
 
 ┌──────────────────────┐
 │ knowledge_points     │   ← 知识点图谱
@@ -1027,16 +1056,23 @@ GET  /api/wrong-book/{id}                错题详情 + 相似题推荐
 POST /api/wrong-book/{id}/master         标记为已掌握
 POST /api/wrong-book/retrain             开始错题复训
 
-# —— 模拟考试（v0.7 按 CR-003 / D-04 §8.7 修订为现行接口） ——
-GET  /api/exams                          考试列表（学生按统一可见性谓词过滤）
+# —— 模拟考试（v0.8 按 CR-003 / CR-004、D-04 §8.7 与 D-09 修订为现行接口） ——
+GET  /api/exams                          考试中心列表；可选 type/status/subject/window_state/q/page/page_size，总数走 X-Total-Count
 GET  /api/exams/{id}                     试卷详情（不含答案）
-GET  /api/exams/past-papers              真题库（历年真题独立入口）
+GET  /api/exams/past-papers              真题库；可选 subject/year/region/grade/exam_type/attempt_status/q/page
+GET  /api/exams/past-papers/filters      真题库可用筛选项（年份/学科/地区/年级/类型）
+GET  /api/exams/past-papers/{id}         真题来源详情（不含答案）
+GET  /api/exams/attempts                 本人历次作答/报告历史（静态路径须在 /{id} 前）
 GET  /api/exams/blueprints               可选组卷蓝图（content:exam:write）
-POST /api/exams/generate                 按蓝图组卷并发布（考试入库，content:exam:write）
+POST /api/exams/generate                 按蓝图组卷；普通卷 published，真题 draft 待复核（source_name 必填）
+GET  /api/exams/reviews                  真题审核队列（content:review:decide，静态路径须在 /{id} 前）
+POST /api/exams/{id}/submit-review       真题草稿提交复核（content:exam:write）
+POST /api/exams/{id}/review              审核决策 approve/reject/offline（content:review:decide）
 POST /api/exams/mock                     派发班级同卷模考（learn:assignment:create）
 POST /api/exams/{id}/attempts            开始/续答
 PATCH /api/exams/attempts/{id}           自动保存答案
 POST /api/exams/attempts/{id}/submit     交卷（幂等）
+POST /api/exams/attempts/{id}/self-assess 主观题自评（v0.8 修正旧 self-grade 漂移）
 GET  /api/exams/attempts/{id}/report     考试报告
 
 # —— 学习首页聚合 ——
@@ -1358,6 +1394,16 @@ Phase 1 ────────────────────────
 | L18 考试入口口径（CR-003） | `/api/learn/home.pending_exams` 与 `GET /api/exams` 同谓词，真题/作业卷/非本班卷/草稿不虚标 |
 | L19 待办考试直达（CR-003） | 首页待办卡按 `entry` 直达 `/exam/:id` 或 `/past-papers`，窗口状态有提示、无待办有空态 |
 | L20 考试入库闭环（CR-003） | `content:exam:write` 可在 App 组卷发布，`learn:assignment:create` 可派发班级模考，新卷立即进入学生可见列表 |
+| L21 考试中心筛选与口径一致（CR-004） | `type/status/subject/window_state/q` 下推服务端且只收窄 `student_visible_exam_clauses()`，真题/作业卷/非本班卷不回到列表 |
+| L22 状态矩阵完备（CR-004） | 窗口 × 作答六态各有唯一按钮与明确反馈；已完成缺 `attempt` 不静默 |
+| L23 真题库服务端筛选（CR-004） | 年份/学科/地区/类型/状态由服务端过滤，历史年份不被 `limit(60)` 截断，按年份分组 |
+| L24 真题来源可追溯（CR-004） | `source_name/license_note/adapted_from` 落库；真题缺来源无法发布；卡片/详情页展示来源 |
+| L25 真题库动作闭环（CR-004） | 未考/进行中/已考/批改中/未开放/已结束全覆盖，真题始终不进通用考试列表 |
+| L26 兼容与回归（CR-004） | 不带新参数时接口行为不变；全量 `pytest` 432 例 / `flutter test` 170 例、静态检查 0 issue |
+| L27 真题审核发布流状态机与权限（CR-005） | `draft → pending_review → published`、退回/下线、非法流转 409、缺来源 422；`/reviews` 需 `content:review:decide`，学生 403；真题库只看 `published` |
+| L28 前端审核闭环（CR-005） | 组卷页草稿态与「提交复核」、`/exams/reviews` 审核队列（通过/退回/下线）、「我的」入口按权限显隐；模型与 widget 测试 |
+| L29 存量真题来源补录与卡口（CR-005） | `backfill_exam_sources.py` 的 `--report/--apply/--quarantine`，不猜测来源、仅接受 R-07 台账显式映射；缺来源卷不得处于 `published` |
+| L30 真机回归与兼容（CR-005） | EBG 真机补跑筛选/年份/来源详情/admin 组卷全链路；普通卷仍生成即 `published`，L18~L26 回归通过 |
 
 ---
 
@@ -1436,6 +1482,7 @@ Phase 1 ────────────────────────
 | 2026-11-05 | — | 待评审 | 初稿输出 |
 | 2026-11-10 | — | 待评审 | 新增 §3.9 读题（TTS）方案（A–E 对比、分阶段路线、离线与缓存契约），未实施 |
 | 2026-11-10 | PM | 已通过 | 读题方案定稿：C 开源 TTS 预生成（零 API 费用）+ A 系统 TTS 兜底；默认不含音频、按需下载；首期仅 1–3 年级语文/数学/英语；待排期实施 |
+| 2026-11-18 | 用户 + 开发 | 已通过（CR-007） | 读题范围修订为「1–3 年级语文/数学 + 全年级英语」；考试页补喇叭（不自动朗读）；门禁收敛到 `SpeechPolicy`；预生成音频范围不变，4–9 英语走系统 TTS。真机已验证 g1 英语/G8 英语有喇叭、G8 语文无喇叭 |
 
 ---
 

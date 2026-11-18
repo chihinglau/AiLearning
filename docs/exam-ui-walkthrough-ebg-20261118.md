@@ -306,4 +306,51 @@ LR-4 从 54 降到 0，其中 **8 条不是内容改善，是我这条审计规�
 
 **本轮结论**：8.6 列的三项遗留（退出确认、倒计时误判、脏卷）已闭环；新发现并关闭 1 项（D-9）。学生端可正常完成「进入 → 作答 → 退出确认 → 继续作答」闭环，倒计时按服务端 `started_at` 连续计时。
 
+### 8.9 第五轮：读题（TTS）在考试页的缺失 —— 已补齐（CR-007）
+
+用户反馈「docs 设计文档原本是低年级语文/数学读题 + 全年龄英语读题，现在 app 功能好像被改没了」。本轮先做「是否被删」的核实，再做补齐。
+
+**（1）核实：功能没被删，缺口是两处**
+
+| 检查项 | 结果 |
+|---|---|
+| `core/speech/question_speech.dart`、`tts_service.dart`、`speech_settings.dart` | 在位 |
+| `features/speech/speech_button.dart`、`features/speech/readable_question_text.dart` | 在位 |
+| `core/speech/question_audio.dart`、`question_reader.dart`（设计后追加的音频优先 + 缓存） | 在位 |
+| `pubspec.yaml:20` `flutter_tts: ^4.2.5` | 在位 |
+| `app/test/question_speech_test.dart` | 在位 |
+| git 删除提交 | 无（唯一相关提交 `541bc29 feat(tts): …`） |
+| `session_page.dart` / `practice_page.dart` 读题引用数 | 各 14 处 |
+| `exam_page.dart` / `exam_report_page.dart` 读题引用数 | **0 处** |
+
+两处真实缺口：① 门禁写死 `grade 1..3` 且限 `{chinese, math, english}`（`session_page.dart:642`、`practice_page.dart:241`），4–9 年级英语没有喇叭；② `exam_page.dart` 从未接入读题——学生在考试中心卷子上看不到喇叭，这就是「感觉被改没了」的直接来源。
+
+**（2）修法**
+
+| 文件 | 改动 |
+|---|---|
+| 新增 `app/lib/core/speech/speech_policy.dart` | `enabled({grade, subject})`：英语任意年级为真；非英语须 1–3 年级且属语文/数学/英语；科目 trim+lowercase 容错；`autoReadByDefault({grade})` 仅 1–3 |
+| 新增 `app/test/speech_policy_test.dart` | 7 例，锁定范围不再被收窄 |
+| `session_page.dart`、`practice_page.dart` | `_speechEnabled` 改调 `SpeechPolicy.enabled` |
+| `exam_page.dart` | 题干改 `Row` + `ReadableQuestionText` + `SpeechButton`；新增 `_speechEnabled` / `_stopSpeaking` / `_goTo`；上一题、下一题、答题卡三处切题统一走 `_goTo`（先停读再切）；`_confirmExit` 与 `dispose` 补停读 |
+| `learning_settings_page.dart` | 两段说明文案改为「…以及各年级英语题目，都可点击题干右侧的喇叭朗读」 |
+
+考试页**刻意不做自动朗读**：计时中突然出声会干扰考场秩序，只保留手动喇叭；练习/复习页的自动读题不变。
+
+**（3）真机复验（EBG-AN00，`adb reverse tcp:18080`）**
+
+| 场景 | 观测 | 判定 |
+|---|---|---|
+| g1 英语单元走查卷（考试页第 1/28 题） | 题干右侧「朗读题目」`[936,492][1032,588]`；英文题干按单词切成可点节点（`Read` / `the` / `passage`），说明单词点读生效 | 通过 |
+| 点击该喇叭 | 按钮变「停止朗读」；logcat `AudioTrack: start(1566)`、`AudioPlayerStateMonitor … content=CONTENT_TYPE_SPEECH … state:started` | 通过（真出声） |
+| g8 英语期末走查卷（账号 `grade` 临时改 8，第 1/39 题） | 同样出现「朗读题目」；点击后 `TtsSystemService: onSynthesizeText lang=eng` → `AudioTrack start` | 通过（后端无该年级预生成音频，走系统 TTS 兜底，无 404 报错、无等待） |
+| g8 语文期末走查卷（第 1/28 题，填空） | **无喇叭**（题干区只有题干与答题卡） | 通过（4–9 语文仍不开放，符合口径） |
+| 账号恢复 | `users.grade` 8 → 1，重启 app 后回到 1 年级教材与待办 | 已恢复 |
+
+**（4）遗留与说明**
+
+1. 4–9 年级英语音质为系统 TTS（各机型音色不一），低于 1–3 年级语数英的 Piper 预生成音频；若要统一音质，需按 CR 评估扩产（涉及合成体积与人工抽检）。
+2. `flutter analyze` 0 issue、`flutter test test/speech_policy_test.dart` 7 passed、`flutter build apk --debug` 27.7s 成功，均已在本轮执行。
+3. 环境坑重演一次：进卷时出现「交卷已暂存到本地 / 当前网络不可用」，排查为后端 uvicorn 进程已退出（18080 无监听、`/health` 拒绝连接）；重拉后端后恢复。此前「看不到喇叭」若在这种状态下观测，会被误判成读题没接上——**先查 `/health` 再判断 UI**。
+
 

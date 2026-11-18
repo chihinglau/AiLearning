@@ -8,7 +8,11 @@ import 'package:ai_learning/core/models/exam.dart';
 import 'package:ai_learning/core/offline/offline_exam_store.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
+import 'package:ai_learning/core/speech/question_speech.dart';
+import 'package:ai_learning/core/speech/speech_policy.dart';
 import 'package:ai_learning/features/exam/signature_answer_page.dart';
+import 'package:ai_learning/features/speech/readable_question_text.dart';
+import 'package:ai_learning/features/speech/speech_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -63,6 +67,8 @@ class _ExamPageState extends ConsumerState<ExamPage> {
 
   @override
   void dispose() {
+    // 离开答题页时把朗读停掉，否则音频会在考试中心列表继续播。
+    unawaited(_stopSpeaking());
     _ticker?.cancel();
     _saveTimer?.cancel();
     _syncTimer?.cancel();
@@ -498,8 +504,34 @@ class _ExamPageState extends ConsumerState<ExamPage> {
     _saveTimer?.cancel();
     await _flushSave();
     _ticker?.cancel();
+    unawaited(_stopSpeaking());
     _allowPop = true;
     if (mounted) context.pop();
+  }
+
+  // ------------------------------------------------------------------
+  // 读题（TTS）：考试页也提供喇叭。考试场景默认不自动朗读——计时进行中
+  // 突然出声会干扰考场秩序，学生需要时点按即可（范围见 SpeechPolicy）。
+  // ------------------------------------------------------------------
+
+  bool _speechEnabled(Question question) {
+    final grade = ref.watch(currentUserProvider)?.grade;
+    return SpeechPolicy.enabled(grade: grade, subject: question.subject);
+  }
+
+  Future<void> _stopSpeaking() async {
+    try {
+      await ref.read(questionReaderProvider).stop();
+    } catch (_) {
+      // 朗读停止失败不影响答题。
+    }
+  }
+
+  /// 切题：先停朗读，避免上一题的音频串到下一题。
+  void _goTo(int index) {
+    if (index < 0 || index >= _questions.length || index == _index) return;
+    unawaited(_stopSpeaking());
+    setState(() => _index = index);
   }
 
   // ------------------------------------------------------------------
@@ -628,7 +660,34 @@ class _ExamPageState extends ConsumerState<ExamPage> {
             Text(item.sectionName!, style: theme.textTheme.bodySmall),
           ],
           const SizedBox(height: 12),
-          Text(item.question.stem, style: theme.textTheme.titleLarge),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(
+                child: ReadableQuestionText(
+                  text: item.question.stem,
+                  spokenText: QuestionSpeech.questionScript(
+                    stem: item.question.stem,
+                    options: item.question.options,
+                  ),
+                  language:
+                      item.question.subject == 'english' ? 'en-US' : 'zh-CN',
+                  style: theme.textTheme.titleLarge,
+                ),
+              ),
+              if (_speechEnabled(item.question))
+                SpeechButton(
+                  key: ValueKey('exam-speech-${item.question.id}-$_index'),
+                  text: QuestionSpeech.questionScript(
+                    stem: item.question.stem,
+                    options: item.question.options,
+                  ),
+                  language:
+                      item.question.subject == 'english' ? 'en-US' : 'zh-CN',
+                  questionId: item.question.id,
+                ),
+            ],
+          ),
           const SizedBox(height: 20),
           _buildAnswerArea(item.question),
           const SizedBox(height: 24),
@@ -636,7 +695,7 @@ class _ExamPageState extends ConsumerState<ExamPage> {
             questions: _questions,
             answers: _answers,
             currentIndex: _index,
-            onSelect: (index) => setState(() => _index = index),
+            onSelect: (index) => _goTo(index),
           ),
           const SizedBox(height: 12),
           Center(
@@ -872,7 +931,7 @@ class _ExamPageState extends ConsumerState<ExamPage> {
                   minimumSize: const Size(0, 52),
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                 ),
-                onPressed: _index == 0 ? null : () => setState(() => _index -= 1),
+                onPressed: _index == 0 ? null : () => _goTo(_index - 1),
                 child: const Text('上一题'),
               ),
               const SizedBox(width: 12),
@@ -883,7 +942,7 @@ class _ExamPageState extends ConsumerState<ExamPage> {
                       ? null
                       : isLast
                           ? _confirmSubmit
-                          : () => setState(() => _index += 1),
+                          : () => _goTo(_index + 1),
                   child: _submitting
                       ? const SizedBox(
                           width: 20,

@@ -12,6 +12,7 @@ import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
 import 'package:ai_learning/core/services/learn_service.dart';
 import 'package:ai_learning/core/speech/question_speech.dart';
+import 'package:ai_learning/core/speech/speech_policy.dart';
 import 'package:ai_learning/features/learn/widgets/offline_banner.dart';
 import 'package:ai_learning/features/speech/readable_question_text.dart';
 import 'package:ai_learning/features/speech/speech_button.dart';
@@ -638,11 +639,10 @@ class _SessionPageState extends ConsumerState<SessionPage> {
     );
   }
 
-  /// 读题仅对 1–3 年级语文/数学/英语开放（设计 §3.9.12）。
+  /// 读题范围按 SpeechPolicy：1–3 年级语文/数学/英语 + 全年级英语（设计 §3.9.12 / CR-007）。
   bool _speechEnabled(Question question) {
     final grade = ref.watch(currentUserProvider)?.grade;
-    if (grade == null || grade < 1 || grade > 3) return false;
-    return const {'chinese', 'math', 'english'}.contains(question.subject);
+    return SpeechPolicy.enabled(grade: grade, subject: question.subject);
   }
 
   /// TT-05：进入新题时按设置自动读题；同一题只触发一次，失败不阻断答题。

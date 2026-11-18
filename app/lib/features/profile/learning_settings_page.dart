@@ -60,7 +60,8 @@ class _LearningSettingsPageState extends ConsumerState<LearningSettingsPage> {
                 const SizedBox(height: 8),
                 Text(
                   '打开后，1–3 年级语文、数学、英语题目进入时会自动朗读题干与选项；'
-                  '仍可随时点击题干右侧喇叭停止或重播。',
+                  '英语题目无论年级都可点题干右侧喇叭朗读；'
+                  '仍可随时点击喇叭停止或重播。',
                   style: theme.textTheme.bodySmall,
                 ),
                 const SizedBox(height: 12),
@@ -82,8 +83,8 @@ class _LearningSettingsPageState extends ConsumerState<LearningSettingsPage> {
                 Text('读题语速', style: theme.textTheme.titleMedium),
                 const SizedBox(height: 8),
                 Text(
-                  '1–3 年级语文、数学、英语题目可点击题干右侧的喇叭朗读，'
-                  '语速设置会立即生效。',
+                  '1–3 年级语文、数学、英语题目，以及各年级英语题目，'
+                  '都可点击题干右侧的喇叭朗读，语速设置会立即生效。',
                   style: theme.textTheme.bodySmall,
                 ),
                 const SizedBox(height: 12),
