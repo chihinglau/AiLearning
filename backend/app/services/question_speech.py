@@ -205,6 +205,99 @@ def voice_for_subject(subject: str) -> str:
     return VOICE_BY_SUBJECT.get(subject, VOICE_BY_SUBJECT["chinese"])
 
 
+# 英语题里有大量「中文题干 + 英文选项」的混排题（如「「妈妈」的英文是（ ）」），
+# 整段用英文模型合成会把中文读空。按语种切段、各自用对应音色合成后拼接。
+_CJK_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff]")
+_SPEECH_CHAR_RE = re.compile(r"[A-Za-z0-9]")
+# 选项前缀由规则生成（「选项 A，」）。英语题的选项本身是英文，中文前缀会把整段
+# 切成「中文前缀 + 英文内容」两截、四个选项反复换音色；合成前把前缀本地化成
+# 「Option A, 」，题干与选项各自成为纯净单语种段。
+_EN_OPTION_PREFIX_RE = re.compile(r"选项\s*([A-Za-z0-9])\s*，\s*")
+# 填空题占位 `____` 被规则读成「空格」；英语题里读 blank 才自然。
+_EN_BLANK_RE = re.compile(r"空格")
+
+
+def _localize_option_prefix(text: str) -> str:
+    return _EN_OPTION_PREFIX_RE.sub(lambda m: f"Option {m.group(1)}, ", text)
+
+
+def _localize_english_markers(text: str) -> str:
+    return _EN_BLANK_RE.sub("blank", text)
+
+
+def speech_segments(text: str, subject: str) -> list[tuple[str, str]]:
+    """朗读文本按语种切段，返回 `[(音色, 文本段), ...]`。
+
+    非英语学科只有一个音色，原样整段返回；英语先本地化选项前缀，再按中英文字符
+    边界切段，纯标点（无字母数字）的碎片并入相邻中文段，避免合成出空音频。
+    """
+    default_voice = voice_for_subject(subject)
+    if subject != "english" or not text.strip():
+        return [(default_voice, text)]
+
+    text = _localize_english_markers(_localize_option_prefix(text))
+    zh_voice = VOICE_BY_SUBJECT["chinese"]
+    en_voice = VOICE_BY_SUBJECT["english"]
+
+    raw: list[list[str]] = []
+    buf: list[str] = []
+    lang = ""
+    for ch in text:
+        cur = "zh" if _CJK_RE.match(ch) else "en"
+        if buf and cur != lang:
+            raw.append([lang, "".join(buf)])
+            buf = []
+        buf.append(ch)
+        lang = cur
+    if buf:
+        raw.append([lang, "".join(buf)])
+
+    merged: list[list[str]] = []
+    for cur_lang, seg in raw:
+        # 不含字母数字的英文碎片（标点、括号、空格）跟随前一段；开头则等后一段。
+        if cur_lang == "en" and not _SPEECH_CHAR_RE.search(seg):
+            if merged:
+                merged[-1][1] += seg
+                continue
+            merged.append(["zh", seg])
+            continue
+        if merged and merged[-1][0] == cur_lang:
+            merged[-1][1] += seg
+            continue
+        merged.append([cur_lang, seg])
+
+    segments: list[tuple[str, str]] = []
+    for cur_lang, seg in merged:
+        stripped = seg.strip()
+        if not stripped:
+            continue
+        voice = zh_voice if cur_lang == "zh" else en_voice
+        if segments and segments[-1][0] == voice:
+            segments[-1] = (voice, f"{segments[-1][1]} {stripped}")
+            continue
+        segments.append((voice, stripped))
+    return segments or [(default_voice, text)]
+
+
+def cache_key_for_segments(segments: Sequence[tuple[str, str]], speed: float) -> str:
+    """分语种缓存的键：单段退化为原 `cache_key`（存量单语种资产不失效）。"""
+    if len(segments) <= 1:
+        voice, text = segments[0] if segments else (VOICE_BY_SUBJECT["chinese"], "")
+        return cache_key(text, voice, speed)
+    payload = f"{RULES_VERSION}|mix|{speed:.2f}|" + "".join(
+        f"{voice}\u0001{text}\u0002" for voice, text in segments
+    )
+    return hashlib.sha256(payload.encode("utf-8")).hexdigest()
+
+
+def question_segments(question: Any, speed: float) -> tuple[list[tuple[str, str]], str]:
+    """整题朗读文本的分语种分段与缓存键。"""
+    text = text_for_question(question)
+    segments = speech_segments(text, str(question.subject or ""))
+    return segments, cache_key_for_segments(segments, speed)
+
+
+
 def cache_key(text: str, voice: str, speed: float) -> str:
     """缓存键：`sha256(清洗后文本 + 音色 + 语速 + 规则版本)`（设计 §3.9.6）。"""
     payload = f"{RULES_VERSION}|{voice}|{speed:.2f}|{text}"

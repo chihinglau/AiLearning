@@ -115,3 +115,35 @@ def test_reading_audio_scope_by_subject() -> None:
     assert speech.reading_grades("english") == (1, 2, 3, 4, 5, 6, 7, 8, 9)
     assert speech.reading_grades("chinese") == speech.ALLOWED_GRADES
 
+
+def test_english_mixed_script_splits_by_language() -> None:
+    segments = speech.speech_segments(
+        "「妈妈」的英文是（ ）。选项 A，mother。选项 B，sister", "english"
+    )
+    voices = [voice for voice, _ in segments]
+    assert "vits-piper-zh_CN-huayan-medium" in voices
+    assert "vits-piper-en_US-lessac-medium" in voices
+    # 中文段只包含中文，英文段只包含英文单词
+    zh_text = "".join(text for voice, text in segments if voice.endswith("huayan-medium"))
+    assert "妈妈" in zh_text
+    assert "mother" not in zh_text
+
+
+def test_single_language_script_keeps_one_segment() -> None:
+    pure_en = speech.speech_segments("How many apples?", "english")
+    assert len(pure_en) == 1 and pure_en[0][0].endswith("lessac-medium")
+    # 非英语学科不切段（数学题里的英文符号仍用中文音色）
+    math = speech.speech_segments("3 + 4 = ?", "math")
+    assert len(math) == 1
+
+
+def test_multi_segment_cache_key_degenerates_for_single() -> None:
+    segments = speech.speech_segments("How many apples?", "english")
+    assert speech.cache_key_for_segments(segments, 1.0) == speech.cache_key(
+        "How many apples?", segments[0][0], 1.0
+    )
+    mixed = [("vits-piper-zh_CN-huayan-medium", "妈妈"), ("vits-piper-en_US-lessac-medium", "mother")]
+    assert speech.cache_key_for_segments(mixed, 1.0) != speech.cache_key_for_segments(
+        list(reversed(mixed)), 1.0
+    )
+

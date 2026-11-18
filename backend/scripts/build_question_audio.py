@@ -47,6 +47,7 @@ OPUS_BITRATE = "24k"
 
 SynthFn = Callable[[str, str, float, Path], None]
 TranscodeFn = Callable[[Path, Path], None]
+ConcatFn = Callable[[list[Path], Path], None]
 
 
 @dataclass(frozen=True)
@@ -60,6 +61,8 @@ class AudioJob:
     key: str
     target: Path
     kind: str = "reading"
+    # 分语种分段（英语中英混排题）：多段时逐段合成再拼接；单段/空则按 voice 整段合成。
+    segments: tuple[tuple[str, str], ...] = ()
 
 
 @dataclass
@@ -162,8 +165,14 @@ def collect_jobs(
         if not text.strip():
             empty += 1
             continue
-        voice = voice_override or speech.voice_for_subject(question.subject)
-        key = speech.cache_key(text, voice, speed)
+        if voice_override:
+            segments: tuple[tuple[str, str], ...] = ((voice_override, text),)
+            voice = voice_override
+        else:
+            # 英语中英混排题按语种分段（中文段中文音色、英文段英文音色）。
+            segments = tuple(speech.speech_segments(text, question.subject))
+            voice = segments[0][0]
+        key = speech.cache_key_for_segments(segments, speed)
         jobs.append(
             AudioJob(
                 question_id=question.id,
@@ -174,6 +183,7 @@ def collect_jobs(
                 speed=speed,
                 key=key,
                 target=out_dir / speech.audio_rel_path(key),
+                segments=segments,
             )
         )
     return jobs, empty
@@ -204,6 +214,7 @@ def run_build(
     out_dir: Path,
     synth: SynthFn,
     transcode: TranscodeFn,
+    concat: ConcatFn | None = None,
     retries: int = 2,
     concurrency: int = 2,
     force: bool = False,
@@ -241,11 +252,25 @@ def run_build(
 
     def _work(job: AudioJob) -> dict | None:
         last_error = ""
+        merge = concat or concat_wavs
         for attempt in range(retries + 1):
             tmp_dir = Path(tempfile.mkdtemp(prefix="qaudio-"))
             try:
                 wav_path = tmp_dir / "tts.wav"
-                synth(job.text, job.voice, job.speed, wav_path)
+                if len(job.segments) > 1:
+                    # 分语种分段：逐段合成后拼接（采样率不一致由 ffmpeg 统一重采样）。
+                    parts: list[Path] = []
+                    for index, (seg_voice, seg_text) in enumerate(job.segments):
+                        part = tmp_dir / f"tts_{index}.wav"
+                        synth(seg_text, seg_voice, job.speed, part)
+                        if not part.exists() or part.stat().st_size == 0:
+                            raise RuntimeError(
+                                f"合成器未生成有效 wav（第 {index + 1} 段）"
+                            )
+                        parts.append(part)
+                    merge(parts, wav_path)
+                else:
+                    synth(job.text, job.voice, job.speed, wav_path)
                 if not wav_path.exists() or wav_path.stat().st_size == 0:
                     raise RuntimeError("合成器未生成有效 wav")
                 job.target.parent.mkdir(parents=True, exist_ok=True)
@@ -418,6 +443,24 @@ def transcode_opus(
     completed = subprocess.run(cmd, check=False, capture_output=True, text=True)
     if completed.returncode != 0:
         raise RuntimeError(f"ffmpeg 转码失败：{completed.stderr.strip()[:300]}")
+
+
+def concat_wavs(wav_paths: list[Path], out_path: Path) -> None:
+    """把多段 wav 顺序拼成一个 wav（采样率不同时统一重采样到 22050）。"""
+    if not wav_paths:
+        raise RuntimeError("没有可拼接的音频段")
+    if len(wav_paths) == 1:
+        shutil.copyfile(wav_paths[0], out_path)
+        return
+    cmd = [ffmpeg_path(), "-y", "-loglevel", "error"]
+    for path in wav_paths:
+        cmd += ["-i", str(path)]
+    streams = "".join(f"[{index}:a]" for index in range(len(wav_paths)))
+    filter_complex = f"{streams}concat=n={len(wav_paths)}:v=0:a=1[out]"
+    cmd += ["-filter_complex", filter_complex, "-map", "[out]", "-ar", "22050", str(out_path)]
+    completed = subprocess.run(cmd, check=False, capture_output=True, text=True)
+    if completed.returncode != 0:
+        raise RuntimeError(f"ffmpeg 拼接失败：{completed.stderr.strip()[:300]}")
 
 
 def _print_plan(

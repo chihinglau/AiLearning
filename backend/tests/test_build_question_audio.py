@@ -58,6 +58,41 @@ def _fake_transcode(wav_path: Path, opus_path: Path) -> None:
     opus_path.write_bytes(b"OggS-fake-opus")
 
 
+def test_run_build_merges_multi_segment_jobs(tmp_path: Path) -> None:
+    merged: list[int] = []
+
+    def fake_concat(paths: list[Path], out_path: Path) -> None:
+        merged.append(len(paths))
+        out_path.write_bytes(b"RIFF-merged")
+
+    key = "ab" * 32
+    job = bqa.AudioJob(
+        question_id=7,
+        subject="english",
+        grade=3,
+        text="「妈妈」的英文是（ ）。选项 A，mother",
+        voice="vits-piper-zh_CN-huayan-medium",
+        speed=1.0,
+        key=key,
+        target=tmp_path / "audio" / key[:2] / f"{key}.opus",
+        segments=(
+            ("vits-piper-zh_CN-huayan-medium", "「妈妈」的英文是（ ）"),
+            ("vits-piper-en_US-lessac-medium", "mother"),
+        ),
+    )
+    result = bqa.run_build(
+        [job],
+        out_dir=tmp_path,
+        synth=_fake_synth,
+        transcode=_fake_transcode,
+        concat=fake_concat,
+        log=lambda _: None,
+    )
+    assert result.generated == 1 and not result.failed
+    assert merged == [2]
+    assert job.target.exists() and job.target.stat().st_size > 0
+
+
 def test_collect_jobs_filters_grade_subject_status_and_placeholder(
     db, tmp_path: Path
 ) -> None:

@@ -1603,8 +1603,14 @@ def question_audio(
         text = speech.text_for_question(question)
         if not text.strip():
             raise _not_ready()
-        resolved_voice = voice or speech.voice_for_subject(question.subject)
-        key = speech.cache_key(text, resolved_voice, speed)
+        if voice:
+            resolved_voice = voice
+            key = speech.cache_key(text, resolved_voice, speed)
+        else:
+            # 英语题中英混排（题干中文 + 选项英文）按语种分段，中文段用中文音色。
+            segments = speech.speech_segments(text, question.subject)
+            resolved_voice = segments[0][0]
+            key = speech.cache_key_for_segments(segments, speed)
         rel_path = speech.audio_rel_path(key)
 
     if question_id in question_audio_service.rework_ids():
