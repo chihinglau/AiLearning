@@ -1983,6 +1983,13 @@ v2.28 之后补做 v2.27 遗留的三项，并在 EBG-AN00（1080×2340，Androi
 |---|---|---|---|
 | 首轮 | 82 | 40 | ORPHAN 19（全在空壳 mock 卷）、LEAK_WARN 16、LEAK_BLOCK 5 |
 | 清障后 | 81 | 16 | 仅剩 LEAK_WARN（阅读理解题必然型，非缺陷）；其余 6 类全 0 |
+| INFO 分档后 | 81 | **0** | 7 类硬问题 + LEAK_BLOCK 全 0；16 条全部归入 `LEAK_INFO` |
+
+**INFO 分档口径**（`_INFO_MARKERS`）：以下三类由题型决定，不再计入待修问题，但明细原样保留供抽查：
+- 答案取自短文原文（阅读理解必然）；
+- 答案落在候选括号内（「填『是』或『否』」这类提示题型）；
+- 单字答案只是题干更长词的组成部分（「语」在「成语」里）。这一档仍可能混真提示（如答案「挡」而题干后文出现「挡住落叶」），所以报告保留 reason 原文，教研可逐条抽查。
+
 
 清障明细：
 - 空壳 mock 卷 → `offline`（19 条悬挂一次清零）。
@@ -2020,6 +2027,27 @@ v2.28 之后补做 v2.27 遗留的三项，并在 EBG-AN00（1080×2340，Androi
 **顺带修掉**：`exam_entry.pendingExamSubtitle` 直接把 `subject` 原始代码拼进副标题，学生看到 `english / math / chinese`。
 改为 `kSubjectLabelOf()` 走 `Subject` 枚举映射；未知代码（如 `science`）原样保留，避免误显示成数学。
 `app/test/exam_entry_test.dart` 补「学科一律本地化 + 未知保留」用例，`flutter test` 10/10 通过、`flutter analyze` 无问题；重装 APK 真机复验副标题已是中文。
+
+### 6.29.21 读题/听力音频接入 ETag 条件校验
+
+**背景**：服务端音频接口早已支持 `ETag` + `If-None-Match` → `304`（`learn.py` 里「记账放在 304 之前」），但客户端只按「文件是否存在」判断，服务端单题重合成后学生一直播旧读音，只能靠人工递增 `questionAudioAssetVersion` 兜底 —— 那是把运维问题变成了发版问题。
+
+**客户端改动（`app/lib/core/speech/question_audio.dart`）**
+- `QuestionAudioCache` 新增 `conditionalFetch` 通道与 `.etag` 旁挂文件（`q_<id>[_listen].etag`）；`ensure(id, revalidate: bool)` 支持「先问服务端再决定是否复用」。
+- 判定逻辑：`304` → 复用本地文件；`200` → 覆盖音频并更新 ETag；条件请求失败（断网/504）而本地有文件 → 继续用本地，不阻断播放。
+- `QuestionAudioService.play()` 用 `_revalidated` 集合保证「本次启动内该题第一次播放」才做一次条件校验；之后连点喇叭直接命中缓存，不会把每分钟 60 次的限流打满。
+- 音频条件请求**不带 `attempt_id`**：试卷听力额度由 `takeListeningPlay` 单独记账，两处都带会重复扣额度。
+- 注入了 `fetcher` 走替身（单测/离线包）时自动关闭条件通道，避免单测打真实网络。
+
+**验证**
+| 环节 | 结果 |
+|---|---|
+| `flutter test test/question_audio_test.dart` | 11/11（新增 3 条：304 复用、ETag 变化重下覆盖、条件请求失败仍可播） |
+| `flutter analyze` | No issues |
+| 真机首次播放（本地有音频但无 `.etag`） | `GET .../audio?speed=1.0` **200**，重下并落 ETag |
+| 真机重启后再播放同一题 | 同 URL **304**，直接复用本地文件（`uvicorn` access log 实测两行 200 → 304） |
+
+**遗留**：`questionAudioAssetVersion` 仍保留（合成规则变更时用于整体换目录），单题内容变更从此不再需要它。
 
 
 
