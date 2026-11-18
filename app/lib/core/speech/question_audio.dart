@@ -9,6 +9,10 @@ import 'package:path_provider/path_provider.dart';
 /// 预生成音频的本地缓存上限（TT-04：按教材 LRU 200 MB）。
 const int questionAudioCacheBytes = 200 * 1024 * 1024;
 
+/// 服务端音频资产版本。合成规则、音色或文本口径变化时递增：
+/// 客户端缓存目录随之切换，避免本地 `q_<id>.opus` 把旧读音一直播下去。
+const int questionAudioAssetVersion = 2;
+
 /// 生成音频统一按 1.0 倍速合成；客户端用播放器变速，避免为每个语速重复生成。
 const double questionAudioGeneratedSpeed = 1.0;
 
@@ -272,10 +276,30 @@ class QuestionAudioService {
   static Future<Directory> _defaultDirectory() async {
     try {
       final base = await getApplicationSupportDirectory();
-      return Directory('${base.path}/question_audio');
+      return _versionedDirectory(base);
     } catch (_) {
       final base = await getTemporaryDirectory();
-      return Directory('${base.path}/question_audio');
+      return _versionedDirectory(base);
     }
+  }
+
+  /// 目录名带资产版本；顺带清掉其它版本的缓存目录，避免旧读音长期占空间。
+  static Directory _versionedDirectory(Directory base) {
+    final current = Directory(
+      '${base.path}/question_audio_v$questionAudioAssetVersion',
+    );
+    try {
+      for (final entity in base.listSync()) {
+        if (entity is! Directory) continue;
+        final name = entity.path.split(Platform.pathSeparator).last;
+        final isAudioDir =
+            name == 'question_audio' ||
+            (name.startsWith('question_audio_v') && entity.path != current.path);
+        if (isAudioDir) entity.delete(recursive: true).ignore();
+      }
+    } catch (_) {
+      // 清理失败不影响播放：新目录照常使用
+    }
+    return current;
   }
 }
