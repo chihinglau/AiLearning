@@ -22,6 +22,7 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.models.content import Chapter, KnowledgePoint, Question, Textbook
+from app.services import question_quality
 
 # 占位章节别名表（2026-11-08 占位章节清理立项 · 阶段 3/4）
 # 由 docs/content-templates/exports/automation_20261108_codebuddy/chapter_cleanup.py 生成，
@@ -88,16 +89,16 @@ MAX_DIFFICULTY = 5
 SOURCE_TYPES = {"original", "adapted", "licensed", "public", "external"}
 
 
-def load_document(path: Path) -> dict[str, Any]:
+def load_document(path: Path, *, allow_answer_leak: bool = False) -> dict[str, Any]:
     with path.open("r", encoding="utf-8") as handle:
         data = json.load(handle)
     if not isinstance(data, dict):
         raise ValueError(f"{path.name}: 顶层必须是 JSON 对象")
-    validate_document(data)
+    validate_document(data, allow_answer_leak=allow_answer_leak)
     return data
 
 
-def validate_document(data: dict[str, Any]) -> None:
+def validate_document(data: dict[str, Any], *, allow_answer_leak: bool = False) -> None:
     subject = data.get("subject")
     if subject not in SUBJECTS:
         raise ValueError(f"subject 必须是 {sorted(SUBJECTS)} 之一，当前为 {subject!r}")
@@ -156,10 +157,14 @@ def validate_document(data: dict[str, Any]) -> None:
         if not isinstance(questions, list):
             raise ValueError(f"章节「{chapter_name}」questions 必须是数组")
         for question in questions:
-            _validate_question(question, chapter_name)
+            _validate_question(
+                question, chapter_name, allow_answer_leak=allow_answer_leak
+            )
 
 
-def _validate_question(question: dict[str, Any], chapter_name: str) -> None:
+def _validate_question(
+    question: dict[str, Any], chapter_name: str, *, allow_answer_leak: bool = False
+) -> None:
     q_type = question.get("q_type")
     if q_type not in Q_TYPES:
         raise ValueError(f"章节「{chapter_name}」题目题型非法：{q_type!r}，可选 {sorted(Q_TYPES)}")
@@ -199,6 +204,15 @@ def _validate_question(question: dict[str, Any], chapter_name: str) -> None:
     difficulty = question.get("difficulty", 2)
     if not isinstance(difficulty, int) or not 1 <= difficulty <= MAX_DIFFICULTY:
         raise ValueError(f"题目「{stem}」difficulty 必须是 1~{MAX_DIFFICULTY}")
+    # CR-008 答案泄漏门禁：答案原样写在题干里（学生不学也能抄），入库直接拒绝。
+    # 算式/条件题（题干天然带操作数）不判泄漏，属题型属性。
+    if not allow_answer_leak and not question_quality.is_arithmetic_stem(stem):
+        verdict = question_quality.check_answer_leak(stem, answer, q_type)
+        if verdict and verdict[0] == question_quality.BLOCK:
+            raise ValueError(
+                f"题目「{stem}」答案泄漏：{verdict[1]}。"
+                "请改写题干（确属合法题型时用 --allow-answer-leak 跳过门禁）"
+            )
     _validate_source(
         question,
         f"题目「{stem}」",
@@ -235,9 +249,15 @@ def _validate_source(
         raise ValueError(f"{label}为外部导入（external），status 必须为 draft，复核后再发布")
 
 
-def import_document(db: Session, data: dict[str, Any], *, overwrite: bool = False) -> dict[str, int]:
+def import_document(
+    db: Session,
+    data: dict[str, Any],
+    *,
+    overwrite: bool = False,
+    allow_answer_leak: bool = False,
+) -> dict[str, int]:
     """导入一份模板数据；调用方负责 commit/rollback。"""
-    validate_document(data)
+    validate_document(data, allow_answer_leak=allow_answer_leak)
     subject = data["subject"]
     grade = data["grade"]
     version = str(data["version"]).strip()

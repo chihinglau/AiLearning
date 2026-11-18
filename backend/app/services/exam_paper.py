@@ -24,6 +24,11 @@ from app.models.user import User
 # 题库尚不存在的题型：一旦蓝图要求，组卷即拒绝（PM 裁决「不接受降级卷」）
 STRICT_Q_TYPES = {"composition", "listening", "experiment"}
 
+# 不参与「卷级题干指纹去重」的题型：听力题干是模板化的固定指令
+# （「听录音，选出你听到的单词」等），一册 80+ 道题只有 8 种题干，
+# 真正的区分点在 script 与音频。若按题干去重，一道 10 题听力分节永远凑不满。
+NO_STEM_DEDUPE_TYPES = frozenset({"listening"})
+
 BAND_QUANTILES = {"easy": (0.0, 0.6), "medium": (0.6, 0.9), "hard": (0.9, 1.0)}
 
 KP_CAP_PER_PAPER = 4     # 整卷同一知识点上限
@@ -518,6 +523,10 @@ def generate_paper(
     for index, section in enumerate(sections):
         wanted = int(section.get("count", 0))
         q_type = section.get("q_type")
+        # 听力节的题干天生模板化（「听录音，选出你听到的单词」等，一册 80+ 道只有 8 种
+        # 题干，区分点在 script/音频而不是题干），套用卷级题干去重会把候选压到 8 道以内，
+        # 导致 10 题的听力分节永远凑不满而整卷被拒。故听力节不参与卷级题干去重。
+        section_stems = None if q_type in NO_STEM_DEDUPE_TYPES else seen_stems
         score_each = float(section.get("score_each", 0))
 
         remaining = [q for q in pool if q.id not in used]
@@ -567,7 +576,7 @@ def generate_paper(
         uncovered_pass = [q for q in typed if q.chapter_id not in chapter_hit]
         head = _pick(uncovered_pass, min(wanted, chapter_total - len(chapter_hit)),
                      covered, pick_counts, chapter_hit, kp_cap_for_section, section_kp_cap,
-                     core_kps=core_kps, seen_stems=seen_stems) if required_chapters else []
+                     core_kps=core_kps, seen_stems=section_stems) if required_chapters else []
         picked = list(head)
         # 注意：章节覆盖轮的跨带是蓝图结构性必然（一册 40-66 个知识点、每章至少 1 题，
         # 必然有题落在带外），它不属于「拿难度换覆盖」，不计入 cross_stat。
@@ -582,19 +591,19 @@ def generate_paper(
                                 cross_limit=cross_limit, cross_stat=cross_stat,
                                 priority_kps=priority_kps, core_kps=core_kps,
                                 core_cross_budget=core_cross_budget,
-                                seen_stems=seen_stems))
+                                seen_stems=section_stems))
         kp_cross_band += cross_stat.get("used", 0)
         cross_budget = max(0, cross_budget - cross_stat.get("used", 0))
         core_cross_budget = max(0, core_cross_budget - cross_stat.get("used", 0))
         if len(picked) < wanted and allow_band_relax:
             # 只放宽「难度带」，绝不放宽「题型」：同题型内的其余题目补位
             leftovers = [q for q in typed if q.id not in {p.id for p in picked}]
-            extra = _pick(leftovers, wanted - len(picked), covered, pick_counts, chapter_hit, kp_cap_for_section, section_kp_cap, seen_stems=seen_stems)
+            extra = _pick(leftovers, wanted - len(picked), covered, pick_counts, chapter_hit, kp_cap_for_section, section_kp_cap, seen_stems=section_stems)
             band_relaxed += len(extra)
             picked.extend(extra)
         if len(picked) < wanted and allow_fallback:
             extras = [q for q in remaining if q.id not in {p.id for p in picked}]
-            picked.extend(_pick(extras, wanted - len(picked), covered, pick_counts, chapter_hit, kp_cap_for_section, section_kp_cap, seen_stems=seen_stems))
+            picked.extend(_pick(extras, wanted - len(picked), covered, pick_counts, chapter_hit, kp_cap_for_section, section_kp_cap, seen_stems=section_stems))
 
         if len(picked) < wanted:
             shortages.append(Shortage(

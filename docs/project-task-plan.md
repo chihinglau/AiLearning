@@ -1609,3 +1609,144 @@ v2.28 之后补做 v2.27 遗留的三项，并在 EBG-AN00（1080×2340，Androi
 **产物**：`docs/exam-ui-walkthrough-ebg-20261118.md` 新增 8.8 节，并把 8.6 的三条遗留标记为已处置；截图 `shots/ebg/53_reentry_timer.png`、`54_chinese_q28.png`、`55_q28_typefixed.png`。
 
 **下一步**：① 听力三件套（audio_url / 音频资产 / 播放控件）齐后关 `LISTENING_AS_CHOICE`；② 教研复核 `answer_leak_review.csv` 99 条；③ 全量 81 张逐张真机走查（仍为抽样）。
+
+---
+
+### 6.28 CR-008 收尾三项验收记录（答案泄漏门禁 / 听力三件套 / 81 卷结构审计，2026-11-18）
+
+> 触发：PM 就「听力真恢复是否可行」「`answer_leak_review.csv` 99 条是否逐条改题干」「81 张卷是否需要再排一轮走查」三问给出「按你的建议推进 1-4 项任务，没有完成不用停下来」的全权委托。三项对应 CR-008 的 (1)(2)(3) 与门禁常态化。
+
+#### 6.28.1 答案泄漏入库门禁（新增，已接入导入链）
+
+| 项 | 实现 | 口径 |
+|---|---|---|
+| 规则模块 | `backend/app/services/question_quality.py` | 三档 `BLOCK / WARN / None`；`answer_values()` 兼容 `{"value": x}` / 字符串 / 列表 |
+| 词边界过滤 | `_positions()` | ASCII 答案剔除 `is⊂This`、`er⊂Father`；数字答案剔除 `80⊂800`；中文多字子串无边界可判，靠改写规避 |
+| 题型豁免 | `is_arithmetic_stem()` / `is_reading_comprehension()` / `_EXEMPT_RE` | 算式题、含短文且 ≥60 字的阅读理解、排序/组词/偏旁/音节题不判 BLOCK；choice/multiple/judge 答案存选项键或 T/F，直接不检查 |
+| 导入链拦截 | `backend/app/services/content_import.py` `_validate_question(..., allow_answer_leak=False)` | 位于 `_validate_source` 之前；BLOCK 抛 `ValueError` 并提示「确属合法题型时用 `--allow-answer-leak` 跳过门禁」；`validate_document` / `import_document` / `load_document` 全链加参 |
+| CLI | `backend/scripts/import_content.py --allow-answer-leak` | 单批豁免开关 |
+| 全库巡检 | `backend/scripts/audit_answer_leak.py --subject/--grade/--out` | 与门禁同一套规则，产物 `docs/content-templates/exports/answer_leak_gate_20261118/answer_leak_gate.csv`（`level,question_id,subject,grade,q_type,answer,stem_head,reason`） |
+| 单测 | `backend/tests/test_question_quality.py` | 19 例：真泄漏必 BLOCK、伪泄漏必放行、中间态 WARN、`answer_values` 四种入参；既有 `test_content_import.py` + `test_chapter_placeholder.py` 14 例同步全绿 |
+
+**规则收敛过程**（每轮都是修规则而非放宽）：583 BLOCK →（排除选择题选项键/单字符 ASCII/阅读理解/算式题）106 →（加词边界过滤 + 排序组词豁免）91 →（修成语 4 条）87。
+**当前全库快照**：`ok=17817 / block=87 / warn=177`；block 分学科 politics 18、chinese 22、math 21、english 11、biology 6、history 4、geography 2、physics 2、chemistry 1。
+
+#### 6.28.2 A 档硬泄漏题干改写（已完成 35 条，其余交教研）
+
+- 源头定位：成语类题在 `backend/scripts/zh_fills_by_unit_data.py` 的 `CHENGYU` 表（`("成语前3字__", "第4字")`），由 `f"把成语补充完整：{broken}。"` 拼题干且**未做答案遮挡**；政治两条重复 fill 题干在 `backend/scripts/seed.py`。
+- 修复脚本 `backend/scripts/fix_answer_leak_cr008.py`（默认演练，`--apply` 落库），按题干子串匹配批量 UPDATE `content.stem` + `answer.value`。
+- 政治「法治」题三次迭代：第一版仍 BLOCK（`法治` 是 `依法治国` 的连续多字子串，中文无词边界判不出）；第二版改为「国家治理方式要从人治转向（　），并建设社会主义（　）国家。」后复扫通过。**结论：中文多字子串只能靠改写题干规避，不能靠规则判别。**
+- `json` 模板（`content-templates/daily_consolidated|daily_rerun` 下 `politics_g8_second_20261113_book.json`、`politics_g9_first_20261113_book.json`）里是另一版 choice 题（`answer.value="A"`），本身不泄漏，无需改。
+- 剩余 87 条全部是「答案词落在题干叙述里」的真实泄漏（如 `和新同学说话，要先说一声（ ）你好`、`志愿服务的特点是不计报酬、为他人和社会（ ）`、`履行（ ）的义务`），需教研逐条改写；继续批量改会引入语义风险，故边界定在「改无歧义 35 条 + 出清单交教研」。
+
+#### 6.28.3 听力三件套（audio_url + 逐题音频 + 播放控件，已端到端打通）
+
+**数据事实**：`questions.q_type='listening'` 共 1348 条，全部 english；`content` 恒为 `{"stem","script","audio_note"}`；script 长度 min=2 / p50=23 / p90=55 / max=98，含 `M:/W:` 对话标记 **0 条** —— 全为单词/短句，TTS 足够，无需真人录音（同时绕开录音版权）。
+
+| 层 | 改动 | 关键口径 |
+|---|---|---|
+| 服务 | `backend/app/services/question_speech.py` 追加听力节 | `LISTENING_RULES_VERSION=1`、`LISTENING_GRADES=(1..9)`、`LISTENING_SUBJECTS=("english",)`；`listening_script()` 只做空白归一化（不套中文 normalize）；`listening_cache_key()` 前缀 `listening|版本|音色|语速|文本`；产物 `audio/listening/{hash前2}/{hash}.opus` |
+| 接口 | `GET /api/learn/questions/{id}/audio?kind=reading\|listening&speed=0.5~2.0` | `kind` 默认 reading 保持向后兼容；listening 分支要求 `q_type=='listening'` + 年级 1–9 + english，否则 404 `AUDIO_NOT_READY`；两分支各自算 key 与 rel_path，共用 ETag/304、限流与 `rework_ids()` |
+| 合成 | `backend/scripts/build_question_audio.py --kind listening` | `AudioJob.kind` + `collect_jobs(kinds=...)`；仅 listening 时默认 grades=1–9、subjects=english |
+| 前端 | `app/lib/core/speech/question_audio.dart` + `features/speech/{speech_button,question_speech_button}.dart` + `core/models/content.dart` | `QuestionAudioKind` 枚举（`wire`/`fileSuffix`）；客户端按 kind 分文件名 `q_${id}.opus` / `q_${id}_listen.opus`，避免两语义互相覆盖；听力走 `listeningAudioServiceProvider`；`Question` 模型补 `listeningScript`（`content.script`）与 `isListening`，**作答界面不展示 script，天然不泄听力内容** |
+
+**实测数据**：
+- 合成 1300 条 → **生成 1294 / 跳过 6 / 失败 0**；产物 `backend/build/question_audio/audio/listening/` 实测 1166 个文件（同文本共享 hash，1300−1166=134 重复）/ 5.92 MB；连同既有读题 653 条，全部 opus 共 1819 文件 / 23.41 MB。
+- 工具链事故：系统与 `.tools` 均无 ffmpeg（11-10 生成读题音频时可用，其后丢失），首轮 3 条全失败报 `RuntimeError: 未找到 ffmpeg`；`pip install imageio-ffmpeg` 后二进制位于 `backend\.venv\lib\site-packages\imageio_ffmpeg\binaries\ffmpeg-win-x86_64-v9.0.2.exe`，经 `$env:FFMPEG_BIN` 传入后小批 3 条成功（1629/1742/3127 字节），再全量。
+- 接口验证：`kind=listening` → **200 `audio/ogg` 1742 bytes**；同题 `kind=reading` → 404；非听力题（q7393）+ `kind=listening` → 404。
+- 前端验证：`flutter analyze` No issues found；`flutter test` **182 例全绿**（新增 4 例：听力与读题缓存互不覆盖、听力服务播放 `q_x_listen.opus`、kind 映射、默认 reading 兼容）。
+
+#### 6.28.4 81 张卷结构审计（数据侧全量，P0=0）
+
+- 脚本 `backend/scripts/audit_walkthrough_papers_ui.py`，覆盖 LR-1 听力无音频、LR-2 选项异常、LR-3 填空未留空位、LR-4 习作字数提示、LR-5 答案泄漏、LR-6 同卷重题、LR-7 分值合计、LR-8 题干超 220 字、LR-9 大题分组。
+- 结果：81 张全部 **P0=0**；逐卷分值与题量全对（语文 unit 15 题/60 分、midterm 24 题/100 分、final 28 题/100 分；数学 unit 12 题/60 分、midterm 22 题/100 分、final 25 题/100 分；英语 unit 28 题/60 分、midterm 39 题/100 分、final 39 题/100 分）；卷矩阵实测 9 年级 × 3 学科 × 3 阶段 = 81，组合缺口 0。
+- 产物：`docs/content-templates/exports/ui_audit_20261118/paper_ui_audit.csv` + `issue_detail.csv`。
+- 真机逐张走查仍未做（人工约 7 min/张，脚本断言后约 5 min/张，81 张 ≈ 9.5–11.7 h），排 9 批 × 9 张。
+
+#### 6.28.5 残留与后续
+
+| 项 | 状态 | 说明 |
+|---|---|---|
+| 87 条 answer-leak BLOCK | 交教研 | 已出清单，逐条改写题干；门禁已在导入链拦截新增 |
+| 听力播放次数限制 | 未定 | 放客户端还是后端 attempt 记账未决；客户端限制 2 次防不住重播 |
+| 4–9 年级英语读题预生成音频 | 未表态 | 当前走系统 TTS 兜底 |
+| `LISTENING_AS_CHOICE` 降级开关 | 待关 | 听力音频已就绪，可在下一轮关闭降级（改为独立听力题渲染） |
+| 81 张真机逐张走查 | TODO | 数据侧已过，渲染侧待走 |
+
+---
+
+## 6.29 CR-008 收尾（2026-11-18 第二轮）：听力分节真恢复 + 审计口径修正 + 真机播放控件打通
+
+### 6.29.1 蓝图降级开关关闭，英语卷恢复「一、听力」独立分节
+
+- `backend/app/services/exam_blueprint_matrix.py`：`LISTENING_AS_CHOICE` 由 `True` 改为 **`False`**，听力不再降级成选择题；三处听力节删掉 `"band":"easy"`（L66/L72/L79），避免难度带把听力候选取空。
+- 听力供给实测（每章 8–10 道）：g1=228 / g2=168 / g3=176 / g4=144 / g5=168 / g6=152 / g7=104 / g8=104 / g9=104，全 english，共 1348 条。
+- 干跑 81/81 可出卷、0 拒绝；写库 `{'created':0,'updated':81,'deactivated':0,'total':81}`，旧 9 条 code 全部停用。
+
+### 6.29.2 重新生成英语卷踩到的三个坑（已修复）
+
+| 坑 | 现象 | 根因 | 修复 |
+|---|---|---|---|
+| ① 旧卷占用题号 | 26 张全部 422 `EXAM_PAPER_UNSUPPORTED`，shortages 指「一、听力」wanted 8/10 got 7 | `exam_paper_docs.py::recent_question_ids()` 跨卷去重**没有 status 过滤**，已下架旧卷占光听力题号 | 加 `Exam.status != "offline"` |
+| ② 难度带卡供给 | 删 `"band":"easy"` 后仍 422 | 同上，非难度问题 | 见 ① |
+| ③ 卷级题干指纹去重 | g1 上册 84 道听力只有 **8 种题干**，`seen_stems` 一压只剩 8 个候选 | `exam_paper.py` 对所有题型统一做题干去重 | 新增 `NO_STEM_DEDUPE_TYPES = frozenset({"listening"})`，section 内 `section_stems = None if q_type in NO_STEM_DEDUPE_TYPES else seen_stems`，4 处 `_pick` 改传 `seen_stems=section_stems`（L574/589/596/601） |
+
+- 修复后批量重生成：**26 张 OK / 0 FAIL**，加试点共 **27 张在架英语卷**；逐张核验（`%TEMP%\q_verify_eng.py`）每张都有「一、听力」节、unit 8 道 / midterm+final 10 道、节内题型恒为 `{'listening'}`、异常 0。
+- 操作前置：先把 27 张旧英语走查卷置 `status='offline'`（含 id=5「2年级英语上册单元卷」），并备份 `backend/build/backups/ailearning-backup-20261118-110921-pre-regenerate-english.db`。
+
+### 6.29.3 81 张卷结构审计（口径三次修正，结果质变）
+
+`backend/scripts/audit_walkthrough_papers_ui.py` 本轮四处改动：
+
+1. 取卷条件加 `Exam.status == "published"`（此前把 offline 卷算进来）；
+2. 新增 `_listen_script(q)`，从 `content.script` / `transcript` / `audio_text` 取听力原文；
+3. `_has_audio` 的 key 集合补 `ogg` / `opus`；
+4. 新增 `_listening_playable(q) = _has_audio(q) or bool(_listen_script(q))`，**LR-1 改判「可播放」而非「有音频字段」**；LR-6 对听力改用 `stem_key = f"[听力]{_listen_script(q)}"` 按 script 判重。
+
+结果：**81 张在架卷 / P0=0（81 张全过）/ 问题 5 条全为 P1**：
+
+| 卷 | 项 | 说明 |
+|---|---|---|
+| exam 19（g1 数学期末） | LR-5 | q_no 13「形状」 |
+| exam 60（g6 语文期中） | LR-5 | q_no 7「活着」 |
+| exam 69 / 70（g7 语文） | LR-5 | q_no 7 / q_no 2「一边」 |
+| exam 112（g6 英语期末） | LR-6 | `[听力]city` script 同卷出现 2 次 |
+
+- 产物刷新：`docs/content-templates/exports/ui_audit_20261118/paper_ui_audit.csv` + `issue_detail.csv`。
+
+### 6.29.4 组卷与前端配比的听力缺口（真机侧发现的假象 → 已修）
+
+| 层 | 问题 | 修复 |
+|---|---|---|
+| 后端抽题 | `TYPE_RATIO_BY_STAGE` / `TYPE_RATIO_BY_MODE` 无 listening；KP 覆盖阶段先取满名额，听力配额沦为"下限补齐" | `SECONDS_PER_TYPE["listening"]=30`、`TYPE_RATIO_BY_STAGE_ENGLISH`、`TYPE_RATIO_ENGLISH_BY_MODE`、`MUST_QTYPES={"listening"}`；`ratio_for(stage, mode, subject=None)`；`select_questions` 在 KP 覆盖轮**之前**先按配额预占 MUST_QTYPES 名额 |
+| 前端传参 | `practice_mode.dart` 三种模式 `defaultQTypes` 不含 listening，前端把听力过滤掉 | 三处 `defaultQTypes` 补 `'listening'` |
+| 前端标签 | `practice_config_page.dart` 的 `_shortTypeLabel` 只处理 multiple/fill/judge，其余一律 `default → '单选'`，**listening 2 被渲染成「单选 2」**，看起来像没听力 | 改显式分支：choice→'单选'、listening→'听力'、multiple→'多选'、fill→'填空'、judge→'判断'、answer→'解答'、default→'其他' |
+
+- 抽样验证：chapter 219 / count 10 / mode=special / q_types 含 listening，**20 次随机 seed 全部含 listening 2–3 道**（典型 `{'choice':4,'fill':3,'judge':1,'listening':2}`）。
+- 真机复核：配置页 chips 由「单选 2 / 单选 4 / 填空 3 / 判断 1」变为 **「听力 2 · 判断 1 · 单选 4 · 多选 2 · 填空 1」**。
+
+### 6.29.5 真机听力播放控件：根因与最终形态
+
+**现象**：EBG-AN00 上「1年级英语期中走查卷」第 1/39 题为听力题、有大题「一、听力」与耳机图标，点图标（多轮多坐标）**始终无 `/audio` 请求、无播放器、无 SnackBar**；同页点选项 A 正常（答题卡 1/39 变化），证明坐标系与整页触摸链路无问题。
+
+**定位结论**：`SpeechButton` 原为 32×32 `InkResponse`，改 48dp `IconButton` 后图标位置变化（证明新码已装）但**命中仍不可靠**——题干 `Expanded` 内 `ReadableQuestionText` 的布局区域把右侧图标热区挤占，`IconButton` 的 hit-test 在该 Row 布局下失效。
+
+**最终形态**（本次落地）：
+
+- `QuestionSpeechButton` 新增 `showLabel` 参数；`SpeechButton` 新增 `showLabel` / `idleLabel`：`showLabel=true` 时渲染 `OutlinedButton.icon`（图标 + 文字，高 44dp），否则保持 `IconButton`。
+- 三个作答页（exam / session / practice）统一布局：**听力题的播放入口不再放行内小图标，改为题干下方整行左侧的大按钮「播放听力材料」**（`Align(centerLeft)` + `OutlinedButton.icon`）；非听力题保持题干右侧图标。
+- **验证结果**：
+  - 期中卷作答页：点「播放听力材料」→ uvicorn 立刻出现 `GET /api/learn/questions/15795/audio?speed=1.0&kind=listening 200 OK`；
+  - 练习页（Unit 1 综合练习）首题为听力题，进入即自动播放，按钮显示「停止播放」，`kind=listening` 请求命中；
+  - `flutter analyze` No issues found；`flutter test` **185 例全绿**；APK 12–13s 构建、`install -r -d` Success。
+
+### 6.29.6 本轮残留
+
+| 项 | 状态 | 说明 |
+|---|---|---|
+| 审计 5 条 P1 | 待教研 | exam 19/60/69/70 的 LR-5 与 exam 112 的 LR-6（`[听力]city` 同卷重复，疑题池只有该词条） |
+| 87 条 answer-leak BLOCK | 待教研 | 35 条已改写入库，其余 52 条需逐条改题干 |
+| 听力播放次数限制 | 未定 | 客户端限制 2 次防不住重播，需后端 attempt 记账 |
+| 4–9 年级英语读题预生成音频 | 未表态 | 当前系统 TTS 兜底 |
+| 旧 27 张离线英语卷 | 保留 | 仅置 `status='offline'`，未物理删除 |
+| `learn.py` 诊断 logger | 保留 | `logger.info`（`ailearning.practice`），dev 期用于核对 preview 参数 |

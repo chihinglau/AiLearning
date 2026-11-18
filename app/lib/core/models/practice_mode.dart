@@ -40,7 +40,7 @@ const Map<String, PracticeModeSpec> kPracticeModes = {
       '默认 10 题，题型按学段常规配比',
     ],
     defaultCount: 10,
-    defaultQTypes: {'choice', 'multiple', 'fill', 'judge'},
+    defaultQTypes: {'choice', 'multiple', 'fill', 'judge', 'listening'},
   ),
   'sync': PracticeModeSpec(
     key: 'sync',
@@ -53,7 +53,7 @@ const Map<String, PracticeModeSpec> kPracticeModes = {
       '默认 15 题，优先练本单元',
     ],
     defaultCount: 15,
-    defaultQTypes: {'choice', 'multiple', 'fill', 'judge'},
+    defaultQTypes: {'choice', 'multiple', 'fill', 'judge', 'listening'},
     preferredScope: 'chapter',
   ),
   'pre_exam': PracticeModeSpec(
@@ -67,7 +67,7 @@ const Map<String, PracticeModeSpec> kPracticeModes = {
       '默认 20 题，优先练整册教材',
     ],
     defaultCount: 20,
-    defaultQTypes: {'choice', 'multiple', 'fill', 'judge', 'answer'},
+    defaultQTypes: {'choice', 'multiple', 'fill', 'judge', 'answer', 'listening'},
     preferredScope: 'textbook',
   ),
 };

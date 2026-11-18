@@ -198,3 +198,35 @@ def cache_key(text: str, voice: str, speed: float) -> str:
 def audio_rel_path(key: str) -> str:
     """`audio/{hash前2位}/{hash}.opus`。"""
     return f"audio/{key[:2]}/{key}.opus"
+
+
+# ---------------------------------------------------------------------------
+# 听力材料音频（CR-008 / TT-09）
+# ---------------------------------------------------------------------------
+# 听力题播的是 `content.script`（听力材料原文），不是「题干 + 选项」；两者语义不同，
+# 共用 `cache_key` 会互相覆盖，所以单独一套前缀与目录：`audio/listening/{hash前2位}/`。
+LISTENING_RULES_VERSION = 1
+
+# 听力材料首期范围：英语 1–9 年级（全库 1348 条 listening 题全部是 english）
+LISTENING_GRADES: tuple[int, ...] = (1, 2, 3, 4, 5, 6, 7, 8, 9)
+LISTENING_SUBJECTS: tuple[str, ...] = ("english",)
+
+
+def listening_script(question: Any) -> str:
+    """听力材料朗读文本：取 `content.script`，只做空白归一化。
+
+    不套用 `normalize()`：那是中文读法规则（分数、单位、上下标），对英文材料无意义，
+    反而可能把 `2/3` 之类读成「三分之二」。
+    """
+    content = question.content or {}
+    raw = str(content.get("script") or "")
+    return _SPACE_RE.sub(" ", raw).strip()
+
+
+def listening_cache_key(text: str, voice: str, speed: float) -> str:
+    payload = f"listening|{LISTENING_RULES_VERSION}|{voice}|{speed:.2f}|{text}"
+    return hashlib.sha256(payload.encode("utf-8")).hexdigest()
+
+
+def listening_audio_rel_path(key: str) -> str:
+    return f"audio/listening/{key[:2]}/{key}.opus"

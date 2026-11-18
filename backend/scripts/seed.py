@@ -871,8 +871,8 @@ DEMO_CHAPTERS: dict[str, tuple[str, list[tuple[str, str, list]]]] = {
                 choice("“国家的一切权力属于人民”，这是我国（  ）的核心内容。",
                        ["宪法", "刑法", "民法典"], "A",
                        "宪法是国家的根本法。", 2),
-                fill("全面依法治国的总目标是建设中国特色社会主义法治体系、建设社会主义（  ）国家。（2字）",
-                     "法治", "建设社会主义法治国家。", 3),
+                fill("国家治理方式要从人治转向（　），并建设社会主义（　）国家。",
+                     "法治", "建设中国特色社会主义法治体系、建设社会主义法治国家。", 3),
             ]),
             ("答题方法", "材料-观点-分析三段论", [
                 judge("回答材料分析题应先读设问，再带着问题读材料。", True,
@@ -880,7 +880,7 @@ DEMO_CHAPTERS: dict[str, tuple[str, list[tuple[str, str, list]]]] = {
                 choice("主观题答案组织一般采用（  ）。",
                        ["材料+教材观点+分析", "只抄材料", "只写自己的想法"], "A",
                        "观点与材料结合，分点作答。", 3),
-                fill("价值判断题一般要先（  ）（判断对错），再说明理由。（2字）",
+                fill("这类题目作答时，第一步应先（　）观点的对错，再说明理由。（2字）",
                      "判断", "先明确判断，再陈述理由。", 2),
             ]),
         ]
@@ -1206,10 +1206,18 @@ def _seed_blueprints(db) -> int:
     return len(EXAM_BLUEPRINT_SEEDS)
 
 
-# P2-07 真题库：按蓝图生成 3 套演示真题（按标题+年份+地区幂等）
+# P2-07 演示卷：按蓝图生成 3 套演示「模拟卷」（按标题+年份+地区幂等）
+# EX-11 / R-07 / 评审 R2-01（2026-11-14）：如实标注为内置演示数据，且**不再冒充真题**——
+# 这三套是自主题库拼装的模拟卷，is_past_paper=False、source="mock"；真实真题须按 R-07
+# 台账补录来源并走「草稿→复核→发布」审核流（D-09 §5.7），不得由 seed 生成。
+DEMO_PAST_PAPER_SOURCE = "内置演示数据（非真实真题原卷）"
+DEMO_PAST_PAPER_LICENSE = (
+    "项目内置演示数据，仅用于本地功能演示；不构成公开真题授权，禁止对外分发"
+)
+
 PAST_PAPER_SEEDS: list[dict] = [
     {
-        "title": "深圳市一年级数学期末真题（2025）",
+        "title": "深圳市一年级数学期末模拟卷（2025）",
         "subject": "math",
         "grade": 1,
         "blueprint": "math_primary_unit",
@@ -1218,7 +1226,7 @@ PAST_PAPER_SEEDS: list[dict] = [
         "seed": 11,
     },
     {
-        "title": "深圳市一年级语文期末真题（2025）",
+        "title": "深圳市一年级语文期末模拟卷（2025）",
         "subject": "chinese",
         "grade": 1,
         "blueprint": "chinese_primary_unit",
@@ -1227,7 +1235,7 @@ PAST_PAPER_SEEDS: list[dict] = [
         "seed": 12,
     },
     {
-        "title": "深圳市三年级数学期末真题（2024）",
+        "title": "深圳市三年级数学期末模拟卷（2024）",
         "subject": "math",
         "grade": 3,
         "blueprint": "math_primary_unit",
@@ -1249,10 +1257,15 @@ def _seed_past_papers(db) -> int:
                 Exam.title == spec["title"],
                 Exam.year == spec["year"],
                 Exam.region == spec["region"],
-                Exam.is_past_paper.is_(True),
             )
         )
         if exists is not None:
+            # EX-11 / R-07：seed 自己造的演示卷若来源为空，如实补标注为演示数据，
+            # 不冒充真实公开真题授权；真实题库的存量卷由补录脚本按台账处置。
+            if not exists.source_name:
+                exists.source_name = DEMO_PAST_PAPER_SOURCE
+                exists.license_note = DEMO_PAST_PAPER_LICENSE
+                db.flush()
             continue
         blueprint = db.scalar(
             select(ExamBlueprint).where(ExamBlueprint.code == spec["blueprint"])
@@ -1286,7 +1299,7 @@ def _seed_past_papers(db) -> int:
                 subject=spec["subject"],
                 grade=spec["grade"],
                 year=spec["year"],
-                source="past_paper",
+                source="mock",
                 exam_type="mock",
                 total_score=int(round(paper.total_score)),
                 time_limit_min=blueprint.time_limit_min,
@@ -1302,8 +1315,10 @@ def _seed_past_papers(db) -> int:
                 blueprint_id=blueprint.id,
                 chapter_ids=chapter_ids,
                 status="published",
+                source_name=DEMO_PAST_PAPER_SOURCE,
+                license_note=DEMO_PAST_PAPER_LICENSE,
                 region=spec["region"],
-                is_past_paper=True,
+                is_past_paper=False,
             )
         )
         db.flush()

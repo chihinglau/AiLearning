@@ -250,12 +250,17 @@ def recent_question_ids(
     limit: int = 3,
     before_exam_id: Optional[int] = None,
 ) -> list[int]:
-    """同年级 + 同学科 + 同卷型最近 `limit` 张自建卷的题号（用于跨卷重题去重）。"""
+    """同年级 + 同学科 + 同卷型最近 `limit` 张自建卷的题号（用于跨卷重题去重）。
+
+    只统计在架卷（published/draft）：已下架（offline）的卷不再面向学生，其题号不应
+    继续占用题池——否则旧走下架卷会持续挤占稀缺题型（实测英语听力因此短缺而拒绝出卷）。
+    """
     stmt = select(Exam).where(
         Exam.subject == subject,
         Exam.grade == grade,
         Exam.exam_type == exam_type,
         Exam.source == "generated",
+        Exam.status != "offline",
     )
     if before_exam_id is not None:
         stmt = stmt.where(Exam.id < before_exam_id)

@@ -142,4 +142,48 @@ void main() {
     expect(await service.play(5), isFalse);
     expect(player.playedFile, isNull);
   });
+
+  test('听力与读题缓存文件互不覆盖', () async {
+    final reading = QuestionAudioCache(
+      fetch: (id) async => Uint8List.fromList([1]),
+      directory: tempDir,
+    );
+    final listening = QuestionAudioCache(
+      fetch: (id) async => Uint8List.fromList([2]),
+      directory: tempDir,
+      kind: QuestionAudioKind.listening,
+    );
+
+    expect(reading.fileFor(5).path, endsWith('q_5.opus'));
+    expect(listening.fileFor(5).path, endsWith('q_5_listen.opus'));
+
+    final r = await reading.ensure(5);
+    final l = await listening.ensure(5);
+    expect(r, isNotNull);
+    expect(l, isNotNull);
+    expect(r!.path, isNot(l!.path));
+    expect(await r.length(), 1);
+    expect(await l.length(), 1);
+  });
+
+  test('听力服务播放听力缓存文件', () async {
+    final player = _FakePlayer();
+    final service = QuestionAudioService(
+      api: ApiClient(baseUrl: 'http://127.0.0.1:1'),
+      player: player,
+      fetcher: (id) async => Uint8List.fromList([9]),
+      directoryResolver: () async => tempDir,
+      kind: QuestionAudioKind.listening,
+    );
+
+    expect(await service.play(31, speed: 1.0), isTrue);
+    expect(player.playedFile?.path, endsWith('q_31_listen.opus'));
+  });
+
+  test('音频类型映射服务端 query 与文件后缀', () {
+    expect(QuestionAudioKind.reading.wire, 'reading');
+    expect(QuestionAudioKind.reading.fileSuffix, isEmpty);
+    expect(QuestionAudioKind.listening.wire, 'listening');
+    expect(QuestionAudioKind.listening.fileSuffix, '_listen');
+  });
 }

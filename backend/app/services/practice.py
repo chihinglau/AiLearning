@@ -15,7 +15,7 @@ from app.models.practice import MasteryScore, StudentQuestionRecord, WrongQuesti
 from app.models.user import User
 
 # 预估单题耗时（秒），用于练习配置页展示
-SECONDS_PER_TYPE = {"choice": 30, "fill": 45, "judge": 25, "answer": 120}
+SECONDS_PER_TYPE = {"choice": 30, "listening": 30, "fill": 45, "judge": 25, "answer": 120}
 
 # 题型配比：按学段默认（D-04 §15.2）；unit/pre_exam 模式按单元测蓝图覆盖
 TYPE_RATIO_BY_STAGE: dict[str, dict[str, float]] = {
@@ -23,10 +23,31 @@ TYPE_RATIO_BY_STAGE: dict[str, dict[str, float]] = {
     "junior": {"choice": 0.40, "multiple": 0.10, "judge": 0.05, "fill": 0.20, "answer": 0.25},
     "senior": {"choice": 0.35, "multiple": 0.15, "fill": 0.15, "answer": 0.35},
 }
+
+# 英语专属配比（CR-008）：听力是英语卷的组成部分，必须按配比入卷，
+# 否则组卷池里的 listening 题型永远不会被抽中（此前实测英语单元练习 0 道听力）。
+# 听力题的作答界面同样选出选项，故从 choice 份额中划出，总和仍为 1。
+TYPE_RATIO_BY_STAGE_ENGLISH: dict[str, dict[str, float]] = {
+    "primary": {"listening": 0.20, "choice": 0.20, "judge": 0.15, "fill": 0.30, "answer": 0.15},
+    "junior": {"listening": 0.15, "choice": 0.25, "multiple": 0.10, "judge": 0.05, "fill": 0.20, "answer": 0.25},
+    "senior": {"listening": 0.10, "choice": 0.25, "multiple": 0.15, "fill": 0.15, "answer": 0.35},
+}
 TYPE_RATIO_BY_MODE: dict[str, dict[str, float]] = {
     "unit": {"choice": 0.35, "judge": 0.15, "fill": 0.25, "answer": 0.25},
     "pre_exam": {"choice": 0.30, "multiple": 0.15, "fill": 0.15, "answer": 0.40},
 }
+
+# 英语在「模式专属配比」里的版本（CR-008）：pre_exam/unit 原本走
+# TYPE_RATIO_BY_MODE（无 listening），会让英语模拟卷/单元测组出口语化试卷却零听力，
+# 因此为这两个模式各补一份含听力的英语配比，总和仍为 1。
+TYPE_RATIO_ENGLISH_BY_MODE: dict[str, dict[str, float]] = {
+    "pre_exam": {"listening": 0.15, "choice": 0.20, "multiple": 0.10, "fill": 0.20, "answer": 0.35},
+    "unit": {"listening": 0.20, "choice": 0.20, "judge": 0.10, "fill": 0.25, "answer": 0.25},
+}
+
+# 必须保证入卷的题型（CR-008）：这些题型在知识点覆盖阶段容易被挤掉，
+# 需要在覆盖前按配比预占名额。目前只有英语听力属于此类（卷面固定分节）。
+MUST_QTYPES: frozenset[str] = frozenset({"listening"})
 
 MIN_COVERAGE_RATIO = 0.8      # KP 覆盖率下限（D-04 §7.3）
 COVERAGE_FULL_KP = 3          # 范围 KP ≤ 3 时要求 100% 覆盖
@@ -86,11 +107,18 @@ def get_mode_policy(mode: str) -> ModePolicy:
     return MODE_POLICIES.get(mode, MODE_POLICIES["special"])
 
 
-def ratio_for(stage: str, mode: str) -> dict[str, float]:
-    """题型配比：unit/pre_exam 用练习蓝图表，其余按学段默认。"""
+def ratio_for(stage: str, mode: str, subject: Optional[str] = None) -> dict[str, float]:
+    """题型配比：英语走含听力的专属表（模式优先，其次学段）；其余科目保持原口径。"""
+    is_english = (subject or "").strip().lower() == "english"
+    if is_english and mode in TYPE_RATIO_ENGLISH_BY_MODE:
+        return TYPE_RATIO_ENGLISH_BY_MODE[mode]
     policy = get_mode_policy(mode)
     if policy.type_ratio:
         return policy.type_ratio
+    if is_english:
+        return TYPE_RATIO_BY_STAGE_ENGLISH.get(
+            stage, TYPE_RATIO_BY_STAGE_ENGLISH["primary"]
+        )
     if mode in TYPE_RATIO_BY_MODE:
         return TYPE_RATIO_BY_MODE[mode]
     return TYPE_RATIO_BY_STAGE.get(stage, TYPE_RATIO_BY_STAGE["primary"])
@@ -347,6 +375,25 @@ def select_questions(
                 return question
         return None
 
+    # 题型配比
+    quotas: dict[str, int] = {}
+    # 必备题型预占（CR-008）：listening 属于英语卷的固定构成，但知识点覆盖阶段
+    # 会先把名额用满，配额补齐轮到时已无空位（实测 10 题只出 1 道听力甚至 0 道）。
+    # 因此在 KP 覆盖之前，先按配比预占必备题型的名额；非英语科目 MUST 为空，行为不变。
+    if type_ratio:
+        existing = {q.q_type for q in pool}
+        quotas = {
+            q_type: int(round(count * ratio))
+            for q_type, ratio in type_ratio.items()
+            if q_type in existing and ratio > 0
+        }
+        for q_type in sorted([t for t in MUST_QTYPES if t in quotas], key=lambda t: -quotas[t]):
+            got = 0
+            while got < quotas[q_type] and len(selected) < count:
+                if take_any(q_type) is None:
+                    break
+                got += 1
+
     # 覆盖率优先：每个 KP 至少 1 题
     for key in bucket_keys:
         if not key or len(selected) >= count or len(covered) >= target:
@@ -361,14 +408,8 @@ def select_questions(
         selected.append(question)
         covered.add(key)
 
-    # 题型配比
-    if type_ratio:
-        existing = {q.q_type for q in pool}
-        quotas = {
-            q_type: int(round(count * ratio))
-            for q_type, ratio in type_ratio.items()
-            if q_type in existing and ratio > 0
-        }
+    # 题型配比补齐（quotas 已在上方按必备题型预占时算好）
+    if quotas:
         actual = {q_type: sum(1 for q in selected if q.q_type == q_type) for q_type in quotas}
         for q_type in sorted(quotas, key=lambda t: (-quotas[t], t)):
             while actual.get(q_type, 0) < quotas[q_type] and len(selected) < count:
@@ -445,7 +486,7 @@ def build_plan(
         seed=actual_seed,
         due_ids=due,
         due_quota_ratio=policy.due_quota_ratio,
-        type_ratio=ratio_for(stage, mode),
+        type_ratio=ratio_for(stage, mode, subject=pool[0].subject if pool else None),
         duration_limit_min=duration_limit_min,
         kp_ids=range_kp_ids,
         weak_kps=weak,

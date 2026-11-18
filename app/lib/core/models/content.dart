@@ -82,6 +82,7 @@ class Question {
     required this.subject,
     required this.qType,
     required this.stem,
+    this.listeningScript,
     this.knowledgePointId,
     this.options = const [],
     this.difficulty = 3,
@@ -95,6 +96,11 @@ class Question {
   final String subject;
   final String qType;
   final String stem;
+
+  /// 听力题的听力材料原文（`content.script`）；非听力题为 null。
+  ///
+  /// 只在需要兜底朗读时使用：作答界面不展示该文本，避免泄漏听力内容。
+  final String? listeningScript;
   final int? knowledgePointId;
   final List<QuestionOption> options;
   final int difficulty;
@@ -103,6 +109,9 @@ class Question {
   /// 仅离线整册下载的题目携带答案与解析；在线接口不返回，保持 null。
   final Map<String, dynamic>? answer;
   final String? analysis;
+
+  /// 听力题：播放的是听力材料而非题干。
+  bool get isListening => qType == 'listening';
 
   factory Question.fromJson(Map<String, dynamic> json) {
     final content = json['content'] as Map<String, dynamic>? ?? const {};
@@ -114,6 +123,7 @@ class Question {
       subject: json['subject'] as String? ?? '',
       qType: json['q_type'] as String? ?? 'choice',
       stem: content['stem'] as String? ?? '',
+      listeningScript: content['script'] as String?,
       knowledgePointId: json['knowledge_point_id'] as int?,
       options: rawOptions
           .map((item) => QuestionOption.fromJson(item as Map<String, dynamic>))

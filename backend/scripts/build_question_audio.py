@@ -59,6 +59,7 @@ class AudioJob:
     speed: float
     key: str
     target: Path
+    kind: str = "reading"
 
 
 @dataclass
@@ -105,8 +106,13 @@ def collect_jobs(
     out_dir: Path,
     speed: float,
     voice_override: str | None = None,
+    kinds: Sequence[str] = ("reading",),
 ) -> tuple[list[AudioJob], int]:
-    """按范围挑选已发布题目并计算缓存键；返回 (jobs, 空文本题数)。"""
+    """按范围挑选已发布题目并计算缓存键；返回 (jobs, 空文本题数)。
+
+    `kinds` 支持 `reading`（题干+选项，读题）与 `listening`（content.script，听力材料）。
+    两者语义与缓存目录都不同，同一道题可同时产出两份音频。
+    """
     stmt = (
         select(Question, Chapter.grade)
         .join(Chapter, Question.chapter_id == Chapter.id)
@@ -121,6 +127,33 @@ def collect_jobs(
     jobs: list[AudioJob] = []
     empty = 0
     for question, grade in session.execute(stmt):
+        if (
+            "listening" in kinds
+            and question.q_type == "listening"
+            and question.subject in speech.LISTENING_SUBJECTS
+        ):
+            script = speech.listening_script(question)
+            if not script.strip():
+                empty += 1
+                continue
+            voice = voice_override or speech.voice_for_subject(question.subject)
+            key = speech.listening_cache_key(script, voice, speed)
+            jobs.append(
+                AudioJob(
+                    question_id=question.id,
+                    subject=question.subject,
+                    grade=int(grade),
+                    text=script,
+                    voice=voice,
+                    speed=speed,
+                    key=key,
+                    target=out_dir / speech.listening_audio_rel_path(key),
+                    kind="listening",
+                )
+            )
+            continue
+        if "reading" not in kinds:
+            continue
         text = speech.text_for_question(question)
         if not text.strip():
             empty += 1
@@ -429,10 +462,22 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser.add_argument("--out-dir", default="")
     parser.add_argument("--failed-list", default="")
     parser.add_argument("--manifest", default="")
+    parser.add_argument(
+        "--kind",
+        action="append",
+        help="合成目标，可逗号分隔：reading（读题，默认）/ listening（听力材料 content.script）",
+    )
     args = parser.parse_args(argv)
 
-    grades = parse_ints(args.grade, speech.ALLOWED_GRADES)
-    subjects = parse_strs(args.subject, speech.ALLOWED_SUBJECTS)
+    kinds = parse_strs(args.kind, ("reading",))
+    if "listening" in kinds and "reading" not in kinds:
+        default_grades: Sequence[int] = speech.LISTENING_GRADES
+        default_subjects: Sequence[str] = speech.LISTENING_SUBJECTS
+    else:
+        default_grades = speech.ALLOWED_GRADES
+        default_subjects = speech.ALLOWED_SUBJECTS
+    grades = parse_ints(args.grade, default_grades)
+    subjects = parse_strs(args.subject, default_subjects)
     out_dir = Path(args.out_dir or settings.question_audio_dir).resolve()
     model_dir = Path(
         args.model_dir
@@ -449,6 +494,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             out_dir=out_dir,
             speed=args.speed,
             voice_override=args.voice or None,
+            kinds=kinds,
         )
     finally:
         session.close()

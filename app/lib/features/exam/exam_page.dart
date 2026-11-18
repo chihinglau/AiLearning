@@ -9,10 +9,9 @@ import 'package:ai_learning/core/offline/offline_exam_store.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
 import 'package:ai_learning/core/speech/question_speech.dart';
-import 'package:ai_learning/core/speech/speech_policy.dart';
 import 'package:ai_learning/features/exam/signature_answer_page.dart';
+import 'package:ai_learning/features/speech/question_speech_button.dart';
 import 'package:ai_learning/features/speech/readable_question_text.dart';
-import 'package:ai_learning/features/speech/speech_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -514,11 +513,6 @@ class _ExamPageState extends ConsumerState<ExamPage> {
   // 突然出声会干扰考场秩序，学生需要时点按即可（范围见 SpeechPolicy）。
   // ------------------------------------------------------------------
 
-  bool _speechEnabled(Question question) {
-    final grade = ref.watch(currentUserProvider)?.grade;
-    return SpeechPolicy.enabled(grade: grade, subject: question.subject);
-  }
-
   Future<void> _stopSpeaking() async {
     try {
       await ref.read(questionReaderProvider).stop();
@@ -675,19 +669,24 @@ class _ExamPageState extends ConsumerState<ExamPage> {
                   style: theme.textTheme.titleLarge,
                 ),
               ),
-              if (_speechEnabled(item.question))
-                SpeechButton(
+              if (!item.question.isListening)
+                QuestionSpeechButton(
                   key: ValueKey('exam-speech-${item.question.id}-$_index'),
-                  text: QuestionSpeech.questionScript(
-                    stem: item.question.stem,
-                    options: item.question.options,
-                  ),
-                  language:
-                      item.question.subject == 'english' ? 'en-US' : 'zh-CN',
-                  questionId: item.question.id,
+                  question: item.question,
                 ),
             ],
           ),
+          if (item.question.isListening) ...[
+            const SizedBox(height: 10),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: QuestionSpeechButton(
+                key: ValueKey('exam-listening-${item.question.id}-$_index'),
+                question: item.question,
+                showLabel: true,
+              ),
+            ),
+          ],
           const SizedBox(height: 20),
           _buildAnswerArea(item.question),
           const SizedBox(height: 24),
@@ -988,6 +987,7 @@ class _ExamPageState extends ConsumerState<ExamPage> {
       case 'answer':
         return '解答题';
       case 'listen':
+      case 'listening':
         return '听力题';
       case 'composition':
       case 'essay':

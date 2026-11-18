@@ -1,5 +1,6 @@
 """自适应学习闭环：组卷 → 提交（判题+掌握度+错题调度）→ 错题本 → 复习 → 学情。"""
 
+import logging
 from datetime import datetime, timedelta
 from typing import Optional
 
@@ -72,6 +73,8 @@ from app.services import recommendation, study_state
 from app.services import textbook as textbook_service
 from app.services import textbook_bundle as bundle_service
 from app.services import wrong_reason as wrong_reason_service
+
+logger = logging.getLogger("ailearning.practice")
 
 router = APIRouter(prefix="/learn", tags=["自适应学习"])
 
@@ -656,6 +659,15 @@ def practice_preview(
     db: Session = Depends(get_db),
 ) -> PracticePreviewOut:
     """组卷预览：题量、知识点覆盖、预计时长、seed（与开始练习共用同一 seed）。"""
+    logger.info(
+        "practice/preview scope=%s ids=%s count=%s q_types=%s mode=%s seed=%s",
+        payload.scope_type,
+        payload.scope_ids,
+        payload.count,
+        payload.q_types,
+        payload.mode,
+        payload.seed,
+    )
     plan = practice_service.build_plan(
         db,
         user=current,
@@ -1511,10 +1523,19 @@ def question_audio(
     speed: float = Query(
         default=float(settings.question_audio_default_speed), ge=0.5, le=2.0
     ),
+    kind: str = Query(
+        default="reading",
+        pattern="^(reading|listening)$",
+        description="reading=读题音频（题干+选项）；listening=听力材料音频（content.script）",
+    ),
     current: User = Depends(require_permission("learn:content:read")),
     db: Session = Depends(get_db),
 ) -> Response:
-    """TT-04 题干朗读音频：ETag/304、未就绪 404、单用户 60 次/分钟限流。"""
+    """TT-04 题干朗读音频：ETag/304、未就绪 404、单用户 60 次/分钟限流。
+
+    CR-008 起支持 `kind=listening`：听力题播 `content.script`，与读题音频分目录、
+    分缓存键，互不覆盖；解除了 1–3 年级限制（听力题覆盖英语 1–9 年级）。
+    """
     allowed, retry_after = rate_limiter.allow(
         f"question-audio:{current.id}",
         settings.question_audio_rate_limit_per_minute,
@@ -1544,20 +1565,39 @@ def question_audio(
     if row is None:
         raise _not_ready()
     question, grade = row
-    if (
-        question.status != "published"
-        or grade not in speech.ALLOWED_GRADES
-        or question.subject not in speech.ALLOWED_SUBJECTS
-    ):
+    if question.status != "published":
         raise _not_ready()
-    text = speech.text_for_question(question)
-    if not text.strip():
-        raise _not_ready()
-    resolved_voice = voice or speech.voice_for_subject(question.subject)
-    key = speech.cache_key(text, resolved_voice, speed)
+
+    if kind == "listening":
+        # 听力材料：只有听力题才有 script，且首期只覆盖英语 1–9 年级
+        if (
+            question.q_type != "listening"
+            or grade not in speech.LISTENING_GRADES
+            or question.subject not in speech.LISTENING_SUBJECTS
+        ):
+            raise _not_ready()
+        text = speech.listening_script(question)
+        if not text.strip():
+            raise _not_ready()
+        resolved_voice = voice or speech.voice_for_subject(question.subject)
+        key = speech.listening_cache_key(text, resolved_voice, speed)
+        rel_path = speech.listening_audio_rel_path(key)
+    else:
+        if (
+            grade not in speech.ALLOWED_GRADES
+            or question.subject not in speech.ALLOWED_SUBJECTS
+        ):
+            raise _not_ready()
+        text = speech.text_for_question(question)
+        if not text.strip():
+            raise _not_ready()
+        resolved_voice = voice or speech.voice_for_subject(question.subject)
+        key = speech.cache_key(text, resolved_voice, speed)
+        rel_path = speech.audio_rel_path(key)
+
     if question_id in question_audio_service.rework_ids():
         raise _not_ready()
-    path = question_audio_service.audio_dir() / speech.audio_rel_path(key)
+    path = question_audio_service.audio_dir() / rel_path
     if not path.is_file() or path.stat().st_size == 0:
         raise _not_ready()
 

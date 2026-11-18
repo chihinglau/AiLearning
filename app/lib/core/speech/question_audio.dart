@@ -12,6 +12,21 @@ const int questionAudioCacheBytes = 200 * 1024 * 1024;
 /// 生成音频统一按 1.0 倍速合成；客户端用播放器变速，避免为每个语速重复生成。
 const double questionAudioGeneratedSpeed = 1.0;
 
+/// 同一道题的两类音频：读题（题干+选项）与听力材料（content.script）。
+///
+/// 服务端按 `kind` 分目录、分缓存键；客户端也按 kind 分本地文件名，
+/// 否则 `q_12.opus` 会被两种语义互相覆盖。
+enum QuestionAudioKind {
+  reading,
+  listening;
+
+  /// 服务端 query 参数值
+  String get wire => name;
+
+  /// 本地缓存文件名后缀（reading 保持旧名，兼容既有缓存）
+  String get fileSuffix => this == QuestionAudioKind.reading ? '' : '_listen';
+}
+
 typedef QuestionAudioFetcher = Future<Uint8List> Function(int questionId);
 
 /// 单题音频文件缓存：命中直接返回；未命中下载落盘；超限按最后访问时间淘汰。
@@ -20,16 +35,19 @@ class QuestionAudioCache {
     required this.fetch,
     required Directory directory,
     int maxBytes = questionAudioCacheBytes,
+    this.kind = QuestionAudioKind.reading,
   })  : _directory = directory,
         _maxBytes = maxBytes;
 
   final QuestionAudioFetcher fetch;
   final Directory _directory;
   final int _maxBytes;
+  final QuestionAudioKind kind;
 
   Directory get directory => _directory;
 
-  File fileFor(int questionId) => File('${_directory.path}/q_$questionId.opus');
+  File fileFor(int questionId) =>
+      File('${_directory.path}/q_$questionId${kind.fileSuffix}.opus');
 
   /// 返回可播放文件；下载失败（404 未就绪 / 429 / 离线）返回 null，由调用方回退系统 TTS。
   Future<File?> ensure(int questionId) async {
@@ -186,6 +204,7 @@ class QuestionAudioService {
     QuestionAudioFetcher? fetcher,
     Future<Directory> Function()? directoryResolver,
     int maxBytes = questionAudioCacheBytes,
+    this.kind = QuestionAudioKind.reading,
   })  : _api = api,
         _player = player ?? JustAudioQuestionPlayer(),
         _ownsPlayer = player == null,
@@ -200,6 +219,9 @@ class QuestionAudioService {
   final Future<Directory> Function() _directoryResolver;
   final int _maxBytes;
 
+  /// 该实例负责的音频类型；听力材料请用 `listeningAudioServiceProvider`。
+  final QuestionAudioKind kind;
+
   QuestionAudioCache? _cache;
 
   ValueListenable<bool> get playing => _player.playing;
@@ -212,6 +234,7 @@ class QuestionAudioService {
       fetch: _fetcher ?? _download,
       directory: await _directoryResolver(),
       maxBytes: _maxBytes,
+      kind: kind,
     );
   }
 
@@ -219,7 +242,10 @@ class QuestionAudioService {
     // 固定按生成倍速取音频，实际语速由播放器变速，避免多倍速重复合成。
     final binary = await _api.getBytes(
       '/api/learn/questions/$questionId/audio',
-      query: {'speed': questionAudioGeneratedSpeed},
+      query: {
+        'speed': questionAudioGeneratedSpeed,
+        if (kind != QuestionAudioKind.reading) 'kind': kind.wire,
+      },
     );
     return binary.bytes;
   }

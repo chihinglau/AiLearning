@@ -63,20 +63,20 @@ _SECTIONS: dict[str, dict[str, list[dict]]] = {
     },
     "english": {
         "unit": [
-            {"name": "一、听力", "q_type": "listening", "count": 8, "score_each": 1, "band": "easy"},
+            {"name": "一、听力", "q_type": "listening", "count": 8, "score_each": 1},
             {"name": "二、单项选择", "q_type": "choice", "count": 8, "score_each": 2, "band": "easy"},
             {"name": "三、词汇填空", "q_type": "fill", "count": 8, "score_each": 2, "band": "medium"},
             {"name": "四、阅读理解", "q_type": "choice", "count": 4, "score_each": 5, "band": "hard"},
         ],
         "midterm": [
-            {"name": "一、听力", "q_type": "listening", "count": 10, "score_each": 2, "band": "easy"},
+            {"name": "一、听力", "q_type": "listening", "count": 10, "score_each": 2},
             {"name": "二、单项选择", "q_type": "choice", "count": 12, "score_each": 2, "band": "easy"},
             {"name": "三、词汇与句型填空", "q_type": "fill", "count": 10, "score_each": 2, "band": "medium"},
             {"name": "四、阅读理解", "q_type": "choice", "count": 6, "score_each": 3, "band": "medium"},
             {"name": "五、书面表达", "q_type": "composition", "count": 1, "score_each": 18, "band": "hard"},
         ],
         "final": [
-            {"name": "一、听力", "q_type": "listening", "count": 10, "score_each": 2, "band": "easy"},
+            {"name": "一、听力", "q_type": "listening", "count": 10, "score_each": 2},
             {"name": "二、单项选择", "q_type": "choice", "count": 12, "score_each": 2, "band": "easy"},
             {"name": "三、词汇与句型填空", "q_type": "fill", "count": 10, "score_each": 2, "band": "medium"},
             {"name": "四、阅读理解", "q_type": "choice", "count": 6, "score_each": 3, "band": "medium"},
@@ -87,12 +87,14 @@ _SECTIONS: dict[str, dict[str, list[dict]]] = {
 
 MIX = {"easy": 0.6, "medium": 0.3, "hard": 0.1}
 
-# 听力节暂以选择题替代（走查 D-1，2026-11-18）：
-# 题库 listening 题型已建设，但 Question 没有音频字段、作答页也没有播放控件，
-# 学生打开「听录音，选出……」只能盲选，属于 P0 不可作答缺陷。
-# 音频资产（Question.audio_url + 播放控件 + 逐题音频）接入后，把该开关置 False
-# 即恢复原 listening 分节；题量/分值不变，因此不影响总分与蓝图口径。
-LISTENING_AS_CHOICE = True
+# 听力节恢复（CR-008，2026-11-18）：
+# 音频三件套已就位——服务端 `GET /questions/{id}/audio?kind=listening`
+# （`question_speech.listening_script/listening_cache_key`）+ 1300 条 listening 音频资产
+# （`backend/build/question_audio/audio/listening/`）+ 前端播放控件
+# （`QuestionSpeechButton` + `QuestionAudioKind.listening`）。
+# 因此关闭降级，英语卷恢复原 listening 分节；题量/分值不变，总分与蓝图口径不受影响。
+# 若后续音频资产缺失需临时降级，把该开关置回 True 并重跑 `seed_exam_blueprint_matrix.py`。
+LISTENING_AS_CHOICE = False
 
 
 def _apply_listening_fallback() -> None:

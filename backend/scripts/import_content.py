@@ -110,6 +110,11 @@ def main() -> int:
         "--manifest",
         help="导入清单 JSON；记录文件 hash 与结果，相同文件自动跳过",
     )
+    parser.add_argument(
+        "--allow-answer-leak",
+        action="store_true",
+        help="跳过答案泄漏门禁（CR-008）：仅用于确认属合法题型的存量模板",
+    )
     args = parser.parse_args()
 
     root = Path(args.path)
@@ -137,8 +142,13 @@ def main() -> int:
                 print(f"{label}: 已导入且文件未变，跳过（manifest）")
                 continue
             try:
-                data = load_document(file)
-                report = import_document(session, data, overwrite=args.overwrite)
+                data = load_document(file, allow_answer_leak=args.allow_answer_leak)
+                report = import_document(
+                    session,
+                    data,
+                    overwrite=args.overwrite,
+                    allow_answer_leak=args.allow_answer_leak,
+                )
                 print(
                     f"{label}: 教材{'新建' if report['textbook_created'] else '已存在'}"
                     f"，章节 +{report['chapters_created']}/~{report['chapters_updated']}"

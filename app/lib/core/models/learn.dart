@@ -824,6 +824,8 @@ class KpExample {
     switch (qType) {
       case 'choice':
         return '单选题';
+      case 'listening':
+        return '听力题';
       case 'fill':
         return '填空题';
       case 'judge':

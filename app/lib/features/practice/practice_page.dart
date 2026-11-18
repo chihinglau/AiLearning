@@ -8,8 +8,8 @@ import 'package:ai_learning/core/services/api_client.dart';
 import 'package:ai_learning/core/speech/question_speech.dart';
 import 'package:ai_learning/core/speech/speech_policy.dart';
 import 'package:ai_learning/core/theme/app_accents.dart';
+import 'package:ai_learning/features/speech/question_speech_button.dart';
 import 'package:ai_learning/features/speech/readable_question_text.dart';
-import 'package:ai_learning/features/speech/speech_button.dart';
 import 'package:ai_learning/widgets/accent_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -185,18 +185,24 @@ class _PracticePageState extends ConsumerState<PracticePage> {
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
               ),
-              if (_speechEnabled(question))
-                SpeechButton(
+              if (!question.isListening)
+                QuestionSpeechButton(
                   key: ValueKey('speech-${question.id}'),
-                  text: QuestionSpeech.questionScript(
-                    stem: question.stem,
-                    options: question.options,
-                  ),
-                  language: question.subject == 'english' ? 'en-US' : 'zh-CN',
-                  questionId: question.id,
+                  question: question,
                 ),
             ],
           ),
+          if (question.isListening) ...[
+            const SizedBox(height: 10),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: QuestionSpeechButton(
+                key: ValueKey('speech-listening-${question.id}'),
+                question: question,
+                showLabel: true,
+              ),
+            ),
+          ],
           const SizedBox(height: 20),
           ...question.options.map(
             (option) => Card(

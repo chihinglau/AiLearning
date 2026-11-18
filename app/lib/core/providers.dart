@@ -173,6 +173,16 @@ final questionAudioServiceProvider = Provider<QuestionAudioService>((ref) {
   return service;
 });
 
+/// 听力材料音频（`kind=listening`）：与读题分开缓存，避免同题两语义互相覆盖。
+final listeningAudioServiceProvider = Provider<QuestionAudioService>((ref) {
+  final service = QuestionAudioService(
+    api: ref.watch(apiClientProvider),
+    kind: QuestionAudioKind.listening,
+  );
+  ref.onDispose(() => unawaited(service.dispose()));
+  return service;
+});
+
 final speechSettingsStoreProvider = Provider<SpeechSettingsStore>((ref) {
   return SpeechSettingsStore(ref.watch(platformPalProvider).storage);
 });

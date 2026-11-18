@@ -14,8 +14,8 @@ import 'package:ai_learning/core/services/learn_service.dart';
 import 'package:ai_learning/core/speech/question_speech.dart';
 import 'package:ai_learning/core/speech/speech_policy.dart';
 import 'package:ai_learning/features/learn/widgets/offline_banner.dart';
+import 'package:ai_learning/features/speech/question_speech_button.dart';
 import 'package:ai_learning/features/speech/readable_question_text.dart';
-import 'package:ai_learning/features/speech/speech_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -601,18 +601,24 @@ class _SessionPageState extends ConsumerState<SessionPage> {
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
               ),
-              if (_speechEnabled(question))
-                SpeechButton(
+              if (!question.isListening)
+                QuestionSpeechButton(
                   key: ValueKey('speech-${question.id}'),
-                  text: QuestionSpeech.questionScript(
-                    stem: question.stem,
-                    options: question.options,
-                  ),
-                  language: question.subject == 'english' ? 'en-US' : 'zh-CN',
-                  questionId: question.id,
+                  question: question,
                 ),
             ],
           ),
+          if (question.isListening) ...[
+            const SizedBox(height: 10),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: QuestionSpeechButton(
+                key: ValueKey('speech-listening-${question.id}'),
+                question: question,
+                showLabel: true,
+              ),
+            ),
+          ],
           const SizedBox(height: 20),
           _buildAnswerArea(question),
           const SizedBox(height: 20),
@@ -750,6 +756,7 @@ class _SessionPageState extends ConsumerState<SessionPage> {
       case 'fill':
         return '填空题';
       case 'listen':
+      case 'listening':
         return '听力题';
       case 'composition':
       case 'essay':

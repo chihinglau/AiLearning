@@ -38,6 +38,7 @@ class PracticeConfigPage extends ConsumerStatefulWidget {
 class _PracticeConfigPageState extends ConsumerState<PracticeConfigPage> {
   static const _qTypeLabels = {
     'choice': '单选题',
+    'listening': '听力题',
     'multiple': '多选题',
     'fill': '填空题',
     'judge': '判断题',
@@ -607,14 +608,20 @@ class _PreviewCard extends StatelessWidget {
 
   String _typeLabel(String type) {
     switch (type) {
+      case 'choice':
+        return '单选';
+      case 'listening':
+        return '听力';
       case 'multiple':
         return '多选';
       case 'fill':
         return '填空';
       case 'judge':
         return '判断';
+      case 'answer':
+        return '解答';
       default:
-        return '单选';
+        return '其他';
     }
   }
 }

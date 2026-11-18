@@ -582,6 +582,7 @@ class _ExamReportPageState extends ConsumerState<ExamReportPage> {
       case 'answer':
         return '解答题';
       case 'listen':
+      case 'listening':
         return '听力题';
       case 'composition':
       case 'essay':

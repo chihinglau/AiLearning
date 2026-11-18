@@ -658,6 +658,7 @@ AccentCard(
 | 场景 | 规格 |
 |---|---|
 | 入口 | 题干右上角喇叭按钮（24dp），播放中切换为停止态；**覆盖三处作答场景：练习页、复习/会话页、考试页（exam_page）** |
+| 听力题入口（2026-11-18，CR-008） | **不放行内小图标**，改为题干下方整行左侧的「🔊 播放听力材料」大按钮（`OutlinedButton.icon`，高 44dp，播放中变「停止播放」）。原因：EBG-AN00 真机上行内 `IconButton`（含 48dp 版）hit-test 被题干 `Expanded` 区域挤占，多点无响应；大按钮落地后 `/audio?kind=listening` 立即 200。三处作答页统一 |
 | 自动读题 | 1–3 年级默认开启，进入题目自动播放；开关位于「我的 → 学习设置」。**考试页刻意不自动朗读**（计时中突然出声会干扰考场秩序），只提供手动喇叭 |
 | 语速 | 默认 0.85，可选 0.7 / 1.0；记入本地设置，随音频缓存键 |
 | 选项 | 按「选项 A，……」逐项朗读，不读选项字母以外的符号 |
@@ -694,12 +695,13 @@ AccentCard(
 
 | 项 | 内容 |
 |---|---|
-| 接口 | `GET /api/learn/questions/{id}/audio?voice=&speed=`，返回 `audio/ogg` |
+| 接口 | `GET /api/learn/questions/{id}/audio?voice=&speed=&kind=`，返回 `audio/ogg`；`kind` 取 `reading`（默认，题干+选项读题）或 `listening`（听力材料，2026-11-18 CR-008 新增） |
 | 缓存头 | `ETag`（内容哈希）+ `Cache-Control: public, max-age=2592000`，命中返回 304 |
 | 权限 | `learn:content:read`；学生只能读取已发布题目 |
 | 未就绪 | 404 `AUDIO_NOT_READY`，客户端降级系统 TTS 并异步重试 |
 | 限流 | 单用户 60 次/分钟（防批量抓取） |
 | 生产脚本 | `scripts/build_question_audio.py --subject --grade --dry-run`，调用本地开源 TTS（sherpa-onnx/Piper）+ `ffmpeg` 转 Opus，按缓存键增量合成，支持并发/重试/失败清单 |
+| 听力音频（CR-008） | 听力题由 q_type='listening' 识别（content.script 即听力原文），kind=listening 分支要求 q_type=='listening'、年级 1–9、科目 english，否则 404；产物落 udio/listening/{hash前2}/{hash}.opus；全库 1348 条听力题已合成 1294 条（跳过 6、失败 0），opus 1166 文件 / 5.92 MB；实测 GET /api/learn/questions/15755/audio?kind=listening → 200 udio/ogg |
 | 生成范围 | 仅 `grade in (1,2,3)` 且 `subject in (chinese, math, english)`；其余返回 404 `AUDIO_NOT_READY`，客户端直接走系统 TTS。**4–9 年级英语按 CR-007 允许读题但不出预生成音频**，稳定走系统 TTS 兜底（真机已验：`TtsSystemService onSynthesizeText lang=eng` → AudioTrack started，无报错） |
 
 #### 3.9.8 成本与容量测算

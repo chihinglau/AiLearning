@@ -71,9 +71,18 @@ def _answer_text(q: dict) -> str:
     return str(a or "")
 
 
+def _listen_script(q: dict) -> str:
+    """听力题的朗读稿（content.script）。有了它服务端就能按需合成/命中音频。"""
+    c = q.get("content") or {}
+    for key in ("script", "transcript", "audio_text"):
+        if isinstance(c.get(key), str) and c[key].strip():
+            return c[key].strip()
+    return ""
+
+
 def _has_audio(q: dict) -> bool:
     """只看结构化字段：题目正文里的「听录音」三个字不算有音频。"""
-    keys = {"audio", "audio_url", "audio_path", "audio_file", "media", "media_url", "mp3", "wav"}
+    keys = {"audio", "audio_url", "audio_path", "audio_file", "media", "media_url", "mp3", "wav", "ogg", "opus"}
     stack = [q.get("content"), q.get("meta"), q.get("media")]
     while stack:
         node = stack.pop()
@@ -86,6 +95,18 @@ def _has_audio(q: dict) -> bool:
         elif isinstance(node, list):
             stack.extend(node)
     return False
+
+
+def _listening_playable(q: dict) -> bool:
+    """听力题是否学生侧真能播放（CR-008 口径）。
+
+    两条通道任一成立即可：
+      1) 题目自带音频字段（预置 mp3/opus 等）；
+      2) 题目带朗读稿 script —— 服务端 `GET /questions/{id}/audio?kind=listening`
+         按 script 命中预生成音频或现场 TTS，前端 `QuestionSpeechButton` 直接播放。
+    只有「既无音频字段、又无朗读稿」才属于学生无法作答的 P0。
+    """
+    return _has_audio(q) or bool(_listen_script(q))
 
 
 def load_questions(db, ids: list[int]) -> dict[int, dict]:
@@ -147,7 +168,10 @@ def audit_paper(exam: Exam, bank: dict[int, dict]) -> tuple[dict, list[dict]]:
         except Exception:
             pass
         stem = _stem(q)
-        stems[stem] += 1
+        # LR-6 判重口径：听力题干是固定指令模板（「听录音，选出你听到的单词」），
+        # 一册 80+ 道只有 8 种题干，真正的区分点在 script。故听力按朗读稿判重。
+        stem_key = f"[听力]{_listen_script(q)}" if qt in ("listening", "listen") else stem
+        stems[stem_key] += 1
         sec = q.get("section_name") or q.get("section") or ""
         if sec and (not sections or sections[-1] != sec):
             sections.append(sec)
@@ -155,10 +179,10 @@ def audit_paper(exam: Exam, bank: dict[int, dict]) -> tuple[dict, list[dict]]:
         if not stem:
             add("LR-0", "P0", i, "题干为空")
 
-        # LR-1 听力题必须有音频，否则学生无法作答
+        # LR-1 听力题必须学生侧可播放：有音频字段或朗读稿（服务端按稿合成音频）
         if qt in ("listening", "listen"):
-            if not _has_audio(q):
-                add("LR-1", "P0", i, "听力题无任何音频字段（学生无法作答）")
+            if not _listening_playable(q):
+                add("LR-1", "P0", i, "听力题既无音频字段也无朗读稿（学生无法作答）")
 
         # LR-2 选择题
         if qt in ("choice", "multiple"):
@@ -247,7 +271,9 @@ def main() -> int:
     db = SessionLocal()
     try:
         exams = db.scalars(
-            select(Exam).where(Exam.title.like("%走查卷%")).order_by(Exam.id)
+            select(Exam)
+            .where(Exam.title.like("%走查卷%"), Exam.status == "published")
+            .order_by(Exam.id)
         ).all()
     finally:
         db.close()
