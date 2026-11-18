@@ -1,0 +1,2300 @@
+{
+  "subject": "biology",
+  "grade": 8,
+  "version": "人教版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第四单元 人体生理与健康（二）",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "消化与吸收",
+      "parent": "第四单元 人体生理与健康（二）",
+      "order_index": 1,
+      "explanation": "食物在消化道内被分解为可吸收的小分子，小肠是主要吸收器官。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "血液循环",
+      "parent": "第四单元 人体生理与健康（二）",
+      "order_index": 2,
+      "explanation": "心脏是血液循环的动力器官，血液在体循环和肺循环中运输物质。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "呼吸与气体交换",
+      "parent": "第四单元 人体生理与健康（二）",
+      "order_index": 3,
+      "explanation": "肺是气体交换的场所，肺泡与血液间进行氧气和二氧化碳的交换。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "排泄与泌尿系统",
+      "parent": "第四单元 人体生理与健康（二）",
+      "order_index": 4,
+      "explanation": "肾脏形成尿液排出代谢废物，排尿是最主要的排泄途径。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第六章 人体生命活动的调节",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "反射与反射弧",
+      "parent": "第六章 人体生命活动的调节",
+      "order_index": 1,
+      "explanation": "反射是人体通过神经系统对外界刺激作出的规律性反应，结构基础是反射弧。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "激素调节",
+      "parent": "第六章 人体生命活动的调节",
+      "order_index": 2,
+      "explanation": "内分泌腺分泌激素，量少作用大，如甲状腺激素促进代谢、胰岛素调节血糖。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "眼与耳的结构",
+      "parent": "第六章 人体生命活动的调节",
+      "order_index": 3,
+      "explanation": "眼球的晶状体相当于镜头，视网膜形成物像；耳分为外耳、中耳、内耳。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "神经调节与激素调节的关系",
+      "parent": "第六章 人体生命活动的调节",
+      "order_index": 4,
+      "explanation": "人体生命活动主要受神经系统调节，同时受激素调节影响，二者相互协调。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第七章 健康地生活",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "传染病及其预防",
+      "parent": "第七章 健康地生活",
+      "order_index": 1,
+      "explanation": "传染病由病原体引起，能在人与人之间传播，预防要控制传染源、切断传播途径、保护易感人群。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "免疫与免疫防线",
+      "parent": "第七章 健康地生活",
+      "order_index": 2,
+      "explanation": "人体有三道防线，第一、二道是非特异性免疫，第三道是特异性免疫。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "安全用药与急救",
+      "parent": "第七章 健康地生活",
+      "order_index": 3,
+      "explanation": "处方药需凭医生处方购买，急救要掌握心肺复苏和止血方法。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "健康的生活方式",
+      "parent": "第七章 健康地生活",
+      "order_index": 4,
+      "explanation": "合理营养、适量运动、规律作息、不吸烟酗酒、心理平衡是健康基础。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第五单元 生物与环境",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "生态因素",
+      "parent": "第五单元 生物与环境",
+      "order_index": 1,
+      "explanation": "生态因素分非生物因素（光、温度、水等）和生物因素（同种和不同种生物）。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "生物对环境的适应",
+      "parent": "第五单元 生物与环境",
+      "order_index": 2,
+      "explanation": "生物在形态、结构和行为上适应环境，如仙人掌叶退化成刺减少水分散失。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "生物对环境的影响",
+      "parent": "第五单元 生物与环境",
+      "order_index": 3,
+      "explanation": "生物的生命活动会改变环境，如蚯蚓松土、植树防风固沙。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "探究实验与对照",
+      "parent": "第五单元 生物与环境",
+      "order_index": 4,
+      "explanation": "探究要设置对照实验，遵循单一变量原则，重复实验减少误差。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第一章 生态系统",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "生态系统的组成",
+      "parent": "第一章 生态系统",
+      "order_index": 1,
+      "explanation": "生态系统由生物部分（生产者、消费者、分解者）和非生物部分组成。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "食物链与食物网",
+      "parent": "第一章 生态系统",
+      "order_index": 2,
+      "explanation": "食物链从生产者开始，箭头指向捕食者，多条食物链交织成食物网。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "能量流动与物质循环",
+      "parent": "第一章 生态系统",
+      "order_index": 3,
+      "explanation": "能量沿食物链单向流动、逐级递减，物质在生物与无机环境间循环。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "生态系统的自我调节",
+      "parent": "第一章 生态系统",
+      "order_index": 4,
+      "explanation": "生态系统有一定自我调节能力，但调节能力有限，超过限度会失去平衡。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二章 生态安全",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "生态安全的意义",
+      "parent": "第二章 生态安全",
+      "order_index": 1,
+      "explanation": "生态安全是国家安全的重要组成部分，关系人民健康和可持续发展。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "生物多样性保护",
+      "parent": "第二章 生态安全",
+      "order_index": 2,
+      "explanation": "生物多样性包括物种、基因和生态系统多样性，保护要就地保护与迁地保护结合。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "外来物种入侵",
+      "parent": "第二章 生态安全",
+      "order_index": 3,
+      "explanation": "外来物种缺少天敌、繁殖快，可能排挤本地物种，破坏生态平衡。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "生态修复与绿色生活",
+      "parent": "第二章 生态安全",
+      "order_index": 4,
+      "explanation": "通过退耕还林、治理污染、绿色低碳生活修复和保护生态。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第四单元 人体生理与健康（二）",
+      "order_index": 1,
+      "summary": "认识人体消化、循环、呼吸与排泄系统的主要功能。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "人体消化和吸收的主要器官是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "小肠长且内表面有皱襞和绒毛，是主要消化吸收器官。",
+          "difficulty": 2,
+          "knowledge_point": "消化与吸收",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "小肠",
+            "胃",
+            "大肠",
+            "食管"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "淀粉在口腔内被（ ）初步分解为麦芽糖。",
+          "answer": {
+            "value": "唾液"
+          },
+          "analysis": "唾液中的唾液淀粉酶分解淀粉。",
+          "difficulty": 2,
+          "knowledge_point": "消化与吸收",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "胆汁由肝脏分泌，能促进脂肪的消化。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "胆汁不含消化酶，但能乳化脂肪。",
+          "difficulty": 3,
+          "knowledge_point": "消化与吸收",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说小肠适于吸收的两个结构特点。",
+          "answer": {
+            "value": "示例：小肠很长；内表面有环形皱襞和小肠绒毛，吸收面积大"
+          },
+          "analysis": "评分要点：两个结构特点与吸收功能对应。",
+          "difficulty": 4,
+          "knowledge_point": "消化与吸收",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "参与消化的消化液有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 汗液 ✗ 与消化无关。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "消化与吸收",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "唾液",
+            "胃液",
+            "肠液",
+            "汗液"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "血液循环的动力器官是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "心脏收缩推动血液流动。",
+          "difficulty": 2,
+          "knowledge_point": "血液循环",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "心脏",
+            "肺",
+            "肝脏",
+            "肾脏"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "血液中运输氧气的主要成分是（ ）。",
+          "answer": {
+            "value": "红细胞"
+          },
+          "analysis": "红细胞含血红蛋白，运输氧气。",
+          "difficulty": 2,
+          "knowledge_point": "血液循环",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "动脉中流的一定是动脉血。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "肺动脉中流的是静脉血，名称与血液性质不完全对应。",
+          "difficulty": 3,
+          "knowledge_point": "血液循环",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说体循环的起点和终点。",
+          "answer": {
+            "value": "示例：起点是左心室，终点是右心房"
+          },
+          "analysis": "评分要点：起点终点正确。",
+          "difficulty": 4,
+          "knowledge_point": "血液循环",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "血液的功能有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 制造食物 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "血液循环",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "运输氧气",
+            "运输养料",
+            "运走废物",
+            "制造食物"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "人体气体交换的主要场所是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "肺泡壁薄、面积大，是气体交换场所。",
+          "difficulty": 2,
+          "knowledge_point": "呼吸与气体交换",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "肺泡",
+            "气管",
+            "鼻腔",
+            "咽"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "吸气时，肋间肌和膈肌（ ），胸廓扩大。",
+          "answer": {
+            "value": "收缩"
+          },
+          "analysis": "吸气时呼吸肌收缩，胸廓容积增大。",
+          "difficulty": 2,
+          "knowledge_point": "呼吸与气体交换",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "呼出的气体中二氧化碳比吸入气体多。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "组织细胞呼吸产生二氧化碳，经肺排出。",
+          "difficulty": 3,
+          "knowledge_point": "呼吸与气体交换",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说肺泡适于气体交换的两个特点。",
+          "answer": {
+            "value": "示例：肺泡数量多、总面积大；肺泡壁只有一层细胞，外面缠绕毛细血管"
+          },
+          "analysis": "评分要点：两个特点与气体交换相关。",
+          "difficulty": 4,
+          "knowledge_point": "呼吸与气体交换",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "呼吸系统由哪些器官组成？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 食道 ✗ 属消化道。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "呼吸与气体交换",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "鼻",
+            "咽和喉",
+            "气管和支气管",
+            "食道"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "形成尿液的器官是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "肾脏是形成尿液的器官。",
+          "difficulty": 2,
+          "knowledge_point": "排泄与泌尿系统",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "肾脏",
+            "膀胱",
+            "输尿管",
+            "肝脏"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "尿的形成包括肾小球的（ ）作用和肾小管的重吸收作用。",
+          "answer": {
+            "value": "滤过"
+          },
+          "analysis": "肾小球和肾小囊内壁起滤过作用。",
+          "difficulty": 2,
+          "knowledge_point": "排泄与泌尿系统",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "健康人尿液中一般不含血细胞和葡萄糖。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "血细胞和大分子蛋白质、葡萄糖不能正常滤出或被重吸收。",
+          "difficulty": 3,
+          "knowledge_point": "排泄与泌尿系统",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说排尿对人体有什么意义。",
+          "answer": {
+            "value": "示例：排出代谢废物，调节体内水和无机盐的平衡"
+          },
+          "analysis": "评分要点：两个意义都说清。",
+          "difficulty": 4,
+          "knowledge_point": "排泄与泌尿系统",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "人体的排泄途径有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 排便 ✗ 属排遗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "排泄与泌尿系统",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "排尿",
+            "呼气",
+            "出汗",
+            "排便"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第六章 人体生命活动的调节",
+      "order_index": 2,
+      "summary": "理解神经调节与激素调节的方式及相互关系。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "反射的结构基础是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "反射弧是完成反射的结构基础。",
+          "difficulty": 2,
+          "knowledge_point": "反射与反射弧",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "反射弧",
+            "神经元",
+            "脊髓",
+            "大脑"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "反射弧包括感受器、传入神经、神经中枢、传出神经和（ ）。",
+          "answer": {
+            "value": "效应器"
+          },
+          "analysis": "效应器是反射弧的最后环节。",
+          "difficulty": 2,
+          "knowledge_point": "反射与反射弧",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "缩手反射属于简单反射，不需要大脑参与。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "缩手反射由脊髓中的神经中枢控制。",
+          "difficulty": 3,
+          "knowledge_point": "反射与反射弧",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说「看梅止渴」和「吃梅止渴」哪个属于复杂反射，为什么。",
+          "answer": {
+            "value": "示例：看梅止渴属复杂反射，因为它需要大脑皮层参与，由生活经验形成"
+          },
+          "analysis": "评分要点：判断正确，理由涉及大脑皮层。",
+          "difficulty": 4,
+          "knowledge_point": "反射与反射弧",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些属于复杂反射？",
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 缩手反射 ✗ 简单反射；D 膝跳反射 ✗ 简单反射。所以选 A、B。",
+          "difficulty": 3,
+          "knowledge_point": "反射与反射弧",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "望梅止渴",
+            "谈虎色变",
+            "缩手反射",
+            "膝跳反射"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "分泌胰岛素的内分泌腺是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "胰岛分泌胰岛素，调节血糖。",
+          "difficulty": 2,
+          "knowledge_point": "激素调节",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "胰腺",
+            "甲状腺",
+            "垂体",
+            "肾上腺"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "幼年时生长激素分泌不足会患（ ）症。",
+          "answer": {
+            "value": "侏儒"
+          },
+          "analysis": "生长激素不足导致身材矮小。",
+          "difficulty": 2,
+          "knowledge_point": "激素调节",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "激素在血液中含量极少，但作用很大。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "激素微量高效。",
+          "difficulty": 3,
+          "knowledge_point": "激素调节",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说胰岛素分泌不足会带来什么后果。",
+          "answer": {
+            "value": "示例：血糖升高，部分随尿排出，形成糖尿，可能患糖尿病"
+          },
+          "analysis": "评分要点：后果说清，因果正确。",
+          "difficulty": 4,
+          "knowledge_point": "激素调节",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "激素调节的特点有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 只在消化道 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "激素调节",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "由内分泌腺分泌",
+            "通过血液运输",
+            "微量但作用大",
+            "只在消化道内起作用"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "物像形成的部位是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "视网膜上形成物像。",
+          "difficulty": 2,
+          "knowledge_point": "眼与耳的结构",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "视网膜",
+            "角膜",
+            "晶状体",
+            "视神经"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "近视眼需要佩戴（ ）透镜矫正。",
+          "answer": {
+            "value": "凹"
+          },
+          "analysis": "凹透镜使光线发散，矫正近视。",
+          "difficulty": 2,
+          "knowledge_point": "眼与耳的结构",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "耳蜗内有听觉感受器。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "声波引起耳蜗内感受器振动产生神经冲动。",
+          "difficulty": 3,
+          "knowledge_point": "眼与耳的结构",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说预防近视的两条做法。",
+          "answer": {
+            "value": "示例：读写姿势端正、光线适宜；连续用眼一小时左右休息远眺"
+          },
+          "analysis": "评分要点：两条做法具体可行。",
+          "difficulty": 4,
+          "knowledge_point": "眼与耳的结构",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "眼球的主要结构有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 耳蜗 ✗ 属耳。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "眼与耳的结构",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "角膜",
+            "晶状体",
+            "视网膜",
+            "耳蜗"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "人体生命活动的主要调节方式是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "神经调节是主要调节方式。",
+          "difficulty": 2,
+          "knowledge_point": "神经调节与激素调节的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "神经调节",
+            "激素调节",
+            "体液调节",
+            "免疫调节"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "人在情绪激动时心跳加快，是（ ）调节和激素调节共同作用的结果。",
+          "answer": {
+            "value": "神经"
+          },
+          "analysis": "神经与激素共同参与调节。",
+          "difficulty": 2,
+          "knowledge_point": "神经调节与激素调节的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "神经调节和激素调节是相互独立的，没有联系。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "两者相互影响、协调配合。",
+          "difficulty": 3,
+          "knowledge_point": "神经调节与激素调节的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "举例说明神经调节与激素调节如何共同起作用。",
+          "answer": {
+            "value": "示例：紧张时大脑皮层兴奋，通过神经使心跳加快，同时肾上腺素分泌增多"
+          },
+          "analysis": "评分要点：举例具体，说明协同。",
+          "difficulty": 4,
+          "knowledge_point": "神经调节与激素调节的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于人体调节的说法，哪些正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 激素更快 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "神经调节与激素调节的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "神经调节反应迅速",
+            "激素调节作用持久",
+            "两者相互协调",
+            "激素调节比神经调节快"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第七章 健康地生活",
+      "order_index": 3,
+      "summary": "认识传染病与免疫，学会安全用药、急救与健康生活方式。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "传染病流行的三个基本环节不包括（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "三个环节是传染源、传播途径、易感人群。",
+          "difficulty": 2,
+          "knowledge_point": "传染病及其预防",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "病原体数量",
+            "传染源",
+            "传播途径",
+            "易感人群"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "对病人进行隔离治疗，属于控制（ ）。",
+          "answer": {
+            "value": "传染源"
+          },
+          "analysis": "隔离病人是控制传染源。",
+          "difficulty": 2,
+          "knowledge_point": "传染病及其预防",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "勤洗手、戴口罩可以切断传播途径。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "这些措施能阻断病原体传播。",
+          "difficulty": 3,
+          "knowledge_point": "传染病及其预防",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说出预防传染病的三条措施，并说明分别针对哪个环节。",
+          "answer": {
+            "value": "示例：隔离病人（控制传染源）；戴口罩（切断传播途径）；接种疫苗（保护易感人群）"
+          },
+          "analysis": "评分要点：措施与环节对应正确。",
+          "difficulty": 4,
+          "knowledge_point": "传染病及其预防",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些是传染病？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓ 由病毒引起；B ✓ 由结核杆菌引起；C 近视 ✗ 不是传染病；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "传染病及其预防",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "流行性感冒",
+            "肺结核",
+            "近视",
+            "艾滋病"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "皮肤和黏膜属于（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "皮肤黏膜构成第一道防线。",
+          "difficulty": 2,
+          "knowledge_point": "免疫与免疫防线",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "第一道防线",
+            "第二道防线",
+            "第三道防线",
+            "不属于防线"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "接种疫苗使人产生（ ），属于特异性免疫。",
+          "answer": {
+            "value": "抗体"
+          },
+          "analysis": "疫苗刺激机体产生相应抗体。",
+          "difficulty": 2,
+          "knowledge_point": "免疫与免疫防线",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "非特异性免疫对多种病原体都有防御作用。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "第一、二道防线不针对特定病原体。",
+          "difficulty": 3,
+          "knowledge_point": "免疫与免疫防线",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说接种疫苗为什么能预防疾病。",
+          "answer": {
+            "value": "示例：疫苗刺激淋巴细胞产生相应抗体，形成对该病原体的抵抗力"
+          },
+          "analysis": "评分要点：说明抗体产生与免疫记忆。",
+          "difficulty": 4,
+          "knowledge_point": "免疫与免疫防线",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "属于非特异性免疫的有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 产生抗体 ✗ 属特异性免疫；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "免疫与免疫防线",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "皮肤阻挡病菌",
+            "吞噬细胞吞噬病菌",
+            "接种疫苗后产生抗体",
+            "黏膜分泌杀菌物质"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面属于处方药的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "抗生素属处方药，须凭处方购买。",
+          "difficulty": 2,
+          "knowledge_point": "安全用药与急救",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "需要医生开处方才能购买的抗生素",
+            "维生素含片",
+            "普通创可贴",
+            "风油精"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "抢救呼吸骤停者应先做（ ）复苏。",
+          "answer": {
+            "value": "心肺"
+          },
+          "analysis": "心肺复苏包括胸外按压和人工呼吸。",
+          "difficulty": 2,
+          "knowledge_point": "安全用药与急救",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "用药前应阅读说明书，了解用法用量和不良反应。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "说明书是安全用药的重要依据。",
+          "difficulty": 3,
+          "knowledge_point": "安全用药与急救",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说遇到有人晕倒无呼吸时，你应该怎么做。",
+          "answer": {
+            "value": "示例：立即呼救并拨打 120，在确保环境安全后开始胸外按压和人工呼吸"
+          },
+          "analysis": "评分要点：呼救、拨打急救电话、心肺复苏步骤合理。",
+          "difficulty": 4,
+          "knowledge_point": "安全用药与急救",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "安全用药要注意哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 过期药 ✗ 有风险；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "安全用药与急救",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "按说明书用药",
+            "不随意加大剂量",
+            "过期药照常服用",
+            "处方药凭处方购买"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面属于健康生活方式的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "适量运动有益健康。",
+          "difficulty": 2,
+          "knowledge_point": "健康的生活方式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "每天坚持适量运动",
+            "经常熬夜打游戏",
+            "长期吸烟",
+            "只吃肉不吃蔬菜"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "健康不仅指身体没有疾病，还包括心理和（ ）的良好状态。",
+          "answer": {
+            "value": "社会适应"
+          },
+          "analysis": "健康是身体、心理和社会适应的良好状态。",
+          "difficulty": 2,
+          "knowledge_point": "健康的生活方式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "吸烟只影响自己，不影响他人健康。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "二手烟也会危害他人健康。",
+          "difficulty": 3,
+          "knowledge_point": "健康的生活方式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出你打算坚持的两项健康习惯。",
+          "answer": {
+            "value": "示例：每天运动一小时；按时作息不熬夜"
+          },
+          "analysis": "评分要点：两项习惯具体可行。",
+          "difficulty": 4,
+          "knowledge_point": "健康的生活方式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "健康生活方式包括哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 长期熬夜 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "健康的生活方式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "合理膳食",
+            "适量运动",
+            "规律作息",
+            "长期熬夜"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第五单元 生物与环境",
+      "order_index": 4,
+      "summary": "理解生态因素的作用，认识生物对环境的适应与影响。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "下面属于非生物因素的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "光照属于非生物因素。",
+          "difficulty": 2,
+          "knowledge_point": "生态因素",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "光照",
+            "捕食者",
+            "竞争者",
+            "寄生者"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "影响生物生活的其他生物，属于（ ）因素。",
+          "answer": {
+            "value": "生物"
+          },
+          "analysis": "同种或不同种生物之间的影响属生物因素。",
+          "difficulty": 2,
+          "knowledge_point": "生态因素",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "温度会影响植物的分布。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "温度影响酶的活性，进而影响分布。",
+          "difficulty": 3,
+          "knowledge_point": "生态因素",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "举例说明一种非生物因素怎样影响生物。",
+          "answer": {
+            "value": "示例：光照不足时植物生长细弱，说明光影响植物的生长"
+          },
+          "analysis": "评分要点：因素明确，影响说明具体。",
+          "difficulty": 4,
+          "knowledge_point": "生态因素",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "非生物因素包括哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 天敌 ✗ 属生物因素。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "生态因素",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "阳光",
+            "温度",
+            "水分",
+            "天敌"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "仙人掌的叶退化成刺，主要是适应（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "刺可减少水分散失，适应干旱。",
+          "difficulty": 2,
+          "knowledge_point": "生物对环境的适应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "干旱环境",
+            "寒冷环境",
+            "水中生活",
+            "阴暗环境"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "生物适应环境是长期（ ）的结果。",
+          "answer": {
+            "value": "自然选择"
+          },
+          "analysis": "适应是自然选择的结果。",
+          "difficulty": 2,
+          "knowledge_point": "生物对环境的适应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "保护色和拟态都是适应环境的表现。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "保护色、拟态有利于躲避敌害或捕食。",
+          "difficulty": 3,
+          "knowledge_point": "生物对环境的适应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "举例说明一种动物行为上的适应。",
+          "answer": {
+            "value": "示例：候鸟迁徙，随季节变化寻找适宜的温度和食物"
+          },
+          "analysis": "评分要点：例子具体，说明适应意义。",
+          "difficulty": 4,
+          "knowledge_point": "生物对环境的适应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "生物适应环境的表现有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 完全不受影响 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "生物对环境的适应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "形态适应",
+            "结构适应",
+            "行为适应",
+            "完全不受环境影响"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "蚯蚓在土壤中活动，主要作用是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "蚯蚓活动疏松土壤，粪便提高肥力。",
+          "difficulty": 2,
+          "knowledge_point": "生物对环境的影响",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "疏松土壤、提高肥力",
+            "杀死土壤中的细菌",
+            "使土壤变干",
+            "让土壤变硬"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "植树造林可以防风固沙、调节（ ）。",
+          "answer": {
+            "value": "气候"
+          },
+          "analysis": "森林能调节气候、涵养水源。",
+          "difficulty": 2,
+          "knowledge_point": "生物对环境的影响",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "生物只能适应环境，不能影响环境。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "生物也能改变环境。",
+          "difficulty": 3,
+          "knowledge_point": "生物对环境的影响",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "举例说明人类活动对环境的两种影响。",
+          "answer": {
+            "value": "示例：植树造林改善环境；乱砍滥伐导致水土流失"
+          },
+          "analysis": "评分要点：一正一负，例子具体。",
+          "difficulty": 4,
+          "knowledge_point": "生物对环境的影响",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "生物影响环境的例子有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 太阳照射 ✗ 是非生物因素作用。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "生物对环境的影响",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "蚯蚓松土",
+            "森林涵养水源",
+            "过度放牧导致草场退化",
+            "太阳照射大地"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "探究实验中除变量外其他条件应（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "单一变量原则要求其余条件相同。",
+          "difficulty": 2,
+          "knowledge_point": "探究实验与对照",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "保持相同",
+            "随意改变",
+            "全部不同",
+            "不需要控制"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "设置对照的作用是排除（ ）因素对结果的干扰。",
+          "answer": {
+            "value": "其他"
+          },
+          "analysis": "对照能说明结果由变量引起。",
+          "difficulty": 2,
+          "knowledge_point": "探究实验与对照",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "实验只做一次就能得出可靠结论。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "应重复实验减少偶然误差。",
+          "difficulty": 3,
+          "knowledge_point": "探究实验与对照",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "设计一个探究「光对鼠妇分布的影响」的简要方案。",
+          "answer": {
+            "value": "示例：取两个相同的盒子，一侧遮光一侧见光，各放相同数量鼠妇，一段时间后统计两侧数量"
+          },
+          "analysis": "评分要点：单一变量、对照设置、观察指标明确。",
+          "difficulty": 4,
+          "knowledge_point": "探究实验与对照",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "探究实验应遵循哪些原则？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 修改数据 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "探究实验与对照",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "单一变量",
+            "设置对照",
+            "重复实验",
+            "随意修改数据"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第一章 生态系统",
+      "order_index": 5,
+      "summary": "掌握生态系统的组成、食物链与能量流动。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "生态系统中的生产者主要是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "绿色植物能进行光合作用制造有机物。",
+          "difficulty": 2,
+          "knowledge_point": "生态系统的组成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "绿色植物",
+            "动物",
+            "细菌",
+            "真菌"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "分解者主要是细菌和（ ）。",
+          "answer": {
+            "value": "真菌"
+          },
+          "analysis": "细菌和真菌分解有机物。",
+          "difficulty": 2,
+          "knowledge_point": "生态系统的组成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "阳光、空气、水属于生态系统的非生物部分。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "非生物部分为生物提供物质和能量条件。",
+          "difficulty": 3,
+          "knowledge_point": "生态系统的组成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说分解者在生态系统中的作用。",
+          "answer": {
+            "value": "示例：把动植物遗体中的有机物分解为无机物，归还环境供植物利用"
+          },
+          "analysis": "评分要点：说明分解对象与归还作用。",
+          "difficulty": 4,
+          "knowledge_point": "生态系统的组成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "生态系统中的生物成分包括哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A 生产者 ✓ 能制造有机物；B 消费者 ✓ 直接或间接以植物为食；C 分解者 ✓ 分解有机物；D 阳光 ✗ 属非生物部分。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "生态系统的组成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "生产者",
+            "消费者",
+            "分解者",
+            "阳光"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面正确的食物链是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "食物链从生产者开始，箭头指向捕食者。",
+          "difficulty": 2,
+          "knowledge_point": "食物链与食物网",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "草→兔→鹰",
+            "鹰→兔→草",
+            "草←兔←鹰",
+            "阳光→草→兔"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "多条食物链彼此交错形成（ ）。",
+          "answer": {
+            "value": "食物网"
+          },
+          "analysis": "食物网由多条食物链交错构成。",
+          "difficulty": 2,
+          "knowledge_point": "食物链与食物网",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "食物链中不包括分解者。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "食物链只表示生产者和消费者之间的捕食关系。",
+          "difficulty": 3,
+          "knowledge_point": "食物链与食物网",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出「草、兔、狐、鼠」构成的两条食物链。",
+          "answer": {
+            "value": "示例：草→兔→狐；草→鼠→狐"
+          },
+          "analysis": "评分要点：都从草开始，箭头方向正确。",
+          "difficulty": 4,
+          "knowledge_point": "食物链与食物网",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于食物链的说法，哪些正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 可包含分解者 ✗；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "食物链与食物网",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "从生产者开始",
+            "箭头指向捕食者",
+            "可包含分解者",
+            "体现捕食关系"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "能量在食物链中流动的特点是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "能量流动单向且逐级递减。",
+          "difficulty": 2,
+          "knowledge_point": "能量流动与物质循环",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "单向流动、逐级递减",
+            "循环流动",
+            "逐级增加",
+            "双向流动"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "生态系统中的能量最终来自（ ）。",
+          "answer": {
+            "value": "太阳能"
+          },
+          "analysis": "生产者通过光合作用固定太阳能。",
+          "difficulty": 2,
+          "knowledge_point": "能量流动与物质循环",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "营养级越高，获得的能量越少。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "能量逐级递减，高位营养级能量少。",
+          "difficulty": 3,
+          "knowledge_point": "能量流动与物质循环",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说为什么食物链一般不超过五个营养级。",
+          "answer": {
+            "value": "示例：能量每传递一级大部分散失，到高位营养级所剩能量太少，难以维持更多营养级"
+          },
+          "analysis": "评分要点：用能量递减解释。",
+          "difficulty": 4,
+          "knowledge_point": "能量流动与物质循环",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于能量流动与物质循环，哪些说法正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 能量循环 ✗；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "能量流动与物质循环",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "能量单向流动",
+            "物质可以循环利用",
+            "能量可以循环",
+            "能量逐级递减"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "生态系统自我调节能力的大小与（ ）有关",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "生物种类越多、食物网越复杂，调节能力越强。",
+          "difficulty": 2,
+          "knowledge_point": "生态系统的自我调节",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "生物种类和数量",
+            "面积大小无关",
+            "气候无关",
+            "与任何因素无关"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "生态系统的调节能力是（ ）的，超过限度就会破坏平衡。",
+          "answer": {
+            "value": "有限"
+          },
+          "analysis": "调节能力有限，需保护。",
+          "difficulty": 2,
+          "knowledge_point": "生态系统的自我调节",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "物种越丰富的生态系统通常越稳定。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "食物网复杂时抗干扰能力更强。",
+          "difficulty": 3,
+          "knowledge_point": "生态系统的自我调节",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说为什么大量捕杀某种动物会破坏生态平衡。",
+          "answer": {
+            "value": "示例：该动物减少会使其捕食者缺少食物、其猎物大量繁殖，食物网失衡"
+          },
+          "analysis": "评分要点：从食物链关系说明连锁影响。",
+          "difficulty": 4,
+          "knowledge_point": "生态系统的自我调节",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "破坏生态平衡的行为有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 植树造林 ✗ 有利于生态。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "生态系统的自我调节",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "乱砍滥伐",
+            "大量捕杀野生动物",
+            "过度放牧",
+            "植树造林"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第二章 生态安全",
+      "order_index": 6,
+      "summary": "认识生态安全的意义，理解生物多样性保护与外来物种入侵的防治。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "生态安全与国家的关系是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "生态安全属于总体国家安全的重要方面。",
+          "difficulty": 2,
+          "knowledge_point": "生态安全的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "是国家安全的重要组成部分",
+            "与国家无关",
+            "只影响个别地区",
+            "只与动物有关"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "维护生态安全是保障（ ）发展的基础。",
+          "answer": {
+            "value": "可持续"
+          },
+          "analysis": "生态安全是可持续发展的基础。",
+          "difficulty": 2,
+          "knowledge_point": "生态安全的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "生态破坏可能引发洪涝、沙尘暴等灾害。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "植被破坏会加剧水土流失和灾害。",
+          "difficulty": 3,
+          "knowledge_point": "生态安全的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说维护生态安全对个人的意义。",
+          "answer": {
+            "value": "示例：生态环境好，饮水、空气更清洁，健康更有保障"
+          },
+          "analysis": "评分要点：联系个人生活说明。",
+          "difficulty": 4,
+          "knowledge_point": "生态安全的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "威胁生态安全的因素有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 植树种草 ✗ 是保护措施。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "生态安全的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "森林减少",
+            "水体污染",
+            "外来物种入侵",
+            "植树种草"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "保护生物多样性最有效的措施是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "就地保护（自然保护区）最有效。",
+          "difficulty": 2,
+          "knowledge_point": "生物多样性保护",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "建立自然保护区",
+            "把动物都捉进笼子",
+            "大量引进外来物种",
+            "人工繁殖所有物种"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "生物多样性包括物种多样性、基因多样性和（ ）多样性。",
+          "answer": {
+            "value": "生态系统"
+          },
+          "analysis": "三个层次构成生物多样性。",
+          "difficulty": 2,
+          "knowledge_point": "生物多样性保护",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "保护生物多样性只需保护珍稀动物。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "所有生物及其生态系统都应保护。",
+          "difficulty": 3,
+          "knowledge_point": "生物多样性保护",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说保护生物多样性的两条措施。",
+          "answer": {
+            "value": "示例：建立自然保护区实施就地保护；建立动物园、植物园开展迁地保护"
+          },
+          "analysis": "评分要点：两条措施类型不同、表述准确。",
+          "difficulty": 4,
+          "knowledge_point": "生物多样性保护",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "保护生物多样性的措施有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 大量捕捞 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "生物多样性保护",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "就地保护",
+            "迁地保护",
+            "制定法律法规",
+            "大量捕捞野生动物"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "外来物种入侵的主要危害是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "入侵种大量繁殖会挤占本地物种生存空间。",
+          "difficulty": 2,
+          "knowledge_point": "外来物种入侵",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "排挤本地物种、破坏生态平衡",
+            "增加本地物种数量",
+            "改善生态环境",
+            "提高生物多样性"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "外来物种入侵常因缺少（ ）而大量繁殖。",
+          "answer": {
+            "value": "天敌"
+          },
+          "analysis": "缺少天敌使其数量迅速增长。",
+          "difficulty": 2,
+          "knowledge_point": "外来物种入侵",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "引进外来物种都是有害的。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "科学评估后的引进可能有益，关键在风险管控。",
+          "difficulty": 3,
+          "knowledge_point": "外来物种入侵",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说防止外来物种入侵的两条做法。",
+          "answer": {
+            "value": "示例：加强口岸检疫；不随意放生宠物和外来水生生物"
+          },
+          "analysis": "评分要点：两条做法具体、可操作。",
+          "difficulty": 4,
+          "knowledge_point": "外来物种入侵",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "外来物种入侵可能带来哪些后果？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 必然增加 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "外来物种入侵",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "本地物种减少",
+            "农林业损失",
+            "生态系统失衡",
+            "本地物种必然增加"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面属于生态修复措施的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "退耕还林还草有助于恢复植被。",
+          "difficulty": 2,
+          "knowledge_point": "生态修复与绿色生活",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "退耕还林还草",
+            "围湖造田",
+            "过度放牧",
+            "乱排污水"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "绿色低碳生活方式包括节约用电、减少（ ）排放。",
+          "answer": {
+            "value": "碳"
+          },
+          "analysis": "低碳生活强调减少碳排放。",
+          "difficulty": 2,
+          "knowledge_point": "生态修复与绿色生活",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "垃圾分类有利于资源回收和减少污染。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "分类回收能提高资源利用率。",
+          "difficulty": 3,
+          "knowledge_point": "生态修复与绿色生活",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出两件你能做的绿色生活小事。",
+          "answer": {
+            "value": "示例：随手关灯、自带购物袋少用塑料袋"
+          },
+          "analysis": "评分要点：两件都具体可行。",
+          "difficulty": 4,
+          "knowledge_point": "生态修复与绿色生活",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "保护生态的做法有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 随意丢弃 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "生态修复与绿色生活",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "退耕还林",
+            "治理水污染",
+            "垃圾分类",
+            "随意丢弃废旧电池"
+          ]
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-14T12:07:25+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "normalized": "难度 40/40/20 归一 + 主观题短答案补评分要点（2026-11-13 统一口径）",
+    "supplemented": "数值填空补可求值算式 0 道 / 数值填空改单选 0 道 / 补多选题 0 道（2 真 + 2 假，答案 2 项；2026-11-14 口径）",
+    "stem_dedup": "跨册同题干补册次前缀 0 道（2026-11-14 跨册去重口径）",
+    "duplicate_rewrites": "跨册同题定向改写 0 道（保留两侧题量，2026-11-14 口径）",
+    "chapter_scope": "全章域（本册无跨册重复章）",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

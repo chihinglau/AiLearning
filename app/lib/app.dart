@@ -10,10 +10,13 @@ import 'package:ai_learning/features/boot/boot_page.dart';
 import 'package:ai_learning/features/common/permission_gate.dart';
 import 'package:ai_learning/features/content/content_report_page.dart';
 import 'package:ai_learning/features/content/content_review_page.dart';
+import 'package:ai_learning/features/exam/exam_history_page.dart';
 import 'package:ai_learning/features/exam/exam_list_page.dart';
 import 'package:ai_learning/features/exam/exam_manage_page.dart';
 import 'package:ai_learning/features/exam/exam_page.dart';
 import 'package:ai_learning/features/exam/exam_report_page.dart';
+import 'package:ai_learning/features/exam/exam_review_page.dart';
+import 'package:ai_learning/features/exam/past_paper_detail_page.dart';
 import 'package:ai_learning/features/exam/past_paper_page.dart';
 import 'package:ai_learning/features/family/parent_children_page.dart';
 import 'package:ai_learning/features/learn/knowledge_graph_page.dart';
@@ -152,12 +155,47 @@ final routerProvider = Provider<GoRouter>((ref) {
           child: ExamManagePage(),
         ),
       ),
+      // EX-10：试卷复核队列；静态路径须在 /exam/:examId 之前。
+      GoRoute(
+        path: '/exams/reviews',
+        builder: (context, state) => const PermissionGate(
+          anyOf: ['content:review:decide'],
+          child: ExamReviewPage(),
+        ),
+      ),
+      // EX-08：报告历史（本人历次作答）；静态路径须在 /exam/:examId 之前。
+      GoRoute(
+        path: '/exams/history',
+        builder: (context, state) {
+          final examId = int.tryParse(
+            state.uri.queryParameters['examId'] ?? '',
+          );
+          return PermissionGate(
+            anyOf: const ['learn:exam:report:self'],
+            child: ExamHistoryPage(examId: examId),
+          );
+        },
+      ),
       GoRoute(
         path: '/past-papers',
         builder: (context, state) => const PermissionGate(
           anyOf: ['learn:exam:take'],
           child: PastPaperPage(),
         ),
+      ),
+      // EX-08：真题来源详情（不含答案）。
+      GoRoute(
+        path: '/past-papers/:paperId',
+        builder: (context, state) {
+          final paperId = int.tryParse(
+            state.pathParameters['paperId'] ?? '',
+          );
+          if (paperId == null) return const PastPaperPage();
+          return PermissionGate(
+            anyOf: const ['learn:exam:take'],
+            child: PastPaperDetailPage(paperId: paperId),
+          );
+        },
       ),
       GoRoute(
         path: '/exam/report/:attemptId',

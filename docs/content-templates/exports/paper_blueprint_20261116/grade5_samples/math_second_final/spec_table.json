@@ -1,0 +1,326 @@
+{
+  "exam_id": null,
+  "title": "5年级数学下册期末卷（自主题库生成）",
+  "subject": "math",
+  "grade": 5,
+  "exam_type": "final",
+  "blueprint_code": "g5_math_final",
+  "blueprint_name": "5年级数学期末模拟卷（自主题库生成）",
+  "total_score": 100,
+  "time_limit_min": 90,
+  "question_count": 25,
+  "actual_score_total": 100.0,
+  "score_matches": true,
+  "knowledge_point_count": 25,
+  "sections": [
+    {
+      "section_index": 0,
+      "section_name": "一、选择题",
+      "q_type": "choice",
+      "band": "easy",
+      "planned_count": 12,
+      "planned_score": 36.0,
+      "actual_count": 12,
+      "actual_score": 36.0,
+      "knowledge_points": [
+        "一个数除以分数",
+        "体积与体积单位",
+        "分数乘整数",
+        "分数运算的整理",
+        "分数除以整数",
+        "异分母分数减法",
+        "异分母分数加法",
+        "方向与角度",
+        "长方体与正方体的体积",
+        "长方体的特征",
+        "长方体的表面积",
+        "长方体知识的整理"
+      ],
+      "chapters": [
+        "一 分数加减法",
+        "三 分数乘法",
+        "二 长方体（一）",
+        "五 分数除法",
+        "六 确定位置",
+        "四 长方体（二）",
+        "整理与复习"
+      ],
+      "questions": [
+        {
+          "question_id": 12701,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "异分母分数减法",
+          "chapter": "一 分数加减法"
+        },
+        {
+          "question_id": 12781,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "长方体知识的整理",
+          "chapter": "整理与复习"
+        },
+        {
+          "question_id": 12762,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "长方体与正方体的体积",
+          "chapter": "四 长方体（二）"
+        },
+        {
+          "question_id": 12722,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "长方体的表面积",
+          "chapter": "二 长方体（一）"
+        },
+        {
+          "question_id": 12802,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "一个数除以分数",
+          "chapter": "五 分数除法"
+        },
+        {
+          "question_id": 12697,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "异分母分数加法",
+          "chapter": "一 分数加减法"
+        },
+        {
+          "question_id": 12796,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "分数除以整数",
+          "chapter": "五 分数除法"
+        },
+        {
+          "question_id": 12756,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "体积与体积单位",
+          "chapter": "四 长方体（二）"
+        },
+        {
+          "question_id": 12776,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "分数运算的整理",
+          "chapter": "整理与复习"
+        },
+        {
+          "question_id": 12716,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "长方体的特征",
+          "chapter": "二 长方体（一）"
+        },
+        {
+          "question_id": 12817,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "方向与角度",
+          "chapter": "六 确定位置"
+        },
+        {
+          "question_id": 12736,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "分数乘整数",
+          "chapter": "三 分数乘法"
+        }
+      ]
+    },
+    {
+      "section_index": 1,
+      "section_name": "二、填空题",
+      "q_type": "fill",
+      "band": "medium",
+      "planned_count": 8,
+      "planned_score": 24.0,
+      "actual_count": 8,
+      "actual_score": 24.0,
+      "knowledge_points": [
+        "分数乘分数",
+        "包装中的数学",
+        "复式条形统计图",
+        "数与计算的梳理",
+        "数与运算·乘除法运算·按单元·变式一",
+        "数与运算·乘除法运算·按单元·变式三",
+        "数与运算·同分母分数加减·按单元·变式三",
+        "设未知数"
+      ],
+      "chapters": [
+        "七 用方程解决问题",
+        "三 分数乘法",
+        "五 分数除法",
+        "八 数据的表示和分析",
+        "四 长方体（二）",
+        "总复习",
+        "数学好玩"
+      ],
+      "questions": [
+        {
+          "question_id": 19500,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·乘除法运算·按单元·变式一",
+          "chapter": "总复习"
+        },
+        {
+          "question_id": 12857,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "包装中的数学",
+          "chapter": "数学好玩"
+        },
+        {
+          "question_id": 12897,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "数与计算的梳理",
+          "chapter": "总复习"
+        },
+        {
+          "question_id": 12837,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "设未知数",
+          "chapter": "七 用方程解决问题"
+        },
+        {
+          "question_id": 12742,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "分数乘分数",
+          "chapter": "三 分数乘法"
+        },
+        {
+          "question_id": 12877,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "复式条形统计图",
+          "chapter": "八 数据的表示和分析"
+        },
+        {
+          "question_id": 19482,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·乘除法运算·按单元·变式三",
+          "chapter": "四 长方体（二）"
+        },
+        {
+          "question_id": 19488,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·同分母分数加减·按单元·变式三",
+          "chapter": "五 分数除法"
+        }
+      ]
+    },
+    {
+      "section_index": 2,
+      "section_name": "三、计算与证明",
+      "q_type": "answer",
+      "band": "medium",
+      "planned_count": 4,
+      "planned_score": 32.0,
+      "actual_count": 4,
+      "actual_score": 32.0,
+      "knowledge_points": [
+        "列等量关系",
+        "平均数与数据分析",
+        "数学与游戏策略",
+        "路线描述"
+      ],
+      "chapters": [
+        "七 用方程解决问题",
+        "八 数据的表示和分析",
+        "六 确定位置",
+        "数学好玩"
+      ],
+      "questions": [
+        {
+          "question_id": 12870,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "数学与游戏策略",
+          "chapter": "数学好玩"
+        },
+        {
+          "question_id": 12890,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "平均数与数据分析",
+          "chapter": "八 数据的表示和分析"
+        },
+        {
+          "question_id": 12830,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "路线描述",
+          "chapter": "六 确定位置"
+        },
+        {
+          "question_id": 12845,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "列等量关系",
+          "chapter": "七 用方程解决问题"
+        }
+      ]
+    },
+    {
+      "section_index": 3,
+      "section_name": "四、综合应用",
+      "q_type": "answer",
+      "band": "hard",
+      "planned_count": 1,
+      "planned_score": 8.0,
+      "actual_count": 1,
+      "actual_score": 8.0,
+      "knowledge_points": [
+        "图形与几何的梳理"
+      ],
+      "chapters": [
+        "总复习"
+      ],
+      "questions": [
+        {
+          "question_id": 12905,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "图形与几何的梳理",
+          "chapter": "总复习"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-11-17T15:45:23.328539+00:00"
+}

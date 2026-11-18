@@ -1,0 +1,2335 @@
+{
+  "subject": "physics",
+  "grade": 8,
+  "version": "人教版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第一章 机械运动",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "长度与时间的测量",
+      "parent": "第一章 机械运动",
+      "order_index": 1,
+      "explanation": "测量长度用刻度尺，读数要估读到分度值的下一位；时间用停表测量。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "机械运动与参照物",
+      "parent": "第一章 机械运动",
+      "order_index": 2,
+      "explanation": "物体位置随时间的变化叫机械运动，判断运动要选参照物。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "速度与平均速度",
+      "parent": "第一章 机械运动",
+      "order_index": 3,
+      "explanation": "速度是单位时间内通过的路程，v 等于 s 除以 t；平均速度描述变速运动快慢。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "运动的图像与计算",
+      "parent": "第一章 机械运动",
+      "order_index": 4,
+      "explanation": "用图像描述运动，注意单位统一与路程时间对应。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二章 声现象",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "声音的产生与传播",
+      "parent": "第二章 声现象",
+      "order_index": 1,
+      "explanation": "声音由物体振动产生，靠介质传播，真空不能传声。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "声音的特性",
+      "parent": "第二章 声现象",
+      "order_index": 2,
+      "explanation": "音调由频率决定，响度由振幅决定，音色由发声体材料结构决定。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "噪声的危害与控制",
+      "parent": "第二章 声现象",
+      "order_index": 3,
+      "explanation": "噪声影响健康，可从声源、传播过程、人耳三处减弱。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "声的利用",
+      "parent": "第二章 声现象",
+      "order_index": 4,
+      "explanation": "声可传递信息（超声诊断、回声定位），也可传递能量（超声清洗）。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第三章 物态变化",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "温度与温度计",
+      "parent": "第三章 物态变化",
+      "order_index": 1,
+      "explanation": "温度表示冷热程度，液体温度计利用热胀冷缩原理。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "熔化和凝固",
+      "parent": "第三章 物态变化",
+      "order_index": 2,
+      "explanation": "固体变液体叫熔化（吸热），液体变固体叫凝固（放热）；晶体有固定熔点。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "汽化和液化",
+      "parent": "第三章 物态变化",
+      "order_index": 3,
+      "explanation": "汽化（蒸发、沸腾）吸热，液化放热；沸点与气压有关。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "升华和凝华",
+      "parent": "第三章 物态变化",
+      "order_index": 4,
+      "explanation": "固态直接变气态叫升华（吸热），气态直接变固态叫凝华（放热）。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第四章 光现象",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "光的直线传播",
+      "parent": "第四章 光现象",
+      "order_index": 1,
+      "explanation": "光在同种均匀介质中沿直线传播，光速约 3×10 的八次方米每秒。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "光的反射",
+      "parent": "第四章 光现象",
+      "order_index": 2,
+      "explanation": "反射角等于入射角，反射光线、入射光线与法线在同一平面。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "平面镜成像",
+      "parent": "第四章 光现象",
+      "order_index": 3,
+      "explanation": "平面镜成正立等大虚像，像与物到镜面距离相等，像与物关于镜面对称。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "光的折射与色散",
+      "parent": "第四章 光现象",
+      "order_index": 4,
+      "explanation": "光从一种介质斜射入另一种介质时发生折射，白光经三棱镜色散为七色光。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第五章 透镜及其应用",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "透镜与焦点",
+      "parent": "第五章 透镜及其应用",
+      "order_index": 1,
+      "explanation": "凸透镜对光有会聚作用，凹透镜对光有发散作用；平行光经凸透镜会聚于焦点。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "凸透镜成像规律",
+      "parent": "第五章 透镜及其应用",
+      "order_index": 2,
+      "explanation": "物距大于二倍焦距成倒立缩小实像；在一倍到二倍焦距之间成倒立放大实像；小于一倍焦距成正立放大虚像。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "眼睛与眼镜",
+      "parent": "第五章 透镜及其应用",
+      "order_index": 3,
+      "explanation": "近视眼像成在视网膜前，用凹透镜矫正；远视眼像成在视网膜后，用凸透镜矫正。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "显微镜与望远镜",
+      "parent": "第五章 透镜及其应用",
+      "order_index": 4,
+      "explanation": "显微镜用两组凸透镜放大微小物体，望远镜用于观察远处物体。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第六章 质量与密度",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "质量及其测量",
+      "parent": "第六章 质量与密度",
+      "order_index": 1,
+      "explanation": "质量是物体所含物质的多少，与位置、形状、状态无关；用天平测量。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "密度及其计算",
+      "parent": "第六章 质量与密度",
+      "order_index": 2,
+      "explanation": "密度是单位体积物质的质量，等于质量除以体积，是物质的特性。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "测量物质的密度",
+      "parent": "第六章 质量与密度",
+      "order_index": 3,
+      "explanation": "用天平和量筒测固体、液体密度，注意先测质量再测体积，减小误差。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "密度的应用",
+      "parent": "第六章 质量与密度",
+      "order_index": 4,
+      "explanation": "密度可用于鉴别物质、计算质量体积、判断物体是否空心。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一章 机械运动",
+      "order_index": 1,
+      "summary": "认识长度和时间的测量、运动与静止的相对性以及速度。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "测量长度时，刻度尺的读数应（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "长度测量需估读一位。",
+          "difficulty": 2,
+          "knowledge_point": "长度与时间的测量",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "估读到分度值的下一位",
+            "只读到整数",
+            "随便写",
+            "不估读"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "国际单位制中长度的基本单位是（ ）。",
+          "answer": {
+            "value": "米"
+          },
+          "analysis": "长度基本单位为米。",
+          "difficulty": 2,
+          "knowledge_point": "长度与时间的测量",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "测量值由准确值、估读值和单位组成。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "测量记录要有数值和单位。",
+          "difficulty": 3,
+          "knowledge_point": "长度与时间的测量",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "刻度尺的最小分度是 1 毫米，测得物体长度应记录到哪一位。",
+          "answer": {
+            "value": "示例：记录到 0.1 毫米，即估读到毫米的下一位"
+          },
+          "analysis": "评分要点：明确估读位。",
+          "difficulty": 4,
+          "knowledge_point": "长度与时间的测量",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "使用刻度尺要注意哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 随意倾斜 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "长度与时间的测量",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "零刻度线对准被测物体一端",
+            "刻度尺要放正",
+            "读数时视线要与尺面垂直",
+            "刻度尺可以随意倾斜"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "判断物体运动还是静止，先要选定（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "运动与静止取决于参照物。",
+          "difficulty": 2,
+          "knowledge_point": "机械运动与参照物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "参照物",
+            "速度",
+            "时间",
+            "路程"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "运动和静止是（ ）的，取决于所选的参照物。",
+          "answer": {
+            "value": "相对"
+          },
+          "analysis": "运动具有相对性。",
+          "difficulty": 2,
+          "knowledge_point": "机械运动与参照物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "坐在行驶汽车里的乘客，以汽车为参照物是静止的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "乘客与车相对位置不变。",
+          "difficulty": 3,
+          "knowledge_point": "机械运动与参照物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明为什么同一物体可以说它既运动又静止。",
+          "answer": {
+            "value": "示例：选择不同参照物，物体相对位置是否变化不同，结论就不同"
+          },
+          "analysis": "评分要点：说明参照物不同。",
+          "difficulty": 4,
+          "knowledge_point": "机械运动与参照物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面属于机械运动的有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 气温升高 ✗ 不是位置变化；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "机械运动与参照物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "汽车行驶",
+            "地球绕太阳公转",
+            "气温升高",
+            "树叶飘落"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "速度的计算式是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "速度等于路程除以时间。",
+          "difficulty": 2,
+          "knowledge_point": "速度与平均速度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "v = s ÷ t",
+            "v = t ÷ s",
+            "v = s × t",
+            "v = s + t"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "速度的单位是米每秒，符号是（ ）。",
+          "answer": {
+            "value": "m/s"
+          },
+          "analysis": "速度单位写 m/s。",
+          "difficulty": 2,
+          "knowledge_point": "速度与平均速度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "平均速度等于总路程除以总时间。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "平均速度按总量计算。",
+          "difficulty": 3,
+          "knowledge_point": "速度与平均速度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "某车 2 小时行驶 120 千米，求平均速度（用千米每时）。",
+          "answer": {
+            "value": "示例：v = 120 ÷ 2 = 60 千米每时"
+          },
+          "analysis": "评分要点：公式与单位正确。",
+          "difficulty": 4,
+          "knowledge_point": "速度与平均速度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于速度，哪些说法正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 路程一定越长 ✗ 还要看时间。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "速度与平均速度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "表示运动快慢",
+            "单位有米每秒",
+            "与路程时间都有关",
+            "速度越大路程一定越长"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "匀速直线运动的 s-t 图像是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "路程与时间成正比，图像为直线。",
+          "difficulty": 2,
+          "knowledge_point": "运动的图像与计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "一条过原点的直线",
+            "一条曲线",
+            "一条水平线",
+            "一条折线"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "计算路程时，速度 5 米每秒、时间 10 秒，路程为（ ）米。",
+          "answer": {
+            "value": "50"
+          },
+          "analysis": "s = vt = 50 米。计算：5 × 10 = 50。",
+          "difficulty": 2,
+          "knowledge_point": "运动的图像与计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "匀速直线运动中速度保持不变。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "匀速指速度大小方向都不变。",
+          "difficulty": 3,
+          "knowledge_point": "运动的图像与计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "甲车速度 15 米每秒，乙车速度 54 千米每时，谁更快。",
+          "answer": {
+            "value": "示例：乙车 54 千米每时等于 15 米每秒，两车一样快"
+          },
+          "analysis": "评分要点：单位换算正确，结论正确。",
+          "difficulty": 4,
+          "knowledge_point": "运动的图像与计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "进行速度计算要注意哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 单位混用 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "运动的图像与计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "统一单位",
+            "路程与时间对应同一物体",
+            "区分平均速度与瞬时速度",
+            "单位可以混用"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第二章 声现象",
+      "order_index": 2,
+      "summary": "认识声音的产生、传播、特性与噪声控制。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "声音是由物体的（ ）产生的",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "振动发声。",
+          "difficulty": 2,
+          "knowledge_point": "声音的产生与传播",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "振动",
+            "发光",
+            "发热",
+            "静止"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "声音在 15 摄氏度空气中的传播速度约为（ ）米每秒。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "空气中声速约 340 米每秒。该项数值为 340，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "声音的产生与传播",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "340",
+            "3400",
+            "34",
+            "341"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "真空不能传播声音。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "声音传播需要介质。",
+          "difficulty": 3,
+          "knowledge_point": "声音的产生与传播",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明为什么在月球上宇航员必须用无线电通话。",
+          "answer": {
+            "value": "示例：月球上没有空气，声音无法传播，只能靠电磁波通信"
+          },
+          "analysis": "评分要点：指出真空不能传声。",
+          "difficulty": 4,
+          "knowledge_point": "声音的产生与传播",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "声音可以在哪些介质中传播？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 真空 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "声音的产生与传播",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "空气",
+            "水",
+            "钢铁",
+            "真空"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "声音的音调由（ ）决定",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "频率决定音调高低。",
+          "difficulty": 2,
+          "knowledge_point": "声音的特性",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "频率",
+            "振幅",
+            "材料",
+            "距离"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "声音的强弱叫响度，它与发声体的（ ）有关。",
+          "answer": {
+            "value": "振幅"
+          },
+          "analysis": "振幅越大响度越大。",
+          "difficulty": 2,
+          "knowledge_point": "声音的特性",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "不同乐器发出同样音调的声音，音色不同。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "音色由发声体决定。",
+          "difficulty": 3,
+          "knowledge_point": "声音的特性",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明「闻其声知其人」依据的是声音的哪个特性。",
+          "answer": {
+            "value": "示例：依据音色，因为每个人的发声体结构不同，音色不同"
+          },
+          "analysis": "评分要点：特性判断正确。",
+          "difficulty": 4,
+          "knowledge_point": "声音的特性",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "声音的特性包括哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 速度 ✗ 不是特性。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "声音的特性",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "音调",
+            "响度",
+            "音色",
+            "速度"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "控制噪声的三个环节不包括（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "减弱噪声从声源、传播、人耳三处，不是提高频率。",
+          "difficulty": 2,
+          "knowledge_point": "噪声的危害与控制",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "提高声源频率",
+            "在声源处减弱",
+            "在传播过程中减弱",
+            "在人耳处减弱"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "在公路旁设置隔音板，是在（ ）过程中减弱噪声。",
+          "answer": {
+            "value": "传播"
+          },
+          "analysis": "隔音板阻断传播。",
+          "difficulty": 2,
+          "knowledge_point": "噪声的危害与控制",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "长期处于噪声环境可能损害听力。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "噪声危害健康。",
+          "difficulty": 3,
+          "knowledge_point": "噪声的危害与控制",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出两条减弱噪声的做法。",
+          "answer": {
+            "value": "示例：摩托车安装消声器；夜间施工限制时间或加隔音屏障"
+          },
+          "analysis": "评分要点：两条具体可行。",
+          "difficulty": 4,
+          "knowledge_point": "噪声的危害与控制",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "在声源处减弱噪声的做法有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 戴耳塞 ✗ 属人耳处。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "噪声的危害与控制",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "安装消声器",
+            "禁止鸣笛",
+            "降低机器转速",
+            "戴耳塞"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "超声波清洗眼镜利用声传递（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "超声清洗利用声的能量。",
+          "difficulty": 2,
+          "knowledge_point": "声的利用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "能量",
+            "信息",
+            "温度",
+            "电流"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "声呐利用（ ）波探测海底深度。",
+          "answer": {
+            "value": "超声"
+          },
+          "analysis": "声呐用超声波定位。",
+          "difficulty": 2,
+          "knowledge_point": "声的利用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "医生用 B 超检查身体利用了声传递信息。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "B 超获取体内信息。",
+          "difficulty": 3,
+          "knowledge_point": "声的利用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "各举一例说明声传递信息和传递能量。",
+          "answer": {
+            "value": "示例：传递信息如声呐测距；传递能量如超声碎石"
+          },
+          "analysis": "评分要点：各举一例且分类正确。",
+          "difficulty": 4,
+          "knowledge_point": "声的利用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "声传递信息的应用有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 超声清洗 ✗ 是能量；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "声的利用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "声呐探测",
+            "B 超检查",
+            "超声清洗",
+            "回声测距"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第三章 物态变化",
+      "order_index": 3,
+      "summary": "认识温度、熔化和凝固、汽化和液化、升华和凝华。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "常用液体温度计的原理是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "温度计利用热胀冷缩。",
+          "difficulty": 2,
+          "knowledge_point": "温度与温度计",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "液体热胀冷缩",
+            "液体导电",
+            "液体蒸发",
+            "液体凝固"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "摄氏温度规定冰水混合物的温度为（ ）摄氏度。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "冰水混合物为 0 摄氏度。该项数值为 0，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "温度与温度计",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "0",
+            "1",
+            "-1",
+            "2"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "使用温度计读数时玻璃泡要继续留在被测液体中。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "读数时不能取出温度计。",
+          "difficulty": 3,
+          "knowledge_point": "温度与温度计",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明体温计为什么可以离开人体读数。",
+          "answer": {
+            "value": "示例：体温计有一段细弯管，水银柱不能自动退回，可离开人体读数"
+          },
+          "analysis": "评分要点：说明结构特点。",
+          "difficulty": 4,
+          "knowledge_point": "温度与温度计",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "使用温度计要注意哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 当搅拌棒 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "温度与温度计",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "玻璃泡全部浸入液体",
+            "不接触容器底和壁",
+            "读数时视线与液柱上表面相平",
+            "可以当搅拌棒使用"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "晶体熔化时温度（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "晶体有固定熔点。",
+          "difficulty": 2,
+          "knowledge_point": "熔化和凝固",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "保持不变",
+            "不断升高",
+            "不断降低",
+            "先升后降"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "物质从固态变成液态叫（ ），需要吸热。",
+          "answer": {
+            "value": "熔化"
+          },
+          "analysis": "熔化吸热。",
+          "difficulty": 2,
+          "knowledge_point": "熔化和凝固",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "非晶体没有固定的熔点。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "非晶体逐渐软化。",
+          "difficulty": 3,
+          "knowledge_point": "熔化和凝固",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明晶体熔化过程中继续加热温度不变的原因。",
+          "answer": {
+            "value": "示例：吸收的热量用于破坏晶体结构，使固态变液态，温度不升高"
+          },
+          "analysis": "评分要点：指出热量用于物态变化。",
+          "difficulty": 4,
+          "knowledge_point": "熔化和凝固",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "属于熔化的现象有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 水结冰 ✗ 是凝固；D 浇铸 ✗ 是凝固。所以选 A、B。",
+          "difficulty": 3,
+          "knowledge_point": "熔化和凝固",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "冰化成水",
+            "蜡烛受热变软流动",
+            "水结冰",
+            "铁水浇铸成零件"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "液体沸腾时继续吸热，温度（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "沸腾时温度保持沸点不变。",
+          "difficulty": 2,
+          "knowledge_point": "汽化和液化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "保持不变",
+            "持续升高",
+            "持续降低",
+            "忽高忽低"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "液体汽化的两种方式是蒸发和（ ）。",
+          "answer": {
+            "value": "沸腾"
+          },
+          "analysis": "汽化有蒸发与沸腾。",
+          "difficulty": 2,
+          "knowledge_point": "汽化和液化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "气压减小时水的沸点降低。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "气压低沸点低。",
+          "difficulty": 3,
+          "knowledge_point": "汽化和液化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明为什么在高山上煮饭不易煮熟。",
+          "answer": {
+            "value": "示例：高海拔气压低，水的沸点低于 100 摄氏度，温度不够难煮熟"
+          },
+          "analysis": "评分要点：气压与沸点关系说清。",
+          "difficulty": 4,
+          "knowledge_point": "汽化和液化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "加快蒸发的做法有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 降低温度 ✗ 减慢蒸发。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "汽化和液化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "提高液体温度",
+            "增大表面积",
+            "加快表面空气流动",
+            "降低温度"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "冬天窗玻璃上的冰花是水蒸气（ ）形成的",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "水蒸气直接变固态属凝华。",
+          "difficulty": 2,
+          "knowledge_point": "升华和凝华",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "凝华",
+            "凝固",
+            "熔化",
+            "汽化"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "干冰升华时吸收热量，可用于人工（ ）。",
+          "answer": {
+            "value": "降雨"
+          },
+          "analysis": "干冰升华吸热促使水汽凝结。",
+          "difficulty": 2,
+          "knowledge_point": "升华和凝华",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "衣柜中的樟脑丸变小是升华现象。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "固态直接变气态为升华。",
+          "difficulty": 3,
+          "knowledge_point": "升华和凝华",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明霜是怎样形成的。",
+          "answer": {
+            "value": "示例：夜间气温降低，空气中的水蒸气直接凝华成小冰晶附着在地面物体上"
+          },
+          "analysis": "评分要点：指出凝华过程。",
+          "difficulty": 4,
+          "knowledge_point": "升华和凝华",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "属于升华或凝华的现象有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "逐项判断：A ✓ 升华；B ✓ 凝华；C 冰化成水 ✗ 熔化；D 雾 ✗ 液化。所以选 A、B。",
+          "difficulty": 3,
+          "knowledge_point": "升华和凝华",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "樟脑丸变小",
+            "霜的形成",
+            "冰化成水",
+            "雾的形成"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第四章 光现象",
+      "order_index": 4,
+      "summary": "认识光的直线传播、反射与平面镜成像。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "光在同种均匀介质中沿（ ）传播",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "均匀介质中光沿直线传播。",
+          "difficulty": 2,
+          "knowledge_point": "光的直线传播",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "直线",
+            "曲线",
+            "折线",
+            "任意方向"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "光在真空中的传播速度约为 3×10 的（ ）次方米每秒。",
+          "answer": {
+            "value": "八"
+          },
+          "analysis": "光速约 3×10 的八次方米每秒。",
+          "difficulty": 2,
+          "knowledge_point": "光的直线传播",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "小孔成像是光的直线传播形成的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "小孔成像由直线传播形成。",
+          "difficulty": 3,
+          "knowledge_point": "光的直线传播",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明影子的形成原因。",
+          "answer": {
+            "value": "示例：光沿直线传播，被不透明物体挡住的部分形成影子"
+          },
+          "analysis": "评分要点：指出直线传播被遮挡。",
+          "difficulty": 4,
+          "knowledge_point": "光的直线传播",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "属于光的直线传播现象的有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 平面镜成像 ✗ 是反射。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "光的直线传播",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "影子",
+            "日食",
+            "小孔成像",
+            "平面镜成像"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "光的反射中，反射角（ ）入射角",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "反射角等于入射角。",
+          "difficulty": 2,
+          "knowledge_point": "光的反射",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "等于",
+            "大于",
+            "小于",
+            "无关"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "入射光线与法线的夹角叫（ ）角。",
+          "answer": {
+            "value": "入射"
+          },
+          "analysis": "入射光线与法线夹角为入射角。",
+          "difficulty": 2,
+          "knowledge_point": "光的反射",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "镜面反射和漫反射都遵守光的反射定律。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "两种反射都遵循反射定律。",
+          "difficulty": 3,
+          "knowledge_point": "光的反射",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "入射光线与镜面夹角为 30 度，求反射角。",
+          "answer": {
+            "value": "示例：入射角为 60 度，故反射角为 60 度"
+          },
+          "analysis": "评分要点：先算入射角，再得反射角。",
+          "difficulty": 4,
+          "knowledge_point": "光的反射",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于光的反射，哪些说法正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 光路不可逆 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "光的反射",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "反射角等于入射角",
+            "三线共面",
+            "反射光与入射光分居法线两侧",
+            "反射时光路不可逆"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "平面镜成的像是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "平面镜成正立等大虚像。",
+          "difficulty": 2,
+          "knowledge_point": "平面镜成像",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "正立等大的虚像",
+            "倒立缩小的实像",
+            "正立放大的虚像",
+            "倒立等大的实像"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "物体距平面镜 2 米，像距镜面（ ）米。",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "像与物到镜面距离相等。该项数值为 2，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "平面镜成像",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "20",
+            "0.2",
+            "2",
+            "3"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "平面镜成像不能用光屏承接。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "虚像不能被光屏承接。",
+          "difficulty": 3,
+          "knowledge_point": "平面镜成像",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "人向平面镜走近 1 米，像与人之间的距离如何变化。",
+          "answer": {
+            "value": "示例：人与像的距离减小 2 米（像也向镜面靠近 1 米）"
+          },
+          "analysis": "评分要点：说明对称关系，结论正确。",
+          "difficulty": 4,
+          "knowledge_point": "平面镜成像",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于平面镜成像，哪些说法正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 可用光屏承接 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "平面镜成像",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "像与物大小相等",
+            "像与物到镜面距离相等",
+            "像是虚像",
+            "像可以用光屏承接"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "光从空气斜射入水中时，折射光线（ ）法线",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "由光疏入光密，折射角小于入射角，光线靠近法线。",
+          "difficulty": 2,
+          "knowledge_point": "光的折射与色散",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "靠近",
+            "远离",
+            "与法线重合",
+            "与法线垂直"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "白光通过三棱镜后分解成七种色光，这种现象叫光的（ ）。",
+          "answer": {
+            "value": "色散"
+          },
+          "analysis": "白光色散为七色光。",
+          "difficulty": 2,
+          "knowledge_point": "光的折射与色散",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "光从水中斜射入空气时，折射角大于入射角。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "由光密入光疏，折射角变大。",
+          "difficulty": 3,
+          "knowledge_point": "光的折射与色散",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明为什么水中的筷子看起来向上弯折。",
+          "answer": {
+            "value": "示例：水中筷子反射的光从水射入空气时发生折射，折射光线偏离法线，人眼看到的位置比实际偏上"
+          },
+          "analysis": "评分要点：说明折射方向与视觉位置。",
+          "difficulty": 4,
+          "knowledge_point": "光的折射与色散",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "属于光的折射现象的有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 平面镜成像 ✗ 是反射；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "光的折射与色散",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "水中的筷子变弯",
+            "池水看起来变浅",
+            "平面镜成像",
+            "海市蜃楼"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第五章 透镜及其应用",
+      "order_index": 5,
+      "summary": "认识凸透镜、凹透镜及凸透镜成像规律与应用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "对光有会聚作用的透镜是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "凸透镜会聚光。",
+          "difficulty": 2,
+          "knowledge_point": "透镜与焦点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "凸透镜",
+            "凹透镜",
+            "平面镜",
+            "三棱镜"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "凸透镜焦点到光心的距离叫（ ）。",
+          "answer": {
+            "value": "焦距"
+          },
+          "analysis": "焦点到光心距离为焦距。",
+          "difficulty": 2,
+          "knowledge_point": "透镜与焦点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "凹透镜对光有发散作用。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "凹透镜发散光。",
+          "difficulty": 3,
+          "knowledge_point": "透镜与焦点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明如何用平行光测凸透镜的焦距。",
+          "answer": {
+            "value": "示例：让平行光正对凸透镜，在另一侧移动光屏找到最小最亮的光斑，量光斑到光心的距离即焦距"
+          },
+          "analysis": "评分要点：步骤可操作。",
+          "difficulty": 4,
+          "knowledge_point": "透镜与焦点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于凸透镜，哪些说法正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 发散 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "透镜与焦点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "会聚光",
+            "有两个焦点",
+            "焦距越大折光能力越弱",
+            "对光有发散作用"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "物距大于二倍焦距时，凸透镜成（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "u 大于 2f 成倒立缩小实像。",
+          "difficulty": 2,
+          "knowledge_point": "凸透镜成像规律",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "倒立缩小的实像",
+            "倒立放大的实像",
+            "正立放大的虚像",
+            "正立等大的虚像"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "物距等于二倍焦距时，像距也等于（ ）倍焦距，成等大实像。",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "u 等于 2f 时 v 等于 2f。该项数值为 2，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "凸透镜成像规律",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "20",
+            "2",
+            "0.2",
+            "3"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "物距小于一倍焦距时，凸透镜成正立放大的虚像。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "这是放大镜原理。",
+          "difficulty": 3,
+          "knowledge_point": "凸透镜成像规律",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明照相机、投影仪分别对应哪种成像情况。",
+          "answer": {
+            "value": "示例：照相机物距大于二倍焦距，成倒立缩小实像；投影仪物距在一倍到二倍焦距之间，成倒立放大实像"
+          },
+          "analysis": "评分要点：两种应用与成像对应正确。",
+          "difficulty": 4,
+          "knowledge_point": "凸透镜成像规律",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于凸透镜成像，哪些说法正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 虚像被光屏承接 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "凸透镜成像规律",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "实像都是倒立的",
+            "虚像都是正立的",
+            "物近像远像变大",
+            "虚像能被光屏承接"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "近视眼应佩戴（ ）矫正",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "近视用凹透镜矫正。",
+          "difficulty": 2,
+          "knowledge_point": "眼睛与眼镜",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "凹透镜",
+            "凸透镜",
+            "平面镜",
+            "棱镜"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "远视眼的像成在视网膜（ ）方，需用凸透镜矫正。",
+          "answer": {
+            "value": "后"
+          },
+          "analysis": "远视像成在视网膜后。",
+          "difficulty": 2,
+          "knowledge_point": "眼睛与眼镜",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "眼睛的晶状体相当于凸透镜。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "晶状体起凸透镜作用。",
+          "difficulty": 3,
+          "knowledge_point": "眼睛与眼镜",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明近视眼的成因和矫正方法。",
+          "answer": {
+            "value": "示例：晶状体折光能力过强，像成在视网膜前，需佩戴凹透镜使光先发散"
+          },
+          "analysis": "评分要点：成因与矫正对应。",
+          "difficulty": 4,
+          "knowledge_point": "眼睛与眼镜",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于眼睛与眼镜，哪些说法正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 近视用凸透镜 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "眼睛与眼镜",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "晶状体相当于凸透镜",
+            "近视用凹透镜",
+            "远视用凸透镜",
+            "近视用凸透镜"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "显微镜的物镜成（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "显微镜物镜成放大实像，再由目镜放大。",
+          "difficulty": 2,
+          "knowledge_point": "显微镜与望远镜",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "放大的实像",
+            "缩小的实像",
+            "放大的虚像",
+            "等大的实像"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "望远镜的物镜使远处物体的像成在（ ）附近。",
+          "answer": {
+            "value": "焦点"
+          },
+          "analysis": "物镜成像在焦点附近。",
+          "difficulty": 2,
+          "knowledge_point": "显微镜与望远镜",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "显微镜两次放大，最终成放大的虚像。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "物镜与目镜共同放大。",
+          "difficulty": 3,
+          "knowledge_point": "显微镜与望远镜",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明显微镜为什么能把微小物体放得很大。",
+          "answer": {
+            "value": "示例：物镜先成放大的实像，目镜再把这个实像放大成虚像，总放大倍数为两者之积"
+          },
+          "analysis": "评分要点：说明两次放大。",
+          "difficulty": 4,
+          "knowledge_point": "显微镜与望远镜",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于显微镜和望远镜，哪些说法正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 都成缩小像 ✗ 显微镜物镜成放大实像。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "显微镜与望远镜",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "都由两组透镜组成",
+            "显微镜用于观察微小物体",
+            "望远镜用于观察远处物体",
+            "两者物镜都成缩小的像"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第六章 质量与密度",
+      "order_index": 6,
+      "summary": "认识质量、密度及其测量与应用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "质量是物体的一种（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "质量不随位置、形状、状态改变。",
+          "difficulty": 2,
+          "knowledge_point": "质量及其测量",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "属性，不随位置改变",
+            "状态，会随温度改变",
+            "力",
+            "运动"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "质量的国际单位是（ ）。",
+          "answer": {
+            "value": "千克"
+          },
+          "analysis": "质量基本单位为千克。",
+          "difficulty": 2,
+          "knowledge_point": "质量及其测量",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "物体的质量与其形状、位置无关。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "质量是物体的属性。",
+          "difficulty": 3,
+          "knowledge_point": "质量及其测量",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明用天平称量物体质量的主要步骤。",
+          "answer": {
+            "value": "示例：把天平放平，游码归零，调平衡螺母使横梁平衡；左物右码；加减砝码并移动游码使横梁再次平衡；读数"
+          },
+          "analysis": "评分要点：步骤顺序正确。",
+          "difficulty": 4,
+          "knowledge_point": "质量及其测量",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "使用托盘天平要注意哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 手拿砝码 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "质量及其测量",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "放平并调平衡",
+            "左物右码",
+            "用镊子取砝码",
+            "用手直接拿砝码"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "密度的计算式是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "密度等于质量除以体积。",
+          "difficulty": 2,
+          "knowledge_point": "密度及其计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "质量 ÷ 体积",
+            "体积 ÷ 质量",
+            "质量 × 体积",
+            "质量 + 体积"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "水的密度是 1.0×10 的三次方千克每立方米，合（ ）克每立方厘米。",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "1 克每立方厘米等于 1000 千克每立方米。该项数值为 1，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "密度及其计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "10",
+            "1",
+            "0.1",
+            "2"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "密度是物质的特性，与质量和体积无关。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "同种物质密度一定。",
+          "difficulty": 3,
+          "knowledge_point": "密度及其计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "某物体体积 20 立方厘米、质量 54 克，求密度。",
+          "answer": {
+            "value": "示例：密度为 2.7 克每立方厘米"
+          },
+          "analysis": "评分要点：公式与结果正确。",
+          "difficulty": 4,
+          "knowledge_point": "密度及其计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于密度，哪些说法正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 质量越大密度越大 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "密度及其计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "是物质的特性",
+            "单位有千克每立方米",
+            "同种物质密度一般不变",
+            "质量越大密度越大"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "测量液体密度时，通常用（ ）测体积",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "量筒测液体体积。",
+          "difficulty": 2,
+          "knowledge_point": "测量物质的密度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "量筒",
+            "刻度尺",
+            "天平",
+            "温度计"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "测固体密度时应先测（ ），再测体积，避免固体沾水影响质量。",
+          "answer": {
+            "value": "质量"
+          },
+          "analysis": "先测质量再测体积。",
+          "difficulty": 2,
+          "knowledge_point": "测量物质的密度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "量筒读数时视线要与凹液面最低处相平。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "量筒读数需平视凹液面底部。",
+          "difficulty": 3,
+          "knowledge_point": "测量物质的密度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明怎样用量筒测不规则小石块的体积。",
+          "answer": {
+            "value": "示例：先在量筒中倒入适量水读出体积 V1，再用细线系住石块浸没水中读出 V2，石块体积为 V2 减 V1"
+          },
+          "analysis": "评分要点：排水法步骤完整。",
+          "difficulty": 4,
+          "knowledge_point": "测量物质的密度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "测量密度需要的器材有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 秒表 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "测量物质的密度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "天平",
+            "量筒",
+            "细线",
+            "秒表"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "利用密度可以（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "密度是鉴别物质的依据之一。",
+          "difficulty": 2,
+          "knowledge_point": "密度的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "鉴别物质种类",
+            "测量温度",
+            "测量时间",
+            "改变重力"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "体积 0.5 立方米、密度 2×10 的三次方千克每立方米的物体质量为（ ）千克。",
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "m = 密度 × 体积 = 1000 千克。该项数值为 1000，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "密度的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "10000",
+            "100",
+            "1001",
+            "1000"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "可以通过比较密度判断物体是否空心。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "实际密度小于材料密度说明空心。",
+          "difficulty": 3,
+          "knowledge_point": "密度的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "一个铁球质量 79 克、体积 20 立方厘米，铁的密度为 7.9 克每立方厘米，判断是否空心。",
+          "answer": {
+            "value": "示例：实心体积应为 10 立方厘米，实际 20 立方厘米，故为空心"
+          },
+          "analysis": "评分要点：比较体积或密度，结论正确。",
+          "difficulty": 4,
+          "knowledge_point": "密度的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "密度的应用有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 测力 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "密度的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "鉴别物质",
+            "计算质量",
+            "计算体积",
+            "测量力的大小"
+          ]
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-14T12:07:25+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "normalized": "难度 40/40/20 归一 + 主观题短答案补评分要点（2026-11-13 统一口径）",
+    "supplemented": "数值填空补可求值算式 1 道 / 数值填空改单选 6 道 / 补多选题 0 道（2 真 + 2 假，答案 2 项；2026-11-14 口径）",
+    "stem_dedup": "跨册同题干补册次前缀 0 道（2026-11-14 跨册去重口径）",
+    "duplicate_rewrites": "跨册同题定向改写 0 道（保留两侧题量，2026-11-14 口径）",
+    "chapter_scope": "全章域（本册无跨册重复章）",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

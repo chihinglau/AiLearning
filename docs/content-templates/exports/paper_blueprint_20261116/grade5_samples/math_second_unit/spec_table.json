@@ -1,0 +1,182 @@
+{
+  "exam_id": null,
+  "title": "5年级数学下册单元卷（自主题库生成）",
+  "subject": "math",
+  "grade": 5,
+  "exam_type": "unit",
+  "blueprint_code": "g5_math_unit",
+  "blueprint_name": "5年级数学单元测试卷（自主题库生成）",
+  "total_score": 60,
+  "time_limit_min": 40,
+  "question_count": 12,
+  "actual_score_total": 60.0,
+  "score_matches": true,
+  "knowledge_point_count": 12,
+  "sections": [
+    {
+      "section_index": 0,
+      "section_name": "一、选择题",
+      "q_type": "choice",
+      "band": "easy",
+      "planned_count": 4,
+      "planned_score": 16.0,
+      "actual_count": 4,
+      "actual_score": 16.0,
+      "knowledge_points": [
+        "分数乘法的意义",
+        "异分母分数减法",
+        "异分母分数加法",
+        "长方体的表面积"
+      ],
+      "chapters": [
+        "一 分数加减法",
+        "三 分数乘法",
+        "二 长方体（一）"
+      ],
+      "questions": [
+        {
+          "question_id": 12701,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "异分母分数减法",
+          "chapter": "一 分数加减法"
+        },
+        {
+          "question_id": 12746,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "分数乘法的意义",
+          "chapter": "三 分数乘法"
+        },
+        {
+          "question_id": 12721,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "长方体的表面积",
+          "chapter": "二 长方体（一）"
+        },
+        {
+          "question_id": 12696,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "异分母分数加法",
+          "chapter": "一 分数加减法"
+        }
+      ]
+    },
+    {
+      "section_index": 1,
+      "section_name": "二、填空题",
+      "q_type": "fill",
+      "band": "medium",
+      "planned_count": 5,
+      "planned_score": 20.0,
+      "actual_count": 5,
+      "actual_score": 20.0,
+      "knowledge_points": [
+        "数与运算·乘除法运算·按单元·变式一",
+        "数与运算·乘除法运算·按单元·变式三",
+        "数与运算·乘除法运算·按单元·变式二",
+        "数与运算·同分母分数加减·按单元·变式一",
+        "数与运算·整数加减运算·按单元·变式二"
+      ],
+      "chapters": [
+        "一 分数加减法",
+        "三 分数乘法",
+        "二 长方体（一）"
+      ],
+      "questions": [
+        {
+          "question_id": 19476,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·乘除法运算·按单元·变式二",
+          "chapter": "二 长方体（一）"
+        },
+        {
+          "question_id": 19474,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·整数加减运算·按单元·变式二",
+          "chapter": "一 分数加减法"
+        },
+        {
+          "question_id": 19478,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·同分母分数加减·按单元·变式一",
+          "chapter": "三 分数乘法"
+        },
+        {
+          "question_id": 19477,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·乘除法运算·按单元·变式三",
+          "chapter": "二 长方体（一）"
+        },
+        {
+          "question_id": 19475,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·乘除法运算·按单元·变式一",
+          "chapter": "二 长方体（一）"
+        }
+      ]
+    },
+    {
+      "section_index": 2,
+      "section_name": "三、计算与解答",
+      "q_type": "answer",
+      "band": "hard",
+      "planned_count": 3,
+      "planned_score": 24.0,
+      "actual_count": 3,
+      "actual_score": 24.0,
+      "knowledge_points": [
+        "分数乘分数",
+        "分数乘法与倒数",
+        "表面积的实际应用"
+      ],
+      "chapters": [
+        "三 分数乘法",
+        "二 长方体（一）"
+      ],
+      "questions": [
+        {
+          "question_id": 12755,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "分数乘法与倒数",
+          "chapter": "三 分数乘法"
+        },
+        {
+          "question_id": 12735,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "表面积的实际应用",
+          "chapter": "二 长方体（一）"
+        },
+        {
+          "question_id": 12745,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "分数乘分数",
+          "chapter": "三 分数乘法"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-11-17T15:45:23.279521+00:00"
+}

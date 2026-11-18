@@ -1,0 +1,181 @@
+{
+  "exam_id": null,
+  "title": "4年级数学下册单元卷（自主题库生成）",
+  "subject": "math",
+  "grade": 4,
+  "exam_type": "unit",
+  "blueprint_code": "g4_math_unit",
+  "blueprint_name": "4年级数学单元测试卷（自主题库生成）",
+  "total_score": 60,
+  "time_limit_min": 40,
+  "question_count": 12,
+  "actual_score_total": 60.0,
+  "score_matches": true,
+  "knowledge_point_count": 12,
+  "sections": [
+    {
+      "section_index": 0,
+      "section_name": "一、选择题",
+      "q_type": "choice",
+      "band": "easy",
+      "planned_count": 4,
+      "planned_score": 16.0,
+      "actual_count": 4,
+      "actual_score": 16.0,
+      "knowledge_points": [
+        "三角形的内角和",
+        "三角形的特性",
+        "小数乘小数",
+        "小数加减法"
+      ],
+      "chapters": [
+        "一 小数的意义和加减法",
+        "三 小数乘法",
+        "二 认识三角形和四边形"
+      ],
+      "questions": [
+        {
+          "question_id": 12560,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "小数乘小数",
+          "chapter": "三 小数乘法"
+        },
+        {
+          "question_id": 12535,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "三角形的特性",
+          "chapter": "二 认识三角形和四边形"
+        },
+        {
+          "question_id": 12525,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "小数加减法",
+          "chapter": "一 小数的意义和加减法"
+        },
+        {
+          "question_id": 12546,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "三角形的内角和",
+          "chapter": "二 认识三角形和四边形"
+        }
+      ]
+    },
+    {
+      "section_index": 1,
+      "section_name": "二、填空题",
+      "q_type": "fill",
+      "band": "medium",
+      "planned_count": 5,
+      "planned_score": 20.0,
+      "actual_count": 5,
+      "actual_score": 20.0,
+      "knowledge_points": [
+        "数与运算·平面图形周长与面积·按单元·变式一",
+        "数与运算·平面图形周长与面积·按单元·变式三",
+        "数与运算·平面图形周长与面积·按单元·变式二",
+        "数与运算·平面图形周长与面积·按单元·变式四",
+        "数与运算·整数加减运算·按单元·变式二"
+      ],
+      "chapters": [
+        "一 小数的意义和加减法",
+        "二 认识三角形和四边形"
+      ],
+      "questions": [
+        {
+          "question_id": 19424,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·整数加减运算·按单元·变式二",
+          "chapter": "一 小数的意义和加减法"
+        },
+        {
+          "question_id": 19427,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·平面图形周长与面积·按单元·变式三",
+          "chapter": "二 认识三角形和四边形"
+        },
+        {
+          "question_id": 19425,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·平面图形周长与面积·按单元·变式一",
+          "chapter": "二 认识三角形和四边形"
+        },
+        {
+          "question_id": 19428,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·平面图形周长与面积·按单元·变式四",
+          "chapter": "二 认识三角形和四边形"
+        },
+        {
+          "question_id": 19426,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·平面图形周长与面积·按单元·变式二",
+          "chapter": "二 认识三角形和四边形"
+        }
+      ]
+    },
+    {
+      "section_index": 2,
+      "section_name": "三、计算与解答",
+      "q_type": "answer",
+      "band": "hard",
+      "planned_count": 3,
+      "planned_score": 24.0,
+      "actual_count": 3,
+      "actual_score": 24.0,
+      "knowledge_points": [
+        "小数乘法的实际应用",
+        "小数在实际中的应用",
+        "小数的数位与读写"
+      ],
+      "chapters": [
+        "一 小数的意义和加减法",
+        "三 小数乘法"
+      ],
+      "questions": [
+        {
+          "question_id": 12574,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "小数乘法的实际应用",
+          "chapter": "三 小数乘法"
+        },
+        {
+          "question_id": 12534,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "小数在实际中的应用",
+          "chapter": "一 小数的意义和加减法"
+        },
+        {
+          "question_id": 12524,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "小数的数位与读写",
+          "chapter": "一 小数的意义和加减法"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-11-17T15:45:22.053520+00:00"
+}

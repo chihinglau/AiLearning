@@ -1,9 +1,9 @@
 # 深爱学（AiLearning）学习页面功能设计方案
 
 > **文档性质**：专项设计方案（学习主链路闭环蓝本）
-> **版本**：v1.2
+> **版本**：v1.4
 > **日期**：2026-11-06
-> **最后更新**：2026-11-12（第二次修订：考试入口口径对齐、待办考试独立入口、考试入库/发布闭环，见 §8.7 / §12.4 / §14.2 L18~L20；对应主计划 CR-003 / EX-01~EX-03。第一次修订为练习模式与前置知识点，CR-002 / UX-04~UX-06）
+> **最后更新**：2026-11-14（第四次修订：CR-005 / D-09 v1.1 评审通过后，§3.1 交叉引用转 v1.1、§14.2 登记 L27~L30；EX-09~EX-11 已交付，见主计划 §6.24。第三次为 CR-004：§12.4 修正 `/self-grade` → `/self-assess`、§14.2 登记 L21~L26；第二次为 CR-003 考试入口闭环，第一次为 CR-002 练习模式与前置知识点）
 > **关联文档**：[user-role-permission-design.md](./user-role-permission-design.md)、[k12-learning-app-design.md](./k12-learning-app-design.md)、[subject-tutoring-and-m2-design.md](./subject-tutoring-and-m2-design.md)
 > **目标**：把当前"教材清单 + 章节列表"升级为"教材绑定 → 分层学习 → 智能练习 → 综合考试 → 复盘推荐"的完整闭环
 
@@ -140,6 +140,8 @@ flowchart LR
 ├── 考试答题 /exams/:id/attempt
 └── 考试报告 /exams/attempts/:id/report
 ```
+
+> **正式交叉引用（2026-11-14，CR-004 / CR-005 均已评审通过）**：上图中「考试中心 /exams」与「真题库 /past-papers」的完整页面方案见 [exam-center-and-past-papers-design.md](./exam-center-and-past-papers-design.md)（D-09 v1.1，已生效 · 已实施，EX-04~EX-08 / L21~L26 见主计划 §6.23，EX-09~EX-11 / L27~L30 见 §6.24）。本图与 §8.7.1 口径契约仍为基准，D-09 为其页面级细化，不改变可见性谓词；CR-005 的审核流仅对真题生效，普通卷生成即 `published` 不变。
 
 ### 3.2 学习首页布局（替换现有清单式页面）
 
@@ -989,7 +991,7 @@ CREATE TABLE exam_answers (
 | PATCH | `/api/exams/attempts/{id}` | 自动保存答案 | 新增 |
 | POST | `/api/exams/attempts/{id}/submit` | 交卷（幂等） | 新增 |
 | GET | `/api/exams/attempts/{id}/report` | 报告 | 新增 |
-| POST | `/api/exams/attempts/{id}/self-grade` | 主观题自评 | 新增（P1） |
+| POST | `/api/exams/attempts/{id}/self-assess` | 主观题自评（v1.3 修正文档漂移 D-1：代码实际路径为 `self-assess`） | 新增（P1） |
 | POST | `/api/exams/generate` | 按蓝图生成试卷并发布（入库） | 新增；v1.2 接入 App `/exams/manage` |
 | POST | `/api/exams/mock` | 派发班级同卷模考 | 已有（P2-07）；v1.2 接入 App，需 `learn:assignment:create` |
 | GET | `/api/learn/home` | `pending_exams` 增 `entry` / `subject` | v1.2 扩展，与 `/api/exams` 同可见性口径（§8.7.1） |
@@ -1077,6 +1079,16 @@ CREATE TABLE exam_answers (
 | L18 | 首页待办考试口径一致 | `pending_exams` 与 `GET /api/exams` 同过滤，真题/作业卷/非本班卷/已交卷/关闭窗口不虚标；§8.7.1 |
 | L19 | 待办考试可直达 | 首页待办卡按 `entry` 直达 `/exam/:id` 或 `/past-papers`，窗口状态有提示、无待办有空态；已完成无 attempt 不静默；§8.7.2 |
 | L20 | 考试入库闭环 | `content:exam:write` 可在 App 按蓝图生成并发布试卷，`learn:assignment:create` 可派发班级模考；新卷立即出现在学生可见列表；§8.7.3 |
+| L21 | 考试中心筛选与口径一致 | `type/status/subject/window_state/q` 下推服务端，且仅对 §8.7.1 谓词做 AND 收窄；`X-Total-Count` 返回过滤后总数（D-09 §4.3） |
+| L22 | 状态矩阵完备 | `examCardDecision()` 六态唯一决策：不可进入必有提示、已完成缺 attempt 不静默、已交卷在关闭窗口仍可看报告（D-09 §4.4） |
+| L23 | 真题库服务端筛选 | `/past-papers/filters` 下发可用项；年份/学科/地区/类型/状态服务端过滤，历史年份不被 `limit(60)` 截断，按 `year desc` 分组（D-09 §5.3） |
+| L24 | 真题来源可追溯 | `source_name/license_note/adapted_from` + 迁移 `b4c5d6e7f8g9`；真题缺来源返回 422 `EXAM_SOURCE_REQUIRED`；缺来源显示「来源待补录」（D-09 §5.5） |
+| L25 | 真题库动作闭环 | 未考/进行中/已考/批改中/未开放/已结束全覆盖；真题始终不进通用考试列表与首页待办（D-09 §5.4） |
+| L26 | 兼容与回归 | 不带新参数时接口行为与 CR-003 一致；L18~L20 回归通过；全量 `pytest` 432 例 / `flutter test` 170 例、静态检查 0 issue（主计划 §6.23） |
+| L27 | 真题审核发布流状态机与权限 | `draft → pending_review → published`、退回/下线、非法流转 409、缺来源 422；权限与审计留痕（主计划 §6.24） |
+| L28 | 前端审核闭环 | 组卷草稿态、提交复核、审核队列页与权限门；模型/widget 测试 |
+| L29 | 存量真题来源补录与卡口 | 按 R-07 台账显式补录，不猜测来源；缺来源的 `published` 卷隔离为 `draft` |
+| L30 | 真机回归与兼容 | EBG 真机补跑筛选/年份/详情/admin 组卷全链路；普通卷生成即 `published` 不变，§8.7.1 契约不变 |
 
 ### 14.3 风险与对策
 

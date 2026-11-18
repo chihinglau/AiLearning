@@ -1,0 +1,453 @@
+{
+  "stamp": "20261113",
+  "action": "quarantine_release_all",
+  "before_pairs": 34,
+  "after_pairs": 0,
+  "tasks_json_sha256_before": "943c73d48476b93e5eff8da79742c3b55f140d75cbf04687a711998bba7f53ea",
+  "tasks_json_backup": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\automation_20261108_codebuddy\\tasks.json.bak_20261113",
+  "evidence": [
+    {
+      "pair": "biology:7",
+      "book": "biology/g7",
+      "pack": "biology_g7",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\biology\\g7\\biology_g7_first_20261110_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 9,
+        "points": 36,
+        "questions": 162
+      }
+    },
+    {
+      "pair": "chemistry:9",
+      "book": "chemistry/g9",
+      "pack": "chemistry_g9",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\chemistry\\g9\\chemistry_g9_first_20261110_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 7,
+        "points": 28,
+        "questions": 126
+      }
+    },
+    {
+      "pair": "chinese:2",
+      "book": "chinese/g2",
+      "pack": "chinese_g2",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\chinese\\g2\\chinese_g2_first_20261110_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 8,
+        "points": 32,
+        "questions": 144
+      }
+    },
+    {
+      "pair": "chinese:3",
+      "book": "chinese/g3",
+      "pack": "chinese_g3",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\chinese\\g3\\chinese_g3_first_20261110_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 8,
+        "points": 32,
+        "questions": 144
+      }
+    },
+    {
+      "pair": "chinese:4",
+      "book": "chinese/g4",
+      "pack": "chinese_g4",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\chinese\\g4\\chinese_g4_first_20261110_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 8,
+        "points": 32,
+        "questions": 144
+      }
+    },
+    {
+      "pair": "chinese:5",
+      "book": "chinese/g5",
+      "pack": "chinese_g5",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\chinese\\g5\\chinese_g5_first_20261110_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 8,
+        "points": 32,
+        "questions": 144
+      }
+    },
+    {
+      "pair": "chinese:6",
+      "book": "chinese/g6",
+      "pack": "chinese_g6",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\chinese\\g6\\chinese_g6_first_20261110_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 8,
+        "points": 32,
+        "questions": 149
+      }
+    },
+    {
+      "pair": "chinese:7",
+      "book": "chinese/g7",
+      "pack": "chinese_g7",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\chinese\\g7\\chinese_g7_first_20261110_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 6,
+        "points": 24,
+        "questions": 108
+      }
+    },
+    {
+      "pair": "chinese:9",
+      "book": "chinese/g9",
+      "pack": "chinese_g9",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\chinese\\g9\\chinese_g9_first_20261110_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 6,
+        "points": 24,
+        "questions": 108
+      }
+    },
+    {
+      "pair": "english:2",
+      "book": "english/g2",
+      "pack": "english_g2",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\english\\g2\\english_g2_first_20261110_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 6,
+        "points": 24,
+        "questions": 108
+      }
+    },
+    {
+      "pair": "english:3",
+      "book": "english/g3",
+      "pack": "english_g3",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\english\\g3\\english_g3_first_20261110_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 8,
+        "points": 32,
+        "questions": 144
+      }
+    },
+    {
+      "pair": "english:4",
+      "book": "english/g4",
+      "pack": "english_g4",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\english\\g4\\english_g4_first_20261110_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 8,
+        "points": 32,
+        "questions": 144
+      }
+    },
+    {
+      "pair": "english:5",
+      "book": "english/g5",
+      "pack": "english_g5",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\english\\g5\\english_g5_first_20261110_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 8,
+        "points": 32,
+        "questions": 144
+      }
+    },
+    {
+      "pair": "english:6",
+      "book": "english/g6",
+      "pack": "english_g6",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\english\\g6\\english_g6_first_20261110_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 6,
+        "points": 24,
+        "questions": 108
+      }
+    },
+    {
+      "pair": "english:7",
+      "book": "english/g7",
+      "pack": "english_g7",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\english\\g7\\english_g7_first_20261110_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 6,
+        "points": 24,
+        "questions": 108
+      }
+    },
+    {
+      "pair": "english:9",
+      "book": "english/g9",
+      "pack": "english_g9",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\english\\g9\\english_g9_first_20261110_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 6,
+        "points": 24,
+        "questions": 108
+      }
+    },
+    {
+      "pair": "geography:7",
+      "book": "geography/g7",
+      "pack": "geography_g7",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\geography\\g7\\geography_g7_first_20261110_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 6,
+        "points": 24,
+        "questions": 108
+      }
+    },
+    {
+      "pair": "history:7",
+      "book": "history/g7",
+      "pack": "history_g7",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\history\\g7\\history_g7_first_20261110_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 4,
+        "points": 16,
+        "questions": 72
+      }
+    },
+    {
+      "pair": "history:9",
+      "book": "history/g9",
+      "pack": "history_g9_first",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\history\\g9\\history_g9_first_20261112_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 7,
+        "points": 28,
+        "questions": 140
+      }
+    },
+    {
+      "pair": "math:2",
+      "book": "math/g2",
+      "pack": "math_g2",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\math\\g2\\math_g2_first_20261110_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 8,
+        "points": 32,
+        "questions": 144
+      }
+    },
+    {
+      "pair": "math:3",
+      "book": "math/g3",
+      "pack": "math_g3",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\math\\g3\\math_g3_first_20261110_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 8,
+        "points": 32,
+        "questions": 144
+      }
+    },
+    {
+      "pair": "math:4",
+      "book": "math/g4",
+      "pack": "math_g4",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\math\\g4\\math_g4_first_20261110_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 12,
+        "points": 48,
+        "questions": 216
+      }
+    },
+    {
+      "pair": "math:5",
+      "book": "math/g5",
+      "pack": "math_g5",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\math\\g5\\math_g5_first_20261110_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 12,
+        "points": 48,
+        "questions": 216
+      }
+    },
+    {
+      "pair": "math:6",
+      "book": "math/g6",
+      "pack": "math_g6",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\math\\g6\\math_g6_first_20261110_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 13,
+        "points": 52,
+        "questions": 234
+      }
+    },
+    {
+      "pair": "math:7",
+      "book": "math/g7",
+      "pack": "math_g7",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\math\\g7\\math_g7_first_20261110_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 6,
+        "points": 24,
+        "questions": 108
+      }
+    },
+    {
+      "pair": "math:9",
+      "book": "math/g9",
+      "pack": "math_g9",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\math\\g9\\math_g9_first_20261110_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 7,
+        "points": 28,
+        "questions": 126
+      }
+    },
+    {
+      "pair": "physics:9",
+      "book": "physics/g9",
+      "pack": "physics_g9",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\physics\\g9\\physics_g9_first_20261110_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 10,
+        "points": 40,
+        "questions": 180
+      }
+    },
+    {
+      "pair": "politics:2",
+      "book": "politics/g2",
+      "pack": "politics_g2",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g2\\politics_g2_first_20261110_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 4,
+        "points": 16,
+        "questions": 73
+      }
+    },
+    {
+      "pair": "politics:3",
+      "book": "politics/g3",
+      "pack": "politics_g3",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g3\\politics_g3_first_20261110_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 4,
+        "points": 16,
+        "questions": 72
+      }
+    },
+    {
+      "pair": "politics:4",
+      "book": "politics/g4",
+      "pack": "politics_g4",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g4\\politics_g4_first_20261110_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 4,
+        "points": 16,
+        "questions": 72
+      }
+    },
+    {
+      "pair": "politics:5",
+      "book": "politics/g5",
+      "pack": "politics_g5_first",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g5\\politics_g5_first_20261112_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 4,
+        "points": 16,
+        "questions": 80
+      }
+    },
+    {
+      "pair": "politics:6",
+      "book": "politics/g6",
+      "pack": "politics_g6",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g6\\politics_g6_first_20261110_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 4,
+        "points": 16,
+        "questions": 72
+      }
+    },
+    {
+      "pair": "politics:7",
+      "book": "politics/g7",
+      "pack": "politics_g7",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g7\\politics_g7_first_20261110_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 4,
+        "points": 16,
+        "questions": 72
+      }
+    },
+    {
+      "pair": "politics:9",
+      "book": "politics/g9",
+      "pack": "politics_g9_first",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g9\\politics_g9_first_20261112_book.json",
+      "validate_pass": true,
+      "gate_pass": true,
+      "stats": {
+        "chapters": 4,
+        "points": 16,
+        "questions": 80
+      }
+    }
+  ],
+  "note": "34 项逐项撤出，每项均有通过三道校验的重跑上册替代；quarantined 文件保留不删。"
+}

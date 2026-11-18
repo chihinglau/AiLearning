@@ -1,0 +1,179 @@
+{
+  "exam_id": null,
+  "title": "1年级数学下册单元卷（自主题库生成）",
+  "subject": "math",
+  "grade": 1,
+  "exam_type": "unit",
+  "blueprint_code": "g1_math_unit",
+  "blueprint_name": "1年级数学单元测试卷（自主题库生成）",
+  "total_score": 60,
+  "time_limit_min": 40,
+  "question_count": 12,
+  "actual_score_total": 60.0,
+  "score_matches": true,
+  "knowledge_point_count": 8,
+  "sections": [
+    {
+      "section_index": 0,
+      "section_name": "一、选择题",
+      "q_type": "choice",
+      "band": "easy",
+      "planned_count": 4,
+      "planned_score": 16.0,
+      "actual_count": 4,
+      "actual_score": 16.0,
+      "knowledge_points": [
+        "11~20各数的认识与顺序",
+        "20以内不进位加法",
+        "20以内进位加与退位减（要点）",
+        "20以内进位加法（凑十法）"
+      ],
+      "chapters": [
+        "20以内进位加与退位减",
+        "第一单元 20以内数与加法"
+      ],
+      "questions": [
+        {
+          "question_id": 11976,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "20以内不进位加法",
+          "chapter": "第一单元 20以内数与加法"
+        },
+        {
+          "question_id": 15159,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "20以内进位加与退位减（要点）",
+          "chapter": "20以内进位加与退位减"
+        },
+        {
+          "question_id": 11984,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "20以内进位加法（凑十法）",
+          "chapter": "第一单元 20以内数与加法"
+        },
+        {
+          "question_id": 11971,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "11~20各数的认识与顺序",
+          "chapter": "第一单元 20以内数与加法"
+        }
+      ]
+    },
+    {
+      "section_index": 1,
+      "section_name": "二、填空题",
+      "q_type": "fill",
+      "band": "medium",
+      "planned_count": 5,
+      "planned_score": 20.0,
+      "actual_count": 5,
+      "actual_score": 20.0,
+      "knowledge_points": [
+        "十几的组成与数的分成",
+        "数与运算·整数加减运算·按单元·变式一",
+        "数与运算·整数加减运算·按单元·变式三",
+        "数与运算·整数加减运算·按单元·变式二"
+      ],
+      "chapters": [
+        "20以内进位加与退位减",
+        "第一单元 20以内数与加法"
+      ],
+      "questions": [
+        {
+          "question_id": 19175,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·整数加减运算·按单元·变式一",
+          "chapter": "第一单元 20以内数与加法"
+        },
+        {
+          "question_id": 19179,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·整数加减运算·按单元·变式二",
+          "chapter": "20以内进位加与退位减"
+        },
+        {
+          "question_id": 11972,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "十几的组成与数的分成",
+          "chapter": "第一单元 20以内数与加法"
+        },
+        {
+          "question_id": 19180,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·整数加减运算·按单元·变式三",
+          "chapter": "20以内进位加与退位减"
+        },
+        {
+          "question_id": 19178,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·整数加减运算·按单元·变式一",
+          "chapter": "20以内进位加与退位减"
+        }
+      ]
+    },
+    {
+      "section_index": 2,
+      "section_name": "三、计算与解答",
+      "q_type": "answer",
+      "band": "hard",
+      "planned_count": 3,
+      "planned_score": 24.0,
+      "actual_count": 3,
+      "actual_score": 24.0,
+      "knowledge_points": [
+        "11~20各数的认识与顺序",
+        "20以内进位加法（凑十法）",
+        "数与运算·整数加减运算·按单元·变式一"
+      ],
+      "chapters": [
+        "20以内进位加与退位减",
+        "第一单元 20以内数与加法"
+      ],
+      "questions": [
+        {
+          "question_id": 11983,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "20以内进位加法（凑十法）",
+          "chapter": "第一单元 20以内数与加法"
+        },
+        {
+          "question_id": 11970,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "11~20各数的认识与顺序",
+          "chapter": "第一单元 20以内数与加法"
+        },
+        {
+          "question_id": 19181,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·整数加减运算·按单元·变式一",
+          "chapter": "20以内进位加与退位减"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-11-17T15:45:18.300604+00:00"
+}

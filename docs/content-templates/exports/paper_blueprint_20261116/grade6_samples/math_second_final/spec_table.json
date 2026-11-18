@@ -1,0 +1,320 @@
+{
+  "exam_id": null,
+  "title": "6年级数学下册期末卷（自主题库生成）",
+  "subject": "math",
+  "grade": 6,
+  "exam_type": "final",
+  "blueprint_code": "g6_math_final",
+  "blueprint_name": "6年级数学期末模拟卷（自主题库生成）",
+  "total_score": 100,
+  "time_limit_min": 90,
+  "question_count": 25,
+  "actual_score_total": 100.0,
+  "score_matches": true,
+  "knowledge_point_count": 25,
+  "sections": [
+    {
+      "section_index": 0,
+      "section_name": "一、选择题",
+      "q_type": "choice",
+      "band": "easy",
+      "planned_count": 12,
+      "planned_score": 36.0,
+      "actual_count": 12,
+      "actual_score": 36.0,
+      "knowledge_points": [
+        "反比例的意义",
+        "图形的放大与缩小",
+        "圆柱的体积",
+        "圆柱的特征",
+        "圆柱的表面积",
+        "平移与旋转",
+        "正比例的意义",
+        "比例的基本性质",
+        "比例的意义",
+        "神奇的莫比乌斯带",
+        "解比例与实际问题",
+        "轴对称图形"
+      ],
+      "chapters": [
+        "一 圆柱与圆锥",
+        "三 图形的运动",
+        "二 比例",
+        "四 正比例与反比例",
+        "数学好玩"
+      ],
+      "questions": [
+        {
+          "question_id": 12926,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "圆柱的表面积",
+          "chapter": "一 圆柱与圆锥"
+        },
+        {
+          "question_id": 13000,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "神奇的莫比乌斯带",
+          "chapter": "数学好玩"
+        },
+        {
+          "question_id": 12920,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "圆柱的特征",
+          "chapter": "一 圆柱与圆锥"
+        },
+        {
+          "question_id": 15080,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "轴对称图形",
+          "chapter": "三 图形的运动"
+        },
+        {
+          "question_id": 12970,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "图形的放大与缩小",
+          "chapter": "三 图形的运动"
+        },
+        {
+          "question_id": 12945,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "比例的基本性质",
+          "chapter": "二 比例"
+        },
+        {
+          "question_id": 12950,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "解比例与实际问题",
+          "chapter": "二 比例"
+        },
+        {
+          "question_id": 12985,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "反比例的意义",
+          "chapter": "四 正比例与反比例"
+        },
+        {
+          "question_id": 12930,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "圆柱的体积",
+          "chapter": "一 圆柱与圆锥"
+        },
+        {
+          "question_id": 12980,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "正比例的意义",
+          "chapter": "四 正比例与反比例"
+        },
+        {
+          "question_id": 12940,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "比例的意义",
+          "chapter": "二 比例"
+        },
+        {
+          "question_id": 12960,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "平移与旋转",
+          "chapter": "三 图形的运动"
+        }
+      ]
+    },
+    {
+      "section_index": 1,
+      "section_name": "二、填空题",
+      "q_type": "fill",
+      "band": "medium",
+      "planned_count": 8,
+      "planned_score": 24.0,
+      "actual_count": 8,
+      "actual_score": 24.0,
+      "knowledge_points": [
+        "图形与几何总复习",
+        "圆柱圆锥的整理",
+        "数与运算·乘除法运算·按单元·变式一",
+        "数与运算·平面图形周长与面积·按单元·变式一",
+        "数与运算·百分比与比例应用·按单元·变式四",
+        "比与比例总复习",
+        "比例的整理",
+        "设计包装方案"
+      ],
+      "chapters": [
+        "三 图形的运动",
+        "二 比例",
+        "总复习",
+        "数学好玩",
+        "整理与复习"
+      ],
+      "questions": [
+        {
+          "question_id": 13026,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "比例的整理",
+          "chapter": "整理与复习"
+        },
+        {
+          "question_id": 13021,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "圆柱圆锥的整理",
+          "chapter": "整理与复习"
+        },
+        {
+          "question_id": 19547,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·乘除法运算·按单元·变式一",
+          "chapter": "数学好玩"
+        },
+        {
+          "question_id": 13006,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "设计包装方案",
+          "chapter": "数学好玩"
+        },
+        {
+          "question_id": 13041,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "图形与几何总复习",
+          "chapter": "总复习"
+        },
+        {
+          "question_id": 13046,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "比与比例总复习",
+          "chapter": "总复习"
+        },
+        {
+          "question_id": 19543,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·百分比与比例应用·按单元·变式四",
+          "chapter": "二 比例"
+        },
+        {
+          "question_id": 19544,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·平面图形周长与面积·按单元·变式一",
+          "chapter": "三 图形的运动"
+        }
+      ]
+    },
+    {
+      "section_index": 2,
+      "section_name": "三、计算与证明",
+      "q_type": "answer",
+      "band": "medium",
+      "planned_count": 4,
+      "planned_score": 32.0,
+      "actual_count": 4,
+      "actual_score": 32.0,
+      "knowledge_points": [
+        "图形运动的整理",
+        "数学在生活中的应用",
+        "数学阅读与表达",
+        "综合应用"
+      ],
+      "chapters": [
+        "数学好玩",
+        "整理与复习"
+      ],
+      "questions": [
+        {
+          "question_id": 13014,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "数学在生活中的应用",
+          "chapter": "数学好玩"
+        },
+        {
+          "question_id": 13039,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "综合应用",
+          "chapter": "整理与复习"
+        },
+        {
+          "question_id": 13019,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "数学阅读与表达",
+          "chapter": "数学好玩"
+        },
+        {
+          "question_id": 13034,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "图形运动的整理",
+          "chapter": "整理与复习"
+        }
+      ]
+    },
+    {
+      "section_index": 3,
+      "section_name": "四、综合应用",
+      "q_type": "answer",
+      "band": "hard",
+      "planned_count": 1,
+      "planned_score": 8.0,
+      "actual_count": 1,
+      "actual_score": 8.0,
+      "knowledge_points": [
+        "图形运动总复习"
+      ],
+      "chapters": [
+        "总复习"
+      ],
+      "questions": [
+        {
+          "question_id": 13054,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "图形运动总复习",
+          "chapter": "总复习"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-11-17T15:45:24.558281+00:00"
+}

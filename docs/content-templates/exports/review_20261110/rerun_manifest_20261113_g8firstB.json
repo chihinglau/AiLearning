@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "stamp": "20261113",
+  "out_dir": "docs/content-templates/daily_rerun",
+  "status": "pending_review（入库待评审后决策）",
+  "packs": [
+    {
+      "pack": "biology_g8_first",
+      "book": "biology/g8",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\biology\\g8\\biology_g8_first_20261113_book.json",
+      "stats": {
+        "chapters": 6,
+        "points": 24,
+        "questions": 120
+      },
+      "errors": []
+    },
+    {
+      "pack": "chinese_g8_first",
+      "book": "chinese/g8",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\chinese\\g8\\chinese_g8_first_20261113_book.json",
+      "stats": {
+        "chapters": 6,
+        "points": 24,
+        "questions": 120
+      },
+      "errors": []
+    },
+    {
+      "pack": "geography_g8_first",
+      "book": "geography/g8",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\geography\\g8\\geography_g8_first_20261113_book.json",
+      "stats": {
+        "chapters": 4,
+        "points": 16,
+        "questions": 80
+      },
+      "errors": []
+    },
+    {
+      "pack": "history_g8_first",
+      "book": "history/g8",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\history\\g8\\history_g8_first_20261113_book.json",
+      "stats": {
+        "chapters": 7,
+        "points": 28,
+        "questions": 140
+      },
+      "errors": []
+    },
+    {
+      "pack": "politics_g8_first",
+      "book": "politics/g8",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g8\\politics_g8_first_20261113_book.json",
+      "stats": {
+        "chapters": 4,
+        "points": 16,
+        "questions": 80
+      },
+      "errors": []
+    }
+  ]
+}

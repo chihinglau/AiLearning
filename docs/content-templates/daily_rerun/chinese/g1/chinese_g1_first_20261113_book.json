@@ -1,0 +1,3061 @@
+{
+  "subject": "chinese",
+  "grade": 1,
+  "version": "人教版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第一单元 识字",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "识字一：天地人",
+      "parent": "第一单元 识字",
+      "order_index": 1,
+      "explanation": "「天、地、人」是最基本的三个字，读准字音、认清字形。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "识字二：你我他",
+      "parent": "第一单元 识字",
+      "order_index": 2,
+      "explanation": "「你、我、他」用来指人，说话时根据对象选择。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "基本笔画：横和竖",
+      "parent": "第一单元 识字",
+      "order_index": 3,
+      "explanation": "「横」从左往右，「竖」从上往下，是汉字最基本的笔画。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "看图识字：日月水火",
+      "parent": "第一单元 识字",
+      "order_index": 4,
+      "explanation": "「日、月、水、火」是象形字，字形和实物很像。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二单元 汉语拼音",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "单韵母 a o e",
+      "parent": "第二单元 汉语拼音",
+      "order_index": 1,
+      "explanation": "a、o、e 是单韵母，发音时口形不变。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "认识四个声调",
+      "parent": "第二单元 汉语拼音",
+      "order_index": 2,
+      "explanation": "一声平、二声扬、三声拐弯、四声降。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "单韵母 i u ü",
+      "parent": "第二单元 汉语拼音",
+      "order_index": 3,
+      "explanation": "i 牙齿对齐，u 嘴巴圆，ü 嘴巴圆而扁。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "声母 y 和 w",
+      "parent": "第二单元 汉语拼音",
+      "order_index": 4,
+      "explanation": "y、w 是大写字母，也是拼音里的声母，帮助拼读。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第三单元 汉语拼音",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "声母 b p m f",
+      "parent": "第三单元 汉语拼音",
+      "order_index": 1,
+      "explanation": "b、p、m、f 四个声母，发音部位在嘴唇。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "声母 d t n l",
+      "parent": "第三单元 汉语拼音",
+      "order_index": 2,
+      "explanation": "d、t、n、l 发音部位在舌尖。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "两拼音节的拼读",
+      "parent": "第三单元 汉语拼音",
+      "order_index": 3,
+      "explanation": "前音轻短后音重，两音相连猛一碰。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "区分形近声母",
+      "parent": "第三单元 汉语拼音",
+      "order_index": 4,
+      "explanation": "b 与 d、p 与 q 形状相近，要看清再读。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第四单元 汉语拼音",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "声母 g k h",
+      "parent": "第四单元 汉语拼音",
+      "order_index": 1,
+      "explanation": "g、k、h 发音部位在舌根。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "声母 j q x",
+      "parent": "第四单元 汉语拼音",
+      "order_index": 2,
+      "explanation": "j、q、x 与 ü 相拼时，ü 上的两点要省去。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "声母 z c s 与平舌音",
+      "parent": "第四单元 汉语拼音",
+      "order_index": 3,
+      "explanation": "z、c、s 是平舌音，舌尖平放。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "声母 zh ch sh r 与翘舌音",
+      "parent": "第四单元 汉语拼音",
+      "order_index": 4,
+      "explanation": "zh、ch、sh、r 是翘舌音，舌尖要翘起。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第五单元 阅读",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "朗读课文《秋天》",
+      "parent": "第五单元 阅读",
+      "order_index": 1,
+      "explanation": "朗读时读准字音、读通句子，注意停顿。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "认识描写景物的词语",
+      "parent": "第五单元 阅读",
+      "order_index": 2,
+      "explanation": "黄叶、凉风、大雁南飞，都是秋天的景象。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "读句子想画面",
+      "parent": "第五单元 阅读",
+      "order_index": 3,
+      "explanation": "读到写景的句子，可以在脑子里想象出图画。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "背诵儿歌",
+      "parent": "第五单元 阅读",
+      "order_index": 4,
+      "explanation": "儿歌句子短、有节奏，多读几遍就能背下来。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第六单元 识字",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "反义词：大小多少",
+      "parent": "第六单元 识字",
+      "order_index": 1,
+      "explanation": "意思相反的一组词叫反义词，如大和小、多和少。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "会意字：日月明",
+      "parent": "第六单元 识字",
+      "order_index": 2,
+      "explanation": "「日」和「月」合起来就是「明」，表示光亮。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "学习用品词语",
+      "parent": "第六单元 识字",
+      "order_index": 3,
+      "explanation": "书包、铅笔、橡皮、尺子都是常用的学习用品。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "升国旗的词语与礼仪",
+      "parent": "第六单元 识字",
+      "order_index": 4,
+      "explanation": "升国旗时要立正、行注目礼、唱国歌，这是庄严的仪式。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第七单元 阅读",
+      "order_index": 7
+    },
+    {
+      "node_type": "point",
+      "name": "读出人物的心情",
+      "parent": "第七单元 阅读",
+      "order_index": 1,
+      "explanation": "从人物的动作和语言，能看出他高兴、着急还是害怕。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "读好「大还是小」的对比",
+      "parent": "第七单元 阅读",
+      "order_index": 2,
+      "explanation": "课文用「有时候……有时候……」写出自己的两面。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "课文里的动词",
+      "parent": "第七单元 阅读",
+      "order_index": 3,
+      "explanation": "走、跑、跳、看、听都是动词，表示动作。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "看图说完整句子",
+      "parent": "第七单元 阅读",
+      "order_index": 4,
+      "explanation": "说句子要有「谁」「做什么」，说完整才清楚。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第八单元 阅读",
+      "order_index": 8
+    },
+    {
+      "node_type": "point",
+      "name": "故事先干什么后干什么",
+      "parent": "第八单元 阅读",
+      "order_index": 1,
+      "explanation": "故事有先后顺序，读时要理清起因、经过、结果。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "遇到困难想办法",
+      "parent": "第八单元 阅读",
+      "order_index": 2,
+      "explanation": "乌鸦衔石子让水升高，说明遇到难题要动脑筋。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "认识自然现象词语",
+      "parent": "第八单元 阅读",
+      "order_index": 3,
+      "explanation": "下雨、下雪、刮风、打雷都是常见的自然现象。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "分角色朗读",
+      "parent": "第八单元 阅读",
+      "order_index": 4,
+      "explanation": "不同人物说话，语气不同，分角色读更有意思。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一单元 识字",
+      "order_index": 1,
+      "summary": "借助图画和生活经验认字，认识基本笔画。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「天」的读音是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「天」读 tiān，第一声。",
+          "difficulty": 2,
+          "knowledge_point": "识字一：天地人",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "tiān",
+            "tán",
+            "diān",
+            "qiān"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「地」字上面的部分是（ ）。",
+          "answer": {
+            "value": "土"
+          },
+          "analysis": "「地」左边是土字旁，上面是「土」。",
+          "difficulty": 2,
+          "knowledge_point": "识字一：天地人",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「人」字只有两笔，一撇一捺。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「人」由撇和捺两笔组成。",
+          "difficulty": 3,
+          "knowledge_point": "识字一：天地人",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「天」组一个词，并说一句话。",
+          "answer": {
+            "value": "示例：今天天气很好。"
+          },
+          "analysis": "评分要点：词语正确，句子通顺、包含「天」。",
+          "difficulty": 4,
+          "knowledge_point": "识字一：天地人",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些字是本单元学过的？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A 天 ✓ 本单元生字；B 地 ✓；C 树 ✗ 本单元未学；D 人 ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "识字一：天地人",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "天",
+            "地",
+            "树",
+            "人"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "指着自己说话，应该用（ ）",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "说自己用「我」。",
+          "difficulty": 2,
+          "knowledge_point": "识字二：你我他",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "你",
+            "我",
+            "他",
+            "她"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "和同学面对面说话，指对方用（ ）。",
+          "answer": {
+            "value": "你"
+          },
+          "analysis": "面对面时称对方为「你」。",
+          "difficulty": 2,
+          "knowledge_point": "识字二：你我他",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「他」和「她」都指别人。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「他」「她」都是第三人称，指别人。",
+          "difficulty": 3,
+          "knowledge_point": "识字二：你我他",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「我」说一句话，说清自己在做什么。",
+          "answer": {
+            "value": "示例：我在教室里读书。"
+          },
+          "analysis": "评分要点：句子含「我」，内容真实通顺。",
+          "difficulty": 4,
+          "knowledge_point": "识字二：你我他",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于人称的说法，下面哪些正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 说对方用「他」✗ 应用「你」；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "识字二：你我他",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "说别人可以用「他」",
+            "说自己用「我」",
+            "说对方用「他」",
+            "说话对象不同，用的人称也不同"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「一」这个字是什么笔画？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「一」就是一条横。",
+          "difficulty": 2,
+          "knowledge_point": "基本笔画：横和竖",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "横",
+            "竖",
+            "撇",
+            "点"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "写「十」字，先写横，再写（ ）。",
+          "answer": {
+            "value": "竖"
+          },
+          "analysis": "「十」的笔顺是先横后竖。",
+          "difficulty": 2,
+          "knowledge_point": "基本笔画：横和竖",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "写横要从右往左写。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "横是从左往右写的。",
+          "difficulty": 3,
+          "knowledge_point": "基本笔画：横和竖",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说出两个含有横画的字。",
+          "answer": {
+            "value": "示例：二、三。评分要点：两个字都含横画，书写正确。"
+          },
+          "analysis": "评分要点：两个字都含横画，书写正确。",
+          "difficulty": 4,
+          "knowledge_point": "基本笔画：横和竖",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些字里有竖画？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A 十 ✓ 有竖；B 干 ✓ 有竖；C 二 ✗ 只有横；D 上 ✓ 有竖。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "基本笔画：横和竖",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "十",
+            "干",
+            "二",
+            "上"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「日」表示的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「日」是象形字，画的是太阳。",
+          "difficulty": 2,
+          "knowledge_point": "看图识字：日月水火",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "太阳",
+            "月亮",
+            "水",
+            "火"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「月」表示天上的（ ）。",
+          "answer": {
+            "value": "月亮"
+          },
+          "analysis": "「月」画的是弯弯的月亮。",
+          "difficulty": 2,
+          "knowledge_point": "看图识字：日月水火",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「水」和「火」的字形都和实物有关。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "象形字就是照着实物画出来的。",
+          "difficulty": 3,
+          "knowledge_point": "看图识字：日月水火",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「火」组一个词，再说一句提醒安全的话。",
+          "answer": {
+            "value": "示例：玩火很危险，不能玩火。"
+          },
+          "analysis": "评分要点：词语正确，句子含安全提醒、通顺。",
+          "difficulty": 4,
+          "knowledge_point": "看图识字：日月水火",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些是象形字？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A 日 ✓ 象形；B 月 ✓；C 你 ✗ 不是象形字；D 水 ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "看图识字：日月水火",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "日",
+            "月",
+            "你",
+            "水"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第二单元 汉语拼音",
+      "order_index": 2,
+      "summary": "认识单韵母和声调，学会正确发音和书写。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "读「阿姨」的「阿」，韵母是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「阿」读 ā，韵母是 a。",
+          "difficulty": 2,
+          "knowledge_point": "单韵母 a o e",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "a",
+            "o",
+            "e",
+            "i"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "公鸡打鸣「喔喔」，韵母是（ ）。",
+          "answer": {
+            "value": "o"
+          },
+          "analysis": "「喔」读 ō，韵母是 o。",
+          "difficulty": 2,
+          "knowledge_point": "单韵母 a o e",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "读 e 的时候嘴巴要扁扁的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "发 e 时口形扁平。",
+          "difficulty": 3,
+          "knowledge_point": "单韵母 a o e",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "读出 a、o、e 三个单韵母，并各说一个带这个韵母的字。",
+          "answer": {
+            "value": "示例：a 妈，o 波，e 鹅"
+          },
+          "analysis": "评分要点：三个韵母读准，举例正确。",
+          "difficulty": 4,
+          "knowledge_point": "单韵母 a o e",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些是单韵母？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A a ✓ 单韵母；B o ✓；C b ✗ 是声母；D e ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "单韵母 a o e",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "a",
+            "o",
+            "b",
+            "e"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「妈」的声调是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「妈」读 mā，是第一声，声音又平又高。",
+          "difficulty": 2,
+          "knowledge_point": "认识四个声调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "第一声",
+            "第二声",
+            "第三声",
+            "第四声"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「麻」读 má，是第（ ）声。",
+          "answer": {
+            "value": "二"
+          },
+          "analysis": "má 声音上扬，是第二声。",
+          "difficulty": 2,
+          "knowledge_point": "认识四个声调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "第三声读音要先降后升。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "三声拐弯，先降后升。",
+          "difficulty": 3,
+          "knowledge_point": "认识四个声调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出「mā、má、mǎ、mà」四个声调对应的一个词。",
+          "answer": {
+            "value": "示例：mā 妈妈，má 麻花，mǎ 骑马，mà 骂人"
+          },
+          "analysis": "评分要点：四个词声调对应正确。",
+          "difficulty": 4,
+          "knowledge_point": "认识四个声调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于四个声调的说法，下面哪些正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 三声要拐弯 ✗ 不是一直下压；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "认识四个声调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "一声读得又平又高",
+            "二声声音上扬",
+            "三声一直往下压",
+            "四声一直往下降"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「鱼」的韵母是（ ）",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "「鱼」读 yú，韵母是 ü。",
+          "difficulty": 2,
+          "knowledge_point": "单韵母 i u ü",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "i",
+            "u",
+            "ü",
+            "a"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「衣」的韵母是（ ）。",
+          "answer": {
+            "value": "i"
+          },
+          "analysis": "「衣」读 yī，韵母是 i。",
+          "difficulty": 2,
+          "knowledge_point": "单韵母 i u ü",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "ü 和 u 的读音完全一样。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "ü 发音时嘴唇更扁，和 u 不同。",
+          "difficulty": 3,
+          "knowledge_point": "单韵母 i u ü",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "读出 i、u、ü，并各举一个含该韵母的字。",
+          "answer": {
+            "value": "示例：i 衣，u 乌，ü 鱼"
+          },
+          "analysis": "评分要点：三个韵母读准，举例正确。",
+          "difficulty": 4,
+          "knowledge_point": "单韵母 i u ü",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些字含韵母 ü？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A 鱼 yú ✓；B 雨 yǔ ✓；C 乌 wū ✗ 韵母是 u；D 绿 lǜ ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "单韵母 i u ü",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "鱼",
+            "雨",
+            "乌",
+            "绿"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「衣」的拼音写作（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「衣」的拼音是 yī。",
+          "difficulty": 2,
+          "knowledge_point": "声母 y 和 w",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "yi",
+            "wu",
+            "yu",
+            "yi i"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「乌鸦」的「乌」拼音是（ ）。",
+          "answer": {
+            "value": "wū"
+          },
+          "analysis": "「乌」的拼音是 wū。",
+          "difficulty": 2,
+          "knowledge_point": "声母 y 和 w",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "y 和 w 都是声母。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "y、w 都可以当声母用。",
+          "difficulty": 3,
+          "knowledge_point": "声母 y 和 w",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出两个以 y 开头的音节。",
+          "answer": {
+            "value": "示例：yī、yú"
+          },
+          "analysis": "评分要点：两个音节都以 y 开头且拼音正确。",
+          "difficulty": 4,
+          "knowledge_point": "声母 y 和 w",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些音节以 w 开头？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A wū ✓；B wǔ ✓；C yī ✗ 以 y 开头；D wǒ ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "声母 y 和 w",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "wū",
+            "wǔ",
+            "yī",
+            "wǒ"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第三单元 汉语拼音",
+      "order_index": 3,
+      "summary": "认识常见声母，学会两拼音节的拼读。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「爸爸」的声母是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「爸」读 bà，声母是 b。",
+          "difficulty": 2,
+          "knowledge_point": "声母 b p m f",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "b",
+            "p",
+            "m",
+            "f"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「妈妈」的声母是（ ）。",
+          "answer": {
+            "value": "m"
+          },
+          "analysis": "「妈」读 mā，声母是 m。",
+          "difficulty": 2,
+          "knowledge_point": "声母 b p m f",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "p 和 b 发音时送气强弱不同。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "p 送气强，b 送气弱。",
+          "difficulty": 3,
+          "knowledge_point": "声母 b p m f",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "读出 b、p、m、f，并各说一个词。",
+          "answer": {
+            "value": "示例：b 爸爸，p 苹果，m 妈妈，f 飞机"
+          },
+          "analysis": "评分要点：四个声母读准，词语正确。",
+          "difficulty": 4,
+          "knowledge_point": "声母 b p m f",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些词的声母是 f？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A 飞机 f ✓；B 饭 f ✓；C 跑步 p ✗；D 房 f ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "声母 b p m f",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "飞机",
+            "吃饭",
+            "跑步",
+            "房间"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「大树」的「大」声母是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「大」读 dà，声母是 d。",
+          "difficulty": 2,
+          "knowledge_point": "声母 d t n l",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "d",
+            "t",
+            "n",
+            "l"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「太阳」的「太」声母是（ ）。",
+          "answer": {
+            "value": "t"
+          },
+          "analysis": "「太」读 tài，声母是 t。",
+          "difficulty": 2,
+          "knowledge_point": "声母 d t n l",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "n 和 l 的发音区别在于鼻音和边音。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "n 是鼻音，l 是边音。",
+          "difficulty": 3,
+          "knowledge_point": "声母 d t n l",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "读出 d、t、n、l，并各举一个词。",
+          "answer": {
+            "value": "示例：d 大米，t 兔子，n 牛奶，l 老虎"
+          },
+          "analysis": "评分要点：四个声母读准，词语正确。",
+          "difficulty": 4,
+          "knowledge_point": "声母 d t n l",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些词的声母是 l？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A 老 l ✓；B 蓝 l ✓；C 牛奶 n ✗；D 路灯 l ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "声母 d t n l",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "老虎",
+            "蓝天",
+            "牛奶",
+            "路灯"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "b 和 a 拼成的音节是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "声母在前、韵母在后，拼成 ba。",
+          "difficulty": 2,
+          "knowledge_point": "两拼音节的拼读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "ba",
+            "ab",
+            "b a",
+            "pa"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "m 和 a 拼成的音节是（ ）。",
+          "answer": {
+            "value": "ma"
+          },
+          "analysis": "m 轻短、a 响亮，拼成 ma。",
+          "difficulty": 2,
+          "knowledge_point": "两拼音节的拼读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "拼读时声母要读得轻短。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "声母轻短，韵母响亮，拼起来才自然。",
+          "difficulty": 3,
+          "knowledge_point": "两拼音节的拼读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "把 d 和 i 拼起来，写出音节并组一个词。",
+          "answer": {
+            "value": "示例：di，组成「弟弟」"
+          },
+          "analysis": "评分要点：音节正确，词语含该音节。",
+          "difficulty": 4,
+          "knowledge_point": "两拼音节的拼读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些是正确拼出的音节？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ba ✓ 声母韵母先后正确；B ma ✓；C ab ✗ 顺序颠倒；D da ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "两拼音节的拼读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "ba",
+            "ma",
+            "ab",
+            "da"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面哪个声母右边是一个圆圈和一道竖线？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "b 的竖在左、圆在右。",
+          "difficulty": 2,
+          "knowledge_point": "区分形近声母",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "b",
+            "d",
+            "p",
+            "q"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "b 和 d 中，竖在右边的是（ ）。",
+          "answer": {
+            "value": "d"
+          },
+          "analysis": "d 的竖在右边，圆在左边。",
+          "difficulty": 2,
+          "knowledge_point": "区分形近声母",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "写字时 b 和 d 可以随便写。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "形近字母必须分清，写错就读错了。",
+          "difficulty": 3,
+          "knowledge_point": "区分形近声母",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你怎样区分 b 和 d。",
+          "answer": {
+            "value": "示例：b 的竖在左边，d 的竖在右边"
+          },
+          "analysis": "评分要点：说清区别，方法可操作。",
+          "difficulty": 4,
+          "knowledge_point": "区分形近声母",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些字母字形相近、容易看错？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓ 镜像相近；B ✓；C a 和 o ✗ 差别明显；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "区分形近声母",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "b 和 d",
+            "p 和 q",
+            "a 和 o",
+            "m 和 n"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第四单元 汉语拼音",
+      "order_index": 4,
+      "summary": "继续认识声母，练习拼读，读准平舌音和翘舌音。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「哥哥」的声母是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「哥」读 gē，声母是 g。",
+          "difficulty": 2,
+          "knowledge_point": "声母 g k h",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "g",
+            "k",
+            "h",
+            "j"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「喝水」的「喝」声母是（ ）。",
+          "answer": {
+            "value": "h"
+          },
+          "analysis": "「喝」读 hē，声母是 h。",
+          "difficulty": 2,
+          "knowledge_point": "声母 g k h",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "k 发音时送气比 g 强。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "k 是送气音，g 不送气。",
+          "difficulty": 3,
+          "knowledge_point": "声母 g k h",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "读出 g、k、h，并各说一个词。",
+          "answer": {
+            "value": "示例：g 哥哥，k 课本，h 花朵"
+          },
+          "analysis": "评分要点：三个声母读准，词语正确。",
+          "difficulty": 4,
+          "knowledge_point": "声母 g k h",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些词的声母是 h？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A 红 h ✓；B 荷 h ✓；C 鸽子 g ✗；D 河 h ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "声母 g k h",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "红花",
+            "荷花",
+            "鸽子",
+            "河水"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「鸡」的声母是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「鸡」读 jī，声母是 j。",
+          "difficulty": 2,
+          "knowledge_point": "声母 j q x",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "j",
+            "q",
+            "x",
+            "z"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「七」的声母是（ ）。",
+          "answer": {
+            "value": "q"
+          },
+          "analysis": "「七」读 qī，声母是 q。",
+          "difficulty": 2,
+          "knowledge_point": "声母 j q x",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "j 和 ü 相拼时，ü 上两点要省略。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "写成 ju，不写 jü。",
+          "difficulty": 3,
+          "knowledge_point": "声母 j q x",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出两个以 x 开头的音节。",
+          "answer": {
+            "value": "示例：xi、xue"
+          },
+          "analysis": "评分要点：两个音节都以 x 开头，拼音正确。",
+          "difficulty": 4,
+          "knowledge_point": "声母 j q x",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些音节正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ju ✓ 省略两点；B qu ✓；C jü ✗ 不应保留两点；D xu ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "声母 j q x",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "ju",
+            "qu",
+            "jü",
+            "xu"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「早上」的「早」声母是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「早」读 zǎo，声母是 z，属于平舌音。",
+          "difficulty": 2,
+          "knowledge_point": "声母 z c s 与平舌音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "z",
+            "c",
+            "s",
+            "zh"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「三个」的「三」声母是（ ）。",
+          "answer": {
+            "value": "s"
+          },
+          "analysis": "「三」读 sān，声母是 s。",
+          "difficulty": 2,
+          "knowledge_point": "声母 z c s 与平舌音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "平舌音发音时舌尖要翘起来。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "平舌音舌尖平放，翘起来的是翘舌音。",
+          "difficulty": 3,
+          "knowledge_point": "声母 z c s 与平舌音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出两个以 c 开头的音节。",
+          "answer": {
+            "value": "示例：ca、cai"
+          },
+          "analysis": "评分要点：两个音节都以 c 开头，拼音正确。",
+          "difficulty": 4,
+          "knowledge_point": "声母 z c s 与平舌音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些字读平舌音？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A 早 z ✓ 平舌；B 草 c ✓；C 知 zh ✗ 翘舌；D 三 s ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "声母 z c s 与平舌音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "早",
+            "草",
+            "知",
+            "三"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「知道」的「知」声母是（ ）",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "「知」读 zhī，声母是 zh，翘舌音。",
+          "difficulty": 2,
+          "knowledge_point": "声母 zh ch sh r 与翘舌音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "z",
+            "zh",
+            "ch",
+            "sh"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「吃饭」的「吃」声母是（ ）。",
+          "answer": {
+            "value": "ch"
+          },
+          "analysis": "「吃」读 chī，声母是 ch。",
+          "difficulty": 2,
+          "knowledge_point": "声母 zh ch sh r 与翘舌音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "sh 和 s 的发音部位不同。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "sh 舌尖翘起，s 舌尖平放。",
+          "difficulty": 3,
+          "knowledge_point": "声母 zh ch sh r 与翘舌音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出两个以 r 开头的音节。",
+          "answer": {
+            "value": "示例：ri、re"
+          },
+          "analysis": "评分要点：两个音节都以 r 开头，拼音正确。",
+          "difficulty": 4,
+          "knowledge_point": "声母 zh ch sh r 与翘舌音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些字读翘舌音？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A 知 zh ✓；B 吃 ch ✓；C 三 s ✗ 平舌；D 师 sh ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "声母 zh ch sh r 与翘舌音",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "知道",
+            "吃饭",
+            "三个",
+            "老师"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第五单元 阅读",
+      "order_index": 5,
+      "summary": "朗读短课文，读出自然景物的样子和季节的变化。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "朗读课文时，遇到逗号应该（ ）",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "逗号表示句中停顿，要稍停再读。",
+          "difficulty": 2,
+          "knowledge_point": "朗读课文《秋天》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "一口气读到底",
+            "稍微停顿一下",
+            "读得更大声",
+            "跳过不读"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "朗读要做到不添字、不漏字、不（ ）字。",
+          "answer": {
+            "value": "错"
+          },
+          "analysis": "读准每个字，不添不漏不错。",
+          "difficulty": 2,
+          "knowledge_point": "朗读课文《秋天》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "朗读时声音越响越好。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "朗读要自然，读准字音、速度合适，不是越响越好。",
+          "difficulty": 3,
+          "knowledge_point": "朗读课文《秋天》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "朗读一段写秋天的话，说说你读的时候注意了什么。",
+          "answer": {
+            "value": "示例：我把「秋天到了」读得慢一点，注意了停顿"
+          },
+          "analysis": "评分要点：说出具体做法，如停顿、读准字音。",
+          "difficulty": 4,
+          "knowledge_point": "朗读课文《秋天》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "朗读课文时要注意什么？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 越快越好 ✗ 要清楚自然；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "朗读课文《秋天》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "读准字音",
+            "注意停顿",
+            "越快越好",
+            "读出句子的语气"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面哪个词语描写秋天？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "树叶变黄是秋天的特点。",
+          "difficulty": 2,
+          "knowledge_point": "认识描写景物的词语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "树叶黄了",
+            "荷花开了",
+            "大雪纷飞",
+            "柳枝发芽"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "秋天天气凉了，大雁往（ ）飞。",
+          "answer": {
+            "value": "南"
+          },
+          "analysis": "秋天转凉，大雁南飞过冬。",
+          "difficulty": 2,
+          "knowledge_point": "认识描写景物的词语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「凉风」是写秋天天气的词。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "秋风凉爽，所以说凉风。",
+          "difficulty": 3,
+          "knowledge_point": "认识描写景物的词语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说出两个描写秋天的词语，并用其中一个说一句话。",
+          "answer": {
+            "value": "示例：黄叶、凉风；秋天到了，树上的黄叶落下来"
+          },
+          "analysis": "评分要点：两个词语合理，句子通顺。",
+          "difficulty": 4,
+          "knowledge_point": "认识描写景物的词语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些是秋天的景象？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 荷花 ✗ 是夏天；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "认识描写景物的词语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "树叶变黄",
+            "大雁南飞",
+            "荷花朵朵",
+            "天气转凉"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "读到「蓝蓝的天空」，你想到的颜色是（ ）",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "句子里说「蓝蓝的」，想到的就是蓝色。",
+          "difficulty": 2,
+          "knowledge_point": "读句子想画面",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "红色",
+            "蓝色",
+            "绿色",
+            "黄色"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「弯弯的月儿小小的船」，把月儿比作（ ）。",
+          "answer": {
+            "value": "小船"
+          },
+          "analysis": "儿歌把弯弯的月儿比成小船。",
+          "difficulty": 2,
+          "knowledge_point": "读句子想画面",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "读句子时想象画面，能帮助读懂意思。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "边读边想，句子里的景象更清楚。",
+          "difficulty": 3,
+          "knowledge_point": "读句子想画面",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "读「雪白的棉花」这句话，说说你想到了什么。",
+          "answer": {
+            "value": "示例：我想到一朵朵白白的、软软的棉花"
+          },
+          "analysis": "评分要点：想到的画面和「雪白」「软」相关。",
+          "difficulty": 4,
+          "knowledge_point": "读句子想画面",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些句子能让人想到画面？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓ 有形象；B ✓；C 问日期 ✗ 没有景物；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "读句子想画面",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "弯弯的月儿小小的船",
+            "小小的船儿两头尖",
+            "今天几月几日",
+            "蓝蓝的天空"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "背儿歌最好的办法是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先读熟，再分句背，最有效。",
+          "difficulty": 2,
+          "knowledge_point": "背诵儿歌",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "先读熟再一句一句背",
+            "看一眼就背",
+            "只背最后一句",
+            "听别人背自己不读"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "背儿歌要先读（ ），再一句一句记。",
+          "answer": {
+            "value": "熟"
+          },
+          "analysis": "读熟之后才容易记住。",
+          "difficulty": 2,
+          "knowledge_point": "背诵儿歌",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "儿歌有节奏，读起来朗朗上口。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "儿歌句子短、押韵，读起来顺口。",
+          "difficulty": 3,
+          "knowledge_point": "背诵儿歌",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "背一首你学过的儿歌，写出其中两句。",
+          "answer": {
+            "value": "示例：弯弯的月儿小小的船，小小的船儿两头尖"
+          },
+          "analysis": "评分要点：两句出自同一首儿歌，字句正确。",
+          "difficulty": 4,
+          "knowledge_point": "背诵儿歌",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "背儿歌时哪些做法有用？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓ 打节奏帮助记忆；C 只看一遍 ✗ 记不住；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "背诵儿歌",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "大声读几遍",
+            "边读边拍手打节奏",
+            "只默看一遍",
+            "一句一句记"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第六单元 识字",
+      "order_index": 6,
+      "summary": "在词语和短文中识字，学习反义词和会意字。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「大」的反义词是（ ）",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "大和小意思相反，是一对反义词。",
+          "difficulty": 2,
+          "knowledge_point": "反义词：大小多少",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "多",
+            "小",
+            "高",
+            "长"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「多」的反义词是（ ）。",
+          "answer": {
+            "value": "少"
+          },
+          "analysis": "多和少意思相反。",
+          "difficulty": 2,
+          "knowledge_point": "反义词：大小多少",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「上」和「下」是一对反义词。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "上和下意思相反。",
+          "difficulty": 3,
+          "knowledge_point": "反义词：大小多少",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出两组反义词。",
+          "answer": {
+            "value": "示例：大—小，多—少"
+          },
+          "analysis": "评分要点：两组词意思都相反，书写正确。",
+          "difficulty": 4,
+          "knowledge_point": "反义词：大小多少",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些组是反义词？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓ 相反；B ✓；C 红—花 ✗ 不是反义；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "反义词：大小多少",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "前—后",
+            "黑—白",
+            "红—花",
+            "来—去"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「明」字由哪两个字组成？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "日、月都发光，合起来就是「明」。",
+          "difficulty": 2,
+          "knowledge_point": "会意字：日月明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "日和月",
+            "日和木",
+            "月和水",
+            "木和火"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「林」字由两个（ ）字组成。",
+          "answer": {
+            "value": "木"
+          },
+          "analysis": "双木成林，两棵树在一起就是林。",
+          "difficulty": 2,
+          "knowledge_point": "会意字：日月明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "会意字是把几个字的意思合起来造出的字。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "几个字的意思合在一起，就是会意字。",
+          "difficulty": 3,
+          "knowledge_point": "会意字：日月明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说「日」和「月」合起来为什么是「明」。",
+          "answer": {
+            "value": "示例：太阳和月亮都很亮，合起来表示光亮，就是明"
+          },
+          "analysis": "评分要点：说清两部分意思与合起来的含义。",
+          "difficulty": 4,
+          "knowledge_point": "会意字：日月明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些是会意字？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A 明 ✓ 日月相合；B 林 ✓ 双木；C 的 ✗ 不是会意字；D 休 ✓ 人靠树休息。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "会意字：日月明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "明",
+            "林",
+            "的",
+            "休"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "写字用的笔是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "写字用铅笔。",
+          "difficulty": 2,
+          "knowledge_point": "学习用品词语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "铅笔",
+            "橡皮",
+            "尺子",
+            "书包"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "写错了字，可以用（ ）擦掉。",
+          "answer": {
+            "value": "橡皮"
+          },
+          "analysis": "橡皮能擦掉铅笔字。",
+          "difficulty": 2,
+          "knowledge_point": "学习用品词语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "尺子可以用来画直线、量长度。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "尺子有刻度，能画线、量长短。",
+          "difficulty": 3,
+          "knowledge_point": "学习用品词语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出三样你书包里的学习用品。",
+          "answer": {
+            "value": "示例：课本、铅笔、橡皮"
+          },
+          "analysis": "评分要点：三样都是真实的学习用品。",
+          "difficulty": 4,
+          "knowledge_point": "学习用品词语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些是学习用品？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 饭碗 ✗ 是餐具；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "学习用品词语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "铅笔",
+            "橡皮",
+            "饭碗",
+            "尺子"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "升国旗时应该（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "升旗是庄重的仪式，要立正行礼。",
+          "difficulty": 2,
+          "knowledge_point": "升国旗的词语与礼仪",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "立正站好，行注目礼",
+            "边走边看",
+            "坐着不动",
+            "和同学说笑"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "升国旗、唱国歌时要（ ）肃立。",
+          "answer": {
+            "value": "面向国旗"
+          },
+          "analysis": "面向国旗肃立，表示尊敬。",
+          "difficulty": 2,
+          "knowledge_point": "升国旗的词语与礼仪",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "国歌可以在任何时候随便哼唱打闹。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "国歌是庄严的，不能拿来打闹。",
+          "difficulty": 3,
+          "knowledge_point": "升国旗的词语与礼仪",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说参加升旗仪式时你会怎么做。",
+          "answer": {
+            "value": "示例：站直不说话，眼睛看着国旗，认真唱国歌"
+          },
+          "analysis": "评分要点：写出具体、可做的做法。",
+          "difficulty": 4,
+          "knowledge_point": "升国旗的词语与礼仪",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "升国旗时哪些做法是对的？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 小声说话 ✗ 不庄重；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "升国旗的词语与礼仪",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "立正站好",
+            "行注目礼",
+            "小声说话",
+            "认真唱国歌"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第七单元 阅读",
+      "order_index": 7,
+      "summary": "读故事和儿歌，体会人物的心情，读好对比和动词。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "课文里写「他高兴得跳起来」，说明他的心情是（ ）",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "「高兴得跳起来」写出开心。",
+          "difficulty": 2,
+          "knowledge_point": "读出人物的心情",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "伤心",
+            "高兴",
+            "生气",
+            "害怕"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "写「他急得直跺脚」，说明他心里很（ ）。",
+          "answer": {
+            "value": "着急"
+          },
+          "analysis": "跺脚是着急时的动作。",
+          "difficulty": 2,
+          "knowledge_point": "读出人物的心情",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "读课文时读出人物的心情，能读得更好。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "语气跟着心情变，读起来更打动人。",
+          "difficulty": 3,
+          "knowledge_point": "读出人物的心情",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你从哪句话看出课文里的小朋友很高兴。",
+          "answer": {
+            "value": "示例：从他「笑着跑进教室」看出他很高兴"
+          },
+          "analysis": "评分要点：引用或复述课文句子，说明心情。",
+          "difficulty": 4,
+          "knowledge_point": "读出人物的心情",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些词表示心情？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 红色 ✗ 是颜色；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "读出人物的心情",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "高兴",
+            "着急",
+            "红色",
+            "害怕"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「有时候我希望自己大一点，有时候又希望小一点」用了（ ）的写法",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "两个「有时候」放在一起作对比。",
+          "difficulty": 2,
+          "knowledge_point": "读好「大还是小」的对比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "对比",
+            "比喻",
+            "排比",
+            "拟人"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「有时候」这个词表示（ ）情况都会出现。",
+          "answer": {
+            "value": "两种"
+          },
+          "analysis": "「有时候……有时候……」说明两种情况都有。",
+          "difficulty": 2,
+          "knowledge_point": "读好「大还是小」的对比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "读对比的句子时，前后语气要有区别。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "前后意思不同，语气也要有变化。",
+          "difficulty": 3,
+          "knowledge_point": "读好「大还是小」的对比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「有时候……有时候……」说一句话。",
+          "answer": {
+            "value": "示例：有时候我自己穿衣服，有时候要妈妈帮忙"
+          },
+          "analysis": "评分要点：句式正确，两种情况真实。",
+          "difficulty": 4,
+          "knowledge_point": "读好「大还是小」的对比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些句子用了对比？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓ 前后对比；B ✓；C 星星 ✗ 无对比；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "读好「大还是小」的对比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "有时候我很快，有时候我很慢",
+            "大还是小，说不清",
+            "天上有很多星星",
+            "有时候我勇敢，有时候我害怕"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面哪个词是动词？",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「跳」表示动作，是动词。",
+          "difficulty": 2,
+          "knowledge_point": "课文里的动词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "跳",
+            "红",
+            "大",
+            "苹果"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「小鸟在天上（ ）」，括号里应填动词。",
+          "answer": {
+            "value": "飞"
+          },
+          "analysis": "「飞」表示小鸟的动作。",
+          "difficulty": 2,
+          "knowledge_point": "课文里的动词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「听」和「看」都是动词。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "听、看都表示动作。",
+          "difficulty": 3,
+          "knowledge_point": "课文里的动词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写三个表示动作的词，并选一个说一句话。",
+          "answer": {
+            "value": "示例：跑、跳、唱；我每天跑步。"
+          },
+          "analysis": "评分要点：三个都是动词，句子通顺。",
+          "difficulty": 4,
+          "knowledge_point": "课文里的动词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些是动词？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 白 ✗ 是颜色；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "课文里的动词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "跑",
+            "看",
+            "白",
+            "听"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面哪个句子说得最完整？",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "「小鸟在天上飞」有谁、在哪、做什么，最完整。",
+          "difficulty": 2,
+          "knowledge_point": "看图说完整句子",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "小鸟",
+            "飞",
+            "小鸟在天上飞",
+            "天上"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「小明在教室里（ ）」，把句子补充完整。",
+          "answer": {
+            "value": "读书"
+          },
+          "analysis": "补充动作后句子才完整。",
+          "difficulty": 2,
+          "knowledge_point": "看图说完整句子",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "说句子时只要说出一个词就够了。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "只说一个词别人听不明白，要把谁做什么说清。",
+          "difficulty": 3,
+          "knowledge_point": "看图说完整句子",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "看一幅小朋友跳绳的图，说一句完整的话。",
+          "answer": {
+            "value": "示例：小红在操场上跳绳。"
+          },
+          "analysis": "评分要点：句中有谁、在哪、做什么。",
+          "difficulty": 4,
+          "knowledge_point": "看图说完整句子",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "说完整句子要有哪些部分？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 颜色 ✗ 不是必须；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "看图说完整句子",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "谁",
+            "在哪里或什么时候",
+            "颜色",
+            "做什么"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第八单元 阅读",
+      "order_index": 8,
+      "summary": "读寓言和科普小文，理清故事顺序，学习遇事想办法。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "读故事时，先要知道（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先弄清人物，再读事情怎么发展。",
+          "difficulty": 2,
+          "knowledge_point": "故事先干什么后干什么",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "故事里有谁",
+            "作者的年龄",
+            "书的价格",
+            "封面颜色"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "故事一般有起因、经过和（ ）。",
+          "answer": {
+            "value": "结果"
+          },
+          "analysis": "事情最后怎样，就是结果。",
+          "difficulty": 2,
+          "knowledge_point": "故事先干什么后干什么",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "读故事时按顺序读，才不容易读乱。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "故事按先后写，按顺序读才清楚。",
+          "difficulty": 3,
+          "knowledge_point": "故事先干什么后干什么",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用三句话说说《乌鸦喝水》讲了什么。",
+          "answer": {
+            "value": "示例：乌鸦口渴了，找到一瓶水，瓶口小喝不到，它衔石子放进瓶子，水升高就喝到了"
+          },
+          "analysis": "评分要点：含起因、办法、结果，顺序正确。",
+          "difficulty": 4,
+          "knowledge_point": "故事先干什么后干什么",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "读故事时要注意哪些内容？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 字体 ✗ 与内容无关；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "故事先干什么后干什么",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "人物是谁",
+            "事情怎么发展",
+            "作者怎么写标题的字体",
+            "最后结果怎样"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "瓶口小、水又低，乌鸦最后是怎么喝到水的？",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "乌鸦把石子放进瓶子，水面升高就喝到了。",
+          "difficulty": 2,
+          "knowledge_point": "遇到困难想办法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "把瓶子推倒",
+            "衔石子放进瓶子让水升高",
+            "不喝了",
+            "找别的鸟帮忙"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "遇到难题不要放弃，要动（ ）想办法。",
+          "answer": {
+            "value": "脑筋"
+          },
+          "analysis": "动脑筋才能想出办法。",
+          "difficulty": 2,
+          "knowledge_point": "遇到困难想办法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "遇到困难先试一试、想一想，是好办法。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "想办法试一试，常能解决问题。",
+          "difficulty": 3,
+          "knowledge_point": "遇到困难想办法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说一件你遇到的难题，以及你想出的办法。",
+          "answer": {
+            "value": "示例：书包太乱找不到本子，我按科目把本子分开装"
+          },
+          "analysis": "评分要点：难题具体，办法可行。",
+          "difficulty": 4,
+          "knowledge_point": "遇到困难想办法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "遇到困难时，哪些做法有用？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 放弃 ✗；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "遇到困难想办法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "观察周围有什么可用",
+            "动手试一试",
+            "马上放弃",
+            "请教别人"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「雨点儿从云里落下来」，说的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "雨点落下来就是下雨。",
+          "difficulty": 2,
+          "knowledge_point": "认识自然现象词语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "下雨",
+            "下雪",
+            "刮风",
+            "打雷"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "天上飘下白白的雪花，叫下（ ）。",
+          "answer": {
+            "value": "雪"
+          },
+          "analysis": "雪花飘落就是下雪。",
+          "difficulty": 2,
+          "knowledge_point": "认识自然现象词语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "刮风时树枝会摇动。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "风一吹，树枝就摇。",
+          "difficulty": 3,
+          "knowledge_point": "认识自然现象词语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说出两种你见过的自然现象，并说说当时的样子。",
+          "answer": {
+            "value": "示例：下雨时雨点打在窗上，地上有水洼；下雪时地上白白的"
+          },
+          "analysis": "评分要点：两种现象真实，描述具体。",
+          "difficulty": 4,
+          "knowledge_point": "认识自然现象词语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些是自然现象？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 写字 ✗ 是人的动作；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "认识自然现象词语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "下雨",
+            "下雪",
+            "写字",
+            "打雷"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "读小蜗牛说的话，语气应该（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "小蜗牛动作慢，说话也该慢而轻。",
+          "difficulty": 2,
+          "knowledge_point": "分角色朗读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "慢慢地、轻轻的",
+            "又快又急",
+            "大喊大叫",
+            "冷冷的"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "分角色朗读时，要读出人物的（ ）。",
+          "answer": {
+            "value": "语气"
+          },
+          "analysis": "不同人物语气不同，读出来才像。",
+          "difficulty": 2,
+          "knowledge_point": "分角色朗读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "分角色朗读时，每个人物都用一样的语气。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "人物不同，语气要有区别。",
+          "difficulty": 3,
+          "knowledge_point": "分角色朗读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "和同学分角色读一段对话，说说你读的角色应该用什么语气。",
+          "answer": {
+            "value": "示例：我读小蜗牛，用慢慢的、轻轻的语气"
+          },
+          "analysis": "评分要点：说清角色和语气理由。",
+          "difficulty": 4,
+          "knowledge_point": "分角色朗读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "分角色朗读要注意什么？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 都一样快 ✗；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "分角色朗读",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "读准字音",
+            "按人物性格定语气",
+            "都读得一样快",
+            "注意对话的停顿"
+          ]
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-14T12:07:25+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "normalized": "难度 40/40/20 归一 + 主观题短答案补评分要点（2026-11-13 统一口径）",
+    "supplemented": "数值填空补可求值算式 0 道 / 数值填空改单选 0 道 / 补多选题 0 道（2 真 + 2 假，答案 2 项；2026-11-14 口径）",
+    "stem_dedup": "跨册同题干补册次前缀 0 道（2026-11-14 跨册去重口径）",
+    "duplicate_rewrites": "跨册同题定向改写 0 道（保留两侧题量，2026-11-14 口径）",
+    "chapter_scope": "全章域（本册无跨册重复章）",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

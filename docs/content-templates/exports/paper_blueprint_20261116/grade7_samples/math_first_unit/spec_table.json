@@ -1,0 +1,176 @@
+{
+  "exam_id": null,
+  "title": "7年级数学上册单元卷（自主题库生成）",
+  "subject": "math",
+  "grade": 7,
+  "exam_type": "unit",
+  "blueprint_code": "g7_math_unit",
+  "blueprint_name": "7年级数学单元测试卷（自主题库生成）",
+  "total_score": 60,
+  "time_limit_min": 40,
+  "question_count": 12,
+  "actual_score_total": 60.0,
+  "score_matches": true,
+  "knowledge_point_count": 5,
+  "sections": [
+    {
+      "section_index": 0,
+      "section_name": "一、选择题",
+      "q_type": "choice",
+      "band": "easy",
+      "planned_count": 4,
+      "planned_score": 16.0,
+      "actual_count": 4,
+      "actual_score": 16.0,
+      "knowledge_points": [
+        "从三个方向看物体的形状图",
+        "几何体的展开图与折叠",
+        "常见立体图形的分类与识别",
+        "棱柱的顶点数、棱数与面数"
+      ],
+      "chapters": [
+        "第一章 丰富的图形世界"
+      ],
+      "questions": [
+        {
+          "question_id": 6388,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "几何体的展开图与折叠",
+          "chapter": "第一章 丰富的图形世界"
+        },
+        {
+          "question_id": 6380,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "棱柱的顶点数、棱数与面数",
+          "chapter": "第一章 丰富的图形世界"
+        },
+        {
+          "question_id": 6376,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "常见立体图形的分类与识别",
+          "chapter": "第一章 丰富的图形世界"
+        },
+        {
+          "question_id": 6389,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "从三个方向看物体的形状图",
+          "chapter": "第一章 丰富的图形世界"
+        }
+      ]
+    },
+    {
+      "section_index": 1,
+      "section_name": "二、填空题",
+      "q_type": "fill",
+      "band": "medium",
+      "planned_count": 5,
+      "planned_score": 20.0,
+      "actual_count": 5,
+      "actual_score": 20.0,
+      "knowledge_points": [
+        "从三个方向看物体的形状图",
+        "几何体的展开图与折叠",
+        "常见立体图形的分类与识别",
+        "数与运算·平面图形周长与面积·按单元·变式一",
+        "棱柱的顶点数、棱数与面数"
+      ],
+      "chapters": [
+        "第一章 丰富的图形世界"
+      ],
+      "questions": [
+        {
+          "question_id": 19552,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·平面图形周长与面积·按单元·变式一",
+          "chapter": "第一章 丰富的图形世界"
+        },
+        {
+          "question_id": 6390,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "从三个方向看物体的形状图",
+          "chapter": "第一章 丰富的图形世界"
+        },
+        {
+          "question_id": 6381,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "棱柱的顶点数、棱数与面数",
+          "chapter": "第一章 丰富的图形世界"
+        },
+        {
+          "question_id": 6385,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "几何体的展开图与折叠",
+          "chapter": "第一章 丰富的图形世界"
+        },
+        {
+          "question_id": 6377,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "常见立体图形的分类与识别",
+          "chapter": "第一章 丰富的图形世界"
+        }
+      ]
+    },
+    {
+      "section_index": 2,
+      "section_name": "三、计算与解答",
+      "q_type": "answer",
+      "band": "hard",
+      "planned_count": 3,
+      "planned_score": 24.0,
+      "actual_count": 3,
+      "actual_score": 24.0,
+      "knowledge_points": [
+        "从三个方向看物体的形状图",
+        "几何体的展开图与折叠"
+      ],
+      "chapters": [
+        "第一章 丰富的图形世界"
+      ],
+      "questions": [
+        {
+          "question_id": 6393,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 3,
+          "knowledge_point": "从三个方向看物体的形状图",
+          "chapter": "第一章 丰富的图形世界"
+        },
+        {
+          "question_id": 6392,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 3,
+          "knowledge_point": "从三个方向看物体的形状图",
+          "chapter": "第一章 丰富的图形世界"
+        },
+        {
+          "question_id": 6387,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 3,
+          "knowledge_point": "几何体的展开图与折叠",
+          "chapter": "第一章 丰富的图形世界"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-11-17T15:45:25.652590+00:00"
+}

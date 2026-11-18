@@ -4,7 +4,7 @@
 > **适用产品**：深爱学（AiLearning）Android 版 / HarmonyOS NEXT 版
 > **适用版本**：`com.ailearning.ai_learning` `versionName 1.0.0` `versionCode 1`（发布前须按 §3 缺口 1 规范递增）
 > **适用主体**：个人开发者（附个体户/公司名义对比与建议）
-> **最后更新**：2026-11-12（按 CR-003 / R-A16 补 §11 映射与附表；见主计划 §6.22 验收记录）
+> **最后更新**：2026-11-14（按 CR-005 更新 §11 附表：admin 真机组卷已由 QA-01 收口，R-A16 签署仍待 PM；见主计划 §6.24）
 > **关联文档**：[privacy.md](./privacy.md)（隐私政策源稿）、[project-task-plan.md](./project-task-plan.md)（任务台账）、[k12-learning-app-design.md](./k12-learning-app-design.md)（产品方案）
 >
 > 文中涉及的平台政策、周期、费用均为行业通行情况，**执行前须以各平台当期官网/公告为准**；本文件不构成法律意见。
@@ -673,6 +673,6 @@ cd ..\app; flutter analyze; flutter test
 | 8 | APP 备案 / 软著 | 缺口 4/5 | ⬜ 未启动 |
 | 9 | 账号注销 / 数据导出 / 家长同意 / 时长限制 | 缺口 8 | ⬜ 未做（设计与任务已就绪） |
 | 10 | CI 与发布校验脚本 | 缺口 8 | ⬜ 未做 |
-| 11 | 考试入口闭环 R-A16 签署 / QA 补 admin 真机组卷 | CR-003（EX-01~EX-03） | ✅ 代码与真机回归完成，⬜ 待 PM 签署与 QA 补验（主计划 §6.22） |
+| 11 | 考试入口闭环 R-A16 签署 / QA 补 admin 真机组卷 | CR-003（EX-01~EX-03） | ✅ 代码与真机回归完成；QA 补 admin 真机组卷已由 CR-005 / QA-01 收口（§6.24），⬜ R-A16 仍待 PM 本人签署（§4.3 B-002） |
 
 > 需要执行时告知编号即可；执行后同步更新本表与 `project-task-plan.md`。

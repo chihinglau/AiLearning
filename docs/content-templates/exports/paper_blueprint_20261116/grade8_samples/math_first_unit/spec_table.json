@@ -1,0 +1,175 @@
+{
+  "exam_id": null,
+  "title": "8年级数学上册单元卷（自主题库生成）",
+  "subject": "math",
+  "grade": 8,
+  "exam_type": "unit",
+  "blueprint_code": "g8_math_unit",
+  "blueprint_name": "8年级数学单元测试卷（自主题库生成）",
+  "total_score": 60,
+  "time_limit_min": 40,
+  "question_count": 12,
+  "actual_score_total": 60.0,
+  "score_matches": true,
+  "knowledge_point_count": 5,
+  "sections": [
+    {
+      "section_index": 0,
+      "section_name": "一、选择题",
+      "q_type": "choice",
+      "band": "easy",
+      "planned_count": 4,
+      "planned_score": 16.0,
+      "actual_count": 4,
+      "actual_score": 16.0,
+      "knowledge_points": [
+        "勾股定理的内容（要点）",
+        "勾股定理的逆定理（要点）",
+        "勾股数（要点）",
+        "用勾股定理求边长"
+      ],
+      "chapters": [
+        "第一章 勾股定理"
+      ],
+      "questions": [
+        {
+          "question_id": 13192,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "勾股定理的逆定理（要点）",
+          "chapter": "第一章 勾股定理"
+        },
+        {
+          "question_id": 13183,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "勾股定理的内容（要点）",
+          "chapter": "第一章 勾股定理"
+        },
+        {
+          "question_id": 13187,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "用勾股定理求边长",
+          "chapter": "第一章 勾股定理"
+        },
+        {
+          "question_id": 13197,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "勾股数（要点）",
+          "chapter": "第一章 勾股定理"
+        }
+      ]
+    },
+    {
+      "section_index": 1,
+      "section_name": "二、填空题",
+      "q_type": "fill",
+      "band": "medium",
+      "planned_count": 5,
+      "planned_score": 20.0,
+      "actual_count": 5,
+      "actual_score": 20.0,
+      "knowledge_points": [
+        "勾股定理的逆定理（要点）",
+        "勾股数（要点）",
+        "数与运算·一元一次方程求解·按单元·变式一"
+      ],
+      "chapters": [
+        "第一章 勾股定理"
+      ],
+      "questions": [
+        {
+          "question_id": 19579,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·一元一次方程求解·按单元·变式一",
+          "chapter": "第一章 勾股定理"
+        },
+        {
+          "question_id": 18055,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "",
+          "chapter": "第一章 勾股定理"
+        },
+        {
+          "question_id": 13198,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "勾股数（要点）",
+          "chapter": "第一章 勾股定理"
+        },
+        {
+          "question_id": 13193,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "勾股定理的逆定理（要点）",
+          "chapter": "第一章 勾股定理"
+        },
+        {
+          "question_id": 18056,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "",
+          "chapter": "第一章 勾股定理"
+        }
+      ]
+    },
+    {
+      "section_index": 2,
+      "section_name": "三、计算与解答",
+      "q_type": "answer",
+      "band": "hard",
+      "planned_count": 3,
+      "planned_score": 24.0,
+      "actual_count": 3,
+      "actual_score": 24.0,
+      "knowledge_points": [
+        "勾股定理的内容（要点）",
+        "勾股定理的逆定理（要点）",
+        "勾股数（要点）"
+      ],
+      "chapters": [
+        "第一章 勾股定理"
+      ],
+      "questions": [
+        {
+          "question_id": 13200,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "勾股数（要点）",
+          "chapter": "第一章 勾股定理"
+        },
+        {
+          "question_id": 13185,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "勾股定理的内容（要点）",
+          "chapter": "第一章 勾股定理"
+        },
+        {
+          "question_id": 13195,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "勾股定理的逆定理（要点）",
+          "chapter": "第一章 勾股定理"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-11-17T15:45:26.818451+00:00"
+}

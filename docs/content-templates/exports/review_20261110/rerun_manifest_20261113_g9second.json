@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "stamp": "20261113",
+  "out_dir": "docs/content-templates/daily_rerun",
+  "status": "pending_review（入库待评审后决策）",
+  "packs": [
+    {
+      "pack": "chemistry_g9_second",
+      "book": "chemistry/g9",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\chemistry\\g9\\chemistry_g9_second_20261113_book.json",
+      "stats": {
+        "chapters": 4,
+        "points": 16,
+        "questions": 80
+      },
+      "errors": []
+    },
+    {
+      "pack": "chinese_g9_second",
+      "book": "chinese/g9",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\chinese\\g9\\chinese_g9_second_20261113_book.json",
+      "stats": {
+        "chapters": 6,
+        "points": 24,
+        "questions": 120
+      },
+      "errors": []
+    },
+    {
+      "pack": "english_g9_second",
+      "book": "english/g9",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\english\\g9\\english_g9_second_20261113_book.json",
+      "stats": {
+        "chapters": 6,
+        "points": 24,
+        "questions": 120
+      },
+      "errors": []
+    },
+    {
+      "pack": "history_g9_second",
+      "book": "history/g9",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\history\\g9\\history_g9_second_20261113_book.json",
+      "stats": {
+        "chapters": 6,
+        "points": 24,
+        "questions": 120
+      },
+      "errors": []
+    },
+    {
+      "pack": "math_g9_second",
+      "book": "math/g9",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\math\\g9\\math_g9_second_20261113_book.json",
+      "stats": {
+        "chapters": 7,
+        "points": 28,
+        "questions": 140
+      },
+      "errors": []
+    },
+    {
+      "pack": "physics_g9_second",
+      "book": "physics/g9",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\physics\\g9\\physics_g9_second_20261113_book.json",
+      "stats": {
+        "chapters": 10,
+        "points": 40,
+        "questions": 200
+      },
+      "errors": []
+    }
+  ]
+}

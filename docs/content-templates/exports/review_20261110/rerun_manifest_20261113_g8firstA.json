@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "stamp": "20261113",
+  "out_dir": "docs/content-templates/daily_rerun",
+  "status": "pending_review（入库待评审后决策）",
+  "packs": [
+    {
+      "pack": "english_g8_first",
+      "book": "english/g8",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\english\\g8\\english_g8_first_20261113_book.json",
+      "stats": {
+        "chapters": 6,
+        "points": 24,
+        "questions": 120
+      },
+      "errors": []
+    },
+    {
+      "pack": "math_g8_first",
+      "book": "math/g8",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\math\\g8\\math_g8_first_20261113_book.json",
+      "stats": {
+        "chapters": 7,
+        "points": 28,
+        "questions": 140
+      },
+      "errors": []
+    }
+  ]
+}

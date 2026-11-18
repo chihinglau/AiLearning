@@ -1,0 +1,346 @@
+{
+  "exam_id": null,
+  "title": "7年级英语上册单元卷（自主题库生成）",
+  "subject": "english",
+  "grade": 7,
+  "exam_type": "unit",
+  "blueprint_code": "g7_english_unit",
+  "blueprint_name": "7年级英语单元测试卷（自主题库生成）",
+  "total_score": 60,
+  "time_limit_min": 40,
+  "question_count": 28,
+  "actual_score_total": 60.0,
+  "score_matches": true,
+  "knowledge_point_count": 18,
+  "sections": [
+    {
+      "section_index": 0,
+      "section_name": "一、听力",
+      "q_type": "listening",
+      "band": "easy",
+      "planned_count": 8,
+      "planned_score": 8.0,
+      "actual_count": 8,
+      "actual_score": 8.0,
+      "knowledge_points": [
+        "Because and when clauses",
+        "Comparatives with -er and than",
+        "Must, should and obligation",
+        "Present simple and present continuous",
+        "Third-person singular -s",
+        "Verb-ing spelling rules",
+        "Writing a diary entry",
+        "try to do vs try doing"
+      ],
+      "chapters": [
+        "Unit 1 Trying new things",
+        "Unit 2 Strong mind",
+        "Unit 3 Jobs"
+      ],
+      "questions": [
+        {
+          "question_id": 17364,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 1,
+          "knowledge_point": "Third-person singular -s",
+          "chapter": "Unit 3 Jobs"
+        },
+        {
+          "question_id": 17351,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "Must, should and obligation",
+          "chapter": "Unit 2 Strong mind"
+        },
+        {
+          "question_id": 17335,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 1,
+          "knowledge_point": "Present simple and present continuous",
+          "chapter": "Unit 1 Trying new things"
+        },
+        {
+          "question_id": 17352,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "Because and when clauses",
+          "chapter": "Unit 2 Strong mind"
+        },
+        {
+          "question_id": 17350,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 1,
+          "knowledge_point": "Comparatives with -er and than",
+          "chapter": "Unit 2 Strong mind"
+        },
+        {
+          "question_id": 17342,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "Writing a diary entry",
+          "chapter": "Unit 1 Trying new things"
+        },
+        {
+          "question_id": 17336,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 1,
+          "knowledge_point": "Verb-ing spelling rules",
+          "chapter": "Unit 1 Trying new things"
+        },
+        {
+          "question_id": 17341,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "try to do vs try doing",
+          "chapter": "Unit 1 Trying new things"
+        }
+      ]
+    },
+    {
+      "section_index": 1,
+      "section_name": "二、单项选择",
+      "q_type": "choice",
+      "band": "easy",
+      "planned_count": 8,
+      "planned_score": 16.0,
+      "actual_count": 8,
+      "actual_score": 16.0,
+      "knowledge_points": [
+        "Adjectives and adverbs of manner",
+        "Job nouns and suffixes",
+        "Object clauses with that",
+        "Wh- questions about work",
+        "英语·短文阅读理解·按单元·变式一",
+        "英语·短文阅读理解·按单元·变式三",
+        "英语·短文阅读理解·按单元·变式二",
+        "英语·短文阅读理解·按单元·变式四"
+      ],
+      "chapters": [
+        "Unit 1 Trying new things",
+        "Unit 2 Strong mind",
+        "Unit 3 Jobs"
+      ],
+      "questions": [
+        {
+          "question_id": 21639,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式一",
+          "chapter": "Unit 1 Trying new things"
+        },
+        {
+          "question_id": 21646,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式二",
+          "chapter": "Unit 2 Strong mind"
+        },
+        {
+          "question_id": 21638,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式四",
+          "chapter": "Unit 1 Trying new things"
+        },
+        {
+          "question_id": 21637,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式三",
+          "chapter": "Unit 1 Trying new things"
+        },
+        {
+          "question_id": 5218,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "Wh- questions about work",
+          "chapter": "Unit 3 Jobs"
+        },
+        {
+          "question_id": 5191,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "Adjectives and adverbs of manner",
+          "chapter": "Unit 2 Strong mind"
+        },
+        {
+          "question_id": 5206,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "Job nouns and suffixes",
+          "chapter": "Unit 3 Jobs"
+        },
+        {
+          "question_id": 5220,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "Object clauses with that",
+          "chapter": "Unit 3 Jobs"
+        }
+      ]
+    },
+    {
+      "section_index": 2,
+      "section_name": "三、词汇填空",
+      "q_type": "fill",
+      "band": "medium",
+      "planned_count": 8,
+      "planned_score": 16.0,
+      "actual_count": 8,
+      "actual_score": 16.0,
+      "knowledge_points": [
+        "Adjectives and adverbs of manner",
+        "Because and when clauses",
+        "Must, should and obligation",
+        "Object clauses with that",
+        "Verb-ing spelling rules",
+        "Wh- questions about work",
+        "英语·词汇填空（中英对应）·按单元·变式三",
+        "英语·词汇填空（中英对应）·按单元·变式二"
+      ],
+      "chapters": [
+        "Unit 1 Trying new things",
+        "Unit 2 Strong mind",
+        "Unit 3 Jobs"
+      ],
+      "questions": [
+        {
+          "question_id": 20629,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式二",
+          "chapter": "Unit 1 Trying new things"
+        },
+        {
+          "question_id": 22087,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式三",
+          "chapter": "Unit 2 Strong mind"
+        },
+        {
+          "question_id": 17344,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "Verb-ing spelling rules",
+          "chapter": "Unit 1 Trying new things"
+        },
+        {
+          "question_id": 5203,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "Because and when clauses",
+          "chapter": "Unit 2 Strong mind"
+        },
+        {
+          "question_id": 5198,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "Must, should and obligation",
+          "chapter": "Unit 2 Strong mind"
+        },
+        {
+          "question_id": 17357,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "Adjectives and adverbs of manner",
+          "chapter": "Unit 2 Strong mind"
+        },
+        {
+          "question_id": 5216,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "Wh- questions about work",
+          "chapter": "Unit 3 Jobs"
+        },
+        {
+          "question_id": 5221,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "Object clauses with that",
+          "chapter": "Unit 3 Jobs"
+        }
+      ]
+    },
+    {
+      "section_index": 3,
+      "section_name": "四、阅读理解",
+      "q_type": "choice",
+      "band": "hard",
+      "planned_count": 4,
+      "planned_score": 20.0,
+      "actual_count": 4,
+      "actual_score": 20.0,
+      "knowledge_points": [
+        "Must, should and obligation",
+        "Object clauses with that",
+        "Wh- questions about work",
+        "Writing a diary entry"
+      ],
+      "chapters": [
+        "Unit 1 Trying new things",
+        "Unit 2 Strong mind",
+        "Unit 3 Jobs"
+      ],
+      "questions": [
+        {
+          "question_id": 17346,
+          "score": 5.0,
+          "q_type": "choice",
+          "difficulty": 5,
+          "knowledge_point": "Writing a diary entry",
+          "chapter": "Unit 1 Trying new things"
+        },
+        {
+          "question_id": 17374,
+          "score": 5.0,
+          "q_type": "choice",
+          "difficulty": 5,
+          "knowledge_point": "Object clauses with that",
+          "chapter": "Unit 3 Jobs"
+        },
+        {
+          "question_id": 17359,
+          "score": 5.0,
+          "q_type": "choice",
+          "difficulty": 5,
+          "knowledge_point": "Must, should and obligation",
+          "chapter": "Unit 2 Strong mind"
+        },
+        {
+          "question_id": 17373,
+          "score": 5.0,
+          "q_type": "choice",
+          "difficulty": 5,
+          "knowledge_point": "Wh- questions about work",
+          "chapter": "Unit 3 Jobs"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-11-17T15:45:25.770647+00:00"
+}

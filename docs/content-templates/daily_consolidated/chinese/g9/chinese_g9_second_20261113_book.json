@@ -1,0 +1,2301 @@
+{
+  "subject": "chinese",
+  "grade": 9,
+  "version": "人教版",
+  "semester": "second",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第一单元",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "现代诗歌的意象",
+      "parent": "第一单元",
+      "order_index": 1,
+      "explanation": "意象是诗中寄托情感的具体物象，多个意象共同营造意境。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "诗歌的节奏与韵律",
+      "parent": "第一单元",
+      "order_index": 2,
+      "explanation": "节奏由停顿和轻重音形成，押韵增强音乐性。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "诗歌的情感表达",
+      "parent": "第一单元",
+      "order_index": 3,
+      "explanation": "诗歌情感可通过直抒胸臆、借景抒情、托物言志等方式表达。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "诗歌的语言特点",
+      "parent": "第一单元",
+      "order_index": 4,
+      "explanation": "诗歌语言凝练、形象，常有意象叠加与陌生化表达。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二单元",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "小说三要素",
+      "parent": "第二单元",
+      "order_index": 1,
+      "explanation": "人物、情节、环境构成小说三要素，人物是核心。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "人物形象的塑造",
+      "parent": "第二单元",
+      "order_index": 2,
+      "explanation": "通过外貌、语言、动作、心理描写及细节塑造人物。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "小说的主题与讽刺",
+      "parent": "第二单元",
+      "order_index": 3,
+      "explanation": "主题通过人物命运与情节揭示，讽刺常用夸张、对比、反语。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "小说的叙述视角",
+      "parent": "第二单元",
+      "order_index": 4,
+      "explanation": "第一人称增强真实感，第三人称便于全知叙述。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第三单元",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "文言实词与虚词",
+      "parent": "第三单元",
+      "order_index": 1,
+      "explanation": "「欲」「患」「弗」等实词与「之」「而」「以」等虚词需结合语境理解。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "论证方法与论点",
+      "parent": "第三单元",
+      "order_index": 2,
+      "explanation": "举例、对比、比喻论证可增强说服力，论点常在开头或结尾。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "史传与说理中的形象",
+      "parent": "第三单元",
+      "order_index": 3,
+      "explanation": "《唐雎不辱使命》通过对话表现人物胆识与气节。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "劝学与求学之道",
+      "parent": "第三单元",
+      "order_index": 4,
+      "explanation": "《送东阳马生序》以自身经历说明求学要刻苦、专心、恭谨。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第四单元",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "读书方法与观点",
+      "parent": "第四单元",
+      "order_index": 1,
+      "explanation": "《谈读书》主张读书要有方法、有选择，读与思结合。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "文艺鉴赏的方法",
+      "parent": "第四单元",
+      "order_index": 2,
+      "explanation": "鉴赏文艺作品要关注意境、形象与情感，体会含蓄之美。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "观点与材料的对应",
+      "parent": "第四单元",
+      "order_index": 3,
+      "explanation": "论述类文章中观点需由材料支撑，材料要能证明观点。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "语言表达的准确与文采",
+      "parent": "第四单元",
+      "order_index": 4,
+      "explanation": "论述语言要准确，文艺鉴赏语言可有形象表达。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第五单元 活动?探究",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "戏剧的基本要素",
+      "parent": "第五单元 活动?探究",
+      "order_index": 1,
+      "explanation": "戏剧由人物、冲突、台词、舞台说明构成，冲突是戏剧的核心。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "剧本阅读方法",
+      "parent": "第五单元 活动?探究",
+      "order_index": 2,
+      "explanation": "读剧本要理清人物关系、把握冲突发展、注意舞台说明。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "戏剧人物与主题",
+      "parent": "第五单元 活动?探究",
+      "order_index": 3,
+      "explanation": "人物在冲突中的选择体现性格，主题通过冲突解决呈现。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "戏剧表演与改编",
+      "parent": "第五单元 活动?探究",
+      "order_index": 4,
+      "explanation": "表演要把握人物语气动作，改编要保留主要冲突与主题。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第六单元",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "曹刿论战与战争智慧",
+      "parent": "第六单元",
+      "order_index": 1,
+      "explanation": "《曹刿论战》说明战争取胜要靠民心与战机把握。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "邹忌讽谏的艺术",
+      "parent": "第六单元",
+      "order_index": 2,
+      "explanation": "邹忌以自身比美经历设喻，委婉劝谏齐王纳谏。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "出师表与忠诚",
+      "parent": "第六单元",
+      "order_index": 3,
+      "explanation": "《出师表》以恳切言辞陈述治国建议，表达报国忠诚。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "古诗词曲的鉴赏",
+      "parent": "第六单元",
+      "order_index": 4,
+      "explanation": "抓意象、品语言、悟情感，注意曲牌与词牌的区别。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一单元",
+      "order_index": 1,
+      "summary": "阅读现代诗歌，体会意象、节奏与情感表达。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「意象」指的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "意象是寄托情感的物象。",
+          "difficulty": 2,
+          "knowledge_point": "现代诗歌的意象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "诗中寄托情感的具体物象",
+            "诗的标题",
+            "作者姓名",
+            "段落划分"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "多个意象组合形成诗的（ ）。",
+          "answer": {
+            "value": "意境"
+          },
+          "analysis": "意象共同构成意境。",
+          "difficulty": 2,
+          "knowledge_point": "现代诗歌的意象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "同一意象在不同诗中可以表达不同情感。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "意象的情感色彩由语境决定。",
+          "difficulty": 3,
+          "knowledge_point": "现代诗歌的意象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说《祖国啊，我亲爱的祖国》中「破旧的老水车」这一意象的含义。",
+          "answer": {
+            "value": "示例：象征祖国曾经的贫穷与落后，表达沉重而深沉的爱"
+          },
+          "analysis": "评分要点：指出象征意义与情感。",
+          "difficulty": 4,
+          "knowledge_point": "现代诗歌的意象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "理解诗歌意象可以从哪些方面入手？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 字数 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "现代诗歌的意象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "物象本身的特点",
+            "上下文语境",
+            "作者情感倾向",
+            "诗句的字数"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "朗读诗歌时要注意（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "节奏和重音是朗读要点。",
+          "difficulty": 2,
+          "knowledge_point": "诗歌的节奏与韵律",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "节奏与重音",
+            "越快越好",
+            "忽略停顿",
+            "只读标题"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "诗句末尾用韵母相同或相近的字，叫（ ）。",
+          "answer": {
+            "value": "押韵"
+          },
+          "analysis": "押韵形成韵律美。",
+          "difficulty": 2,
+          "knowledge_point": "诗歌的节奏与韵律",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "自由诗不一定押韵，但仍可有内在节奏。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "自由诗以内在节奏为主。",
+          "difficulty": 3,
+          "knowledge_point": "诗歌的节奏与韵律",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说朗读诗歌时怎样处理停顿。",
+          "answer": {
+            "value": "示例：按语意和情感划分停顿，抒情处稍缓，激昂处加快"
+          },
+          "analysis": "评分要点：结合语意与情感说明。",
+          "difficulty": 4,
+          "knowledge_point": "诗歌的节奏与韵律",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "诗歌的音乐性体现在哪些方面？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 字数相同 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "诗歌的节奏与韵律",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "节奏",
+            "押韵",
+            "句式长短变化",
+            "段落字数相同"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「直接表达内心情感」的手法叫（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "直抒胸臆是直接抒情。",
+          "difficulty": 2,
+          "knowledge_point": "诗歌的情感表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "直抒胸臆",
+            "借景抒情",
+            "托物言志",
+            "虚实结合"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "借景物表达情感的手法叫借景（ ）。",
+          "answer": {
+            "value": "抒情"
+          },
+          "analysis": "借景抒情是常见手法。",
+          "difficulty": 2,
+          "knowledge_point": "诗歌的情感表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "诗歌情感往往含蓄，需要结合意象体会。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "诗贵含蓄，需细读。",
+          "difficulty": 3,
+          "knowledge_point": "诗歌的情感表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "举例说明一首诗如何借景抒情。",
+          "answer": {
+            "value": "示例：诗中写「雪落在中国的土地上」，借寒冷的雪景抒发对祖国的忧思"
+          },
+          "analysis": "评分要点：举出诗句，说明情景关系。",
+          "difficulty": 4,
+          "knowledge_point": "诗歌的情感表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "诗歌抒情的方式有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 罗列数据 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "诗歌的情感表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "直抒胸臆",
+            "借景抒情",
+            "托物言志",
+            "罗列数据"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "诗歌语言最重要的特点是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "诗歌语言凝练而含蓄。",
+          "difficulty": 2,
+          "knowledge_point": "诗歌的语言特点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "凝练含蓄",
+            "冗长啰嗦",
+            "只求押韵",
+            "全是说明"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "诗歌常通过词语的非常规搭配形成（ ）化表达。",
+          "answer": {
+            "value": "陌生"
+          },
+          "analysis": "陌生化让读者重新感受事物。",
+          "difficulty": 2,
+          "knowledge_point": "诗歌的语言特点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "诗歌中可以省略关联词，靠意象衔接。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "意象并置可省关联词。",
+          "difficulty": 3,
+          "knowledge_point": "诗歌的语言特点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "找出一句你喜欢的诗句，说说它的语言妙处。",
+          "answer": {
+            "value": "示例：我喜欢「我是你十亿分之一」，用极小的数字对比表达个人与祖国的关系"
+          },
+          "analysis": "评分要点：引用准确，妙处说明具体。",
+          "difficulty": 4,
+          "knowledge_point": "诗歌的语言特点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "诗歌语言的特点有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 长篇大论 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "诗歌的语言特点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "凝练",
+            "形象",
+            "有节奏感",
+            "必须长篇大论"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第二单元",
+      "order_index": 2,
+      "summary": "阅读小说，理解人物形象、情节与主题。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "小说三要素不包括（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "三要素是人物、情节、环境。",
+          "difficulty": 2,
+          "knowledge_point": "小说三要素",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "主题思想",
+            "人物",
+            "情节",
+            "环境"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "小说中推动故事发展的过程叫（ ）。",
+          "answer": {
+            "value": "情节"
+          },
+          "analysis": "情节包括开端、发展、高潮、结局。",
+          "difficulty": 2,
+          "knowledge_point": "小说三要素",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "环境描写可以烘托人物心情。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "环境常与人物的心境呼应。",
+          "difficulty": 3,
+          "knowledge_point": "小说三要素",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说小说中环境描写的两个作用。",
+          "answer": {
+            "value": "示例：交代背景；烘托人物心情或暗示命运"
+          },
+          "analysis": "评分要点：两个作用具体。",
+          "difficulty": 4,
+          "knowledge_point": "小说三要素",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "小说情节通常包括哪些部分？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 作者简介 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "小说三要素",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "开端",
+            "发展",
+            "高潮",
+            "作者简介"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「他排出九文大钱」属于（ ）描写",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「排」是动作描写，显示人物心态。",
+          "difficulty": 2,
+          "knowledge_point": "人物形象的塑造",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "动作",
+            "心理",
+            "环境",
+            "议论"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "刻画人物最常用的方法是（ ）描写。",
+          "answer": {
+            "value": "细节"
+          },
+          "analysis": "细节最能显现人物性格。",
+          "difficulty": 2,
+          "knowledge_point": "人物形象的塑造",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "人物形象可以从言行中分析出来。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "言行反映性格与处境。",
+          "difficulty": 3,
+          "knowledge_point": "人物形象的塑造",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "以《孔乙己》为例，说说「排出九文大钱」表现了什么。",
+          "answer": {
+            "value": "示例：表现他虽穷困却要摆出体面、炫耀读书人身份的迂腐心理"
+          },
+          "analysis": "评分要点：动作细节与心理分析结合。",
+          "difficulty": 4,
+          "knowledge_point": "人物形象的塑造",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "塑造人物形象的方法有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 数据统计 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "人物形象的塑造",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "外貌描写",
+            "语言描写",
+            "动作描写",
+            "数据统计"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "讽刺小说常用的手法是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "夸张对比能突出荒谬。",
+          "difficulty": 2,
+          "knowledge_point": "小说的主题与讽刺",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "夸张与对比",
+            "平铺直叙",
+            "数据说明",
+            "押韵"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "《变色龙》通过警官态度的反复变化，讽刺了（ ）主义。",
+          "answer": {
+            "value": "媚上欺下"
+          },
+          "analysis": "警官随狗主人身份变化态度，讽刺趋炎附势。",
+          "difficulty": 2,
+          "knowledge_point": "小说的主题与讽刺",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "小说的主题常需结合时代背景理解。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "背景影响主题解读。",
+          "difficulty": 3,
+          "knowledge_point": "小说的主题与讽刺",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说《孔乙己》的主题。",
+          "answer": {
+            "value": "示例：揭露封建科举制度对读书人的毒害和社会的冷漠"
+          },
+          "analysis": "评分要点：结合人物命运说明主题。",
+          "difficulty": 4,
+          "knowledge_point": "小说的主题与讽刺",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "理解小说主题的途径有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 段落数量 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "小说的主题与讽刺",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "分析人物命运",
+            "关注情节冲突",
+            "结合时代背景",
+            "统计段落数量"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "用「我」来叙述故事属于（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "用「我」叙述是第一人称。",
+          "difficulty": 2,
+          "knowledge_point": "小说的叙述视角",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "第一人称",
+            "第二人称",
+            "第三人称",
+            "无人称"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "第三人称叙述可以展现多个人物的（ ）。",
+          "answer": {
+            "value": "心理"
+          },
+          "analysis": "全知视角能写多人心理。",
+          "difficulty": 2,
+          "knowledge_point": "小说的叙述视角",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "第一人称叙述只能写「我」看到听到的内容。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "第一人称受视角限制。",
+          "difficulty": 3,
+          "knowledge_point": "小说的叙述视角",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说《孔乙己》用小伙计视角叙述的好处。",
+          "answer": {
+            "value": "示例：以旁观者眼光看孔乙己，显得客观冷静，也显出周围的冷漠"
+          },
+          "analysis": "评分要点：视角特点与效果都说清。",
+          "difficulty": 4,
+          "knowledge_point": "小说的叙述视角",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于叙述视角，哪些说法正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 与主题无关 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "小说的叙述视角",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "第一人称更显真实",
+            "第三人称可写多人心理",
+            "视角影响读者感受",
+            "视角与主题无关"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第三单元",
+      "order_index": 3,
+      "summary": "阅读先秦及后世文言名篇，理解论点与论证。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「鱼，我所欲也」中「欲」的意思是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "此处「欲」表示想要、喜爱。",
+          "difficulty": 2,
+          "knowledge_point": "文言实词与虚词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "想要",
+            "欲望",
+            "将要",
+            "贪欲"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「二者不可得兼」中「兼」的意思是（ ）。",
+          "answer": {
+            "value": "同时具有"
+          },
+          "analysis": "兼表示同时得到。",
+          "difficulty": 2,
+          "knowledge_point": "文言实词与虚词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "文言虚词「之」可作代词、助词，需看语境。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「之」用法多样。",
+          "difficulty": 3,
+          "knowledge_point": "文言实词与虚词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "翻译「生，亦我所欲也；义，亦我所欲也」。",
+          "answer": {
+            "value": "示例：生命是我想要的，道义也是我想要的"
+          },
+          "analysis": "评分要点：关键实词译出，句意通顺。",
+          "difficulty": 4,
+          "knowledge_point": "文言实词与虚词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "阅读文言文要注意哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 只看字形 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "文言实词与虚词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "一词多义",
+            "古今异义",
+            "通假字",
+            "只看字形猜义"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「鱼与熊掌」的比喻属于（ ）论证",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "以鱼与熊掌设喻是比喻论证。",
+          "difficulty": 2,
+          "knowledge_point": "论证方法与论点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "比喻",
+            "举例",
+            "对比",
+            "引用"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "《鱼我所欲也》的中心论点是「舍生取（ ）」。",
+          "answer": {
+            "value": "义"
+          },
+          "analysis": "文章主张舍生取义。",
+          "difficulty": 2,
+          "knowledge_point": "论证方法与论点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "对比论证能突出观点的正确性。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "正反对比使观点鲜明。",
+          "difficulty": 3,
+          "knowledge_point": "论证方法与论点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说《鱼我所欲也》中对比论证的运用。",
+          "answer": {
+            "value": "示例：把「不食嗟来之食」与「贪图享乐而受辱」对比，突出舍生取义"
+          },
+          "analysis": "评分要点：指出对比双方与作用。",
+          "difficulty": 4,
+          "knowledge_point": "论证方法与论点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "常见的论证方法有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 数据统计 ✗ 非文言常用论证法。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "论证方法与论点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "举例论证",
+            "对比论证",
+            "比喻论证",
+            "数据统计论证"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "唐雎面对秦王时的态度是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "唐雎以「布衣之怒」抗争，维护国家尊严。",
+          "difficulty": 2,
+          "knowledge_point": "史传与说理中的形象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "不卑不亢、以理抗争",
+            "恐惧屈服",
+            "沉默不语",
+            "谄媚讨好"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「布衣之怒，亦免冠徒跣，以头抢地耳」中「抢」的意思是（ ）。",
+          "answer": {
+            "value": "撞"
+          },
+          "analysis": "「抢」在此表示撞击。",
+          "difficulty": 2,
+          "knowledge_point": "史传与说理中的形象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "对话描写能表现人物的性格与智慧。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "言为心声，对话显性格。",
+          "difficulty": 3,
+          "knowledge_point": "史传与说理中的形象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说唐雎的形象特点。",
+          "answer": {
+            "value": "示例：有胆有识、不畏强权、忠于使命、能言善辩"
+          },
+          "analysis": "评分要点：至少三点，结合文句。",
+          "difficulty": 4,
+          "knowledge_point": "史传与说理中的形象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "《唐雎不辱使命》表现的主题有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 贪图富贵 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "史传与说理中的形象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "维护国家尊严",
+            "不畏强权",
+            "以理服人",
+            "贪图富贵"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "《送东阳马生序》的作者是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "该文作者为明代宋濂。",
+          "difficulty": 2,
+          "knowledge_point": "劝学与求学之道",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "宋濂",
+            "韩愈",
+            "苏轼",
+            "欧阳修"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "文中「以是人多以书假余」的「假」意思是（ ）。",
+          "answer": {
+            "value": "借"
+          },
+          "analysis": "「假」在此为借。",
+          "difficulty": 2,
+          "knowledge_point": "劝学与求学之道",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "作者用自己求学的艰苦与太学生的优越条件作对比。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "对比说明学业成就在勤。",
+          "difficulty": 3,
+          "knowledge_point": "劝学与求学之道",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说作者求学经历给你的启示。",
+          "answer": {
+            "value": "示例：条件艰苦仍坚持抄书求学，说明学习要靠勤奋与专心"
+          },
+          "analysis": "评分要点：结合文中事实谈启示。",
+          "difficulty": 4,
+          "knowledge_point": "劝学与求学之道",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "作者求学的做法有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 只靠天赋 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "劝学与求学之道",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "借书抄录",
+            "远行求师",
+            "虚心请教",
+            "只靠天赋不努力"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第四单元",
+      "order_index": 4,
+      "summary": "阅读读书与文艺鉴赏类文章，学习观点提炼与审美方法。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "关于读书，正确的态度是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "读书要有选择并思考。",
+          "difficulty": 2,
+          "knowledge_point": "读书方法与观点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "有选择地读并思考",
+            "只求数量",
+            "完全不读",
+            "只读一类书"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「不求甚解」原意是读书只求领会（ ），不必处处咬文嚼字。",
+          "answer": {
+            "value": "要旨"
+          },
+          "analysis": "原意是领会要旨。",
+          "difficulty": 2,
+          "knowledge_point": "读书方法与观点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "读书应与讨论、笔记结合。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "读思结合效果更好。",
+          "difficulty": 3,
+          "knowledge_point": "读书方法与观点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说《谈读书》中关于读书方法的两个观点。",
+          "answer": {
+            "value": "示例：读书要有所选择；读书要与思考、讨论结合"
+          },
+          "analysis": "评分要点：两个观点准确。",
+          "difficulty": 4,
+          "knowledge_point": "读书方法与观点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "有效的读书方法有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 只看目录 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "读书方法与观点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "做批注",
+            "写读书笔记",
+            "与人讨论",
+            "只看目录"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「山水画的意境」主要谈的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "意境指景与情的融合。",
+          "difficulty": 2,
+          "knowledge_point": "文艺鉴赏的方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "景物与情感的统一",
+            "颜料配方",
+            "画家生平",
+            "展览流程"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「无言之美」强调艺术作品中的（ ）之美。",
+          "answer": {
+            "value": "含蓄"
+          },
+          "analysis": "无言之美即含蓄之美。",
+          "difficulty": 2,
+          "knowledge_point": "文艺鉴赏的方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "鉴赏文艺作品应结合自身感受与作品特点。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "鉴赏既需作品依据也需感受。",
+          "difficulty": 3,
+          "knowledge_point": "文艺鉴赏的方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说怎样体会文艺作品中的含蓄之美。",
+          "answer": {
+            "value": "示例：留意未说出的部分，从景、物、留白处体味情感"
+          },
+          "analysis": "评分要点：方法具体，结合作品。",
+          "difficulty": 4,
+          "knowledge_point": "文艺鉴赏的方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "鉴赏文艺作品可以从哪些方面入手？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 身高 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "文艺鉴赏的方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "形象",
+            "意境",
+            "语言",
+            "作者身高"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "论述文中材料的作用是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "材料为观点服务。",
+          "difficulty": 2,
+          "knowledge_point": "观点与材料的对应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "支撑观点",
+            "增加篇幅",
+            "装饰版面",
+            "代替观点"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "阅读论述文要先找出文章的（ ）。",
+          "answer": {
+            "value": "观点"
+          },
+          "analysis": "先抓观点再理材料。",
+          "difficulty": 2,
+          "knowledge_point": "观点与材料的对应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "材料与观点无关时，论点就失去说服力。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "材料须能证明观点。",
+          "difficulty": 3,
+          "knowledge_point": "观点与材料的对应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说判断材料是否支撑观点的方法。",
+          "answer": {
+            "value": "示例：看材料是否直接说明观点的关键词与结论，能否推出该观点"
+          },
+          "analysis": "评分要点：方法清楚、可操作。",
+          "difficulty": 4,
+          "knowledge_point": "观点与材料的对应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "阅读论述文的步骤有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 背全文 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "观点与材料的对应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "找观点",
+            "理材料",
+            "析论证",
+            "背全文"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "论述类语言首要要求是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "准确是论述语言基础。",
+          "difficulty": 2,
+          "knowledge_point": "语言表达的准确与文采",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "准确",
+            "华丽",
+            "含蓄",
+            "押韵"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "鉴赏文字中适当使用比喻能增强语言的（ ）性。",
+          "answer": {
+            "value": "形象"
+          },
+          "analysis": "比喻使表达形象。",
+          "difficulty": 2,
+          "knowledge_point": "语言表达的准确与文采",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "准确与文采并不矛盾，可并存。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "准确基础上可有文采。",
+          "difficulty": 3,
+          "knowledge_point": "语言表达的准确与文采",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "把「这幅画很好看」改成较有文采的评价。",
+          "answer": {
+            "value": "示例：画面淡墨轻染，远山含烟，给人一种悠远的宁静感"
+          },
+          "analysis": "评分要点：在原意基础上增加形象表达。",
+          "difficulty": 4,
+          "knowledge_point": "语言表达的准确与文采",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "提升表达效果的方法有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 堆砌生僻字 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "语言表达的准确与文采",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "用词准确",
+            "适当比喻",
+            "句式变化",
+            "堆砌生僻字"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第五单元 活动?探究",
+      "order_index": 5,
+      "summary": "通过戏剧单元学习剧本阅读与表演，体会戏剧冲突与人物。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "戏剧的核心是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "没有冲突就没有戏剧。",
+          "difficulty": 2,
+          "knowledge_point": "戏剧的基本要素",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "戏剧冲突",
+            "舞台灯光",
+            "观众人数",
+            "票价"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "剧本中说明人物动作、场景的文字叫（ ）说明。",
+          "answer": {
+            "value": "舞台"
+          },
+          "analysis": "舞台说明提示表演。",
+          "difficulty": 2,
+          "knowledge_point": "戏剧的基本要素",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "台词能表现人物性格与关系。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "台词是塑造人物的主要手段。",
+          "difficulty": 3,
+          "knowledge_point": "戏剧的基本要素",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说戏剧冲突的作用。",
+          "answer": {
+            "value": "示例：推动情节发展，展现人物性格，突出主题"
+          },
+          "analysis": "评分要点：三点作用说清。",
+          "difficulty": 4,
+          "knowledge_point": "戏剧的基本要素",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "戏剧的构成要素有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 稿费 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "戏剧的基本要素",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "人物",
+            "冲突",
+            "台词",
+            "作者稿费"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "读剧本首先要理清（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "人物关系是理解剧情的基础。",
+          "difficulty": 2,
+          "knowledge_point": "剧本阅读方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "人物关系",
+            "印刷字体",
+            "纸张大小",
+            "出版年份"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "剧本中括号内的文字多为（ ）说明。",
+          "answer": {
+            "value": "舞台"
+          },
+          "analysis": "括号内常为动作、神态提示。",
+          "difficulty": 2,
+          "knowledge_point": "剧本阅读方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "舞台说明有助于想象表演场景。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "说明提供表演与场景信息。",
+          "difficulty": 3,
+          "knowledge_point": "剧本阅读方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说阅读剧本的三个步骤。",
+          "answer": {
+            "value": "示例：理清人物关系，梳理冲突发展，关注舞台说明与台词"
+          },
+          "analysis": "评分要点：三步清楚、顺序合理。",
+          "difficulty": 4,
+          "knowledge_point": "剧本阅读方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "读剧本时应关注哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 排版字号 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "剧本阅读方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "人物台词",
+            "冲突发展",
+            "舞台说明",
+            "排版字号"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "人物性格常在（ ）中显现",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "冲突中的选择显现性格。",
+          "difficulty": 2,
+          "knowledge_point": "戏剧人物与主题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "冲突与选择",
+            "舞台布景",
+            "票价高低",
+            "演出时长"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "戏剧主题往往通过冲突的（ ）呈现。",
+          "answer": {
+            "value": "解决"
+          },
+          "analysis": "冲突解决指向主题。",
+          "difficulty": 2,
+          "knowledge_point": "戏剧人物与主题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "同一人物在不同场景中的表现可能不同。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "人物有复杂性。",
+          "difficulty": 3,
+          "knowledge_point": "戏剧人物与主题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "以《屈原》为例，说说主人公的形象。",
+          "answer": {
+            "value": "示例：屈原正直爱国、坚贞不屈，面对诬陷仍坚持真理"
+          },
+          "analysis": "评分要点：形象特点与剧情依据。",
+          "difficulty": 4,
+          "knowledge_point": "戏剧人物与主题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "分析戏剧人物可以看哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 演员身高 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "戏剧人物与主题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "台词内容",
+            "行动选择",
+            "与他人的关系",
+            "演员身高"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "表演时最重要的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "表演要贴合并表现人物。",
+          "difficulty": 2,
+          "knowledge_point": "戏剧表演与改编",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "把握人物性格与语气",
+            "穿最贵的衣服",
+            "声音越大越好",
+            "随意加台词"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "改编剧本要保留主要冲突和（ ）。",
+          "answer": {
+            "value": "主题"
+          },
+          "analysis": "改编不能丢主题。",
+          "difficulty": 2,
+          "knowledge_point": "戏剧表演与改编",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "表演时的停顿与语气能传递情感。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "语气停顿是表演手段。",
+          "difficulty": 3,
+          "knowledge_point": "戏剧表演与改编",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说把小说改编成剧本要注意什么。",
+          "answer": {
+            "value": "示例：把叙述转为台词与动作，集中冲突，保留主要人物与主题"
+          },
+          "analysis": "评分要点：至少两点，符合戏剧特点。",
+          "difficulty": 4,
+          "knowledge_point": "戏剧表演与改编",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "戏剧表演的准备包括哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 只背标题 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "戏剧表演与改编",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "熟悉台词",
+            "设计动作",
+            "理解人物",
+            "只背标题"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第六单元",
+      "order_index": 6,
+      "summary": "阅读史传与表文名篇，理解劝谏、忠诚与战争智慧。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "曹刿认为作战取胜的关键是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先取信于民，再把握战机。",
+          "difficulty": 2,
+          "knowledge_point": "曹刿论战与战争智慧",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "取信于民与把握战机",
+            "兵力越多越好",
+            "武器越贵越好",
+            "地势越高越好"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「一鼓作气，再而衰，三而（ ）」是文中名句。",
+          "answer": {
+            "value": "竭"
+          },
+          "analysis": "三而竭是原文。",
+          "difficulty": 2,
+          "knowledge_point": "曹刿论战与战争智慧",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "长勺之战中鲁国以弱胜强。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "鲁国抓住战机击败齐军。",
+          "difficulty": 3,
+          "knowledge_point": "曹刿论战与战争智慧",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说「一鼓作气」现在常用来表达什么意思。",
+          "answer": {
+            "value": "示例：比喻趁劲头大的时候一下子把事情做完"
+          },
+          "analysis": "评分要点：本义与引申义都说清。",
+          "difficulty": 4,
+          "knowledge_point": "曹刿论战与战争智慧",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "曹刿身上体现的品质有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 贪生怕死 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "曹刿论战与战争智慧",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "爱国",
+            "有远见",
+            "善观察",
+            "贪生怕死"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "邹忌劝谏齐王采用的方法是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "以家事设喻，类比国事。",
+          "difficulty": 2,
+          "knowledge_point": "邹忌讽谏的艺术",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "设喻讽谏",
+            "直言斥责",
+            "武力威胁",
+            "沉默抗议"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "邹忌以「吾妻之美我者，（ ）我也」说明偏爱会使人受蒙蔽。",
+          "answer": {
+            "value": "私"
+          },
+          "analysis": "「私我也」指偏爱我。",
+          "difficulty": 2,
+          "knowledge_point": "邹忌讽谏的艺术",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "委婉劝谏更易被接受。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "设喻劝谏既委婉又有说服力。",
+          "difficulty": 3,
+          "knowledge_point": "邹忌讽谏的艺术",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说邹忌讽谏的效果。",
+          "answer": {
+            "value": "示例：齐王接受建议，广开言路，齐国政治清明，邻国畏服"
+          },
+          "analysis": "评分要点：效果表述准确。",
+          "difficulty": 4,
+          "knowledge_point": "邹忌讽谏的艺术",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "邹忌讽谏成功的原因有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 强迫 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "邹忌讽谏的艺术",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "设喻贴切",
+            "层层推理",
+            "态度委婉",
+            "强迫齐王"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "《出师表》的作者是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "《出师表》为诸葛亮所作。",
+          "difficulty": 2,
+          "knowledge_point": "出师表与忠诚",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "诸葛亮",
+            "曹操",
+            "司马懿",
+            "周瑜"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "文中「先帝创业未半而中道（ ）」表达对国势的忧虑。",
+          "answer": {
+            "value": "崩殂"
+          },
+          "analysis": "「中道崩殂」指先帝中途去世。",
+          "difficulty": 2,
+          "knowledge_point": "出师表与忠诚",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《出师表》中提出广开言路、赏罚严明、亲贤远佞三条建议。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "三条建议是文章核心。",
+          "difficulty": 3,
+          "knowledge_point": "出师表与忠诚",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说《出师表》表达的情感。",
+          "answer": {
+            "value": "示例：对先帝的感激、对蜀汉的忠诚，以及北伐的决心"
+          },
+          "analysis": "评分要点：情感与内容对应。",
+          "difficulty": 4,
+          "knowledge_point": "出师表与忠诚",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "《出师表》给后主的建议有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 大兴土木 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "出师表与忠诚",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "广开言路",
+            "赏罚分明",
+            "亲贤远佞",
+            "大兴土木"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「词牌」规定的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "词牌规定格式格律。",
+          "difficulty": 2,
+          "knowledge_point": "古诗词曲的鉴赏",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "词的格式与格律",
+            "词的内容",
+            "作者署名",
+            "写作时间"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「兴，百姓苦；亡，百姓苦」表达了对（ ）的同情。",
+          "answer": {
+            "value": "百姓"
+          },
+          "analysis": "曲作抒发对百姓疾苦的同情。",
+          "difficulty": 2,
+          "knowledge_point": "古诗词曲的鉴赏",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "同一词牌可以填写不同内容。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "词牌定格式，内容可变。",
+          "difficulty": 3,
+          "knowledge_point": "古诗词曲的鉴赏",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说鉴赏古诗词曲的三个入手点。",
+          "answer": {
+            "value": "示例：抓意象、品语言、悟情感（结合背景）"
+          },
+          "analysis": "评分要点：三点明确。",
+          "difficulty": 4,
+          "knowledge_point": "古诗词曲的鉴赏",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "鉴赏古诗词可以从哪些方面入手？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 印刷版式 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "古诗词曲的鉴赏",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "意象",
+            "语言",
+            "情感",
+            "印刷版式"
+          ]
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-14T12:07:25+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "normalized": "难度 40/40/20 归一 + 主观题短答案补评分要点（2026-11-13 统一口径）",
+    "supplemented": "数值填空补可求值算式 0 道 / 数值填空改单选 0 道 / 补多选题 0 道（2 真 + 2 假，答案 2 项；2026-11-14 口径）",
+    "stem_dedup": "跨册同题干补册次前缀 0 道（2026-11-14 跨册去重口径）",
+    "duplicate_rewrites": "跨册同题定向改写 0 道（保留两侧题量，2026-11-14 口径）",
+    "chapter_scope": "全章域（本册无跨册重复章）",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

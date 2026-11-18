@@ -1,0 +1,328 @@
+{
+  "exam_id": null,
+  "title": "4年级数学上册期末卷（自主题库生成）",
+  "subject": "math",
+  "grade": 4,
+  "exam_type": "final",
+  "blueprint_code": "g4_math_final",
+  "blueprint_name": "4年级数学期末模拟卷（自主题库生成）",
+  "total_score": 100,
+  "time_limit_min": 90,
+  "question_count": 25,
+  "actual_score_total": 100.0,
+  "score_matches": true,
+  "knowledge_point_count": 24,
+  "sections": [
+    {
+      "section_index": 0,
+      "section_name": "一、选择题",
+      "q_type": "choice",
+      "band": "easy",
+      "planned_count": 12,
+      "planned_score": 36.0,
+      "actual_count": 12,
+      "actual_score": 36.0,
+      "knowledge_points": [
+        "三位数乘两位数的竖式",
+        "亿以内数的数位顺序",
+        "加法交换律与结合律",
+        "因数末尾有0的简便算法",
+        "垂直与平行的判定",
+        "多位数的读法与写法",
+        "大数的读写与近似数",
+        "平行线与垂线的辨认",
+        "线段射线与直线的区别",
+        "观察点高低与观察范围",
+        "身份证号码的组成",
+        "速度乘时间求路程"
+      ],
+      "chapters": [
+        "总复习",
+        "第一单元 认识更大的数",
+        "第七单元 运用数量关系解决问题",
+        "第三单元 整数乘法（二）",
+        "第二单元 线与角",
+        "第五单元 运算律",
+        "第六单元 图形的奥秘",
+        "第四单元 我们生活的空间（二）",
+        "综合实践 编码"
+      ],
+      "questions": [
+        {
+          "question_id": 5804,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "加法交换律与结合律",
+          "chapter": "第五单元 运算律"
+        },
+        {
+          "question_id": 5733,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "身份证号码的组成",
+          "chapter": "综合实践 编码"
+        },
+        {
+          "question_id": 5839,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "平行线与垂线的辨认",
+          "chapter": "第六单元 图形的奥秘"
+        },
+        {
+          "question_id": 5713,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "亿以内数的数位顺序",
+          "chapter": "第一单元 认识更大的数"
+        },
+        {
+          "question_id": 5746,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "线段射线与直线的区别",
+          "chapter": "第二单元 线与角"
+        },
+        {
+          "question_id": 5772,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "因数末尾有0的简便算法",
+          "chapter": "第三单元 整数乘法（二）"
+        },
+        {
+          "question_id": 5786,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "观察点高低与观察范围",
+          "chapter": "第四单元 我们生活的空间（二）"
+        },
+        {
+          "question_id": 5754,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "垂直与平行的判定",
+          "chapter": "第二单元 线与角"
+        },
+        {
+          "question_id": 5715,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "多位数的读法与写法",
+          "chapter": "第一单元 认识更大的数"
+        },
+        {
+          "question_id": 5854,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "速度乘时间求路程",
+          "chapter": "第七单元 运用数量关系解决问题"
+        },
+        {
+          "question_id": 5765,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "三位数乘两位数的竖式",
+          "chapter": "第三单元 整数乘法（二）"
+        },
+        {
+          "question_id": 5912,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "大数的读写与近似数",
+          "chapter": "总复习"
+        }
+      ]
+    },
+    {
+      "section_index": 1,
+      "section_name": "二、填空题",
+      "q_type": "fill",
+      "band": "medium",
+      "planned_count": 8,
+      "planned_score": 24.0,
+      "actual_count": 8,
+      "actual_score": 24.0,
+      "knowledge_points": [
+        "三位数乘两位数与运算律简算",
+        "列表整理条件解两步问题",
+        "数与运算·乘除法运算·按单元·变式一",
+        "数与运算·平面图形周长与面积·按单元·变式一",
+        "条形统计图一格代表几",
+        "直线上的线段计数",
+        "编码中数字表示的信息",
+        "预计到达时刻的换算"
+      ],
+      "chapters": [
+        "总复习",
+        "数学好玩 数图形的学问",
+        "第七单元 运用数量关系解决问题",
+        "第八单元 数据的表示和分析（一）",
+        "第六单元 图形的奥秘",
+        "综合实践 导航给的时间准吗",
+        "综合实践 编码"
+      ],
+      "questions": [
+        {
+          "question_id": 5873,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "条形统计图一格代表几",
+          "chapter": "第八单元 数据的表示和分析（一）"
+        },
+        {
+          "question_id": 19418,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·乘除法运算·按单元·变式一",
+          "chapter": "综合实践 导航给的时间准吗"
+        },
+        {
+          "question_id": 5819,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "直线上的线段计数",
+          "chapter": "数学好玩 数图形的学问"
+        },
+        {
+          "question_id": 5891,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "预计到达时刻的换算",
+          "chapter": "综合实践 导航给的时间准吗"
+        },
+        {
+          "question_id": 5729,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "编码中数字表示的信息",
+          "chapter": "综合实践 编码"
+        },
+        {
+          "question_id": 19408,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·平面图形周长与面积·按单元·变式一",
+          "chapter": "第六单元 图形的奥秘"
+        },
+        {
+          "question_id": 5914,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "三位数乘两位数与运算律简算",
+          "chapter": "总复习"
+        },
+        {
+          "question_id": 5869,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "列表整理条件解两步问题",
+          "chapter": "第七单元 运用数量关系解决问题"
+        }
+      ]
+    },
+    {
+      "section_index": 2,
+      "section_name": "三、计算与证明",
+      "q_type": "answer",
+      "band": "medium",
+      "planned_count": 4,
+      "planned_score": 32.0,
+      "actual_count": 4,
+      "actual_score": 32.0,
+      "knowledge_points": [
+        "单价乘数量求总价",
+        "数与运算·乘除法运算·按单元·变式二",
+        "数与运算·平均数与数据整理·按单元·变式二",
+        "直线上的线段计数"
+      ],
+      "chapters": [
+        "总复习",
+        "数学好玩 数图形的学问",
+        "第七单元 运用数量关系解决问题",
+        "第八单元 数据的表示和分析（一）"
+      ],
+      "questions": [
+        {
+          "question_id": 19417,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·平均数与数据整理·按单元·变式二",
+          "chapter": "第八单元 数据的表示和分析（一）"
+        },
+        {
+          "question_id": 5863,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "单价乘数量求总价",
+          "chapter": "第七单元 运用数量关系解决问题"
+        },
+        {
+          "question_id": 19422,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·乘除法运算·按单元·变式二",
+          "chapter": "总复习"
+        },
+        {
+          "question_id": 5821,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "直线上的线段计数",
+          "chapter": "数学好玩 数图形的学问"
+        }
+      ]
+    },
+    {
+      "section_index": 3,
+      "section_name": "四、综合应用",
+      "q_type": "answer",
+      "band": "hard",
+      "planned_count": 1,
+      "planned_score": 8.0,
+      "actual_count": 1,
+      "actual_score": 8.0,
+      "knowledge_points": [
+        "预计与实际用时的比较"
+      ],
+      "chapters": [
+        "综合实践 导航给的时间准吗"
+      ],
+      "questions": [
+        {
+          "question_id": 5907,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "预计与实际用时的比较",
+          "chapter": "综合实践 导航给的时间准吗"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-11-17T15:45:22.038521+00:00"
+}

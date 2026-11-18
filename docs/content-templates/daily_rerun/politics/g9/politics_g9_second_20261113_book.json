@@ -1,0 +1,1161 @@
+{
+  "subject": "politics",
+  "grade": 9,
+  "version": "部编版",
+  "semester": "second",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第一单元 我们共同的世界",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "开放互动的世界",
+      "parent": "第一单元 我们共同的世界",
+      "order_index": 1,
+      "explanation": "当今世界是开放、发展、紧密联系的世界，各国相互依存。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "经济全球化",
+      "parent": "第一单元 我们共同的世界",
+      "order_index": 2,
+      "explanation": "经济全球化表现为生产、贸易、资本全球化，带来机遇也带来挑战。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "文化多样性",
+      "parent": "第一单元 我们共同的世界",
+      "order_index": 3,
+      "explanation": "各民族文化共同构成丰富多彩的世界文化，应尊重差异、交流互鉴。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "世界格局的变化",
+      "parent": "第一单元 我们共同的世界",
+      "order_index": 4,
+      "explanation": "世界多极化深入发展，和平与发展仍是时代主题。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二单元 世界舞台上的中国",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "中国与世界的关系",
+      "parent": "第二单元 世界舞台上的中国",
+      "order_index": 1,
+      "explanation": "中国是世界的中国，与世界紧密相连、命运与共。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "中国的责任与担当",
+      "parent": "第二单元 世界舞台上的中国",
+      "order_index": 2,
+      "explanation": "中国积极参与全球治理，承担大国责任，是负责任的大国。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "中国的机遇与挑战",
+      "parent": "第二单元 世界舞台上的中国",
+      "order_index": 3,
+      "explanation": "中国发展面临重要战略机遇期，也面临外部压力与内部转型挑战。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "与世界共享发展机遇",
+      "parent": "第二单元 世界舞台上的中国",
+      "order_index": 4,
+      "explanation": "中国坚持合作共赢，让发展成果惠及各国。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第三单元 走向未来的少年",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "少年的担当",
+      "parent": "第三单元 走向未来的少年",
+      "order_index": 1,
+      "explanation": "少年强则国强，青少年要把个人理想融入国家发展。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "职业选择与规划",
+      "parent": "第三单元 走向未来的少年",
+      "order_index": 2,
+      "explanation": "职业选择要考虑国家需要、个人兴趣与能力，做好长远规划。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "学习与终身发展",
+      "parent": "第三单元 走向未来的少年",
+      "order_index": 3,
+      "explanation": "学习是成长的重要途径，要树立终身学习理念。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "走向未来的选择",
+      "parent": "第三单元 走向未来的少年",
+      "order_index": 4,
+      "explanation": "面对未来要理性选择、脚踏实地，把理想落实到行动。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一单元 我们共同的世界",
+      "order_index": 1,
+      "summary": "认识经济全球化、文化多样性与世界格局的变化。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "当今世界的基本特征是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "开放互动是当今世界的特征。",
+          "difficulty": 2,
+          "knowledge_point": "开放互动的世界",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "开放、发展、紧密联系",
+            "封闭、停滞、隔绝",
+            "完全统一",
+            "互不往来"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "各国相互联系、相互依存的程度空前加深，人类生活在同一个（ ）村里。",
+          "answer": {
+            "value": "地球"
+          },
+          "analysis": "地球村比喻紧密联系。",
+          "difficulty": 2,
+          "knowledge_point": "开放互动的世界",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "国家间只有竞争没有合作。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "国家间既有竞争也有合作。",
+          "difficulty": 3,
+          "knowledge_point": "开放互动的世界",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说当今世界各国为什么要加强合作。",
+          "answer": {
+            "value": "示例：各国经济相互依存，全球性问题需要共同应对，合作才能实现共赢"
+          },
+          "analysis": "评分要点：至少两点理由。",
+          "difficulty": 4,
+          "knowledge_point": "开放互动的世界",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "体现世界开放互动的现象有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 闭关锁国 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "开放互动的世界",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "国际贸易往来",
+            "跨国旅游",
+            "国际文化交流",
+            "闭关锁国"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "经济全球化的重要表现不包括（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "全球化强调相互联系而非自给自足。",
+          "difficulty": 2,
+          "knowledge_point": "经济全球化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "各国完全自给自足",
+            "商品跨境流动",
+            "资本全球配置",
+            "生产国际分工"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "经济全球化使各国经济日益相互开放、相互（ ）。",
+          "answer": {
+            "value": "依赖"
+          },
+          "analysis": "全球化加深相互依赖。",
+          "difficulty": 2,
+          "knowledge_point": "经济全球化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "经济全球化只带来机遇，没有风险。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "全球化也有风险与挑战。",
+          "difficulty": 3,
+          "knowledge_point": "经济全球化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说面对经济全球化，我们应有的态度。",
+          "answer": {
+            "value": "示例：抓住机遇、积极参与，同时增强风险意识，提高自身竞争力"
+          },
+          "analysis": "评分要点：机遇与风险两方面。",
+          "difficulty": 4,
+          "knowledge_point": "经济全球化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "经济全球化的影响有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 完全隔绝 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "经济全球化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "促进资源优化配置",
+            "推动技术传播",
+            "可能加大发展差距",
+            "使各国完全隔绝"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "对待不同文化，正确态度是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "文化应相互尊重、交流互鉴。",
+          "difficulty": 2,
+          "knowledge_point": "文化多样性",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "尊重差异、交流互鉴",
+            "只认同本民族文化",
+            "强行统一文化",
+            "拒绝外来文化"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "文化多样性是人类文明进步的（ ）。",
+          "answer": {
+            "value": "动力"
+          },
+          "analysis": "多样性是文明进步动力。",
+          "difficulty": 2,
+          "knowledge_point": "文化多样性",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "不同文化之间应当平等相待。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "各民族文化一律平等。",
+          "difficulty": 3,
+          "knowledge_point": "文化多样性",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说我们应怎样对待外来文化。",
+          "answer": {
+            "value": "示例：以我为主、兼收并蓄，学习借鉴优秀成果，抵制有害内容"
+          },
+          "analysis": "评分要点：态度与方法说清。",
+          "difficulty": 4,
+          "knowledge_point": "文化多样性",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "尊重文化多样性的做法有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 贬低其他文化 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "文化多样性",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "尊重各民族文化",
+            "学习借鉴优秀文化",
+            "以开放心态交流",
+            "贬低其他文化"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "当今时代的主题是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "和平与发展是时代主题。",
+          "difficulty": 2,
+          "knowledge_point": "世界格局的变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "和平与发展",
+            "战争与冲突",
+            "封闭与对抗",
+            "霸权与扩张"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "世界多极化深入发展，多个力量中心正在（ ）。",
+          "answer": {
+            "value": "崛起"
+          },
+          "analysis": "多个力量中心崛起。",
+          "difficulty": 2,
+          "knowledge_point": "世界格局的变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "世界多极化有利于维护世界和平。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "力量制衡有助于和平。",
+          "difficulty": 3,
+          "knowledge_point": "世界格局的变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说影响世界和平与发展的主要因素。",
+          "answer": {
+            "value": "示例：霸权主义和强权政治、地区冲突、贫困与发展不平衡"
+          },
+          "analysis": "评分要点：至少两点因素。",
+          "difficulty": 4,
+          "knowledge_point": "世界格局的变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "推动世界多极化的力量有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 单边主义 ✗ 是阻碍因素。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "世界格局的变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "新兴市场国家",
+            "发展中国家整体力量上升",
+            "区域合作组织",
+            "单边主义"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第二单元 世界舞台上的中国",
+      "order_index": 2,
+      "summary": "认识中国在国际事务中的责任与担当、机遇与挑战。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "中国在国际事务中坚持（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "中国坚持和平发展。",
+          "difficulty": 2,
+          "knowledge_point": "中国与世界的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "和平发展道路",
+            "霸权主义",
+            "武力扩张",
+            "闭关自守"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "中国主张构建人类（ ）共同体。",
+          "answer": {
+            "value": "命运"
+          },
+          "analysis": "人类命运共同体是中国主张。",
+          "difficulty": 2,
+          "knowledge_point": "中国与世界的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "中国的发展离不开世界，世界的繁荣也需要中国。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "中国与世界相互依存。",
+          "difficulty": 3,
+          "knowledge_point": "中国与世界的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说中国为什么主张构建人类命运共同体。",
+          "answer": {
+            "value": "示例：全球性问题需要各国共同应对，各国命运相连，合作才能共赢"
+          },
+          "analysis": "评分要点：理由充分。",
+          "difficulty": 4,
+          "knowledge_point": "中国与世界的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "中国在国际舞台上的表现有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 输出制度 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "中国与世界的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "参与联合国维和",
+            "推动共建一带一路",
+            "提供发展援助",
+            "输出本国制度"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "中国在国际社会中是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "中国是负责任大国。",
+          "difficulty": 2,
+          "knowledge_point": "中国的责任与担当",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "负责任的大国",
+            "旁观者",
+            "霸权国家",
+            "封闭国家"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "中国积极参与全球（ ）体系改革和建设。",
+          "answer": {
+            "value": "治理"
+          },
+          "analysis": "参与全球治理。",
+          "difficulty": 2,
+          "knowledge_point": "中国的责任与担当",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "中国承担国际责任要量力而行、尽力而为。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "责任担当要符合国情。",
+          "difficulty": 3,
+          "knowledge_point": "中国的责任与担当",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "举例说明中国在国际事务中承担的责任。",
+          "answer": {
+            "value": "示例：参与国际维和、应对气候变化承诺减排、向发展中国家提供援助"
+          },
+          "analysis": "评分要点：举例具体、责任类别清楚。",
+          "difficulty": 4,
+          "knowledge_point": "中国的责任与担当",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "中国承担国际责任的表现有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 只顾本国 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "中国的责任与担当",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "参与气候治理",
+            "提供人道援助",
+            "推动多边合作",
+            "只顾本国利益"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "面对机遇与挑战，中国应（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "要抓住机遇、主动应对。",
+          "difficulty": 2,
+          "knowledge_point": "中国的机遇与挑战",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "抓住机遇、应对挑战",
+            "回避挑战",
+            "放弃发展",
+            "依赖他国"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "我国发展仍处于重要战略（ ）期。",
+          "answer": {
+            "value": "机遇"
+          },
+          "analysis": "重要战略机遇期。",
+          "difficulty": 2,
+          "knowledge_point": "中国的机遇与挑战",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "机遇与挑战并存，挑战可以转化为机遇。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "辩证看待机遇与挑战。",
+          "difficulty": 3,
+          "knowledge_point": "中国的机遇与挑战",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说我国发展面临的主要挑战。",
+          "answer": {
+            "value": "示例：外部环境复杂多变、关键技术受制于人、发展不平衡不充分"
+          },
+          "analysis": "评分要点：至少两点挑战。",
+          "difficulty": 4,
+          "knowledge_point": "中国的机遇与挑战",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "我国面临的机遇有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 封锁加剧 ✗ 是挑战。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "中国的机遇与挑战",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "新一轮科技革命",
+            "广阔的国际市场",
+            "完整的产业体系",
+            "外部封锁加剧"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "中国发展理念强调（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "合作共赢是中国理念。",
+          "difficulty": 2,
+          "knowledge_point": "与世界共享发展机遇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "合作共赢",
+            "零和博弈",
+            "单边主义",
+            "以邻为壑"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "共建一带一路秉持共商共建（ ）原则。",
+          "answer": {
+            "value": "共享"
+          },
+          "analysis": "共商共建共享是原则。",
+          "difficulty": 2,
+          "knowledge_point": "与世界共享发展机遇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "中国的发展为世界提供了更多机遇。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "中国发展为世界带来机遇。",
+          "difficulty": 3,
+          "knowledge_point": "与世界共享发展机遇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说中国如何与世界共享发展机遇。",
+          "answer": {
+            "value": "示例：扩大开放、推动贸易投资合作、共建一带一路、分享技术与经验"
+          },
+          "analysis": "评分要点：至少两条做法。",
+          "difficulty": 4,
+          "knowledge_point": "与世界共享发展机遇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "中国与世界共享机遇的做法有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 贸易壁垒 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "与世界共享发展机遇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "扩大对外开放",
+            "共建一带一路",
+            "开展技术合作",
+            "设置贸易壁垒"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第三单元 走向未来的少年",
+      "order_index": 3,
+      "summary": "认识少年担当、职业选择与终身学习。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "青少年应有的担当是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "少年担当要与国家发展结合。",
+          "difficulty": 2,
+          "knowledge_point": "少年的担当",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "把个人理想融入国家发展",
+            "只顾个人享乐",
+            "逃避社会责任",
+            "漠视国家命运"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "少年强则国强，青少年是祖国的（ ）。",
+          "answer": {
+            "value": "未来"
+          },
+          "analysis": "青少年是祖国未来。",
+          "difficulty": 2,
+          "knowledge_point": "少年的担当",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "承担责任意味着付出，也可能获得成长。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "承担责任有付出也有收获。",
+          "difficulty": 3,
+          "knowledge_point": "少年的担当",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说青少年应怎样承担社会责任。",
+          "answer": {
+            "value": "示例：努力学习提升本领，积极参与志愿服务，遵守规则、关爱他人"
+          },
+          "analysis": "评分要点：至少两条具体做法。",
+          "difficulty": 4,
+          "knowledge_point": "少年的担当",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "青少年担当的表现有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 只顾自己 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "少年的担当",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "努力学习",
+            "参与志愿服务",
+            "关心国家发展",
+            "只顾自己利益"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "进行职业选择时应考虑（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "职业选择兼顾国家需要与个人条件。",
+          "difficulty": 2,
+          "knowledge_point": "职业选择与规划",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "国家需要与个人实际",
+            "只看收入高低",
+            "完全随大流",
+            "不做任何规划"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "选择职业既要考虑个人兴趣和能力，也要考虑（ ）的需要。",
+          "answer": {
+            "value": "社会"
+          },
+          "analysis": "要考虑社会需要。",
+          "difficulty": 2,
+          "knowledge_point": "职业选择与规划",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "职业没有高低贵贱之分，都应受到尊重。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "劳动平等，职业受尊重。",
+          "difficulty": 3,
+          "knowledge_point": "职业选择与规划",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说做好职业规划的两条建议。",
+          "answer": {
+            "value": "示例：了解自己的兴趣与优势；了解社会需求与行业发展趋势"
+          },
+          "analysis": "评分要点：两条建议合理。",
+          "difficulty": 4,
+          "knowledge_point": "职业选择与规划",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "影响职业选择的因素有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 他人家境 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "职业选择与规划",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "个人兴趣",
+            "能力特长",
+            "社会需要",
+            "他人家境"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "面对快速变化的社会，青少年应（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "终身学习适应社会发展。",
+          "difficulty": 2,
+          "knowledge_point": "学习与终身发展",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "树立终身学习理念",
+            "学完就停止学习",
+            "只学一门技能",
+            "拒绝新知识"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "学习不仅在学校，也要在（ ）中不断学习。",
+          "answer": {
+            "value": "生活"
+          },
+          "analysis": "终身学习贯穿生活。",
+          "difficulty": 2,
+          "knowledge_point": "学习与终身发展",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "学习既是权利也是责任。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "学习是权利也是义务。",
+          "difficulty": 3,
+          "knowledge_point": "学习与终身发展",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说为什么需要终身学习。",
+          "answer": {
+            "value": "示例：知识更新加快，职业变化频繁，只有持续学习才能适应社会、实现发展"
+          },
+          "analysis": "评分要点：理由充分。",
+          "difficulty": 4,
+          "knowledge_point": "学习与终身发展",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "良好的学习习惯有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 抄袭 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "学习与终身发展",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "制定计划",
+            "及时复习",
+            "主动思考",
+            "抄袭作业"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "实现理想最重要的途径是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "理想需要行动落实。",
+          "difficulty": 2,
+          "knowledge_point": "走向未来的选择",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "脚踏实地付诸行动",
+            "只做空想",
+            "等待机会",
+            "依赖他人"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "走向未来，既要胸怀理想，又要（ ）奋斗。",
+          "answer": {
+            "value": "艰苦"
+          },
+          "analysis": "要艰苦奋斗。",
+          "difficulty": 2,
+          "knowledge_point": "走向未来的选择",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "选择意味着责任，要对自己的选择负责。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "选择伴随责任。",
+          "difficulty": 3,
+          "knowledge_point": "走向未来的选择",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说面对未来应该具备哪些品质。",
+          "answer": {
+            "value": "示例：有理想、敢担当、能吃苦、肯奋斗"
+          },
+          "analysis": "评分要点：至少两点品质。",
+          "difficulty": 4,
+          "knowledge_point": "走向未来的选择",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "走向未来应有的态度有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 逃避困难 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "走向未来的选择",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "树立远大理想",
+            "脚踏实地努力",
+            "勇于承担责任",
+            "逃避困难"
+          ]
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-14T12:07:25+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "normalized": "难度 40/40/20 归一 + 主观题短答案补评分要点（2026-11-13 统一口径）",
+    "supplemented": "数值填空补可求值算式 0 道 / 数值填空改单选 0 道 / 补多选题 0 道（2 真 + 2 假，答案 2 项；2026-11-14 口径）",
+    "stem_dedup": "跨册同题干补册次前缀 0 道（2026-11-14 跨册去重口径）",
+    "duplicate_rewrites": "跨册同题定向改写 0 道（保留两侧题量，2026-11-14 口径）",
+    "chapter_scope": "全章域（本册无跨册重复章）",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

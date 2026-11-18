@@ -1,0 +1,286 @@
+{
+  "exam_id": null,
+  "title": "7年级数学下册期中卷（自主题库生成）",
+  "subject": "math",
+  "grade": 7,
+  "exam_type": "midterm",
+  "blueprint_code": "g7_math_midterm",
+  "blueprint_name": "7年级数学期中模拟卷（自主题库生成）",
+  "total_score": 100,
+  "time_limit_min": 90,
+  "question_count": 22,
+  "actual_score_total": 100.0,
+  "score_matches": true,
+  "knowledge_point_count": 16,
+  "sections": [
+    {
+      "section_index": 0,
+      "section_name": "一、选择题",
+      "q_type": "choice",
+      "band": "easy",
+      "planned_count": 10,
+      "planned_score": 30.0,
+      "actual_count": 10,
+      "actual_score": 30.0,
+      "knowledge_points": [
+        "垂线与点到直线的距离",
+        "平行线的判定",
+        "平行线的性质",
+        "数与运算·平面图形周长与面积·按单元·变式三",
+        "数与运算·简单事件概率·按单元·变式二",
+        "数与运算·简单事件概率·按单元·变式四",
+        "整式的乘法与乘法公式",
+        "整式的除法与综合运算",
+        "积的乘方与同底数幂的除法",
+        "频率与概率"
+      ],
+      "chapters": [
+        "第一章 整式的乘除",
+        "第三章 概率初步",
+        "第二章 相交线与平行线"
+      ],
+      "questions": [
+        {
+          "question_id": 13110,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "频率与概率",
+          "chapter": "第三章 概率初步"
+        },
+        {
+          "question_id": 13075,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "整式的乘法与乘法公式",
+          "chapter": "第一章 整式的乘除"
+        },
+        {
+          "question_id": 13095,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "平行线的判定",
+          "chapter": "第二章 相交线与平行线"
+        },
+        {
+          "question_id": 13090,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "垂线与点到直线的距离",
+          "chapter": "第二章 相交线与平行线"
+        },
+        {
+          "question_id": 22165,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 1,
+          "knowledge_point": "数与运算·简单事件概率·按单元·变式四",
+          "chapter": "第三章 概率初步"
+        },
+        {
+          "question_id": 22166,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 1,
+          "knowledge_point": "数与运算·平面图形周长与面积·按单元·变式三",
+          "chapter": "第二章 相交线与平行线"
+        },
+        {
+          "question_id": 13078,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "整式的除法与综合运算",
+          "chapter": "第一章 整式的乘除"
+        },
+        {
+          "question_id": 22164,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 1,
+          "knowledge_point": "数与运算·简单事件概率·按单元·变式二",
+          "chapter": "第三章 概率初步"
+        },
+        {
+          "question_id": 13097,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "平行线的性质",
+          "chapter": "第二章 相交线与平行线"
+        },
+        {
+          "question_id": 13070,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "积的乘方与同底数幂的除法",
+          "chapter": "第一章 整式的乘除"
+        }
+      ]
+    },
+    {
+      "section_index": 1,
+      "section_name": "二、填空题",
+      "q_type": "fill",
+      "band": "medium",
+      "planned_count": 6,
+      "planned_score": 18.0,
+      "actual_count": 6,
+      "actual_score": 18.0,
+      "knowledge_points": [
+        "事件的分类",
+        "数与运算·简单事件概率·按单元·变式一"
+      ],
+      "chapters": [
+        "第一章 整式的乘除",
+        "第三章 概率初步"
+      ],
+      "questions": [
+        {
+          "question_id": 13103,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "事件的分类",
+          "chapter": "第三章 概率初步"
+        },
+        {
+          "question_id": 19570,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·简单事件概率·按单元·变式一",
+          "chapter": "第三章 概率初步"
+        },
+        {
+          "question_id": 18049,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "",
+          "chapter": "第一章 整式的乘除"
+        },
+        {
+          "question_id": 18051,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "",
+          "chapter": "第一章 整式的乘除"
+        },
+        {
+          "question_id": 18052,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "",
+          "chapter": "第一章 整式的乘除"
+        },
+        {
+          "question_id": 18050,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "",
+          "chapter": "第一章 整式的乘除"
+        }
+      ]
+    },
+    {
+      "section_index": 2,
+      "section_name": "三、计算与证明",
+      "q_type": "answer",
+      "band": "medium",
+      "planned_count": 4,
+      "planned_score": 32.0,
+      "actual_count": 4,
+      "actual_score": 32.0,
+      "knowledge_points": [
+        "同底数幂的乘法与幂的乘方",
+        "对顶角与邻补角",
+        "平行线的性质",
+        "等可能事件的概率"
+      ],
+      "chapters": [
+        "第一章 整式的乘除",
+        "第三章 概率初步",
+        "第二章 相交线与平行线"
+      ],
+      "questions": [
+        {
+          "question_id": 13116,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "等可能事件的概率",
+          "chapter": "第三章 概率初步"
+        },
+        {
+          "question_id": 13086,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "对顶角与邻补角",
+          "chapter": "第二章 相交线与平行线"
+        },
+        {
+          "question_id": 13066,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "同底数幂的乘法与幂的乘方",
+          "chapter": "第一章 整式的乘除"
+        },
+        {
+          "question_id": 13101,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "平行线的性质",
+          "chapter": "第二章 相交线与平行线"
+        }
+      ]
+    },
+    {
+      "section_index": 3,
+      "section_name": "四、综合应用",
+      "q_type": "answer",
+      "band": "hard",
+      "planned_count": 2,
+      "planned_score": 20.0,
+      "actual_count": 2,
+      "actual_score": 20.0,
+      "knowledge_points": [
+        "垂线与点到直线的距离",
+        "用概率解释实际问题"
+      ],
+      "chapters": [
+        "第三章 概率初步",
+        "第二章 相交线与平行线"
+      ],
+      "questions": [
+        {
+          "question_id": 13121,
+          "score": 10.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "用概率解释实际问题",
+          "chapter": "第三章 概率初步"
+        },
+        {
+          "question_id": 13091,
+          "score": 10.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "垂线与点到直线的距离",
+          "chapter": "第二章 相交线与平行线"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-11-17T15:45:25.719647+00:00"
+}

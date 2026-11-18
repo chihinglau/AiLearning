@@ -104,7 +104,8 @@ def test_unit_exam_backflow_writes_records_wrongbook_and_mastery(
     assert len(records) == 2  # 主观题不回流
     assert {row.question_id for row in records} == {data["choice"].id, data["judge"].id}
     assert all(row.source == "exam" for row in records)
-    assert all(row.kp_weight == 0.8 for row in records)
+    # PG-04：已作废按卷型加权，统一按 1.0 回流
+    assert all(row.kp_weight == 1.0 for row in records)
     assert {row.question_id: row.is_correct for row in records} == {
         data["choice"].id: True,
         data["judge"].id: False,
@@ -127,7 +128,7 @@ def test_unit_exam_backflow_writes_records_wrongbook_and_mastery(
         )
     )
     assert correct_kp is not None
-    assert correct_kp.score == pytest.approx(48)  # EMA 0.6 * 0.8 * 100
+    assert correct_kp.score == pytest.approx(60)  # EMA 0.6 * 1.0 * 100
     assert correct_kp.source_breakdown["exam"] == {"answered": 1, "correct": 1}
 
     wrong_kp = db.scalar(
@@ -170,7 +171,7 @@ def test_backflow_is_not_repeated_on_idempotent_resubmit(
     assert wrong.wrong_count == 1
 
 
-def test_midterm_weight_is_lower(client: TestClient, db: Session) -> None:
+def test_midterm_weight_is_not_discounted(client: TestClient, db: Session) -> None:
     headers, user_id = _student(client, "13600000022")
     data = _seed_exam(db, exam_type="midterm")
     _submit(client, headers, data, "t1")
@@ -178,7 +179,7 @@ def test_midterm_weight_is_lower(client: TestClient, db: Session) -> None:
     records = list(
         db.scalars(select(StudentQuestionRecord).where(StudentQuestionRecord.source == "exam"))
     )
-    assert all(row.kp_weight == 0.6 for row in records)
+    assert all(row.kp_weight == 1.0 for row in records)
 
     correct_kp = db.scalar(
         select(MasteryScore).where(
@@ -187,4 +188,4 @@ def test_midterm_weight_is_lower(client: TestClient, db: Session) -> None:
         )
     )
     assert correct_kp is not None
-    assert correct_kp.score == pytest.approx(36)  # EMA 0.6 * 0.6 * 100
+    assert correct_kp.score == pytest.approx(60)  # EMA 0.6 * 1.0 * 100

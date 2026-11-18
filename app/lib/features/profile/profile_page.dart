@@ -364,6 +364,20 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                     ),
                     const SizedBox(height: 16),
                   ],
+                  if (user?.hasPermission('content:review:decide') == true) ...[
+                    AccentCard(
+                      accent: AppAccents.of(context).exam,
+                      padding: EdgeInsets.zero,
+                      child: ListTile(
+                        leading: const Icon(Icons.fact_check_outlined),
+                        title: const Text('试卷复核'),
+                        subtitle: const Text('复核真题草稿并发布 / 退回 / 下线'),
+                        trailing: const Icon(Icons.chevron_right),
+                        onTap: () => context.push('/exams/reviews'),
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                  ],
                   if (user?.hasPermission('system:config:write') == true) ...[
                     AccentCard(
                       accent: AppAccents.of(context).practice,

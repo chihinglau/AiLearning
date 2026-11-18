@@ -1,0 +1,181 @@
+{
+  "exam_id": null,
+  "title": "3年级数学单元测试卷（自主题库生成）",
+  "subject": "math",
+  "grade": 3,
+  "exam_type": "unit",
+  "blueprint_code": "g3_math_unit",
+  "blueprint_name": "3年级数学单元测试卷（自主题库生成）",
+  "total_score": 60,
+  "time_limit_min": 40,
+  "question_count": 12,
+  "actual_score_total": 60.0,
+  "score_matches": true,
+  "knowledge_point_count": 9,
+  "sections": [
+    {
+      "section_index": 0,
+      "section_name": "一、选择题",
+      "q_type": "choice",
+      "band": "easy",
+      "planned_count": 4,
+      "planned_score": 16.0,
+      "actual_count": 4,
+      "actual_score": 16.0,
+      "knowledge_points": [
+        "一位数乘多位数（要点）",
+        "乘加乘减的运算顺序",
+        "分米厘米毫米的换算",
+        "除加除减的运算顺序"
+      ],
+      "chapters": [
+        "一位数乘多位数",
+        "第一单元 混合运算",
+        "第二单元 测量（二）"
+      ],
+      "questions": [
+        {
+          "question_id": 5570,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "乘加乘减的运算顺序",
+          "chapter": "第一单元 混合运算"
+        },
+        {
+          "question_id": 15302,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "一位数乘多位数（要点）",
+          "chapter": "一位数乘多位数"
+        },
+        {
+          "question_id": 5589,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "分米厘米毫米的换算",
+          "chapter": "第二单元 测量（二）"
+        },
+        {
+          "question_id": 5571,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "除加除减的运算顺序",
+          "chapter": "第一单元 混合运算"
+        }
+      ]
+    },
+    {
+      "section_index": 1,
+      "section_name": "二、填空题",
+      "q_type": "fill",
+      "band": "medium",
+      "planned_count": 5,
+      "planned_score": 20.0,
+      "actual_count": 5,
+      "actual_score": 20.0,
+      "knowledge_points": [
+        "克千克吨的进率",
+        "分米厘米毫米的换算",
+        "千米和米的换算",
+        "质量单位购物估算",
+        "购物情境中的两步列式"
+      ],
+      "chapters": [
+        "第一单元 混合运算",
+        "第二单元 测量（二）"
+      ],
+      "questions": [
+        {
+          "question_id": 5595,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "克千克吨的进率",
+          "chapter": "第二单元 测量（二）"
+        },
+        {
+          "question_id": 5599,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "质量单位购物估算",
+          "chapter": "第二单元 测量（二）"
+        },
+        {
+          "question_id": 5590,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "分米厘米毫米的换算",
+          "chapter": "第二单元 测量（二）"
+        },
+        {
+          "question_id": 5581,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "购物情境中的两步列式",
+          "chapter": "第一单元 混合运算"
+        },
+        {
+          "question_id": 5585,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "千米和米的换算",
+          "chapter": "第二单元 测量（二）"
+        }
+      ]
+    },
+    {
+      "section_index": 2,
+      "section_name": "三、计算与解答",
+      "q_type": "answer",
+      "band": "hard",
+      "planned_count": 3,
+      "planned_score": 24.0,
+      "actual_count": 3,
+      "actual_score": 24.0,
+      "knowledge_points": [
+        "克千克吨的进率",
+        "带小括号的两步运算",
+        "质量单位购物估算"
+      ],
+      "chapters": [
+        "第一单元 混合运算",
+        "第二单元 测量（二）"
+      ],
+      "questions": [
+        {
+          "question_id": 5601,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 3,
+          "knowledge_point": "质量单位购物估算",
+          "chapter": "第二单元 测量（二）"
+        },
+        {
+          "question_id": 5579,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 3,
+          "knowledge_point": "带小括号的两步运算",
+          "chapter": "第一单元 混合运算"
+        },
+        {
+          "question_id": 5597,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 3,
+          "knowledge_point": "克千克吨的进率",
+          "chapter": "第二单元 测量（二）"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-11-16T01:27:34.309650+00:00"
+}

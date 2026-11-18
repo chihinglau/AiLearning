@@ -1,0 +1,463 @@
+{
+  "exam_id": null,
+  "title": "3年级英语下册期中卷（自主题库生成）",
+  "subject": "english",
+  "grade": 3,
+  "exam_type": "midterm",
+  "blueprint_code": "g3_english_midterm",
+  "blueprint_name": "3年级英语期中模拟卷（自主题库生成）",
+  "total_score": 100,
+  "time_limit_min": 60,
+  "question_count": 39,
+  "actual_score_total": 100.0,
+  "score_matches": true,
+  "knowledge_point_count": 30,
+  "sections": [
+    {
+      "section_index": 0,
+      "section_name": "一、听力",
+      "q_type": "listening",
+      "band": "easy",
+      "planned_count": 10,
+      "planned_score": 20.0,
+      "actual_count": 10,
+      "actual_score": 20.0,
+      "knowledge_points": [
+        "介绍他人的句型",
+        "描述朋友的形容词",
+        "本单元的疑问句",
+        "空闲活动的词汇",
+        "穿着表达",
+        "英语·听力词群辨识·按单元·变式一",
+        "英语·听力词群辨识·按单元·变式三",
+        "英语·听力词群辨识·按单元·变式二",
+        "英语·听力词群辨识·按单元·变式四",
+        "询问与回答空闲活动"
+      ],
+      "chapters": [
+        "Daily activities 日常活动",
+        "Prepositions 方位介词",
+        "Unit 1 How do we spend our free time?",
+        "Unit 2 How do we make friends?",
+        "Unit 3 What do we wear?"
+      ],
+      "questions": [
+        {
+          "question_id": 20188,
+          "score": 2.0,
+          "q_type": "listening",
+          "difficulty": 1,
+          "knowledge_point": "英语·听力词群辨识·按单元·变式四",
+          "chapter": "Prepositions 方位介词"
+        },
+        {
+          "question_id": 16453,
+          "score": 2.0,
+          "q_type": "listening",
+          "difficulty": 1,
+          "knowledge_point": "空闲活动的词汇",
+          "chapter": "Unit 1 How do we spend our free time?"
+        },
+        {
+          "question_id": 16471,
+          "score": 2.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "描述朋友的形容词",
+          "chapter": "Unit 2 How do we make friends?"
+        },
+        {
+          "question_id": 16488,
+          "score": 2.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "本单元的疑问句",
+          "chapter": "Unit 3 What do we wear?"
+        },
+        {
+          "question_id": 20156,
+          "score": 2.0,
+          "q_type": "listening",
+          "difficulty": 1,
+          "knowledge_point": "英语·听力词群辨识·按单元·变式三",
+          "chapter": "Daily activities 日常活动"
+        },
+        {
+          "question_id": 20158,
+          "score": 2.0,
+          "q_type": "listening",
+          "difficulty": 1,
+          "knowledge_point": "英语·听力词群辨识·按单元·变式一",
+          "chapter": "Daily activities 日常活动"
+        },
+        {
+          "question_id": 20159,
+          "score": 2.0,
+          "q_type": "listening",
+          "difficulty": 1,
+          "knowledge_point": "英语·听力词群辨识·按单元·变式二",
+          "chapter": "Daily activities 日常活动"
+        },
+        {
+          "question_id": 16468,
+          "score": 2.0,
+          "q_type": "listening",
+          "difficulty": 1,
+          "knowledge_point": "介绍他人的句型",
+          "chapter": "Unit 2 How do we make friends?"
+        },
+        {
+          "question_id": 16455,
+          "score": 2.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "询问与回答空闲活动",
+          "chapter": "Unit 1 How do we spend our free time?"
+        },
+        {
+          "question_id": 16482,
+          "score": 2.0,
+          "q_type": "listening",
+          "difficulty": 1,
+          "knowledge_point": "穿着表达",
+          "chapter": "Unit 3 What do we wear?"
+        }
+      ]
+    },
+    {
+      "section_index": 1,
+      "section_name": "二、单项选择",
+      "q_type": "choice",
+      "band": "easy",
+      "planned_count": 12,
+      "planned_score": 24.0,
+      "actual_count": 12,
+      "actual_score": 24.0,
+      "knowledge_points": [
+        "Daily activities 日常活动（要点）",
+        "天气与衣物的搭配",
+        "本单元的字母与发音",
+        "本单元的语音与书写",
+        "英语·基础语法单项选择·按单元·变式一",
+        "英语·基础语法单项选择·按单元·变式三",
+        "英语·基础语法单项选择·按单元·变式二",
+        "英语·基础语法单项选择·按单元·变式四",
+        "英语·短文阅读理解·按单元·变式一",
+        "英语·短文阅读理解·按单元·变式三",
+        "英语·短文阅读理解·按单元·变式二",
+        "英语·短文阅读理解·按单元·变式四"
+      ],
+      "chapters": [
+        "Daily activities 日常活动",
+        "Prepositions 方位介词",
+        "Unit 1 How do we spend our free time?",
+        "Unit 2 How do we make friends?",
+        "Unit 3 What do we wear?"
+      ],
+      "questions": [
+        {
+          "question_id": 20198,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "英语·基础语法单项选择·按单元·变式二",
+          "chapter": "Prepositions 方位介词"
+        },
+        {
+          "question_id": 20148,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "英语·基础语法单项选择·按单元·变式一",
+          "chapter": "Unit 1 How do we spend our free time?"
+        },
+        {
+          "question_id": 21237,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式一",
+          "chapter": "Unit 1 How do we spend our free time?"
+        },
+        {
+          "question_id": 20151,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "英语·基础语法单项选择·按单元·变式四",
+          "chapter": "Unit 1 How do we spend our free time?"
+        },
+        {
+          "question_id": 20168,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "英语·基础语法单项选择·按单元·变式三",
+          "chapter": "Daily activities 日常活动"
+        },
+        {
+          "question_id": 21236,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式四",
+          "chapter": "Unit 1 How do we spend our free time?"
+        },
+        {
+          "question_id": 21234,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式二",
+          "chapter": "Unit 1 How do we spend our free time?"
+        },
+        {
+          "question_id": 21235,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式三",
+          "chapter": "Unit 1 How do we spend our free time?"
+        },
+        {
+          "question_id": 15361,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "Daily activities 日常活动（要点）",
+          "chapter": "Daily activities 日常活动"
+        },
+        {
+          "question_id": 9716,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "本单元的语音与书写",
+          "chapter": "Unit 1 How do we spend our free time?"
+        },
+        {
+          "question_id": 9751,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "天气与衣物的搭配",
+          "chapter": "Unit 3 What do we wear?"
+        },
+        {
+          "question_id": 9736,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "本单元的字母与发音",
+          "chapter": "Unit 2 How do we make friends?"
+        }
+      ]
+    },
+    {
+      "section_index": 2,
+      "section_name": "三、词汇与句型填空",
+      "q_type": "fill",
+      "band": "medium",
+      "planned_count": 10,
+      "planned_score": 20.0,
+      "actual_count": 10,
+      "actual_score": 20.0,
+      "knowledge_points": [
+        "交友的礼貌表达",
+        "空闲活动的词汇",
+        "英语·词汇填空（中英对应）·按单元·变式一",
+        "英语·词汇填空（中英对应）·按单元·变式三",
+        "英语·词汇填空（中英对应）·按单元·变式二",
+        "英语·词汇填空（中英对应）·按单元·变式四",
+        "频率副词"
+      ],
+      "chapters": [
+        "Daily activities 日常活动",
+        "Prepositions 方位介词",
+        "Unit 1 How do we spend our free time?",
+        "Unit 2 How do we make friends?",
+        "Unit 3 What do we wear?"
+      ],
+      "questions": [
+        {
+          "question_id": 21950,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式四",
+          "chapter": "Unit 2 How do we make friends?"
+        },
+        {
+          "question_id": 21945,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式三",
+          "chapter": "Unit 1 How do we spend our free time?"
+        },
+        {
+          "question_id": 21952,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式一",
+          "chapter": "Prepositions 方位介词"
+        },
+        {
+          "question_id": 20208,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式二",
+          "chapter": "Prepositions 方位介词"
+        },
+        {
+          "question_id": 9707,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "频率副词",
+          "chapter": "Unit 1 How do we spend our free time?"
+        },
+        {
+          "question_id": 9732,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "交友的礼貌表达",
+          "chapter": "Unit 2 How do we make friends?"
+        },
+        {
+          "question_id": 21953,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式三",
+          "chapter": "Unit 3 What do we wear?"
+        },
+        {
+          "question_id": 21948,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式一",
+          "chapter": "Daily activities 日常活动"
+        },
+        {
+          "question_id": 16461,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "空闲活动的词汇",
+          "chapter": "Unit 1 How do we spend our free time?"
+        },
+        {
+          "question_id": 21946,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式四",
+          "chapter": "Unit 1 How do we spend our free time?"
+        }
+      ]
+    },
+    {
+      "section_index": 3,
+      "section_name": "四、阅读理解",
+      "q_type": "choice",
+      "band": "medium",
+      "planned_count": 6,
+      "planned_score": 18.0,
+      "actual_count": 6,
+      "actual_score": 18.0,
+      "knowledge_points": [
+        "Prepositions 方位介词（要点）",
+        "英语·短文阅读理解·按单元·变式一",
+        "英语·短文阅读理解·按单元·变式三",
+        "英语·短文阅读理解·按单元·变式四",
+        "衣物词汇"
+      ],
+      "chapters": [
+        "Daily activities 日常活动",
+        "Prepositions 方位介词",
+        "Unit 2 How do we make friends?",
+        "Unit 3 What do we wear?"
+      ],
+      "questions": [
+        {
+          "question_id": 16493,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 4,
+          "knowledge_point": "衣物词汇",
+          "chapter": "Unit 3 What do we wear?"
+        },
+        {
+          "question_id": 15368,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "Prepositions 方位介词（要点）",
+          "chapter": "Prepositions 方位介词"
+        },
+        {
+          "question_id": 21821,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式一",
+          "chapter": "Prepositions 方位介词"
+        },
+        {
+          "question_id": 21255,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式三",
+          "chapter": "Unit 3 What do we wear?"
+        },
+        {
+          "question_id": 21819,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式一",
+          "chapter": "Daily activities 日常活动"
+        },
+        {
+          "question_id": 21246,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式四",
+          "chapter": "Unit 2 How do we make friends?"
+        }
+      ]
+    },
+    {
+      "section_index": 4,
+      "section_name": "五、书面表达",
+      "q_type": "composition",
+      "band": "hard",
+      "planned_count": 1,
+      "planned_score": 18.0,
+      "actual_count": 1,
+      "actual_score": 18.0,
+      "knowledge_points": [],
+      "chapters": [
+        "Unit 1 How do we spend our free time?"
+      ],
+      "questions": [
+        {
+          "question_id": 17850,
+          "score": 18.0,
+          "q_type": "composition",
+          "difficulty": 4,
+          "knowledge_point": "",
+          "chapter": "Unit 1 How do we spend our free time?"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-11-17T15:45:20.981320+00:00"
+}

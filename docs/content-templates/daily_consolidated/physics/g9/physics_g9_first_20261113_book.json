@@ -1,0 +1,2107 @@
+{
+  "subject": "physics",
+  "grade": 9,
+  "version": "人教版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第十三章 内能",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "分子热运动与扩散现象",
+      "parent": "第十三章 内能",
+      "order_index": 1,
+      "explanation": "分子永不停息做无规则运动，温度越高越剧烈；扩散现象说明分子间存在间隙。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "内能及其改变方式",
+      "parent": "第十三章 内能",
+      "order_index": 2,
+      "explanation": "内能是分子动能与势能总和；做功和热传递都能改变内能，改变效果相同。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "比热容的物理意义",
+      "parent": "第十三章 内能",
+      "order_index": 3,
+      "explanation": "比热容指单位质量物质升温一摄氏度吸收的热量；水比热容大，常用作冷却剂。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "热量计算 Q=cmΔt",
+      "parent": "第十三章 内能",
+      "order_index": 4,
+      "explanation": "吸热用Q=cmΔt，c为比热容、m为质量、Δt为升温，单位是焦。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第十四章 内能的利用",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "热机与四冲程汽油机",
+      "parent": "第十四章 内能的利用",
+      "order_index": 1,
+      "explanation": "汽油机循环含吸气、压缩、做功、排气四冲程，仅做功冲程对外做功。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "燃料的热值",
+      "parent": "第十四章 内能的利用",
+      "order_index": 2,
+      "explanation": "热值是单位质量燃料完全燃烧放出的热量，单位是焦每千克，与质量无关。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "热机效率",
+      "parent": "第十四章 内能的利用",
+      "order_index": 3,
+      "explanation": "热机效率是有用功与燃料放热之比，总小于一，废气散热是主损失。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "能量的转化与守恒",
+      "parent": "第十四章 内能的利用",
+      "order_index": 4,
+      "explanation": "能量既不会消灭也不会创生，只会转化或转移，总量保持不变。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第十五章 电流和电路",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "电荷与摩擦起电",
+      "parent": "第十五章 电流和电路",
+      "order_index": 1,
+      "explanation": "摩擦起电是电子转移；同种电荷相斥、异种相吸，验电器依据相斥原理工作。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "电流的形成与方向",
+      "parent": "第十五章 电流和电路",
+      "order_index": 2,
+      "explanation": "电荷定向移动形成电流；正电荷移动方向即电流方向，由正极到负极。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "串联电路与并联电路的识别",
+      "parent": "第十五章 电流和电路",
+      "order_index": 3,
+      "explanation": "串联元件首尾相连只有一条路径，并联元件两端分别相连、电流出现分支。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "电流表的使用与电流规律",
+      "parent": "第十五章 电流和电路",
+      "order_index": 4,
+      "explanation": "电流表串联且正进负出；串联电流处处相等，干路电流等于支路之和。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第十六章 电压 电阻",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "电压与电压表的使用",
+      "parent": "第十六章 电压 电阻",
+      "order_index": 1,
+      "explanation": "电压推动电荷定向移动；电压表并联在元件两端，正柱接高电势。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "串并联电路电压规律",
+      "parent": "第十六章 电压 电阻",
+      "order_index": 2,
+      "explanation": "串联总电压等于各部分电压之和；并联各支路两端电压相等且等于电源电压。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "电阻及其影响因素",
+      "parent": "第十六章 电压 电阻",
+      "order_index": 3,
+      "explanation": "电阻由材料、长度、横截面积和温度决定，与所加电压无关。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "滑动变阻器的接法与作用",
+      "parent": "第十六章 电压 电阻",
+      "order_index": 4,
+      "explanation": "变阻器靠改变接入电阻线长度变阻，须一上一下接线并串联。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第十七章 欧姆定律",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "电流与电压、电阻的关系",
+      "parent": "第十七章 欧姆定律",
+      "order_index": 1,
+      "explanation": "电阻一定时电流与电压成正比，电压一定时与电阻成反比。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "欧姆定律 I=U/R 及简单计算",
+      "parent": "第十七章 欧姆定律",
+      "order_index": 2,
+      "explanation": "欧姆定律I=U/R，由此可算电流、电压与电阻，单位用安、伏、欧。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "串并联电阻的计算",
+      "parent": "第十七章 欧姆定律",
+      "order_index": 3,
+      "explanation": "串联总电阻等于各电阻之和；并联总电阻的倒数等于各支路电阻倒数之和。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "伏安法测电阻",
+      "parent": "第十七章 欧姆定律",
+      "order_index": 4,
+      "explanation": "电压表测U、电流表测I，由R=U/I算阻值，多次取平均减误差。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第十八章 电功率",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "电能与电能表",
+      "parent": "第十八章 电功率",
+      "order_index": 1,
+      "explanation": "电能表计量电能，单位千瓦时；一度电为3.6×10⁶焦，读前后差。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "电功率 P=UI 及计算",
+      "parent": "第十八章 电功率",
+      "order_index": 2,
+      "explanation": "电功率表示做功快慢，P=UI，单位瓦；W=Pt可求耗电。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "额定功率与实际功率",
+      "parent": "第十八章 电功率",
+      "order_index": 3,
+      "explanation": "额定电压下功率为额定功率；实际电压偏低时实际功率偏小，灯泡变暗。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "焦耳定律与电热",
+      "parent": "第十八章 电功率",
+      "order_index": 4,
+      "explanation": "焦耳定律Q=I²Rt，放热与电流平方、电阻、时间成正比。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第十三章 内能",
+      "order_index": 1,
+      "summary": "认识分子热运动与扩散，理解内能、比热容和热量计算，区分做功与热传递。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "在教室喷香水，后排很快闻到，这主要说明（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "分子运动才扩散，余项否认运动，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "分子热运动与扩散现象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "分子不停运动",
+            "分子间无间隙",
+            "分子静止不动",
+            "分子体积变大"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "热水里红墨水扩散更快，说明分子运动更（ ）",
+          "answer": {
+            "value": "剧烈"
+          },
+          "analysis": "温度越高分子无规则运动越剧烈，扩散加快。",
+          "difficulty": 3,
+          "knowledge_point": "分子热运动与扩散现象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "温度降到零摄氏度以下，分子就不再运动。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "分子运动永不停息，降温只减慢，故说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "分子热运动与扩散现象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "两块铅柱压紧后能吊起重物，说明（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "压紧使分子靠近显出引力，余项不符，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "分子热运动与扩散现象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "分子间有引力",
+            "分子间无空隙",
+            "分子带电荷",
+            "分子被压大"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "冬天搓手感到暖和，是用（ ）改变内能",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "摩擦做功使内能增大，热传递需温差，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "内能及其改变方式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "做功",
+            "热传递",
+            "熔化",
+            "凝固"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "用热水袋暖手，内能以（ ）方式转移。",
+          "answer": {
+            "value": "热传递"
+          },
+          "analysis": "有温差且无做功，热量由袋传到手，属热传递。",
+          "difficulty": 3,
+          "knowledge_point": "内能及其改变方式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "对物体做功，物体的内能一定增大。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "若同时向外放热，内能未必增大，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "内能及其改变方式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "给自行车胎打气，气筒壁发热主要因为（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "活塞压缩空气做功升温，余项非主因，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "内能及其改变方式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "压缩空气做功",
+            "阳光晒热筒壁",
+            "轮胎向外放热",
+            "空气遇冷液化"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明用热水袋取暖时内能如何转移，并指出是否有做功。",
+          "answer": {
+            "value": "热水袋温度高，热量经热传递转移到手，手内能增大；过程无机械做功。"
+          },
+          "analysis": "评分：热传递2分、无做功1分、内能增1分。",
+          "difficulty": 4,
+          "knowledge_point": "内能及其改变方式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "汽车发动机用水作冷却剂，因水的（ ）大",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "同质量升温水吸热多，余项无关，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "比热容的物理意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "比热容",
+            "密度",
+            "沸点",
+            "硬度"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "比热容是物质的一种（ ），与质量无关。",
+          "answer": {
+            "value": "特性"
+          },
+          "analysis": "比热容由物质种类决定，不随质量改变。",
+          "difficulty": 3,
+          "knowledge_point": "比热容的物理意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "一杯水与半杯水的比热容大小不同。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "比热容是物质特性，与质量多少无关，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "比热容的物理意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "同质量水和砂石吸收相同热量，升温少的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "水比热容大，同热量升温小，砂石相反，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "比热容的物理意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "水",
+            "砂石",
+            "两者一样",
+            "无法判断"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "夏天海边的沙子烫脚而海水凉，合理解释是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "同日照下水比热容大升温慢，沙升温快，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "比热容的物理意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "水比热容大",
+            "沙比热容大",
+            "沙不吸热",
+            "水不吸热"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "2kg水升温10℃吸热约（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "由Q=cmΔt，连乘得84千焦，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "热量计算 Q=cmΔt",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "84kJ",
+            "42kJ",
+            "8.4kJ",
+            "4.2kJ"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "1kg水升温1℃需吸热（ ）",
+          "answer": {
+            "value": "4.2×10³焦"
+          },
+          "analysis": "由Q=cmΔt，代入得4.2×10³焦。",
+          "difficulty": 3,
+          "knowledge_point": "热量计算 Q=cmΔt",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "物体吸收热量越多，升高的温度一定越高。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "升温还由质量和比热容决定，故说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "热量计算 Q=cmΔt",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "同质量的水和煤油，升高相同温度，吸热多的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "水比热容大于煤油，同条件吸热更多，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "热量计算 Q=cmΔt",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "水",
+            "煤油",
+            "一样多",
+            "不能比"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第十四章 内能的利用",
+      "order_index": 2,
+      "summary": "认识热机四冲程、燃料热值、热机效率，理解能量转化与守恒定律。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "汽油机中把内能转化为机械能的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "燃气膨胀推活塞做功，余项靠飞轮，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "热机与四冲程汽油机",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "做功冲程",
+            "吸气冲程",
+            "压缩冲程",
+            "排气冲程"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "汽油机一个工作循环，飞轮转动（ ）周。",
+          "answer": {
+            "value": "两"
+          },
+          "analysis": "四冲程中活塞往复两次，曲轴连飞轮转两周。",
+          "difficulty": 3,
+          "knowledge_point": "热机与四冲程汽油机",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "压缩冲程中，气缸内燃气内能减小。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "活塞压缩气体做功，机械能转为内能，内能增大。",
+          "difficulty": 3,
+          "knowledge_point": "热机与四冲程汽油机",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "柴油机与汽油机相比，气缸顶部没有（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "柴油机靠压燃用喷油嘴，无火花塞，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "热机与四冲程汽油机",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "火花塞",
+            "喷油嘴",
+            "进气门",
+            "排气门"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "汽油机做功冲程中，能量的转化是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "燃气膨胀推活塞，内能转为机械能，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "热机与四冲程汽油机",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "内能转机械能",
+            "机械能转内能",
+            "化学能转光能",
+            "电能转内能"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "燃料的热值大小取决于（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "热值是燃料特性，与质量、时间无关，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "燃料的热值",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "燃料种类",
+            "燃料质量",
+            "燃烧时间",
+            "容器形状"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "完全燃烧放热量用Q=mq计算，q叫（ ）。",
+          "answer": {
+            "value": "热值"
+          },
+          "analysis": "q表示单位质量完全燃烧放热，称热值。",
+          "difficulty": 3,
+          "knowledge_point": "燃料的热值",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "把煤磨成粉，煤的热值会因此变大。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "热值只由燃料种类决定，粉碎不改变，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "燃料的热值",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "2kg干木柴完全燃烧，q取1.2×10⁷，放热（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "由Q=mq代入得2.4×10⁷焦，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "燃料的热值",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "2.4×10⁷J",
+            "1.2×10⁷J",
+            "2.4×10⁶J",
+            "6×10⁶J"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "热机效率总小于100%，根本原因是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "总有废气散热与摩擦损失，故效率小于一，选A。",
+          "difficulty": 2,
+          "knowledge_point": "热机效率",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "存在能量损失",
+            "燃料热值太小",
+            "做功冲程太少",
+            "飞轮太重"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "热机效率等于有用功与燃料完全燃烧（ ）之比。",
+          "answer": {
+            "value": "放出的热量"
+          },
+          "analysis": "效率定义为有用功占总放热的百分比。",
+          "difficulty": 3,
+          "knowledge_point": "热机效率",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "让燃料燃烧更充分，热机效率一定达到100%。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "散热与摩擦损失仍存在，效率不能到一，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "热机效率",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "做功2×10⁶J、放热1×10⁷J，效率约（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "由η=W/Q，代入得百分之二十，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "热机效率",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "20%",
+            "50%",
+            "2%",
+            "80%"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出提高热机效率的两条办法并各说明理由。",
+          "answer": {
+            "value": "①让燃料充分燃烧，减少未燃尽损失；②加润滑、回收废气热，减少散热与摩擦损失。"
+          },
+          "analysis": "评分：充分燃烧2分；减损2分；理由各1分。",
+          "difficulty": 4,
+          "knowledge_point": "热机效率",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "摩擦生热过程中，主要发生的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "克服摩擦做功使机械能减少、内能增加，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "能量的转化与守恒",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "机械能转内能",
+            "内能转机械能",
+            "电能转光能",
+            "化学能消失"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "能量守恒定律指出能量总量（ ）。",
+          "answer": {
+            "value": "保持不变"
+          },
+          "analysis": "能量只转化或转移，既不创生也不消灭。",
+          "difficulty": 3,
+          "knowledge_point": "能量的转化与守恒",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "永动机不消耗能量却能持续做功，可以实现。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "违背能量守恒，无能量输入不能持续输出功。",
+          "difficulty": 3,
+          "knowledge_point": "能量的转化与守恒",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "水电站发电时，能量转化顺序是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "水流机械能经水轮机发电，得电能，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "能量的转化与守恒",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "机械能转电能",
+            "电能转机械能",
+            "内能转电能",
+            "光能转内能"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第十五章 电流和电路",
+      "order_index": 3,
+      "summary": "认识电荷、电流方向，会识别串并联电路，掌握电流表使用与电流规律。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "用丝绸摩擦玻璃棒，玻璃棒带（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "玻璃棒失电子带正电，丝绸得电子，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "电荷与摩擦起电",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "正电",
+            "负电",
+            "不带电",
+            "带磁"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "验电器金属箔张开，是因为两片箔带（ ）电荷。",
+          "answer": {
+            "value": "同种"
+          },
+          "analysis": "同种电荷相互排斥使箔片张开，可检验带电。",
+          "difficulty": 3,
+          "knowledge_point": "电荷与摩擦起电",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "摩擦起电过程中创造出了新的电荷。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "只是电子从一物体转移到另一物体，电荷总量不变。",
+          "difficulty": 3,
+          "knowledge_point": "电荷与摩擦起电",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "两个轻小物体相互吸引，可以判定（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "吸引可能是异种电荷或带电吸轻物，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "电荷与摩擦起电",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "至少一物带电",
+            "两物都带正电",
+            "两物都带负电",
+            "两物都不带电"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "金属导体中定向移动形成电流的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "自由电子定向移动成电流，方向相反，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "电流的形成与方向",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "自由电子",
+            "原子核",
+            "质子",
+            "中子"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "规定（ ）电荷定向移动的方向为电流方向。",
+          "answer": {
+            "value": "正"
+          },
+          "analysis": "规定正电荷移动方向为电流方向，与电子相反。",
+          "difficulty": 3,
+          "knowledge_point": "电流的形成与方向",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "在电源外部，电流从电源负极流向正极。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "外电路电流由正极经用电器回负极，说法错误。",
+          "difficulty": 3,
+          "knowledge_point": "电流的形成与方向",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "发光二极管具有单向导电性，接入电路时要（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "只有电流从正极流入才导通，接反不亮，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "电流的形成与方向",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "认清正负极",
+            "随意接入",
+            "串联电阻",
+            "并联电源"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "家中各盏灯能独立开关，它们属于（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "各灯独立工作互不影响，是并联特征，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "串联电路与并联电路的识别",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "并联",
+            "串联",
+            "混联",
+            "短路"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "串联电路中电流只有（ ）条路径。",
+          "answer": {
+            "value": "一"
+          },
+          "analysis": "元件首尾依次相接，电流无分支仅一条通路。",
+          "difficulty": 3,
+          "knowledge_point": "串联电路与并联电路的识别",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "并联电路中，断开一条支路，其他支路也停止工作。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "各支路两端电压相同、独立通断，互不影响。",
+          "difficulty": 4,
+          "knowledge_point": "串联电路与并联电路的识别",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "街道两旁的路灯同时亮灭，它们的连接方式是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "一盏坏了其余仍亮，说明各灯独立，是并联，选A。",
+          "difficulty": 2,
+          "knowledge_point": "串联电路与并联电路的识别",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "并联",
+            "串联",
+            "无法判断",
+            "部分串联"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "画出两灯并联、一个开关控制干路的连接要点。",
+          "answer": {
+            "value": "两灯两端分别接在同一对节点上；开关串联在干路中，再与电源构成闭合回路。"
+          },
+          "analysis": "评分：两灯并列接节点2分；开关串干路2分。",
+          "difficulty": 4,
+          "knowledge_point": "串联电路与并联电路的识别",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "测量通过小灯泡的电流，电流表应（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "电流表须串入被测支路，并联易短路，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "电流表的使用与电流规律",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "串联接入",
+            "并联两端",
+            "接在电源旁",
+            "直接接两极"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "串联电路中，A处电流0.3A，B处为（ ）。",
+          "answer": {
+            "value": "0.3A"
+          },
+          "analysis": "串联电路电流处处相等，B处与A处相同。",
+          "difficulty": 3,
+          "knowledge_point": "电流表的使用与电流规律",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "电流表可以直接接在电源两极测量电流。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "内阻极小会形成短路烧坏电表，须串入用电器。",
+          "difficulty": 4,
+          "knowledge_point": "电流表的使用与电流规律",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "干路0.8A、支路0.3A，另一支路（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "由I=I1+I2，代入得0.5安，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "电流表的使用与电流规律",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "0.5A",
+            "0.3A",
+            "0.8A",
+            "1.1A"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "闭合开关后两灯都不亮，电流表无示数，故障可能是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "无电流说明回路断开，短路或接反仍有示数，选A。",
+          "difficulty": 2,
+          "knowledge_point": "电流表的使用与电流规律",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "某地断路",
+            "灯泡短路",
+            "电源过强",
+            "电表接反"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第十六章 电压 电阻",
+      "order_index": 4,
+      "summary": "认识电压与电压表使用、串并联电压规律，掌握电阻影响因素与变阻器接法。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "测量小灯泡两端电压，电压表应（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "电压表并联在元件两端，串联会断路，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "电压与电压表的使用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "并联两端",
+            "串联接入",
+            "接电源旁",
+            "串在干路"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "一节新干电池的电压是（ ）。",
+          "answer": {
+            "value": "1.5V"
+          },
+          "analysis": "常见锌锰干电池额定电压1.5伏，属直流电源。",
+          "difficulty": 3,
+          "knowledge_point": "电压与电压表的使用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "电压表可以直接并联在电源两端测电源电压。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "内阻很大不会短路，可直接测电源电压，说法正确。",
+          "difficulty": 4,
+          "knowledge_point": "电压与电压表的使用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "电压表指针反偏，最可能的原因是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "正负柱接反使指针反偏，量程只影响幅度，选A。",
+          "difficulty": 2,
+          "knowledge_point": "电压与电压表的使用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "正负接反",
+            "量程太大",
+            "量程太小",
+            "未调零"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "电压表有示数而电流表为零，故障可能是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "灯断路后电压表分得电源电压，电流近零，选A。",
+          "difficulty": 2,
+          "knowledge_point": "电压与电压表的使用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "被测灯断路",
+            "被测灯短路",
+            "电表接反",
+            "电源没电"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "两灯串联接电源，总电压与各部分电压关系是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "由U=U1+U2，总压等于各段之和，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "串并联电路电压规律",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "等于之和",
+            "等于之差",
+            "等于最大",
+            "等于最小"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "并联电路各支路两端的电压（ ）。",
+          "answer": {
+            "value": "相等"
+          },
+          "analysis": "各支路接在同一对节点上，电势差相同。",
+          "difficulty": 3,
+          "knowledge_point": "串并联电路电压规律",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "串联的两只灯泡，两端电压一定相等。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "只有电阻相同时分压才相等，一般不等，说法错误。",
+          "difficulty": 4,
+          "knowledge_point": "串并联电路电压规律",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "串联电路电源电压6V，一灯2V，另一灯为（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "由U=U1+U2，代入得4伏，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "串并联电路电压规律",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "4V",
+            "2V",
+            "6V",
+            "8V"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明用电压表判断两灯串联故障的步骤。",
+          "answer": {
+            "value": "把电压表依次并联在每只灯两端；示数接近电源电压的那只灯断路，另一只完好。"
+          },
+          "analysis": "评分：逐灯并联2分；示数近电源判断路2分。",
+          "difficulty": 4,
+          "knowledge_point": "串并联电路电压规律",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "导体电阻的大小与下列哪一项无关（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "电阻由材料长度截面决定，与电压无关，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "电阻及其影响因素",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "两端电压",
+            "材料",
+            "长度",
+            "横截面积"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "同材料导线越长，电阻越（ ）。",
+          "answer": {
+            "value": "大"
+          },
+          "analysis": "长度增加使电子碰撞机会增多，阻碍作用变大。",
+          "difficulty": 3,
+          "knowledge_point": "电阻及其影响因素",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "把一根导线对折使用，其电阻变为原来的一半。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "长度减半且截面加倍，电阻约为原来四分之一。",
+          "difficulty": 4,
+          "knowledge_point": "电阻及其影响因素",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "灯丝冷态电阻比工作时小，主要因为（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "金属电阻随温度升高而增大，冷态阻小，所以选A。",
+          "difficulty": 3,
+          "knowledge_point": "电阻及其影响因素",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "温度较低",
+            "材料不同",
+            "长度变短",
+            "截面变大"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "滑动变阻器接入电路时，接线柱要（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "一上一下才可变阻，同上同下不调节，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "滑动变阻器的接法与作用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "一上一下",
+            "同上",
+            "同下",
+            "任意两个"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "滑片右移使接入电阻变大，应接（ ）下接线柱。",
+          "answer": {
+            "value": "左"
+          },
+          "analysis": "接左下柱时有效电阻线变长，右移阻值增大。",
+          "difficulty": 3,
+          "knowledge_point": "滑动变阻器的接法与作用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "闭合开关前，滑片应放在阻值最小处。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "应置于最大阻值处以限流保护电路，说法错误。",
+          "difficulty": 4,
+          "knowledge_point": "滑动变阻器的接法与作用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "变阻器与灯泡串联，滑片使阻值变大时灯泡（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "总阻增大电流减小，灯变暗，所以选A。",
+          "difficulty": 3,
+          "knowledge_point": "滑动变阻器的接法与作用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "变暗",
+            "变亮",
+            "不变",
+            "烧坏"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第十七章 欧姆定律",
+      "order_index": 5,
+      "summary": "探究电流与电压、电阻关系，掌握欧姆定律及串并联电阻计算，会用伏安法测电阻。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "研究电流与电压关系时，应保持不变的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "控制变量法固定电阻，改变电压测电流，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "电流与电压、电阻的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "电阻",
+            "电压",
+            "电流",
+            "电源"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "电压一定时，导体中的电流与电阻成（ ）。",
+          "answer": {
+            "value": "反比"
+          },
+          "analysis": "由I=U/R，U固定时R越大I越小。",
+          "difficulty": 3,
+          "knowledge_point": "电流与电压、电阻的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "导体两端电压为零时，导体电阻也变为零。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "电阻是导体属性，与电压电流无关，说法错误。",
+          "difficulty": 4,
+          "knowledge_point": "电流与电压、电阻的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "某电阻两端电压加倍，通过它的电流（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "由I=U/R，U加倍I随之加倍，所以选A。",
+          "difficulty": 3,
+          "knowledge_point": "电流与电压、电阻的关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "加倍",
+            "减半",
+            "不变",
+            "变为零"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "电阻10Ω、电压5V，通过电流为（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "由I=U/R，代入得0.5安，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "欧姆定律 I=U/R 及简单计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "0.5A",
+            "2A",
+            "5A",
+            "50A"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "导体两端6V、电流0.3A，电阻为（ ）。",
+          "answer": {
+            "value": "20Ω"
+          },
+          "analysis": "由R=U/I，代入6伏与0.3安得20欧。",
+          "difficulty": 3,
+          "knowledge_point": "欧姆定律 I=U/R 及简单计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "由R=U/I可知，电阻与电压成正比。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "R是导体属性，U与I同比变化，比值不变。",
+          "difficulty": 4,
+          "knowledge_point": "欧姆定律 I=U/R 及简单计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "某导体电流0.2A、电阻15Ω，两端电压为（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "由U=IR，代入得3伏，所以选A。",
+          "difficulty": 3,
+          "knowledge_point": "欧姆定律 I=U/R 及简单计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "3V",
+            "0.3V",
+            "30V",
+            "7.5V"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "2Ω与3Ω电阻串联，总电阻为（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "由R=R1+R2，代入得5欧，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "串并联电阻的计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "5Ω",
+            "1Ω",
+            "6Ω",
+            "1.2Ω"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "两个10Ω电阻并联，总电阻为（ ）。",
+          "answer": {
+            "value": "5Ω"
+          },
+          "analysis": "相同电阻并联，总阻等于其中一个的一半。",
+          "difficulty": 3,
+          "knowledge_point": "串并联电阻的计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "并联的电阻越多，电路的总电阻越大。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "并联相当于增大截面，总阻小于任一支路。",
+          "difficulty": 4,
+          "knowledge_point": "串并联电阻的计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "串联电路中再串一个电阻，总电阻将（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "串联相当于增加长度，总阻为各阻之和，所以选A。",
+          "difficulty": 3,
+          "knowledge_point": "串并联电阻的计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "变大",
+            "变小",
+            "不变",
+            "为零"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "6V电源接10Ω与20Ω串联，电流（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "由I=U/R，串联30欧代入得0.2安，选A。",
+          "difficulty": 2,
+          "knowledge_point": "串并联电阻的计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "0.2A",
+            "0.3A",
+            "0.6A",
+            "2A"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "伏安法测电阻依据的原理是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "测出电压与电流后取比值得电阻，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "伏安法测电阻",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "R=U/I",
+            "P=UI",
+            "Q=cmΔt",
+            "W=Fs"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "伏安法测电阻，滑动变阻器用来改变（ ）。",
+          "answer": {
+            "value": "灯泡两端电压"
+          },
+          "analysis": "改变阻值可调电流与电压，获得多组数据。",
+          "difficulty": 3,
+          "knowledge_point": "伏安法测电阻",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "测定值电阻时，多次测量取平均值可减小误差。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "随机误差有正有负，取平均可抵消，说法正确。",
+          "difficulty": 4,
+          "knowledge_point": "伏安法测电阻",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "测灯泡电阻时，多组数据算出的阻值不同，因为（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "灯丝温度随电压升高，电阻变大，所以选A。",
+          "difficulty": 3,
+          "knowledge_point": "伏安法测电阻",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "温度改变阻值",
+            "读数都错",
+            "电表坏了",
+            "电压不变"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出伏安法测未知电阻的实验步骤要点。",
+          "answer": {
+            "value": "按电路图连接，电流表串联、电压表并联；闭合前变阻器调最大，读U与I，由R=U/I求阻并多次取平均。"
+          },
+          "analysis": "评分：表计接法2分；调最大与多次测量2分。",
+          "difficulty": 4,
+          "knowledge_point": "伏安法测电阻",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第十八章 电功率",
+      "order_index": 6,
+      "summary": "认识电能与电能表，掌握电功率、额定功率与实际功率，会用焦耳定律分析电热。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "家庭电能表用来测量（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "电能表累计用电能，其余量另有仪表，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "电能与电能表",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "消耗电能",
+            "电压高低",
+            "电流大小",
+            "电阻大小"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "1千瓦时等于（ ）焦。",
+          "answer": {
+            "value": "3.6×10⁶"
+          },
+          "analysis": "由W=Pt，代入得3.6×10⁶焦。",
+          "difficulty": 3,
+          "knowledge_point": "电能与电能表",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "电能表月底读数减去月初读数即本月用电量。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "表盘累计计数，两次读数之差为期间用电量。",
+          "difficulty": 4,
+          "knowledge_point": "电能与电能表",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "标有3000r/kWh的表转300转，耗电（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "由W=n/N，代入得0.1千瓦时，所以选A。",
+          "difficulty": 3,
+          "knowledge_point": "电能与电能表",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "0.1kWh",
+            "1kWh",
+            "10kWh",
+            "0.01kWh"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "用电器两端220V、电流2A，功率为（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "由P=UI，代入得440瓦，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "电功率 P=UI 及计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "440W",
+            "220W",
+            "110W",
+            "440J"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "1kW用电器工作2h，耗电为（ ）。",
+          "answer": {
+            "value": "2kWh"
+          },
+          "analysis": "由W=Pt，1千瓦乘2小时得2千瓦时。",
+          "difficulty": 3,
+          "knowledge_point": "电功率 P=UI 及计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "电功率越大的用电器，消耗的电能一定越多。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "耗电还取决于时间，功率大未必多，说法错误。",
+          "difficulty": 4,
+          "knowledge_point": "电功率 P=UI 及计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "标有220V 100W的灯正常工作1h耗电（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "由W=Pt，代入得0.1千瓦时，所以选A。",
+          "difficulty": 3,
+          "knowledge_point": "电功率 P=UI 及计算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "0.1kWh",
+            "1kWh",
+            "100kWh",
+            "0.01kWh"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "灯泡标220V 40W，其中40W指（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "铭牌数值指额定电压下的功率，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "额定功率与实际功率",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "额定功率",
+            "实际功率",
+            "额定电压",
+            "电阻值"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "灯泡接在低于额定电压的电源上会变（ ）。",
+          "answer": {
+            "value": "暗"
+          },
+          "analysis": "实际电压低使实际功率减小，发光变弱。",
+          "difficulty": 3,
+          "knowledge_point": "额定功率与实际功率",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "把110V的灯泡接到220V电源上会正常工作。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "实际电压远超额定值，电流过大灯丝易烧断。",
+          "difficulty": 4,
+          "knowledge_point": "额定功率与实际功率",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "220V 100W灯接110V电源，实际功率（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "由P=U²/R，电压减半功率约25瓦，选A。",
+          "difficulty": 3,
+          "knowledge_point": "额定功率与实际功率",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "约25W",
+            "约100W",
+            "约50W",
+            "约200W"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "两灯串联，额定功率小的灯反而更亮，因为（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "由P=I²R，电流同阻大者功率大更亮，选A。",
+          "difficulty": 2,
+          "knowledge_point": "额定功率与实际功率",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "其电阻较大",
+            "其电流较小",
+            "其电压较低",
+            "其额定压高"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "电炉丝热得发红而导线不热，主要因为（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "由Q=I²Rt，同电流时阻大放热多，所以选A。",
+          "difficulty": 2,
+          "knowledge_point": "焦耳定律与电热",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "电炉丝电阻大",
+            "导线电流小",
+            "导线不通电",
+            "电炉丝电压低"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "电流通过导体发热的现象叫电流的（ ）效应。",
+          "answer": {
+            "value": "热"
+          },
+          "analysis": "电能转化为内能，导体温度升高即热效应。",
+          "difficulty": 3,
+          "knowledge_point": "焦耳定律与电热",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "电饭锅、电热水器都利用电流的热效应。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "二者把电能转为内能加热，属热效应应用。",
+          "difficulty": 4,
+          "knowledge_point": "焦耳定律与电热",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "2A电流通过10Ω电阻5s，产生热量（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "由Q=I²Rt，代入得200焦，所以选A。",
+          "difficulty": 3,
+          "knowledge_point": "焦耳定律与电热",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "200J",
+            "100J",
+            "20J",
+            "40J"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明为何大功率用电器要用较粗的导线。",
+          "answer": {
+            "value": "功率大则电流大；粗导线电阻小，由Q=I²Rt知相同时间发热少，可避免绝缘层过热引发危险。"
+          },
+          "analysis": "评分：电流大2分；阻小发热少2分。",
+          "difficulty": 4,
+          "knowledge_point": "焦耳定律与电热",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于9年级上册「第十八章 电功率」的相关内容，下列说法正确的有哪些？",
+          "options": [
+            "电能表月底读数减去月初读数即本月用电量",
+            "电功率越大的用电器，消耗的电能一定越多",
+            "电饭锅、电热水器都利用电流的热效应",
+            "把110V的灯泡接到220V电源上会正常工作"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓（表盘累计计数，两次读数之差为期间用电量）；B ✗（耗电还取决于时间，功率大未必多，说法错误）；C ✓（二者把电能转为内能加热，属热效应应用）；D ✗（实际电压远超额定值，电流过大灯丝易烧断）。所以选 A、C。",
+          "difficulty": 4,
+          "knowledge_point": "电能与电能表",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-14T12:07:25+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "normalized": "难度 40/40/20 归一 + 主观题短答案补评分要点（2026-11-13 统一口径）",
+    "supplemented": "数值填空补可求值算式 0 道 / 数值填空改单选 0 道 / 补多选题 1 道（2 真 + 2 假，答案 2 项；2026-11-14 口径）",
+    "stem_dedup": "跨册同题干补册次前缀 0 道（2026-11-14 跨册去重口径）",
+    "duplicate_rewrites": "跨册同题定向改写 0 道（保留两侧题量，2026-11-14 口径）",
+    "chapter_scope": "按分册章域剔除跨册重复章 4 个（physics g9 骨架纠偏，2026-11-14）",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

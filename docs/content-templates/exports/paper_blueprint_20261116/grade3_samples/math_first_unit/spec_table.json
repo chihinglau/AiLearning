@@ -1,0 +1,179 @@
+{
+  "exam_id": null,
+  "title": "3年级数学上册单元卷（自主题库生成）",
+  "subject": "math",
+  "grade": 3,
+  "exam_type": "unit",
+  "blueprint_code": "g3_math_unit",
+  "blueprint_name": "3年级数学单元测试卷（自主题库生成）",
+  "total_score": 60,
+  "time_limit_min": 40,
+  "question_count": 12,
+  "actual_score_total": 60.0,
+  "score_matches": true,
+  "knowledge_point_count": 8,
+  "sections": [
+    {
+      "section_index": 0,
+      "section_name": "一、选择题",
+      "q_type": "choice",
+      "band": "easy",
+      "planned_count": 4,
+      "planned_score": 16.0,
+      "actual_count": 4,
+      "actual_score": 16.0,
+      "knowledge_points": [
+        "一位数乘多位数（要点）",
+        "乘加乘减的运算顺序",
+        "购物情境中的两步列式",
+        "除加除减的运算顺序"
+      ],
+      "chapters": [
+        "一位数乘多位数",
+        "第一单元 混合运算"
+      ],
+      "questions": [
+        {
+          "question_id": 5580,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "购物情境中的两步列式",
+          "chapter": "第一单元 混合运算"
+        },
+        {
+          "question_id": 15304,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "一位数乘多位数（要点）",
+          "chapter": "一位数乘多位数"
+        },
+        {
+          "question_id": 5566,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "乘加乘减的运算顺序",
+          "chapter": "第一单元 混合运算"
+        },
+        {
+          "question_id": 5571,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "除加除减的运算顺序",
+          "chapter": "第一单元 混合运算"
+        }
+      ]
+    },
+    {
+      "section_index": 1,
+      "section_name": "二、填空题",
+      "q_type": "fill",
+      "band": "medium",
+      "planned_count": 5,
+      "planned_score": 20.0,
+      "actual_count": 5,
+      "actual_score": 20.0,
+      "knowledge_points": [
+        "带小括号的两步运算",
+        "数与运算·整数加减运算·按单元·变式一",
+        "数与运算·整数加减运算·按单元·变式三",
+        "数与运算·整数加减运算·按单元·变式二"
+      ],
+      "chapters": [
+        "一位数乘多位数",
+        "第一单元 混合运算"
+      ],
+      "questions": [
+        {
+          "question_id": 19306,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·整数加减运算·按单元·变式二",
+          "chapter": "一位数乘多位数"
+        },
+        {
+          "question_id": 19305,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·整数加减运算·按单元·变式一",
+          "chapter": "一位数乘多位数"
+        },
+        {
+          "question_id": 5577,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "带小括号的两步运算",
+          "chapter": "第一单元 混合运算"
+        },
+        {
+          "question_id": 19307,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·整数加减运算·按单元·变式三",
+          "chapter": "一位数乘多位数"
+        },
+        {
+          "question_id": 19302,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·整数加减运算·按单元·变式一",
+          "chapter": "第一单元 混合运算"
+        }
+      ]
+    },
+    {
+      "section_index": 2,
+      "section_name": "三、计算与解答",
+      "q_type": "answer",
+      "band": "hard",
+      "planned_count": 3,
+      "planned_score": 24.0,
+      "actual_count": 3,
+      "actual_score": 24.0,
+      "knowledge_points": [
+        "数与运算·整数加减运算·按单元·变式一",
+        "数与运算·整数加减运算·按单元·变式三",
+        "除加除减的运算顺序"
+      ],
+      "chapters": [
+        "一位数乘多位数",
+        "第一单元 混合运算"
+      ],
+      "questions": [
+        {
+          "question_id": 19310,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·整数加减运算·按单元·变式三",
+          "chapter": "一位数乘多位数"
+        },
+        {
+          "question_id": 19308,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·整数加减运算·按单元·变式一",
+          "chapter": "一位数乘多位数"
+        },
+        {
+          "question_id": 5574,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 3,
+          "knowledge_point": "除加除减的运算顺序",
+          "chapter": "第一单元 混合运算"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-11-17T15:45:20.764673+00:00"
+}

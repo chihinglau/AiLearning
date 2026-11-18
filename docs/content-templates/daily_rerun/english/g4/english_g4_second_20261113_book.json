@@ -1,0 +1,3405 @@
+{
+  "subject": "english",
+  "grade": 4,
+  "version": "牛津深圳版",
+  "semester": "second",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "Unit 1 What is your daily schedule?",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 1 的作息词汇",
+      "parent": "Unit 1 What is your daily schedule?",
+      "order_index": 1,
+      "explanation": "本知识点为作息类动词短语，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 1 的时间表达",
+      "parent": "Unit 1 What is your daily schedule?",
+      "order_index": 2,
+      "explanation": "本知识点为时间介词搭配，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 1 的日常问答",
+      "parent": "Unit 1 What is your daily schedule?",
+      "order_index": 3,
+      "explanation": "本知识点为作息问答句型，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 1 的语音与语调",
+      "parent": "Unit 1 What is your daily schedule?",
+      "order_index": 4,
+      "explanation": "本知识点为语音知识，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 2 What do we like about school?",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 2 的课程名称",
+      "parent": "Unit 2 What do we like about school?",
+      "order_index": 1,
+      "explanation": "本知识点为课程名称，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 2 的学校场所",
+      "parent": "Unit 2 What do we like about school?",
+      "order_index": 2,
+      "explanation": "本知识点为校园场所，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 2 的喜好表达",
+      "parent": "Unit 2 What do we like about school?",
+      "order_index": 3,
+      "explanation": "本知识点为喜好句型，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 2 的语音与语调",
+      "parent": "Unit 2 What do we like about school?",
+      "order_index": 4,
+      "explanation": "本知识点为语音知识，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 3 What's great about jobs?",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 3 的职业名称",
+      "parent": "Unit 3 What's great about jobs?",
+      "order_index": 1,
+      "explanation": "本知识点为职业词汇，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 3 的职业特点",
+      "parent": "Unit 3 What's great about jobs?",
+      "order_index": 2,
+      "explanation": "本知识点为职业职责描述，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 3 的职业问答",
+      "parent": "Unit 3 What's great about jobs?",
+      "order_index": 3,
+      "explanation": "本知识点为职业问答句型，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 3 的语音与语调",
+      "parent": "Unit 3 What's great about jobs?",
+      "order_index": 4,
+      "explanation": "本知识点为语音知识，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 4 How can we make music?",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 4 的乐器名称",
+      "parent": "Unit 4 How can we make music?",
+      "order_index": 1,
+      "explanation": "本知识点为乐器词汇，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 4 的声音动词",
+      "parent": "Unit 4 How can we make music?",
+      "order_index": 2,
+      "explanation": "本知识点为音乐动作短语，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 4 的音乐问答",
+      "parent": "Unit 4 How can we make music?",
+      "order_index": 3,
+      "explanation": "本知识点为能力问答句型，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 4 的语音与语调",
+      "parent": "Unit 4 How can we make music?",
+      "order_index": 4,
+      "explanation": "本知识点为语音知识，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 5 How do we make art?",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 5 的美术词汇",
+      "parent": "Unit 5 How do we make art?",
+      "order_index": 1,
+      "explanation": "本知识点为美术动作与工具，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 5 的颜色与形状",
+      "parent": "Unit 5 How do we make art?",
+      "order_index": 2,
+      "explanation": "本知识点为颜色形状词汇，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 5 的美术问答",
+      "parent": "Unit 5 How do we make art?",
+      "order_index": 3,
+      "explanation": "本知识点为美术问答句型，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 5 的语音与语调",
+      "parent": "Unit 5 How do we make art?",
+      "order_index": 4,
+      "explanation": "本知识点为语音知识，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 6 How do we measure time?",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 6 的时间单位",
+      "parent": "Unit 6 How do we measure time?",
+      "order_index": 1,
+      "explanation": "本知识点为时间单位词汇，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 6 的钟表读法",
+      "parent": "Unit 6 How do we measure time?",
+      "order_index": 2,
+      "explanation": "本知识点为钟表时间读法，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 6 的时长问答",
+      "parent": "Unit 6 How do we measure time?",
+      "order_index": 3,
+      "explanation": "本知识点为时长问答句型，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 6 的语音与语调",
+      "parent": "Unit 6 How do we measure time?",
+      "order_index": 4,
+      "explanation": "本知识点为语音知识，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 7 How do things change?",
+      "order_index": 7
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 7 的变化动词",
+      "parent": "Unit 7 How do things change?",
+      "order_index": 1,
+      "explanation": "本知识点为变化类动词，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 7 的状态描述",
+      "parent": "Unit 7 How do things change?",
+      "order_index": 2,
+      "explanation": "本知识点为状态形容词，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 7 的变化问答",
+      "parent": "Unit 7 How do things change?",
+      "order_index": 3,
+      "explanation": "本知识点为变化问答句型，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 7 的语音与语调",
+      "parent": "Unit 7 How do things change?",
+      "order_index": 4,
+      "explanation": "本知识点为语音知识，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 8 How do people get along with each other?",
+      "order_index": 8
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 8 的相处用语",
+      "parent": "Unit 8 How do people get along with each other?",
+      "order_index": 1,
+      "explanation": "本知识点为相处类短语，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 8 的礼貌表达",
+      "parent": "Unit 8 How do people get along with each other?",
+      "order_index": 2,
+      "explanation": "本知识点为礼貌用语，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 8 的相处问答",
+      "parent": "Unit 8 How do people get along with each other?",
+      "order_index": 3,
+      "explanation": "本知识点为相处问答句型，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 8 的语音与语调",
+      "parent": "Unit 8 How do people get along with each other?",
+      "order_index": 4,
+      "explanation": "本知识点为语音知识，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit checklist",
+      "order_index": 9
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 9 的词汇梳理",
+      "parent": "Unit checklist",
+      "order_index": 1,
+      "explanation": "本知识点为词汇归类，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 9 的句型梳理",
+      "parent": "Unit checklist",
+      "order_index": 2,
+      "explanation": "本知识点为句型归类，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 9 的语法梳理",
+      "parent": "Unit checklist",
+      "order_index": 3,
+      "explanation": "本知识点为语法要点，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "Unit 9 的语音梳理",
+      "parent": "Unit checklist",
+      "order_index": 4,
+      "explanation": "本知识点为语音要点，要求能认读并在句子中正确使用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "Unit 1 What is your daily schedule?",
+      "order_index": 1,
+      "summary": "日常作息与时间安排的表达。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「起床」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「get up」的意思是起床，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 1 的作息词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "get up",
+            "have breakfast",
+            "go to school",
+            "do homework"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：吃早饭（ ）。",
+          "answer": {
+            "value": "have breakfast"
+          },
+          "analysis": "「吃早饭」的英文是 have breakfast。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 1 的作息词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「go to school」表示「去上学」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「go to school」的意思确实是去上学。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 1 的作息词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「起床」和「去上学」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应起床；B ✗ 对应吃早饭；C ✓ 对应去上学；D ✗ 对应做作业。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 1 的作息词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "get up",
+            "have breakfast",
+            "go to school",
+            "do homework"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「get up」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I get up every day. 我每天起床。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 1 的作息词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「在七点」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「at seven o'clock」的意思是在七点，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 1 的时间表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "at seven o'clock",
+            "in the morning",
+            "in the afternoon",
+            "in the evening"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：在上午（ ）。",
+          "answer": {
+            "value": "in the morning"
+          },
+          "analysis": "「在上午」的英文是 in the morning。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 1 的时间表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「in the afternoon」表示「在下午」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「in the afternoon」的意思确实是在下午。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 1 的时间表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「在七点」和「在下午」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应在七点；B ✗ 对应在上午；C ✓ 对应在下午；D ✗ 对应在晚上。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 1 的时间表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "at seven o'clock",
+            "in the morning",
+            "in the afternoon",
+            "in the evening"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「at seven o'clock」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I at seven o'clock every day. 我每天在七点。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 1 的时间表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「你几点起床？」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「What time do you get up?」的意思是你几点起床？，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 1 的日常问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "What time do you get up?",
+            "When do you go to school?",
+            "I get up at six thirty.",
+            "I go to school at seven."
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：你什么时候去上学？（ ）。",
+          "answer": {
+            "value": "When do you go to school?"
+          },
+          "analysis": "「你什么时候去上学？」的英文是 When do you go to school?。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 1 的日常问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「I get up at six thirty.」表示「我六点半起床。」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「I get up at six thirty.」的意思确实是我六点半起床。。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 1 的日常问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「你几点起床？」和「我六点半起床。」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应你几点起床？；B ✗ 对应你什么时候去上学？；C ✓ 对应我六点半起床。；D ✗ 对应我七点去上学。。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 1 的日常问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "What time do you get up?",
+            "When do you go to school?",
+            "I get up at six thirty.",
+            "I go to school at seven."
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「What time do you get up?」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I What time do you get up? every day. 我每天你几点起床？。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 1 的日常问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「字母 i 的读音」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「/aɪ/」的意思是字母 i 的读音，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 1 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "/aɪ/",
+            "/iː/",
+            "升调",
+            "降调"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：字母组合 ee 的读音（ ）。",
+          "answer": {
+            "value": "/iː/"
+          },
+          "analysis": "「字母组合 ee 的读音」的英文是 /iː/。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 1 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「升调」表示「一般疑问句用升调」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「升调」的意思确实是一般疑问句用升调。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 1 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「字母 i 的读音」和「一般疑问句用升调」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应字母 i 的读音；B ✗ 对应字母组合 ee 的读音；C ✓ 对应一般疑问句用升调；D ✗ 对应特殊疑问句用降调。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 1 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "/aɪ/",
+            "/iː/",
+            "升调",
+            "降调"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「/aɪ/」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I /aɪ/ every day. 我每天字母 i 的读音。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 1 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 2 What do we like about school?",
+      "order_index": 2,
+      "summary": "学校生活与喜欢的课程。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「语文」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「Chinese」的意思是语文，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 2 的课程名称",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Chinese",
+            "Maths",
+            "English",
+            "Art"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：数学（ ）。",
+          "answer": {
+            "value": "Maths"
+          },
+          "analysis": "「数学」的英文是 Maths。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 2 的课程名称",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「English」表示「英语」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「English」的意思确实是英语。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 2 的课程名称",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「语文」和「英语」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应语文；B ✗ 对应数学；C ✓ 对应英语；D ✗ 对应美术。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 2 的课程名称",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Chinese",
+            "Maths",
+            "English",
+            "Art"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「Chinese」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I Chinese every day. 我每天语文。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 2 的课程名称",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「图书馆」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「library」的意思是图书馆，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 2 的学校场所",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "library",
+            "playground",
+            "classroom",
+            "music room"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：操场（ ）。",
+          "answer": {
+            "value": "playground"
+          },
+          "analysis": "「操场」的英文是 playground。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 2 的学校场所",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「classroom」表示「教室」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「classroom」的意思确实是教室。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 2 的学校场所",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「图书馆」和「教室」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应图书馆；B ✗ 对应操场；C ✓ 对应教室；D ✗ 对应音乐室。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 2 的学校场所",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "library",
+            "playground",
+            "classroom",
+            "music room"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「library」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I library every day. 我每天图书馆。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 2 的学校场所",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「我喜欢数学。」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「I like Maths.」的意思是我喜欢数学。，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 2 的喜好表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "I like Maths.",
+            "I don't like Art.",
+            "Do you like Music?",
+            "What do you like about school?"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：我不喜欢美术。（ ）。",
+          "answer": {
+            "value": "I don't like Art."
+          },
+          "analysis": "「我不喜欢美术。」的英文是 I don't like Art.。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 2 的喜好表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「Do you like Music?」表示「你喜欢音乐吗？」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「Do you like Music?」的意思确实是你喜欢音乐吗？。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 2 的喜好表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「我喜欢数学。」和「你喜欢音乐吗？」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应我喜欢数学。；B ✗ 对应我不喜欢美术。；C ✓ 对应你喜欢音乐吗？；D ✗ 对应你喜欢学校的什么？。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 2 的喜好表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "I like Maths.",
+            "I don't like Art.",
+            "Do you like Music?",
+            "What do you like about school?"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「I like Maths.」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I I like Maths. every day. 我每天我喜欢数学。。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 2 的喜好表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「字母 a 的短音」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「/æ/」的意思是字母 a 的短音，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 2 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "/æ/",
+            "/ɑː/",
+            "连读",
+            "重音"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：字母组合 ar 的读音（ ）。",
+          "answer": {
+            "value": "/ɑː/"
+          },
+          "analysis": "「字母组合 ar 的读音」的英文是 /ɑː/。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 2 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「连读」表示「相邻词自然连读」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「连读」的意思确实是相邻词自然连读。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 2 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「字母 a 的短音」和「相邻词自然连读」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应字母 a 的短音；B ✗ 对应字母组合 ar 的读音；C ✓ 对应相邻词自然连读；D ✗ 对应实词重读。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 2 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "/æ/",
+            "/ɑː/",
+            "连读",
+            "重音"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「/æ/」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I /æ/ every day. 我每天字母 a 的短音。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 2 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 3 What's great about jobs?",
+      "order_index": 3,
+      "summary": "职业名称与职业特点。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「医生」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「doctor」的意思是医生，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 3 的职业名称",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "doctor",
+            "teacher",
+            "driver",
+            "cook"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：教师（ ）。",
+          "answer": {
+            "value": "teacher"
+          },
+          "analysis": "「教师」的英文是 teacher。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 3 的职业名称",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「driver」表示「司机」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「driver」的意思确实是司机。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 3 的职业名称",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「医生」和「司机」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应医生；B ✗ 对应教师；C ✓ 对应司机；D ✗ 对应厨师。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 3 的职业名称",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "doctor",
+            "teacher",
+            "driver",
+            "cook"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「doctor」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I doctor every day. 我每天医生。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 3 的职业名称",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「帮助病人」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「helps sick people」的意思是帮助病人，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 3 的职业特点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "helps sick people",
+            "teaches students",
+            "drives a bus",
+            "makes nice food"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：教学生（ ）。",
+          "answer": {
+            "value": "teaches students"
+          },
+          "analysis": "「教学生」的英文是 teaches students。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 3 的职业特点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「drives a bus」表示「开公共汽车」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「drives a bus」的意思确实是开公共汽车。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 3 的职业特点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「帮助病人」和「开公共汽车」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应帮助病人；B ✗ 对应教学生；C ✓ 对应开公共汽车；D ✗ 对应做美味的食物。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 3 的职业特点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "helps sick people",
+            "teaches students",
+            "drives a bus",
+            "makes nice food"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「helps sick people」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I helps sick people every day. 我每天帮助病人。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 3 的职业特点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「你爸爸做什么工作？」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「What does your father do?」的意思是你爸爸做什么工作？，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 3 的职业问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "What does your father do?",
+            "He is a doctor.",
+            "What's great about this job?",
+            "It helps many people."
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：他是一名医生。（ ）。",
+          "answer": {
+            "value": "He is a doctor."
+          },
+          "analysis": "「他是一名医生。」的英文是 He is a doctor.。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 3 的职业问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「What's great about this job?」表示「这份工作好在哪里？」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「What's great about this job?」的意思确实是这份工作好在哪里？。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 3 的职业问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「你爸爸做什么工作？」和「这份工作好在哪里？」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应你爸爸做什么工作？；B ✗ 对应他是一名医生。；C ✓ 对应这份工作好在哪里？；D ✗ 对应它能帮助很多人。。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 3 的职业问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "What does your father do?",
+            "He is a doctor.",
+            "What's great about this job?",
+            "It helps many people."
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「What does your father do?」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I What does your father do? every day. 我每天你爸爸做什么工作？。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 3 的职业问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「字母 e 的短音」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「/e/」的意思是字母 e 的短音，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 3 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "/e/",
+            "/ɜː/",
+            "一般疑问句",
+            "陈述句"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：字母组合 er 的读音（ ）。",
+          "answer": {
+            "value": "/ɜː/"
+          },
+          "analysis": "「字母组合 er 的读音」的英文是 /ɜː/。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 3 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「一般疑问句」表示「用升调提问」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「一般疑问句」的意思确实是用升调提问。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 3 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「字母 e 的短音」和「用升调提问」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应字母 e 的短音；B ✗ 对应字母组合 er 的读音；C ✓ 对应用升调提问；D ✗ 对应用降调陈述。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 3 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "/e/",
+            "/ɜː/",
+            "一般疑问句",
+            "陈述句"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「/e/」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I /e/ every day. 我每天字母 e 的短音。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 3 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 4 How can we make music?",
+      "order_index": 4,
+      "summary": "乐器与声音的表达。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「钢琴」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「piano」的意思是钢琴，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 4 的乐器名称",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "piano",
+            "violin",
+            "drum",
+            "guitar"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：小提琴（ ）。",
+          "answer": {
+            "value": "violin"
+          },
+          "analysis": "「小提琴」的英文是 violin。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 4 的乐器名称",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「drum」表示「鼓」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「drum」的意思确实是鼓。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 4 的乐器名称",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「钢琴」和「鼓」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应钢琴；B ✗ 对应小提琴；C ✓ 对应鼓；D ✗ 对应吉他。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 4 的乐器名称",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "piano",
+            "violin",
+            "drum",
+            "guitar"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「piano」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I piano every day. 我每天钢琴。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 4 的乐器名称",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「弹钢琴」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「play the piano」的意思是弹钢琴，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 4 的声音动词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "play the piano",
+            "sing a song",
+            "listen to music",
+            "make a sound"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：唱歌（ ）。",
+          "answer": {
+            "value": "sing a song"
+          },
+          "analysis": "「唱歌」的英文是 sing a song。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 4 的声音动词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「listen to music」表示「听音乐」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「listen to music」的意思确实是听音乐。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 4 的声音动词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「弹钢琴」和「听音乐」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应弹钢琴；B ✗ 对应唱歌；C ✓ 对应听音乐；D ✗ 对应发出声音。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 4 的声音动词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "play the piano",
+            "sing a song",
+            "listen to music",
+            "make a sound"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「play the piano」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I play the piano every day. 我每天弹钢琴。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 4 的声音动词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「你会弹钢琴吗？」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「Can you play the piano?」的意思是你会弹钢琴吗？，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 4 的音乐问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Can you play the piano?",
+            "Yes, I can.",
+            "How can we make music?",
+            "We can sing and play."
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：是的，我会。（ ）。",
+          "answer": {
+            "value": "Yes, I can."
+          },
+          "analysis": "「是的，我会。」的英文是 Yes, I can.。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 4 的音乐问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「How can we make music?」表示「我们怎样创作音乐？」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「How can we make music?」的意思确实是我们怎样创作音乐？。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 4 的音乐问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「你会弹钢琴吗？」和「我们怎样创作音乐？」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应你会弹钢琴吗？；B ✗ 对应是的，我会。；C ✓ 对应我们怎样创作音乐？；D ✗ 对应我们可以唱歌和演奏。。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 4 的音乐问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Can you play the piano?",
+            "Yes, I can.",
+            "How can we make music?",
+            "We can sing and play."
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「Can you play the piano?」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I Can you play the piano? every day. 我每天你会弹钢琴吗？。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 4 的音乐问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「字母 i 的短音」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「/ɪ/」的意思是字母 i 的短音，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 4 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "/ɪ/",
+            "/iː/",
+            "can 的弱读",
+            "节奏"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：字母组合 ea 的读音（ ）。",
+          "answer": {
+            "value": "/iː/"
+          },
+          "analysis": "「字母组合 ea 的读音」的英文是 /iː/。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 4 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「can 的弱读」表示「肯定句中轻读」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「can 的弱读」的意思确实是肯定句中轻读。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 4 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「字母 i 的短音」和「肯定句中轻读」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应字母 i 的短音；B ✗ 对应字母组合 ea 的读音；C ✓ 对应肯定句中轻读；D ✗ 对应重读与轻读交替。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 4 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "/ɪ/",
+            "/iː/",
+            "can 的弱读",
+            "节奏"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「/ɪ/」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I /ɪ/ every day. 我每天字母 i 的短音。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 4 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 5 How do we make art?",
+      "order_index": 5,
+      "summary": "绘画手工与颜色形状。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「画一幅画」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「draw a picture」的意思是画一幅画，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 5 的美术词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "draw a picture",
+            "paint",
+            "paper",
+            "brush"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：涂色绘画（ ）。",
+          "answer": {
+            "value": "paint"
+          },
+          "analysis": "「涂色绘画」的英文是 paint。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 5 的美术词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「paper」表示「纸」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「paper」的意思确实是纸。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 5 的美术词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「画一幅画」和「纸」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应画一幅画；B ✗ 对应涂色绘画；C ✓ 对应纸；D ✗ 对应画笔。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 5 的美术词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "draw a picture",
+            "paint",
+            "paper",
+            "brush"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「draw a picture」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I draw a picture every day. 我每天画一幅画。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 5 的美术词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「红色」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「red」的意思是红色，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 5 的颜色与形状",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "red",
+            "triangle",
+            "circle",
+            "square"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：三角形（ ）。",
+          "answer": {
+            "value": "triangle"
+          },
+          "analysis": "「三角形」的英文是 triangle。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 5 的颜色与形状",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「circle」表示「圆形」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「circle」的意思确实是圆形。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 5 的颜色与形状",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「红色」和「圆形」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应红色；B ✗ 对应三角形；C ✓ 对应圆形；D ✗ 对应正方形。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 5 的颜色与形状",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "red",
+            "triangle",
+            "circle",
+            "square"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「red」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I red every day. 我每天红色。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 5 的颜色与形状",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「你在画什么？」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「What are you drawing?」的意思是你在画什么？，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 5 的美术问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "What are you drawing?",
+            "I'm drawing a tree.",
+            "How do we make art?",
+            "We use paper and colours."
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：我在画一棵树。（ ）。",
+          "answer": {
+            "value": "I'm drawing a tree."
+          },
+          "analysis": "「我在画一棵树。」的英文是 I'm drawing a tree.。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 5 的美术问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「How do we make art?」表示「我们怎样做美术作品？」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「How do we make art?」的意思确实是我们怎样做美术作品？。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 5 的美术问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「你在画什么？」和「我们怎样做美术作品？」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应你在画什么？；B ✗ 对应我在画一棵树。；C ✓ 对应我们怎样做美术作品？；D ✗ 对应我们用纸和颜色。。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 5 的美术问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "What are you drawing?",
+            "I'm drawing a tree.",
+            "How do we make art?",
+            "We use paper and colours."
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「What are you drawing?」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I What are you drawing? every day. 我每天你在画什么？。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 5 的美术问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「字母 o 的读音」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「/əʊ/」的意思是字母 o 的读音，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 5 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "/əʊ/",
+            "/uː/",
+            "句子重音",
+            "语调"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：字母组合 oo 的读音（ ）。",
+          "answer": {
+            "value": "/uː/"
+          },
+          "analysis": "「字母组合 oo 的读音」的英文是 /uː/。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 5 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「句子重音」表示「关键信息重读」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「句子重音」的意思确实是关键信息重读。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 5 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「字母 o 的读音」和「关键信息重读」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应字母 o 的读音；B ✗ 对应字母组合 oo 的读音；C ✓ 对应关键信息重读；D ✗ 对应列举时前升后降。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 5 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "/əʊ/",
+            "/uː/",
+            "句子重音",
+            "语调"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「/əʊ/」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I /əʊ/ every day. 我每天字母 o 的读音。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 5 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 6 How do we measure time?",
+      "order_index": 6,
+      "summary": "时间计量单位与表达。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「秒」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「second」的意思是秒，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 6 的时间单位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "second",
+            "minute",
+            "hour",
+            "day"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：分钟（ ）。",
+          "answer": {
+            "value": "minute"
+          },
+          "analysis": "「分钟」的英文是 minute。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 6 的时间单位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「hour」表示「小时」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「hour」的意思确实是小时。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 6 的时间单位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「秒」和「小时」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应秒；B ✗ 对应分钟；C ✓ 对应小时；D ✗ 对应天。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 6 的时间单位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "second",
+            "minute",
+            "hour",
+            "day"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「second」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I second every day. 我每天秒。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 6 的时间单位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「七点半」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「half past seven」的意思是七点半，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 6 的钟表读法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "half past seven",
+            "a quarter past eight",
+            "ten to nine",
+            "nine o'clock"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：八点一刻（ ）。",
+          "answer": {
+            "value": "a quarter past eight"
+          },
+          "analysis": "「八点一刻」的英文是 a quarter past eight。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 6 的钟表读法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「ten to nine」表示「八点五十」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「ten to nine」的意思确实是八点五十。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 6 的钟表读法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「七点半」和「八点五十」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应七点半；B ✗ 对应八点一刻；C ✓ 对应八点五十；D ✗ 对应九点整。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 6 的钟表读法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "half past seven",
+            "a quarter past eight",
+            "ten to nine",
+            "nine o'clock"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「half past seven」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I half past seven every day. 我每天七点半。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 6 的钟表读法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「要花多长时间？」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「How long does it take?」的意思是要花多长时间？，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 6 的时长问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "How long does it take?",
+            "It takes ten minutes.",
+            "How many minutes are there in an hour?",
+            "There are sixty."
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：要花十分钟。（ ）。",
+          "answer": {
+            "value": "It takes ten minutes."
+          },
+          "analysis": "「要花十分钟。」的英文是 It takes ten minutes.。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 6 的时长问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「How many minutes are there in an hour?」表示「一小时有多少分钟？」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「How many minutes are there in an hour?」的意思确实是一小时有多少分钟？。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 6 的时长问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「要花多长时间？」和「一小时有多少分钟？」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应要花多长时间？；B ✗ 对应要花十分钟。；C ✓ 对应一小时有多少分钟？；D ✗ 对应有六十分钟。。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 6 的时长问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "How long does it take?",
+            "It takes ten minutes.",
+            "How many minutes are there in an hour?",
+            "There are sixty."
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「How long does it take?」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I How long does it take? every day. 我每天要花多长时间？。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 6 的时长问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「字母组合 ou 的读音」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「/aʊ/」的意思是字母组合 ou 的读音，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 6 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "/aʊ/",
+            "/eɪ/",
+            "时间读法",
+            "语调"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：字母 a 在开音节中的读音（ ）。",
+          "answer": {
+            "value": "/eɪ/"
+          },
+          "analysis": "「字母 a 在开音节中的读音」的英文是 /eɪ/。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 6 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「时间读法」表示「整点后加 o'clock」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「时间读法」的意思确实是整点后加 o'clock。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 6 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「字母组合 ou 的读音」和「整点后加 o'clock」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应字母组合 ou 的读音；B ✗ 对应字母 a 在开音节中的读音；C ✓ 对应整点后加 o'clock；D ✗ 对应陈述时间用降调。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 6 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "/aʊ/",
+            "/eɪ/",
+            "时间读法",
+            "语调"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「/aʊ/」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I /aʊ/ every day. 我每天字母组合 ou 的读音。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 6 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 7 How do things change?",
+      "order_index": 7,
+      "summary": "事物变化与状态描述。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「生长」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「grow」的意思是生长，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 7 的变化动词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "grow",
+            "change",
+            "become",
+            "turn"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：变化（ ）。",
+          "answer": {
+            "value": "change"
+          },
+          "analysis": "「变化」的英文是 change。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 7 的变化动词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「become」表示「变成」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「become」的意思确实是变成。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 7 的变化动词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「生长」和「变成」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应生长；B ✗ 对应变化；C ✓ 对应变成；D ✗ 对应转变。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 7 的变化动词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "grow",
+            "change",
+            "become",
+            "turn"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「grow」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I grow every day. 我每天生长。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 7 的变化动词",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「结冰的」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「icy」的意思是结冰的，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 7 的状态描述",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "icy",
+            "melt",
+            "wet",
+            "dry"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：融化（ ）。",
+          "answer": {
+            "value": "melt"
+          },
+          "analysis": "「融化」的英文是 melt。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 7 的状态描述",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「wet」表示「湿的」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「wet」的意思确实是湿的。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 7 的状态描述",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「结冰的」和「湿的」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应结冰的；B ✗ 对应融化；C ✓ 对应湿的；D ✗ 对应干的。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 7 的状态描述",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "icy",
+            "melt",
+            "wet",
+            "dry"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「icy」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I icy every day. 我每天结冰的。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 7 的状态描述",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「事物是怎样变化的？」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「How do things change?」的意思是事物是怎样变化的？，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 7 的变化问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "How do things change?",
+            "Water turns into ice.",
+            "What happens when it is hot?",
+            "The ice melts."
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：水会变成冰。（ ）。",
+          "answer": {
+            "value": "Water turns into ice."
+          },
+          "analysis": "「水会变成冰。」的英文是 Water turns into ice.。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 7 的变化问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「What happens when it is hot?」表示「天气热的时候会发生什么？」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「What happens when it is hot?」的意思确实是天气热的时候会发生什么？。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 7 的变化问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「事物是怎样变化的？」和「天气热的时候会发生什么？」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应事物是怎样变化的？；B ✗ 对应水会变成冰。；C ✓ 对应天气热的时候会发生什么？；D ✗ 对应冰会融化。。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 7 的变化问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "How do things change?",
+            "Water turns into ice.",
+            "What happens when it is hot?",
+            "The ice melts."
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「How do things change?」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I How do things change? every day. 我每天事物是怎样变化的？。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 7 的变化问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「字母组合 oi 的读音」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「/ɔɪ/」的意思是字母组合 oi 的读音，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 7 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "/ɔɪ/",
+            "/eə/",
+            "重读",
+            "降调"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：字母组合 air 的读音（ ）。",
+          "answer": {
+            "value": "/eə/"
+          },
+          "analysis": "「字母组合 air 的读音」的英文是 /eə/。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 7 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「重读」表示「动词重读」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「重读」的意思确实是动词重读。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 7 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「字母组合 oi 的读音」和「动词重读」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应字母组合 oi 的读音；B ✗ 对应字母组合 air 的读音；C ✓ 对应动词重读；D ✗ 对应陈述变化用降调。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 7 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "/ɔɪ/",
+            "/eə/",
+            "重读",
+            "降调"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「/ɔɪ/」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I /ɔɪ/ every day. 我每天字母组合 oi 的读音。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 7 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit 8 How do people get along with each other?",
+      "order_index": 8,
+      "summary": "同伴相处与礼貌表达。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「互相帮助」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「help each other」的意思是互相帮助，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 8 的相处用语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "help each other",
+            "share",
+            "say sorry",
+            "be kind"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：分享（ ）。",
+          "answer": {
+            "value": "share"
+          },
+          "analysis": "「分享」的英文是 share。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 8 的相处用语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「say sorry」表示「说对不起」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「say sorry」的意思确实是说对不起。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 8 的相处用语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「互相帮助」和「说对不起」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应互相帮助；B ✗ 对应分享；C ✓ 对应说对不起；D ✗ 对应友善待人。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 8 的相处用语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "help each other",
+            "share",
+            "say sorry",
+            "be kind"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「help each other」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I help each other every day. 我每天互相帮助。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 8 的相处用语",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「打扰一下。」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「Excuse me.」的意思是打扰一下。，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 8 的礼貌表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Excuse me.",
+            "Thank you very much.",
+            "Would you like to play with me?",
+            "That's all right."
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：非常感谢你。（ ）。",
+          "answer": {
+            "value": "Thank you very much."
+          },
+          "analysis": "「非常感谢你。」的英文是 Thank you very much.。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 8 的礼貌表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「Would you like to play with me?」表示「你想和我一起玩吗？」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「Would you like to play with me?」的意思确实是你想和我一起玩吗？。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 8 的礼貌表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「打扰一下。」和「你想和我一起玩吗？」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应打扰一下。；B ✗ 对应非常感谢你。；C ✓ 对应你想和我一起玩吗？；D ✗ 对应没关系。。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 8 的礼貌表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Excuse me.",
+            "Thank you very much.",
+            "Would you like to play with me?",
+            "That's all right."
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「Excuse me.」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I Excuse me. every day. 我每天打扰一下。。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 8 的礼貌表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「人们怎样相处？」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「How do people get along?」的意思是人们怎样相处？，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 8 的相处问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "How do people get along?",
+            "We share and help.",
+            "What should we say when we are wrong?",
+            "We should say sorry."
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：我们分享和互相帮助。（ ）。",
+          "answer": {
+            "value": "We share and help."
+          },
+          "analysis": "「我们分享和互相帮助。」的英文是 We share and help.。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 8 的相处问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「What should we say when we are wrong?」表示「做错事时该说什么？」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「What should we say when we are wrong?」的意思确实是做错事时该说什么？。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 8 的相处问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「人们怎样相处？」和「做错事时该说什么？」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应人们怎样相处？；B ✗ 对应我们分享和互相帮助。；C ✓ 对应做错事时该说什么？；D ✗ 对应我们应该说对不起。。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 8 的相处问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "How do people get along?",
+            "We share and help.",
+            "What should we say when we are wrong?",
+            "We should say sorry."
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「How do people get along?」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I How do people get along? every day. 我每天人们怎样相处？。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 8 的相处问答",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「字母组合 ea 的部分读音」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「/ɪə/」的意思是字母组合 ea 的部分读音，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 8 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "/ɪə/",
+            "/ʃ/",
+            "疑问语调",
+            "礼貌语气"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：字母组合 sh 的读音（ ）。",
+          "answer": {
+            "value": "/ʃ/"
+          },
+          "analysis": "「字母组合 sh 的读音」的英文是 /ʃ/。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 8 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「疑问语调」表示「征求同意用升调」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「疑问语调」的意思确实是征求同意用升调。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 8 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「字母组合 ea 的部分读音」和「征求同意用升调」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应字母组合 ea 的部分读音；B ✗ 对应字母组合 sh 的读音；C ✓ 对应征求同意用升调；D ✗ 对应说话柔和清晰。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 8 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "/ɪə/",
+            "/ʃ/",
+            "疑问语调",
+            "礼貌语气"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「/ɪə/」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I /ɪə/ every day. 我每天字母组合 ea 的部分读音。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 8 的语音与语调",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "Unit checklist",
+      "order_index": 9,
+      "summary": "全册语言知识梳理与运用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「get up 等」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「作息短语」的意思是get up 等，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 9 的词汇梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "作息短语",
+            "职业名称",
+            "乐器名称",
+            "时间单位"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：doctor 等（ ）。",
+          "answer": {
+            "value": "职业名称"
+          },
+          "analysis": "「doctor 等」的英文是 职业名称。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 9 的词汇梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「乐器名称」表示「piano 等」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「乐器名称」的意思确实是piano 等。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 9 的词汇梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「get up 等」和「piano 等」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应get up 等；B ✗ 对应doctor 等；C ✓ 对应piano 等；D ✗ 对应minute 等。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 9 的词汇梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "作息短语",
+            "职业名称",
+            "乐器名称",
+            "时间单位"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「作息短语」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I 作息短语 every day. 我每天get up 等。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 9 的词汇梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「询问作息」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「What time do you...?」的意思是询问作息，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 9 的句型梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "What time do you...?",
+            "What does he do?",
+            "Can you...?",
+            "How long does it take?"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：询问职业（ ）。",
+          "answer": {
+            "value": "What does he do?"
+          },
+          "analysis": "「询问职业」的英文是 What does he do?。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 9 的句型梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「Can you...?」表示「询问能力」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「Can you...?」的意思确实是询问能力。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 9 的句型梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「询问作息」和「询问能力」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应询问作息；B ✗ 对应询问职业；C ✓ 对应询问能力；D ✗ 对应询问时长。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 9 的句型梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "What time do you...?",
+            "What does he do?",
+            "Can you...?",
+            "How long does it take?"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「What time do you...?」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I What time do you...? every day. 我每天询问作息。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 9 的句型梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「表经常性动作」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「一般现在时」的意思是表经常性动作，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 9 的语法梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "一般现在时",
+            "情态动词 can",
+            "时间介词 at",
+            "时间介词 in"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：后接动词原形（ ）。",
+          "answer": {
+            "value": "情态动词 can"
+          },
+          "analysis": "「后接动词原形」的英文是 情态动词 can。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 9 的语法梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「时间介词 at」表示「用于钟点前」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「时间介词 at」的意思确实是用于钟点前。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 9 的语法梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「表经常性动作」和「用于钟点前」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应表经常性动作；B ✗ 对应后接动词原形；C ✓ 对应用于钟点前；D ✗ 对应用于上午下午。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 9 的语法梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "一般现在时",
+            "情态动词 can",
+            "时间介词 at",
+            "时间介词 in"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「一般现在时」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I 一般现在时 every day. 我每天表经常性动作。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 9 的语法梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「长短元音区分」的意思是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "「元音」的意思是长短元音区分，与选项 A 对应。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 9 的语音梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "元音",
+            "辅音组合",
+            "升调",
+            "降调"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "根据中文写英文：sh、ch 的读音（ ）。",
+          "answer": {
+            "value": "辅音组合"
+          },
+          "analysis": "「sh、ch 的读音」的英文是 辅音组合。",
+          "difficulty": 2,
+          "knowledge_point": "Unit 9 的语音梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「升调」表示「一般疑问句」。这一说法是正确的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "「升调」的意思确实是一般疑问句。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 9 的语音梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与本单元相关的表达中，表示「长短元音区分」和「一般疑问句」的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 对应长短元音区分；B ✗ 对应sh、ch 的读音；C ✓ 对应一般疑问句；D ✗ 对应特殊疑问句。所以选 A、C。",
+          "difficulty": 3,
+          "knowledge_point": "Unit 9 的语音梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "元音",
+            "辅音组合",
+            "升调",
+            "降调"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用「元音」写一句英文，并写出中文意思。",
+          "answer": {
+            "value": "示例：I 元音 every day. 我每天长短元音区分。"
+          },
+          "analysis": "评分要点：用上目标表达 + 句子通顺 + 中文准确。",
+          "difficulty": 4,
+          "knowledge_point": "Unit 9 的语音梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-14T12:07:25+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "normalized": "难度 40/40/20 归一 + 主观题短答案补评分要点（2026-11-13 统一口径）",
+    "supplemented": "数值填空补可求值算式 0 道 / 数值填空改单选 0 道 / 补多选题 0 道（2 真 + 2 假，答案 2 项；2026-11-14 口径）",
+    "stem_dedup": "跨册同题干补册次前缀 0 道（2026-11-14 跨册去重口径）",
+    "duplicate_rewrites": "跨册同题定向改写 0 道（保留两侧题量，2026-11-14 口径）",
+    "chapter_scope": "全章域（本册无跨册重复章）",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

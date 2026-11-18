@@ -1,0 +1,1553 @@
+{
+  "subject": "chemistry",
+  "grade": 9,
+  "version": "人教版",
+  "semester": "second",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第八单元 金属和金属材料",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "金属的物理性质",
+      "parent": "第八单元 金属和金属材料",
+      "order_index": 1,
+      "explanation": "金属一般有光泽、导电导热、延展性，多数熔点较高。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "金属的化学性质",
+      "parent": "第八单元 金属和金属材料",
+      "order_index": 2,
+      "explanation": "金属能与氧气、稀酸、某些盐溶液反应，活动性不同反应难易不同。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "金属活动性顺序",
+      "parent": "第八单元 金属和金属材料",
+      "order_index": 3,
+      "explanation": "钾钙钠镁铝锌铁锡铅氢铜汞银铂金，排在氢前的金属能与稀酸反应。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "金属资源的利用与保护",
+      "parent": "第八单元 金属和金属材料",
+      "order_index": 4,
+      "explanation": "工业上用一氧化碳还原铁矿石炼铁，防止金属锈蚀可减少资源浪费。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第九单元 溶液",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "溶液的组成与特征",
+      "parent": "第九单元 溶液",
+      "order_index": 1,
+      "explanation": "溶液由溶质和溶剂组成，具有均一性和稳定性。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "饱和溶液与不饱和溶液",
+      "parent": "第九单元 溶液",
+      "order_index": 2,
+      "explanation": "一定温度下不能再溶解某溶质的溶液是饱和溶液，二者可相互转化。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "溶解度与溶解度曲线",
+      "parent": "第九单元 溶液",
+      "order_index": 3,
+      "explanation": "固体溶解度指一定温度下 100 克溶剂中达到饱和时所溶解的质量，曲线可比较随温度变化。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "溶质质量分数与配制",
+      "parent": "第九单元 溶液",
+      "order_index": 4,
+      "explanation": "溶质质量分数等于溶质质量除以溶液质量，配制需计算、称量、溶解。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第十单元 常见的酸、碱、盐",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "常见的酸",
+      "parent": "第十单元 常见的酸、碱、盐",
+      "order_index": 1,
+      "explanation": "盐酸、硫酸具有酸性，能使石蕊变红，与金属、金属氧化物反应。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "常见的碱",
+      "parent": "第十单元 常见的酸、碱、盐",
+      "order_index": 2,
+      "explanation": "氢氧化钠、氢氧化钙具有碱性，能使酚酞变红，与非金属氧化物反应。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "中和反应与 pH",
+      "parent": "第十单元 常见的酸、碱、盐",
+      "order_index": 3,
+      "explanation": "酸与碱反应生成盐和水叫中和反应，pH 小于 7 为酸性、大于 7 为碱性。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "盐与复分解反应",
+      "parent": "第十单元 常见的酸、碱、盐",
+      "order_index": 4,
+      "explanation": "盐由金属离子和酸根离子构成，复分解反应是两种化合物交换成分生成两种新化合物。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第十一单元 化学与社会",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "化学与能源",
+      "parent": "第十一单元 化学与社会",
+      "order_index": 1,
+      "explanation": "化石燃料燃烧释放能量，开发清洁能源是发展方向。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "化学与材料",
+      "parent": "第十一单元 化学与社会",
+      "order_index": 2,
+      "explanation": "金属、无机非金属、有机高分子和复合材料各有用途。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "化学与健康",
+      "parent": "第十一单元 化学与社会",
+      "order_index": 3,
+      "explanation": "蛋白质、糖类、油脂、维生素、无机盐和水是人体必需营养素。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "化学与环境",
+      "parent": "第十一单元 化学与社会",
+      "order_index": 4,
+      "explanation": "防治水污染、空气污染与土壤污染，践行绿色化学与垃圾分类。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第八单元 金属和金属材料",
+      "order_index": 1,
+      "summary": "认识金属的性质、金属活动性顺序与金属资源的利用保护。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "下面不属于金属共性的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "常温下金属多为固体（汞为液体），不是气体。",
+          "difficulty": 2,
+          "knowledge_point": "金属的物理性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "易导电",
+            "有延展性",
+            "常温下都是气体",
+            "有金属光泽"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "金属能拉成丝、压成片，说明金属具有（ ）性。",
+          "answer": {
+            "value": "延展"
+          },
+          "analysis": "延展性是金属共性。",
+          "difficulty": 2,
+          "knowledge_point": "金属的物理性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "铜的导电性比银强。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "银的导电性最好，铜次之。",
+          "difficulty": 3,
+          "knowledge_point": "金属的物理性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明为什么电线常用铜而不用铁。",
+          "answer": {
+            "value": "示例：铜的导电性比铁好，且不易生锈，延展性也好"
+          },
+          "analysis": "评分要点：结合导电性与稳定性说明。",
+          "difficulty": 4,
+          "knowledge_point": "金属的物理性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "金属的物理性质有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 可燃性 ✗ 不是金属共性。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "金属的物理性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "导电性",
+            "导热性",
+            "延展性",
+            "可燃性"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "铁与稀盐酸反应生成（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "铁与稀盐酸生成氯化亚铁和氢气。",
+          "difficulty": 2,
+          "knowledge_point": "金属的化学性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "氯化亚铁和氢气",
+            "氯化铁和水",
+            "氧化铁",
+            "二氧化碳"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "铁在氧气中燃烧生成四氧化三铁，化学式为 Fe3O（ ）。",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "四氧化三铁写作 Fe3O4。该项数值为 4，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "金属的化学性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "40",
+            "4",
+            "0.4",
+            "5"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "铜不能与稀盐酸反应。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "铜在活动性顺序中排在氢后，不与稀酸反应。",
+          "difficulty": 3,
+          "knowledge_point": "金属的化学性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出铁与硫酸铜溶液反应的化学方程式。",
+          "answer": {
+            "value": "示例：Fe + CuSO4 → FeSO4 + Cu"
+          },
+          "analysis": "评分要点：方程式与产物正确。",
+          "difficulty": 4,
+          "knowledge_point": "金属的化学性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "能与稀盐酸反应放出氢气的金属有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 铜 ✗ 排在氢后不反应；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "金属的化学性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "锌",
+            "铁",
+            "铜",
+            "镁"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面金属活动性最强的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "镁在四种中位置最前。",
+          "difficulty": 2,
+          "knowledge_point": "金属活动性顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "镁",
+            "铁",
+            "铜",
+            "银"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "金属活动性顺序中，排在氢（ ）的金属能与稀盐酸反应放出氢气。",
+          "answer": {
+            "value": "前面"
+          },
+          "analysis": "氢前金属可与稀酸反应。",
+          "difficulty": 2,
+          "knowledge_point": "金属活动性顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "活动性强的金属能把活动性弱的金属从其盐溶液中置换出来。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "这是置换反应的规律。",
+          "difficulty": 3,
+          "knowledge_point": "金属活动性顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "判断铁能否置换出硫酸铜中的铜，并说明理由。",
+          "answer": {
+            "value": "示例：能，铁的活动性比铜强，可发生置换反应"
+          },
+          "analysis": "评分要点：结论与活动性依据都写出。",
+          "difficulty": 4,
+          "knowledge_point": "金属活动性顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于金属活动性顺序，哪些说法正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 铜置换铁 ✗；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "金属活动性顺序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "排在氢前的金属可与稀酸反应",
+            "活动性强的可置换弱的",
+            "铜能置换出铁",
+            "银的活动性比铜弱"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "工业炼铁常用的还原剂是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "高炉炼铁用一氧化碳还原氧化铁。",
+          "difficulty": 2,
+          "knowledge_point": "金属资源的利用与保护",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "一氧化碳",
+            "氧气",
+            "二氧化碳",
+            "氮气"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "铁生锈是铁与（ ）和氧气共同作用的结果。",
+          "answer": {
+            "value": "水"
+          },
+          "analysis": "铁锈蚀需水和氧气。",
+          "difficulty": 2,
+          "knowledge_point": "金属资源的利用与保护",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "在钢铁表面刷漆可以防锈。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "隔绝水和氧气可防锈。",
+          "difficulty": 3,
+          "knowledge_point": "金属资源的利用与保护",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出用一氧化碳还原氧化铁炼铁的化学方程式。",
+          "answer": {
+            "value": "示例：Fe2O3 + 3CO → 2Fe + 3CO2"
+          },
+          "analysis": "评分要点：方程式配平正确。",
+          "difficulty": 4,
+          "knowledge_point": "金属资源的利用与保护",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "防止铁生锈的方法有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 潮湿处 ✗ 加速锈蚀。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "金属资源的利用与保护",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "刷漆",
+            "涂油",
+            "镀其他金属",
+            "放在潮湿处"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第九单元 溶液",
+      "order_index": 2,
+      "summary": "认识溶液组成、溶解度与溶质质量分数。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "溶液的基本特征是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "溶液均一稳定。",
+          "difficulty": 2,
+          "knowledge_point": "溶液的组成与特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "均一、稳定",
+            "浑浊、分层",
+            "有沉淀",
+            "不均匀"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "碘酒中，碘是溶质，酒精是（ ）。",
+          "answer": {
+            "value": "溶剂"
+          },
+          "analysis": "酒精作为溶剂。",
+          "difficulty": 2,
+          "knowledge_point": "溶液的组成与特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "溶液一定是无色的。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "硫酸铜溶液是蓝色的。",
+          "difficulty": 3,
+          "knowledge_point": "溶液的组成与特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明溶液与悬浊液的区别。",
+          "answer": {
+            "value": "示例：溶液均一稳定不分层；悬浊液不均一，静置会沉淀"
+          },
+          "analysis": "评分要点：特征对比清楚。",
+          "difficulty": 4,
+          "knowledge_point": "溶液的组成与特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "属于溶液的有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 泥水 ✗ 是悬浊液；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "溶液的组成与特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "食盐水",
+            "糖水",
+            "泥水",
+            "碘酒"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "饱和溶液转化为不饱和溶液常用的方法是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "加溶剂或升温可使饱和变不饱和。",
+          "difficulty": 2,
+          "knowledge_point": "饱和溶液与不饱和溶液",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "加溶剂或升温",
+            "加溶质",
+            "降温",
+            "蒸发溶剂"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "一定温度下，不能再溶解某种溶质的溶液叫（ ）溶液。",
+          "answer": {
+            "value": "饱和"
+          },
+          "analysis": "饱和溶液的定义。",
+          "difficulty": 2,
+          "knowledge_point": "饱和溶液与不饱和溶液",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "饱和溶液一定是浓溶液。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "饱和溶液与浓稀无必然关系。",
+          "difficulty": 3,
+          "knowledge_point": "饱和溶液与不饱和溶液",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明怎样判断某溶液是否已饱和。",
+          "answer": {
+            "value": "示例：在该温度下加入少量该溶质，若不再溶解且有剩余固体，则已饱和"
+          },
+          "analysis": "评分要点：方法具体可操作。",
+          "difficulty": 4,
+          "knowledge_point": "饱和溶液与不饱和溶液",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于饱和溶液，哪些说法正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 一定很浓 ✗；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "饱和溶液与不饱和溶液",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "一定温度下不能继续溶解该溶质",
+            "可通过加溶剂变为不饱和",
+            "饱和溶液一定很浓",
+            "可通过升温变为不饱和"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "固体溶解度的单位是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "溶解度单位为克。",
+          "difficulty": 2,
+          "knowledge_point": "溶解度与溶解度曲线",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "克",
+            "克每升",
+            "摩尔",
+            "百分比"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "溶解度指一定温度下 100 克（ ）中最多溶解的溶质质量。",
+          "answer": {
+            "value": "溶剂"
+          },
+          "analysis": "以 100 克溶剂为基准。",
+          "difficulty": 2,
+          "knowledge_point": "溶解度与溶解度曲线",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "大多数固体物质的溶解度随温度升高而增大。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "多数固体溶解度随升温增大。",
+          "difficulty": 3,
+          "knowledge_point": "溶解度与溶解度曲线",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "某物质 20 摄氏度时 50 克水最多溶解 10 克，求该温度下的溶解度。",
+          "answer": {
+            "value": "示例：100 克水中溶解 20 克，溶解度为 20 克"
+          },
+          "analysis": "评分要点：换算到 100 克溶剂，结果正确。",
+          "difficulty": 4,
+          "knowledge_point": "溶解度与溶解度曲线",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于溶解度曲线，哪些说法正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 只适用气体 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "溶解度与溶解度曲线",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "可比较不同物质的溶解度",
+            "曲线交点表示该温度溶解度相等",
+            "可判断随温度的变化趋势",
+            "曲线只适用于气体"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "溶质质量分数的计算式是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "质量分数为溶质与溶液质量之比。",
+          "difficulty": 2,
+          "knowledge_point": "溶质质量分数与配制",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "溶质质量 ÷ 溶液质量 × 100%",
+            "溶液质量 ÷ 溶质质量",
+            "溶质质量 ÷ 溶剂质量",
+            "溶剂质量 ÷ 溶液质量"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "配制 100 克 10% 的食盐水，需食盐（ ）克。",
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "100 × 10% = 10 克。该项数值为 10，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "溶质质量分数与配制",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "100",
+            "1",
+            "11",
+            "10"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "溶液加水稀释后，溶质质量分数变小。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "稀释后溶液质量增大，分数减小。",
+          "difficulty": 3,
+          "knowledge_point": "溶质质量分数与配制",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "配制 50 克 20% 的硝酸钾溶液，需要硝酸钾和水各多少克。",
+          "answer": {
+            "value": "示例：硝酸钾 10 克，水 40 克"
+          },
+          "analysis": "评分要点：溶质与溶剂质量都正确。",
+          "difficulty": 4,
+          "knowledge_point": "溶质质量分数与配制",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "配制一定质量分数溶液的步骤有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 蒸干 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "溶质质量分数与配制",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "计算",
+            "称量与量取",
+            "溶解并搅拌",
+            "加热蒸发至干"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第十单元 常见的酸、碱、盐",
+      "order_index": 3,
+      "summary": "认识常见酸碱的性质、中和反应与盐的性质。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "紫色石蕊溶液中加入稀盐酸，溶液变（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "酸性溶液使石蕊变红。",
+          "difficulty": 2,
+          "knowledge_point": "常见的酸",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "红色",
+            "蓝色",
+            "无色",
+            "黄色"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "浓硫酸具有强（ ）性，会吸收空气中的水分。",
+          "answer": {
+            "value": "吸水"
+          },
+          "analysis": "浓硫酸有吸水性。",
+          "difficulty": 2,
+          "knowledge_point": "常见的酸",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "稀硫酸能与氧化铜反应生成硫酸铜和水。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "酸与金属氧化物反应生成盐和水。",
+          "difficulty": 3,
+          "knowledge_point": "常见的酸",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出稀盐酸与氧化铁反应的化学方程式。",
+          "answer": {
+            "value": "示例：Fe2O3 + 6HCl → 2FeCl3 + 3H2O"
+          },
+          "analysis": "评分要点：方程式与产物正确。",
+          "difficulty": 4,
+          "knowledge_point": "常见的酸",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "酸的通性有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 使酚酞变红 ✗ 那是碱的性质。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "常见的酸",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "使石蕊变红",
+            "与活泼金属反应放氢气",
+            "与金属氧化物反应",
+            "使酚酞变红"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "氢氧化钠的俗称是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "氢氧化钠俗称烧碱、火碱、苛性钠。",
+          "difficulty": 2,
+          "knowledge_point": "常见的碱",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "烧碱",
+            "纯碱",
+            "熟石灰",
+            "小苏打"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "氢氧化钙俗称（ ）石灰。",
+          "answer": {
+            "value": "熟"
+          },
+          "analysis": "氢氧化钙俗称熟石灰。",
+          "difficulty": 2,
+          "knowledge_point": "常见的碱",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "氢氧化钠固体暴露在空气中会吸水潮解。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "氢氧化钠易吸湿潮解。",
+          "difficulty": 3,
+          "knowledge_point": "常见的碱",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明氢氧化钠为什么要密封保存。",
+          "answer": {
+            "value": "示例：易吸收水分潮解，还能与空气中的二氧化碳反应变质"
+          },
+          "analysis": "评分要点：两条原因都说清。",
+          "difficulty": 4,
+          "knowledge_point": "常见的碱",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "碱的通性有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 与金属放氢气 ✗ 是酸的性质。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "常见的碱",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "使酚酞变红",
+            "与酸反应生成盐和水",
+            "与某些非金属氧化物反应",
+            "与金属反应放氢气"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "pH 等于 7 的溶液呈（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "pH 为 7 是中性。",
+          "difficulty": 2,
+          "knowledge_point": "中和反应与 pH",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "中性",
+            "酸性",
+            "碱性",
+            "强酸性"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "盐酸与氢氧化钠反应生成氯化钠和（ ）。",
+          "answer": {
+            "value": "水"
+          },
+          "analysis": "中和反应生成盐和水。",
+          "difficulty": 2,
+          "knowledge_point": "中和反应与 pH",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "用 pH 试纸可以粗略测定溶液的酸碱度。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "pH 试纸测酸碱度。",
+          "difficulty": 3,
+          "knowledge_point": "中和反应与 pH",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明农业上为什么用熟石灰改良酸性土壤。",
+          "answer": {
+            "value": "示例：熟石灰呈碱性，能中和土壤中的酸性物质，提高土壤 pH"
+          },
+          "analysis": "评分要点：中和原理与效果说清。",
+          "difficulty": 4,
+          "knowledge_point": "中和反应与 pH",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于中和反应，哪些说法正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 一定呈酸性 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "中和反应与 pH",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "生成盐和水",
+            "属于复分解反应",
+            "可用于改良酸性土壤",
+            "反应后溶液一定呈酸性"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面属于盐的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "氯化钠由钠离子和氯离子构成，属盐。",
+          "difficulty": 2,
+          "knowledge_point": "盐与复分解反应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "氯化钠",
+            "盐酸",
+            "氢氧化钠",
+            "水"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "复分解反应的条件之一是生成沉淀、气体或（ ）。",
+          "answer": {
+            "value": "水"
+          },
+          "analysis": "生成水也是反应条件。",
+          "difficulty": 2,
+          "knowledge_point": "盐与复分解反应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "碳酸钠俗称纯碱，属于盐。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "纯碱是盐，水溶液显碱性。",
+          "difficulty": 3,
+          "knowledge_point": "盐与复分解反应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出碳酸钠与稀盐酸反应的化学方程式。",
+          "answer": {
+            "value": "示例：Na2CO3 + 2HCl → 2NaCl + H2O + CO2"
+          },
+          "analysis": "评分要点：方程式与气体产物正确。",
+          "difficulty": 4,
+          "knowledge_point": "盐与复分解反应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "复分解反应发生的条件有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 有单质 ✗ 那是置换反应。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "盐与复分解反应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "生成沉淀",
+            "生成气体",
+            "生成水",
+            "有单质生成"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第十一单元 化学与社会",
+      "order_index": 4,
+      "summary": "了解化学与能源、材料、健康和环境的关系。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "下面属于化石燃料的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "煤、石油、天然气是化石燃料。",
+          "difficulty": 2,
+          "knowledge_point": "化学与能源",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "煤",
+            "氢气",
+            "酒精",
+            "木材"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "氢气燃烧的产物只有（ ），是清洁能源。",
+          "answer": {
+            "value": "水"
+          },
+          "analysis": "氢气燃烧生成水，无污染。",
+          "difficulty": 2,
+          "knowledge_point": "化学与能源",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "化石燃料属于不可再生能源。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "形成周期极长，属不可再生。",
+          "difficulty": 3,
+          "knowledge_point": "化学与能源",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说氢能源的优点和推广难点。",
+          "answer": {
+            "value": "示例：优点是热值高、产物无污染；难点是制取成本高、储存运输困难"
+          },
+          "analysis": "评分要点：优缺点都说清。",
+          "difficulty": 4,
+          "knowledge_point": "化学与能源",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "清洁能源有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 煤 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "化学与能源",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "太阳能",
+            "风能",
+            "氢能",
+            "煤"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "塑料属于（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "塑料是有机高分子材料。",
+          "difficulty": 2,
+          "knowledge_point": "化学与材料",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "有机高分子材料",
+            "金属材料",
+            "无机非金属材料",
+            "复合材料"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "玻璃、陶瓷属于（ ）非金属材料。",
+          "answer": {
+            "value": "无机"
+          },
+          "analysis": "玻璃陶瓷属无机非金属材料。",
+          "difficulty": 2,
+          "knowledge_point": "化学与材料",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "合金的硬度一般比组成它的纯金属大。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "合金硬度通常更高。",
+          "difficulty": 3,
+          "knowledge_point": "化学与材料",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "举例说明两种材料在生活中的用途。",
+          "answer": {
+            "value": "示例：铝合金用于门窗，塑料用于包装袋"
+          },
+          "analysis": "评分要点：材料与用途对应正确。",
+          "difficulty": 4,
+          "knowledge_point": "化学与材料",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "材料分类包括哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 无其他 ✗ 还有复合材料。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "化学与材料",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "金属材料",
+            "无机非金属材料",
+            "有机高分子材料",
+            "生物材料之外无其他"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "人体最主要的供能物质是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "糖类是主要供能物质。",
+          "difficulty": 2,
+          "knowledge_point": "化学与健康",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "糖类",
+            "维生素",
+            "水",
+            "无机盐"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "蛋白质是构成细胞的基本物质，瘦肉、鸡蛋中含量丰富，其组成元素一定含（ ）元素。",
+          "answer": {
+            "value": "氮"
+          },
+          "analysis": "蛋白质含氮元素。",
+          "difficulty": 2,
+          "knowledge_point": "化学与健康",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "缺乏维生素 C 可能引起坏血病。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "维生素 C 缺乏导致坏血病。",
+          "difficulty": 3,
+          "knowledge_point": "化学与健康",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说均衡饮食的两条建议。",
+          "answer": {
+            "value": "示例：荤素搭配，保证蛋白质与蔬菜摄入；少油少盐，控制糖分"
+          },
+          "analysis": "评分要点：两条建议科学合理。",
+          "difficulty": 4,
+          "knowledge_point": "化学与健康",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "人体必需的营养素有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 塑料 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "化学与健康",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "蛋白质",
+            "糖类",
+            "维生素",
+            "塑料"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "造成酸雨的主要气体是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "二氧化硫和氮氧化物是酸雨主因。",
+          "difficulty": 2,
+          "knowledge_point": "化学与环境",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "二氧化硫",
+            "二氧化碳",
+            "氮气",
+            "氧气"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "生活中把垃圾（ ）投放，有利于资源回收和减少污染。",
+          "answer": {
+            "value": "分类"
+          },
+          "analysis": "垃圾分类便于回收处理。",
+          "difficulty": 2,
+          "knowledge_point": "化学与环境",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "二氧化碳排放过多会加剧温室效应。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "二氧化碳是主要温室气体。",
+          "difficulty": 3,
+          "knowledge_point": "化学与环境",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出两条减少水污染的做法。",
+          "answer": {
+            "value": "示例：生活污水经处理再排放；减少含磷洗涤剂使用"
+          },
+          "analysis": "评分要点：两条做法具体可行。",
+          "difficulty": 4,
+          "knowledge_point": "化学与环境",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "造成环境污染的问题有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 植树造林 ✗ 是保护环境。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "化学与环境",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "酸雨",
+            "水体污染",
+            "白色污染",
+            "植树造林"
+          ]
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-14T12:07:25+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "normalized": "难度 40/40/20 归一 + 主观题短答案补评分要点（2026-11-13 统一口径）",
+    "supplemented": "数值填空补可求值算式 0 道 / 数值填空改单选 2 道 / 补多选题 0 道（2 真 + 2 假，答案 2 项；2026-11-14 口径）",
+    "stem_dedup": "跨册同题干补册次前缀 0 道（2026-11-14 跨册去重口径）",
+    "duplicate_rewrites": "跨册同题定向改写 0 道（保留两侧题量，2026-11-14 口径）",
+    "chapter_scope": "全章域（本册无跨册重复章）",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

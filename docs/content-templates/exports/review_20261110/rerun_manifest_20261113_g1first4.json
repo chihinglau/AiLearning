@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "stamp": "20261113",
+  "out_dir": "docs/content-templates/daily_rerun",
+  "status": "pending_review（入库待评审后决策）",
+  "packs": [
+    {
+      "pack": "chinese_g1_first",
+      "book": "chinese/g1",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\chinese\\g1\\chinese_g1_first_20261113_book.json",
+      "stats": {
+        "chapters": 8,
+        "points": 32,
+        "questions": 160
+      },
+      "errors": []
+    },
+    {
+      "pack": "english_g1_first",
+      "book": "english/g1",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\english\\g1\\english_g1_first_20261113_book.json",
+      "stats": {
+        "chapters": 6,
+        "points": 24,
+        "questions": 120
+      },
+      "errors": []
+    },
+    {
+      "pack": "math_g1_first",
+      "book": "math/g1",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\math\\g1\\math_g1_first_20261113_book.json",
+      "stats": {
+        "chapters": 6,
+        "points": 24,
+        "questions": 120
+      },
+      "errors": []
+    },
+    {
+      "pack": "politics_g1_first",
+      "book": "politics/g1",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g1\\politics_g1_first_20261113_book.json",
+      "stats": {
+        "chapters": 4,
+        "points": 16,
+        "questions": 80
+      },
+      "errors": []
+    }
+  ]
+}

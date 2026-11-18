@@ -1,0 +1,82 @@
+{
+  "archived_at": "2026-11-14T11:12:07+08:00",
+  "reason": "这 2 道为 20261113 整册之外的旧版遗留题（App 不展示），删除前连同引用它们的 2 条练习记录一并存档",
+  "questions": [
+    {
+      "id": 1517,
+      "chapter_id": 219,
+      "subject": "english",
+      "q_type": "judge",
+      "content": "{\"stem\": \"Hi is a friendly way to say hello.\"}",
+      "options": "[{\"key\": \"T\", \"text\": \"\\u6b63\\u786e\"}, {\"key\": \"F\", \"text\": \"\\u9519\\u8bef\"}]",
+      "answer": "{\"value\": \"T\"}",
+      "analysis": "Hi 与 Hello 意思相同，语气更轻松，常用于同学之间，说法正确。",
+      "difficulty": 1,
+      "tags": "[]",
+      "created_at": "2026-11-08 01:24:05.993753",
+      "knowledge_point_id": 588,
+      "status": "published",
+      "source_type": "original",
+      "source_name": null,
+      "source_ref": null,
+      "copyright_owner": null,
+      "license_note": null,
+      "adapted_from": null
+    },
+    {
+      "id": 1529,
+      "chapter_id": 219,
+      "subject": "english",
+      "q_type": "multiple",
+      "content": "{\"stem\": \"Which words or phrases can greet people?\"}",
+      "options": "[{\"key\": \"A\", \"text\": \"Hello\"}, {\"key\": \"B\", \"text\": \"Hi\"}, {\"key\": \"C\", \"text\": \"Good morning\"}, {\"key\": \"D\", \"text\": \"Pencil\"}]",
+      "answer": "{\"value\": [\"A\", \"B\", \"C\"]}",
+      "analysis": "A Hello ✓；B Hi ✓；C Good morning 是早上问候 ✓；D Pencil 是文具名称，不能问候 ✗。故 A、B、C 成立，D 不成立。",
+      "difficulty": 3,
+      "tags": "[\"\\u591a\\u9009\"]",
+      "created_at": "2026-11-08 01:24:05.993753",
+      "knowledge_point_id": 588,
+      "status": "published",
+      "source_type": "original",
+      "source_name": null,
+      "source_ref": null,
+      "copyright_owner": null,
+      "license_note": null,
+      "adapted_from": null
+    }
+  ],
+  "student_question_records": [
+    {
+      "id": 2,
+      "user_id": 2,
+      "question_id": 1517,
+      "is_correct": 1,
+      "user_answer": "{\"value\": \"T\"}",
+      "duration_ms": 8962,
+      "wrong_reason": null,
+      "mastered": 0,
+      "attempted_at": "2026-11-11 02:34:02.555287",
+      "source": "practice",
+      "session_id": null,
+      "kp_weight": 1.0,
+      "attempt_id": null,
+      "client_key": "1794335642555244-2138913288"
+    },
+    {
+      "id": 1,
+      "user_id": 2,
+      "question_id": 1529,
+      "is_correct": 1,
+      "user_answer": "{\"value\": [\"A\", \"B\", \"C\"]}",
+      "duration_ms": 11754,
+      "wrong_reason": null,
+      "mastered": 0,
+      "attempted_at": "2026-11-11 02:33:47.899782",
+      "source": "practice",
+      "session_id": null,
+      "kp_weight": 1.0,
+      "attempt_id": null,
+      "client_key": "1794335627899678-2225141916"
+    }
+  ]
+}

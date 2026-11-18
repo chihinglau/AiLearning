@@ -1,0 +1,270 @@
+{
+  "stamp": "20261113",
+  "stage": "补齐 + 全量重跑 + 入库（dev 库） + P1P2P3 整改后覆盖入库",
+  "generated_at": "2026-11-14T10:51:22+08:00",
+  "scope": {
+    "books": 92,
+    "chapters": 618,
+    "points": 2472,
+    "questions": 11870,
+    "note": "11870 = 补齐前 11839 + 新增 31 道多选题（件数与题型口径均为整册文件值）"
+  },
+  "supplement": {
+    "numeric_fill_equations": 81,
+    "numeric_fill_to_choice": 186,
+    "multiple_added": 31,
+    "rules": "数值填空能反推算式就补算式（解析末尾「计算：a 运算符 b = 答案」），补不出（定义/年代/单位/含字母）转数值选项单选且每册至少留 1 道 fill；整册缺 multiple 时用本册判断题拼一道「1 真 + 3 假」，正确项固定 B"
+  },
+  "validate": {
+    "files": 92,
+    "passed": 92,
+    "failed": 0,
+    "errors": 0,
+    "warnings": 100,
+    "warnings_breakdown": {
+      "book_level_spec_not_applicable": 92,
+      "questions_over_200": 8
+    },
+    "before_warnings": 291,
+    "json": "exports/review_20261112/rerun_validate_all92c_20261113.json",
+    "log": "exports/review_20261112/rerun_validate_all92c_20261113.log"
+  },
+  "gate": {
+    "files": 92,
+    "passed": 92,
+    "failed": 0,
+    "scope": "daily_consolidated 下 92 份 20261113 整册文件",
+    "json": "exports/review_20261112/rerun_gate_consolidated92_20261114.json"
+  },
+  "import": {
+    "entry": "ops.ps1 -Action import-books -Stamp 20261113 -Overwrite -ConfirmToken I_KNOW -Unattended",
+    "files": 92,
+    "ok": 92,
+    "failed": 0,
+    "db_before": {
+      "textbooks": 146,
+      "chapters": 618,
+      "knowledge_points": 2041,
+      "questions": 6436
+    },
+    "db_after": {
+      "textbooks": 146,
+      "chapters": 618,
+      "knowledge_points": 3949,
+      "questions": 14311
+    },
+    "delta": {
+      "textbooks": 0,
+      "chapters": 0,
+      "knowledge_points": 1908,
+      "questions": 7875
+    },
+    "questions_updated_in_place": 3995,
+    "backup": "backend/build/backups/ailearning-backup-20261114-104945.db",
+    "report": "exports/automation_20261108_codebuddy/import_report_books_20261114_104954.json",
+    "rollback": "Copy-Item -Force \"D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\build\\backups\\ailearning-backup-20261114-104945.db\" \"D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\ailearning_dev.db\""
+  },
+  "verification": {
+    "每册 1 本教材": true,
+    "章节数与文件一致": 92,
+    "册内题量不少于文件": 92,
+    "整册可查": true
+  },
+  "open_items": [],
+  "cleanup_plan": "exports/review_20261112/legacy_questions_cleanup_plan_20261114.json",
+  "db_state": {
+    "textbooks": 146,
+    "chapters": 618,
+    "knowledge_points": 3067,
+    "questions": 11870
+  },
+  "cleanup": {
+    "legacy_questions_deleted": 2441,
+    "legacy_questions_kept": 0,
+    "orphan_points_deleted": 572,
+    "orphan_sections_deleted": 310,
+    "prerequisites_fixed": 17,
+    "record": "exports/automation_20261108_codebuddy/db_op_20261114_cleanup.json",
+    "pre_backup": "backend/build/backups/ailearning-backup-20261114-110121-preclean.db",
+    "practice_records_deleted": 2,
+    "referenced_archive": "exports/review_20261112/_archive_20261114/legacy_questions_referenced_20261114.json"
+  },
+  "file_cleanup": {
+    "quarantined_archived": 34,
+    "daily_rerun_old_stamp_archived": 73,
+    "daily_consolidated_old_stamp_archived": 43,
+    "archive_root": "exports/review_20261112/_archive_20261114/"
+  },
+  "validate_v2": {
+    "json": "exports/review_20261112/rerun_validate_consolidated92_20261114_v2.json",
+    "files": 92,
+    "passed": 92,
+    "failed": 0,
+    "errors": 0,
+    "warnings": 92,
+    "note": "整册口径不再报「200 题上限」，100 → 92"
+  },
+  "p123_round": {
+    "title": "P1/P2/P3 整改后重跑 + 覆盖入库 + 旧行清理（2026-11-14 11:52 轮）",
+    "updated_at": "2026-11-14T12:00:00+08:00",
+    "scope": "92 册 / 618 章 / 618 section + 2472 point / 11870 题",
+    "changes": {
+      "p1_option_duplicate": "chinese_g3_second 第 4 选项 偏偏起舞 → 偏篇起舞，解析补同音/形近说明",
+      "p2_multiple": "补位多选素材 1 真 + 3 假 → 2 真 + 2 假；正确项 A、C；answer 固定 2 项；knowledge_point 固定本章自己的点",
+      "p3_stem_dedup": "新增 disambiguate_stems()：跨册重复题干补「（学科+年级+册别·章名）」前缀；另改写 4 处泛化题干源头",
+      "p2_manual_true": "5 册判断题真项不足，补 MANUAL_TRUE_STATEMENTS 教材通行表述"
+    },
+    "rerun": {
+      "packs": 92,
+      "self_check_passed": 92,
+      "self_check_failed": 0,
+      "rounds": 3,
+      "regressions_fixed": [
+        "补位多选跨章挂知识点 → 4 册 section_shared_questions_0 门禁失败（改挂本章知识点后修复）",
+        "5 册判断题真项不足 → 缺 multiple 提醒（补教材通行表述后修复）"
+      ],
+      "log": "%TEMP%\\rerun92_v4.log"
+    },
+    "validate_v3": {
+      "json": "exports/review_20261112/compliance_validate_dailyrerun92_20261114_v3.json",
+      "files": 92,
+      "passed": 92,
+      "failed": 0,
+      "errors": 0,
+      "warnings": 92
+    },
+    "gate_v3": {
+      "json": "exports/review_20261112/compliance_gate_dailyrerun92_20261114_v3.json",
+      "files": 92,
+      "passed": 92,
+      "failed": 0,
+      "gate_exit": 0
+    },
+    "audit_after": {
+      "json": "exports/review_20261112/compliance_audit_g1g9_after_p123_20261114.json",
+      "errors": 0,
+      "warnings": 0,
+      "cleared": ["MULTIPLE_ANSWER_INVALID 31 → 0", "OPTION_DUPLICATE 1 → 0", "跨册重复题干 52 → 0"],
+      "false_positive_rule_fix": ["判断题完整短句（≥5 字、句末标点）放行", "「待定」仅在非「待定系数」时判占位"]
+    },
+    "consolidated_sync": {
+      "files": 92,
+      "md5_mismatch": 0
+    },
+    "import": {
+      "entry": "ops.ps1 -Action import-books -Stamp 20261113 -Overwrite -ConfirmToken I_KNOW -Unattended",
+      "ok": 92,
+      "failed": 0,
+      "created": 89,
+      "skipped": 11781,
+      "db_before": 11870,
+      "db_after": 11959,
+      "backup": "backend/build/backups/ailearning-backup-20261114-115223-pre-p123.db",
+      "report": "exports/automation_20261108_codebuddy/import_report_books_20261114_115232.json"
+    },
+    "stale_cleanup": {
+      "script": "_stale_check.py",
+      "criterion": "(chapter_id, stem, q_type) 不在当前整册文件集合",
+      "stale_found": 89,
+      "referenced": 0,
+      "deleted": 89,
+      "db_after": 11870,
+      "quick_check": "ok",
+      "fk_violations": 0,
+      "dryrun": "exports/review_20261112/stale_dryrun_after_p123_20261114.json",
+      "applied": "exports/review_20261112/stale_after_p123_20261114.json"
+    },
+    "verification": {
+      "script": "_verify_books_vs_db.py",
+      "books": 92,
+      "file_questions": 11870,
+      "db_questions": 11870,
+      "mismatched_books": 0,
+      "db_state": {"textbooks": 146, "chapters": 618, "knowledge_points": 3067, "questions": 11870},
+      "quick_check": "ok",
+      "fk_violations": 0
+    },
+    "open_items": [
+      "51 道跨册真实同题：已加册次前缀，题干可区分但题面内容仍相同，是否删一侧/改写待决策",
+      "history 与 politics 15+ 道同学科重合：是否按学科归属删一侧待决策"
+    ],
+    "dedup_round": {
+      "title": "跨册同题治理（去前缀比对 + 按学科归属定向改写）",
+      "detect_script": "_find_same_content.py",
+      "detected_before": {"groups": 47, "rows": 96,
+                          "跨学科": 18, "同年级同学科跨册": 5, "跨年级同学科": 24},
+      "policy": "只改题、不删题，守住 92 册 / 618 章 / 2472 点 / 11870 题基线；按学科归属改写不属于本学科的那一侧",
+      "mechanism": "_rerun_books.py DUPLICATE_REWRITES + apply_duplicate_rewrites()，留痕写 _rerun.duplicate_rewrites",
+      "rewritten": 24,
+      "detected_after": {"groups": 24, "rows": 49, "跨学科": 0, "同年级同学科跨册": 0, "跨年级同学科": 24},
+      "kept_reason": "跨年级同学科同素材属教材螺旋复现，按口径保留",
+      "validate_v4": {"json": "exports/review_20261112/compliance_validate_dailyrerun92_20261114_v4.json",
+                      "files": 92, "passed": 92, "failed": 0, "errors": 0, "warnings": 92},
+      "gate_v4": {"json": "exports/review_20261112/compliance_gate_dailyrerun92_20261114_v4.json",
+                  "files": 92, "passed": 92, "failed": 0},
+      "audit": {"json": "exports/review_20261112/compliance_audit_g1g9_after_dedup_20261114.json",
+                "errors": 0, "warnings": 0},
+      "import": {"created": 30, "skipped": 11840, "db_before": 11870, "db_after": 11900,
+                 "backup": "backend/build/backups/ailearning-backup-20261114-120148-pre-dedup.db"},
+      "stale_cleanup": {"found": 30, "referenced": 0, "deleted": 30, "db_after": 11870,
+                        "quick_check": "ok", "fk_violations": 0,
+                        "applied": "exports/review_20261112/stale_after_dedup_20261114.json"},
+      "verification": {"books": 92, "file_questions": 11870, "db_questions": 11870,
+                       "mismatched_books": 0,
+                       "db_state": {"textbooks": 146, "chapters": 618,
+                                    "knowledge_points": 3067, "questions": 11870}},
+      "remaining": [
+        "24 组跨年级同素材复现：判定为螺旋上升的合理复现，保留",
+        "physics g9 上册与下册同名同章（第十八章 电功率、第二十一章 电磁波及其应用）：骨架层面重复，需单独立项"
+      ],
+      "scope_fix_round": {
+        "title": "骨架纠偏：physics g9 上下册同名同章",
+        "diagnose_script": "_diagnose_chapter_dup.py",
+        "finding": "physics_g9（上册）与 physics_g9_second（下册）章列表完全相同（13–22 章各 10 章），骨架索引下册内容为上册整份复制；chinese 各年级单元名、math g4/g5/g6「总复习」同名属教材真实结构，非缺陷",
+        "fix": {
+          "packs_unchanged": true,
+          "mechanism": "_rerun_books.py CHAPTER_SCOPE + apply_chapter_scope()（在 load_packs 裁剪，_rerun.chapter_scope 留痕）",
+          "skeleton_script": "_fix_skeleton_physics_g9.py",
+          "skeleton_backup": "exports/review_20261112/rerun_skeleton_index_g1g9_unified_20261113_bak_20261114120640.json",
+          "db_cleanup_script": "_scope_cleanup.py"
+        },
+        "physics_g9": {
+          "first": {"before_chapters": 10, "after_chapters": 6, "after_questions": 109,
+                    "chapters": ["第十三章 内能", "第十四章 内能的利用", "第十五章 电流和电路",
+                                 "第十六章 电压 电阻", "第十七章 欧姆定律", "第十八章 电功率"]},
+          "second": {"before_chapters": 10, "after_chapters": 4, "after_questions": 80,
+                     "chapters": ["第十九章 生活用电", "第二十章 电与磁",
+                                  "第二十一章 电磁波及其应用", "第二十二章 能源与可持续发展"]}
+        },
+        "baseline_change": {
+          "books": {"before": 92, "after": 92},
+          "chapters": {"before": 618, "after": 608},
+          "knowledge_points_declared": {"before": 2472, "after": 2432},
+          "questions": {"before": 11870, "after": 11678},
+          "removed": "上册 4 章 / 72 题，下册 6 章 / 120 题（同一批章节两册各存一遍的重复部分）"
+        },
+        "checks": {
+          "self_check": {"files": 92, "passed": 92, "failed": 0},
+          "validate_v5": {"json": "exports/review_20261112/compliance_validate_dailyrerun92_20261114_v5.json",
+                          "passed": 92, "failed": 0, "errors": 0},
+          "gate_v5": {"json": "exports/review_20261112/compliance_gate_dailyrerun92_20261114_v5.json",
+                      "passed": 92, "failed": 0},
+          "same_content": {"groups": 24, "all": "跨年级同学科"},
+          "audit": {"json": "exports/review_20261112/compliance_audit_g1g9_after_scope_fix_20261114.json",
+                    "errors": 0, "warnings": 0}
+        },
+        "import": {"created": 0, "skipped": 11678,
+                   "backup": "backend/build/backups/ailearning-backup-20261114-120808.db"},
+        "scope_cleanup": {"chapters_deleted": 10, "questions_deleted": 192,
+                          "report": "exports/review_20261112/scope_cleanup_20261114.json"},
+        "stale_cleanup": {"found": 0, "report": "exports/review_20261112/stale_after_scope_20261114.json"},
+        "verification": {"books": 92, "file_questions": 11678, "db_questions": 11678,
+                         "mismatched_books": 0,
+                         "db_state": {"textbooks": 146, "chapters": 608,
+                                      "knowledge_points": 3067, "questions": 11678},
+                         "quick_check": "ok", "fk_violations": 0},
+        "new_finding": "knowledge_points 库内 3067 vs 整册声明 3040，其中 103 个节点不在声明集（physics g8/math g8/physics g9 等早期骨架遗留），建议单独立项做知识点对齐"
+      }
+    }
+  }
+}

@@ -1,9 +1,9 @@
 # 深爱学（AiLearning）用户角色定位及权限设计方案
 
 > **文档性质**：专项设计方案（可落地实施蓝本）
-> **版本**：v1.1（2026-11-12 按 CR-003 补考试域接口契约 §10.5、验收项 A11~A13 与权限点落地说明）
+> **版本**：v1.3（2026-11-14 按 CR-005 / D-09 v1.1 补 3 个真题审核接口权限与 A15 验收项；v1.2 按 CR-004 修订 §10.5 考试域接口契约并登记 A14）
 > **日期**：2026-11-06
-> **最后更新**：2026-11-12（对应主计划 CR-003 / §6.22）
+> **最后更新**：2026-11-14（对应主计划 CR-004 / §3.10 / §6.23）
 > **关联文档**：[k12-learning-app-design.md](./k12-learning-app-design.md)、[learning-page-design.md](./learning-page-design.md)、[subject-tutoring-and-m2-design.md](./subject-tutoring-and-m2-design.md)
 > **适用范围**：学生 / 家长 / 教师 / 学校管理员 / 平台运营与审核
 
@@ -734,8 +734,14 @@ WHERE grade IS NOT NULL;
 
 | 方法 | 路径 | 权限点 | 说明 |
 |---|---|---|---|
-| GET | `/api/exams` | `learn:exam:take` | 学生视角按 `student_visible_exam_clauses()` 过滤：`status=published`、年级匹配、非真题、非作业卷、班级卷限本班 |
-| GET | `/api/exams/past-papers` | `learn:exam:take` | 真题库；真题不进入通用考试列表，避免入口虚标 |
+| GET | `/api/exams` | 登录（`get_current_user`）+ 前端 `PermissionGate(learn:exam:take)` | v1.2 按 Q6/D-2 修订：后端不做权限依赖，仅由路由守卫与学生范围谓词约束；学生视角按 `student_visible_exam_clauses()` 过滤 `status=published`、年级匹配、非真题、非作业卷、班级卷限本班；v1.99 增 `subject/window_state/q/page` 可选参数，只收窄不改口径 |
+| GET | `/api/exams/past-papers` | 登录 + 前端 `PermissionGate(learn:exam:take)` | 真题库；真题不进入通用考试列表，避免入口虚标；v1.99 增 `grade/exam_type/attempt_status/q/page`，学生仍锁定 `current.grade` |
+| GET | `/api/exams/past-papers/filters` | 登录 + 前端路由守卫 | v1.99 新增：下发可用年份/学科/地区/年级/类型（D-09 §5.3） |
+| GET | `/api/exams/past-papers/{id}` | 登录 + 前端 `PermissionGate(learn:exam:take)` | v1.99 新增：真题来源详情，仅 `published` + `class_id is None`，不含答案，学生跨年级返回 403 |
+| GET | `/api/exams/attempts` | 登录 + 前端 `PermissionGate(learn:exam:report:self)` | v1.99 新增：仅返回本人 `ExamAttempt`；须注册在 `/{exam_id}` 前 |
+| POST | `/api/exams/{id}/submit-review` | `require_permission("content:exam:write")` | v1.3 / CR-005：仅真题草稿可提交，缺 `source_name` 返回 422 |
+| GET | `/api/exams/reviews` | `require_permission("content:review:decide")` | v1.3 / CR-005：静态路径须注册在 `/{exam_id}` 前；学生 403；默认只列 `pending_review` |
+| POST | `/api/exams/{id}/review` | `require_permission("content:review:decide")` | v1.3 / CR-005：`approve/reject/offline` 状态机，非法流转 409，动作写审计 |
 | GET | `/api/exams/blueprints` | `content:exam:write` | App 组卷表单的可选蓝图；**须注册在 `/{exam_id}` 之前**，学生调用返回 403 |
 | POST | `/api/exams/generate` | `content:exam:write` | 按蓝图组卷并发布（考试入库）；生成结果立即进入学生可见列表 |
 | POST | `/api/exams/mock` | `learn:assignment:create` | 派发班级同卷模考 |
@@ -811,6 +817,8 @@ App 侧入口：「我的 → 考试管理与发布」（`/exams/manage`）按 `
 | A11 | 考试域接口权限（CR-003 / L18） | 学生调用 `GET /api/exams/blueprints` 返回 403；`content:exam:write` 账号返回 200 且仅列 `is_active` 蓝图 |
 | A12 | 待办考试口径（CR-003 / L18） | 学生首页 `pending_exams` 与 `GET /api/exams` 完全一致；真题、作业卷、非本班班级卷、已交卷/关闭窗口卷不出现 |
 | A13 | 考试入库与派发（CR-003 / L20） | `POST /api/exams/generate` 生成的普通卷立即出现在学生待办与列表；`POST /api/exams/mock` 仅 `learn:assignment:create` 可调用 |
+| A14 | 考试中心与真题库权限（CR-004 / L21~L26） | `GET /api/exams`、`/past-papers` 及新增 `/past-papers/filters`、`/past-papers/{id}`、`/attempts` 均为登录 + 前端 `PermissionGate` 守卫；`/attempts` 只返回本人 attempt，真题详情学生跨年级返回 403；列表筛选不得放宽 `student_visible_exam_clauses()` |
+| A15 | 真题审核发布权限（CR-005 / L27） | `POST /api/exams/{id}/submit-review` 需 `content:exam:write`；`GET /api/exams/reviews` 与 `POST /api/exams/{id}/review` 需 `content:review:decide`，学生一律 403；审核动作写 `record_audit` 的 `exam.review.*`；前端 `/exams/reviews` 与「我的」入口按该权限显隐 |
 
 > A11~A13 与主计划 `L18~L20`、`R-A16` 交叉引用，实现证据见 `project-task-plan.md` §6.22。
 

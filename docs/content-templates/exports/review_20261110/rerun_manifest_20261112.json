@@ -5,6 +5,18 @@
   "status": "pending_review（入库待评审后决策）",
   "packs": [
     {
+      "pack": "biology_g7_second",
+      "book": "biology/g7",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\biology\\g7\\biology_g7_second_20261112_book.json",
+      "stats": {
+        "chapters": 9,
+        "points": 36,
+        "questions": 180
+      },
+      "errors": []
+    },
+    {
       "pack": "biology_g8_second",
       "book": "biology/g8",
       "status": "written",
@@ -25,6 +37,78 @@
         "chapters": 8,
         "points": 32,
         "questions": 144
+      },
+      "errors": []
+    },
+    {
+      "pack": "chinese_g2_second",
+      "book": "chinese/g2",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\chinese\\g2\\chinese_g2_second_20261112_book.json",
+      "stats": {
+        "chapters": 8,
+        "points": 32,
+        "questions": 160
+      },
+      "errors": []
+    },
+    {
+      "pack": "chinese_g3_second",
+      "book": "chinese/g3",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\chinese\\g3\\chinese_g3_second_20261112_book.json",
+      "stats": {
+        "chapters": 8,
+        "points": 32,
+        "questions": 160
+      },
+      "errors": []
+    },
+    {
+      "pack": "chinese_g4_second",
+      "book": "chinese/g4",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\chinese\\g4\\chinese_g4_second_20261112_book.json",
+      "stats": {
+        "chapters": 8,
+        "points": 32,
+        "questions": 160
+      },
+      "errors": []
+    },
+    {
+      "pack": "chinese_g5_second",
+      "book": "chinese/g5",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\chinese\\g5\\chinese_g5_second_20261112_book.json",
+      "stats": {
+        "chapters": 8,
+        "points": 32,
+        "questions": 160
+      },
+      "errors": []
+    },
+    {
+      "pack": "chinese_g6_second",
+      "book": "chinese/g6",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\chinese\\g6\\chinese_g6_second_20261112_book.json",
+      "stats": {
+        "chapters": 6,
+        "points": 24,
+        "questions": 120
+      },
+      "errors": []
+    },
+    {
+      "pack": "chinese_g7_second",
+      "book": "chinese/g7",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\chinese\\g7\\chinese_g7_second_20261112_book.json",
+      "stats": {
+        "chapters": 6,
+        "points": 24,
+        "questions": 120
       },
       "errors": []
     },
@@ -53,6 +137,78 @@
       "errors": []
     },
     {
+      "pack": "english_g2_second",
+      "book": "english/g2",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\english\\g2\\english_g2_second_20261112_book.json",
+      "stats": {
+        "chapters": 9,
+        "points": 36,
+        "questions": 180
+      },
+      "errors": []
+    },
+    {
+      "pack": "english_g3_second",
+      "book": "english/g3",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\english\\g3\\english_g3_second_20261112_book.json",
+      "stats": {
+        "chapters": 8,
+        "points": 32,
+        "questions": 160
+      },
+      "errors": []
+    },
+    {
+      "pack": "english_g4_second",
+      "book": "english/g4",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\english\\g4\\english_g4_second_20261112_book.json",
+      "stats": {
+        "chapters": 9,
+        "points": 36,
+        "questions": 180
+      },
+      "errors": []
+    },
+    {
+      "pack": "english_g5_second",
+      "book": "english/g5",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\english\\g5\\english_g5_second_20261112_book.json",
+      "stats": {
+        "chapters": 12,
+        "points": 48,
+        "questions": 240
+      },
+      "errors": []
+    },
+    {
+      "pack": "english_g6_second",
+      "book": "english/g6",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\english\\g6\\english_g6_second_20261112_book.json",
+      "stats": {
+        "chapters": 12,
+        "points": 48,
+        "questions": 240
+      },
+      "errors": []
+    },
+    {
+      "pack": "english_g7_second",
+      "book": "english/g7",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\english\\g7\\english_g7_second_20261112_book.json",
+      "stats": {
+        "chapters": 6,
+        "points": 24,
+        "questions": 120
+      },
+      "errors": []
+    },
+    {
       "pack": "english_g8_second",
       "book": "english/g8",
       "status": "written",
@@ -65,6 +221,18 @@
       "errors": []
     },
     {
+      "pack": "geography_g7_second",
+      "book": "geography/g7",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\geography\\g7\\geography_g7_second_20261112_book.json",
+      "stats": {
+        "chapters": 3,
+        "points": 12,
+        "questions": 60
+      },
+      "errors": []
+    },
+    {
       "pack": "geography_g8_second",
       "book": "geography/g8",
       "status": "written",
@@ -73,6 +241,18 @@
         "chapters": 5,
         "points": 20,
         "questions": 100
+      },
+      "errors": []
+    },
+    {
+      "pack": "history_g7_second",
+      "book": "history/g7",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\history\\g7\\history_g7_second_20261112_book.json",
+      "stats": {
+        "chapters": 3,
+        "points": 12,
+        "questions": 60
       },
       "errors": []
     },
@@ -97,6 +277,78 @@
         "chapters": 10,
         "points": 40,
         "questions": 180
+      },
+      "errors": []
+    },
+    {
+      "pack": "math_g2_second",
+      "book": "math/g2",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\math\\g2\\math_g2_second_20261112_book.json",
+      "stats": {
+        "chapters": 11,
+        "points": 44,
+        "questions": 220
+      },
+      "errors": []
+    },
+    {
+      "pack": "math_g3_second",
+      "book": "math/g3",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\math\\g3\\math_g3_second_20261112_book.json",
+      "stats": {
+        "chapters": 7,
+        "points": 28,
+        "questions": 140
+      },
+      "errors": []
+    },
+    {
+      "pack": "math_g4_second",
+      "book": "math/g4",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\math\\g4\\math_g4_second_20261112_book.json",
+      "stats": {
+        "chapters": 9,
+        "points": 36,
+        "questions": 180
+      },
+      "errors": []
+    },
+    {
+      "pack": "math_g5_second",
+      "book": "math/g5",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\math\\g5\\math_g5_second_20261112_book.json",
+      "stats": {
+        "chapters": 11,
+        "points": 44,
+        "questions": 220
+      },
+      "errors": []
+    },
+    {
+      "pack": "math_g6_second",
+      "book": "math/g6",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\math\\g6\\math_g6_second_20261112_book.json",
+      "stats": {
+        "chapters": 7,
+        "points": 28,
+        "questions": 140
+      },
+      "errors": []
+    },
+    {
+      "pack": "math_g7_second",
+      "book": "math/g7",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\math\\g7\\math_g7_second_20261112_book.json",
+      "stats": {
+        "chapters": 6,
+        "points": 24,
+        "questions": 120
       },
       "errors": []
     },
@@ -137,90 +389,6 @@
       "errors": []
     },
     {
-      "pack": "politics_g8_second",
-      "book": "politics/g8",
-      "status": "written",
-      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g8\\politics_g8_second_20261112_book.json",
-      "stats": {
-        "chapters": 5,
-        "points": 20,
-        "questions": 100
-      },
-      "errors": []
-    },
-    {
-      "pack": "history_g9_first",
-      "book": "history/g9",
-      "status": "written",
-      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\history\\g9\\history_g9_first_20261112_book.json",
-      "stats": {
-        "chapters": 7,
-        "points": 28,
-        "questions": 140
-      },
-      "errors": []
-    },
-    {
-      "pack": "politics_g5_first",
-      "book": "politics/g5",
-      "status": "written",
-      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g5\\politics_g5_first_20261112_book.json",
-      "stats": {
-        "chapters": 4,
-        "points": 16,
-        "questions": 80
-      },
-      "errors": []
-    },
-    {
-      "pack": "politics_g9_first",
-      "book": "politics/g9",
-      "status": "written",
-      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g9\\politics_g9_first_20261112_book.json",
-      "stats": {
-        "chapters": 4,
-        "points": 16,
-        "questions": 80
-      },
-      "errors": []
-    },
-    {
-      "pack": "chinese_g2_second",
-      "book": "chinese/g2",
-      "status": "written",
-      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\chinese\\g2\\chinese_g2_second_20261112_book.json",
-      "stats": {
-        "chapters": 8,
-        "points": 32,
-        "questions": 160
-      },
-      "errors": []
-    },
-    {
-      "pack": "english_g2_second",
-      "book": "english/g2",
-      "status": "written",
-      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\english\\g2\\english_g2_second_20261112_book.json",
-      "stats": {
-        "chapters": 9,
-        "points": 36,
-        "questions": 180
-      },
-      "errors": []
-    },
-    {
-      "pack": "math_g2_second",
-      "book": "math/g2",
-      "status": "written",
-      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\math\\g2\\math_g2_second_20261112_book.json",
-      "stats": {
-        "chapters": 11,
-        "points": 44,
-        "questions": 220
-      },
-      "errors": []
-    },
-    {
       "pack": "politics_g2_second",
       "book": "politics/g2",
       "status": "written",
@@ -233,46 +401,34 @@
       "errors": []
     },
     {
-      "pack": "biology_g7_second",
-      "book": "biology/g7",
+      "pack": "politics_g3_second",
+      "book": "politics/g3",
       "status": "written",
-      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\biology\\g7\\biology_g7_second_20261112_book.json",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g3\\politics_g3_second_20261112_book.json",
       "stats": {
-        "chapters": 9,
-        "points": 36,
-        "questions": 180
+        "chapters": 4,
+        "points": 16,
+        "questions": 80
       },
       "errors": []
     },
     {
-      "pack": "chinese_g7_second",
-      "book": "chinese/g7",
+      "pack": "politics_g4_second",
+      "book": "politics/g4",
       "status": "written",
-      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\chinese\\g7\\chinese_g7_second_20261112_book.json",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g4\\politics_g4_second_20261112_book.json",
       "stats": {
-        "chapters": 6,
-        "points": 24,
-        "questions": 120
+        "chapters": 4,
+        "points": 16,
+        "questions": 80
       },
       "errors": []
     },
     {
-      "pack": "english_g7_second",
-      "book": "english/g7",
+      "pack": "politics_g5_second",
+      "book": "politics/g5",
       "status": "written",
-      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\english\\g7\\english_g7_second_20261112_book.json",
-      "stats": {
-        "chapters": 6,
-        "points": 24,
-        "questions": 120
-      },
-      "errors": []
-    },
-    {
-      "pack": "geography_g7_second",
-      "book": "geography/g7",
-      "status": "written",
-      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\geography\\g7\\geography_g7_second_20261112_book.json",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g5\\politics_g5_second_20261112_book.json",
       "stats": {
         "chapters": 3,
         "points": 12,
@@ -281,26 +437,14 @@
       "errors": []
     },
     {
-      "pack": "history_g7_second",
-      "book": "history/g7",
+      "pack": "politics_g6_second",
+      "book": "politics/g6",
       "status": "written",
-      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\history\\g7\\history_g7_second_20261112_book.json",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g6\\politics_g6_second_20261112_book.json",
       "stats": {
-        "chapters": 3,
-        "points": 12,
-        "questions": 60
-      },
-      "errors": []
-    },
-    {
-      "pack": "math_g7_second",
-      "book": "math/g7",
-      "status": "written",
-      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\math\\g7\\math_g7_second_20261112_book.json",
-      "stats": {
-        "chapters": 6,
-        "points": 24,
-        "questions": 120
+        "chapters": 4,
+        "points": 16,
+        "questions": 80
       },
       "errors": []
     },
@@ -315,18 +459,18 @@
         "questions": 80
       },
       "errors": []
+    },
+    {
+      "pack": "politics_g8_second",
+      "book": "politics/g8",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g8\\politics_g8_second_20261112_book.json",
+      "stats": {
+        "chapters": 5,
+        "points": 20,
+        "questions": 100
+      },
+      "errors": []
     }
-  ],
-  "merged_from": [
-    "g1g8second",
-    "first3",
-    "g2second",
-    "g7second"
-  ],
-  "pack_count": 26,
-  "stats": {
-    "chapters": 164,
-    "points": 656,
-    "questions": 3197
-  }
+  ]
 }

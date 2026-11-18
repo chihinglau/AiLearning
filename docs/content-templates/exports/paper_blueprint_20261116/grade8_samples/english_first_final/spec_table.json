@@ -1,0 +1,466 @@
+{
+  "exam_id": null,
+  "title": "8年级英语上册期末卷（自主题库生成）",
+  "subject": "english",
+  "grade": 8,
+  "exam_type": "final",
+  "blueprint_code": "g8_english_final",
+  "blueprint_name": "8年级英语期末模拟卷（自主题库生成）",
+  "total_score": 100,
+  "time_limit_min": 120,
+  "question_count": 39,
+  "actual_score_total": 100.0,
+  "score_matches": true,
+  "knowledge_point_count": 27,
+  "sections": [
+    {
+      "section_index": 0,
+      "section_name": "一、听力",
+      "q_type": "listening",
+      "band": "easy",
+      "planned_count": 10,
+      "planned_score": 20.0,
+      "actual_count": 10,
+      "actual_score": 20.0,
+      "knowledge_points": [
+        "U1 水的相关词汇",
+        "U1 被动语态的用法",
+        "U1 说明水的用途",
+        "U2 数字生活词汇",
+        "U2 网络的好处与问题",
+        "U2 谈论网络用途",
+        "U3 描述现象与推断",
+        "U3 科学探究词汇",
+        "U4 变化相关词汇",
+        "U5 表达建议与分工"
+      ],
+      "chapters": [
+        "Unit 1 Water",
+        "Unit 2 Digital life",
+        "Unit 3 Curious minds",
+        "Unit 4 Then and now",
+        "Unit 5 Teamwork"
+      ],
+      "questions": [
+        {
+          "question_id": 17521,
+          "score": 2.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "U2 数字生活词汇",
+          "chapter": "Unit 2 Digital life"
+        },
+        {
+          "question_id": 17532,
+          "score": 2.0,
+          "q_type": "listening",
+          "difficulty": 1,
+          "knowledge_point": "U3 描述现象与推断",
+          "chapter": "Unit 3 Curious minds"
+        },
+        {
+          "question_id": 17549,
+          "score": 2.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "U4 变化相关词汇",
+          "chapter": "Unit 4 Then and now"
+        },
+        {
+          "question_id": 17522,
+          "score": 2.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "U2 谈论网络用途",
+          "chapter": "Unit 2 Digital life"
+        },
+        {
+          "question_id": 17503,
+          "score": 2.0,
+          "q_type": "listening",
+          "difficulty": 1,
+          "knowledge_point": "U1 水的相关词汇",
+          "chapter": "Unit 1 Water"
+        },
+        {
+          "question_id": 17508,
+          "score": 2.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "U1 被动语态的用法",
+          "chapter": "Unit 1 Water"
+        },
+        {
+          "question_id": 17531,
+          "score": 2.0,
+          "q_type": "listening",
+          "difficulty": 1,
+          "knowledge_point": "U3 科学探究词汇",
+          "chapter": "Unit 3 Curious minds"
+        },
+        {
+          "question_id": 17560,
+          "score": 2.0,
+          "q_type": "listening",
+          "difficulty": 1,
+          "knowledge_point": "U5 表达建议与分工",
+          "chapter": "Unit 5 Teamwork"
+        },
+        {
+          "question_id": 17523,
+          "score": 2.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "U2 网络的好处与问题",
+          "chapter": "Unit 2 Digital life"
+        },
+        {
+          "question_id": 17509,
+          "score": 2.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "U1 说明水的用途",
+          "chapter": "Unit 1 Water"
+        }
+      ]
+    },
+    {
+      "section_index": 1,
+      "section_name": "二、单项选择",
+      "q_type": "choice",
+      "band": "easy",
+      "planned_count": 12,
+      "planned_score": 24.0,
+      "actual_count": 12,
+      "actual_score": 24.0,
+      "knowledge_points": [
+        "U3 说明实验步骤",
+        "U4 一般过去时",
+        "U5 合作相关词汇",
+        "U6 will 表预测",
+        "U6 未来生活词汇",
+        "英语·基础语法单项选择·按单元·变式一",
+        "英语·基础语法单项选择·按单元·变式三",
+        "英语·基础语法单项选择·按单元·变式二",
+        "英语·基础语法单项选择·按单元·变式四",
+        "英语·短文阅读理解·按单元·变式一",
+        "英语·短文阅读理解·按单元·变式三",
+        "英语·短文阅读理解·按单元·变式二"
+      ],
+      "chapters": [
+        "Unit 1 Water",
+        "Unit 2 Digital life",
+        "Unit 3 Curious minds",
+        "Unit 4 Then and now",
+        "Unit 5 Teamwork",
+        "Unit 6 Life in the future"
+      ],
+      "questions": [
+        {
+          "question_id": 20737,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "英语·基础语法单项选择·按单元·变式一",
+          "chapter": "Unit 6 Life in the future"
+        },
+        {
+          "question_id": 21727,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式一",
+          "chapter": "Unit 3 Curious minds"
+        },
+        {
+          "question_id": 10725,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "U5 合作相关词汇",
+          "chapter": "Unit 5 Teamwork"
+        },
+        {
+          "question_id": 10750,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "U6 will 表预测",
+          "chapter": "Unit 6 Life in the future"
+        },
+        {
+          "question_id": 10745,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "U6 未来生活词汇",
+          "chapter": "Unit 6 Life in the future"
+        },
+        {
+          "question_id": 10695,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "U3 说明实验步骤",
+          "chapter": "Unit 3 Curious minds"
+        },
+        {
+          "question_id": 10710,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "U4 一般过去时",
+          "chapter": "Unit 4 Then and now"
+        },
+        {
+          "question_id": 20738,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "英语·基础语法单项选择·按单元·变式二",
+          "chapter": "Unit 6 Life in the future"
+        },
+        {
+          "question_id": 20721,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "英语·基础语法单项选择·按单元·变式三",
+          "chapter": "Unit 3 Curious minds"
+        },
+        {
+          "question_id": 21713,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式三",
+          "chapter": "Unit 1 Water"
+        },
+        {
+          "question_id": 20734,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "英语·基础语法单项选择·按单元·变式四",
+          "chapter": "Unit 5 Teamwork"
+        },
+        {
+          "question_id": 21722,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式二",
+          "chapter": "Unit 2 Digital life"
+        }
+      ]
+    },
+    {
+      "section_index": 2,
+      "section_name": "三、词汇与句型填空",
+      "q_type": "fill",
+      "band": "medium",
+      "planned_count": 10,
+      "planned_score": 20.0,
+      "actual_count": 10,
+      "actual_score": 20.0,
+      "knowledge_points": [
+        "U1 水的相关词汇",
+        "U1 被动语态的用法",
+        "U2 数字生活词汇",
+        "U2 谈论网络用途",
+        "U3 科学探究词汇",
+        "英语·词汇填空（中英对应）·按单元·变式一",
+        "英语·词汇填空（中英对应）·按单元·变式三",
+        "英语·词汇填空（中英对应）·按单元·变式四"
+      ],
+      "chapters": [
+        "Unit 1 Water",
+        "Unit 2 Digital life",
+        "Unit 3 Curious minds",
+        "Unit 6 Life in the future"
+      ],
+      "questions": [
+        {
+          "question_id": 20741,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式一",
+          "chapter": "Unit 6 Life in the future"
+        },
+        {
+          "question_id": 22114,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式四",
+          "chapter": "Unit 2 Digital life"
+        },
+        {
+          "question_id": 22115,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式三",
+          "chapter": "Unit 3 Curious minds"
+        },
+        {
+          "question_id": 17511,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "U1 水的相关词汇",
+          "chapter": "Unit 1 Water"
+        },
+        {
+          "question_id": 17539,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "U3 科学探究词汇",
+          "chapter": "Unit 3 Curious minds"
+        },
+        {
+          "question_id": 17526,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "U2 谈论网络用途",
+          "chapter": "Unit 2 Digital life"
+        },
+        {
+          "question_id": 22122,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式四",
+          "chapter": "Unit 6 Life in the future"
+        },
+        {
+          "question_id": 22113,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式三",
+          "chapter": "Unit 2 Digital life"
+        },
+        {
+          "question_id": 17525,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "U2 数字生活词汇",
+          "chapter": "Unit 2 Digital life"
+        },
+        {
+          "question_id": 17512,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "U1 被动语态的用法",
+          "chapter": "Unit 1 Water"
+        }
+      ]
+    },
+    {
+      "section_index": 3,
+      "section_name": "四、阅读理解",
+      "q_type": "choice",
+      "band": "medium",
+      "planned_count": 6,
+      "planned_score": 18.0,
+      "actual_count": 6,
+      "actual_score": 18.0,
+      "knowledge_points": [
+        "U1 提出节水建议",
+        "U2 数字生活词汇",
+        "U3 描述现象与推断",
+        "英语·短文阅读理解·按单元·变式三",
+        "英语·短文阅读理解·按单元·变式二",
+        "英语·短文阅读理解·按单元·变式四"
+      ],
+      "chapters": [
+        "Unit 1 Water",
+        "Unit 2 Digital life",
+        "Unit 3 Curious minds",
+        "Unit 5 Teamwork",
+        "Unit 6 Life in the future"
+      ],
+      "questions": [
+        {
+          "question_id": 21742,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式四",
+          "chapter": "Unit 5 Teamwork"
+        },
+        {
+          "question_id": 17514,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 5,
+          "knowledge_point": "U1 提出节水建议",
+          "chapter": "Unit 1 Water"
+        },
+        {
+          "question_id": 17544,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 4,
+          "knowledge_point": "U3 描述现象与推断",
+          "chapter": "Unit 3 Curious minds"
+        },
+        {
+          "question_id": 21740,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式二",
+          "chapter": "Unit 5 Teamwork"
+        },
+        {
+          "question_id": 17529,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 4,
+          "knowledge_point": "U2 数字生活词汇",
+          "chapter": "Unit 2 Digital life"
+        },
+        {
+          "question_id": 21747,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式三",
+          "chapter": "Unit 6 Life in the future"
+        }
+      ]
+    },
+    {
+      "section_index": 4,
+      "section_name": "五、书面表达",
+      "q_type": "composition",
+      "band": "hard",
+      "planned_count": 1,
+      "planned_score": 18.0,
+      "actual_count": 1,
+      "actual_score": 18.0,
+      "knowledge_points": [],
+      "chapters": [
+        "Unit 1 Water"
+      ],
+      "questions": [
+        {
+          "question_id": 17877,
+          "score": 18.0,
+          "q_type": "composition",
+          "difficulty": 4,
+          "knowledge_point": "",
+          "chapter": "Unit 1 Water"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-11-17T15:45:26.984455+00:00"
+}

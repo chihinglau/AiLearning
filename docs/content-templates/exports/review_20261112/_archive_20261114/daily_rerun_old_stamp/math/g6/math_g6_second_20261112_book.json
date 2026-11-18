@@ -1,0 +1,2677 @@
+{
+  "subject": "math",
+  "grade": 6,
+  "version": "北师大版",
+  "semester": "second",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "一 圆柱与圆锥",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "圆柱的特征",
+      "parent": "一 圆柱与圆锥",
+      "order_index": 1,
+      "explanation": "圆柱有两个相同的圆形底面和一个曲面，侧面展开是长方形。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "圆柱的表面积",
+      "parent": "一 圆柱与圆锥",
+      "order_index": 2,
+      "explanation": "圆柱表面积等于侧面积加两个底面积。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "圆柱的体积",
+      "parent": "一 圆柱与圆锥",
+      "order_index": 3,
+      "explanation": "圆柱体积等于底面积乘高。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "圆锥的特征与体积",
+      "parent": "一 圆柱与圆锥",
+      "order_index": 4,
+      "explanation": "圆锥有一个圆形底面和一个顶点，体积是等底等高圆柱的三分之一。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "二 比例",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "比例的意义",
+      "parent": "二 比例",
+      "order_index": 1,
+      "explanation": "表示两个比相等的式子叫比例。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "比例的基本性质",
+      "parent": "二 比例",
+      "order_index": 2,
+      "explanation": "比例中两个外项积等于两个内项积。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "解比例与实际问题",
+      "parent": "二 比例",
+      "order_index": 3,
+      "explanation": "用比例解决按比例分配等问题。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "比例尺",
+      "parent": "二 比例",
+      "order_index": 4,
+      "explanation": "图上距离与实际距离的比叫比例尺。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "三 图形的运动",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "平移与旋转",
+      "parent": "三 图形的运动",
+      "order_index": 1,
+      "explanation": "平移是沿直线移动，旋转是绕定点转动，都不改变形状大小。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "轴对称图形",
+      "parent": "三 图形的运动",
+      "order_index": 2,
+      "explanation": "沿一条直线对折后两部分重合的图形叫轴对称图形。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "图形的放大与缩小",
+      "parent": "三 图形的运动",
+      "order_index": 3,
+      "explanation": "按一定比放大或缩小，形状不变、大小改变。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "图形运动的综合应用",
+      "parent": "三 图形的运动",
+      "order_index": 4,
+      "explanation": "用平移、旋转、轴对称设计图案。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "四 正比例与反比例",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "正比例的意义",
+      "parent": "四 正比例与反比例",
+      "order_index": 1,
+      "explanation": "两种相关联的量，比值一定时成正比例。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "反比例的意义",
+      "parent": "四 正比例与反比例",
+      "order_index": 2,
+      "explanation": "两种相关联的量，乘积一定时成反比例。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "正反比例的判断",
+      "parent": "四 正比例与反比例",
+      "order_index": 3,
+      "explanation": "先看是否相关联，再看比值或乘积是否一定。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "比例的应用",
+      "parent": "四 正比例与反比例",
+      "order_index": 4,
+      "explanation": "用正反比例关系解决实际问题。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "数学好玩",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "神奇的莫比乌斯带",
+      "parent": "数学好玩",
+      "order_index": 1,
+      "explanation": "把纸带扭转半圈后粘合，只有一个面和一条边。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "设计包装方案",
+      "parent": "数学好玩",
+      "order_index": 2,
+      "explanation": "通过比较不同包装方式选择最省材料的方案。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "数学在生活中的应用",
+      "parent": "数学好玩",
+      "order_index": 3,
+      "explanation": "购物折扣、行程安排都可用数学解决。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "数学阅读与表达",
+      "parent": "数学好玩",
+      "order_index": 4,
+      "explanation": "用数学语言清楚表达推理过程。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "整理与复习",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "圆柱圆锥的整理",
+      "parent": "整理与复习",
+      "order_index": 1,
+      "explanation": "区分表面积与体积的公式和用途。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "比例的整理",
+      "parent": "整理与复习",
+      "order_index": 2,
+      "explanation": "比例、比例尺与正反比例相互关联。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "图形运动的整理",
+      "parent": "整理与复习",
+      "order_index": 3,
+      "explanation": "平移、旋转、轴对称与放大缩小的区别。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "综合应用",
+      "parent": "整理与复习",
+      "order_index": 4,
+      "explanation": "综合运用本册知识解决实际问题。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "总复习",
+      "order_index": 7
+    },
+    {
+      "node_type": "point",
+      "name": "图形与几何总复习",
+      "parent": "总复习",
+      "order_index": 1,
+      "explanation": "圆柱圆锥的表面积体积是重点。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "比与比例总复习",
+      "parent": "总复习",
+      "order_index": 2,
+      "explanation": "比例的性质与正反比例判断。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "图形运动总复习",
+      "parent": "总复习",
+      "order_index": 3,
+      "explanation": "四种图形运动的特征与用途。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "综合演练",
+      "parent": "总复习",
+      "order_index": 4,
+      "explanation": "融合多知识点的综合问题。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "一 圆柱与圆锥",
+      "order_index": 1,
+      "summary": "圆柱圆锥的特征、表面积与体积。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "圆柱的侧面展开后一般是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "圆柱侧面展开为长方形。",
+          "difficulty": 2,
+          "knowledge_point": "圆柱的特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "长方形",
+            "三角形",
+            "圆形",
+            "扇形"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "圆柱有两个相同的（ ）底面。",
+          "answer": {
+            "value": "圆形"
+          },
+          "analysis": "圆柱底面是两个圆。",
+          "difficulty": 2,
+          "knowledge_point": "圆柱的特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "圆柱的高是两个底面之间的距离。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "高即两底面距离。",
+          "difficulty": 3,
+          "knowledge_point": "圆柱的特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "圆柱的特征有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 圆柱没有顶点。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "圆柱的特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "两个圆形底面",
+            "一个曲面",
+            "侧面展开是长方形",
+            "四个顶点"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说生活中有哪些物体是圆柱形。",
+          "answer": {
+            "value": "示例：水杯、易拉罐、铅笔杆、圆木柱都是圆柱形，它们的上下是两个相同的圆，侧面是曲面。"
+          },
+          "analysis": "评分要点：举例 + 特征对应。",
+          "difficulty": 4,
+          "knowledge_point": "圆柱的特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "底面半径 2 厘米、高 5 厘米的圆柱，侧面积是（ ）平方厘米。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "侧面积为 2πrh，即 2π×2×5 得 20π。",
+          "difficulty": 2,
+          "knowledge_point": "圆柱的表面积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "20π",
+            "10π",
+            "4π",
+            "40π"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "圆柱表面积等于侧面积加上（ ）个底面积。",
+          "answer": {
+            "value": "2"
+          },
+          "analysis": "上下两个底面。",
+          "difficulty": 2,
+          "knowledge_point": "圆柱的表面积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "无盖的圆柱形水桶只需要算一个底面积。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "无盖只算一个底。",
+          "difficulty": 3,
+          "knowledge_point": "圆柱的表面积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "求圆柱表面积时要算（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 圆柱没有棱。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "圆柱的表面积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "侧面积",
+            "上底面积",
+            "下底面积",
+            "棱长总和"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "一个圆柱底面直径 4 分米、高 6 分米，求它的侧面积。",
+          "answer": {
+            "value": "示例：底面周长是 4π 分米，侧面积等于底面周长乘高，4π 乘 6 得 24π 平方分米。"
+          },
+          "analysis": "评分要点：周长×高 + 结果。",
+          "difficulty": 4,
+          "knowledge_point": "圆柱的表面积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "底面积 10 平方厘米、高 6 厘米的圆柱体积是（ ）立方厘米。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "10 乘 6 得 60。",
+          "difficulty": 2,
+          "knowledge_point": "圆柱的体积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "60",
+            "16",
+            "30",
+            "600"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "底面半径 1 分米、高 3 分米的圆柱体积是（ ）π 立方分米。",
+          "answer": {
+            "value": "3"
+          },
+          "analysis": "底面积 π，乘 3 得 3π。",
+          "difficulty": 2,
+          "knowledge_point": "圆柱的体积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "圆柱的体积也可以用底面积乘高求得。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "体积等于底面积乘高。",
+          "difficulty": 3,
+          "knowledge_point": "圆柱的体积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "求圆柱体积时需要的条件有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓ 有半径可先求底面积；D ✗ 侧面积不直接用于求体积。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "圆柱的体积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "底面积",
+            "高",
+            "底面半径",
+            "侧面积"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "一个圆柱形水桶底面半径 2 分米、高 5 分米，求容积。",
+          "answer": {
+            "value": "示例：底面积为 4π 平方分米，乘高 5 得 20π 立方分米，约合 62.8 立方分米，也就是约 62.8 升。"
+          },
+          "analysis": "评分要点：底面积 × 高 + 换算。",
+          "difficulty": 4,
+          "knowledge_point": "圆柱的体积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "圆锥的体积等于等底等高圆柱体积的（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "圆锥是圆柱的三分之一。",
+          "difficulty": 2,
+          "knowledge_point": "圆锥的特征与体积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "三分之一",
+            "二分之一",
+            "两倍",
+            "三倍"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "圆锥有（ ）个顶点。",
+          "answer": {
+            "value": "1"
+          },
+          "analysis": "圆锥只有一个顶点。",
+          "difficulty": 2,
+          "knowledge_point": "圆锥的特征与体积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "圆锥的侧面展开后是一个扇形。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "圆锥侧面展开为扇形。",
+          "difficulty": 3,
+          "knowledge_point": "圆锥的特征与体积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于圆锥说法正确的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 只有一个底面。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "圆锥的特征与体积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "有一个圆形底面",
+            "有一个顶点",
+            "体积是等底等高圆柱的三分之一",
+            "有两个底面"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "一个圆锥底面积 9 平方厘米、高 4 厘米，求体积。",
+          "answer": {
+            "value": "示例：圆锥体积等于三分之一乘底面积乘高，即 9 乘 4 得 36，再除以 3 得 12 立方厘米。"
+          },
+          "analysis": "评分要点：三分之一 + 结果。",
+          "difficulty": 4,
+          "knowledge_point": "圆锥的特征与体积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "二 比例",
+      "order_index": 2,
+      "summary": "比例的意义与基本性质，解比例。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "下面能组成比例的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "2 比 3 等于 4 比 6。",
+          "difficulty": 2,
+          "knowledge_point": "比例的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "2 比 3 和 4 比 6",
+            "2 比 3 和 3 比 4",
+            "1 比 2 和 2 比 5",
+            "3 比 4 和 5 比 6"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "表示两个比相等的式子叫（ ）。",
+          "answer": {
+            "value": "比例"
+          },
+          "analysis": "比例的定义。",
+          "difficulty": 2,
+          "knowledge_point": "比例的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "比例中两个外项的积等于两个内项的积。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "比例基本性质。",
+          "difficulty": 3,
+          "knowledge_point": "比例的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "判断两个比能否组成比例的方法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 大小无关。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "比例的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "求比值比较",
+            "化简比比较",
+            "用内项积与外项积比较",
+            "看数字大小"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "判断 3 比 4 和 9 比 12 能否组成比例并说明理由。",
+          "answer": {
+            "value": "示例：能组成比例。因为 3 比 4 的比值是 0.75，9 比 12 的比值也是 0.75，两个比相等，所以可以写成 3 比 4 等于 9 比 12。"
+          },
+          "analysis": "评分要点：比值 + 判断。",
+          "difficulty": 4,
+          "knowledge_point": "比例的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "在比例 2 比 3 等于 4 比 6 中，外项的积是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "外项 2 和 6 相乘得 12。",
+          "difficulty": 2,
+          "knowledge_point": "比例的基本性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "12",
+            "8",
+            "6",
+            "18"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "比例 5 比 x 等于 10 比 16 中，x 等于（ ）。",
+          "answer": {
+            "value": "8"
+          },
+          "analysis": "由 5×16 等于 10×x 得 x 等于 8。",
+          "difficulty": 2,
+          "knowledge_point": "比例的基本性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "根据比例的基本性质可以解比例。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "解比例依靠这一性质。",
+          "difficulty": 3,
+          "knowledge_point": "比例的基本性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于比例基本性质说法正确的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 小数分数比例同样适用。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "比例的基本性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "外项积等于内项积",
+            "可以据此求未知项",
+            "适用于所有比例",
+            "只适用于整数比例"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "解比例 3 比 8 等于 x 比 24。",
+          "answer": {
+            "value": "示例：由内项积等于外项积得 8x 等于 3 乘 24，即 8x 等于 72，两边除以 8 得 x 等于 9。"
+          },
+          "analysis": "评分要点：性质运用 + 结果。",
+          "difficulty": 4,
+          "knowledge_point": "比例的基本性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "把 60 按 2 比 3 分成两份，两份分别是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "总份数 5，每份 12，得 24 与 36。",
+          "difficulty": 2,
+          "knowledge_point": "解比例与实际问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "24 和 36",
+            "20 和 40",
+            "30 和 30",
+            "12 和 48"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "把 90 按 4 比 5 分配，较小的一份是（ ）。",
+          "answer": {
+            "value": "40"
+          },
+          "analysis": "总份数 9，每份 10，得 40 与 50。",
+          "difficulty": 2,
+          "knowledge_point": "解比例与实际问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "按比例分配时先要求出总份数。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "总份数是关键。",
+          "difficulty": 3,
+          "knowledge_point": "解比例与实际问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "解比例问题的步骤有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 不可靠。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "解比例与实际问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "设未知数",
+            "根据比例列式",
+            "用比例性质求解",
+            "随意估计"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "一种药水按药液与水 1 比 50 配制，要配 1020 克药水需要药液多少克？",
+          "answer": {
+            "value": "示例：总份数是 51，每份 1020 除以 51 得 20 克，药液占 1 份，所以需要 20 克药液。"
+          },
+          "analysis": "评分要点：份数法 + 结果。",
+          "difficulty": 4,
+          "knowledge_point": "解比例与实际问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "比例尺 1 比 1000 表示图上 1 厘米相当于实际（ ）厘米。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "1 比 1000 即实际放大 1000 倍。",
+          "difficulty": 2,
+          "knowledge_point": "比例尺",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "1000",
+            "100",
+            "10",
+            "10000"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "图上距离 5 厘米、比例尺 1 比 200，实际距离是（ ）厘米。",
+          "answer": {
+            "value": "1000"
+          },
+          "analysis": "5 乘 200 得 1000。",
+          "difficulty": 2,
+          "knowledge_point": "比例尺",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "比例尺是一个比，没有单位。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "比例尺是比，无单位。",
+          "difficulty": 3,
+          "knowledge_point": "比例尺",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于比例尺说法正确的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 比例尺越大表示缩小越少。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "比例尺",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "图上距离比实际距离",
+            "可以求实际距离",
+            "可以求图上距离",
+            "比例尺越大实际越大"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "一幅地图比例尺是 1 比 500000，图上两地相距 4 厘米，实际相距多少千米？",
+          "answer": {
+            "value": "示例：4 乘 500000 得 2000000 厘米，2000000 厘米等于 20000 米，也就是 20 千米。"
+          },
+          "analysis": "评分要点：换算 + 单位。",
+          "difficulty": 4,
+          "knowledge_point": "比例尺",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "三 图形的运动",
+      "order_index": 3,
+      "summary": "平移、旋转、轴对称与图形的放大缩小。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "图形绕一个点转动一定角度，这种运动叫（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "绕点转动是旋转。",
+          "difficulty": 2,
+          "knowledge_point": "平移与旋转",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "旋转",
+            "平移",
+            "放大",
+            "翻折"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "平移和旋转都不改变图形的形状和（ ）。",
+          "answer": {
+            "value": "大小"
+          },
+          "analysis": "只改变位置或方向。",
+          "difficulty": 2,
+          "knowledge_point": "平移与旋转",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "平移后图形的方向不变。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "平移不改变方向。",
+          "difficulty": 3,
+          "knowledge_point": "平移与旋转",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "属于图形运动的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 不是运动。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "平移与旋转",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "平移",
+            "旋转",
+            "轴对称",
+            "涂色"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说生活中你见过的旋转现象，并指出旋转中心。",
+          "answer": {
+            "value": "示例：电风扇的扇叶绕轴旋转，旋转中心是扇叶的转轴；钟表指针绕表盘中心旋转，中心就是表盘圆心。"
+          },
+          "analysis": "评分要点：现象 + 中心。",
+          "difficulty": 4,
+          "knowledge_point": "平移与旋转",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面一定是轴对称图形的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "正方形有对称轴。",
+          "difficulty": 2,
+          "knowledge_point": "轴对称图形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "正方形",
+            "任意三角形",
+            "平行四边形",
+            "任意梯形"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "圆有（ ）条对称轴。",
+          "answer": {
+            "value": "无数"
+          },
+          "analysis": "任意直径所在直线都是对称轴。",
+          "difficulty": 2,
+          "knowledge_point": "轴对称图形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "等腰三角形是轴对称图形。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "对称轴为底边的高所在直线。",
+          "difficulty": 3,
+          "knowledge_point": "轴对称图形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "属于轴对称图形的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 一般平行四边形无对称轴。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "轴对称图形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "正方形",
+            "圆",
+            "等腰三角形",
+            "任意平行四边形"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说怎样判断一个图形是不是轴对称图形。",
+          "answer": {
+            "value": "示例：可以先折一折，看能否找到一条直线把图形分成完全重合的两部分；能找到就是对轴图形，那条折痕就是对称轴。"
+          },
+          "analysis": "评分要点：判断方法清楚。",
+          "difficulty": 4,
+          "knowledge_point": "轴对称图形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "把图形按 2 比 1 放大，各边长度变为原来的（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "2 比 1 表示放大 2 倍。",
+          "difficulty": 2,
+          "knowledge_point": "图形的放大与缩小",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "2 倍",
+            "一半",
+            "不变",
+            "4 倍"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "按 1 比 3 缩小，边长变为原来的（ ）（填三分之一）。",
+          "answer": {
+            "value": "三分之一"
+          },
+          "analysis": "1 比 3 表示缩小为三分之一。",
+          "difficulty": 2,
+          "knowledge_point": "图形的放大与缩小",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "放大或缩小后的图形与原图形形状相同。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "形状不变是相似关系。",
+          "difficulty": 3,
+          "knowledge_point": "图形的放大与缩小",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "图形放大缩小时会发生变化的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓ 都随比例变化；D ✗ 角度不变。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "图形的放大与缩小",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "边长",
+            "周长",
+            "面积",
+            "内角度数"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "一个长方形长 3 厘米、宽 2 厘米，按 3 比 1 放大后面积是多少？",
+          "answer": {
+            "value": "示例：放大后长 9 厘米、宽 6 厘米，面积是 9 乘 6 得 54 平方厘米，是原来的 9 倍。"
+          },
+          "analysis": "评分要点：边长算对 + 面积。",
+          "difficulty": 4,
+          "knowledge_point": "图形的放大与缩小",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "设计对称图案最常用的运动是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "对称设计常用轴对称。",
+          "difficulty": 2,
+          "knowledge_point": "图形运动的综合应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "轴对称",
+            "放大",
+            "缩小",
+            "平移以外的随机运动"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "用平移可以把一个基本图形排成有规律的（ ）（填图案）。",
+          "answer": {
+            "value": "图案"
+          },
+          "analysis": "平移可排列成图案。",
+          "difficulty": 2,
+          "knowledge_point": "图形运动的综合应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "组合使用多种运动可以创作更丰富的图案。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "组合运动丰富效果。",
+          "difficulty": 3,
+          "knowledge_point": "图形运动的综合应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "设计图案时可以运用（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 不属设计方法。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "图形运动的综合应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "平移",
+            "旋转",
+            "轴对称",
+            "随意涂改"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你会怎样用图形运动设计一块花砖图案。",
+          "answer": {
+            "value": "示例：先画一个简单的菱形作基本图形，把它平移排列成四格，再用轴对称方式镜像一次，形成上下对称的花砖纹样。"
+          },
+          "analysis": "评分要点：基本图形 + 运动方式。",
+          "difficulty": 4,
+          "knowledge_point": "图形运动的综合应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "四 正比例与反比例",
+      "order_index": 4,
+      "summary": "正比例与反比例的意义与判断。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "单价一定时，总价与数量成（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "总价比数量等于单价一定，成正比例。",
+          "difficulty": 2,
+          "knowledge_point": "正比例的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "正比例",
+            "反比例",
+            "不成比例",
+            "无法判断"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "两种量成正比例时，它们的（ ）一定。",
+          "answer": {
+            "value": "比值"
+          },
+          "analysis": "正比例比值一定。",
+          "difficulty": 2,
+          "knowledge_point": "正比例的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "路程一定时，速度与时间成正比例。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "此时成反比例。",
+          "difficulty": 3,
+          "knowledge_point": "正比例的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "成正比例的量有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓ 都是比值一定；D ✗ 是反比例。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "正比例的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "单价一定时的总价与数量",
+            "速度一定时的路程与时间",
+            "工作效率一定时的工作量与时间",
+            "路程一定时的速度与时间"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "判断：圆的周长与直径成正比例吗？说明理由。",
+          "answer": {
+            "value": "示例：成正比例。因为周长除以直径总等于圆周率，比值一定，所以圆的周长与直径成正比例。"
+          },
+          "analysis": "评分要点：判断 + 理由。",
+          "difficulty": 4,
+          "knowledge_point": "正比例的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "路程一定时，速度与时间成（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "速度乘时间等于路程一定。",
+          "difficulty": 2,
+          "knowledge_point": "反比例的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "反比例",
+            "正比例",
+            "不成比例",
+            "无法确定"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "两种量成反比例时，它们的（ ）一定。",
+          "answer": {
+            "value": "乘积"
+          },
+          "analysis": "反比例乘积一定。",
+          "difficulty": 2,
+          "knowledge_point": "反比例的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "总价一定时，单价与数量成反比例。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "单价乘数量等于总价。",
+          "difficulty": 3,
+          "knowledge_point": "反比例的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "成反比例的量有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓ 乘积都一定；D ✗ 是正比例。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "反比例的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "路程一定时的速度与时间",
+            "总价一定时的单价与数量",
+            "长方形面积一定时的长与宽",
+            "单价一定时的总价与数量"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "判断：长方形周长一定时，长与宽成反比例吗？",
+          "answer": {
+            "value": "示例：不成反比例。因为长加宽的和一定，而长与宽的乘积并不一定，所以不符合反比例的条件。"
+          },
+          "analysis": "评分要点：条件辨析。",
+          "difficulty": 4,
+          "knowledge_point": "反比例的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "判断正反比例的关键是看（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "看比值或乘积。",
+          "difficulty": 2,
+          "knowledge_point": "正反比例的判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "比值或乘积是否一定",
+            "数字大小",
+            "单位是否相同",
+            "是否都是整数"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "判断比例关系要先看两种量是否相（ ）（填关联）。",
+          "answer": {
+            "value": "关联"
+          },
+          "analysis": "先看是否相关联。",
+          "difficulty": 2,
+          "knowledge_point": "正反比例的判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "两种量不相关联就谈不上成比例。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "关联是前提。",
+          "difficulty": 3,
+          "knowledge_point": "正反比例的判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "判断正反比例的步骤有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 大小无关。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "正反比例的判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "判断是否相关联",
+            "写出数量关系式",
+            "看比值或乘积是否一定",
+            "比较数值大小"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "判断：每袋水泥重量一定时，水泥总重量与袋数成什么比例？",
+          "answer": {
+            "value": "示例：成正比例。因为总重量除以袋数等于每袋重量，比值一定，所以水泥总重量与袋数成正比例。"
+          },
+          "analysis": "评分要点：关系式 + 判断。",
+          "difficulty": 4,
+          "knowledge_point": "正反比例的判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "用正比例解决问题时，常列（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "正比例问题列比例式。",
+          "difficulty": 2,
+          "knowledge_point": "比例的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "比例式",
+            "加减式",
+            "平均数式",
+            "面积式"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "3 小时行 180 千米，照这样 5 小时行（ ）千米。",
+          "answer": {
+            "value": "300"
+          },
+          "analysis": "每小时 60 千米，5 小时 300 千米。",
+          "difficulty": 2,
+          "knowledge_point": "比例的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "解比例应用题后要检验结果是否符合实际。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "检验是必要步骤。",
+          "difficulty": 3,
+          "knowledge_point": "比例的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "能用比例解决的问题有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 与数量无关。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "比例的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "按比例分配",
+            "速度路程问题",
+            "工程效率问题",
+            "背诵古诗"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "4 台机器 6 小时加工一批零件，若工作效率相同，3 台机器需要多少小时？",
+          "answer": {
+            "value": "示例：总工作量相当于 24 台时，3 台机器需要 24 除以 3 等于 8 小时。台数减少时间增加，是反比例关系。"
+          },
+          "analysis": "评分要点：反比例判断 + 计算。",
+          "difficulty": 4,
+          "knowledge_point": "比例的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "数学好玩",
+      "order_index": 5,
+      "summary": "在活动与实践中运用数学思想方法。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "莫比乌斯带的特点是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "莫比乌斯带只有一个面。",
+          "difficulty": 2,
+          "knowledge_point": "神奇的莫比乌斯带",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "只有一个面",
+            "有两个面",
+            "没有面",
+            "有四个面"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "制作莫比乌斯带要把纸带扭转（ ）（填半圈）。",
+          "answer": {
+            "value": "半圈"
+          },
+          "analysis": "扭转半圈后粘合。",
+          "difficulty": 2,
+          "knowledge_point": "神奇的莫比乌斯带",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "沿莫比乌斯带中线剪开，会得到一个更长的环。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "剪开后连成一个长环。",
+          "difficulty": 3,
+          "knowledge_point": "神奇的莫比乌斯带",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "莫比乌斯带的性质有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 与性质相反。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "神奇的莫比乌斯带",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "只有一个面",
+            "只有一条边",
+            "剪开后会形成更长的环",
+            "有两个面两条边"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说莫比乌斯带在生活或生产中的一种用途。",
+          "answer": {
+            "value": "示例：传送带做成莫比乌斯带形状，可以让带子的两面都均匀磨损，延长使用寿命，也有人用它设计循环标志。"
+          },
+          "analysis": "评分要点：用途具体 + 合理。",
+          "difficulty": 4,
+          "knowledge_point": "神奇的莫比乌斯带",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "比较包装方案是否省材料，主要看（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "比较表面积。",
+          "difficulty": 2,
+          "knowledge_point": "设计包装方案",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "所需包装纸面积",
+            "包装颜色",
+            "包装顺序",
+            "商品价格"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "包装时让重叠的面尽量（ ），可以节省材料。",
+          "answer": {
+            "value": "大"
+          },
+          "analysis": "重叠面大则外表面积小。",
+          "difficulty": 2,
+          "knowledge_point": "设计包装方案",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "同样数量的物品，不同包装方式所需材料可能不同。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "排列方式影响用纸。",
+          "difficulty": 3,
+          "knowledge_point": "设计包装方案",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "设计包装方案要考虑（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 与用材无关。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "设计包装方案",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "物品数量",
+            "排列方式",
+            "重叠面积",
+            "包装者年龄"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "把 8 个相同的小正方体包成一包，你会怎样排列更省纸？",
+          "answer": {
+            "value": "示例：把 8 个摆成 2 乘 2 乘 2 的大正方体，接触面最多、外表面积最小，比排成一排或长条更省包装纸。"
+          },
+          "analysis": "评分要点：方案 + 理由。",
+          "difficulty": 4,
+          "knowledge_point": "设计包装方案",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "商品打八折表示按原价的（ ）付款。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "八折即原价的八成。",
+          "difficulty": 2,
+          "knowledge_point": "数学在生活中的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "八成",
+            "两成",
+            "八成加价",
+            "原价不变"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "原价 200 元的商品打七折，现价是（ ）元。",
+          "answer": {
+            "value": "140"
+          },
+          "analysis": "200 乘 0.7 得 140。",
+          "difficulty": 2,
+          "knowledge_point": "数学在生活中的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "打折后的价格一定低于原价。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "折扣价低于原价。",
+          "difficulty": 3,
+          "knowledge_point": "数学在生活中的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "生活中用到百分数或折扣的地方有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 与数值无关。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "数学在生活中的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "商店促销",
+            "银行利率",
+            "成绩统计",
+            "写作文描写风景"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "同一商品甲店打八折、乙店满 100 减 25，原价 200 元时哪家更便宜？",
+          "answer": {
+            "value": "示例：甲店 200 乘 0.8 得 160 元；乙店满 100 减 25，200 元可减 50，付 150 元。所以乙店更便宜。"
+          },
+          "analysis": "评分要点：分别计算 + 比较。",
+          "difficulty": 4,
+          "knowledge_point": "数学在生活中的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "清楚表达解题思路的关键是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "每步目的要说清。",
+          "difficulty": 2,
+          "knowledge_point": "数学阅读与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "说清每一步在求什么",
+            "只说答案",
+            "用很多符号",
+            "写得越长越好"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "表达推理过程时要用到「因为」「所以」这类（ ）词。",
+          "answer": {
+            "value": "关联"
+          },
+          "analysis": "关联词使逻辑清楚。",
+          "difficulty": 2,
+          "knowledge_point": "数学阅读与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "同样的结论可以用不同的方法得到。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "方法可多样。",
+          "difficulty": 3,
+          "knowledge_point": "数学阅读与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "好的数学表达应做到（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 推理不可省。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "数学阅读与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "步骤清楚",
+            "理由充分",
+            "结论明确",
+            "省去所有推理"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用三句话说明为什么圆柱体积等于底面积乘高。",
+          "answer": {
+            "value": "示例：因为圆柱可以看作许多薄圆片叠起来。每一薄片的体积是底面积乘厚度。把所有薄片的厚度加起来就是高，所以总体积等于底面积乘高。"
+          },
+          "analysis": "评分要点：推理连贯。",
+          "difficulty": 4,
+          "knowledge_point": "数学阅读与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "整理与复习",
+      "order_index": 6,
+      "summary": "梳理圆柱圆锥、比例与图形运动的知识。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "求圆柱形水桶能装多少水，是求（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "装水量对应容积。",
+          "difficulty": 2,
+          "knowledge_point": "圆柱圆锥的整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "容积",
+            "表面积",
+            "侧面积",
+            "周长"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "圆锥体积公式中要乘（ ）（填三分之一）。",
+          "answer": {
+            "value": "三分之一"
+          },
+          "analysis": "圆锥是圆柱的三分之一。",
+          "difficulty": 2,
+          "knowledge_point": "圆柱圆锥的整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "圆柱表面积包括侧面和两个底面。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "表面积含三部分。",
+          "difficulty": 3,
+          "knowledge_point": "圆柱圆锥的整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于圆柱圆锥说法正确的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 公式不同。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "圆柱圆锥的整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "等底等高时圆柱体积是圆锥的 3 倍",
+            "圆柱侧面展开是长方形",
+            "圆锥侧面展开是扇形",
+            "两者体积公式相同"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说圆锥体积为什么是等底等高圆柱的三分之一。",
+          "answer": {
+            "value": "示例：用等底等高的空圆锥装满沙子倒进圆柱，需要倒三次才装满，实验说明圆锥体积正好是圆柱的三分之一。"
+          },
+          "analysis": "评分要点：实验依据 + 结论。",
+          "difficulty": 4,
+          "knowledge_point": "圆柱圆锥的整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "比例尺属于（ ）的应用。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "比例尺是比的应用。",
+          "difficulty": 2,
+          "knowledge_point": "比例的整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "比和比例",
+            "图形运动",
+            "统计",
+            "分数加减"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "正比例中比值一定，反比例中（ ）一定。",
+          "answer": {
+            "value": "乘积"
+          },
+          "analysis": "反比例乘积一定。",
+          "difficulty": 2,
+          "knowledge_point": "比例的整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "按比例分配问题可以用总份数法解决。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "总份数法常用。",
+          "difficulty": 3,
+          "knowledge_point": "比例的整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "本册比例知识包括（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 比例的意义；B ✓ 比例的基本性质；C ✓ 比例尺；D ✗ 分数加减法不属于本单元比例内容。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "比例的整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "比例的意义",
+            "比例的基本性质",
+            "比例尺",
+            "分数的加减法"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说比例尺、正比例、反比例三者的区别。",
+          "answer": {
+            "value": "示例：比例尺是图上距离与实际距离的比；正比例是两种量的比值一定；反比例是两种量的乘积一定，三者的数量关系不同。"
+          },
+          "analysis": "评分要点：三者区分。",
+          "difficulty": 4,
+          "knowledge_point": "比例的整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "只改变大小不改变形状的运动是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "放大缩小改变大小。",
+          "difficulty": 2,
+          "knowledge_point": "图形运动的整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "放大与缩小",
+            "平移",
+            "旋转",
+            "轴对称"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "平移、旋转、轴对称都不改变图形的（ ）（填大小）。",
+          "answer": {
+            "value": "大小"
+          },
+          "analysis": "这三种运动大小不变。",
+          "difficulty": 2,
+          "knowledge_point": "图形运动的整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "轴对称图形一定有对称轴。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "对称轴是定义要求。",
+          "difficulty": 3,
+          "knowledge_point": "图形运动的整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "属于图形运动的是（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 计算不是运动。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "图形运动的整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "平移",
+            "旋转",
+            "放大",
+            "计算周长"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说平移与旋转的区别。",
+          "answer": {
+            "value": "示例：平移是图形沿某个方向整体移动，方向不变；旋转是图形绕一个定点转动一定角度，方向会改变，两者都不改变形状大小。"
+          },
+          "analysis": "评分要点：区别清楚。",
+          "difficulty": 4,
+          "knowledge_point": "图形运动的整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "解决综合问题时通常先（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先理清关系。",
+          "difficulty": 2,
+          "knowledge_point": "综合应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "理清数量关系",
+            "先写答案",
+            "随便列式",
+            "先算单位"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "解决问题后要把结果代回（ ）（填原题）检验。",
+          "answer": {
+            "value": "原题"
+          },
+          "analysis": "检验应回原题。",
+          "difficulty": 2,
+          "knowledge_point": "综合应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "同一问题可能涉及多种数量关系。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "综合题常含多种关系。",
+          "difficulty": 3,
+          "knowledge_point": "综合应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "综合解题应注意（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 应写过程。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "综合应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "单位统一",
+            "分清每步所求",
+            "结果符合实际",
+            "只写数字"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "一个圆柱形水桶底面直径 4 分米、高 5 分米，能装多少升水？",
+          "answer": {
+            "value": "示例：半径是 2 分米，底面积为 4π 平方分米，乘高 5 得 20π 立方分米，约 62.8 立方分米，即约 62.8 升。"
+          },
+          "analysis": "评分要点：半径 + 体积 + 换算。",
+          "difficulty": 4,
+          "knowledge_point": "综合应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "总复习",
+      "order_index": 7,
+      "summary": "全册知识梳理与综合演练。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "等底等高的圆柱与圆锥体积比是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "圆柱是圆锥的 3 倍。",
+          "difficulty": 2,
+          "knowledge_point": "图形与几何总复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "3 比 1",
+            "1 比 3",
+            "2 比 1",
+            "1 比 2"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "圆柱侧面积等于底面周长乘（ ）（填高）。",
+          "answer": {
+            "value": "高"
+          },
+          "analysis": "侧面积等于周长乘高。",
+          "difficulty": 2,
+          "knowledge_point": "图形与几何总复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "圆柱表面积越大，体积一定越大。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "两者不成正比。",
+          "difficulty": 3,
+          "knowledge_point": "图形与几何总复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "几何部分的重点内容有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 本册未学。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "图形与几何总复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "圆柱表面积",
+            "圆柱体积",
+            "圆锥体积",
+            "负数运算"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说求圆柱表面积与体积各需要哪些条件。",
+          "answer": {
+            "value": "示例：求表面积需要底面半径和高，先求周长算侧面积再加两个底面积；求体积需要底面积和高，两者相乘即可。"
+          },
+          "analysis": "评分要点：条件 + 方法。",
+          "difficulty": 4,
+          "knowledge_point": "图形与几何总复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "比例中内项积与外项积的关系是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "内项积等于外项积。",
+          "difficulty": 2,
+          "knowledge_point": "比与比例总复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "相等",
+            "内项积大",
+            "外项积大",
+            "无关"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "路程一定时，速度与时间成（ ）比例。",
+          "answer": {
+            "value": "反"
+          },
+          "analysis": "速度乘时间一定，成反比例。",
+          "difficulty": 2,
+          "knowledge_point": "比与比例总复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "两个比只要数值相等就能组成比例。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "比值相等即能成比例。",
+          "difficulty": 3,
+          "knowledge_point": "比与比例总复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与比例有关的内容有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 与比例无直接关系。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "比与比例总复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "比例的基本性质",
+            "解比例",
+            "比例尺",
+            "圆的面积公式"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说判断正反比例的完整思路。",
+          "answer": {
+            "value": "示例：先看两种量是否相关联；再写出它们的数量关系式；最后看比值是否一定（成正比例）或乘积是否一定（成反比例），两者都不满足就不成比例。"
+          },
+          "analysis": "评分要点：三步完整。",
+          "difficulty": 4,
+          "knowledge_point": "比与比例总复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "设计花边图案时最常用的运动组合是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "平移加对称常用。",
+          "difficulty": 2,
+          "knowledge_point": "图形运动总复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "平移与轴对称",
+            "放大与缩小",
+            "只旋转",
+            "随意移动"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "把图形按 1 比 2 缩小，边长变为原来的（ ）（填二分之一）。",
+          "answer": {
+            "value": "二分之一"
+          },
+          "analysis": "1 比 2 即缩小一半。",
+          "difficulty": 2,
+          "knowledge_point": "图形运动总复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "图形放大后内角度数不变。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "放大不改变角度。",
+          "difficulty": 3,
+          "knowledge_point": "图形运动总复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于图形运动说法正确的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 放大不改变形状。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "图形运动总复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "平移不改变方向",
+            "旋转改变方向",
+            "轴对称可以制作对称图案",
+            "放大改变形状"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "举例说明图形运动在实际生活中的应用。",
+          "answer": {
+            "value": "示例：瓷砖花纹用平移和对称排列；风车叶片体现旋转；照片放大和缩印就是按比例放大缩小图形。"
+          },
+          "analysis": "评分要点：两个以上实例。",
+          "difficulty": 4,
+          "knowledge_point": "图形运动总复习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "综合题中先确定单位是否统一的目的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "单位统一是正确计算前提。",
+          "difficulty": 2,
+          "knowledge_point": "综合演练",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "保证计算正确",
+            "让题目变长",
+            "显得规范",
+            "便于抄写"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "把 120 按 3 比 5 分配，两份是 45 和（ ）。",
+          "answer": {
+            "value": "75"
+          },
+          "analysis": "总份数 8，每份 15，得 45 与 75。",
+          "difficulty": 2,
+          "knowledge_point": "综合演练",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "综合题的结果要符合实际意义，如长度不能为负。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "结果须符合实际。",
+          "difficulty": 3,
+          "knowledge_point": "综合演练",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "综合演练能帮助我们（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 不能代替。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "综合演练",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "整合所学知识",
+            "发现薄弱环节",
+            "提高解题能力",
+            "代替所有练习"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "一个圆锥形沙堆底面积 12 平方米、高 3 米，把这些沙铺在宽 4 米、厚 0.5 米的路面上，能铺多长？",
+          "answer": {
+            "value": "示例：沙的体积是三分之一乘 12 乘 3 得 12 立方米；路面每米用沙 4 乘 0.5 得 2 立方米，12 除以 2 得 6，所以能铺 6 米。"
+          },
+          "analysis": "评分要点：体积 + 除法 + 结果。",
+          "difficulty": 4,
+          "knowledge_point": "综合演练",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-13T10:06:09+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "normalized": "难度 40/40/20 归一 + 主观题短答案补评分要点（2026-11-13 统一口径）",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

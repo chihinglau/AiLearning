@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "_template": true,
+  "_note": "结构模板：questions 为空即为模板态，校验器只给 warning；真实卷必须逐题填写原件内容，禁止 AI 生成或拼装。",
+  "papers": [
+    {
+      "paper_uid": "SZ-2024-2025-G8-EN-NS-END",
+      "grade": 8,
+      "subject": "english",
+      "school_year": "2024-2025",
+      "term": "second",
+      "exam_type": "final",
+      "region": "南山区",
+      "school": "区统考",
+      "source_tier": "L3",
+      "source_name": "21世纪教育网（2024-2025学年八年级下学期期末英语试卷汇总·深圳分区）",
+      "source_url": "https://mip.21cnjy.com/b/312089",
+      "license_note": "平台付费下载；仅限本项目内部教研与组卷参考，不对外分发原卷。",
+      "file_ref": "raw/SZ-2024-2025-G8-EN-NS-END.pdf",
+      "file_sha256": "",
+      "total_score": 100,
+      "duration_min": 90,
+      "question_count": 0,
+      "audio_missing": true,
+      "ocr_status": "pending",
+      "recorder": "",
+      "reviewer": "",
+      "reviewed_at": "",
+      "questions": [
+        {
+          "no": "1",
+          "type": "single_choice",
+          "stem": "<按原件抄录，禁止改写>",
+          "options": ["A. ...", "B. ...", "C. ...", "D. ..."],
+          "answer": "",
+          "score": 1,
+          "kp_code": "",
+          "section": "I. 听力/笔试 第几部分"
+        }
+      ]
+    }
+  ]
+}

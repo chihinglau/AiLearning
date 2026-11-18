@@ -1,0 +1,1541 @@
+{
+  "subject": "politics",
+  "grade": 1,
+  "version": "部编版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第一单元 我是小学生啦",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "我成了小学生",
+      "parent": "第一单元 我是小学生啦",
+      "order_index": 1,
+      "explanation": "上小学后身份变了，要按时到校、自己背书包，学会新的作息。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "认识我们的学校",
+      "parent": "第一单元 我是小学生啦",
+      "order_index": 2,
+      "explanation": "教室里上课，图书角看书，操场活动，各处有各处的用法。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "认识新同学",
+      "parent": "第一单元 我是小学生啦",
+      "order_index": 3,
+      "explanation": "主动打招呼、互相介绍，能更快交到朋友。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "学校里的安全",
+      "parent": "第一单元 我是小学生啦",
+      "order_index": 4,
+      "explanation": "走楼梯靠右、不推挤、不带危险物品，才安全。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二单元 过好校园生活",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "上课要认真",
+      "parent": "第二单元 过好校园生活",
+      "order_index": 1,
+      "explanation": "坐正、看老师、听清楚，作业才能做对。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "排队与课间活动",
+      "parent": "第二单元 过好校园生活",
+      "order_index": 2,
+      "explanation": "排队按顺序、课间做安全游戏，不追跑打闹。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "和同学一起玩",
+      "parent": "第二单元 过好校园生活",
+      "order_index": 3,
+      "explanation": "一起玩要轮流、要分享、要遵守约定。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "遇到问题会求助",
+      "parent": "第二单元 过好校园生活",
+      "order_index": 4,
+      "explanation": "迷路、受伤、被欺负时，要及时找老师或家长帮忙。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第三单元 养成良好习惯",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "按时作息",
+      "parent": "第三单元 养成良好习惯",
+      "order_index": 1,
+      "explanation": "早睡早起、按时上学，白天才有精神。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "讲究卫生",
+      "parent": "第三单元 养成良好习惯",
+      "order_index": 2,
+      "explanation": "饭前便后洗手、勤刷牙、不乱扔垃圾，少生病。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "自己事情自己做",
+      "parent": "第三单元 养成良好习惯",
+      "order_index": 3,
+      "explanation": "整理书包、收拾桌面、自己穿衣，都是独立的表现。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "珍惜时间不拖拉",
+      "parent": "第三单元 养成良好习惯",
+      "order_index": 4,
+      "explanation": "先做该做的事，做完再玩，不拖到最后一刻。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第四单元 我们讲文明",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "说话有礼貌",
+      "parent": "第四单元 我们讲文明",
+      "order_index": 1,
+      "explanation": "常说「请」「谢谢」「对不起」，让人听着舒服。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "待人友善不欺负人",
+      "parent": "第四单元 我们讲文明",
+      "order_index": 2,
+      "explanation": "不嘲笑、不推打别人，看到同学有困难愿意帮。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "爱护公物",
+      "parent": "第四单元 我们讲文明",
+      "order_index": 3,
+      "explanation": "课桌、墙壁、图书、体育器材都是大家的，要一起爱护。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "爱护环境与垃圾分类",
+      "parent": "第四单元 我们讲文明",
+      "order_index": 4,
+      "explanation": "垃圾分开放、不随地丢弃，校园才干净。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一单元 我是小学生啦",
+      "order_index": 1,
+      "summary": "认识新身份、熟悉新学校，学会与新同学相处。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "成为小学生后，最应该做到的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "小学生要守时守纪律，按时到校上课。",
+          "difficulty": 2,
+          "knowledge_point": "我成了小学生",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "按时到校，按时上课",
+            "想什么时候去就什么时候去",
+            "上课随便走动",
+            "作业交给家长写"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "上小学了，我要自己背（ ），自己的东西自己管。",
+          "answer": {
+            "value": "书包"
+          },
+          "analysis": "自己的书包自己背，是小学生的样子。",
+          "difficulty": 2,
+          "knowledge_point": "我成了小学生",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "上小学和上幼儿园的要求完全一样。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "小学作息更规律，要求更明确，不完全一样。",
+          "difficulty": 3,
+          "knowledge_point": "我成了小学生",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你成为小学生后，自己独立做了哪件事。",
+          "answer": {
+            "value": "示例：每天自己整理书包，早上自己穿好校服"
+          },
+          "analysis": "评分要点：事情真实、是自己独立完成的。",
+          "difficulty": 4,
+          "knowledge_point": "我成了小学生",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "哪些是小学生该做到的事？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A 按时到校 ✓；B 举手发言 ✓；C 乱跑乱喊 ✗ 违反纪律；D 自己收拾 ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "我成了小学生",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "按时到校",
+            "上课举手发言",
+            "乱跑乱喊",
+            "自己收拾书包"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "想借书看，应该去（ ）",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "看书、借书的地方是图书角或图书馆。",
+          "difficulty": 2,
+          "knowledge_point": "认识我们的学校",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "操场",
+            "图书角或图书馆",
+            "食堂",
+            "医务室"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "身体不舒服，可以去学校的（ ）室。",
+          "answer": {
+            "value": "医务"
+          },
+          "analysis": "校医在医务室帮同学处理伤病。",
+          "difficulty": 2,
+          "knowledge_point": "认识我们的学校",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "在操场上可以跑步、做操，也可以踢球。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "操场是运动场地，可以跑步、做操、踢球。",
+          "difficulty": 3,
+          "knowledge_point": "认识我们的学校",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出学校里两个场所的名字，并说说在那里做什么。",
+          "answer": {
+            "value": "示例：图书角可以看书；操场可以跑步"
+          },
+          "analysis": "评分要点：两个场所真实，用途说明正确。",
+          "difficulty": 4,
+          "knowledge_point": "认识我们的学校",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "在图书角应该怎样做？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓ 归位好习惯；C 大声聊天 ✗ 影响别人；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "认识我们的学校",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "安静看书",
+            "看完把书放回原位",
+            "大声聊天",
+            "爱护书本不乱画"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "第一次见到新同学，最好的做法是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "主动打招呼、互相介绍，容易成为朋友。",
+          "difficulty": 2,
+          "knowledge_point": "认识新同学",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "主动打招呼，说说自己的名字",
+            "躲着不说话",
+            "抢他的东西",
+            "给他起外号"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "和新同学说话，要先说一声（ ）你好。",
+          "answer": {
+            "value": "你好"
+          },
+          "analysis": "见面先问好，是最基本的礼貌。",
+          "difficulty": 2,
+          "knowledge_point": "认识新同学",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "给同学起难听的外号是开玩笑，不算错。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "起外号会伤害同学，不能做。",
+          "difficulty": 3,
+          "knowledge_point": "认识新同学",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写一两句话介绍自己，可以说名字和爱好。",
+          "answer": {
+            "value": "示例：我叫小明，我喜欢画画和踢球。"
+          },
+          "analysis": "评分要点：包含名字，内容真实、友好。",
+          "difficulty": 4,
+          "knowledge_point": "认识新同学",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "怎样做容易交到新朋友？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 不听别人说 ✗ 不友好；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "认识新同学",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "主动打招呼",
+            "一起玩游戏",
+            "只说自己的事不听别人说",
+            "记住同学的名字"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "上下楼梯时应该（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "靠右慢走不推挤，才不会摔倒受伤。",
+          "difficulty": 2,
+          "knowledge_point": "学校里的安全",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "靠右慢走，不推挤",
+            "跑着往下冲",
+            "坐在楼梯上玩",
+            "几个人并排挤着走"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "在走廊里要慢慢走，不能（ ）。",
+          "answer": {
+            "value": "奔跑"
+          },
+          "analysis": "走廊人多，奔跑容易撞到别人。",
+          "difficulty": 2,
+          "knowledge_point": "学校里的安全",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "把小刀带到学校玩很安全。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "刀具等危险物品不能带到学校。",
+          "difficulty": 3,
+          "knowledge_point": "学校里的安全",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出两条在校园里要注意的安全规则。",
+          "answer": {
+            "value": "示例：上下楼梯靠右走；不追跑打闹"
+          },
+          "analysis": "评分要点：两条都是真实可做的安全规则。",
+          "difficulty": 4,
+          "knowledge_point": "学校里的安全",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "在校园里，下面哪些做法能保护自己？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 滑扶手 ✗ 容易摔伤；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "学校里的安全",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "靠右上下楼梯",
+            "课间慢走",
+            "从楼梯扶手上滑下来",
+            "不玩尖锐物品"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第二单元 过好校园生活",
+      "order_index": 2,
+      "summary": "会听课、会排队、会和同学一起玩，遇到问题会求助。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "上课时最应该做的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "上课认真听讲，才学得会。",
+          "difficulty": 2,
+          "knowledge_point": "上课要认真",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "看老师、认真听讲",
+            "和同桌聊天",
+            "玩文具",
+            "趴桌子睡觉"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "上课想发言，要先（ ）。",
+          "answer": {
+            "value": "举手"
+          },
+          "analysis": "举手经老师同意再发言，是课堂规则。",
+          "difficulty": 2,
+          "knowledge_point": "上课要认真",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "作业不会做，抄同学的也是一种办法。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "抄作业学不到知识，应该问老师或自己再想。",
+          "difficulty": 3,
+          "knowledge_point": "上课要认真",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你上课时打算怎样做，才不容易走神。",
+          "answer": {
+            "value": "示例：坐正看老师，把老师说的重点记一记"
+          },
+          "analysis": "评分要点：说出具体可做的做法。",
+          "difficulty": 4,
+          "knowledge_point": "上课要认真",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "哪些是上课的好表现？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 随便离开 ✗；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "上课要认真",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "坐姿端正",
+            "认真听讲",
+            "随便离开座位",
+            "积极举手"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "排队打饭时应该（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "排队按顺序，大家都能快点。",
+          "difficulty": 2,
+          "knowledge_point": "排队与课间活动",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "按顺序排队，不插队",
+            "挤到前面",
+            "推前面的同学",
+            "自己另开一队"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "课间活动要选（ ）的游戏，不追跑打闹。",
+          "answer": {
+            "value": "安全"
+          },
+          "analysis": "安全游戏才不会受伤。",
+          "difficulty": 2,
+          "knowledge_point": "排队与课间活动",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "课间十分钟可以去操场跑一跑，但要遵守秩序。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "课间可以活动，但要守秩序、注意安全。",
+          "difficulty": 3,
+          "knowledge_point": "排队与课间活动",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说课间你会玩什么，为什么选这个游戏。",
+          "answer": {
+            "value": "示例：课间我和同学一起跳绳，不追跑，不容易撞到人"
+          },
+          "analysis": "评分要点：游戏安全、理由合理。",
+          "difficulty": 4,
+          "knowledge_point": "排队与课间活动",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "课间哪些做法合适？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 走廊追跑 ✗ 危险；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "排队与课间活动",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "跳绳",
+            "做安静的桌面游戏",
+            "在走廊追跑",
+            "玩滑梯时排队"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "两个人只有一个球，最好的办法是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "轮流玩两个人都开心。",
+          "difficulty": 2,
+          "knowledge_point": "和同学一起玩",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "轮流玩",
+            "一个人一直占着",
+            "抢过来",
+            "谁力气大谁玩"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "和同学一起玩，要遵守大家定好的（ ）。",
+          "answer": {
+            "value": "规则"
+          },
+          "analysis": "一起玩先守约，才不吵架。",
+          "difficulty": 2,
+          "knowledge_point": "和同学一起玩",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "游戏输了就发脾气、不玩了，是好做法。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "输了也要有风度，发脾气就没人愿意一起玩。",
+          "difficulty": 3,
+          "knowledge_point": "和同学一起玩",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你和同学玩游戏时怎么做到公平。",
+          "answer": {
+            "value": "示例：我们轮流当队长，谁犯规就重来一次"
+          },
+          "analysis": "评分要点：做法具体、体现公平。",
+          "difficulty": 4,
+          "knowledge_point": "和同学一起玩",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "一起玩时哪些做法受欢迎？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 只顾自己 ✗；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "和同学一起玩",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "轮流玩",
+            "愿意分享",
+            "只按自己的想法玩",
+            "遵守游戏规则"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "在学校被同学欺负，最合适的做法是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "告诉老师，老师才能帮你解决。",
+          "difficulty": 2,
+          "knowledge_point": "遇到问题会求助",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "告诉老师",
+            "忍着不说",
+            "打回去",
+            "自己躲起来"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "受伤了要马上去找（ ），处理伤口。",
+          "answer": {
+            "value": "老师"
+          },
+          "analysis": "受伤要及时告诉老师，由老师带你处理。",
+          "difficulty": 2,
+          "knowledge_point": "遇到问题会求助",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "求助是把事情交给别人，很不勇敢。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "遇到自己解决不了的事求助，是聪明的做法。",
+          "difficulty": 3,
+          "knowledge_point": "遇到问题会求助",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你遇到难题时向谁求助过，结果怎样。",
+          "answer": {
+            "value": "示例：我找不到教室，问了老师，老师带我过去了"
+          },
+          "analysis": "评分要点：对象明确、结果说清。",
+          "difficulty": 4,
+          "knowledge_point": "遇到问题会求助",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "哪些情况应该马上求助？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 做作业 ✗ 自己能做；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "遇到问题会求助",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "受伤流血",
+            "被人欺负",
+            "自己做作业",
+            "在校园里迷路"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第三单元 养成良好习惯",
+      "order_index": 3,
+      "summary": "作息、卫生、劳动、惜时四类好习惯，从小养成。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "小学生每天应该（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "早睡早起精神好，上课才听得进。",
+          "difficulty": 2,
+          "knowledge_point": "按时作息",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "早睡早起",
+            "熬夜看电视",
+            "早上赖床不起",
+            "想睡就睡"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "晚上要按时（ ），第二天才有精神。",
+          "answer": {
+            "value": "睡觉"
+          },
+          "analysis": "按时睡觉保证睡眠时间。",
+          "difficulty": 2,
+          "knowledge_point": "按时作息",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "睡得晚一点没关系，第二天补回来就行。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "晚睡影响白天状态，缺的觉不容易补回来。",
+          "difficulty": 3,
+          "knowledge_point": "按时作息",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你每天的睡觉和起床时间，以及怎样做到按时。",
+          "answer": {
+            "value": "示例：我晚上九点睡，早上七点起，妈妈会提前提醒我"
+          },
+          "analysis": "评分要点：时间具体，做到的方法可行。",
+          "difficulty": 4,
+          "knowledge_point": "按时作息",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "哪些做法有助于按时作息？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 随意 ✗；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "按时作息",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "定好睡觉时间",
+            "睡前不玩手机",
+            "想睡多久睡多久",
+            "早上闹钟响了就起床"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "吃饭前应该（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "饭前洗手能减少病菌入口。",
+          "difficulty": 2,
+          "knowledge_point": "讲究卫生",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "先洗手",
+            "先吃一口",
+            "不用管手",
+            "用衣服擦手"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "每天早晚要刷（ ），保护牙齿。",
+          "answer": {
+            "value": "牙"
+          },
+          "analysis": "早晚刷牙能保护牙齿。",
+          "difficulty": 2,
+          "knowledge_point": "讲究卫生",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "打喷嚏时用手捂嘴，然后马上洗手。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "捂嘴挡住飞沫，随后洗手避免传播。",
+          "difficulty": 3,
+          "knowledge_point": "讲究卫生",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出三条你每天坚持的卫生习惯。",
+          "answer": {
+            "value": "示例：饭前洗手；早晚刷牙；不乱扔垃圾"
+          },
+          "analysis": "评分要点：三条都是真实的卫生习惯。",
+          "difficulty": 4,
+          "knowledge_point": "讲究卫生",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "哪些是讲卫生的做法？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 随手扔 ✗；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "讲究卫生",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "饭前洗手",
+            "早晚刷牙",
+            "随手扔果皮",
+            "勤换衣服"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "放学后书包应该（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "自己的书包自己整理，才不会忘带东西。",
+          "difficulty": 2,
+          "knowledge_point": "自己事情自己做",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "自己整理好",
+            "让家长整理",
+            "随手一放",
+            "只装作业不装书"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "自己的事情要自己（ ），不依赖别人。",
+          "answer": {
+            "value": "做"
+          },
+          "analysis": "自己的事自己做，是长大的表现。",
+          "difficulty": 2,
+          "knowledge_point": "自己事情自己做",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "让家长替自己背书包是理所当然的。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "书包不重就该自己背，学会独立。",
+          "difficulty": 3,
+          "knowledge_point": "自己事情自己做",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你每天自己会做哪两三件事。",
+          "answer": {
+            "value": "示例：自己穿衣、自己整理书包、自己收拾书桌"
+          },
+          "analysis": "评分要点：事情真实、是自己完成的。",
+          "difficulty": 4,
+          "knowledge_point": "自己事情自己做",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "哪些事情一年级同学可以自己做？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 开煤气 ✗ 太危险；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "自己事情自己做",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "整理书包",
+            "穿衣服",
+            "开煤气做饭",
+            "收拾桌面"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "放学回家后，最好的顺序是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先做该做的事，心里才不慌。",
+          "difficulty": 2,
+          "knowledge_point": "珍惜时间不拖拉",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "先完成作业再玩",
+            "先玩到很晚再写",
+            "作业留到早上写",
+            "不写作业"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "做事不拖拉，要在规定的时间内（ ）。",
+          "answer": {
+            "value": "完成"
+          },
+          "analysis": "按时完成，才不会越拖越多。",
+          "difficulty": 2,
+          "knowledge_point": "珍惜时间不拖拉",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "作业拖到最后一刻才写，容易出错。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "时间不够会慌张，容易写错、漏题。",
+          "difficulty": 3,
+          "knowledge_point": "珍惜时间不拖拉",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你怎样安排写作业的时间。",
+          "answer": {
+            "value": "示例：回家先休息十分钟，然后半小时写完作业再玩"
+          },
+          "analysis": "评分要点：安排具体、有先后顺序。",
+          "difficulty": 4,
+          "knowledge_point": "珍惜时间不拖拉",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "哪些做法能减少拖拉？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 等明天 ✗ 就是拖拉；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "珍惜时间不拖拉",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "先做作业再玩",
+            "给自己定完成时间",
+            "一直等明天再做",
+            "把要做的事写下来"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第四单元 我们讲文明",
+      "order_index": 4,
+      "summary": "说话有礼貌、待人友善、爱护公物与环境。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "想请同学帮忙，最合适的说法是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "加「请」和商量语气，别人才愿意帮。",
+          "difficulty": 2,
+          "knowledge_point": "说话有礼貌",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "请你帮我一下，好吗",
+            "喂，帮我",
+            "你必须帮我",
+            "把东西给我"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "不小心碰到别人，要说一声（ ）。",
+          "answer": {
+            "value": "对不起"
+          },
+          "analysis": "碰到别人要道歉。",
+          "difficulty": 2,
+          "knowledge_point": "说话有礼貌",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "对家人说话不用讲礼貌。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "对家人同样要说「请」「谢谢」。",
+          "difficulty": 3,
+          "knowledge_point": "说话有礼貌",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写一句向老师借东西时说的话。",
+          "answer": {
+            "value": "示例：老师，请您把这支铅笔借我用一下，好吗？"
+          },
+          "analysis": "评分要点：含礼貌用语，语气商量。",
+          "difficulty": 4,
+          "knowledge_point": "说话有礼貌",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与人相处时，下面哪些做法有礼貌？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 打断别人说话 ✗ 不礼貌；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "说话有礼貌",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "见面主动问好",
+            "得到帮助后说谢谢",
+            "打断别人说话",
+            "不小心碰到别人时说对不起"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "同学摔倒了，最合适的做法是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "主动帮扶是友善的表现。",
+          "difficulty": 2,
+          "knowledge_point": "待人友善不欺负人",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "扶他起来，问他要不要帮忙",
+            "笑他笨",
+            "装作没看见",
+            "绕开走"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "同学有困难时，我们要主动（ ）。",
+          "answer": {
+            "value": "帮忙"
+          },
+          "analysis": "主动帮忙，同学之间才亲近。",
+          "difficulty": 2,
+          "knowledge_point": "待人友善不欺负人",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "给同学起外号、嘲笑别人很好玩。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "嘲笑会伤害别人，是不友善的行为。",
+          "difficulty": 3,
+          "knowledge_point": "待人友善不欺负人",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你帮助过同学的一件小事。",
+          "answer": {
+            "value": "示例：同桌忘带橡皮，我把我的借给他"
+          },
+          "analysis": "评分要点：事情具体、体现友善。",
+          "difficulty": 4,
+          "knowledge_point": "待人友善不欺负人",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "哪些是友善的表现？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 嘲笑 ✗；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "待人友善不欺负人",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "主动帮助同学",
+            "见到同学问好",
+            "嘲笑同学口音",
+            "和同学分享文具"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "在课桌上乱涂乱画，是（ ）的行为",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课桌是公物，乱画就是损坏公物。",
+          "difficulty": 2,
+          "knowledge_point": "爱护公物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "不爱护公物",
+            "爱护公物",
+            "讲卫生",
+            "有礼貌"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "借来的图书要（ ）好，按时归还。",
+          "answer": {
+            "value": "爱护"
+          },
+          "analysis": "爱护图书，别撕别画。",
+          "difficulty": 2,
+          "knowledge_point": "爱护公物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "公物是学校的，坏了不用管。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "公物是大家共用的，损坏了大家都不方便。",
+          "difficulty": 3,
+          "knowledge_point": "爱护公物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出两件你在学校爱护公物的事。",
+          "answer": {
+            "value": "示例：不在课桌上乱画；用完体育器材放回原处"
+          },
+          "analysis": "评分要点：两件事真实、行为正确。",
+          "difficulty": 4,
+          "knowledge_point": "爱护公物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "哪些是爱护公物的做法？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 撕书 ✗ 损坏公物；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "爱护公物",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "不在墙上乱画",
+            "轻拿轻放体育器材",
+            "把图书撕下来折纸",
+            "发现公物坏了告诉老师"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "看到地上有纸屑，应该（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "捡起纸屑，环境才干净。",
+          "difficulty": 2,
+          "knowledge_point": "爱护环境与垃圾分类",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "捡起来扔进垃圾桶",
+            "踢到墙角",
+            "不管它",
+            "再撕碎一点"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "垃圾要放进（ ），不能随手扔。",
+          "answer": {
+            "value": "垃圾桶"
+          },
+          "analysis": "垃圾入桶，是爱护环境的基本做法。",
+          "difficulty": 2,
+          "knowledge_point": "爱护环境与垃圾分类",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "把果皮扔进花坛里可以当肥料。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "果皮乱扔会弄脏校园，还招虫子。",
+          "difficulty": 3,
+          "knowledge_point": "爱护环境与垃圾分类",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你在学校做过的两件爱护环境的事。",
+          "answer": {
+            "value": "示例：把纸屑扔进垃圾桶；看到水龙头没关紧就去关好"
+          },
+          "analysis": "评分要点：两件事真实、行为正确。",
+          "difficulty": 4,
+          "knowledge_point": "爱护环境与垃圾分类",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "哪些是爱护环境的行为？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 摘花 ✗ 破坏绿化；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "爱护环境与垃圾分类",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "垃圾分类投放",
+            "不随地吐痰",
+            "摘花坛里的花",
+            "看见垃圾顺手捡起"
+          ]
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-14T12:07:25+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "normalized": "难度 40/40/20 归一 + 主观题短答案补评分要点（2026-11-13 统一口径）",
+    "supplemented": "数值填空补可求值算式 0 道 / 数值填空改单选 0 道 / 补多选题 0 道（2 真 + 2 假，答案 2 项；2026-11-14 口径）",
+    "stem_dedup": "跨册同题干补册次前缀 0 道（2026-11-14 跨册去重口径）",
+    "duplicate_rewrites": "跨册同题定向改写 2 道（保留两侧题量，2026-11-14 口径）",
+    "chapter_scope": "全章域（本册无跨册重复章）",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

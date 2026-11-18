@@ -753,7 +753,7 @@ def validate_file(
     checker.book = path.name.lower().endswith("_book.json")
     if checker.book:
         checker.warn(
-            "整册归集文件（*_book.json）：「每批次知识点 3~6 个」「每知识点≥4 道」的每日规格不适用，"
+            "整册归集文件（*_book.json）：「每批次知识点 3~6 个」「每知识点≥4 道」「单一批次 200 题上限」的每日规格不适用，"
             "只按章节题量、题量与结构层校验"
         )
     if checker.template_mode:
@@ -770,7 +770,7 @@ def validate_file(
     sections, points = checker.check_knowledge(data)
     total = checker.check_questions(data, sections, points)
     checker.check_spec(data, points, total)
-    if total > 200:
+    if total > 200 and not checker.book:
         checker.warn(f"题目总数 {total} 超过 200，建议按章节拆分")
     if _FRAGMENT_RE.search(path.name):
         checker.warn(

@@ -1,0 +1,342 @@
+{
+  "exam_id": null,
+  "title": "1年级英语上册单元卷（自主题库生成）",
+  "subject": "english",
+  "grade": 1,
+  "exam_type": "unit",
+  "blueprint_code": "g1_english_unit",
+  "blueprint_name": "1年级英语单元测试卷（自主题库生成）",
+  "total_score": 60,
+  "time_limit_min": 40,
+  "question_count": 28,
+  "actual_score_total": 60.0,
+  "score_matches": true,
+  "knowledge_point_count": 24,
+  "sections": [
+    {
+      "section_index": 0,
+      "section_name": "一、听力",
+      "q_type": "listening",
+      "band": "easy",
+      "planned_count": 8,
+      "planned_score": 8.0,
+      "actual_count": 8,
+      "actual_score": 8.0,
+      "knowledge_points": [
+        "U1 家庭成员词",
+        "U2 问候与应答",
+        "英语·听力词群辨识·按单元·变式一",
+        "英语·听力词群辨识·按单元·变式三",
+        "英语·听力词群辨识·按单元·变式二",
+        "英语·听力词群辨识·按单元·变式四"
+      ],
+      "chapters": [
+        "Greetings 问候",
+        "Unit 1 What is your family like?",
+        "Unit 2 How are you today?"
+      ],
+      "questions": [
+        {
+          "question_id": 15750,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "U1 家庭成员词",
+          "chapter": "Unit 1 What is your family like?"
+        },
+        {
+          "question_id": 15759,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "U2 问候与应答",
+          "chapter": "Unit 2 How are you today?"
+        },
+        {
+          "question_id": 19660,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 1,
+          "knowledge_point": "英语·听力词群辨识·按单元·变式三",
+          "chapter": "Greetings 问候"
+        },
+        {
+          "question_id": 19661,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 1,
+          "knowledge_point": "英语·听力词群辨识·按单元·变式四",
+          "chapter": "Greetings 问候"
+        },
+        {
+          "question_id": 19659,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 1,
+          "knowledge_point": "英语·听力词群辨识·按单元·变式二",
+          "chapter": "Greetings 问候"
+        },
+        {
+          "question_id": 19654,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 1,
+          "knowledge_point": "英语·听力词群辨识·按单元·变式一",
+          "chapter": "Greetings 问候"
+        },
+        {
+          "question_id": 15749,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "U1 家庭成员词",
+          "chapter": "Unit 1 What is your family like?"
+        },
+        {
+          "question_id": 15747,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "U1 家庭成员词",
+          "chapter": "Unit 1 What is your family like?"
+        }
+      ]
+    },
+    {
+      "section_index": 1,
+      "section_name": "二、单项选择",
+      "q_type": "choice",
+      "band": "easy",
+      "planned_count": 8,
+      "planned_score": 16.0,
+      "actual_count": 8,
+      "actual_score": 16.0,
+      "knowledge_points": [
+        "英语·基础语法单项选择·按单元·变式一",
+        "英语·基础语法单项选择·按单元·变式三",
+        "英语·基础语法单项选择·按单元·变式二",
+        "英语·基础语法单项选择·按单元·变式四",
+        "英语·短文阅读理解·按单元·变式一",
+        "英语·短文阅读理解·按单元·变式三",
+        "英语·短文阅读理解·按单元·变式二",
+        "英语·短文阅读理解·按单元·变式四"
+      ],
+      "chapters": [
+        "Greetings 问候",
+        "Unit 1 What is your family like?",
+        "Unit 2 How are you today?"
+      ],
+      "questions": [
+        {
+          "question_id": 19668,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "英语·基础语法单项选择·按单元·变式三",
+          "chapter": "Greetings 问候"
+        },
+        {
+          "question_id": 19680,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "英语·基础语法单项选择·按单元·变式二",
+          "chapter": "Unit 2 How are you today?"
+        },
+        {
+          "question_id": 19665,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "英语·基础语法单项选择·按单元·变式四",
+          "chapter": "Greetings 问候"
+        },
+        {
+          "question_id": 20935,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式一",
+          "chapter": "Greetings 问候"
+        },
+        {
+          "question_id": 20934,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式二",
+          "chapter": "Unit 1 What is your family like?"
+        },
+        {
+          "question_id": 20931,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式三",
+          "chapter": "Unit 1 What is your family like?"
+        },
+        {
+          "question_id": 19679,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "英语·基础语法单项选择·按单元·变式一",
+          "chapter": "Unit 2 How are you today?"
+        },
+        {
+          "question_id": 20932,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式四",
+          "chapter": "Unit 1 What is your family like?"
+        }
+      ]
+    },
+    {
+      "section_index": 2,
+      "section_name": "三、词汇填空",
+      "q_type": "fill",
+      "band": "medium",
+      "planned_count": 8,
+      "planned_score": 16.0,
+      "actual_count": 8,
+      "actual_score": 16.0,
+      "knowledge_points": [
+        "U1 字母 A a 与它的发音",
+        "U1 家庭成员词",
+        "U2 问句与礼貌用语",
+        "英语·词汇填空（中英对应）·按单元·变式一",
+        "英语·词汇填空（中英对应）·按单元·变式三",
+        "英语·词汇填空（中英对应）·按单元·变式二",
+        "英语·词汇填空（中英对应）·按单元·变式四"
+      ],
+      "chapters": [
+        "Greetings 问候",
+        "Unit 1 What is your family like?",
+        "Unit 2 How are you today?"
+      ],
+      "questions": [
+        {
+          "question_id": 21841,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式三",
+          "chapter": "Unit 2 How are you today?"
+        },
+        {
+          "question_id": 21838,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式四",
+          "chapter": "Unit 1 What is your family like?"
+        },
+        {
+          "question_id": 19682,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式二",
+          "chapter": "Unit 2 How are you today?"
+        },
+        {
+          "question_id": 21840,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式一",
+          "chapter": "Greetings 问候"
+        },
+        {
+          "question_id": 9199,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "U1 字母 A a 与它的发音",
+          "chapter": "Unit 1 What is your family like?"
+        },
+        {
+          "question_id": 9214,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "U2 问句与礼貌用语",
+          "chapter": "Unit 2 How are you today?"
+        },
+        {
+          "question_id": 15929,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "U1 家庭成员词",
+          "chapter": "Unit 1 What is your family like?"
+        },
+        {
+          "question_id": 21837,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式三",
+          "chapter": "Unit 1 What is your family like?"
+        }
+      ]
+    },
+    {
+      "section_index": 3,
+      "section_name": "四、阅读理解",
+      "q_type": "choice",
+      "band": "hard",
+      "planned_count": 4,
+      "planned_score": 20.0,
+      "actual_count": 4,
+      "actual_score": 20.0,
+      "knowledge_points": [
+        "U1 介绍家人的句型",
+        "U1 用一句话说清家人",
+        "U2 字母 B b 与它的发音",
+        "U2 表达心情的词"
+      ],
+      "chapters": [
+        "Unit 1 What is your family like?",
+        "Unit 2 How are you today?"
+      ],
+      "questions": [
+        {
+          "question_id": 15936,
+          "score": 5.0,
+          "q_type": "choice",
+          "difficulty": 5,
+          "knowledge_point": "U2 字母 B b 与它的发音",
+          "chapter": "Unit 2 How are you today?"
+        },
+        {
+          "question_id": 15931,
+          "score": 5.0,
+          "q_type": "choice",
+          "difficulty": 5,
+          "knowledge_point": "U1 用一句话说清家人",
+          "chapter": "Unit 1 What is your family like?"
+        },
+        {
+          "question_id": 9188,
+          "score": 5.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "U1 介绍家人的句型",
+          "chapter": "Unit 1 What is your family like?"
+        },
+        {
+          "question_id": 16006,
+          "score": 5.0,
+          "q_type": "choice",
+          "difficulty": 4,
+          "knowledge_point": "U2 表达心情的词",
+          "chapter": "Unit 2 How are you today?"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-11-17T15:45:18.367275+00:00"
+}

@@ -1,0 +1,179 @@
+{
+  "exam_id": null,
+  "title": "4年级数学上册单元卷（自主题库生成）",
+  "subject": "math",
+  "grade": 4,
+  "exam_type": "unit",
+  "blueprint_code": "g4_math_unit",
+  "blueprint_name": "4年级数学单元测试卷（自主题库生成）",
+  "total_score": 60,
+  "time_limit_min": 40,
+  "question_count": 12,
+  "actual_score_total": 60.0,
+  "score_matches": true,
+  "knowledge_point_count": 11,
+  "sections": [
+    {
+      "section_index": 0,
+      "section_name": "一、选择题",
+      "q_type": "choice",
+      "band": "easy",
+      "planned_count": 4,
+      "planned_score": 16.0,
+      "actual_count": 4,
+      "actual_score": 16.0,
+      "knowledge_points": [
+        "亿以内数的数位顺序",
+        "多位数大小比较与改写",
+        "用四舍五入求近似数",
+        "编码中数字表示的信息"
+      ],
+      "chapters": [
+        "第一单元 认识更大的数",
+        "综合实践 编码"
+      ],
+      "questions": [
+        {
+          "question_id": 5714,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "亿以内数的数位顺序",
+          "chapter": "第一单元 认识更大的数"
+        },
+        {
+          "question_id": 5731,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "编码中数字表示的信息",
+          "chapter": "综合实践 编码"
+        },
+        {
+          "question_id": 5720,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "多位数大小比较与改写",
+          "chapter": "第一单元 认识更大的数"
+        },
+        {
+          "question_id": 5727,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "用四舍五入求近似数",
+          "chapter": "第一单元 认识更大的数"
+        }
+      ]
+    },
+    {
+      "section_index": 1,
+      "section_name": "二、填空题",
+      "q_type": "fill",
+      "band": "medium",
+      "planned_count": 5,
+      "planned_score": 20.0,
+      "actual_count": 5,
+      "actual_score": 20.0,
+      "knowledge_points": [
+        "多位数的读法与写法",
+        "数与运算·乘除法运算·按单元·变式一",
+        "编码的位数与唯一性",
+        "身份证号码的组成",
+        "邮政编码与学号规则"
+      ],
+      "chapters": [
+        "第一单元 认识更大的数",
+        "综合实践 编码"
+      ],
+      "questions": [
+        {
+          "question_id": 5743,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "编码的位数与唯一性",
+          "chapter": "综合实践 编码"
+        },
+        {
+          "question_id": 5737,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "身份证号码的组成",
+          "chapter": "综合实践 编码"
+        },
+        {
+          "question_id": 5739,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "邮政编码与学号规则",
+          "chapter": "综合实践 编码"
+        },
+        {
+          "question_id": 19377,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·乘除法运算·按单元·变式一",
+          "chapter": "第一单元 认识更大的数"
+        },
+        {
+          "question_id": 5719,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "多位数的读法与写法",
+          "chapter": "第一单元 认识更大的数"
+        }
+      ]
+    },
+    {
+      "section_index": 2,
+      "section_name": "三、计算与解答",
+      "q_type": "answer",
+      "band": "hard",
+      "planned_count": 3,
+      "planned_score": 24.0,
+      "actual_count": 3,
+      "actual_score": 24.0,
+      "knowledge_points": [
+        "数与运算·乘除法运算·按单元·变式三",
+        "数与运算·乘除法运算·按单元·变式二"
+      ],
+      "chapters": [
+        "第一单元 认识更大的数",
+        "综合实践 编码"
+      ],
+      "questions": [
+        {
+          "question_id": 19388,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·乘除法运算·按单元·变式三",
+          "chapter": "综合实践 编码"
+        },
+        {
+          "question_id": 18038,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 3,
+          "knowledge_point": "",
+          "chapter": "第一单元 认识更大的数"
+        },
+        {
+          "question_id": 19387,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·乘除法运算·按单元·变式二",
+          "chapter": "综合实践 编码"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-11-17T15:45:21.991010+00:00"
+}

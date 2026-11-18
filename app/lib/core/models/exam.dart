@@ -20,6 +20,10 @@ class ExamSummary {
     this.isPastPaper = false,
     this.classId,
     this.attempt,
+    this.sourceName,
+    this.licenseNote,
+    this.adaptedFrom,
+    this.attemptCount = 0,
   });
 
   final int id;
@@ -45,6 +49,17 @@ class ExamSummary {
   final bool isPastPaper;
   final int? classId;
   final ExamAttemptBrief? attempt;
+
+  /// D-09 §4.2 / §5.2：真题溯源（普通卷为 null）
+  final String? sourceName;
+  final String? licenseNote;
+  final String? adaptedFrom;
+  final int attemptCount;
+
+  /// 来源摘要：缺来源时明确显示「来源待补录」，不伪造来源（L24）
+  String get sourceLabel => (sourceName == null || sourceName!.trim().isEmpty)
+      ? '来源待补录'
+      : sourceName!.trim();
 
   bool get windowOpen => windowState != 'scheduled' && windowState != 'closed';
 
@@ -106,6 +121,10 @@ class ExamSummary {
       attempt: json['attempt'] == null
           ? null
           : ExamAttemptBrief.fromJson(json['attempt'] as Map<String, dynamic>),
+      sourceName: json['source_name'] as String?,
+      licenseNote: json['license_note'] as String?,
+      adaptedFrom: json['adapted_from'] as String?,
+      attemptCount: json['attempt_count'] as int? ?? 0,
     );
   }
 
@@ -115,6 +134,103 @@ class ExamSummary {
     String two(int number) => number.toString().padLeft(2, '0');
     return '${two(local.month)}-${two(local.day)} ${two(local.hour)}:${two(local.minute)}';
   }
+}
+
+/// 真题库可用筛选项（D-09 §5.3：由服务端下发，前端不再硬编码年份/学科/地区）。
+class PastPaperFilters {
+  const PastPaperFilters({
+    this.years = const [],
+    this.subjects = const [],
+    this.regions = const [],
+    this.grades = const [],
+    this.examTypes = const [],
+  });
+
+  final List<int> years;
+  final List<String> subjects;
+  final List<String> regions;
+  final List<int> grades;
+  final List<String> examTypes;
+
+  factory PastPaperFilters.fromJson(Map<String, dynamic> json) =>
+      PastPaperFilters(
+        years: _intList(json['years']),
+        subjects: _stringList(json['subjects']),
+        regions: _stringList(json['regions']),
+        grades: _intList(json['grades']),
+        examTypes: _stringList(json['exam_types']),
+      );
+
+  static List<int> _intList(Object? value) => (value as List<dynamic>? ?? [])
+      .map((item) => item is int ? item : int.tryParse('$item') ?? 0)
+      .where((item) => item > 0)
+      .toList();
+
+  static List<String> _stringList(Object? value) =>
+      (value as List<dynamic>? ?? []).map((item) => '$item').toList();
+}
+
+/// 本人历次作答（D-09 §4.7 报告历史）。
+class ExamAttemptHistory {
+  const ExamAttemptHistory({
+    required this.attemptId,
+    required this.examId,
+    required this.examTitle,
+    required this.examType,
+    required this.status,
+    required this.startedAt,
+    this.totalScore,
+    this.fullScore = 0,
+    this.submittedAt,
+    this.durationMs = 0,
+  });
+
+  final int attemptId;
+  final int examId;
+  final String examTitle;
+  final String examType;
+  final String status;
+  final DateTime startedAt;
+  final double? totalScore;
+  final int fullScore;
+  final DateTime? submittedAt;
+  final int durationMs;
+
+  String get route => '/exam/report/$attemptId';
+
+  factory ExamAttemptHistory.fromJson(Map<String, dynamic> json) =>
+      ExamAttemptHistory(
+        attemptId: json['attempt_id'] as int? ?? 0,
+        examId: json['exam_id'] as int? ?? 0,
+        examTitle: json['exam_title'] as String? ?? '',
+        examType: json['exam_type'] as String? ?? '',
+        status: json['status'] as String? ?? '',
+        startedAt: DateTime.tryParse(json['started_at'] as String? ?? '') ??
+            DateTime.now(),
+        totalScore: (json['total_score'] as num?)?.toDouble(),
+        fullScore: json['full_score'] as int? ?? 0,
+        submittedAt: DateTime.tryParse(json['submitted_at'] as String? ?? ''),
+        durationMs: json['duration_ms'] as int? ?? 0,
+      );
+}
+
+/// 真题详情/预览（D-09 §5.5，不含答案）。
+class PastPaperDetail {
+  const PastPaperDetail({
+    required this.summary,
+    this.source = 'mock',
+    this.attemptCount = 0,
+  });
+
+  final ExamSummary summary;
+  final String source;
+  final int attemptCount;
+
+  factory PastPaperDetail.fromJson(Map<String, dynamic> json) => PastPaperDetail(
+        summary: ExamSummary.fromJson(json),
+        source: json['source'] as String? ?? 'mock',
+        attemptCount: json['attempt_count'] as int? ?? 0,
+      );
 }
 
 class ExamAttemptBrief {
@@ -848,6 +964,7 @@ class ExamGenerateResult {
     required this.difficultyMix,
     required this.fallbackCount,
     required this.insufficient,
+    this.status = 'published',
   });
 
   final int examId;
@@ -859,6 +976,10 @@ class ExamGenerateResult {
   final Map<String, int> difficultyMix;
   final int fallbackCount;
   final bool insufficient;
+  // CR-005 / D-09 §5.7：真题生成即 draft，普通卷为 published。
+  final String status;
+
+  bool get isDraft => status == 'draft';
 
   factory ExamGenerateResult.fromJson(Map<String, dynamic> json) {
     final rawMix = json['difficulty_mix'];
@@ -878,6 +999,125 @@ class ExamGenerateResult {
       difficultyMix: mix,
       fallbackCount: json['fallback_count'] as int? ?? 0,
       insufficient: json['insufficient'] as bool? ?? false,
+      status: json['status'] as String? ?? 'published',
+    );
+  }
+}
+
+/// 真题审核队列条目（GET /api/exams/reviews，EX-09 / EX-10）。
+class ExamReviewItem {
+  const ExamReviewItem({
+    required this.id,
+    required this.title,
+    required this.subject,
+    required this.grade,
+    required this.status,
+    required this.isPastPaper,
+    this.year,
+    this.region,
+    this.sourceName,
+    this.licenseNote,
+    this.adaptedFrom,
+    this.reviewedBy,
+    this.publishedBy,
+    this.reviewNote,
+  });
+
+  final int id;
+  final String title;
+  final String subject;
+  final int grade;
+  final int? year;
+  final String? region;
+  final String status;
+  final bool isPastPaper;
+  final String? sourceName;
+  final String? licenseNote;
+  final String? adaptedFrom;
+  final int? reviewedBy;
+  final int? publishedBy;
+  final String? reviewNote;
+
+  String get sourceLabel =>
+      (sourceName == null || sourceName!.trim().isEmpty)
+          ? '来源待补录'
+          : sourceName!;
+
+  String get statusLabel {
+    switch (status) {
+      case 'draft':
+        return '草稿';
+      case 'pending_review':
+        return '待复核';
+      case 'published':
+        return '已发布';
+      case 'offline':
+        return '已下线';
+      default:
+        return status;
+    }
+  }
+
+  factory ExamReviewItem.fromJson(Map<String, dynamic> json) {
+    return ExamReviewItem(
+      id: json['id'] as int? ?? 0,
+      title: json['title'] as String? ?? '',
+      subject: json['subject'] as String? ?? '',
+      grade: json['grade'] as int? ?? 0,
+      year: json['year'] as int?,
+      region: json['region'] as String?,
+      status: json['status'] as String? ?? 'draft',
+      isPastPaper: json['is_past_paper'] as bool? ?? false,
+      sourceName: json['source_name'] as String?,
+      licenseNote: json['license_note'] as String?,
+      adaptedFrom: json['adapted_from'] as String?,
+      reviewedBy: json['reviewed_by'] as int?,
+      publishedBy: json['published_by'] as int?,
+      reviewNote: json['review_note'] as String?,
+    );
+  }
+}
+
+/// 双向细目表的一节（GET /api/exams/{id}/spec-table）。
+class ExamSpecRow {
+  const ExamSpecRow({
+    required this.sectionIndex,
+    required this.sectionName,
+    required this.qType,
+    required this.band,
+    required this.plannedCount,
+    required this.plannedScore,
+    required this.actualCount,
+    required this.actualScore,
+    required this.chapterCount,
+  });
+
+  final int sectionIndex;
+  final String sectionName;
+  final String qType;
+  final String band;
+  final int plannedCount;
+  final double plannedScore;
+  final int actualCount;
+  final double actualScore;
+  final int chapterCount;
+
+  bool get matches =>
+      plannedCount == actualCount &&
+      (plannedScore - actualScore).abs() < 0.01;
+
+  factory ExamSpecRow.fromJson(Map<String, dynamic> json) {
+    final chapters = json['chapters'];
+    return ExamSpecRow(
+      sectionIndex: json['section_index'] as int? ?? 0,
+      sectionName: json['section_name'] as String? ?? '',
+      qType: json['q_type'] as String? ?? '',
+      band: json['band'] as String? ?? '',
+      plannedCount: json['planned_count'] as int? ?? 0,
+      plannedScore: (json['planned_score'] as num?)?.toDouble() ?? 0,
+      actualCount: json['actual_count'] as int? ?? 0,
+      actualScore: (json['actual_score'] as num?)?.toDouble() ?? 0,
+      chapterCount: chapters is List ? chapters.length : 0,
     );
   }
 }

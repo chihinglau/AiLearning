@@ -1,6 +1,7 @@
 import 'package:ai_learning/core/constants/app_constants.dart';
 import 'package:ai_learning/core/errors/api_error_guide.dart';
 import 'package:ai_learning/core/models/exam.dart';
+import 'package:ai_learning/core/models/exam_action.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
 import 'package:ai_learning/core/theme/app_accents.dart';
@@ -9,7 +10,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-/// 考试中心：待考 / 进行中 / 已完成，支持开始、继续与查看报告。
+/// 考试中心（D-09 §4）：状态/类型/学科/窗口/搜索均由服务端过滤，
+/// 结果集始终是 D-04 §8.7.1 学生可见性谓词的子集（L21）。
 class ExamListPage extends ConsumerStatefulWidget {
   const ExamListPage({super.key});
 
@@ -33,9 +35,20 @@ class _ExamListPageState extends ConsumerState<ExamListPage> {
     'mock': '模考',
   };
 
+  static const _windowFilters = {
+    'all': '全部窗口',
+    'open': '开放中',
+    'scheduled': '未开始',
+    'closed': '已结束',
+    'unscheduled': '不限时',
+  };
+
+  final _query = TextEditingController();
   List<ExamSummary> _exams = const [];
   String _filter = 'all';
   String _type = 'all';
+  String? _subject;
+  String _windowState = 'all';
   bool _loading = true;
   String? _error;
 
@@ -45,13 +58,32 @@ class _ExamListPageState extends ConsumerState<ExamListPage> {
     _load();
   }
 
+  @override
+  void dispose() {
+    _query.dispose();
+    super.dispose();
+  }
+
+  bool get _hasFilters =>
+      _filter != 'all' ||
+      _type != 'all' ||
+      _subject != null ||
+      _windowState != 'all' ||
+      _query.text.trim().isNotEmpty;
+
   Future<void> _load() async {
     setState(() {
       _loading = true;
       _error = null;
     });
     try {
-      final exams = await ref.read(examServiceProvider).list();
+      final exams = await ref.read(examServiceProvider).list(
+            type: _type == 'all' ? null : _type,
+            status: _filter == 'all' ? null : _filter,
+            subject: _subject,
+            windowState: _windowState == 'all' ? null : _windowState,
+            query: _query.text.trim().isEmpty ? null : _query.text.trim(),
+          );
       if (!mounted) return;
       setState(() {
         _exams = exams;
@@ -66,42 +98,45 @@ class _ExamListPageState extends ConsumerState<ExamListPage> {
     }
   }
 
-  List<ExamSummary> get _visible {
-    return _exams.where((exam) {
-      if (_filter != 'all' && exam.category != _filter) return false;
-      if (_type != 'all' && exam.examType != _type) return false;
-      return true;
-    }).toList();
+  void _clearFilters() {
+    setState(() {
+      _filter = 'all';
+      _type = 'all';
+      _subject = null;
+      _windowState = 'all';
+      _query.clear();
+    });
+    _load();
   }
 
-  int _countOf(String category) {
-    if (category == 'all') return _exams.length;
-    return _exams.where((exam) => exam.category == category).length;
-  }
-
+  /// 六态唯一决策表（D-09 §4.4）：任何非可进入状态都给明确提示，禁止静默。
   void _open(ExamSummary exam) {
-    if (exam.category != 'completed' && !exam.windowOpen) {
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(content: Text('${exam.windowLabel}，暂不可进入考试')));
+    final decision = examCardDecision(exam);
+    final route = decision.route;
+    // 窗口已关/未开但已有报告时仍可直接看报告，不显示「暂不可进入」误导提示
+    if (route == null && decision.message != null) {
+      ScaffoldMessenger.of(context)
+          .showSnackBar(SnackBar(content: Text(decision.message!)));
       return;
     }
-    switch (exam.category) {
-      case 'available':
-      case 'in_progress':
-        context.push('/exam/${exam.id}');
-      case 'completed':
-        final attempt = exam.attempt;
-        if (attempt != null) {
-          context.push('/exam/report/${attempt.id}');
-        } else {
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('报告尚未生成，请稍后重试')),
-          );
-        }
-      default:
-        break;
-    }
+    if (route == null) return;
+    context.push(route);
+  }
+
+  List<ExamSummary> get _visible {
+    const rank = {'in_progress': 0, 'available': 1, 'completed': 2};
+    final sorted = [..._exams];
+    sorted.sort((a, b) {
+      final byCategory =
+          (rank[a.category] ?? 3).compareTo(rank[b.category] ?? 3);
+      return byCategory != 0 ? byCategory : b.id.compareTo(a.id);
+    });
+    return sorted;
+  }
+
+  void _reloadWith(void Function() update) {
+    setState(update);
+    _load();
   }
 
   @override
@@ -118,6 +153,12 @@ class _ExamListPageState extends ConsumerState<ExamListPage> {
               ),
         title: const Text('考试中心'),
         actions: [
+          IconButton(
+            key: const ValueKey('open-exam-history'),
+            tooltip: '报告历史',
+            icon: const Icon(Icons.history_outlined),
+            onPressed: () => context.push('/exams/history'),
+          ),
           IconButton(
             key: const ValueKey('open-past-papers'),
             tooltip: '真题库',
@@ -136,9 +177,10 @@ class _ExamListPageState extends ConsumerState<ExamListPage> {
               children: _filters.entries
                   .map(
                     (entry) => ChoiceChip(
-                      label: Text('${entry.value} ${_countOf(entry.key)}'),
+                      label: Text(entry.value),
                       selected: _filter == entry.key,
-                      onSelected: (_) => setState(() => _filter = entry.key),
+                      onSelected: (_) =>
+                          _reloadWith(() => _filter = entry.key),
                     ),
                   )
                   .toList(),
@@ -151,10 +193,64 @@ class _ExamListPageState extends ConsumerState<ExamListPage> {
                     (entry) => FilterChip(
                       label: Text(entry.value),
                       selected: _type == entry.key,
-                      onSelected: (_) => setState(() => _type = entry.key),
+                      onSelected: (_) => _reloadWith(() => _type = entry.key),
                     ),
                   )
                   .toList(),
+            ),
+            const SizedBox(height: 8),
+            Wrap(
+              spacing: 8,
+              children: [
+                FilterChip(
+                  label: const Text('全部学科'),
+                  selected: _subject == null,
+                  onSelected: (_) => _reloadWith(() => _subject = null),
+                ),
+                for (final subject in Subject.values)
+                  FilterChip(
+                    label: Text(subject.label),
+                    selected: _subject == subject.code,
+                    onSelected: (_) => _reloadWith(
+                      () => _subject = _subject == subject.code
+                          ? null
+                          : subject.code,
+                    ),
+                  ),
+              ],
+            ),
+            const SizedBox(height: 8),
+            Wrap(
+              spacing: 8,
+              children: _windowFilters.entries
+                  .map(
+                    (entry) => ChoiceChip(
+                      label: Text(entry.value),
+                      selected: _windowState == entry.key,
+                      onSelected: (_) =>
+                          _reloadWith(() => _windowState = entry.key),
+                    ),
+                  )
+                  .toList(),
+            ),
+            const SizedBox(height: 8),
+            TextField(
+              controller: _query,
+              textInputAction: TextInputAction.search,
+              onChanged: (_) => setState(() {}),
+              onSubmitted: (_) => _load(),
+              decoration: InputDecoration(
+                hintText: '搜索试卷标题',
+                prefixIcon: const Icon(Icons.search_outlined),
+                border: const OutlineInputBorder(),
+                suffixIcon: _query.text.isEmpty
+                    ? null
+                    : IconButton(
+                        tooltip: '清除搜索',
+                        icon: const Icon(Icons.clear),
+                        onPressed: () => _reloadWith(_query.clear),
+                      ),
+              ),
             ),
             const SizedBox(height: 16),
             if (_loading)
@@ -180,7 +276,7 @@ class _ExamListPageState extends ConsumerState<ExamListPage> {
                 ),
               )
             else if (_visible.isEmpty)
-              _EmptyState(filter: _filter)
+              _EmptyState(filtered: _hasFilters, onClear: _clearFilters)
             else
               for (final exam in _visible) ...[
                 _ExamCard(exam: exam, onTap: () => _open(exam)),
@@ -203,25 +299,14 @@ class _ExamCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final attempt = exam.attempt;
+    final decision = examCardDecision(exam);
     final isDone = exam.category == 'completed';
     final isDoing = exam.category == 'in_progress';
-    final blocked = !isDone && !exam.windowOpen;
-    final actionLabel = isDone
-        ? '查看报告'
-        : blocked
-        ? exam.windowLabel
-        : isDoing
-        ? '继续考试'
-        : '开始考试';
-    final actionColor = blocked
-        ? theme.disabledColor
-        : theme.colorScheme.primary;
+    final actionColor = decision.enabled
+        ? theme.colorScheme.primary
+        : theme.disabledColor;
     final accents = AppAccents.of(context);
-    final statusColor = switch (exam.category) {
-      'completed' => accents.learn,
-      'in_progress' => accents.exam,
-      _ => accents.exam,
-    };
+    final statusColor = isDone ? accents.learn : accents.exam;
 
     return AccentCard(
       accent: isDone ? accents.learn : accents.exam,
@@ -251,10 +336,14 @@ class _ExamCard extends StatelessWidget {
                   border: Border.all(color: statusColor.withValues(alpha: 0.4)),
                 ),
                 child: Text(
-                  exam.category == 'completed'
+                  isDone
                       ? '已完成'
-                      : exam.category == 'in_progress'
+                      : isDoing
                       ? '进行中'
+                      : exam.windowState == 'scheduled'
+                      ? '未开始'
+                      : exam.windowState == 'closed'
+                      ? '已结束'
                       : '待考',
                   style: TextStyle(color: statusColor, fontSize: 12),
                 ),
@@ -278,6 +367,10 @@ class _ExamCard extends StatelessWidget {
               style: theme.textTheme.bodySmall,
             ),
           ],
+          if (exam.isPastPaper || exam.sourceName != null) ...[
+            const SizedBox(height: 2),
+            Text('来源：${exam.sourceLabel}', style: theme.textTheme.bodySmall),
+          ],
           if (attempt != null) ...[
             const SizedBox(height: 8),
             Text(
@@ -288,11 +381,15 @@ class _ExamCard extends StatelessWidget {
               style: theme.textTheme.bodySmall,
             ),
           ],
+          if (exam.attemptCount > 1) ...[
+            const SizedBox(height: 2),
+            Text('共 ${exam.attemptCount} 次作答', style: theme.textTheme.bodySmall),
+          ],
           const SizedBox(height: 10),
           Row(
             children: [
               Text(
-                actionLabel,
+                decision.label,
                 style: theme.textTheme.labelLarge?.copyWith(color: actionColor),
               ),
               const Spacer(),
@@ -320,9 +417,10 @@ class _ExamCard extends StatelessWidget {
 }
 
 class _EmptyState extends StatelessWidget {
-  const _EmptyState({required this.filter});
+  const _EmptyState({required this.filtered, required this.onClear});
 
-  final String filter;
+  final bool filtered;
+  final VoidCallback onClear;
 
   @override
   Widget build(BuildContext context) {
@@ -338,11 +436,20 @@ class _EmptyState extends StatelessWidget {
           ),
           const SizedBox(height: 12),
           Text(
-            filter == 'all' ? '暂时没有可参加的考试' : '该分类下暂无考试',
+            filtered ? '没有符合条件的考试' : '暂时没有可参加的考试',
             style: theme.textTheme.titleMedium,
           ),
           const SizedBox(height: 4),
-          Text('完成教材学习后，老师会为你安排单元测与期中期末。', style: theme.textTheme.bodySmall),
+          Text(
+            filtered
+                ? '试试放宽筛选条件'
+                : '完成教材学习后，老师会为你安排单元测与期中期末。',
+            style: theme.textTheme.bodySmall,
+          ),
+          if (filtered) ...[
+            const SizedBox(height: 12),
+            OutlinedButton(onPressed: onClear, child: const Text('清除筛选')),
+          ],
         ],
       ),
     );

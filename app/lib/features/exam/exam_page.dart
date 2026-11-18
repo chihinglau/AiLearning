@@ -494,18 +494,22 @@ class _ExamPageState extends ConsumerState<ExamPage> {
           ),
           FilledButton(
             onPressed: () => Navigator.of(dialogContext).pop(true),
+            style: FilledButton.styleFrom(minimumSize: const Size(96, 48)),
             child: const Text('退出'),
           ),
         ],
       ),
     );
     if (confirmed != true) return;
+    if (!mounted) return;
+    // 退出以「立即离开」为准：保存/停朗读都放到后台，避免落盘慢或抛异常时把学生
+    // 卡在确认框里点不动（CR-008 真机走查发现的 P2）。
     _saveTimer?.cancel();
-    await _flushSave();
     _ticker?.cancel();
     unawaited(_stopSpeaking());
+    unawaited(_flushSave());
     _allowPop = true;
-    if (mounted) context.pop();
+    context.pop();
   }
 
   // ------------------------------------------------------------------

@@ -154,7 +154,14 @@ cd backend
 | GET | `/api/exams` | 考试列表（学生按统一可见性谓词过滤） |
 | GET | `/api/exams/past-papers` | 真题库（真题不进通用列表） |
 | GET | `/api/exams/blueprints` | 可选组卷蓝图（需 `content:exam:write`，须注册在 `/{exam_id}` 前） |
-| POST | `/api/exams/generate` | 按蓝图组卷并发布（需 `content:exam:write`） |
+| GET | `/api/exams/past-papers/filters` | 真题库可用筛选项（年份/学科/地区/年级/类型，D-09 §5.3） |
+| GET | `/api/exams/past-papers/{id}` | 真题来源详情，不含答案（D-09 §5.5） |
+| GET | `/api/exams/attempts` | 本人历次作答/报告历史，**须注册在 `/{exam_id}` 前**（D-09 §4.7） |
+| GET | `/api/exams`、`/api/exams/past-papers` | v1.99 扩展：可选 `subject/window_state/q/page/page_size` 与 `grade/exam_type/attempt_status`；总数走 `X-Total-Count`，不带参数时行为不变 |
+| GET | `/api/exams/reviews` | 真题审核队列（需 `content:review:decide`；静态路径须注册在 `/{exam_id}` 前，CR-005） |
+| POST | `/api/exams/{id}/submit-review` | 真题草稿提交复核（需 `content:exam:write`；缺来源 422 `EXAM_SOURCE_REQUIRED`） |
+| POST | `/api/exams/{id}/review` | 审核决策 `approve` / `reject` / `offline`（需 `content:review:decide`；非法流转 409） |
+| POST | `/api/exams/generate` | 按蓝图组卷；普通卷生成即 `published`，真题生成即 `draft` 待复核（需 `content:exam:write`，CR-005） |
 | POST | `/api/exams/mock` | 派发班级同卷模考（需 `learn:assignment:create`） |
 | GET | `/api/learn/home` | 首页聚合；`pending_exams[]` 与 `/api/exams` 同口径 |
 
@@ -681,5 +688,7 @@ Invoke-RestMethod http://127.0.0.1:18080/api/exams/blueprints -Headers $ah
 - ⏳ M2：题库批量导入、错题本与复训调度、家长绑定与家长端、会员权益服务端校验。
 - ⏳ 鸿蒙 Pal 实机能力：华为账号、Push、系统使用时长统计。
 - ✅ CR-003 / EX-01~EX-03：考试入口闭环（统一可见性谓词、待办考试独立入口、考试入库与派发）已交付，EBG 真机回归通过；**R-A16 技术验收通过、待 PM 签署**（主计划 §6.22、§5.5.6）。
+- ✅ CR-004 / EX-04~EX-08：D-09《考试中心与真题库功能设计方案》评审通过并实施完成（筛选下推服务端、六态决策、真题溯源迁移 `b4c5d6e7f8g9`、报告历史/来源详情、L21~L26 验收）；全量 `pytest` 432 例 / `flutter test` 170 例全绿（主计划 §6.23、D-09 §13）。**注意**：`flutter analyze` / `flutter test` 前须把 `D:\nodejs` 加入 PATH，否则 Flutter 工具链因找不到 `npm` 直接崩溃（不报 Dart 错误）。
+- ✅ CR-005 / EX-09~EX-11、QA-01：真题「草稿 → 复核 → 发布」审核流（仅真题走草稿，普通卷 L20 行为不变）、前端审核队列、存量来源补录脚本（不猜测来源）、EBG 真机筛选/年份/详情/admin 组卷全链路补跑；全量 `pytest` 440 例 / `flutter test` 174 例全绿（主计划 §6.24、D-09 §14）。静态检查用 `backend/.venv/Scripts/ruff.exe`；`scripts/seed.py` 有历史超长行，检查该文件时加 `--ignore E501`。
 
 设计依据：[k12-learning-app-design.md](./k12-learning-app-design.md)

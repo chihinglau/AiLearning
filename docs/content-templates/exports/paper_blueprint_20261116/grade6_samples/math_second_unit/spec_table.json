@@ -1,0 +1,181 @@
+{
+  "exam_id": null,
+  "title": "6年级数学下册单元卷（自主题库生成）",
+  "subject": "math",
+  "grade": 6,
+  "exam_type": "unit",
+  "blueprint_code": "g6_math_unit",
+  "blueprint_name": "6年级数学单元测试卷（自主题库生成）",
+  "total_score": 60,
+  "time_limit_min": 40,
+  "question_count": 12,
+  "actual_score_total": 60.0,
+  "score_matches": true,
+  "knowledge_point_count": 12,
+  "sections": [
+    {
+      "section_index": 0,
+      "section_name": "一、选择题",
+      "q_type": "choice",
+      "band": "easy",
+      "planned_count": 4,
+      "planned_score": 16.0,
+      "actual_count": 4,
+      "actual_score": 16.0,
+      "knowledge_points": [
+        "图形的放大与缩小",
+        "圆柱的特征",
+        "圆柱的表面积",
+        "比例的基本性质"
+      ],
+      "chapters": [
+        "一 圆柱与圆锥",
+        "三 图形的运动",
+        "二 比例"
+      ],
+      "questions": [
+        {
+          "question_id": 12926,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "圆柱的表面积",
+          "chapter": "一 圆柱与圆锥"
+        },
+        {
+          "question_id": 12946,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "比例的基本性质",
+          "chapter": "二 比例"
+        },
+        {
+          "question_id": 12970,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "图形的放大与缩小",
+          "chapter": "三 图形的运动"
+        },
+        {
+          "question_id": 12920,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "圆柱的特征",
+          "chapter": "一 圆柱与圆锥"
+        }
+      ]
+    },
+    {
+      "section_index": 1,
+      "section_name": "二、填空题",
+      "q_type": "fill",
+      "band": "medium",
+      "planned_count": 5,
+      "planned_score": 20.0,
+      "actual_count": 5,
+      "actual_score": 20.0,
+      "knowledge_points": [
+        "数与运算·平面图形周长与面积·按单元·变式三",
+        "数与运算·百分比与比例应用·按单元·变式一",
+        "数与运算·百分比与比例应用·按单元·变式三",
+        "数与运算·百分比与比例应用·按单元·变式二",
+        "数与运算·百分比与比例应用·按单元·变式四"
+      ],
+      "chapters": [
+        "一 圆柱与圆锥",
+        "二 比例"
+      ],
+      "questions": [
+        {
+          "question_id": 19543,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·百分比与比例应用·按单元·变式四",
+          "chapter": "二 比例"
+        },
+        {
+          "question_id": 19539,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·平面图形周长与面积·按单元·变式三",
+          "chapter": "一 圆柱与圆锥"
+        },
+        {
+          "question_id": 19542,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·百分比与比例应用·按单元·变式三",
+          "chapter": "二 比例"
+        },
+        {
+          "question_id": 19541,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·百分比与比例应用·按单元·变式二",
+          "chapter": "二 比例"
+        },
+        {
+          "question_id": 19540,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·百分比与比例应用·按单元·变式一",
+          "chapter": "二 比例"
+        }
+      ]
+    },
+    {
+      "section_index": 2,
+      "section_name": "三、计算与解答",
+      "q_type": "answer",
+      "band": "hard",
+      "planned_count": 3,
+      "planned_score": 24.0,
+      "actual_count": 3,
+      "actual_score": 24.0,
+      "knowledge_points": [
+        "图形运动的综合应用",
+        "圆柱的体积",
+        "轴对称图形"
+      ],
+      "chapters": [
+        "一 圆柱与圆锥",
+        "三 图形的运动"
+      ],
+      "questions": [
+        {
+          "question_id": 12979,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "图形运动的综合应用",
+          "chapter": "三 图形的运动"
+        },
+        {
+          "question_id": 12934,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "圆柱的体积",
+          "chapter": "一 圆柱与圆锥"
+        },
+        {
+          "question_id": 12969,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "轴对称图形",
+          "chapter": "三 图形的运动"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-11-17T15:45:24.505129+00:00"
+}

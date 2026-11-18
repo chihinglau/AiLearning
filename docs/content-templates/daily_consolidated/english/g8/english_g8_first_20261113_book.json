@@ -1,0 +1,2301 @@
+{
+  "subject": "english",
+  "grade": 8,
+  "version": "牛津深圳版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "Unit 1 Water",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "U1 水的相关词汇",
+      "parent": "Unit 1 Water",
+      "order_index": 1,
+      "explanation": "water、save、waste、tap、river 等是谈论水资源的核心词。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "U1 被动语态的用法",
+      "parent": "Unit 1 Water",
+      "order_index": 2,
+      "explanation": "水被使用、被污染时，用 be 加过去分词表示被动。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "U1 说明水的用途",
+      "parent": "Unit 1 Water",
+      "order_index": 3,
+      "explanation": "用 we use water to…、water is used for… 说清用途。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "U1 提出节水建议",
+      "parent": "Unit 1 Water",
+      "order_index": 4,
+      "explanation": "用 We should…、Let's… 提建议，语气更自然。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 2 Digital life",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "U2 数字生活词汇",
+      "parent": "Unit 2 Digital life",
+      "order_index": 1,
+      "explanation": "online、app、website、password、download 是常用词。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "U2 谈论网络用途",
+      "parent": "Unit 2 Digital life",
+      "order_index": 2,
+      "explanation": "用 I use the Internet to… 说清上网做什么。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "U2 网络的好处与问题",
+      "parent": "Unit 2 Digital life",
+      "order_index": 3,
+      "explanation": "用 It is helpful to… / It may cause… 讨论利弊。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "U2 网络安全提醒",
+      "parent": "Unit 2 Digital life",
+      "order_index": 4,
+      "explanation": "不随便给陌生人密码、不点陌生链接，是基本安全习惯。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 3 Curious minds",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "U3 科学探究词汇",
+      "parent": "Unit 3 Curious minds",
+      "order_index": 1,
+      "explanation": "experiment、observe、discover、reason 是探究常用词。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "U3 描述现象与推断",
+      "parent": "Unit 3 Curious minds",
+      "order_index": 2,
+      "explanation": "用 It seems that… / Why does…? 说现象、提问题。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "U3 说明实验步骤",
+      "parent": "Unit 3 Curious minds",
+      "order_index": 3,
+      "explanation": "用 First、Then、Finally 让步骤清楚有序。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "U3 表达好奇与猜想",
+      "parent": "Unit 3 Curious minds",
+      "order_index": 4,
+      "explanation": "用 I wonder… / Maybe… 表达好奇和猜测。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 4 Then and now",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "U4 变化相关词汇",
+      "parent": "Unit 4 Then and now",
+      "order_index": 1,
+      "explanation": "change、develop、modern、traditional 常用来谈变化。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "U4 一般过去时",
+      "parent": "Unit 4 Then and now",
+      "order_index": 2,
+      "explanation": "过去发生的动作用动词过去式，常与 ago、last year 连用。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "U4 现在与过去的对比",
+      "parent": "Unit 4 Then and now",
+      "order_index": 3,
+      "explanation": "用 but、while、used to 对比今昔。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "U4 描述变化的影响",
+      "parent": "Unit 4 Then and now",
+      "order_index": 4,
+      "explanation": "用 make life easier、bring problems 评价变化。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 5 Teamwork",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "U5 合作相关词汇",
+      "parent": "Unit 5 Teamwork",
+      "order_index": 1,
+      "explanation": "team、leader、member、cooperate、support 是合作话题常用词。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "U5 表达建议与分工",
+      "parent": "Unit 5 Teamwork",
+      "order_index": 2,
+      "explanation": "用 Why not…? / Let's… / You'd better… 提建议分工。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "U5 说明合作的好处",
+      "parent": "Unit 5 Teamwork",
+      "order_index": 3,
+      "explanation": "用 Together we can…、It is easier to… 说明合作价值。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "U5 处理分歧",
+      "parent": "Unit 5 Teamwork",
+      "order_index": 4,
+      "explanation": "出现不同意见时，用 I see your point, but… 表达并协商。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "Unit 6 Life in the future",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "U6 未来生活词汇",
+      "parent": "Unit 6 Life in the future",
+      "order_index": 1,
+      "explanation": "future、robot、predict、environment 是未来话题常用词。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "U6 will 表预测",
+      "parent": "Unit 6 Life in the future",
+      "order_index": 2,
+      "explanation": "will 加动词原形表示将要或预测。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "U6 表达可能性的程度",
+      "parent": "Unit 6 Life in the future",
+      "order_index": 3,
+      "explanation": "may、might、probably 表示可能性大小不同。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "U6 讨论未来环境",
+      "parent": "Unit 6 Life in the future",
+      "order_index": 4,
+      "explanation": "用 If we…, …will… 讨论环保与未来。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "Unit 1 Water",
+      "order_index": 1,
+      "summary": "围绕水资源学习相关词汇、被动语态与说明文表达。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「浪费」的英文是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "waste 表示浪费。",
+          "difficulty": 2,
+          "knowledge_point": "U1 水的相关词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "waste",
+            "save",
+            "collect",
+            "boil"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「节约用水」可以说 save（ ）。",
+          "answer": {
+            "value": "water"
+          },
+          "analysis": "save water 是节约用水。",
+          "difficulty": 2,
+          "knowledge_point": "U1 水的相关词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "tap 意思是水龙头。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "tap 是水龙头。",
+          "difficulty": 3,
+          "knowledge_point": "U1 水的相关词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出三种节约用水的做法，用英文短语表达。",
+          "answer": {
+            "value": "示例：turn off the tap, take a short shower, reuse water"
+          },
+          "analysis": "评分要点：三条做法合理、表达正确。",
+          "difficulty": 4,
+          "knowledge_point": "U1 水的相关词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些词与水资源有关？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A river ✓ 河流；B tap ✓ 水龙头；C pencil ✗ 是文具；D lake ✓ 湖泊。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "U1 水的相关词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "river",
+            "tap",
+            "pencil",
+            "lake"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「水被污染了」英文是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "水是被污染的，用 is 加过去分词 polluted。",
+          "difficulty": 2,
+          "knowledge_point": "U1 被动语态的用法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Water is polluted.",
+            "Water pollutes.",
+            "Water is polluting.",
+            "Water pollute."
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Much water（ ）wasted every day.",
+          "answer": {
+            "value": "is"
+          },
+          "analysis": "water 不可数名词作主语，被动用 is。",
+          "difficulty": 2,
+          "knowledge_point": "U1 被动语态的用法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "被动语态由 be 加过去分词构成。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "be 动词加过去分词是基本被动结构。",
+          "difficulty": 3,
+          "knowledge_point": "U1 被动语态的用法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "把「人们每天使用大量的水」改写成被动句。",
+          "answer": {
+            "value": "示例：A lot of water is used every day."
+          },
+          "analysis": "评分要点：改成 be 加过去分词，主语调整正确。",
+          "difficulty": 4,
+          "knowledge_point": "U1 被动语态的用法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些是被动语态的句子？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓ is 加过去分词；B ✓ are 加过去分词；C People save water ✗ 是主动；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "U1 被动语态的用法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Water is cleaned in this factory.",
+            "Bottles are reused.",
+            "People save water.",
+            "The river is polluted."
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「我们用水做饭」英文是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "use sth to do sth 表示用某物做某事。",
+          "difficulty": 2,
+          "knowledge_point": "U1 说明水的用途",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "We use water to cook.",
+            "We use water cooking.",
+            "Water uses we to cook.",
+            "We water use cook."
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Water is used（ ）drinking.",
+          "answer": {
+            "value": "for"
+          },
+          "analysis": "be used for 加动名词表示用途。",
+          "difficulty": 2,
+          "knowledge_point": "U1 说明水的用途",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "use water to wash 和 use water for washing 意思接近。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "to do 与 for doing 都可表示用途。",
+          "difficulty": 3,
+          "knowledge_point": "U1 说明水的用途",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用两句英文说出水的两种用途。",
+          "answer": {
+            "value": "示例：We use water to cook. We use water to wash."
+          },
+          "analysis": "评分要点：两句都用正确句型。",
+          "difficulty": 4,
+          "knowledge_point": "U1 说明水的用途",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些句子表达用水做某事？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C Water is drink ✗ 语法错；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "U1 说明水的用途",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "We use water to wash clothes.",
+            "Water is used for cooking.",
+            "Water is drink.",
+            "We use water to clean the floor."
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "提建议时最合适的说法是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "We should 语气委婉，适合提建议。",
+          "difficulty": 2,
+          "knowledge_point": "U1 提出节水建议",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "We should save water.",
+            "You must save water now.",
+            "Save water!",
+            "Water is saved."
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Let's（ ）the tap after washing hands.",
+          "answer": {
+            "value": "turn off"
+          },
+          "analysis": "turn off the tap 表示关水龙头。",
+          "difficulty": 2,
+          "knowledge_point": "U1 提出节水建议",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "提建议可以用 should、let's 等表达。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "should 与 let's 都是常见建议表达。",
+          "difficulty": 3,
+          "knowledge_point": "U1 提出节水建议",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写两条节水建议，每条用不同句式。",
+          "answer": {
+            "value": "示例：We should take short showers. Let's reuse water to clean the floor."
+          },
+          "analysis": "评分要点：两条建议合理、句式不同。",
+          "difficulty": 4,
+          "knowledge_point": "U1 提出节水建议",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于节水建议，下面哪些句子是提建议？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 陈述事实 ✗；D ✓ 反问提建议。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "U1 提出节水建议",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "We should save water.",
+            "Let's fix the leaking tap.",
+            "Water is wasted.",
+            "Why not reuse the water?"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Unit 2 Digital life",
+      "order_index": 2,
+      "summary": "学习数字生活相关词汇，谈论网络使用与利弊。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「下载」的英文是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "download 是下载，upload 是上传。",
+          "difficulty": 2,
+          "knowledge_point": "U2 数字生活词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "download",
+            "upload",
+            "delete",
+            "search"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "在网上聊天要说（ ）line（填一个词）。",
+          "answer": {
+            "value": "on"
+          },
+          "analysis": "on line 表示在网上。",
+          "difficulty": 2,
+          "knowledge_point": "U2 数字生活词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "password 意思是密码。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "password 是密码。",
+          "difficulty": 3,
+          "knowledge_point": "U2 数字生活词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出三个你常用的数字生活英文词。",
+          "answer": {
+            "value": "示例：app, website, download"
+          },
+          "analysis": "评分要点：三个词都与数字生活相关、拼写正确。",
+          "difficulty": 4,
+          "knowledge_point": "U2 数字生活词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些与数字生活有关？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C spoon ✗ 是勺子；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "U2 数字生活词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "app",
+            "website",
+            "spoon",
+            "password"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「我用网络查资料」英文是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "use sth to do sth 结构完整。",
+          "difficulty": 2,
+          "knowledge_point": "U2 谈论网络用途",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "I use the Internet to search for information.",
+            "I use Internet search information.",
+            "I use the Internet searching information.",
+            "The Internet uses me."
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "I use my phone to（ ）emails.",
+          "answer": {
+            "value": "send"
+          },
+          "analysis": "send emails 表示发邮件。",
+          "difficulty": 2,
+          "knowledge_point": "U2 谈论网络用途",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "上网只能用来玩，没有别的用途。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "上网还能学习、查资料、与人联系。",
+          "difficulty": 3,
+          "knowledge_point": "U2 谈论网络用途",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用英文说出你上网做的两件事。",
+          "answer": {
+            "value": "示例：I use the Internet to study English and watch the news."
+          },
+          "analysis": "评分要点：两件事表达清楚、语法正确。",
+          "difficulty": 4,
+          "knowledge_point": "U2 谈论网络用途",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "上网可以做哪些事？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C sleep ✗ 与上网无关；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "U2 谈论网络用途",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "search for information",
+            "send emails",
+            "sleep",
+            "watch online lessons"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「上网太久对眼睛不好」英文是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "动名词作主语，be bad for 表示对……不好。",
+          "difficulty": 2,
+          "knowledge_point": "U2 网络的好处与问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Using the Internet too long is bad for your eyes.",
+            "Use Internet long is bad eyes.",
+            "The Internet bad for eyes long.",
+            "Internet too long bad eyes."
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "The Internet makes our life more（ ）（方便的）。",
+          "answer": {
+            "value": "convenient"
+          },
+          "analysis": "convenient 表示方便的。",
+          "difficulty": 2,
+          "knowledge_point": "U2 网络的好处与问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "长时间看屏幕会伤害视力。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "长时间用眼容易造成视力下降。",
+          "difficulty": 3,
+          "knowledge_point": "U2 网络的好处与问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出上网的一个好处和一个问题。",
+          "answer": {
+            "value": "示例：好处是查资料很快；问题是容易分心"
+          },
+          "analysis": "评分要点：一利一弊都说清。",
+          "difficulty": 4,
+          "knowledge_point": "U2 网络的好处与问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些是上网带来的问题？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓ 眼睛疲劳；B ✓ 浪费时间；C 快速获取信息 ✗ 是好处；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "U2 网络的好处与问题",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "eyes hurt after long use",
+            "waste too much time",
+            "get information quickly",
+            "forget to do homework"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "网上有人要你的密码，应该（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "密码不能给陌生人，遇到可疑情况要告诉家长或老师。",
+          "difficulty": 2,
+          "knowledge_point": "U2 网络安全提醒",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "不告诉对方，告诉家长或老师",
+            "马上告诉他",
+            "写在网上",
+            "发到群里"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "不要随便点开（ ）的链接。",
+          "answer": {
+            "value": "陌生"
+          },
+          "analysis": "陌生链接可能带病毒或骗信息。",
+          "difficulty": 2,
+          "knowledge_point": "U2 网络安全提醒",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "网友约你单独见面，可以直接去。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "不能单独与网友见面，要告诉家长。",
+          "difficulty": 3,
+          "knowledge_point": "U2 网络安全提醒",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出两条网络安全注意事项。",
+          "answer": {
+            "value": "示例：不把密码告诉别人；不点陌生链接"
+          },
+          "analysis": "评分要点：两条具体、可操作。",
+          "difficulty": 4,
+          "knowledge_point": "U2 网络安全提醒",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于保护个人账号安全，下面哪些做法正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 群发密码 ✗ 泄露账号；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "U2 网络安全提醒",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "不把密码告诉陌生人",
+            "定期修改密码",
+            "把密码发到班级群里",
+            "不点陌生链接"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Unit 3 Curious minds",
+      "order_index": 3,
+      "summary": "学习与科学探究有关的表达，会用疑问和推断描述现象。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「实验」的英文是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "experiment 是实验。",
+          "difficulty": 2,
+          "knowledge_point": "U3 科学探究词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "experiment",
+            "experience",
+            "example",
+            "exercise"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "科学家先（ ）现象，再找原因。用英文填 observe。",
+          "answer": {
+            "value": "observe"
+          },
+          "analysis": "observe 表示观察。",
+          "difficulty": 2,
+          "knowledge_point": "U3 科学探究词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "discover 意思是发现。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "discover 是发现。",
+          "difficulty": 3,
+          "knowledge_point": "U3 科学探究词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出三个与科学研究有关的英文词。",
+          "answer": {
+            "value": "示例：experiment, observe, discover"
+          },
+          "analysis": "评分要点：三个词都与探究相关。",
+          "difficulty": 4,
+          "knowledge_point": "U3 科学探究词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些词与科学探究有关？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C umbrella ✗ 是雨伞；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "U3 科学探究词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "observe",
+            "experiment",
+            "umbrella",
+            "discover"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「水为什么会结冰」英文是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "特殊疑问句用 Why 加助动词 does 加动词原形。",
+          "difficulty": 2,
+          "knowledge_point": "U3 描述现象与推断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Why does water freeze?",
+            "Why water freeze?",
+            "Why is water freeze?",
+            "Water why freeze?"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "It（ ）that the plant grows faster in light.",
+          "answer": {
+            "value": "seems"
+          },
+          "analysis": "It seems that 表示似乎。",
+          "difficulty": 2,
+          "knowledge_point": "U3 描述现象与推断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "提出问题后可以通过实验寻找答案。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "实验能验证猜想。",
+          "difficulty": 3,
+          "knowledge_point": "U3 描述现象与推断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用英文就一个生活现象提一个问题。",
+          "answer": {
+            "value": "示例：Why does ice melt in warm water?"
+          },
+          "analysis": "评分要点：问句结构正确、现象具体。",
+          "difficulty": 4,
+          "knowledge_point": "U3 描述现象与推断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些句子是在提问？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓ 疑问句；B ✓；C 陈述句 ✗；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "U3 描述现象与推断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Why does ice melt?",
+            "How does the plant grow?",
+            "It seems that ice melts.",
+            "What makes the balloon big?"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "说明步骤时表示「首先」用（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "First 表示首先。",
+          "difficulty": 2,
+          "knowledge_point": "U3 说明实验步骤",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "First",
+            "Finally",
+            "However",
+            "Because"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "（ ），we write down the result.（最后）",
+          "answer": {
+            "value": "Finally"
+          },
+          "analysis": "Finally 表示最后一步。",
+          "difficulty": 2,
+          "knowledge_point": "U3 说明实验步骤",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "实验步骤按顺序说，别人才看得懂。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "顺序清楚才好重复操作。",
+          "difficulty": 3,
+          "knowledge_point": "U3 说明实验步骤",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用 First、Then、Finally 写出三个步骤的一句话。",
+          "answer": {
+            "value": "示例：First, put the ice in water. Then, watch it. Finally, write down the time."
+          },
+          "analysis": "评分要点：三个连接词使用正确、顺序合理。",
+          "difficulty": 4,
+          "knowledge_point": "U3 说明实验步骤",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "表示顺序的词有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D However ✗ 表转折。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "U3 说明实验步骤",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "First",
+            "Then",
+            "Finally",
+            "However"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「我想知道为什么天是蓝的」英文是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "I wonder 后面接疑问词引导的从句。",
+          "difficulty": 2,
+          "knowledge_point": "U3 表达好奇与猜想",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "I wonder why the sky is blue.",
+            "I wonder the sky blue.",
+            "I want the sky blue why.",
+            "Sky is blue I wonder why."
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "（ ）it will rain tomorrow.（也许）",
+          "answer": {
+            "value": "Maybe"
+          },
+          "analysis": "Maybe 表示也许。",
+          "difficulty": 2,
+          "knowledge_point": "U3 表达好奇与猜想",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "猜想需要用实验或证据来检验。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "猜想只是初步想法，要靠证据验证。",
+          "difficulty": 3,
+          "knowledge_point": "U3 表达好奇与猜想",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用 I wonder… 写一句你对自然现象的好奇。",
+          "answer": {
+            "value": "示例：I wonder why leaves turn yellow in autumn."
+          },
+          "analysis": "评分要点：从句结构正确、内容合理。",
+          "difficulty": 4,
+          "knowledge_point": "U3 表达好奇与猜想",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "表达猜想可以用哪些词？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C Certainly ✗ 表示确定；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "U3 表达好奇与猜想",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Maybe",
+            "Perhaps",
+            "Certainly",
+            "It may be"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Unit 4 Then and now",
+      "order_index": 4,
+      "summary": "比较过去与现在的变化，掌握一般过去时与现在完成时的对比。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「现代的」英文是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "modern 表示现代的。",
+          "difficulty": 2,
+          "knowledge_point": "U4 变化相关词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "modern",
+            "traditional",
+            "ancient",
+            "quiet"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "我们的城市发生了很大的（ ）（变化）。",
+          "answer": {
+            "value": "change"
+          },
+          "analysis": "change 表示变化。",
+          "difficulty": 2,
+          "knowledge_point": "U4 变化相关词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "traditional 意思是传统的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "traditional 是传统的。",
+          "difficulty": 3,
+          "knowledge_point": "U4 变化相关词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出两个描述变化的英文词。",
+          "answer": {
+            "value": "示例：change, develop"
+          },
+          "analysis": "评分要点：两个词都与变化相关、拼写正确。",
+          "difficulty": 4,
+          "knowledge_point": "U4 变化相关词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些词可以描述变化？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D sleep ✗ 与变化无关。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "U4 变化相关词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "change",
+            "develop",
+            "modern",
+            "sleep"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「十年前这里有一所学校」英文是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "十年前是过去，单数用 was。",
+          "difficulty": 2,
+          "knowledge_point": "U4 一般过去时",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "There was a school here ten years ago.",
+            "There is a school here ten years ago.",
+            "There were a school here now.",
+            "There has a school ten years ago."
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "People（ ）(live) a simple life in the past. 填过去式。",
+          "answer": {
+            "value": "lived"
+          },
+          "analysis": "in the past 表过去，用过去式 lived。",
+          "difficulty": 2,
+          "knowledge_point": "U4 一般过去时",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "yesterday 常用于一般过去时。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "yesterday 是过去时间标志。",
+          "difficulty": 3,
+          "knowledge_point": "U4 一般过去时",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用一般过去时写一句你去年做过的事。",
+          "answer": {
+            "value": "示例：I visited my grandparents last year."
+          },
+          "analysis": "评分要点：动词用过去式，时间状语正确。",
+          "difficulty": 4,
+          "knowledge_point": "U4 一般过去时",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些句子用了一般过去时？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓ visited；B ✓ lived；C 现在进行时 ✗；D ✓ watched。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "U4 一般过去时",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "I visited the museum last week.",
+            "She lived here ten years ago.",
+            "They are playing now.",
+            "We watched a film yesterday."
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「过去人们走路，现在人们开车」英文最贴切的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "used to 加动词原形表示过去常做。",
+          "difficulty": 2,
+          "knowledge_point": "U4 现在与过去的对比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "People used to walk, but now they drive.",
+            "People walk, but now drive.",
+            "People used walk but drive now.",
+            "People walking but driving."
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "We（ ）to play outside when we were young.",
+          "answer": {
+            "value": "used"
+          },
+          "analysis": "used to 表示过去常常。",
+          "difficulty": 2,
+          "knowledge_point": "U4 现在与过去的对比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "used to 后面接动词原形。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "used to do 是固定结构。",
+          "difficulty": 3,
+          "knowledge_point": "U4 现在与过去的对比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用 used to 和 now 写一句今昔对比。",
+          "answer": {
+            "value": "示例：People used to write letters, but now they send emails."
+          },
+          "analysis": "评分要点：两头对比清楚、结构正确。",
+          "difficulty": 4,
+          "knowledge_point": "U4 现在与过去的对比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些句子正确表达了今昔对比？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 前后无变化 ✗ 不算对比；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "U4 现在与过去的对比",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "We used to play outside, but now we play games online.",
+            "People used to walk to school.",
+            "I used to swim, now I swim.",
+            "She used to read paper books, but now she reads e-books."
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「科技让生活更方便」英文是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "make 加宾语加形容词，比较级用 more convenient。",
+          "difficulty": 2,
+          "knowledge_point": "U4 描述变化的影响",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Technology makes life more convenient.",
+            "Technology make life convenient more.",
+            "Technology makes life convenienter.",
+            "Technology making life convenient."
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "New roads（ ）(bring) more cars. 用现在时。",
+          "answer": {
+            "value": "bring"
+          },
+          "analysis": "描述现在情况，主语复数用 bring。",
+          "difficulty": 2,
+          "knowledge_point": "U4 描述变化的影响",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "变化既可能带来好处，也可能带来问题。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "发展有便利也会有新问题，需要客观看待。",
+          "difficulty": 3,
+          "knowledge_point": "U4 描述变化的影响",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用英文写一句变化带来的影响。",
+          "answer": {
+            "value": "示例：The new road makes travel easier but brings more noise."
+          },
+          "analysis": "评分要点：影响说清、句式正确。",
+          "difficulty": 4,
+          "knowledge_point": "U4 描述变化的影响",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "变化可能带来哪些影响？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 什么都没变 ✗ 与变化矛盾。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "U4 描述变化的影响",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "life becomes easier",
+            "more noise",
+            "traffic becomes slower",
+            "nothing changes at all"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Unit 5 Teamwork",
+      "order_index": 5,
+      "summary": "学习团队合作相关表达，会用建议和协商句式。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「合作」的英文动词是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "cooperate 表示合作。",
+          "difficulty": 2,
+          "knowledge_point": "U5 合作相关词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "cooperate",
+            "compete",
+            "complain",
+            "complete"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Each（ ）has a job in the team.（成员）",
+          "answer": {
+            "value": "member"
+          },
+          "analysis": "member 表示成员。",
+          "difficulty": 2,
+          "knowledge_point": "U5 合作相关词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "leader 意思是队长或负责人。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "leader 是带领大家的人。",
+          "difficulty": 3,
+          "knowledge_point": "U5 合作相关词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出三个与团队合作有关的英文词。",
+          "answer": {
+            "value": "示例：team, member, cooperate"
+          },
+          "analysis": "评分要点：三个词都与合作相关。",
+          "difficulty": 4,
+          "knowledge_point": "U5 合作相关词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些词与合作有关？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D alone ✗ 表示独自。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "U5 合作相关词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "team",
+            "member",
+            "cooperate",
+            "alone"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "分工时最礼貌的说法是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "How about 加动名词，语气委婉。",
+          "difficulty": 2,
+          "knowledge_point": "U5 表达建议与分工",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "How about you drawing the picture?",
+            "You draw the picture.",
+            "Draw it now.",
+            "You must draw."
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "（ ）not ask the teacher for help?（为什么不）",
+          "answer": {
+            "value": "Why"
+          },
+          "analysis": "Why not 加动词原形表建议。",
+          "difficulty": 2,
+          "knowledge_point": "U5 表达建议与分工",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "提建议时加 please 会更礼貌。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "please 让语气更客气。",
+          "difficulty": 3,
+          "knowledge_point": "U5 表达建议与分工",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用英文提两条小组分工建议。",
+          "answer": {
+            "value": "示例：Let's divide the work. Why not ask Lily to write the report?"
+          },
+          "analysis": "评分要点：两条建议合理、句式正确。",
+          "difficulty": 4,
+          "knowledge_point": "U5 表达建议与分工",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于小组分工，下面哪些句子是提建议？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C You must ✗ 是命令；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "U5 表达建议与分工",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Why not start now?",
+            "Let's share the work.",
+            "You must do it.",
+            "How about working together?"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「一起做会更快」英文是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "It is 加比较级加 to do 说明更……",
+          "difficulty": 2,
+          "knowledge_point": "U5 说明合作的好处",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "It is faster to work together.",
+            "It is fast to work together.",
+            "Work together it faster.",
+            "Together work fast."
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Together we can（ ）the problem.（解决）",
+          "answer": {
+            "value": "solve"
+          },
+          "analysis": "solve the problem 表示解决问题。",
+          "difficulty": 2,
+          "knowledge_point": "U5 说明合作的好处",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "分工合作能减少重复劳动。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "分工后各做一部分，避免重复。",
+          "difficulty": 3,
+          "knowledge_point": "U5 说明合作的好处",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用英文说一句合作的好处。",
+          "answer": {
+            "value": "示例：Working together helps us finish the task faster."
+          },
+          "analysis": "评分要点：好处具体、表达正确。",
+          "difficulty": 4,
+          "knowledge_point": "U5 说明合作的好处",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "合作有哪些好处？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 什么都不做 ✗；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "U5 说明合作的好处",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "finish work faster",
+            "share different ideas",
+            "do nothing at all",
+            "learn from each other"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "组员意见不同时，最好的做法是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先听理由再协商，才能达成一致。",
+          "difficulty": 2,
+          "knowledge_point": "U5 处理分歧",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "听清对方理由再商量",
+            "直接否决不解释",
+            "不说话生闷气",
+            "退出小组"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "I see your point,（ ）I have a different idea.",
+          "answer": {
+            "value": "but"
+          },
+          "analysis": "but 表示转折，引出不同意见。",
+          "difficulty": 2,
+          "knowledge_point": "U5 处理分歧",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "少数人的意见也值得听。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "不同意见可能带来更好的办法。",
+          "difficulty": 3,
+          "knowledge_point": "U5 处理分歧",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用英文写一句表达不同意见又不失礼貌的话。",
+          "answer": {
+            "value": "示例：I see your point, but I think we need more time."
+          },
+          "analysis": "评分要点：有让步再转折，语气礼貌。",
+          "difficulty": 4,
+          "knowledge_point": "U5 处理分歧",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "处理分歧时哪些做法合适？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 提高嗓门 ✗；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "U5 处理分歧",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "先说理解对方的想法",
+            "用事实说明理由",
+            "提高嗓门压过对方",
+            "寻找折中办法"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Unit 6 Life in the future",
+      "order_index": 6,
+      "summary": "用 will 与预测句式谈论未来生活。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「预测」的英文是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "predict 表示预测。",
+          "difficulty": 2,
+          "knowledge_point": "U6 未来生活词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "predict",
+            "protect",
+            "prepare",
+            "produce"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "In the（ ），we may live on other planets.（未来）",
+          "answer": {
+            "value": "future"
+          },
+          "analysis": "future 表示未来。",
+          "difficulty": 2,
+          "knowledge_point": "U6 未来生活词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "robot 意思是机器人。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "robot 是机器人。",
+          "difficulty": 3,
+          "knowledge_point": "U6 未来生活词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出三个与未来生活有关的英文词。",
+          "answer": {
+            "value": "示例：future, robot, environment"
+          },
+          "analysis": "评分要点：三个词都与未来话题相关。",
+          "difficulty": 4,
+          "knowledge_point": "U6 未来生活词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些词与未来生活有关？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C spoon ✗；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "U6 未来生活词汇",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "future",
+            "robot",
+            "spoon",
+            "environment"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「未来机器人会帮我们做家务」英文是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "will 后接动词原形 help。",
+          "difficulty": 2,
+          "knowledge_point": "U6 will 表预测",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Robots will help us do housework.",
+            "Robots will helping us.",
+            "Robots help will us.",
+            "Robots will helps us."
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "People（ ）live longer in the future.",
+          "answer": {
+            "value": "will"
+          },
+          "analysis": "预测将来用 will。",
+          "difficulty": 2,
+          "knowledge_point": "U6 will 表预测",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "will 后面的动词要加 s。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "will 后接动词原形，不加 s。",
+          "difficulty": 3,
+          "knowledge_point": "U6 will 表预测",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用 will 写两句你对未来的预测。",
+          "answer": {
+            "value": "示例：Cars will drive themselves. Robots will help us at home."
+          },
+          "analysis": "评分要点：两句都用 will 加动词原形。",
+          "difficulty": 4,
+          "knowledge_point": "U6 will 表预测",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些句子正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C cooks ✗ 多加 s；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "U6 will 表预测",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Robots will cook for us.",
+            "Cars will fly.",
+            "Robots will cooks.",
+            "People will live on Mars."
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "可能性最小的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "might 表示可能性较小。",
+          "difficulty": 2,
+          "knowledge_point": "U6 表达可能性的程度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "might",
+            "will",
+            "must",
+            "are going to"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "Robots（ ）do most of the work.（可能）",
+          "answer": {
+            "value": "may"
+          },
+          "analysis": "may 表示可能。",
+          "difficulty": 2,
+          "knowledge_point": "U6 表达可能性的程度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "probably 表示很有可能。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "probably 表示很可能。",
+          "difficulty": 3,
+          "knowledge_point": "U6 表达可能性的程度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用 may 和 will 各写一句关于未来的话，说一说可能性差别。",
+          "answer": {
+            "value": "示例：We may live on the moon. We will use more clean energy. 前者可能、后者更确定"
+          },
+          "analysis": "评分要点：两句结构正确，差别说明清楚。",
+          "difficulty": 4,
+          "knowledge_point": "U6 表达可能性的程度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "表达可能性时可以用的词有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C must ✗ 表必须；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "U6 表达可能性的程度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "may",
+            "might",
+            "must",
+            "probably"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「如果我们少开车，空气会更好」英文是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "if 从句用现在时，主句用 will。",
+          "difficulty": 2,
+          "knowledge_point": "U6 讨论未来环境",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "If we drive less, the air will be cleaner.",
+            "If we drive less, the air is cleaner will.",
+            "If we will drive less, air cleaner.",
+            "We drive less if air will cleaner."
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "If we plant more trees, the city will be（ ）（更美）。",
+          "answer": {
+            "value": "more beautiful"
+          },
+          "analysis": "比较级 more beautiful 表示更美。",
+          "difficulty": 2,
+          "knowledge_point": "U6 讨论未来环境",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "if 从句里通常不用 will。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "条件从句用一般现在时表将来。",
+          "difficulty": 3,
+          "knowledge_point": "U6 讨论未来环境",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用 If…, …will… 写一句环保预测。",
+          "answer": {
+            "value": "示例：If we use less plastic, the sea will be cleaner."
+          },
+          "analysis": "评分要点：条件句与主句时态正确。",
+          "difficulty": 4,
+          "knowledge_point": "U6 讨论未来环境",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些句子结构正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 从句用 will ✗；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "U6 讨论未来环境",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "If we save water, we will help the earth.",
+            "If we plant trees, the air will be fresher.",
+            "If we will save water, we help.",
+            "If people use clean energy, the air will be better."
+          ]
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-14T12:07:25+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "normalized": "难度 40/40/20 归一 + 主观题短答案补评分要点（2026-11-13 统一口径）",
+    "supplemented": "数值填空补可求值算式 0 道 / 数值填空改单选 0 道 / 补多选题 0 道（2 真 + 2 假，答案 2 项；2026-11-14 口径）",
+    "stem_dedup": "跨册同题干补册次前缀 0 道（2026-11-14 跨册去重口径）",
+    "duplicate_rewrites": "跨册同题定向改写 1 道（保留两侧题量，2026-11-14 口径）",
+    "chapter_scope": "全章域（本册无跨册重复章）",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

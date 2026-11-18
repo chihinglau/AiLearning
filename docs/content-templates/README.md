@@ -228,3 +228,42 @@ python ..\docs\content-templates\_validate_daily.py ..\docs\content-templates\da
 6. 每题至少挂 1 个知识点；新增知识点时先补 `knowledge`，再补题目。
 7. 单文件建议不超过 200 题，按「章节」拆分文件便于评审与回滚。
 8. 提交前先跑 `--dry-run`；上线前题目 `status` 建议先 `draft`，走内容复核后再 `published`。
+
+## 整册教研数据口径（2026-11-14 起，整册重跑 / 定时任务都适用）
+
+> 本节是「整册重跑（`rerun_packs/` + `_rerun_books.py`）」与「每日增量任务」共用的硬口径；模板级要求见 §出题质量要求，内容包写法见 `rerun_packs/_PACK_SPEC.md` §8–§10。
+
+### 1. 统一骨架与当前基线
+
+- 范围：g1–g9 全学科**上下册统一骨架**，共 **92 册**；骨架索引唯一可信来源 `exports/review_20261112/rerun_skeleton_index_g1g9_unified_20261113.json`（`books[]` 的 `chapters` 为该册官方章序）。
+- 当前基线（2026-11-14 骨架纠偏后）：**92 册 / 608 章 / 2432 知识点 / 11678 题**；纠偏前为 92 / 618 / 2472 / 11870。
+- 基线口径：`daily_rerun/` 与 `daily_consolidated/` 各 92 份逐册一致，且逐册题量与库内题行精确相等；`backend\ailearning_dev.db` 总表以「册 / 章 / 知识点 / 题目」四项对齐。
+
+### 2. 分册章域（禁止跨册重复章）
+
+- 同一学科同一年级的两册**不得出现同一章**。physics g9 原骨架曾把上册 10 章整份复制给下册（第十三章 内能～第二十二章 能源与可持续发展 ×2），2026-11-14 已按人教版实际分册修正：上册 13–18 章（6 章）、下册 19–22 章（4 章）。
+- 落地方式：`_rerun_books.py` 的 `CHAPTER_SCOPE`（键 = 学科/年级/学期）+ `apply_chapter_scope()`，在 `load_packs` 阶段裁剪，留痕 `_rerun.chapter_scope`；同时修正骨架索引的 `chapters / chapter_count`。
+- 语文各年级「第一/二…单元」、数学 g4/g5/g6「总复习」在上下册同名，属教材真实结构（章属于不同 textbook），**不是缺陷**，不需要改名。
+- 新增册要拆上下册，必须先登记 `CHAPTER_SCOPE`，再改骨架索引，然后全量重组装；漏改骨架会触发自检「章名与官方骨架不一致」。
+
+### 3. 跨册同题处置（去前缀比对）
+
+- 判据：剥离 `（学科年级册别·章名）` 前缀后，按 **(题干, 题型)** 跨册比对；同题即视为重复。
+- 处置：跨学科重复 → 按学科归属改写「不属于本学科」的一侧；同年级同学科跨册重复 → 改写下册侧；跨年级同学科重复 → 判定为螺旋复现，保留。
+- 铁律：**只改题不删题**，改写后题量回到本册基线；改写登记在 `_rerun_books.py` 的 `DUPLICATE_REWRITES`（原题干必须逐字一致，含空格），由 `apply_duplicate_rewrites()` 执行。
+- 复核：`python _find_same_content.py`；当前结果为 24 组，全部为跨年级同学科。
+
+### 4. 每日任务 / 整册重跑的结构性防重规则
+
+1. **题干不得跨册重复**：同一个题干在 92 册里只能出现一次（跨年级螺旋复现除外，需人工确认）；系统侧由 `disambiguate_stems()` 补册次前缀兜底，计数写 `_rerun.stem_dedup`，但**前缀只是兜底，不是许可**。
+2. **多选题统一 2 真 2 假**：正确项固定 A、C，错误项 B、D，`answer` 固定 2 项；题干带册次（`关于{年级}年级{上/下册}「{章名}」的相关内容，下列说法正确的有哪些？`）；`knowledge_point` **固定本章首个题的知识点**（不得挂到跨章取材的节点，否则硬门禁 `section_shared_questions_0` 会判 FAIL）。
+3. **同 section 的题不得出现在 >1 章**（硬门禁 `section_shared_questions_0`）。
+4. **判断题**：每册至少 5 道「真」判断，且题干 ≥5 字、句末带标点；「真」项不足会在校验器中表现为「缺少题型 multiple」。
+5. **难度分布**照 40/40/20 归一；主观题答案 ≥8 字，不得写「略」开头的空答案（`略读` 这类正文也需改写，避免命中「略」）。
+6. **题干泛化词**禁用：`更可取的学习做法`、`可以先梳理`、`举一个生活中用到`、`结合实例分析比单纯背诵`、`值得提倡的`、`知识脉络`。
+
+### 5. 台账与留痕要求
+
+- 每次整册重跑必须留痕：`_rerun` 内的 `normalized / supplemented / stem_dedup / duplicate_rewrites / chapter_scope / status`；
+- 每次入库必须留痕：机读校验（`_validate_daily.py --json-out`）、门禁（`_check_book_gate.py --json-out`）、审计（`_audit_g1g9.py`）、stale 清理（`_stale_check.py`，dry-run 与 apply 各一份）、逐册核对（`_verify_books_vs_db.py`）；
+- 骨架/章域变更还必须留痕：骨架索引备份、`_scope_cleanup.py` 报告（记录被删章节与随删题目数）。

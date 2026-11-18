@@ -1,0 +1,85 @@
+{
+  "op_id": "db_op_20261114_cleanup",
+  "generated_at": "2026-11-14T11:03:46+08:00",
+  "db": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\ailearning_dev.db",
+  "operator": "main-agent（用户指令「清除，另外把未做项也做完」）",
+  "intent": "清理 20261113 整册入库后库内旧版本遗留题，以及因题尽而孤立的知识点",
+  "pre_backup": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\build\\backups\\ailearning-backup-20261114-110121-preclean.db",
+  "steps": [
+    {
+      "step": "删除旧版遗留题",
+      "criteria": "(chapter, stem, q_type) 不在 20261113 整册文件集合内",
+      "planned": 2441,
+      "deleted": 2441,
+      "kept": 0,
+      "kept_reason": null,
+      "questions_before": 14311,
+      "questions_after": 11870,
+      "note": "第二轮：被 student_question_records 引用的 2 道旧题也一并删除，引用它们的 2 条练习记录同时删除并在 archive 中存档"
+    },
+    {
+      "step": "删除孤立知识点",
+      "criteria": "无题 + 名称不在本学科本年级当前整册声明里 + 无子节点",
+      "points_deleted": 572,
+      "sections_deleted": 310,
+      "knowledge_points_before": 3949,
+      "knowledge_points_after": 3067
+    },
+    {
+      "step": "修正 prerequisites 悬空引用",
+      "rows_fixed": 17
+    },
+    {
+      "step": "删除引用旧题的练习记录",
+      "table": "student_question_records",
+      "rows_before": 2,
+      "rows_deleted": 2,
+      "rows_after": 0,
+      "archive": "exports/review_20261112/_archive_20261114/legacy_questions_referenced_20261114.json"
+    }
+  ],
+  "state_after": {
+    "textbooks": 146,
+    "chapters": 618,
+    "knowledge_points": 3067,
+    "questions": 11870
+  },
+  "integrity": {
+    "quick_check": "ok",
+    "foreign_key_check": 0
+  },
+  "file_cleanup": {
+    "quarantined_files_archived": {
+      "count": 34,
+      "to": "exports/review_20261112/_archive_20261114/quarantined/"
+    },
+    "daily_rerun_old_stamp_archived": {
+      "count": 73,
+      "to": "exports/review_20261112/_archive_20261114/daily_rerun_old_stamp/"
+    },
+    "daily_consolidated_old_stamp_archived": {
+      "count": 43,
+      "to": "exports/review_20261112/_archive_20261114/daily_consolidated_old_stamp/"
+    },
+    "note": "统一移动到归档目录而非物理删除：daily_rerun / daily_consolidated 均不受 git 跟踪，移档可回溯；归档目录清空即等价彻底删除"
+  },
+  "validator_change": {
+    "file": "docs/content-templates/_validate_daily.py",
+    "change": "整册归集文件（*_book.json）不再施加「单一批次 200 题上限」提醒（`if total > 200 and not checker.book`），归入「每日规格不适用于整册」的同一口径",
+    "reason": "200 题上限是为单一批次分片服务的；92 册整册天然 12~20 章 × 约 20 题，其中 8 册 200~240 题属于结构性正常值，不是数据缺陷",
+    "effect": "92 册校验提醒 100 → 92（只剩 92 条固有「整册归集规格不适用」）",
+    "result": {
+      "files": 92,
+      "passed": 92,
+      "failed": 0,
+      "errors": 0,
+      "warnings": 92
+    }
+  },
+  "rollback": "Copy-Item -Force 'D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\build\\backups\\ailearning-backup-20261114-110121-preclean.db' 'D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\ailearning_dev.db'",
+  "final_check": {
+    "books_vs_files": "92 册题量与文件精确相等（合计 11870，差值 0）",
+    "quick_check": "ok",
+    "foreign_key_check": 0
+  }
+}

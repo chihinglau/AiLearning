@@ -1,0 +1,1541 @@
+{
+  "subject": "geography",
+  "grade": 8,
+  "version": "湘教版",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第一章 中国的疆域与人口",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "中国的位置与疆域",
+      "parent": "第一章 中国的疆域与人口",
+      "order_index": 1,
+      "explanation": "中国位于亚洲东部、太平洋西岸，海陆兼备，陆地面积约 960 万平方千米。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "行政区划与省级单位",
+      "parent": "第一章 中国的疆域与人口",
+      "order_index": 2,
+      "explanation": "中国基本行政区划分为省、县、乡三级，共 34 个省级行政区。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "人口分布与特点",
+      "parent": "第一章 中国的疆域与人口",
+      "order_index": 3,
+      "explanation": "我国人口东多西少，以黑河—腾冲一线为界分布不均。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "民族分布与政策",
+      "parent": "第一章 中国的疆域与人口",
+      "order_index": 4,
+      "explanation": "我国有 56 个民族，汉族人口最多，民族分布呈大杂居、小聚居特点。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二章 中国的自然环境",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "地形与地势",
+      "parent": "第二章 中国的自然环境",
+      "order_index": 1,
+      "explanation": "我国地势西高东低，呈三级阶梯分布，地形类型复杂多样。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "气候特征与分布",
+      "parent": "第二章 中国的自然环境",
+      "order_index": 2,
+      "explanation": "我国气候复杂多样、季风气候显著，降水分东南多西北少。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "河流与湖泊",
+      "parent": "第二章 中国的自然环境",
+      "order_index": 3,
+      "explanation": "长江、黄河是我国最重要的两条河流，外流河多分布在东部季风区。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "自然灾害与防灾",
+      "parent": "第二章 中国的自然环境",
+      "order_index": 4,
+      "explanation": "我国常见的自然灾害有洪涝、干旱、台风、地震、滑坡泥石流等。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第三章 中国的自然资源",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "自然资源的概况",
+      "parent": "第三章 中国的自然资源",
+      "order_index": 1,
+      "explanation": "自然资源分可再生与非可再生，我国总量丰富但人均不足。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "土地资源与利用",
+      "parent": "第三章 中国的自然资源",
+      "order_index": 2,
+      "explanation": "我国土地类型多样，耕地比重小，分布不均，需严守耕地红线。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "水资源与分布",
+      "parent": "第三章 中国的自然资源",
+      "order_index": 3,
+      "explanation": "我国水资源时空分布不均，南多北少、夏秋多冬春少。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "合理利用与保护资源",
+      "parent": "第三章 中国的自然资源",
+      "order_index": 4,
+      "explanation": "节约资源、提高利用率、发展循环经济是可持续利用的方向。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第四章 中国的主要产业",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "农业与分布",
+      "parent": "第四章 中国的主要产业",
+      "order_index": 1,
+      "explanation": "我国农业以种植业为主，水稻、小麦分布有明显地区差异，因地制宜是原则。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "工业与分布",
+      "parent": "第四章 中国的主要产业",
+      "order_index": 2,
+      "explanation": "我国工业集中在东部沿海和长江沿江地区，重工业多接近原料、能源产地。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "交通运输业",
+      "parent": "第四章 中国的主要产业",
+      "order_index": 3,
+      "explanation": "铁路、公路、水运、航空各有优势，我国已形成综合运输网络。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "产业分布与区域差异",
+      "parent": "第四章 中国的主要产业",
+      "order_index": 4,
+      "explanation": "我国东中西部产业差异明显，区域协调发展是重要方向。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一章 中国的疆域与人口",
+      "order_index": 1,
+      "summary": "了解中国的海陆位置、疆域范围、行政区划与人口民族分布。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "中国位于（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "中国在亚洲东部，东临太平洋。",
+          "difficulty": 2,
+          "knowledge_point": "中国的位置与疆域",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "亚洲东部、太平洋西岸",
+            "欧洲东部",
+            "非洲北部",
+            "南美洲西部"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "中国陆地面积约 960 万平方（ ）千米。",
+          "answer": {
+            "value": "千"
+          },
+          "analysis": "960 万平方千米是常用表述。",
+          "difficulty": 2,
+          "knowledge_point": "中国的位置与疆域",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "中国是海陆兼备的国家。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "中国既有广大陆地，也有漫长的海岸线。",
+          "difficulty": 3,
+          "knowledge_point": "中国的位置与疆域",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说出与中国陆地相邻的两个国家。",
+          "answer": {
+            "value": "示例：俄罗斯、蒙古"
+          },
+          "analysis": "评分要点：两个都是陆上邻国，名称正确。",
+          "difficulty": 4,
+          "knowledge_point": "中国的位置与疆域",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于中国位置的说法，哪些正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓ 大部分在北温带；B ✓；C 全部位于热带 ✗；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "中国的位置与疆域",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "大部分位于北温带",
+            "东临太平洋",
+            "全部位于热带",
+            "海陆兼备"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "我国省级行政区共有（ ）个",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "包括 23 个省、5 个自治区、4 个直辖市、2 个特别行政区，共 34 个。",
+          "difficulty": 2,
+          "knowledge_point": "行政区划与省级单位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "23",
+            "31",
+            "34",
+            "40"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "我国基本行政区划分为省、（ ）、乡三级。",
+          "answer": {
+            "value": "县"
+          },
+          "analysis": "省县乡是我国三级行政区划。",
+          "difficulty": 2,
+          "knowledge_point": "行政区划与省级单位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "自治区与省是同级行政单位。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "自治区属于省级行政区。",
+          "difficulty": 3,
+          "knowledge_point": "行政区划与省级单位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出我国两个自治区和两个直辖市的名称。",
+          "answer": {
+            "value": "示例：新疆维吾尔自治区、内蒙古自治区；北京市、上海市"
+          },
+          "analysis": "评分要点：四个名称与类型对应正确。",
+          "difficulty": 4,
+          "knowledge_point": "行政区划与省级单位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面哪些是省级行政区？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓ 省；B ✓ 自治区；C 深圳市 ✗ 是地级市；D ✓ 特别行政区。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "行政区划与省级单位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "广东省",
+            "广西壮族自治区",
+            "深圳市",
+            "香港特别行政区"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "我国人口分布的特点是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "东部自然条件好、经济发达，人口密集。",
+          "difficulty": 2,
+          "knowledge_point": "人口分布与特点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "东多西少",
+            "西多东少",
+            "南北均匀",
+            "沿海人口最少"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "我国人口分布以黑河—（ ）一线为界，东南多、西北少。",
+          "answer": {
+            "value": "腾冲"
+          },
+          "analysis": "黑河—腾冲线是人口分布界线。",
+          "difficulty": 2,
+          "knowledge_point": "人口分布与特点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "我国人口密度最大的地区多在东部平原和沿海。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "东部平原、沿海地区人口密集。",
+          "difficulty": 3,
+          "knowledge_point": "人口分布与特点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说我国人口东多西少的主要原因。",
+          "answer": {
+            "value": "示例：东部地形平坦、气候湿润、经济发达；西部多高原山地、气候干旱"
+          },
+          "analysis": "评分要点：自然条件与经济条件都涉及。",
+          "difficulty": 4,
+          "knowledge_point": "人口分布与特点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "影响人口分布的因素有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 姓氏 ✗ 与分布无关。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "人口分布与特点",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "地形",
+            "气候",
+            "经济发展水平",
+            "人口姓氏"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "我国人口最多的民族是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "汉族人口占绝大多数。",
+          "difficulty": 2,
+          "knowledge_point": "民族分布与政策",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "汉族",
+            "壮族",
+            "回族",
+            "满族"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "我国民族分布的特点是大杂居、小（ ）。",
+          "answer": {
+            "value": "聚居"
+          },
+          "analysis": "大杂居、小聚居、交错杂居是基本特点。",
+          "difficulty": 2,
+          "knowledge_point": "民族分布与政策",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "我国在少数民族聚居地区实行民族区域自治制度。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "民族区域自治是我国基本政治制度之一。",
+          "difficulty": 3,
+          "knowledge_point": "民族分布与政策",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说出我国两个少数民族及其主要分布地区。",
+          "answer": {
+            "value": "示例：壮族主要分布在广西；维吾尔族主要分布在新疆"
+          },
+          "analysis": "评分要点：民族与地区对应正确。",
+          "difficulty": 4,
+          "knowledge_point": "民族分布与政策",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于我国民族的说法，哪些正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 全部集中西部 ✗ 分布广泛；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "民族分布与政策",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "共有 56 个民族",
+            "汉族人口最多",
+            "少数民族全部集中在西部",
+            "民族分布交错杂居"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第二章 中国的自然环境",
+      "order_index": 2,
+      "summary": "掌握我国地形、气候、河流特征与主要自然灾害。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "我国地势的总体特征是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "我国地势西高东低，分三级阶梯。",
+          "difficulty": 2,
+          "knowledge_point": "地形与地势",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "西高东低，呈阶梯状",
+            "东高西低",
+            "南高北低",
+            "四周高中间低"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "我国地势第一级阶梯的主体是（ ）高原。",
+          "answer": {
+            "value": "青藏"
+          },
+          "analysis": "青藏高原平均海拔最高，属第一级阶梯。",
+          "difficulty": 2,
+          "knowledge_point": "地形与地势",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "西高东低的地势使我国许多河流向东流。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "水往低处流，河流多向东入海。",
+          "difficulty": 3,
+          "knowledge_point": "地形与地势",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说出我国地势三级阶梯的分界线之一。",
+          "answer": {
+            "value": "示例：昆仑山—祁连山—横断山是第一、二级阶梯分界"
+          },
+          "analysis": "评分要点：分界山脉名称正确。",
+          "difficulty": 4,
+          "knowledge_point": "地形与地势",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "我国地形特点有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 以平原为主 ✗；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "地形与地势",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "类型复杂多样",
+            "山区面积广大",
+            "以平原为主",
+            "地势西高东低"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "我国气候的主要特征之一是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "季风气候显著是我国气候的重要特点。",
+          "difficulty": 2,
+          "knowledge_point": "气候特征与分布",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "季风气候显著",
+            "全年高温",
+            "全年少雨",
+            "只有温带气候"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "我国冬季气温分布特点是南（ ）北低。",
+          "answer": {
+            "value": "高"
+          },
+          "analysis": "冬季南方气温高于北方。",
+          "difficulty": 2,
+          "knowledge_point": "气候特征与分布",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "我国降水的空间分布大致是从东南向西北递减。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "东南沿海降水多，西北内陆降水少。",
+          "difficulty": 3,
+          "knowledge_point": "气候特征与分布",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说季风对我国气候的影响。",
+          "answer": {
+            "value": "示例：夏季风带来大量降水，雨热同期，有利于农业生产；夏季风不稳定会导致旱涝"
+          },
+          "analysis": "评分要点：既说有利也说不足。",
+          "difficulty": 4,
+          "knowledge_point": "气候特征与分布",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "我国气候特点包括哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 完全一致 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "气候特征与分布",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "复杂多样",
+            "季风气候显著",
+            "雨热同期",
+            "全国气候完全一致"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "我国最长的河流是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "长江是我国第一长河。",
+          "difficulty": 2,
+          "knowledge_point": "河流与湖泊",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "长江",
+            "黄河",
+            "珠江",
+            "黑龙江"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "黄河的泥沙主要来自（ ）高原。",
+          "answer": {
+            "value": "黄土"
+          },
+          "analysis": "黄土高原水土流失使黄河泥沙含量大。",
+          "difficulty": 2,
+          "knowledge_point": "河流与湖泊",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "我国外流河主要分布在东部季风区。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "东部降水多，河流多外流入海。",
+          "difficulty": 3,
+          "knowledge_point": "河流与湖泊",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说出长江的两项重要作用。",
+          "answer": {
+            "value": "示例：提供灌溉水源；航运便利，被称为黄金水道"
+          },
+          "analysis": "评分要点：两项作用符合实际。",
+          "difficulty": 4,
+          "knowledge_point": "河流与湖泊",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于我国河流的说法，哪些正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 都向东流 ✗ 如雅鲁藏布江；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "河流与湖泊",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "长江水量丰富",
+            "黄河含沙量大",
+            "所有河流都向东流",
+            "外流河多在季风区"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "我国东部季风区夏季常见的自然灾害是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "夏季降水集中，易发生洪涝。",
+          "difficulty": 2,
+          "knowledge_point": "自然灾害与防灾",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "洪涝",
+            "沙尘暴",
+            "寒潮",
+            "霜冻"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "我国地震多发，是因为位于板块（ ）地带。",
+          "answer": {
+            "value": "交界"
+          },
+          "analysis": "板块交界处地壳活跃，地震多发。",
+          "difficulty": 2,
+          "knowledge_point": "自然灾害与防灾",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "山区暴雨后容易发生滑坡和泥石流。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "暴雨易引发滑坡、泥石流等灾害。",
+          "difficulty": 3,
+          "knowledge_point": "自然灾害与防灾",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说出遇到地震时在教室里的两条避险做法。",
+          "answer": {
+            "value": "示例：躲在课桌下护住头部；震动停止后按老师指挥有序撤离"
+          },
+          "analysis": "评分要点：两条做法正确、可操作。",
+          "difficulty": 4,
+          "knowledge_point": "自然灾害与防灾",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "我国常见的自然灾害有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 极光 ✗ 不是灾害。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "自然灾害与防灾",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "洪涝",
+            "干旱",
+            "台风",
+            "极光"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第三章 中国的自然资源",
+      "order_index": 3,
+      "summary": "认识自然资源的分类与特点，理解土地、水资源的利用与保护。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "下面属于可再生资源的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "森林可以更新生长，属可再生资源。",
+          "difficulty": 2,
+          "knowledge_point": "自然资源的概况",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "森林",
+            "煤炭",
+            "石油",
+            "铁矿"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "我国自然资源的基本特点是总量丰富、人均（ ）。",
+          "answer": {
+            "value": "不足"
+          },
+          "analysis": "人口多，人均占有量少。",
+          "difficulty": 2,
+          "knowledge_point": "自然资源的概况",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "矿产资源属于非可再生资源。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "矿产形成周期极长，用一点少一点。",
+          "difficulty": 3,
+          "knowledge_point": "自然资源的概况",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "举例说明可再生资源与非可再生资源的区别。",
+          "answer": {
+            "value": "示例：水资源可循环更新，属可再生；煤炭用完不能再生成，属非可再生"
+          },
+          "analysis": "评分要点：各举一例，区别说清。",
+          "difficulty": 4,
+          "knowledge_point": "自然资源的概况",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "我国自然资源的特点有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 取之不尽 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "自然资源的概况",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "总量丰富",
+            "人均不足",
+            "种类比较齐全",
+            "取之不尽用之不竭"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "我国土地资源中比重较小的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "我国耕地比重小，人均耕地更少。",
+          "difficulty": 2,
+          "knowledge_point": "土地资源与利用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "耕地",
+            "草地",
+            "林地",
+            "荒漠"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "我国把（ ）作为一项基本国策，保护耕地。",
+          "answer": {
+            "value": "十分珍惜和合理利用每一寸土地"
+          },
+          "analysis": "土地管理法明确这一基本国策。",
+          "difficulty": 2,
+          "knowledge_point": "土地资源与利用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "我国耕地主要分布在东部季风区的平原和盆地。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "东部平原、盆地水热条件好，耕地集中。",
+          "difficulty": 3,
+          "knowledge_point": "土地资源与利用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说保护耕地的两条措施。",
+          "answer": {
+            "value": "示例：严格控制建设用地占用耕地；治理土地污染和退化"
+          },
+          "analysis": "评分要点：两条措施具体、合理。",
+          "difficulty": 4,
+          "knowledge_point": "土地资源与利用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "我国土地利用中存在的问题有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 不断增加 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "土地资源与利用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "耕地减少",
+            "土地污染",
+            "水土流失",
+            "土地面积不断增加"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "我国水资源空间分布特点是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "南方降水多，水资源比北方丰富。",
+          "difficulty": 2,
+          "knowledge_point": "水资源与分布",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "南多北少",
+            "北多南少",
+            "东西均匀",
+            "全国都缺水"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "解决水资源空间分布不均的主要措施是跨（ ）调水。",
+          "answer": {
+            "value": "流域"
+          },
+          "analysis": "南水北调就是跨流域调水工程。",
+          "difficulty": 2,
+          "knowledge_point": "水资源与分布",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "我国水资源时间分配上夏秋多、冬春少。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "降水集中在夏秋季节。",
+          "difficulty": 3,
+          "knowledge_point": "水资源与分布",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说出两条节约用水的具体做法。",
+          "answer": {
+            "value": "示例：一水多用，用洗菜水浇花；及时关紧水龙头"
+          },
+          "analysis": "评分要点：两条做法具体可行。",
+          "difficulty": 4,
+          "knowledge_point": "水资源与分布",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "解决水资源不足的措施有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 无限制开采 ✗ 会造成地面沉降。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "水资源与分布",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "跨流域调水",
+            "修建水库",
+            "节约用水",
+            "无限制开采地下水"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面符合可持续发展理念的做法是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "回收利用能减少资源浪费和污染。",
+          "difficulty": 2,
+          "knowledge_point": "合理利用与保护资源",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "垃圾分类回收利用",
+            "随意丢弃废旧电池",
+            "过度开采矿产",
+            "大量使用一次性餐具"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "节约资源、保护环境是我国的一项基本（ ）。",
+          "answer": {
+            "value": "国策"
+          },
+          "analysis": "保护环境和节约资源是基本国策。",
+          "difficulty": 2,
+          "knowledge_point": "合理利用与保护资源",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "废旧电池应作为有害垃圾单独投放。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "电池含重金属，需专门处理。",
+          "difficulty": 3,
+          "knowledge_point": "合理利用与保护资源",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你在生活中怎样节约资源。",
+          "answer": {
+            "value": "示例：双面用纸、随手关灯、自带水杯少用一次性用品"
+          },
+          "analysis": "评分要点：做法具体、可坚持。",
+          "difficulty": 4,
+          "knowledge_point": "合理利用与保护资源",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "可持续利用资源的做法有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 过度消费 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "合理利用与保护资源",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "提高资源利用率",
+            "发展循环经济",
+            "垃圾分类回收",
+            "鼓励过度消费"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第四章 中国的主要产业",
+      "order_index": 4,
+      "summary": "了解农业、工业、交通运输业的分布特点与发展方向。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "我国南方主要粮食作物是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "南方水热条件适合种水稻。",
+          "difficulty": 2,
+          "knowledge_point": "农业与分布",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "水稻",
+            "小麦",
+            "玉米",
+            "青稞"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "发展农业要遵循（ ）制宜的原则。",
+          "answer": {
+            "value": "因地"
+          },
+          "analysis": "因地制宜才能发挥地区优势。",
+          "difficulty": 2,
+          "knowledge_point": "农业与分布",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "我国东部以种植业为主，西部以畜牧业为主。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "东部平原适合种植，西部草原适合放牧。",
+          "difficulty": 3,
+          "knowledge_point": "农业与分布",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说我国南北方农业差异的一个表现。",
+          "answer": {
+            "value": "示例：南方以水田为主种水稻，北方以旱地为主种小麦"
+          },
+          "analysis": "评分要点：差异具体、作物对应正确。",
+          "difficulty": 4,
+          "knowledge_point": "农业与分布",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "影响农业分布的因素有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 姓氏 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "农业与分布",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "地形",
+            "气候",
+            "市场需求",
+            "人口姓氏"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "我国工业最发达的地区是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "东部沿海交通便利、市场广阔，工业发达。",
+          "difficulty": 2,
+          "knowledge_point": "工业与分布",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "东部沿海地区",
+            "青藏高原",
+            "西北内陆",
+            "西南山区"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "钢铁工业多靠近（ ）和能源产地布局。",
+          "answer": {
+            "value": "原料"
+          },
+          "analysis": "重工业靠近原料和能源可降低成本。",
+          "difficulty": 2,
+          "knowledge_point": "工业与分布",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "长江三角洲是我国重要的综合性工业基地。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "长三角工业门类齐全、实力强。",
+          "difficulty": 3,
+          "knowledge_point": "工业与分布",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说出我国两个重要的工业基地。",
+          "answer": {
+            "value": "示例：辽中南工业基地、珠江三角洲工业基地"
+          },
+          "analysis": "评分要点：两个基地名称正确。",
+          "difficulty": 4,
+          "knowledge_point": "工业与分布",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "影响工业布局的因素有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 风俗 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "工业与分布",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "原料",
+            "交通",
+            "市场",
+            "当地风俗"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "运输大宗笨重货物、远距离运输最适合（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "铁路运量大、成本较低，适合大宗货物。",
+          "difficulty": 2,
+          "knowledge_point": "交通运输业",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "铁路",
+            "航空",
+            "管道",
+            "公路"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "运输鲜活易坏的高价值货物多用（ ）运输。",
+          "answer": {
+            "value": "航空"
+          },
+          "analysis": "航空速度快，适合鲜活、贵重物品。",
+          "difficulty": 2,
+          "knowledge_point": "交通运输业",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "我国铁路网东部密集、西部相对稀疏。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "东部经济发达、人口密集，铁路网更密。",
+          "difficulty": 3,
+          "knowledge_point": "交通运输业",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说选择运输方式时要考虑的两个因素。",
+          "answer": {
+            "value": "示例：货物的性质和数量；运输距离和时间要求"
+          },
+          "analysis": "评分要点：两个因素合理、与运输方式选择相关。",
+          "difficulty": 4,
+          "knowledge_point": "交通运输业",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "我国的主要运输方式有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 索道 ✗ 不是主要运输方式。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "交通运输业",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "铁路",
+            "公路",
+            "水运",
+            "空中索道"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "我国产业水平较高、经济发达的地区主要在（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "东部沿海产业基础好、发展水平高。",
+          "difficulty": 2,
+          "knowledge_point": "产业分布与区域差异",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "东部",
+            "西部",
+            "中部",
+            "青藏地区"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "促进区域（ ）发展，是我国产业布局的重要方向。",
+          "answer": {
+            "value": "协调"
+          },
+          "analysis": "区域协调发展缩小地区差距。",
+          "difficulty": 2,
+          "knowledge_point": "产业分布与区域差异",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "西部大开发促进了西部基础设施和产业发展。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "西部大开发改善了交通、能源等条件。",
+          "difficulty": 3,
+          "knowledge_point": "产业分布与区域差异",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说东中西部产业差异的一个表现。",
+          "answer": {
+            "value": "示例：东部以先进制造业和现代服务业为主，西部资源型产业比重较大"
+          },
+          "analysis": "评分要点：差异具体、符合实际。",
+          "difficulty": 4,
+          "knowledge_point": "产业分布与区域差异",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "区域协调发展可以采取哪些措施？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 限制发展 ✗；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "产业分布与区域差异",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "加强基础设施互联互通",
+            "推动产业转移与承接",
+            "限制所有地区发展",
+            "加大对欠发达地区支持"
+          ]
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-14T12:07:25+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "normalized": "难度 40/40/20 归一 + 主观题短答案补评分要点（2026-11-13 统一口径）",
+    "supplemented": "数值填空补可求值算式 0 道 / 数值填空改单选 0 道 / 补多选题 0 道（2 真 + 2 假，答案 2 项；2026-11-14 口径）",
+    "stem_dedup": "跨册同题干补册次前缀 0 道（2026-11-14 跨册去重口径）",
+    "duplicate_rewrites": "跨册同题定向改写 0 道（保留两侧题量，2026-11-14 口径）",
+    "chapter_scope": "全章域（本册无跨册重复章）",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

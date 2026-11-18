@@ -1,0 +1,1628 @@
+{
+  "schema_version": 1,
+  "stamp": "20261113",
+  "scope": "g1~g9 上下册统一骨架范围",
+  "note": "合并 baseline/_skeleton_first（上册 46 册）与 baseline/_skeleton（下册 46 册），作为单次执行的唯一骨架索引。｜2026-11-14 骨架纠偏：physics g9 下册章节由「上册 10 章整份复制」改为 19–22 章，上册限定 13–18 章（统一骨架范围不变，仍为 g1–g9 上下册 92 册）",
+  "books": [
+    {
+      "book": "biology/g7",
+      "subject": "biology",
+      "grade": 7,
+      "semester": "first",
+      "version": "人教版",
+      "chapters": [
+        "第一单元 生物和细胞",
+        "第一章 认识生物",
+        "第二章 认识细胞",
+        "第三章 从细胞到生物体",
+        "第二单元 多种多样的生物",
+        "第一章 藻类与植物的类群",
+        "第二章 动物的类群",
+        "第三章 微生物",
+        "第四章 生物分类的方法"
+      ],
+      "chapter_count": 9,
+      "source": "_skeleton_first/chapters_biology_g7_first_20261107.json"
+    },
+    {
+      "book": "biology/g7",
+      "subject": "biology",
+      "grade": 7,
+      "semester": "second",
+      "version": "人教版",
+      "chapters": [
+        "第三单元 植物的生活",
+        "第一章 被子植物的一生",
+        "第二章 植物体内的物质与能量变化",
+        "第四单元 人体生理与健康(一)",
+        "第一章 人的生殖和发育",
+        "第二章 人体的营养",
+        "第三章 人体的呼吸",
+        "第四章 人体内物质的运输",
+        "第五章 人体内废物的排出"
+      ],
+      "chapter_count": 9,
+      "source": "_skeleton/chapters_biology_g7_second_20261107.json"
+    },
+    {
+      "book": "biology/g8",
+      "subject": "biology",
+      "grade": 8,
+      "semester": "first",
+      "version": "人教版",
+      "chapters": [
+        "第四单元 人体生理与健康（二）",
+        "第六章 人体生命活动的调节",
+        "第七章 健康地生活",
+        "第五单元 生物与环境",
+        "第一章 生态系统",
+        "第二章 生态安全"
+      ],
+      "chapter_count": 6,
+      "source": "_skeleton_first/chapters_biology_g8_first_20261107.json"
+    },
+    {
+      "book": "biology/g8",
+      "subject": "biology",
+      "grade": 8,
+      "semester": "second",
+      "version": "人教版",
+      "chapters": [
+        "第六单元 生命的延续和发展",
+        "第一章 生物的生殖",
+        "第二章 生物的遗传与变异",
+        "第三章 生物的进化",
+        "第四章 生物多样性及其保护"
+      ],
+      "chapter_count": 5,
+      "source": "_skeleton/chapters_biology_g8_second_20261107.json"
+    },
+    {
+      "book": "chemistry/g9",
+      "subject": "chemistry",
+      "grade": 9,
+      "semester": "first",
+      "version": "人教版",
+      "chapters": [
+        "第一单元 走进化学世界",
+        "第二单元 空气和氧气",
+        "第三单元 物质构成的奥秘",
+        "第四单元 自然界的水",
+        "第五单元 化学反应的定量关系",
+        "第六单元 碳和碳的氧化物",
+        "第七单元 能源的合理利用与开发"
+      ],
+      "chapter_count": 7,
+      "source": "_skeleton_first/chapters_chemistry_g9_first_20261107.json"
+    },
+    {
+      "book": "chemistry/g9",
+      "subject": "chemistry",
+      "grade": 9,
+      "semester": "second",
+      "version": "人教版",
+      "chapters": [
+        "第八单元 金属和金属材料",
+        "第九单元 溶液",
+        "第十单元 常见的酸、碱、盐",
+        "第十一单元 化学与社会"
+      ],
+      "chapter_count": 4,
+      "source": "_skeleton/chapters_chemistry_g9_second_20261107.json"
+    },
+    {
+      "book": "chinese/g1",
+      "subject": "chinese",
+      "grade": 1,
+      "semester": "first",
+      "version": "人教版",
+      "chapters": [
+        "第一单元 识字",
+        "第二单元 汉语拼音",
+        "第三单元 汉语拼音",
+        "第四单元 汉语拼音",
+        "第五单元 阅读",
+        "第六单元 识字",
+        "第七单元 阅读",
+        "第八单元 阅读"
+      ],
+      "chapter_count": 8,
+      "source": "_skeleton_first/chapters_chinese_g1_first_20261107.json"
+    },
+    {
+      "book": "chinese/g1",
+      "subject": "chinese",
+      "grade": 1,
+      "semester": "second",
+      "version": "人教版",
+      "chapters": [
+        "第一单元 识字",
+        "第二单元 阅读",
+        "第三单元 阅读",
+        "第四单元 阅读",
+        "第五单元 识字",
+        "第六单元 阅读",
+        "第七单元 阅读",
+        "第八单元 阅读"
+      ],
+      "chapter_count": 8,
+      "source": "_skeleton/chapters_chinese_g1_second_20261107.json"
+    },
+    {
+      "book": "chinese/g2",
+      "subject": "chinese",
+      "grade": 2,
+      "semester": "first",
+      "version": "人教版",
+      "chapters": [
+        "第一单元 阅读",
+        "第二单元 识字",
+        "第三单元 阅读",
+        "第四单元 阅读",
+        "第五单元 阅读",
+        "第六单元 阅读",
+        "第七单元 阅读",
+        "第八单元 阅读"
+      ],
+      "chapter_count": 8,
+      "source": "_skeleton_first/chapters_chinese_g2_first_20261107.json"
+    },
+    {
+      "book": "chinese/g2",
+      "subject": "chinese",
+      "grade": 2,
+      "semester": "second",
+      "version": "人教版",
+      "chapters": [
+        "第一单元",
+        "第二单元",
+        "第三单元",
+        "第四单元",
+        "第五单元",
+        "第六单元",
+        "第七单元",
+        "第八单元"
+      ],
+      "chapter_count": 8,
+      "source": "_skeleton/chapters_chinese_g2_second_20261107.json"
+    },
+    {
+      "book": "chinese/g3",
+      "subject": "chinese",
+      "grade": 3,
+      "semester": "first",
+      "version": "人教版",
+      "chapters": [
+        "第一单元",
+        "第二单元",
+        "第三单元",
+        "第四单元",
+        "第五单元",
+        "第六单元",
+        "第七单元",
+        "第八单元"
+      ],
+      "chapter_count": 8,
+      "source": "_skeleton_first/chapters_chinese_g3_first_20261107.json"
+    },
+    {
+      "book": "chinese/g3",
+      "subject": "chinese",
+      "grade": 3,
+      "semester": "second",
+      "version": "人教版",
+      "chapters": [
+        "第一单元",
+        "第二单元",
+        "第三单元",
+        "第四单元",
+        "第五单元",
+        "第六单元",
+        "第七单元",
+        "第八单元"
+      ],
+      "chapter_count": 8,
+      "source": "_skeleton/chapters_chinese_g3_second_20261107.json"
+    },
+    {
+      "book": "chinese/g4",
+      "subject": "chinese",
+      "grade": 4,
+      "semester": "first",
+      "version": "人教版",
+      "chapters": [
+        "第一单元",
+        "第二单元",
+        "第三单元",
+        "第四单元",
+        "第五单元",
+        "第六单元",
+        "第七单元",
+        "第八单元"
+      ],
+      "chapter_count": 8,
+      "source": "_skeleton_first/chapters_chinese_g4_first_20261107.json"
+    },
+    {
+      "book": "chinese/g4",
+      "subject": "chinese",
+      "grade": 4,
+      "semester": "second",
+      "version": "人教版",
+      "chapters": [
+        "第一单元",
+        "第二单元",
+        "第三单元",
+        "第四单元",
+        "第五单元",
+        "第六单元",
+        "第七单元",
+        "第八单元"
+      ],
+      "chapter_count": 8,
+      "source": "_skeleton/chapters_chinese_g4_second_20261107.json"
+    },
+    {
+      "book": "chinese/g5",
+      "subject": "chinese",
+      "grade": 5,
+      "semester": "first",
+      "version": "人教版",
+      "chapters": [
+        "第一单元",
+        "第二单元",
+        "第三单元",
+        "第四单元",
+        "第五单元",
+        "第六单元",
+        "第七单元",
+        "第八单元"
+      ],
+      "chapter_count": 8,
+      "source": "_skeleton_first/chapters_chinese_g5_first_20261107.json"
+    },
+    {
+      "book": "chinese/g5",
+      "subject": "chinese",
+      "grade": 5,
+      "semester": "second",
+      "version": "人教版",
+      "chapters": [
+        "第一单元",
+        "第二单元",
+        "第三单元",
+        "第四单元",
+        "第五单元",
+        "第六单元",
+        "第七单元",
+        "第八单元"
+      ],
+      "chapter_count": 8,
+      "source": "_skeleton/chapters_chinese_g5_second_20261107.json"
+    },
+    {
+      "book": "chinese/g6",
+      "subject": "chinese",
+      "grade": 6,
+      "semester": "first",
+      "version": "人教版",
+      "chapters": [
+        "第一单元",
+        "第二单元",
+        "第三单元",
+        "第四单元",
+        "第五单元",
+        "第六单元",
+        "第七单元",
+        "第八单元"
+      ],
+      "chapter_count": 8,
+      "source": "_skeleton_first/chapters_chinese_g6_first_20261107.json"
+    },
+    {
+      "book": "chinese/g6",
+      "subject": "chinese",
+      "grade": 6,
+      "semester": "second",
+      "version": "人教版",
+      "chapters": [
+        "第一单元",
+        "第二单元",
+        "第三单元",
+        "第四单元",
+        "第五单元",
+        "第六单元"
+      ],
+      "chapter_count": 6,
+      "source": "_skeleton/chapters_chinese_g6_second_20261107.json"
+    },
+    {
+      "book": "chinese/g7",
+      "subject": "chinese",
+      "grade": 7,
+      "semester": "first",
+      "version": "人教版",
+      "chapters": [
+        "第一单元",
+        "第二单元",
+        "第三单元",
+        "第四单元",
+        "第五单元 活动 探究",
+        "第六单元"
+      ],
+      "chapter_count": 6,
+      "source": "_skeleton_first/chapters_chinese_g7_first_20261107.json"
+    },
+    {
+      "book": "chinese/g7",
+      "subject": "chinese",
+      "grade": 7,
+      "semester": "second",
+      "version": "人教版",
+      "chapters": [
+        "第一单元",
+        "第二单元",
+        "第三单元",
+        "第四单元",
+        "第五单元",
+        "第六单元"
+      ],
+      "chapter_count": 6,
+      "source": "_skeleton/chapters_chinese_g7_second_20261107.json"
+    },
+    {
+      "book": "chinese/g8",
+      "subject": "chinese",
+      "grade": 8,
+      "semester": "first",
+      "version": "人教版",
+      "chapters": [
+        "第一单元 活动 探究",
+        "第二单元",
+        "第三单元",
+        "第四单元",
+        "第五单元",
+        "第六单元"
+      ],
+      "chapter_count": 6,
+      "source": "_skeleton_first/chapters_chinese_g8_first_20261107.json"
+    },
+    {
+      "book": "chinese/g8",
+      "subject": "chinese",
+      "grade": 8,
+      "semester": "second",
+      "version": "人教版",
+      "chapters": [
+        "第一单元",
+        "第二单元",
+        "第三单元",
+        "第四单元",
+        "第五单元",
+        "第六单元"
+      ],
+      "chapter_count": 6,
+      "source": "_skeleton/chapters_chinese_g8_second_20261107.json"
+    },
+    {
+      "book": "chinese/g9",
+      "subject": "chinese",
+      "grade": 9,
+      "semester": "first",
+      "version": "人教版",
+      "chapters": [
+        "第一单元",
+        "第二单元",
+        "第三单元",
+        "第四单元",
+        "第五单元",
+        "第六单元"
+      ],
+      "chapter_count": 6,
+      "source": "_skeleton_first/chapters_chinese_g9_first_20261107.json"
+    },
+    {
+      "book": "chinese/g9",
+      "subject": "chinese",
+      "grade": 9,
+      "semester": "second",
+      "version": "人教版",
+      "chapters": [
+        "第一单元",
+        "第二单元",
+        "第三单元",
+        "第四单元",
+        "第五单元 活动?探究",
+        "第六单元"
+      ],
+      "chapter_count": 6,
+      "source": "_skeleton/chapters_chinese_g9_second_20261107.json"
+    },
+    {
+      "book": "english/g1",
+      "subject": "english",
+      "grade": 1,
+      "semester": "first",
+      "version": "牛津深圳版",
+      "chapters": [
+        "Unit 1 What is your family like?",
+        "Unit 2 How are you today?",
+        "Unit 3 What do you take to school?",
+        "Unit 4 What can you do?",
+        "Unit 5 What is your favourite animal?",
+        "Unit 6 What colours can you see?"
+      ],
+      "chapter_count": 6,
+      "source": "_skeleton_first/chapters_english_g1_first_20261107.json"
+    },
+    {
+      "book": "english/g1",
+      "subject": "english",
+      "grade": 1,
+      "semester": "second",
+      "version": "牛津深圳版",
+      "chapters": [
+        "Unit 1 Look and see",
+        "Unit 2 Listen and hear",
+        "Unit 3 Taste and smell",
+        "Unit 4 Toys I like",
+        "Unit 5 Food I like",
+        "Unit 6 Drinks I like",
+        "Unit 7 Seasons",
+        "Unit 8 Weather",
+        "Unit 9 Clothes",
+        "Unit 10 Activities",
+        "Unit 11 New Year's Day",
+        "Unit 12 A boy and a wolf"
+      ],
+      "chapter_count": 12,
+      "source": "_skeleton/chapters_english_g1_second_20261107.json"
+    },
+    {
+      "book": "english/g2",
+      "subject": "english",
+      "grade": 2,
+      "semester": "first",
+      "version": "牛津深圳版",
+      "chapters": [
+        "Unit 1 What can you do with your five senses?",
+        "Unit 2 What do you like about your family?",
+        "Unit 3 What is your favourite toy?",
+        "Unit 4 What is around your home?",
+        "Unit 5 What do you like about farms?",
+        "Unit 6 How do people celebrate the Mid-Autumn Festival?"
+      ],
+      "chapter_count": 6,
+      "source": "_skeleton_first/chapters_english_g2_first_20261107.json"
+    },
+    {
+      "book": "english/g2",
+      "subject": "english",
+      "grade": 2,
+      "semester": "second",
+      "version": "牛津深圳版",
+      "chapters": [
+        "Unit 1 Farm animals",
+        "Unit 2 In the circus",
+        "Unit 3 My room",
+        "Unit 4 In the park",
+        "Unit 5 Wash with water",
+        "Unit 6 Eating and drinking",
+        "Unit 7 Hot summer",
+        "Unit 8 Time",
+        "Unit 9 Revision"
+      ],
+      "chapter_count": 9,
+      "source": "_skeleton/chapters_english_g2_second_20261107.json"
+    },
+    {
+      "book": "english/g3",
+      "subject": "english",
+      "grade": 3,
+      "semester": "first",
+      "version": "牛津深圳版",
+      "chapters": [
+        "Unit 1 How do we feel?",
+        "Unit 2 What's interesting about families?",
+        "Unit 3 What do we look like?",
+        "Unit 4 How do we have fun?",
+        "Unit 5 What do we eat?",
+        "Unit 6 What do we like about small animals?",
+        "Unit 7 What do we know about weather?",
+        "Unit 8 Why do we like birthdays?"
+      ],
+      "chapter_count": 8,
+      "source": "_skeleton_first/chapters_english_g3_first_20261107.json"
+    },
+    {
+      "book": "english/g3",
+      "subject": "english",
+      "grade": 3,
+      "semester": "second",
+      "version": "牛津深圳版",
+      "chapters": [
+        "Unit 1 How do we spend our free time?",
+        "Unit 2 How do we make friends?",
+        "Unit 3 What do we wear?",
+        "Unit 4 What sounds can we hear?",
+        "Unit 5 Where can we see colours?",
+        "Unit 6 What are our homes like?",
+        "Unit 7 What do we do at school?",
+        "Unit 8 What do you do on Children's Day?"
+      ],
+      "chapter_count": 8,
+      "source": "_skeleton/chapters_english_g3_second_20261107.json"
+    },
+    {
+      "book": "english/g4",
+      "subject": "english",
+      "grade": 4,
+      "semester": "first",
+      "version": "牛津深圳版",
+      "chapters": [
+        "Unit 1 Where do people live?",
+        "Unit 2 Where do animals live?",
+        "Unit 3 How do we use numbers?",
+        "Unit 4 What do we buy?",
+        "Unit 5 How are the seasons different?",
+        "Unit 6 What's amazing about plants?",
+        "Unit 7 How do we keep safe on the road?",
+        "Unit 8 What do our grandparents do?"
+      ],
+      "chapter_count": 8,
+      "source": "_skeleton_first/chapters_english_g4_first_20261107.json"
+    },
+    {
+      "book": "english/g4",
+      "subject": "english",
+      "grade": 4,
+      "semester": "second",
+      "version": "牛津深圳版",
+      "chapters": [
+        "Unit 1 What is your daily schedule?",
+        "Unit 2 What do we like about school?",
+        "Unit 3 What's great about jobs?",
+        "Unit 4 How can we make music?",
+        "Unit 5 How do we make art?",
+        "Unit 6 How do we measure time?",
+        "Unit 7 How do things change?",
+        "Unit 8 How do people get along with each other?",
+        "Unit checklist"
+      ],
+      "chapter_count": 9,
+      "source": "_skeleton/chapters_english_g4_second_20261107.json"
+    },
+    {
+      "book": "english/g5",
+      "subject": "english",
+      "grade": 5,
+      "semester": "first",
+      "version": "牛津深圳版",
+      "chapters": [
+        "Unit 1 What do we do at the weekend?",
+        "Unit 2 How do we stay healthy?",
+        "Unit 3 What do you know about different countries?",
+        "Unit 4 What's interesting about holidays?",
+        "Unit 5 What are living things?",
+        "Unit 6 Why should we take care of the Earth?",
+        "Unit 7 How do we celebrate festivals?",
+        "Unit 8 How does music make us feel?"
+      ],
+      "chapter_count": 8,
+      "source": "_skeleton_first/chapters_english_g5_first_20261107.json"
+    },
+    {
+      "book": "english/g5",
+      "subject": "english",
+      "grade": 5,
+      "semester": "second",
+      "version": "牛津深圳版",
+      "chapters": [
+        "Unit 1 Tidy up!",
+        "Unit 2 Our new home",
+        "Unit 3 In the future",
+        "Unit 4 Reading is fun",
+        "Unit 5 At the weekend",
+        "Unit 6 Holidays",
+        "Unit 7 Open Day",
+        "Unit 8 Buying clothes",
+        "Unit 9 Seeing the doctor",
+        "Unit 10 Great inventions",
+        "Unit 11 Chinese festivals",
+        "Unit 12 The giant's garden"
+      ],
+      "chapter_count": 12,
+      "source": "_skeleton/chapters_english_g5_second_20261107.json"
+    },
+    {
+      "book": "english/g6",
+      "subject": "english",
+      "grade": 6,
+      "semester": "first",
+      "version": "牛津深圳版",
+      "chapters": [
+        "Unit 1 Why do people move to new places?",
+        "Unit 2 Why do we make art?",
+        "Unit 3 How should we protect ourselves?",
+        "Unit 4 What makes things move?",
+        "Unit 5 How do inventions change our lives?",
+        "Unit 6 What is a city?"
+      ],
+      "chapter_count": 6,
+      "source": "_skeleton_first/chapters_english_g6_first_20261107.json"
+    },
+    {
+      "book": "english/g6",
+      "subject": "english",
+      "grade": 6,
+      "semester": "second",
+      "version": "牛津深圳版",
+      "chapters": [
+        "Unit 1 You and me",
+        "Unit 2 Changes in our lives",
+        "Unit 3 Our school in the future",
+        "Unit 4 Art",
+        "Unit 5 Crafts",
+        "Unit 6 PE lessons",
+        "Unit 7 Helping others",
+        "Unit 8 Reading signs",
+        "Unit 9 Reusing things",
+        "Unit 10 Great storybooks",
+        "Unit 11 Western festivals",
+        "Unit 12 The five peas"
+      ],
+      "chapter_count": 12,
+      "source": "_skeleton/chapters_english_g6_second_20261107.json"
+    },
+    {
+      "book": "english/g7",
+      "subject": "english",
+      "grade": 7,
+      "semester": "first",
+      "version": "牛津深圳版",
+      "chapters": [
+        "Unit 1 Trying new things",
+        "Unit 2 Strong mind",
+        "Unit 3 Jobs",
+        "Unit 4 Smart home",
+        "Unit 5 Films",
+        "Unit 6 Mountains and rivers"
+      ],
+      "chapter_count": 6,
+      "source": "_skeleton_first/chapters_english_g7_first_20261107.json"
+    },
+    {
+      "book": "english/g7",
+      "subject": "english",
+      "grade": 7,
+      "semester": "second",
+      "version": "牛津深圳版",
+      "chapters": [
+        "Unit 1 Music",
+        "Unit 2 Language and communication",
+        "Unit 3 A helping hand",
+        "Unit 4 Honesty",
+        "Unit 5 Wild animals",
+        "Unit 6 Trees"
+      ],
+      "chapter_count": 6,
+      "source": "_skeleton/chapters_english_g7_second_20261107.json"
+    },
+    {
+      "book": "english/g8",
+      "subject": "english",
+      "grade": 8,
+      "semester": "first",
+      "version": "牛津深圳版",
+      "chapters": [
+        "Unit 1 Water",
+        "Unit 2 Digital life",
+        "Unit 3 Curious minds",
+        "Unit 4 Then and now",
+        "Unit 5 Teamwork",
+        "Unit 6 Life in the future"
+      ],
+      "chapter_count": 6,
+      "source": "_skeleton_first/chapters_english_g8_first_20261107.json"
+    },
+    {
+      "book": "english/g8",
+      "subject": "english",
+      "grade": 8,
+      "semester": "second",
+      "version": "牛津深圳版",
+      "chapters": [
+        "Unit 1 Art and artists",
+        "Unit 2 Great inventions and discoveries",
+        "Unit 3 Money",
+        "Unit 4 Fashion",
+        "Unit 5 Natural disasters",
+        "Unit 6 Friendship"
+      ],
+      "chapter_count": 6,
+      "source": "_skeleton/chapters_english_g8_second_20261107.json"
+    },
+    {
+      "book": "english/g9",
+      "subject": "english",
+      "grade": 9,
+      "semester": "first",
+      "version": "牛津深圳版",
+      "chapters": [
+        "Unit 1 Teenage life",
+        "Unit 2 People and their jobs",
+        "Unit 3 Travellers' tales",
+        "Unit 4 Folk customs",
+        "Unit 5 Buildings",
+        "Unit 6 Pollution"
+      ],
+      "chapter_count": 6,
+      "source": "_skeleton_first/chapters_english_g9_first_20261107.json"
+    },
+    {
+      "book": "english/g9",
+      "subject": "english",
+      "grade": 9,
+      "semester": "second",
+      "version": "牛津深圳版",
+      "chapters": [
+        "Unit 1 Sport and sportsmanship",
+        "Unit 2 Finding balance in life",
+        "Unit 3 Protecting the environment",
+        "Unit 4 Natural disasters",
+        "Unit 5 Great explorers and explorations",
+        "Unit 6 Experiencing different cultures"
+      ],
+      "chapter_count": 6,
+      "source": "_skeleton/chapters_english_g9_second_20261107.json"
+    },
+    {
+      "book": "geography/g7",
+      "subject": "geography",
+      "grade": 7,
+      "semester": "first",
+      "version": "湘教版",
+      "chapters": [
+        "第一章 让我们走进地理",
+        "第二章 认识地球",
+        "第三章 地球的面貌",
+        "第四章 世界的居民与文化",
+        "第五章 世界的气候",
+        "第六章 世界的发展差异"
+      ],
+      "chapter_count": 6,
+      "source": "_skeleton_first/chapters_geography_g7_first_20261107.json"
+    },
+    {
+      "book": "geography/g7",
+      "subject": "geography",
+      "grade": 7,
+      "semester": "second",
+      "version": "湘教版",
+      "chapters": [
+        "第七章 认识大洲",
+        "第八章 了解地区",
+        "第九章 走近国家"
+      ],
+      "chapter_count": 3,
+      "source": "_skeleton/chapters_geography_g7_second_20261107.json"
+    },
+    {
+      "book": "geography/g8",
+      "subject": "geography",
+      "grade": 8,
+      "semester": "first",
+      "version": "湘教版",
+      "chapters": [
+        "第一章 中国的疆域与人口",
+        "第二章 中国的自然环境",
+        "第三章 中国的自然资源",
+        "第四章 中国的主要产业"
+      ],
+      "chapter_count": 4,
+      "source": "_skeleton_first/chapters_geography_g8_first_20261107.json"
+    },
+    {
+      "book": "geography/g8",
+      "subject": "geography",
+      "grade": 8,
+      "semester": "second",
+      "version": "湘教版",
+      "chapters": [
+        "第五章 中国的地域差异",
+        "第六章 区域地理特征与城乡分布",
+        "第七章 区域内外联系与协同发展",
+        "第八章 区域地理环境与未来图景",
+        "第九章 建设永续发展的美丽中国"
+      ],
+      "chapter_count": 5,
+      "source": "_skeleton/chapters_geography_g8_second_20261107.json"
+    },
+    {
+      "book": "history/g7",
+      "subject": "history",
+      "grade": 7,
+      "semester": "first",
+      "version": "部编版",
+      "chapters": [
+        "第一单元 史前时期：原始社会与中华文明的起源",
+        "第二单元 夏商周时期：奴隶制王朝的更替和向封建社会的过渡",
+        "第三单元 秦汉时期：统一多民族封建国家的建立和巩固",
+        "第四单元 三国两晋南北朝时期：政权分立与民族交融"
+      ],
+      "chapter_count": 4,
+      "source": "_skeleton_first/chapters_history_g7_first_20261107.json"
+    },
+    {
+      "book": "history/g7",
+      "subject": "history",
+      "grade": 7,
+      "semester": "second",
+      "version": "部编版",
+      "chapters": [
+        "第一单元 隋唐时期：繁荣与开放的时代",
+        "第二单元 辽宋夏金元时期：民族关系发展和社会变化",
+        "第三单元 明清时期（至鸦片战争前）：统一多民族封建国家的巩固与发展"
+      ],
+      "chapter_count": 3,
+      "source": "_skeleton/chapters_history_g7_second_20261107.json"
+    },
+    {
+      "book": "history/g8",
+      "subject": "history",
+      "grade": 8,
+      "semester": "first",
+      "version": "部编版",
+      "chapters": [
+        "第一单元 中国开始沦为半殖民地半封建社会",
+        "第二单元 早期现代化的初步探索和民族危机加剧",
+        "第三单元 资产阶级民主革命与中华民国的建立",
+        "第四单元 新民主主义革命的兴起",
+        "第五单元 从国共合作到农村革命根据地的建立",
+        "第六单元 中华民族的抗日战争",
+        "第七单元 人民解放战争"
+      ],
+      "chapter_count": 7,
+      "source": "_skeleton_first/chapters_history_g8_first_20261107.json"
+    },
+    {
+      "book": "history/g8",
+      "subject": "history",
+      "grade": 8,
+      "semester": "second",
+      "version": "部编版",
+      "chapters": [
+        "第一单元 中华人民共和国成立和社会主义制度建立",
+        "第二单元 社会主义建设道路的探索",
+        "第三单元 改革开放与中国特色社会主义的开创",
+        "第四单元 中国特色社会主义迈向21世纪",
+        "第五单元 在新形势下坚持和发展中国特色社会主义",
+        "第六单元 中国特色社会主义进入新时代",
+        "第七单元 全面建设社会主义现代化国家"
+      ],
+      "chapter_count": 7,
+      "source": "_skeleton/chapters_history_g8_second_20261107.json"
+    },
+    {
+      "book": "history/g9",
+      "subject": "history",
+      "grade": 9,
+      "semester": "first",
+      "version": "部编版",
+      "chapters": [
+        "第一单元 文明的产生和古代亚非文明",
+        "第二单元 古代欧洲文明",
+        "第三单元 封建时代的欧洲",
+        "第四单元 中古时期的亚洲、非洲和美洲",
+        "第五单元 走向近代",
+        "第六单元 资本主义制度的初步确立",
+        "第七单元 第一次工业革命和马克思主义的诞生"
+      ],
+      "chapter_count": 7,
+      "source": "_skeleton_first/chapters_history_g9_first_20261107.json"
+    },
+    {
+      "book": "history/g9",
+      "subject": "history",
+      "grade": 9,
+      "semester": "second",
+      "version": "部编版",
+      "chapters": [
+        "第一单元 殖民地人民的反抗与资本主义制度的扩展",
+        "第二单元 第二次工业革命和近代科学文化",
+        "第三单元 第一次世界大战和战后初期的世界",
+        "第四单元 经济大危机和第二次世界大战",
+        "第五单元 二战后的世界变化",
+        "第六单元 走向和平发展的世界"
+      ],
+      "chapter_count": 6,
+      "source": "_skeleton/chapters_history_g9_second_20261107.json"
+    },
+    {
+      "book": "math/g1",
+      "subject": "math",
+      "grade": 1,
+      "semester": "first",
+      "version": "北师大版",
+      "chapters": [
+        "开篇",
+        "第一单元 生活中的数",
+        "第二单元 5以内数加与减",
+        "第三单元 整理与分类",
+        "第四单元 10以内数加与减",
+        "第五单元 有趣的立体图形"
+      ],
+      "chapter_count": 6,
+      "source": "_skeleton_first/chapters_math_g1_first_20261107.json"
+    },
+    {
+      "book": "math/g1",
+      "subject": "math",
+      "grade": 1,
+      "semester": "second",
+      "version": "北师大版",
+      "chapters": [
+        "第一单元 20以内数与加法",
+        "第二单元 图形大变身（一）",
+        "综合实践 设计教室装饰图",
+        "第三单元 20以内数与减法",
+        "第四单元 100以内数的认识",
+        "数学好玩 填数游戏",
+        "第五单元 100以内数加与减（一）",
+        "第六单元 有趣的平面图形（一）",
+        "综合实践 画数学连环画",
+        "总复习"
+      ],
+      "chapter_count": 10,
+      "source": "_skeleton/chapters_math_g1_second_20261107.json"
+    },
+    {
+      "book": "math/g2",
+      "subject": "math",
+      "grade": 2,
+      "semester": "first",
+      "version": "北师大版",
+      "chapters": [
+        "第一单元 100以内数加与减（二）",
+        "第二单元 测量（一）",
+        "第三单元 数一数与乘法",
+        "第四单元 乘法口诀（一）",
+        "第五单元 分一分与除法",
+        "第六单元 图形的运动（一）",
+        "第七单元 乘法口诀（二）",
+        "第八单元 乘除法的应用（一）"
+      ],
+      "chapter_count": 8,
+      "source": "_skeleton_first/chapters_math_g2_first_20261107.json"
+    },
+    {
+      "book": "math/g2",
+      "subject": "math",
+      "grade": 2,
+      "semester": "second",
+      "version": "北师大版",
+      "chapters": [
+        "第一单元 100以内数加与减（三）",
+        "第二单元 图形大变身（二）",
+        "第三单元 除法的应用",
+        "综合实践 参加趣味运动会",
+        "第四单元 生活中的大数",
+        "第五单元 有趣的平面图形（二）",
+        "数学好玩 有趣的推理",
+        "第六单元 大数加与减（一）",
+        "第七单元 分类",
+        "综合实践 发现身体上的尺子",
+        "总复习"
+      ],
+      "chapter_count": 11,
+      "source": "_skeleton/chapters_math_g2_second_20261107.json"
+    },
+    {
+      "book": "math/g3",
+      "subject": "math",
+      "grade": 3,
+      "semester": "first",
+      "version": "北师大版",
+      "chapters": [
+        "第一单元 混合运算",
+        "第二单元 测量（二）",
+        "第三单元 大数加与减（二）",
+        "第四单元 我们生活的空间（一）",
+        "第五单元 认识图形",
+        "第六单元 乘除法的应用（二）",
+        "第七单元 认识小数",
+        "第八单元 调查与记录"
+      ],
+      "chapter_count": 8,
+      "source": "_skeleton_first/chapters_math_g3_first_20261107.json"
+    },
+    {
+      "book": "math/g3",
+      "subject": "math",
+      "grade": 3,
+      "semester": "second",
+      "version": "北师大版",
+      "chapters": [
+        "第一单元 整数乘法（一）",
+        "第二单元 图形的运动（二）",
+        "第三单元 周长",
+        "第四单元 整数除法（一）",
+        "第五单元 动手做",
+        "第六单元 关系与规律",
+        "第七单元 数据的整理与表示"
+      ],
+      "chapter_count": 7,
+      "source": "_skeleton/chapters_math_g3_second_20261107.json"
+    },
+    {
+      "book": "math/g4",
+      "subject": "math",
+      "grade": 4,
+      "semester": "first",
+      "version": "北师大版",
+      "chapters": [
+        "第一单元 认识更大的数",
+        "综合实践 编码",
+        "第二单元 线与角",
+        "第三单元 整数乘法（二）",
+        "第四单元 我们生活的空间（二）",
+        "第五单元 运算律",
+        "数学好玩 数图形的学问",
+        "第六单元 图形的奥秘",
+        "第七单元 运用数量关系解决问题",
+        "第八单元 数据的表示和分析（一）",
+        "综合实践 导航给的时间准吗",
+        "总复习"
+      ],
+      "chapter_count": 12,
+      "source": "_skeleton_first/chapters_math_g4_first_20261107.json"
+    },
+    {
+      "book": "math/g4",
+      "subject": "math",
+      "grade": 4,
+      "semester": "second",
+      "version": "北师大版",
+      "chapters": [
+        "一 小数的意义和加减法",
+        "二 认识三角形和四边形",
+        "三 小数乘法",
+        "整理与复习",
+        "四 观察物体",
+        "五 认识方程",
+        "数学好玩",
+        "六 数据的表示和分析",
+        "总复习"
+      ],
+      "chapter_count": 9,
+      "source": "_skeleton/chapters_math_g4_second_20261107.json"
+    },
+    {
+      "book": "math/g5",
+      "subject": "math",
+      "grade": 5,
+      "semester": "first",
+      "version": "北师大版",
+      "chapters": [
+        "第一单元 小数的再认识和加减法",
+        "第二单元 三角形的再认识",
+        "综合实践 小小设计师",
+        "第三单元 小数乘法",
+        "第四单元 用字母表示（一）",
+        "第五单元 多边形的面积",
+        "数学好玩 鸡兔同笼",
+        "第六单元 图形的位置与运动（一）",
+        "第七单元 倍数与因数",
+        "第八单元 可能性",
+        "综合实践 多少落叶能铺满",
+        "总复习"
+      ],
+      "chapter_count": 12,
+      "source": "_skeleton_first/chapters_math_g5_first_20261107.json"
+    },
+    {
+      "book": "math/g5",
+      "subject": "math",
+      "grade": 5,
+      "semester": "second",
+      "version": "北师大版",
+      "chapters": [
+        "一 分数加减法",
+        "二 长方体（一）",
+        "三 分数乘法",
+        "四 长方体（二）",
+        "整理与复习",
+        "五 分数除法",
+        "六 确定位置",
+        "七 用方程解决问题",
+        "数学好玩",
+        "八 数据的表示和分析",
+        "总复习"
+      ],
+      "chapter_count": 11,
+      "source": "_skeleton/chapters_math_g5_second_20261107.json"
+    },
+    {
+      "book": "math/g6",
+      "subject": "math",
+      "grade": 6,
+      "semester": "first",
+      "version": "北师大版",
+      "chapters": [
+        "第一单元 分数除法",
+        "第二单元 圆",
+        "第三单元 用字母表示（二）",
+        "综合实践 制订节水方案",
+        "第四单元 分数的应用",
+        "第五单元 比的认识",
+        "第六单元 确定位置",
+        "数学好玩 五子棋",
+        "第七单元 百分数的认识与应用（一）",
+        "第八单元 观察物体（二）",
+        "第九单元 数据的表示和分析（三）",
+        "综合实践 制订营养食谱",
+        "总复习"
+      ],
+      "chapter_count": 13,
+      "source": "_skeleton_first/chapters_math_g6_first_20261107.json"
+    },
+    {
+      "book": "math/g6",
+      "subject": "math",
+      "grade": 6,
+      "semester": "second",
+      "version": "北师大版",
+      "chapters": [
+        "一 圆柱与圆锥",
+        "二 比例",
+        "三 图形的运动",
+        "四 正比例与反比例",
+        "数学好玩",
+        "整理与复习",
+        "总复习"
+      ],
+      "chapter_count": 7,
+      "source": "_skeleton/chapters_math_g6_second_20261107.json"
+    },
+    {
+      "book": "math/g7",
+      "subject": "math",
+      "grade": 7,
+      "semester": "first",
+      "version": "北师大版",
+      "chapters": [
+        "第一章 丰富的图形世界",
+        "第二章 有理数及其运算",
+        "第三章 整式及其加减",
+        "第四章 基本平面图形",
+        "第五章 一元一次方程",
+        "第六章 数据的收集与整理"
+      ],
+      "chapter_count": 6,
+      "source": "_skeleton_first/chapters_math_g7_first_20261107.json"
+    },
+    {
+      "book": "math/g7",
+      "subject": "math",
+      "grade": 7,
+      "semester": "second",
+      "version": "北师大版",
+      "chapters": [
+        "第一章 整式的乘除",
+        "第二章 相交线与平行线",
+        "第三章 概率初步",
+        "第四章 三角形",
+        "第五章 生活中的轴对称",
+        "第六章 变量之间的关系"
+      ],
+      "chapter_count": 6,
+      "source": "_skeleton/chapters_math_g7_second_20261107.json"
+    },
+    {
+      "book": "math/g8",
+      "subject": "math",
+      "grade": 8,
+      "semester": "first",
+      "version": "北师大版",
+      "chapters": [
+        "第一章 勾股定理",
+        "第二章 实数",
+        "第三章 位置与坐标",
+        "第四章 一次函数",
+        "第五章 二元一次方程组",
+        "第六章 数据的分析",
+        "第七章 证明"
+      ],
+      "chapter_count": 7,
+      "source": "_skeleton_first/chapters_math_g8_first_20261107.json"
+    },
+    {
+      "book": "math/g8",
+      "subject": "math",
+      "grade": 8,
+      "semester": "second",
+      "version": "北师大版",
+      "chapters": [
+        "第一章 三角形的证明及其应用",
+        "第二章 不等式与不等式组",
+        "第三章 图形的平移与旋转",
+        "第四章 因式分解",
+        "第五章 分式与分式方程",
+        "第六章 平行四边形"
+      ],
+      "chapter_count": 6,
+      "source": "_skeleton/chapters_math_g8_second_20261107.json"
+    },
+    {
+      "book": "math/g9",
+      "subject": "math",
+      "grade": 9,
+      "semester": "first",
+      "version": "北师大版",
+      "chapters": [
+        "第一章 特殊平行四边形",
+        "第二章 一元二次方程",
+        "第三章 图形的相似",
+        "第四章 投影与视图",
+        "第五章 二次函数",
+        "第六章 概率的进一步认识",
+        "综合与实践 池塘里有多少条鱼"
+      ],
+      "chapter_count": 7,
+      "source": "_skeleton_first/chapters_math_g9_first_20261107.json"
+    },
+    {
+      "book": "math/g9",
+      "subject": "math",
+      "grade": 9,
+      "semester": "second",
+      "version": "北师大版",
+      "chapters": [
+        "第一章 直角三角形的边角关系",
+        "第二章 二次函数",
+        "第三章 圆",
+        "综合与实践 视力的变化",
+        "综合与实践 哪种方式更合算",
+        "综合与实践 设计遮阳篷",
+        "总复习"
+      ],
+      "chapter_count": 7,
+      "source": "_skeleton/chapters_math_g9_second_20261107.json"
+    },
+    {
+      "book": "physics/g8",
+      "subject": "physics",
+      "grade": 8,
+      "semester": "first",
+      "version": "人教版",
+      "chapters": [
+        "第一章 机械运动",
+        "第二章 声现象",
+        "第三章 物态变化",
+        "第四章 光现象",
+        "第五章 透镜及其应用",
+        "第六章 质量与密度"
+      ],
+      "chapter_count": 6,
+      "source": "_skeleton_first/chapters_physics_g8_first_20261107.json"
+    },
+    {
+      "book": "physics/g8",
+      "subject": "physics",
+      "grade": 8,
+      "semester": "second",
+      "version": "人教版",
+      "chapters": [
+        "第七章 力",
+        "第八章 运动和力",
+        "第九章 压强",
+        "第十章 浮力",
+        "第十一章 功和机械能",
+        "第十二章 简单机械"
+      ],
+      "chapter_count": 6,
+      "source": "_skeleton/chapters_physics_g8_second_20261107.json"
+    },
+    {
+      "book": "physics/g9",
+      "subject": "physics",
+      "grade": 9,
+      "semester": "first",
+      "version": "人教版",
+      "chapters": [
+        "第十三章 内能",
+        "第十四章 内能的利用",
+        "第十五章 电流和电路",
+        "第十六章 电压 电阻",
+        "第十七章 欧姆定律",
+        "第十八章 电功率"
+      ],
+      "chapter_count": 6,
+      "source": "_skeleton_first/chapters_physics_g9_first_20261107.json｜2026-11-14 分册纠偏（原误用上册 10 章，按人教版分册拆分）"
+    },
+    {
+      "book": "physics/g9",
+      "subject": "physics",
+      "grade": 9,
+      "semester": "second",
+      "version": "人教版",
+      "chapters": [
+        "第十九章 生活用电",
+        "第二十章 电与磁",
+        "第二十一章 电磁波及其应用",
+        "第二十二章 能源与可持续发展"
+      ],
+      "chapter_count": 4,
+      "source": "_skeleton/chapters_physics_g9_second_20261107.json｜2026-11-14 分册纠偏（原误用上册 10 章，按人教版分册拆分）"
+    },
+    {
+      "book": "politics/g1",
+      "subject": "politics",
+      "grade": 1,
+      "semester": "first",
+      "version": "部编版",
+      "chapters": [
+        "第一单元 我是小学生啦",
+        "第二单元 过好校园生活",
+        "第三单元 养成良好习惯",
+        "第四单元 我们讲文明"
+      ],
+      "chapter_count": 4,
+      "source": "_skeleton_first/chapters_politics_g1_first_20261107.json"
+    },
+    {
+      "book": "politics/g1",
+      "subject": "politics",
+      "grade": 1,
+      "semester": "second",
+      "version": "部编版",
+      "chapters": [
+        "第一单元 我有新面貌",
+        "第二单元 我们一起长大",
+        "第三单元 幸福一家人",
+        "第四单元 争做中国好儿童"
+      ],
+      "chapter_count": 4,
+      "source": "_skeleton/chapters_politics_g1_second_20261107.json"
+    },
+    {
+      "book": "politics/g2",
+      "subject": "politics",
+      "grade": 2,
+      "semester": "first",
+      "version": "部编版",
+      "chapters": [
+        "第一单元 过好节假日",
+        "第二单元 我爱我们班",
+        "第三单元 我的家乡美",
+        "第四单元 我爱我们的祖国"
+      ],
+      "chapter_count": 4,
+      "source": "_skeleton_first/chapters_politics_g2_first_20261107.json"
+    },
+    {
+      "book": "politics/g2",
+      "subject": "politics",
+      "grade": 2,
+      "semester": "second",
+      "version": "部编版",
+      "chapters": [
+        "第一单元 我乐观我向上",
+        "第二单元 大自然，谢谢您",
+        "第三单元 传统美德我弘扬",
+        "第四单元 播下梦想的种子"
+      ],
+      "chapter_count": 4,
+      "source": "_skeleton/chapters_politics_g2_second_20261107.json"
+    },
+    {
+      "book": "politics/g3",
+      "subject": "politics",
+      "grade": 3,
+      "semester": "first",
+      "version": "部编版",
+      "chapters": [
+        "第一单元 做学习的主人",
+        "第二单元 爱科学 学科学",
+        "第三单元 在集体中成长",
+        "第四单元 公共生活靠大家"
+      ],
+      "chapter_count": 4,
+      "source": "_skeleton_first/chapters_politics_g3_first_20261107.json"
+    },
+    {
+      "book": "politics/g3",
+      "subject": "politics",
+      "grade": 3,
+      "semester": "second",
+      "version": "部编版",
+      "chapters": [
+        "第一单元 共建美好生活",
+        "第二单元 劳动最光荣",
+        "第三单元 我是家庭一员",
+        "第四单元 我们来交往"
+      ],
+      "chapter_count": 4,
+      "source": "_skeleton/chapters_politics_g3_second_20261107.json"
+    },
+    {
+      "book": "politics/g4",
+      "subject": "politics",
+      "grade": 4,
+      "semester": "first",
+      "version": "部编版",
+      "chapters": [
+        "第一单元 我们的班集体",
+        "第二单元 少年在成长",
+        "第三单元 生活在信息社会",
+        "第四单元 做文明的消费者"
+      ],
+      "chapter_count": 4,
+      "source": "_skeleton_first/chapters_politics_g4_first_20261107.json"
+    },
+    {
+      "book": "politics/g4",
+      "subject": "politics",
+      "grade": 4,
+      "semester": "second",
+      "version": "部编版",
+      "chapters": [
+        "第一单元 同伴与交往",
+        "第二单元 做聪明的消费者",
+        "第三单元 美好生活哪里来",
+        "第四单元 感受家乡文化 关心家乡发展"
+      ],
+      "chapter_count": 4,
+      "source": "_skeleton/chapters_politics_g4_second_20261107.json"
+    },
+    {
+      "book": "politics/g5",
+      "subject": "politics",
+      "grade": 5,
+      "semester": "first",
+      "version": "部编版",
+      "chapters": [
+        "第一单元 没有共产党就没有新中国",
+        "第二单元 建设社会主义新中国",
+        "第三单元 进行改革开放",
+        "第四单元 开创新时代"
+      ],
+      "chapter_count": 4,
+      "source": "_skeleton_first/chapters_politics_g5_first_20261107.json"
+    },
+    {
+      "book": "politics/g5",
+      "subject": "politics",
+      "grade": 5,
+      "semester": "second",
+      "version": "部编版",
+      "chapters": [
+        "第一单元 我们一家人",
+        "第二单元 公共生活靠大家",
+        "第三单元 百年追梦 复兴中华"
+      ],
+      "chapter_count": 3,
+      "source": "_skeleton/chapters_politics_g5_second_20261107.json"
+    },
+    {
+      "book": "politics/g6",
+      "subject": "politics",
+      "grade": 6,
+      "semester": "first",
+      "version": "部编版",
+      "chapters": [
+        "第一单元 生活中的法律",
+        "第二单元 公民与国家",
+        "第三单元 我们受特殊保护",
+        "第四单元 知法守法 依法维权"
+      ],
+      "chapter_count": 4,
+      "source": "_skeleton_first/chapters_politics_g6_first_20261107.json"
+    },
+    {
+      "book": "politics/g6",
+      "subject": "politics",
+      "grade": 6,
+      "semester": "second",
+      "version": "部编版",
+      "chapters": [
+        "第一单元 完善自我 健康成长",
+        "第二单元 爱护地球 共同责任",
+        "第三单元 多样文明 多彩生活",
+        "第四单元 让世界更美好"
+      ],
+      "chapter_count": 4,
+      "source": "_skeleton/chapters_politics_g6_second_20261107.json"
+    },
+    {
+      "book": "politics/g7",
+      "subject": "politics",
+      "grade": 7,
+      "semester": "first",
+      "version": "部编版",
+      "chapters": [
+        "第一单元 少年有梦",
+        "第二单元 成长的时空",
+        "第三单元 珍爱我们的生命",
+        "第四单元 追求美好人生"
+      ],
+      "chapter_count": 4,
+      "source": "_skeleton_first/chapters_politics_g7_first_20261107.json"
+    },
+    {
+      "book": "politics/g7",
+      "subject": "politics",
+      "grade": 7,
+      "semester": "second",
+      "version": "部编版",
+      "chapters": [
+        "第一单元 珍惜青春时光",
+        "第二单元 焕发青春活力",
+        "第三单元 传承中华优秀传统文化",
+        "第四单元 生活在法治社会"
+      ],
+      "chapter_count": 4,
+      "source": "_skeleton/chapters_politics_g7_second_20261107.json"
+    },
+    {
+      "book": "politics/g8",
+      "subject": "politics",
+      "grade": 8,
+      "semester": "first",
+      "version": "部编版",
+      "chapters": [
+        "第一单元走进社会生活",
+        "第二单元 维护社会秩序",
+        "第三单元 勇担社会责任",
+        "第四单元 维护国家利益"
+      ],
+      "chapter_count": 4,
+      "source": "_skeleton_first/chapters_politics_g8_first_20261107.json"
+    },
+    {
+      "book": "politics/g8",
+      "subject": "politics",
+      "grade": 8,
+      "semester": "second",
+      "version": "部编版",
+      "chapters": [
+        "第一单元 坚持宪法至上",
+        "第二单元 理解权利义务",
+        "第三单元 认识国家制度",
+        "第四单元 走近国家机构",
+        "第五单元 建设法治中国"
+      ],
+      "chapter_count": 5,
+      "source": "_skeleton/chapters_politics_g8_second_20261107.json"
+    },
+    {
+      "book": "politics/g9",
+      "subject": "politics",
+      "grade": 9,
+      "semester": "first",
+      "version": "部编版",
+      "chapters": [
+        "第一单元 坚持党的全面领导",
+        "第二单元 进入新时代",
+        "第三单元 奋进新征程",
+        "第四单元 共圆中国梦"
+      ],
+      "chapter_count": 4,
+      "source": "_skeleton_first/chapters_politics_g9_first_20261107.json"
+    },
+    {
+      "book": "politics/g9",
+      "subject": "politics",
+      "grade": 9,
+      "semester": "second",
+      "version": "部编版",
+      "chapters": [
+        "第一单元 我们共同的世界",
+        "第二单元 世界舞台上的中国",
+        "第三单元 走向未来的少年"
+      ],
+      "chapter_count": 3,
+      "source": "_skeleton/chapters_politics_g9_second_20261107.json"
+    }
+  ]
+}

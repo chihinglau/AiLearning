@@ -1,0 +1,4303 @@
+{
+  "subject": "math",
+  "grade": 5,
+  "version": "北师大版",
+  "semester": "second",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "一 分数加减法",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "异分母分数加法",
+      "parent": "一 分数加减法",
+      "order_index": 1,
+      "explanation": "异分母分数相加要先通分，化成同分母分数再相加。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "异分母分数减法",
+      "parent": "一 分数加减法",
+      "order_index": 2,
+      "explanation": "异分母分数相减同样先通分，再分子相减。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "分数加减混合运算",
+      "parent": "一 分数加减法",
+      "order_index": 3,
+      "explanation": "分数混合运算顺序与整数相同，有括号先算括号。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "分数加减的应用",
+      "parent": "一 分数加减法",
+      "order_index": 4,
+      "explanation": "解决分数相关的实际问题要先弄清单位 1。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "二 长方体（一）",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "长方体的特征",
+      "parent": "二 长方体（一）",
+      "order_index": 1,
+      "explanation": "长方体有 6 个面、12 条棱、8 个顶点。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "长方体的表面积",
+      "parent": "二 长方体（一）",
+      "order_index": 2,
+      "explanation": "表面积是 6 个面的面积总和。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "展开图与折叠",
+      "parent": "二 长方体（一）",
+      "order_index": 3,
+      "explanation": "长方体展开图有 6 个面，相对的面在展开图中不相邻。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "表面积的实际应用",
+      "parent": "二 长方体（一）",
+      "order_index": 4,
+      "explanation": "粉刷、包装等问题要注意是否要算全部面。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "三 分数乘法",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "分数乘整数",
+      "parent": "三 分数乘法",
+      "order_index": 1,
+      "explanation": "分数乘整数，用分子与整数相乘，分母不变。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "分数乘分数",
+      "parent": "三 分数乘法",
+      "order_index": 2,
+      "explanation": "分数乘分数，分子相乘作分子，分母相乘作分母。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "分数乘法的意义",
+      "parent": "三 分数乘法",
+      "order_index": 3,
+      "explanation": "求一个数的几分之几是多少，用乘法计算。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "分数乘法与倒数",
+      "parent": "三 分数乘法",
+      "order_index": 4,
+      "explanation": "乘积是 1 的两个数互为倒数。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "四 长方体（二）",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "体积与体积单位",
+      "parent": "四 长方体（二）",
+      "order_index": 1,
+      "explanation": "物体所占空间的大小叫体积，常用立方厘米、立方分米、立方米。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "长方体与正方体的体积",
+      "parent": "四 长方体（二）",
+      "order_index": 2,
+      "explanation": "长方体体积等于长乘宽乘高，正方体等于棱长的立方。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "容积与容积单位",
+      "parent": "四 长方体（二）",
+      "order_index": 3,
+      "explanation": "容器所能容纳物体的体积叫容积，常用升和毫升。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "体积计算的实际应用",
+      "parent": "四 长方体（二）",
+      "order_index": 4,
+      "explanation": "解决用料、装水、堆放等问题。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "整理与复习",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "分数运算的整理",
+      "parent": "整理与复习",
+      "order_index": 1,
+      "explanation": "分数加减要通分，乘法则分子分母分别相乘。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "长方体知识的整理",
+      "parent": "整理与复习",
+      "order_index": 2,
+      "explanation": "表面积与体积公式要分清用途。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "易错点分析",
+      "parent": "整理与复习",
+      "order_index": 3,
+      "explanation": "通分漏乘、单位不统一、多算或少算面是常见错误。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "综合应用练习",
+      "parent": "整理与复习",
+      "order_index": 4,
+      "explanation": "把分数与长方体知识用于综合情境。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "五 分数除法",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "分数除以整数",
+      "parent": "五 分数除法",
+      "order_index": 1,
+      "explanation": "分数除以整数，等于乘这个整数的倒数。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "一个数除以分数",
+      "parent": "五 分数除法",
+      "order_index": 2,
+      "explanation": "除以一个分数等于乘它的倒数。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "分数除法的应用",
+      "parent": "五 分数除法",
+      "order_index": 3,
+      "explanation": "已知部分和它占整体的分率，求整体用除法。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "分数乘除混合运算",
+      "parent": "五 分数除法",
+      "order_index": 4,
+      "explanation": "乘除混合时按从左到右，先把除法转成乘法再约分。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "六 确定位置",
+      "order_index": 7
+    },
+    {
+      "node_type": "point",
+      "name": "方向与角度",
+      "parent": "六 确定位置",
+      "order_index": 1,
+      "explanation": "用北偏东、北偏西等描述方向，配合角度更准确。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "用方向和距离确定位置",
+      "parent": "六 确定位置",
+      "order_index": 2,
+      "explanation": "确定观测点后，按方向和图上距离标出位置。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "路线描述",
+      "parent": "六 确定位置",
+      "order_index": 3,
+      "explanation": "按顺序描述行走方向、角度和距离。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "位置与方向的应用",
+      "parent": "六 确定位置",
+      "order_index": 4,
+      "explanation": "地图导航、救援定位都用到方向与距离。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "七 用方程解决问题",
+      "order_index": 8
+    },
+    {
+      "node_type": "point",
+      "name": "设未知数",
+      "parent": "七 用方程解决问题",
+      "order_index": 1,
+      "explanation": "把要求的量设为 x，根据题意列出等量关系。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "列等量关系",
+      "parent": "七 用方程解决问题",
+      "order_index": 2,
+      "explanation": "从题中找关键语句，把数量关系写成等式。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "解方程与检验",
+      "parent": "七 用方程解决问题",
+      "order_index": 3,
+      "explanation": "用等式性质解方程，并代入原题检验。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "方程应用的类型",
+      "parent": "七 用方程解决问题",
+      "order_index": 4,
+      "explanation": "和差倍问题、行程问题、购物问题都可用方程解。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "数学好玩",
+      "order_index": 9
+    },
+    {
+      "node_type": "point",
+      "name": "包装中的数学",
+      "parent": "数学好玩",
+      "order_index": 1,
+      "explanation": "把多个小盒包成一件，要让重叠面最大以省包装纸。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "图形与变换游戏",
+      "parent": "数学好玩",
+      "order_index": 2,
+      "explanation": "通过平移、旋转、翻折观察图形变化。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "数学与游戏策略",
+      "parent": "数学好玩",
+      "order_index": 3,
+      "explanation": "用规律和计算寻找取胜或省力的办法。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "调查与实践",
+      "parent": "数学好玩",
+      "order_index": 4,
+      "explanation": "通过实际调查收集数据并用数学方法整理。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "八 数据的表示和分析",
+      "order_index": 10
+    },
+    {
+      "node_type": "point",
+      "name": "复式条形统计图",
+      "parent": "八 数据的表示和分析",
+      "order_index": 1,
+      "explanation": "复式条形统计图同时表示两组或多组数据，便于比较。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "复式折线统计图",
+      "parent": "八 数据的表示和分析",
+      "order_index": 2,
+      "explanation": "复式折线统计图能同时显示多组数据的变化趋势。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "平均数与数据分析",
+      "parent": "八 数据的表示和分析",
+      "order_index": 3,
+      "explanation": "平均数能反映一组数据的整体水平。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "根据数据作判断",
+      "parent": "八 数据的表示和分析",
+      "order_index": 4,
+      "explanation": "依据统计图与平均数作出合理推断。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "总复习",
+      "order_index": 11
+    },
+    {
+      "node_type": "point",
+      "name": "数与计算的梳理",
+      "parent": "总复习",
+      "order_index": 1,
+      "explanation": "分数四则运算与方程是本册重点。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "图形与几何的梳理",
+      "parent": "总复习",
+      "order_index": 2,
+      "explanation": "长方体的表面积与体积是本册几何重点。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "统计与应用的梳理",
+      "parent": "总复习",
+      "order_index": 3,
+      "explanation": "复式统计图与平均数用于数据分析。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "综合问题解决",
+      "parent": "总复习",
+      "order_index": 4,
+      "explanation": "综合运用方程、几何与统计知识解题。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "一 分数加减法",
+      "order_index": 1,
+      "summary": "异分母分数加减与混合运算。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "二分之一加三分之一的结果是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "通分后三分之三加六分之二等于六分之五。",
+          "difficulty": 2,
+          "knowledge_point": "异分母分数加法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "五分之六",
+            "六分之五",
+            "五分之二",
+            "三分之二"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "四分之一加六分之一，通分后公分母最小是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "4 与 6 的最小公倍数是 12。该项数值为 12，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "异分母分数加法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "12",
+            "120",
+            "1.2",
+            "13"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "异分母分数相加时可以直接把分子分母分别相加。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "必须先通分。",
+          "difficulty": 3,
+          "knowledge_point": "异分母分数加法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "计算异分母分数加法时要做（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 分母不能相加。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "异分母分数加法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "先通分",
+            "化成同分母",
+            "分子相加分母不变",
+            "分子分母都相加"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "计算三分之一加四分之一并写出过程。",
+          "answer": {
+            "value": "示例：公分母是 12，三分之一等于十二分之四，四分之一等于十二分之三，相加得十二分之七。"
+          },
+          "analysis": "评分要点：通分 + 结果正确。",
+          "difficulty": 4,
+          "knowledge_point": "异分母分数加法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "二分之一减四分之一的结果是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "通分后四分之二减四分之一得四分之一。",
+          "difficulty": 2,
+          "knowledge_point": "异分母分数减法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "四分之一",
+            "四分之三",
+            "二分之一",
+            "八分之一"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "五分之三减十分之三的结果是（ ）。",
+          "answer": {
+            "value": "十分之三"
+          },
+          "analysis": "十分之六减十分之三得十分之三。",
+          "difficulty": 2,
+          "knowledge_point": "异分母分数减法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "分数减法结果能约分的要约成最简分数。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "结果应化为最简。",
+          "difficulty": 3,
+          "knowledge_point": "异分母分数减法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "分数减法时要注意（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 分母不能相减。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "异分母分数减法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "先通分",
+            "分子相减分母不变",
+            "结果约分",
+            "分母相减"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "计算三分之二减六分之一。",
+          "answer": {
+            "value": "示例：公分母是 6，三分之二等于六分之四，减去六分之一得六分之三，约分后是二分之一。"
+          },
+          "analysis": "评分要点：通分 + 约分。",
+          "difficulty": 4,
+          "knowledge_point": "异分母分数减法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "三分之一加六分之一再加二分之一的结果是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "六分之二加六分之一加六分之三得六分之六即 1。",
+          "difficulty": 2,
+          "knowledge_point": "分数加减混合运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "1",
+            "三分之二",
+            "六分之五",
+            "二分之三"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "一减二分之一减四分之一的结果是（ ）。",
+          "answer": {
+            "value": "四分之一"
+          },
+          "analysis": "1 减四分之二再减四分之一得四分之一。",
+          "difficulty": 2,
+          "knowledge_point": "分数加减混合运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "分数混合运算中可以用运算律简化计算。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "交换结合律同样适用。",
+          "difficulty": 3,
+          "knowledge_point": "分数加减混合运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "分数混合运算的正确做法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 没有这种规则。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "分数加减混合运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "按从左到右的顺序算同级运算",
+            "有括号先算括号内",
+            "能用运算律时可简算",
+            "先算分母大的"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "计算二分之一加三分之一减六分之一。",
+          "answer": {
+            "value": "示例：通分到 6，得六分之三加六分之二减六分之一，等于六分之四，约分为三分之二。"
+          },
+          "analysis": "评分要点：顺序 + 结果正确。",
+          "difficulty": 4,
+          "knowledge_point": "分数加减混合运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "一根绳子用去它的五分之二，还剩（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "1 减五分之二得五分之三。",
+          "difficulty": 2,
+          "knowledge_point": "分数加减的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "五分之三",
+            "五分之二",
+            "三分之二",
+            "十分之三"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "一本书第一天看了全书的四分之一，第二天看了全书的八分之三，两天共看全书的（ ）。",
+          "answer": {
+            "value": "八分之五"
+          },
+          "analysis": "四分之一等于八分之二，加八分之三得八分之五。",
+          "difficulty": 2,
+          "knowledge_point": "分数加减的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "求剩余部分可以用 1 减去已用的分率。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "剩余等于 1 减已用。",
+          "difficulty": 3,
+          "knowledge_point": "分数加减的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "解决分数实际问题时要弄清（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 分母大小无关。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "分数加减的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "单位 1 是什么",
+            "已知的分率",
+            "求的是部分还是整体",
+            "只看分母大小"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "一块地种玉米占五分之二，种大豆占四分之一，其余种蔬菜，蔬菜占几分之几？",
+          "answer": {
+            "value": "示例：通分到 20，玉米占二十分之八，大豆占二十分之五，合起来二十分之十三，其余二十分之七就是蔬菜。"
+          },
+          "analysis": "评分要点：通分计算 + 结果。",
+          "difficulty": 4,
+          "knowledge_point": "分数加减的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "二 长方体（一）",
+      "order_index": 2,
+      "summary": "长方体的特征、表面积与展开图。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "长方体有（ ）条棱。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "长方体有 12 条棱。",
+          "difficulty": 2,
+          "knowledge_point": "长方体的特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "12",
+            "6",
+            "8",
+            "4"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "长方体有（ ）个顶点。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "长方体有 8 个顶点。该项数值为 8，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "长方体的特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "8",
+            "80",
+            "0.8",
+            "9"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "长方体的 6 个面一般都是长方形。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "特殊情况有两个相对的面是正方形。",
+          "difficulty": 3,
+          "knowledge_point": "长方体的特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "长方体的特征有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 面数不对。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "长方体的特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "6 个面",
+            "12 条棱",
+            "8 个顶点",
+            "4 个面"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说长方体中哪些棱长度相等。",
+          "answer": {
+            "value": "示例：长方体相对的 4 条棱长度相等，可以分成 3 组，每组 4 条，分别对应长、宽、高三个方向。"
+          },
+          "analysis": "评分要点：分组说明。",
+          "difficulty": 4,
+          "knowledge_point": "长方体的特征",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "长 3 厘米、宽 2 厘米、高 1 厘米的长方体表面积是（ ）平方厘米。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "2×(3×2+3×1+2×1) 得 22。",
+          "difficulty": 2,
+          "knowledge_point": "长方体的表面积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "22",
+            "11",
+            "6",
+            "18"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "正方体棱长 4 厘米，表面积是（ ）平方厘米。",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "6×4×4 得 96。该项数值为 96，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "长方体的表面积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "960",
+            "96",
+            "9.6",
+            "97"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "正方体的表面积等于棱长乘棱长再乘 6。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "正方体 6 个面相同。",
+          "difficulty": 3,
+          "knowledge_point": "长方体的表面积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "求长方体表面积的方法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 只是其中一个面。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "长方体的表面积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "分别求 6 个面再相加",
+            "用（长×宽+长×高+宽×高）×2",
+            "求 3 组相对面的面积和",
+            "只求一个面的面积"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "长 5 分米、宽 4 分米、高 3 分米的长方体，求表面积。",
+          "answer": {
+            "value": "示例：长乘宽 20，长乘高 15，宽乘高 12，三者和为 47，再乘 2 得 94 平方分米。"
+          },
+          "analysis": "评分要点：公式 + 单位。",
+          "difficulty": 4,
+          "knowledge_point": "长方体的表面积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "长方体展开图共有（ ）个面。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "展开后仍是 6 个面。",
+          "difficulty": 2,
+          "knowledge_point": "展开图与折叠",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "6",
+            "4",
+            "8",
+            "12"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "在展开图中，相对的两个面（ ）（填不相邻或相邻）。",
+          "answer": {
+            "value": "不相邻"
+          },
+          "analysis": "相对面在展开图中不相邻。",
+          "difficulty": 2,
+          "knowledge_point": "展开图与折叠",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "同一个长方体可能有不同形状的展开图。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "展开方式多样。",
+          "difficulty": 3,
+          "knowledge_point": "展开图与折叠",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于展开图说法正确的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 面数错误。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "展开图与折叠",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "展开图有 6 个面",
+            "折叠后相对的面面积相等",
+            "展开方式不止一种",
+            "展开图只有 3 个面"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说怎样判断一个平面图形能否折成长方体。",
+          "answer": {
+            "value": "示例：先数是不是 6 个面，再看相对的面是否成对且大小相同、排列位置能不能围合，折起来后不重叠不留空才行。"
+          },
+          "analysis": "评分要点：面数 + 相对面 + 折叠可行性。",
+          "difficulty": 4,
+          "knowledge_point": "展开图与折叠",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "给一个无盖的长方体水箱外表涂漆，要涂（ ）个面。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "无盖水箱只有 5 个面。",
+          "difficulty": 2,
+          "knowledge_point": "表面积的实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "5",
+            "6",
+            "4",
+            "3"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "包装一个长方体纸盒，至少需要的包装纸等于它的（ ）（填表面积）。",
+          "answer": {
+            "value": "表面积"
+          },
+          "analysis": "包装纸对应表面积。",
+          "difficulty": 2,
+          "knowledge_point": "表面积的实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "实际问题中有时只需要计算部分面的面积。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "如无盖、贴墙等情况。",
+          "difficulty": 3,
+          "knowledge_point": "表面积的实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "做这类实际问题时要先弄清（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 与计算无关。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "表面积的实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "要算几个面",
+            "哪些面不算",
+            "单位是否统一",
+            "物体的颜色"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "长 6 分米、宽 5 分米、高 4 分米的无盖水箱，求需要铁皮的面积。",
+          "answer": {
+            "value": "示例：底面 30 平方分米，前后两面各 24 平方分米共 48，左右两面各 20 共 40，合计 118 平方分米。"
+          },
+          "analysis": "评分要点：少算一个面 + 结果正确。",
+          "difficulty": 4,
+          "knowledge_point": "表面积的实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "三 分数乘法",
+      "order_index": 3,
+      "summary": "分数乘整数、分数乘分数及乘法应用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "五分之二乘 3 的结果是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "分子 2 乘 3 得 6，分母不变。",
+          "difficulty": 2,
+          "knowledge_point": "分数乘整数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "五分之六",
+            "十五分之六",
+            "五分之五",
+            "十分之六"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "七分之三乘 2 等于（ ）。",
+          "answer": {
+            "value": "七分之六"
+          },
+          "analysis": "分子乘整数得七分之六。",
+          "difficulty": 2,
+          "knowledge_point": "分数乘整数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "分数乘整数时可以把整数与分母相乘。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "应乘分子。",
+          "difficulty": 3,
+          "knowledge_point": "分数乘整数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "分数乘整数的做法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 分母不变。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "分数乘整数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "分子乘整数",
+            "分母不变",
+            "结果能约分要约分",
+            "分母乘整数"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "计算九分之四乘 3 并说明过程。",
+          "answer": {
+            "value": "示例：分子 4 乘 3 得 12，分母仍是 9，得九分之十二，约分后是三分之四。"
+          },
+          "analysis": "评分要点：计算 + 约分。",
+          "difficulty": 4,
+          "knowledge_point": "分数乘整数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "二分之一乘四分之三的结果是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "1×3 得 3，2×4 得 8。",
+          "difficulty": 2,
+          "knowledge_point": "分数乘分数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "八分之三",
+            "六分之三",
+            "八分之四",
+            "二分之三"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "三分之二乘五分之三的结果是（ ）。",
+          "answer": {
+            "value": "五分之二"
+          },
+          "analysis": "分子 6 分母 15，约分得五分之二。",
+          "difficulty": 2,
+          "knowledge_point": "分数乘分数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "分数乘分数可以先约分再相乘，结果相同。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "先约分可简化计算。",
+          "difficulty": 3,
+          "knowledge_point": "分数乘分数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "分数乘法的计算要点有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 无此算法。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "分数乘分数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "分子相乘作分子",
+            "分母相乘作分母",
+            "能约分先约分",
+            "分子分母交叉相加"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "计算四分之三乘八分之四。",
+          "answer": {
+            "value": "示例：八分之四约成二分之一，四分之三乘二分之一得八分之三，也可以先约分再相乘。"
+          },
+          "analysis": "评分要点：约分 + 结果。",
+          "difficulty": 4,
+          "knowledge_point": "分数乘分数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "求 12 的三分之一是多少，列式应是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "求几分之几用乘法。",
+          "difficulty": 2,
+          "knowledge_point": "分数乘法的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "12 乘三分之一",
+            "12 除以三分之一",
+            "三分之一除以 12",
+            "12 加三分之一"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "20 的四分之三是（ ）。",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "20 乘四分之三得 15。该项数值为 15，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "分数乘法的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "150",
+            "1.5",
+            "15",
+            "16"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "求一个数的几分之几，用这个数乘这个分数。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "这是分数乘法的意义。",
+          "difficulty": 3,
+          "knowledge_point": "分数乘法的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "可以用乘法解决的说法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "A ✓；B ✓；D ✓ 都是求几分之几；C ✗ 用除法。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "分数乘法的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "求 8 的二分之一",
+            "求 15 的五分之二",
+            "把 15 平均分成 5 份求一份",
+            "求 6 的三分之二是多少"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "一箱牛奶有 24 盒，喝了它的四分之一，喝了多少盒？",
+          "answer": {
+            "value": "示例：24 乘四分之一，先算 24 除以 4 得 6，所以喝了 6 盒。"
+          },
+          "analysis": "评分要点：列式 + 结果。",
+          "difficulty": 4,
+          "knowledge_point": "分数乘法的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "五分之二的倒数是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "分子分母交换得二分之五。",
+          "difficulty": 2,
+          "knowledge_point": "分数乘法与倒数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "二分之五",
+            "五分之二",
+            "零点四",
+            "五分之三"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "6 的倒数是（ ）。",
+          "answer": {
+            "value": "六分之一"
+          },
+          "analysis": "6 写作一分之六，倒数为六分之一。",
+          "difficulty": 2,
+          "knowledge_point": "分数乘法与倒数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "1 的倒数是 1。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "1 乘 1 得 1。",
+          "difficulty": 3,
+          "knowledge_point": "分数乘法与倒数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于倒数说法正确的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 0 没有倒数。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "分数乘法与倒数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "乘积是 1 的两个数互为倒数",
+            "0 没有倒数",
+            "真分数的倒数大于 1",
+            "所有数都有倒数"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "求四分之三的倒数，并说明理由。",
+          "answer": {
+            "value": "示例：四分之三的倒数是三分之四，因为四分之三乘三分之四等于 1，两数乘积为 1 所以互为倒数。"
+          },
+          "analysis": "评分要点：结果 + 理由。",
+          "difficulty": 4,
+          "knowledge_point": "分数乘法与倒数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "四 长方体（二）",
+      "order_index": 4,
+      "summary": "体积与容积的计算。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "常用的体积单位是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "体积单位是立方单位。",
+          "difficulty": 2,
+          "knowledge_point": "体积与体积单位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "立方厘米",
+            "平方厘米",
+            "厘米",
+            "千克"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "棱长 1 分米的正方体，体积是 1（ ）。",
+          "answer": {
+            "value": "立方分米"
+          },
+          "analysis": "棱长 1 分米体积为 1 立方分米。",
+          "difficulty": 2,
+          "knowledge_point": "体积与体积单位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "1 立方分米等于 1000 立方厘米。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "相邻体积单位进率为 1000。",
+          "difficulty": 3,
+          "knowledge_point": "体积与体积单位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "体积单位有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓ 都是体积单位；D ✗ 是面积单位。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "体积与体积单位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "立方厘米",
+            "立方分米",
+            "立方米",
+            "平方分米"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说 1 立方厘米大约有多大。",
+          "answer": {
+            "value": "示例：棱长 1 厘米的小正方体体积就是 1 立方厘米，大约相当于一个手指尖大小的一小块方糖。"
+          },
+          "analysis": "评分要点：结合实物估计。",
+          "difficulty": 4,
+          "knowledge_point": "体积与体积单位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "长 4 厘米、宽 3 厘米、高 2 厘米的长方体体积是（ ）立方厘米。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "4×3×2 得 24。",
+          "difficulty": 2,
+          "knowledge_point": "长方体与正方体的体积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "24",
+            "12",
+            "9",
+            "26"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "棱长 3 厘米的正方体体积是（ ）立方厘米。",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "3×3×3 得 27。该项数值为 27，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "长方体与正方体的体积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "270",
+            "27",
+            "2.7",
+            "28"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "长方体的体积也可以用底面积乘高计算。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "底面积乘高是通用公式。",
+          "difficulty": 3,
+          "knowledge_point": "长方体与正方体的体积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "求体积的正确公式有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 是周长思路。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "长方体与正方体的体积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "长×宽×高",
+            "底面积×高",
+            "棱长×棱长×棱长（正方体）",
+            "长加宽加高"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "一个长方体木箱长 8 分米、宽 5 分米、高 4 分米，求它的体积。",
+          "answer": {
+            "value": "示例：8 乘 5 得 40 平方分米是底面积，再乘高 4 得 160 立方分米。"
+          },
+          "analysis": "评分要点：公式 + 单位。",
+          "difficulty": 4,
+          "knowledge_point": "长方体与正方体的体积",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "1 升等于（ ）毫升。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "1 升是 1000 毫升。",
+          "difficulty": 2,
+          "knowledge_point": "容积与容积单位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "1000",
+            "100",
+            "10",
+            "10000"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "1 立方分米等于（ ）升。",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "容积与体积单位可互换。该项数值为 1，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "容积与容积单位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "10",
+            "0.1",
+            "1",
+            "2"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "容器的容积一定小于它的体积。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "容器有壁厚，容积小于体积。",
+          "difficulty": 3,
+          "knowledge_point": "容积与容积单位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "容积单位有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓ 也可作容积单位；D ✗ 是面积单位。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "容积与容积单位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "升",
+            "毫升",
+            "立方分米",
+            "平方米"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "一个长方体水槽从里面量长 5 分米、宽 4 分米、深 3 分米，能装多少升水？",
+          "answer": {
+            "value": "示例：容积等于 5 乘 4 乘 3 得 60 立方分米，也就是 60 升水。"
+          },
+          "analysis": "评分要点：从里面量 + 单位换算。",
+          "difficulty": 4,
+          "knowledge_point": "容积与容积单位",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "计算一堆砖占多大空间，应该求（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "占空间大小是体积。",
+          "difficulty": 2,
+          "knowledge_point": "体积计算的实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "体积",
+            "表面积",
+            "周长",
+            "面积"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "一个正方体水箱棱长 2 米，装满水是（ ）立方米。",
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "2 的立方等于 8。该项数值为 8，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "体积计算的实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "80",
+            "0.8",
+            "9",
+            "8"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "求装多少水要用容积，求材料用量常用表面积。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "两者用途不同。",
+          "difficulty": 3,
+          "knowledge_point": "体积计算的实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "可能用到体积计算的情境有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 围栏求周长。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "体积计算的实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "计算水池能装多少水",
+            "计算一堆沙占多大地方",
+            "计算包装箱内能放多少物品",
+            "计算围栏长度"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "一个长 6 米、宽 4 米、深 2 米的水池，最多能蓄水多少升？",
+          "answer": {
+            "value": "示例：容积为 6 乘 4 乘 2 得 48 立方米，1 立方米是 1000 升，所以是 48000 升。"
+          },
+          "analysis": "评分要点：体积 + 单位换算。",
+          "difficulty": 4,
+          "knowledge_point": "体积计算的实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "整理与复习",
+      "order_index": 5,
+      "summary": "梳理分数运算与长方体知识的联系。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "分数加法与分数乘法在计算上的主要区别是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "加减需通分，乘法不需要。",
+          "difficulty": 2,
+          "knowledge_point": "分数运算的整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "加法要通分，乘法不用通分",
+            "两者都要通分",
+            "两者都不用通分",
+            "乘法要通分"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "计算分数加减前要先（ ）（填通分）。",
+          "answer": {
+            "value": "通分"
+          },
+          "analysis": "异分母相加减要通分。",
+          "difficulty": 2,
+          "knowledge_point": "分数运算的整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "分数乘法的结果一定比原来的数大。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "乘小于 1 的分数会变小。",
+          "difficulty": 3,
+          "knowledge_point": "分数运算的整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "本册分数知识包括（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓ 都是本册内容；D ✗ 说法混乱不成立。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "分数运算的整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "异分母加减",
+            "分数乘法",
+            "倒数",
+            "分数除法以外的比例"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "总结分数加减与分数乘法各自的关键步骤。",
+          "answer": {
+            "value": "示例：加减要先找公分母通分，分子相加减，分母不变，结果约分；乘法分子乘分子、分母乘分母，能约分先约分。"
+          },
+          "analysis": "评分要点：两类步骤清楚。",
+          "difficulty": 4,
+          "knowledge_point": "分数运算的整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "求表面积用（ ）单位。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "表面积单位为平方单位。",
+          "difficulty": 2,
+          "knowledge_point": "长方体知识的整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "平方",
+            "立方",
+            "长度",
+            "重量"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "求体积用（ ）单位。",
+          "answer": {
+            "value": "立方"
+          },
+          "analysis": "体积为立方单位。",
+          "difficulty": 2,
+          "knowledge_point": "长方体知识的整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "表面积和体积的计算都可以用「底面积乘高」这一个公式。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "表面积另有算法。",
+          "difficulty": 3,
+          "knowledge_point": "长方体知识的整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于表面积与体积说法正确的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 数值不相等。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "长方体知识的整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "表面积是 6 个面面积和",
+            "体积是物体占空间大小",
+            "单位不同",
+            "两者数值总相等"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说表面积和体积的区别。",
+          "answer": {
+            "value": "示例：表面积是物体表面的大小，用平方单位；体积是物体占空间的大小，用立方单位。两者意义和算法都不同。"
+          },
+          "analysis": "评分要点：意义 + 单位 + 算法。",
+          "difficulty": 4,
+          "knowledge_point": "长方体知识的整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "异分母相加时只把分子相加、分母不变，错误原因是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "未通分就合并是主要错误。",
+          "difficulty": 2,
+          "knowledge_point": "易错点分析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "没有通分",
+            "约分错了",
+            "单位错了",
+            "看错题"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "计算表面积时忘减去不算的面，属于（ ）（填多算）。",
+          "answer": {
+            "value": "多算"
+          },
+          "analysis": "多算了不该算的面。",
+          "difficulty": 2,
+          "knowledge_point": "易错点分析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "计算前把长度单位统一，可以减少错误。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "统一单位是必要步骤。",
+          "difficulty": 3,
+          "knowledge_point": "易错点分析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "常见易错的地方有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 检查是防错方法。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "易错点分析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "通分时漏乘分子",
+            "单位不统一",
+            "表面积多算一小面",
+            "检查计算结果"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "写下你自己最容易出错的一处，以及避免办法。",
+          "answer": {
+            "value": "示例：我通分时常常忘记把分子也跟着乘。现在我会先把两个分数都写成分母相同的形式，再动笔相加，最后检查一遍。"
+          },
+          "analysis": "评分要点：错因 + 办法具体。",
+          "difficulty": 4,
+          "knowledge_point": "易错点分析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "一个水箱装了三分之二的水，再倒出其中的四分之一，剩下的水占水箱的（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "三分之二乘四分之三得二分之一。",
+          "difficulty": 2,
+          "knowledge_point": "综合应用练习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "二分之一",
+            "三分之二",
+            "十二分之一",
+            "四分之一"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "长方体鱼缸长 5 分米、宽 3 分米、高 4 分米，装到一半高度，水的体积是（ ）立方分米。",
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "5 乘 3 乘 2 得 30。该项数值为 30，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "综合应用练习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "300",
+            "3",
+            "31",
+            "30"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "解决综合问题时要先分清每一步求的是什么。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "分步理清关系很重要。",
+          "difficulty": 3,
+          "knowledge_point": "综合应用练习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "综合应用时应注意（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 易出错。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "综合应用练习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "读懂每个条件",
+            "分清每一步的所求",
+            "单位统一",
+            "直接套最后一个公式"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "一个长方体盒子长 4 分米、宽 3 分米、高 2 分米，装满棱长 1 分米的小正方体，最多放多少个？",
+          "answer": {
+            "value": "示例：沿长放 4 个、沿宽放 3 个、沿高放 2 层，4 乘 3 乘 2 得 24，所以最多放 24 个。"
+          },
+          "analysis": "评分要点：三层思维 + 结果。",
+          "difficulty": 4,
+          "knowledge_point": "综合应用练习",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "五 分数除法",
+      "order_index": 6,
+      "summary": "分数除法与倒数的关系。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "五分之四除以 2 的结果是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "等于乘二分之一得五分之二。",
+          "difficulty": 2,
+          "knowledge_point": "分数除以整数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "五分之二",
+            "十分之四",
+            "五分之八",
+            "二分之五"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "七分之六除以 3 等于（ ）。",
+          "answer": {
+            "value": "七分之二"
+          },
+          "analysis": "等于乘三分之一得七分之二。",
+          "difficulty": 2,
+          "knowledge_point": "分数除以整数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "分数除以整数就是把这个分数平均分成若干份。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "除法即平均分。",
+          "difficulty": 3,
+          "knowledge_point": "分数除以整数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "分数除以整数可以这样算（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓ 等价于 A；C ✓；D ✗ 说法错误。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "分数除以整数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "乘这个整数的倒数",
+            "分子不变分母乘整数",
+            "能约分先约分",
+            "分子除以整数的倒数"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "计算九分之六除以 2。",
+          "answer": {
+            "value": "示例：九分之六约成三分之二，除以 2 等于乘二分之一，得三分之一。"
+          },
+          "analysis": "评分要点：约分 + 结果。",
+          "difficulty": 4,
+          "knowledge_point": "分数除以整数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "二分之一除以三分之一的结果是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "乘 3 得二分之三。",
+          "difficulty": 2,
+          "knowledge_point": "一个数除以分数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "二分之三",
+            "六分之一",
+            "三分之二",
+            "五分之二"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "四分之三除以八分之三等于（ ）。",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "乘三分之八得四分之二十四即 2。该项数值为 2，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "一个数除以分数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "20",
+            "2",
+            "0.2",
+            "3"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "除以一个数等于乘这个数的倒数，这个数不能是 0。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "0 没有倒数。",
+          "difficulty": 3,
+          "knowledge_point": "一个数除以分数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于分数除法说法正确的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 取倒数的是除数。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "一个数除以分数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "除以分数等于乘它的倒数",
+            "除数不能为 0",
+            "被除数不变",
+            "把被除数取倒数再乘"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "计算五分之二除以十分之三。",
+          "answer": {
+            "value": "示例：除以十分之三等于乘三分之十，五分之二乘三分之十得三十分之二十，约分后是三分之二。"
+          },
+          "analysis": "评分要点：转乘法 + 约分。",
+          "difficulty": 4,
+          "knowledge_point": "一个数除以分数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "一本书看了 40 页，正好是全书的五分之二，全书有（ ）页。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "40 除以五分之二得 100。",
+          "difficulty": 2,
+          "knowledge_point": "分数除法的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "100",
+            "80",
+            "60",
+            "16"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "一桶油用去 12 千克，占全桶的三分之一，全桶有（ ）千克。",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "12 除以三分之一得 36。该项数值为 36，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "分数除法的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "360",
+            "3.6",
+            "36",
+            "37"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "已知部分和分率求整体，用除法计算。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "对应量除以对应分率。",
+          "difficulty": 3,
+          "knowledge_point": "分数除法的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "分数除法能解决的问题有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓ 都用除法；D ✗ 用乘法。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "分数除法的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "已知部分求整体",
+            "把整体平均分",
+            "求一个数是另一个数的几分之几",
+            "求几个相同数的和"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "小明走了一段路的四分之三，正好是 600 米，这段路共多长？",
+          "answer": {
+            "value": "示例：600 米对应四分之三，用 600 除以四分之三，等于 600 乘三分之四，得 800 米。"
+          },
+          "analysis": "评分要点：对应量除分率 + 结果。",
+          "difficulty": 4,
+          "knowledge_point": "分数除法的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "二分之一乘三分之二除以三分之一的结果是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "前两步得三分之一，除以三分之一得 1。",
+          "difficulty": 2,
+          "knowledge_point": "分数乘除混合运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "1",
+            "三分之一",
+            "九分之一",
+            "三分之二"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "四分之三除以二分之一再乘三分之二的结果是（ ）。",
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "四分之三乘 2 得二分之三，再乘三分之二得 1。该项数值为 1，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "分数乘除混合运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "10",
+            "0.1",
+            "2",
+            "1"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "乘除混合运算中可以把除法先转成乘法再统一约分。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "统一成乘法便于约分。",
+          "difficulty": 3,
+          "knowledge_point": "分数乘除混合运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "分数乘除混合运算的做法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 无此规则。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "分数乘除混合运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "按从左到右顺序算",
+            "把除法转成乘法",
+            "先约分再计算",
+            "先算分母大的"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "计算三分之二除以四分之三再乘二分之一。",
+          "answer": {
+            "value": "示例：三分之二乘三分之四得九分之八，再乘二分之一得九分之四。"
+          },
+          "analysis": "评分要点：顺序 + 结果。",
+          "difficulty": 4,
+          "knowledge_point": "分数乘除混合运算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "六 确定位置",
+      "order_index": 7,
+      "summary": "用方向和距离确定位置。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "东北方向也可以说成（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "东北即北偏东 45 度。",
+          "difficulty": 2,
+          "knowledge_point": "方向与角度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "北偏东 45 度",
+            "南偏东 45 度",
+            "北偏西 45 度",
+            "南偏西 45 度"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「北偏东 30 度」表示从北方向向东偏转（ ）度。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "角度即以北为起点偏转的度数。该项数值为 30，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "方向与角度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "30",
+            "300",
+            "3",
+            "31"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "只说方向不说距离，无法确定物体的准确位置。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "位置需方向加距离。",
+          "difficulty": 3,
+          "knowledge_point": "方向与角度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "描述位置需要的信息有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 与位置无关。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "方向与角度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "方向",
+            "角度",
+            "距离",
+            "物体颜色"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说怎样描述学校在你家的什么方向。",
+          "answer": {
+            "value": "示例：先确定以家为观测点，量出学校在家北偏东方向偏多少度，再量出家到学校的距离，写成北偏东某度、距离多少米。"
+          },
+          "analysis": "评分要点：观测点 + 方向角度 + 距离。",
+          "difficulty": 4,
+          "knowledge_point": "方向与角度",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "确定位置时首先要确定（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先定观测点才能描述方向。",
+          "difficulty": 2,
+          "knowledge_point": "用方向和距离确定位置",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "观测点",
+            "物体颜色",
+            "天气",
+            "时间"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "图上 1 厘米表示实际 100 米，图上 3 厘米表示实际（ ）米。",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "按比例放大 3 倍。该项数值为 300，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "用方向和距离确定位置",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "3000",
+            "300",
+            "30",
+            "301"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "绘图时要标出方向和比例尺。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "方向与比例尺是绘图要素。",
+          "difficulty": 3,
+          "knowledge_point": "用方向和距离确定位置",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "确定位置时要做到（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 不准确。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "用方向和距离确定位置",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "定好观测点",
+            "量准角度",
+            "按比例尺换算距离",
+            "随便画一个点"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说如何在图上标出「北偏东 40 度、距离 400 米」的位置。",
+          "answer": {
+            "value": "示例：以观测点为中心画出北的方向，从北向东量 40 度画一条射线，再按比例尺算出图上距离，在射线上量取并标点。"
+          },
+          "analysis": "评分要点：步骤清楚。",
+          "difficulty": 4,
+          "knowledge_point": "用方向和距离确定位置",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "描述行走路线时正确的顺序是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "路线要按先后顺序。",
+          "difficulty": 2,
+          "knowledge_point": "路线描述",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "按实际行走的先后顺序",
+            "按距离长短",
+            "按方向字母顺序",
+            "随意顺序"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "描述路线要说清每一段的（ ）、方向和距离。",
+          "answer": {
+            "value": "起点"
+          },
+          "analysis": "每段要有起点。",
+          "difficulty": 2,
+          "knowledge_point": "路线描述",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "同一路线正向和反向描述时方向正好相反。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "反向即相反方向。",
+          "difficulty": 3,
+          "knowledge_point": "路线描述",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "描述路线时应包含（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 与本任务无关。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "路线描述",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "每段的方向",
+            "每段的角度",
+            "每段的距离",
+            "沿途店铺名字"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "描述你从家到学校的一条路线。",
+          "answer": {
+            "value": "示例：从家出发向东走 200 米到路口，再向北偏东 30 度走 300 米，最后向东走 100 米就到学校。"
+          },
+          "analysis": "评分要点：分段 + 方向距离。",
+          "difficulty": 4,
+          "knowledge_point": "路线描述",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "地图上确定两地的相对位置，常用（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "方向加距离可定位。",
+          "difficulty": 2,
+          "knowledge_point": "位置与方向的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "方向和距离",
+            "颜色深浅",
+            "字体大小",
+            "纸张厚度"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "救援人员描述被困者位置时，必须说清方向和（ ）（填距离）。",
+          "answer": {
+            "value": "距离"
+          },
+          "analysis": "两者缺一不可。",
+          "difficulty": 2,
+          "knowledge_point": "位置与方向的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "方向描述越精确，定位越可靠。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "精确角度提高定位准确性。",
+          "difficulty": 3,
+          "knowledge_point": "位置与方向的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "需要确定位置的情景有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 不需要定位。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "位置与方向的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "绘制校园平面图",
+            "规划救援路线",
+            "看地图找地点",
+            "写作文描写天气"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说为什么地图上要标明方向。",
+          "answer": {
+            "value": "示例：有了方向标记（如指北针），看图的人才知道上下左右对应实际什么方向，才能准确判断地点之间的相对位置和行走路线。"
+          },
+          "analysis": "评分要点：作用 + 准确性。",
+          "difficulty": 4,
+          "knowledge_point": "位置与方向的应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "七 用方程解决问题",
+      "order_index": 8,
+      "summary": "列方程解决简单实际问题。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "列方程解应用题时通常把（ ）设为 x。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "常把所求量设为未知数。",
+          "difficulty": 2,
+          "knowledge_point": "设未知数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "所求的量",
+            "已知的数",
+            "任意数",
+            "最小的数"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "设未知数时要说清它的（ ）（填单位名称）。",
+          "answer": {
+            "value": "单位"
+          },
+          "analysis": "设未知要带单位说明含义。",
+          "difficulty": 2,
+          "knowledge_point": "设未知数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "设未知数的方式可能不止一种。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "可设不同的量为 x。",
+          "difficulty": 3,
+          "knowledge_point": "设未知数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "设未知数时要注意（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 随意设不利解题。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "设未知数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "写明所设量的含义",
+            "带上单位",
+            "便于列等量关系",
+            "随意设一个数"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "甲数是乙数的 3 倍，两数和是 48，怎样设未知数？",
+          "answer": {
+            "value": "示例：可以设乙数为 x，则甲数为 3x，根据两数和是 48 列出方程 x 加 3x 等于 48。"
+          },
+          "analysis": "评分要点：设未知 + 列式。",
+          "difficulty": 4,
+          "knowledge_point": "设未知数",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "列方程的关键是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "等量关系是核心。",
+          "difficulty": 2,
+          "knowledge_point": "列等量关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "找出等量关系",
+            "把数字都写上",
+            "先算答案",
+            "只看最后一句话"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "「比 x 多 5 的数是 12」写成方程是 x 加 5 等于（ ）。",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "等量关系直接写成等式。该项数值为 12，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "列等量关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "120",
+            "12",
+            "1.2",
+            "13"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "等量关系式中两边表示的量要相等。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "等式两边必须等量。",
+          "difficulty": 3,
+          "knowledge_point": "列等量关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "常用来表示等量关系的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 与数量无关。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "列等量关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "一共、总数",
+            "比谁多或少",
+            "几倍关系",
+            "物体颜色"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "根据「苹果比梨多 8 千克，共 30 千克」写出等量关系。",
+          "answer": {
+            "value": "示例：可以写成梨的质量加苹果的质量等于 30 千克，而苹果等于梨加 8，所以若梨是 x，则 x 加 x 加 8 等于 30。"
+          },
+          "analysis": "评分要点：关系清楚 + 列式正确。",
+          "difficulty": 4,
+          "knowledge_point": "列等量关系",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "方程 2x 加 6 等于 20 的解是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "20 减 6 得 14，除以 2 得 7。",
+          "difficulty": 2,
+          "knowledge_point": "解方程与检验",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "x 等于 7",
+            "x 等于 13",
+            "x 等于 10",
+            "x 等于 3"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "方程 5x 减 5 等于 15 的解是 x 等于（ ）。",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "20 除以 5 得 4。该项数值为 4，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "解方程与检验",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "40",
+            "0.4",
+            "4",
+            "5"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "解方程后把解代回原方程检验是好习惯。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "检验能确认答案。",
+          "difficulty": 3,
+          "knowledge_point": "解方程与检验",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "解方程时可以用（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 必须两边同时变。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "解方程与检验",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "等式性质",
+            "两边同时加减同一个数",
+            "两边同时乘除同一个非零数",
+            "随意改动一边"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "解方程 3x 加 4 等于 19 并检验。",
+          "answer": {
+            "value": "示例：两边同时减 4 得 3x 等于 15，再除以 3 得 x 等于 5。代入原式，3 乘 5 加 4 等于 19，成立。"
+          },
+          "analysis": "评分要点：两步求解 + 检验。",
+          "difficulty": 4,
+          "knowledge_point": "解方程与检验",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "买 3 支笔花了 12 元，每支 x 元，可列方程（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "单价乘数量等于总价。",
+          "difficulty": 2,
+          "knowledge_point": "方程应用的类型",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "3x 等于 12",
+            "x 加 3 等于 12",
+            "12x 等于 3",
+            "x 除以 3 等于 12"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "一辆车每小时行 x 千米，3 小时行 180 千米，方程是 3x 等于（ ）。",
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "速度乘时间等于路程。该项数值为 180，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "方程应用的类型",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "1800",
+            "18",
+            "181",
+            "180"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "同一个问题既可以用算术方法也可以用方程解决。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "两种方法都可行。",
+          "difficulty": 3,
+          "knowledge_point": "方程应用的类型",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "适合用方程解决的问题有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 与数量关系无关。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "方程应用的类型",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "和差倍问题",
+            "购物总价问题",
+            "行程问题",
+            "背诵课文"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用方程解决：妈妈买了 4 千克苹果，付 40 元找回 8 元，每千克苹果多少元？",
+          "answer": {
+            "value": "示例：设每千克 x 元，4x 加 8 等于 40，两边减 8 得 4x 等于 32，除以 4 得 x 等于 8，所以每千克 8 元。"
+          },
+          "analysis": "评分要点：设 + 列 + 解 + 答。",
+          "difficulty": 4,
+          "knowledge_point": "方程应用的类型",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "数学好玩",
+      "order_index": 9,
+      "summary": "在活动与游戏中体验数学方法。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "包装多个长方体小盒时，想省包装纸应让（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "重叠面积大则外表面积小。",
+          "difficulty": 2,
+          "knowledge_point": "包装中的数学",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "重叠的面尽量大",
+            "重叠的面尽量小",
+            "盒子分开摆",
+            "盒子立着放"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "把 4 个小盒叠在一起包装，比分别包装所用的纸要（ ）（填少）。",
+          "answer": {
+            "value": "少"
+          },
+          "analysis": "合并包装可省纸。",
+          "difficulty": 2,
+          "knowledge_point": "包装中的数学",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "包装问题要考虑重叠面的面积大小。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "重叠面影响总表面积。",
+          "difficulty": 3,
+          "knowledge_point": "包装中的数学",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "包装时需要考虑的因素有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 与用纸量无关。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "包装中的数学",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "重叠面的面积",
+            "盒子的排列方式",
+            "包装纸的大小",
+            "盒子的颜色"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明为什么把 3 盒牙膏叠成一个长方体包装更省纸。",
+          "answer": {
+            "value": "示例：三盒叠在一起后有两对接触面被遮住，需要的包装纸只覆盖外面的面；分开包装每盒都要包六个面，所以合并更省。"
+          },
+          "analysis": "评分要点：重叠面 + 对比。",
+          "difficulty": 4,
+          "knowledge_point": "包装中的数学",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "物体沿直线移动而形状不变，这叫（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "沿直线移动是平移。",
+          "difficulty": 2,
+          "knowledge_point": "图形与变换游戏",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "平移",
+            "旋转",
+            "翻折",
+            "放大"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "钟表的指针转动属于（ ）（填旋转）。",
+          "answer": {
+            "value": "旋转"
+          },
+          "analysis": "绕定点转动是旋转。",
+          "difficulty": 2,
+          "knowledge_point": "图形与变换游戏",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "平移和旋转都不改变图形的形状和大小。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "只改变位置或方向。",
+          "difficulty": 3,
+          "knowledge_point": "图形与变换游戏",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "属于图形变换的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 不是变换。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "图形与变换游戏",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "平移",
+            "旋转",
+            "翻折",
+            "涂色"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说生活中你见过的一个旋转现象。",
+          "answer": {
+            "value": "示例：电风扇的扇叶绕着轴旋转，风车在风里转动，摩天轮绕着中心慢慢转，都是旋转现象。"
+          },
+          "analysis": "评分要点：实例 + 绕定点转动。",
+          "difficulty": 4,
+          "knowledge_point": "图形与变换游戏",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "游戏中找规律通常可以借助（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "列表计算能发现规律。",
+          "difficulty": 2,
+          "knowledge_point": "数学与游戏策略",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "列表与计算",
+            "猜测",
+            "别人说法",
+            "运气"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "找出游戏中的关键数，可以用（ ）（填倒推）的方法。",
+          "answer": {
+            "value": "倒推"
+          },
+          "analysis": "倒推便于定关键数。",
+          "difficulty": 2,
+          "knowledge_point": "数学与游戏策略",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "有规律的游戏可以提前算出结果。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "规律使结果可推。",
+          "difficulty": 3,
+          "knowledge_point": "数学与游戏策略",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "分析游戏策略的方法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 不可靠。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "数学与游戏策略",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "列表找规律",
+            "倒推",
+            "计算总量",
+            "凭感觉乱试"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你怎样用规律解决一个数字游戏。",
+          "answer": {
+            "value": "示例：玩报数游戏时先算出要报到的总数，再倒推每次两人合计能报几个，找出关键数并抢到它们，就能稳赢。"
+          },
+          "analysis": "评分要点：规律 + 具体做法。",
+          "difficulty": 4,
+          "knowledge_point": "数学与游戏策略",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "进行调查时第一步通常要（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先明确调查目的。",
+          "difficulty": 2,
+          "knowledge_point": "调查与实践",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "确定调查的问题",
+            "先写结论",
+            "先画图",
+            "先猜数据"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "调查得到的数据可以用统计表和（ ）整理。",
+          "answer": {
+            "value": "统计图"
+          },
+          "analysis": "统计图便于展示。",
+          "difficulty": 2,
+          "knowledge_point": "调查与实践",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "调查对象要选得合适，数据才可靠。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "样本影响数据可靠性。",
+          "difficulty": 3,
+          "knowledge_point": "调查与实践",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "进行调查的步骤有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 不能编造。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "调查与实践",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "确定问题",
+            "收集数据",
+            "整理数据",
+            "编造数据"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "设计一个调查班级同学最喜欢的水果的小方案。",
+          "answer": {
+            "value": "示例：先列出五种常见水果选项，用举手或填表的方式收集全班同学的选择，再把人数统计成表格并画成条形统计图。"
+          },
+          "analysis": "评分要点：步骤 + 可执行。",
+          "difficulty": 4,
+          "knowledge_point": "调查与实践",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "八 数据的表示和分析",
+      "order_index": 10,
+      "summary": "复式统计图与数据分析。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "比较两个班的成绩用（ ）更合适。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "复式条形便于对比。",
+          "difficulty": 2,
+          "knowledge_point": "复式条形统计图",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "复式条形统计图",
+            "单式统计表",
+            "折线统计图以外的文字说明",
+            "照片"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "复式条形统计图中不同颜色的直条表示不同的（ ）（填数据组）。",
+          "answer": {
+            "value": "数据组"
+          },
+          "analysis": "颜色区分不同组。",
+          "difficulty": 2,
+          "knowledge_point": "复式条形统计图",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "复式统计图需要标明图例。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "图例说明颜色含义。",
+          "difficulty": 3,
+          "knowledge_point": "复式条形统计图",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "复式条形统计图的优点是（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 精度有限。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "复式条形统计图",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "便于比较两组数据",
+            "可以看出各组数量",
+            "能同时展示多个类别",
+            "能显示精确到小数后十位"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说复式条形统计图与单式的区别。",
+          "answer": {
+            "value": "示例：单式只表示一组数据，复式可以同时表示两组或多组数据，用不同颜色或条纹区分，便于直接比较各组之间的差别。"
+          },
+          "analysis": "评分要点：区别清楚。",
+          "difficulty": 4,
+          "knowledge_point": "复式条形统计图",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "要比较两个城市全年气温的变化，用（ ）最好。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "趋势比较用复式折线图。",
+          "difficulty": 2,
+          "knowledge_point": "复式折线统计图",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "复式折线统计图",
+            "单式条形统计图",
+            "文字叙述",
+            "示意图"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "复式折线统计图中不同的（ ）表示不同的数据。",
+          "answer": {
+            "value": "折线"
+          },
+          "analysis": "不同折线代表不同组。",
+          "difficulty": 2,
+          "knowledge_point": "复式折线统计图",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "复式折线统计图既可以比较数量多少，也可以比较变化趋势。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "兼具两种功能。",
+          "difficulty": 3,
+          "knowledge_point": "复式折线统计图",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "读复式折线统计图可以比较（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 图表无法判断真假。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "复式折线统计图",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "同一时间不同对象的高低",
+            "同一对象不同时间的变化",
+            "变化快慢",
+            "数据来源真假"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说读复式折线统计图时要注意什么。",
+          "answer": {
+            "value": "示例：先看图例分清每条折线代表什么，再看纵轴一格表示多少，然后比较同一时间的点和整段折线的走势。"
+          },
+          "analysis": "评分要点：图例 + 刻度 + 比较。",
+          "difficulty": 4,
+          "knowledge_point": "复式折线统计图",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "求平均数的方法是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "平均数是总和除以个数。",
+          "difficulty": 2,
+          "knowledge_point": "平均数与数据分析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "总和除以个数",
+            "取最大和最小的一半",
+            "取中间一个",
+            "任意取一个数"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "4 个数分别是 3、5、6、6，平均数是（ ）。",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "总和 20 除以 4 得 5。该项数值为 5，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "平均数与数据分析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "50",
+            "0.5",
+            "5",
+            "6"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "平均数可能不等于其中任何一个数据。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "平均数常是中间值。",
+          "difficulty": 3,
+          "knowledge_point": "平均数与数据分析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于平均数说法正确的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 可能是小数。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "平均数与数据分析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "反映整体水平",
+            "易受极端数据影响",
+            "单位与原数据相同",
+            "一定是整数"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "某小组 5 人跳绳次数为 80、90、100、110、120，求平均数并说明它表示什么。",
+          "answer": {
+            "value": "示例：总和 500 除以 5 得 100，平均数是 100 次，表示这个小组跳绳的一般水平。"
+          },
+          "analysis": "评分要点：计算 + 意义。",
+          "difficulty": 4,
+          "knowledge_point": "平均数与数据分析",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "根据数据作判断时最重要的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "真实数据是判断基础。",
+          "difficulty": 2,
+          "knowledge_point": "根据数据作判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "数据真实可靠",
+            "结论说得漂亮",
+            "数据越多越好但可编造",
+            "只看一组数据"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "如果两个班平均分相同，但一个班分数差距大，说明数据波动（ ）（填大）。",
+          "answer": {
+            "value": "大"
+          },
+          "analysis": "差距大即波动大。",
+          "difficulty": 2,
+          "knowledge_point": "根据数据作判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "只看平均数就能完全了解一组数据的情况。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "平均数会掩盖差异。",
+          "difficulty": 3,
+          "knowledge_point": "根据数据作判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "判断数据时应注意（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 新奇不代表正确。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "根据数据作判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "数据是否真实",
+            "有没有极端值",
+            "结论是否与数据相符",
+            "结论是否新奇"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "两个小组平均成绩相同，但第一组最高分和最低分差距很大，你对这两个组的评价是什么？",
+          "answer": {
+            "value": "示例：两组平均水平相当，但第一组内部差异大，有的很好有的较弱；第二组更均衡。教学上第一组需要帮扶弱项，第二组可整体提高。"
+          },
+          "analysis": "评分要点：平均 + 差异 + 合理建议。",
+          "difficulty": 4,
+          "knowledge_point": "根据数据作判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "总复习",
+      "order_index": 11,
+      "summary": "全册知识梳理与综合运用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "本册分数部分的重点是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "本册学分数四则运算。",
+          "difficulty": 2,
+          "knowledge_point": "数与计算的梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "分数加减乘除",
+            "分数与小数互化",
+            "分数化简以外的内容",
+            "整数除法"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "除以一个分数，等于乘这个分数的（ ）（填倒数）。",
+          "answer": {
+            "value": "倒数"
+          },
+          "analysis": "除法转乘法用倒数。",
+          "difficulty": 2,
+          "knowledge_point": "数与计算的梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "分数乘法和分数除法都可以转化为乘法计算。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "除法转乘倒数。",
+          "difficulty": 3,
+          "knowledge_point": "数与计算的梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "本册数与计算内容包括（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 本册未学负数。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "数与计算的梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "异分母分数加减",
+            "分数乘法",
+            "分数除法",
+            "负数运算"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说分数加减与分数乘除在计算上的主要不同。",
+          "answer": {
+            "value": "示例：加减必须先通分，分子相加减、分母不变；乘除不用通分，乘法分子分母分别相乘，除法先转成乘倒数。"
+          },
+          "analysis": "评分要点：对比清楚。",
+          "difficulty": 4,
+          "knowledge_point": "数与计算的梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "长方体表面积公式是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "表面积是六个面面积和。",
+          "difficulty": 2,
+          "knowledge_point": "图形与几何的梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "（长×宽+长×高+宽×高）×2",
+            "长×宽×高",
+            "长加宽加高",
+            "底面积×高"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "长方体体积等于底面积乘（ ）（填高）。",
+          "answer": {
+            "value": "高"
+          },
+          "analysis": "体积等于底面积乘高。",
+          "difficulty": 2,
+          "knowledge_point": "图形与几何的梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "确定位置需要方向、角度和距离。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "三者结合才准确。",
+          "difficulty": 3,
+          "knowledge_point": "图形与几何的梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "本册几何知识包括（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 本册未学。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "图形与几何的梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "长方体表面积",
+            "体积与容积",
+            "确定位置",
+            "圆的周长"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说表面积、体积、容积三者的区别。",
+          "answer": {
+            "value": "示例：表面积是外表面的面积和，用平方单位；体积是占空间大小，用立方单位；容积是容器能容纳的体积，从里面量。"
+          },
+          "analysis": "评分要点：三者区分清楚。",
+          "difficulty": 4,
+          "knowledge_point": "图形与几何的梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "要同时比较两组数据的变化趋势，用（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "复式折线最合适。",
+          "difficulty": 2,
+          "knowledge_point": "统计与应用的梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "复式折线统计图",
+            "单式条形统计图",
+            "统计表以外无图",
+            "简单示意图"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "平均数等于总和除以（ ）（填个数）。",
+          "answer": {
+            "value": "个数"
+          },
+          "analysis": "平均数是总和除以个数。",
+          "difficulty": 2,
+          "knowledge_point": "统计与应用的梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "统计图中必须标明单位。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "不标单位易误读。",
+          "difficulty": 3,
+          "knowledge_point": "统计与应用的梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "本册统计知识包括（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 本册未学。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "统计与应用的梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "复式条形统计图",
+            "复式折线统计图",
+            "平均数",
+            "概率计算"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说为什么比较数据时要看多组而不是只看一组。",
+          "answer": {
+            "value": "示例：只看一组容易片面，看不出高低和差异；多组比较才能发现谁的更好、差多少，也便于判断变化是否普遍。"
+          },
+          "analysis": "评分要点：多组价值 + 举例。",
+          "difficulty": 4,
+          "knowledge_point": "统计与应用的梳理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "综合解题的正确顺序通常是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "理清关系再计算。",
+          "difficulty": 2,
+          "knowledge_point": "综合问题解决",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "读题、找关系、列式、计算、检验",
+            "先算后读题",
+            "先写答案",
+            "随便列式"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "解题后要把结果代回（ ）（填原题）检验是否符合实际。",
+          "answer": {
+            "value": "原题"
+          },
+          "analysis": "检验要回到具体情境。",
+          "difficulty": 2,
+          "knowledge_point": "综合问题解决",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "综合题的答案要符合实际情况，如人数不能是小数。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "结果需符合实际意义。",
+          "difficulty": 3,
+          "knowledge_point": "综合问题解决",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "（数学5年级下册·总复习）综合解题时应注意（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 应写过程。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "综合问题解决",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "单位统一",
+            "分步理清所求",
+            "结果符合实际",
+            "只写最后数字"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用方程解决：一个长方体水箱容积 60 升，长 5 分米、宽 4 分米，高是多少分米？",
+          "answer": {
+            "value": "示例：设高为 x 分米，5 乘 4 乘 x 等于 60，得 20x 等于 60，x 等于 3，所以高是 3 分米。"
+          },
+          "analysis": "评分要点：设 + 列 + 解 + 单位。",
+          "difficulty": 4,
+          "knowledge_point": "综合问题解决",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-14T12:07:25+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "normalized": "难度 40/40/20 归一 + 主观题短答案补评分要点（2026-11-13 统一口径）",
+    "supplemented": "数值填空补可求值算式 0 道 / 数值填空改单选 17 道 / 补多选题 0 道（2 真 + 2 假，答案 2 项；2026-11-14 口径）",
+    "stem_dedup": "跨册同题干补册次前缀 1 道（2026-11-14 跨册去重口径）",
+    "duplicate_rewrites": "跨册同题定向改写 0 道（保留两侧题量，2026-11-14 口径）",
+    "chapter_scope": "全章域（本册无跨册重复章）",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

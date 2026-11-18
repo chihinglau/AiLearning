@@ -1,0 +1,342 @@
+{
+  "exam_id": null,
+  "title": "1年级英语下册单元卷（自主题库生成）",
+  "subject": "english",
+  "grade": 1,
+  "exam_type": "unit",
+  "blueprint_code": "g1_english_unit",
+  "blueprint_name": "1年级英语单元测试卷（自主题库生成）",
+  "total_score": 60,
+  "time_limit_min": 40,
+  "question_count": 28,
+  "actual_score_total": 60.0,
+  "score_matches": true,
+  "knowledge_point_count": 24,
+  "sections": [
+    {
+      "section_index": 0,
+      "section_name": "一、听力",
+      "q_type": "listening",
+      "band": "easy",
+      "planned_count": 8,
+      "planned_score": 8.0,
+      "actual_count": 8,
+      "actual_score": 8.0,
+      "knowledge_points": [
+        "Listen and hear 听与听见",
+        "Look and see 看与见的基本动词",
+        "英语·听力词群辨识·按单元·变式一",
+        "英语·听力词群辨识·按单元·变式三",
+        "英语·听力词群辨识·按单元·变式二",
+        "英语·听力词群辨识·按单元·变式四"
+      ],
+      "chapters": [
+        "School things 文具",
+        "Unit 1 Look and see",
+        "Unit 2 Listen and hear"
+      ],
+      "questions": [
+        {
+          "question_id": 19753,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 1,
+          "knowledge_point": "英语·听力词群辨识·按单元·变式三",
+          "chapter": "School things 文具"
+        },
+        {
+          "question_id": 15807,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "Look and see 看与见的基本动词",
+          "chapter": "Unit 1 Look and see"
+        },
+        {
+          "question_id": 15823,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "Listen and hear 听与听见",
+          "chapter": "Unit 2 Listen and hear"
+        },
+        {
+          "question_id": 19754,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 1,
+          "knowledge_point": "英语·听力词群辨识·按单元·变式四",
+          "chapter": "School things 文具"
+        },
+        {
+          "question_id": 19755,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 1,
+          "knowledge_point": "英语·听力词群辨识·按单元·变式一",
+          "chapter": "School things 文具"
+        },
+        {
+          "question_id": 19756,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 1,
+          "knowledge_point": "英语·听力词群辨识·按单元·变式二",
+          "chapter": "School things 文具"
+        },
+        {
+          "question_id": 15816,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 1,
+          "knowledge_point": "Listen and hear 听与听见",
+          "chapter": "Unit 2 Listen and hear"
+        },
+        {
+          "question_id": 15811,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "Look and see 看与见的基本动词",
+          "chapter": "Unit 1 Look and see"
+        }
+      ]
+    },
+    {
+      "section_index": 1,
+      "section_name": "二、单项选择",
+      "q_type": "choice",
+      "band": "easy",
+      "planned_count": 8,
+      "planned_score": 16.0,
+      "actual_count": 8,
+      "actual_score": 16.0,
+      "knowledge_points": [
+        "英语·基础语法单项选择·按单元·变式一",
+        "英语·基础语法单项选择·按单元·变式三",
+        "英语·基础语法单项选择·按单元·变式二",
+        "英语·基础语法单项选择·按单元·变式四",
+        "英语·短文阅读理解·按单元·变式一",
+        "英语·短文阅读理解·按单元·变式三",
+        "英语·短文阅读理解·按单元·变式二",
+        "英语·短文阅读理解·按单元·变式四"
+      ],
+      "chapters": [
+        "School things 文具",
+        "Unit 1 Look and see"
+      ],
+      "questions": [
+        {
+          "question_id": 19763,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "英语·基础语法单项选择·按单元·变式一",
+          "chapter": "School things 文具"
+        },
+        {
+          "question_id": 20978,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式三",
+          "chapter": "Unit 1 Look and see"
+        },
+        {
+          "question_id": 19765,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "英语·基础语法单项选择·按单元·变式三",
+          "chapter": "School things 文具"
+        },
+        {
+          "question_id": 20980,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式一",
+          "chapter": "Unit 1 Look and see"
+        },
+        {
+          "question_id": 20979,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式四",
+          "chapter": "Unit 1 Look and see"
+        },
+        {
+          "question_id": 19768,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "英语·基础语法单项选择·按单元·变式二",
+          "chapter": "School things 文具"
+        },
+        {
+          "question_id": 19762,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "英语·基础语法单项选择·按单元·变式四",
+          "chapter": "School things 文具"
+        },
+        {
+          "question_id": 20983,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式二",
+          "chapter": "School things 文具"
+        }
+      ]
+    },
+    {
+      "section_index": 2,
+      "section_name": "三、词汇填空",
+      "q_type": "fill",
+      "band": "medium",
+      "planned_count": 8,
+      "planned_score": 16.0,
+      "actual_count": 8,
+      "actual_score": 16.0,
+      "knowledge_points": [
+        "Listen and hear 声音大小与形容词",
+        "Look and see 数量表达 one / two",
+        "Look and see 看与见的基本动词",
+        "英语·词汇填空（中英对应）·按单元·变式一",
+        "英语·词汇填空（中英对应）·按单元·变式三",
+        "英语·词汇填空（中英对应）·按单元·变式二",
+        "英语·词汇填空（中英对应）·按单元·变式四"
+      ],
+      "chapters": [
+        "School things 文具",
+        "Unit 1 Look and see",
+        "Unit 2 Listen and hear"
+      ],
+      "questions": [
+        {
+          "question_id": 21859,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式二",
+          "chapter": "Unit 2 Listen and hear"
+        },
+        {
+          "question_id": 21856,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式三",
+          "chapter": "Unit 1 Look and see"
+        },
+        {
+          "question_id": 21857,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式四",
+          "chapter": "School things 文具"
+        },
+        {
+          "question_id": 19777,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式一",
+          "chapter": "Unit 2 Listen and hear"
+        },
+        {
+          "question_id": 9320,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "Look and see 数量表达 one / two",
+          "chapter": "Unit 1 Look and see"
+        },
+        {
+          "question_id": 9335,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "Listen and hear 声音大小与形容词",
+          "chapter": "Unit 2 Listen and hear"
+        },
+        {
+          "question_id": 21855,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式二",
+          "chapter": "Unit 1 Look and see"
+        },
+        {
+          "question_id": 15953,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "Look and see 看与见的基本动词",
+          "chapter": "Unit 1 Look and see"
+        }
+      ]
+    },
+    {
+      "section_index": 3,
+      "section_name": "四、阅读理解",
+      "q_type": "choice",
+      "band": "hard",
+      "planned_count": 4,
+      "planned_score": 20.0,
+      "actual_count": 4,
+      "actual_score": 20.0,
+      "knowledge_points": [
+        "Listen and hear 常见声音词汇",
+        "Listen and hear 教室里的指令句",
+        "Look and see 冠词 a / an 的选择",
+        "School things 文具（要点）"
+      ],
+      "chapters": [
+        "School things 文具",
+        "Unit 1 Look and see",
+        "Unit 2 Listen and hear"
+      ],
+      "questions": [
+        {
+          "question_id": 15959,
+          "score": 5.0,
+          "q_type": "choice",
+          "difficulty": 5,
+          "knowledge_point": "Listen and hear 教室里的指令句",
+          "chapter": "Unit 2 Listen and hear"
+        },
+        {
+          "question_id": 15955,
+          "score": 5.0,
+          "q_type": "choice",
+          "difficulty": 5,
+          "knowledge_point": "Look and see 冠词 a / an 的选择",
+          "chapter": "Unit 1 Look and see"
+        },
+        {
+          "question_id": 15205,
+          "score": 5.0,
+          "q_type": "choice",
+          "difficulty": 1,
+          "knowledge_point": "School things 文具（要点）",
+          "chapter": "School things 文具"
+        },
+        {
+          "question_id": 9329,
+          "score": 5.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "Listen and hear 常见声音词汇",
+          "chapter": "Unit 2 Listen and hear"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-11-17T15:45:18.441354+00:00"
+}

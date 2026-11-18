@@ -111,7 +111,9 @@ class _PracticeConfigPageState extends ConsumerState<PracticeConfigPage> {
     final options = <_ScopeOption>[
       _ScopeOption(widget.scopeType, widget.scopeIds, _scopeDefaultLabel),
     ];
-    if (widget.scopeType == 'kp' && widget.chapterId != null) {
+    // 入口带了当前单元（学习页「继续学习」或知识点页），就允许在「本单元 / 整册」
+    // 之间切换：同步巩固默认练本单元，考前速练默认练整册。
+    if (widget.chapterId != null && widget.scopeType != 'chapter') {
       options.add(_ScopeOption('chapter', [widget.chapterId!], '本单元'));
     }
     if (widget.scopeType != 'textbook' && widget.textbookId != null) {

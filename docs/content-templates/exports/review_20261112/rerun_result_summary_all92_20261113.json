@@ -1,0 +1,60 @@
+{
+  "stamp": "20261113",
+  "stage": "待评审区全量收口（92 册 / 618 章），未入库",
+  "scope": "统一骨架 92 册逐册比对：缺 0 册、多 0 册，章数 618 一致",
+  "manifest": "exports/review_20261110/rerun_manifest_20261113.json",
+  "knowledge_map": "exports/review_20261110/rerun_knowledge_map_20261113.json",
+  "packs": 92,
+  "chapters": 618,
+  "points": 2472,
+  "questions": 11839,
+  "missing_files": 0,
+  "packs_with_errors": 0,
+  "validate": {
+    "files": 92,
+    "passed": 92,
+    "failed": 0,
+    "errors": 0,
+    "warnings": 291,
+    "quarantined_skipped": 0
+  },
+  "gate": {
+    "files": 92,
+    "pass": 92,
+    "fail": 0,
+    "exit_code": 0
+  },
+  "batches_20261113": [
+    {
+      "batch": 1,
+      "books": 4,
+      "chapters": 24,
+      "trace": "rerun_manifest_20261113_g1first4.json"
+    },
+    {
+      "batch": 2,
+      "books": 7,
+      "chapters": 40,
+      "trace": "rerun_manifest_20261113_g8firstA.json / ..._g8firstB.json"
+    },
+    {
+      "batch": 3,
+      "books": 8,
+      "chapters": 45,
+      "trace": "rerun_manifest_20261113_g9second.json / ..._last2.json"
+    }
+  ],
+  "db": {
+    "textbooks": 146,
+    "chapters": 618,
+    "knowledge_points": 2041,
+    "questions": 6436,
+    "written": false
+  },
+  "daily_consolidated_written": false,
+  "import_books_executed": false,
+  "open_items": [
+    "291 条非阻断提醒中「数值填空解析无可求值算式」「缺 multiple 题型」两类未统一处理",
+    "逐册入库仍需单独授权"
+  ]
+}

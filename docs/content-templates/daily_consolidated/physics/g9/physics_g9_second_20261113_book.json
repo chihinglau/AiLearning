@@ -1,0 +1,1540 @@
+{
+  "subject": "physics",
+  "grade": 9,
+  "version": "人教版",
+  "semester": "second",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第十九章 生活用电",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "家庭电路的组成",
+      "parent": "第十九章 生活用电",
+      "order_index": 1,
+      "explanation": "家庭电路由进户线、电能表、总开关、保险装置、用电器和插座组成。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "安全用电与触电急救",
+      "parent": "第十九章 生活用电",
+      "order_index": 2,
+      "explanation": "人体安全电压不高于 36 伏，触电时要先断电再施救。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "保险装置与故障判断",
+      "parent": "第十九章 生活用电",
+      "order_index": 3,
+      "explanation": "保险丝在电流过大时熔断，空气开关自动跳闸；短路时立即跳闸。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "节约用电",
+      "parent": "第十九章 生活用电",
+      "order_index": 4,
+      "explanation": "使用节能灯、随手关灯、减少待机耗电可节约电能。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二十章 电与磁",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "磁场与磁感线",
+      "parent": "第二十章 电与磁",
+      "order_index": 1,
+      "explanation": "磁体周围存在磁场，磁感线从 N 极出发回到 S 极。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "电流的磁效应",
+      "parent": "第二十章 电与磁",
+      "order_index": 2,
+      "explanation": "奥斯特实验说明通电导线周围存在磁场，通电螺线管外部磁场类似条形磁体。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "电磁铁与电磁继电器",
+      "parent": "第二十章 电与磁",
+      "order_index": 3,
+      "explanation": "电磁铁磁性强弱可调，电磁继电器可实现远距离控制与自动控制。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "电动机与电磁感应",
+      "parent": "第二十章 电与磁",
+      "order_index": 4,
+      "explanation": "通电导体在磁场中受力运动制成电动机；闭合电路部分导体切割磁感线产生感应电流。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二十一章 电磁波及其应用",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "电磁波的产生与传播",
+      "parent": "第二十一章 电磁波及其应用",
+      "order_index": 1,
+      "explanation": "迅速变化的电流产生电磁波，电磁波可在真空中传播，速度约 3×10 的八次方米每秒。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "电磁波谱与特性",
+      "parent": "第二十一章 电磁波及其应用",
+      "order_index": 2,
+      "explanation": "无线电波、微波、红外线、可见光、紫外线、X 射线都是电磁波，频率不同。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "广播、电视与移动通信",
+      "parent": "第二十一章 电磁波及其应用",
+      "order_index": 3,
+      "explanation": "无线电波传递声音与图像信息，移动通信依靠电磁波实现。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "电磁波的应用与防护",
+      "parent": "第二十一章 电磁波及其应用",
+      "order_index": 4,
+      "explanation": "电磁波广泛用于医疗、雷达、加热，但过强辐射需防护。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二十二章 能源与可持续发展",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "能源的分类",
+      "parent": "第二十二章 能源与可持续发展",
+      "order_index": 1,
+      "explanation": "能源分可再生能源与不可再生能源，化石能源属不可再生。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "核能",
+      "parent": "第二十二章 能源与可持续发展",
+      "order_index": 2,
+      "explanation": "核裂变与核聚变可释放巨大能量，核电站利用核裂变发电。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "新能源的利用",
+      "parent": "第二十二章 能源与可持续发展",
+      "order_index": 3,
+      "explanation": "太阳能、风能、地热能、潮汐能是重要新能源，清洁可再生。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "能源与可持续发展",
+      "parent": "第二十二章 能源与可持续发展",
+      "order_index": 4,
+      "explanation": "节能、提高效率、开发清洁能源是实现可持续发展的重要途径。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第十九章 生活用电",
+      "order_index": 1,
+      "summary": "认识家庭电路与安全用电常识。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "家庭电路中，电能表的作用是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "电能表计量电能。",
+          "difficulty": 2,
+          "knowledge_point": "家庭电路的组成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "计量消耗的电能",
+            "控制开关",
+            "改变电压",
+            "储存电能"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "家庭电路中，各用电器之间是（ ）联的。",
+          "answer": {
+            "value": "并"
+          },
+          "analysis": "用电器并联使用。",
+          "difficulty": 2,
+          "knowledge_point": "家庭电路的组成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "家庭电路的火线与零线之间电压为 220 伏。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "火线与零线间电压 220 伏。",
+          "difficulty": 3,
+          "knowledge_point": "家庭电路的组成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说出家庭电路的主要组成部分。",
+          "answer": {
+            "value": "示例：进户线、电能表、总开关、保险装置、用电器与插座"
+          },
+          "analysis": "评分要点：至少四项正确。",
+          "difficulty": 4,
+          "knowledge_point": "家庭电路的组成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "家庭电路的安全装置有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 电能表 ✗ 只计量不保护。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "家庭电路的组成",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "保险丝",
+            "空气开关",
+            "漏电保护器",
+            "电能表"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "人体的安全电压一般不高于（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "安全电压不高于 36 伏。",
+          "difficulty": 2,
+          "knowledge_point": "安全用电与触电急救",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "36 伏",
+            "220 伏",
+            "110 伏",
+            "380 伏"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "发现有人触电，首先要（ ）电源。",
+          "answer": {
+            "value": "切断"
+          },
+          "analysis": "先切断电源再施救。",
+          "difficulty": 2,
+          "knowledge_point": "安全用电与触电急救",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "不能用湿手接触开关和插座。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "水导电，易触电。",
+          "difficulty": 3,
+          "knowledge_point": "安全用电与触电急救",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说出两条预防触电的做法。",
+          "answer": {
+            "value": "示例：不用湿手碰开关；更换电器前先断开电源"
+          },
+          "analysis": "评分要点：两条具体可行。",
+          "difficulty": 4,
+          "knowledge_point": "安全用电与触电急救",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "触电的常见原因有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 合格插座 ✗ 是安全措施。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "安全用电与触电急救",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "湿手接触电器",
+            "电器漏电",
+            "导线绝缘破损",
+            "使用合格插座"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "保险丝应选用（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "保险丝需电阻较大熔点较低。",
+          "difficulty": 2,
+          "knowledge_point": "保险装置与故障判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "电阻较大、熔点较低的铅锑合金",
+            "电阻很小的铜丝",
+            "熔点很高的钨丝",
+            "任意金属丝"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "电路中发生短路时，空气开关会（ ）。",
+          "answer": {
+            "value": "跳闸"
+          },
+          "analysis": "短路电流大，开关跳闸。",
+          "difficulty": 2,
+          "knowledge_point": "保险装置与故障判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "保险丝熔断后可用铜丝代替。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "铜丝不易熔断，失去保护作用。",
+          "difficulty": 3,
+          "knowledge_point": "保险装置与故障判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "家里空气开关频繁跳闸，可能有哪些原因。",
+          "answer": {
+            "value": "示例：同时使用大功率电器导致总电流过大；某处短路或漏电"
+          },
+          "analysis": "评分要点：至少两种原因。",
+          "difficulty": 4,
+          "knowledge_point": "保险装置与故障判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "电路故障的常见表现有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 表述矛盾 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "保险装置与故障判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "保险丝熔断",
+            "空气开关跳闸",
+            "灯不亮",
+            "电能表停转但一切正常"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面最省电的做法是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "节能灯效率更高。",
+          "difficulty": 2,
+          "knowledge_point": "节约用电",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "用节能灯替换白炽灯",
+            "整夜开灯",
+            "电器长期待机",
+            "夏天空调开到最低温"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "电器长时间不用应（ ）电源，减少待机耗电。",
+          "answer": {
+            "value": "断开"
+          },
+          "analysis": "断开电源避免待机耗电。",
+          "difficulty": 2,
+          "knowledge_point": "节约用电",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "待机状态下的电器不消耗电能。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "待机仍耗电。",
+          "difficulty": 3,
+          "knowledge_point": "节约用电",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出两条家庭节约用电的做法。",
+          "answer": {
+            "value": "示例：随手关灯；空调温度设置不低于 26 摄氏度"
+          },
+          "analysis": "评分要点：两条具体可行。",
+          "difficulty": 4,
+          "knowledge_point": "节约用电",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "节约用电的措施有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 冰箱门常开 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "节约用电",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "使用节能电器",
+            "随手关灯",
+            "减少待机",
+            "把冰箱门常开"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第二十章 电与磁",
+      "order_index": 2,
+      "summary": "认识磁场、电流的磁效应、电磁铁与电磁感应。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "磁体外部磁感线的方向是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "外部磁感线由 N 到 S。",
+          "difficulty": 2,
+          "knowledge_point": "磁场与磁感线",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "从 N 极到 S 极",
+            "从 S 极到 N 极",
+            "由内向外任意",
+            "与磁体平行"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "同名磁极相互（ ）。",
+          "answer": {
+            "value": "排斥"
+          },
+          "analysis": "同名相斥、异名相吸。",
+          "difficulty": 2,
+          "knowledge_point": "磁场与磁感线",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "磁场是真实存在的物质。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "磁场虽看不见但真实存在。",
+          "difficulty": 3,
+          "knowledge_point": "磁场与磁感线",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明怎样用小磁针判断某点磁场方向。",
+          "answer": {
+            "value": "示例：把小磁针放在该点，静止时 N 极所指方向即该点磁场方向"
+          },
+          "analysis": "评分要点：方法明确、结论正确。",
+          "difficulty": 4,
+          "knowledge_point": "磁场与磁感线",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于磁场，哪些说法正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 磁感线真实存在 ✗ 是假想曲线。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "磁场与磁感线",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "磁体周围有磁场",
+            "磁感线不相交",
+            "磁场有方向",
+            "磁感线真实存在"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "首先发现电流磁效应的科学家是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "奥斯特发现电流的磁效应。",
+          "difficulty": 2,
+          "knowledge_point": "电流的磁效应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "奥斯特",
+            "法拉第",
+            "牛顿",
+            "焦耳"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "通电螺线管外部磁场与（ ）磁体的磁场相似。",
+          "answer": {
+            "value": "条形"
+          },
+          "analysis": "螺线管外部类似条形磁体。",
+          "difficulty": 2,
+          "knowledge_point": "电流的磁效应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "改变电流方向会改变通电螺线管的磁极。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "电流方向决定磁极。",
+          "difficulty": 3,
+          "knowledge_point": "电流的磁效应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明怎样增强通电螺线管的磁性。",
+          "answer": {
+            "value": "示例：增大电流；增加线圈匝数；插入铁芯"
+          },
+          "analysis": "评分要点：至少两条措施。",
+          "difficulty": 4,
+          "knowledge_point": "电流的磁效应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "影响电磁铁磁性强弱的因素有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 导线颜色 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "电流的磁效应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "电流大小",
+            "线圈匝数",
+            "是否有铁芯",
+            "导线颜色"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "电磁继电器的主要作用是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "继电器实现间接控制。",
+          "difficulty": 2,
+          "knowledge_point": "电磁铁与电磁继电器",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "利用低电压控制高电压电路",
+            "增大电阻",
+            "储存电能",
+            "改变频率"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "电磁铁的磁性有无可以由（ ）控制。",
+          "answer": {
+            "value": "电流"
+          },
+          "analysis": "通断电流控制磁性有无。",
+          "difficulty": 2,
+          "knowledge_point": "电磁铁与电磁继电器",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "电磁铁的磁性强弱可以通过改变电流大小调节。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "电流越大磁性越强。",
+          "difficulty": 3,
+          "knowledge_point": "电磁铁与电磁继电器",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "举一个电磁继电器在生活中的应用。",
+          "answer": {
+            "value": "示例：温度自动报警器、自动控制路灯"
+          },
+          "analysis": "评分要点：应用合理，说明控制关系。",
+          "difficulty": 4,
+          "knowledge_point": "电磁铁与电磁继电器",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "电磁铁的优点有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 永久不变 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "电磁铁与电磁继电器",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "磁性有无可控",
+            "磁性强弱可调",
+            "磁极可改变",
+            "磁性永久不变"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "电动机的工作原理是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "电动机利用磁场对通电导体的力。",
+          "difficulty": 2,
+          "knowledge_point": "电动机与电磁感应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "通电导体在磁场中受力运动",
+            "电磁感应",
+            "电流的热效应",
+            "电流的化学效应"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "电磁感应现象是英国科学家（ ）发现的。",
+          "answer": {
+            "value": "法拉第"
+          },
+          "analysis": "法拉第发现电磁感应。",
+          "difficulty": 2,
+          "knowledge_point": "电动机与电磁感应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "发电机是把机械能转化为电能的装置。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "发电机利用电磁感应。",
+          "difficulty": 3,
+          "knowledge_point": "电动机与电磁感应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明电动机与发电机在能量转化上的区别。",
+          "answer": {
+            "value": "示例：电动机把电能转化为机械能；发电机把机械能转化为电能"
+          },
+          "analysis": "评分要点：转化方向说清。",
+          "difficulty": 4,
+          "knowledge_point": "电动机与电磁感应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "产生感应电流的条件有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 电路断开 ✗；D 静止不动 ✗ 无相对运动不产生。所以选 A、B。",
+          "difficulty": 3,
+          "knowledge_point": "电动机与电磁感应",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "闭合电路",
+            "导体切割磁感线",
+            "电路断开",
+            "磁体静止不动且电路静止"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第二十一章 电磁波及其应用",
+      "order_index": 3,
+      "summary": "认识电磁波的产生、传播与应用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "关于电磁波的传播，下列说法正确的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "电磁波无需介质，可在真空中以光速传播。",
+          "difficulty": 2,
+          "knowledge_point": "电磁波的产生与传播",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "电磁波可以在真空中传播",
+            "电磁波只能在固体中传播",
+            "电磁波传播必须依赖介质",
+            "电磁波不能在空气中传播"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "迅速变化的（ ）能在空间产生电磁波。",
+          "answer": {
+            "value": "电流"
+          },
+          "analysis": "变化电流产生电磁波。",
+          "difficulty": 2,
+          "knowledge_point": "电磁波的产生与传播",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "电磁波可以在真空中传播。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "电磁波不需要介质。",
+          "difficulty": 3,
+          "knowledge_point": "电磁波的产生与传播",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明为什么宇航员在太空可以用无线电通信。",
+          "answer": {
+            "value": "示例：电磁波可在真空中传播，不需要空气等介质"
+          },
+          "analysis": "评分要点：指出真空传播特性。",
+          "difficulty": 4,
+          "knowledge_point": "电磁波的产生与传播",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于电磁波，哪些说法正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 必须空气 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "电磁波的产生与传播",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "由变化的电流产生",
+            "可在真空中传播",
+            "速度约 3×10 的八次方米每秒",
+            "必须依靠空气传播"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面属于电磁波的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "紫外线是电磁波。",
+          "difficulty": 2,
+          "knowledge_point": "电磁波谱与特性",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "紫外线",
+            "声波",
+            "水波",
+            "地震波"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "电磁波家族中频率最低的一般是（ ）。",
+          "answer": {
+            "value": "无线电波"
+          },
+          "analysis": "无线电波频率最低。",
+          "difficulty": 2,
+          "knowledge_point": "电磁波谱与特性",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "不同频率的电磁波特性不同，用途也不同。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "频率决定特性与用途。",
+          "difficulty": 3,
+          "knowledge_point": "电磁波谱与特性",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说出两种电磁波及其应用。",
+          "answer": {
+            "value": "示例：红外线用于遥控器；紫外线用于消毒"
+          },
+          "analysis": "评分要点：两种波与用途对应正确。",
+          "difficulty": 4,
+          "knowledge_point": "电磁波谱与特性",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "属于电磁波的有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 超声波 ✗ 是声波。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "电磁波谱与特性",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "微波",
+            "红外线",
+            "紫外线",
+            "超声波"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "手机通信依靠（ ）传递信息",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "手机靠电磁波通信。",
+          "difficulty": 2,
+          "knowledge_point": "广播、电视与移动通信",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "电磁波",
+            "声波",
+            "水流",
+            "导线"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "广播电视信号通过（ ）传送。",
+          "answer": {
+            "value": "电磁波"
+          },
+          "analysis": "广播电视用电磁波传送。",
+          "difficulty": 2,
+          "knowledge_point": "广播、电视与移动通信",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "手机在电梯里信号弱，是因为电磁波被屏蔽。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "金属结构屏蔽电磁波。",
+          "difficulty": 3,
+          "knowledge_point": "广播、电视与移动通信",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说明为什么手机在密闭金属电梯中信号变弱。",
+          "answer": {
+            "value": "示例：金属对电磁波有屏蔽作用，信号难以传入"
+          },
+          "analysis": "评分要点：指出屏蔽作用。",
+          "difficulty": 4,
+          "knowledge_point": "广播、电视与移动通信",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "利用电磁波传递信息的方式有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 有线电话 ✗ 靠电流。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "广播、电视与移动通信",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "广播",
+            "电视",
+            "手机通信",
+            "有线电话"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "微波炉加热食物利用的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "微波使分子运动生热。",
+          "difficulty": 2,
+          "knowledge_point": "电磁波的应用与防护",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "电磁波的能量",
+            "热水的热量",
+            "化学能",
+            "机械能"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "使用微波炉时应避免使用（ ）容器。",
+          "answer": {
+            "value": "金属"
+          },
+          "analysis": "金属容器反射微波有危险。",
+          "difficulty": 2,
+          "knowledge_point": "电磁波的应用与防护",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "过强的电磁辐射可能对人体有影响，应注意防护。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "强辐射需防护。",
+          "difficulty": 3,
+          "knowledge_point": "电磁波的应用与防护",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说出两条减少电磁辐射影响的做法。",
+          "answer": {
+            "value": "示例：不长时间贴近使用中的微波设备；使用合格电器并保持距离"
+          },
+          "analysis": "评分要点：两条具体可行。",
+          "difficulty": 4,
+          "knowledge_point": "电磁波的应用与防护",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "电磁波的应用有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 水中推进 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "电磁波的应用与防护",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "雷达探测",
+            "医学成像",
+            "微波加热",
+            "水中航行推进"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第二十二章 能源与可持续发展",
+      "order_index": 4,
+      "summary": "认识能源分类、核能与新能源，理解可持续发展。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "下面属于可再生能源的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "太阳能可持续获得。",
+          "difficulty": 2,
+          "knowledge_point": "能源的分类",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "太阳能",
+            "煤炭",
+            "石油",
+            "天然气"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "煤、石油、天然气统称为（ ）能源。",
+          "answer": {
+            "value": "化石"
+          },
+          "analysis": "化石能源不可再生。",
+          "difficulty": 2,
+          "knowledge_point": "能源的分类",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "核能属于不可再生能源。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "核燃料有限，属不可再生。",
+          "difficulty": 3,
+          "knowledge_point": "能源的分类",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "举例说明可再生能源与不可再生能源的区别。",
+          "answer": {
+            "value": "示例：风能可不断获得属可再生；煤形成周期极长属不可再生"
+          },
+          "analysis": "评分要点：各举一例，区别清楚。",
+          "difficulty": 4,
+          "knowledge_point": "能源的分类",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "可再生能源有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 石油 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "能源的分类",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "风能",
+            "水能",
+            "太阳能",
+            "石油"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "核电站利用的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "核电站利用可控核裂变。",
+          "difficulty": 2,
+          "knowledge_point": "核能",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "核裂变",
+            "核聚变",
+            "化学反应",
+            "燃烧煤炭"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "核能发电的能量转化过程是核能→内能→机械能→（ ）。",
+          "answer": {
+            "value": "电能"
+          },
+          "analysis": "最终转化为电能。",
+          "difficulty": 2,
+          "knowledge_point": "核能",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "核废料需要妥善处理，防止污染。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "核废料有放射性。",
+          "difficulty": 3,
+          "knowledge_point": "核能",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说核能发电的优点和需要注意的问题。",
+          "answer": {
+            "value": "示例：优点是不消耗大量化石燃料、能量密度高；问题是核废料与安全风险需严格管理"
+          },
+          "analysis": "评分要点：优缺点都说清。",
+          "difficulty": 4,
+          "knowledge_point": "核能",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于核能，哪些说法正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 完全无风险 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "核能",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "裂变可释放巨大能量",
+            "聚变需要极高温",
+            "核废料有放射性",
+            "核能完全无风险"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "太阳能电池把（ ）转化为电能",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "太阳能电池实现光能转电能。",
+          "difficulty": 2,
+          "knowledge_point": "新能源的利用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "光能",
+            "内能",
+            "化学能",
+            "核能"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "风力发电是把风能转化为（ ）。",
+          "answer": {
+            "value": "电能"
+          },
+          "analysis": "风力带动发电机发电。",
+          "difficulty": 2,
+          "knowledge_point": "新能源的利用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "新能源大多清洁、可再生。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "如风能、太阳能清洁可再生。",
+          "difficulty": 3,
+          "knowledge_point": "新能源的利用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说发展新能源的意义。",
+          "answer": {
+            "value": "示例：减少化石能源消耗和污染，改善能源结构，促进可持续发展"
+          },
+          "analysis": "评分要点：至少两点意义。",
+          "difficulty": 4,
+          "knowledge_point": "新能源的利用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "属于新能源的有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 煤炭 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "新能源的利用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "太阳能",
+            "风能",
+            "地热能",
+            "煤炭"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "可持续发展的核心是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "可持续发展兼顾当代与后代。",
+          "difficulty": 2,
+          "knowledge_point": "能源与可持续发展",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "既满足当代又不对后代构成危害",
+            "只顾当前利益",
+            "停止一切生产",
+            "无限消耗资源"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "提高能源利用（ ）是节能的重要途径。",
+          "answer": {
+            "value": "效率"
+          },
+          "analysis": "提高效率减少浪费。",
+          "difficulty": 2,
+          "knowledge_point": "能源与可持续发展",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "节约能源人人有责。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "节能减排需要全社会参与。",
+          "difficulty": 3,
+          "knowledge_point": "能源与可持续发展",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出两条你在生活中节能的做法。",
+          "answer": {
+            "value": "示例：随手关灯；步行或骑车代替短途乘车"
+          },
+          "analysis": "评分要点：两条具体可行。",
+          "difficulty": 4,
+          "knowledge_point": "能源与可持续发展",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "实现可持续发展的措施有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 无节制开采 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "能源与可持续发展",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "提高能源利用率",
+            "开发清洁能源",
+            "节约用电",
+            "无节制开采资源"
+          ]
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-14T12:07:25+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "normalized": "难度 40/40/20 归一 + 主观题短答案补评分要点（2026-11-13 统一口径）",
+    "supplemented": "数值填空补可求值算式 0 道 / 数值填空改单选 0 道 / 补多选题 0 道（2 真 + 2 假，答案 2 项；2026-11-14 口径）",
+    "stem_dedup": "跨册同题干补册次前缀 0 道（2026-11-14 跨册去重口径）",
+    "duplicate_rewrites": "跨册同题定向改写 1 道（保留两侧题量，2026-11-14 口径）",
+    "chapter_scope": "按分册章域剔除跨册重复章 6 个（physics g9 骨架纠偏，2026-11-14）",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

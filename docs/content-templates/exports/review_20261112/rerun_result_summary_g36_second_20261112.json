@@ -1,0 +1,42 @@
+{
+  "stamp": "20261112",
+  "batch": "g3~g6 second semester (16 books)",
+  "skeleton_index": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\exports\\review_20261112\\rerun_skeleton_index_g36_second_20261113.json",
+  "packs": 16,
+  "chapters": 120,
+  "points": 480,
+  "questions": 2400,
+  "self_check": {
+    "passed": 16,
+    "failed": 0
+  },
+  "validate": {
+    "files": 16,
+    "passed": 16,
+    "failed": 0,
+    "errors": 0,
+    "warnings": 88,
+    "quarantined_skipped": 0
+  },
+  "gate": {
+    "files": 16,
+    "passed": 16,
+    "failed": 0
+  },
+  "warnings_breakdown": {
+    "数值填空答案解析无可求值算式": 59,
+    "整册归集规格不适用（校验器固有提示）": 16,
+    "难度低段(1-2级)偏离40%目标": 6,
+    "题量超200建议拆分": 3,
+    "难度中段(3级)偏离40%目标": 2,
+    "难度高段(4-5级)偏离20%目标": 2
+  },
+  "cumulative_manifest": {
+    "books": 42,
+    "chapters": 284,
+    "points": 1136,
+    "questions": 5597
+  },
+  "db_written": false,
+  "notes": "全部产出留在 daily_rerun/ 待评审；未写 daily_consolidated，未改 policy.quarantine_books，未入库。"
+}

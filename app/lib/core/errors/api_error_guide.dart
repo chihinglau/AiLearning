@@ -46,6 +46,22 @@ class ApiErrorGuide {
         );
       case 'DAILY_LIMIT_REACHED':
         return ApiErrorGuide(code: 'DAILY_LIMIT_REACHED', message: error.message);
+      // 评审 R2-03/R2-04：真题复核的双人约束与退回留痕失败码
+      case 'EXAM_REVIEW_SELF':
+        return const ApiErrorGuide(
+          code: 'EXAM_REVIEW_SELF',
+          message: '双人复核：提交人与复核发布人不能是同一账号，请换人发布',
+        );
+      case 'EXAM_REVIEW_NOTE_REQUIRED':
+        return const ApiErrorGuide(
+          code: 'EXAM_REVIEW_NOTE_REQUIRED',
+          message: '退回必须填写复核意见，便于试卷负责人整改',
+        );
+      case 'EXAM_INVALID_STATE':
+        return ApiErrorGuide(
+          code: 'EXAM_INVALID_STATE',
+          message: error.message.isEmpty ? '当前状态不允许该操作，请刷新后重试' : error.message,
+        );
     }
     if (error.statusCode == 401) {
       return const ApiErrorGuide(

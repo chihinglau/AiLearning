@@ -175,6 +175,20 @@ class ApiClient {
     }
   }
 
+  /// 取纯文本响应（PG-05 答题卡 HTML）。
+  Future<String> getText(String path) async {
+    try {
+      final response = await _dio.get<dynamic>(
+        path,
+        options: Options(responseType: ResponseType.plain),
+      );
+      final data = response.data;
+      return data is String ? data : '$data';
+    } on DioException catch (error) {
+      throw _toApiException(error);
+    }
+  }
+
   Future<List<dynamic>> getList(
     String path, {
     Map<String, dynamic>? query,

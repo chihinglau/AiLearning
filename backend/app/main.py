@@ -56,6 +56,8 @@ app.add_middleware(
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
+    # 评审 R2-06：分页总数走响应头，必须显式暴露，否则浏览器端读不到 X-Total-Count。
+    expose_headers=["X-Total-Count"],
 )
 
 # 中间件顺序：后添加的在外层。ErrorMasking 最外层兜底，其次限流，最后 CORS。

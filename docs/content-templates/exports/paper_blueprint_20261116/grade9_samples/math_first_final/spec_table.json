@@ -1,0 +1,323 @@
+{
+  "exam_id": null,
+  "title": "9年级数学上册期末卷（自主题库生成）",
+  "subject": "math",
+  "grade": 9,
+  "exam_type": "final",
+  "blueprint_code": "g9_math_final",
+  "blueprint_name": "9年级数学期末模拟卷（自主题库生成）",
+  "total_score": 100,
+  "time_limit_min": 120,
+  "question_count": 25,
+  "actual_score_total": 100.0,
+  "score_matches": true,
+  "knowledge_point_count": 25,
+  "sections": [
+    {
+      "section_index": 0,
+      "section_name": "一、选择题",
+      "q_type": "choice",
+      "band": "easy",
+      "planned_count": 12,
+      "planned_score": 36.0,
+      "actual_count": 12,
+      "actual_score": 36.0,
+      "knowledge_points": [
+        "平行投影与中心投影的辨认",
+        "开口方向、对称轴与顶点坐标",
+        "成比例线段与比例基本性质",
+        "正投影与物高影长比例",
+        "正方形边角性质与判定条件",
+        "求根公式与判别式 Δ=b²-4ac",
+        "用树状图求两步试验的概率",
+        "用样本比例估计总体数量",
+        "相似三角形的判定",
+        "矩形四角为直角与对角线相等",
+        "菱形四边相等与对角线垂直平分",
+        "配方法解一元二次方程"
+      ],
+      "chapters": [
+        "第一章 特殊平行四边形",
+        "第三章 图形的相似",
+        "第二章 一元二次方程",
+        "第五章 二次函数",
+        "第六章 概率的进一步认识",
+        "第四章 投影与视图",
+        "综合与实践 池塘里有多少条鱼"
+      ],
+      "questions": [
+        {
+          "question_id": 6542,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "平行投影与中心投影的辨认",
+          "chapter": "第四章 投影与视图"
+        },
+        {
+          "question_id": 6578,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "用树状图求两步试验的概率",
+          "chapter": "第六章 概率的进一步认识"
+        },
+        {
+          "question_id": 6511,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "配方法解一元二次方程",
+          "chapter": "第二章 一元二次方程"
+        },
+        {
+          "question_id": 6520,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "成比例线段与比例基本性质",
+          "chapter": "第三章 图形的相似"
+        },
+        {
+          "question_id": 6561,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "开口方向、对称轴与顶点坐标",
+          "chapter": "第五章 二次函数"
+        },
+        {
+          "question_id": 6484,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "菱形四边相等与对角线垂直平分",
+          "chapter": "第一章 特殊平行四边形"
+        },
+        {
+          "question_id": 6601,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "用样本比例估计总体数量",
+          "chapter": "综合与实践 池塘里有多少条鱼"
+        },
+        {
+          "question_id": 6489,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "矩形四角为直角与对角线相等",
+          "chapter": "第一章 特殊平行四边形"
+        },
+        {
+          "question_id": 6512,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "求根公式与判别式 Δ=b²-4ac",
+          "chapter": "第二章 一元二次方程"
+        },
+        {
+          "question_id": 6494,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "正方形边角性质与判定条件",
+          "chapter": "第一章 特殊平行四边形"
+        },
+        {
+          "question_id": 6530,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "相似三角形的判定",
+          "chapter": "第三章 图形的相似"
+        },
+        {
+          "question_id": 6543,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "正投影与物高影长比例",
+          "chapter": "第四章 投影与视图"
+        }
+      ]
+    },
+    {
+      "section_index": 1,
+      "section_name": "二、填空题",
+      "q_type": "fill",
+      "band": "medium",
+      "planned_count": 8,
+      "planned_score": 24.0,
+      "actual_count": 8,
+      "actual_score": 24.0,
+      "knowledge_points": [
+        "一元二次方程一般形式与系数识别",
+        "二次函数一般式与系数识别",
+        "平行线分线段成比例",
+        "抽样代表性与方案合理性",
+        "数与运算·一元一次方程求解·按单元·变式一",
+        "数与运算·平面图形周长与面积·按单元·变式一",
+        "标记重捕法估计总体数量的原理",
+        "用列表法求两步试验的概率"
+      ],
+      "chapters": [
+        "第一章 特殊平行四边形",
+        "第三章 图形的相似",
+        "第二章 一元二次方程",
+        "第五章 二次函数",
+        "第六章 概率的进一步认识",
+        "综合与实践 池塘里有多少条鱼"
+      ],
+      "questions": [
+        {
+          "question_id": 6593,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "标记重捕法估计总体数量的原理",
+          "chapter": "综合与实践 池塘里有多少条鱼"
+        },
+        {
+          "question_id": 6580,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "用列表法求两步试验的概率",
+          "chapter": "第六章 概率的进一步认识"
+        },
+        {
+          "question_id": 19628,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·一元一次方程求解·按单元·变式一",
+          "chapter": "第二章 一元二次方程"
+        },
+        {
+          "question_id": 6557,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "二次函数一般式与系数识别",
+          "chapter": "第五章 二次函数"
+        },
+        {
+          "question_id": 6526,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "平行线分线段成比例",
+          "chapter": "第三章 图形的相似"
+        },
+        {
+          "question_id": 6503,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "一元二次方程一般形式与系数识别",
+          "chapter": "第二章 一元二次方程"
+        },
+        {
+          "question_id": 19619,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·平面图形周长与面积·按单元·变式一",
+          "chapter": "第一章 特殊平行四边形"
+        },
+        {
+          "question_id": 6603,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "抽样代表性与方案合理性",
+          "chapter": "综合与实践 池塘里有多少条鱼"
+        }
+      ]
+    },
+    {
+      "section_index": 2,
+      "section_name": "三、计算与证明",
+      "q_type": "answer",
+      "band": "medium",
+      "planned_count": 4,
+      "planned_score": 32.0,
+      "actual_count": 4,
+      "actual_score": 32.0,
+      "knowledge_points": [
+        "二次函数与一元二次方程及最值应用",
+        "游戏公平性的判断",
+        "用频率估计概率",
+        "顶点式 y=a(x-h)²+k 与图象平移"
+      ],
+      "chapters": [
+        "第五章 二次函数",
+        "第六章 概率的进一步认识"
+      ],
+      "questions": [
+        {
+          "question_id": 6573,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "二次函数与一元二次方程及最值应用",
+          "chapter": "第五章 二次函数"
+        },
+        {
+          "question_id": 6591,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "用频率估计概率",
+          "chapter": "第六章 概率的进一步认识"
+        },
+        {
+          "question_id": 6569,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "顶点式 y=a(x-h)²+k 与图象平移",
+          "chapter": "第五章 二次函数"
+        },
+        {
+          "question_id": 6587,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "游戏公平性的判断",
+          "chapter": "第六章 概率的进一步认识"
+        }
+      ]
+    },
+    {
+      "section_index": 3,
+      "section_name": "四、综合应用",
+      "q_type": "answer",
+      "band": "hard",
+      "planned_count": 1,
+      "planned_score": 8.0,
+      "actual_count": 1,
+      "actual_score": 8.0,
+      "knowledge_points": [
+        "估计误差与多次取样取平均"
+      ],
+      "chapters": [
+        "综合与实践 池塘里有多少条鱼"
+      ],
+      "questions": [
+        {
+          "question_id": 6609,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "估计误差与多次取样取平均",
+          "chapter": "综合与实践 池塘里有多少条鱼"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-11-17T15:45:28.016019+00:00"
+}

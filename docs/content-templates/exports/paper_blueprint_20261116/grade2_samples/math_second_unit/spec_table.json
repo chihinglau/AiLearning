@@ -1,0 +1,179 @@
+{
+  "exam_id": null,
+  "title": "2年级数学下册单元卷（自主题库生成）",
+  "subject": "math",
+  "grade": 2,
+  "exam_type": "unit",
+  "blueprint_code": "g2_math_unit",
+  "blueprint_name": "2年级数学单元测试卷（自主题库生成）",
+  "total_score": 60,
+  "time_limit_min": 40,
+  "question_count": 12,
+  "actual_score_total": 60.0,
+  "score_matches": true,
+  "knowledge_point_count": 8,
+  "sections": [
+    {
+      "section_index": 0,
+      "section_name": "一、选择题",
+      "q_type": "choice",
+      "band": "easy",
+      "planned_count": 4,
+      "planned_score": 16.0,
+      "actual_count": 4,
+      "actual_score": 16.0,
+      "knowledge_points": [
+        "两位数加两位数的进位加法",
+        "估算与解决实际问题",
+        "数与运算·整数加减运算·按单元·变式三",
+        "连加连减与加减混合"
+      ],
+      "chapters": [
+        "第一单元 100以内数加与减（三）",
+        "除法的初步认识"
+      ],
+      "questions": [
+        {
+          "question_id": 12163,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "连加连减与加减混合",
+          "chapter": "第一单元 100以内数加与减（三）"
+        },
+        {
+          "question_id": 19263,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "数与运算·整数加减运算·按单元·变式三",
+          "chapter": "除法的初步认识"
+        },
+        {
+          "question_id": 12168,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "估算与解决实际问题",
+          "chapter": "第一单元 100以内数加与减（三）"
+        },
+        {
+          "question_id": 12153,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "两位数加两位数的进位加法",
+          "chapter": "第一单元 100以内数加与减（三）"
+        }
+      ]
+    },
+    {
+      "section_index": 1,
+      "section_name": "二、填空题",
+      "q_type": "fill",
+      "band": "medium",
+      "planned_count": 5,
+      "planned_score": 20.0,
+      "actual_count": 5,
+      "actual_score": 20.0,
+      "knowledge_points": [
+        "两位数减两位数的退位减法",
+        "数与运算·整数加减运算·按单元·变式一",
+        "数与运算·整数加减运算·按单元·变式二",
+        "除法的初步认识（要点）"
+      ],
+      "chapters": [
+        "第一单元 100以内数加与减（三）",
+        "除法的初步认识"
+      ],
+      "questions": [
+        {
+          "question_id": 19260,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·整数加减运算·按单元·变式一",
+          "chapter": "第一单元 100以内数加与减（三）"
+        },
+        {
+          "question_id": 19265,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·整数加减运算·按单元·变式二",
+          "chapter": "除法的初步认识"
+        },
+        {
+          "question_id": 15237,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "除法的初步认识（要点）",
+          "chapter": "除法的初步认识"
+        },
+        {
+          "question_id": 12160,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "两位数减两位数的退位减法",
+          "chapter": "第一单元 100以内数加与减（三）"
+        },
+        {
+          "question_id": 19264,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·整数加减运算·按单元·变式一",
+          "chapter": "除法的初步认识"
+        }
+      ]
+    },
+    {
+      "section_index": 2,
+      "section_name": "三、计算与解答",
+      "q_type": "answer",
+      "band": "hard",
+      "planned_count": 3,
+      "planned_score": 24.0,
+      "actual_count": 3,
+      "actual_score": 24.0,
+      "knowledge_points": [
+        "两位数加两位数的进位加法",
+        "估算与解决实际问题",
+        "数与运算·整数加减运算·按单元·变式一"
+      ],
+      "chapters": [
+        "第一单元 100以内数加与减（三）",
+        "除法的初步认识"
+      ],
+      "questions": [
+        {
+          "question_id": 12172,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "估算与解决实际问题",
+          "chapter": "第一单元 100以内数加与减（三）"
+        },
+        {
+          "question_id": 12157,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "两位数加两位数的进位加法",
+          "chapter": "第一单元 100以内数加与减（三）"
+        },
+        {
+          "question_id": 19267,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·整数加减运算·按单元·变式一",
+          "chapter": "除法的初步认识"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-11-17T15:45:19.568977+00:00"
+}

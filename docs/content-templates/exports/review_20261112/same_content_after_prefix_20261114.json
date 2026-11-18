@@ -1,0 +1,612 @@
+{
+  "groups": [
+    {
+      "key": [
+        "每种生物都是一个丰富的基因库。",
+        "judge"
+      ],
+      "rel": "跨年级同学科",
+      "items": [
+        {
+          "book": "biology_g7_first",
+          "subject": "biology",
+          "grade": 7,
+          "semester": "first",
+          "chapter": "第二单元 多种多样的生物",
+          "stem": "每种生物都是一个丰富的基因库。"
+        },
+        {
+          "book": "biology_g8_second",
+          "subject": "biology",
+          "grade": 8,
+          "semester": "second",
+          "chapter": "第六单元 生命的延续和发展",
+          "stem": "（生物8年级下册·第六单元 生命的延续和发展）每种生物都是一个丰富的基因库。"
+        }
+      ]
+    },
+    {
+      "key": [
+        "下面搭配正确的是（）",
+        "choice"
+      ],
+      "rel": "跨年级同学科",
+      "items": [
+        {
+          "book": "chinese_g1_second",
+          "subject": "chinese",
+          "grade": 1,
+          "semester": "second",
+          "chapter": "第五单元 识字",
+          "stem": "下面搭配正确的是（ ）"
+        },
+        {
+          "book": "chinese_g2_first",
+          "subject": "chinese",
+          "grade": 2,
+          "semester": "first",
+          "chapter": "第一单元 阅读",
+          "stem": "（语文2年级上册·第一单元 阅读）下面搭配正确的是（  ）"
+        }
+      ]
+    },
+    {
+      "key": [
+        "课文写到的内容有（）。",
+        "multiple"
+      ],
+      "rel": "跨年级同学科",
+      "items": [
+        {
+          "book": "chinese_g3_second",
+          "subject": "chinese",
+          "grade": 3,
+          "semester": "second",
+          "chapter": "第六单元",
+          "stem": "课文写到的内容有（ ）。"
+        },
+        {
+          "book": "chinese_g5_second",
+          "subject": "chinese",
+          "grade": 5,
+          "semester": "second",
+          "chapter": "第七单元",
+          "stem": "（语文5年级下册·第七单元）课文写到的内容有（ ）。"
+        }
+      ]
+    },
+    {
+      "key": [
+        "课文中描写的景物有（）。",
+        "multiple"
+      ],
+      "rel": "跨年级同学科",
+      "items": [
+        {
+          "book": "chinese_g4_second",
+          "subject": "chinese",
+          "grade": 4,
+          "semester": "second",
+          "chapter": "第一单元",
+          "stem": "课文中描写的景物有（ ）。"
+        },
+        {
+          "book": "chinese_g5_second",
+          "subject": "chinese",
+          "grade": 5,
+          "semester": "second",
+          "chapter": "第七单元",
+          "stem": "（语文5年级下册·第七单元）课文中描写的景物有（ ）。"
+        }
+      ]
+    },
+    {
+      "key": [
+        "Writewhatyouhaveforbreakfast.",
+        "answer"
+      ],
+      "rel": "跨年级同学科",
+      "items": [
+        {
+          "book": "english_g1_second",
+          "subject": "english",
+          "grade": 1,
+          "semester": "second",
+          "chapter": "Unit 5 Food I like",
+          "stem": "Write what you have for breakfast."
+        },
+        {
+          "book": "english_g2_second",
+          "subject": "english",
+          "grade": 2,
+          "semester": "second",
+          "chapter": "Unit 6 Eating and drinking",
+          "stem": "（英语2年级下册·Unit 6 Eating and drinking）Write what you have for breakfast."
+        }
+      ]
+    },
+    {
+      "key": [
+        "Fillin:Itis___（晴朗的）today.",
+        "fill"
+      ],
+      "rel": "跨年级同学科",
+      "items": [
+        {
+          "book": "english_g1_second",
+          "subject": "english",
+          "grade": 1,
+          "semester": "second",
+          "chapter": "Unit 8 Weather",
+          "stem": "Fill in: It is ___（晴朗的）today."
+        },
+        {
+          "book": "english_g2_second",
+          "subject": "english",
+          "grade": 2,
+          "semester": "second",
+          "chapter": "Unit 7 Hot summer",
+          "stem": "（英语2年级下册·Unit 7 Hot summer）Fill in: It is ___（晴朗的）today."
+        }
+      ]
+    },
+    {
+      "key": [
+        "Describetoday'sweatherinonesentence.",
+        "answer"
+      ],
+      "rel": "跨年级同学科",
+      "items": [
+        {
+          "book": "english_g1_second",
+          "subject": "english",
+          "grade": 1,
+          "semester": "second",
+          "chapter": "Unit 8 Weather",
+          "stem": "Describe today's weather in one sentence."
+        },
+        {
+          "book": "english_g2_second",
+          "subject": "english",
+          "grade": 2,
+          "semester": "second",
+          "chapter": "Unit 7 Hot summer",
+          "stem": "（英语2年级下册·Unit 7 Hot summer）Describe today's weather in one sentence."
+        }
+      ]
+    },
+    {
+      "key": [
+        "Whichsentenceiscorrect?",
+        "choice"
+      ],
+      "rel": "跨年级同学科",
+      "items": [
+        {
+          "book": "english_g2_second",
+          "subject": "english",
+          "grade": 2,
+          "semester": "second",
+          "chapter": "Unit 1 Farm animals",
+          "stem": "Which sentence is correct?"
+        },
+        {
+          "book": "english_g7_first",
+          "subject": "english",
+          "grade": 7,
+          "semester": "first",
+          "chapter": "Unit 3 Jobs",
+          "stem": "（英语7年级上册·Unit 3 Jobs）Which sentence is correct?"
+        },
+        {
+          "book": "english_g7_second",
+          "subject": "english",
+          "grade": 7,
+          "semester": "second",
+          "chapter": "Unit 1 Music",
+          "stem": "（英语7年级下册·Unit 1 Music）Which sentence is correct?"
+        }
+      ]
+    },
+    {
+      "key": [
+        "Thebookis___thedesk.",
+        "choice"
+      ],
+      "rel": "跨年级同学科",
+      "items": [
+        {
+          "book": "english_g2_second",
+          "subject": "english",
+          "grade": 2,
+          "semester": "second",
+          "chapter": "Unit 3 My room",
+          "stem": "The book is ___ the desk."
+        },
+        {
+          "book": "english_g3_second",
+          "subject": "english",
+          "grade": 3,
+          "semester": "second",
+          "chapter": "Unit 6 What are our homes like?",
+          "stem": "（英语3年级下册·Unit 6 What are our homes like?）The book is ___ the desk."
+        }
+      ]
+    },
+    {
+      "key": [
+        "Choosethecorrectsentence.",
+        "choice"
+      ],
+      "rel": "跨年级同学科",
+      "items": [
+        {
+          "book": "english_g2_second",
+          "subject": "english",
+          "grade": 2,
+          "semester": "second",
+          "chapter": "Unit 4 In the park",
+          "stem": "Choose the correct sentence."
+        },
+        {
+          "book": "english_g8_second",
+          "subject": "english",
+          "grade": 8,
+          "semester": "second",
+          "chapter": "Unit 1 Art and artists",
+          "stem": "（英语8年级下册·Unit 1 Art and artists）Choose the correct sentence."
+        }
+      ]
+    },
+    {
+      "key": [
+        "「纸」的英文是（）。",
+        "choice"
+      ],
+      "rel": "跨年级同学科",
+      "items": [
+        {
+          "book": "english_g5_second",
+          "subject": "english",
+          "grade": 5,
+          "semester": "second",
+          "chapter": "Unit 10 Great inventions",
+          "stem": "「纸」的英文是（ ）。"
+        },
+        {
+          "book": "english_g6_second",
+          "subject": "english",
+          "grade": 6,
+          "semester": "second",
+          "chapter": "Unit 5 Crafts",
+          "stem": "（英语6年级下册·Unit 5 Crafts）「纸」的英文是（ ）。"
+        }
+      ]
+    },
+    {
+      "key": [
+        "与「纸」意思相同或相近的表达有（）。",
+        "multiple"
+      ],
+      "rel": "跨年级同学科",
+      "items": [
+        {
+          "book": "english_g5_second",
+          "subject": "english",
+          "grade": 5,
+          "semester": "second",
+          "chapter": "Unit 10 Great inventions",
+          "stem": "与「纸」意思相同或相近的表达有（ ）。"
+        },
+        {
+          "book": "english_g6_second",
+          "subject": "english",
+          "grade": 6,
+          "semester": "second",
+          "chapter": "Unit 5 Crafts",
+          "stem": "（英语6年级下册·Unit 5 Crafts）与「纸」意思相同或相近的表达有（ ）。"
+        }
+      ]
+    },
+    {
+      "key": [
+        "围绕「paper」（纸）写一句英文，并说明中文意思。",
+        "answer"
+      ],
+      "rel": "跨年级同学科",
+      "items": [
+        {
+          "book": "english_g5_second",
+          "subject": "english",
+          "grade": 5,
+          "semester": "second",
+          "chapter": "Unit 10 Great inventions",
+          "stem": "围绕「paper」（纸）写一句英文，并说明中文意思。"
+        },
+        {
+          "book": "english_g6_second",
+          "subject": "english",
+          "grade": 6,
+          "semester": "second",
+          "chapter": "Unit 5 Crafts",
+          "stem": "（英语6年级下册·Unit 5 Crafts）围绕「paper」（纸）写一句英文，并说明中文意思。"
+        }
+      ]
+    },
+    {
+      "key": [
+        "三角形有（）条边。",
+        "choice"
+      ],
+      "rel": "跨年级同学科",
+      "items": [
+        {
+          "book": "math_g1_second",
+          "subject": "math",
+          "grade": 1,
+          "semester": "second",
+          "chapter": "第六单元 有趣的平面图形（一）",
+          "stem": "三角形有（ ）条边。"
+        },
+        {
+          "book": "math_g4_second",
+          "subject": "math",
+          "grade": 4,
+          "semester": "second",
+          "chapter": "二 认识三角形和四边形",
+          "stem": "（数学4年级下册·二 认识三角形和四边形）三角形有（ ）条边。"
+        }
+      ]
+    },
+    {
+      "key": [
+        "有小括号的算式要先算括号里面的。",
+        "judge"
+      ],
+      "rel": "跨年级同学科",
+      "items": [
+        {
+          "book": "math_g2_second",
+          "subject": "math",
+          "grade": 2,
+          "semester": "second",
+          "chapter": "第一单元 100以内数加与减（三）",
+          "stem": "有小括号的算式要先算括号里面的。"
+        },
+        {
+          "book": "math_g4_second",
+          "subject": "math",
+          "grade": 4,
+          "semester": "second",
+          "chapter": "整理与复习",
+          "stem": "（数学4年级下册·整理与复习）有小括号的算式要先算括号里面的。"
+        }
+      ]
+    },
+    {
+      "key": [
+        "圆有无数条对称轴。",
+        "judge"
+      ],
+      "rel": "跨年级同学科",
+      "items": [
+        {
+          "book": "math_g2_second",
+          "subject": "math",
+          "grade": 2,
+          "semester": "second",
+          "chapter": "第二单元 图形大变身（二）",
+          "stem": "圆有无数条对称轴。"
+        },
+        {
+          "book": "math_g6_first",
+          "subject": "math",
+          "grade": 6,
+          "semester": "first",
+          "chapter": "第二单元 圆",
+          "stem": "（数学6年级上册·第二单元 圆）圆有无数条对称轴。"
+        }
+      ]
+    },
+    {
+      "key": [
+        "属于轴对称图形的有（）。",
+        "multiple"
+      ],
+      "rel": "跨年级同学科",
+      "items": [
+        {
+          "book": "math_g2_second",
+          "subject": "math",
+          "grade": 2,
+          "semester": "second",
+          "chapter": "总复习",
+          "stem": "属于轴对称图形的有（ ）。"
+        },
+        {
+          "book": "math_g6_second",
+          "subject": "math",
+          "grade": 6,
+          "semester": "second",
+          "chapter": "三 图形的运动",
+          "stem": "（数学6年级下册·三 图形的运动）属于轴对称图形的有（ ）。"
+        }
+      ]
+    },
+    {
+      "key": [
+        "下面一定是轴对称图形的是（）。",
+        "choice"
+      ],
+      "rel": "跨年级同学科",
+      "items": [
+        {
+          "book": "math_g3_second",
+          "subject": "math",
+          "grade": 3,
+          "semester": "second",
+          "chapter": "第二单元 图形的运动（二）",
+          "stem": "下面一定是轴对称图形的是（ ）。"
+        },
+        {
+          "book": "math_g6_second",
+          "subject": "math",
+          "grade": 6,
+          "semester": "second",
+          "chapter": "三 图形的运动",
+          "stem": "（数学6年级下册·三 图形的运动）下面一定是轴对称图形的是（ ）。"
+        }
+      ]
+    },
+    {
+      "key": [
+        "圆有（）条对称轴。",
+        "fill"
+      ],
+      "rel": "跨年级同学科",
+      "items": [
+        {
+          "book": "math_g3_second",
+          "subject": "math",
+          "grade": 3,
+          "semester": "second",
+          "chapter": "第二单元 图形的运动（二）",
+          "stem": "圆有（ ）条对称轴。"
+        },
+        {
+          "book": "math_g6_second",
+          "subject": "math",
+          "grade": 6,
+          "semester": "second",
+          "chapter": "三 图形的运动",
+          "stem": "（数学6年级下册·三 图形的运动）圆有（ ）条对称轴。"
+        }
+      ]
+    },
+    {
+      "key": [
+        "综合解题时应注意（）。",
+        "multiple"
+      ],
+      "rel": "跨年级同学科",
+      "items": [
+        {
+          "book": "math_g4_second",
+          "subject": "math",
+          "grade": 4,
+          "semester": "second",
+          "chapter": "总复习",
+          "stem": "综合解题时应注意（ ）。"
+        },
+        {
+          "book": "math_g5_second",
+          "subject": "math",
+          "grade": 5,
+          "semester": "second",
+          "chapter": "总复习",
+          "stem": "（数学5年级下册·总复习）综合解题时应注意（ ）。"
+        }
+      ]
+    },
+    {
+      "key": [
+        "遵守公共秩序的行为有（）。",
+        "multiple"
+      ],
+      "rel": "跨年级同学科",
+      "items": [
+        {
+          "book": "politics_g3_second",
+          "subject": "politics",
+          "grade": 3,
+          "semester": "second",
+          "chapter": "第一单元 共建美好生活",
+          "stem": "遵守公共秩序的行为有（ ）。"
+        },
+        {
+          "book": "politics_g5_second",
+          "subject": "politics",
+          "grade": 5,
+          "semester": "second",
+          "chapter": "第二单元 公共生活靠大家",
+          "stem": "（道德与法治5年级下册·第二单元 公共生活靠大家）遵守公共秩序的行为有（ ）。"
+        }
+      ]
+    },
+    {
+      "key": [
+        "我国的根本政治制度是（）。",
+        "choice"
+      ],
+      "rel": "跨年级同学科",
+      "items": [
+        {
+          "book": "politics_g5_first",
+          "subject": "politics",
+          "grade": 5,
+          "semester": "first",
+          "chapter": "第二单元 建设社会主义新中国",
+          "stem": "我国的根本政治制度是（ ）。"
+        },
+        {
+          "book": "politics_g8_second",
+          "subject": "politics",
+          "grade": 8,
+          "semester": "second",
+          "chapter": "第三单元 认识国家制度",
+          "stem": "（道德与法治8年级下册·第三单元 认识国家制度）我国的根本政治制度是（ ）。"
+        }
+      ]
+    },
+    {
+      "key": [
+        "新时代我国社会主要矛盾是（）。",
+        "choice"
+      ],
+      "rel": "跨年级同学科",
+      "items": [
+        {
+          "book": "politics_g5_first",
+          "subject": "politics",
+          "grade": 5,
+          "semester": "first",
+          "chapter": "第四单元 开创新时代",
+          "stem": "新时代我国社会主要矛盾是（ ）。"
+        },
+        {
+          "book": "politics_g9_first",
+          "subject": "politics",
+          "grade": 9,
+          "semester": "first",
+          "chapter": "第二单元 进入新时代",
+          "stem": "（道德与法治9年级上册·第二单元 进入新时代）新时代我国社会主要矛盾是（ ）。"
+        }
+      ]
+    },
+    {
+      "key": [
+        "全面依法治国的总目标是（）。",
+        "choice"
+      ],
+      "rel": "跨年级同学科",
+      "items": [
+        {
+          "book": "politics_g8_second",
+          "subject": "politics",
+          "grade": 8,
+          "semester": "second",
+          "chapter": "第五单元 建设法治中国",
+          "stem": "全面依法治国的总目标是（ ）。"
+        },
+        {
+          "book": "politics_g9_first",
+          "subject": "politics",
+          "grade": 9,
+          "semester": "first",
+          "chapter": "第三单元 奋进新征程",
+          "stem": "（道德与法治9年级上册·第三单元 奋进新征程）全面依法治国的总目标是（ ）。"
+        }
+      ]
+    }
+  ]
+}

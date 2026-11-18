@@ -1,0 +1,100 @@
+{
+  "db": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\backend\\ailearning_dev.db",
+  "applied": true,
+  "before": {
+    "textbooks": 146,
+    "chapters": 618,
+    "knowledge_points": 3067,
+    "questions": 11870
+  },
+  "after": {
+    "textbooks": 146,
+    "chapters": 608,
+    "knowledge_points": 3067,
+    "questions": 11678
+  },
+  "chapters": [
+    {
+      "chapter_id": 391,
+      "chapter": "第十九章 生活用电",
+      "subject": "physics",
+      "grade": 9,
+      "semester": "first",
+      "questions": 18
+    },
+    {
+      "chapter_id": 392,
+      "chapter": "第二十章 电与磁",
+      "subject": "physics",
+      "grade": 9,
+      "semester": "first",
+      "questions": 18
+    },
+    {
+      "chapter_id": 393,
+      "chapter": "第二十一章 电磁波及其应用",
+      "subject": "physics",
+      "grade": 9,
+      "semester": "first",
+      "questions": 18
+    },
+    {
+      "chapter_id": 394,
+      "chapter": "第二十二章 能源与可持续发展",
+      "subject": "physics",
+      "grade": 9,
+      "semester": "first",
+      "questions": 18
+    },
+    {
+      "chapter_id": 690,
+      "chapter": "第十三章 内能",
+      "subject": "physics",
+      "grade": 9,
+      "semester": "second",
+      "questions": 20
+    },
+    {
+      "chapter_id": 691,
+      "chapter": "第十四章 内能的利用",
+      "subject": "physics",
+      "grade": 9,
+      "semester": "second",
+      "questions": 20
+    },
+    {
+      "chapter_id": 692,
+      "chapter": "第十五章 电流和电路",
+      "subject": "physics",
+      "grade": 9,
+      "semester": "second",
+      "questions": 20
+    },
+    {
+      "chapter_id": 693,
+      "chapter": "第十六章 电压 电阻",
+      "subject": "physics",
+      "grade": 9,
+      "semester": "second",
+      "questions": 20
+    },
+    {
+      "chapter_id": 694,
+      "chapter": "第十七章 欧姆定律",
+      "subject": "physics",
+      "grade": 9,
+      "semester": "second",
+      "questions": 20
+    },
+    {
+      "chapter_id": 695,
+      "chapter": "第十八章 电功率",
+      "subject": "physics",
+      "grade": 9,
+      "semester": "second",
+      "questions": 20
+    }
+  ],
+  "chapter_total": 10,
+  "question_total": 192
+}

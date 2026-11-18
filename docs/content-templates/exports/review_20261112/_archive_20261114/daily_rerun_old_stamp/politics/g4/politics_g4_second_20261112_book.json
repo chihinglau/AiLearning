@@ -1,0 +1,1537 @@
+{
+  "subject": "politics",
+  "grade": 4,
+  "version": "部编版",
+  "semester": "second",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第一单元 同伴与交往",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "珍惜同伴情谊",
+      "parent": "第一单元 同伴与交往",
+      "order_index": 1,
+      "explanation": "同伴之间的友情需要真诚和维护。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "学会尊重与包容",
+      "parent": "第一单元 同伴与交往",
+      "order_index": 2,
+      "explanation": "尊重他人的想法与习惯，包容不同的特点。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "正确处理交往中的矛盾",
+      "parent": "第一单元 同伴与交往",
+      "order_index": 3,
+      "explanation": "遇到矛盾先冷静，再沟通、找办法，必要时求助老师。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "拒绝不良交往行为",
+      "parent": "第一单元 同伴与交往",
+      "order_index": 4,
+      "explanation": "面对嘲笑、欺凌、拉帮结派等行为要拒绝并求助。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二单元 做聪明的消费者",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "认识商品与价格",
+      "parent": "第二单元 做聪明的消费者",
+      "order_index": 1,
+      "explanation": "商品有价格、质量、保质期等信息，购物要看清。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "理性消费",
+      "parent": "第二单元 做聪明的消费者",
+      "order_index": 2,
+      "explanation": "按需要购买，不攀比、不冲动、不浪费。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "维护消费者权益",
+      "parent": "第二单元 做聪明的消费者",
+      "order_index": 3,
+      "explanation": "购物要索要凭证，遇到问题可依法维权。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "节约资源与绿色消费",
+      "parent": "第二单元 做聪明的消费者",
+      "order_index": 4,
+      "explanation": "少用一次性用品，按需购买，减少浪费。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第三单元 美好生活哪里来",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "农业与我们的生活",
+      "parent": "第三单元 美好生活哪里来",
+      "order_index": 1,
+      "explanation": "粮食、蔬菜、棉花等来自农业劳动。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "工业与我们的生活",
+      "parent": "第三单元 美好生活哪里来",
+      "order_index": 2,
+      "explanation": "工厂把原料加工成各种生活用品。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "各行各业的贡献",
+      "parent": "第三单元 美好生活哪里来",
+      "order_index": 3,
+      "explanation": "交通、医疗、教育、服务等行业共同支撑美好生活。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "尊重劳动与感恩",
+      "parent": "第三单元 美好生活哪里来",
+      "order_index": 4,
+      "explanation": "美好生活来自劳动，应尊重劳动、珍惜成果。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第四单元 感受家乡文化 关心家乡发展",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "家乡的风俗与节庆",
+      "parent": "第四单元 感受家乡文化 关心家乡发展",
+      "order_index": 1,
+      "explanation": "不同地方有各自的节日习俗和饮食特色。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "家乡的文化遗产",
+      "parent": "第四单元 感受家乡文化 关心家乡发展",
+      "order_index": 2,
+      "explanation": "古建筑、民间艺术、传统技艺都是家乡的文化遗产。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "家乡的发展与变化",
+      "parent": "第四单元 感受家乡文化 关心家乡发展",
+      "order_index": 3,
+      "explanation": "交通、环境、产业的变化让家乡更美好。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "为家乡发展出力",
+      "parent": "第四单元 感受家乡文化 关心家乡发展",
+      "order_index": 4,
+      "explanation": "小学生也能通过小事参与家乡建设。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一单元 同伴与交往",
+      "order_index": 1,
+      "summary": "学会与同伴友好相处，处理交往中的问题。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "维护同伴情谊最重要的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "真诚尊重是友谊的基础。",
+          "difficulty": 2,
+          "knowledge_point": "珍惜同伴情谊",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "真诚与尊重",
+            "经常送礼物",
+            "只说好话",
+            "从不指出问题"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "同学遇到困难时主动帮助，会让友谊更（ ）（填牢固或疏远）。",
+          "answer": {
+            "value": "牢固"
+          },
+          "analysis": "互助让友谊更牢固。",
+          "difficulty": 2,
+          "knowledge_point": "珍惜同伴情谊",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "同伴之间可以有不同的兴趣爱好。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "差异不影响友谊。",
+          "difficulty": 3,
+          "knowledge_point": "珍惜同伴情谊",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "珍惜同伴情谊的做法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 会伤害友谊。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "珍惜同伴情谊",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "真诚相待",
+            "互相帮助",
+            "答应的事努力做到",
+            "背后议论同伴"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你做过的让同伴感到温暖的一件事。",
+          "answer": {
+            "value": "示例：同桌生病缺课，我把当天的笔记整理好带给他，还帮他讲了两道不会的题，他第二天就把笔记补完了。"
+          },
+          "analysis": "评分要点：事情具体 + 体现温暖。",
+          "difficulty": 4,
+          "knowledge_point": "珍惜同伴情谊",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "对同伴的不同习惯，正确态度是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "差异应被尊重。",
+          "difficulty": 2,
+          "knowledge_point": "学会尊重与包容",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "尊重并包容",
+            "当众取笑",
+            "要求他必须改",
+            "不再理他"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "给别人起外号是一种不（ ）（填尊重或友好）的行为。",
+          "answer": {
+            "value": "尊重"
+          },
+          "analysis": "起外号不尊重他人。",
+          "difficulty": 2,
+          "knowledge_point": "学会尊重与包容",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "包容不等于无原则地迁就错误行为。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "包容有原则。",
+          "difficulty": 3,
+          "knowledge_point": "学会尊重与包容",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "尊重同伴的表现有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 强求不尊重。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "学会尊重与包容",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "认真听对方说完",
+            "不随意评价别人的外貌",
+            "征得同意再用他的东西",
+            "强行让别人按自己的想法做"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你会怎样对待和自己习惯不同的同伴。",
+          "answer": {
+            "value": "示例：我会先了解他的习惯和原因，不去取笑；一起活动时互相商量，找一个大家都方便的方式。"
+          },
+          "analysis": "评分要点：态度 + 具体做法。",
+          "difficulty": 4,
+          "knowledge_point": "学会尊重与包容",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "和同伴发生争执时，最好的第一步是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "冷静是解决矛盾的前提。",
+          "difficulty": 2,
+          "knowledge_point": "正确处理交往中的矛盾",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "冷静下来，说明自己的想法",
+            "马上动手",
+            "大声骂人",
+            "永远不理他"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "自己不小心弄坏了同伴的东西，应先说（ ）（填对不起）。",
+          "answer": {
+            "value": "对不起"
+          },
+          "analysis": "做错要道歉。",
+          "difficulty": 2,
+          "knowledge_point": "正确处理交往中的矛盾",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "请老师帮助解决矛盾是可取的办法。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "第三方帮助有效。",
+          "difficulty": 3,
+          "knowledge_point": "正确处理交往中的矛盾",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "解决矛盾的正确做法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 暴力不能解决问题。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "正确处理交往中的矛盾",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "说清自己的感受",
+            "听对方的想法",
+            "一起商量办法",
+            "用打架解决"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你和同伴发生过的一次矛盾，后来怎么解决的。",
+          "answer": {
+            "value": "示例：我们曾为谁先用电脑争执，我提议每人用二十分钟并计时，他同意了，之后我们轮流使用，没有再吵。"
+          },
+          "analysis": "评分要点：矛盾具体 + 解决有效。",
+          "difficulty": 4,
+          "knowledge_point": "正确处理交往中的矛盾",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "有同学被嘲笑时，你应该（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "应及时制止并求助。",
+          "difficulty": 2,
+          "knowledge_point": "拒绝不良交往行为",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "制止或告诉老师",
+            "跟着一起笑",
+            "装作没看见",
+            "鼓励他忍着"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "遇到校园欺凌，正确的做法是及时（ ）（填求助或隐瞒）。",
+          "answer": {
+            "value": "求助"
+          },
+          "analysis": "遇欺凌要求助。",
+          "difficulty": 2,
+          "knowledge_point": "拒绝不良交往行为",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "被人威胁要保持沉默，不能告诉家长。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "应及时告知家长老师。",
+          "difficulty": 3,
+          "knowledge_point": "拒绝不良交往行为",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "属于不良交往行为的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓ 都是不良行为；D ✗ 是正当互助。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "拒绝不良交往行为",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "给同学起侮辱性外号",
+            "拉帮结派排斥他人",
+            "强行索要同学的东西",
+            "一起做值日"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说遇到不良交往行为时你会怎么做。",
+          "answer": {
+            "value": "示例：先明确拒绝，不参与；再告诉老师和家长，让他们及时处理；同时提醒受影响的同学不要独自承受。"
+          },
+          "analysis": "评分要点：拒绝 + 求助 + 保护他人。",
+          "difficulty": 4,
+          "knowledge_point": "拒绝不良交往行为",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第二单元 做聪明的消费者",
+      "order_index": 2,
+      "summary": "了解购物常识，学会理性消费与维权。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "购买食品时最应该看清的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "食品要看日期和保质期。",
+          "difficulty": 2,
+          "knowledge_point": "认识商品与价格",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "生产日期和保质期",
+            "包装颜色",
+            "货架位置",
+            "广告语"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "同样商品比较哪种更划算，可以比较（ ）（填单价）。",
+          "answer": {
+            "value": "单价"
+          },
+          "analysis": "比较单价更科学。",
+          "difficulty": 2,
+          "knowledge_point": "认识商品与价格",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "价格高的商品质量一定更好。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "价格与质量不成正比。",
+          "difficulty": 3,
+          "knowledge_point": "认识商品与价格",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "购物时应注意的信息有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 与购物无关。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "认识商品与价格",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "生产日期",
+            "保质期",
+            "价格",
+            "售货员的年龄"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你买文具时会怎样挑选。",
+          "answer": {
+            "value": "示例：先看需要什么，再看价格是否合适，比较同类商品的单价和质量，尽量选择实用耐用的，不盲目选贵的。"
+          },
+          "analysis": "评分要点：需求 + 比较 + 理性。",
+          "difficulty": 4,
+          "knowledge_point": "认识商品与价格",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "看到同学有新玩具就想买，这种行为属于（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "盲目跟风是攀比消费。",
+          "difficulty": 2,
+          "knowledge_point": "理性消费",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "盲目攀比",
+            "理性消费",
+            "按需购买",
+            "节约用钱"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "买东西前先想清楚是不是真的（ ）（填需要）。",
+          "answer": {
+            "value": "需要"
+          },
+          "analysis": "按需要购买是理性消费。",
+          "difficulty": 2,
+          "knowledge_point": "理性消费",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "打折商品如果不需要，也可以不买。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "不需要就不买是理性。",
+          "difficulty": 3,
+          "knowledge_point": "理性消费",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "理性消费的表现有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 冲动消费。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "理性消费",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "按需要购买",
+            "比较价格和质量",
+            "不盲目攀比",
+            "看见广告就买"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你怎样避免冲动购物。",
+          "answer": {
+            "value": "示例：想买一样东西时先记下来，过几天再看是否真的需要；买之前算一算零花钱够不够，优先买学习和生活必需的。"
+          },
+          "analysis": "评分要点：方法具体 + 可执行。",
+          "difficulty": 4,
+          "knowledge_point": "理性消费",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "购物后应保留的重要凭证是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "发票小票是维权凭证。",
+          "difficulty": 2,
+          "knowledge_point": "维护消费者权益",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "发票或小票",
+            "包装盒上的图案",
+            "购物袋",
+            "广告单"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "买到过期食品，可以向商家要求（ ）（填退换或扔掉）。",
+          "answer": {
+            "value": "退换"
+          },
+          "analysis": "可要求退换或赔偿。",
+          "difficulty": 2,
+          "knowledge_point": "维护消费者权益",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "遇到消费纠纷可以向消费者协会投诉。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "消协是维权渠道。",
+          "difficulty": 3,
+          "knowledge_point": "维护消费者权益",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "维护消费者权益的做法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 放弃维权不对。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "维护消费者权益",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "索要发票",
+            "保留购物小票",
+            "与商家协商",
+            "自认倒霉不吭声"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说买到质量有问题的商品时该怎样处理。",
+          "answer": {
+            "value": "示例：先带上小票和商品找商家说明情况，要求退换；如果商家不理，可以向消费者协会或市场监管部门反映。"
+          },
+          "analysis": "评分要点：凭证 + 协商 + 投诉渠道。",
+          "difficulty": 4,
+          "knowledge_point": "维护消费者权益",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面属于绿色消费的行为是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "自带袋子减少塑料使用。",
+          "difficulty": 2,
+          "knowledge_point": "节约资源与绿色消费",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "自带购物袋",
+            "大量购买一次性餐具",
+            "把剩饭全倒掉",
+            "买很多用不上的东西"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "买东西时按需购买，可以减少（ ）（填浪费）。",
+          "answer": {
+            "value": "浪费"
+          },
+          "analysis": "按需购买减少浪费。",
+          "difficulty": 2,
+          "knowledge_point": "节约资源与绿色消费",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "节约资源是每个消费者的责任。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "人人有节约责任。",
+          "difficulty": 3,
+          "knowledge_point": "节约资源与绿色消费",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "绿色消费的做法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 造成浪费。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "节约资源与绿色消费",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "自带购物袋",
+            "选择可重复使用的用品",
+            "按需购买食物",
+            "把没用完的东西随手丢"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "提出两条你可以在生活中做到的绿色消费做法。",
+          "answer": {
+            "value": "示例：一是出门自带水杯和购物袋，少买瓶装水和塑料袋；二是吃饭按量取用，剩菜打包带走，不浪费食物。"
+          },
+          "analysis": "评分要点：两条做法 + 具体可行。",
+          "difficulty": 4,
+          "knowledge_point": "节约资源与绿色消费",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第三单元 美好生活哪里来",
+      "order_index": 3,
+      "summary": "认识工农业生产与各行各业对生活的贡献。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "我们吃的蔬菜主要来自（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "蔬菜来自农业种植。",
+          "difficulty": 2,
+          "knowledge_point": "农业与我们的生活",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "农业生产",
+            "工厂制造",
+            "商店印刷",
+            "矿山开采"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "农民种地需要耕地、播种、施肥和（ ）（填收获）。",
+          "answer": {
+            "value": "收获"
+          },
+          "analysis": "农业劳动包括收获。",
+          "difficulty": 2,
+          "knowledge_point": "农业与我们的生活",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "农业只生产粮食，与穿衣无关。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "棉花等农产品用于穿衣。",
+          "difficulty": 3,
+          "knowledge_point": "农业与我们的生活",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "来自农业的产品有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓ 都是农产品；D ✗ 是工业产品。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "农业与我们的生活",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "大米",
+            "棉花",
+            "蔬菜",
+            "电视机"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说一粒米从田间到餐桌要经过哪些劳动。",
+          "answer": {
+            "value": "示例：农民育秧插秧、施肥除草、收割脱粒，运输人员把稻谷运到加工厂，工人碾成大米，再由商店卖到家里，煮饭还要人动手。"
+          },
+          "analysis": "评分要点：环节清楚 + 体现劳动。",
+          "difficulty": 4,
+          "knowledge_point": "农业与我们的生活",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "我们用的课本主要来自（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课本由造纸印刷生产。",
+          "difficulty": 2,
+          "knowledge_point": "工业与我们的生活",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "造纸和印刷工业",
+            "农业生产",
+            "渔业捕捞",
+            "采矿以外的自然生成"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "工厂把原料加工成产品，需要工人、机器和（ ）（填技术）。",
+          "answer": {
+            "value": "技术"
+          },
+          "analysis": "生产需要技术与设备。",
+          "difficulty": 2,
+          "knowledge_point": "工业与我们的生活",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "工业产品让生活更便利。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "工业提供各类用品。",
+          "difficulty": 3,
+          "knowledge_point": "工业与我们的生活",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "属于工业产品的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓ 都是工业制成品；D ✗ 是农产品。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "工业与我们的生活",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "铅笔",
+            "衣服",
+            "手机",
+            "刚收割的稻谷"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你家里一件工业产品是怎样生产出来的。",
+          "answer": {
+            "value": "示例：我家的水杯由工厂把塑料或玻璃原料加热成型，再经过打磨、检验、包装，最后由货车运到商店出售。"
+          },
+          "analysis": "评分要点：过程合理 + 环节完整。",
+          "difficulty": 4,
+          "knowledge_point": "工业与我们的生活",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "生病时能得到及时治疗，主要依靠（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "医疗行业保障健康。",
+          "difficulty": 2,
+          "knowledge_point": "各行各业的贡献",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "医疗卫生行业",
+            "农业生产",
+            "建筑行业",
+            "文艺演出"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "我们上学读书，离不开（ ）（填教育）行业的付出。",
+          "answer": {
+            "value": "教育"
+          },
+          "analysis": "教育行业提供服务。",
+          "difficulty": 2,
+          "knowledge_point": "各行各业的贡献",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "各行各业的劳动都与我们的生活有关。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "社会分工相互依存。",
+          "difficulty": 3,
+          "knowledge_point": "各行各业的贡献",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "为生活提供服务的行业有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 不是服务行业。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "各行各业的贡献",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "交通运输",
+            "医疗卫生",
+            "教育",
+            "闲置不工作的行业"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说如果没有清洁工，我们的生活会怎样。",
+          "answer": {
+            "value": "示例：街道垃圾会堆积，气味难闻，还容易滋生细菌传播疾病；环境变差后大家的生活和健康都会受影响。"
+          },
+          "analysis": "评分要点：后果具体 + 体现劳动价值。",
+          "difficulty": 4,
+          "knowledge_point": "各行各业的贡献",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "对待劳动成果的正确态度是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "珍惜劳动成果是尊重劳动。",
+          "difficulty": 2,
+          "knowledge_point": "尊重劳动与感恩",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "珍惜不浪费",
+            "随意丢弃",
+            "觉得理所当然",
+            "用坏也不修"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "吃饭时按量取用、不剩饭菜，是（ ）（填珍惜）劳动成果的表现。",
+          "answer": {
+            "value": "珍惜"
+          },
+          "analysis": "不浪费即珍惜成果。",
+          "difficulty": 2,
+          "knowledge_point": "尊重劳动与感恩",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "节约一粒米也是尊重农民的劳动。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "节约体现尊重。",
+          "difficulty": 3,
+          "knowledge_point": "尊重劳动与感恩",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "尊重劳动的表现有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 不尊重他人劳动。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "尊重劳动与感恩",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "珍惜粮食",
+            "爱护公共设施",
+            "对服务人员有礼貌",
+            "随手乱扔垃圾"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "写一句你想对劳动者说的话。",
+          "answer": {
+            "value": "示例：谢谢你们每天的辛苦付出，让我们能吃到新鲜的饭菜、走在干净的街道上，我会珍惜每一份劳动成果。"
+          },
+          "analysis": "评分要点：真诚 + 与劳动相关。",
+          "difficulty": 4,
+          "knowledge_point": "尊重劳动与感恩",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第四单元 感受家乡文化 关心家乡发展",
+      "order_index": 4,
+      "summary": "了解家乡的风俗、文化与变化，关心家乡发展。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "端午节的传统习俗是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "端午习俗为包粽子赛龙舟。",
+          "difficulty": 2,
+          "knowledge_point": "家乡的风俗与节庆",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "包粽子、赛龙舟",
+            "吃月饼、赏月",
+            "贴春联、放鞭炮",
+            "登高、插茱萸"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "中秋节的传统食品是（ ）（填月饼）。",
+          "answer": {
+            "value": "月饼"
+          },
+          "analysis": "中秋吃月饼。",
+          "difficulty": 2,
+          "knowledge_point": "家乡的风俗与节庆",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "不同地区的风俗可能各不相同。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "地域差异形成不同风俗。",
+          "difficulty": 3,
+          "knowledge_point": "家乡的风俗与节庆",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "属于家乡传统习俗的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓ 都是传统习俗；D ✗ 不是习俗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "家乡的风俗与节庆",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "春节贴春联",
+            "清明扫墓",
+            "重阳登高",
+            "每天刷手机"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "介绍一个你家乡的节日习俗。",
+          "answer": {
+            "value": "示例：我们家乡过年时会一起做年糕，全家动手磨米、蒸制，寓意一年比一年高，做好后还会分给邻居。"
+          },
+          "analysis": "评分要点：习俗具体 + 寓意或做法。",
+          "difficulty": 4,
+          "knowledge_point": "家乡的风俗与节庆",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "下面属于文化遗产的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "古建筑属于文化遗产。",
+          "difficulty": 2,
+          "knowledge_point": "家乡的文化遗产",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "古老的民居建筑",
+            "新买的手机",
+            "超市的货架",
+            "刚修的公路"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "剪纸、皮影戏这类传统技艺属于（ ）（填非物质文化遗产）。",
+          "answer": {
+            "value": "非物质文化遗产"
+          },
+          "analysis": "民间艺术多为非遗。",
+          "difficulty": 2,
+          "knowledge_point": "家乡的文化遗产",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "保护文化遗产只是政府的事。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "人人都有保护责任。",
+          "difficulty": 3,
+          "knowledge_point": "家乡的文化遗产",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "保护家乡文化遗产的做法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 破坏遗产。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "家乡的文化遗产",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "参观时不乱刻乱画",
+            "学习了解传统技艺",
+            "宣传家乡文化",
+            "拆掉老建筑盖新楼"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你的家乡有哪些值得保护的文化遗产。",
+          "answer": {
+            "value": "示例：我们家乡有一座古老的石桥和一项传统的手工制茶技艺，石桥有几百年历史，制茶技艺靠师傅口传心授，都值得保护。"
+          },
+          "analysis": "评分要点：举例具体 + 说明价值。",
+          "difficulty": 4,
+          "knowledge_point": "家乡的文化遗产",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "家乡发展最直观的变化常常体现在（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "基础设施改善是直观变化。",
+          "difficulty": 2,
+          "knowledge_point": "家乡的发展与变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "道路和公共设施改善",
+            "天气变化",
+            "个人身高",
+            "课本内容"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "家乡通了高铁后，出行变得更（ ）（填方便或困难）。",
+          "answer": {
+            "value": "方便"
+          },
+          "analysis": "交通改善带来便利。",
+          "difficulty": 2,
+          "knowledge_point": "家乡的发展与变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "家乡发展也会带来环境保护的新问题。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "发展需兼顾环境。",
+          "difficulty": 3,
+          "knowledge_point": "家乡的发展与变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "属于家乡发展变化的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓ 都是正面变化；D ✗ 是负面现象。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "家乡的发展与变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "新建的公园",
+            "改善的医疗条件",
+            "更便利的交通",
+            "减少的绿地"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你家乡近几年的一个变化，以及它带来的好处。",
+          "answer": {
+            "value": "示例：我们村修了新的文化广场，晚上有路灯，老人跳广场舞、孩子打球都方便，大家的生活更丰富。"
+          },
+          "analysis": "评分要点：变化具体 + 好处清楚。",
+          "difficulty": 4,
+          "knowledge_point": "家乡的发展与变化",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "小学生为家乡发展出力可以做的事是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "参与公益劳动力所能及。",
+          "difficulty": 2,
+          "knowledge_point": "为家乡发展出力",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "参加社区卫生清洁",
+            "承包工程",
+            "独自投资建设",
+            "替村里签合同"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "宣传家乡的美景和特产，也是在为家乡发展（ ）（填出力）。",
+          "answer": {
+            "value": "出力"
+          },
+          "analysis": "宣传也是贡献。",
+          "difficulty": 2,
+          "knowledge_point": "为家乡发展出力",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "爱护家乡环境就是为家乡发展做贡献。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "小事也是贡献。",
+          "difficulty": 3,
+          "knowledge_point": "为家乡发展出力",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "小学生可为家乡做的事有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 不适合也不安全。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "为家乡发展出力",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "不乱扔垃圾",
+            "参加植树活动",
+            "向外地亲友介绍家乡",
+            "深夜独自去工地"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你打算为家乡做的一件小事。",
+          "answer": {
+            "value": "示例：我打算和同学一起把村口小公园的垃圾捡干净，并做几块提示牌，提醒大家爱护花草。"
+          },
+          "analysis": "评分要点：具体可行 + 与家乡相关。",
+          "difficulty": 4,
+          "knowledge_point": "为家乡发展出力",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-13T10:06:09+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "normalized": "难度 40/40/20 归一 + 主观题短答案补评分要点（2026-11-13 统一口径）",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

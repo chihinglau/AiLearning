@@ -1,0 +1,1161 @@
+{
+  "subject": "politics",
+  "grade": 5,
+  "version": "部编版",
+  "semester": "second",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第一单元 我们一家人",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "家庭中的亲情",
+      "parent": "第一单元 我们一家人",
+      "order_index": 1,
+      "explanation": "家人的关心体现在日常小事中，亲情需要用心体会。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "分担家务与责任",
+      "parent": "第一单元 我们一家人",
+      "order_index": 2,
+      "explanation": "家庭责任由家庭成员共同承担，孩子也要尽力。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "家庭规则与约定",
+      "parent": "第一单元 我们一家人",
+      "order_index": 3,
+      "explanation": "家庭中也要有共同遵守的规则，规则让生活有序。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "与长辈沟通",
+      "parent": "第一单元 我们一家人",
+      "order_index": 4,
+      "explanation": "与父母长辈沟通要尊重、坦诚，遇到分歧要好好商量。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二单元 公共生活靠大家",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "公共生活的空间",
+      "parent": "第二单元 公共生活靠大家",
+      "order_index": 1,
+      "explanation": "公园、图书馆、车站等是公共空间，人人共享。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "遵守公共秩序",
+      "parent": "第二单元 公共生活靠大家",
+      "order_index": 2,
+      "explanation": "排队、礼让、守时都是维护公共秩序的行为。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "爱护公共设施",
+      "parent": "第二单元 公共生活靠大家",
+      "order_index": 3,
+      "explanation": "公共设施为大家服务，损坏了会影响所有人。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "参与公益与志愿服务",
+      "parent": "第二单元 公共生活靠大家",
+      "order_index": 4,
+      "explanation": "参加志愿活动是参与公共生活的重要方式。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第三单元 百年追梦 复兴中华",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "近代的屈辱与抗争",
+      "parent": "第三单元 百年追梦 复兴中华",
+      "order_index": 1,
+      "explanation": "近代中国遭受侵略，许多仁人志士奋起抗争。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "革命先驱的探索",
+      "parent": "第三单元 百年追梦 复兴中华",
+      "order_index": 2,
+      "explanation": "孙中山等先驱为民族振兴进行了艰难探索。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "新中国的成立与发展",
+      "parent": "第三单元 百年追梦 复兴中华",
+      "order_index": 3,
+      "explanation": "1949 年新中国成立，中国人民从此站起来了。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "新时代的梦想与担当",
+      "parent": "第三单元 百年追梦 复兴中华",
+      "order_index": 4,
+      "explanation": "国家发展要靠一代代人努力，少年要有理想和担当。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一单元 我们一家人",
+      "order_index": 1,
+      "summary": "理解家庭亲情，学会沟通与分担。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "家人之间的亲情常常表现在（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "亲情多在日常小事中体现。",
+          "difficulty": 2,
+          "knowledge_point": "家庭中的亲情",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "日常的关心与照顾",
+            "只在大事上",
+            "只有过节时",
+            "只在口头上"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "家人的爱往往藏在做饭、接送、叮嘱这些（ ）（填小事）里。",
+          "answer": {
+            "value": "小事"
+          },
+          "analysis": "亲情藏在日常小事。",
+          "difficulty": 2,
+          "knowledge_point": "家庭中的亲情",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "理解家人的付出，才会懂得感恩。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "体会付出才有感恩。",
+          "difficulty": 3,
+          "knowledge_point": "家庭中的亲情",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "体现家庭亲情的行为有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 与亲情相反。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "家庭中的亲情",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "照顾生病的家人",
+            "记住家人生日",
+            "接送上下学",
+            "对家人不理不睬"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说家人为你做过的一件让你感动的小事。",
+          "answer": {
+            "value": "示例：有一次我发烧，妈妈半夜起来给我量体温、喂水，第二天还请假陪我去医院，我一整晚都觉得安心。"
+          },
+          "analysis": "评分要点：事件具体 + 感受真实。",
+          "difficulty": 4,
+          "knowledge_point": "家庭中的亲情",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "作为家庭一员，分担家务的正确态度是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "应主动承担家务。",
+          "difficulty": 2,
+          "knowledge_point": "分担家务与责任",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "主动承担力所能及的事",
+            "等大人做完",
+            "只做一次应付",
+            "认为与自己无关"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "家庭成员共同分担家务，能让家庭生活更（ ）（填和谐）。",
+          "answer": {
+            "value": "和谐"
+          },
+          "analysis": "共同分担促进和谐。",
+          "difficulty": 2,
+          "knowledge_point": "分担家务与责任",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "孩子做家务会影响学习，所以不应参与。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "适当家务不影响学习。",
+          "difficulty": 3,
+          "knowledge_point": "分担家务与责任",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "适合小学高年级学生做的家务有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 有触电危险。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "分担家务与责任",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "整理自己的房间",
+            "洗碗扫地",
+            "晾晒衣物",
+            "独自修理电闸"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你们家的家务是怎样分工的。",
+          "answer": {
+            "value": "示例：爸爸负责买菜做饭，妈妈负责洗衣打扫，我负责倒垃圾、整理书桌和给花浇水，周末全家一起大扫除。"
+          },
+          "analysis": "评分要点：分工具体 + 合理。",
+          "difficulty": 4,
+          "knowledge_point": "分担家务与责任",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "家里约定晚饭后先完成作业再娱乐，这属于（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "这属于家庭内部约定。",
+          "difficulty": 2,
+          "knowledge_point": "家庭规则与约定",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "家庭规则",
+            "学校纪律",
+            "法律规定",
+            "交通规则"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "制定家庭规则时，最好全家一起（ ）（填商量）。",
+          "answer": {
+            "value": "商量"
+          },
+          "analysis": "共同商量更易遵守。",
+          "difficulty": 2,
+          "knowledge_point": "家庭规则与约定",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "家庭规则只约束孩子，大人可以不遵守。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "规则对全家都有效。",
+          "difficulty": 3,
+          "knowledge_point": "家庭规则与约定",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "合理的家庭规则应该（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 单方决定不利遵守。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "家庭规则与约定",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "全家人共同遵守",
+            "内容清楚可行",
+            "大家一起商定",
+            "由一个人随意决定"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "为你们家设计一条可行的家庭规则。",
+          "answer": {
+            "value": "示例：我们约定晚上九点前完成作业和收拾书包，九点半后不看手机，全家一起读书或聊天，谁没做到就负责第二天倒垃圾。"
+          },
+          "analysis": "评分要点：规则清楚 + 可行 + 有约束。",
+          "difficulty": 4,
+          "knowledge_point": "家庭规则与约定",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "和父母意见不同时，最好的做法是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "坦诚沟通才能解决问题。",
+          "difficulty": 2,
+          "knowledge_point": "与长辈沟通",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "心平气和说明自己的想法",
+            "赌气不理他们",
+            "大声争吵",
+            "偷偷按自己想法做"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "向长辈提出请求时，语气要（ ）（填礼貌）。",
+          "answer": {
+            "value": "礼貌"
+          },
+          "analysis": "礼貌语气更易被接受。",
+          "difficulty": 2,
+          "knowledge_point": "与长辈沟通",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "长辈的意见不一定都对，可以礼貌地表达不同看法。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "可以礼貌表达不同意见。",
+          "difficulty": 3,
+          "knowledge_point": "与长辈沟通",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与长辈沟通的好做法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 不尊重。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "与长辈沟通",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "耐心听完对方的话",
+            "说明自己的理由",
+            "选择合适的时机",
+            "摔门离开"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你和父母有过分歧时是怎样沟通的。",
+          "answer": {
+            "value": "示例：我想参加同学的生日会，父母担心太晚。我把时间、地点和同行的人说清楚，还答应九点前回家，他们放心后就同意了。"
+          },
+          "analysis": "评分要点：分歧具体 + 沟通有效。",
+          "difficulty": 4,
+          "knowledge_point": "与长辈沟通",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第二单元 公共生活靠大家",
+      "order_index": 2,
+      "summary": "认识公共生活，遵守公共规则，参与公益。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "下面属于公共空间的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "社区公园是公共空间。",
+          "difficulty": 2,
+          "knowledge_point": "公共生活的空间",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "社区公园",
+            "自己的卧室",
+            "家里的餐桌",
+            "自己的抽屉"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "公共空间里的设施由大家共同（ ）（填使用）。",
+          "answer": {
+            "value": "使用"
+          },
+          "analysis": "公共设施共同使用。",
+          "difficulty": 2,
+          "knowledge_point": "公共生活的空间",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "在公共空间里，个人的行为会影响他人。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "公共空间行为有影响。",
+          "difficulty": 3,
+          "knowledge_point": "公共生活的空间",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "属于公共空间的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 属私人空间。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "公共生活的空间",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "公交车站",
+            "图书馆",
+            "体育馆",
+            "自家的衣柜"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说在公共空间里应该注意什么。",
+          "answer": {
+            "value": "示例：要遵守秩序、不大声喧哗、不占用他人位置，爱护公共设施，垃圾自己带走，让每个人都能舒适使用。"
+          },
+          "analysis": "评分要点：具体行为 + 理由。",
+          "difficulty": 4,
+          "knowledge_point": "公共生活的空间",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "乘坐地铁时正确的做法是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "先下后上保证有序。",
+          "difficulty": 2,
+          "knowledge_point": "遵守公共秩序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "先下后上、排队候车",
+            "抢在前面挤上车",
+            "在车厢里大声打电话",
+            "把包放在空座位上"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "在图书馆阅览区要保持（ ）（填安静）。",
+          "answer": {
+            "value": "安静"
+          },
+          "analysis": "阅览区需保持安静。",
+          "difficulty": 2,
+          "knowledge_point": "遵守公共秩序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "遵守公共秩序会让所有人都更方便。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "秩序让众人受益。",
+          "difficulty": 3,
+          "knowledge_point": "遵守公共秩序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "（道德与法治5年级下册·第二单元 公共生活靠大家）遵守公共秩序的行为有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 影响他人。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "遵守公共秩序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "排队购物",
+            "主动给需要的人让座",
+            "按信号灯过马路",
+            "在电梯里大声玩笑"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说为什么公共场所需要大家共同守秩序。",
+          "answer": {
+            "value": "示例：公共场所人多，如果各按自己的想法行动就容易拥挤、发生危险，也会影响别人正常使用，守秩序才能让人人安全方便。"
+          },
+          "analysis": "评分要点：原因清楚。",
+          "difficulty": 4,
+          "knowledge_point": "遵守公共秩序",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "发现公园的健身器材坏了，应该（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "应报告管理方维修。",
+          "difficulty": 2,
+          "knowledge_point": "爱护公共设施",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "告诉管理人员",
+            "继续硬用",
+            "拆下来带走",
+            "在上面涂画"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "公共设施是为（ ）（填大家）服务的，要共同爱护。",
+          "answer": {
+            "value": "大家"
+          },
+          "analysis": "公共设施为大家服务。",
+          "difficulty": 2,
+          "knowledge_point": "爱护公共设施",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "在公共座椅上乱刻字是损坏公物的行为。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "刻字属于损坏。",
+          "difficulty": 3,
+          "knowledge_point": "爱护公共设施",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "爱护公共设施的做法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 侵占公共财物。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "爱护公共设施",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "轻拿轻放",
+            "发现损坏及时报告",
+            "不随意涂画",
+            "把公共图书带回家不还"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你怎样爱护学校的公共设施。",
+          "answer": {
+            "value": "示例：我用完体育器材会放回原处，不在课桌上刻字，看到水龙头没关好就拧紧，发现桌椅坏了就告诉老师。"
+          },
+          "analysis": "评分要点：做法具体。",
+          "difficulty": 4,
+          "knowledge_point": "爱护公共设施",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "参加社区志愿服务属于（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "志愿服务是公共参与。",
+          "difficulty": 2,
+          "knowledge_point": "参与公益与志愿服务",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "参与公共生活",
+            "私人活动",
+            "商业行为",
+            "学校作业"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "志愿服务的特点是不计报酬、为他人和社会（ ）（填服务）。",
+          "answer": {
+            "value": "服务"
+          },
+          "analysis": "志愿服务的核心是服务。",
+          "difficulty": 2,
+          "knowledge_point": "参与公益与志愿服务",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "小学生也可以参加力所能及的志愿活动。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "力所能及即可参与。",
+          "difficulty": 3,
+          "knowledge_point": "参与公益与志愿服务",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "适合小学生参加的志愿活动有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 不适合未成年人。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "参与公益与志愿服务",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "社区清洁",
+            "敬老院慰问演出",
+            "图书整理",
+            "深夜值守岗位"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你参加过或想参加的一次志愿活动。",
+          "answer": {
+            "value": "示例：我想参加社区图书角的整理，把书按类别摆放、贴上标签，还可以给小朋友讲绘本，让更多人有书可读。"
+          },
+          "analysis": "评分要点：活动具体 + 意义。",
+          "difficulty": 4,
+          "knowledge_point": "参与公益与志愿服务",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第三单元 百年追梦 复兴中华",
+      "order_index": 3,
+      "summary": "了解近代以来的奋斗历程，体会今天的幸福来之不易。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "近代中国遭受列强侵略，重要的原因是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "国力衰弱是重要原因。",
+          "difficulty": 2,
+          "knowledge_point": "近代的屈辱与抗争",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "国力衰弱、闭关自守",
+            "人口太多",
+            "土地太少",
+            "天气不好"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "面对侵略，许多爱国志士挺身而出，进行了英勇（ ）（填抗争）。",
+          "answer": {
+            "value": "抗争"
+          },
+          "analysis": "爱国志士奋起抗争。",
+          "difficulty": 2,
+          "knowledge_point": "近代的屈辱与抗争",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "落后就要挨打，这是近代历史给我们的深刻教训。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "这是历史教训。",
+          "difficulty": 3,
+          "knowledge_point": "近代的屈辱与抗争",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "近代中国人民的抗争形式有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 与史实相反。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "近代的屈辱与抗争",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "武装反抗",
+            "变法图强",
+            "兴办实业",
+            "放弃抵抗"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说为什么说近代史是一部屈辱史，也是一部抗争史。",
+          "answer": {
+            "value": "示例：一方面国家被迫签订不平等条约、领土被侵占，遭受屈辱；另一方面无数人奋起反抗、探索救国之路，从未放弃，所以两部历史交织。"
+          },
+          "analysis": "评分要点：两方面 + 举例。",
+          "difficulty": 4,
+          "knowledge_point": "近代的屈辱与抗争",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "提出「振兴中华」口号的先驱是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "孙中山提出振兴中华。",
+          "difficulty": 2,
+          "knowledge_point": "革命先驱的探索",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "孙中山",
+            "李大钊",
+            "鲁迅",
+            "詹天佑"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "孙中山领导了辛亥革命，推翻了（ ）（填清朝统治）。",
+          "answer": {
+            "value": "清朝统治"
+          },
+          "analysis": "辛亥革命推翻清朝。",
+          "difficulty": 2,
+          "knowledge_point": "革命先驱的探索",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "先驱们的探索虽历经曲折，但推动了社会进步。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "探索推动进步。",
+          "difficulty": 3,
+          "knowledge_point": "革命先驱的探索",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "近代为民族振兴作出贡献的人物有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓ 詹天佑修铁路；C ✓ 张謇兴办实业；D ✗ 不是贡献者。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "革命先驱的探索",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "孙中山",
+            "詹天佑",
+            "张謇",
+            "侵略者"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说詹天佑修筑京张铁路的意义。",
+          "answer": {
+            "value": "示例：京张铁路是中国人自己设计施工的第一条铁路，打破了外国人认为中国人不能自建的偏见，增强了民族自信。"
+          },
+          "analysis": "评分要点：史实 + 意义。",
+          "difficulty": 4,
+          "knowledge_point": "革命先驱的探索",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "中华人民共和国成立于（ ）年。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "新中国成立是 1949 年。",
+          "difficulty": 2,
+          "knowledge_point": "新中国的成立与发展",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "1949",
+            "1921",
+            "1911",
+            "1978"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "1949 年 10 月 1 日，天安门广场举行了开国（ ）（填大典）。",
+          "answer": {
+            "value": "大典"
+          },
+          "analysis": "开国大典在此举行。",
+          "difficulty": 2,
+          "knowledge_point": "新中国的成立与发展",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "新中国成立后，人民成为国家的主人。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "人民当家作主。",
+          "difficulty": 3,
+          "knowledge_point": "新中国的成立与发展",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "新中国成立以来的成就有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 与史实不符。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "新中国的成立与发展",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "建立社会主义制度",
+            "发展工业与科技",
+            "改善人民生活",
+            "继续遭受侵略"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说为什么说新中国的成立开辟了中国历史的新纪元。",
+          "answer": {
+            "value": "示例：它结束了长期受侵略受压迫的历史，人民成为国家主人，国家开始独立自主地建设，所以是历史新纪元。"
+          },
+          "analysis": "评分要点：史实 + 意义。",
+          "difficulty": 4,
+          "knowledge_point": "新中国的成立与发展",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "实现民族复兴需要（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "复兴需要持续奋斗。",
+          "difficulty": 2,
+          "knowledge_point": "新时代的梦想与担当",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "一代代人持续奋斗",
+            "只靠少数人",
+            "等待运气",
+            "停止发展"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "作为小学生，为国家出力首先要努力（ ）（填学习）。",
+          "answer": {
+            "value": "学习"
+          },
+          "analysis": "学习是当前的主要任务。",
+          "difficulty": 2,
+          "knowledge_point": "新时代的梦想与担当",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "个人的成长与国家的发展是相互联系的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "个人与国家相互联系。",
+          "difficulty": 3,
+          "knowledge_point": "新时代的梦想与担当",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "小学生可以为梦想做的准备有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 不利成长。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "新时代的梦想与担当",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "努力学习知识",
+            "锻炼身体",
+            "培养好品格",
+            "只顾玩手机"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你的理想，以及现在打算怎样努力。",
+          "answer": {
+            "value": "示例：我想成为一名工程师，为国家造出更好的机器。现在我要把数学和科学学好，多读科普书，遇到难题不轻易放弃。"
+          },
+          "analysis": "评分要点：理想 + 具体行动。",
+          "difficulty": 4,
+          "knowledge_point": "新时代的梦想与担当",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-14T12:07:25+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "normalized": "难度 40/40/20 归一 + 主观题短答案补评分要点（2026-11-13 统一口径）",
+    "supplemented": "数值填空补可求值算式 0 道 / 数值填空改单选 0 道 / 补多选题 0 道（2 真 + 2 假，答案 2 项；2026-11-14 口径）",
+    "stem_dedup": "跨册同题干补册次前缀 1 道（2026-11-14 跨册去重口径）",
+    "duplicate_rewrites": "跨册同题定向改写 0 道（保留两侧题量，2026-11-14 口径）",
+    "chapter_scope": "全章域（本册无跨册重复章）",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

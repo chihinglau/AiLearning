@@ -55,3 +55,19 @@
 - [ ] 举报入口在所有角色可见（学生/家长/教师）
 - [ ] 内容运营值班表与 24 小时处置 SLA 已确认
 - [ ] 新增题源/图片素材均已登记授权凭证
+
+## 6. 真题来源补录记录（EX-11 / CR-005，2026-11-14）
+
+> 对应主计划 §3.11 EX-11、D-09 §14 与 §6.24（L29）。**原则：不猜测来源**，真实公开真题须先取得授权并在本台账 §1 登记凭证，再逐卷补录。
+
+| 项 | 口径 |
+|---|---|
+| 补录对象 | `exams` 表中 `is_past_paper=true` 且 `source_name` 为空的存量卷（含 `backend/scripts/seed.py` 的 3 套演示真题） |
+| 工具 | `python -m scripts.backfill_exam_sources --report`（只读出清单）、`--apply --source-map <json>`（仅写入显式映射）、`--quarantine`（未补录的 `published` 真题隔离为 `draft`） |
+| 映射格式 | `{"<exam_id>": {"source_name": "...", "license_note": "...", "adapted_from": "..."}}`；`source_name` 与 `license_note` 必须非空，缺映射的卷跳过并在报告中列出，**脚本不推断来源** |
+| 演示数据 | seed 的 3 套真题标注为「内置演示数据（非真实真题原卷）」，不冒充公开真题授权；真实公开真题由 CT 取得授权并登记凭证后补录 |
+| 对外发布卡口 | 未补录来源的真题不得处于 `published`；由 `--quarantine` 与 `submit-review` / `approve` 双重卡口保证 |
+| 状态 | 已验证：`--report` / `--apply` / `--quarantine` 与单测通过；dev 库 3 张 seed 演示卷已如实标注为「内置演示数据（非真实真题原卷）」并附授权说明，缺来源真题 0 张、需隔离 0 张；真实公开真题的逐卷补录仍由 CT/PM 按授权凭证执行 |
+
+- [ ] CT 按授权凭证逐卷补录存量真题来源，并在本节追加记录（卷 ID / 来源 / 凭证 / 补录人 / 日期）
+- [ ] PM 抽检补录结果与卡片 `source_name` 一致性

@@ -1,0 +1,346 @@
+{
+  "exam_id": null,
+  "title": "6年级英语上册单元卷（自主题库生成）",
+  "subject": "english",
+  "grade": 6,
+  "exam_type": "unit",
+  "blueprint_code": "g6_english_unit",
+  "blueprint_name": "6年级英语单元测试卷（自主题库生成）",
+  "total_score": 60,
+  "time_limit_min": 40,
+  "question_count": 28,
+  "actual_score_total": 60.0,
+  "score_matches": true,
+  "knowledge_point_count": 19,
+  "sections": [
+    {
+      "section_index": 0,
+      "section_name": "一、听力",
+      "q_type": "listening",
+      "band": "easy",
+      "planned_count": 8,
+      "planned_score": 8.0,
+      "actual_count": 8,
+      "actual_score": 8.0,
+      "knowledge_points": [
+        "Adjectives for a painting",
+        "Art tools: brush, clay, paint",
+        "Imperatives in a drill",
+        "Long /uː/ in move and school",
+        "Reading a moving note",
+        "Safety words: exit, helmet",
+        "Should and shouldn't",
+        "The /ɑː/ sound in art"
+      ],
+      "chapters": [
+        "Unit 1 Why do people move to new places?",
+        "Unit 2 Why do we make art?",
+        "Unit 3 How should we protect ourselves?"
+      ],
+      "questions": [
+        {
+          "question_id": 17100,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "Adjectives for a painting",
+          "chapter": "Unit 2 Why do we make art?"
+        },
+        {
+          "question_id": 17114,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "Imperatives in a drill",
+          "chapter": "Unit 3 How should we protect ourselves?"
+        },
+        {
+          "question_id": 17089,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "Long /uː/ in move and school",
+          "chapter": "Unit 1 Why do people move to new places?"
+        },
+        {
+          "question_id": 17112,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 1,
+          "knowledge_point": "Should and shouldn't",
+          "chapter": "Unit 3 How should we protect ourselves?"
+        },
+        {
+          "question_id": 17097,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 1,
+          "knowledge_point": "Art tools: brush, clay, paint",
+          "chapter": "Unit 2 Why do we make art?"
+        },
+        {
+          "question_id": 17111,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 1,
+          "knowledge_point": "Safety words: exit, helmet",
+          "chapter": "Unit 3 How should we protect ourselves?"
+        },
+        {
+          "question_id": 17090,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "Reading a moving note",
+          "chapter": "Unit 1 Why do people move to new places?"
+        },
+        {
+          "question_id": 17099,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "The /ɑː/ sound in art",
+          "chapter": "Unit 2 Why do we make art?"
+        }
+      ]
+    },
+    {
+      "section_index": 1,
+      "section_name": "二、单项选择",
+      "q_type": "choice",
+      "band": "easy",
+      "planned_count": 8,
+      "planned_score": 16.0,
+      "actual_count": 8,
+      "actual_score": 16.0,
+      "knowledge_points": [
+        "Naming places: city, town, village",
+        "The /ʃ/ sound in should",
+        "To plus verb for purpose",
+        "英语·基础语法单项选择·按单元·变式一",
+        "英语·短文阅读理解·按单元·变式一",
+        "英语·短文阅读理解·按单元·变式三",
+        "英语·短文阅读理解·按单元·变式二",
+        "英语·短文阅读理解·按单元·变式四"
+      ],
+      "chapters": [
+        "Unit 1 Why do people move to new places?",
+        "Unit 2 Why do we make art?",
+        "Unit 3 How should we protect ourselves?"
+      ],
+      "questions": [
+        {
+          "question_id": 20541,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "英语·基础语法单项选择·按单元·变式一",
+          "chapter": "Unit 2 Why do we make art?"
+        },
+        {
+          "question_id": 21526,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式四",
+          "chapter": "Unit 1 Why do people move to new places?"
+        },
+        {
+          "question_id": 21533,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式一",
+          "chapter": "Unit 2 Why do we make art?"
+        },
+        {
+          "question_id": 21528,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式二",
+          "chapter": "Unit 1 Why do people move to new places?"
+        },
+        {
+          "question_id": 21525,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式三",
+          "chapter": "Unit 1 Why do people move to new places?"
+        },
+        {
+          "question_id": 5062,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "Naming places: city, town, village",
+          "chapter": "Unit 1 Why do people move to new places?"
+        },
+        {
+          "question_id": 5111,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "The /ʃ/ sound in should",
+          "chapter": "Unit 3 How should we protect ourselves?"
+        },
+        {
+          "question_id": 5088,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "To plus verb for purpose",
+          "chapter": "Unit 2 Why do we make art?"
+        }
+      ]
+    },
+    {
+      "section_index": 2,
+      "section_name": "三、词汇填空",
+      "q_type": "fill",
+      "band": "medium",
+      "planned_count": 8,
+      "planned_score": 16.0,
+      "actual_count": 8,
+      "actual_score": 16.0,
+      "knowledge_points": [
+        "Art tools: brush, clay, paint",
+        "Because and past tense of move",
+        "Imperatives in a drill",
+        "Safety words: exit, helmet",
+        "Should and shouldn't",
+        "The /ʃ/ sound in should",
+        "英语·词汇填空（中英对应）·按单元·变式三",
+        "英语·词汇填空（中英对应）·按单元·变式四"
+      ],
+      "chapters": [
+        "Unit 1 Why do people move to new places?",
+        "Unit 2 Why do we make art?",
+        "Unit 3 How should we protect ourselves?"
+      ],
+      "questions": [
+        {
+          "question_id": 17092,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "Because and past tense of move",
+          "chapter": "Unit 1 Why do people move to new places?"
+        },
+        {
+          "question_id": 22046,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式四",
+          "chapter": "Unit 1 Why do people move to new places?"
+        },
+        {
+          "question_id": 22045,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式三",
+          "chapter": "Unit 1 Why do people move to new places?"
+        },
+        {
+          "question_id": 5109,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "The /ʃ/ sound in should",
+          "chapter": "Unit 3 How should we protect ourselves?"
+        },
+        {
+          "question_id": 5113,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "Imperatives in a drill",
+          "chapter": "Unit 3 How should we protect ourselves?"
+        },
+        {
+          "question_id": 5099,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "Safety words: exit, helmet",
+          "chapter": "Unit 3 How should we protect ourselves?"
+        },
+        {
+          "question_id": 5104,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "Should and shouldn't",
+          "chapter": "Unit 3 How should we protect ourselves?"
+        },
+        {
+          "question_id": 17105,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "Art tools: brush, clay, paint",
+          "chapter": "Unit 2 Why do we make art?"
+        }
+      ]
+    },
+    {
+      "section_index": 3,
+      "section_name": "四、阅读理解",
+      "q_type": "choice",
+      "band": "hard",
+      "planned_count": 4,
+      "planned_score": 20.0,
+      "actual_count": 4,
+      "actual_score": 20.0,
+      "knowledge_points": [
+        "Adjectives for a painting",
+        "Imperatives in a drill",
+        "Reading a moving note",
+        "The /ʃ/ sound in should"
+      ],
+      "chapters": [
+        "Unit 1 Why do people move to new places?",
+        "Unit 2 Why do we make art?",
+        "Unit 3 How should we protect ourselves?"
+      ],
+      "questions": [
+        {
+          "question_id": 17122,
+          "score": 5.0,
+          "q_type": "choice",
+          "difficulty": 5,
+          "knowledge_point": "Imperatives in a drill",
+          "chapter": "Unit 3 How should we protect ourselves?"
+        },
+        {
+          "question_id": 17121,
+          "score": 5.0,
+          "q_type": "choice",
+          "difficulty": 5,
+          "knowledge_point": "The /ʃ/ sound in should",
+          "chapter": "Unit 3 How should we protect ourselves?"
+        },
+        {
+          "question_id": 17094,
+          "score": 5.0,
+          "q_type": "choice",
+          "difficulty": 5,
+          "knowledge_point": "Reading a moving note",
+          "chapter": "Unit 1 Why do people move to new places?"
+        },
+        {
+          "question_id": 17108,
+          "score": 5.0,
+          "q_type": "choice",
+          "difficulty": 5,
+          "knowledge_point": "Adjectives for a painting",
+          "chapter": "Unit 2 Why do we make art?"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-11-17T15:45:24.577788+00:00"
+}

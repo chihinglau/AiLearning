@@ -1859,8 +1859,34 @@ v2.28 之后补做 v2.27 遗留的三项，并在 EBG-AN00（1080×2340，Androi
 | dev 库真实 HTTP | 第 1 次 200（remaining 1）、第 2 次 200（remaining 0）、第 3 次 429 |
 | 真机 EBG（g1 英语单元卷 第 1/28 听力题） | 三次点击 → `listening-plays` 200 / 200 / 429，第 3 次底部 SnackBar「该题听力材料最多播放 2 次」，按钮回到未播放态 |
 
-**新发现缺陷（P2，本轮未修）**
-- 作答页「退出考试？」弹窗里点「退出」两次无效（坐标 1080×2340，(775,1270) 命中按钮但无响应），只能 force-stop 退出。建议排查 `PopScope` 重入或弹窗按钮 hit-test。
+**走查发现（已澄清，非缺陷）**
+- 作答页「退出考试？」弹窗「退出」按钮：初次按估算坐标 (775,1270) 连点两次无响应，改为按按钮实际中心 (745,1360) 一次即退出。结论是走查坐标偏差，不是 hit-test 或 `PopScope` 问题。顺手把退出流程改为「先离开再后台保存」（`_flushSave` 不再 await，避免落盘慢时卡在弹窗），并把「退出」按钮加 `minimumSize(96,48)` 保证触控面积。
 
 **未完成**
 - 练习页「不限次」仅代码路径 + 单测覆盖，未做真机旁证（同一会话内退出受阻，改用 force-stop 重启）。
+
+### 6.29.14 练习组卷「听力未入卷」根因修复
+
+**现象**：真机学习页「同步巩固」组卷预览显示 15 题（单选 5 / 填空 7 / 判断 2 / 多选 1），无听力，知识点覆盖 15/44；后端用同参数直接调 `build_plan` 却能出 3–5 道 listening。
+
+**根因（以日志取证，不靠推测）**
+- 抓到的现场：`INFO ailearning.practice practice/preview scope=textbook ids=[3] count=15 q_types=[..., 'listening'] mode=sync`。
+- 学习页三个练习模式入口统一传 `_home.textbooks.first.textbookId`。该学生 g1 的首册是语文（textbook 3），所以「英语」入口实际按**语文整册**组卷——题型里明明勾着听力，池子里却没有 listening 题。
+- 配置页 `_scopeOptions` 只在 `scopeType == 'kp' && chapterId != null` 时才追加「本单元」，而入口传的是 `scope=textbook`，于是 sync 的 `preferredScope='chapter'` 永远命中不了，范围被固定在整册。
+
+**修复**
+- 学习页 `_openPracticeMode`：多册时先弹「选择要练的学科」（语文/英语/数学，副标题带版本·年级·学期），选定后按该教材 id 组卷；只有一册教材时直接进入不弹。
+- 「继续学习」的学科与所选教材同学科时才带 `chapter=<chapterId>`（sync 默认练本单元）；跨学科不传，避免把别科章节塞进组卷范围。
+- 配置页 `_scopeOptions`：入口带 chapterId 且当前范围不是 chapter 时追加「本单元」，恢复「本单元 / 整册教材」可切换，`preferredScope` 随之生效。
+- 配置页标题带学科（如「同步巩固 · 英语」），组卷范围对学生可见。
+
+**验证**
+| 环节 | 结果 |
+|---|---|
+| `flutter analyze` | No issues found |
+| 真机 preview 日志 | `scope=chapter ids=[223] q_types=['choice','multiple','fill','judge','listening'] mode=sync` |
+| 真机预览卡片 | 15 题 = 单选 7 / 填空 2 / **听力 3** / 多选 2 / 判断 1，覆盖 11/14（79%） |
+| 真机「开始练习」 | `POST /api/learn/start` 200，进入第 1/15 题作答页 |
+
+**遗留（下一轮）**
+- 英语读题（题干喇叭）对纯 choice 题仍请求 `GET /api/learn/questions/{id}/audio?speed=1.0` 并 404（qid 19741、15754），需 TTS 预生成或音频缺失时的兜底文案。

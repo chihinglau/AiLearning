@@ -1,0 +1,2752 @@
+{
+  "subject": "math",
+  "grade": 9,
+  "version": "北师大版",
+  "semester": "second",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第一章 直角三角形的边角关系",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "锐角三角函数的意义",
+      "parent": "第一章 直角三角形的边角关系",
+      "order_index": 1,
+      "explanation": "在直角三角形中，正弦是对边比斜边，余弦是邻边比斜边，正切是对边比邻边。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "特殊角的三角函数值",
+      "parent": "第一章 直角三角形的边角关系",
+      "order_index": 2,
+      "explanation": "30 度、45 度、60 度的三角函数值需熟记并会代入计算。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "解直角三角形",
+      "parent": "第一章 直角三角形的边角关系",
+      "order_index": 3,
+      "explanation": "已知一边和一锐角，或已知两边，可求出其余元素。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "三角函数的实际应用",
+      "parent": "第一章 直角三角形的边角关系",
+      "order_index": 4,
+      "explanation": "仰角、俯角、坡度是测量问题中的常用概念，需画图转化为三角形。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二章 二次函数",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "二次函数的图象与性质",
+      "parent": "第二章 二次函数",
+      "order_index": 1,
+      "explanation": "y = ax² 加 bx 加 c（a 不等于 0）的图象是抛物线，开口由 a 决定，对称轴为 x = -b/2a。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "二次函数的三种形式",
+      "parent": "第二章 二次函数",
+      "order_index": 2,
+      "explanation": "一般式、顶点式、交点式可互化，顶点式便于读顶点坐标。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "二次函数与一元二次方程",
+      "parent": "第二章 二次函数",
+      "order_index": 3,
+      "explanation": "抛物线与 x 轴交点个数由判别式决定：大于 0 两个交点，等于 0 一个，小于 0 没有。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "二次函数的应用与最值",
+      "parent": "第二章 二次函数",
+      "order_index": 4,
+      "explanation": "实际问题中的最大利润、最大面积常转化为求抛物线顶点。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第三章 圆",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "圆的基本性质",
+      "parent": "第三章 圆",
+      "order_index": 1,
+      "explanation": "垂径定理：垂直于弦的直径平分弦及弦所对的两条弧；同圆中圆心角相等则弦相等。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "圆周角定理",
+      "parent": "第三章 圆",
+      "order_index": 2,
+      "explanation": "同弧所对的圆周角等于圆心角的一半，直径所对的圆周角是 90 度。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "切线的性质与判定",
+      "parent": "第三章 圆",
+      "order_index": 3,
+      "explanation": "切线垂直于过切点的半径；过半径外端且垂直该半径的直线是切线。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "圆与三角形、正多边形",
+      "parent": "第三章 圆",
+      "order_index": 4,
+      "explanation": "三角形的外接圆圆心是三边垂直平分线交点，内切圆圆心是角平分线交点。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "综合与实践 视力的变化",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "数据的收集与整理",
+      "parent": "综合与实践 视力的变化",
+      "order_index": 1,
+      "explanation": "调查要明确对象、样本与记录方式，数据可用表格或统计图整理。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "折线图与趋势判断",
+      "parent": "综合与实践 视力的变化",
+      "order_index": 2,
+      "explanation": "折线图适合表示随时间变化的趋势，看斜率可判断变化快慢。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "选择合适的模型",
+      "parent": "综合与实践 视力的变化",
+      "order_index": 3,
+      "explanation": "数据近似直线变化可用一次函数拟合，弯曲变化可考虑二次函数。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "撰写实践报告",
+      "parent": "综合与实践 视力的变化",
+      "order_index": 4,
+      "explanation": "报告应含问题、方法、数据、结论与建议，结论要有数据支撑。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "综合与实践 哪种方式更合算",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "建立费用模型",
+      "parent": "综合与实践 哪种方式更合算",
+      "order_index": 1,
+      "explanation": "把每种方案的花费表示成关于数量的函数，便于比较。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "用不等式比较方案",
+      "parent": "综合与实践 哪种方式更合算",
+      "order_index": 2,
+      "explanation": "解不等式可求出某方案更省的使用次数范围。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "临界点与决策",
+      "parent": "综合与实践 哪种方式更合算",
+      "order_index": 3,
+      "explanation": "两方案费用相等的点叫临界点，是选择的分界。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "数学表达与说明",
+      "parent": "综合与实践 哪种方式更合算",
+      "order_index": 4,
+      "explanation": "结论要用数学语言表述，写清假设、计算过程和适用条件。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "综合与实践 设计遮阳篷",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "测量与角度估算",
+      "parent": "综合与实践 设计遮阳篷",
+      "order_index": 1,
+      "explanation": "通过测量窗高、阳光入射角度，把实际问题转化为直角三角形模型。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "用三角函数计算尺寸",
+      "parent": "综合与实践 设计遮阳篷",
+      "order_index": 2,
+      "explanation": "遮阳篷伸出的长度与遮挡高度可用正切关系计算。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "方案优化与取舍",
+      "parent": "综合与实践 设计遮阳篷",
+      "order_index": 3,
+      "explanation": "遮阳篷过长影响采光、增加成本，需在遮挡与采光间平衡。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "展示与说明方案",
+      "parent": "综合与实践 设计遮阳篷",
+      "order_index": 4,
+      "explanation": "用图、数据和计算过程说明设计理由，便于他人复核。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "总复习",
+      "order_index": 7
+    },
+    {
+      "node_type": "point",
+      "name": "数与式",
+      "parent": "总复习",
+      "order_index": 1,
+      "explanation": "有理数、实数运算与整式、分式的化简是基础。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "方程与不等式",
+      "parent": "总复习",
+      "order_index": 2,
+      "explanation": "一元二次方程用因式分解或求根公式，不等式注意变号。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "函数与图象",
+      "parent": "总复习",
+      "order_index": 3,
+      "explanation": "一次函数、反比例函数、二次函数的图象与性质要能互相对应。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "图形与几何、统计概率",
+      "parent": "总复习",
+      "order_index": 4,
+      "explanation": "三角形、四边形、圆的性质与统计概率的基本计算是重点。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一章 直角三角形的边角关系",
+      "order_index": 1,
+      "summary": "学习锐角三角函数，会用三角函数解直角三角形并解决测量问题。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "在直角三角形中，sin A 等于（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "正弦定义为对边比斜边。",
+          "difficulty": 2,
+          "knowledge_point": "锐角三角函数的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "∠A 的对边与斜边之比",
+            "∠A 的邻边与斜边之比",
+            "斜边与对边之比",
+            "对边与邻边之比"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "若直角三角形中 ∠A 的对边为 3、斜边为 5，则 sin A 等于（ ）。",
+          "answer": {
+            "value": "0.6"
+          },
+          "analysis": "sin A = 3 ÷ 5 = 0.6。计算：3 ÷ 5 = 0.6。",
+          "difficulty": 2,
+          "knowledge_point": "锐角三角函数的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "直角三角形的锐角三角函数值与三角形大小无关，只与角的大小有关。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "同角的三角函数值是定值。",
+          "difficulty": 3,
+          "knowledge_point": "锐角三角函数的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "在直角三角形 ABC 中，∠C = 90 度，AC = 4，BC = 3，求 sin A、cos A、tan A。",
+          "answer": {
+            "value": "示例：AB = 5，sin A = 3/5，cos A = 4/5，tan A = 3/4"
+          },
+          "analysis": "评分要点：先求斜边，三个比值正确。",
+          "difficulty": 4,
+          "knowledge_point": "锐角三角函数的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于锐角三角函数，哪些说法正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓ 正弦值随角增大；B ✓；C cos A 大于 1 ✗ 直角三角形中余弦小于 1；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "锐角三角函数的意义",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "sin A 随 ∠A 增大而增大",
+            "tan A 等于对边比邻边",
+            "cos A 可能大于 1",
+            "sin A 的值小于 1"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "sin 30 度的值等于（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "sin 30 度等于二分之一。",
+          "difficulty": 2,
+          "knowledge_point": "特殊角的三角函数值",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "0.5",
+            "1",
+            "0.866",
+            "0.707"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "tan 45 度等于（ ）。",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "45 度时对边等于邻边，正切为 1。该项数值为 1，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "特殊角的三角函数值",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "10",
+            "1",
+            "0.1",
+            "2"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "cos 60 度等于 sin 30 度。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "两者都等于 0.5。",
+          "difficulty": 3,
+          "knowledge_point": "特殊角的三角函数值",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "计算 sin 30 度加 cos 60 度加 tan 45 度的值。",
+          "answer": {
+            "value": "示例：0.5 + 0.5 + 1 = 2"
+          },
+          "analysis": "评分要点：三个特殊值代入正确，结果 2。",
+          "difficulty": 4,
+          "knowledge_point": "特殊角的三角函数值",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面三角函数值等于 0.866（约）的有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B"
+            ]
+          },
+          "analysis": "逐项判断：A sin 60 度 ✓ 约为 0.866；B cos 30 度 ✓；C tan 60 度 ✗ 约为 1.732；D sin 45 度 ✗ 约为 0.707。所以选 A、B。",
+          "difficulty": 3,
+          "knowledge_point": "特殊角的三角函数值",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "sin 60 度",
+            "cos 30 度",
+            "tan 60 度",
+            "sin 45 度"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "解直角三角形至少需要已知（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "必须已知至少一条边才能确定大小。",
+          "difficulty": 2,
+          "knowledge_point": "解直角三角形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "一条边",
+            "一个角",
+            "两个角",
+            "三个角"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "直角三角形中 ∠C = 90 度，∠A = 30 度，BC = 2，则 AB =（ ）。",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "sin 30 度 = 2/AB = 0.5，AB = 4。该项数值为 4，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "解直角三角形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "40",
+            "0.4",
+            "4",
+            "5"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "已知两个锐角不能确定直角三角形的边长。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "只有角没有边，只能确定形状不确定大小。",
+          "difficulty": 3,
+          "knowledge_point": "解直角三角形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "直角三角形中 ∠C = 90 度，AC = 3，BC = 4，求 ∠A 的正切值和 AB。",
+          "answer": {
+            "value": "示例：tan A = 4/3，AB = 5"
+          },
+          "analysis": "评分要点：比值与斜边都正确。",
+          "difficulty": 4,
+          "knowledge_point": "解直角三角形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "解直角三角形的常用关系有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 三边之和 180 ✗ 是内角和。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "解直角三角形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "两锐角互余",
+            "三边满足勾股定理",
+            "边角由三角函数联系",
+            "三边之和为 180"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "视线在水平线上方时，视线与水平线的夹角叫（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "视线向上时为仰角。",
+          "difficulty": 2,
+          "knowledge_point": "三角函数的实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "仰角",
+            "俯角",
+            "坡度",
+            "方位角"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "坡度常表示为坡面的（ ）高度与水平宽度的比。",
+          "answer": {
+            "value": "垂直"
+          },
+          "analysis": "坡度等于垂直高度比水平宽度。",
+          "difficulty": 2,
+          "knowledge_point": "三角函数的实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "测量塔高时，若站在距塔底 10 米处测得仰角 45 度，则塔高约 10 米加测点高度。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "tan 45 度 = 1，塔高约等于水平距离。",
+          "difficulty": 3,
+          "knowledge_point": "三角函数的实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "某人在距楼底 20 米处测得楼顶仰角 30 度，眼睛离地 1.5 米，求楼高（tan 30 度约 0.577）。",
+          "answer": {
+            "value": "示例：楼高约 20 × 0.577 + 1.5 = 13.04 米（约 13 米）"
+          },
+          "analysis": "评分要点：用正切求垂直高度，再加测点高度。",
+          "difficulty": 4,
+          "knowledge_point": "三角函数的实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "解决测量问题的关键步骤有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 直接量出 ✗ 需计算。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "三角函数的实际应用",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "画出几何图形",
+            "标出已知角度和长度",
+            "选择合适三角函数",
+            "直接量出答案"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第二章 二次函数",
+      "order_index": 2,
+      "summary": "掌握二次函数的图象、性质与最值应用。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "二次函数 y = 2x² 的图象开口方向是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "a = 2 大于 0，开口向上。",
+          "difficulty": 2,
+          "knowledge_point": "二次函数的图象与性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "向上",
+            "向下",
+            "向左",
+            "向右"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "抛物线 y = x² 减 4x 加 3 的对称轴是 x =（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "-b/2a = 4/2 = 2。该项数值为 2，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "二次函数的图象与性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "2",
+            "20",
+            "0.2",
+            "3"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "a 的绝对值越大，抛物线开口越窄。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "a 绝对值大时开口更窄。",
+          "difficulty": 3,
+          "knowledge_point": "二次函数的图象与性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "求抛物线 y = x² 减 2x 减 3 的顶点坐标。",
+          "answer": {
+            "value": "示例：顶点为（1，-4）"
+          },
+          "analysis": "评分要点：对称轴与顶点纵坐标计算正确。",
+          "difficulty": 4,
+          "knowledge_point": "二次函数的图象与性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于抛物线 y = ax² 加 bx 加 c，哪些说法正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C a 等于 0 不是二次函数 ✗；D ✓ 与 y 轴交于（0，c）。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "二次函数的图象与性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "a 大于 0 时开口向上",
+            "对称轴是 x = -b/2a",
+            "a 等于 0 时仍是二次函数",
+            "图象一定与 y 轴相交"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "y = 2(x 减 1)² 加 3 的顶点是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "顶点式为 y = a(x 减 h)² 加 k，顶点是（h，k）。",
+          "difficulty": 2,
+          "knowledge_point": "二次函数的三种形式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "(1, 3)",
+            "(-1, 3)",
+            "(1, -3)",
+            "(3, 1)"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "把 y = x² 减 4x 加 5 化为顶点式得 y = (x 减 2)² 加（ ）。",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "配方后常数为 1。该项数值为 1，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "二次函数的三种形式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "10",
+            "1",
+            "0.1",
+            "2"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "交点式 y = a(x 减 x1)(x 减 x2) 中 x1、x2 是与 x 轴交点的横坐标。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "交点式直接读出两个零点。",
+          "difficulty": 3,
+          "knowledge_point": "二次函数的三种形式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "把 y = x² 加 2x 减 3 化成顶点式并说出顶点。",
+          "answer": {
+            "value": "示例：y = (x 加 1)² 减 4，顶点是（-1，-4）"
+          },
+          "analysis": "评分要点：配方正确，顶点正确。",
+          "difficulty": 4,
+          "knowledge_point": "二次函数的三种形式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "二次函数的常见形式有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 分式 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "二次函数的三种形式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "一般式",
+            "顶点式",
+            "交点式",
+            "分式形式"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "抛物线 y = x² 加 2x 加 3 与 x 轴的交点个数是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "判别式 4 减 12 = -8 小于 0，无交点。",
+          "difficulty": 2,
+          "knowledge_point": "二次函数与一元二次方程",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "0 个",
+            "1 个",
+            "2 个",
+            "3 个"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "判别式 Δ = b² 减 4ac 大于 0 时，抛物线与 x 轴有（ ）个交点。",
+          "answer": {
+            "value": "C"
+          },
+          "analysis": "两个不同实根对应两个交点。该项数值为 2，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "二次函数与一元二次方程",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "20",
+            "0.2",
+            "2",
+            "3"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "抛物线与 x 轴的交点横坐标就是对应一元二次方程的根。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "交点横坐标满足 y = 0。",
+          "difficulty": 3,
+          "knowledge_point": "二次函数与一元二次方程",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "判断 y = x² 减 6x 加 9 与 x 轴的交点情况并说明理由。",
+          "answer": {
+            "value": "示例：Δ = 36 减 36 = 0，与 x 轴只有一个交点（3，0）"
+          },
+          "analysis": "评分要点：判别式计算正确，结论对应。",
+          "difficulty": 4,
+          "knowledge_point": "二次函数与一元二次方程",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于抛物线与 x 轴交点，哪些说法正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 小于 0 有两个 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "二次函数与一元二次方程",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "Δ 大于 0 有两个交点",
+            "Δ 等于 0 有一个交点",
+            "Δ 小于 0 没有交点",
+            "Δ 小于 0 有两个交点"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "二次函数 y = -(x 减 3)² 加 10 的最大值是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "a 小于 0 时顶点纵坐标是最大值 10。",
+          "difficulty": 2,
+          "knowledge_point": "二次函数的应用与最值",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "10",
+            "3",
+            "-10",
+            "0"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "用 20 米篱笆围矩形，一边长 x 米，面积 S = x(10 减 x)，当 x =（ ）米时面积最大。",
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "顶点在 x = 5，最大面积 25 平方米。该项数值为 5，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "二次函数的应用与最值",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "50",
+            "0.5",
+            "6",
+            "5"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "a 小于 0 的二次函数在顶点处取得最大值。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "开口向下时顶点最高。",
+          "difficulty": 3,
+          "knowledge_point": "二次函数的应用与最值",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "某商品每件利润为（20 减 x）元，日销量为（100 加 10x）件，求日利润最大时的 x。",
+          "answer": {
+            "value": "示例：利润 W = (20 减 x)(100 加 10x) = -10(x 减 5)² 加 2250，x = 5 时最大"
+          },
+          "analysis": "评分要点：建模正确，配方求顶点正确。",
+          "difficulty": 4,
+          "knowledge_point": "二次函数的应用与最值",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "求二次函数最值的常用方法有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓ 有范围限制时需比较端点；D 只看常数项 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "二次函数的应用与最值",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "配方求顶点",
+            "用对称轴判断",
+            "代入端点逐个比较",
+            "只看常数项"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "第三章 圆",
+      "order_index": 3,
+      "summary": "掌握圆的性质、圆周角、切线与圆的有关计算。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "垂直于弦的直径（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "垂径定理给出平分弦与弧的结论。",
+          "difficulty": 2,
+          "knowledge_point": "圆的基本性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "平分这条弦",
+            "与弦平行",
+            "等于弦长",
+            "平分弦所对的圆周角为 90 度"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "圆中弦长为 8，圆心到弦的距离为 3，则半径为（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "半径平方 = 4² 加 3² = 25，半径为 5。该项数值为 5，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "圆的基本性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "5",
+            "50",
+            "0.5",
+            "6"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "同圆中相等的圆心角所对的弦相等。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "圆心角相等对应弦相等。",
+          "difficulty": 3,
+          "knowledge_point": "圆的基本性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "圆的半径为 10，弦长为 16，求圆心到弦的距离。",
+          "answer": {
+            "value": "示例：距离为根号下(100 减 64) = 6"
+          },
+          "analysis": "评分要点：用垂径定理构造直角三角形，结果 6。",
+          "difficulty": 4,
+          "knowledge_point": "圆的基本性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于圆的性质，哪些正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 弦一定过圆心 ✗；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "圆的基本性质",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "同圆半径都相等",
+            "直径是最长的弦",
+            "弦一定过圆心",
+            "圆是轴对称图形"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "直径所对的圆周角是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "半圆所对圆周角为直角。",
+          "difficulty": 2,
+          "knowledge_point": "圆周角定理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "90 度",
+            "180 度",
+            "60 度",
+            "45 度"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "同弧所对圆心角为 80 度，则圆周角为（ ）度。",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "圆周角是圆心角的一半。该项数值为 40，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "圆周角定理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "400",
+            "40",
+            "4",
+            "41"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "同弧所对的圆周角都相等。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "同弧圆周角相等。",
+          "difficulty": 3,
+          "knowledge_point": "圆周角定理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "圆中弦 AB 所对圆心角为 120 度，C 在优弧上，求 ∠ACB。",
+          "answer": {
+            "value": "示例：∠ACB = 60 度"
+          },
+          "analysis": "评分要点：用圆周角等于圆心角一半。",
+          "difficulty": 4,
+          "knowledge_point": "圆周角定理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于圆周角，哪些说法正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 大于圆心角 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "圆周角定理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "等于同弧圆心角的一半",
+            "直径所对为 90 度",
+            "同弧圆周角相等",
+            "一定大于圆心角"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "圆的切线（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "切线垂直于过切点的半径。",
+          "difficulty": 2,
+          "knowledge_point": "切线的性质与判定",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "垂直于过切点的半径",
+            "平行于半径",
+            "等于半径",
+            "一定过圆心"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "经过半径外端并且（ ）于这条半径的直线是圆的切线。",
+          "answer": {
+            "value": "垂直"
+          },
+          "analysis": "这是切线的判定定理。",
+          "difficulty": 2,
+          "knowledge_point": "切线的性质与判定",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "从圆外一点引两条切线，切线长相等。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "切线长定理。",
+          "difficulty": 3,
+          "knowledge_point": "切线的性质与判定",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "圆 O 半径为 3，点 P 到圆心距离为 5，求过 P 的切线长。",
+          "answer": {
+            "value": "示例：切线长为根号下(25 减 9) = 4"
+          },
+          "analysis": "评分要点：用切线垂直于半径构造直角三角形，结果 4。",
+          "difficulty": 4,
+          "knowledge_point": "切线的性质与判定",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "与切线有关的常用结论有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 两个公共点 ✗ 那是割线。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "切线的性质与判定",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "切线垂直于过切点的半径",
+            "圆外一点的两条切线长相等",
+            "切线与圆只有一个公共点",
+            "切线与圆有两个公共点"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "三角形外接圆的圆心是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "外心是三边中垂线交点。",
+          "difficulty": 2,
+          "knowledge_point": "圆与三角形、正多边形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "三边垂直平分线的交点",
+            "三条角平分线的交点",
+            "三条中线的交点",
+            "三条高的交点"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "正六边形的中心角为（ ）度。",
+          "answer": {
+            "value": "D"
+          },
+          "analysis": "360 ÷ 6 = 60 度。该项数值为 60，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "圆与三角形、正多边形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "600",
+            "6",
+            "61",
+            "60"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "直角三角形外接圆半径等于斜边的一半。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "斜边为直径。",
+          "difficulty": 3,
+          "knowledge_point": "圆与三角形、正多边形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "正三角形的边长为 6，求其内切圆半径（用根号表示）。",
+          "answer": {
+            "value": "示例：内切圆半径为根号 3"
+          },
+          "analysis": "评分要点：用 30 度直角三角形关系，结果正确。",
+          "difficulty": 4,
+          "knowledge_point": "圆与三角形、正多边形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于圆与多边形，哪些说法正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 任意四边形 ✗ 需对边和相等。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "圆与三角形、正多边形",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "正多边形必有外接圆",
+            "正多边形必有内切圆",
+            "任意三角形都有外接圆",
+            "任意四边形都有内切圆"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "综合与实践 视力的变化",
+      "order_index": 4,
+      "summary": "以视力数据为载体，练习数据整理、图象分析与模型预测。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "调查全班视力情况，最合适的记录方式是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "统计表便于汇总分析。",
+          "difficulty": 2,
+          "knowledge_point": "数据的收集与整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "统计表",
+            "日记",
+            "小说",
+            "海报"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "一组数据中出现次数最多的数叫（ ）。",
+          "answer": {
+            "value": "众数"
+          },
+          "analysis": "众数是出现次数最多的数据。",
+          "difficulty": 2,
+          "knowledge_point": "数据的收集与整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "样本越大，统计结果通常越可靠。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "样本大更能代表总体。",
+          "difficulty": 3,
+          "knowledge_point": "数据的收集与整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说调查视力时应记录哪些项目。",
+          "answer": {
+            "value": "示例：姓名、年级、左眼视力、右眼视力、检测时间"
+          },
+          "analysis": "评分要点：项目具体且便于统计。",
+          "difficulty": 4,
+          "knowledge_point": "数据的收集与整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "整理数据常用的方式有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 口头猜测 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "数据的收集与整理",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "统计表",
+            "条形图",
+            "折线图",
+            "口头猜测"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "表示视力随年级变化，最适合用（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "折线图适合展示随时间或顺序的变化。",
+          "difficulty": 2,
+          "knowledge_point": "折线图与趋势判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "折线图",
+            "饼图",
+            "照片",
+            "流程图"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "折线图上升越陡，说明变化越（ ）。",
+          "answer": {
+            "value": "快"
+          },
+          "analysis": "斜率越大变化越快。",
+          "difficulty": 2,
+          "knowledge_point": "折线图与趋势判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "折线图中相邻两点之间的线段可以反映变化幅度。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "线段倾斜程度反映变化大小。",
+          "difficulty": 3,
+          "knowledge_point": "折线图与趋势判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "某校三个年级平均视力依次为 5.0、4.9、4.7，描述变化趋势。",
+          "answer": {
+            "value": "示例：随年级升高平均视力持续下降，且下降幅度有加大趋势"
+          },
+          "analysis": "评分要点：趋势与幅度都说清。",
+          "difficulty": 4,
+          "knowledge_point": "折线图与趋势判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "从折线图可以得到哪些信息？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 原因 ✗ 图上看不出原因。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "折线图与趋势判断",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "变化趋势",
+            "变化快慢",
+            "极值出现的时间",
+            "每个数据的原因"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "数据大致沿直线分布时，宜用（ ）拟合",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "直线趋势用一次函数。",
+          "difficulty": 2,
+          "knowledge_point": "选择合适的模型",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "一次函数",
+            "二次函数",
+            "反比例函数",
+            "指数函数"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "用函数模型预测，需要先确定两个变量之间的（ ）关系。",
+          "answer": {
+            "value": "对应"
+          },
+          "analysis": "先明确自变量与因变量的对应关系。",
+          "difficulty": 2,
+          "knowledge_point": "选择合适的模型",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "模型只是近似描述，预测值可能与实际有偏差。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "模型有误差，需结合实际判断。",
+          "difficulty": 3,
+          "knowledge_point": "选择合适的模型",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "用一次函数描述「每年视力下降 0.1」的关系，写出表达式并预测 3 年后视力（现在 5.0）。",
+          "answer": {
+            "value": "示例：y = 5.0 减 0.1x，3 年后 y = 4.7"
+          },
+          "analysis": "评分要点：表达式正确，代入计算正确。",
+          "difficulty": 4,
+          "knowledge_point": "选择合适的模型",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "建立模型时要注意哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 忽略误差 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "选择合适的模型",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "明确变量含义",
+            "选择合适函数类型",
+            "检验与实际的符合程度",
+            "忽略数据误差"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "实践报告中最重要的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "结论必须有数据依据。",
+          "difficulty": 2,
+          "knowledge_point": "撰写实践报告",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "结论有数据支撑",
+            "纸张漂亮",
+            "字数多",
+            "插图多"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "报告中的建议应针对（ ）提出。",
+          "answer": {
+            "value": "结论"
+          },
+          "analysis": "建议要与结论对应。",
+          "difficulty": 2,
+          "knowledge_point": "撰写实践报告",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "实践报告可以只写结论，不写数据来源。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "需说明数据来源与方法。",
+          "difficulty": 3,
+          "knowledge_point": "撰写实践报告",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出视力调查报告中「建议」部分的两条内容。",
+          "answer": {
+            "value": "示例：每天户外活动不少于 1 小时；每用眼 40 分钟远眺休息"
+          },
+          "analysis": "评分要点：建议具体，与视力下降结论相关。",
+          "difficulty": 4,
+          "knowledge_point": "撰写实践报告",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "实践报告通常包括哪些部分？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 虚构故事 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "撰写实践报告",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "问题与方法",
+            "数据与图表",
+            "结论与建议",
+            "虚构的故事"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "综合与实践 哪种方式更合算",
+      "order_index": 5,
+      "summary": "用一次函数与不等式比较不同消费方案，做出合理选择。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "方案 A 每次 10 元，方案 B 月卡 60 元不限次，方案 B 的费用可表示为（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "月卡费用与次数无关，是常数。",
+          "difficulty": 2,
+          "knowledge_point": "建立费用模型",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "常数 60",
+            "10x",
+            "60x",
+            "60 加 10x"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "方案 A 费用 y = 10x，方案 B 费用 y = 60，当 x =（ ）时两方案相同。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "10x = 60 得 x = 6。该项数值为 6，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "建立费用模型",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "6",
+            "60",
+            "0.6",
+            "7"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "比较方案时应把费用表示成同一变量的函数。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "同一变量才能比较。",
+          "difficulty": 3,
+          "knowledge_point": "建立费用模型",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "某健身房单次 30 元，年卡 1200 元，一年去 50 次，哪种合算？",
+          "answer": {
+            "value": "示例：单次共 1500 元，年卡 1200 元，年卡更合算"
+          },
+          "analysis": "评分要点：两种方案费用都算出，结论正确。",
+          "difficulty": 4,
+          "knowledge_point": "建立费用模型",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "建立费用模型要考虑哪些因素？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 天气 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "建立费用模型",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "单价",
+            "固定费用",
+            "使用次数",
+            "天气情况"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "10x 小于 60 的解是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "两边除以 10 得 x 小于 6。",
+          "difficulty": 2,
+          "knowledge_point": "用不等式比较方案",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "x 小于 6",
+            "x 大于 6",
+            "x 等于 6",
+            "x 大于 10"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "当每月通话超过 200 分钟时，套餐 B 更省，这可用（ ）表示比较结果。",
+          "answer": {
+            "value": "不等式"
+          },
+          "analysis": "范围比较用不等式表达。",
+          "difficulty": 2,
+          "knowledge_point": "用不等式比较方案",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "不等式两边同除以负数时，不等号方向要改变。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "负数除法需变号。",
+          "difficulty": 3,
+          "knowledge_point": "用不等式比较方案",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "A 方案每分钟 0.2 元，B 方案月租 20 元每分钟 0.1 元，求 B 更省的分钟数范围。",
+          "answer": {
+            "value": "示例：0.1x 加 20 小于 0.2x，得 x 大于 200 分钟"
+          },
+          "analysis": "评分要点：不等式列对，解得范围正确。",
+          "difficulty": 4,
+          "knowledge_point": "用不等式比较方案",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "方案比较中常见的关系有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 完全无关 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "用不等式比较方案",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "等于",
+            "大于",
+            "小于",
+            "完全无关"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "两方案费用相等时的使用量称为（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "费用相等处即临界点。",
+          "difficulty": 2,
+          "knowledge_point": "临界点与决策",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "临界点",
+            "最大值",
+            "平均值",
+            "中位数"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "低于临界点时，固定费用低的方案通常更（ ）。",
+          "answer": {
+            "value": "省"
+          },
+          "analysis": "使用少时低固定费更省。",
+          "difficulty": 2,
+          "knowledge_point": "临界点与决策",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "临界点是选择方案的分界点。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "临界点两侧方案优劣不同。",
+          "difficulty": 3,
+          "knowledge_point": "临界点与决策",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "结合临界点说明如何根据使用次数选择方案。",
+          "answer": {
+            "value": "示例：使用次数少于临界点选单次方案，多于临界点选月卡方案"
+          },
+          "analysis": "评分要点：临界点两侧分别说明。",
+          "difficulty": 4,
+          "knowledge_point": "临界点与决策",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "做方案决策时应考虑哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 只看广告 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "临界点与决策",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "费用临界点",
+            "实际使用量",
+            "方案的限制条件",
+            "只看广告宣传"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "说明结论时最应写清的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "结论要在明确条件下成立。",
+          "difficulty": 2,
+          "knowledge_point": "数学表达与说明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "假设条件与适用范围",
+            "个人喜好",
+            "无关细节",
+            "广告语"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "用函数比较方案时，要先说明自变量的（ ）范围。",
+          "answer": {
+            "value": "取值"
+          },
+          "analysis": "自变量范围决定结论适用范围。",
+          "difficulty": 2,
+          "knowledge_point": "数学表达与说明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "结论可以不写计算过程，只写答案。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "过程能证明结论可靠。",
+          "difficulty": 3,
+          "knowledge_point": "数学表达与说明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出比较两种方案时结论表述的两个要点。",
+          "answer": {
+            "value": "示例：一是写清比较的使用量范围；二是给出临界点的具体数值"
+          },
+          "analysis": "评分要点：两个要点明确、可执行。",
+          "difficulty": 4,
+          "knowledge_point": "数学表达与说明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "数学结论表述应包含哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 夸张 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "数学表达与说明",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "假设条件",
+            "关键计算",
+            "适用范围",
+            "夸张形容"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "综合与实践 设计遮阳篷",
+      "order_index": 6,
+      "summary": "用几何与三角函数知识设计遮阳篷尺寸，解决实际遮挡问题。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "遮阳篷设计中需要测量的关键量是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "窗高和入射角决定遮挡长度。",
+          "difficulty": 2,
+          "knowledge_point": "测量与角度估算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "窗高与阳光入射角",
+            "窗框颜色",
+            "玻璃品牌",
+            "室内家具数量"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "阳光与水平面的夹角称为（ ）角。",
+          "answer": {
+            "value": "太阳高度"
+          },
+          "analysis": "太阳高度角决定影子长度。",
+          "difficulty": 2,
+          "knowledge_point": "测量与角度估算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "太阳高度角越大，物体影子越短。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "高度角大时影子短。",
+          "difficulty": 3,
+          "knowledge_point": "测量与角度估算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "正午太阳高度角 60 度时，1 米高的窗台影子长约多少（tan 60 度约 1.73）？",
+          "answer": {
+            "value": "示例：影子长约 1 ÷ 1.73 约 0.58 米"
+          },
+          "analysis": "评分要点：用正切关系，结果合理。",
+          "difficulty": 4,
+          "knowledge_point": "测量与角度估算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "把实际问题转化为数学问题要做哪些事？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 直接猜 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "测量与角度估算",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "画出示意图",
+            "标出已知量与未知量",
+            "确定几何关系",
+            "直接猜测结果"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "已知遮挡高度 h 和太阳高度角 a，伸出长度约为（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "由 tan a = h ÷ 伸出长度得伸出长度 = h ÷ tan a。",
+          "difficulty": 2,
+          "knowledge_point": "用三角函数计算尺寸",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "h ÷ tan a",
+            "h × tan a",
+            "h × sin a",
+            "h ÷ sin a"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "太阳高度角 45 度，需遮挡 1.5 米高度，遮阳篷至少伸出（ ）米。",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "tan 45 度 = 1，伸出长度等于遮挡高度。该项数值为 1.5，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "用三角函数计算尺寸",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "15",
+            "1.5",
+            "0.15",
+            "2.5"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "太阳高度角越小，需要伸出的遮阳篷越长。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "角小影子长，需更长遮挡。",
+          "difficulty": 3,
+          "knowledge_point": "用三角函数计算尺寸",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "需遮挡高度 2 米，太阳高度角 30 度，求遮阳篷伸出长度（tan 30 度约 0.577）。",
+          "answer": {
+            "value": "示例：伸出长度约 2 ÷ 0.577 约 3.47 米"
+          },
+          "analysis": "评分要点：公式正确，计算合理。",
+          "difficulty": 4,
+          "knowledge_point": "用三角函数计算尺寸",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "影响遮阳篷伸出长度的因素有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓ 朝向影响入射角；D 颜色 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "用三角函数计算尺寸",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "遮挡高度",
+            "太阳高度角",
+            "窗户朝向",
+            "窗户颜色"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "遮阳篷伸出过长可能带来的问题是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "过长会遮挡冬季阳光。",
+          "difficulty": 2,
+          "knowledge_point": "方案优化与取舍",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "冬季室内采光不足",
+            "完全不影响",
+            "窗子变大",
+            "太阳变远"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "设计时要兼顾夏季遮阳和冬季（ ）。",
+          "answer": {
+            "value": "采光"
+          },
+          "analysis": "冬夏需求不同，需兼顾。",
+          "difficulty": 2,
+          "knowledge_point": "方案优化与取舍",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "同一尺寸的遮阳篷在冬夏两季的遮阳效果相同。",
+          "answer": {
+            "value": "F"
+          },
+          "analysis": "冬夏太阳高度角不同，效果不同。",
+          "difficulty": 3,
+          "knowledge_point": "方案优化与取舍",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说设计遮阳篷时如何兼顾夏季遮阳与冬季采光。",
+          "answer": {
+            "value": "示例：按夏季正午高度角确定长度，兼顾冬季较低高度角仍能进光，可取折中尺寸"
+          },
+          "analysis": "评分要点：两方面都考虑，方案合理。",
+          "difficulty": 4,
+          "knowledge_point": "方案优化与取舍",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "遮阳篷设计需要考虑哪些因素？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 流行度 ✗ 非关键。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "方案优化与取舍",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "夏季遮阳效果",
+            "冬季采光",
+            "成本与安全",
+            "篷布花色的流行度"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "展示设计方案时最有说服力的是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "数据与计算能支撑方案。",
+          "difficulty": 2,
+          "knowledge_point": "展示与说明方案",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "计算过程与实测数据",
+            "口头保证",
+            "个人感觉",
+            "广告语"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "设计说明中应写出采用的（ ）及其依据。",
+          "answer": {
+            "value": "尺寸"
+          },
+          "analysis": "尺寸需有依据。",
+          "difficulty": 2,
+          "knowledge_point": "展示与说明方案",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "设计说明应写明方案的适用条件。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "条件明确才便于使用。",
+          "difficulty": 3,
+          "knowledge_point": "展示与说明方案",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "写出遮阳篷设计说明应包含的三项内容。",
+          "answer": {
+            "value": "示例：测量数据、计算依据、最终尺寸与适用条件"
+          },
+          "analysis": "评分要点：三项齐全、表述清晰。",
+          "difficulty": 4,
+          "knowledge_point": "展示与说明方案",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "设计说明的常见内容有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 无关故事 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "展示与说明方案",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "问题与目标",
+            "测量数据",
+            "计算与结论",
+            "与设计无关的故事"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "总复习",
+      "order_index": 7,
+      "summary": "系统回顾初中数学核心知识与方法。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "根号 16 的值是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "4 的平方是 16。",
+          "difficulty": 2,
+          "knowledge_point": "数与式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "4",
+            "8",
+            "2",
+            "16"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "化简 (a 加 b)² 减 (a 减 b)² 得（ ）。",
+          "answer": {
+            "value": "4ab"
+          },
+          "analysis": "两式相减得 4ab。",
+          "difficulty": 2,
+          "knowledge_point": "数与式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "任何实数的平方都是非负数。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "平方非负。",
+          "difficulty": 3,
+          "knowledge_point": "数与式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "计算 (2x 加 1)(2x 减 1) 减 4x² 的值。",
+          "answer": {
+            "value": "示例：4x² 减 1 减 4x² = -1"
+          },
+          "analysis": "评分要点：用平方差公式，结果 -1。",
+          "difficulty": 4,
+          "knowledge_point": "数与式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面运算正确的有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C 加法不能合并指数 ✗；D ✓。所以选 A、B、D。",
+          "difficulty": 3,
+          "knowledge_point": "数与式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "a² × a³ = a 的五次方",
+            "(a²)³ = a 的六次方",
+            "a² 加 a³ = a 的五次方",
+            "a⁶ ÷ a² = a 的四次方"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "方程 x² 减 5x 加 6 = 0 的根是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "分解为 (x 减 2)(x 减 3) = 0。",
+          "difficulty": 2,
+          "knowledge_point": "方程与不等式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "2 和 3",
+            "-2 和 -3",
+            "1 和 6",
+            "0 和 5"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "不等式 2x 减 3 大于 5 的解是 x 大于（ ）。",
+          "answer": {
+            "value": "B"
+          },
+          "analysis": "2x 大于 8，x 大于 4。该项数值为 4，其余为干扰项。",
+          "difficulty": 2,
+          "knowledge_point": "方程与不等式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "40",
+            "4",
+            "0.4",
+            "5"
+          ]
+        },
+        {
+          "q_type": "judge",
+          "stem": "分式方程解完必须检验分母是否为零。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "需检验增根。",
+          "difficulty": 3,
+          "knowledge_point": "方程与不等式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "解方程 x² 减 4x 减 5 = 0。",
+          "answer": {
+            "value": "示例：x = 5 或 x = -1"
+          },
+          "analysis": "评分要点：因式分解正确，两根都写出。",
+          "difficulty": 4,
+          "knowledge_point": "方程与不等式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "解一元二次方程的方法有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 直接猜 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "方程与不等式",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "因式分解",
+            "配方",
+            "求根公式",
+            "直接猜根"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "y = -2x 加 1 的图象经过（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "k 小于 0、b 大于 0，过一二四象限。",
+          "difficulty": 2,
+          "knowledge_point": "函数与图象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "第一、二、四象限",
+            "第一、二、三象限",
+            "第二、三、四象限",
+            "只过原点"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "反比例函数 y = 6 ÷ x 的图象位于第（ ）象限。",
+          "answer": {
+            "value": "一、三"
+          },
+          "analysis": "k 大于 0 时图象在一、三象限。",
+          "difficulty": 2,
+          "knowledge_point": "函数与图象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "一次函数 y = kx 加 b 中 k 大于 0 时 y 随 x 增大而增大。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "k 决定增减性。",
+          "difficulty": 3,
+          "knowledge_point": "函数与图象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "说出 y = x² 减 2x 的开口方向、对称轴与顶点。",
+          "answer": {
+            "value": "示例：开口向上，对称轴 x = 1，顶点（1，-1）"
+          },
+          "analysis": "评分要点：三项都正确。",
+          "difficulty": 4,
+          "knowledge_point": "函数与图象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于函数图象，哪些说法正确？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A ✓；B ✓；C ✓；D 都过原点 ✗。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "函数与图象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "一次函数图象是直线",
+            "反比例函数图象是双曲线",
+            "二次函数图象是抛物线",
+            "所有函数图象都过原点"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "三角形内角和是（ ）",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "三角形内角和 180 度。",
+          "difficulty": 2,
+          "knowledge_point": "图形与几何、统计概率",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "180 度",
+            "90 度",
+            "360 度",
+            "270 度"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "掷一枚均匀骰子出现 6 点的概率是（ ）。",
+          "answer": {
+            "value": "1/6"
+          },
+          "analysis": "六个等可能结果。",
+          "difficulty": 2,
+          "knowledge_point": "图形与几何、统计概率",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "平行四边形的对角线互相平分。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "这是平行四边形性质。",
+          "difficulty": 3,
+          "knowledge_point": "图形与几何、统计概率",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "answer",
+          "stem": "一个袋中有 3 个红球和 2 个白球，随机摸一个是红球的概率是多少？",
+          "answer": {
+            "value": "示例：概率为 3/5"
+          },
+          "analysis": "评分要点：分子分母意义正确。",
+          "difficulty": 4,
+          "knowledge_point": "图形与几何、统计概率",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "下面几何性质正确的有哪些？",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "逐项判断：A 两底角相等 ✓；B 直径平分弦所对的弧 ✓；C 菱形对角线互相垂直 ✓；D 任意四边形对角线垂直 ✗ 只有正方形、菱形等特殊四边形成立。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "图形与几何、统计概率",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "等腰三角形两底角相等",
+            "圆的直径平分弦所对的两条弧",
+            "菱形对角线互相垂直",
+            "任意四边形的对角线都互相垂直"
+          ]
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-14T12:07:25+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "normalized": "难度 40/40/20 归一 + 主观题短答案补评分要点（2026-11-13 统一口径）",
+    "supplemented": "数值填空补可求值算式 1 道 / 数值填空改单选 12 道 / 补多选题 0 道（2 真 + 2 假，答案 2 项；2026-11-14 口径）",
+    "stem_dedup": "跨册同题干补册次前缀 0 道（2026-11-14 跨册去重口径）",
+    "duplicate_rewrites": "跨册同题定向改写 0 道（保留两侧题量，2026-11-14 口径）",
+    "chapter_scope": "全章域（本册无跨册重复章）",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

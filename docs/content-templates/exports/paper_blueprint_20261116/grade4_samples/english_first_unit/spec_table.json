@@ -1,0 +1,344 @@
+{
+  "exam_id": null,
+  "title": "4年级英语上册单元卷（自主题库生成）",
+  "subject": "english",
+  "grade": 4,
+  "exam_type": "unit",
+  "blueprint_code": "g4_english_unit",
+  "blueprint_name": "4年级英语单元测试卷（自主题库生成）",
+  "total_score": 60,
+  "time_limit_min": 40,
+  "question_count": 28,
+  "actual_score_total": 60.0,
+  "score_matches": true,
+  "knowledge_point_count": 22,
+  "sections": [
+    {
+      "section_index": 0,
+      "section_name": "一、听力",
+      "q_type": "listening",
+      "band": "easy",
+      "planned_count": 8,
+      "planned_score": 8.0,
+      "actual_count": 8,
+      "actual_score": 8.0,
+      "knowledge_points": [
+        "用 There is / There are 描述房屋",
+        "用 Where do you live 问答与介词 in、on",
+        "用 Where does a 单数动物 live 提问",
+        "认读 13 到 19 与整十数词",
+        "认读住所名词 flat、house、village、city",
+        "辨认 ar 与 a-e 的发音",
+        "辨认 i-e 与 i 的发音",
+        "辨认 oo 的长短音"
+      ],
+      "chapters": [
+        "Unit 1 Where do people live?",
+        "Unit 2 Where do animals live?",
+        "Unit 3 How do we use numbers?"
+      ],
+      "questions": [
+        {
+          "question_id": 16596,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "辨认 i-e 与 i 的发音",
+          "chapter": "Unit 3 How do we use numbers?"
+        },
+        {
+          "question_id": 16580,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 1,
+          "knowledge_point": "用 Where does a 单数动物 live 提问",
+          "chapter": "Unit 2 Where do animals live?"
+        },
+        {
+          "question_id": 16569,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "认读住所名词 flat、house、village、city",
+          "chapter": "Unit 1 Where do people live?"
+        },
+        {
+          "question_id": 16571,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "用 Where do you live 问答与介词 in、on",
+          "chapter": "Unit 1 Where do people live?"
+        },
+        {
+          "question_id": 16570,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "用 There is / There are 描述房屋",
+          "chapter": "Unit 1 Where do people live?"
+        },
+        {
+          "question_id": 16568,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "辨认 ar 与 a-e 的发音",
+          "chapter": "Unit 1 Where do people live?"
+        },
+        {
+          "question_id": 16593,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 1,
+          "knowledge_point": "认读 13 到 19 与整十数词",
+          "chapter": "Unit 3 How do we use numbers?"
+        },
+        {
+          "question_id": 16582,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "辨认 oo 的长短音",
+          "chapter": "Unit 2 Where do animals live?"
+        }
+      ]
+    },
+    {
+      "section_index": 1,
+      "section_name": "二、单项选择",
+      "q_type": "choice",
+      "band": "easy",
+      "planned_count": 8,
+      "planned_score": 16.0,
+      "actual_count": 8,
+      "actual_score": 16.0,
+      "knowledge_points": [
+        "用 How many 问可数名词数量",
+        "英语·基础语法单项选择·按单元·变式一",
+        "英语·基础语法单项选择·按单元·变式三",
+        "英语·基础语法单项选择·按单元·变式二",
+        "英语·短文阅读理解·按单元·变式一",
+        "英语·短文阅读理解·按单元·变式三",
+        "英语·短文阅读理解·按单元·变式二",
+        "英语·短文阅读理解·按单元·变式四"
+      ],
+      "chapters": [
+        "Unit 1 Where do people live?",
+        "Unit 2 Where do animals live?",
+        "Unit 3 How do we use numbers?"
+      ],
+      "questions": [
+        {
+          "question_id": 20272,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "英语·基础语法单项选择·按单元·变式二",
+          "chapter": "Unit 1 Where do people live?"
+        },
+        {
+          "question_id": 20305,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "英语·基础语法单项选择·按单元·变式一",
+          "chapter": "Unit 3 How do we use numbers?"
+        },
+        {
+          "question_id": 21304,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式二",
+          "chapter": "Unit 2 Where do animals live?"
+        },
+        {
+          "question_id": 20307,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "英语·基础语法单项选择·按单元·变式三",
+          "chapter": "Unit 3 How do we use numbers?"
+        },
+        {
+          "question_id": 21303,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式一",
+          "chapter": "Unit 2 Where do animals live?"
+        },
+        {
+          "question_id": 21295,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式三",
+          "chapter": "Unit 1 Where do people live?"
+        },
+        {
+          "question_id": 21296,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式四",
+          "chapter": "Unit 1 Where do people live?"
+        },
+        {
+          "question_id": 4815,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "用 How many 问可数名词数量",
+          "chapter": "Unit 3 How do we use numbers?"
+        }
+      ]
+    },
+    {
+      "section_index": 2,
+      "section_name": "三、词汇填空",
+      "q_type": "fill",
+      "band": "medium",
+      "planned_count": 8,
+      "planned_score": 16.0,
+      "actual_count": 8,
+      "actual_score": 16.0,
+      "knowledge_points": [
+        "用 There is / There are 描述房屋",
+        "英语·词汇填空（中英对应）·按单元·变式一",
+        "英语·词汇填空（中英对应）·按单元·变式三",
+        "英语·词汇填空（中英对应）·按单元·变式四",
+        "认读栖息地名词 forest、river、cave、sea",
+        "读电话号码与价格"
+      ],
+      "chapters": [
+        "Unit 1 Where do people live?",
+        "Unit 2 Where do animals live?",
+        "Unit 3 How do we use numbers?"
+      ],
+      "questions": [
+        {
+          "question_id": 21971,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式三",
+          "chapter": "Unit 2 Where do animals live?"
+        },
+        {
+          "question_id": 21968,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式四",
+          "chapter": "Unit 1 Where do people live?"
+        },
+        {
+          "question_id": 16587,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "认读栖息地名词 forest、river、cave、sea",
+          "chapter": "Unit 2 Where do animals live?"
+        },
+        {
+          "question_id": 20303,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式一",
+          "chapter": "Unit 2 Where do animals live?"
+        },
+        {
+          "question_id": 4820,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "读电话号码与价格",
+          "chapter": "Unit 3 How do we use numbers?"
+        },
+        {
+          "question_id": 16574,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "用 There is / There are 描述房屋",
+          "chapter": "Unit 1 Where do people live?"
+        },
+        {
+          "question_id": 21974,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式四",
+          "chapter": "Unit 3 How do we use numbers?"
+        },
+        {
+          "question_id": 21967,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式三",
+          "chapter": "Unit 1 Where do people live?"
+        }
+      ]
+    },
+    {
+      "section_index": 3,
+      "section_name": "四、阅读理解",
+      "q_type": "choice",
+      "band": "hard",
+      "planned_count": 4,
+      "planned_score": 20.0,
+      "actual_count": 4,
+      "actual_score": 20.0,
+      "knowledge_points": [
+        "用 in、on、near 说动物位置",
+        "辨认 ar 与 a-e 的发音",
+        "辨认 i-e 与 i 的发音",
+        "辨认 oo 的长短音"
+      ],
+      "chapters": [
+        "Unit 1 Where do people live?",
+        "Unit 2 Where do animals live?",
+        "Unit 3 How do we use numbers?"
+      ],
+      "questions": [
+        {
+          "question_id": 16589,
+          "score": 5.0,
+          "q_type": "choice",
+          "difficulty": 5,
+          "knowledge_point": "用 in、on、near 说动物位置",
+          "chapter": "Unit 2 Where do animals live?"
+        },
+        {
+          "question_id": 16576,
+          "score": 5.0,
+          "q_type": "choice",
+          "difficulty": 5,
+          "knowledge_point": "辨认 ar 与 a-e 的发音",
+          "chapter": "Unit 1 Where do people live?"
+        },
+        {
+          "question_id": 16590,
+          "score": 5.0,
+          "q_type": "choice",
+          "difficulty": 5,
+          "knowledge_point": "辨认 oo 的长短音",
+          "chapter": "Unit 2 Where do animals live?"
+        },
+        {
+          "question_id": 16604,
+          "score": 5.0,
+          "q_type": "choice",
+          "difficulty": 5,
+          "knowledge_point": "辨认 i-e 与 i 的发音",
+          "chapter": "Unit 3 How do we use numbers?"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-11-17T15:45:22.115544+00:00"
+}

@@ -1,0 +1,173 @@
+{
+  "exam_id": null,
+  "title": "8年级数学下册单元卷（自主题库生成）",
+  "subject": "math",
+  "grade": 8,
+  "exam_type": "unit",
+  "blueprint_code": "g8_math_unit",
+  "blueprint_name": "8年级数学单元测试卷（自主题库生成）",
+  "total_score": 60,
+  "time_limit_min": 40,
+  "question_count": 12,
+  "actual_score_total": 60.0,
+  "score_matches": true,
+  "knowledge_point_count": 4,
+  "sections": [
+    {
+      "section_index": 0,
+      "section_name": "一、选择题",
+      "q_type": "choice",
+      "band": "easy",
+      "planned_count": 4,
+      "planned_score": 16.0,
+      "actual_count": 4,
+      "actual_score": 16.0,
+      "knowledge_points": [
+        "全等三角形的判定方法",
+        "命题、逆命题与反证法",
+        "等腰三角形与等边三角形的性质与判定",
+        "线段垂直平分线与角平分线的性质"
+      ],
+      "chapters": [
+        "第一章 三角形的证明及其应用"
+      ],
+      "questions": [
+        {
+          "question_id": 13331,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "线段垂直平分线与角平分线的性质",
+          "chapter": "第一章 三角形的证明及其应用"
+        },
+        {
+          "question_id": 13328,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "等腰三角形与等边三角形的性质与判定",
+          "chapter": "第一章 三角形的证明及其应用"
+        },
+        {
+          "question_id": 13322,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "全等三角形的判定方法",
+          "chapter": "第一章 三角形的证明及其应用"
+        },
+        {
+          "question_id": 13336,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "命题、逆命题与反证法",
+          "chapter": "第一章 三角形的证明及其应用"
+        }
+      ]
+    },
+    {
+      "section_index": 1,
+      "section_name": "二、填空题",
+      "q_type": "fill",
+      "band": "medium",
+      "planned_count": 5,
+      "planned_score": 20.0,
+      "actual_count": 5,
+      "actual_score": 20.0,
+      "knowledge_points": [
+        "全等三角形的判定方法",
+        "命题、逆命题与反证法"
+      ],
+      "chapters": [
+        "第一章 三角形的证明及其应用"
+      ],
+      "questions": [
+        {
+          "question_id": 18059,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "",
+          "chapter": "第一章 三角形的证明及其应用"
+        },
+        {
+          "question_id": 13325,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "全等三角形的判定方法",
+          "chapter": "第一章 三角形的证明及其应用"
+        },
+        {
+          "question_id": 13337,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "命题、逆命题与反证法",
+          "chapter": "第一章 三角形的证明及其应用"
+        },
+        {
+          "question_id": 18060,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "",
+          "chapter": "第一章 三角形的证明及其应用"
+        },
+        {
+          "question_id": 18058,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "",
+          "chapter": "第一章 三角形的证明及其应用"
+        }
+      ]
+    },
+    {
+      "section_index": 2,
+      "section_name": "三、计算与解答",
+      "q_type": "answer",
+      "band": "hard",
+      "planned_count": 3,
+      "planned_score": 24.0,
+      "actual_count": 3,
+      "actual_score": 24.0,
+      "knowledge_points": [
+        "命题、逆命题与反证法",
+        "等腰三角形与等边三角形的性质与判定"
+      ],
+      "chapters": [
+        "第一章 三角形的证明及其应用"
+      ],
+      "questions": [
+        {
+          "question_id": 13338,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "命题、逆命题与反证法",
+          "chapter": "第一章 三角形的证明及其应用"
+        },
+        {
+          "question_id": 13330,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "等腰三角形与等边三角形的性质与判定",
+          "chapter": "第一章 三角形的证明及其应用"
+        },
+        {
+          "question_id": 18062,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 3,
+          "knowledge_point": "",
+          "chapter": "第一章 三角形的证明及其应用"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-11-17T15:45:26.869376+00:00"
+}

@@ -151,13 +151,56 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
 
   /// 首页三个练习模式入口：把 mode 传进配置页，由配置页套用各自的默认范围、
   /// 题量与题型，进入后组卷策略也按 mode 区分。
-  void _openPracticeMode(String mode) {
+  ///
+  /// 首页教材按科目排列，若直接取第一册组卷会跨科目错配（例如英语入口拿着语文
+  /// 教材 id 组卷，英语听力永远进不了卷）。故多册时先让用户选定学科再跳转。
+  Future<void> _openPracticeMode(String mode) async {
     final textbooks = _home?.textbooks ?? const <HomeTextbook>[];
     if (textbooks.isEmpty) return;
     final spec = practiceModeOf(mode);
+    final HomeTextbook? target = textbooks.length == 1
+        ? textbooks.first
+        : await showModalBottomSheet<HomeTextbook>(
+            context: context,
+            showDragHandle: true,
+            builder: (sheetContext) => SafeArea(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 4, 20, 8),
+                    child: Text(
+                      '选择要练的学科',
+                      style: Theme.of(sheetContext).textTheme.titleMedium,
+                    ),
+                  ),
+                  for (final textbook in textbooks)
+                    ListTile(
+                      leading: Icon(_subjectIcon(textbook.subject)),
+                      title: Text(textbook.subjectLabel),
+                      subtitle: Text(
+                        '${textbook.version} · ${textbook.grade} 年级'
+                        ' · ${_semesterLabel(textbook.semester)}',
+                      ),
+                      onTap: () => Navigator.of(sheetContext).pop(textbook),
+                    ),
+                ],
+              ),
+            ),
+          );
+    if (target == null || !mounted) return;
+    // 「继续学习」的单元只在该学科与该教材同学科时才可用，否则会把别的学科
+    // 章节塞进本学科的组卷范围。
+    final resume = _home?.continueLearning;
+    final chapterId = (resume != null && resume.subject == target.subject)
+        ? resume.chapterId
+        : null;
     context.push(
-      '/practice/config?scope=textbook&ids=${textbooks.first.textbookId}'
-      '&mode=${spec.key}&title=${Uri.encodeComponent(spec.label)}',
+      '/practice/config?scope=textbook&ids=${target.textbookId}'
+      '&mode=${spec.key}'
+      '${chapterId == null ? '' : '&chapter=$chapterId'}'
+      '&title=${Uri.encodeComponent('${spec.label} · ${target.subjectLabel}')}',
     );
   }
 

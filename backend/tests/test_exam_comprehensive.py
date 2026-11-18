@@ -152,16 +152,17 @@ def test_generate_midterm_paper_from_chapter_set(db: Session) -> None:
     assert paper.kp_coverage == 1.0
     assert {item.question.chapter_id for item in paper.items} == set(chapter_ids)
 
-    score_by_band: dict[str, float] = {"easy": 0, "medium": 0, "hard": 0}
-    for item in paper.items:
-        band = "easy" if item.question.difficulty <= 1 else (
-            "medium" if item.question.difficulty <= 3 else "hard"
-        )
-        score_by_band[band] += item.score
-    assert score_by_band == {"easy": 60, "medium": 30, "hard": 10}
-
+    # PG-01 改按「题型池内排名分位」选难度带，原始 difficulty 映射不再等价于卷面分带，
+    # 因此校验口径改为：各节题量与分值合计严格等于蓝图。
     section_counts = Counter(item.section_index for item in paper.items)
     assert section_counts == {0: 10, 1: 10, 2: 5, 3: 2, 4: 1}
+
+    score_by_section: dict[int, float] = {}
+    for item in paper.items:
+        score_by_section[item.section_index] = (
+            score_by_section.get(item.section_index, 0) + item.score
+        )
+    assert score_by_section == {0: 30, 1: 30, 2: 20, 3: 10, 4: 10}
 
 
 def test_generate_final_paper_is_deterministic(db: Session) -> None:
@@ -180,7 +181,9 @@ def test_generate_final_paper_is_deterministic(db: Session) -> None:
     assert [item.question.id for item in first.items] == [
         item.question.id for item in second.items
     ]
-    assert first.difficulty_mix == {"easy": 20, "medium": 7, "hard": 1}
+    # PG-01：难度按题型池内排名分位切 6:3:1，结果随种子稳定，但不再写死具体计数
+    assert first.difficulty_mix == second.difficulty_mix
+    assert set(first.difficulty_mix) <= {"easy", "medium", "hard"}
 
 
 def test_generate_api_publishes_midterm_exam(
@@ -205,8 +208,11 @@ def test_generate_api_publishes_midterm_exam(
     assert body["question_count"] == 28
     assert body["total_score"] == 100
     assert body["kp_coverage"] >= 0.8
-    assert body["difficulty_mix"] == {"easy": 20, "medium": 7, "hard": 1}
+    # PG-01：难度按题型池内排名分位切分，三档必须齐全且合计等于题量
+    assert set(body["difficulty_mix"]) == {"easy", "medium", "hard"}
+    assert sum(body["difficulty_mix"].values()) == 28
     assert body["fallback_count"] == 0
+    assert body["refused"] is False
 
     exam = db.get(Exam, body["exam_id"])
     assert exam is not None

@@ -1,0 +1,3057 @@
+{
+  "subject": "chinese",
+  "grade": 5,
+  "version": "人教版",
+  "semester": "second",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "第一单元",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "《古诗三首》中的童年",
+      "parent": "第一单元",
+      "order_index": 1,
+      "explanation": "三首古诗写出儿童的天真与劳动的乐趣。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "《祖父的园子》",
+      "parent": "第一单元",
+      "order_index": 2,
+      "explanation": "课文写园子里的自由与快乐，表达对祖父的怀念。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "《月是故乡明》",
+      "parent": "第一单元",
+      "order_index": 3,
+      "explanation": "课文以月亮为线索写思乡之情。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "《梅花魂》",
+      "parent": "第一单元",
+      "order_index": 4,
+      "explanation": "课文借梅花写外祖父的爱国情怀。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第二单元",
+      "order_index": 2
+    },
+    {
+      "node_type": "point",
+      "name": "《草船借箭》的情节",
+      "parent": "第二单元",
+      "order_index": 1,
+      "explanation": "课文按事情发展写诸葛亮用草船借箭的过程。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "《景阳冈》的人物形象",
+      "parent": "第二单元",
+      "order_index": 2,
+      "explanation": "课文写武松打虎，通过动作写出人物的勇武。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "《猴王出世》",
+      "parent": "第二单元",
+      "order_index": 3,
+      "explanation": "课文写石猴出世的经过，语言生动有趣。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "阅读古典名著的方法",
+      "parent": "第二单元",
+      "order_index": 4,
+      "explanation": "读古典名著可先了解背景，遇到难懂的词句可猜测或查证。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第三单元",
+      "order_index": 3
+    },
+    {
+      "node_type": "point",
+      "name": "汉字的起源",
+      "parent": "第三单元",
+      "order_index": 1,
+      "explanation": "汉字起源于图画和记事符号，逐渐演变成文字。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "汉字的演变",
+      "parent": "第三单元",
+      "order_index": 2,
+      "explanation": "汉字经历甲骨文、金文、小篆、隶书、楷书等演变。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "汉字的造字方法",
+      "parent": "第三单元",
+      "order_index": 3,
+      "explanation": "象形、指事、会意、形声是常见造字方法，形声字最多。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "书法与汉字之美",
+      "parent": "第三单元",
+      "order_index": 4,
+      "explanation": "汉字书写讲结构、笔画，书法是独特的艺术。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第四单元",
+      "order_index": 4
+    },
+    {
+      "node_type": "point",
+      "name": "《古诗三首》的家国之思",
+      "parent": "第四单元",
+      "order_index": 1,
+      "explanation": "三首古诗分别写戍边、收复失地、忧国的情怀。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "《青山处处埋忠骨》",
+      "parent": "第四单元",
+      "order_index": 2,
+      "explanation": "课文写毛泽东在儿子牺牲后的复杂心情。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "《军神》",
+      "parent": "第四单元",
+      "order_index": 3,
+      "explanation": "课文写刘伯承手术中不用麻醉，表现钢铁意志。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "《清贫》",
+      "parent": "第四单元",
+      "order_index": 4,
+      "explanation": "课文写方志敏甘于清贫、坚守信仰的品格。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第五单元",
+      "order_index": 5
+    },
+    {
+      "node_type": "point",
+      "name": "《人物描写一组》",
+      "parent": "第五单元",
+      "order_index": 1,
+      "explanation": "三则片段分别用动作、外貌、语言刻画人物。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "《刷子李》",
+      "parent": "第五单元",
+      "order_index": 2,
+      "explanation": "课文用曹小三的视角写刷子李的绝活。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "《金字塔》",
+      "parent": "第五单元",
+      "order_index": 3,
+      "explanation": "课文介绍金字塔的建造与特点，说明古代文明的伟大。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "写人的方法",
+      "parent": "第五单元",
+      "order_index": 4,
+      "explanation": "写人要选典型事例，用细节表现特点。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第六单元",
+      "order_index": 6
+    },
+    {
+      "node_type": "point",
+      "name": "《自相矛盾》",
+      "parent": "第六单元",
+      "order_index": 1,
+      "explanation": "寓言说明说话做事要前后一致，不能自相矛盾。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "《田忌赛马》",
+      "parent": "第六单元",
+      "order_index": 2,
+      "explanation": "课文写孙膑调整出场顺序以弱胜强。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "《跳水》",
+      "parent": "第六单元",
+      "order_index": 3,
+      "explanation": "课文写船长在危急时刻逼孩子跳水获救。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "思辨与表达",
+      "parent": "第六单元",
+      "order_index": 4,
+      "explanation": "表达观点要有理由，倾听不同意见要理性。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第七单元",
+      "order_index": 7
+    },
+    {
+      "node_type": "point",
+      "name": "《威尼斯的小艇》",
+      "parent": "第七单元",
+      "order_index": 1,
+      "explanation": "课文写小艇的样子、船夫的驾驶技术和它与生活的关系。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "《牧场之国》",
+      "parent": "第七单元",
+      "order_index": 2,
+      "explanation": "课文写荷兰牧场的宁静与生机。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "《金字塔夕照》",
+      "parent": "第七单元",
+      "order_index": 3,
+      "explanation": "课文写夕阳下金字塔的景象，语言富有画面感。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "写景的方法",
+      "parent": "第七单元",
+      "order_index": 4,
+      "explanation": "写景要抓住特点，动静结合，融入感受。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "section",
+      "name": "第八单元",
+      "order_index": 8
+    },
+    {
+      "node_type": "point",
+      "name": "《杨氏之子》",
+      "parent": "第八单元",
+      "order_index": 1,
+      "explanation": "课文写孩子机智应答，语言风趣有礼。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "《手指》",
+      "parent": "第八单元",
+      "order_index": 2,
+      "explanation": "丰子恺用风趣的语言写五根手指各有所长。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "《童年的发现》",
+      "parent": "第八单元",
+      "order_index": 3,
+      "explanation": "课文写孩子自己「发现」规律的有趣经历。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    },
+    {
+      "node_type": "point",
+      "name": "幽默的表达",
+      "parent": "第八单元",
+      "order_index": 4,
+      "explanation": "幽默来自巧妙的对比、夸张和自嘲，要得体不伤人。",
+      "prerequisites": [],
+      "weight": 1.2,
+      "source_type": "original",
+      "source_name": "教研组自编"
+    }
+  ],
+  "chapters": [
+    {
+      "name": "第一单元",
+      "order_index": 1,
+      "summary": "童年往事：在回忆中体会亲情与成长。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「童孙未解供耕织，也傍桑阴学种瓜」写孩子（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "诗句写孩子学种瓜。",
+          "difficulty": 2,
+          "knowledge_point": "《古诗三首》中的童年",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "模仿大人劳动",
+            "在树下睡觉",
+            "去集市买东西",
+            "在河边玩耍"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「昼出耘田夜绩麻」中「绩麻」指（ ）（填搓麻线）。",
+          "answer": {
+            "value": "搓麻线"
+          },
+          "analysis": "绩麻是把麻搓成线。",
+          "difficulty": 2,
+          "knowledge_point": "《古诗三首》中的童年",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "三首古诗都写出了乡村儿童的活泼可爱。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "三首都写童趣。",
+          "difficulty": 3,
+          "knowledge_point": "《古诗三首》中的童年",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "诗中写到的儿童活动有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓ 学种瓜是诗中活动；B ✓ 学钓鱼也是古诗常见的儿童乐趣；C ✓ 采莲同样写儿童劳作；D ✗ 诗中没有经商的儿童活动。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "《古诗三首》中的童年",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "学种瓜",
+            "学钓鱼",
+            "采莲",
+            "经商"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说「童孙未解供耕织」中的孩子为什么也学着种瓜。",
+          "answer": {
+            "value": "示例：孩子虽然还不会耕田织布，但天天看大人劳作，觉得有趣也跟着学，写出农村孩子勤劳可爱、爱模仿的天性。"
+          },
+          "analysis": "评分要点：结合诗句 + 童趣。",
+          "difficulty": 4,
+          "knowledge_point": "《古诗三首》中的童年",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《祖父的园子》中园子给「我」的感受是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "园子充满自由快乐。",
+          "difficulty": 2,
+          "knowledge_point": "《祖父的园子》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "自由快乐",
+            "紧张害怕",
+            "无聊沉闷",
+            "拥挤喧闹"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "课文中「我」跟着祖父在园子里（ ）（填干活或读书）。",
+          "answer": {
+            "value": "干活"
+          },
+          "analysis": "课文写跟着祖父干活玩耍。",
+          "difficulty": 2,
+          "knowledge_point": "《祖父的园子》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "课文中园子里的一切都显得生机勃勃。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "景物与心情都活泼。",
+          "difficulty": 3,
+          "knowledge_point": "《祖父的园子》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "课文中写到的事物有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓ 都是园中作物；D ✗ 与园子无关。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "《祖父的园子》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "黄瓜",
+            "倭瓜",
+            "玉米",
+            "高楼"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说课文为什么反复写「愿意……就……」这样的句子。",
+          "answer": {
+            "value": "示例：这样的句式反复出现，写出园子里植物动物都随自己心意生长，也写出「我」在园子里无拘无束、想做什么就做什么的快乐。"
+          },
+          "analysis": "评分要点：句式 + 自由感。",
+          "difficulty": 4,
+          "knowledge_point": "《祖父的园子》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "课文以（ ）为线索抒发思乡之情。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "月亮是全文线索。",
+          "difficulty": 2,
+          "knowledge_point": "《月是故乡明》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "月亮",
+            "河流",
+            "山路",
+            "钟声"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「月是故乡明」表达的是对（ ）（填故乡）的思念。",
+          "answer": {
+            "value": "故乡"
+          },
+          "analysis": "题目即点明思乡。",
+          "difficulty": 2,
+          "knowledge_point": "《月是故乡明》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "课文用他乡的月亮与故乡的月亮作对比。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "对比突出思乡。",
+          "difficulty": 3,
+          "knowledge_point": "《月是故乡明》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "课文中写到的童年往事有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓ 都是童年回忆；D ✗ 不属童年趣事。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "《月是故乡明》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "在苇坑边数星星",
+            "捉知了",
+            "摇知了",
+            "坐火车远行"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说作者为什么觉得「月是故乡明」。",
+          "answer": {
+            "value": "示例：并非故乡的月亮真比别人家的亮，而是故乡的月亮连着童年的记忆和亲人，感情深所以显得明亮，这是思乡之情的表达。"
+          },
+          "analysis": "评分要点：情感 + 说明。",
+          "difficulty": 4,
+          "knowledge_point": "《月是故乡明》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《梅花魂》中「魂」指的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "魂指精神品格。",
+          "difficulty": 2,
+          "knowledge_point": "《梅花魂》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "梅花象征的精神",
+            "梅花的香味",
+            "梅花的颜色",
+            "梅花的枝条"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "外祖父把一幅（ ）画送给「我」，寄托思乡之情。",
+          "answer": {
+            "value": "墨梅"
+          },
+          "analysis": "墨梅图寄托深意。",
+          "difficulty": 2,
+          "knowledge_point": "《梅花魂》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "课文用梅花比喻中华民族坚贞不屈的精神。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "梅花象征民族精神。",
+          "difficulty": 3,
+          "knowledge_point": "《梅花魂》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "课文中表现外祖父爱国之情的事有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓ 都是课文内容；D ✗ 与课文相反。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "《梅花魂》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "读诗流泪",
+            "珍爱墨梅图",
+            "临别赠画",
+            "嫌弃家乡"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说课文为什么用梅花来表达外祖父的情感。",
+          "answer": {
+            "value": "示例：梅花在寒冬中开放、不怕风雪，象征坚贞不屈的品格，这与外祖父身在异国却心向故土的情怀相合，所以借梅花写人。"
+          },
+          "analysis": "评分要点：梅花象征 + 情感关联。",
+          "difficulty": 4,
+          "knowledge_point": "《梅花魂》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第二单元",
+      "order_index": 2,
+      "summary": "古典名著：初步阅读，感受人物形象。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "草船借箭能够成功，主要靠（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "诸葛亮算准天时人心。",
+          "difficulty": 2,
+          "knowledge_point": "《草船借箭》的情节",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "诸葛亮的神机妙算",
+            "鲁肃的帮助最大",
+            "曹操的配合",
+            "天气偶然"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "诸葛亮向鲁肃借了二十条船，船上布置了（ ）（填草把子）。",
+          "answer": {
+            "value": "草把子"
+          },
+          "analysis": "草把子用来受箭。",
+          "difficulty": 2,
+          "knowledge_point": "《草船借箭》的情节",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "诸葛亮算准了三天后有大雾，这是借箭成功的重要条件。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "天时是重要条件。",
+          "difficulty": 3,
+          "knowledge_point": "《草船借箭》的情节",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "诸葛亮借箭成功的原因有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 与课文主旨不符。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "《草船借箭》的情节",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "知天时",
+            "懂人心",
+            "有谋划",
+            "靠运气"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说周瑜为什么想为难诸葛亮。",
+          "answer": {
+            "value": "示例：周瑜嫉妒诸葛亮的才干，觉得他将来会是东吴的隐患，所以让他十天造十万支箭，想借这个难题治他的罪。"
+          },
+          "analysis": "评分要点：动机 + 情节。",
+          "difficulty": 4,
+          "knowledge_point": "《草船借箭》的情节",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《景阳冈》中武松的主要性格是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "武松勇武豪爽。",
+          "difficulty": 2,
+          "knowledge_point": "《景阳冈》的人物形象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "勇武豪爽",
+            "胆小谨慎",
+            "沉默寡言",
+            "优柔寡断"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "课文写武松打虎，用了「闪、劈、打」等一连串（ ）（填动作）描写。",
+          "answer": {
+            "value": "动作"
+          },
+          "analysis": "打虎靠动作描写。",
+          "difficulty": 2,
+          "knowledge_point": "《景阳冈》的人物形象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "课文先写武松喝酒，为后文打虎做了铺垫。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "喝酒显示豪气。",
+          "difficulty": 3,
+          "knowledge_point": "《景阳冈》的人物形象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "表现武松勇武的描写有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓ 都是课文内容；D ✗ 与人物相反。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "《景阳冈》的人物形象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "连喝十八碗酒",
+            "不听劝阻上山",
+            "与虎搏斗",
+            "见到老虎就跑"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说课文为什么把打虎的过程写得那么详细。",
+          "answer": {
+            "value": "示例：详细写武松闪避、揪住、猛打的每个动作，能让人感到打虎的惊险，也显出武松的力气和胆量，人物形象更鲜明。"
+          },
+          "analysis": "评分要点：细节作用 + 人物。",
+          "difficulty": 4,
+          "knowledge_point": "《景阳冈》的人物形象",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《猴王出世》选自（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "该文出自《西游记》。",
+          "difficulty": 2,
+          "knowledge_point": "《猴王出世》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "《西游记》",
+            "《水浒传》",
+            "《三国演义》",
+            "《红楼梦》"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "石猴因敢于跳进水帘洞，被众猴拜为（ ）（填猴王）。",
+          "answer": {
+            "value": "猴王"
+          },
+          "analysis": "敢入水帘洞被拜为王。",
+          "difficulty": 2,
+          "knowledge_point": "《猴王出世》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "课文语言带有古代白话的特点。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "原文为古代白话。",
+          "difficulty": 3,
+          "knowledge_point": "《猴王出世》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "石猴的特点有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓ 都是石猴特点；D ✗ 与形象不符。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "《猴王出世》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "机敏",
+            "胆大",
+            "活泼",
+            "懒惰"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说石猴为什么能当上猴王。",
+          "answer": {
+            "value": "示例：众猴都不敢进水帘洞，石猴敢于跳进去又安然出来，还找到了安身的好地方，凭胆量和本事赢得了众猴的敬服。"
+          },
+          "analysis": "评分要点：情节 + 品质。",
+          "difficulty": 4,
+          "knowledge_point": "《猴王出世》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "读古典名著遇到不懂的词，最好的做法是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "结合上下文与注释理解。",
+          "difficulty": 2,
+          "knowledge_point": "阅读古典名著的方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "结合上下文猜意思或查注释",
+            "直接跳过整篇",
+            "随意改词",
+            "只看插图"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "读名著时可以先把人物关系理清，这样更容易读懂（ ）（填情节）。",
+          "answer": {
+            "value": "情节"
+          },
+          "analysis": "理清人物关系有助理解情节。",
+          "difficulty": 2,
+          "knowledge_point": "阅读古典名著的方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "古典名著中的一些词义与现代汉语不同。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "古今词义有差异。",
+          "difficulty": 3,
+          "knowledge_point": "阅读古典名著的方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "阅读古典名著的方法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 读目录不能读懂。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "阅读古典名著的方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "了解故事背景",
+            "借助注释",
+            "理清人物关系",
+            "只读目录"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说你打算怎样读一本古典名著。",
+          "answer": {
+            "value": "示例：我先看简介了解时代背景，再借助注释读原文，遇到人物多的时候画一张人物关系图，读完一章用自己的话讲讲主要情节。"
+          },
+          "analysis": "评分要点：方法具体 + 可执行。",
+          "difficulty": 4,
+          "knowledge_point": "阅读古典名著的方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第三单元",
+      "order_index": 3,
+      "summary": "汉字之美：了解汉字的起源与演变。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "汉字最早来源于（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "汉字由图画符号演变。",
+          "difficulty": 2,
+          "knowledge_point": "汉字的起源",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "图画和符号",
+            "外国文字",
+            "拼音字母",
+            "数字"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "传说中整理汉字的人是（ ）（填仓颉）。",
+          "answer": {
+            "value": "仓颉"
+          },
+          "analysis": "传说仓颉造字。",
+          "difficulty": 2,
+          "knowledge_point": "汉字的起源",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "甲骨文是我国已发现的最早的成熟文字。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "甲骨文是最早成熟文字。",
+          "difficulty": 3,
+          "knowledge_point": "汉字的起源",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "汉字起源的说法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓ 都是早期记事方式；D ✗ 拼音是后来借用。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "汉字的起源",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "结绳记事",
+            "图画符号",
+            "刻划记号",
+            "拼音转写"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说为什么说汉字是世界上最古老的文字之一。",
+          "answer": {
+            "value": "示例：甲骨文距今三千多年，汉字形体虽有变化但一脉相承，一直使用至今，是少有的没有中断的古老文字。"
+          },
+          "analysis": "评分要点：年代 + 延续性。",
+          "difficulty": 4,
+          "knowledge_point": "汉字的起源",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "汉字演变的顺序大致是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "这是大致演变顺序。",
+          "difficulty": 2,
+          "knowledge_point": "汉字的演变",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "甲骨文、金文、小篆、隶书、楷书",
+            "楷书、甲骨文、隶书、小篆",
+            "隶书、楷书、甲骨文、金文",
+            "小篆、甲骨文、楷书、隶书"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "秦始皇统一文字，把（ ）作为标准字体。",
+          "answer": {
+            "value": "小篆"
+          },
+          "analysis": "秦统一使用小篆。",
+          "difficulty": 2,
+          "knowledge_point": "汉字的演变",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "汉字演变的总趋势是由繁到简。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "总体趋于简化。",
+          "difficulty": 3,
+          "knowledge_point": "汉字的演变",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "属于汉字字体的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 不是汉字字体。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "汉字的演变",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "甲骨文",
+            "小篆",
+            "隶书",
+            "拉丁文"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说汉字演变对今天有什么意义。",
+          "answer": {
+            "value": "示例：了解演变能看懂古文字、读懂古书，也能明白今天字形为什么这么写，帮助我们更好地学习和书写汉字。"
+          },
+          "analysis": "评分要点：意义具体。",
+          "difficulty": 4,
+          "knowledge_point": "汉字的演变",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "「山」这个字用的是（ ）造字法。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "山像山峰形状，是象形。",
+          "difficulty": 2,
+          "knowledge_point": "汉字的造字方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "象形",
+            "形声",
+            "会意",
+            "指事"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「休」由「人」和「木」组成，表示人靠树休息，这是（ ）字。",
+          "answer": {
+            "value": "会意"
+          },
+          "analysis": "合两字表新义为会意。",
+          "difficulty": 2,
+          "knowledge_point": "汉字的造字方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "形声字由表示意义的形旁和表示读音的声旁组成。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "形旁表义声旁表音。",
+          "difficulty": 3,
+          "knowledge_point": "汉字的造字方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "属于造字方法的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 不是造字法。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "汉字的造字方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "象形",
+            "指事",
+            "会意",
+            "翻译"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "分析「清」字的构造。",
+          "answer": {
+            "value": "示例：「清」是形声字，三点水是形旁，表示与水有关；「青」是声旁，提示读音，所以它表示水纯净透明。"
+          },
+          "analysis": "评分要点：形旁声旁 + 意义。",
+          "difficulty": 4,
+          "knowledge_point": "汉字的造字方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "被称为「书圣」的书法家是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "王羲之被称书圣。",
+          "difficulty": 2,
+          "knowledge_point": "书法与汉字之美",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "王羲之",
+            "李白",
+            "杜甫",
+            "苏轼"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "写汉字要注意笔画的（ ）和结构比例。",
+          "answer": {
+            "value": "顺序"
+          },
+          "analysis": "笔顺与结构都重要。",
+          "difficulty": 2,
+          "knowledge_point": "书法与汉字之美",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "楷书、行书、草书各有不同的风格特点。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "字体风格各异。",
+          "difficulty": 3,
+          "knowledge_point": "书法与汉字之美",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "欣赏书法时可以关注（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 与艺术无关。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "书法与汉字之美",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "笔画",
+            "结构",
+            "整体布局",
+            "纸张价格"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说写好汉字要注意哪几点。",
+          "answer": {
+            "value": "示例：一是笔顺正确，二是横平竖直、笔画到位，三是注意字的结构比例和重心，写前先看清范字再落笔。"
+          },
+          "analysis": "评分要点：要点清楚 + 可操作。",
+          "difficulty": 4,
+          "knowledge_point": "书法与汉字之美",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第四单元",
+      "order_index": 4,
+      "summary": "爱国情怀：从诗文中体会家国之情。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "「黄沙百战穿金甲，不破楼兰终不还」表达将士（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "诗句写誓死报国决心。",
+          "difficulty": 2,
+          "knowledge_point": "《古诗三首》的家国之思",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "誓死保家的决心",
+            "思乡的愁苦",
+            "对战争的厌倦",
+            "对功名的追求"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「遗民泪尽胡尘里，南望王师又一年」写沦陷区百姓盼望（ ）（填收复失地）。",
+          "answer": {
+            "value": "收复失地"
+          },
+          "analysis": "诗句写盼王师收复。",
+          "difficulty": 2,
+          "knowledge_point": "《古诗三首》的家国之思",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "「死去元知万事空，但悲不见九州同」表达诗人对国土未统一的悲愤。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "诗句写未见统一的遗憾。",
+          "difficulty": 3,
+          "knowledge_point": "《古诗三首》的家国之思",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "三首古诗共同的情感有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓ 三首都含家国之情；D ✗ 与三首主题不符。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "《古诗三首》的家国之思",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "爱国",
+            "忧国",
+            "盼望国家统一",
+            "赞美田园"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说「不破楼兰终不还」中的将士为什么这样说。",
+          "answer": {
+            "value": "示例：他们身经百战、铠甲磨穿，仍然决心不打败敌人绝不回家，表现将士保家卫国、视死如归的坚定与豪迈。"
+          },
+          "analysis": "评分要点：诗句理解 + 精神。",
+          "difficulty": 4,
+          "knowledge_point": "《古诗三首》的家国之思",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "课文中「青山处处埋忠骨」表现的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "此句表现牺牲精神。",
+          "difficulty": 2,
+          "knowledge_point": "《青山处处埋忠骨》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "革命者的牺牲精神",
+            "对风景的赞美",
+            "对战争的喜爱",
+            "对家乡的思念"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "课文写毛泽东最终决定将儿子安葬在（ ）（填朝鲜）。",
+          "answer": {
+            "value": "朝鲜"
+          },
+          "analysis": "烈士安葬在朝鲜。",
+          "difficulty": 2,
+          "knowledge_point": "《青山处处埋忠骨》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "课文通过心理和动作描写表现人物的内心。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "细节描写表现内心。",
+          "difficulty": 3,
+          "knowledge_point": "《青山处处埋忠骨》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "课文表现的人物品质有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 与人物不符。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "《青山处处埋忠骨》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "疼爱子女",
+            "以国家为重",
+            "坚忍",
+            "冷漠无情"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说课文结尾「电文稿」上的批示为什么让人感动。",
+          "answer": {
+            "value": "示例：他既是一位失去儿子的父亲，又是国家的领导人，最终选择让孩子和牺牲的战士一起留在朝鲜，把个人的悲痛放在国家之后，令人动容。"
+          },
+          "analysis": "评分要点：身份矛盾 + 情感。",
+          "difficulty": 4,
+          "knowledge_point": "《青山处处埋忠骨》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《军神》中被称为「军神」的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "军神指刘伯承。",
+          "difficulty": 2,
+          "knowledge_point": "《军神》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "刘伯承",
+            "沃克医生",
+            "彭德怀",
+            "白求恩"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "刘伯承在手术中拒绝使用（ ）（填麻醉药）。",
+          "answer": {
+            "value": "麻醉药"
+          },
+          "analysis": "他拒绝麻醉坚持手术。",
+          "difficulty": 2,
+          "knowledge_point": "《军神》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "课文通过沃克医生的态度变化侧面表现刘伯承的坚强。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "侧面描写突出人物。",
+          "difficulty": 3,
+          "knowledge_point": "《军神》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "表现刘伯承意志坚强的细节有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓ 都是课文内容；D ✗ 与课文相反。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "《军神》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "拒绝麻醉",
+            "手术中数刀数",
+            "一声不吭",
+            "大声哭喊"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说沃克医生为什么称他为军神。",
+          "answer": {
+            "value": "示例：在没有麻醉的情况下他忍着剧痛一声不吭，还清楚地数出医生的刀数，这样的意志超出常人，让沃克医生由衷敬佩，称他为军神。"
+          },
+          "analysis": "评分要点：细节 + 敬佩原因。",
+          "difficulty": 4,
+          "knowledge_point": "《军神》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《清贫》的作者是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "《清贫》为方志敏所作。",
+          "difficulty": 2,
+          "knowledge_point": "《清贫》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "方志敏",
+            "鲁迅",
+            "巴金",
+            "老舍"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "课文中敌人搜身，只从他身上搜出一只时表和一支（ ）（填钢笔）。",
+          "answer": {
+            "value": "钢笔"
+          },
+          "analysis": "清贫可见一斑。",
+          "difficulty": 2,
+          "knowledge_point": "《清贫》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "课文中「清贫」指共产党员甘于简朴生活、坚守信仰。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "清贫是精神品格。",
+          "difficulty": 3,
+          "knowledge_point": "《清贫》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "课文表现方志敏的品质有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 与人物相反。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "《清贫》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "清廉",
+            "坚贞",
+            "乐观",
+            "贪婪"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说为什么说清贫是革命者能够战胜困难的力量。",
+          "answer": {
+            "value": "示例：因为不求私利、不贪财物，就不会被诱惑和威胁所动摇，心里只有信仰和人民，所以能在艰苦中坚持斗争。"
+          },
+          "analysis": "评分要点：逻辑清楚 + 品格。",
+          "difficulty": 4,
+          "knowledge_point": "《清贫》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第五单元",
+      "order_index": 5,
+      "summary": "人物描写：从细节中认识人物。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "《摔跤》主要运用（ ）描写表现人物。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "摔跤片段以动作描写为主。",
+          "difficulty": 2,
+          "knowledge_point": "《人物描写一组》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "动作",
+            "环境",
+            "议论",
+            "说明"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "《他像一棵挺脱的树》主要写人物的（ ）（填外貌）。",
+          "answer": {
+            "value": "外貌"
+          },
+          "analysis": "该片段写外貌。",
+          "difficulty": 2,
+          "knowledge_point": "《人物描写一组》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "《两茎灯草》通过细节写出严监生的吝啬。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "细节表现性格。",
+          "difficulty": 3,
+          "knowledge_point": "《人物描写一组》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "人物描写常见的方法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 姓名不能表现性格。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "《人物描写一组》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "外貌描写",
+            "动作描写",
+            "语言描写",
+            "只写姓名"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说《两茎灯草》中的细节怎样表现人物性格。",
+          "answer": {
+            "value": "示例：严监生临死还伸着两个指头不肯断气，直到家人挑掉一茎灯草才咽气，这个细节把他极端吝啬的性格写得入木三分。"
+          },
+          "analysis": "评分要点：细节 + 性格。",
+          "difficulty": 4,
+          "knowledge_point": "《人物描写一组》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《刷子李》中刷子李的绝活是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "他刷浆时身上不留白点。",
+          "difficulty": 2,
+          "knowledge_point": "《刷子李》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "刷浆时一滴不掉",
+            "写字很快",
+            "跑得很快",
+            "做饭好吃"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "课文通过曹小三的（ ）（填观察）来写刷子李的技艺。",
+          "answer": {
+            "value": "观察"
+          },
+          "analysis": "侧面描写借曹小三视角。",
+          "difficulty": 2,
+          "knowledge_point": "《刷子李》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "课文中「白点」的出现让情节有了波折。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "白点制造悬念。",
+          "difficulty": 3,
+          "knowledge_point": "《刷子李》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "课文表现刷子李技艺高超的写法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 无法表现技艺。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "《刷子李》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "正面写刷墙动作",
+            "侧面写曹小三的心理",
+            "用传说增强效果",
+            "只写他的姓名"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说课文为什么用曹小三的眼睛来看刷子李。",
+          "answer": {
+            "value": "示例：借徒弟的眼睛写师傅，读者跟着曹小三从怀疑到佩服，感受更真实，也避免了自己一味夸赞，写法更巧妙。"
+          },
+          "analysis": "评分要点：视角作用。",
+          "difficulty": 4,
+          "knowledge_point": "《刷子李》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "金字塔主要位于（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "金字塔在埃及。",
+          "difficulty": 2,
+          "knowledge_point": "《金字塔》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "埃及",
+            "印度",
+            "希腊",
+            "意大利"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "金字塔的形状是（ ）（填四棱锥）。",
+          "answer": {
+            "value": "四棱锥"
+          },
+          "analysis": "金字塔为四棱锥形。",
+          "difficulty": 2,
+          "knowledge_point": "《金字塔》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "金字塔的建造体现了古代劳动人民的智慧。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "体现古人智慧。",
+          "difficulty": 3,
+          "knowledge_point": "《金字塔》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "关于金字塔说法正确的有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 与史实不符。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "《金字塔》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "由巨石砌成",
+            "规模宏大",
+            "是古代王陵",
+            "用混凝土浇筑"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说金字塔为什么被称为世界奇迹。",
+          "answer": {
+            "value": "示例：石块巨大、数量众多，在没有现代机械的条件下运输和垒砌，误差还很小，工程规模和技术水平都令人惊叹。"
+          },
+          "analysis": "评分要点：工程规模 + 技术。",
+          "difficulty": 4,
+          "knowledge_point": "《金字塔》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "写人时最能表现人物特点的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "事例细节最有效。",
+          "difficulty": 2,
+          "knowledge_point": "写人的方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "典型事例和细节",
+            "罗列形容词",
+            "别人评价",
+            "外貌清单"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "写人时可以通过动作、语言、神态和（ ）表现人物。",
+          "answer": {
+            "value": "心理"
+          },
+          "analysis": "心理描写也重要。",
+          "difficulty": 2,
+          "knowledge_point": "写人的方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "写人时写出人物的变化能让人物更真实。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "变化使人物立体。",
+          "difficulty": 3,
+          "knowledge_point": "写人的方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "写人时应注意（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 堆砌反而失真。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "写人的方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "选真实的事例",
+            "细节具体",
+            "特点突出",
+            "把优点全部堆上去"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "用三句话写一位你熟悉的人，要写出他的特点。",
+          "answer": {
+            "value": "示例：我的爷爷每天清早扫院子，连落叶都捡干净。他说话慢，但答应的事从不落空。邻居都说找他帮忙最放心。"
+          },
+          "analysis": "评分要点：细节 + 特点。",
+          "difficulty": 4,
+          "knowledge_point": "写人的方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第六单元",
+      "order_index": 6,
+      "summary": "思维火花：在思辨中学会判断与表达。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "《自相矛盾》中楚人夸赞自己的盾和矛时（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "他的说法前后冲突。",
+          "difficulty": 2,
+          "knowledge_point": "《自相矛盾》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "前后说法互相冲突",
+            "说法完全正确",
+            "只说盾不说矛",
+            "不说话"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「吾盾之坚，物莫能陷也」意思是我的盾很坚固，没有东西能（ ）（填刺穿它）。",
+          "answer": {
+            "value": "刺穿它"
+          },
+          "analysis": "陷意为刺穿。",
+          "difficulty": 2,
+          "knowledge_point": "《自相矛盾》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "这则寓言告诉我们说话做事要实事求是。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "寓意是实事求是。",
+          "difficulty": 3,
+          "knowledge_point": "《自相矛盾》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "这则寓言给人的启示有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 与寓意相反。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "《自相矛盾》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "说话要前后一致",
+            "不能夸大其词",
+            "做事要实事求是",
+            "越夸张越好"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说为什么楚人无法回答「以子之矛陷子之盾」。",
+          "answer": {
+            "value": "示例：若说矛能刺穿盾，则盾不坚固；若说不能刺穿，则矛不利。无论怎么答都会推翻自己先前的话，所以他答不上来。"
+          },
+          "analysis": "评分要点：逻辑推演。",
+          "difficulty": 4,
+          "knowledge_point": "《自相矛盾》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "田忌赛马取胜的关键是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "调整顺序是取胜关键。",
+          "difficulty": 2,
+          "knowledge_point": "《田忌赛马》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "调整马的出场顺序",
+            "马跑得更快",
+            "换了更好的马",
+            "对手让赛"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "孙膑让田忌用下等马对齐王的（ ）（填上等马）。",
+          "answer": {
+            "value": "上等马"
+          },
+          "analysis": "以下对上，牺牲一局。",
+          "difficulty": 2,
+          "knowledge_point": "《田忌赛马》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "同样的条件，改变安排方式也可能得到不同结果。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "策略可以改变结果。",
+          "difficulty": 3,
+          "knowledge_point": "《田忌赛马》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "田忌赛马给我们的启示有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 案例正是以弱胜强。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "《田忌赛马》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "要善于动脑",
+            "合理安排能出奇制胜",
+            "了解对手很重要",
+            "实力差就放弃"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说孙膑为什么能以下等马对上等马还不怕输。",
+          "answer": {
+            "value": "示例：他算准三局两胜，牺牲必输的一局，用下等马对上等马；再以上等马对中等马、中等马对下等马，两局取胜，总体赢下比赛。"
+          },
+          "analysis": "评分要点：全局思维 + 逻辑。",
+          "difficulty": 4,
+          "knowledge_point": "《田忌赛马》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "孩子最终获救的关键是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "跳水是获救关键。",
+          "difficulty": 2,
+          "knowledge_point": "《跳水》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "船长命令他跳水",
+            "风停了",
+            "猴子把帽子还给他",
+            "水手爬上桅杆"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "船长在危急时刻用枪逼迫孩子（ ）（填跳水）。",
+          "answer": {
+            "value": "跳水"
+          },
+          "analysis": "船上开枪逼他跳水。",
+          "difficulty": 2,
+          "knowledge_point": "《跳水》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "船长的做法看似冒险，其实是基于对情况的准确判断。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "冒险中有判断。",
+          "difficulty": 3,
+          "knowledge_point": "《跳水》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "船长能救下孩子的原因有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 与课文主旨不符。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "《跳水》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "判断准确",
+            "果断",
+            "了解水手能及时救起",
+            "运气好"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说船长为什么选择开枪逼孩子跳水，而不是派人爬上去。",
+          "answer": {
+            "value": "示例：孩子在高处摇晃随时会摔下，派人爬上去来不及，跳水后水手能立刻救起，所以用枪逼他跳水是当时最快最可靠的办法。"
+          },
+          "analysis": "评分要点：比较方案 + 果断。",
+          "difficulty": 4,
+          "knowledge_point": "《跳水》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "表达自己的观点时最重要的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "观点需理由支撑。",
+          "difficulty": 2,
+          "knowledge_point": "思辨与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "说清理由",
+            "声音最大",
+            "人数最多",
+            "反复重复"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "和别人意见不同时，应先（ ）（填倾听）对方的理由。",
+          "answer": {
+            "value": "倾听"
+          },
+          "analysis": "先听再判断。",
+          "difficulty": 2,
+          "knowledge_point": "思辨与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "别人的意见与己不同，不一定就是错的。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "不同意见可能有理。",
+          "difficulty": 3,
+          "knowledge_point": "思辨与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "理性表达的做法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 不礼貌。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "思辨与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "说明理由",
+            "举出例子",
+            "尊重不同意见",
+            "打断别人"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "就「小学生该不该带手机上学」说说你的看法和理由。",
+          "answer": {
+            "value": "示例：我认为不带更好，因为上课容易分心，也容易互相攀比；如果确有联系需要，可以用电话手表，只保留通话功能。"
+          },
+          "analysis": "评分要点：观点 + 理由 + 具体办法。",
+          "difficulty": 4,
+          "knowledge_point": "思辨与表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第七单元",
+      "order_index": 7,
+      "summary": "异域风情：在写景中感受不同地域的美。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "威尼斯小艇的形状特点是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "小艇两头翘起。",
+          "difficulty": 2,
+          "knowledge_point": "《威尼斯的小艇》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "两头翘、又窄又深",
+            "又宽又平",
+            "圆形",
+            "方形"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "课文写船夫驾驶技术特别好，在急驶时还能（ ）（填拐弯）。",
+          "answer": {
+            "value": "拐弯"
+          },
+          "analysis": "船夫能灵活拐弯。",
+          "difficulty": 2,
+          "knowledge_point": "《威尼斯的小艇》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "课文写出小艇与威尼斯人的生活密切相关。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "小艇是主要交通工具。",
+          "difficulty": 3,
+          "knowledge_point": "《威尼斯的小艇》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "课文写到的内容有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 与课文无关。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "《威尼斯的小艇》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "小艇的样子",
+            "船夫的驾驶技术",
+            "小艇与人们生活的关系",
+            "火车时刻表"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说课文为什么先写小艇的样子再写船夫。",
+          "answer": {
+            "value": "示例：先写小艇独特的外形让人有直观印象，再写船夫高超的技术，才能说明小艇为什么能在窄河道里快速穿行，层次自然。"
+          },
+          "analysis": "评分要点：层次 + 逻辑。",
+          "difficulty": 4,
+          "knowledge_point": "《威尼斯的小艇》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《牧场之国》写的是（ ）的牧场。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文写荷兰牧场。",
+          "difficulty": 2,
+          "knowledge_point": "《牧场之国》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "荷兰",
+            "法国",
+            "瑞士",
+            "丹麦"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "课文中反复出现「这就是真正的（ ）」，表达赞美之情。",
+          "answer": {
+            "value": "荷兰"
+          },
+          "analysis": "反复句强化赞美。",
+          "difficulty": 2,
+          "knowledge_point": "《牧场之国》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "课文写出了牧场白天与夜晚不同的景象。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "日夜景象相对比。",
+          "difficulty": 3,
+          "knowledge_point": "《牧场之国》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "课文中描写的景物有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓ 都是荷兰牧场景物；D ✗ 与课文无关。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "《牧场之国》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "奶牛",
+            "运河",
+            "风车",
+            "沙漠"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说课文为什么反复用「这就是真正的荷兰」。",
+          "answer": {
+            "value": "示例：这句反复出现，像一次次赞叹，把读者带到不同的牧场场景里，层层加深对荷兰宁静美丽的印象，也强化了作者的喜爱。"
+          },
+          "analysis": "评分要点：反复作用。",
+          "difficulty": 4,
+          "knowledge_point": "《牧场之国》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《金字塔夕照》主要写的是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "课文写夕照景象。",
+          "difficulty": 2,
+          "knowledge_point": "《金字塔夕照》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "夕阳下金字塔的景象",
+            "金字塔的建造方法",
+            "埃及的历史",
+            "游人的行程"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "课文中金字塔在夕阳下呈现出（ ）（填金色）的光辉。",
+          "answer": {
+            "value": "金色"
+          },
+          "analysis": "夕照下呈金色。",
+          "difficulty": 2,
+          "knowledge_point": "《金字塔夕照》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "课文用色彩和光影写出金字塔的壮美。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "色彩光影是描写重点。",
+          "difficulty": 3,
+          "knowledge_point": "《金字塔夕照》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "课文中描写的对象有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓ 都是课文景物；D ✗ 与埃及无关。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "《金字塔夕照》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "金字塔",
+            "沙漠",
+            "夕阳",
+            "江南水乡"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说课文给你的画面感来自哪些描写。",
+          "answer": {
+            "value": "示例：写金字塔在夕阳下泛出金光，沙丘的轮廓一层层延伸，光影慢慢移动，这些色彩和光影的描写让我像亲眼看到那片沙漠。"
+          },
+          "analysis": "评分要点：举例 + 画面感。",
+          "difficulty": 4,
+          "knowledge_point": "《金字塔夕照》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "写景时要突出景物的（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "抓特点是关键。",
+          "difficulty": 2,
+          "knowledge_point": "写景的方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "独特之处",
+            "全部细节",
+            "所在地址",
+            "门票价格"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "写景时把静景与动景结合，画面会更（ ）（填生动）。",
+          "answer": {
+            "value": "生动"
+          },
+          "analysis": "动静结合更生动。",
+          "difficulty": 2,
+          "knowledge_point": "写景的方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "写景可以按空间顺序或时间顺序安排内容。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "两种顺序都常用。",
+          "difficulty": 3,
+          "knowledge_point": "写景的方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "写景的方法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 无法成文。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "写景的方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "抓特点",
+            "动静结合",
+            "融入感受",
+            "只列景点名单"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "写三句话描写你见过的傍晚景色。",
+          "answer": {
+            "value": "示例：太阳落到楼后，天边染成橘红色。广场上的灯一盏盏亮起来，孩子们还在追跑。风里有饭菜的香味。"
+          },
+          "analysis": "评分要点：特点 + 顺序 + 感受。",
+          "difficulty": 4,
+          "knowledge_point": "写景的方法",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "name": "第八单元",
+      "order_index": 8,
+      "summary": "幽默语言：在风趣的表达中体会智慧。",
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "《杨氏之子》中孩子的回答妙在（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "他借姓氏做文章。",
+          "difficulty": 2,
+          "knowledge_point": "《杨氏之子》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "用对方的话回敬",
+            "大声反驳",
+            "沉默不语",
+            "背诗作答"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "「未闻孔雀是夫子家禽」意思是没听说孔雀是您家的（ ）（填鸟）。",
+          "answer": {
+            "value": "鸟"
+          },
+          "analysis": "家禽指家里的鸟。",
+          "difficulty": 2,
+          "knowledge_point": "《杨氏之子》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "孩子的回答既有礼貌又巧妙。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "应答机智有礼。",
+          "difficulty": 3,
+          "knowledge_point": "《杨氏之子》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "这则故事表现孩子的特点有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 与人物不符。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "《杨氏之子》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "机智",
+            "有礼貌",
+            "反应快",
+            "蛮横"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说孩子的回答为什么被认为是妙答。",
+          "answer": {
+            "value": "示例：客人以「杨梅是君家果」开玩笑，孩子顺着同样的思路说没听说孔雀是您家的鸟，既不失礼又把话还了回去，思路一致，所以妙。"
+          },
+          "analysis": "评分要点：思路分析。",
+          "difficulty": 4,
+          "knowledge_point": "《杨氏之子》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "《手指》的作者是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "《手指》为丰子恺所作。",
+          "difficulty": 2,
+          "knowledge_point": "《手指》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "丰子恺",
+            "老舍",
+            "巴金",
+            "鲁迅"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "课文中把大拇指称为五指中的（ ）（填老大）。",
+          "answer": {
+            "value": "老大"
+          },
+          "analysis": "大拇指被称为老大。",
+          "difficulty": 2,
+          "knowledge_point": "《手指》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "课文说明五根手指各有长处、缺一不可。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "主旨是各有所长。",
+          "difficulty": 3,
+          "knowledge_point": "《手指》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "课文语言的特点有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 与课文风格相反。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "《手指》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "风趣",
+            "形象",
+            "善用比喻",
+            "严肃枯燥"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说课文借手指说明了什么道理。",
+          "answer": {
+            "value": "示例：五根手指姿态不同、用处不同，但配合起来才有力，说明人和人各有所长，只要团结协作就能发挥更大作用。"
+          },
+          "analysis": "评分要点：比喻 + 道理。",
+          "difficulty": 4,
+          "knowledge_point": "《手指》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "课文中「我」的发现被老师误解，是因为（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "说法被误解。",
+          "difficulty": 2,
+          "knowledge_point": "《童年的发现》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "说法被联想到别的意思",
+            "算错了",
+            "没说清楚",
+            "抄了别人的"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "课文中「我」因为一次（ ）（填笑）被老师误解而遭到惩罚。",
+          "answer": {
+            "value": "笑"
+          },
+          "analysis": "他笑出声被误解。",
+          "difficulty": 2,
+          "knowledge_point": "《童年的发现》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "课文用幽默的语气写童年的天真。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "语气幽默自嘲。",
+          "difficulty": 3,
+          "knowledge_point": "《童年的发现》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "课文表现童年的特点有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 与童年不符。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "《童年的发现》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "好奇",
+            "爱思考",
+            "天真",
+            "老成世故"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "说说课文中的幽默来自哪些地方。",
+          "answer": {
+            "value": "示例：作者写自己小时候认真琢磨「人为什么长着眉毛」，还一本正经地得出结论，结果被老师误解，这种天真的认真劲儿和对成人世界的调侃让人发笑。"
+          },
+          "analysis": "评分要点：举例 + 幽默来源。",
+          "difficulty": 4,
+          "knowledge_point": "《童年的发现》",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "choice",
+          "stem": "好的幽默应该是（ ）。",
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "幽默要得体。",
+          "difficulty": 2,
+          "knowledge_point": "幽默的表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "风趣而不伤人",
+            "拿别人缺点取笑",
+            "大声喊叫",
+            "贬低他人"
+          ]
+        },
+        {
+          "q_type": "fill",
+          "stem": "幽默常用夸张和（ ）（填自嘲）的手法。",
+          "answer": {
+            "value": "自嘲"
+          },
+          "analysis": "自嘲是常见幽默手法。",
+          "difficulty": 2,
+          "knowledge_point": "幽默的表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "judge",
+          "stem": "幽默的语言能让文章更有趣味。",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "幽默增添趣味。",
+          "difficulty": 3,
+          "knowledge_point": "幽默的表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "幽默的表达手法有（ ）。",
+          "answer": {
+            "value": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "analysis": "A ✓；B ✓；C ✓；D ✗ 不是幽默。所以选 A、B、C。",
+          "difficulty": 3,
+          "knowledge_point": "幽默的表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published",
+          "options": [
+            "夸张",
+            "对比",
+            "自嘲",
+            "辱骂别人"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "写一句风趣的话描述你今天早上赶时间的样子。",
+          "answer": {
+            "value": "示例：闹钟响第三遍我才从床上弹起来，刷牙时一只手刷牙一只手找袜子，出门时鞋带还没系好，活像被风推着跑。"
+          },
+          "analysis": "评分要点：风趣 + 不伤人。",
+          "difficulty": 4,
+          "knowledge_point": "幽默的表达",
+          "source_type": "original",
+          "source_name": "教研组自编",
+          "status": "published"
+        }
+      ]
+    }
+  ],
+  "_rerun": {
+    "generated_at": "2026-11-13T10:06:09+08:00",
+    "source": "docs/content-templates/_rerun_books.py + rerun_packs/*.py",
+    "review": "exports/review_20261110/daily_consolidated-评审_20261110.md §九-③",
+    "normalized": "难度 40/40/20 归一 + 主观题短答案补评分要点（2026-11-13 统一口径）",
+    "status": "pending_review（待评审，不在 daily_consolidated，不入库）"
+  }
+}

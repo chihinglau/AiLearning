@@ -1,0 +1,288 @@
+{
+  "exam_id": null,
+  "title": "9年级数学下册期中卷（自主题库生成）",
+  "subject": "math",
+  "grade": 9,
+  "exam_type": "midterm",
+  "blueprint_code": "g9_math_midterm",
+  "blueprint_name": "9年级数学期中模拟卷（自主题库生成）",
+  "total_score": 100,
+  "time_limit_min": 90,
+  "question_count": 22,
+  "actual_score_total": 100.0,
+  "score_matches": true,
+  "knowledge_point_count": 20,
+  "sections": [
+    {
+      "section_index": 0,
+      "section_name": "一、选择题",
+      "q_type": "choice",
+      "band": "easy",
+      "planned_count": 10,
+      "planned_score": 30.0,
+      "actual_count": 10,
+      "actual_score": 30.0,
+      "knowledge_points": [
+        "三角函数的实际应用",
+        "二次函数的三种形式",
+        "二次函数的图象与性质",
+        "圆的基本性质",
+        "数与运算·一次函数求值·按单元·变式二",
+        "数与运算·一次函数求值·按单元·变式四",
+        "数与运算·平面图形周长与面积·按单元·变式一",
+        "数与运算·平面图形周长与面积·按单元·变式二",
+        "特殊角的三角函数值",
+        "锐角三角函数的意义"
+      ],
+      "chapters": [
+        "第一章 直角三角形的边角关系",
+        "第三章 圆",
+        "第二章 二次函数"
+      ],
+      "questions": [
+        {
+          "question_id": 13471,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "圆的基本性质",
+          "chapter": "第三章 圆"
+        },
+        {
+          "question_id": 22171,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 1,
+          "knowledge_point": "数与运算·一次函数求值·按单元·变式四",
+          "chapter": "第二章 二次函数"
+        },
+        {
+          "question_id": 13436,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "特殊角的三角函数值",
+          "chapter": "第一章 直角三角形的边角关系"
+        },
+        {
+          "question_id": 13430,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "锐角三角函数的意义",
+          "chapter": "第一章 直角三角形的边角关系"
+        },
+        {
+          "question_id": 22190,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 1,
+          "knowledge_point": "数与运算·平面图形周长与面积·按单元·变式一",
+          "chapter": "第三章 圆"
+        },
+        {
+          "question_id": 13445,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "三角函数的实际应用",
+          "chapter": "第一章 直角三角形的边角关系"
+        },
+        {
+          "question_id": 13451,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "二次函数的图象与性质",
+          "chapter": "第二章 二次函数"
+        },
+        {
+          "question_id": 22169,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 1,
+          "knowledge_point": "数与运算·一次函数求值·按单元·变式二",
+          "chapter": "第二章 二次函数"
+        },
+        {
+          "question_id": 13455,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "二次函数的三种形式",
+          "chapter": "第二章 二次函数"
+        },
+        {
+          "question_id": 22168,
+          "score": 3.0,
+          "q_type": "choice",
+          "difficulty": 1,
+          "knowledge_point": "数与运算·平面图形周长与面积·按单元·变式二",
+          "chapter": "第三章 圆"
+        }
+      ]
+    },
+    {
+      "section_index": 1,
+      "section_name": "二、填空题",
+      "q_type": "fill",
+      "band": "medium",
+      "planned_count": 6,
+      "planned_score": 18.0,
+      "actual_count": 6,
+      "actual_score": 18.0,
+      "knowledge_points": [
+        "数与运算·一次函数求值·按单元·变式一",
+        "数与运算·一次函数求值·按单元·变式三",
+        "数与运算·平面图形周长与面积·按单元·变式三",
+        "数与运算·平面图形周长与面积·按单元·变式四"
+      ],
+      "chapters": [
+        "第一章 直角三角形的边角关系",
+        "第三章 圆",
+        "第二章 二次函数"
+      ],
+      "questions": [
+        {
+          "question_id": 19641,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·平面图形周长与面积·按单元·变式三",
+          "chapter": "第三章 圆"
+        },
+        {
+          "question_id": 19642,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·平面图形周长与面积·按单元·变式四",
+          "chapter": "第三章 圆"
+        },
+        {
+          "question_id": 19636,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·一次函数求值·按单元·变式三",
+          "chapter": "第二章 二次函数"
+        },
+        {
+          "question_id": 19634,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·一次函数求值·按单元·变式一",
+          "chapter": "第二章 二次函数"
+        },
+        {
+          "question_id": 18064,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "",
+          "chapter": "第一章 直角三角形的边角关系"
+        },
+        {
+          "question_id": 18063,
+          "score": 3.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "",
+          "chapter": "第一章 直角三角形的边角关系"
+        }
+      ]
+    },
+    {
+      "section_index": 2,
+      "section_name": "三、计算与证明",
+      "q_type": "answer",
+      "band": "medium",
+      "planned_count": 4,
+      "planned_score": 32.0,
+      "actual_count": 4,
+      "actual_score": 32.0,
+      "knowledge_points": [
+        "二次函数与一元二次方程",
+        "二次函数的应用与最值",
+        "切线的性质与判定",
+        "圆周角定理"
+      ],
+      "chapters": [
+        "第三章 圆",
+        "第二章 二次函数"
+      ],
+      "questions": [
+        {
+          "question_id": 13478,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "圆周角定理",
+          "chapter": "第三章 圆"
+        },
+        {
+          "question_id": 13468,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "二次函数的应用与最值",
+          "chapter": "第二章 二次函数"
+        },
+        {
+          "question_id": 13483,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "切线的性质与判定",
+          "chapter": "第三章 圆"
+        },
+        {
+          "question_id": 13463,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "二次函数与一元二次方程",
+          "chapter": "第二章 二次函数"
+        }
+      ]
+    },
+    {
+      "section_index": 3,
+      "section_name": "四、综合应用",
+      "q_type": "answer",
+      "band": "hard",
+      "planned_count": 2,
+      "planned_score": 20.0,
+      "actual_count": 2,
+      "actual_score": 20.0,
+      "knowledge_points": [
+        "圆与三角形、正多边形",
+        "解直角三角形"
+      ],
+      "chapters": [
+        "第一章 直角三角形的边角关系",
+        "第三章 圆"
+      ],
+      "questions": [
+        {
+          "question_id": 13488,
+          "score": 10.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "圆与三角形、正多边形",
+          "chapter": "第三章 圆"
+        },
+        {
+          "question_id": 13443,
+          "score": 10.0,
+          "q_type": "answer",
+          "difficulty": 4,
+          "knowledge_point": "解直角三角形",
+          "chapter": "第一章 直角三角形的边角关系"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-11-17T15:45:28.038019+00:00"
+}

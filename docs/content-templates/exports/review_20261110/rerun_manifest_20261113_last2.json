@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "stamp": "20261113",
+  "out_dir": "docs/content-templates/daily_rerun",
+  "status": "pending_review（入库待评审后决策）",
+  "packs": [
+    {
+      "pack": "physics_g8_first",
+      "book": "physics/g8",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\physics\\g8\\physics_g8_first_20261113_book.json",
+      "stats": {
+        "chapters": 6,
+        "points": 24,
+        "questions": 120
+      },
+      "errors": []
+    },
+    {
+      "pack": "politics_g9_second",
+      "book": "politics/g9",
+      "status": "written",
+      "path": "D:\\ai\\prj\\trae\\HuaWei\\AiLearning\\docs\\content-templates\\daily_rerun\\politics\\g9\\politics_g9_second_20261113_book.json",
+      "stats": {
+        "chapters": 3,
+        "points": 12,
+        "questions": 60
+      },
+      "errors": []
+    }
+  ]
+}

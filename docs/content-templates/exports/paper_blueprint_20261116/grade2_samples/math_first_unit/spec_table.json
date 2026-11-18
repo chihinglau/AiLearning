@@ -1,0 +1,179 @@
+{
+  "exam_id": null,
+  "title": "2年级数学上册单元卷（自主题库生成）",
+  "subject": "math",
+  "grade": 2,
+  "exam_type": "unit",
+  "blueprint_code": "g2_math_unit",
+  "blueprint_name": "2年级数学单元测试卷（自主题库生成）",
+  "total_score": 60,
+  "time_limit_min": 40,
+  "question_count": 12,
+  "actual_score_total": 60.0,
+  "score_matches": true,
+  "knowledge_point_count": 8,
+  "sections": [
+    {
+      "section_index": 0,
+      "section_name": "一、选择题",
+      "q_type": "choice",
+      "band": "easy",
+      "planned_count": 4,
+      "planned_score": 16.0,
+      "actual_count": 4,
+      "actual_score": 16.0,
+      "knowledge_points": [
+        "100以内加减法（要点）",
+        "两位数加两位数的进位",
+        "求比一个数多几或少几",
+        "连加与加减混合运算"
+      ],
+      "chapters": [
+        "100以内加减法",
+        "第一单元 100以内数加与减（二）"
+      ],
+      "questions": [
+        {
+          "question_id": 3159,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "连加与加减混合运算",
+          "chapter": "第一单元 100以内数加与减（二）"
+        },
+        {
+          "question_id": 15226,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "100以内加减法（要点）",
+          "chapter": "100以内加减法"
+        },
+        {
+          "question_id": 3153,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "两位数加两位数的进位",
+          "chapter": "第一单元 100以内数加与减（二）"
+        },
+        {
+          "question_id": 12147,
+          "score": 4.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "求比一个数多几或少几",
+          "chapter": "第一单元 100以内数加与减（二）"
+        }
+      ]
+    },
+    {
+      "section_index": 1,
+      "section_name": "二、填空题",
+      "q_type": "fill",
+      "band": "medium",
+      "planned_count": 5,
+      "planned_score": 20.0,
+      "actual_count": 5,
+      "actual_score": 20.0,
+      "knowledge_points": [
+        "两位数减两位数的退位",
+        "数与运算·整数加减运算·按单元·变式一",
+        "数与运算·整数加减运算·按单元·变式三",
+        "数与运算·整数加减运算·按单元·变式二"
+      ],
+      "chapters": [
+        "100以内加减法",
+        "第一单元 100以内数加与减（二）"
+      ],
+      "questions": [
+        {
+          "question_id": 19222,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·整数加减运算·按单元·变式二",
+          "chapter": "第一单元 100以内数加与减（二）"
+        },
+        {
+          "question_id": 19225,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·整数加减运算·按单元·变式一",
+          "chapter": "100以内加减法"
+        },
+        {
+          "question_id": 3155,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "两位数减两位数的退位",
+          "chapter": "第一单元 100以内数加与减（二）"
+        },
+        {
+          "question_id": 19227,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·整数加减运算·按单元·变式三",
+          "chapter": "100以内加减法"
+        },
+        {
+          "question_id": 19226,
+          "score": 4.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·整数加减运算·按单元·变式二",
+          "chapter": "100以内加减法"
+        }
+      ]
+    },
+    {
+      "section_index": 2,
+      "section_name": "三、计算与解答",
+      "q_type": "answer",
+      "band": "hard",
+      "planned_count": 3,
+      "planned_score": 24.0,
+      "actual_count": 3,
+      "actual_score": 24.0,
+      "knowledge_points": [
+        "数与运算·整数加减运算·按单元·变式一",
+        "数与运算·整数加减运算·按单元·变式三",
+        "连加与加减混合运算"
+      ],
+      "chapters": [
+        "100以内加减法",
+        "第一单元 100以内数加与减（二）"
+      ],
+      "questions": [
+        {
+          "question_id": 19230,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·整数加减运算·按单元·变式三",
+          "chapter": "100以内加减法"
+        },
+        {
+          "question_id": 19228,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 3,
+          "knowledge_point": "数与运算·整数加减运算·按单元·变式一",
+          "chapter": "100以内加减法"
+        },
+        {
+          "question_id": 3162,
+          "score": 8.0,
+          "q_type": "answer",
+          "difficulty": 3,
+          "knowledge_point": "连加与加减混合运算",
+          "chapter": "第一单元 100以内数加与减（二）"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-11-17T15:45:19.509855+00:00"
+}

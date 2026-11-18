@@ -1,0 +1,344 @@
+{
+  "exam_id": null,
+  "title": "9年级英语下册单元卷（自主题库生成）",
+  "subject": "english",
+  "grade": 9,
+  "exam_type": "unit",
+  "blueprint_code": "g9_english_unit",
+  "blueprint_name": "9年级英语单元测试卷（自主题库生成）",
+  "total_score": 60,
+  "time_limit_min": 40,
+  "question_count": 28,
+  "actual_score_total": 60.0,
+  "score_matches": true,
+  "knowledge_point_count": 23,
+  "sections": [
+    {
+      "section_index": 0,
+      "section_name": "一、听力",
+      "q_type": "listening",
+      "band": "easy",
+      "planned_count": 8,
+      "planned_score": 8.0,
+      "actual_count": 8,
+      "actual_score": 8.0,
+      "knowledge_points": [
+        "U1 体育精神",
+        "U1 描述比赛过程",
+        "U1 谈论运动的好处",
+        "U2 安排时间",
+        "U2 生活平衡词汇",
+        "U2 给出建议",
+        "U3 写环保倡议",
+        "U3 提出环保行动"
+      ],
+      "chapters": [
+        "Unit 1 Sport and sportsmanship",
+        "Unit 2 Finding balance in life",
+        "Unit 3 Protecting the environment"
+      ],
+      "questions": [
+        {
+          "question_id": 17786,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "U3 写环保倡议",
+          "chapter": "Unit 3 Protecting the environment"
+        },
+        {
+          "question_id": 17762,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "U1 谈论运动的好处",
+          "chapter": "Unit 1 Sport and sportsmanship"
+        },
+        {
+          "question_id": 17773,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "U2 生活平衡词汇",
+          "chapter": "Unit 2 Finding balance in life"
+        },
+        {
+          "question_id": 17784,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 1,
+          "knowledge_point": "U3 提出环保行动",
+          "chapter": "Unit 3 Protecting the environment"
+        },
+        {
+          "question_id": 17761,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "U1 体育精神",
+          "chapter": "Unit 1 Sport and sportsmanship"
+        },
+        {
+          "question_id": 17760,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "U1 描述比赛过程",
+          "chapter": "Unit 1 Sport and sportsmanship"
+        },
+        {
+          "question_id": 17771,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "U2 给出建议",
+          "chapter": "Unit 2 Finding balance in life"
+        },
+        {
+          "question_id": 17772,
+          "score": 1.0,
+          "q_type": "listening",
+          "difficulty": 2,
+          "knowledge_point": "U2 安排时间",
+          "chapter": "Unit 2 Finding balance in life"
+        }
+      ]
+    },
+    {
+      "section_index": 1,
+      "section_name": "二、单项选择",
+      "q_type": "choice",
+      "band": "easy",
+      "planned_count": 8,
+      "planned_score": 16.0,
+      "actual_count": 8,
+      "actual_score": 16.0,
+      "knowledge_points": [
+        "英语·基础语法单项选择·按单元·变式一",
+        "英语·基础语法单项选择·按单元·变式三",
+        "英语·基础语法单项选择·按单元·变式二",
+        "英语·基础语法单项选择·按单元·变式四",
+        "英语·短文阅读理解·按单元·变式一",
+        "英语·短文阅读理解·按单元·变式三",
+        "英语·短文阅读理解·按单元·变式二",
+        "英语·短文阅读理解·按单元·变式四"
+      ],
+      "chapters": [
+        "Unit 1 Sport and sportsmanship",
+        "Unit 2 Finding balance in life",
+        "Unit 3 Protecting the environment"
+      ],
+      "questions": [
+        {
+          "question_id": 20893,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式一",
+          "chapter": "Unit 1 Sport and sportsmanship"
+        },
+        {
+          "question_id": 20823,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "英语·基础语法单项选择·按单元·变式二",
+          "chapter": "Unit 3 Protecting the environment"
+        },
+        {
+          "question_id": 20819,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "英语·基础语法单项选择·按单元·变式四",
+          "chapter": "Unit 2 Finding balance in life"
+        },
+        {
+          "question_id": 20896,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式四",
+          "chapter": "Unit 1 Sport and sportsmanship"
+        },
+        {
+          "question_id": 20810,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "英语·基础语法单项选择·按单元·变式一",
+          "chapter": "Unit 1 Sport and sportsmanship"
+        },
+        {
+          "question_id": 20894,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式二",
+          "chapter": "Unit 1 Sport and sportsmanship"
+        },
+        {
+          "question_id": 20818,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "英语·基础语法单项选择·按单元·变式三",
+          "chapter": "Unit 2 Finding balance in life"
+        },
+        {
+          "question_id": 20895,
+          "score": 2.0,
+          "q_type": "choice",
+          "difficulty": 3,
+          "knowledge_point": "英语·短文阅读理解·按单元·变式三",
+          "chapter": "Unit 1 Sport and sportsmanship"
+        }
+      ]
+    },
+    {
+      "section_index": 2,
+      "section_name": "三、词汇填空",
+      "q_type": "fill",
+      "band": "medium",
+      "planned_count": 8,
+      "planned_score": 16.0,
+      "actual_count": 8,
+      "actual_score": 16.0,
+      "knowledge_points": [
+        "U1 体育相关词汇",
+        "U1 描述比赛过程",
+        "U2 生活平衡词汇",
+        "U3 说明原因与结果",
+        "英语·词汇填空（中英对应）·按单元·变式三",
+        "英语·词汇填空（中英对应）·按单元·变式二",
+        "英语·词汇填空（中英对应）·按单元·变式四"
+      ],
+      "chapters": [
+        "Unit 1 Sport and sportsmanship",
+        "Unit 2 Finding balance in life",
+        "Unit 3 Protecting the environment"
+      ],
+      "questions": [
+        {
+          "question_id": 22154,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式四",
+          "chapter": "Unit 3 Protecting the environment"
+        },
+        {
+          "question_id": 22153,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式三",
+          "chapter": "Unit 3 Protecting the environment"
+        },
+        {
+          "question_id": 17763,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "U1 体育相关词汇",
+          "chapter": "Unit 1 Sport and sportsmanship"
+        },
+        {
+          "question_id": 10937,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "U3 说明原因与结果",
+          "chapter": "Unit 3 Protecting the environment"
+        },
+        {
+          "question_id": 20821,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式二",
+          "chapter": "Unit 2 Finding balance in life"
+        },
+        {
+          "question_id": 17764,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "U1 描述比赛过程",
+          "chapter": "Unit 1 Sport and sportsmanship"
+        },
+        {
+          "question_id": 17777,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 3,
+          "knowledge_point": "U2 生活平衡词汇",
+          "chapter": "Unit 2 Finding balance in life"
+        },
+        {
+          "question_id": 22152,
+          "score": 2.0,
+          "q_type": "fill",
+          "difficulty": 2,
+          "knowledge_point": "英语·词汇填空（中英对应）·按单元·变式四",
+          "chapter": "Unit 2 Finding balance in life"
+        }
+      ]
+    },
+    {
+      "section_index": 3,
+      "section_name": "四、阅读理解",
+      "q_type": "choice",
+      "band": "hard",
+      "planned_count": 4,
+      "planned_score": 20.0,
+      "actual_count": 4,
+      "actual_score": 20.0,
+      "knowledge_points": [
+        "U2 安排时间",
+        "U2 表达压力与感受",
+        "U3 写环保倡议",
+        "U3 环境问题词汇"
+      ],
+      "chapters": [
+        "Unit 2 Finding balance in life",
+        "Unit 3 Protecting the environment"
+      ],
+      "questions": [
+        {
+          "question_id": 10911,
+          "score": 5.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "U2 表达压力与感受",
+          "chapter": "Unit 2 Finding balance in life"
+        },
+        {
+          "question_id": 10926,
+          "score": 5.0,
+          "q_type": "choice",
+          "difficulty": 2,
+          "knowledge_point": "U3 环境问题词汇",
+          "chapter": "Unit 3 Protecting the environment"
+        },
+        {
+          "question_id": 17780,
+          "score": 5.0,
+          "q_type": "choice",
+          "difficulty": 5,
+          "knowledge_point": "U2 安排时间",
+          "chapter": "Unit 2 Finding balance in life"
+        },
+        {
+          "question_id": 17794,
+          "score": 5.0,
+          "q_type": "choice",
+          "difficulty": 5,
+          "knowledge_point": "U3 写环保倡议",
+          "chapter": "Unit 3 Protecting the environment"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-11-17T15:45:28.155999+00:00"
+}
