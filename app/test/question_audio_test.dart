@@ -186,4 +186,70 @@ void main() {
     expect(QuestionAudioKind.listening.wire, 'listening');
     expect(QuestionAudioKind.listening.fileSuffix, '_listen');
   });
+
+  group('ETag 条件校验', () {
+    test('首次下载落 ETag，再校验命中 304 时复用本地文件', () async {
+      final seenEtag = <String?>[];
+      final cache = QuestionAudioCache(
+        fetch: (id) async => throw StateError('不应走普通下载'),
+        directory: tempDir,
+        conditionalFetch: (id, {ifNoneMatch}) async {
+          seenEtag.add(ifNoneMatch);
+          if (ifNoneMatch == null) {
+            return ApiBinary(bytes: Uint8List.fromList([1, 1, 1]), etag: '"v1"');
+          }
+          return ApiBinary(
+            bytes: Uint8List(0),
+            etag: ifNoneMatch,
+            notModified: true,
+          );
+        },
+      );
+
+      final first = await cache.ensure(7, revalidate: true);
+      expect(first, isNotNull);
+      expect(await first!.length(), 3);
+      expect(await cache.etagFor(7).readAsString(), '"v1"');
+
+      final again = await cache.ensure(7, revalidate: true);
+      expect(again, isNotNull);
+      expect(await again!.length(), 3);
+      expect(seenEtag.length, 2);
+      expect(seenEtag.last, '"v1"');
+    });
+
+    test('服务端 ETag 变化时重下并覆盖本地音频', () async {
+      final cache = QuestionAudioCache(
+        fetch: (id) async => throw StateError('不应走普通下载'),
+        directory: tempDir,
+        conditionalFetch: (id, {ifNoneMatch}) async {
+          if (ifNoneMatch == null) {
+            return ApiBinary(bytes: Uint8List.fromList([1, 1]), etag: '"old"');
+          }
+          if (ifNoneMatch == '"old"') {
+            return ApiBinary(bytes: Uint8List.fromList([2, 2, 2, 2]), etag: '"new"');
+          }
+          return ApiBinary(bytes: Uint8List(0), etag: ifNoneMatch, notModified: true);
+        },
+      );
+
+      await cache.ensure(7, revalidate: true);
+      final updated = await cache.ensure(7, revalidate: true);
+      expect(await updated!.length(), 4);
+      expect(await cache.etagFor(7).readAsString(), '"new"');
+    });
+
+    test('条件请求失败但本地有文件时仍可播放', () async {
+      final cache = QuestionAudioCache(
+        fetch: (id) async => Uint8List.fromList([5, 5, 5]),
+        directory: tempDir,
+        conditionalFetch: (id, {ifNoneMatch}) async =>
+            throw const ApiException('超时', statusCode: 504),
+      );
+
+      final file = await cache.ensure(7, revalidate: true);
+      expect(file, isNotNull);
+      expect(await file!.length(), 3);
+    });
+  });
 }

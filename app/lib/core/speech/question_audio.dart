@@ -33,6 +33,12 @@ enum QuestionAudioKind {
 
 typedef QuestionAudioFetcher = Future<Uint8List> Function(int questionId);
 
+/// 条件请求通道：带 `If-None-Match` 取音频，命中（304）时 [ApiBinary.bytes] 为空。
+typedef ConditionalAudioFetcher = Future<ApiBinary> Function(
+  int questionId, {
+  String? ifNoneMatch,
+});
+
 /// 单题音频文件缓存：命中直接返回；未命中下载落盘；超限按最后访问时间淘汰。
 class QuestionAudioCache {
   QuestionAudioCache({
@@ -40,32 +46,106 @@ class QuestionAudioCache {
     required Directory directory,
     int maxBytes = questionAudioCacheBytes,
     this.kind = QuestionAudioKind.reading,
+    ConditionalAudioFetcher? conditionalFetch,
   })  : _directory = directory,
-        _maxBytes = maxBytes;
+        _maxBytes = maxBytes,
+        _conditionalFetch = conditionalFetch;
 
   final QuestionAudioFetcher fetch;
   final Directory _directory;
   final int _maxBytes;
   final QuestionAudioKind kind;
 
+  /// 有该通道时，首次（或显式要求）播放会先做 ETag 条件校验：
+  /// 服务端重合成过（ETag 变了）就重下，没变（304）就复用本地文件。
+  final ConditionalAudioFetcher? _conditionalFetch;
+
   Directory get directory => _directory;
 
   File fileFor(int questionId) =>
       File('${_directory.path}/q_$questionId${kind.fileSuffix}.opus');
 
+  /// ETag 旁挂文件：与音频同名加 `.etag` 后缀，避免改音频文件名。
+  File etagFor(int questionId) =>
+      File('${_directory.path}/q_$questionId${kind.fileSuffix}.etag');
+
+  Future<String?> _readEtag(int questionId) async {
+    try {
+      final file = etagFor(questionId);
+      if (!await file.exists()) return null;
+      final text = (await file.readAsString()).trim();
+      return text.isEmpty ? null : text;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  Future<void> _writeEtag(int questionId, String? etag) async {
+    try {
+      final file = etagFor(questionId);
+      if (etag == null || etag.isEmpty) {
+        if (await file.exists()) await file.delete();
+        return;
+      }
+      await file.parent.create(recursive: true);
+      await file.writeAsString(etag, flush: true);
+    } catch (_) {
+      // ETag 落盘失败只影响下次是否重下，不影响播放
+    }
+  }
+
   /// 返回可播放文件；下载失败（404 未就绪 / 429 / 离线）返回 null，由调用方回退系统 TTS。
-  Future<File?> ensure(int questionId) async {
+  ///
+  /// [revalidate] 为 true 且有条件请求通道时，即使本地已有文件也先问服务端一次：
+  /// 这样可以发现「服务端已重合成」的情况，不必只靠资产版本号人工递增。
+  Future<File?> ensure(
+    int questionId, {
+    bool revalidate = false,
+  }) async {
     final file = fileFor(questionId);
+    var hasLocal = false;
     try {
       if (await file.exists()) {
         if (await file.length() > 0) {
-          await file.setLastModified(DateTime.now());
-          return file;
+          hasLocal = true;
+        } else {
+          await file.delete();
         }
-        await file.delete();
       }
     } catch (_) {
       // 缓存读失败按未命中处理
+    }
+
+    final conditional = _conditionalFetch;
+    if (conditional != null && (revalidate || !hasLocal)) {
+      final etag = hasLocal ? await _readEtag(questionId) : null;
+      try {
+        final binary = await conditional(questionId, ifNoneMatch: etag);
+        if (binary.notModified) {
+          if (hasLocal) {
+            await file.setLastModified(DateTime.now());
+            return file;
+          }
+          // 本地没文件却回 304：说明 ETag 与本地状态错位，落到下面的普通下载
+        } else if (binary.bytes.isNotEmpty) {
+          await file.parent.create(recursive: true);
+          await file.writeAsBytes(binary.bytes, flush: true);
+          await _writeEtag(questionId, binary.etag);
+          await trim();
+          return file;
+        }
+      } catch (_) {
+        // 网络异常/限流：本地有文件就继续用，没有则退回普通下载通道
+        if (hasLocal) {
+          await file.setLastModified(DateTime.now());
+          return file;
+        }
+      }
+    }
+
+    if (hasLocal) {
+      await file.setLastModified(DateTime.now());
+      return file;
     }
 
     final Uint8List bytes;
@@ -206,6 +286,7 @@ class QuestionAudioService {
     required ApiClient api,
     QuestionAudioPlayer? player,
     QuestionAudioFetcher? fetcher,
+    ConditionalAudioFetcher? conditionalFetcher,
     Future<Directory> Function()? directoryResolver,
     int maxBytes = questionAudioCacheBytes,
     this.kind = QuestionAudioKind.reading,
@@ -214,17 +295,26 @@ class QuestionAudioService {
         _ownsPlayer = player == null,
         _fetcher = fetcher,
         _directoryResolver = directoryResolver ?? _defaultDirectory,
-        _maxBytes = maxBytes;
+        _maxBytes = maxBytes {
+    // 注入了 fetcher 说明走替身（单测/离线包），此时不再发真实条件请求，
+    // 否则单测会去打真实网络；生产路径不注入 fetcher，默认接真实通道。
+    _conditionalFetcher = conditionalFetcher ?? (fetcher == null ? _conditionalDownload : null);
+  }
 
   final ApiClient _api;
   final QuestionAudioPlayer _player;
   final bool _ownsPlayer;
   final QuestionAudioFetcher? _fetcher;
+  late final ConditionalAudioFetcher? _conditionalFetcher;
   final Future<Directory> Function() _directoryResolver;
   final int _maxBytes;
 
   /// 该实例负责的音频类型；听力材料请用 `listeningAudioServiceProvider`。
   final QuestionAudioKind kind;
+
+  /// 本次启动内已经做过 ETag 条件校验的题目。
+  /// 一次校验之后同一题再播放就不必再问服务端，避免连点喇叭打满限流。
+  final Set<int> _revalidated = <int>{};
 
   QuestionAudioCache? _cache;
 
@@ -236,9 +326,26 @@ class QuestionAudioService {
   Future<QuestionAudioCache> _cacheInstance() async {
     return _cache ??= QuestionAudioCache(
       fetch: _fetcher ?? _download,
+      conditionalFetch: _conditionalFetcher,
       directory: await _directoryResolver(),
       maxBytes: _maxBytes,
       kind: kind,
+    );
+  }
+
+  Future<ApiBinary> _conditionalDownload(
+    int questionId, {
+    String? ifNoneMatch,
+  }) {
+    // 注意：这里刻意不传 attempt_id。试卷听力额度由 takeListeningPlay 单独记账，
+    // 音频接口若也带 attempt_id 会重复扣额度。
+    return _api.getBytes(
+      '/api/learn/questions/$questionId/audio',
+      query: {
+        'speed': questionAudioGeneratedSpeed,
+        if (kind != QuestionAudioKind.reading) 'kind': kind.wire,
+      },
+      ifNoneMatch: ifNoneMatch,
     );
   }
 
@@ -258,7 +365,10 @@ class QuestionAudioService {
   Future<bool> play(int questionId, {double speed = 1.0}) async {
     try {
       final cache = await _cacheInstance();
-      final file = await cache.ensure(questionId);
+      // 本次启动内该题第一次播放时做一次 ETag 条件校验：服务端重合成过就换新音频，
+      // 没变则 304 复用本地文件。之后的重复播放直接命中缓存，不再打扰服务端。
+      final firstThisRun = _revalidated.add(questionId);
+      final file = await cache.ensure(questionId, revalidate: firstThisRun);
       if (file == null) return false;
       await _player.play(file, speed: speed);
       return true;
