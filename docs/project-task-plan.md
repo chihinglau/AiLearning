@@ -1750,3 +1750,91 @@ v2.28 之后补做 v2.27 遗留的三项，并在 EBG-AN00（1080×2340，Androi
 | 4–9 年级英语读题预生成音频 | 未表态 | 当前系统 TTS 兜底 |
 | 旧 27 张离线英语卷 | 保留 | 仅置 `status='offline'`，未物理删除 |
 | `learn.py` 诊断 logger | 保留 | `logger.info`（`ailearning.practice`），dev 期用于核对 preview 参数 |
+
+> 上表为 6.29 阶段快照；听力 P1、BLOCK 数量等已在 6.29.7–6.29.11 刷新，最新状态见 6.29.12。
+
+### 6.29.7 听力题同卷重复：改为按录音文本去重
+
+`exam_paper.py` 此前为修「同卷听力题干重复」，给 `listening` 开了 `NO_STEM_DEDUPE_TYPES` 白名单，副作用是**同一段录音被排进同一张卷两次**——题干不同但 `script` 相同的听力题，学生听到的是同一段材料（如 exam 112 的 `[听力]city`）。
+
+修正为「按录音文本去重」：
+
+| 位置 | 改动 |
+|---|---|
+| `exam_paper.py` | 新增 `script_fingerprint(question)`：依次取 `content.script` / `transcript` / `audio_text`，按 `_STEM_NOISE` 归一化后小写 |
+| `_pick()` | 签名加 `seen_scripts`，`allow()` 与 `take()` 内按 script 判重、登记 |
+| 主循环 | 新增 `seen_scripts: set[str]`；`section_scripts = seen_scripts if q_type in NO_STEM_DEDUPE_TYPES else None`；4 处 `_pick` 全部传参 |
+
+验证：`dry_run_paper_matrix.py` **81/81 可出卷、0 拒绝**。
+
+### 6.29.8 重生成产生的「重复卷对」清理
+
+`gen_walkthrough_papers.py --apply` 不是更新旧卷，而是**新建** id，同一 (grade, subject, exam_type) 会出现两张 published。清理结果：
+
+| 保留 | 置 offline | 组合 |
+|---|---|---|
+| 128 | 112, 111, 110 | g6 英语 / 语文 / 数学 期末 |
+| 127 | 126 | — |
+| 125 | 124 | — |
+| 62 | 61, 60 | g6 语文期中（含「活着」错题） |
+| 65 | 64, 63 | — |
+
+清理后 published 走查卷回到 **81**，每 (grade, subject, exam_type) 唯一。旧卷仅置 `status='offline'`，未物理删除；清理前备份 `ailearning-backup-<ts>-pre-dedupe-script.db`。
+
+同时改掉身下的 3 条 P1：qid 11908 → `把积木分成方的、圆的等几类，这种分法依据的是（　）。`；qid 18538（exam 69/70 共用）→ `填上合适的关联词：他走着路，__哼着小曲。`。重跑审计 **`issue_detail.csv` 只剩表头（P0=0、P1=0）**。
+
+### 6.29.9 答案泄漏门禁：四轮收敛（85 → 43）
+
+`question_quality.py` 原口径把 262 条判成问题，其中大量是「题型必然」的假命中。逐轮修正（口径均写入模块 docstring 的「伪泄漏」清单）：
+
+| 轮次 | 改动 | BLOCK |
+|---|---|---|
+| 基线 | — | 85（warn 177） |
+| 一 | `_positions()` 数字分支加 `prev == "."` 判定，修 `4元 ⊂ 2.4元` | 70（chinese 21→9、math 20→17） |
+| 二 | 新增 `_QUOTED_RE` + `_mask_quoted()`：引号/书名号内遮成等长全角空格，只用于 positions 与构词判定，「紧贴填空位」仍看原文 | 54 |
+| 三 | 新增 `_GIVEN_WORD_PAREN_RE` + `_inside_given_word_paren()`：答案落在「所给词」括号内判 WARN（`I ___ (wear)` 是词形填空题型惯例） | 47 |
+| 四 | 英语 4 条直给答案改写（`用英文填 observe` → `提示：首字母 o`） | **43** |
+
+最终分学科 BLOCK：politics 18、chinese 9、biology 6、history 4、geography 2、physics 2、chemistry 1、math 1、english 0；WARN 162。
+
+### 6.29.10 A / B 批改写（数学 16 条 + 英语 4 条，已入库）
+
+| 批 | 条数 | 处理要点 |
+|---|---|---|
+| 数学 | 16 | 改题干去答案/消歧义：`拼摆图形时，一般先拼（　）还是小块？`、`用 4 个同样的小方块可以拼成一个大的（　）。`、`把 10 个水果分成红、黄、绿三组，这是按（　）分类。`、`给 8 个小组编号，一位数字是否（　）用？`、`直线是否能量出长度（　）？`、`销量连续几个月增加，可能继续（　）`、`从各个方向观察…形状可能（　）`、`分析信息…结论必须有（　）支持`、`以（　）为观测点，学校在东偏南 25 度、800 米处。`、`频率等于（　）除以（　）`、`直方图中，各小长方形的宽表示（　），高表示（　）`、`圆的面积随自变量的增大而增大…`、`平行四边形的对角线（　）且互相平分；若它的对角线一样长，则它是（　）`、`试验次数越（　），频率越接近该事件发生的（　）`、`若 2x+13=35，则 x=（　）` |
+| 数学特例 | 1（qid 5585） | `4000米是（  ）千米，合（  ）米。` → `4000 米=（　）千米。`，答案由 `["4千米","4000米"]` 收敛为 `{"value":"4千米"}`。**属答案变更，需教研追认** |
+| 英语 | 4 | 15194 `别人向你打招呼说「你好」，你用英文回答：`、10686 `…（提示：首字母 o）`、10907 `…（提示：首字母 b）`、10987 `…（提示：首字母 f）` |
+
+**判为题型惯例、不改的 8 条英语**：`There ___（复数用 are）`、`I ___ (wear)`、`I ___ (like)`、`New roads（ ）(bring)`、`so ___（vivid）`、`If you ___（need）`、`You'd better ___（tell）` 等——括号里给原形是「用所给词的适当形式填空」的题型要求，学生仍需自行变形。
+
+### 6.29.11 C 批（43 条）转教研工单
+
+剩余 BLOCK 全部是**概念定义 / 术语辨识类**：答案本身就是题面必现的术语（`复式折线统计图中不同的（　）表示不同的数据` → 答「折线」；`1937 年 12 月，日军攻陷南京，制造了（　）大屠杀` → 答「南京」）。改题干会破坏题意，改题型（选择化）属教研决策，故不做自动改写。
+
+工单：`docs/content-templates/exports/answer_leak_review_cr008_20261118/answer_leak_worklist.csv`，43 行，字段 `question_id / subject / grade / q_type / answer / stem / reason / suggested_action / owner`。
+
+| 学科 | 条数 | 建议动作 |
+|---|---|---|
+| politics | 18 | 术语 / 表述须确认，教研改写 |
+| chinese | 9 | 诗词、成语、课文引用需校对（如 `露似真珠月似弓` 解比喻，答案必在引文） |
+| biology | 6 | 概念定义类 |
+| history | 4 | 概念定义类 |
+| geography | 2 | 概念定义类 |
+| physics | 2 | 概念定义类 |
+| chemistry | 1 | 概念定义类 |
+| math | 1 | 术语已在题面（qid 12882） |
+
+门禁对这批题仍判 BLOCK，因此**不会被新导入**；81 张在架走查卷不含这些题，审计 0 问题，不阻塞上线。
+
+### 6.29.12 本轮收尾状态
+
+| 项 | 状态 |
+|---|---|
+| 听力同卷重复 | 已修（script 去重，81/81 干跑通过） |
+| 重复卷对 | 已清理（7 张置 offline，published 回 81） |
+| 审计 P0 / P1 | 0 / 0（`issue_detail.csv` 仅表头） |
+| answer-leak BLOCK | 85 → 43（数学 20→1、英语 11→0） |
+| 后端测试 | `pytest -q` 全绿（含 `test_question_quality.py`） |
+| 未完成 | 听力播放次数限制（后端 attempt 记账） |
+| 待表态 | 4–9 年级英语读题音频是否扩产、qid 5585 答案变更追认、12882 类辨识题「改题型 / 白名单」口径 |
+| 交付物 | `exports/answer_leak_gate_20261118/answer_leak_gate.csv`（205 行，最终口径）、`exports/answer_leak_review_cr008_20261118/answer_leak_worklist.csv`（43 行工单） |

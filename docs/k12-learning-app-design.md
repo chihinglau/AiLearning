@@ -1219,6 +1219,25 @@ mastery_score = f(
 # < 40  → 未掌握
 ```
 
+#### 模块 F：题库质量门禁（answer-leak gate）
+
+题目入库与全库巡检共用同一套规则模块 `backend/app/services/question_quality.py`，目标是把「答案写在题干里、学生不学也能抄」的题挡在入库前。
+
+| 档位 | 触发条件 | 处置 |
+|---|---|---|
+| `BLOCK` | 答案紧贴填空位（前/后 3 字内）；或多字答案整段落在题干叙述；或单字答案原样出现且不属构词包含 | 导入抛 `ValueError`；确属合法题型时用 `--allow-answer-leak` 单批豁免 |
+| `WARN` | 答案取自短文原文（阅读理解必然）、落在候选括号内、落在「所给词」括号内（`I ___ (wear)` 词形题惯例）、单字答案只是题干更长词的组成部分 | 仅提示，入库放行 |
+| `None` | 选择题 / 多选 / 判断（答案是选项键）；单字符 ASCII 答案；算式条件题；排序 / 组词 / 偏旁 / 音节题 | 直接放行 |
+
+口径细节（都会影响误报率，改动需同步回归 `backend/tests/test_question_quality.py`）：
+
+- **数字边界**：`4元 ⊂ 2.4元` 不算命中，小数点前的数字不视为独立数字。
+- **引用材料遮罩**：引号 / 书名号内为引用原文（例题枚举、命题原文、课文标题）时，判 positions 与构词包含时整段遮成等长占位；但「紧贴填空位」仍按原文判。
+- **所给词括号**：`(wear)`、`（复数用 are）` 这类括号里给原形/变形的提示，答案在括号内判 WARN —— 学生仍需自行变形，不属可照抄。
+- **术语必现题**：概念定义类（`复式折线统计图中不同的（　）表示不同的数据` → 答「折线」）改题干会破坏题意，不做自动改写，转教研工单决定「改题型 or 白名单」。
+
+运维入口：`backend/scripts/audit_answer_leak.py --subject/--grade/--out <目录>`（`--out` 是目录不是文件），产物字段 `level, question_id, subject, grade, q_type, answer, stem_head, reason`；教研工单模板见 `exports/answer_leak_review_cr008_20261118/answer_leak_worklist.csv`（含 `suggested_action / owner`）。
+
 ---
 
 ## 六、数据安全与合规方案

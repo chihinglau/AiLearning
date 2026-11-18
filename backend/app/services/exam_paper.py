@@ -57,6 +57,22 @@ def stem_fingerprint(question: Question) -> str:
     return _STEM_NOISE.sub("", stem)
 
 
+def script_fingerprint(question: Question) -> str:
+    """听力录音指纹：题干是模板化的固定指令，真正的区分点是录音原文。
+
+    依次取 content.script / transcript / audio_text（历史上字段名不统一），
+    归一化空白与标点并转小写后返回；都没有则返回空串，不参与去重。
+    """
+    content = question.content if isinstance(question.content, dict) else {}
+    for key in ("script", "transcript", "audio_text"):
+        raw = content.get(key)
+        if raw:
+            text = str(raw).strip()
+            if text:
+                return _STEM_NOISE.sub("", text).lower()
+    return ""
+
+
 @dataclass
 class PaperItem:
     question: Question
@@ -196,11 +212,15 @@ def _pick(
     core_kps: Optional[set[int]] = None,
     core_cross_budget: int = 0,
     seen_stems: Optional[set[str]] = None,
+    seen_scripts: Optional[set[str]] = None,
 ) -> list[Question]:
     """核心考点优先 → 章节覆盖优先 → 知识点覆盖优先 → 补足；同知识点次数受上限约束。
 
     seen_stems：整卷共享的题干指纹集合（跨大题传递），防止同一题干被录入成多个
     题号后在同卷重复出现。传 None 时退化为只按题目 id 去重（旧行为）。
+
+    seen_scripts：听力节专用——题干是模板化指令（不按题干去重），真正的区分点是
+    录音原文，故改用 script 指纹去重，避免同一段录音在同一卷出现两次（走查 LR-6）。
     """
     covered_chapters = covered_chapters if covered_chapters is not None else set()
     picked: list[Question] = []
@@ -222,6 +242,10 @@ def _pick(
             fp = fingerprint(q)
             if fp and fp in seen_stems:
                 return False
+        if seen_scripts is not None:
+            sk = script_fingerprint(q)
+            if sk and sk in seen_scripts:
+                return False
         kp = q.knowledge_point_id
         if kp is None:
             return True
@@ -236,6 +260,10 @@ def _pick(
             fp = fingerprint(question)
             if fp:
                 seen_stems.add(fp)
+        if seen_scripts is not None:
+            sk = script_fingerprint(question)
+            if sk:
+                seen_scripts.add(sk)
         kp = question.knowledge_point_id
         kp_counts[kp] = kp_counts.get(kp, 0) + 1
         section_kp[kp] = section_kp.get(kp, 0) + 1
@@ -519,6 +547,8 @@ def generate_paper(
 
     # 卷级题干指纹：同一题干被录入成多个题号时也要去重（走查 LR-6）
     seen_stems: set[str] = set()
+    # 卷级录音指纹：听力题干模板化、不按题干去重，改用录音原文去重（走查 LR-6 听力分支）
+    seen_scripts: set[str] = set()
 
     for index, section in enumerate(sections):
         wanted = int(section.get("count", 0))
@@ -527,6 +557,8 @@ def generate_paper(
         # 题干，区分点在 script/音频而不是题干），套用卷级题干去重会把候选压到 8 道以内，
         # 导致 10 题的听力分节永远凑不满而整卷被拒。故听力节不参与卷级题干去重。
         section_stems = None if q_type in NO_STEM_DEDUPE_TYPES else seen_stems
+        # 题干不去的题型（听力）改用录音指纹去重：同卷不许出现同一段录音两次
+        section_scripts = seen_scripts if q_type in NO_STEM_DEDUPE_TYPES else None
         score_each = float(section.get("score_each", 0))
 
         remaining = [q for q in pool if q.id not in used]
@@ -576,7 +608,7 @@ def generate_paper(
         uncovered_pass = [q for q in typed if q.chapter_id not in chapter_hit]
         head = _pick(uncovered_pass, min(wanted, chapter_total - len(chapter_hit)),
                      covered, pick_counts, chapter_hit, kp_cap_for_section, section_kp_cap,
-                     core_kps=core_kps, seen_stems=section_stems) if required_chapters else []
+                     core_kps=core_kps, seen_stems=section_stems, seen_scripts=section_scripts) if required_chapters else []
         picked = list(head)
         # 注意：章节覆盖轮的跨带是蓝图结构性必然（一册 40-66 个知识点、每章至少 1 题，
         # 必然有题落在带外），它不属于「拿难度换覆盖」，不计入 cross_stat。
@@ -591,19 +623,19 @@ def generate_paper(
                                 cross_limit=cross_limit, cross_stat=cross_stat,
                                 priority_kps=priority_kps, core_kps=core_kps,
                                 core_cross_budget=core_cross_budget,
-                                seen_stems=section_stems))
+                                seen_stems=section_stems, seen_scripts=section_scripts))
         kp_cross_band += cross_stat.get("used", 0)
         cross_budget = max(0, cross_budget - cross_stat.get("used", 0))
         core_cross_budget = max(0, core_cross_budget - cross_stat.get("used", 0))
         if len(picked) < wanted and allow_band_relax:
             # 只放宽「难度带」，绝不放宽「题型」：同题型内的其余题目补位
             leftovers = [q for q in typed if q.id not in {p.id for p in picked}]
-            extra = _pick(leftovers, wanted - len(picked), covered, pick_counts, chapter_hit, kp_cap_for_section, section_kp_cap, seen_stems=section_stems)
+            extra = _pick(leftovers, wanted - len(picked), covered, pick_counts, chapter_hit, kp_cap_for_section, section_kp_cap, seen_stems=section_stems, seen_scripts=section_scripts)
             band_relaxed += len(extra)
             picked.extend(extra)
         if len(picked) < wanted and allow_fallback:
             extras = [q for q in remaining if q.id not in {p.id for p in picked}]
-            picked.extend(_pick(extras, wanted - len(picked), covered, pick_counts, chapter_hit, kp_cap_for_section, section_kp_cap, seen_stems=section_stems))
+            picked.extend(_pick(extras, wanted - len(picked), covered, pick_counts, chapter_hit, kp_cap_for_section, section_kp_cap, seen_stems=section_stems, seen_scripts=section_scripts))
 
         if len(picked) < wanted:
             shortages.append(Shortage(
