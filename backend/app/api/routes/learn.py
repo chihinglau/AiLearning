@@ -1596,10 +1596,9 @@ def question_audio(
         key = speech.listening_cache_key(text, resolved_voice, speed)
         rel_path = speech.listening_audio_rel_path(key)
     else:
-        if (
-            grade not in speech.ALLOWED_GRADES
-            or question.subject not in speech.ALLOWED_SUBJECTS
-        ):
+        # 读题音频按学科决定年级上限：英语 1–9 年级（全学段读题），
+        # 语文/数学仍只覆盖 1–3 年级。
+        if not speech.reading_allowed(question.subject, int(grade)):
             raise _not_ready()
         text = speech.text_for_question(question)
         if not text.strip():

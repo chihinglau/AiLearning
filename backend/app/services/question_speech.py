@@ -15,9 +15,25 @@ from typing import Any
 # 读法规则版本：参与音频缓存键（设计 §3.9.6）。与客户端 `SpeechRules.version` 同步。
 RULES_VERSION = 1
 
-# 首期生成/分发范围（设计 §3.9.7）。
+# 首期生成/分发范围（设计 §3.9.7）：语文/数学只给低年级读题用。
 ALLOWED_GRADES: tuple[int, ...] = (1, 2, 3)
 ALLOWED_SUBJECTS: tuple[str, ...] = ("chinese", "math", "english")
+
+# 英语读题是全学段能力（1–9 年级）：低年级靠读题理解题意，高年级靠听读记发音。
+# 语文/数学维持 1–3 年级，避免长题干合成成本与播放时长失控。
+READING_GRADES_BY_SUBJECT: dict[str, tuple[int, ...]] = {
+    "english": (1, 2, 3, 4, 5, 6, 7, 8, 9),
+}
+
+
+def reading_grades(subject: str) -> tuple[int, ...]:
+    """某学科的读题音频覆盖年级；未登记的学科回落到 `ALLOWED_GRADES`。"""
+    return READING_GRADES_BY_SUBJECT.get(subject, ALLOWED_GRADES)
+
+
+def reading_allowed(subject: str, grade: int) -> bool:
+    """服务端是否提供该题读题音频（学科 × 年级双条件）。"""
+    return subject in ALLOWED_SUBJECTS and grade in reading_grades(subject)
 
 # 音色与学科绑定：英语用英文模型，语文/数学用中文模型。
 VOICE_BY_SUBJECT: dict[str, str] = {

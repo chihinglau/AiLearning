@@ -154,6 +154,10 @@ def collect_jobs(
             continue
         if "reading" not in kinds:
             continue
+        # 读题音频按学科限定年级（英语 1–9，语文/数学 1–3）：命令行传入的年级只是
+        # 上限范围，真正是否产出以此判定为准，避免给不提供读题音频的年级白合成。
+        if not speech.reading_allowed(question.subject, int(grade)):
+            continue
         text = speech.text_for_question(question)
         if not text.strip():
             empty += 1
@@ -474,7 +478,12 @@ def main(argv: Sequence[str] | None = None) -> int:
         default_grades: Sequence[int] = speech.LISTENING_GRADES
         default_subjects: Sequence[str] = speech.LISTENING_SUBJECTS
     else:
-        default_grades = speech.ALLOWED_GRADES
+        # 读题：年级范围取所有学科覆盖年级的并集（英语到 9 年级，语文/数学到 3 年级），
+        # 具体学科×年级是否产出由 collect_jobs 里的 reading_allowed 判定。
+        default_grades = tuple(
+            sorted({g for grades in speech.READING_GRADES_BY_SUBJECT.values() for g in grades}
+                   | set(speech.ALLOWED_GRADES))
+        )
         default_subjects = speech.ALLOWED_SUBJECTS
     grades = parse_ints(args.grade, default_grades)
     subjects = parse_strs(args.subject, default_subjects)

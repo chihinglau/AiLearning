@@ -1890,3 +1890,31 @@ v2.28 之后补做 v2.27 遗留的三项，并在 EBG-AN00（1080×2340，Androi
 
 **遗留（下一轮）**
 - 英语读题（题干喇叭）对纯 choice 题仍请求 `GET /api/learn/questions/{id}/audio?speed=1.0` 并 404（qid 19741、15754），需 TTS 预生成或音频缺失时的兜底文案。
+
+### 6.29.15 英语读题音频：扩到 1–9 年级并预生成
+
+**背景**：§6.29.14 遗留的 404 不是接口缺陷，而是两层原因叠加——服务端读题音频的年级口径原先只放开到 1–3 年级（`ALLOWED_GRADES=(1,2,3)`），且题库里根本没有生成对应音频文件，`path.is_file()` 判空后统一返回 `AUDIO_NOT_READY`。设计文档要求的是「低年级语文/数学读题 + **全年龄英语读题**」，所以年级口径本身也需要放开。
+
+**改动**
+- `question_speech.py` 新增 `READING_GRADES_BY_SUBJECT = {"english": 1..9}`、`reading_grades(subject)`、`reading_allowed(subject, grade)`；语文/数学继续沿用 `ALLOWED_GRADES=(1,2,3)`，未登记学科（物理/化学等）不提供读题音频。
+- `learn.py` 的 reading 分支由「年级 ∈ ALLOWED_GRADES」改为「`speech.reading_allowed(subject, grade)`」，即学科×年级双条件。
+- `build_question_audio.py`：`collect_jobs` 在 reading 分支前用 `reading_allowed` 过滤（命令行 `--grade` 只作上限范围，避免给不提供读题的年级白合成）；默认年级改为各学科覆盖年级的并集。
+- 新增单测 `test_reading_audio_scope_by_subject`（英语 1–9 允许、语文/数学 4–9 拒绝、未登记学科拒绝）。
+
+**音频预生成（离线 sherpa-onnx，零 API 费用）**
+| 批次 | 结果 |
+|---|---|
+| g1 英语 reading | 生成 1081（2 已存在），失败 0；dry-run 复算 1083/1083 已存在 |
+| g2–g9 英语 reading | 后台批量执行中（6079 题，dry-run 口径），落地后同口径复算 |
+
+**验证**
+| 环节 | 结果 |
+|---|---|
+| `pytest tests/test_question_speech.py` 等三份 | 40 passed |
+| dev 库真实 HTTP（qid 19741 / 15754 / 9183） | 全部 200（19741 32199B、15754 77599B、9183 37345B），此前均 404 |
+| 真机 EBG（练习会话第 1 题，英语 choice） | 点题干喇叭 → 先 401（token 刷新）再 `audio 200`，图标切「停止播放」，题干高亮随朗读推进 |
+
+**口径说明**
+- 读题音频是「离线预生成 + 客户端按需下载缓存」，不是点击时实时合成；没预生成的题会 404 并回退系统 TTS（`SpeechButton._toggle` 已有兜底，不会静默失败）。
+- 英语题干中英混排（如「「妈妈」的英文是（ ）」）由英文音色合成，属既有取音色规则，暂不按语种自动切换。
+

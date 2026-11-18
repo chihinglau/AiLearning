@@ -98,3 +98,20 @@ def test_rules_version_matches_client() -> None:
     )
     assert match is not None
     assert int(match.group(1)) == speech.RULES_VERSION
+
+
+def test_reading_audio_scope_by_subject() -> None:
+    """读题音频覆盖范围：英语 1–9 年级（全学段读题），语文/数学仅 1–3 年级。"""
+    for grade in range(1, 10):
+        assert speech.reading_allowed("english", grade)
+    for grade in (1, 2, 3):
+        assert speech.reading_allowed("chinese", grade)
+        assert speech.reading_allowed("math", grade)
+    for grade in (4, 5, 6, 7, 8, 9):
+        assert not speech.reading_allowed("chinese", grade)
+        assert not speech.reading_allowed("math", grade)
+    # 未登记的学科（物理/化学等）不提供读题音频
+    assert not speech.reading_allowed("physics", 8)
+    assert speech.reading_grades("english") == (1, 2, 3, 4, 5, 6, 7, 8, 9)
+    assert speech.reading_grades("chinese") == speech.ALLOWED_GRADES
+
