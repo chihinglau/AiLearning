@@ -9,6 +9,7 @@
 | `paper_summary.csv` | 一卷一行：题数、总分、章节数、题型分布、7 类硬问题计数、泄漏 block/warn 计数、听力音频缺失数 |
 | `issue_detail.csv` | 一问题一行：卷 id / 卷名 / 年级 / 学科 / 阶段 / 题号 / 问题类型 / 原因 |
 | `summary.json` | 汇总：卷数、问题数、分类计数、有问题的卷数 |
+| `takeable_matrix.csv` | 81 张卷「能开考」实测矩阵：开考状态码、实际下发题数、首题题干长度、听力音频状态码 |
 
 ## 检查口径
 
@@ -34,7 +35,11 @@
 ```powershell
 cd backend
 .\.venv\Scripts\python.exe -m scripts.audit_published_papers
+.\.venv\Scripts\python.exe -m scripts.verify_papers_takeable
 ```
+
+第二个脚本会临时把学生年级按 g1–g9 逐个切换，真实调 `POST /api/exams/{id}/attempts` 开考，
+跑完删除本轮新建的 attempts 并复原学生年级 —— 它验证的是「点得开、题下得来、听力播得响」。
 
 ## 本轮结果
 
