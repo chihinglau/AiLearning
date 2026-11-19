@@ -29,7 +29,7 @@
 | 公网入口 | 阶段 0：Cloudflare quick tunnel（临时域名，零配置）；阶段 1：ECS 自建 Caddy 独占 80/443 + 自动 ACME |
 | 数据库 | 独立 `postgres:16-alpine` + 独立 volume；阶段 0 无 Docker 时回退 SQLite dev 库 |
 | 网络隔离 | API 只绑 `127.0.0.1:18080`，DB 不映射宿主端口；阶段 1 API 完全不发布宿主端口 |
-| 阻断上线的 P0 | 原有 3 个：① 生产内容初始化（**已解决**：导出/导入数据包已实现并本地验证 18746 题 / 81 卷 / 1348 听力一致）；② 1.7 GB 读题+听力音频的交付（未解决）；③ ICP 备案与解析切换（未解决，属时间阻断） |
+| 阻断上线的 P0 | 原有 3 个：① 生产内容初始化（**已解决**：导出/导入数据包已实现并本地验证 18746 题 / 81 卷 / 1348 听力一致）；② 音频交付（**体积已实测 505.8 MB**、清单与校验工具就绪，仅剩实际传输与最终选型）；③ ICP 备案与解析切换（未解决，属时间阻断） |
 | 工作量 | 阶段 0 已完成；阶段 1 约 **5.25–6.25 人日**（不含备案等待），其中 P0-A 已于 2026-11-19 提前完成 |
 
 ---
@@ -93,7 +93,7 @@ D:\AiLearning\
 └─ run\local-deploy.json # 进程与公网地址状态，供 -Status / -Stop 使用
 ```
 
-音频不复制：容器以只读方式挂 `backend/build/question_audio`（15783 个文件，约 1.7 GB）。
+音频不复制：容器以只读方式挂 `backend/build/question_audio`（15778 个 opus，505.8 MB）。
 
 ### 3.4 实测结果（2026-11-19，深圳本地出口）
 
@@ -140,8 +140,8 @@ D:\AiLearning\
 | 资源 | 依据 | 建议 |
 |---|---|---|
 | 内存 | 现网同构三容器 RSS：api 79.6 / db 14.8 / caddy 14.4 MB；AiLearning 依赖更轻（`requirements.txt` 无 pandas/numpy/TTS） | 单栈 **150–300 MB**；**2C2G 够用，2C4G 更稳** |
-| 磁盘 | 镜像（优化后）0.3–0.4 GB + 音频 1.7 GB + PG <0.2 GB + 备份 7 天 + Caddy 日志上限 2 GB + 系统 6 GB | **40 GB ESSD**；20 GB 偏紧 |
-| 带宽 | 试卷 JSON 与按需音频很轻（50 DAU × 20 题 × 16 KB ≈ 16 MB/天）；痛点是首次全量音频 1.7 GB ≈ 78 分钟/人 | 3 Mbps 可支撑初期；音频走 **OSS+CDN** 或严格按需播放 |
+| 磁盘 | 镜像（优化后）0.3–0.4 GB + 音频 0.5 GB + PG <0.2 GB + 备份 7 天 + Caddy 日志上限 2 GB + 系统 6 GB | **40 GB ESSD**；20 GB 也够用 |
+| 带宽 | 试卷 JSON 与按需音频很轻（50 DAU × 20 题 × 16 KB ≈ 16 MB/天）；痛点是首次全量音频 505.8 MB ≈ 23 分钟/人 | 3 Mbps 可支撑初期；音频走 **OSS+CDN** 或严格按需播放 |
 | CPU | 单 uvicorn worker；组卷/体检脚本属批处理 | 2 核够；批处理避峰 |
 
 ### 4.2 独立栈架构
@@ -271,27 +271,64 @@ FORWARDED_ALLOW_IPS=<caddy 固定网段，如 172.30.0.0/16>
 **生产首启顺序（写进部署流程）**
 
 ```bash
-# 1. 只跑迁移，不灌 seed
+# 0. 起栈（只跑迁移，不灌 seed）
 RUN_SEED=false docker compose up -d
+# 1. 账号 bootstrap（空库没有任何账号，不做这步谁也别想登录）
+ADMIN_PASSWORD='<强口令>' docker compose exec -T api python -m scripts.bootstrap_admin
 # 2. 灌内容包（生产库为空库时也必须带 --truncate 语义确认，实际为空则无副作用）
 docker compose exec -T api python -m scripts.import_content_pack \
-    --pack /app/build/content_pack/ailearning-content-20261119.json.gz --truncate --yes
+    --pack /build/content_pack/ailearning-content-20261119.json.gz --truncate --yes
 # 3. 门禁：先跑无账号依赖的自检，再跑答案泄漏审计
 docker compose exec -T api python -m scripts.content_selfcheck
 docker compose exec -T api python -m scripts.audit_published_papers
 ```
 
+**账号 bootstrap（`backend/scripts/bootstrap_admin.py`）**
+
+- 口令只从环境变量读（`ADMIN_PASSWORD` / `QUALITY_STUDENT_PASSWORD`），不进 shell 历史；
+- production 拒绝弱口令（<10 位、纯数字、`admin123`/`student123` 等）；
+- 幂等：已存在默认跳过，`--reset-password` 才改口令；
+- 顺带同步 RBAC catalog 并回填 `user_roles`（空库第一次跑必须有）。
+- 可选质检学生（`QUALITY_STUDENT_PHONE`，默认 `13900000001`）只用于登录态冒烟，`--no-student` 可跳过。
+
+本地实测（临时库）：首次 `roles_created 10 / permissions_created 36 / links_created 94` + 建 admin 与质检学生 + `user_roles 2 条`；重跑全部跳过、`user_roles 0 条`；`APP_ENV=production` + 弱口令 → **exit 2 拒绝**。
+
 > 注意：`RUN_SEED=true` 与数据包二选一。seed 会写入 id 1..N 的占位内容，与数据包 id 段冲突；若已误跑 seed，用 `import_content_pack --truncate --yes` 覆盖即可。
 > 数据包不进 git（在 `backend/build/` 下，已被 `.gitignore` 与 `.dockerignore` 排除）；上线时用 `scp`（1.5 MB）或独立传输通道送到 `/opt/ailearning-assets/`。
 
-### P0-B 音频资产
+### P0-B 音频资产 —— 体积与覆盖率已实测，清单/校验工具已就绪
 
-1.7 GB（读题 15778 + 听力 1166）不在 git、也不应进镜像（`.dockerignore` 会排掉）。二选一：
+**实测（2026-11-19，`backend/build/question_audio`）**
 
-- **volume 只读挂载 + 一次性 rsync**（`--partial --append`，3 Mbps 约 78 分钟）；
+| 类别 | 文件数 | 体积 |
+|---|---|---|
+| 读题音频 `audio/xx/*.opus` | 14612 | 499.9 MB |
+| 听力音频 `audio/listening/xx/*.opus` | 1166 | 5.9 MB |
+| **合计** | **15778** | **505.8 MB** |
+
+> 旧文档写的 1.7 GB 是错的（把中间产物/重复目录也算进去了）；实际 505.8 MB，3 Mbps 下首次传输约 **23 分钟**，volume 挂载方案完全可接受，不需要为体积上 OSS。
+> 听力题 **1348 道**共用 **1166 个音频文件**（同文本共享缓存键），覆盖率 **1348/1348 = 100%**。
+
+**工具（`backend/scripts/asset_manifest.py`）**
+
+```bash
+# 快速清单（不算哈希，秒级）
+python -m scripts.asset_manifest --no-hash --out build/audio_manifest.json
+# 传输基线（含 sha256，本地实测 15778 文件全量哈希约 30s）
+python -m scripts.asset_manifest --out build/audio_manifest_sha.json
+# 传输后校验（rsync/scp 落盘后跑，逐文件 sha256 比对）
+python -m scripts.asset_manifest --verify-manifest build/audio_manifest_sha.json \
+    --dir /opt/ailearning-assets/question_audio
+```
+
+本地实测：清单 15778 个文件、`--verify-manifest` **异常 0**；听力覆盖 100%。
+
+**交付路径（二选一，仍待决策）**
+
+- **volume 只读挂载 + 一次性 rsync**（`--partial --append-verify`，505.8 MB / 3 Mbps ≈ 23 分钟），落 `/opt/ailearning-assets/question_audio`；
 - **OSS + CDN**（同区域内网传输不计流量，Caddy 改为重定向）。
 
-不定义这条，读题降级系统 TTS、**听力题无兜底**。
+两种方式都必须跑一次 `--verify-manifest` 才算交付完成。不定义这条，读题降级系统 TTS、**听力题无兜底**。
 
 ### P0-C 备案与解析
 
@@ -368,6 +405,8 @@ docker compose exec -T api python -m scripts.audit_published_papers
 | P0-A 内容导出 | `backend/scripts/export_content_pack.py` | **已实测**：81 卷 / 18746 题 / 包体 1.5 MB |
 | P0-A 内容导入 | `backend/scripts/import_content_pack.py` | **已实测**：空库一致、幂等重导 0 新增、audit 0 issues |
 | P0-A 内容自检 | `backend/scripts/content_selfcheck.py` | **已实测**：阻断 0 / 警告 0 / 覆盖缺口 0 / 分值不符 0 |
+| 账号 bootstrap | `backend/scripts/bootstrap_admin.py` | **已实测**：建号/幂等/弱口令拒绝（exit 2） |
+| P0-B 音频清单 | `backend/scripts/asset_manifest.py` | **已实测**：15778 文件 / 505.8 MB / 听力覆盖 100% / 校验 0 异常 |
 
 ### 9.2 待用户决策（阻塞上线，不阻塞验证）
 
@@ -397,6 +436,6 @@ docker compose exec -T api python -m scripts.audit_published_papers
 
 **A-6 阶段 0 本地实测**：见 §3.4（含公网时延与 304）。
 
-**A-7 音频资产**：`backend/build/question_audio` 递归文件 15783 个（读题 opus + 听力），约 1.7 GB。
+**A-7 音频资产**：`backend/build/question_audio` 递归 15778 个 `.opus`（读题 14612 / 499.9 MB，听力 1166 / 5.9 MB），合计 **505.8 MB**（另有 4 个 json + 1 个 md 报告）。听力题 1348 道，覆盖 1348/1348 = 100%。
 
 > 本文基于对两个仓库代码、ECS 只读命令与本机实跑的核对（2026-11-19）；平台政策、证书与备案要求以当期官方公告为准。
