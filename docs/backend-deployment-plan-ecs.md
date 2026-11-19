@@ -29,8 +29,8 @@
 | 公网入口 | 阶段 0：Cloudflare quick tunnel（临时域名，零配置）；阶段 1：ECS 自建 Caddy 独占 80/443 + 自动 ACME |
 | 数据库 | 独立 `postgres:16-alpine` + 独立 volume；阶段 0 无 Docker 时回退 SQLite dev 库 |
 | 网络隔离 | API 只绑 `127.0.0.1:18080`，DB 不映射宿主端口；阶段 1 API 完全不发布宿主端口 |
-| 仍然阻断上线的 3 个 P0 | ① 生产内容初始化（seed 只有 600 题 / 0 张正式卷）；② 1.7 GB 读题+听力音频的交付；③ ICP 备案与解析切换 |
-| 工作量 | 阶段 0 已完成；阶段 1 约 **5.25–6.25 人日**（不含备案等待） |
+| 阻断上线的 P0 | 原有 3 个：① 生产内容初始化（**已解决**：导出/导入数据包已实现并本地验证 18746 题 / 81 卷 / 1348 听力一致）；② 1.7 GB 读题+听力音频的交付（未解决）；③ ICP 备案与解析切换（未解决，属时间阻断） |
+| 工作量 | 阶段 0 已完成；阶段 1 约 **5.25–6.25 人日**（不含备案等待），其中 P0-A 已于 2026-11-19 提前完成 |
 
 ---
 
@@ -239,14 +239,50 @@ FORWARDED_ALLOW_IPS=<caddy 固定网段，如 172.30.0.0/16>
 
 ## 5. 仍然存在的 3 个 P0（换机器也不会消失）
 
-### P0-A 生产内容初始化
+### P0-A 生产内容初始化 —— ✅ 链路已实现并本地验证（2026-11-19）
 
-本地独立库实跑 `scripts.seed` 的结果：**146 教材 / 118 章节 / 300 知识点 / 600 题**（choice 213 / fill 205 / judge 182，**无 listening / answer / composition**）+ 9 套蓝图 + 3 套 `source=mock` 演示卷。而当前能力是 **18746 题 / 81 张已发布卷 / 1348 道听力题**。
+**问题**：本地独立库实跑 `scripts.seed` 只有 **146 教材 / 118 章节 / 300 知识点 / 600 题**（choice 213 / fill 205 / judge 182，**无 listening / answer / composition**）+ 9 套蓝图 + 3 套 mock 演示卷；而 dev 库能力是 **18746 题 / 81 张已发布卷 / 1348 道听力题**。按 seed 上线 = 单元/期中/期末卷 0 张。
 
-按现方案上线 = 单元/期中/期末卷 **0 张**，考试中心只有 3 张 mock 撑。
+**已实现方案：受控数据包（导出 → 导入），不走"生产上重跑生成脚本"**
 
-**交付方式（二选一）**：受控数据包导入（脱敏剔除 users/attempts/wrong_book），或把题库导入 + `gen_walkthrough_papers.py` 纳入部署流水线。导入后必须跑三层门禁：
-`audit_published_papers.py` → `verify_papers_takeable.py` → `snapshot_papers.py`。
+| 脚本 | 作用 |
+|---|---|
+| `backend/scripts/export_content_pack.py` | 从 dev 库导出 6 张内容表为 `.json.gz`，**只含内容**：textbooks / chapters / knowledge_points / questions / exam_blueprints / exams；显式排除 users、attempts、answers、wrong_questions、mastery、audit、classes、assignments 等全部运行时与用户数据 |
+| `backend/scripts/import_content_pack.py` | 按原 id 导入目标库；`--truncate --yes` 清空内容表后全量灌入；无 `--truncate` 时按 id 幂等跳过已存在行；PG 导入后自动 `setval` 回填 sequence；`--dry-run` 只统计 |
+
+**本地实测（2026-11-19）**
+
+| 步骤 | 结果 |
+|---|---|
+| 导出 | `build/content_pack/ailearning-content-20261119.json.gz`，**1.5 MB**，146 / 726 / 3455 / 18746 / 90 / 81 |
+| 导入空库（sqlite，create_all 建表） | 146 / 726 / 3455 / 18746 / 90 / 81 全部一致；自检 published 题 **18746**、published 卷 **81**、听力题 **1348** |
+| 幂等重导（再跑一次，不 truncate） | 6 张表**新增 0，全部跳过** |
+| 内容门禁 `audit_published_papers` | 81 卷、**issues 0**、info 16（均为 `LEAK_INFO`）、`papers_with_issues 0` |
+
+**生产自检（无账号依赖，可反复跑）**
+
+`backend/scripts/content_selfcheck.py` 只读库、不发 HTTP、不需要学生账号，检查：卷内 `question_id` 可回查、无重复、分值合计与卷面总分一致、题干/答案非空、q_type 合法、g1–g9 × 语数英 × 单元/期中/期末 覆盖矩阵。
+
+本地实测（临时库导入后）：**阻断问题 0 / 警告 0 / 覆盖缺口 0 / 分值不符 0**，题量 18746（judge 2698、choice 5938、fill 4774、answer 2659、multiple 1093、listening 1348、composition 236），published 卷 81（unit 27 / midterm 27 / final 27）。
+
+> 注意 `exam_type` 取值是 **`midterm`**（不是 `mid`），老脚本里写成 `mid` 会误报 27 个覆盖缺口。
+> `verify_papers_takeable.py` 依赖 dev 固定学生账号（id=2）与 `http://127.0.0.1:18080`，只能本地用，不要作为生产验收项。
+
+**生产首启顺序（写进部署流程）**
+
+```bash
+# 1. 只跑迁移，不灌 seed
+RUN_SEED=false docker compose up -d
+# 2. 灌内容包（生产库为空库时也必须带 --truncate 语义确认，实际为空则无副作用）
+docker compose exec -T api python -m scripts.import_content_pack \
+    --pack /app/build/content_pack/ailearning-content-20261119.json.gz --truncate --yes
+# 3. 门禁：先跑无账号依赖的自检，再跑答案泄漏审计
+docker compose exec -T api python -m scripts.content_selfcheck
+docker compose exec -T api python -m scripts.audit_published_papers
+```
+
+> 注意：`RUN_SEED=true` 与数据包二选一。seed 会写入 id 1..N 的占位内容，与数据包 id 段冲突；若已误跑 seed，用 `import_content_pack --truncate --yes` 覆盖即可。
+> 数据包不进 git（在 `backend/build/` 下，已被 `.gitignore` 与 `.dockerignore` 排除）；上线时用 `scp`（1.5 MB）或独立传输通道送到 `/opt/ailearning-assets/`。
 
 ### P0-B 音频资产
 
@@ -329,6 +365,9 @@ FORWARDED_ALLOW_IPS=<caddy 固定网段，如 172.30.0.0/16>
 | D4/D5 Caddyfile | `deploy/Caddyfile.prod`、`deploy/Caddyfile.staging`、`deploy/docker-compose.staging.yml` | 已写，待 `caddy validate` |
 | D6 构建瘦身 | `.dockerignore` + `Dockerfile` 白名单 COPY（源码约 2 MB，替代原 884 MB 的 `backend/`） | 已完成，待实测镜像体积 |
 | D7 部署脚本 | `scripts/deploy-backend.ps1`（setup/deploy/seed/status/logs/stop/assets，git 拉取 + 服务器构建） | 已写，待实例实测 |
+| P0-A 内容导出 | `backend/scripts/export_content_pack.py` | **已实测**：81 卷 / 18746 题 / 包体 1.5 MB |
+| P0-A 内容导入 | `backend/scripts/import_content_pack.py` | **已实测**：空库一致、幂等重导 0 新增、audit 0 issues |
+| P0-A 内容自检 | `backend/scripts/content_selfcheck.py` | **已实测**：阻断 0 / 警告 0 / 覆盖缺口 0 / 分值不符 0 |
 
 ### 9.2 待用户决策（阻塞上线，不阻塞验证）
 
