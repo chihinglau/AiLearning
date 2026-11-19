@@ -27,7 +27,7 @@
 | 阶段 0（本地 + Cloudflare） | **已跑通**：公网 HTTPS 下 `/health` 200、登录取 token、试卷列表（含 `x-total-count`）、听力/读题音频 200 + `audio/ogg` + ETag `304` 全部通过 |
 | 阶段 1（独立 ECS） | **可行**：单栈内存估 150–300 MB、磁盘 <11 GB、2C2G 够用、2C4G 更稳；原共用方案唯一硬阻断项（跨栈 loopback）在本方案中天然消失 |
 | 公网入口 | 阶段 0：Cloudflare quick tunnel（临时域名，零配置）；阶段 1：ECS 自建 Caddy 独占 80/443 + 自动 ACME |
-| 数据库 | 独立 `postgres:16-alpine` + 独立 volume；阶段 0 无 Docker 时回退 SQLite dev 库 |
+| 数据库 | 独立 `postgres:16-alpine` + 独立 volume；**阶段 0 已改为本地便携 PostgreSQL 16（生产同构，端口 15432）**，SQLite 仅作最后兜底 |
 | 网络隔离 | API 只绑 `127.0.0.1:18080`，DB 不映射宿主端口；阶段 1 API 完全不发布宿主端口 |
 | 阻断上线的 P0 | 原有 3 个：① 生产内容初始化（**已解决**：导出/导入数据包已实现并本地验证 18746 题 / 81 卷 / 1348 听力一致）；② 音频交付（**体积已实测 505.8 MB**、清单与校验工具就绪，仅剩实际传输与最终选型）；③ ICP 备案与解析切换（未解决，属时间阻断） |
 | 工作量 | 阶段 0 已完成；阶段 1 约 **5.25–6.25 人日**（不含备案等待），其中 P0-A 已于 2026-11-19 提前完成 |
@@ -88,12 +88,48 @@ cloudflared 若未安装，用国内可达镜像下载（GitHub 直连会被重�
 
 ```
 D:\AiLearning\
-├─ data\postgres\        # Docker 模式 PG 数据（bind mount）
-├─ logs\                 # uvicorn / cloudflared 日志
-└─ run\local-deploy.json # 进程与公网地址状态，供 -Status / -Stop 使用
+├─ tools\pgsql\          # 便携 PostgreSQL 16（官方 binaries 解压，不注册服务）
+├─ data\pgdata\          # 本地 PG 集群数据（端口 15432，仅 127.0.0.1）
+├─ data\postgres\        # Docker 模式 PG 数据（bind mount，本机未用）
+├─ logs\                 # uvicorn / cloudflared / pg 日志
+└─ run\
+   ├─ local-deploy.json  # 进程、数据库、公网地址状态（供 -Status / -Stop）
+   └─ pg.local.json      # 本地 PG 连接参数（端口/库/口令/目录），脚本据此自动切 PG
 ```
 
-音频不复制：容器以只读方式挂 `backend/build/question_audio`（15778 个 opus，505.8 MB）。
+音频不复制：直接以本机路径读 `backend/build/question_audio`（15778 个 opus，505.8 MB）。
+
+**本地 PostgreSQL（生产同构）怎么来的**
+
+本机没有 Docker、也没有安装版 PG，因此用官方 Windows binaries 便携版：
+
+```powershell
+# 1) 下载并解压（约 300 MB）
+curl.exe -L -o D:\AiLearning\tools\pg16.zip `
+  https://get.enterprisedb.com/postgresql/postgresql-16.9-1-windows-x64-binaries.zip
+Expand-Archive D:\AiLearning\tools\pg16.zip D:\AiLearning\tools -Force
+
+# 2) 初始化集群（UTF8、 scram-sha-256、只监听 127.0.0.1）
+D:\AiLearning\tools\pgsql\bin\initdb.exe -D D:\AiLearning\data\pgdata -U postgres `
+  --pwfile=<口令文件> -E UTF8 --locale=C --auth=scram-sha-256
+# 在 postgresql.conf 追加：port = 15432 / listen_addresses = '127.0.0.1'
+
+# 3) 建库 + 迁移 + 灌内容 + 建账号（一条条来，脚本里也能跑）
+createdb -h 127.0.0.1 -p 15432 -U postgres ailearning
+python -m alembic upgrade head                     # → 35 表，head d6e7f8g9h0a1
+python -m scripts.import_content_pack --pack build/content_pack/<pack>.json.gz --truncate --yes
+python -m scripts.bootstrap_admin                  # 口令走 ADMIN_PASSWORD
+python -m scripts.content_selfcheck
+```
+
+之后 `scripts/local-deploy.ps1` 会读 `D:\AiLearning\run\pg.local.json`，自动起 PG 并注入 `DATABASE_URL`：
+
+```powershell
+pwsh scripts/local-deploy.ps1 -Backend pg      # 生产同构：PG + uvicorn + Cloudflare
+pwsh scripts/local-deploy.ps1 -Backend auto    # 有 pg.local.json 就用 PG，否则 SQLite
+pwsh scripts/local-deploy.ps1 -Status          # 显示后端 / 数据库 / PG / 公网地址
+pwsh scripts/local-deploy.ps1 -Stop            # 停后端与隧道（PG 默认保留，加 -StopPg 一起停）
+```
 
 ### 3.4 实测结果（2026-11-19，深圳本地出口）
 
@@ -109,6 +145,22 @@ D:\AiLearning\
 | 读题音频 `/api/learn/questions/4522/audio?kind=reading` | 200，`audio/ogg`，34469 B |
 | 音频 ETag 条件请求 | `If-None-Match` → **304**，0 B（Cloudflare 未破坏条件校验） |
 | 音频缓存头 | `cache-control: public, max-age=2592000` |
+
+**生产同构复测（2026-11-19 17:13，本地 PostgreSQL 16 + 新 quick tunnel）**
+
+| 检查项 | 结果 |
+|---|---|
+| 本地 PG | `127.0.0.1:15432/ailearning`，`alembic upgrade head` → **35 表**，head `d6e7f8g9h0a1` |
+| 内容包导入（PG） | 146 / 726 / 3455 / **18746** / 90 / **81** 全一致；`setval` 回填 6 表；`questions.max(id)=22212`，`nextval` → **22213**（续号正确） |
+| 账号 bootstrap（PG） | admin + 质检学生创建成功，RBAC 目录同步，`user_roles` 2 条 |
+| `content_selfcheck`（PG） | 阻断 0 / 警告 0 / 覆盖缺口 0 / 分值不符 0 |
+| 公网 `/health` | 200；quick tunnel 首次 DNS 解析失败 4 次后成功（正常现象） |
+| 学生登录 + g1 三科 | chinese **3** / math **3** / english **3** 张 |
+| 管理员全量 | **81** 张（各科 27：unit 9 / midterm 9 / final 9） |
+| 听力音频（公网） | 200 `audio/ogg` 1742 B，ETag 命中 → **304** |
+| 读题音频（公网） | 200 `audio/ogg` 23434 B |
+
+> 注意：考试中心 `GET /api/exams` **没有 `grade` 参数**——学生按 `current.grade` 锁定，管理员看全量。用管理员带 `grade=` 不会报错但也不生效（会看到 `x-total-count: 27`），容易误判成"筛选失效"。
 
 > 音频路径易踩坑：路由前缀是 **`/api/learn/questions/{id}/audio`**（`learn.py` 的 `APIRouter(prefix="/learn")` + `settings.api_prefix`），不是 `/api/questions/...`；写错会得到 FastAPI 默认 `{"detail":"Not Found"}`，与"音频未就绪"的业务错误不同。
 
@@ -356,7 +408,7 @@ python -m scripts.asset_manifest --verify-manifest build/audio_manifest_sha.json
 | **A14** | **幂等重建** | 重复 deploy/seed 不产生重复卷、不重复建卷 |
 | **A15** | **压测** | 50 并发开考 P95 < 2 s，内存峰值 < 70% |
 
-> 阶段 0 已完成 A2/A3（临时域名）/A5（SQLite）/A7 的部分：A3 用 trycloudflare 域名验证，A6 以 dev 库 35 表为准。
+> 阶段 0 已完成 A2/A3（临时域名）/A5（**本地 PostgreSQL 16**）/A6（35 表、alembic head `d6e7f8g9h0a1`）/A7 的部分：A3 用 trycloudflare 域名验证。
 
 ---
 
@@ -394,7 +446,7 @@ python -m scripts.asset_manifest --verify-manifest build/audio_manifest_sha.json
 
 | 项 | 文件 | 状态 |
 |---|---|---|
-| 阶段 0 一键部署 | `scripts/local-deploy.ps1` | **已实测**（见 §3.4） |
+| 阶段 0 一键部署 | `scripts/local-deploy.ps1` | **已实测**：支持 `-Backend pg`（本地 PG 生产同构）与 SQLite 兜底、`-Status`/`-Stop`/`-StopPg`（见 §3.4） |
 | 阶段 0 本地栈 | `deploy/docker-compose.local.yml`、`deploy/.env.local.example` | 已写（本机无 Docker，走 uvicorn 路径实测） |
 | C5 备案首页 | `backend/app/main.py` 根路由支持 `Accept: text/html` | **已实测**：HTML 200 / 1763 B，默认仍返回 JSON |
 | D2 实例初始化 | `scripts/setup-ailearning-ecs.sh` | 已写（swap/时区/Docker 阿里云源/镜像加速/fail2ban），待实例实测 |
@@ -437,5 +489,7 @@ python -m scripts.asset_manifest --verify-manifest build/audio_manifest_sha.json
 **A-6 阶段 0 本地实测**：见 §3.4（含公网时延与 304）。
 
 **A-7 音频资产**：`backend/build/question_audio` 递归 15778 个 `.opus`（读题 14612 / 499.9 MB，听力 1166 / 5.9 MB），合计 **505.8 MB**（另有 4 个 json + 1 个 md 报告）。听力题 1348 道，覆盖 1348/1348 = 100%。
+
+**A-8 本地 PostgreSQL 生产同构（2026-11-19）**：便携版 `postgresql-16.9-1-windows-x64-binaries`（下载 299.9 MB / 2 分 15 秒，速度峰值 ≈ 3.4 MB/s）解压到 `D:\AiLearning\tools\pgsql`，`initdb` UTF8 + scram-sha-256，端口 15432 仅绑定 127.0.0.1；`alembic upgrade head` 到 `d6e7f8g9h0a1` 建出 35 表；内容包导入后 6 表行数与 SQLite 一致，PG `setval` 首次被执行验证（`max(id)=22212` → `nextval=22213`）。
 
 > 本文基于对两个仓库代码、ECS 只读命令与本机实跑的核对（2026-11-19）；平台政策、证书与备案要求以当期官方公告为准。

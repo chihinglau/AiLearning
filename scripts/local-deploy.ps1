@@ -21,10 +21,14 @@ param(
     [int]$LocalPort = 18080,
     [ValidateSet("cloudflare", "cpolar", "none")]
     [string]$Provider = "cloudflare",
+    # 后端形态：auto = 有本地 PG 就用 PG，否则 SQLite dev 库
+    [ValidateSet("auto", "pg", "sqlite")]
+    [string]$Backend = "auto",
     [switch]$SkipTunnel,
     [switch]$Stop,
     [switch]$Status,
-    [switch]$ForceRebuild
+    [switch]$ForceRebuild,
+    [switch]$StopPg
 )
 
 $ErrorActionPreference = "Stop"
@@ -44,6 +48,9 @@ $TunnelLog = Join-Path $LogDir "cloudflared.log"
 $UvicornOut = Join-Path $LogDir "uvicorn.out.log"
 $UvicornErr = Join-Path $LogDir "uvicorn.err.log"
 
+# 本地 PostgreSQL（便携版，不注册服务）：配置与运行目录
+$PgConfigFile = Join-Path $RunDir "pg.local.json"
+
 foreach ($d in @($DataRoot, $RunDir, $LogDir, (Join-Path $DataRoot "data\postgres"))) {
     New-Item -ItemType Directory -Force -Path $d | Out-Null
 }
@@ -52,6 +59,42 @@ function Write-Step($msg) { Write-Host "▶ $msg" -ForegroundColor Cyan }
 function Write-Ok($msg) { Write-Host "✅ $msg" -ForegroundColor Green }
 function Write-Warn2($msg) { Write-Host "⚠️  $msg" -ForegroundColor Yellow }
 function Write-Err2($msg) { Write-Host "❌ $msg" -ForegroundColor Red }
+
+# =================================================================
+# 本地 PostgreSQL（便携版）
+# =================================================================
+function Get-PgConfig {
+    if (-not (Test-Path $PgConfigFile)) { return $null }
+    try { return Get-Content $PgConfigFile -Raw | ConvertFrom-Json } catch { return $null }
+}
+
+function Get-PgDatabaseUrl($cfg) {
+    return "postgresql+psycopg://{0}:{1}@127.0.0.1:{2}/{3}" -f $cfg.user, $cfg.password, $cfg.port, $cfg.db
+}
+
+function Test-Pg($cfg) {
+    $ready = Join-Path $cfg.bin_dir "pg_isready.exe"
+    if (-not (Test-Path $ready)) { return $false }
+    & $ready -h 127.0.0.1 -p $cfg.port *> $null
+    return $LASTEXITCODE -eq 0
+}
+
+function Start-Pg($cfg) {
+    if (Test-Pg $cfg) { Write-Ok "PostgreSQL 已在 $($cfg.port) 运行"; return $false }
+    $ctl = Join-Path $cfg.bin_dir "pg_ctl.exe"
+    if (-not (Test-Path $ctl)) { throw "找不到 pg_ctl：$ctl" }
+    Write-Step "启动本地 PostgreSQL（$($cfg.data_dir)）"
+    & $ctl -D $cfg.data_dir -l (Join-Path $LogDir "pg.log") -w start 2>&1 | Select-Object -Last 3
+    if (-not (Test-Pg $cfg)) { throw "PostgreSQL 启动失败，见 $LogDir\pg.log" }
+    Write-Ok "PostgreSQL 就绪：127.0.0.1:$($cfg.port)/$($cfg.db)"
+    return $true
+}
+
+function Stop-Pg($cfg) {
+    if (-not $cfg) { return }
+    $ctl = Join-Path $cfg.bin_dir "pg_ctl.exe"
+    if (Test-Path $ctl) { & $ctl -D $cfg.data_dir -m fast stop 2>&1 | Select-Object -Last 2 }
+}
 
 # =================================================================
 # 状态读取 / 停止
@@ -81,6 +124,13 @@ function Stop-All {
         try { Stop-Process -Id ([int]$state.backendPid) -Force -ErrorAction Stop; Write-Ok "uvicorn 已停止 (pid $($state.backendPid))" }
         catch { Write-Warn2 "uvicorn 进程已不存在" }
     }
+    if ($StopPg) {
+        $cfg = Get-PgConfig
+        Stop-Pg $cfg
+        Write-Ok "PostgreSQL 已停止"
+    } elseif ($state.pgStartedByScript) {
+        Write-Warn2 "PostgreSQL 仍在运行（本脚本启动的）；需要一起停请加 -StopPg"
+    }
     Remove-Item $StateFile -Force -ErrorAction SilentlyContinue
 }
 
@@ -96,9 +146,15 @@ function Show-Status {
     if ($state) {
         Write-Host "启动时间  : $($state.startedAt)"
         Write-Host "运行模式  : $($state.backendMode)"
-        Write-Host "公网地址  : $($state.url)"
+        Write-Host "数据库    : $($state.database)"
+        if ($state.publicUrl) { Write-Host "公网地址  : $($state.publicUrl)" }
     } else {
         Write-Warn2 "无部署状态记录（可能未由本脚本启动）"
+    }
+    $cfg = Get-PgConfig
+    if ($cfg) {
+        $pgUp = Test-Pg $cfg
+        Write-Host ("PostgreSQL: {0} 127.0.0.1:{1}/{2}" -f ($(if ($pgUp) { "OK" } else { "DOWN" })), $cfg.port, $cfg.db)
     }
     if (Test-Path $TunnelLog) {
         $last = Get-Content $TunnelLog -Tail 3
@@ -135,11 +191,14 @@ function Wait-Health([int]$timeoutSec = 90) {
 }
 
 # 已在监听则直接复用
+$dbLabel = $null
+$pgStarted = $false
 $existing = Get-NetTCPConnection -LocalPort $LocalPort -State Listen -ErrorAction SilentlyContinue
 if ($existing) {
     Write-Ok "端口 $LocalPort 已有服务在监听，复用现有后端"
     $backendMode = "reuse"
     $backendPid = ($existing | Select-Object -First 1).OwningProcess
+    $dbLabel = (Read-State).database
 } else {
     $docker = Get-Command docker -ErrorAction SilentlyContinue
     if ($docker -and (Test-Path $ComposeFile)) {
@@ -151,16 +210,35 @@ if ($existing) {
         $backendMode = "docker"
         $backendPid = $null
     } else {
-        Write-Warn2 "未检测到 Docker，回退 uvicorn（SQLite dev 库）"
+        # ---- uvicorn 兜底 ----
+        # 数据库：auto/显式 pg 且存在 pg.local.json → 本地 PostgreSQL；否则 SQLite dev 库
+        $pgConfig = Get-PgConfig
+        $usePg = ($Backend -eq "pg") -or ($Backend -eq "auto" -and $pgConfig)
+        $pgStarted = $false
+        $dbLabel = "sqlite:backend/ailearning_dev.db"
+        $databaseUrl = $null
+        if ($usePg) {
+            if (-not $pgConfig) { Write-Err2 "指定了 -Backend pg，但找不到 $PgConfigFile"; exit 1 }
+            $pgStarted = Start-Pg $pgConfig
+            $databaseUrl = Get-PgDatabaseUrl $pgConfig
+            $dbLabel = "postgresql:127.0.0.1:$($pgConfig.port)/$($pgConfig.db)"
+        } else {
+            Write-Warn2 "使用 SQLite dev 库（若要生产同构请放好 $PgConfigFile）"
+        }
+
         $py = Join-Path $BackendDir ".venv\Scripts\python.exe"
         if (-not (Test-Path $py)) { $py = "python" }
         $uvArgs = @("-m", "uvicorn", "app.main:app", "--host", "127.0.0.1", "--port", "$LocalPort")
+        if ($databaseUrl) {
+            $env:DATABASE_URL = $databaseUrl
+            Write-Step "DATABASE_URL = $databaseUrl"
+        }
         $p = Start-Process -FilePath $py -ArgumentList $uvArgs -WorkingDirectory $BackendDir `
             -WindowStyle Hidden -PassThru `
             -RedirectStandardOutput $UvicornOut -RedirectStandardError $UvicornErr
         $backendMode = "uvicorn"
         $backendPid = $p.Id
-        Write-Ok "uvicorn 已启动 (pid $($p.Id))，日志 $UvicornErr"
+        Write-Ok "uvicorn 已启动 (pid $($p.Id))，库 $dbLabel，日志 $UvicornErr"
     }
 }
 
@@ -255,19 +333,22 @@ if ($publicUrl) {
 # Step 5：写状态
 # =================================================================
 @{
-    backendMode = $backendMode
-    backendPid  = $backendPid
-    tunnelPid   = $tunnelPid
-    url         = $publicUrl
-    port        = $LocalPort
-    startedAt   = (Get-Date).ToString("yyyy-MM-dd HH:mm:ss")
-    provider    = $Provider
+    backendMode        = $backendMode
+    backendPid         = $backendPid
+    tunnelPid          = $tunnelPid
+    publicUrl          = $publicUrl
+    port               = $LocalPort
+    database           = $(if ($dbLabel) { $dbLabel } else { "docker" })
+    pgStartedByScript  = [bool]$pgStarted
+    startedAt          = (Get-Date).ToString("yyyy-MM-dd HH:mm:ss")
+    provider           = $Provider
 } | ConvertTo-Json | Set-Content -Path $StateFile -Encoding utf8
 
 Write-Host ""
 Write-Host "════════════════════════════════════════════════════════" -ForegroundColor DarkGray
 Write-Host " 本地部署完成" -ForegroundColor Green
 Write-Host " 后端      : http://127.0.0.1:$LocalPort  ($backendMode)"
+if ($dbLabel) { Write-Host " 数据库    : $dbLabel" }
 if ($publicUrl) { Write-Host " 公网地址  : $publicUrl" }
 Write-Host " 状态文件  : $StateFile"
 Write-Host " 停止      : pwsh scripts/local-deploy.ps1 -Stop"
