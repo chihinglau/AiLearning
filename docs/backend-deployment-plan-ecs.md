@@ -1,11 +1,22 @@
-# 深爱学（AiLearning）后端服务同机部署方案
+# 深爱学（AiLearning）后端部署方案：本地验证 → 独立 ECS
 
 > **文档性质**：后端生产部署实施方案（与 `release-plan.md` 缺口 2/3/4 配套）
-> **目标环境**：阿里云 ECS `112.74.114.146`（与 RetroEmuPouch 账号后端同一台）
-> **目标域名**：`ailearnning.cn`（见 §2.1 拼写核验）
-> **方案基线**：复用 RetroEmuPouch `tools/account_backend` 已验证的 Docker Compose + Caddy + PostgreSQL + Alembic 部署模式
-> **最后更新**：2026-11-17
-> **关联文档**：`docs/release-plan.md`、`docs/skills.md` §5.6、`docs/project-task-plan.md`（R-02/R-03/R-06）
+> **目标形态**：**独立阿里云 ECS**（不再与 RetroEmuPouch 共用）
+> **当前阶段**：阶段 0「本地部署 + Cloudflare Tunnel」——**已实测通过（2026-11-19）**
+> **目标域名**：`ailearnning.cn`（见 §4.7 拼写核验）
+> **最后更新**：2026-11-19
+> **关联文档**：`docs/release-plan.md`、`docs/project-task-plan.md`（R-02/R-03/R-06）、`docs/k12-learning-app-design.md`
+
+---
+
+## 0. 相对上一版（2026-11-17）的变更
+
+| 变更 | 内容 |
+|---|---|
+| 部署形态 | ~~与 RetroEmuPouch 同机共用~~ → **独立 ECS**，本方案自建 Caddy，同 compose 内反代 |
+| 作废章节 | 原 §2.2「复用 RetroEmuPouch 部署资产」、§3 跨栈架构、§3.1 loopback 端口矩阵、§5「Caddy 同机共存」（C7/C8）、§8 P2 中与 RetroEmuPouch 协同的 4 个步骤、§10 回滚中的 Caddy 恢复 |
+| 作废原因 | 原方案核心技术路径 **实测证伪**：仅绑 `127.0.0.1` 的服务从容器侧不可达（详见附录 A-2） |
+| 新增 | 阶段 0「本地部署 + Cloudflare Tunnel」全流程与实测数据（§3）；独立 ECS 规格测算与 D1–D10（§4）；三个 P0 交付缺口（§5）；A11–A15 验收（§6） |
 
 ---
 
@@ -13,207 +24,181 @@
 
 | 维度 | 结论 |
 |---|---|
-| 同机可行性 | **可行**。ECS 2C2G 上再跑一套 FastAPI + PostgreSQL，内存增量约 180 MiB；先补 2G swap 后可稳定承载 |
-| 公网入口 | 复用 RetroEmuPouch 已有的 **Caddy 容器**（独占 80/443），AiLearning **不再自建 nginx**，避免端口冲突 |
-| 域名 | `api.ailearnning.cn`（App API）+ `www.ailearnning.cn`（法务/备案首页）；裸域 301 跳转 |
-| 数据库 | AiLearning **独立** PostgreSQL 容器 + 独立 volume，不共用 RetroEmuPouch 的库与网络 |
-| 网络隔离 | AiLearning API 只绑 `127.0.0.1:18080`；DB 完全不映射宿主端口 |
-| 备案/HTTPS | 备案前走 SSH 隧道内网验证；备案通过后由 Caddy 自动签发证书（Let's Encrypt），不再手工放 certs |
-| 主要风险 | ① 域名拼写 `ailearnning` vs 项目内既有 `ailearning` 不一致；② Caddy 配置误覆盖会打断 RetroEmuPouch；③ 备案未过前 80 端口不可用；④ 2C2G 内存需先补 swap |
+| 阶段 0（本地 + Cloudflare） | **已跑通**：公网 HTTPS 下 `/health` 200、登录取 token、试卷列表（含 `x-total-count`）、听力/读题音频 200 + `audio/ogg` + ETag `304` 全部通过 |
+| 阶段 1（独立 ECS） | **可行**：单栈内存估 150–300 MB、磁盘 <11 GB、2C2G 够用、2C4G 更稳；原共用方案唯一硬阻断项（跨栈 loopback）在本方案中天然消失 |
+| 公网入口 | 阶段 0：Cloudflare quick tunnel（临时域名，零配置）；阶段 1：ECS 自建 Caddy 独占 80/443 + 自动 ACME |
+| 数据库 | 独立 `postgres:16-alpine` + 独立 volume；阶段 0 无 Docker 时回退 SQLite dev 库 |
+| 网络隔离 | API 只绑 `127.0.0.1:18080`，DB 不映射宿主端口；阶段 1 API 完全不发布宿主端口 |
+| 仍然阻断上线的 3 个 P0 | ① 生产内容初始化（seed 只有 600 题 / 0 张正式卷）；② 1.7 GB 读题+听力音频的交付；③ ICP 备案与解析切换 |
+| 工作量 | 阶段 0 已完成；阶段 1 约 **5.25–6.25 人日**（不含备案等待） |
 
 ---
 
-## 2. 现状与约束
-
-### 2.1 域名拼写必须先核验（P0 阻断）
-
-用户指定域名为 **`ailearnning.cn`（双 n）**，但项目内既有资产普遍写作 **`ailearning.cn`（单 n）**：
-
-- `backend/app/legal/privacy.md` L192、`app/lib/core/constants/legal_constants.dart` L9、`deploy/.env.example` L25、`docs/k12-learning-app-design.md` L34 等均为 `ailearning.cn` / `AiLearning.cn`；
-- `docs/ailearnning.cn_certificate.png`（双 n）与 `docs/ailearning.com_certificate.png` 同时存在。
-
-**行动**：确认实际注册/可备案的域名。本方案以下统一按 **`ailearnning.cn`** 编写；若实际为 `ailearning.cn`，全文替换即可，但必须同步修改客服邮箱、CORS、法务地址、商店文案，保证全链路一致。
-
-### 2.2 RetroEmuPouch 已验证的部署资产（直接复用模式）
-
-来源：`D:\ai\prj\trae\HuaWei\RetroEmuPouch\tools\account_backend\`、`docs\design-account-backend.md`
-
-| 组件 | RetroEmuPouch 现状 | AiLearning 复用方式 |
-|---|---|---|
-| ECS | `112.74.114.146`，Ubuntu 24.04.5，2C2G/40GB/3Mbps，安全组仅 22/80/443 | 同一台，不新增实例 |
-| 容器编排 | `docker-compose.prod.yml`，3 容器：`db` / `app` / `caddy`；`restart: always`；`json-file` 日志轮转 10m×3 | 同样的 compose 结构（但去掉自身 caddy） |
-| 反向代理 | `caddy:2-alpine` 独占 80/443，`Caddyfile.prod` 按 Host 路由 `api.`/`www.`，自动 HTTPS，访问日志 180 天留存 | **共用这个 Caddy**，新增 AiLearning 两个 site 块 |
-| 数据库 | `postgres:16-alpine`，`internal` 网络，无宿主端口；`alembic upgrade head`；03:15 每日 `pg_dump` 备份 7 天 | 同版本独立实例，独立 volume/凭据/备份 |
-| 部署脚本 | `scripts/deploy.ps1`（setup/deploy/seed/update/logs/stop，-Staging/-Domain），SSH key `C:\Users\liuzhixing\.ssh\id_ecs99` | 复制模式新建 `scripts/deploy-backend.ps1` |
-| 健康检查 | `GET /healthz`；host cron 每 10 分钟 `healthcheck.sh` | 新增 AiLearning `/health` 检查，错开时间 |
-| 安全 | JWT/DB 口令 env 注入、CORS 白名单、`*`/localhost 被 `validate_settings` 拒绝 | AiLearning 已有同等校验（`backend/app/core/config.py` L82-107） |
-
-### 2.3 AiLearning 现状（与 RetroEmuPouch 的关键差异）
-
-- 已有 `deploy/Dockerfile`、`deploy/docker-compose.yml`、`deploy/entrypoint.sh`、`deploy/nginx/ailearning.conf`、`.env.example`（**已具备生产化骨架**）。
-- 但 `deploy/docker-compose.yml` L34-44 的 `nginx` 服务**硬绑定宿主 80/443**，与 RetroEmuPouch 的 Caddy **直接冲突**：必须删除该服务。
-- `deploy/nginx/ailearning.conf` L12 `server_name _;` 仍是占位；证书目录 `deploy/certs/` 为手工证书模式，需改为 Caddy 自动证书。
-- `entrypoint.sh` 已做 `alembic upgrade head` + 可选 seed，单 uvicorn worker，符合 2C2G 约束。
-- 生产校验 `validate_settings()` 已覆盖 JWT 默认密钥、DEBUG、AUTO_CREATE_TABLES、CORS 通配等，可直接沿用。
-- 质量门禁：`pytest` 440 通过、`flutter test` 174 通过、`ruff`/`analyze` 干净（见 `docs/skills.md` L691-692）。
-
----
-
-## 3. 总体架构
+## 2. 两阶段路线
 
 ```
-                          公网（安全组仅 22/80/443）
-                                      │
-                       ┌──────────────▼──────────────┐
-                       │  共享 Caddy（RetroEmuPouch   │
-                       │  compose 的 caddy 容器）      │
-                       │  80/443 + 自动 HTTPS/ACME    │
-                       └───┬──────────────────┬───────┘
-        api.gamepouch.cn   │                  │   api.ailearnning.cn
-        www.gamepouch.cn   │                  │   www.ailearnning.cn
-                           │                  │
-                 reverse_proxy app:8000   reverse_proxy host.docker.internal:18080
-                           │                  │
-        ┌──────────────────▼───────┐   ┌──────▼──────────────────────┐
-        │ RetroEmuPouch stack      │   │ AiLearning stack            │
-        │ /opt/retroemupouch-account│   │ /opt/ailearning-backend     │
-        │ app:8000 / db:5432       │   │ api:127.0.0.1:18080→8000    │
-        │ 网络 internal + web      │   │ db:5432（无宿主映射）        │
-        └──────────────────────────┘   │ 网络 ailearning_internal    │
-                                       └─────────────────────────────┘
+阶段 0（本周，验证链路与内容）          阶段 1（验证通过后，正式对外）
+本机 Windows                           独立阿里云 ECS（Ubuntu 24.04）
+  uvicorn/Docker ── 127.0.0.1:18080        caddy(80/443) ── api:8000 ── db
+        │                                        │
+  cloudflared quick tunnel                DNS → 独立公网 IP
+        │                                        │
+  https://xxx.trycloudflare.com           https://api.ailearnning.cn
+        │                                        │
+  真机 App（环境诊断改地址）              正式 APK/HAP（dart-define 注入）
 ```
 
-### 3.1 端口与域名矩阵
-
-| 项 | RetroEmuPouch（现状） | AiLearning（本方案） |
-|---|---|---|
-| 公网域名 | `api.gamepouch.cn` / `www.gamepouch.cn` | `api.ailearnning.cn` / `www.ailearnning.cn` |
-| 公网端口 | Caddy 80/443 | **共用同一 Caddy**，不新开端口 |
-| API 容器内端口 | 8000 | 8000 |
-| API 宿主映射 | 无 | `127.0.0.1:18080:8000`（仅 loopback） |
-| DB 容器 | `postgres:16-alpine` 5432 | `postgres:16-alpine` 5432 |
-| DB 宿主映射 | 无 | 无 |
-| Caddy→API | `app:8000`（同 compose 网络） | `host.docker.internal:18080`（跨 compose，经宿主 loopback） |
-| 健康检查 | `GET /healthz` | `GET /health` |
-
-> **为何选 loopback 而非共享 Docker 网络**：两个 compose 项目各自独立，不依赖对方的网络名（避免 `retroemupouch-account_web` 这类隐式耦合）。代价是 Caddy 需增加一行 `extra_hosts: host.docker.internal:host-gateway`（Docker 20.10+ 支持，当前 Docker 29.9.3 满足）。
+阶段 0 的目的不是"临时凑合上线"，而是用**真实后端 + 真实内容 + 真机**把下列风险前移：鉴权、组卷、音频、ETag、中文编码、时延体感。阶段 1 只换承载与入口。
 
 ---
 
-## 4. 代码与配置改造清单（动手前先做）
+## 3. 阶段 0：本地部署 + Cloudflare Tunnel（已实测）
 
-| # | 文件（AiLearning 仓库） | 改造内容 | 必要性 |
+### 3.1 交付物
+
+| 文件 | 作用 |
+|---|---|
+| `deploy/docker-compose.local.yml` | 本地栈：db + api（去掉 nginx），api 绑 loopback，音频只读挂载 |
+| `deploy/.env.local.example` | 本地 env 模板（PG 口令、JWT、CORS、RUN_SEED） |
+| `scripts/local-deploy.ps1` | 一键启停/状态：Docker 优先、uvicorn 兜底；起隧道并解析公网地址；公网自检 |
+
+### 3.2 一键命令
+
+```powershell
+# 启动（自动选择 Docker 或 uvicorn，自动起 Cloudflare 临时隧道）
+pwsh scripts/local-deploy.ps1
+
+# 只看状态
+pwsh scripts/local-deploy.ps1 -Status
+
+# 只起后端、不起隧道（内网联调用）
+pwsh scripts/local-deploy.ps1 -SkipTunnel
+
+# 停止隧道与后端
+pwsh scripts/local-deploy.ps1 -Stop
+```
+
+cloudflared 若未安装，用国内可达镜像下载（GitHub 直连会被重置，实测 `curl (56)`）：
+
+```powershell
+& "$env:SystemRoot\System32\curl.exe" -L -o D:\ai\prj\trae\HuaWei\MyLangLean\.tools\cloudflared.exe https://ghfast.top/https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-windows-amd64.exe
+```
+
+### 3.3 数据与日志布局（不污染仓库）
+
+```
+D:\AiLearning\
+├─ data\postgres\        # Docker 模式 PG 数据（bind mount）
+├─ logs\                 # uvicorn / cloudflared 日志
+└─ run\local-deploy.json # 进程与公网地址状态，供 -Status / -Stop 使用
+```
+
+音频不复制：容器以只读方式挂 `backend/build/question_audio`（15783 个文件，约 1.7 GB）。
+
+### 3.4 实测结果（2026-11-19，深圳本地出口）
+
+| 检查项 | 结果 |
+|---|---|
+| 本地 `/health` | 200 `{"status":"ok","app":"AiLearning API","env":"dev"}` |
+| 公网 `/health` | 200；首次 12.8 s（TLS+隧道建连），后续 1.85 s |
+| 公网 `/legal/privacy` | 200（免登录，1.85 s） |
+| 未鉴权访问 `/api/exams` | **401**（鉴权生效） |
+| 学生登录 `POST /api/auth/login` | 200，返回 access_token（注意是 **form-urlencoded + `username` 字段**，不是 JSON） |
+| 试卷列表 `/api/exams?grade=1&subject=math` | 200，返回 3 张卷；`x-total-count: 3`；中文标题正常（`1年级数学期末卷`） |
+| 听力音频 `/api/learn/questions/15745/audio?kind=listening` | 200，`audio/ogg`，1742 B，公网 1.47 s |
+| 读题音频 `/api/learn/questions/4522/audio?kind=reading` | 200，`audio/ogg`，34469 B |
+| 音频 ETag 条件请求 | `If-None-Match` → **304**，0 B（Cloudflare 未破坏条件校验） |
+| 音频缓存头 | `cache-control: public, max-age=2592000` |
+
+> 音频路径易踩坑：路由前缀是 **`/api/learn/questions/{id}/audio`**（`learn.py` 的 `APIRouter(prefix="/learn")` + `settings.api_prefix`），不是 `/api/questions/...`；写错会得到 FastAPI 默认 `{"detail":"Not Found"}`，与"音频未就绪"的业务错误不同。
+
+### 3.5 已知限制（阶段 0 不能当生产用）
+
+| 限制 | 说明 | 对策 |
+|---|---|---|
+| 大陆访问时延高 | 经 Cloudflare 海外节点，单请求 1.5–2 s；首连 12.8 s | 只用于功能验证；正式对外必须回到境内直连 ECS |
+| 临时域名每次变 | `xxx.trycloudflare.com` 重启即换 | 每次验证前 `-Status` 取新地址，在 App「环境诊断」里改 |
+| 无 SLA | quick tunnel 不承诺可用性，Cloudflare 侧限速 | 不作为生产入口 |
+| 本机不能休眠 | 电脑关机即断 | 验证窗口内保持开机 |
+| 无 Caddy | 阶段 0 由隧道承担 TLS | 阶段 1 用 Caddy，配置见 §4.2 |
+| 可选国内替代 | 若大陆访问 Cloudflare 持续不畅 | `-Provider cpolar`（国内节点，需 authtoken）或直接先做阶段 1 |
+
+### 3.6 真机联调（EBG-AN00）
+
+1. App 登录 →「我的」→「环境诊断」→ 服务地址填 `-Status` 输出里的 `https://xxx.trycloudflare.com`（**不带结尾斜杠**）。
+2. 保存后回首页：验证学生登录、考试中心筛选（g1 数学应为 3 张）、开考、听力播放、退出重进仍可登录（refresh token）。
+3. 若 adb 在线，可先用 `adb logcat` 观察 `Dio` 请求耗时；阶段 0 下 1.5–2 s/请求是预期值。
+
+> 实测环境：本机 adb 当前无设备连接（`adb devices` 为空），真机步骤待设备接入后执行。
+
+---
+
+## 4. 阶段 1：独立 ECS 部署
+
+### 4.1 规格测算（基于实测）
+
+| 资源 | 依据 | 建议 |
+|---|---|---|
+| 内存 | 现网同构三容器 RSS：api 79.6 / db 14.8 / caddy 14.4 MB；AiLearning 依赖更轻（`requirements.txt` 无 pandas/numpy/TTS） | 单栈 **150–300 MB**；**2C2G 够用，2C4G 更稳** |
+| 磁盘 | 镜像（优化后）0.3–0.4 GB + 音频 1.7 GB + PG <0.2 GB + 备份 7 天 + Caddy 日志上限 2 GB + 系统 6 GB | **40 GB ESSD**；20 GB 偏紧 |
+| 带宽 | 试卷 JSON 与按需音频很轻（50 DAU × 20 题 × 16 KB ≈ 16 MB/天）；痛点是首次全量音频 1.7 GB ≈ 78 分钟/人 | 3 Mbps 可支撑初期；音频走 **OSS+CDN** 或严格按需播放 |
+| CPU | 单 uvicorn worker；组卷/体检脚本属批处理 | 2 核够；批处理避峰 |
+
+### 4.2 独立栈架构
+
+```
+公网（安全组仅 22/80/443，22 建议限源）
+              │
+        ┌─────▼─────┐
+        │ Caddy 2   │ 80/443，自动 ACME 证书，180 天 JSON 访问日志
+        └──┬─────┬──┘
+  api.域名 │     │ www.域名（备案首页 HTML）
+           ▼     ▼
+     ┌──────────────┐   同 compose 自定义网络（建议 ipam 固定 subnet）
+     │ api (FastAPI)│   uvicorn 0.0.0.0:8000，不发布宿主端口
+     └──────┬───────┘
+            ▼
+     ┌──────────────┐
+     │ db (PG16)    │   internal: true，无宿主端口
+     └──────────────┘
+     卷：pgdata / caddy_data / question_audio（只读）
+```
+
+与阶段 0 的差异只有承载与入口；应用侧不需要改动。
+
+### 4.3 改造清单
+
+| # | 项 | 内容 | 级别 |
 |---|---|---|---|
-| C1 | `deploy/docker-compose.yml` | **删除 `nginx` 服务**；`api` 增加 `ports: ["127.0.0.1:18080:8000"]`；补 `LEGAL_PUBLIC_BASE_URL`、`ICP_RECORD_NO`、`APP_RECORD_NO`、`SOFTWARE_COPYRIGHT_NO`、`AUDIT_RETENTION_MONTHS`、`FORWARDED_ALLOW_IPS`；加日志轮转锚点与 `mem_limit`（建议 api 768m / db 512m） | **阻断**（端口冲突） |
-| C2 | `deploy/Dockerfile` | pip 改阿里云镜像（对齐 RetroEmuPouch）；可选加非 root 用户 | 建议（大陆拉取速度） |
-| C3 | 新增 `.dockerignore`（仓库根） | 排除 `backend/*.db*`、`docs/`、`.tools/`、`build/`、`app/build/` 等，避免构建上下文膨胀 | 建议 |
-| C4 | `deploy/.env.example` | 域名占位改 `ailearnning.cn`；`CORS_ORIGINS=["https://www.ailearnning.cn"]`；`LEGAL_PUBLIC_BASE_URL=https://www.ailearnning.cn` | 必须 |
-| C5 | `backend/app/main.py` | 根路径 `GET /`：当 `Accept: text/html` 时返回简易 HTML 落地页（含隐私政策/用户协议链接），满足备案「首页 URL 可访问」要求；JSON 行为保持不变 | 必须（备案） |
-| C6 | `scripts/deploy-backend.ps1`（新建） | 参照 RetroEmuPouch `deploy.ps1`，实现 setup/deploy/seed/update/logs/stop/ssh，复用 `$env:ECS_SSH_KEY` | 必须 |
-| C7 | RetroEmuPouch `tools/account_backend/docker-compose.prod.yml` | `caddy` 服务加 `extra_hosts: ["host.docker.internal:host-gateway"]` | 必须 |
-| C8 | RetroEmuPouch `tools/account_backend/Caddyfile.prod` | 新增 AiLearning 两个 site 块 + HTTP→HTTPS 跳转 + 180 天访问日志（见 §5.2） | 必须 |
-| C9 | `scripts/build-apk.ps1` / `build-hap.ps1` / `ci.ps1` | 生产构建传 `-ApiBaseUrl https://api.ailearnning.cn`；`ci.ps1` L30 默认值改正式域名 | 必须（客户端） |
-| C10 | `app/lib/core/constants/app_constants.dart` L48-51 | `API_BASE_URL` 默认值仅用于本地调试；生产一律由 dart-define 注入。**备案号**优先走后端 `/app/info` 云端下发，避免硬编码发版 | 建议 |
+| D1 | 新建实例 | Ubuntu 24.04、2C4G（或 2C2G + 2G swap）、40 GB ESSD、≥3 Mbps；安全组仅 22/80/443 | 阻断 |
+| D2 | `scripts/setup-ailearning-ecs.sh` | 复用 RetroEmuPouch `setup-ecs.sh`（阿里云 Docker CE 源、compose v2、镜像加速、git/curl/htop、ufw），**补它缺的三项**：2G swap + `vm.swappiness=10`、时区 `Asia/Shanghai`、fail2ban | 阻断 |
+| D3 | `deploy/docker-compose.yml` | 删 `nginx`；加 `caddy`（80/443 + `caddy_data`）；api 不发布宿主端口；db `internal: true`；加 `x-logging` 与 `mem_limit`（api 512m / db 512m）；api 补 healthcheck（现仅 Dockerfile 内有） | 阻断 |
+| D4 | `deploy/Caddyfile.prod` | `api.*` / `www.*` / 裸域 301；安全头；`roll_size 50MiB + roll_keep_for 4320h` | 阻断 |
+| D5 | `deploy/Caddyfile.staging` | 备案前纯 HTTP `:80`，照搬 RetroEmuPouch `Caddyfile.staging` 模式 | 必须 |
+| D6 | `.dockerignore` + Dockerfile 白名单 COPY | 现 `context: ..` 若无 `.dockerignore`，上下文约 **4 GB**（`app/build` 2.7 GB、`backend/build` 884 MB、`.venv` 330 MB、`docs` 80 MB）；`COPY backend/` 还会把它们塞进镜像 | **阻断** |
+| D7 | `scripts/deploy-backend.ps1` | 改 **git clone/pull + 服务器构建**（仓库仅 46 MB，3 Mbps 约 2 分钟），替代 scp 887 MB（约 40 分钟、不可续传） | 必须 |
+| D8 | `scripts/backup-ailearning-db.sh` + `healthcheck.sh` | 可直接复用现成两个脚本（改库名与 URL）；独立机后 cron 不再需要错峰 | 必须 |
+| D9 | 客户端域名注入 | `build-apk.ps1` / `build-hap.ps1` / `ci.ps1` 传 `-ApiBaseUrl https://api.ailearnning.cn`；`app_constants.dart` 仅保底 | 必须 |
+| D10 | **生产内容与音频资产** | 见 §5 P0-A / P0-B | 阻断 |
 
----
+### 4.4 数据库、迁移与备份
 
-## 5. Caddy 同机共存配置
+- **实例**：独立 `postgres:16-alpine`，volume `ailearning_pgdata`；库/用户 `ailearning`；口令独立。
+- **迁移**：`entrypoint.sh` 已执行 `alembic upgrade head`；**当前 head = `d6e7f8g9h0a1`**（比上一版文档多一枚 `listening_play_quota`），表数 **35**。
+- **初始化**：`RUN_SEED` 只做底座，**不能当内容交付**（见 §5）。
+- **备份**：`pg_dump` 每日 → `/opt/backups/ailearning/db-YYYY-MM-DD.sql.gz`，保留 7 天；**另加异地**（推 OSS，保留 30 天）。
+- **恢复演练**：临时库导入比对行数（A13）。
+- **审计留存**：`AUDIT_RETENTION_MONTHS=24`。
 
-### 5.1 前置改动（C7）：让 Caddy 能访问宿主 loopback
+### 4.5 环境变量
 
-在 RetroEmuPouch `docker-compose.prod.yml` 的 `caddy` 服务中加入：
-
-```yaml
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
-```
-
-> ⚠️ 该文件由 RetroEmuPouch `deploy.ps1 -Action deploy` 上传；`-Action update` **故意不覆盖** compose/Caddyfile/env（2026-11-05 事故教训）。因此此改动必须走完整的 `-Action deploy`，并在变更前备份远端文件。
-
-### 5.2 Caddyfile 追加片段（C8）
-
-```caddyfile
-# ── 深爱学 AiLearning（同机第二域名）──
-api.ailearnning.cn {
-    reverse_proxy host.docker.internal:18080
-    handle /health {
-        reverse_proxy host.docker.internal:18080
-    }
-    header {
-        Strict-Transport-Security "max-age=31536000; includeSubDomains"
-        X-Content-Type-Options "nosniff"
-        X-Frame-Options "DENY"
-        Referrer-Policy "strict-origin-when-cross-origin"
-    }
-    log {
-        output file /data/logs/ailearning-access.log {
-            roll_size 50MiB
-            roll_keep 20
-            roll_keep_for 4320h
-        }
-        format json
-    }
-}
-
-www.ailearnning.cn {
-    reverse_proxy host.docker.internal:18080
-    header {
-        Strict-Transport-Security "max-age=31536000; includeSubDomains"
-        X-Content-Type-Options "nosniff"
-        X-Frame-Options "SAMEORIGIN"
-        Referrer-Policy "strict-origin-when-cross-origin"
-    }
-    log {
-        output file /data/logs/ailearning-www-access.log {
-            roll_size 50MiB
-            roll_keep 20
-            roll_keep_for 4320h
-        }
-        format json
-    }
-}
-
-http://api.ailearnning.cn {
-    redir https://api.ailearnning.cn{uri} permanent
-}
-http://www.ailearnning.cn {
-    redir https://www.ailearnning.cn{uri} permanent
-}
-ailearnning.cn {
-    redir https://www.ailearnning.cn{uri} permanent
-}
-http://ailearnning.cn {
-    redir https://www.ailearnning.cn{uri} permanent
-}
-```
-
-要点：
-- CORS 由各后端 `CORSMiddleware` 统一处理，Caddy **不重复设置**（与 RetroEmuPouch 一致）。
-- 请求体大小由后端限制；Caddy v2 无 `client_max_body_size`。
-- 日志落到 `caddy_data` 卷的 `/data/logs`，满足公安联网备案 6 个月留存；与 `gamepouch.cn` 的日志文件分开，便于取证。
-
----
-
-## 6. 数据库、迁移与备份
-
-- **实例**：AiLearning 独立 `postgres:16-alpine`，volume `ailearning_pgdata`（与 RetroEmuPouch `pgdata` 完全隔离），库名/用户 `ailearning`，口令由 `/opt/ailearning-backend/.env` 提供（与 RetroEmuPouch `DB_PASSWORD` 不同）。
-- **迁移**：`entrypoint.sh` 已执行 `alembic upgrade head`；当前 Alembic 单链 head 为 `c5d6e7f8g9h0`（`backend/alembic/versions/c5d6e7f8g9h0_exam_review.py`），无分叉。生产 `AUTO_CREATE_TABLES=false`。
-- **初始化**：首次 `RUN_SEED=true` 起 `python -m scripts.seed`（幂等，134 教材 / 564 题底座）；之后保持 `false`。
-- **备份**：新增 `scripts/backup-ailearning-db.sh`，`pg_dump -U ailearning ailearning | gzip > /opt/backups/ailearning/db-YYYY-MM-DD.sql.gz`，保留 7 天；cron 设在 **03:20**（错开 RetroEmuPouch 的 03:15）。
-- **恢复演练**：沿用 RetroEmuPouch `migrate-db.sh --restore-drill` 思路，用临时库导入并比对 33 张表行数。
-- **审计留存**：`AUDIT_RETENTION_MONTHS=24`（≥6）；`prune_audit` 定时清理。
-
----
-
-## 7. 环境变量与密钥
-
-`/opt/ailearning-backend/.env`（权限 600，不入 git）：
+`/opt/ailearning-backend/.env`（600，不入 git）：
 
 ```dotenv
 POSTGRES_DB=ailearning
 POSTGRES_USER=ailearning
 POSTGRES_PASSWORD=<openssl rand -hex 24>
-JWT_SECRET=<openssl rand -hex 32>          # 必须 >=32，validate_settings 会强制校验
+JWT_SECRET=<openssl rand -hex 32>          # >=32，validate_settings 强制
 CORS_ORIGINS=["https://www.ailearnning.cn"]
 LEGAL_PUBLIC_BASE_URL=https://www.ailearnning.cn
 RUN_SEED=false
@@ -224,122 +209,155 @@ ICP_RECORD_NO=<备案通过后回填>
 APP_RECORD_NO=<备案通过后回填>
 SOFTWARE_COPYRIGHT_NO=<软著取得后回填>
 SUPPORT_EMAIL=support@ailearnning.cn
-FORWARDED_ALLOW_IPS=<Caddy 容器在 docker 网桥的地址段>
+FORWARDED_ALLOW_IPS=<caddy 固定网段，如 172.30.0.0/16>
 ```
 
-> `SUPPORT_EMAIL` 必须与隐私政策/用户协议/商店素材中的邮箱一致；当前仓库内是 `support@ailearning.cn`（单 n），**随域名核验一并统一**。
+> `FORWARDED_ALLOW_IPS` 当前 `entrypoint.sh` 默认 `*`，会信任任意 `X-Forwarded-For`，审计 IP 可伪造；必须显式收窄。
+
+### 4.6 实施步骤
+
+| 阶段 | 内容 | 人日 |
+|---|---|---|
+| S1 | 开实例 + 安全组 + `setup-ailearning-ecs.sh`（D1/D2） | 0.75 |
+| S2 | compose / Caddyfile(prod+staging) / Dockerfile / `.dockerignore`（D3–D6） | 1.0 |
+| S3 | `deploy-backend.ps1` + 备份/巡检 cron（D7/D8） | 0.5 |
+| S4 | **内容交付**（P0-A） | 1.5–2.0 |
+| S5 | **音频交付**（P0-B） | 0.5–1.0 |
+| S6 | 备案 + 解析切换 + 正式 HTTPS（P0-C，含外部等待） | 0.5 + 等待 |
+| S7 | 压测与 A1–A15 验收 | 0.5 |
+
+顺序纪律：**S1–S3 先在 staging（纯 HTTP）跑通 → S4/S5 灌内容与音频 → 最后 S6 切域名**。内容与音频没解决就切 DNS，等于把空站暴露到公网。
+
+### 4.7 域名与备案
+
+- **拼写必须先核验（P0 阻断）**：用户口径 `ailearnning.cn`（双 n），仓库内既有资产多为 `ailearning.cn`（单 n，见隐私政策、`legal_constants.dart`、`deploy/.env.example`、`k12-learning-app-design.md`）；`docs/` 下同时存在两张证书图。确认后全链路统一（客服邮箱、CORS、法务地址、商店文案）。
+- 备案前 80 端口被拦 → ACME 必失败，只能跑 `Caddyfile.staging`（纯 HTTP）或 SSH 隧道验证。
+- **换实例是否需要"接入/变更备案"**：同账号同服务商通常只需改解析，但存在被拦风险，按阿里云当期要求核实后再切 DNS。
+- `www` 必须能打开 HTML 首页（§4.3 D 系列中的 C5 等价项），当前 `GET /` 只返回 JSON，**不满足备案审核**。
 
 ---
 
-## 8. 分阶段实施步骤
+## 5. 仍然存在的 3 个 P0（换机器也不会消失）
 
-### P0 — 本机准备（备案前，不影响 RetroEmuPouch）
+### P0-A 生产内容初始化
 
-1. 核验域名拼写（§2.1），完成 `ailearnning.cn` 的 ICP 备案材料准备（与 APP 备案是两回事）。
-2. ECS 补 2G swap + `vm.swappiness=10` + 时区 `Asia/Shanghai`（RetroEmuPouch 文档 D2 仍为待办，本方案的前置条件）。
-3. 在本地完成 C1~C4、C6 改造，跑质量门禁：
-   ```powershell
-   cd backend; .\.venv\Scripts\python.exe -m pytest -q
-   .\.venv\Scripts\python.exe -m ruff check --select E9,F app alembic tests
-   ```
-4. 新建 `/opt/ailearning-backend`，上传 `deploy/` 与 `backend/`，填 `.env`，`chmod 600`。
+本地独立库实跑 `scripts.seed` 的结果：**146 教材 / 118 章节 / 300 知识点 / 600 题**（choice 213 / fill 205 / judge 182，**无 listening / answer / composition**）+ 9 套蓝图 + 3 套 `source=mock` 演示卷。而当前能力是 **18746 题 / 81 张已发布卷 / 1348 道听力题**。
 
-### P1 — 内网部署与验证（备案前，无公网域名）
+按现方案上线 = 单元/期中/期末卷 **0 张**，考试中心只有 3 张 mock 撑。
 
-```powershell
-$env:ECS_HOST='112.74.114.146'; $env:ECS_USER='root'
-$env:ECS_SSH_KEY='C:\Users\liuzhixing\.ssh\id_ecs99'
-powershell -ExecutionPolicy Bypass -File scripts\deploy-backend.ps1 -Action deploy
-powershell -ExecutionPolicy Bypass -File scripts\deploy-backend.ps1 -Action seed
-```
+**交付方式（二选一）**：受控数据包导入（脱敏剔除 users/attempts/wrong_book），或把题库导入 + `gen_walkthrough_papers.py` 纳入部署流水线。导入后必须跑三层门禁：
+`audit_published_papers.py` → `verify_papers_takeable.py` → `snapshot_papers.py`。
 
-ECS 上验证（不经过 Caddy）：
+### P0-B 音频资产
 
-```bash
-curl -fsS http://127.0.0.1:18080/health
-curl -fsS http://127.0.0.1:18080/legal/privacy -H 'Accept: text/html' | head
-docker compose -f /opt/ailearning-backend/docker-compose.yml ps
-docker compose -f /opt/ailearning-backend/docker-compose.yml logs api
-```
+1.7 GB（读题 15778 + 听力 1166）不在 git、也不应进镜像（`.dockerignore` 会排掉）。二选一：
 
-也可从本机经 SSH 隧道验证：`ssh -N -L 18080:127.0.0.1:18080 root@112.74.114.146`。
+- **volume 只读挂载 + 一次性 rsync**（`--partial --append`，3 Mbps 约 78 分钟）；
+- **OSS + CDN**（同区域内网传输不计流量，Caddy 改为重定向）。
 
-### P2 — 备案通过后的公网切换（与 RetroEmuPouch 协同）
+不定义这条，读题降级系统 TTS、**听力题无兜底**。
 
-1. DNS：`api`、`www` 两条 A 记录指向 `112.74.114.146`。若使用 Cloudflare，**必须灰云（DNS only）**，不能代理。
-2. 备份 RetroEmuPouch 远端 `Caddyfile.prod` 与 compose；应用 C7+C8 改动。
-3. **先校验再重载**：
-   ```bash
-   docker compose -f /opt/retroemupouch-account/docker-compose.prod.yml exec -T caddy caddy validate --config /etc/caddy/Caddyfile
-   ```
-4. 切 Caddy 到正式配置（含两个项目的 site 块），`docker compose ... restart caddy`，等待 15s。
-5. 验证两个域名互不干扰：
-   ```bash
-   curl -fsS https://api.gamepouch.cn/healthz
-   curl -fsS https://api.ailearnning.cn/health
-   curl -fsSI https://www.ailearnning.cn/legal/privacy | head
-   ```
-6. 观察 Caddy ACME 证书签发日志（`/data/logs` 与 `docker logs caddy`），确认两个域名证书均签发成功。
+### P0-C 备案与解析
 
-### P3 — 客户端发版
-
-```powershell
-powershell -ExecutionPolicy Bypass -File scripts\ci.ps1 `
-  -ApiBaseUrl https://api.ailearnning.cn -BuildAab -WithHap
-```
-
-- 备案号取得后回填后端 `.env`（`/app/info` 云端下发）与 `app_constants.dart`（离线展示兜底）。
-- Android release 禁止明文流量，`network_security_config` 保持仅 HTTPS。
+见 §4.7。它是时间上的阻断，不是技术阻断。
 
 ---
 
-## 9. 验收标准
+## 6. 验收标准
 
 | # | 验收项 | 判定 |
 |---|---|---|
-| A1 | 同机双栈共存 | 两套 compose 同时 `up`，`docker ps` 无端口冲突，RetroEmuPouch 38 项 smoke 全绿 |
-| A2 | API 内网可达 | `http://127.0.0.1:18080/health` 返回 `status=ok` |
-| A3 | 公网 HTTPS | `https://api.ailearnning.cn/health` 200，`www/legal/privacy` 浏览器可直接打开且无需登录 |
-| A4 | 证书自动 | Caddy 为两个域名自动签发/续期证书，无手工 certs |
-| A5 | 数据隔离 | AiLearning 的库/备份/日志与 RetroEmuPouch 完全分开；`pg_dump` 可恢复 |
-| A6 | 迁移正确 | `alembic current` = `c5d6e7f8g9h0`；33 表齐备；种子数据幂等 |
-| A7 | 生产配置合规 | `validate_settings` 通过；JWT 自定义、DEBUG=false、AUTO_CREATE_TABLES=false、CORS 白名单 |
-| A8 | 安全组 | 公网仅 22/80/443；18080/5432 无法从外网访问 |
-| A9 | 日志留存 | Caddy JSON 访问日志 180 天轮转配置生效 |
-| A10 | 客户端联通 | 用 `https://api.ailearnning.cn` 构建的 APK/HAP 真机登录、组卷、提交全链路通过 |
+| A1 | 独立栈隔离 | 本机只有 AiLearning 栈，无端口冲突；与 RetroEmuPouch 零影响（不再有"同机共存"要求） |
+| A2 | API 内网可达 | `http://127.0.0.1:18080/health` → `status=ok` |
+| A3 | 公网 HTTPS | `https://api.ailearnning.cn/health` 200；`www/legal/privacy` 浏览器可直接打开且免登录 |
+| A4 | 证书自动 | Caddy 自动签发/续期，无手工 certs |
+| A5 | 数据隔离与恢复 | 独立库/备份/日志；`pg_dump` 可导入临时库 |
+| A6 | 迁移正确 | `alembic current` = **`d6e7f8g9h0a1`**；**35 表**；seed 幂等 |
+| A7 | 生产配置合规 | `validate_settings` 通过（JWT 自定义、DEBUG=false、AUTO_CREATE_TABLES=false、CORS 白名单） |
+| A8 | 安全组 | 公网仅 22/80/443；18080/5432 外网不可达；22 限源或 fail2ban 生效 |
+| A9 | 日志留存 | Caddy JSON 访问日志 180 天轮转生效 |
+| A10 | 客户端联通 | 正式构建的真机登录、组卷、提交、听力播放全链路通过 |
+| **A11** | **内容完整性** | 每级每科 9 张卷（81 张）、题量合计 2088、0 硬问题 |
+| **A12** | **音频可用** | `kind=reading` / `kind=listening` 均 200（或 OSS 302）；命中缓存返 304 |
+| **A13** | **备份可恢复** | 临时库导入后行数与生产一致 |
+| **A14** | **幂等重建** | 重复 deploy/seed 不产生重复卷、不重复建卷 |
+| **A15** | **压测** | 50 并发开考 P95 < 2 s，内存峰值 < 70% |
+
+> 阶段 0 已完成 A2/A3（临时域名）/A5（SQLite）/A7 的部分：A3 用 trycloudflare 域名验证，A6 以 dev 库 35 表为准。
 
 ---
 
-## 10. 运维与回滚
+## 7. 运维与回滚
 
-- **日常更新**：AiLearning 用 `-Action update`（只传 `Dockerfile`/`requirements.txt`/`alembic/`/`app/`），**不覆盖 compose/Caddyfile/.env**——沿用 RetroEmuPouch 的事故教训。
-- **Caddy 变更纪律**：任何 site 块修改先 `caddy validate`，再重启；变更前备份 Caddyfile，变更后立刻验两个域名。
-- **回滚**：
-  1. 客户端：切回旧 `API_BASE_URL` 重新发版（需提前保留旧包）；
-  2. 服务端：恢复备份的 Caddyfile → 删掉 AiLearning site 块 → `restart caddy` → `docker compose -f /opt/ailearning-backend/docker-compose.yml down`；
-  3. DNS：A 记录切回原值（若走 Cloudflare Tunnel 则恢复代理）。
-- **监控**：新增 host cron `curl /health` 每 10 分钟（如 `:05` 错开 RetroEmuPouch），失败写 `/var/log/ailearning-health.log`；数据盘用量与 swap 使用率纳入每周检查。
+- **日常更新**：git pull → `docker compose build api` → `up -d api`；只传代码与迁移，不覆盖 `.env`。
+- **Caddy 变更纪律**：`caddy validate` → 变更后验 api/www 双侧 → 改端口/volume 时用 `up -d --force-recreate caddy`（`restart` 不应用 `extra_hosts`/网络变更）。
+- **回滚**：① 客户端切回旧 `API_BASE_URL` 重新发版（提前留旧包）；② 服务端 `git checkout <上一个 tag>` + 重建 api；③ DNS 切回。
+- **监控**：host cron 每 10 分钟 `curl /health`，失败写 `/var/log/ailearning-health.log`；磁盘与 swap 纳入每周检查。
+- **阶段 0 的运维**：本机保持不休眠；每次重启后 `-Status` 取新地址并同步给测试同学。
 
 ---
 
-## 11. 风险登记
+## 8. 风险登记
 
 | 风险 | 概率 | 影响 | 缓解 |
 |---|---|---|---|
-| 域名拼写 `ailearnning` / `ailearning` 混用 | 高 | 高 | P0 核验并全仓库统一；证书文件、邮箱、CORS、商店文案一并核对 |
-| 改 Caddy 打断 RetroEmuPouch 现网 | 中 | 高 | 备份 + `caddy validate` + 分批切换；`-Action update` 不覆盖配置 |
-| ICP 备案未过，80 端口被拦截导致 ACME 失败 | 高 | 中 | 备案前只跑 P1 内网验证；备案+DNS 生效后再切正式 Caddyfile |
-| 2C2G 内存吃紧 | 中 | 中 | 先补 2G swap；api/db 加 mem_limit；单 uvicorn worker；Caddy 只读静态口 |
-| RetroEmuPouch `-Action deploy` 覆盖本地改动 | 中 | 中 | C7 改动纳入 RetroEmuPouch 本地文件并登记变更；部署后核对 `extra_hosts` |
-| 跨 compose 走宿主 loopback 排障复杂 | 中 | 低 | 明确 `host.docker.internal:host-gateway`；Caddy 日志按域名分文件 |
-| 独立 Postgres 增加运维面 | 中 | 低 | 备份 cron 错峰、恢复演练、凭据独立轮换 |
+| 域名拼写双/单 n 混用 | 高 | 高 | 先核验再全链路统一 |
+| 单点无冗余 | 中 | 高 | 异地备份（OSS 30 天）+ 每日巡检 + 快速重建脚本 |
+| 新机安全基线不足 | 中 | 高 | 密钥登录、禁密码、fail2ban、22 限源、仅 80/443 |
+| `FORWARDED_ALLOW_IPS=*` 伪造审计 IP | 高 | 中 | 显式收窄到 Caddy 网段 |
+| 备案未过 80 被拦、ACME 失败 | 高 | 中 | staging 纯 HTTP 先跑；备案+解析生效后切正式 |
+| 生产内容为空（seed 只有 600 题） | 高 | 高 | P0-A 受控导入 + 三层门禁 |
+| 音频未交付导致听力不可用 | 高 | 高 | P0-B 二选一交付；OSS+CDN 优先 |
+| 2C2G 内存吃紧 | 中 | 中 | 2C4G 或 2G swap；`mem_limit`；单 worker |
+| 大陆访问 Cloudflare 慢（阶段 0） | 高 | 低 | 仅验证用；正式回境内直连 |
 
 ---
 
-## 12. 任务衔接与下一步
+## 9. 任务衔接与实现进度
 
-- 本方案对应 `docs/release-plan.md` 缺口 2（隐私 URL）、缺口 3（后端生产化）、缺口 4（备案）的技术落地；对应 `project-task-plan.md` R-02/R-03/R-06。
-- 建议按项目管控要求将 §4 的 C1~C10 登记为新任务（暂拟 `BE-01~BE-10`），走 `TODO → DOING → DONE`，并纳入质量门禁验收 A1~A10。
-- **当前下一步（阻断）**：确认 `ailearnning.cn` 是否已完成 ICP 备案、DNS 当前指向、是否使用 Cloudflare；确认后即可进入 P0。
+- 对应 `release-plan.md` 缺口 2/3/4、`project-task-plan.md` R-02/R-03/R-06。
 
-> 本文基于对两个仓库实际代码的审阅（2026-11-17）；平台政策、证书与备案要求以当期官方公告为准。
+### 9.1 已落地（2026-11-19）
+
+| 项 | 文件 | 状态 |
+|---|---|---|
+| 阶段 0 一键部署 | `scripts/local-deploy.ps1` | **已实测**（见 §3.4） |
+| 阶段 0 本地栈 | `deploy/docker-compose.local.yml`、`deploy/.env.local.example` | 已写（本机无 Docker，走 uvicorn 路径实测） |
+| C5 备案首页 | `backend/app/main.py` 根路由支持 `Accept: text/html` | **已实测**：HTML 200 / 1763 B，默认仍返回 JSON |
+| D2 实例初始化 | `scripts/setup-ailearning-ecs.sh` | 已写（swap/时区/Docker 阿里云源/镜像加速/fail2ban），待实例实测 |
+| D3 生产 compose | `deploy/docker-compose.yml`（db/api/caddy + internal/edge 双网络 + mem_limit + 日志轮转） | 已写，YAML 校验通过，待实例 `up` 实测 |
+| D4/D5 Caddyfile | `deploy/Caddyfile.prod`、`deploy/Caddyfile.staging`、`deploy/docker-compose.staging.yml` | 已写，待 `caddy validate` |
+| D6 构建瘦身 | `.dockerignore` + `Dockerfile` 白名单 COPY（源码约 2 MB，替代原 884 MB 的 `backend/`） | 已完成，待实测镜像体积 |
+| D7 部署脚本 | `scripts/deploy-backend.ps1`（setup/deploy/seed/status/logs/stop/assets，git 拉取 + 服务器构建） | 已写，待实例实测 |
+
+### 9.2 待用户决策（阻塞上线，不阻塞验证）
+
+1. 域名拼写：`ailearnning.cn` 还是 `ailearning.cn`（影响客服邮箱、CORS、法务、商店文案全链路）；
+2. 独立实例规格与预算（2C2G + 2G swap vs 2C4G）；
+3. 音频交付方式（volume 挂载 vs OSS+CDN）；
+4. 生产内容交付形态（受控数据包 vs 把导入 + 组卷纳入流水线）。
+
+### 9.3 本轮遗留
+
+- 真机走查未执行：`adb devices` 当前无设备；真机验证步骤见 §3.6，可等设备接入后补。
+- `Caddyfile.prod` 仅做结构核对，未跑 `caddy validate`（本机无 caddy 与 docker）。
+
+---
+
+## 附录 A：2026-11-19 实测证据
+
+**A-1 服务器（RetroEmuPouch 现网，用于规格参照）**：内存 1740 MB（used 652 / available 1088），swap 2 GB 已用 242 MB；磁盘 40 G 用 6.6 G；Docker 29.9.3；时区已 CST；三容器 RSS 109 MB。
+
+**A-2 共用方案网络拓扑证伪**：ECS 上分别监听 `127.0.0.1:18099` 与 `0.0.0.0:18098`，从 `caddy:2-alpine` 容器经 `host.docker.internal`（解析为 172.17.0.1）访问：loopback **UNREACHABLE**、`0.0.0.0` **REACHABLE**。docker-proxy 只监听 loopback，容器侧无监听。→ 共用方案的 `reverse_proxy host.docker.internal:18080` 不成立；独立方案同 compose 反代 `api:8000` 无此问题。
+
+**A-3 构建与仓库体积**：构建上下文 ≈ 4 GB（`app/build` 2731 MB、`backend/build` 884 MB、`.venv` 330 MB、`docs` 80 MB、db 18.9 MB）；git 仓库 45.9 MB / 跟踪 2814 文件 82.4 MB；音频与 `*.db` 均被 `.gitignore` 排除（`backend/build/*` 跟踪数 0）。
+
+**A-4 seed 实跑（独立 sqlite，已删探测库）**：146 教材 / 118 章节 / 300 知识点 / 600 题（choice 213·fill 205·judge 182）/ 9 蓝图 / 3 套 `is_past_paper=0, source=mock` 演示卷。学科分布 chinese 126、english 126、math 126、politics 72、history 36、physics/biology/geography 各 30、chemistry 24。
+
+**A-5 迁移与表**：`alembic heads` = `d6e7f8g9h0a1`；dev 库表数 35。
+
+**A-6 阶段 0 本地实测**：见 §3.4（含公网时延与 304）。
+
+**A-7 音频资产**：`backend/build/question_audio` 递归文件 15783 个（读题 opus + 听力），约 1.7 GB。
+
+> 本文基于对两个仓库代码、ECS 只读命令与本机实跑的核对（2026-11-19）；平台政策、证书与备案要求以当期官方公告为准。

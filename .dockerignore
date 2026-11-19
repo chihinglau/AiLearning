@@ -1,0 +1,46 @@
+# =================================================================
+# AiLearning 构建上下文收敛（仓库根）
+# 目的：deploy/docker-compose.yml 的 context 是仓库根，若无本文件
+#       构建上下文约 4 GB（app/build 2.7 GB + backend/build 884 MB
+#       + backend/.venv 330 MB + docs 80 MB），镜像还会把 .venv/db 进包。
+# 口径：源码 < 3 MB，音频与数据库一律不进镜像（音频走卷挂载或 OSS）。
+# =================================================================
+
+# ── 版本控制与编辑器 ──
+.git/
+.gitignore
+.github/
+.idea/
+.vscode/
+
+# ── 前端构建产物 ──
+app/build/
+app/ohos/build/
+app/.dart_tool/
+app/**/.dart_tool/
+
+# ── 后端本地运行产物 ──
+backend/build/
+backend/.venv/
+backend/_backup/
+backend/.pytest_cache/
+backend/.ruff_cache/
+backend/.tmp/
+backend/tests/
+backend/*.db
+backend/*.db-*
+backend/*.log
+backend/run-uvicorn.*
+
+# ── 文档与素材（运行期不需要）──
+docs/
+deploy/certs/
+
+# ── 本地工具与安装包 ──
+.tools/
+node_modules/
+*.apk
+*.aab
+*.hap
+*.zip
+*.log

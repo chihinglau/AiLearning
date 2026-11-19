@@ -1,0 +1,77 @@
+# =================================================================
+# AiLearning —— 本地生产级部署（家用/办公电脑 + 内网穿透验证）
+#
+# 定位：在「独立 ECS 生产部署」之前，先用本机跑通
+#       「真实后端 + PostgreSQL + Cloudflare Tunnel + 真机 App」的完整链路。
+#
+# 与 deploy/docker-compose.yml（云端版）的差异：
+#   * 去掉 nginx（本地由 cloudflared 直连 api，无需 TLS 终止）
+#   * api 只绑 127.0.0.1:18080，绝不暴露到局域网/公网
+#   * db 只绑 127.0.0.1:15432（宿主机脚本连它做 alembic / 体检）
+#   * 数据、日志、音频全部落 D:\AiLearning\，不污染仓库
+#
+# 用法：
+#   cp deploy/.env.local.example deploy/.env.local   # 首次
+#   docker compose -f deploy/docker-compose.local.yml --env-file deploy/.env.local up -d --build
+#   或直接：pwsh scripts/local-deploy.ps1
+# =================================================================
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-ailearning}
+      POSTGRES_USER: ${POSTGRES_USER:-ailearning}
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in deploy/.env.local}"
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - D:/AiLearning/data/postgres:/var/lib/postgresql/data
+    # 只绑 loopback：宿主机上的 alembic / 体检脚本要连它，但不暴露给局域网
+    ports:
+      - "127.0.0.1:15432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-ailearning} -d ${POSTGRES_DB:-ailearning}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - internal
+
+  api:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    image: ailearning-api:local
+    restart: unless-stopped
+    env_file:
+      - .env.local
+    environment:
+      APP_ENV: local
+      DEBUG: "true"
+      AUTO_CREATE_TABLES: "false"
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-ailearning}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-ailearning}
+      # 读题/听力音频：直接挂仓库里的生成目录（只读），避免二次拷贝 1.7 GB
+      QUESTION_AUDIO_DIR: /app/build/question_audio
+      RUN_SEED: ${RUN_SEED:-true}
+    depends_on:
+      db:
+        condition: service_healthy
+    # 只绑 loopback：外部一律走 cloudflared 隧道，宿主不对外开孔
+    ports:
+      - "127.0.0.1:18080:8000"
+    volumes:
+      - ../backend/build/question_audio:/app/build/question_audio:ro
+      - D:/AiLearning/data/logs:/data/logs
+    networks:
+      - internal
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+
+networks:
+  internal:
+    driver: bridge
+    internal: true

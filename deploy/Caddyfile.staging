@@ -1,0 +1,27 @@
+# =================================================================
+# AiLearning —— 备案前 staging Caddyfile（纯 HTTP :80）
+#
+# 用途：ICP 备案未通过时 80 端口会被拦截，ACME 必然失败。
+#       此阶段用 HTTP + 公网 IP 或 SSH 隧道验证接口与首页，不做 TLS。
+# 用法：
+#   docker compose -f deploy/docker-compose.yml -f deploy/docker-compose.staging.yml up -d
+#   （staging override 把 Caddyfile.prod 换成本文件）
+# 备案通过后改回 Caddyfile.prod，让 Caddy 自动签发证书。
+# =================================================================
+
+{
+	admin off
+	auto_https off
+}
+
+:80 {
+	encode gzip
+	reverse_proxy api:8000
+	log {
+		output file /data/logs/staging-access.log {
+			roll_size 20MiB
+			roll_keep 5
+		}
+		format json
+	}
+}

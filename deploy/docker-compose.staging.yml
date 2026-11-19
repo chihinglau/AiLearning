@@ -1,0 +1,16 @@
+# =================================================================
+# staging override：备案前用纯 HTTP :80，关闭 ACME
+#
+# 用法：
+#   docker compose -f deploy/docker-compose.yml -f deploy/docker-compose.staging.yml up -d
+# 备案通过后：去掉 -f deploy/docker-compose.staging.yml，回到 Caddyfile.prod
+# =================================================================
+services:
+  caddy:
+    environment:
+      # staging 不签发证书，域名无关紧要，保留占位避免模板渲染报错
+      AILEARNING_DOMAIN: ${AILEARNING_DOMAIN:-ailearnning.cn}
+    volumes:
+      - ./Caddyfile.staging:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config

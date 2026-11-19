@@ -1,0 +1,68 @@
+# =================================================================
+# AiLearning —— 生产 Caddyfile（备案通过后使用）
+# 挂载：deploy/Caddyfile.prod → /etc/caddy/Caddyfile
+# 域名由 compose 环境变量 AILEARNING_DOMAIN 注入（默认 ailearnning.cn）
+#
+# 变更纪律：
+#   docker compose exec -T caddy caddy validate --config /etc/caddy/Caddyfile
+#   docker compose up -d --force-recreate caddy      # 改端口/volume 时不要 restart
+# =================================================================
+
+{
+	admin off
+	email {$ACME_EMAIL:admin@ailearning.cn}
+}
+
+(sec_headers) {
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		X-Frame-Options "SAMEORIGIN"
+		-Server
+	}
+}
+
+(access_log) {
+	log {
+		output file /data/logs/{args.0} {
+			roll_size 50MiB
+			roll_keep 20
+			roll_keep_for 4320h
+		}
+		format json
+	}
+}
+
+# ── API 域名 ──
+api.{$AILEARNING_DOMAIN} {
+	import sec_headers
+	encode gzip zstd
+	reverse_proxy api:8000
+	import access_log api-access.log
+}
+
+# ── 官网（备案首页 / 法务页面）──
+www.{$AILEARNING_DOMAIN} {
+	import sec_headers
+	encode gzip zstd
+	reverse_proxy api:8000
+	import access_log www-access.log
+}
+
+# ── 裸域 301 ──
+{$AILEARNING_DOMAIN} {
+	redir https://www.{$AILEARNING_DOMAIN}{uri} permanent
+}
+
+http://{$AILEARNING_DOMAIN} {
+	redir https://www.{$AILEARNING_DOMAIN}{uri} permanent
+}
+
+http://api.{$AILEARNING_DOMAIN} {
+	redir https://api.{$AILEARNING_DOMAIN}{uri} permanent
+}
+
+http://www.{$AILEARNING_DOMAIN} {
+	redir https://www.{$AILEARNING_DOMAIN}{uri} permanent
+}
