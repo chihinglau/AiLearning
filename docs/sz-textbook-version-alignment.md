@@ -62,11 +62,19 @@
 | 英语 7–9 题量 | 1468（旧版目录残留） | 1300（1280 单元题 + 20 写作） |
 | 试卷总数 | 72（删旧英语卷后） | 81（恢复基线，含 9 张新英语卷） |
 | 内容自检 | — | issue 0 / warning 0 / 覆盖缺口 0 / 分值不一致 0 |
+| 试卷体检（audit_published_papers） | — | 81 卷 issues 0（仅 16 条 LEAK_INFO 信息级） |
+| 音频资产 | 15778 个 / 505.8 MB | 16565 个 / 540.3 MB，听力题覆盖 1356/1356（100%） |
 | 内容包 | `ailearning-content-20261119.json.gz`（含旧章节） | `ailearning-content-20261122.json.gz`（146 册 / 728 章 / 3425 KP / 18278 题 / 81 卷） |
+
+补充说明：
+
+- 音频重建需 ffmpeg，本机 ffmpeg 未在 PATH（位于 WinGet 包 `Gyan.FFmpeg...\ffmpeg-9.0.1-full_build\bin\ffmpeg.exe`），
+  需以 `FFMPEG_BIN` 指向后执行 `python -m scripts.build_question_audio --grade 7,8,9 --subject english --kind reading,listening`。
+  本轮结果：生成 817、跳过 483、失败 0。
+- 本地部署（含公网隧道）已恢复：`127.0.0.1:18080`，公网 `https://hit-heard-mailing-borough.trycloudflare.com`（quick tunnel，重启即变，状态见 `D:\AiLearning\run\local-deploy.json`）。
 
 ## 5. 未决事项
 
 - **9 下（九年级下册）**：上教版新教材尚未发布，当前为占位章节、不铺题。需要过渡方案时再决策（用旧版目录过渡 or 等官方目录）。
 - **小学英语 1–6**：版本名一并改为「上教版（沪教牛津深圳版）」（深圳小学英语同为沪教牛津，方向一致），但内容未逐册复核。
 - **历史**：仍为「部编版」，未纳入本次整改，是否统一为「人教版（部编）」待定。
-- **音频**：新题题干/听力文本已变，音频需按新内容重生成（`scripts.build_question_audio.py`），未命中的读题请求走 404 兜底合成。
