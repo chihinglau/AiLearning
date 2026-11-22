@@ -103,7 +103,10 @@ def main() -> int:
             .order_by(Textbook.grade, Textbook.semester)
         ):
             chapters = list(db.scalars(
-                select(Chapter).where(Chapter.textbook_id == book.id)
+                select(Chapter).where(
+                    Chapter.textbook_id == book.id,
+                    Chapter.is_placeholder == 0,  # 占位章节（教材目录未公布）不铺题
+                )
                 .order_by(Chapter.order_index, Chapter.id)
             ))
             for chapter in chapters:
