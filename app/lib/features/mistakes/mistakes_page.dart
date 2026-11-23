@@ -24,6 +24,7 @@ class _MistakesPageState extends ConsumerState<MistakesPage> {
   String? _error;
   bool _offline = false;
   bool _showMastered = false;
+  int _pendingCount = 0;
   int? _diagnosingId;
 
   @override
@@ -39,6 +40,8 @@ class _MistakesPageState extends ConsumerState<MistakesPage> {
     });
     final status = _showMastered ? 'mastered' : 'active';
     final service = ref.read(learnServiceProvider);
+    // 先把离线答题队列补传，错题本才包含断网期间答错的题。
+    await _syncOffline();
     try {
       final items = await service.wrongQuestions(status: status);
       final stats = await service.stats();
@@ -46,12 +49,13 @@ class _MistakesPageState extends ConsumerState<MistakesPage> {
       setState(() {
         _items = items;
         _dueCount = stats.dueReviewCount;
+        _pendingCount = 0;
         _offline = false;
         _loading = false;
       });
     } on ApiException catch (error) {
       if (!mounted) return;
-      // 断网时回退到最近一次同步缓存。
+      // 断网时回退到最近一次同步缓存，并合并本地尚未同步的错题。
       final offline = ref.read(offlineLearnServiceProvider);
       final cachedItems = error.statusCode == null
           ? await offline.cachedWrongQuestions(status)
@@ -59,11 +63,20 @@ class _MistakesPageState extends ConsumerState<MistakesPage> {
       final cachedStats = error.statusCode == null
           ? await offline.cachedStats()
           : null;
+      final pending = !_showMastered && error.statusCode == null
+          ? await offline.pendingWrongQuestions()
+          : const <WrongQuestionItem>[];
       if (!mounted) return;
       setState(() {
-        if (cachedItems != null && cachedStats != null) {
-          _items = cachedItems;
-          _dueCount = cachedStats.dueReviewCount;
+        if (cachedItems != null || pending.isNotEmpty) {
+          final cached = cachedItems ?? const <WrongQuestionItem>[];
+          final cachedIds = cached.map((item) => item.questionId).toSet();
+          _items = [
+            ...pending.where((item) => !cachedIds.contains(item.questionId)),
+            ...cached,
+          ];
+          _dueCount = cachedStats?.dueReviewCount ?? 0;
+          _pendingCount = pending.length;
           _offline = true;
           _error = null;
         } else {
@@ -71,6 +84,17 @@ class _MistakesPageState extends ConsumerState<MistakesPage> {
         }
         _loading = false;
       });
+    }
+  }
+
+  Future<void> _syncOffline() async {
+    try {
+      await ref
+          .read(offlineLearnSyncProvider)
+          .sync()
+          .timeout(const Duration(seconds: 3));
+    } catch (_) {
+      // 仍离线或同步不可用时保留队列，下次进入页面继续尝试。
     }
   }
 
@@ -133,7 +157,11 @@ class _MistakesPageState extends ConsumerState<MistakesPage> {
                 padding: const EdgeInsets.all(16),
                 children: [
                   if (_offline)
-                    const OfflineBanner(message: '离线模式，显示最近一次同步的错题与统计'),
+                    OfflineBanner(
+                      message: _pendingCount > 0
+                          ? '离线模式：$_pendingCount 条待同步错题，联网后自动补传'
+                          : '离线模式，显示最近一次同步的错题与统计',
+                    ),
                   AccentCard(
                     accent: AppAccents.of(context).exam,
                     padding: const EdgeInsets.all(16),
@@ -200,6 +228,7 @@ class _MistakesPageState extends ConsumerState<MistakesPage> {
                     ..._items.map(
                       (item) => _WrongCard(
                         item: item,
+                        pending: item.id < 0,
                         diagnosing: _diagnosingId == item.id,
                         onTagReason: (reason) => _tagReason(item, reason),
                         onDiagnose: () => _diagnose(item),
@@ -218,6 +247,7 @@ class _WrongCard extends StatelessWidget {
     required this.diagnosing,
     required this.onTagReason,
     required this.onDiagnose,
+    this.pending = false,
   });
 
   final WrongQuestionItem item;
@@ -225,12 +255,17 @@ class _WrongCard extends StatelessWidget {
   final ValueChanged<String> onTagReason;
   final VoidCallback onDiagnose;
 
+  /// 尚未同步到服务端的离线错题：只读展示，不提供标注/AI 归因。
+  final bool pending;
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final dueText = item.nextReviewAt == null
-        ? '已消灭'
-        : '下次复习：${item.nextReviewAt!.month}-${item.nextReviewAt!.day}';
+    final dueText = pending
+        ? '待同步'
+        : item.nextReviewAt == null
+            ? '已消灭'
+            : '下次复习：${item.nextReviewAt!.month}-${item.nextReviewAt!.day}';
     // 待消灭用警示色、已消灭用掌握色，一眼区分两类错题。
     final accent = item.nextReviewAt == null
         ? AppAccents.of(context).learn
@@ -284,7 +319,7 @@ class _WrongCard extends StatelessWidget {
               ),
               TextButton(
                 key: ValueKey('ai-diagnose-${item.id}'),
-                onPressed: diagnosing ? null : onDiagnose,
+                onPressed: diagnosing || pending ? null : onDiagnose,
                 style: TextButton.styleFrom(
                   padding: const EdgeInsets.symmetric(horizontal: 8),
                   minimumSize: Size.zero,
@@ -300,6 +335,7 @@ class _WrongCard extends StatelessWidget {
               ),
               PopupMenuButton<String>(
                 tooltip: '标注错因',
+                enabled: !pending,
                 onSelected: onTagReason,
                 itemBuilder: (context) => [
                   for (final reason in WrongReason.all)

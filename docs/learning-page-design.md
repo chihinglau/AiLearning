@@ -1,9 +1,9 @@
 # 深爱学（AiLearning）学习页面功能设计方案
 
 > **文档性质**：专项设计方案（学习主链路闭环蓝本）
-> **版本**：v1.4
+> **版本**：v1.5
 > **日期**：2026-11-06
-> **最后更新**：2026-11-14（第四次修订：CR-005 / D-09 v1.1 评审通过后，§3.1 交叉引用转 v1.1、§14.2 登记 L27~L30；EX-09~EX-11 已交付，见主计划 §6.24。第三次为 CR-004：§12.4 修正 `/self-grade` → `/self-assess`、§14.2 登记 L21~L26；第二次为 CR-003 考试入口闭环，第一次为 CR-002 练习模式与前置知识点）
+> **最后更新**：2026-11-23（v1.5：离线练习闭环已落地，§1.3 设计边界更新、§14.2 新增 L31~L33 离线验收项；真机 OXF-AN10 端到端走查通过，见主计划 §6.30。此前：v1.4 为 CR-005 修订，v1.3 为 CR-004，v1.2 为 CR-003，v1.1 为 CR-002）
 > **关联文档**：[user-role-permission-design.md](./user-role-permission-design.md)、[k12-learning-app-design.md](./k12-learning-app-design.md)、[subject-tutoring-and-m2-design.md](./subject-tutoring-and-m2-design.md)
 > **目标**：把当前"教材清单 + 章节列表"升级为"教材绑定 → 分层学习 → 智能练习 → 综合考试 → 复盘推荐"的完整闭环
 
@@ -56,7 +56,7 @@
 - 覆盖小学 1-6、初中 7-9、高中 10-12 的同步学习与校內考试场景。
 - 一期不做直播、不做教师实时互动课堂；教师布置作业作为 P2 扩展。
 - 主观题（作文、解答题）一期采用"参考解析 + 自评/待批"混合方案，不做全自动语义评分。
-- 离线能力：答题草稿本地暂存，联网后同步；不做整卷离线下载（P2）。
+- 离线能力（**已落地 v1.5**）：练习（Session）离线答题本地 Hive 暂存、离线本地判分、联网后 `POST /api/learn/offline/attempts` 按 `client_key` 幂等补传、后端自动更新 `student_question_records` + `wrong_questions` + 掌握度；离线错题本显示"待同步"横幅与负 id 本地错题；离线判分器缺答案时返回 null 跳过，联网后由服务端兜底。**不做整卷离线下载**（P2-05 已覆盖）。
 
 ---
 
@@ -1089,6 +1089,9 @@ CREATE TABLE exam_answers (
 | L28 | 前端审核闭环 | 组卷草稿态、提交复核、审核队列页与权限门；模型/widget 测试 |
 | L29 | 存量真题来源补录与卡口 | 按 R-07 台账显式补录，不猜测来源；缺来源的 `published` 卷隔离为 `draft` |
 | L30 | 真机回归与兼容 | EBG 真机补跑筛选/年份/详情/admin 组卷全链路；普通卷生成即 `published` 不变，§8.7.1 契约不变 |
+| L31 | 离线答题本地入队 | SessionPage 断网时 `ApiException(statusCode=null)` 判定离线 → `enqueueAttempt` 写入 Hive `offline_learn` box（`queue:微秒戳-随机数` key）；真机 OXF-AN10 断网答题后 base64 导出 Hive 能看到新 queue 条目（主计划 §6.30） |
+| L32 | 联网自动补传与幂等 | LearnPage 首页 `_load()` + `AppLifecycleState.resumed` 触发 `OfflineLearnSync.sync()` → 批量 `POST /api/learn/offline/attempts` → 后端按 `client_key` 幂等 upsert → `student_question_records` 新增 + `wrong_questions` wrong_count 递增 + 掌握度更新；同一 client_key 二次 POST 返回 `skipped:true` 不重复入库（主计划 §6.30） |
+| L33 | 离线错题本待同步聚合 | MistakesPage 离线时调用 `pendingWrongQuestions()` 遍历 Hive 队列本地判错（`OfflineGrader.grade()`） → 缺答案返回 null 跳过防误判 → 错题本顶部显示「离线模式：N 条待同步错题，联网后自动补传」横幅 + 负 id 本地错题卡片（主计划 §6.30） |
 
 ### 14.3 风险与对策
 

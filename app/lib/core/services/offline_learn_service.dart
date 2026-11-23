@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:ai_learning/core/models/content.dart';
 import 'package:ai_learning/core/models/learn.dart';
+import 'package:ai_learning/core/offline/offline_grader.dart';
 import 'package:ai_learning/core/offline/offline_learn_store.dart';
 import 'package:ai_learning/core/services/api_client.dart';
 
@@ -225,6 +226,50 @@ class OfflineLearnService {
 
   Future<List<OfflineAttemptEntry>> pendingAttempts() {
     return _store.pendingAttempts();
+  }
+
+  /// 待同步的离线错题：本地判分后按题目聚合，供错题本离线展示。
+  ///
+  /// 返回条目的 `id` 为负的题目 ID，用于和服务端错题记录区分（不下发操作）。
+  Future<List<WrongQuestionItem>> pendingWrongQuestions() async {
+    final pending = await _store.pendingAttempts();
+    if (pending.isEmpty) return const [];
+    final grouped = <int, ({Question question, DateTime at, int count})>{};
+    for (final entry in pending) {
+      final raw = await rawQuestion(entry.questionId);
+      if (raw == null) continue;
+      final question = Question.fromJson(raw);
+      final isCorrect = OfflineGrader.grade(question, entry.userAnswer);
+      if (isCorrect == null || isCorrect) continue;
+      final previous = grouped[question.id];
+      final later = previous == null || entry.answeredAt.isAfter(previous.at);
+      grouped[question.id] = (
+        question: question,
+        at: later ? entry.answeredAt : previous.at,
+        count: (previous?.count ?? 0) + 1,
+      );
+    }
+    final items = grouped.values
+        .map(
+          (entry) => WrongQuestionItem(
+            id: -entry.question.id,
+            questionId: entry.question.id,
+            wrongCount: entry.count,
+            correctStreak: 0,
+            status: 'active',
+            intervalDays: 0,
+            lastWrongAt: entry.at,
+            subject: entry.question.subject,
+            qType: entry.question.qType,
+            stem: entry.question.stem,
+            chapterId: entry.question.chapterId,
+            knowledgePointId: entry.question.knowledgePointId,
+            difficulty: entry.question.difficulty,
+          ),
+        )
+        .toList()
+      ..sort((a, b) => b.lastWrongAt.compareTo(a.lastWrongAt));
+    return items;
   }
 
   Future<void> removeAttempt(String clientKey) {

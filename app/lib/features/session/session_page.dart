@@ -474,12 +474,20 @@ class _SessionPageState extends ConsumerState<SessionPage> {
       setState(() => _finished = true);
       await _clearRememberedSession();
       if (_offline) {
-        if (mounted) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('离线答题已保存，联网后将自动同步')),
-          );
+        var synced = 0;
+        try {
+          synced = await ref.read(offlineLearnSyncProvider).sync();
+        } catch (_) {
+          // 仍然离线或同步不可用：队列保留，回到首页或错题本时会再次补传。
         }
-        unawaited(ref.read(offlineLearnSyncProvider).sync());
+        if (!mounted) return;
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              synced > 0 ? '已同步 $synced 条离线答题记录' : '离线答题已保存，联网后将自动同步',
+            ),
+          ),
+        );
       }
       return;
     }

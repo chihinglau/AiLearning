@@ -44,6 +44,15 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
       _loading = true;
       _error = null;
     });
+    // 补传离线答题记录后，学情统计才包含断网期间的学习进展。
+    try {
+      await ref
+          .read(offlineLearnSyncProvider)
+          .sync()
+          .timeout(const Duration(seconds: 3));
+    } catch (_) {
+      // 仍离线：继续展示缓存统计。
+    }
     try {
       final stats = await ref.read(learnServiceProvider).stats();
       if (!mounted) return;
