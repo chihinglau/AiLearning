@@ -110,3 +110,44 @@ adb install -r -d app\build\app\outputs\flutter-apk\app-debug.apk
 2. 学科选择弹窗底部出现 Flutter `BOTTOM OVERFLOWED BY 157 PIXELS`，需调整弹窗高度/滚动。
 3. 验证期间为看 g7 内容曾把质检学生 `grade` 临时改为 7，走查后已改回 1。
 
+## 7. 整改后修复（2026-11-23 第二轮，已全部实施）
+
+上一节三条观察项已按「修复回来 / 修改掉 / 按建议处理」全部收口，不再作为待优化挂账。
+
+### 7.1 走查痕迹复原
+
+| 项 | 走查后残留 | 处置 | 复原结果 |
+| --- | --- | --- | --- |
+| 学生画像 | `grade=8 / stage=junior`（7 年级走查后又落到 8 年级） | 改回 `grade=1 / stage=primary` | `/api/learn/home` 返回 `grade=1` |
+| 教材绑定 | 7 条 `active` 绑定全部指向 7 年级（生物/语文/英语/地理/历史/数学/政治） | 全量置 `archived` → `textbook_service.auto_bind()` 按 1 年级重绑 | 3 科：语文（id 3）/ 数学（id 1）/ 英语（id 5） |
+| home 缓存 | 进程内 `home:{user}:{grade}:{semester}` 缓存仍返回旧教材 | 重启 uvicorn | 缓存重建后即返回 1 年级 |
+| App 本地态 | 协议同意、登录态、离线缓存 | `adb shell pm clear` + 重走首启 | 首页「小学 · 1 年级 · 上学期」 |
+
+### 7.2 听力题按单元主题化
+
+根因：`backend/scripts/english_by_unit_data.py` 的 `listening_item(idx)` 用「12 个通用词群 × 全局游标」解码，40 个单元共享同一批词，且 `answer` 硬编码 `A`。
+
+修复：新增 `UNIT_LISTENING_WORDS`（40 单元 × 8 主题词）与 `listening_items_for_unit()`（干扰项限同单元词表、答案位置按题序 A/B/C/D 轮转）；`seed_english_by_unit.build_for_chapter()` 增加 `chapter_name` 入参，7-9 走主题化、1-6 回退旧词池。
+
+| 验收项 | 结果 |
+| --- | --- |
+| 重跑改写 | 1280 题（含 320 道 g7-9 听力） |
+| 答案分布 | A / B / C / D 各 80 |
+| 抽样 | 7A Unit 1 Friendship → friend·friendly·kind·helpful…；8A Unit 1 Look it up! → dictionary·entry·word·meaning…；9A Unit 1 Great people → hero·great·courage·leader… |
+| KP 回挂 | 7-9 英语 1300 题未挂知识点 = 0 |
+| 音频重生成 | `--kind listening --grade 7,8,9 --subject english --force` → 生成 320 / 跳过 0 / 失败 0 |
+| 全库自检 | `content_selfcheck` issue 0 / warning 0；`audit_published_papers` 81 卷 issues 0（16 条 LEAK_INFO） |
+
+### 7.3 学科选择弹窗溢出
+
+`app/lib/features/learn/learn_page.dart#_openPracticeMode`：`showModalBottomSheet` 增 `isScrollControlled: true`，内容套 `ConstrainedBox(maxHeight: 屏高 0.7)`，列表改 `Flexible(ListView(shrinkWrap: true))`。`flutter analyze` 0 issue，EBG-AN00 复验黄黑条消失、末项完整、可滚动。
+
+### 7.4 版本口径与定时任务
+
+| 项 | 结果 |
+| --- | --- |
+| 历史学科 | 12 册 `部编版` → `人教版（部编）` |
+| 英语 / 道法 / 历史 每日教研任务 | query 内 `version=` 与 `--expect-version` 全部换新口径（任务仍暂停，未擅自启用） |
+| 远端 | 本轮改动已 commit 并 push `origin/main` |
+
+

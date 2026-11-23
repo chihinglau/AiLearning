@@ -3,7 +3,7 @@
 > **文档性质**：项目主计划 / 进度跟踪 / 过程追溯（全程伴随开发周期）
 > **版本**：v1.99
 > **创建日期**：2026-11-06
-> **最后更新**：2026-11-23 v2.31（**深圳初中教材版本对齐整改**：核实深圳初中英语为沪教牛津深圳版、道法为人教版统编，库内英语 7–9 原用「牛津上海版」6 单元目录且版本名标「牛津上海版」——按 8 单元新目录重建 7–9 英语章节/KP/题库并重出试卷，英语版本名统一为「上教版（沪教牛津深圳版）」、道法改为「人教版（部编）」，补 20 道书面表达、重出听力音频、修部署通道；EBG-AN00 重装真机验证通过，见 §5.3 v2.31 / §6.31）；同日 v2.03（新增 §6.30 离线练习闭环真机端到端验证：Hive 本地答题队列 + 离线判分 + 联网自动补传 `/api/learn/offline/attempts` 按 client_key 幂等入库 + 错题本离线待同步横幅，OXF-AN10 设备全链路走查通过；P2-05 证据列同步更新练习侧实现；`flutter analyze` 0 issue、`flutter test` 182 passed、离线专项 3/3 通过）；早期：D-09 方案经 PM 评审通过并转 v1.0；CR-004 决策「通过」，EX-04~EX-08 全部实施完成、L21~L26 验收通过；CR-006 已通过并实施；新增 1 个 Alembic 迁移，全量 `pytest` 432 例与 `flutter test` 170 例全绿；R-A15 / R-A16 与 M5 仍待 PM 签署）
+> **最后更新**：2026-11-23 v2.32（**整改回填轮**：复原质检学生画像为「小学·1 年级」并按 1 年级重绑教材、7-9 英语 320 道听力题改按单元主题词表出题（答案位置 A/B/C/D 轮转）并重生成 320 条音频、学科选择弹窗溢出修复（`isScrollControlled` + 限高 0.7 + 可滚动列表）、历史学科版本名统一「人教版（部编）」、3 条教研任务 query 换新版本口径；EBG-AN00 复验通过，见 §6.32）；同日 v2.31（**深圳初中教材版本对齐整改**：核实深圳初中英语为沪教牛津深圳版、道法为人教版统编，库内英语 7–9 原用「牛津上海版」6 单元目录且版本名标「牛津上海版」——按 8 单元新目录重建 7–9 英语章节/KP/题库并重出试卷，英语版本名统一为「上教版（沪教牛津深圳版）」、道法改为「人教版（部编）」，补 20 道书面表达、重出听力音频、修部署通道；EBG-AN00 重装真机验证通过，见 §5.3 v2.31 / §6.31）；同日 v2.03（新增 §6.30 离线练习闭环真机端到端验证：Hive 本地答题队列 + 离线判分 + 联网自动补传 `/api/learn/offline/attempts` 按 client_key 幂等入库 + 错题本离线待同步横幅，OXF-AN10 设备全链路走查通过；P2-05 证据列同步更新练习侧实现；`flutter analyze` 0 issue、`flutter test` 182 passed、离线专项 3/3 通过）；早期：D-09 方案经 PM 评审通过并转 v1.0；CR-004 决策「通过」，EX-04~EX-08 全部实施完成、L21~L26 验收通过；CR-006 已通过并实施；新增 1 个 Alembic 迁移，全量 `pytest` 432 例与 `flutter test` 170 例全绿；R-A15 / R-A16 与 M5 仍待 PM 签署）
 > **参考设计文档**：见[§1.1 参考设计文档清单](#11-参考设计文档清单)（共 9 份，含 5 份设计方案、4 份支撑文档）
 > **需求追踪**：见[§1.2 需求—设计—任务追踪矩阵](#12-需求设计任务追踪矩阵)
 > **维护人**：项目负责人（PM）
@@ -582,7 +582,8 @@ flowchart LR
 | 当前迭代 | CR-005 后续项收口：真题审核发布流、前端审核队列、存量真题来源补录与 EBG 真机全链路补跑均 `DONE`（L27~L30 / §6.24）；仅 QA-02（PM 签署）与 QA-03（TT-07 人工试听）为人工依赖 `BLOCKED`（§4.3 B-002 / B-001）；2026-11-23 追加两项不新增台账任务的内容侧收口：深圳初中教材版本对齐整改（§6.31）与离线练习闭环真机验收（§6.30） |
 | 迭代目标 | 按 CR-002 消除「三模式相同」与「前置乱序、点击不到讲解」，按 CR-003 消除「有待办 / 无考试」虚标并补齐考试入库入口，按 CR-004 补齐考试中心与真题库页面方案并实施，按 CR-005 把 §6.23 后续项全部立为受控任务并实施（真题审核发布流、来源补录、真机回归、人工项登记）；后续按 PM 排期推进内容覆盖与真机回归（R-09 流水线补跑 TT-05 断网场景与音频播放） |
 | 里程碑 | M2.5（P0 技术验收通过，待签署）→ M3（P1 技术验收通过，待签署）→ M4（P2 技术验收通过，待签署）→ M5（发布就绪，R-01~R-09 已完成，待 PM 签署）→ UX-01~UX-03（`DONE`）→ CT-01~CT-03（`DONE`）→ 读题方案评审（2026-11-10 通过）→ 读题实施（TT-01~TT-07 全部 `DONE`，T3 全量合成完成、T6 待人工试听）→ 练习体验收口（CR-002 / UX-04~UX-06 `DONE`）→ 考试入口闭环（CR-003 / EX-01~EX-03 `DONE`）→ 考试中心与真题库（CR-004 / EX-04~EX-08 `DONE`）→ 后续项收口（CR-005 / EX-09~EX-11、QA-01 `DONE`；QA-02/QA-03 `BLOCKED`） |
-| 最新真机验证（2026-11-23） | EBG-AN00（SN `2NSDU20423005421`）重装新构建 debug 包（`flutter build apk --debug --target-platform android-arm64 --dart-define API_BASE_URL=http://127.0.0.1:18080`，90 s / 108.8 MB）→ `adb reverse tcp:18080 tcp:18080` → 冷启动全链路：登录（质检学生 `13900000001`）→ 首启协议同意 → 三段引导（学段选初中 / 年级 7 / 确认教材）→ 学习首页 → 同步巩固·英语配置（15 题：听力 6 + 单选 5 + 填空 4，知识点覆盖 13/32）→ 答题页听力题。**关键证据**：引导第 3 步「确认教材」显示「英语 7 年级 · 上教版（沪教牛津深圳版）」，版本整改已真实下发；`GET /api/learn/questions/23531/audio?speed=1.0&kind=listening` 200 且 AudioFlinger 实际出声（预生成 Opus 生效）；logcat 无 FATAL。观察项：学科选择弹窗底部 Flutter 溢出 157 px、g7 听力首题词汇偏通用（head/hand/eye/ear），列入待优化 |
+| 最新真机验证（2026-11-23 v2.32） | EBG-AN00（SN `2NSDU20423005421`）装新包（`build OK in 39 s` / 108.8 MB）后 `adb shell pm clear` 重走首启：协议页勾选 → 登录质检学生 `13900000001` → 首页显示「你好，质检学生 / **小学 · 1 年级 · 上学期**」（画像与教材绑定均已复原）→ 同步巩固 → 学科选择弹窗。**关键证据**：弹窗**无** `BOTTOM OVERFLOWED BY 157 PIXELS` 黄黑条，3 科（语文人教版 / 英语上教版（沪教牛津深圳版）/ 数学北师大版，均 1 年级）完整显示、末项不被裁切；复原前同一弹窗 7 科 7 年级同样不溢出（`r2_10_sheet.png` 对照 `ebg_practice1.png`）。截图 `r2_12_home.png`、`r2_11_sheet2.png` 与 dump `r2_ui*.xml` 已入库 |
+| 真机验证（2026-11-23 v2.31） | EBG-AN00（SN `2NSDU20423005421`）重装新构建 debug 包（`flutter build apk --debug --target-platform android-arm64 --dart-define API_BASE_URL=http://127.0.0.1:18080`，90 s / 108.8 MB）→ `adb reverse tcp:18080 tcp:18080` → 冷启动全链路：登录（质检学生 `13900000001`）→ 首启协议同意 → 三段引导（学段选初中 / 年级 7 / 确认教材）→ 学习首页 → 同步巩固·英语配置（15 题：听力 6 + 单选 5 + 填空 4，知识点覆盖 13/32）→ 答题页听力题。**关键证据**：引导第 3 步「确认教材」显示「英语 7 年级 · 上教版（沪教牛津深圳版）」，版本整改已真实下发；`GET /api/learn/questions/23531/audio?speed=1.0&kind=listening` 200 且 AudioFlinger 实际出声（预生成 Opus 生效）；logcat 无 FATAL。观察项（**已在 v2.32 修掉**）：学科选择弹窗底部 Flutter 溢出 157 px、g7 听力首题词汇偏通用（head/hand/eye/ear） |
 | 最新真机验证（2026-11-14） | EBG-AN00（SN `2NSDU20423005421`）在 18080 新后端 + `adb reverse` 下补跑：考试中心 `subject=math` 筛选（服务端 200，空态「没有符合条件的考试」）、真题库 `year=2025` 筛选（服务端 200）、来源详情页展示「内置演示数据（非真实真题原卷）」与授权说明；admin 账号登录后在「考试管理与发布」以章节 193 实际生成真题草稿（ID 4 / 21 题 / 状态草稿）→「提交复核」（`POST /api/exams/4/submit-review` 200）→「我的 · 试卷复核」队列（`GET /api/exams/reviews` 200）→「通过并发布」（`POST /api/exams/4/review` 200）→「已发布」队列显示该卷与 3 张带合规标注的演示卷；dev 库 `exams.id=4` 为 `published` 且 `reviewed_by/published_by=1`，缺来源真题 0 张；logcat 无 FATAL。证据见 §6.24 |
 | 最新真机验证（2026-11-12） | EBG-AN00（SN `2NSDU20423005421`）冷启动 debug 包两轮回归：① UX 组：三模式 10/15/20 题、策略与题型配比各异，前置「按教材顺序」→「天地人 · 讲解」首屏即讲解（§6.21）；② EX 组：新后端（18081 + `adb reverse`）下 `pending_exams=0` / `/api/exams=0` 口径一致，首页「待办考试」空态卡、考试中心不再虚标、真题库入口列出 2 张一年级真题；admin `/api/exams/blueprints` 200（9 蓝图）/ student 403。`/health` 200、logcat 无 FATAL。证据见 D-06 §5.5.5/§5.5.6、§6.22。历史（2026-11-10）：device 库整册离线包断网冷启动、离线判分与联网同步通过（I-006/I-007） |
 | 已知观感项（已处理） | CT-03 去重后同名 section 与其「（要点）」point 双层并存（如 1 年级数学 `10以内加减法` + `10以内加减法（要点）`）。展示层已收敛：单元页按节聚合成可折叠节卡片，同主题「（要点）」节点折叠进所属节并显示为「本节要点」；知识图谱、知识点详情、前置知识点统一显示为「名称 · 要点」；**数据层未改动** |
@@ -726,6 +727,7 @@ flowchart LR
 | v2.02 | 2026-11-14 | AR/FE/CT/PM | **CR-006 通过并实施（数据口径 + 代码加固 + 规范成文）**：3 演示卷改模拟卷、QA 卷下线（真题 0 张）并同步 `seed.py`；审核流双人复核 / 退回必填 / `restore` / 班级副本隔离（EX-18）；筛选下推与 `X-Total-Count` 口径、`/attempts`+`/reviews` 分页、CORS `expose_headers`；`license_note` 学生端收口（EX-17 部分）；CT-04 成文 `docs/past-paper-source-intake-spec.md`；D-09 §5.7 与评审报告 §九 同步；`pytest` 443+、`flutter test` 175 全绿；残留 EX-12 与 EBG 真机走查（§6.26.3） |
 | v2.30 | 2026-11-18 | AR/FE/QA | **CR-007 读题范围修订 + 考试页接入**：用户反馈「低年级语数 + 全年龄英语读题被改没了」。核实：`core/speech/*`、`features/speech/*`、`flutter_tts` 依赖、`question_speech_test.dart` 全部在位，git 无删除提交；真实缺口为 ① `session_page.dart:642` / `practice_page.dart:241` 的 `_speechEnabled` 写死 `grade 1..3` 且限语数英 → 4–9 年级英语无喇叭；② `exam_page.dart` 对 `SpeechButton/QuestionReader` 匹配数为 0，考试中心卷子从未接入读题。**实施**：新增 `app/lib/core/speech/speech_policy.dart`（英语任意年级为真、非英语须 1–3 年级且语数英、科目 trim+lowercase 容错、`autoReadByDefault` 仅 1–3）与 `app/test/speech_policy_test.dart` 7 例；三个页面 `_speechEnabled` 统一改调 policy；`exam_page.dart` 题干改 `Row`+`ReadableQuestionText`+`SpeechButton`，新增 `_speechEnabled`/`_stopSpeaking`/`_goTo`，三处切题（上一题/下一题/答题卡）统一走 `_goTo` 先停读，`_confirmExit` 与 `dispose` 补停读，**考试页不自动朗读**；`learning_settings_page.dart` 两段说明文案补「各年级英语」。**回归**：`flutter analyze` 0 issue、`flutter test test/speech_policy_test.dart` 7 passed、`flutter build apk --debug` 成功（27.7s）。**真机 EBG-AN00**：g1 英语单元走查卷出现「朗读题目」`[936,492][1032,588]`，点击切「停止朗读」且 logcat `AudioTrack start(1566)` + `content=CONTENT_TYPE_SPEECH`；账号 grade 临时改 8 后 g8 英语期末卷同样有喇叭（无预生成音频 → `TtsSystemService onSynthesizeText lang=eng` 走系统 TTS 出声，无 404 报错、无等待），g8 语文期末卷无喇叭（门禁仍生效）；验证后 grade 已改回 1。**文档**：D-01 §3.9.1/§3.9.4/§3.9.7/§3.9.8/§3.9.12 与评审记录同步新口径；主计划 §1.2/§3.8 新增 TT-08（`DONE`，3 h）、§4.2 登记 CR-007。**未做**：预生成音频不扩到 4–9 英语（走系统 TTS 兜底，音质略低），如需统一音质另立 CR |
 | v2.31 | 2026-11-23 | AR/CT/QA | **深圳初中教材版本对齐整改（内容侧校正，不新增台账任务与工时）**：用户指出「深圳初中英语是上教版、政治是人教版」并要求核实后重跑差异科目的 7–9 年级教研数据与试题。**核实结论**：用户判断正确，且库内偏差比版本名更深——英语 7–9 章节直接沿用了「牛津**上海**版」6 单元目录（7A Trying new things / Strong mind / Jobs / Smart home / Films / Mountains and rivers…9A Pollution），而深圳实际使用「沪教牛津**深圳**版」新教材（每册 8 单元）；道法章节本就是人教版统编目录，仅 `textbooks.version` 误写「部编版」。**实施**：① `scripts/align_sz_curriculum.py`（新增）统一版本口径（英语 1–9 → 上教版（沪教牛津深圳版）、道法 1–12 → 人教版（部编））并按年级整体重建英语章节/KP（`SZ_ENGLISH_UNITS` 常量，7A/7B/8A/8B 各 8 单元、9A 8 单元、9B 占位「待发布·上教版新教材九年级下册」`is_placeholder=1` 不铺题），`--bind-points` 做题目→知识点回挂，另清理道法 14 个游离 section；② `seed_english_by_unit.py` 增 `Chapter.is_placeholder == 0` 过滤（修掉旧 `rebuild_english` 把 KP 限定 `semester=="first"` 导致下册无 section/point、9 下被误铺 32 题的问题）；③ `seed_english_writing.py`（新增）补 20 道书面表达（`composition`），解期中/期末卷 422 `EXAM_PAPER_UNSUPPORTED`；④ `regen_english_papers.py`（新增）重出 9 张英语卷（删旧 9 张），内置「生成期末前把期中已用 composition 临时置 `draft`」去重逻辑；⑤ KP 后缀改为「听力与主题词汇 / 语法要点 / 语篇理解 / 词汇填空与表达」，`order_index` 1..4 与之对齐。**验收数字**：g7 16 单元 / g8 16 单元 / g9 8 单元 + 1 占位；KP 40 section + 160 point（64/64/32）；每册英语 260 题（listening 64 / choice 112 / fill 80 / composition 4），7–9 共 1300 题且未挂知识点 0 条；试卷回到 81 张（单元卷 28 题 60 分、期中期末 39 题 100 分，期中/期末写作题已验证不同：g7 24809 vs 24808、g8 24817 vs 24816、g9 24825 vs 24824）；全库 146 教材 / 728 章节 / 3425 KP / 18278 题 / 81 卷；`content_selfcheck` issue 0 / warning 0 / coverage_gap 0 / score_mismatch 0，`audit_published_papers` 81 卷 issues 0（16 条 LEAK_INFO 信息级）；音频 16565 个 / 540.3 MB，听力覆盖 1356/1356（100%），本轮生成 817 / 跳过 483 / 失败 0；内容包重导出 `ailearning-content-20261122.json.gz`（1.4 MB）。**环境修复**：18080 旧进程连错库导致登录报「手机号或密码错误」→ 停旧进程用 `.venv` 重起 uvicorn（PG 模式）；`bootstrap_admin --reset-password` 须同时传 `ADMIN_PASSWORD` 与 `QUALITY_STUDENT_PASSWORD`；cloudflared 重启（新公网地址 `https://hit-heard-mailing-borough.trycloudflare.com`）。**真机**：EBG-AN00 重装 debug 包 + `adb reverse` 冷启动，确认教材「上教版（沪教牛津深圳版）」下发、同步巩固英语 15 题组卷（听力 6/单选 5/填空 4）与听力音频 200 实际出声（详见 §5.1 快照与 §6.31）。**文档**：新增 `docs/sz-textbook-version-alignment.md`；本文件 §5.1 补真机验证行、§5.3 记本条、新增 §6.31。**未决**：9 下（9B）官方目录未发布仍为占位；小学英语 1–6 版本名一并改口径待确认；历史仍「部编版」未统一；改动仅在本地 git（`5a74a01`、`3d2dfc2`），未 push 远端 |
+| v2.32 | 2026-11-23 | AR/FE/QA | **整改回填轮（承接 v2.31 的三条指令「修复回来 / 修改掉 / 按建议处理」）**：① **复原**——走查结束时质检学生画像为 `grade=8 / stage=junior`、`textbook_bindings` 留 7 条 7 年级 active 绑定，导致 App 首页「小学 · 1 年级」与练习学科弹窗「7 年级教材」并存；改回 `grade=1 / stage=primary`、旧绑定全量 `archived` 后按 1 年级 `auto_bind()`（语文 3 / 数学 1 / 英语 5）、重启 uvicorn 清 `home:{user}:{grade}:{semester}` 进程缓存、真机 `pm clear` 重走首启，首页与弹窗均回到 1 年级。② **听力题主题化**——根因 `listening_item(idx)` 走「12 通用词群 × 全局游标」且 `answer` 恒 `A`，40 个单元复用同一批词（Unit 1 Friendship 出 head/hand/eye/ear）；新增 `UNIT_LISTENING_WORDS`（40 单元 × 8 主题词）与 `listening_items_for_unit()`（干扰项同单元、答案位置按题序 A/B/C/D 轮转），`seed_english_by_unit` 增 `chapter_name` 入参分流（1–6 回退旧池）；重跑改写 1280 题（含 320 听力，答案 A/B/C/D 各 80）、`--bind-points` 挂回 1280 题、`build_question_audio --kind listening --force` 生成 320 / 失败 0。③ **弹窗溢出**——`learn_page.dart#_openPracticeMode` 加 `isScrollControlled: true` + `ConstrainedBox(maxHeight: 屏高 0.7)` + `Flexible(ListView(shrinkWrap: true))`，`flutter analyze` 0 issue、39 s 构建、真机复验黄黑条消失且末项完整可滚。④ **收口**——历史 12 册版本名统一「人教版（部编）」；英语/道法/历史 3 条教研任务 query 内 `version=` 与 `--expect-version` 换新口径（任务仍全部暂停，不擅自启用）；`content_selfcheck` issue 0 / warning 0、`audit_published_papers` 81 卷 issues 0；git push 远端。详见 §6.32 |
 
 
 
@@ -2277,5 +2279,99 @@ KP 后缀同步改名：`听力与主题词汇 / 语法要点 / 语篇理解 / �
 | g7 听力首题词汇偏通用 | 待优化 | 真机首题选项 head/hand/eye/ear，与 `Unit 1 Friendship` 主题贴合度不足，建议按单元主题词表重写 listening 干扰项 |
 | 学科选择弹窗布局 | 待优化 | Flutter `BOTTOM OVERFLOWED BY 157 PIXELS`，小屏弹窗底部溢出 |
 | 远端同步 | 未做 | 改动仅本地 git（`5a74a01`、`3d2dfc2`），未 push |
+
+## 6.32 整改回填轮（2026-11-23 第二轮：复原 + 修改掉 + 收口）
+
+本节对应 v2.31 交付后用户的三条指令：「1. 修复回来；2. 修改掉；3. 按你的建议处理」。
+
+### 6.32.1 指令与范围
+
+| 指令 | 解读 | 范围 |
+|---|---|---|
+| 1. 修复回来 | 把走查期间临时改库的痕迹彻底复原 | 学生画像 `grade/stage`、教材绑定、App 首页显示 |
+| 2. 修改掉 | 把交付里列出的两个观察项直接修掉，不做「记录待优化」 | 学科选择弹窗溢出、g7-9 英语听力题词汇与单元主题不贴 |
+| 3. 按你的建议处理 | 按上一轮建议收口未动项 | 历史学科版本名统一、定时任务 query 旧版本串替换、git push |
+
+### 6.32.2 库侧复原（指令 1）
+
+| 项 | 处置 | 结果 |
+|---|---|---|
+| 学生画像 | 走查结束时画像为 `grade=8 / stage=junior`（7 年级走查后又落到 8 年级），与账号定位（小学）不符 | 改回 `grade=1 / stage=primary` |
+| 教材绑定 | `textbook_bindings` 仍有 7 条 7 年级 active 绑定（生物/语文/英语/地理/历史/数学/政治），首页与练习学科弹窗因此全显示 7 年级 | 全部置 `archived`，再用 `textbook_service.auto_bind()` 按 1 年级重绑 → 语文（id 3）、数学（id 1）、英语（id 5） |
+| home 缓存 | `/api/learn/home` 有 `home:{user_id}:{grade}:{semester}` 进程内缓存，改库后仍返回旧教材列表 | 重启 uvicorn 清缓存 |
+| App 本地态 | 首启协议、登录态、离线缓存都存本地 | `adb shell pm clear` 后重走首启全链路 |
+
+复原口令：账号 `13900000001`，接口与 App 均确认 `/api/learn/home` 返回 `grade=1`、`textbooks` 仅 3 科（语文人教版 / 英语上教版（沪教牛津深圳版）/ 数学北师大版），无 `grade=7` 残留。
+
+### 6.32.3 听力题按单元主题化（指令 2b）
+
+根因：`backend/scripts/english_by_unit_data.py` 的 `listening_item(idx)` 走「12 个通用词群 × 全局游标索引解码」，同一 index 永远解码同一组槽值，答案键硬编码 `A`。因此 7-9 全 40 个单元复用同一批通用词（Unit 1 Friendship 出 head/hand/eye/ear 这类身体部位词），且不听音频也能蒙对。
+
+修复：
+
+| 改动 | 说明 |
+|---|---|
+| 新增 `UNIT_LISTENING_WORDS` | 7-9 上教版 40 个单元 × 8 个主题词（如 Friendship：friend/friendly/kind/helpful/share/trust/together/classmate） |
+| 新增 `unit_topic()` | `Unit 1 Friendship` → `Friendship`，用于查词表 |
+| 新增 `listening_items_for_unit()` | 按单元取 8 题，干扰项全部来自同单元词表；答案位置按题序 A/B/C/D 轮转；难度 2 |
+| `seed_english_by_unit.build_for_chapter()` | 增加 `chapter_name` 入参，7-9 命中词表走主题化分支，1-6 或未登记单元回退旧通用词池 |
+| 重跑 seed | `python -m scripts.seed_english_by_unit --grades 7 8 9 --apply` → 改写 1280 题（含 320 道听力） |
+| 重挂 KP | `python -m scripts.align_sz_curriculum --bind-points` → 1280 题挂回单元知识点 |
+| 重生成音频 | `python -m scripts.build_question_audio --kind listening --grade 7,8,9 --subject english --force --concurrency 4` → 生成 320 / 跳过 0 / 失败 0 |
+
+验收数字：
+
+| 项 | 结果 |
+|---|---|
+| 听力题总量 | g7-9 共 320 道（40 单元 × 8），答案分布 A/B/C/D 各 80 |
+| 主题贴合抽样 | 9A Unit 1 Great people → hero/great/courage/leader/example/respect/achieve/famous；7A Unit 1 Friendship → friend/friendly/kind/helpful/share/trust/together/classmate；8A Unit 1 Look it up! → dictionary/entry/word/meaning/spell/example/search/alphabet |
+| 未挂知识点 | 7-9 英语 1300 题 `knowledge_point_id is null` = 0 |
+| `content_selfcheck` | `issue_count=0` / `warning_count=0` / `coverage_gap_count=0` / `score_mismatch_papers=0` |
+| `audit_published_papers` | 81 卷 `papers_with_issues=0`（16 条 LEAK_INFO 信息级） |
+| 音频存量 | 16565 opus / 540.3 MB，听力覆盖 1356/1356 |
+
+### 6.32.4 学科选择弹窗溢出修复（指令 2a）
+
+| 项 | 内容 |
+|---|---|
+| 现象 | 首页 → 同步巩固 → 学科选择底部弹窗出现黄黑条 `BOTTOM OVERFLOWED BY 157 PIXELS` |
+| 根因 | `showModalBottomSheet` 未开 `isScrollControlled`，默认最大高度为屏高 9/16；内层 `Column(mainAxisSize: min)` 直接铺 N 个 `ListTile`，7 科即溢出 |
+| 修复 | `app/lib/features/learn/learn_page.dart` 的 `_openPracticeMode`：加 `isScrollControlled: true`；`SafeArea` 内套 `ConstrainedBox(maxHeight: 屏高 0.7)`；列表改为 `Flexible(ListView(shrinkWrap: true))` 可滚动 |
+| 静态检查 | `flutter analyze` → **No issues found (8.6 s)** |
+| 构建 | `pwsh scripts/build-apk.ps1 -DebugBuild -ApiBaseUrl http://127.0.0.1:18080` → **build OK in 39 s**，`app-debug.apk` 108.8 MB |
+| 真机复验 | EBG-AN00 装入新包后打开弹窗：**无溢出提示**，7 科（旧绑定）与 3 科（复原后）两种数据下弹窗高度自适应、末项完整可见且列表可滚动 |
+
+### 6.32.5 版本口径与定时任务收口（指令 3）
+
+| 项 | 处置 | 结果 |
+|---|---|---|
+| 历史学科版本名 | 库内 `history` 12 册仍为「部编版」 | 统一为「人教版（部编）」，`updated rows = 12` |
+| 英语每日教研任务 | query 内 `version=牛津深圳版`、`--expect-version 牛津深圳版` | 替换为「上教版（沪教牛津深圳版）」 |
+| 道法每日教研任务 | query 内 `version=部编版`、`--expect-version 部编版` | 替换为「人教版（部编）」 |
+| 历史每日教研任务 | query 内 `version=部编版`、`--expect-version 部编版` | 替换为「人教版（部编）」 |
+| 任务启停 | 10 条任务全部「已暂停」 | 仅改 query，**不擅自启用**，等用户明确恢复时间 |
+
+全库版本口径（复原后复核）：语文/生物/化学/物理 人教版；英语 1-9 上教版（沪教牛津深圳版）、高中英语 外研版；道法 1-12 人教版（部编）；历史 7-12 人教版（部编）；数学 北师大版、高中数学 人教版A版；地理 湘教版/人教版。
+
+### 6.32.6 真机证据（EBG-AN00，SN `2NSDU20423005421`）
+
+| 步骤 | 结果 | 证据 |
+|---|---|---|
+| `pm clear` 后冷启动 | 协议页 → 勾选 → 登录 `13900000001` | `r2_01_launch.png`～`r2_09_filled.png` |
+| 首页画像 | 「你好，质检学生 / **小学 · 1 年级 · 上学期**」 | `r2_12_home.png` |
+| 学科弹窗（修复前数据） | 7 科 7 年级，无溢出条 | `r2_10_sheet.png` |
+| 学科弹窗（复原后数据） | 3 科 1 年级，无溢出条，末项完整 | `r2_11_sheet2.png` |
+| 控件坐标 | `uiautomator dump` bounds 即屏幕坐标；复选框须点左侧方框（x≈196）才生效 | `r2_ui1.xml`～`r2_ui14.xml` |
+
+### 6.32.7 残留与待决
+
+| 项 | 状态 | 说明 |
+|---|---|---|
+| 9 下（9B）目录 | 保持占位 | 等官方目录发布，不铺题 |
+| 小学英语 1-6 版本名 | 保持新名 | 与 7-9 一致，未回退 |
+| 听力题干扰项 | 已主题化但同单元 8 词反复使用 | 单元内 8 题轮用 8 词，属可接受范围；若后续要求更高区分度，可按小节扩词表 |
+| 定时任务 | 仍全部暂停 | query 已换新口径，恢复启用前需确认排期 |
+| App 工作区改动 | 混合未提交 | `learn_page.dart` 同时含既有离线同步改动，本轮仅提交弹窗修复所在文件，其余他人在改文件未动 |
+
 
 

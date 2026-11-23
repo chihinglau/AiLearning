@@ -63,6 +63,143 @@ LISTEN_STEMS = [
 ]
 
 
+# 7-9 上教版（沪教牛津深圳版）每单元 8 个主题词。听力题按单元取词，
+# 干扰项也来自同单元词表，避免旧实现「全局通用词池 + 答案永远 A」导致的
+# 两处问题：①题目与本单元主题无关（如 Unit 1 Friendship 出 head/hand/eye/ear）；
+# ②答案固定 A，学生不听音频也能蒙对。
+UNIT_LISTENING_WORDS = {
+    # 7A
+    "Friendship": ["friend", "friendly", "kind", "helpful", "share", "trust",
+                   "together", "classmate"],
+    "School life": ["classroom", "teacher", "lesson", "timetable", "subject",
+                    "uniform", "library", "homework"],
+    "The seasons": ["spring", "summer", "autumn", "winter", "weather", "warm",
+                    "cool", "season"],
+    "The Earth": ["earth", "ocean", "mountain", "forest", "river", "desert",
+                  "island", "planet"],
+    "Off to space": ["rocket", "astronaut", "space", "moon", "planet", "star",
+                     "launch", "satellite"],
+    "Travelling around Asia": ["travel", "country", "city", "temple", "museum",
+                               "ticket", "journey", "Asia"],
+    "Fun after school": ["hobby", "club", "sport", "music", "painting", "chess",
+                         "join", "activity"],
+    "Collecting as a hobby": ["collect", "stamp", "coin", "card", "album",
+                              "series", "valuable", "hobby"],
+    # 7B
+    "People around us": ["neighbour", "cousin", "uncle", "aunt", "grandparent",
+                         "relative", "polite", "friendly"],
+    "Travelling around the world": ["passport", "flight", "hotel", "luggage",
+                                    "map", "sightseeing", "abroad", "tourist"],
+    "Trees and us": ["tree", "leaf", "branch", "root", "forest", "wood",
+                     "plant", "oxygen"],
+    "Our animal friends": ["panda", "elephant", "tiger", "monkey", "dolphin",
+                           "rabbit", "protect", "wild"],
+    "Water": ["water", "river", "lake", "ocean", "rain", "save", "drink",
+              "fresh"],
+    "Electricity": ["electricity", "light", "battery", "wire", "power",
+                    "switch", "safe", "energy"],
+    "Poems": ["poem", "poet", "rhyme", "line", "verse", "rhythm", "imagine",
+              "feeling"],
+    "From hobby to career": ["career", "job", "skill", "practice", "dream",
+                             "future", "hobby", "choose"],
+    # 8A
+    "Look it up!": ["dictionary", "entry", "word", "meaning", "spell",
+                    "example", "search", "alphabet"],
+    "Amazing numbers": ["number", "zero", "million", "digit", "count", "maths",
+                        "total", "half"],
+    "Our digital lives": ["computer", "internet", "email", "website", "online",
+                          "screen", "password", "digital"],
+    "Inventions": ["invention", "inventor", "machine", "telephone", "wheel",
+                   "design", "create", "useful"],
+    "Going on an exchange trip": ["exchange", "student", "host", "family",
+                                  "culture", "language", "visit", "welcome"],
+    "Wisdom counts": ["wisdom", "clever", "advice", "decision", "experience",
+                      "wise", "learn", "mistake"],
+    "The secret of memory": ["memory", "remember", "forget", "mind", "method",
+                             "review", "practise", "brain"],
+    "Pets and us": ["pet", "dog", "cat", "rabbit", "feed", "care", "cute",
+                    "owner"],
+    # 8B
+    "Helping those in need": ["help", "charity", "volunteer", "donate", "poor",
+                              "kind", "support", "community"],
+    "Body language": ["smile", "nod", "gesture", "signal", "eye", "hand",
+                      "meaning", "express"],
+    "Comics and animation": ["comic", "cartoon", "character", "story", "picture",
+                             "funny", "hero", "animation"],
+    "Arts and heritage": ["art", "museum", "heritage", "painting", "ancient",
+                          "culture", "protect", "history"],
+    "Saving animals in danger": ["danger", "endangered", "protect", "habitat",
+                                 "wildlife", "rescue", "extinct", "environment"],
+    "Learning by doing": ["practise", "experiment", "skill", "experience",
+                          "learn", "try", "activity", "improve"],
+    "Space exploration": ["space", "planet", "rocket", "astronaut", "explore",
+                          "universe", "telescope", "mission"],
+    "Imagine that!": ["imagine", "dream", "creative", "idea", "future", "magic",
+                      "invent", "wonder"],
+    # 9A
+    "Great people": ["hero", "great", "courage", "leader", "example", "respect",
+                     "achieve", "famous"],
+    "Great ideas": ["idea", "think", "creative", "solution", "change",
+                    "improve", "possible", "clever"],
+    "Family traditions": ["tradition", "family", "festival", "custom",
+                          "celebrate", "together", "ancestor", "gather"],
+    "A better me": ["improve", "habit", "goal", "confident", "healthy",
+                    "change", "effort", "progress"],
+    "My time, my joy": ["time", "enjoy", "relax", "hobby", "free", "happy",
+                        "balance", "moment"],
+    "Food and health": ["food", "healthy", "vegetable", "fruit", "diet",
+                        "vitamin", "energy", "balance"],
+    "Reading Mark Twain": ["novel", "author", "humour", "story", "adventure",
+                           "character", "famous", "write"],
+    "The power of love": ["love", "care", "kindness", "family", "heart",
+                          "warmth", "support", "together"],
+}
+
+
+def unit_topic(name: str) -> str:
+    """`Unit 1 Friendship` → `Friendship`；非 Unit 命名原样返回。"""
+    parts = (name or "").strip().split(" ", 2)
+    if len(parts) >= 3 and parts[0].lower() == "unit":
+        return parts[2].strip()
+    return (name or "").strip()
+
+
+def listening_items_for_unit(unit_name: str, count: int = 8) -> list[dict] | None:
+    """按单元主题词表生成听力题；单元不在表内返回 None（回退旧通用词池）。
+
+    答案位置按题序在 A/B/C/D 轮转（旧实现恒为 A），干扰项全部取自同单元词表。
+    """
+    words = UNIT_LISTENING_WORDS.get(unit_topic(unit_name))
+    if not words:
+        return None
+    n = len(words)
+    keys = "ABCD"
+    items: list[dict] = []
+    for i in range(count):
+        ti = i % n
+        target = words[ti]
+        others: list[str] = []
+        step = 1
+        while len(others) < 3 and step < n * 2:
+            cand = words[(ti + step + i) % n]
+            if cand != target and cand not in others:
+                others.append(cand)
+            step += 1
+        pos = i % 4
+        opts_text = others[:pos] + [target] + others[pos:]
+        items.append({
+            "content": {"stem": LISTEN_STEMS[i % len(LISTEN_STEMS)],
+                        "script": target,
+                        "audio_note": "听力材料以教师朗读/后续 TTS 音频为准"},
+            "options": [{"key": keys[j], "text": w} for j, w in enumerate(opts_text)],
+            "answer": keys[pos],
+            "analysis": f"录音念的是 {target}；其余 {others[0]} / {others[1]} / "
+                        f"{others[2]} 是本单元其它主题词，注意听关键词。",
+            "difficulty": 2,
+        })
+    return items
+
+
 def listening_item(idx: int) -> dict:
     """听力：目标词 + 同群 3 个干扰词。索引唯一解码 (组, 词, 干扰起点)。"""
     groups = GROUP_NAMES

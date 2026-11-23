@@ -15,7 +15,8 @@ from app.db.session import SessionLocal
 from app.models.content import Chapter, Question, Textbook
 from scripts.english_by_unit_data import (
     FILL_FRAMES, GRAM_FRAMES, LICENSE_NOTE, SOURCE_NAME, band_for_grade,
-    fill_item_at, grammar_item_at, listening_item, reading_passage,
+    fill_item_at, grammar_item_at, listening_item, listening_items_for_unit,
+    reading_passage,
 )
 
 NEED = {"listening": 8, "grammar": 8, "reading": 6, "fill": 10}
@@ -25,7 +26,9 @@ NEED = {"listening": 8, "grammar": 8, "reading": 6, "fill": 10}
 READ_Q_PER_PASSAGE = 3
 
 
-def build_for_chapter(grade: int, cursors: dict, counts: dict | None = None) -> dict:
+def build_for_chapter(
+    grade: int, cursors: dict, counts: dict | None = None, chapter_name: str = ""
+) -> dict:
     band = band_for_grade(grade)
     need = dict(NEED)
     if counts:
@@ -33,9 +36,16 @@ def build_for_chapter(grade: int, cursors: dict, counts: dict | None = None) -> 
             need[k] = max(need[k], v)  # 历史多余的 selfbank 行也要改写，避免残留旧内容
 
     listening = []
-    for k in range(need["listening"]):
-        listening.append(listening_item(cursors["listening"] + k))
-    cursors["listening"] += need["listening"]
+    # 7-9 上教版按单元主题词表出题（干扰项同主题、答案位置轮转）；
+    # 1-6 或未登记单元沿用旧的全局词池。
+    unit_items = listening_items_for_unit(chapter_name, need["listening"])
+    if unit_items:
+        listening.extend(unit_items)
+        cursors["listening"] += need["listening"]
+    else:
+        for k in range(need["listening"]):
+            listening.append(listening_item(cursors["listening"] + k))
+        cursors["listening"] += need["listening"]
 
     # 语法：模板按章轮转（同章 8 题句式各异），模板内槽位用独立全局游标递增，
     # 保证同一模板的 (主语 × 槽位) 组合不被重复取用。
@@ -124,7 +134,9 @@ def main() -> int:
                     existing[b].sort()
 
                 counts = {b: len(v) for b, v in existing.items() if b in NEED}
-                batches = build_for_chapter(book.grade, cursors, counts)
+                batches = build_for_chapter(
+                    book.grade, cursors, counts, chapter_name=chapter.name
+                )
                 for bucket, items in batches.items():
                     q_type = {"grammar": "choice", "reading": "choice"}.get(bucket, bucket)
                     rows = existing.get(bucket, [])

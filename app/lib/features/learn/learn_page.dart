@@ -1,4 +1,3 @@
-import 'dart:async';
 import 'dart:convert';
 
 import 'package:ai_learning/core/errors/api_error_guide.dart';
@@ -38,7 +37,8 @@ class _StudentHomeView extends ConsumerStatefulWidget {
   ConsumerState<_StudentHomeView> createState() => _StudentHomeViewState();
 }
 
-class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
+class _StudentHomeViewState extends ConsumerState<_StudentHomeView>
+    with WidgetsBindingObserver {
   HomeData? _home;
   _LastPractice? _lastPractice;
   bool _loading = true;
@@ -59,7 +59,22 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addObserver(this);
     _load();
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    // 从后台回到前台时补传离线记录，弱网恢复后无需手动下拉。
+    if (state == AppLifecycleState.resumed) {
+      _load();
+    }
   }
 
   Future<void> _load() async {
@@ -68,6 +83,15 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
       _error = null;
     });
     try {
+      // 先把离线答题队列补传，首页进展与统计才能包含断网期间的学习记录。
+      try {
+        await ref
+            .read(offlineLearnSyncProvider)
+            .sync()
+            .timeout(const Duration(seconds: 3));
+      } catch (_) {
+        // 仍离线或超时：保留队列，继续使用缓存首页。
+      }
       // 三个请求同时发起，避免串行拖慢首页
       final homeFuture = ref.read(learnServiceProvider).home();
       final lastPracticeFuture = _loadLastPractice();
@@ -83,8 +107,6 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
         _offline = false;
         _loading = false;
       });
-      // 联网后顺带同步离线答题队列。
-      unawaited(ref.read(offlineLearnSyncProvider).sync());
     } on ApiException catch (error) {
       if (!mounted) return;
       // 断网时使用上次缓存的首页，保证可进入已下载教材。
@@ -180,29 +202,45 @@ class _StudentHomeViewState extends ConsumerState<_StudentHomeView> {
         : await showModalBottomSheet<HomeTextbook>(
             context: context,
             showDragHandle: true,
+            // 学科数量随教材册数增长，默认高度（屏高 9/16）会溢出（EBG-AN00 实测
+            // BOTTOM OVERFLOWED BY 157 PIXELS）；改为可滚动 + 限高。
+            isScrollControlled: true,
             builder: (sheetContext) => SafeArea(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 4, 20, 8),
-                    child: Text(
-                      '选择要练的学科',
-                      style: Theme.of(sheetContext).textTheme.titleMedium,
-                    ),
-                  ),
-                  for (final textbook in textbooks)
-                    ListTile(
-                      leading: Icon(_subjectIcon(textbook.subject)),
-                      title: Text(textbook.subjectLabel),
-                      subtitle: Text(
-                        '${textbook.version} · ${textbook.grade} 年级'
-                        ' · ${_semesterLabel(textbook.semester)}',
+              child: ConstrainedBox(
+                constraints: BoxConstraints(
+                  maxHeight: MediaQuery.of(sheetContext).size.height * 0.7,
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 4, 20, 8),
+                      child: Text(
+                        '选择要练的学科',
+                        style: Theme.of(sheetContext).textTheme.titleMedium,
                       ),
-                      onTap: () => Navigator.of(sheetContext).pop(textbook),
                     ),
-                ],
+                    Flexible(
+                      child: ListView(
+                        shrinkWrap: true,
+                        children: [
+                          for (final textbook in textbooks)
+                            ListTile(
+                              leading: Icon(_subjectIcon(textbook.subject)),
+                              title: Text(textbook.subjectLabel),
+                              subtitle: Text(
+                                '${textbook.version} · ${textbook.grade} 年级'
+                                ' · ${_semesterLabel(textbook.semester)}',
+                              ),
+                              onTap: () =>
+                                  Navigator.of(sheetContext).pop(textbook),
+                            ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           );
