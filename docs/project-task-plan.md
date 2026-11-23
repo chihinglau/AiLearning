@@ -2328,6 +2328,7 @@ KP 后缀同步改名：`听力与主题词汇 / 语法要点 / 语篇理解 / �
 | 未挂知识点 | 7-9 英语 1300 题 `knowledge_point_id is null` = 0 |
 | `content_selfcheck` | `issue_count=0` / `warning_count=0` / `coverage_gap_count=0` / `score_mismatch_papers=0` |
 | `audit_published_papers` | 81 卷 `papers_with_issues=0`（16 条 LEAK_INFO 信息级） |
+| 内容包重导出 | `python -m scripts.export_content_pack` → `backend\build\content_pack\ailearning-content-20261123.json.gz`（1.4 MB；146 教材 / 728 章节 / 3425 KP / 18278 题 / 90 蓝图 / 81 卷） |
 | 音频存量 | 16565 opus / 540.3 MB，听力覆盖 1356/1356 |
 
 ### 6.32.4 学科选择弹窗溢出修复（指令 2a）
