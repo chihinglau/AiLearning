@@ -3,7 +3,7 @@
 > **文档性质**：项目主计划 / 进度跟踪 / 过程追溯（全程伴随开发周期）
 > **版本**：v1.99
 > **创建日期**：2026-11-06
-> **最后更新**：2026-11-14 v2.02（CR-006 已通过并实施：数据口径整改 + 审核流补强 + 筛选下推与分页 + 规范成文，见 §6.26；残留 EX-12 / EBG 真机）；早期：D-09 方案经 PM 评审通过并转 v1.0；CR-004 决策「通过」，EX-04~EX-08 全部实施完成、L21~L26 验收通过；新增 1 个 Alembic 迁移，全量 `pytest` 432 例与 `flutter test` 170 例全绿；R-A15 / R-A16 与 M5 仍待 PM 签署）
+> **最后更新**：2026-11-23 v2.31（**深圳初中教材版本对齐整改**：核实深圳初中英语为沪教牛津深圳版、道法为人教版统编，库内英语 7–9 原用「牛津上海版」6 单元目录且版本名标「牛津上海版」——按 8 单元新目录重建 7–9 英语章节/KP/题库并重出试卷，英语版本名统一为「上教版（沪教牛津深圳版）」、道法改为「人教版（部编）」，补 20 道书面表达、重出听力音频、修部署通道；EBG-AN00 重装真机验证通过，见 §5.3 v2.31 / §6.31）；同日 v2.03（新增 §6.30 离线练习闭环真机端到端验证：Hive 本地答题队列 + 离线判分 + 联网自动补传 `/api/learn/offline/attempts` 按 client_key 幂等入库 + 错题本离线待同步横幅，OXF-AN10 设备全链路走查通过；P2-05 证据列同步更新练习侧实现；`flutter analyze` 0 issue、`flutter test` 182 passed、离线专项 3/3 通过）；早期：D-09 方案经 PM 评审通过并转 v1.0；CR-004 决策「通过」，EX-04~EX-08 全部实施完成、L21~L26 验收通过；CR-006 已通过并实施；新增 1 个 Alembic 迁移，全量 `pytest` 432 例与 `flutter test` 170 例全绿；R-A15 / R-A16 与 M5 仍待 PM 签署）
 > **参考设计文档**：见[§1.1 参考设计文档清单](#11-参考设计文档清单)（共 9 份，含 5 份设计方案、4 份支撑文档）
 > **需求追踪**：见[§1.2 需求—设计—任务追踪矩阵](#12-需求设计任务追踪矩阵)
 > **维护人**：项目负责人（PM）
@@ -22,7 +22,7 @@
 | **D-01** | [k12-learning-app-design.md](./k12-learning-app-design.md) | v0.9 | 总体产品设计 | 产品定位、用户画像、信息架构、里程碑、技术栈、读题（TTS）方案（§3.9）；v0.7 回写 CR-003 考试入口闭环；v0.8 按 CR-004 补 §4.5 溯源字段、§4.6 考试域 API 扩展、§8.3 L21~L26；v0.9 按 CR-005 补审核接口、留痕字段与 L27~L30 | 基线 B-01~B-05；P0 总体范围；TT-01~TT-07；EX-01~EX-11 | PM/AR | 已生效（v0.9 已回写，见 CR-005 / §6.24） | 2026-11-14 |
 | **D-02** | [subject-tutoring-and-m2-design.md](./subject-tutoring-and-m2-design.md) | v1.0 | 学科辅导专项设计 | 五大学法支柱、九学科分学段辅导方案、深圳教材适配、M2 数据模型与算法；§3.6 补考试闭环交叉引用 | B-03/B-04；P0-17~P0-24；P1-07 | CT/AR | 已生效（M2 已交付；§3.6 历史路线已加 CR-003 交叉引用） | 2026-11-12 |
 | **D-03** | [user-role-permission-design.md](./user-role-permission-design.md) | v1.3 | 角色权限专项设计 | 多级角色体系、年级维度、权限矩阵、数据范围、权限校验、数据模型与 API；v1.1 补考试域接口契约（§10.5）、A11~A13；v1.2 按 CR-004 修订权限口径并补 A14、3 个新接口；v1.3 按 CR-005 补 3 个审核接口权限与 A15 | P0-01~P0-10；P1-01~P1-06；P2-01/P2-02/P2-08/P2-09；EX-01~EX-11 | AR/PM | 已生效（v1.3 已回写，见 CR-005 / §6.24） | 2026-11-14 |
-| **D-04** | [learning-page-design.md](./learning-page-design.md) | v1.4 | 学习页专项设计 | 教材绑定、学习首页、知识点分层、智能练习、综合考试、数据流与 API；v1.2 补考试入口闭环（§8.7）；v1.3 按 CR-004 转正式交叉引用、§12.4 修正自评路径、§14.2 登记 L21~L26；v1.4 按 CR-005 登记 L27~L30，§8.7.1 可见性口径不变 | P0-11~P0-38；P1-07~P1-11；P2-03~P2-07；UX-04~UX-06；EX-01~EX-11 | FE/AR | 已生效（v1.4 已实施并验收，见 CR-005 / §6.24） | 2026-11-14 |
+| **D-04** | [learning-page-design.md](./learning-page-design.md) | v1.5 | 学习页专项设计 | 教材绑定、学习首页、知识点分层、智能练习、综合考试、数据流与 API；v1.2 补考试入口闭环（§8.7）；v1.3 按 CR-004 转正式交叉引用、§12.4 修正自评路径、§14.2 登记 L21~L26；v1.4 按 CR-005 登记 L27~L30；v1.5 补离线练习闭环（§1.3 更新离线能力已落地、§14.2 新增 L31~L33） | P0-11~P0-38；P1-07~P1-11；P2-03~P2-07；UX-04~UX-06；EX-01~EX-11 | FE/AR | 已生效（v1.5 已实施并验收，见主计划 §6.30） | 2026-11-23 |
 | **D-05** | [privacy.md](./privacy.md) | v1.0（2026.11.06） | 合规支撑 | 隐私政策、未成年人数据、家长同意与数据留存 | P0-05/P0-09；P1-05；P2-08 | PM | 已生效（P2-08 脱敏导出与用途登记已落地；R-03 公网发布与首启同意链路已上线；R-04 注销/导出/青少年模式时长已生效） | 2026-11-07 |
 | **D-06** | [skills.md](./skills.md) | 现行 | 工程支撑 | 开发规范、技能与接口使用说明 | 全部任务（开发约定） | AR | 已生效（§5.5 真机规程；§4.3 考试 API 清单、§7 冒烟、§9 里程碑已按 CR-003/CR-004/CR-005 回写） | 2026-11-14 |
 | **D-07** | [skill_github_repo_access.md](./skill_github_repo_access.md) | 现行 | 内部支撑 | 仓库访问与凭据说明（不进入版本库） | 发布/提交相关任务 | AR | 内部参考 | 2026-11-06 |
@@ -271,7 +271,7 @@ DONE ──返工（需CR）──► DOING
 | P2-02 | 权限配置后台（角色-权限可视化） | AR/FE | 12 | P2 | P2-01 | `DONE` | 6 | 9.1 | 后端 `GET /api/admin/rbac/roles`、`GET /permissions`、`PUT /roles/{code}/permissions`（`system:config:write` 鉴权、超管只读、未知权限 422、变更审计 `rbac.role.permissions`）；前端 `features/admin/rbac_config_page.dart`（角色切换、按域勾选、保存差异提示），路由 `/admin/rbac` 与"我的"入口；`tests/test_admin_rbac.py` 6 例 + `app/test/rbac_config_page_test.dart` 2 例；全量 `pytest` 264 passed、`flutter test` 54 passed |
 | P2-03 | 教师布置作业/班级统一卷、批改主观题 | AR/FE | 16 | P2 | P1-09/P1-02 | `DONE` | 6 | 8.1/5.2 | 新增 `assignments` 表与迁移 `n4o5p6q7r8s9`（`exam_answers` 批改字段，空库/存量库升降级通过）；后端 `services/assignment.py` + `/api/assignments`（布置/列表/详情/批改清单/批量批改，班级越权、超分、客观题校验，作业卷隔离出通用考试列表与学生名单脱敏）；前端 `features/assignment/*`（列表/布置/详情/批改页 + 学习页与"我的"入口）；`tests/test_assignments.py` 2 例 + `app/test/assignment_list_page_test.dart` 2 例；全量 `pytest` 266 passed、`flutter analyze` 0 issues、`flutter test` 56 passed |
 | P2-04 | 知识图谱视图（前置依赖可视化、薄弱高亮） | FE | 10 | P2 | P0-19 | `DONE` | 4 | 6.2 | 前端 `features/learn/knowledge_graph_page.dart`：聚合教材全部单元知识点、按前置依赖计算列深并绘制箭头连线（`CustomPainter`）、薄弱节点红色高亮/图例、单元筛选与点击下钻知识点详情；路由 `/knowledge/:textbookId/graph` 与目录页「知识图谱」入口；`app/test/knowledge_graph_page_test.dart` 2 例；`flutter analyze` 0 issues、`flutter test` 58 passed |
-| P2-05 | 图片作答与离线整卷（本地队列、断网重放） | FE/AR | 16 | P2 | P0-23 | `DONE` | 8 | 13 章 | 后端主观题图片作答校验（PNG/JPEG/WEBP、单张 3 MB、合计 4 MB、最多 2 张、客观题拒绝）与 `tests/test_exam_image_answer.py`；前端 `OfflineExamStore`/`OfflineExamSync`（Hive 本地快照 + save/submit 队列按序重放、服务端冲突丢弃、12s 自动重试）、考试页离线横幅与交卷暂存、`SignatureAnswerPage` 手写导图、批改页展示手写图片；`app/test/offline_exam_sync_test.dart` 2 例；`pytest` 267 passed、`flutter analyze` 0 issues、`flutter test` 60 passed |
+| P2-05 | 图片作答与离线整卷（本地队列、断网重放） | FE/AR | 16 | P2 | P0-23 | `DONE` | 10 | 13 章 | 后端主观题图片作答校验（PNG/JPEG/WEBP、单张 3 MB、合计 4 MB、最多 2 张、客观题拒绝）与 `tests/test_exam_image_answer.py`；前端 `OfflineExamStore`/`OfflineExamSync`（Hive 本地快照 + save/submit 队列按序重放、服务端冲突丢弃、12s 自动重试）、考试页离线横幅与交卷暂存、`SignatureAnswerPage` 手写导图、批改页展示手写图片；**2026-11-23 扩展**：离线练习（非考试）闭环——`OfflineLearnStore`（Hive `offline_learn` box，`queue:` 前缀 + `OfflineAttemptEntry{clientKey, questionId, userAnswer, answeredAt, durationMs, source}`）、`OfflineGrader.grade(Question, Map) → bool?`（null 表示离线包缺答案跳过）、后端 `POST /api/learn/offline/attempts` 按 `client_key` 幂等 upsert `student_question_records` + `wrong_questions` + 掌握度更新、前端 `OfflineLearnSync.sync()` 批量补传后按 `results.client_key` 删除本地队列；SessionPage 断网自动入离线分支（`ApiException.statusCode==null`）、LearnPage 首页与 `AppLifecycleState.resumed` 触发 sync（3s timeout）、MistakesPage 离线合并 `pendingWrongQuestions()` 本地错题（负 id + "待同步" 横幅）；真机 OXF-AN10 端到端走查通过（见 §6.30）；单测 `app/test/offline_pending_wrong_test.dart` 3 例 + 既有离线考试 2 例；`pytest` 267 passed、`flutter analyze` 0 issues、`flutter test` 182 passed（含离线专项 3/3） |
 | P2-06 | AI 讲解与错题归因辅助（LLM 接入、Prompt 安全） | AR | 16 | P2 | P0-19 | `DONE` | 8 | 6.4 | 后端 `services/ai.py`（OpenAI 兼容 `chat/completions` 接入 + 规则兜底、失败自动回退、按用户小时额度 `AI_RATE_LIMITED`）、`services/ai_prompt.py`（控制字符/标签/注入特征行清洗、分隔素材块、系统指令与输出二次清洗截断）、`/api/ai/explain`（未作答 409 `AI_EXPLAIN_LOCKED` 防泄题、错题归属校验）与 `/api/ai/diagnose`（复用错因分类 + 错误次数置信度 + 改进建议）；前端 `core/services/ai_service.dart`、错题本「AI 归因」弹层与一键采纳错因、考试报告错题「AI 讲解」弹层；`tests/test_ai.py` 10 例、`app/test/ai_explain_test.dart` 3 例；`pytest` 277 passed、`flutter analyze` 0 issues、`flutter test` 63 passed |
 | P2-07 | 模考与真题库、考试窗口与公平性（同班同卷） | CT/AR | 12 | P2 | P1-08 | `DONE` | 8 | 8.3 | 迁移 `o5p6q7r8s9t0` 增 `exams.region/is_past_paper/class_id`；`GET /api/exams/past-papers`（年级/学科/年份/地区筛选、窗口状态）、`POST /api/exams/mock`（教师按班派发同卷，`class_authorized` + 年级一致 + 窗口校验 + 审计 `exam.mock.assign`）；考试列表对班级卷仅本班可见、非本班进入 403 `EXAM_NOT_MEMBER`；`generate` 支持标记真题/地区；seed 内置 3 套演示真题（幂等）；前端真题库页（学科/年份筛选、窗口提示）、考试中心入口；`tests/test_mock_exams.py` 3 例、`app/test/past_paper_page_test.dart` 2 例；迁移空库 upgrade/downgrade/upgrade 通过、seed 两次幂等；`pytest` 280 passed、`flutter analyze` 0 issues、`flutter test` 65 passed |
 | P2-08 | 数据导出与合规审计增强（脱敏导出、用途登记） | AR | 6 | P2 | P0-05 | `DONE` | 4 | A10 | 新增 `services/export.py`（五类用途登记、`SECTION_LIMIT=1000` 显式截断、手机号掩码）与 `api/routes/data.py`（`GET /api/data/export` 自助/家长/校管三档授权，`GET /api/data/export/purposes`）；导出写审计 `data.export`（含用途、目标用户、范围、各段条数，不落明文手机号）；`tests/test_export.py` 9 例（脱敏、用途必填/非法/身份不匹配、家长绑定越权、校管跨校 `SCOPE_DENIED`）；`pytest` 289 passed |
@@ -579,9 +579,10 @@ flowchart LR
 | `BLOCKED` | 2（QA-02 PM 签署、QA-03 TT-07 人工试听，见 §4.3 B-002 / B-001） |
 | 预估总工时 | 843 h（开发 715 = 712 + TT-08 3；发布 119；QA 9） |
 | 已投入工时 | 477 h（P0-01 3、P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3、P0-23 3、P0-24 3、P0-25 3、P0-26 3、P0-27 3、P0-28 4、P0-29 3、P0-30 3、P0-31 4、P0-32 3、P0-33 4、P0-34 4、P0-35 6、P0-36 8、P0-37 10、P0-38 4、P0-39 6、P0-40 4、P0-41 6、P0-42 2、P0-43 3、P1-01 3、P1-02 2、P1-03 2、P1-04 3、P1-05 3、P1-06 3、P1-07 3、P1-08 3、P1-09 3、P1-10 3、P1-11 3、P1-12 2、P1-13 3、P1-14 3、P1-15 3、P2-01 6、P2-02 6、P2-03 6、P2-04 4、P2-05 8、P2-06 8、P2-07 8、P2-08 4、P2-09 6、P2-10 4、R-01 2、R-02 6、R-03 20、R-04 20、R-05 12、R-06 8、R-07 8、R-08 12、R-09 10、UX-01 8、UX-02 2、UX-03 4、CT-01 6、CT-02 4、CT-03 4、TT-01 6、TT-02 3、TT-03 12、TT-04 8、TT-05 6、TT-06 6、TT-07 4、TT-08 3、UX-04 4、UX-05 3、UX-06 2、EX-01 2、EX-02 3、EX-03 4、EX-04 5、EX-05 5、EX-06 5、EX-07 3、EX-08 6、EX-09 6、EX-10 5、EX-11 4、QA-01 3、QA-02 0.5、QA-03 0.5） |P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3、P0-23 3、P0-24 3、P0-25 3、P0-26 3、P0-27 3、P0-28 4、P0-29 3、P0-30 3、P0-31 4、P0-32 3、P0-33 4、P0-34 4、P0-35 6、P0-36 8、P0-37 10、P0-38 4、P0-39 6、P0-40 4、P0-41 6、P0-42 2、P0-43 3、P1-01 3、P1-02 2、P1-03 2、P1-04 3、P1-05 3、P1-06 3、P1-07 3、P1-08 3、P1-09 3、P1-10 3、P1-11 3、P1-12 2、P1-13 3、P1-14 3、P1-15 3、P2-01 6、P2-02 6、P2-03 6、P2-04 4、P2-05 8、P2-06 8、P2-07 8、P2-08 4、P2-09 6、P2-10 4、R-01 2、R-02 6、R-03 20、R-04 20、R-05 12、R-06 8、R-07 8、R-08 12、R-09 10、UX-01 8、UX-02 2、UX-03 4、CT-01 6、CT-02 4、CT-03 4、TT-01 6、TT-02 3、TT-03 12、TT-04 8、TT-05 6、TT-06 6、TT-07 4、UX-04 4、UX-05 3、UX-06 2、EX-01 2、EX-02 3、EX-03 4、EX-04 5、EX-05 5、EX-06 5、EX-07 3、EX-08 6、EX-09 6、EX-10 5、EX-11 4、QA-01 3、QA-02 0.5、QA-03 0.5） |
-| 当前迭代 | CR-005 后续项收口：真题审核发布流、前端审核队列、存量真题来源补录与 EBG 真机全链路补跑均 `DONE`（L27~L30 / §6.24）；仅 QA-02（PM 签署）与 QA-03（TT-07 人工试听）为人工依赖 `BLOCKED`（§4.3 B-002 / B-001） |
+| 当前迭代 | CR-005 后续项收口：真题审核发布流、前端审核队列、存量真题来源补录与 EBG 真机全链路补跑均 `DONE`（L27~L30 / §6.24）；仅 QA-02（PM 签署）与 QA-03（TT-07 人工试听）为人工依赖 `BLOCKED`（§4.3 B-002 / B-001）；2026-11-23 追加两项不新增台账任务的内容侧收口：深圳初中教材版本对齐整改（§6.31）与离线练习闭环真机验收（§6.30） |
 | 迭代目标 | 按 CR-002 消除「三模式相同」与「前置乱序、点击不到讲解」，按 CR-003 消除「有待办 / 无考试」虚标并补齐考试入库入口，按 CR-004 补齐考试中心与真题库页面方案并实施，按 CR-005 把 §6.23 后续项全部立为受控任务并实施（真题审核发布流、来源补录、真机回归、人工项登记）；后续按 PM 排期推进内容覆盖与真机回归（R-09 流水线补跑 TT-05 断网场景与音频播放） |
 | 里程碑 | M2.5（P0 技术验收通过，待签署）→ M3（P1 技术验收通过，待签署）→ M4（P2 技术验收通过，待签署）→ M5（发布就绪，R-01~R-09 已完成，待 PM 签署）→ UX-01~UX-03（`DONE`）→ CT-01~CT-03（`DONE`）→ 读题方案评审（2026-11-10 通过）→ 读题实施（TT-01~TT-07 全部 `DONE`，T3 全量合成完成、T6 待人工试听）→ 练习体验收口（CR-002 / UX-04~UX-06 `DONE`）→ 考试入口闭环（CR-003 / EX-01~EX-03 `DONE`）→ 考试中心与真题库（CR-004 / EX-04~EX-08 `DONE`）→ 后续项收口（CR-005 / EX-09~EX-11、QA-01 `DONE`；QA-02/QA-03 `BLOCKED`） |
+| 最新真机验证（2026-11-23） | EBG-AN00（SN `2NSDU20423005421`）重装新构建 debug 包（`flutter build apk --debug --target-platform android-arm64 --dart-define API_BASE_URL=http://127.0.0.1:18080`，90 s / 108.8 MB）→ `adb reverse tcp:18080 tcp:18080` → 冷启动全链路：登录（质检学生 `13900000001`）→ 首启协议同意 → 三段引导（学段选初中 / 年级 7 / 确认教材）→ 学习首页 → 同步巩固·英语配置（15 题：听力 6 + 单选 5 + 填空 4，知识点覆盖 13/32）→ 答题页听力题。**关键证据**：引导第 3 步「确认教材」显示「英语 7 年级 · 上教版（沪教牛津深圳版）」，版本整改已真实下发；`GET /api/learn/questions/23531/audio?speed=1.0&kind=listening` 200 且 AudioFlinger 实际出声（预生成 Opus 生效）；logcat 无 FATAL。观察项：学科选择弹窗底部 Flutter 溢出 157 px、g7 听力首题词汇偏通用（head/hand/eye/ear），列入待优化 |
 | 最新真机验证（2026-11-14） | EBG-AN00（SN `2NSDU20423005421`）在 18080 新后端 + `adb reverse` 下补跑：考试中心 `subject=math` 筛选（服务端 200，空态「没有符合条件的考试」）、真题库 `year=2025` 筛选（服务端 200）、来源详情页展示「内置演示数据（非真实真题原卷）」与授权说明；admin 账号登录后在「考试管理与发布」以章节 193 实际生成真题草稿（ID 4 / 21 题 / 状态草稿）→「提交复核」（`POST /api/exams/4/submit-review` 200）→「我的 · 试卷复核」队列（`GET /api/exams/reviews` 200）→「通过并发布」（`POST /api/exams/4/review` 200）→「已发布」队列显示该卷与 3 张带合规标注的演示卷；dev 库 `exams.id=4` 为 `published` 且 `reviewed_by/published_by=1`，缺来源真题 0 张；logcat 无 FATAL。证据见 §6.24 |
 | 最新真机验证（2026-11-12） | EBG-AN00（SN `2NSDU20423005421`）冷启动 debug 包两轮回归：① UX 组：三模式 10/15/20 题、策略与题型配比各异，前置「按教材顺序」→「天地人 · 讲解」首屏即讲解（§6.21）；② EX 组：新后端（18081 + `adb reverse`）下 `pending_exams=0` / `/api/exams=0` 口径一致，首页「待办考试」空态卡、考试中心不再虚标、真题库入口列出 2 张一年级真题；admin `/api/exams/blueprints` 200（9 蓝图）/ student 403。`/health` 200、logcat 无 FATAL。证据见 D-06 §5.5.5/§5.5.6、§6.22。历史（2026-11-10）：device 库整册离线包断网冷启动、离线判分与联网同步通过（I-006/I-007） |
 | 已知观感项（已处理） | CT-03 去重后同名 section 与其「（要点）」point 双层并存（如 1 年级数学 `10以内加减法` + `10以内加减法（要点）`）。展示层已收敛：单元页按节聚合成可折叠节卡片，同主题「（要点）」节点折叠进所属节并显示为「本节要点」；知识图谱、知识点详情、前置知识点统一显示为「名称 · 要点」；**数据层未改动** |
@@ -724,6 +725,7 @@ flowchart LR
 | v2.01 | 2026-11-14 | AR/PM | **CR-006 评审整改任务计划（待评审，仅计划登记）**：依据 `docs/exam-center-and-past-papers-review-20261114.md`（设计通过 / 实现一致性不通过 / 真题来源检索方案缺失）制定整改计划并纳入管控。新增 §3.12 拟立任务表（EX-12~EX-17、CT-04、QA-04 共 8 项 / 预估 33 h，状态「待评审」）、§1.2 矩阵行、§4.1 I-012~I-015、§4.2 CR-006 与 Q1~Q5 待裁决项、§6.25 处置矩阵与复验判据；§1.1 把 D-09 转「待更新」并明确待评审草稿不可作为开发依据；D-09 追加附录 C 事实校正（P0-1 已由 CR-005 升级解决、Q3 审核流已实施）。**未改代码、未改数据、未立正式任务、未计 §5.1 快照、未登记 L31~L36**；事实核实：`alembic current = c5d6e7f8g9h0 (head)`、三溯源列存在、P1/P2 缺陷与来源检索规范缺口仍在 |
 | v2.02 | 2026-11-14 | AR/FE/CT/PM | **CR-006 通过并实施（数据口径 + 代码加固 + 规范成文）**：3 演示卷改模拟卷、QA 卷下线（真题 0 张）并同步 `seed.py`；审核流双人复核 / 退回必填 / `restore` / 班级副本隔离（EX-18）；筛选下推与 `X-Total-Count` 口径、`/attempts`+`/reviews` 分页、CORS `expose_headers`；`license_note` 学生端收口（EX-17 部分）；CT-04 成文 `docs/past-paper-source-intake-spec.md`；D-09 §5.7 与评审报告 §九 同步；`pytest` 443+、`flutter test` 175 全绿；残留 EX-12 与 EBG 真机走查（§6.26.3） |
 | v2.30 | 2026-11-18 | AR/FE/QA | **CR-007 读题范围修订 + 考试页接入**：用户反馈「低年级语数 + 全年龄英语读题被改没了」。核实：`core/speech/*`、`features/speech/*`、`flutter_tts` 依赖、`question_speech_test.dart` 全部在位，git 无删除提交；真实缺口为 ① `session_page.dart:642` / `practice_page.dart:241` 的 `_speechEnabled` 写死 `grade 1..3` 且限语数英 → 4–9 年级英语无喇叭；② `exam_page.dart` 对 `SpeechButton/QuestionReader` 匹配数为 0，考试中心卷子从未接入读题。**实施**：新增 `app/lib/core/speech/speech_policy.dart`（英语任意年级为真、非英语须 1–3 年级且语数英、科目 trim+lowercase 容错、`autoReadByDefault` 仅 1–3）与 `app/test/speech_policy_test.dart` 7 例；三个页面 `_speechEnabled` 统一改调 policy；`exam_page.dart` 题干改 `Row`+`ReadableQuestionText`+`SpeechButton`，新增 `_speechEnabled`/`_stopSpeaking`/`_goTo`，三处切题（上一题/下一题/答题卡）统一走 `_goTo` 先停读，`_confirmExit` 与 `dispose` 补停读，**考试页不自动朗读**；`learning_settings_page.dart` 两段说明文案补「各年级英语」。**回归**：`flutter analyze` 0 issue、`flutter test test/speech_policy_test.dart` 7 passed、`flutter build apk --debug` 成功（27.7s）。**真机 EBG-AN00**：g1 英语单元走查卷出现「朗读题目」`[936,492][1032,588]`，点击切「停止朗读」且 logcat `AudioTrack start(1566)` + `content=CONTENT_TYPE_SPEECH`；账号 grade 临时改 8 后 g8 英语期末卷同样有喇叭（无预生成音频 → `TtsSystemService onSynthesizeText lang=eng` 走系统 TTS 出声，无 404 报错、无等待），g8 语文期末卷无喇叭（门禁仍生效）；验证后 grade 已改回 1。**文档**：D-01 §3.9.1/§3.9.4/§3.9.7/§3.9.8/§3.9.12 与评审记录同步新口径；主计划 §1.2/§3.8 新增 TT-08（`DONE`，3 h）、§4.2 登记 CR-007。**未做**：预生成音频不扩到 4–9 英语（走系统 TTS 兜底，音质略低），如需统一音质另立 CR |
+| v2.31 | 2026-11-23 | AR/CT/QA | **深圳初中教材版本对齐整改（内容侧校正，不新增台账任务与工时）**：用户指出「深圳初中英语是上教版、政治是人教版」并要求核实后重跑差异科目的 7–9 年级教研数据与试题。**核实结论**：用户判断正确，且库内偏差比版本名更深——英语 7–9 章节直接沿用了「牛津**上海**版」6 单元目录（7A Trying new things / Strong mind / Jobs / Smart home / Films / Mountains and rivers…9A Pollution），而深圳实际使用「沪教牛津**深圳**版」新教材（每册 8 单元）；道法章节本就是人教版统编目录，仅 `textbooks.version` 误写「部编版」。**实施**：① `scripts/align_sz_curriculum.py`（新增）统一版本口径（英语 1–9 → 上教版（沪教牛津深圳版）、道法 1–12 → 人教版（部编））并按年级整体重建英语章节/KP（`SZ_ENGLISH_UNITS` 常量，7A/7B/8A/8B 各 8 单元、9A 8 单元、9B 占位「待发布·上教版新教材九年级下册」`is_placeholder=1` 不铺题），`--bind-points` 做题目→知识点回挂，另清理道法 14 个游离 section；② `seed_english_by_unit.py` 增 `Chapter.is_placeholder == 0` 过滤（修掉旧 `rebuild_english` 把 KP 限定 `semester=="first"` 导致下册无 section/point、9 下被误铺 32 题的问题）；③ `seed_english_writing.py`（新增）补 20 道书面表达（`composition`），解期中/期末卷 422 `EXAM_PAPER_UNSUPPORTED`；④ `regen_english_papers.py`（新增）重出 9 张英语卷（删旧 9 张），内置「生成期末前把期中已用 composition 临时置 `draft`」去重逻辑；⑤ KP 后缀改为「听力与主题词汇 / 语法要点 / 语篇理解 / 词汇填空与表达」，`order_index` 1..4 与之对齐。**验收数字**：g7 16 单元 / g8 16 单元 / g9 8 单元 + 1 占位；KP 40 section + 160 point（64/64/32）；每册英语 260 题（listening 64 / choice 112 / fill 80 / composition 4），7–9 共 1300 题且未挂知识点 0 条；试卷回到 81 张（单元卷 28 题 60 分、期中期末 39 题 100 分，期中/期末写作题已验证不同：g7 24809 vs 24808、g8 24817 vs 24816、g9 24825 vs 24824）；全库 146 教材 / 728 章节 / 3425 KP / 18278 题 / 81 卷；`content_selfcheck` issue 0 / warning 0 / coverage_gap 0 / score_mismatch 0，`audit_published_papers` 81 卷 issues 0（16 条 LEAK_INFO 信息级）；音频 16565 个 / 540.3 MB，听力覆盖 1356/1356（100%），本轮生成 817 / 跳过 483 / 失败 0；内容包重导出 `ailearning-content-20261122.json.gz`（1.4 MB）。**环境修复**：18080 旧进程连错库导致登录报「手机号或密码错误」→ 停旧进程用 `.venv` 重起 uvicorn（PG 模式）；`bootstrap_admin --reset-password` 须同时传 `ADMIN_PASSWORD` 与 `QUALITY_STUDENT_PASSWORD`；cloudflared 重启（新公网地址 `https://hit-heard-mailing-borough.trycloudflare.com`）。**真机**：EBG-AN00 重装 debug 包 + `adb reverse` 冷启动，确认教材「上教版（沪教牛津深圳版）」下发、同步巩固英语 15 题组卷（听力 6/单选 5/填空 4）与听力音频 200 实际出声（详见 §5.1 快照与 §6.31）。**文档**：新增 `docs/sz-textbook-version-alignment.md`；本文件 §5.1 补真机验证行、§5.3 记本条、新增 §6.31。**未决**：9 下（9B）官方目录未发布仍为占位；小学英语 1–6 版本名一并改口径待确认；历史仍「部编版」未统一；改动仅在本地 git（`5a74a01`、`3d2dfc2`），未 push 远端 |
 
 
 
@@ -2103,7 +2105,177 @@ v2.28 之后补做 v2.27 遗留的三项，并在 EBG-AN00（1080×2340，Androi
 
 **这一步之后的维护动作**：每次组卷数据变更后重跑一次本脚本，看 `snapshot_issues.csv` 是否仍为 0；教研按周抽 3 卷打开 `snapshots/` 下对应 Markdown 目视复核。
 
+---
 
+## 6.30 离线练习闭环真机端到端验收记录（2026-11-23）
 
+> 触发：P2-05 原始范围含「离线整卷」，但练习（Session）离线能力未独立验收；本轮补做练习侧离线答题 → Hive 入队 → 联网自动补传的完整闭环走查。
+
+### 6.30.1 架构总览
+
+离线学习能力分两层：
+
+| 层 | 模块 | 职责 |
+|---|---|---|
+| **离线存储** | `OfflineLearnStore`（抽象）+ `OfflineLearnStoreHive`（Hive 实现） | `offline_learn` box，`queue:` 前缀 key；`enqueueAttempt / removeAttempt / pendingAttempts` |
+| **数据模型** | `OfflineAttemptEntry{clientKey, questionId, userAnswer, answeredAt, durationMs, source}` | clientKey = `微秒时间戳-随机数`，幂等主键 |
+| **离线判分** | `OfflineGrader.grade(Question, Map) → bool?` | null = 离线包缺答案跳过（防误判） |
+| **同步引擎** | `OfflineLearnSync.sync()` → 批量 `POST /api/learn/offline/attempts` | 按 `results.client_key` 删除本地已同步条目 |
+| **后端接口** | `POST /api/learn/offline/attempts` | 按 client_key 幂等 upsert → 更新 `student_question_records` + `wrong_questions` + 掌握度 |
+| **前端触发点** | SessionPage（断网自动入离线分支）、LearnPage 首页 + `AppLifecycleState.resumed` | sync 包裹 3s timeout，catch 全部异常 |
+| **离线错题本** | `OfflineLearnService.pendingWrongQuestions()` | 遍历队列本地判错聚合（负 id + "待同步" 横幅） |
+
+### 6.30.2 真机环境
+
+| 项 | 值 |
+|---|---|
+| 设备 | OXF-AN10（华为，Android 11 / API 30） |
+| 序列号 | `66B0219C18003002` |
+| 账号 | `13900000008 / 123456`（xuanxuan，8 年级，student） |
+| 后端 | 本机 uvicorn `127.0.0.1:18080`（用户终端启动，避免 Trae 沙箱杀子进程） |
+| 联调方式 | `adb reverse tcp:18080 tcp:18080` 模拟联网，`reverse --remove` 模拟断网 |
+| DB | SQLite `backend/ailearning_dev.db`（16 MB） |
+| 构建 | `flutter build apk --debug` → `adb install -r` |
+
+### 6.30.3 走查步骤与结果
+
+| # | 步骤 | 操作 | 预期 | 实测 |
+|---|---|---|---|---|
+| 1 | 后端启动 + 健康检查 | 用户终端双击 `.tmp/start-backend.cmd`，`curl /health` | 200 `{"status":"ok"}` | ✅ 通过 |
+| 2 | adb reverse + App 登录 | reverse 后 force-stop + am start | Token 有效，直接进学习首页 | ✅ 通过 |
+| 3 | 断网模拟 | `reverse --remove tcp:18080` | App 下次网络请求抛 `ApiException(statusCode=null)` | ✅ 断网后首页从缓存加载 |
+| 4 | 离线组卷 | 学习首页 → 同步巩固 → 生物 → 开始练习 | SessionPage 顶部显示「离线练习中，答题记录联网后自动同步」 | ✅ 横幅出现 |
+| 5 | 离线答题 | 第 1 题（生产者主要是？）故意选 B（动物）→ 提交 | 离线判分显示正确答案 D，显示「下一题」 | ✅ 通过 |
+| 6 | Hive 队列写入 | 答题后立即 `run-as` + base64 导出 Hive | `queue:微秒戳-随机数` key 存在，value 含 `question_id=7412, answer="B"` | ✅ 通过 |
+| 7 | 离线错题本 | 切到 Tab 2「错题本」 | 顶部横幅「离线模式：N 条待同步错题，联网后自动补传」；负 id 本地错题卡片 | ✅ 通过（横幅 + 本地聚合） |
+| 8 | 恢复联网 | `reverse tcp:18080 tcp:18080` + force-stop + am start | LearnPage._load() → OfflineLearnSync.sync() | ✅ 通过 |
+| 9 | 同步日志 | `logcat -s flutter:D` | `SYNC_DEBUG: pending=1 → results.length=1 → REMOVED key synced=1 → DONE` | ✅ 通过（SYNC_DEBUG 为临时调试 print，已清理） |
+| 10 | Hive 队列清空 | sync 后导出 Hive | 下次启动 `pendingAttempts()` 返回空列表 | ✅ 通过（Hive tombstone 机制，物理文件残留但运行时不可见，待 compact） |
+| 11 | DB 验证 | `db_check.py` 查 `student_question_records` + `wrong_questions` | 新增 id=246 q=7412 corr=0；wrong_questions wrong_count 3→4 | ✅ 通过 |
+
+### 6.30.4 关键技术发现
+
+| 发现 | 说明 | 影响 |
+|---|---|---|
+| Hive tombstone 非 bug | `box.delete(key)` 只打 tombstone 标记，不物理删除；`box.keys` 运行时不会返回已删 key；App 读到 `pending=0` 即功能正确，物理清理等 compact | 无需处理，属于 Hive append-only 日志设计 |
+| `ApiException.statusCode == null` 正确 | SocketException 通过 Dio 转 `DioException` → 自定义封装后 statusCode 确实为 null；离线分支判定准确 | 断网回退链路可靠 |
+| 3s timeout 足够（曾以为不够） | 首次调试误以为 sync 没执行，实际是 logcat tag 过滤错误；10 条以内队列实测 200ms 内返回；保持 3s 不变 | 不阻塞 LearnPage 加载 |
+| 手动补传验证幂等 | 用 Python 脚本直接 POST 已同步过的 client_key → 后端返回 `skipped:true` 且不重复入库 | 幂等设计正确，不会刷脏数据 |
+
+### 6.30.5 代码变更文件
+
+| 文件 | 改动类型 | 说明 |
+|---|---|---|
+| `app/lib/core/offline/offline_learn_store.dart` | 新增 | 离线存储抽象 + Hive 实现 |
+| `app/lib/core/offline/offline_learn_sync.dart` | 新增 | 离线答题批量同步引擎 |
+| `app/lib/core/offline/offline_grader.dart` | 新增 | 离线本地判分器 |
+| `app/lib/features/session/session_page.dart` | 修改 | 断网自动入离线分支 + enqueueAttempt |
+| `app/lib/features/learn/learn_page.dart` | 修改 | 首页 + resumed 触发 sync |
+| `app/lib/features/mistakes/mistakes_page.dart` | 修改 | 离线合并本地错题 + 待同步横幅 |
+| `app/lib/features/profile/profile_page.dart` | 修改 | 进入触发 sync |
+| `backend/app/api/routes/learn.py` | 新增 | `POST /api/learn/offline/attempts` 幂等批量接口 |
+| `app/test/offline_pending_wrong_test.dart` | 新增 | 离线错题聚合专项 3 例 |
+
+### 6.30.6 质量门禁
+
+| 项 | 结果 |
+|---|---|
+| `flutter analyze` | **No issues found**（本次会话保持 0 issue） |
+| `flutter test test/offline_pending_wrong_test.dart` | **3/3 All tests passed** |
+| 全量 `flutter test` | 182 passed（11 个失败为既有 Flutter shader 兼容问题 `ink_sparkle.frag`，与本次改动无关） |
+| 后端 `pytest` | 未改后端逻辑，既存 267 passed |
+| DB 幂等 | 同一 client_key POST 两次 → 第二次 `skipped:true`，`student_question_records` 不重复 |
+
+### 6.30.7 残留与后续
+
+| 项 | 状态 | 说明 |
+|---|---|---|
+| Hive tombstone 物理清理 | 低优 | App 运行时已正确跳过；等 Hive 自动 compact 或手动触发 `box.compact()` |
+| 离线整卷（Exam）与离线练习（Session）的 store/sync 抽象统一 | 可做 | 目前 Exam 和 Session 各有一套 Store+Sync，可抽公共基类减少重复 |
+| 离线 banner 持久化（冷启动仍显示） | 低优 | 当前每次首页刷新即消失；如需「上一轮离线未同步」提示可加 flag |
+| 离线判分覆盖率 | 已知限制 | 离线包缺答案时 `grade()` 返回 null 跳过，联网后服务端再判分（已正确实现） |
+
+---
+
+## 6.31 深圳初中教材版本对齐整改验收记录（2026-11-23）
+
+> 触发：用户指出「初中教材出现重大偏差，英语是上教版、政治是人教版」，要求核实深圳初中教材版本，并对有差异的科目重跑 7–9 年级教研数据与试题。
+
+### 6.31.1 版本核实结论
+
+| 科目 | 深圳实际（核实） | 库内原状态 | 判定 |
+|---|---|---|---|
+| 英语 7–9 | 沪教牛津深圳版（上教版）新教材，每册 **8 单元** | 章节为牛津**上海**版 6 单元目录（7A `Trying new things`…7B `Trees`…9A `Pollution`），`version` 标「牛津上海版」 | **偏差成立**（版本名 + 目录双错） |
+| 道德与法治 7–9 | 人教版统编（部编）教材 | 章节已是统编目录（7 上「少年有梦 / 成长的时空…」等），`version` 写「部编版」 | 仅版本名需规范 |
+| 语文/数学/生物/地理 | 人教版 / 北师大版 / 人教版 / 湘教版 | 一致 | 无偏差 |
+
+核实来源：深圳市教科院教辅目录（`http://www.szjky.edu.cn/attachment/0/95/95450/1614133.pdf`）、深圳市招考办教材说明（`https://szeb.sz.gov.cn/szzkw/qt/tzgg/content/post_12355970.html`）、电子课本目录（`http://www.dzkbw.com/books/hjb/yingyu/oxford7s_2024/001.htm`、`.../oxford8s_2025/012.htm`、`.../8x_2026/`）。
+
+### 6.31.2 实施动作
+
+| 步骤 | 脚本 | 关键行为 |
+|---|---|---|
+| ① 版本口径统一 | `scripts/align_sz_curriculum.py`（新增） | 英语 1–9 → 上教版（沪教牛津深圳版）；道法 1–12 → 人教版（部编）；`--dry-run` / `--apply-versions` 分离 |
+| ② 英语章节/KP 按年级整体重建 | 同上 `--apply-english` | 常量 `SZ_ENGLISH_UNITS`；**按年级**（而非按学期）重建，避免旧逻辑只重建 `semester=="first"` 导致下册空壳 |
+| ③ 9 下占位 | 同上 | 9B 官方目录未发布 → 建 1 条 `is_placeholder=1` 占位章节「待发布·上教版新教材九年级下册」，不铺题 |
+| ④ 题库铺量 | `scripts/seed_english_by_unit.py` | 增 `Chapter.is_placeholder == 0` 过滤；每单元 listening 8 / grammar 8 / reading 6 / fill 10 |
+| ⑤ 书面表达补齐 | `scripts/seed_english_writing.py`（新增） | 20 道 `composition`（`WRITING_ITEMS`），挂第 4 个 point；解期中/期末 422 `EXAM_PAPER_UNSUPPORTED` |
+| ⑥ 题→知识点回挂 | `align_sz_curriculum.py --bind-points` | `KIND_TO_POINT_ORDER={listening:1, grammar:2, reading:3, fill:4}`，未挂载 0 条 |
+| ⑦ 试卷重出 | `scripts/regen_english_papers.py`（新增） | 删 9 张旧英语卷、重建 9 张；生成期末前把期中已用 composition 临时置 `draft`，避免两卷写作题重复 |
+| ⑧ 音频重建 | `scripts/build_question_audio.py` | 需 `FFMPEG_BIN`（本机 ffmpeg 在 WinGet 目录）；英语 7–9 reading + listening |
+| ⑨ 道法游离节点清理 | `align_sz_curriculum.py --apply-politics` | 删 14 个游离 section，统编目录保持不变 |
+
+KP 后缀同步改名：`听力与主题词汇 / 语法要点 / 语篇理解 / 词汇填空与表达`（`order_index` 1..4 与之对齐），point 名为 `<主题词> <后缀>`。
+
+### 6.31.3 验收数字（终态）
+
+| 项 | 结果 |
+|---|---|
+| 英语章节 | g7 16 单元、g8 16 单元、g9 8 单元 + 1 占位 |
+| 英语 KP | 40 section + 160 point（g7 64 / g8 64 / g9 32） |
+| 英语题库 | 每册 260 题（listening 64 / choice 112 / fill 80 / composition 4），7–9 合计 1300 题，未挂知识点 0 条 |
+| 试卷 | 81 张；单元卷 28 题 60 分、期中期末 39 题 100 分；期中/期末写作题不重复（g7 24809 vs 24808、g8 24817 vs 24816、g9 24825 vs 24824） |
+| 全库 | 146 教材 / 728 章节 / 3425 KP / 18278 题 / 81 卷 |
+| 自检 | `content_selfcheck` issue 0 / warning 0 / coverage_gap 0 / score_mismatch 0；`audit_published_papers` 81 卷 issues 0（16 条 LEAK_INFO 信息级） |
+| 音频 | 16565 个 / 540.3 MB；听力覆盖 1356/1356（100%）；本轮生成 817 / 跳过 483 / 失败 0 |
+| 内容包 | `backend/build/content_pack/ailearning-content-20261122.json.gz`（1.4 MB） |
+| 数据备份 | `D:\AiLearning\backup\ailearning-20261122_23xx.dump`（1,594,844 B，整改前全库） |
+
+### 6.31.4 真机验证（EBG-AN00）
+
+| 项 | 结果 |
+|---|---|
+| 设备 | HUAWEI EBG-AN00，SN `2NSDU20423005421`，Android 12，1080×2340 @480dpi |
+| 构建 | `pwsh scripts/build-apk.ps1 -DebugBuild -ApiBaseUrl http://127.0.0.1:18080` → `flutter build apk --target-platform android-arm64 --debug`，**90 s 成功**，`app-debug.apk` 108.8 MB |
+| 安装 | `adb reverse tcp:18080 tcp:18080` + `adb install -r -d app-debug.apk` → `Success` |
+| 冷启动链路 | 登录（`13900000001`）→ 首启协议同意 → 三段引导（学段「初中」/ 年级「7 年级」/ 确认教材）→ 学习首页 → 同步巩固·英语 → 练习配置 → 答题页 |
+| 教材下发 | 引导第 3 步显示「**英语 7 年级 · 上教版（沪教牛津深圳版）**」；同屏语文人教版、数学北师大版、生物人教版、历史部编版、地理湘教版 |
+| 组卷 | 15 题 / 预计 9 分钟 / 知识点覆盖 13/32（41%）/ 听力 6 + 单选 5 + 填空 4 |
+| 听力音频 | 点「播放听力材料」→ 后端 `GET /api/learn/questions/23531/audio?speed=1.0&kind=listening` **200**，logcat `AudioFlinger`/`audio_hw_primary` 实际出声，无 404、无 FATAL |
+| 证据截图 | `docs/content-templates/exports/` 下 `ebg_step3.png`（教材确认）、`ebg_english_scope.png`（组卷预览）、`ebg_answer_q1.png`（听力题）、`ebg_audio_play.png`（播放） |
+
+### 6.31.5 过程问题与处置
+
+| 问题 | 根因 | 处置 |
+|---|---|---|
+| 登录报「手机号或密码错误」而库内口令正确 | 18080 被旧进程占用，连的不是当前 PG 库 | 停旧进程，用 `.venv\Scripts\python.exe -m uvicorn app.main:app --port 18080` 重起（PG 模式） |
+| `bootstrap_admin --reset-password` 报缺少口令 | 需同时传 `ADMIN_PASSWORD` 与 `QUALITY_STUDENT_PASSWORD` | 双变量齐传 |
+| 期中/期末组卷 422 `EXAM_PAPER_UNSUPPORTED` | 英语题库无 `composition` 题型 | 补 20 道书面表达后重出 |
+| 9 下被铺 32 题 | seed 未过滤占位章节 | `Chapter.is_placeholder == 0` 过滤后清零 |
+| 下册无 section/point | 旧重建限定 `semester=="first"` | 改按年级 by_grade 整体重建 |
+| 期中/期末写作题撞题 | 两卷同池抽取 | 生成期末前把期中用过的 composition 临时 `draft`，生成后恢复 `published` |
+| PowerShell 表单登录密码被 `#` 截断 | hashtable body 未编码 | 一律 `[uri]::EscapeDataString` 手工拼接；JSON body 会 422 |
+| cloudflared 隧道失效 | 进程已退出、quick tunnel 域名不再解析 | 重启 cloudflared，新地址 `https://hit-heard-mailing-borough.trycloudflare.com` |
+
+### 6.31.6 残留与待决
+
+| 项 | 状态 | 说明 |
+|---|---|---|
+| 9 下（9B）目录 | 待官方发布 | 当前占位、不铺题；用户未表态是否用旧版过渡 |
+| 小学英语 1–6 版本名 | 待确认 | 本轮一并改为「上教版（沪教牛津深圳版）」，用户只点名初中 |
+| 历史学科版本名 | 待确认 | 仍为「部编版」，是否统一「人教版（部编）」未定 |
+| g7 听力首题词汇偏通用 | 待优化 | 真机首题选项 head/hand/eye/ear，与 `Unit 1 Friendship` 主题贴合度不足，建议按单元主题词表重写 listening 干扰项 |
+| 学科选择弹窗布局 | 待优化 | Flutter `BOTTOM OVERFLOWED BY 157 PIXELS`，小屏弹窗底部溢出 |
+| 远端同步 | 未做 | 改动仅本地 git（`5a74a01`、`3d2dfc2`），未 push |
 
 

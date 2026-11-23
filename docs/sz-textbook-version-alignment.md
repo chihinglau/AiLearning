@@ -78,3 +78,35 @@
 - **9 下（九年级下册）**：上教版新教材尚未发布，当前为占位章节、不铺题。需要过渡方案时再决策（用旧版目录过渡 or 等官方目录）。
 - **小学英语 1–6**：版本名一并改为「上教版（沪教牛津深圳版）」（深圳小学英语同为沪教牛津，方向一致），但内容未逐册复核。
 - **历史**：仍为「部编版」，未纳入本次整改，是否统一为「人教版（部编）」待定。
+
+## 6. App 重装与真机验证（2026-11-23）
+
+构建与安装（真机必须走 `127.0.0.1`，模拟器口径 `10.0.2.2` 在真机上不可达）：
+
+```powershell
+pwsh scripts\build-apk.ps1 -DebugBuild -ApiBaseUrl http://127.0.0.1:18080
+# 运行前需把 C:\Windows\System32（where.exe）与 C:\Program Files\Git\cmd 加进 PATH
+adb reverse tcp:18080 tcp:18080
+adb install -r -d app\build\app\outputs\flutter-apk\app-debug.apk
+```
+
+- 构建：`flutter build apk --target-platform android-arm64 --debug --dart-define API_BASE_URL=http://127.0.0.1:18080`，90 s 成功，`app-debug.apk` 108.8 MB。
+- 设备：HUAWEI EBG-AN00，SN `2NSDU20423005421`，Android 12，1080×2340 @480dpi。
+
+走查结果：
+
+| 环节 | 结果 |
+| --- | --- |
+| 安装 | `Success`（覆盖安装，保留数据） |
+| 冷启动 | 登录 `13900000001` → 首启协议同意 → 三段引导（初中 / 7 年级 / 确认教材）→ 学习首页 |
+| 教材下发 | 引导第 3 步「确认教材」显示「**英语 7 年级 · 上教版（沪教牛津深圳版）**」；同屏语文人教版、数学北师大版、生物人教版、历史部编版、地理湘教版 |
+| 组卷 | 同步巩固·英语：15 题 / 预计 9 分钟 / 知识点覆盖 13/32（41%）/ 听力 6 + 单选 5 + 填空 4 |
+| 听力音频 | 点「播放听力材料」→ `GET /api/learn/questions/23531/audio?speed=1.0&kind=listening` 200，AudioFlinger 实际出声，无 404、无 FATAL |
+| 证据截图 | `docs/content-templates/exports/ebg_step3.png`、`ebg_english_scope.png`、`ebg_answer_q1.png`、`ebg_audio_play.png` |
+
+观察项（不影响交付，建议后续优化）：
+
+1. g7 听力首题选项为 `head / hand / eye / ear`，与 `Unit 1 Friendship` 主题贴合度不足，建议按单元主题词表重写干扰项。
+2. 学科选择弹窗底部出现 Flutter `BOTTOM OVERFLOWED BY 157 PIXELS`，需调整弹窗高度/滚动。
+3. 验证期间为看 g7 内容曾把质检学生 `grade` 临时改为 7，走查后已改回 1。
+
