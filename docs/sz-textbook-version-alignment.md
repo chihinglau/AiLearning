@@ -150,4 +150,50 @@ adb install -r -d app\build\app\outputs\flutter-apk\app-debug.apk
 | 英语 / 道法 / 历史 每日教研任务 | query 内 `version=` 与 `--expect-version` 全部换新口径（任务仍暂停，未擅自启用） |
 | 远端 | 本轮改动已 commit 并 push `origin/main` |
 
+## 8. 每日教研基线同步（2026-11-23 第三轮）
+
+库内英语章节已按 8 单元重建，但教研任务真正读的是 `baseline/` 下的大纲 md，两者此前仍是旧「牛津上海版」6 单元口径。本轮把基线一并纠正，否则已启用的英语任务会在 22:10 按旧目录产出一批注定被拒的内容。
+
+### 8.1 已改的基线文件
+
+| 文件 | 改动 |
+| --- | --- |
+| `baseline/_outline_english_first_latest.md` | 7/8/9 年级三张表整体换成新教材 8 单元（Friendship…Collecting as a hobby / Look it up!…Pets and us / Great people…The power of love），板块名未取到的按「课时 1-3」写，并加「旧目录已作废」标注 |
+| `baseline/_outline_english_second_latest.md` | 7B/8B 换成 8 单元（People around us…From hobby to career / Helping those in need…Imagine that!）；栏目页（Culture corner / Exploring the world / Literature corner）从单元表移出，明确不计入单元数；九年级下册删掉此前未核实推断的 6 个单元名，改成「待官方目录发布后回填（当前禁止产出）」 |
+| `baseline/_chapters-baseline_latest.md` | 英语 7/8/9 三行章节清单同步为 8 单元，处理方式列注明「2026-11-23 重建」 |
+| `ledger/english/g7.md`、`g8.md`、`g9.md` | 「下一节计划」重置为新单元 `Unit 1 … / 课时 1`，并注明旧 6 单元阶段的 daily 产出已作废、不得导入 |
+
+`baseline/_outline_english_first_20261107.md` 等带日期的快照保持原样，作为历史留档。
+
+### 8.2 解析与门禁复验
+
+`_validate_daily.load_outline()` 解析结果：first 大纲 g7/g8/g9 各 8 个单元（pairs 48 = 8×(单元 + 3 课时)）；second 大纲 g7/g8 各 8 单元、g9 只剩占位项。
+
+用新大纲回扫存量旧产出：
+
+| 目录 | 结果 |
+| --- | --- |
+| `daily/english/g7` | 6 个文件全部失败，错误均为「章节 `Unit N …` 不在本册教材大纲内」 |
+| `daily/english/g8` | 7 个文件 6 失败；`english_g8_first_20261107.json` 因带 `_legacy` 标记（旧样章约定）走降级路径判通过 |
+| `daily/english/g9` | 6 个文件全部失败 |
+
+即门禁已能拦住旧目录内容，且这些旧产出在任何导入动作前都会红灯。
+
+### 8.3 九年级下册的处理决定
+
+查到沪教牛津版（深圳·广州·沈阳）九下确有旧版 6 单元 3 模块官方目录（Module 1 Explorations and exchanges / Unit 1 Great explorations、Unit 2 Culture shock；Module 2 Environmental problems / Unit 3 The environment、Unit 4 Natural disasters；Module 3 Sport and health / Unit 5 Sport、Unit 6 Caring for your health），但那是 2014 审定旧版结构，与深圳当前使用的新教材 8 单元体系不是同一套书。
+
+**决定：不按旧版 6 单元重建**，九下继续保留 `is_placeholder=1` 的占位章节、不铺题、不出卷、不生成教研内容；待新教材九下官方目录发布后再按同一套 `SZ_ENGLISH_UNITS` 流程补齐。理由是不拿旧版目录冒充新教材，避免把已经修掉一次的版本错误再用另一种形式复现。
+
+### 8.4 定时任务套餐上限
+
+对 9 条暂停任务实测：启用第 1 条成功，启用第 2 条被服务端拒绝——「当前用户套餐仅支持创建 1 个定时任务，目前已达上限，请升级到专业版标准以上套餐」。因此最终把唯一名额给**英语 1-9 上每日教研**（`17353890184450`，Active，下次 2026-11-23 22:10，Asia/Shanghai，运行环境本机 LZXST14P），其余 8 条（数学 / 语文 / 道法 / 物理 / 化学 / 生物 / 历史 / 地理）保持暂停。数学任务曾被启用验证通路，随即停回暂停，未产生实际运行。
+
+九条任务的分钟已按学科错峰（数学 00、语文 05、英语 10、道法 15、物理 20、化学 25、生物 30、历史 35、地理 40，每天 2/12/22 点），升级套餐后可直接逐条放开，不会撞点。
+
+### 8.5 主计划表格修复
+
+`docs/project-task-plan.md` 第 581 行「已投入工时」单元格长期存在历史重复串损坏（`…QA-03 0.5） |P0-02 2、…QA-03 0.5） |`），本轮按正则去重恢复为单一完整括号，行长度 1737 → 885 字符，数值未改。
+
+
 

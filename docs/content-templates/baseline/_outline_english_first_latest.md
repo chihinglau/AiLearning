@@ -108,43 +108,54 @@
 
 ## 七年级（七年级英语上册(2024秋版)）
 
+> **2026-11-23 更新**：旧版本（牛津上海版 6 单元：Trying new things / Strong mind / Jobs / Smart home / Films / Mountains and rivers）已作废。
+> 深圳实际使用「上教版（沪教牛津深圳版）」新教材，七年级上册为 8 单元，与库内 `chapters` / `SZ_ENGLISH_UNITS` 一致。
+
 | 序 | 单元/章节 | 课时板块 |
 |---|---|---|
-| 1 | Starter 1 English is fun / English is fun | — |
-| 2 | Starter 2 English worldwide / English worldwide | — |
-| 3 | Starter 3 English matters / English matters | — |
-| 4 | Starter 4 English learning styles / English learning styles | — |
-| 5 | Unit 1 Trying new things / Trying new things | A Viewing and listening / B Speaking / C Reading & Grammar in use / D Writing & Discovery / E Project |
-| 6 | Unit 2 Strong mind / Strong mind | A Viewing and listening / B Speaking / C Reading & Grammar in use / D Writing & Discovery / E Project |
-| 7 | Unit 3 Jobs / Jobs | A Viewing and listening / B Speaking / C Reading & Grammar in use / D Writing & Discovery / E Project |
-| 8 | Unit 4 Smart home / Smart home | A Viewing and listening / B Speaking / C Reading & Grammar in use / D Writing & Discovery / E Project |
-| 9 | Unit 5 Films / Films | A Viewing and listening / B Speaking / C Reading & Grammar in use / D Writing & Discovery / E Project |
-| 10 | Unit 6 Mountains and rivers / Mountains and rivers | A Viewing and listening / B Speaking / C Reading & Grammar in use / D Writing & Discovery / E Project |
+| 1 | Unit 1 Friendship / Friendship | 课时 1 / 课时 2 / 课时 3 |
+| 2 | Unit 2 School life / School life | 课时 1 / 课时 2 / 课时 3 |
+| 3 | Unit 3 The seasons / The seasons | 课时 1 / 课时 2 / 课时 3 |
+| 4 | Unit 4 The Earth / The Earth | 课时 1 / 课时 2 / 课时 3 |
+| 5 | Unit 5 Off to space / Off to space | 课时 1 / 课时 2 / 课时 3 |
+| 6 | Unit 6 Travelling around Asia / Travelling around Asia | 课时 1 / 课时 2 / 课时 3 |
+| 7 | Unit 7 Fun after school / Fun after school | 课时 1 / 课时 2 / 课时 3 |
+| 8 | Unit 8 Collecting as a hobby / Collecting as a hobby | 课时 1 / 课时 2 / 课时 3 |
 
 ## 八年级（八年级英语上册(2025秋版)）
 
+> **2026-11-23 更新**：旧版本（牛津上海版 6 单元：Water / Digital life / Curious minds / Then and now / Teamwork / Life in the future）已作废，改为上教版新教材 8 单元。
+
 | 序 | 单元/章节 | 课时板块 |
 |---|---|---|
-| 1 | Unit 1 Water / Water | A Facts about water / B Water in everyday life / C The land of little water / D Water protection / E Our water use in a day |
-| 2 | Unit 2 Digital life / Digital life | A Viewing and listening / B Speaking / C Reading & Grammar in use / D Writing & Discovery / E Project |
-| 3 | Unit 3 Curious minds / Curious minds | A Viewing and listening / B Speaking / C Reading & Grammar in use / D Writing & Discovery / E Project |
-| 4 | Unit 4 Then and now / Then and now | A Viewing and listening / B Speaking / C Reading & Grammar in use / D Writing & Discovery / E Project |
-| 5 | Unit 5 Teamwork / Teamwork | A Viewing and listening / B Speaking / C Reading & Grammar in use / D Writing & Discovery / E Project |
-| 6 | Unit 6 Life in the future / Life in the future | A Viewing and listening / B Speaking / C Reading & Grammar in use / D Writing & Discovery / E Project |
+| 1 | Unit 1 Look it up! / Look it up! | 课时 1 / 课时 2 / 课时 3 |
+| 2 | Unit 2 Amazing numbers / Amazing numbers | 课时 1 / 课时 2 / 课时 3 |
+| 3 | Unit 3 Our digital lives / Our digital lives | 课时 1 / 课时 2 / 课时 3 |
+| 4 | Unit 4 Inventions / Inventions | 课时 1 / 课时 2 / 课时 3 |
+| 5 | Unit 5 Going on an exchange trip / Going on an exchange trip | 课时 1 / 课时 2 / 课时 3 |
+| 6 | Unit 6 Wisdom counts / Wisdom counts | 课时 1 / 课时 2 / 课时 3 |
+| 7 | Unit 7 The secret of memory / The secret of memory | 课时 1 / 课时 2 / 课时 3 |
+| 8 | Unit 8 Pets and us / Pets and us | 课时 1 / 课时 2 / 课时 3 |
 
 ## 九年级（九年级英语上册(2026秋版)）
 
+> **2026-11-23 更新**：旧版本（牛津上海版 6 单元：Teenage life / People and their jobs / Travellers' tales / Folk customs / Buildings / Pollution）已作废，改为上教版新教材 8 单元。
+
 | 序 | 单元/章节 | 课时板块 |
 |---|---|---|
-| 1 | Unit 1 Teenage life / Teenage life | — |
-| 2 | Unit 2 People and their jobs / People and their jobs | — |
-| 3 | Unit 3 Travellers' tales / Travellers' tales | — |
-| 4 | Unit 4 Folk customs / Folk customs | — |
-| 5 | Unit 5 Buildings / Buildings | — |
-| 6 | Unit 6 Pollution / Pollution | — |
+| 1 | Unit 1 Great people / Great people | 课时 1 / 课时 2 / 课时 3 |
+| 2 | Unit 2 Great ideas / Great ideas | 课时 1 / 课时 2 / 课时 3 |
+| 3 | Unit 3 Family traditions / Family traditions | 课时 1 / 课时 2 / 课时 3 |
+| 4 | Unit 4 A better me / A better me | 课时 1 / 课时 2 / 课时 3 |
+| 5 | Unit 5 My time, my joy / My time, my joy | 课时 1 / 课时 2 / 课时 3 |
+| 6 | Unit 6 Food and health / Food and health | 课时 1 / 课时 2 / 课时 3 |
+| 7 | Unit 7 Reading Mark Twain / Reading Mark Twain | 课时 1 / 课时 2 / 课时 3 |
+| 8 | Unit 8 The power of love / The power of love | 课时 1 / 课时 2 / 课时 3 |
 
 ## 待补清单
 
-- 九年级上册：单元名已核对，A-E 板块名暂未取到（不影响按单元推进）。
+- 九年级上册：8 单元名称已按新教材核对，A-E 板块命名未取到，按「课时 1-3」推进。
+- 九年级下册：上教版新教材预计 2027 春发布，官方目录未出 → 保持占位，不产内容。
 - 六年级上册：单元名与 3 课时结构确认，板块具体命名未公开。
-- 下册大纲：全部学科尚未采集。
+- 下册大纲：7B/8B 已按新教材 8 单元口径更新；9B 仍无官方目录。
+

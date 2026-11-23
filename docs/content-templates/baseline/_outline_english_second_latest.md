@@ -76,39 +76,45 @@
 
 ## 七年级（七年级英语下册（沪教版 2025 春版·牛津上海版））
 
+> **2026-11-23 更新**：旧版本（牛津上海版 6 单元：Music / Language and communication / A helping hand / Honesty / Wild animals / Trees）已作废，改为上教版（沪教牛津深圳版）新教材 8 单元。
+
 | 序 | 单元/模块 | 板块/课时 |
 |---|---|---|
-| 1 | Unit 1 Music | A Viewing and listening / B Speaking / C Reading & Grammar in use / D Writing & Discovery / E Project |
-| 2 | Unit 2 Language and communication | A Viewing and listening / B Speaking / C Reading & Grammar in use / D Writing & Discovery / E Project |
-| 3 | Unit 3 A helping hand | A Viewing and listening / B Speaking / C Reading & Grammar in use / D Writing & Discovery / E Project |
-| 4 | Unit 4 Honesty | A Viewing and listening / B Speaking / C Reading & Grammar in use / D Writing & Discovery / E Project |
-| 5 | Unit 5 Wild animals | A Viewing and listening / B Speaking / C Reading & Grammar in use / D Writing & Discovery / E Project |
-| 6 | Unit 6 Trees | A Viewing and listening / B Speaking / C Reading & Grammar in use / D Writing & Discovery / E Project |
+| 1 | Unit 1 People around us | 课时 1 / 课时 2 / 课时 3 |
+| 2 | Unit 2 Travelling around the world | 课时 1 / 课时 2 / 课时 3 |
+| 3 | Unit 3 Trees and us | 课时 1 / 课时 2 / 课时 3 |
+| 4 | Unit 4 Our animal friends | 课时 1 / 课时 2 / 课时 3 |
+| 5 | Unit 5 Water | 课时 1 / 课时 2 / 课时 3 |
+| 6 | Unit 6 Electricity | 课时 1 / 课时 2 / 课时 3 |
+| 7 | Unit 7 Poems | 课时 1 / 课时 2 / 课时 3 |
+| 8 | Unit 8 From hobby to career | 课时 1 / 课时 2 / 课时 3 |
 
 ## 八年级（八年级英语下册（沪教版 2026 春版·牛津上海版））
 
-| 序 | 单元/模块 | 板块/课时 |
-|---|---|---|
-| 1 | Unit 1 Art and artists | Art in my view / My choice of an art class / A famous artist / My favourite work of art / Art in different forms / Works of art around us |
-| 2 | Unit 2 Great inventions and discoveries | Great ancient inventions / Great modern inventions / Stories behind great discoveries / The most useful invention in my view / A world of aircraft / The development and influences of a great invention |
-| 3 | Unit 3 Money | Daily use of money / Managing pocket money / Money in the economy / Spending and saving habits / The history of money / A charity sale plan |
-| 4 | Unit 4 Fashion | Fashion in the past / Personal style / Changing fashion / My fashion attitude / Fashion in ancient times / Fashion design |
-| 5 | Unit 5 Natural disasters | Learning about natural disasters / Staying safe from natural disasters / Surviving natural disasters / Reporting natural disasters / The fate of cities in natural disasters / Being prepared for natural disasters |
-| 6 | Unit 6 Friendship | Beginning of friendship / Ups and downs in friendship / Power of friendship / Memories with friends / Two poems on friendship / “Recipes” for friendship |
-| 7 | Culture corner | Exploring China: Great works of art |
-| 8 | Exploring the world: Africa | Exploring the world: Africa |
-| 9 | Literature corner | A chapter to start with: The Time Machine / A scene to act out: The Merchant of Venice / A poem to savour: The Arrow and the Song |
-
-## 九年级（九年级英语下册（沪教版新教材，2027 春））
+> **2026-11-23 更新**：旧版本（牛津上海版 6 单元：Art and artists / Great inventions and discoveries / Money / Fashion / Natural disasters / Friendship）已作废，改为上教版新教材 8 单元。
 
 | 序 | 单元/模块 | 板块/课时 |
 |---|---|---|
-| 1 | Unit 1 Sport and sportsmanship | Section 1 Experiencing and understanding language / Section 2 Exploring and applying rules (Grammar) / Section 3 Expressing and communicating ideas / Section 4 Extending and developing competencies |
-| 2 | Unit 2 Finding balance in life | Section 1 Experiencing and understanding language / Section 2 Exploring and applying rules (Grammar) / Section 3 Expressing and communicating ideas / Section 4 Extending and developing competencies |
-| 3 | Unit 3 Protecting the environment | Section 1 Experiencing and understanding language / Section 2 Exploring and applying rules (Grammar) / Section 3 Expressing and communicating ideas / Section 4 Extending and developing competencies |
-| 4 | Unit 4 Natural disasters | Section 1 Experiencing and understanding language / Section 2 Exploring and applying rules (Grammar) / Section 3 Expressing and communicating ideas / Section 4 Extending and developing competencies |
-| 5 | Unit 5 Great explorers and explorations | Section 1 Experiencing and understanding language / Section 2 Exploring and applying rules (Grammar) / Section 3 Expressing and communicating ideas / Section 4 Extending and developing competencies |
-| 6 | Unit 6 Experiencing different cultures | Section 1 Experiencing and understanding language / Section 2 Exploring and applying rules (Grammar) / Section 3 Expressing and communicating ideas |
+| 1 | Unit 1 Helping those in need | 课时 1 / 课时 2 / 课时 3 |
+| 2 | Unit 2 Body language | 课时 1 / 课时 2 / 课时 3 |
+| 3 | Unit 3 Comics and animation | 课时 1 / 课时 2 / 课时 3 |
+| 4 | Unit 4 Arts and heritage | 课时 1 / 课时 2 / 课时 3 |
+| 5 | Unit 5 Saving animals in danger | 课时 1 / 课时 2 / 课时 3 |
+| 6 | Unit 6 Learning by doing | 课时 1 / 课时 2 / 课时 3 |
+| 7 | Unit 7 Space exploration | 课时 1 / 课时 2 / 课时 3 |
+| 8 | Unit 8 Imagine that! | 课时 1 / 课时 2 / 课时 3 |
+
+> 栏目页（Culture corner / Exploring the world: Africa / Literature corner）**不计入单元数**，也不作为每日节次推进；本册按上表 8 单元走完即视为完成。
+
+## 九年级（九年级英语下册·上教版新教材）
+
+> **2026-11-23 更正**：本册官方目录未发布（预计 2027 春），库内为占位章节（`is_placeholder=1`），**不生成任何内容**。
+> 此前本文件填的 6 个单元名（Sport and sportsmanship / Finding balance in life / Protecting the environment / Natural disasters / Great explorers and explorations / Experiencing different cultures）属未经核实推断，已作废。
+> 网传 6 单元（Module 1-3：Great explorations / Culture shock / The environment / Natural disasters / Sport / Caring for your health）为旧版牛津上海版（2014 审定）目录，不得用于新教材。
+
+| 序 | 单元/模块 | 板块/课时 |
+|---|---|---|
+| — | 待官方目录发布后回填（当前禁止产出） | — |
 
 ## 待补清单
 
