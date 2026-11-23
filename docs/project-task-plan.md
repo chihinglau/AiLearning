@@ -3,7 +3,7 @@
 > **文档性质**：项目主计划 / 进度跟踪 / 过程追溯（全程伴随开发周期）
 > **版本**：v1.99
 > **创建日期**：2026-11-06
-> **最后更新**：2026-11-23 v2.32（**整改回填轮**：复原质检学生画像为「小学·1 年级」并按 1 年级重绑教材、7-9 英语 320 道听力题改按单元主题词表出题（答案位置 A/B/C/D 轮转）并重生成 320 条音频、学科选择弹窗溢出修复（`isScrollControlled` + 限高 0.7 + 可滚动列表）、历史学科版本名统一「人教版（部编）」、3 条教研任务 query 换新版本口径；EBG-AN00 复验通过，见 §6.32）；同日 v2.31（**深圳初中教材版本对齐整改**：核实深圳初中英语为沪教牛津深圳版、道法为人教版统编，库内英语 7–9 原用「牛津上海版」6 单元目录且版本名标「牛津上海版」——按 8 单元新目录重建 7–9 英语章节/KP/题库并重出试卷，英语版本名统一为「上教版（沪教牛津深圳版）」、道法改为「人教版（部编）」，补 20 道书面表达、重出听力音频、修部署通道；EBG-AN00 重装真机验证通过，见 §5.3 v2.31 / §6.31）；同日 v2.03（新增 §6.30 离线练习闭环真机端到端验证：Hive 本地答题队列 + 离线判分 + 联网自动补传 `/api/learn/offline/attempts` 按 client_key 幂等入库 + 错题本离线待同步横幅，OXF-AN10 设备全链路走查通过；P2-05 证据列同步更新练习侧实现；`flutter analyze` 0 issue、`flutter test` 182 passed、离线专项 3/3 通过）；早期：D-09 方案经 PM 评审通过并转 v1.0；CR-004 决策「通过」，EX-04~EX-08 全部实施完成、L21~L26 验收通过；CR-006 已通过并实施；新增 1 个 Alembic 迁移，全量 `pytest` 432 例与 `flutter test` 170 例全绿；R-A15 / R-A16 与 M5 仍待 PM 签署）
+> **最后更新**：2026-11-23 v2.33（**测试环境修复**：`app/build/unit_test_assets` 内的旧版 material shader 产物导致 11 例 `shaders/ink_sparkle.frag` runtime stage 校验失败，删除缓存重编后 `flutter test` 192 例全绿，排查手册见 §6.33）；同日 v2.32（**整改回填轮**：复原质检学生画像为「小学·1 年级」并按 1 年级重绑教材、7-9 英语 320 道听力题改按单元主题词表出题（答案位置 A/B/C/D 轮转）并重生成 320 条音频、学科选择弹窗溢出修复（`isScrollControlled` + 限高 0.7 + 可滚动列表）、历史学科版本名统一「人教版（部编）」、3 条教研任务 query 换新版本口径；EBG-AN00 复验通过，见 §6.32）；同日 v2.31（**深圳初中教材版本对齐整改**：核实深圳初中英语为沪教牛津深圳版、道法为人教版统编，库内英语 7–9 原用「牛津上海版」6 单元目录且版本名标「牛津上海版」——按 8 单元新目录重建 7–9 英语章节/KP/题库并重出试卷，英语版本名统一为「上教版（沪教牛津深圳版）」、道法改为「人教版（部编）」，补 20 道书面表达、重出听力音频、修部署通道；EBG-AN00 重装真机验证通过，见 §5.3 v2.31 / §6.31）；同日 v2.03（新增 §6.30 离线练习闭环真机端到端验证：Hive 本地答题队列 + 离线判分 + 联网自动补传 `/api/learn/offline/attempts` 按 client_key 幂等入库 + 错题本离线待同步横幅，OXF-AN10 设备全链路走查通过；P2-05 证据列同步更新练习侧实现；`flutter analyze` 0 issue、`flutter test` 182 passed、离线专项 3/3 通过）；早期：D-09 方案经 PM 评审通过并转 v1.0；CR-004 决策「通过」，EX-04~EX-08 全部实施完成、L21~L26 验收通过；CR-006 已通过并实施；新增 1 个 Alembic 迁移，全量 `pytest` 432 例与 `flutter test` 170 例全绿；R-A15 / R-A16 与 M5 仍待 PM 签署）
 > **参考设计文档**：见[§1.1 参考设计文档清单](#11-参考设计文档清单)（共 9 份，含 5 份设计方案、4 份支撑文档）
 > **需求追踪**：见[§1.2 需求—设计—任务追踪矩阵](#12-需求设计任务追踪矩阵)
 > **维护人**：项目负责人（PM）
@@ -2372,7 +2372,39 @@ KP 后缀同步改名：`听力与主题词汇 / 语法要点 / 语篇理解 / �
 | 小学英语 1-6 版本名 | 保持新名 | 与 7-9 一致，未回退 |
 | 听力题干扰项 | 已主题化但同单元 8 词反复使用 | 单元内 8 题轮用 8 词，属可接受范围；若后续要求更高区分度，可按小节扩词表 |
 | 定时任务 | 仍全部暂停 | query 已换新口径，恢复启用前需确认排期 |
-| App 工作区改动 | 混合未提交 | `learn_page.dart` 同时含既有离线同步改动，本轮仅提交弹窗修复所在文件，其余他人在改文件未动 |
+| App 工作区改动 | 已提交 | 经用户确认属本人改动，已随 `5e32a01` 提交（离线错题本闭环 + 设计文档 v1.5 + pubspec.lock），工作区已与 `origin/main` 同步 |
+
+## 6.33 Flutter 测试环境：material shader 编译产物缓存（2026-11-23）
+
+### 6.33.1 现象
+
+`flutter test` 出现批量失败，异常统一为：
+
+```
+Asset 'shaders/ink_sparkle.frag' manifest could not be decoded:
+INVALID_ARGUMENT: Runtime stages buffer failed verification.
+```
+
+本轮全量跑 192 个用例时 11 个失败，涉及 `consent_gate_test`、`ai_explain_test`、`content_review_page_test`、`exam_list_page_test`、`teacher_pages_test` 等互不相关的模块，且单独跑同一用例仍失败。
+
+### 6.33.2 根因
+
+`app/build/unit_test_assets/shaders/ink_sparkle.frag` 是 2026-11-11 由旧引擎工具链编译出的 runtime stage 产物（12,944 B），而当前 SDK 为 Flutter 3.47.5 / engine `af7e796e16`。shader 二进制格式与 `flutter_tester` 引擎期望不一致，加载时 runtime stage 校验直接拒绝；`flutter_tools` 又认为该资产已是最新，不会自动重编，于是每次跑都失败。
+
+这不是代码问题：同一时刻 `flutter analyze` 0 issue，新增的 `offline_pending_wrong_test.dart` 3/3 通过（它不触发 InkSparkle）。
+
+### 6.33.3 处置
+
+1. 先单独删 `build/unit_test_assets/shaders/` —— 不够，因为 `flutter_tools` 的资产 stamp 仍认为已完成，重跑报「Asset not found」；
+2. 删整个 `app/build/unit_test_assets/`（用 `-Recurse -Force -Confirm:$false`，NonInteractive 下不加 `-Confirm:$false` 会被拒），触发重新编译；
+3. 重跑后生成新的 13,472 B 产物，`consent_gate_test` 4/4 通过；再跑全量 192 个用例全部通过（exit 0）。
+
+### 6.33.4 复现与预防
+
+- 触发条件：升级 Flutter SDK / 切换 engine 分支后，未清测试资产缓存就直接 `flutter test`
+- 处置命令：`Remove-Item app\build\unit_test_assets -Recurse -Force -Confirm:$false` 后重跑；等效手段 `flutter clean`（会一并删掉 `app\build` 下的 APK，需要重新构建）
+- 判定要点：失败信息含 `ink_sparkle.frag` 与 `Runtime stages buffer failed verification`，且受影响用例跨模块不成片；此时先怀疑缓存，不要去改业务代码
+
 
 
 
