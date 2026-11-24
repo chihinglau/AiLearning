@@ -53,8 +53,23 @@ class AuthService {
     int? grade,
     String? stage,
     String role = 'student',
+    bool isChild = false,
+    bool guardianConsent = false,
+    String? privacyVersion,
+    String? termsVersion,
   }) async {
     final body = <String, dynamic>{'password': password, 'role': role};
+    if (isChild) {
+      body['is_child'] = true;
+      body['guardian_consent'] = guardianConsent;
+    }
+    // R-03：携带当前法务版本，注册即完成同意留痕（避免注册后再弹一次同意门）。
+    if (privacyVersion != null && privacyVersion.isNotEmpty) {
+      body['privacy_version'] = privacyVersion;
+    }
+    if (termsVersion != null && termsVersion.isNotEmpty) {
+      body['terms_version'] = termsVersion;
+    }
     if (username != null && username.trim().isNotEmpty) {
       body['username'] = username.trim();
     }

@@ -1,18 +1,24 @@
 import 'package:ai_learning/core/constants/app_constants.dart';
+import 'package:ai_learning/core/constants/legal_constants.dart';
 import 'package:ai_learning/core/models/textbook_binding.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-/// 注册页：用户名必填，手机号可选；年级为后端必填项，注册成功即自动登录。
+/// 注册页：用户名必填，手机号可选；须先同意《用户协议》《隐私政策》
+/// （R-03：未满 14 周岁由监护人代为同意），注册成功即自动登录。
 class RegisterPage extends ConsumerStatefulWidget {
   const RegisterPage({super.key});
 
   @override
   ConsumerState<RegisterPage> createState() => _RegisterPageState();
 }
+
+/// 未满 14 周岁按学段/年级推断：小学 1-6 年级与初一（7 年级）视为未成年儿童账号。
+bool _isChildGrade(int grade) => grade <= 7;
 
 class _RegisterPageState extends ConsumerState<RegisterPage> {
   final TextEditingController _usernameController = TextEditingController();
@@ -23,11 +29,23 @@ class _RegisterPageState extends ConsumerState<RegisterPage> {
   Stage _stage = Stage.junior;
   int _grade = 7;
   bool _obscure = true;
+  bool _agreed = false;
   bool _loading = false;
   String? _error;
 
+  late final TapGestureRecognizer _termsRecognizer = TapGestureRecognizer()
+    ..onTap = () {
+      if (mounted) context.push('/legal/terms');
+    };
+  late final TapGestureRecognizer _privacyRecognizer = TapGestureRecognizer()
+    ..onTap = () {
+      if (mounted) context.push('/legal/privacy');
+    };
+
   @override
   void dispose() {
+    _termsRecognizer.dispose();
+    _privacyRecognizer.dispose();
     _usernameController.dispose();
     _phoneController.dispose();
     _nicknameController.dispose();
@@ -50,6 +68,9 @@ class _RegisterPageState extends ConsumerState<RegisterPage> {
     if (_passwordController.text != _confirmController.text) {
       return '两次输入的密码不一致';
     }
+    if (!_agreed) {
+      return '请先阅读并同意《用户协议》和《隐私政策》';
+    }
     return null;
   }
 
@@ -71,6 +92,10 @@ class _RegisterPageState extends ConsumerState<RegisterPage> {
             nickname: _nicknameController.text,
             grade: _grade,
             stage: _stage.code,
+            isChild: _isChildGrade(_grade),
+            guardianConsent: _agreed,
+            privacyVersion: kLegalPrivacyVersion,
+            termsVersion: kLegalTermsVersion,
           );
       ref.read(currentUserProvider.notifier).state = user;
       if (!mounted) return;
@@ -210,7 +235,58 @@ class _RegisterPageState extends ConsumerState<RegisterPage> {
                 const SizedBox(height: 12),
                 Text(_error!, style: TextStyle(color: theme.colorScheme.error)),
               ],
-              const SizedBox(height: 24),
+              const SizedBox(height: 8),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Checkbox(
+                    value: _agreed,
+                    onChanged: (value) => setState(() {
+                      _agreed = value ?? false;
+                      if (_agreed && _error != null &&
+                          _error!.startsWith('请先阅读并同意')) {
+                        _error = null;
+                      }
+                    }),
+                  ),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 12),
+                      child: Text.rich(
+                        TextSpan(
+                          style: theme.textTheme.bodyMedium,
+                          children: [
+                            const TextSpan(text: '我已阅读并同意 '),
+                            TextSpan(
+                              text: '《用户协议》',
+                              style: TextStyle(color: theme.colorScheme.primary),
+                              recognizer: _termsRecognizer,
+                            ),
+                            const TextSpan(text: ' 和 '),
+                            TextSpan(
+                              text: '《隐私政策》',
+                              style: TextStyle(color: theme.colorScheme.primary),
+                              recognizer: _privacyRecognizer,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 12, bottom: 8),
+                child: Text(
+                  _isChildGrade(_grade)
+                      ? '当前所选年级按未满 14 周岁处理，须由监护人阅读并代为同意。'
+                      : '未满 14 周岁的账号须由监护人阅读并确认。',
+                  style: theme.textTheme.bodySmall?.copyWith(
+                    color: theme.colorScheme.outline,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 8),
               FilledButton(
                 onPressed: _loading ? null : _submit,
                 child: _loading
