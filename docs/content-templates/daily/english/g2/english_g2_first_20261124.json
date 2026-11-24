@@ -1,0 +1,346 @@
+{
+  "subject": "english",
+  "grade": 2,
+  "version": "沪教牛津版（2024）·深圳",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "Unit 1 What can you do with your five senses? / Story",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "Story: five senses in the park",
+      "parent": "Unit 1 What can you do with your five senses? / Story",
+      "order_index": 1,
+      "explanation": "读懂公园故事：用 see / hear / smell / taste / touch 描述在公园里的五种感官活动。",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "I see with my eyes 感官句型",
+      "parent": "Unit 1 What can you do with your five senses? / Story",
+      "order_index": 2,
+      "explanation": "句型 I + 感官动词 + with my + 器官，如 I see with my eyes. 常错点：器官与动词不搭配（用 ears 配 see）。",
+      "prerequisites": [
+        "Story: five senses in the park"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "It smells good 第三人称感官句",
+      "parent": "Unit 1 What can you do with your five senses? / Story",
+      "order_index": 3,
+      "explanation": "第三人称单数做主语的感官句：It smells good. / It tastes sweet.，动词要加 s。",
+      "prerequisites": [
+        "I see with my eyes 感官句型"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "Story words: nice, loud, sweet, soft",
+      "parent": "Unit 1 What can you do with your five senses? / Story",
+      "order_index": 4,
+      "explanation": "故事中的评价形容词 nice / loud / sweet / soft，用来回答「感觉怎么样」。",
+      "prerequisites": [
+        "It smells good 第三人称感官句"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "Unit 1 What can you do with your five senses?",
+      "order_index": 1,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "In the story, Ben is in the park. What can he do there?",
+          "options": [
+            "See the flowers.",
+            "Do maths.",
+            "Wash the dishes.",
+            "Write a letter."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "公园里能看到花，用 see，选 A；做数学、洗碗、写信都不是公园里的感官活动。",
+          "difficulty": 1,
+          "knowledge_point": "Story: five senses in the park"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which sense do you use to enjoy birdsong?",
+          "options": [
+            "Hearing.",
+            "Tasting.",
+            "Smelling.",
+            "Touching."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "鸟叫要用耳朵听，属于 hearing，选 A；tasting 是尝味道，smelling 是闻气味，touching 是触摸。",
+          "difficulty": 1,
+          "knowledge_point": "Story: five senses in the park"
+        },
+        {
+          "q_type": "judge",
+          "stem": "We use our nose to smell flowers.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "鼻子负责嗅觉，闻花香用 nose，说法正确。",
+          "difficulty": 1,
+          "knowledge_point": "Story: five senses in the park"
+        },
+        {
+          "q_type": "fill",
+          "stem": "I ____ the birds with my ears.",
+          "answer": {
+            "value": "hear"
+          },
+          "analysis": "耳朵负责听觉，用 hear，故填 hear；填 see 要配 eyes，填 smell 要配 nose。",
+          "difficulty": 2,
+          "knowledge_point": "Story: five senses in the park"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which sentences about senses are correct?",
+          "options": [
+            "We see with our eyes.",
+            "We hear with our noses.",
+            "We smell with our noses.",
+            "We taste with our ears."
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A 眼睛看 ✓；B 鼻子不能听声音，听觉器官是耳朵 ✗；C 鼻子闻气味 ✓；D 耳朵不能尝味道 ✗。故 A、C 成立，B、D 不成立。",
+          "difficulty": 2,
+          "knowledge_point": "Story: five senses in the park",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "At Shenzhen Bay Park, Lily ____ the sea with her ears.",
+          "options": [
+            "hears",
+            "tastes",
+            "smells",
+            "touches"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "听到海浪声用 hear，主语 Lily 是第三人称单数，动词加 s，选 hears；taste 是尝，smell 是闻，touch 是摸。",
+          "difficulty": 2,
+          "knowledge_point": "Story: five senses in the park"
+        },
+        {
+          "q_type": "choice",
+          "stem": "I ____ with my hands.",
+          "options": [
+            "touch",
+            "touches",
+            "touching",
+            "to touch"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "主语 I 后用动词原形 touch，选 A；touches 用于第三人称单数，touching 是现在分词，to touch 不能单独作谓语。",
+          "difficulty": 2,
+          "knowledge_point": "I see with my eyes 感官句型"
+        },
+        {
+          "q_type": "judge",
+          "stem": "\"I taste the ice cream with my tongue.\" is a correct sentence about senses.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "舌头负责味觉，taste 与 tongue 搭配正确，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "I see with my eyes 感官句型"
+        },
+        {
+          "q_type": "fill",
+          "stem": "I see the rainbow with my ____.",
+          "answer": {
+            "value": "eyes"
+          },
+          "analysis": "看东西用眼睛，复数 eyes 更自然，故填 eyes；填 eye 单数在「两只眼睛」的语境下不规范。",
+          "difficulty": 3,
+          "knowledge_point": "I see with my eyes 感官句型"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which sentences match the right sense organ?",
+          "options": [
+            "I smell the soup with my nose.",
+            "I see the song with my ears.",
+            "I hear the music with my ears.",
+            "I hear the picture with my eyes."
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A 鼻子闻汤 ✓；B 歌要用耳朵听，不能用 see ✗；C 耳朵听音乐 ✓；D 图画要用眼睛看，不能用 hear ✗。故 A、C 成立，B、D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "I see with my eyes 感官句型",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "The soup ____ good.",
+          "options": [
+            "smells",
+            "smell",
+            "smelling",
+            "to smell"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "主语 The soup 是第三人称单数，动词加 s，选 smells；smell 用于 I / we / they。",
+          "difficulty": 2,
+          "knowledge_point": "It smells good 第三人称感官句"
+        },
+        {
+          "q_type": "judge",
+          "stem": "\"It sounds loud.\" uses an adjective after the sense verb.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "sounds 后面接形容词 loud 说明声音的特点，说法正确。",
+          "difficulty": 3,
+          "knowledge_point": "It smells good 第三人称感官句"
+        },
+        {
+          "q_type": "fill",
+          "stem": "The cake ____ sweet.",
+          "answer": {
+            "value": "tastes"
+          },
+          "analysis": "主语 The cake 是第三人称单数，感官动词加 s，故填 tastes；写 taste 与单数主语不一致。",
+          "difficulty": 3,
+          "knowledge_point": "It smells good 第三人称感官句"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which sentences are correct with sense verbs?",
+          "options": [
+            "It smells nice.",
+            "It smell nice.",
+            "It tastes sweet.",
+            "It tasting sweet."
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A It 后用 smells，句子正确 ✓；B It 后少了 s ✗；C It 后用 tastes，句子正确 ✓；D tasting 不能单独作谓语 ✗。故 A、C 成立，B、D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "It smells good 第三人称感官句",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "\"How does the lemon taste?\" \"It ____ sour.\"",
+          "options": [
+            "tastes",
+            "taste",
+            "tasting",
+            "to taste"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "答句主语 It 是第三人称单数，用 tastes，选 A；其余三项都不能与 It 直接作谓语。",
+          "difficulty": 3,
+          "knowledge_point": "It smells good 第三人称感官句"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which word describes a very loud sound?",
+          "options": [
+            "loud",
+            "sweet",
+            "soft",
+            "sour"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "loud 指声音大，选 A；sweet 是甜，soft 是柔软或轻柔，sour 是酸。",
+          "difficulty": 2,
+          "knowledge_point": "Story words: nice, loud, sweet, soft"
+        },
+        {
+          "q_type": "judge",
+          "stem": "The word \"sweet\" can describe the taste of candy.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "sweet 表示甜，可以形容糖果的味道，说法正确。",
+          "difficulty": 1,
+          "knowledge_point": "Story words: nice, loud, sweet, soft"
+        },
+        {
+          "q_type": "fill",
+          "stem": "The pillow is ____. I can sleep well.",
+          "answer": {
+            "value": "soft"
+          },
+          "analysis": "能让人睡得好，说明枕头很软，故填 soft；填 loud 指声音大，与枕头不符。",
+          "difficulty": 3,
+          "knowledge_point": "Story words: nice, loud, sweet, soft"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write two sentences about what you can do with your senses in the park.",
+          "answer": {
+            "value": "I see the green trees. I hear the birds singing."
+          },
+          "analysis": "评分要点：①写出一个视觉句子，如 I see ...（1 分）；②写出一个听觉句子，如 I hear ...（1 分）；③两句英文完整、主谓一致（1 分）；④拼写与标点正确（1 分）。两句都用同一个感官扣 1 分。",
+          "difficulty": 4,
+          "knowledge_point": "Story words: nice, loud, sweet, soft",
+          "status": "published",
+          "tags": [
+            "写作"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "Your mum cooks soup at home. Write two sentences: what you smell and how it tastes.",
+          "answer": {
+            "value": "I smell the soup with my nose. It tastes nice."
+          },
+          "analysis": "评分要点：①用 smell 写闻到的动作并搭配 nose（1 分）；②用 It tastes + 形容词 写味道（1 分）；③两句完整、第三人称单数动词加 s（1 分）；④拼写与标点正确（1 分）。",
+          "difficulty": 5,
+          "knowledge_point": "Story words: nice, loud, sweet, soft",
+          "status": "published",
+          "tags": [
+            "情境应用",
+            "写作"
+          ]
+        }
+      ]
+    }
+  ]
+}

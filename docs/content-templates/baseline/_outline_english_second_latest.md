@@ -76,7 +76,7 @@
 
 ## 七年级（七年级英语下册（沪教版 2025 春版·牛津上海版））
 
-> **2026-11-23 更新**：旧版本（牛津上海版 6 单元：Music / Language and communication / A helping hand / Honesty / Wild animals / Trees）已作废，改为上教版（沪教牛津深圳版）新教材 8 单元。
+> **2026-11-23 更新**：旧版本（牛津上海版 6 单元：Music / Language and communication / A helping hand / Honesty / Wild animals / Trees）已作废，改为沪教牛津版（2024）·深圳新教材 8 单元。
 
 | 序 | 单元/模块 | 板块/课时 |
 |---|---|---|

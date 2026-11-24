@@ -61,7 +61,7 @@ class AppConfig {
   static const List<String> shenzhenTextbookVersions = [
     '人教版',
     '粤教版',
-    '上教版（沪教牛津深圳版）',
+    '沪教牛津版（2024）·深圳',
   ];
 
   /// 合规：22:00 - 06:00 强制休息，未成年账号默认每日 120 分钟。

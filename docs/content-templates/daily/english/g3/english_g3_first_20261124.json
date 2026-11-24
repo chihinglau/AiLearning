@@ -1,0 +1,350 @@
+{
+  "subject": "english",
+  "grade": 3,
+  "version": "沪教牛津版（2024）·深圳",
+  "semester": "first",
+  "knowledge": [
+    {
+      "node_type": "section",
+      "name": "Unit 1 How do we feel? / Explore",
+      "order_index": 1
+    },
+    {
+      "node_type": "point",
+      "name": "Feelings in situations 情境中的心情",
+      "parent": "Unit 1 How do we feel? / Explore",
+      "order_index": 1,
+      "explanation": "把心情和情境对应起来：台风、丢东西、走很久、比赛得奖，各自对应 worried / sad / tired / excited 等词。",
+      "prerequisites": []
+    },
+    {
+      "node_type": "point",
+      "name": "Look and feel 系动词后接形容词",
+      "parent": "Unit 1 How do we feel? / Explore",
+      "order_index": 2,
+      "explanation": "look / feel / smell / taste 是系动词，后面接形容词而不是副词，如 She looks happy、He feels tired。",
+      "prerequisites": [
+        "Feelings in situations 情境中的心情"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "Feelings opposites 情绪反义词",
+      "parent": "Unit 1 How do we feel? / Explore",
+      "order_index": 3,
+      "explanation": "情绪形容词的反义配对：happy—sad、excited—bored、interested—bored；Why 问原因用 Because 回答。",
+      "prerequisites": [
+        "Feelings in situations 情境中的心情"
+      ]
+    },
+    {
+      "node_type": "point",
+      "name": "Comforting words 安慰用语",
+      "parent": "Unit 1 How do we feel? / Explore",
+      "order_index": 4,
+      "explanation": "安慰与鼓励用语：Don't worry. / Cheer up. / It's OK. I can help you.，并说明安慰时要给出具体的帮助。",
+      "prerequisites": [
+        "Feelings opposites 情绪反义词"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "name": "Unit 1 How do we feel?",
+      "order_index": 1,
+      "questions": [
+        {
+          "q_type": "choice",
+          "stem": "A typhoon stops school in Shenzhen. Your friend says: \"I feel worried.\" Why?",
+          "options": [
+            "Because the typhoon is coming.",
+            "Because he got a new toy.",
+            "Because the sun is shining.",
+            "Because he likes maths."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "worried 是担心，台风要来才会担心，选 A；得到新玩具应开心，阳光明媚与担心无关，喜欢数学也不会让人担心。",
+          "difficulty": 1,
+          "knowledge_point": "Feelings in situations 情境中的心情"
+        },
+        {
+          "q_type": "choice",
+          "stem": "\"How does Amy feel?\" \"She feels ____ because she lost her key.\"",
+          "options": [
+            "sad",
+            "happy",
+            "excited",
+            "proud"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "丢了钥匙会难过，选 sad；happy、excited 是高兴、兴奋，proud 是自豪，都与丢东西不符。",
+          "difficulty": 1,
+          "knowledge_point": "Feelings in situations 情境中的心情"
+        },
+        {
+          "q_type": "judge",
+          "stem": "\"I feel excited before a football match.\" shows you are looking forward to it.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "excited 表示兴奋、期待，赛前有这种心情很自然，说法正确。",
+          "difficulty": 1,
+          "knowledge_point": "Feelings in situations 情境中的心情"
+        },
+        {
+          "q_type": "fill",
+          "stem": "Tom feels ____ because he won the race.",
+          "answer": {
+            "value": "happy"
+          },
+          "analysis": "赢了比赛心情是高兴的，故填 happy；填 sad 与原因相反，填 tired 只说明累，不能对应「赢比赛」。",
+          "difficulty": 2,
+          "knowledge_point": "Feelings in situations 情境中的心情"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which sentences match the feeling and the reason?",
+          "options": [
+            "Lily feels tired after the long walk.",
+            "Lily feels tired because she won a prize.",
+            "Ben feels excited about the school trip.",
+            "Ben feels excited because he is ill."
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A 走了很久所以累，心情与原因相符 ✓；B 得奖应开心，不是累 ✗；C 期待秋游所以兴奋，相符 ✓；D 生病应难受，不是兴奋 ✗。故 A、C 成立，B、D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Feelings in situations 情境中的心情",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "Your friend's cat is lost. She looks ____.",
+          "options": [
+            "worried",
+            "excited",
+            "proud",
+            "hungry"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "猫丢了会担心，选 worried；excited 是兴奋，proud 是自豪，hungry 是饿，都不符合情境。",
+          "difficulty": 2,
+          "knowledge_point": "Feelings in situations 情境中的心情"
+        },
+        {
+          "q_type": "choice",
+          "stem": "You look ____ today. Is everything OK?",
+          "options": [
+            "tired",
+            "tire",
+            "tiring",
+            "tires"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "look 后接形容词说明状态，tired 是形容词，选 A；tire 是动词或名词，tiring 形容事情累人，tires 是动词形式。",
+          "difficulty": 2,
+          "knowledge_point": "Look and feel 系动词后接形容词"
+        },
+        {
+          "q_type": "judge",
+          "stem": "After look and feel we can use adjectives, as in \"She looks happy.\"",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "look、feel 是系动词，后面跟形容词作表语，如 She looks happy，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "Look and feel 系动词后接形容词"
+        },
+        {
+          "q_type": "fill",
+          "stem": "The soup smells ____. I want more.",
+          "answer": {
+            "value": [
+              "nice",
+              "good",
+              "delicious"
+            ]
+          },
+          "analysis": "闻起来不错才会想再喝，故填 nice / good / delicious 均可；填 bad 与「还想再喝」矛盾。",
+          "difficulty": 3,
+          "knowledge_point": "Look and feel 系动词后接形容词"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which sentences use adjectives correctly after sense verbs?",
+          "options": [
+            "She looks happy.",
+            "She looks happily.",
+            "He feels tired.",
+            "He feels tiredly."
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A look 后接形容词 happy ✓；B happily 是副词，不能作 look 的表语 ✗；C feel 后接形容词 tired ✓；D tiredly 是副词，用法错误 ✗。故 A、C 成立，B、D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Look and feel 系动词后接形容词",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "Which word is the opposite of \"happy\"?",
+          "options": [
+            "sad",
+            "excited",
+            "proud",
+            "calm"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "happy 的反义词是 sad，选 A；excited、proud 都偏积极，calm 是平静，都不是直接反义。",
+          "difficulty": 2,
+          "knowledge_point": "Feelings opposites 情绪反义词"
+        },
+        {
+          "q_type": "judge",
+          "stem": "\"Bored\" means the opposite of \"interested\".",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "bored 是觉得无聊，interested 是有兴趣，两者意思相反，说法正确。",
+          "difficulty": 2,
+          "knowledge_point": "Feelings opposites 情绪反义词"
+        },
+        {
+          "q_type": "fill",
+          "stem": "He is not sad. He is very ____.",
+          "answer": {
+            "value": "happy"
+          },
+          "analysis": "与 sad 相反的心情是 happy，故填 happy；填 angry 表示生气，不是 sad 的反义。",
+          "difficulty": 3,
+          "knowledge_point": "Feelings opposites 情绪反义词"
+        },
+        {
+          "q_type": "multiple",
+          "stem": "Which pairs are true opposites?",
+          "options": [
+            "happy — sad",
+            "angry — glad",
+            "excited — bored",
+            "tired — hungry"
+          ],
+          "answer": {
+            "value": [
+              "A",
+              "C"
+            ]
+          },
+          "analysis": "A 高兴与难过是反义 ✓；B 生气与高兴不是严格反义（生气对应平静或温和）✗；C 兴奋与无聊是反义 ✓；D 累与饿是两种不同状态，不是反义 ✗。故 A、C 成立，B、D 不成立。",
+          "difficulty": 3,
+          "knowledge_point": "Feelings opposites 情绪反义词",
+          "tags": [
+            "多选"
+          ]
+        },
+        {
+          "q_type": "choice",
+          "stem": "\"Why does May look sad?\" \"____ she misses her friend.\"",
+          "options": [
+            "Because",
+            "So",
+            "But",
+            "Or"
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "问原因用 Why，答句用 Because 引出原因，选 A；So 引出结果，But 表转折，Or 表选择。",
+          "difficulty": 3,
+          "knowledge_point": "Feelings opposites 情绪反义词"
+        },
+        {
+          "q_type": "choice",
+          "stem": "Your classmate is crying. What do you say to comfort her?",
+          "options": [
+            "Don't worry. I can help you.",
+            "Open your book, please.",
+            "You are always wrong.",
+            "See you tomorrow."
+          ],
+          "answer": {
+            "value": "A"
+          },
+          "analysis": "安慰别人用 Don't worry 并表示愿意帮忙，选 A；B 是课堂指令，C 是指责，D 是道别。",
+          "difficulty": 2,
+          "knowledge_point": "Comforting words 安慰用语"
+        },
+        {
+          "q_type": "judge",
+          "stem": "\"Cheer up!\" is used to encourage someone.",
+          "answer": {
+            "value": "T"
+          },
+          "analysis": "Cheer up 意为振作起来，用来鼓励别人，说法正确。",
+          "difficulty": 1,
+          "knowledge_point": "Comforting words 安慰用语"
+        },
+        {
+          "q_type": "fill",
+          "stem": "\"I feel nervous about the test.\" \"____ up! You studied hard.\"",
+          "answer": {
+            "value": "Cheer"
+          },
+          "analysis": "鼓励别人振作用 Cheer up，故填 Cheer；句首大写首字母，写 cheer 意思正确但不符合句首规范。",
+          "difficulty": 3,
+          "knowledge_point": "Comforting words 安慰用语"
+        },
+        {
+          "q_type": "answer",
+          "stem": "Write two sentences: how your friend feels and one sentence to comfort him or her.",
+          "answer": {
+            "value": "He feels sad because he lost his book. Don't worry. I can share mine."
+          },
+          "analysis": "评分要点：①用 He / She feels + 情绪词 写出心情（1 分）；②用 because 交代原因（1 分）；③写出一句安慰语，如 Don't worry / Cheer up（1 分）；④句子完整、拼写与标点正确（1 分）。",
+          "difficulty": 4,
+          "knowledge_point": "Comforting words 安慰用语",
+          "status": "published",
+          "tags": [
+            "写作"
+          ]
+        },
+        {
+          "q_type": "answer",
+          "stem": "A typhoon stops classes in Shenzhen. Write two sentences: how you feel and why.",
+          "answer": {
+            "value": "I feel excited because I can stay at home. But I also feel worried about the strong wind."
+          },
+          "analysis": "评分要点：①用 I feel + 情绪形容词 写出心情（1 分）；②用 because 说明原因（1 分）；③两句逻辑一致、时态用一般现在时（1 分）；④拼写与标点正确（1 分）。只写心情不写原因扣 1 分。",
+          "difficulty": 5,
+          "knowledge_point": "Comforting words 安慰用语",
+          "status": "published",
+          "tags": [
+            "情境应用",
+            "写作"
+          ]
+        }
+      ]
+    }
+  ]
+}

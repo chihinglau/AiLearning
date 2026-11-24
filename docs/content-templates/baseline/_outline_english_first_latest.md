@@ -109,7 +109,7 @@
 ## 七年级（七年级英语上册(2024秋版)）
 
 > **2026-11-23 更新**：旧版本（牛津上海版 6 单元：Trying new things / Strong mind / Jobs / Smart home / Films / Mountains and rivers）已作废。
-> 深圳实际使用「上教版（沪教牛津深圳版）」新教材，七年级上册为 8 单元，与库内 `chapters` / `SZ_ENGLISH_UNITS` 一致。
+> 深圳实际使用「沪教牛津版（2024）·深圳」新教材，七年级上册为 8 单元，与库内 `chapters` / `SZ_ENGLISH_UNITS` 一致。
 
 | 序 | 单元/章节 | 课时板块 |
 |---|---|---|
