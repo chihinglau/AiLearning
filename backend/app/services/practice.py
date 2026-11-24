@@ -309,6 +309,7 @@ def select_questions(
     kp_ids: Optional[set[int]] = None,
     weak_kps: Optional[set[int]] = None,
     cover_all_kps: bool = False,
+    required_types: Optional[set[str]] = None,
 ) -> list[Question]:
     """确定性选题（D-04 §7.3）：
 
@@ -317,7 +318,9 @@ def select_questions(
        考前速练要求全覆盖）；薄弱知识点在专项突破模式下排在最前；
     3) 题型配比：按学段/模式蓝图分配剩余名额；
     4) 兜底：按 KP 轮转补齐，题量不足时自然收敛；
-    5) 时长预算：超限时优先裁剪低难度非到期题。
+    5) 勾选题型保底：用户在配置页明确勾选的题型若被配比/覆盖挤成 0 题，
+       只要范围内仍有该题型，就用题量最多的非勾选题型换 1 题进来；
+    6) 时长预算：超限时优先裁剪低难度非到期题。
     """
     if not pool or count <= 0:
         return []
@@ -422,6 +425,47 @@ def select_questions(
         if take_any() is None:
             break
 
+    # 勾选题型保底（判断题/解答题等低配比题型）：配比 round() 后可能为 0，
+    # 加上知识点覆盖先占名额，用户勾了却一道不出。这里按「换出 1 题」兜住：
+    # 只在范围内确实还有该题型、且有非勾选题型可让位时执行。
+    if required_types:
+        def _has_type(q_type: str) -> bool:
+            return any(
+                question.q_type == q_type and question.id not in seen
+                for bucket in buckets.values()
+                for question in bucket
+            )
+
+        for q_type in sorted(required_types):
+            if any(q.q_type == q_type for q in selected):
+                continue
+            if not _has_type(q_type):
+                continue
+            victim: Optional[Question] = None
+            if len(selected) >= count:
+                candidates = [
+                    q for q in selected
+                    if q.q_type not in required_types and q.id not in due_ids
+                ]
+                if not candidates:
+                    continue
+                type_counts: dict[str, int] = {}
+                for q in selected:
+                    type_counts[q.q_type] = type_counts.get(q.q_type, 0) + 1
+                # 让位者：题量最多的题型里挑难度最低的，减小对配比与难度曲线的扰动
+                victim = max(
+                    candidates,
+                    key=lambda q: (type_counts[q.q_type], -(q.difficulty or 0), q.id),
+                )
+                selected.remove(victim)
+                seen.discard(victim.id)
+            if take_any(q_type) is None:
+                if victim is not None:
+                    buckets.setdefault(victim.knowledge_point_id or 0, []).append(victim)
+                    seen.add(victim.id)
+                    selected.append(victim)
+                continue
+
     # 时长预算：超限时优先裁剪低难度题（到期错题不裁）
     if duration_limit_min:
         limit_seconds = duration_limit_min * 60
@@ -491,6 +535,7 @@ def build_plan(
         kp_ids=range_kp_ids,
         weak_kps=weak,
         cover_all_kps=policy.cover_all_kps,
+        required_types={t for t in (q_types or []) if t},
     )
     # 呈现顺序也随模式变化：同步巩固按教材章节推进，考前速练按难度分层。
     # 只重排、不换题，预览与实际、覆盖率与题型配比均保持一致。

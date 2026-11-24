@@ -246,7 +246,11 @@ def delete_my_account(
     }
     current.deletion_requested_at = now
     current.is_active = False
-    current.phone = f"deleted-{current.id}-{uuid4().hex[:8]}"
+    if current.phone:
+        current.phone = f"deleted-{current.id}-{uuid4().hex[:8]}"
+    if current.username:
+        # 释放用户名，便于同名再次注册；同时切断登录路径。
+        current.username = f"deleted-{current.id}-{uuid4().hex[:8]}"
     current.nickname = "已注销用户"
     current.password_hash = f"deleted:{secrets.token_hex(8)}"
     bump_token_version(current)

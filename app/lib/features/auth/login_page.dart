@@ -12,21 +12,23 @@ class LoginPage extends ConsumerStatefulWidget {
 }
 
 class _LoginPageState extends ConsumerState<LoginPage> {
-  final TextEditingController _phoneController = TextEditingController(text: '13900000000');
+  final TextEditingController _accountController =
+      TextEditingController(text: '13900000000');
   final TextEditingController _passwordController = TextEditingController();
   bool _loading = false;
   String? _error;
 
   @override
   void dispose() {
-    _phoneController.dispose();
+    _accountController.dispose();
     _passwordController.dispose();
     super.dispose();
   }
 
   Future<void> _login() async {
-    if (_phoneController.text.trim().isEmpty || _passwordController.text.isEmpty) {
-      setState(() => _error = '请输入手机号与密码');
+    if (_accountController.text.trim().isEmpty ||
+        _passwordController.text.isEmpty) {
+      setState(() => _error = '请输入手机号/用户名与密码');
       return;
     }
     setState(() {
@@ -35,7 +37,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
     });
     try {
       final user = await ref.read(authServiceProvider).login(
-        phone: _phoneController.text.trim(),
+        account: _accountController.text.trim(),
         password: _passwordController.text,
       );
       ref.read(currentUserProvider.notifier).state = user;
@@ -63,7 +65,8 @@ class _LoginPageState extends ConsumerState<LoginPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Icon(Icons.school_outlined, size: 64, color: theme.colorScheme.primary),
+                Icon(Icons.school_outlined,
+                    size: 64, color: theme.colorScheme.primary),
                 const SizedBox(height: 16),
                 Text(
                   '深爱学',
@@ -82,11 +85,13 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                 ),
                 const SizedBox(height: 32),
                 TextField(
-                  controller: _phoneController,
-                  keyboardType: TextInputType.phone,
+                  controller: _accountController,
+                  keyboardType: TextInputType.text,
+                  textInputAction: TextInputAction.next,
                   decoration: const InputDecoration(
-                    labelText: '手机号',
-                    prefixIcon: Icon(Icons.phone_iphone),
+                    labelText: '手机号 / 用户名',
+                    hintText: '两者任一均可登录',
+                    prefixIcon: Icon(Icons.person_outline),
                     border: OutlineInputBorder(),
                   ),
                 ),
@@ -116,9 +121,16 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                         )
                       : const Text('登录'),
                 ),
-                const SizedBox(height: 16),
+                const SizedBox(height: 8),
+                TextButton(
+                  onPressed: _loading
+                      ? null
+                      : () => context.push('/register'),
+                  child: const Text('没有账号？用户名注册'),
+                ),
+                const SizedBox(height: 8),
                 Text(
-                  '测试学生账号：13900000000 / student123\n（需先在 backend 执行 python -m scripts.seed）',
+                  '测试账号：13900000000 / student123\n（需先在 backend 执行 python -m scripts.seed）',
                   textAlign: TextAlign.center,
                   style: theme.textTheme.bodySmall?.copyWith(
                     color: theme.colorScheme.outline,

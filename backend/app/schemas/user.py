@@ -1,11 +1,22 @@
 from datetime import datetime
 from typing import List, Optional
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, model_validator
+
+
+USERNAME_PATTERN = r"^[A-Za-z0-9_\-\.\u4e00-\u9fa5]{2,50}$"
 
 
 class UserCreate(BaseModel):
-    phone: str = Field(pattern=r"^1[3-9]\d{9}$", description="中国大陆手机号")
+    # 手机号与用户名至少填一个：不再强制手机号注册。
+    phone: Optional[str] = Field(
+        default=None, pattern=r"^1[3-9]\d{9}$", description="中国大陆手机号（可选）"
+    )
+    username: Optional[str] = Field(
+        default=None,
+        pattern=USERNAME_PATTERN,
+        description="用户名（2-50 位字母/数字/下划线/中划线/点/中文）",
+    )
     password: str = Field(min_length=6, max_length=64)
     nickname: str = Field(default="", max_length=50)
     role: str = Field(default="student", pattern=r"^(student|parent)$")
@@ -18,12 +29,19 @@ class UserCreate(BaseModel):
     privacy_version: Optional[str] = Field(default=None, max_length=20)
     terms_version: Optional[str] = Field(default=None, max_length=20)
 
+    @model_validator(mode="after")
+    def _require_identity(self) -> "UserCreate":
+        if not (self.phone or "").strip() and not (self.username or "").strip():
+            raise ValueError("手机号与用户名至少填写一个")
+        return self
+
 
 class UserOut(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
     id: int
-    phone: str
+    phone: Optional[str] = None
+    username: Optional[str] = None
     nickname: str
     role: str
     stage: Optional[str]

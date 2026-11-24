@@ -69,7 +69,7 @@ void main() {
     final api = _FakeApi();
     final auth = AuthService(api, storage);
 
-    final user = await auth.login(phone: '13900000000', password: 'pass');
+    final user = await auth.login(account: '13900000000', password: 'pass');
 
     expect(user.phone, '13900000000');
     expect(storage.values['auth_token'], 'access-1');

@@ -78,7 +78,13 @@ def list_users(
         filters.append(User.grade == grade)
     if keyword:
         pattern = f"%{keyword.strip()}%"
-        filters.append(or_(User.phone.like(pattern), User.nickname.like(pattern)))
+        filters.append(
+            or_(
+                User.phone.like(pattern),
+                User.username.like(pattern),
+                User.nickname.like(pattern),
+            )
+        )
 
     total = int(db.scalar(select(func.count()).select_from(User).where(*filters)) or 0)
     users = list(

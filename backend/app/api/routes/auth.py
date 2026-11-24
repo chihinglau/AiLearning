@@ -3,7 +3,7 @@ from uuid import uuid4
 
 from fastapi import APIRouter, Depends, HTTPException, Request, Response, status
 from fastapi.security import OAuth2PasswordRequestForm
-from sqlalchemy import select
+from sqlalchemy import func, or_, select
 from sqlalchemy.orm import Session
 
 from app.api.deps import current_user_permissions, current_user_scope, get_current_user
@@ -39,6 +39,18 @@ from app.services.legal import accepted_version, needs_reconsent, record_consent
 from app.services.rbac import sync_user_role
 
 router = APIRouter(prefix="/auth", tags=["账号"])
+
+
+def _account_label(raw: str) -> str:
+    """审计日志里的账号标识：手机号脱敏，用户名只留首尾。"""
+    value = (raw or "").strip()
+    if not value:
+        return "-"
+    if value.isdigit() and len(value) >= 8:
+        return f"phone={mask_phone(value)}"
+    if len(value) <= 3:
+        return "user=***"
+    return f"user={value[:2]}***{value[-1]}"
 
 
 def _issue_refresh_token(
@@ -90,11 +102,22 @@ def _refresh_invalid() -> HTTPException:
 def register(
     payload: UserCreate, request: Request, db: Session = Depends(get_db)
 ) -> User:
-    exists = db.scalar(select(User).where(User.phone == payload.phone))
-    if exists is not None:
-        raise HTTPException(
-            status_code=status.HTTP_409_CONFLICT, detail="该手机号已注册"
+    phone = (payload.phone or "").strip() or None
+    username = (payload.username or "").strip() or None
+    if phone:
+        exists = db.scalar(select(User).where(User.phone == phone))
+        if exists is not None:
+            raise HTTPException(
+                status_code=status.HTTP_409_CONFLICT, detail="该手机号已注册"
+            )
+    if username:
+        exists = db.scalar(
+            select(User).where(func.lower(User.username) == username.lower())
         )
+        if exists is not None:
+            raise HTTPException(
+                status_code=status.HTTP_409_CONFLICT, detail="该用户名已被占用"
+            )
 
     try:
         profile = resolve_grade_profile(payload.grade, payload.stage, payload.role)
@@ -138,9 +161,10 @@ def register(
             )
 
     user = User(
-        phone=payload.phone,
+        phone=phone,
+        username=username,
         password_hash=hash_password(payload.password),
-        nickname=payload.nickname or payload.phone[-4:],
+        nickname=payload.nickname or username or (phone[-4:] if phone else "同学"),
         role=payload.role,
         stage=profile.stage if profile else None,
         grade=payload.grade,
@@ -185,17 +209,23 @@ def login(
     db: Session = Depends(get_db),
 ) -> TokenOut:
     ip = request.client.host if request.client else None
-    user = db.scalar(select(User).where(User.phone == form.username))
+    identifier = (form.username or "").strip()
+    # 手机号或用户名任一命中即可登录（用户名不区分大小写）。
+    user = db.scalar(
+        select(User).where(
+            or_(User.phone == identifier, func.lower(User.username) == identifier.lower())
+        )
+    ) if identifier else None
     if user is None or not verify_password(form.password, user.password_hash):
         record_audit(
             db,
             user_id=user.id if user else None,
             action="auth.login_failed",
-            message=f"phone={mask_phone(form.username)}",
+            message=_account_label(identifier),
             ip=ip,
         )
         raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED, detail="手机号或密码错误"
+            status_code=status.HTTP_401_UNAUTHORIZED, detail="手机号/用户名或密码错误"
         )
     if not user.is_active:
         record_audit(
@@ -211,7 +241,11 @@ def login(
         db,
         user_id=user.id,
         action="auth.login",
-        message=f"phone={mask_phone(user.phone)}",
+        message=(
+            f"phone={mask_phone(user.phone)}"
+            if user.phone
+            else f"user={user.username or '-'}"
+        ),
         ip=ip,
         commit=False,
     )

@@ -25,7 +25,14 @@ class User(Base):
     id: Mapped[int] = mapped_column(
         BigInteger().with_variant(Integer, "sqlite"), primary_key=True
     )
-    phone: Mapped[str] = mapped_column(String(20), unique=True, index=True)
+    # 手机号可空：允许纯用户名账号（App 不再强制手机号注册）。
+    phone: Mapped[Optional[str]] = mapped_column(
+        String(20), unique=True, index=True, nullable=True
+    )
+    # 用户名：可与手机号并存，登录/注册二选一即可。
+    username: Mapped[Optional[str]] = mapped_column(
+        String(50), unique=True, index=True, nullable=True
+    )
     password_hash: Mapped[str] = mapped_column(String(255))
     nickname: Mapped[str] = mapped_column(String(50), default="")
     role: Mapped[str] = mapped_column(String(20), default="student", index=True)

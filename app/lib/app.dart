@@ -6,6 +6,7 @@ import 'package:ai_learning/features/assignment/assignment_detail_page.dart';
 import 'package:ai_learning/features/assignment/assignment_grading_page.dart';
 import 'package:ai_learning/features/assignment/assignment_list_page.dart';
 import 'package:ai_learning/features/auth/login_page.dart';
+import 'package:ai_learning/features/auth/register_page.dart';
 import 'package:ai_learning/features/boot/boot_page.dart';
 import 'package:ai_learning/features/common/permission_gate.dart';
 import 'package:ai_learning/features/content/content_report_page.dart';
@@ -51,7 +52,11 @@ final routerProvider = Provider<GoRouter>((ref) {
       final location = state.matchedLocation;
       final user = ref.read(currentUserProvider);
       if (user == null) {
-        return location == '/login' || location == '/boot' ? null : '/login';
+        return location == '/login' ||
+                location == '/boot' ||
+                location == '/register'
+            ? null
+            : '/login';
       }
       if (location == '/login' || location == '/boot') return null;
       // R-03：政策版本升高后强制先重新同意。
@@ -79,6 +84,10 @@ final routerProvider = Provider<GoRouter>((ref) {
     routes: [
       GoRoute(path: '/boot', builder: (context, state) => const BootPage()),
       GoRoute(path: '/login', builder: (context, state) => const LoginPage()),
+      GoRoute(
+        path: '/register',
+        builder: (context, state) => const RegisterPage(),
+      ),
       GoRoute(
         path: '/gate',
         builder: (context, state) => const EntryGatePage(),

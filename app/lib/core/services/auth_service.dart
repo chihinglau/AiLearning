@@ -20,11 +20,11 @@ class AuthService {
   final StoragePal _storage;
 
   Future<AppUser> login({
-    required String phone,
+    required String account,
     required String password,
   }) async {
     final data = await _api.postForm('/api/auth/login', {
-      'username': phone,
+      'username': account,
       'password': password,
     });
     final token = data['access_token'] as String?;
@@ -42,6 +42,35 @@ class AuthService {
     final me = await _api.getJson('/api/auth/me');
     await _storage.write(_userKey, jsonEncode(me));
     return AppUser.fromJson(me);
+  }
+
+  /// 注册：用户名与手机号至少填一个，成功后直接用同一账号登录。
+  Future<AppUser> register({
+    String? username,
+    String? phone,
+    required String password,
+    String? nickname,
+    int? grade,
+    String? stage,
+    String role = 'student',
+  }) async {
+    final body = <String, dynamic>{'password': password, 'role': role};
+    if (username != null && username.trim().isNotEmpty) {
+      body['username'] = username.trim();
+    }
+    if (phone != null && phone.trim().isNotEmpty) {
+      body['phone'] = phone.trim();
+    }
+    if (nickname != null && nickname.trim().isNotEmpty) {
+      body['nickname'] = nickname.trim();
+    }
+    if (grade != null) body['grade'] = grade;
+    if (stage != null && stage.isNotEmpty) body['stage'] = stage;
+    await _api.postJson('/api/auth/register', body);
+    final account = (username != null && username.trim().isNotEmpty)
+        ? username.trim()
+        : phone!.trim();
+    return login(account: account, password: password);
   }
 
   /// 启动时恢复登录态。
