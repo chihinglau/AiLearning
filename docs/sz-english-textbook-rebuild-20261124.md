@@ -65,8 +65,16 @@
 - 同步巩固·英语 20 题预览：知识点覆盖 19/42、单选 9 / 判断 2 / 多选 3 / 填空 2 / 听力 4。
 - 第 1 题：`A dictionary ___ you the meaning of words.`（Unit 1 Look it up! 语法点「一般现在时第三人称单数」）→ 选 B. tells，反馈「回答正确 · 正确答案 B. tells · 解析：主语 A dictionary 是第三人称单数，一般现在时动词加 -s · 掌握度 60 分」。
 
+## 真机复核补充（13:39）
+
+- 重装新 APK（`release/app-debug-20261124-en2024sz.apk`）后学科浮层实拍仍是「沪教牛津版（2024）·深圳 · 8 年级 · 上学期」，说明版本名由库驱动，不依赖旧编译串。
+- 下册（七下 / 八下）在本机无法做卷面抽检：App 按当前日期判为「上学期」，11 月进练习只会落到 8 上；下册以库内 + API（`chapters?textbook_id=54/68` 返回 8 个新单元）+ 结构自检三重核对通过。
+- 九下占位章 `is_placeholder=1` 被 public chapters 接口过滤，返回空列表，App 不会显示假单元。
+- 复核期间清过一次 App 数据做登录测试，已把 xuanxuan 重新登回首页；临时账号 `en8bcheck` 与其绑定行已删除。
+
 ## 未动 / 待办
 
-- 七下、八下重建与九下占位未做真机卷面抽检（上册已验），App 单元列表对九下「待发布…」的呈现也待看。
+- 九下 2027 春官方目录发布后需按同一模式补齐 8 单元（现为占位、0 题）。
 - 早前遗留的 dev 库测试账号（tester2026 / stuxuan2026 / kidconsent01 / xiaoxue2026 / kidui2026）未清理。
+- xuanxuan 的登录密码本轮被重置（清数据后原密码无法恢复），新密码 `Xuan1808`，建议在 App 内改成家长自定的密码。
 - 备份：`backend/ailearning_dev.db.bak-20261124-before-en-rebuild`。
