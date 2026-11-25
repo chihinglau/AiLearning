@@ -1,7 +1,8 @@
-# 自建题库组卷方案（单元 / 期中 / 期末）v1.2
+# 自建题库组卷方案（单元 / 期中 / 期末）v1.3
 
 > **背景**：真题受版权限制不可直接入库（见 `docs/past-paper-source-intake-spec.md` D-10）。替代路径：用本项目自建知识点题库，按固定蓝图规则输出**标注为“模拟卷/单元测试卷”的成套试卷**，绕开版权，支撑日常教学与练习。
-> **日期**：2026-11-16　**状态**：v1.2 已实施（81 条蓝图矩阵 + 自建题库 2322 题，**162/162 卷型全部可出卷**）
+> **日期**：2026-11-16　**最后更新**：2026-11-25 v1.3（按 CR-011 补「全年级按教材单元逐一出卷」发布口径，见 §〇c）
+> **状态**：v1.2 已实施（81 条蓝图矩阵 + 自建题库 2322 题，**162/162 卷型全部可出卷**）；v1.3 追加 391 张按教材单元生成并发布的单元卷
 > **基础**：`app/services/exam_paper.py::generate_paper`、`app/services/exam_blueprint_matrix.py`、`ExamBlueprint` 模型、`POST /api/exams/generate`
 
 ---
@@ -37,6 +38,39 @@
 体检（`grade_paper_audit.py --grade 1..9 --export-docs`）：各年级 18/18 OK、0 拒绝，全部 `score_matches=True`；题量语文单元 15 / 期中期末 18，数学 12 / 22，英语 28 / 39。
 
 > 对照 §一 的原始家底：`composition` 与 `listening` 原先均为 0，是 54+ 条蓝图被拒的唯一原因；现分别为 58 与 976（含 g1）。
+
+---
+
+## 〇c、全年级按教材单元出卷发布口径（2026-11-25，CR-011）
+
+> **变更来源**：PM 要求「按这个口径全年级补齐吧」——学生端不应只看到每科 1 张笼统「单元卷」，应按教材实际单元章节逐单元出卷。本节只改变**学生可见数据集的生成口径**，不改变 §二 蓝图结构、严格拒绝语义与 §三 出卷流程；对应主计划 CR-011 / L37 / §6.34。
+
+| 项 | 口径 |
+|---|---|
+| 覆盖范围 | 1–9 年级 × 语文/数学/英语 × 上/下册；9B「待发布」占位章节不铺题、不生成 |
+| 单元切分 | `scripts/generate_all_unit_papers.py::split_units()` 从章节名解析「第 N 单元 / 第 N 章 / Unit N / 中文数字开头」，同名单元起至下一单元前的章节合并为一个单元范围 |
+| 出卷方式 | 每个单元一张卷，标题 `N年级X科上/下册 第k单元卷（章节名）`；调用 `POST /api/exams/generate`，`blueprint_code=g{grade}_{subject}_unit`，`chapter_ids=单元章节`，`seed` 固定可复现 |
+| 严格门禁 | `allow_fallback=False` 不放宽题型；`allow_band_relax=True` 允许难度带内补位；最多 8 个候选 seed 重试；`avoid_recent_repeats=False` 与干跑口径一致，避免补量轮被历史卷排重误伤 |
+| 题库补量 | ① `backfill_unit_question_bank.py` 补 7–9 年级英语各单元 8 道原创听力及低年级缺口 1 道，共 321 道；② `backfill_unit_paper_supplements.py` 按 `shortages` 动态补 choice/fill/answer/composition/listening 共 335 道。全部 `source_type=original`、`source_ref` 幂等、无第三方版权素材 |
+| 幂等 | 同标题卷已存在即跳过；重复执行 `--apply` 只补缺失单元，不覆盖已发布卷 |
+
+**执行结果（dev 库，2026-11-25）**
+
+| 指标 | 结果 |
+|---|---|
+| 干跑 | `planned=391 skipped=0 succeeded=0 failed=0 dry_run=True` |
+| 正式生成 | `planned=391 skipped=0 succeeded=391 failed=0 dry_run=False` |
+| 新增卷 | **391 张**，标题均带「第 N 单元卷（章节名）」 |
+| 存量卷 | 27 张旧版笼统「N年级X科单元卷」在 CR-011 时保留；2026-11-25 用户决策 CR-012 已全部置 `offline`（作答记录保留），见主计划 §6.34.6 |
+| 发布后单元卷 | CR-011 时 published **418 张** = 391 新 + 27 旧；2026-11-25 用户决策 CR-012 已把 27 张旧卷全部下线，最终 published **391 张**（全部为按教材单元新卷），详见主计划 §6.34.6 |
+| 快照完整性 | 空 `questions` 快照 **0**；快照中的题目 ID 在 `questions` 表全部存在（缺失 0） |
+| 学生可见性 | 418 张均满足 `status=published`、`is_past_paper=0`、`source!='assignment'`、`class_id is NULL`；学生接口按 `grade/subject/type=unit` 可见（g8 英语实测 17 张，年级均为 8） |
+
+**备份与脚本**
+
+- 生成前备份：`backend/ailearning_dev.db.bak-20261125-before-all-unit-papers`；英语卷修复前备份：`backend/ailearning_dev.db.bak-20261125-before-en-paper-repair`。
+- 保留脚本：`scripts/generate_all_unit_papers.py`、`scripts/backfill_unit_question_bank.py`、`scripts/backfill_unit_paper_supplements.py`、`scripts/repair_g8_english_papers.py`。
+- 旧版 27 张笼统卷已按用户 2026-11-25 决策登记 **CR-012** 并全部下线（`offline`），作答记录保留；详见主计划 §6.34.6。
 
 ---
 

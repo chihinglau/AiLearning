@@ -1,10 +1,10 @@
 # 深爱学（AiLearning）项目实施任务计划与进度跟踪
 
 > **文档性质**：项目主计划 / 进度跟踪 / 过程追溯（全程伴随开发周期）
-> **版本**：v1.99
+> **版本**：v2.35
 > **创建日期**：2026-11-06
-> **最后更新**：2026-11-23 v2.33（**测试环境修复**：`app/build/unit_test_assets` 内的旧版 material shader 产物导致 11 例 `shaders/ink_sparkle.frag` runtime stage 校验失败，删除缓存重编后 `flutter test` 192 例全绿，排查手册见 §6.33）；同日 v2.32（**整改回填轮**：复原质检学生画像为「小学·1 年级」并按 1 年级重绑教材、7-9 英语 320 道听力题改按单元主题词表出题（答案位置 A/B/C/D 轮转）并重生成 320 条音频、学科选择弹窗溢出修复（`isScrollControlled` + 限高 0.7 + 可滚动列表）、历史学科版本名统一「人教版（部编）」、3 条教研任务 query 换新版本口径；EBG-AN00 复验通过，见 §6.32）；同日 v2.31（**深圳初中教材版本对齐整改**：核实深圳初中英语为沪教牛津深圳版、道法为人教版统编，库内英语 7–9 原用「牛津上海版」6 单元目录且版本名标「牛津上海版」——按 8 单元新目录重建 7–9 英语章节/KP/题库并重出试卷，英语版本名统一为「沪教牛津版（2024）·深圳」、道法改为「人教版（部编）」，补 20 道书面表达、重出听力音频、修部署通道；EBG-AN00 重装真机验证通过，见 §5.3 v2.31 / §6.31）；同日 v2.03（新增 §6.30 离线练习闭环真机端到端验证：Hive 本地答题队列 + 离线判分 + 联网自动补传 `/api/learn/offline/attempts` 按 client_key 幂等入库 + 错题本离线待同步横幅，OXF-AN10 设备全链路走查通过；P2-05 证据列同步更新练习侧实现；`flutter analyze` 0 issue、`flutter test` 182 passed、离线专项 3/3 通过）；早期：D-09 方案经 PM 评审通过并转 v1.0；CR-004 决策「通过」，EX-04~EX-08 全部实施完成、L21~L26 验收通过；CR-006 已通过并实施；新增 1 个 Alembic 迁移，全量 `pytest` 432 例与 `flutter test` 170 例全绿；R-A15 / R-A16 与 M5 仍待 PM 签署）
-> **参考设计文档**：见[§1.1 参考设计文档清单](#11-参考设计文档清单)（共 9 份，含 5 份设计方案、4 份支撑文档）
+> **最后更新**：2026-11-25 v2.35（**旧版单元卷清理**：按用户决策登记 CR-012，27 张旧版笼统单元卷全部 `offline`（含 116 进行中卷，作答记录保留），发布单元卷 418→391、学生 g8 英语单元卷 17→16 且笼统卷 0，备份与验收见 §6.34.6；QA-02/QA-03 可填写材料见 §6.35）；v2.34（**全年级按教材单元补齐单元卷**：按 CR-011 切分 1–9 年级语数英上下册实际单元，补 321 道英语听力 + 335 道动态题型题，严格组卷生成并发布 **391 张**「第 N 单元卷（章节名）」，发布单元卷达 418 张（新 391 + 旧兼容 27）、空快照 0、题目 ID 缺失 0；学生接口 g8 英语可见 17 张均为 8 年级，EBG-AN00 学生端待办/考试中心可见新卷并打开 28 题听力卷播放正常、无 FATAL，详见 §6.34）；2026-11-23 v2.33（**测试环境修复**：`app/build/unit_test_assets` 内的旧版 material shader 产物导致 11 例 `shaders/ink_sparkle.frag` runtime stage 校验失败，删除缓存重编后 `flutter test` 192 例全绿，排查手册见 §6.33）；同日 v2.32（**整改回填轮**：复原质检学生画像为「小学·1 年级」并按 1 年级重绑教材、7-9 英语 320 道听力题改按单元主题词表出题（答案位置 A/B/C/D 轮转）并重生成 320 条音频、学科选择弹窗溢出修复（`isScrollControlled` + 限高 0.7 + 可滚动列表）、历史学科版本名统一「人教版（部编）」、3 条教研任务 query 换新版本口径；EBG-AN00 复验通过，见 §6.32）；同日 v2.31（**深圳初中教材版本对齐整改**：核实深圳初中英语为沪教牛津深圳版、道法为人教版统编，库内英语 7–9 原用「牛津上海版」6 单元目录且版本名标「牛津上海版」——按 8 单元新目录重建 7–9 英语章节/KP/题库并重出试卷，英语版本名统一为「沪教牛津版（2024）·深圳」、道法改为「人教版（部编）」，补 20 道书面表达、重出听力音频、修部署通道；EBG-AN00 重装真机验证通过，见 §5.3 v2.31 / §6.31）；同日 v2.03（新增 §6.30 离线练习闭环真机端到端验证：Hive 本地答题队列 + 离线判分 + 联网自动补传 `/api/learn/offline/attempts` 按 client_key 幂等入库 + 错题本离线待同步横幅，OXF-AN10 设备全链路走查通过；P2-05 证据列同步更新练习侧实现；`flutter analyze` 0 issue、`flutter test` 182 passed、离线专项 3/3 通过）；早期：D-09 方案经 PM 评审通过并转 v1.0；CR-004 决策「通过」，EX-04~EX-08 全部实施完成、L21~L26 验收通过；CR-006 已通过并实施；新增 1 个 Alembic 迁移，全量 `pytest` 432 例与 `flutter test` 170 例全绿；R-A15 / R-A16 与 M5 仍待 PM 签署）
+> **参考设计文档**：见[§1.1 参考设计文档清单](#11-参考设计文档清单)（共 10 份，含 6 份设计方案、4 份支撑文档）
 > **需求追踪**：见[§1.2 需求—设计—任务追踪矩阵](#12-需求设计任务追踪矩阵)
 > **维护人**：项目负责人（PM）
 > **更新频率**：每次开发会话结束必更；每日一次进度快照；里程碑专项评审
@@ -29,6 +29,7 @@
 | **D-08** | [release-plan.md](./release-plan.md) | v1.0 | 发布支撑 | 上架缺口、渠道矩阵、备案/软著、合规红线、素材与时间线；§11/附表补 R-A16 签署与 QA 待补项 | 发布任务 R-01~R-09；R-A16；P0-05/P0-09、P1-05、P2-08 | PM/AR | 已生效（R-01~R-09 已完成；R-A16 技术验收通过，待 PM 签署；§11 附表 QA 待补项已由 CR-005 收口） | 2026-11-14 |
 | **D-09** | [exam-center-and-past-papers-design.md](./exam-center-and-past-papers-design.md) | v1.2 | 考试中心与真题库专项设计 | 考试中心列表页与真题库页的字段、筛选、状态矩阵、交互、空态/异常、权限、接口与模型变更、L21~L26 验收与 EX-04~EX-08 实施记录；v1.1 按 CR-005 转正式审核发布流（§5.7/§7.2/§14）、L27~L30 与 EX-09~EX-11 实施记录；**追加评审输入**：`docs/exam-center-and-past-papers-review-20261114.md`（设计通过 / 实现一致性不通过 / 真题来源检索方案缺失），整改计划见 §3.12 / §6.25 | EX-04~EX-11、EX-13~EX-16、EX-18 已 `DONE`；EX-12 / EX-17 部分待办 | FE/AR/PM | **已生效（v1.2，2026-11-14）**：§5.7 补队列分页 / 班级副本隔离 / `license_note` 收口 / 采集规范引用；§15 新增 CR-006 落地口径表；附录 C 转「已通过并实施」 | 2026-11-14 |
 | **D-10** | [past-paper-source-intake-spec.md](./past-paper-source-intake-spec.md) | v1.0 | 教研支撑（题源合规） | 真题来源检索与录入规范：来源分层 L1~L4 与禁止自主题拼装、检索渠道白名单/黑名单、版权判定三步与 3 类 `license_note` 模板、卷级/题级结构化录入、去重阈值（重合率 ≥30% 判非原卷）、离线台账 11 列、深圳 g1–g9 语数英 2023–2025 覆盖目标、8 项验收指标、与代码/文档对应表 | CT-04；R-07 台账；EX-13 数据口径 | CT/PM | 已生效（v1.0，CT-04 成文） | 2026-11-14 |
+| **D-11** | [paper-generation-blueprint-design.md](./paper-generation-blueprint-design.md) | v1.3 | 内容/组卷设计（自建题库） | 81 条蓝图矩阵、严格拒绝语义、分位难度带、scope/unit_index 解析；v1.3 新增 §〇c「全年级按教材单元逐一出卷」发布口径、题库补量与 391 张单元卷验收 | PG-01~PG-05；CR-011；L37 | CT/AR | 已生效（v1.3，2026-11-25 CR-011 落地，见 §6.34） | 2026-11-25 |
 
 **文档优先级**：需求冲突时，`D-01`（总体）> 专项设计（`D-02/D-03/D-04/D-09`）> 支撑文档（`D-05`~`D-08`）。专项之间冲突由 PM 裁决并登记 CR。发布相关的合规与上架要求以 `D-08` 为准。`D-09` 已于 2026-11-14 经 PM 评审通过并转 v1.0「已生效」，纳入优先级仲裁、可作为开发依据；其考试域可见性口径仍以 `D-04` §8.7.1 为契约（见 CR-004 / §6.23）。**v2.02 补充**：`D-09` 已升 v1.2「已生效」（CR-006 整改落地，见 §6.26）；新增 `D-10`《真题来源检索与录入规范》v1.0，真题采集与录入以 D-10 为准（冲突时 D-09 的展示与留痕口径优先）；`docs/exam-center-and-past-papers-review-20261114.md` 为评审输入记录，不参与优先级仲裁。
 
@@ -59,6 +60,7 @@
 | 知识点分层与学习路径 | D-02 学科方案、D-04 §6 | D-04 §6 | P0-17~P0-20、P0-35 | L4/L5 | `DONE`（四层结构、状态机与前端单元/知识点详情已完成） |
 | 智能辅助练习 | D-02 学法、D-04 §7 | D-04 §7 | P0-21~P0-24、P0-36 | L6/L7/L8/L13 | `DONE`（服务端预览/组卷/会话/来源拆分 + 前端配置/预览/续答/结算已完成） |
 | 单元测试 | D-04 §8.1~§8.5 | D-04 §8 | P0-25~P0-30、P0-37 | L9/L10/L11/L12 | `DONE`（服务端组卷/交卷/报告/回流 + 前端考试中心/限时答题/报告页已完成） |
+| 自建题库按教材单元逐卷发布 | 2026-11-25 PM 要求「按这个口径全年级补齐吧」（CR-011） | D-11 v1.3 §〇c | PG-01~PG-05 + 内容补量操作（不新增台账任务） | L37 | `DONE`（1–9 年级语数英上下册按实际单元生成 391 张新卷；发布单元卷 418 = 新 391 + 旧兼容 27；空快照 0；见 §6.34） |
 | 期中/期末/模考 | D-04 §8.1~§8.5 | D-04 §8、D-03 §5.2 | P1-07~P1-10、P2-07 | L9~L12 | `DONE`（P1-07 蓝图组卷、P1-08 考试窗口与过期处理、P1-09 主观题自评、P1-10 报告增强、P2-07 真题库与班级同卷模考已完成） |
 | 主观题与报告增强 | D-04 §7.5/§8.5 | D-04 §7.5/§8.5 | P1-09、P1-10 | L11 | `DONE`（主观题自评与能力维度/班级平均/趋势对比已完成） |
 | 推荐与学习闭环 | D-04 §2.2/§6.6 | D-04 §2.2/§6.6 | P1-11、P1-12、P1-14 | 闭环验收 | `DONE`（六优先级推荐、考试错题默认错因/复习优先级、活服务端到端回归均已通过） |
@@ -544,6 +546,8 @@ flowchart LR
 | CR-006 | 2026-11-14 | PM 要求「根据 `docs/exam-center-and-past-papers-review-20261114.md` 评审意见制定修改任务计划，遵循主计划管控要求」。评审结论：设计通过 / 实现一致性不通过 / 真题来源检索方案缺失。处置：登记 §3.12 拟立任务 8 项（EX-12~EX-17、CT-04、QA-04，预估 33 h）、§6.25 处置矩阵与复验判据、§4.1 I-012~I-015、§1.1 D-09 转「待更新」、D-09 附录 C 事实校正；**本轮只制定待评审计划，未改代码、未改数据、未立正式任务、未计 §5.1 快照** | PM（评审报告输入） | 本轮：主计划 §1.1/§1.2/§3.12/§4.1/§4.2/§5.5/§6.25/文末、D-09 头部状态与附录 C；评审通过后：`config.py`、`routes/exams.py`、`main.py`、前端考试卡片、D-03 §10.5、R-07 台账与新增规范文档 | **通过** | PM（2026-11-14 授权「按你的意见执行」；Q1=方案①、Q2=独立成文） | EX-12~EX-18、CT-04、QA-04；L31~L36 登记见 §6.26 |
 
 | CR-007 | 2026-11-18 | 用户反馈「docs 设计文档原本是低年级语文数学读题 + 全年龄英语读题，现在 app 功能好像被改没了」。核实结论：读题代码零删除，缺口为①门禁写死 `grade 1..3` 且限语数英，4–9 年级英语无喇叭；②`exam_page.dart` 从未接入读题（用户走查考试中心卷子看不到喇叭）。变更：读题范围改为「1–3 年级语文/数学 + 全年级（1–9）英语」，判定收敛到 `SpeechPolicy`，考试页补喇叭（不自动朗读、切题与退出停读）；**不扩大预生成音频范围**（4–9 英语走系统 TTS 兜底） | 用户 | D-01 §3.9.1/§3.9.4/§3.9.7/§3.9.8/§3.9.12；主计划 §1.2/§3.8；`speech_policy.dart`（新增）、`session_page.dart`、`practice_page.dart`、`exam_page.dart`、`learning_settings_page.dart`、`test/speech_policy_test.dart`（新增） | **通过** | 用户（2026-11-18 授权执行） | TT-08（本次 `DONE`）；T1/T5 真机复验 |
+| CR-011 | 2026-11-25 | 用户要求「按这个口径全年级补齐吧」：学生端单元卷由「每科 1 张笼统卷」改为「按教材实际单元章节逐单元出卷」。变更内容：①新增 §〇c 发布口径（D-11 升 v1.3）；②按教材单元切分 1–9 年级语数英上下册，9B 占位章节跳过；③补 321 道英语单元听力 + 335 道动态题型题（全部原创、`source_ref` 幂等）；④新增 `generate_all_unit_papers.py` / `backfill_unit_question_bank.py` / `backfill_unit_paper_supplements.py`，严格组卷 + 8 seed 重试；⑤生成并发布 **391 张**新单元卷，保留 27 张旧版笼统卷作历史兼容。**不新增台账任务与工时**，按内容侧补量操作登记（同 v2.09~v2.16 先例）。编号顺延说明：CR-008 已在 §6.29 答案泄漏门禁中使用但未登记本表，CR-009/CR-010 已在 `k12-learning-app-design.md` 读题范围/音频扩产中使用，故本次顺延为 CR-011 | 用户 | D-11 v1.3 §〇c；主计划 §1.1/§1.2/§5.3/§6.1 L37/§6.34；`backend/scripts/*unit*.py`；dev 库 `exams` | **通过** | 用户（2026-11-25 授权执行） | PG-01~PG-05 + 内容补量操作；L37 验收见 §6.34 |
+| CR-012 | 2026-11-25 | 用户在本轮决策中明确选择「27 张全部下线（包含 116 进行中卷）」。变更内容：把 §6.34.5 预案中的 27 张旧版笼统单元卷全部置 `status='offline'`，包括 `exams.id=116`（`xuanxuan` 的 `in_progress` attempt 22 与 14/95 的 `grading` attempt 均保留原记录，不删除、不改状态）；学生端仅保留 391 张按教材单元生成的新卷。执行前备份 dev 库，执行后复核发布单元卷 418→391、旧卷 published 0、新卷与题目快照不受影响。**用户已知悉 116 进行中作答无法继续，仍选择全部下线** | 用户 | §6.34.5 预案；dev 库 `exams`；主计划 §4.2/§6.34.6 | **通过** | 用户（2026-11-25 明确选择全部下线） | CR-012 数据清理操作；验收见 §6.34.6 |
 
 > 变更流程：提出 → 影响评估（任务/工时/验收） → PM 裁决 → 更新本表与任务台账 → 通知相关方。
 > CR-002 说明：按 §7.6「先更新设计文档或登记 CR」执行——D-04 升 v1.1 补设计与 L16/L17 验收项，D-06 补真机规程，再回写 §1.2/§3.6/§5.1/§6.21 台账；代码与文档同批交付，无未登记的需求偏差。
@@ -561,8 +565,8 @@ flowchart LR
 
 | 阻塞 ID | 日期 | 任务 | 阻塞原因 | 解除条件 | 责任人 | 预计解除 | 状态 |
 |---|---|---|---|---|---|---|---|
-| B-001 | 2026-11-10 | TT-07 / QA-03 | 读音合格率需人工试听判定（多音字/分数/单位/英文读法），Agent 只能完成自动筛查（时长/语速），无法代替听感结论 | 教研/QA 按 `backend/build/question_audio/qa_audio_checklist.md` 逐题试听，在 `qa_audio_results.json` 回填 `{"题目id":"ok|fail"}` 后执行 `python -m scripts.check_question_audio --results <file> --apply`，生成 `rework.json`（接口自动返回 404，客户端回退系统 TTS），合格率 ≥95% 后本项与 QA-03 一并解除 | 教研+QA | 设备与人力排期后 | `OPEN` |
-| B-002 | 2026-11-14 | QA-02 | R-A15 / R-A16 / M5 的技术验收已通过，但里程碑签署须由 PM 本人确认；Agent 只能整理材料与登记台账，不得代签 | PM 在 §6.21 / §6.22 / 里程碑表签署位填写姓名与日期并确认；签署后 QA-02 转 `DONE`，M5 与 R-A15/R-A16 状态去掉「待 PM 签署」 | PM | PM 排期后 | `OPEN` |
+| B-001 | 2026-11-10 | TT-07 / QA-03 | 读音合格率需人工试听判定（多音字/分数/单位/英文读法），Agent 只能完成自动筛查（时长/语速），无法代替听感结论 | 教研/QA 按 `backend/build/question_audio/qa_audio_checklist.md` 逐题试听（清单已按当前题库重生成：201 单元 / 1005 题；旧 133 题口径作废），在 **`qa_results.json`** 回填 `{"题目id":"ok|fail"}` 后执行 `python -m scripts.check_question_audio --results qa_results.json --apply`，生成 `rework.json`（接口自动返回 404，客户端回退系统 TTS），合格率 ≥95% 后本项与 QA-03 一并解除；可直接填写材料见 §6.35 | 教研+QA | 设备与人力排期后 | `OPEN` |
+| B-002 | 2026-11-14 | QA-02 | R-A15 / R-A16 / M5 的技术验收已通过，但里程碑签署须由 PM 本人确认；Agent 只能整理材料与登记台账，不得代签 | PM 在 §6.21 / §6.22 / 里程碑表签署位填写姓名与日期并确认；签署后 QA-02 转 `DONE`，M5 与 R-A15/R-A16 状态去掉「待 PM 签署」；可直接填写材料见 §6.35.1 | PM | PM 排期后 | `OPEN` |
 
 ---
 
@@ -579,9 +583,10 @@ flowchart LR
 | `BLOCKED` | 2（QA-02 PM 签署、QA-03 TT-07 人工试听，见 §4.3 B-002 / B-001） |
 | 预估总工时 | 843 h（开发 715 = 712 + TT-08 3；发布 119；QA 9） |
 | 已投入工时 | 477 h（P0-01 3、P0-02 2、P0-03 5、P0-04 4、P0-05 2、P0-06 2、P0-07 2、P0-08 3、P0-09 3、P0-10 3、P0-11 1、P0-12 2、P0-13 2、P0-14 2、P0-15 2、P0-16 1、P0-17 1、P0-18 2、P0-19 2、P0-20 2、P0-21 2、P0-22 3、P0-23 3、P0-24 3、P0-25 3、P0-26 3、P0-27 3、P0-28 4、P0-29 3、P0-30 3、P0-31 4、P0-32 3、P0-33 4、P0-34 4、P0-35 6、P0-36 8、P0-37 10、P0-38 4、P0-39 6、P0-40 4、P0-41 6、P0-42 2、P0-43 3、P1-01 3、P1-02 2、P1-03 2、P1-04 3、P1-05 3、P1-06 3、P1-07 3、P1-08 3、P1-09 3、P1-10 3、P1-11 3、P1-12 2、P1-13 3、P1-14 3、P1-15 3、P2-01 6、P2-02 6、P2-03 6、P2-04 4、P2-05 8、P2-06 8、P2-07 8、P2-08 4、P2-09 6、P2-10 4、R-01 2、R-02 6、R-03 20、R-04 20、R-05 12、R-06 8、R-07 8、R-08 12、R-09 10、UX-01 8、UX-02 2、UX-03 4、CT-01 6、CT-02 4、CT-03 4、TT-01 6、TT-02 3、TT-03 12、TT-04 8、TT-05 6、TT-06 6、TT-07 4、TT-08 3、UX-04 4、UX-05 3、UX-06 2、EX-01 2、EX-02 3、EX-03 4、EX-04 5、EX-05 5、EX-06 5、EX-07 3、EX-08 6、EX-09 6、EX-10 5、EX-11 4、QA-01 3、QA-02 0.5、QA-03 0.5） |
-| 当前迭代 | CR-005 后续项收口：真题审核发布流、前端审核队列、存量真题来源补录与 EBG 真机全链路补跑均 `DONE`（L27~L30 / §6.24）；仅 QA-02（PM 签署）与 QA-03（TT-07 人工试听）为人工依赖 `BLOCKED`（§4.3 B-002 / B-001）；2026-11-23 追加两项不新增台账任务的内容侧收口：深圳初中教材版本对齐整改（§6.31）与离线练习闭环真机验收（§6.30）；2026-11-23 第三轮再补两项：英语 7-9 教研基线（outline / chapters-baseline / ledger 下一节计划）同步为新教材 8 单元口径，定时任务在套餐仅容 1 条的限制下启用英语 1-9 上教研（详见 `docs/sz-textbook-version-alignment.md` §8） |
+| 当前迭代 | CR-005 后续项收口：真题审核发布流、前端审核队列、存量真题来源补录与 EBG 真机全链路补跑均 `DONE`（L27~L30 / §6.24）；仅 QA-02（PM 签署）与 QA-03（TT-07 人工试听）为人工依赖 `BLOCKED`（§4.3 B-002 / B-001）；2026-11-23 追加两项不新增台账任务的内容侧收口：深圳初中教材版本对齐整改（§6.31）与离线练习闭环真机验收（§6.30）；2026-11-23 第三轮再补两项：英语 7-9 教研基线（outline / chapters-baseline / ledger 下一节计划）同步为新教材 8 单元口径，定时任务在套餐仅容 1 条的限制下启用英语 1-9 上教研（详见 `docs/sz-textbook-version-alignment.md` §8）；2026-11-25 追加 CR-011 全年级按教材单元补齐单元卷（不新增台账任务与工时）：新增 391 张「第 N 单元卷（章节名）」并发布，发布单元卷 418 张，验收见 §6.34 / L37；2026-11-25 再按 CR-012 把 27 张旧版笼统卷全部下线，发布单元卷收敛为 391 张，验收见 §6.34.6 |
 | 迭代目标 | 按 CR-002 消除「三模式相同」与「前置乱序、点击不到讲解」，按 CR-003 消除「有待办 / 无考试」虚标并补齐考试入库入口，按 CR-004 补齐考试中心与真题库页面方案并实施，按 CR-005 把 §6.23 后续项全部立为受控任务并实施（真题审核发布流、来源补录、真机回归、人工项登记）；后续按 PM 排期推进内容覆盖与真机回归（R-09 流水线补跑 TT-05 断网场景与音频播放） |
 | 里程碑 | M2.5（P0 技术验收通过，待签署）→ M3（P1 技术验收通过，待签署）→ M4（P2 技术验收通过，待签署）→ M5（发布就绪，R-01~R-09 已完成，待 PM 签署）→ UX-01~UX-03（`DONE`）→ CT-01~CT-03（`DONE`）→ 读题方案评审（2026-11-10 通过）→ 读题实施（TT-01~TT-07 全部 `DONE`，T3 全量合成完成、T6 待人工试听）→ 练习体验收口（CR-002 / UX-04~UX-06 `DONE`）→ 考试入口闭环（CR-003 / EX-01~EX-03 `DONE`）→ 考试中心与真题库（CR-004 / EX-04~EX-08 `DONE`）→ 后续项收口（CR-005 / EX-09~EX-11、QA-01 `DONE`；QA-02/QA-03 `BLOCKED`） |
+| 最新真机验证（2026-11-25 v2.34） | EBG-AN00（SN `2NSDU20423005421`）登录 `xuanxuan`（初中 · 8 年级 · 上学期）→ 学习页底部「待办考试」显示 `8年级数学下册 第6单元卷（第六章 平行四边形）`；「考试中心」显示「50 场考试待完成」，筛选 `单元测 + 英语` 可见 `8年级英语下册 第8/7/6/5/4单元卷`（各 28 题 / 60 分 / 40 分钟）及旧版 `8年级英语单元卷`（CR-011 时点；CR-012 后旧卷已下线）。打开第 8 单元卷：第 1 题听力题、答题卡 28 题齐全，点击播放后 `AudioTrack` 输出 32,672 帧，无 FATAL；退出回考试中心。截图 `.tmp/ebg_unit_exam_20261125.png`，详见 §6.34 |
 | 最新真机验证（2026-11-23 v2.32） | EBG-AN00（SN `2NSDU20423005421`）装新包（`build OK in 39 s` / 108.8 MB）后 `adb shell pm clear` 重走首启：协议页勾选 → 登录质检学生 `13900000001` → 首页显示「你好，质检学生 / **小学 · 1 年级 · 上学期**」（画像与教材绑定均已复原）→ 同步巩固 → 学科选择弹窗。**关键证据**：弹窗**无** `BOTTOM OVERFLOWED BY 157 PIXELS` 黄黑条，3 科（语文人教版 / 英语沪教牛津版（2024）·深圳/ 数学北师大版，均 1 年级）完整显示、末项不被裁切；复原前同一弹窗 7 科 7 年级同样不溢出（`r2_10_sheet.png` 对照 `ebg_practice1.png`）。截图 `r2_12_home.png`、`r2_11_sheet2.png` 与 dump `r2_ui*.xml` 已入库 |
 | 真机验证（2026-11-23 v2.31） | EBG-AN00（SN `2NSDU20423005421`）重装新构建 debug 包（`flutter build apk --debug --target-platform android-arm64 --dart-define API_BASE_URL=http://127.0.0.1:18080`，90 s / 108.8 MB）→ `adb reverse tcp:18080 tcp:18080` → 冷启动全链路：登录（质检学生 `13900000001`）→ 首启协议同意 → 三段引导（学段选初中 / 年级 7 / 确认教材）→ 学习首页 → 同步巩固·英语配置（15 题：听力 6 + 单选 5 + 填空 4，知识点覆盖 13/32）→ 答题页听力题。**关键证据**：引导第 3 步「确认教材」显示「英语 7 年级 · 沪教牛津版（2024）·深圳」，版本整改已真实下发；`GET /api/learn/questions/23531/audio?speed=1.0&kind=listening` 200 且 AudioFlinger 实际出声（预生成 Opus 生效）；logcat 无 FATAL。观察项（**已在 v2.32 修掉**）：学科选择弹窗底部 Flutter 溢出 157 px、g7 听力首题词汇偏通用（head/hand/eye/ear） |
 | 最新真机验证（2026-11-14） | EBG-AN00（SN `2NSDU20423005421`）在 18080 新后端 + `adb reverse` 下补跑：考试中心 `subject=math` 筛选（服务端 200，空态「没有符合条件的考试」）、真题库 `year=2025` 筛选（服务端 200）、来源详情页展示「内置演示数据（非真实真题原卷）」与授权说明；admin 账号登录后在「考试管理与发布」以章节 193 实际生成真题草稿（ID 4 / 21 题 / 状态草稿）→「提交复核」（`POST /api/exams/4/submit-review` 200）→「我的 · 试卷复核」队列（`GET /api/exams/reviews` 200）→「通过并发布」（`POST /api/exams/4/review` 200）→「已发布」队列显示该卷与 3 张带合规标注的演示卷；dev 库 `exams.id=4` 为 `published` 且 `reviewed_by/published_by=1`，缺来源真题 0 张；logcat 无 FATAL。证据见 §6.24 |
@@ -728,6 +733,9 @@ flowchart LR
 | v2.30 | 2026-11-18 | AR/FE/QA | **CR-007 读题范围修订 + 考试页接入**：用户反馈「低年级语数 + 全年龄英语读题被改没了」。核实：`core/speech/*`、`features/speech/*`、`flutter_tts` 依赖、`question_speech_test.dart` 全部在位，git 无删除提交；真实缺口为 ① `session_page.dart:642` / `practice_page.dart:241` 的 `_speechEnabled` 写死 `grade 1..3` 且限语数英 → 4–9 年级英语无喇叭；② `exam_page.dart` 对 `SpeechButton/QuestionReader` 匹配数为 0，考试中心卷子从未接入读题。**实施**：新增 `app/lib/core/speech/speech_policy.dart`（英语任意年级为真、非英语须 1–3 年级且语数英、科目 trim+lowercase 容错、`autoReadByDefault` 仅 1–3）与 `app/test/speech_policy_test.dart` 7 例；三个页面 `_speechEnabled` 统一改调 policy；`exam_page.dart` 题干改 `Row`+`ReadableQuestionText`+`SpeechButton`，新增 `_speechEnabled`/`_stopSpeaking`/`_goTo`，三处切题（上一题/下一题/答题卡）统一走 `_goTo` 先停读，`_confirmExit` 与 `dispose` 补停读，**考试页不自动朗读**；`learning_settings_page.dart` 两段说明文案补「各年级英语」。**回归**：`flutter analyze` 0 issue、`flutter test test/speech_policy_test.dart` 7 passed、`flutter build apk --debug` 成功（27.7s）。**真机 EBG-AN00**：g1 英语单元走查卷出现「朗读题目」`[936,492][1032,588]`，点击切「停止朗读」且 logcat `AudioTrack start(1566)` + `content=CONTENT_TYPE_SPEECH`；账号 grade 临时改 8 后 g8 英语期末卷同样有喇叭（无预生成音频 → `TtsSystemService onSynthesizeText lang=eng` 走系统 TTS 出声，无 404 报错、无等待），g8 语文期末卷无喇叭（门禁仍生效）；验证后 grade 已改回 1。**文档**：D-01 §3.9.1/§3.9.4/§3.9.7/§3.9.8/§3.9.12 与评审记录同步新口径；主计划 §1.2/§3.8 新增 TT-08（`DONE`，3 h）、§4.2 登记 CR-007。**未做**：预生成音频不扩到 4–9 英语（走系统 TTS 兜底，音质略低），如需统一音质另立 CR |
 | v2.31 | 2026-11-23 | AR/CT/QA | **深圳初中教材版本对齐整改（内容侧校正，不新增台账任务与工时）**：用户指出「深圳初中英语是上教版、政治是人教版」并要求核实后重跑差异科目的 7–9 年级教研数据与试题。**核实结论**：用户判断正确，且库内偏差比版本名更深——英语 7–9 章节直接沿用了「牛津**上海**版」6 单元目录（7A Trying new things / Strong mind / Jobs / Smart home / Films / Mountains and rivers…9A Pollution），而深圳实际使用「沪教牛津**深圳**版」新教材（每册 8 单元）；道法章节本就是人教版统编目录，仅 `textbooks.version` 误写「部编版」。**实施**：① `scripts/align_sz_curriculum.py`（新增）统一版本口径（英语 1–9 → 沪教牛津版（2024）·深圳、道法 1–12 → 人教版（部编））并按年级整体重建英语章节/KP（`SZ_ENGLISH_UNITS` 常量，7A/7B/8A/8B 各 8 单元、9A 8 单元、9B 占位「待发布·上教版新教材九年级下册」`is_placeholder=1` 不铺题），`--bind-points` 做题目→知识点回挂，另清理道法 14 个游离 section；② `seed_english_by_unit.py` 增 `Chapter.is_placeholder == 0` 过滤（修掉旧 `rebuild_english` 把 KP 限定 `semester=="first"` 导致下册无 section/point、9 下被误铺 32 题的问题）；③ `seed_english_writing.py`（新增）补 20 道书面表达（`composition`），解期中/期末卷 422 `EXAM_PAPER_UNSUPPORTED`；④ `regen_english_papers.py`（新增）重出 9 张英语卷（删旧 9 张），内置「生成期末前把期中已用 composition 临时置 `draft`」去重逻辑；⑤ KP 后缀改为「听力与主题词汇 / 语法要点 / 语篇理解 / 词汇填空与表达」，`order_index` 1..4 与之对齐。**验收数字**：g7 16 单元 / g8 16 单元 / g9 8 单元 + 1 占位；KP 40 section + 160 point（64/64/32）；每册英语 260 题（listening 64 / choice 112 / fill 80 / composition 4），7–9 共 1300 题且未挂知识点 0 条；试卷回到 81 张（单元卷 28 题 60 分、期中期末 39 题 100 分，期中/期末写作题已验证不同：g7 24809 vs 24808、g8 24817 vs 24816、g9 24825 vs 24824）；全库 146 教材 / 728 章节 / 3425 KP / 18278 题 / 81 卷；`content_selfcheck` issue 0 / warning 0 / coverage_gap 0 / score_mismatch 0，`audit_published_papers` 81 卷 issues 0（16 条 LEAK_INFO 信息级）；音频 16565 个 / 540.3 MB，听力覆盖 1356/1356（100%），本轮生成 817 / 跳过 483 / 失败 0；内容包重导出 `ailearning-content-20261122.json.gz`（1.4 MB）。**环境修复**：18080 旧进程连错库导致登录报「手机号或密码错误」→ 停旧进程用 `.venv` 重起 uvicorn（PG 模式）；`bootstrap_admin --reset-password` 须同时传 `ADMIN_PASSWORD` 与 `QUALITY_STUDENT_PASSWORD`；cloudflared 重启（新公网地址 `https://hit-heard-mailing-borough.trycloudflare.com`）。**真机**：EBG-AN00 重装 debug 包 + `adb reverse` 冷启动，确认教材「沪教牛津版（2024）·深圳」下发、同步巩固英语 15 题组卷（听力 6/单选 5/填空 4）与听力音频 200 实际出声（详见 §5.1 快照与 §6.31）。**文档**：新增 `docs/sz-textbook-version-alignment.md`；本文件 §5.1 补真机验证行、§5.3 记本条、新增 §6.31。**未决**：9 下（9B）官方目录未发布仍为占位；小学英语 1–6 版本名一并改口径待确认；历史仍「部编版」未统一；改动仅在本地 git（`5a74a01`、`3d2dfc2`），未 push 远端 |
 | v2.32 | 2026-11-23 | AR/FE/QA | **整改回填轮（承接 v2.31 的三条指令「修复回来 / 修改掉 / 按建议处理」）**：① **复原**——走查结束时质检学生画像为 `grade=8 / stage=junior`、`textbook_bindings` 留 7 条 7 年级 active 绑定，导致 App 首页「小学 · 1 年级」与练习学科弹窗「7 年级教材」并存；改回 `grade=1 / stage=primary`、旧绑定全量 `archived` 后按 1 年级 `auto_bind()`（语文 3 / 数学 1 / 英语 5）、重启 uvicorn 清 `home:{user}:{grade}:{semester}` 进程缓存、真机 `pm clear` 重走首启，首页与弹窗均回到 1 年级。② **听力题主题化**——根因 `listening_item(idx)` 走「12 通用词群 × 全局游标」且 `answer` 恒 `A`，40 个单元复用同一批词（Unit 1 Friendship 出 head/hand/eye/ear）；新增 `UNIT_LISTENING_WORDS`（40 单元 × 8 主题词）与 `listening_items_for_unit()`（干扰项同单元、答案位置按题序 A/B/C/D 轮转），`seed_english_by_unit` 增 `chapter_name` 入参分流（1–6 回退旧池）；重跑改写 1280 题（含 320 听力，答案 A/B/C/D 各 80）、`--bind-points` 挂回 1280 题、`build_question_audio --kind listening --force` 生成 320 / 失败 0。③ **弹窗溢出**——`learn_page.dart#_openPracticeMode` 加 `isScrollControlled: true` + `ConstrainedBox(maxHeight: 屏高 0.7)` + `Flexible(ListView(shrinkWrap: true))`，`flutter analyze` 0 issue、39 s 构建、真机复验黄黑条消失且末项完整可滚。④ **收口**——历史 12 册版本名统一「人教版（部编）」；英语/道法/历史 3 条教研任务 query 内 `version=` 与 `--expect-version` 换新口径（任务仍全部暂停，不擅自启用）；`content_selfcheck` issue 0 / warning 0、`audit_published_papers` 81 卷 issues 0；git push 远端。详见 §6.32 |
+| v2.33 | 2026-11-23 | QA | **Flutter 测试环境修复**：`app/build/unit_test_assets/shaders/ink_sparkle.frag` 为旧引擎产物（12,944 B），与 Flutter 3.47.5 / engine `af7e796e16` 不兼容，致 11 例跨模块测试报 `Runtime stages buffer failed verification`；删整个 `app/build/unit_test_assets/` 触发重编后生成 13,472 B 新产物，全量 `flutter test` **192 passed / exit 0**；排查与预防见 §6.33 |
+| v2.34 | 2026-11-25 | CT/AR/QA | **全年级按教材单元补齐单元卷（CR-011）**：学生端此前每科仅 1 张笼统「单元卷」，按 PM 要求改为按教材实际单元章节逐单元出卷。新增 `scripts/generate_all_unit_papers.py`（`split_units` 解析「第 N 单元/第 N 章/Unit N/中文数字」）/`scripts/backfill_unit_question_bank.py`（英语 7–9 单元各补 8 道原创听力、低年级补 1 道，共 321）/`scripts/backfill_unit_paper_supplements.py`（按 `shortages` 动态补 335 道原创题）；严格组卷 `allow_fallback=False` + `allow_band_relax=True` + 8 seed 重试 + `avoid_recent_repeats=False`。备份 `backend/ailearning_dev.db.bak-20261125-before-all-unit-papers`。干跑 `planned=391 failed=0`，正式 `succeeded=391 failed=0`；发布单元卷 **418 = 新 391 + 旧兼容 27**，空快照 0、题目 ID 缺失 0；学生接口 g8 英语 17 张均为 8 年级（`/api/exams` 无 `grade` 参数，已改用受支持 `type/subject/page` 验证）。D-11 升 v1.3 §〇c、登记 L37、§6.34 验收记录；4 个保留脚本 `ruff`/`py_compile` 通过、后端 `pytest -q` **493 passed**；EBG-AN00 真机 `xuanxuan` 待办/考试中心可见新卷，英语第 8 单元卷 28 题与听力播放正常、无 FATAL（`.tmp/ebg_unit_exam_20261125.png`）；**不新增台账任务与工时** |
+| v2.35 | 2026-11-25 | 用户/AR | **CR-012 旧版笼统单元卷全部下线**：用户对 §6.34.5 预案明确选择「27 张全部下线（含 116 进行中卷）」。备份 `backend/ailearning_dev.db.bak-20261125-before-legacy-unit-offline` 后，27 张 `published→offline` 并写 `review_note`；作答记录 14/95(`grading`)、116(`in_progress`) 保留不改。库验收：发布单元卷 **418→391**、offline 单元卷 **14→41**、旧版笼统 published **27→0**；活服务学生 g8 英语单元卷 **17→16**、笼统卷 0；admin 计数仍含 offline（141/130/161）。执行记录见 §6.34.6 |
 
 
 
@@ -776,6 +784,7 @@ flowchart LR
 | L28 | 前端审核闭环 | EX-10 | `DONE`（组卷页草稿态与「提交复核」、`/exams/reviews` 审核队列、「我的」权限入口；`exam_review_test.dart` 4 例与真机审核链路；见 §6.24） |
 | L29 | 存量真题来源补录与卡口 | EX-11 | `DONE`（`--report/--apply --source-map/--quarantine` 不猜测来源；dev 库 3 张演示卷已标注、缺来源 0 张；`test_backfill_exam_sources.py` 4 例；见 §6.24） |
 | L30 | 真机回归与 L18~L26 兼容 | QA-01 | `DONE`（EBG 真机筛选/年份/详情/admin 组卷全链路，访问日志 200、无 FATAL；普通卷仍生成即 `published`；见 §6.24） |
+| L37 | 全年级按教材单元逐卷发布（CR-011） | PG-01~PG-05 + 内容补量操作 | `DONE`（391 张新卷按「第 N 单元卷（章节名）」生成并发布；发布单元卷 418 = 新 391 + 旧兼容 27；空快照 0、题目 ID 缺失 0；学生接口 g8 英语 17 张均为 8 年级；见 §6.34） |
 
 ### 6.2 M2.5（P0）验收记录（2026-11-06）
 
@@ -1073,7 +1082,7 @@ flowchart LR
 | T3/T4 客户端缓存 | 通过：首次播放下载落盘、命中不再请求、失败返回 null 回退系统 TTS、LRU 200 MB 按最后访问时间淘汰、播放变速 0.85；**真机 EBG-AN00**：`MediaCodec`+`AudioTrack` 播放 476,808 帧（≈10.8 s），落盘 `files/question_audio/q_1526.opus`（30 KB）；移除 `adb reverse` 后仍从缓存播放（无网络、无 TTS、无 `MissingPluginException`） | `flutter test test/question_audio_test.dart` 5 passed；`app/lib/core/speech/question_audio.dart`。注：为兼容现有 Gradle（未注册 Kotlin 扩展），`just_audio` 由 `^0.10.6` 降为 `^0.9.42`（实际解析 0.9.46 / audio_session 0.1.25），播放 API 与单测不受影响 |
 | T5 自动读题 | 通过（代码级 + 真机）：1–3 年级默认开启、设置页可关闭、同题去重、朗读失败静默；**真机**：1 年级英语练习进入即自动播放且按钮语义为「停止朗读」；「我的→学习设置」显示「自动读题 / 当前年级默认开启」 | `app/lib/core/speech/speech_settings.dart`、`learning_settings_page.dart`、`session_page.dart`/`practice_page.dart` 的 `_maybeAutoRead` |
 | T1/T5 句级高亮与点读 | 通过（估算实现）：按题干字符占比映射播放进度高亮当前句（**非字级时间戳**）；英语单词点击走系统 TTS；**真机**：播放中题干整句高亮（`.tmp/tt06_highlight.png`），点击 `letter` 先停播放器再以 `EN_US` 合成 6 字符 | `app/lib/features/speech/readable_question_text.dart`；`flutter test test/readable_question_text_test.dart` 2 passed |
-| T6 读音抽检 | 部分通过：抽检脚本、报告与试听清单已产出（27 单元 / 抽样 133 题，`226`/`237` 两单元题量不足 5 题已标注），自动筛查 132/133 无异常（仅 q1063 语速偏慢待复核）；**人工试听合格率待 QA 执行** | `backend/scripts/check_question_audio.py`、`build/question_audio/qa_audio_report.json`、`qa_audio_checklist.md`；`pytest tests/test_check_question_audio.py` passed；§4.3 B-001 |
+| T6 读音抽检 | 部分通过：抽检脚本、报告与试听清单已产出；2026-11-25 清单已按当前题库重生成（201 单元 / 1005 题，旧 133 题口径作废），自动筛查不能替代听感；**人工试听合格率待 QA 执行**，可直接填写材料见 §6.35.2 | `backend/scripts/check_question_audio.py`、`build/question_audio/qa_audio_report.json`、`qa_audio_checklist.md`；`pytest tests/test_check_question_audio.py` passed；§4.3 B-001 |
 | UX-03 环境诊断 | 通过（含真机）：地址持久化 + 启动生效、运行时切换立即生效、`/health` 连通性与耗时、地址非法提示；**真机 EBG-AN00** 诊断页显示 `http://127.0.0.1:18080` / `健康检查 ok · AiLearning API · 12 ms` / 登录态「小深（student）」/ 自动读题「已开启」 | `app/lib/core/services/server_config.dart`、`features/profile/environment_diagnostics_page.dart`；`flutter test test/server_config_test.dart` 2 passed |
 | 静态检查/回归 | 通过：`flutter analyze` 0 issue、`flutter test` 142 passed、后端 `pytest` 全通过；新增/变更文件 `ruff --select E,F,I` 0 issue（`learn.py` 仅修复因新增导入产生的 I001，其余 E501 长行为既有基线，不在本次范围） | 本次会话执行记录 |
 
@@ -1156,9 +1165,9 @@ flowchart LR
 
 | 项 | 内容 |
 |---|---|
-| 已产出 | `backend/build/question_audio/qa_audio_checklist.md`（133 题逐题试听清单）、`qa_audio_report.json`（`total=133 / duration_warn=4 / speech_rate_warn=3`）、`backend/scripts/check_question_audio.py`（`--results/--apply`） |
-| 回填格式 | 按清单逐题试听，写 `{"<题目id>": "ok|fail"}` 到 `qa_audio_results.json`；**不可用模板空值直接 `--apply`** |
-| 回填命令 | `python -m scripts.check_question_audio --results <file> --apply`，生成 `rework.json`；`fail` 题目接口自动返回 404，客户端回退系统 TTS |
+| 已产出 | `backend/build/question_audio/qa_audio_checklist.md`（2026-11-25 重生成：201 单元 / 1005 题；旧 133 题口径作废）、`qa_audio_report.json`、`backend/scripts/check_question_audio.py`（`--results/--apply`）；当前清单音频哈希与实际文件不匹配，需先按 §6.35.2 重合成读题音频 |
+| 回填格式 | 按清单逐题试听，写 `{"<题目id>": "ok|fail"}` 到 **`qa_results.json`**（旧文 `qa_audio_results.json` 为笔误）；**不可用模板空值直接 `--apply`** |
+| 回填命令 | `python -m scripts.check_question_audio --results qa_results.json --apply`，生成 `rework.json`；`fail` 题目接口自动返回 404，客户端回退系统 TTS |
 | 解除条件 | 合格率 ≥95% 且 `rework.json` 已生成；B-001 与 QA-03 一并解除 |
 
 > Agent 只完成自动筛查与清单产出，**听感结论必须由教研/QA 人工判定**。
@@ -2405,6 +2414,106 @@ INVALID_ARGUMENT: Runtime stages buffer failed verification.
 - 处置命令：`Remove-Item app\build\unit_test_assets -Recurse -Force -Confirm:$false` 后重跑；等效手段 `flutter clean`（会一并删掉 `app\build` 下的 APK，需要重新构建）
 - 判定要点：失败信息含 `ink_sparkle.frag` 与 `Runtime stages buffer failed verification`，且受影响用例跨模块不成片；此时先怀疑缓存，不要去改业务代码
 
+## 6.34 全年级按教材单元补齐单元卷验收（CR-011，2026-11-25）
 
+> 触发：用户指出「现在的单元卷每个科目都只有一份，不是应该按照教材单元章节输出对应的单元卷吗？」并要求按该口径全年级补齐。结论：原行为是**发布口径**而非技术限制——题库与蓝图早已具备按 `scope=unit + unit_index` 出卷能力（见 §6.27 / D-11 v1.2），只是 dev 库学生可见数据集只保留了每科 1 张笼统卷。本轮按 CR-011 登记并实施，**不新增台账任务与工时**（同 v2.09~v2.16 内容补量先例）。
+
+### 6.34.1 口径与边界
+
+| 项 | 内容 |
+|---|---|
+| 覆盖 | 1–9 年级 × 语文/数学/英语 × 上/下册；按教材章节名解析实际单元，9B「待发布」占位章节跳过 |
+| 卷名 | `N年级X科上/下册 第k单元卷（章节名）`，例如 `8年级英语下册 第7单元卷（Unit 7 Space exploration）` |
+| 严格门禁 | `allow_fallback=False`（不降级题型）、`allow_band_relax=True`（仅放宽难度带）、8 个 seed 重试、`avoid_recent_repeats=False` 与干跑一致 |
+| 幂等 | 同标题已存在跳过；补题按 `source_ref` 判重；重复 `--apply` 不覆盖已发布卷 |
+| 版权 | 新增题目全部 `source_type=original`、`license_note=原创自建内容，不含第三方版权素材`，不引入真实试卷/教材扫描件 |
+
+### 6.34.2 实施动作
+
+| # | 动作 | 证据 |
+|---|---|---|
+| 1 | 英语 8 年级上册空卷修复（116/117/118）后备份 | `backend/ailearning_dev.db.bak-20261125-before-en-paper-repair`；修复后 116=28 题、117=39、118=39 |
+| 2 | 备份全量生成前库 | `backend/ailearning_dev.db.bak-20261125-before-all-unit-papers` |
+| 3 | 补英语单元听力与低年级缺口 | `scripts/backfill_unit_question_bank.py --apply`：`SUMMARY create=321 skip=0 apply=True` |
+| 4 | 按 `shortages` 动态补题型 | `scripts/backfill_unit_paper_supplements.py --apply`：创建 335 道原创补充题 |
+| 5 | 干跑全量 | `scripts/generate_all_unit_papers.py`：`SUMMARY planned=391 skipped=0 succeeded=0 failed=0 dry_run=True` |
+| 6 | 正式生成并发布 | `scripts/generate_all_unit_papers.py --apply`：`SUMMARY planned=391 skipped=0 succeeded=391 failed=0 dry_run=False` |
+
+### 6.34.3 验收结果（dev 库 + 活服务）
+
+| 检查 | 结果 |
+|---|---|
+| 新增卷数 | **391 张**，全部标题含「第 N 单元卷（章节名）」 |
+| 发布单元卷总数 | CR-011 完成时 **418 张** = 新 391 + 旧版笼统卷 27；CR-012 后旧卷全部下线，收敛为 **391 张**（见 §6.34.6） |
+| 空 `questions` 快照 | **0** |
+| 快照题目 ID 存在于 `questions` 表 | 缺失 **0** |
+| 学生可见条件 | CR-011 时 418/418 满足 `status=published`、`is_past_paper=0`、`source!='assignment'`、`class_id is NULL`；CR-012 后 391/391 新卷仍满足 |
+| 受支持筛选复核 | CR-011 时 admin `X-Total-Count` 语文 141 / 数学 130 / 英语 161（合计 432 = 418 published + 14 offline），学生 `xuanxuan` 英语单元卷 17 张；CR-012 后 admin 计数不变（含 41 offline），学生英语单元卷 **16 张**、笼统卷 0（见 §6.34.6） |
+| 旧口径纠正 | `/api/exams` **没有 `grade` 查询参数**，此前带 `grade` 的验证脚本结果无效；本轮改用受支持参数 + 数据库逐年级统计复核 |
+| 静态检查 | 4 个保留脚本 `ruff check --select E,F,I --ignore E501` **All checks passed**；`python -m py_compile` 全通过 |
+| 全量回归 | 后端 `pytest -q` **493 passed / exit 0**（仅 1 条 anyio `BlockingPortal` 弃用警告，与本轮无关） |
+| EBG 真机走查 | EBG-AN00（`2NSDU20423005421`）登录 `xuanxuan`（8 年级）→ 学习页底部「待办考试」显示新卷 `8年级数学下册 第6单元卷（第六章 平行四边形）`；「考试中心」显示「50 场考试待完成」，筛选 `单元测 + 英语` 后可见 `8年级英语下册 第8/7/6/5/4单元卷`（每卷 28 题 / 60 分 / 40 分钟）与旧版 `8年级英语单元卷`（CR-011 时点；CR-012 后旧卷已下线）。打开第 8 单元卷：第 1 题为听力题、28 题答题卡齐全，点击播放听力后 `AudioTrack` 输出 32,672 帧、无 FATAL；退出后回到考试中心。截图 `.tmp/ebg_unit_exam_20261125.png` |
+
+> 按年级学科新增数：g1 语/数/英 16/11/18，g2 16/15/15，g3 16/15/16，g4 16/14/16，g5 16/16/20，g6 14/13/18，g7 12/12/16，g8 12/13/16，g9 12/9/8（顺序为语文/数学/英语）。
+
+### 6.34.4 残留与决策
+
+| 项 | 状态 | 说明 |
+|---|---|---|
+| 27 张旧版笼统单元卷 | 保留（待 PM 裁决） | 是否 `offline` 属新的数据清理决策；已核实 3 张有作答、24 张无作答，预案见 §6.34.5，需单独登记后再执行，避免本轮越权改动发布数据 |
+| 补充题题干质量 | 可接受 | 动态补充题以「根据单元选择正确表述」等模板生成，用于消除严格门禁缺口；后续如要求更高题干多样性，应走教研内容生产而非改门禁 |
+| 学生端真机逐单元走查 | `DONE` | EBG-AN00 / `xuanxuan`（8 年级）在「待办考试」与「考试中心」均看到新单元卷；打开英语第 8 单元卷 28 题与听力播放正常、无 FATAL；证据见 §6.34.3 与 `.tmp/ebg_unit_exam_20261125.png` |
+
+### 6.34.5 旧版 27 张笼统卷下线预案（待 PM 裁决，不执行）
+
+| 项 | 核实结果 |
+|---|---|
+| 存量 | `exam_type='unit' AND status='published' AND title NOT LIKE '%第%'` 共 **27 张**：语文 9 / 数学 9 / 英语 9，覆盖 g1–g9 每年级 3 张；`questions` 快照均非空 |
+| 作答影响 | 仅 3 张有 `exam_attempts`：`14`（attempt 10，user 2，`grading`）、`95`（attempt 16，user 2，`grading`）、`116`（attempt 22，user 3 `xuanxuan`，**`in_progress`**）。其余 24 张无任何作答记录 |
+| 建议 | **不批量下线**：先保留 14/95/116（存在未终结作答，尤其 116 是 `xuanxuan` 正在进行的旧英语单元卷，EBG 真机也可见「进行中」）；若 PM 决定清理，仅对 24 张无作答卷执行 `status='offline'`：`17,23,26,32,35,41,44,50,53,59,62,68,71,77,80,86,89,98,101,104,107,113,119,126` |
+| 执行前置 | 该操作改变学生可见数据集，须**单独登记 CR**，生成前备份 DB，执行后复核 `published unit` 从 418 → 394（若只下 24 张）、空快照仍 0、学生端 g8 英语新单元卷仍可见 17 张 |
+| 当前状态 | **已于 2026-11-25 按 CR-012 执行「全部下线」**，27 张均为 `offline`，执行记录见 §6.34.6；本节保留为决策留痕 |
+
+### 6.34.6 CR-012：27 张旧版笼统单元卷全部下线（2026-11-25，用户决策）
+
+| 项 | 结果 |
+|---|---|
+| 决策 | 用户对 §6.34.5 预案明确选择「**27 张全部下线（包含 116 进行中卷）**」，已知悉 116 的 `in_progress` attempt 将无法继续 |
+| 登记 | §4.2 新增 CR-012（决策「通过」，用户授权执行） |
+| 备份 | `backend/ailearning_dev.db.bak-20261125-before-legacy-unit-offline`（16,891,904 B） |
+| 执行 | 27 张全部 `status='published' → 'offline'`，`review_note='[CR-012] legacy generic unit paper offline, user decision 2026-11-25'`；ID：`14,17,23,26,32,35,41,44,50,53,59,62,68,71,77,80,86,89,95,98,101,104,107,113,116,119,126` |
+| 库验收 | 发布单元卷 **418 → 391**（全部为按教材单元新卷）；`offline` 单元卷 **14 → 41**；旧版笼统 published **27 → 0**；空快照仍 0 |
+| 作答记录 | 不删除、不改状态：`14` attempt 10 `grading`、`95` attempt 16 `grading`、`116` attempt 22 `in_progress`（该 attempt 已无可见试卷，属用户已知风险） |
+| 活服务 | 重启 uvicorn 后 admin `type=unit` 的 `X-Total-Count` 仍为 141/130/161（含 offline，符合接口口径）；学生 `xuanxuan` 英语单元卷 **17 → 16**，笼统卷 **0**，新卷仍可见 |
+| 真机 | 后端重启 + App 冷启动后按 §6.34.3 路径复验即可；本轮以活服务 API 为准，未重复截图 |
+
+> **当前下一步（v2.35，覆盖上文）**：CR-012 已执行——27 张旧版笼统单元卷全部下线，发布单元卷收敛为 391 张按教材单元新卷；备份与验收见 §6.34.6；QA-02（PM 签署 R-A15/R-A16/M5）与 QA-03（TT-07 人工试听）仍为 `BLOCKED`，材料见 §6.35。
+
+> **历史当前下一步（v2.34，已被 v2.35 覆盖）**：CR-011 已实施并通过 DB/API 验收——1–9 年级语数英按教材实际单元生成 **391 张**新卷，发布单元卷 418 张（新 391 + 旧兼容 27），空快照 0、题目 ID 缺失 0；D-11 升 v1.3 §〇c、L37 登记完成。EBG-AN00 学生端走查也已通过（待办考试 / 考试中心可见新卷、28 题与听力播放正常、无 FATAL，证据见 §6.34.3）。下一步：①按 PM 决策是否按下线预案清理旧版笼统卷——建议保留有作答的 14/95/116、仅评估 24 张无作答卷，且需单独 CR（预案见 §6.34.5）；②QA-02（PM 签署 R-A15/R-A16/M5）与 QA-03（TT-07 人工试听）仍为 `BLOCKED`，解除条件见 §4.3 B-002 / B-001。
+
+## 6.35 QA-02 签署 / QA-03 试听材料包（2026-11-25，待人工填写）
+
+> 本节点只提供**可直接填写的位置、命令与回填动作**；Agent 不代签、不代填听感结论。填写完成后按本节「回填动作」更新台账，QA-02/QA-03 方可从 `BLOCKED` 转 `DONE`。
+
+### 6.35.1 QA-02：PM 签署位（R-A15 / R-A16 / M5）
+
+| 签署项 | 文件与位置 | 当前文案 | PM 填写 | 回填动作 |
+|---|---|---|---|---|
+| R-A15 | `docs/project-task-plan.md` §6.21 结论行（「R-A15 技术验收通过（待 PM 签署）」） | 技术验收通过，待 PM 签署 | `PM 姓名 / 日期` | 把「待 PM 签署」替换为「PM：<姓名> 日期：<YYYY-MM-DD>」 |
+| R-A16 | `docs/project-task-plan.md` §6.22 结论行（「R-A16 技术验收通过（待 PM 签署）」） | 技术验收通过，待 PM 签署 | `PM 姓名 / 日期` | 同上；同步 `docs/release-plan.md` §11 附表第 11 行与文首「R-A16 签署仍待 PM」 |
+| M5 | `docs/project-task-plan.md` §六 里程碑表 M5 行「计划状态」列 | `DONE`（内测链路…待 PM 签署；软著受理号/备案号回填仍由 PM 推进） | `PM 姓名 / 日期`；软著受理号、ICP/APP 备案号 | 去掉「待 PM 签署」，补编号与签署日期 |
+| QA-02 台账 | 本文件 §3.11 QA-02 行、§4.3 B-002 | `BLOCKED` / `OPEN` | 确认签署完成 | QA-02 转 `DONE`、B-002 转 `RESOLVED`；§1.2「后续项收口」行同步 |
+
+### 6.35.2 QA-03：TT-07 人工试听材料
+
+| 项 | 内容 |
+|---|---|
+| 清单 | `backend/build/question_audio/qa_audio_checklist.md`（2026-11-25 已按当前题库重新生成；抽样种子 `20261110`，每单元 5 题，共 **201 单元 / 1005 题**，合格线 **95%**） |
+| 报告 | `backend/build/question_audio/qa_audio_report.json`（当前 `ok=0 / fail=0 / pending=1005`，须人工试听后回填） |
+| **重要前置** | 当前清单中抽样题的音频哈希与 `backend/build/question_audio/audio/` 实际文件**不匹配**，`备注` 列显示「音频文件缺失」。试听前需先按当前题干重合成读题音频，例如：`cd backend` → `.venv\Scripts\python.exe -m scripts.build_question_audio --grade 1,2,3,4,5,6,7,8,9 --subject chinese,math,english --kind reading --force --concurrency 4`，再重跑 `python -m scripts.check_question_audio` 刷新清单 |
+| 结果文件 | 在 `backend/` 下新建 `qa_results.json`，格式 `{"7650":"ok","7642":"fail"}`（题目 id → `ok`/`fail`）。**注意正确文件名是 `qa_results.json`**，§4.3 B-001 旧文「`qa_audio_results.json`」为笔误，本节为准 |
+| 回填命令 | `cd backend` → `.venv\Scripts\python.exe -m scripts.check_question_audio --results qa_results.json --apply`，生成/更新 `rework.json`；`fail` 题目接口返回 404，客户端回退系统 TTS |
+| 解除判据 | 试听结论中 `ok / sampled ≥ 95%`，`rework.json` 已生成；QA-03 转 `DONE`、TT-07 的 T6 与 §4.3 B-001 转 `RESOLVED`；§6.1 T6 与 §1.2「读题（TTS）辅助」行同步 |
+| AI 边界 | Agent 已完成清单生成、哈希核对与命令准备；**多音字/分数/单位/英文读法的听感结论必须由教研/QA 本人给出**，不得代填 |
 
 
