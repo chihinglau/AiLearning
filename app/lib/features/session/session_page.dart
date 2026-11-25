@@ -11,6 +11,7 @@ import 'package:ai_learning/core/offline/offline_learn_store.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
 import 'package:ai_learning/core/services/learn_service.dart';
+import 'package:ai_learning/core/speech/question_reader.dart';
 import 'package:ai_learning/core/speech/question_speech.dart';
 import 'package:ai_learning/core/speech/speech_policy.dart';
 import 'package:ai_learning/features/learn/widgets/offline_banner.dart';
@@ -65,6 +66,7 @@ class _SessionPageState extends ConsumerState<SessionPage> {
   static const _lastSessionKey = 'practice_last_session';
 
   final _fillController = TextEditingController();
+  late final QuestionReader _questionReader;
 
   List<Question> _questions = const [];
   int _index = 0;
@@ -91,6 +93,7 @@ class _SessionPageState extends ConsumerState<SessionPage> {
   @override
   void initState() {
     super.initState();
+    _questionReader = ref.read(questionReaderProvider);
     _resumeId = widget.sessionId;
     _seed = widget.seed;
     _load();
@@ -99,7 +102,7 @@ class _SessionPageState extends ConsumerState<SessionPage> {
   @override
   void dispose() {
     _fillController.dispose();
-    unawaited(ref.read(questionReaderProvider).stop());
+    unawaited(_questionReader.stop());
     super.dispose();
   }
 
@@ -115,6 +118,7 @@ class _SessionPageState extends ConsumerState<SessionPage> {
       _sessionId = null;
       _selectedKey = null;
       _selectedKeys.clear();
+      _fillController.clear();
       _result = null;
       _offline = false;
     });
@@ -391,17 +395,38 @@ class _SessionPageState extends ConsumerState<SessionPage> {
     }
   }
 
+  /// 需要用文本框作答的题型：填空、计算、解答、习作。
+  static const _textAnswerTypes = {
+    'fill',
+    'calc',
+    'answer',
+    'composition',
+    'essay',
+    'writing',
+  };
+
+  /// 判定是否走文本框作答：显式文本题型 + 任何没有选项的兜底题型。
+  ///
+  /// 兜底很关键：题库里若出现未登记的题型（如 `answer`）且 `options` 为空，
+  /// 旧实现会落到单选分支渲染出空白区域，学生既没有输入控件也无法提交。
+  static bool _usesTextAnswer(Question question) {
+    if (question.qType == 'multiple') return question.options.isEmpty;
+    if (_textAnswerTypes.contains(question.qType)) return true;
+    return question.options.isEmpty;
+  }
+
+  /// 主观题（解答/计算/习作）需要多行输入，且判分口径与客观题不同。
+  static bool _isSubjectiveType(Question question) =>
+      _textAnswerTypes.contains(question.qType) && question.qType != 'fill';
+
   bool get _canSubmit {
     final question = _current;
     if (question == null || _result != null) return false;
-    switch (question.qType) {
-      case 'multiple':
-        return _selectedKeys.isNotEmpty;
-      case 'fill':
-        return _fillController.text.trim().isNotEmpty;
-      default:
-        return _selectedKey != null;
+    if (_usesTextAnswer(question)) {
+      return _fillController.text.trim().isNotEmpty;
     }
+    if (question.qType == 'multiple') return _selectedKeys.isNotEmpty;
+    return _selectedKey != null;
   }
 
   Future<void> _submit() async {
@@ -409,13 +434,12 @@ class _SessionPageState extends ConsumerState<SessionPage> {
     if (question == null || !_canSubmit) return;
 
     final Map<String, dynamic> userAnswer;
-    switch (question.qType) {
-      case 'multiple':
-        userAnswer = {'value': _selectedKeys.toList()..sort()};
-      case 'fill':
-        userAnswer = {'value': _fillController.text.trim()};
-      default:
-        userAnswer = {'value': _selectedKey};
+    if (_usesTextAnswer(question)) {
+      userAnswer = {'value': _fillController.text.trim()};
+    } else if (question.qType == 'multiple') {
+      userAnswer = {'value': _selectedKeys.toList()..sort()};
+    } else {
+      userAnswer = {'value': _selectedKey};
     }
 
     setState(() => _submitting = true);
@@ -673,7 +697,7 @@ class _SessionPageState extends ConsumerState<SessionPage> {
     if (!await store.autoReadEnabled(grade: grade)) return;
     if (!mounted) return;
     try {
-      await ref.read(questionReaderProvider).read(
+      await _questionReader.read(
             questionId: question.id,
             text: QuestionSpeech.questionScript(
               stem: question.stem,
@@ -689,6 +713,9 @@ class _SessionPageState extends ConsumerState<SessionPage> {
 
   Widget _buildAnswerArea(Question question) {
     final locked = _result != null;
+    if (_usesTextAnswer(question)) {
+      return _buildTextAnswerArea(question, locked: locked);
+    }
     switch (question.qType) {
       case 'multiple':
         return Column(
@@ -705,35 +732,21 @@ class _SessionPageState extends ConsumerState<SessionPage> {
               Card(
                 child: CheckboxListTile(
                   value: _selectedKeys.contains(option.key),
-                  onChanged: locked
-                      ? null
-                      : (checked) {
-                          setState(() {
-                            if (checked == true) {
-                              _selectedKeys.add(option.key);
-                            } else {
-                              _selectedKeys.remove(option.key);
-                            }
-                          });
-                        },
+                  onChanged: (checked) {
+                    if (locked) return;
+                    setState(() {
+                      if (checked == true) {
+                        _selectedKeys.add(option.key);
+                      } else {
+                        _selectedKeys.remove(option.key);
+                      }
+                    });
+                  },
                   secondary: CircleAvatar(child: Text(option.key)),
                   title: Text(option.text),
                 ),
               ),
           ],
-        );
-      case 'fill':
-        return TextField(
-          controller: _fillController,
-          enabled: !locked,
-          textInputAction: TextInputAction.done,
-          onSubmitted: locked ? null : (_) => _submit(),
-          onChanged: locked ? null : (_) => setState(() {}),
-          decoration: const InputDecoration(
-            labelText: '请在此填写答案',
-            border: OutlineInputBorder(),
-            prefixIcon: Icon(Icons.edit_outlined),
-          ),
         );
       default:
         // choice / judge 都是单选（judge 的选项为 正确 / 错误）。
@@ -743,16 +756,51 @@ class _SessionPageState extends ConsumerState<SessionPage> {
               Card(
                 child: ListTile(
                   selected: _selectedKey == option.key,
+                  selectedTileColor: Theme.of(context)
+                      .colorScheme
+                      .primary
+                      .withValues(alpha: 0.12),
                   leading: CircleAvatar(child: Text(option.key)),
                   title: Text(option.text),
-                  onTap: locked
-                      ? null
-                      : () => setState(() => _selectedKey = option.key),
+                  trailing: _selectedKey == option.key
+                      ? Icon(
+                          Icons.check_circle,
+                          color: Theme.of(context).colorScheme.primary,
+                        )
+                      : null,
+                  onTap: () {
+                    if (locked) return;
+                    setState(() => _selectedKey = option.key);
+                  },
                 ),
               ),
           ],
         );
     }
+  }
+
+  /// 文本框作答区：填空单行，主观题（解答/计算/习作）多行。
+  Widget _buildTextAnswerArea(Question question, {required bool locked}) {
+    final subjective = _isSubjectiveType(question);
+    return TextField(
+      key: ValueKey('answer-input-${question.id}'),
+      controller: _fillController,
+      readOnly: locked,
+      minLines: subjective ? 4 : 1,
+      maxLines: subjective ? 8 : 1,
+      textInputAction:
+          subjective ? TextInputAction.newline : TextInputAction.done,
+      onSubmitted: locked || subjective ? null : (_) => _submit(),
+      onChanged: locked ? null : (_) => setState(() {}),
+      decoration: InputDecoration(
+        labelText: subjective ? '请写出解答过程与答案' : '请在此填写答案',
+        helperText: subjective
+            ? '主观题按要点覆盖判分：写清关键步骤或结论即可，不必与参考答案逐字一致。'
+            : null,
+        border: const OutlineInputBorder(),
+        prefixIcon: const Icon(Icons.edit_outlined),
+      ),
+    );
   }
 
   String _typeLabel(String type) {
@@ -763,6 +811,10 @@ class _SessionPageState extends ConsumerState<SessionPage> {
         return '判断题';
       case 'fill':
         return '填空题';
+      case 'calc':
+        return '计算题';
+      case 'answer':
+        return '解答题';
       case 'listen':
       case 'listening':
         return '听力题';
@@ -811,6 +863,15 @@ class _FeedbackCard extends StatelessWidget {
     return value?.toString() ?? '-';
   }
 
+  /// 主观题（解答/计算/习作）判分口径与客观题不同，结果文案按「参考答案」呈现。
+  bool get _subjective => const {
+        'answer',
+        'calc',
+        'composition',
+        'essay',
+        'writing',
+      }.contains(question.qType);
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -838,10 +899,17 @@ class _FeedbackCard extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 8),
-            Text('正确答案：${_formatAnswer(rawValue)}'),
+            Text('${_subjective ? '参考答案' : '正确答案'}：${_formatAnswer(rawValue)}'),
             if (result.analysis != null && result.analysis!.isNotEmpty) ...[
               const SizedBox(height: 8),
               Text('解析：${result.analysis!}', style: theme.textTheme.bodyMedium),
+            ],
+            if (_subjective) ...[
+              const SizedBox(height: 8),
+              Text(
+                '主观题按要点覆盖判分，表述不同也可能判对；可对照参考答案自查。',
+                style: theme.textTheme.bodySmall,
+              ),
             ],
             if (result.masteryScore != null) ...[
               const SizedBox(height: 8),

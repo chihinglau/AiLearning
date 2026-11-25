@@ -284,6 +284,19 @@ class _ExamPageState extends ConsumerState<ExamPage> {
     });
   }
 
+  /// 文本作答统一入口：填空题 / 主观题 / 无选项兜底题型共用。
+  void _setTextAnswer(Question question, String text) {
+    final current = Map<String, dynamic>.from(
+      _answers[question.id] ?? const <String, dynamic>{},
+    );
+    if (text.trim().isEmpty) {
+      current.remove('value');
+    } else {
+      current['value'] = text.trim();
+    }
+    _setAnswer(question.id, current.isEmpty ? null : current);
+  }
+
   void _setAnswer(int questionId, Map<String, dynamic>? answer) {
     setState(() {
       if (answer == null) {
@@ -785,6 +798,11 @@ class _ExamPageState extends ConsumerState<ExamPage> {
       case 'calc':
       case 'answer':
       case 'listen':
+      // 习作 / 书面表达同样是主观书写题：漏了这三个题型会落到单选分支，
+      // options 为空 → 整块作答区空白，学生无法作答（语文、英语卷必考）。
+      case 'composition':
+      case 'essay':
+      case 'writing':
         final subjective = question.qType != 'fill';
         final images = (_answers[question.id]?['images'] as List<dynamic>? ?? const [])
             .whereType<String>()
@@ -798,20 +816,7 @@ class _ExamPageState extends ConsumerState<ExamPage> {
               maxLines: subjective ? 8 : 1,
               textInputAction:
                   subjective ? TextInputAction.newline : TextInputAction.done,
-              onChanged: (text) {
-                final current = Map<String, dynamic>.from(
-                  _answers[question.id] ?? const <String, dynamic>{},
-                );
-                if (text.trim().isEmpty) {
-                  current.remove('value');
-                } else {
-                  current['value'] = text.trim();
-                }
-                _setAnswer(
-                  question.id,
-                  current.isEmpty ? null : current,
-                );
-              },
+              onChanged: (text) => _setTextAnswer(question, text),
               decoration: InputDecoration(
                 labelText: subjective ? '请写出解答过程与答案' : '请在此填写答案',
                 helperText:
@@ -898,6 +903,22 @@ class _ExamPageState extends ConsumerState<ExamPage> {
           ],
         );
       default:
+        // 兜底：认不出的题型且没有选项时，给一个书写框，避免该题完全没有作答控件。
+        if (question.options.isEmpty) {
+          return TextField(
+            controller: _controllerFor(question.id),
+            minLines: 4,
+            maxLines: 8,
+            textInputAction: TextInputAction.newline,
+            onChanged: (text) => _setTextAnswer(question, text),
+            decoration: const InputDecoration(
+              labelText: '请写出解答过程与答案',
+              helperText: '主观题交卷后由老师批改，请写下思路与结论。',
+              border: OutlineInputBorder(),
+              prefixIcon: Icon(Icons.edit_outlined),
+            ),
+          );
+        }
         // choice / judge 均为单选（judge 选项为 正确 / 错误）。
         return Column(
           children: [

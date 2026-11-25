@@ -1,9 +1,9 @@
 # 深爱学（AiLearning）项目实施任务计划与进度跟踪
 
 > **文档性质**：项目主计划 / 进度跟踪 / 过程追溯（全程伴随开发周期）
-> **版本**：v2.36
+> **版本**：v2.39
 > **创建日期**：2026-11-06
-> **最后更新**：2026-11-25 v2.36（**QA-03 音频前置完成**：读题音频生成 4478 道、听力补 84 道，失败 0；1005 个试听抽样音频路径全部存在、缺失 0，修正听力题误用读题哈希的工具 bug；人工试听仍待 QA，记录见 §6.35.3）；v2.35（**旧版单元卷清理**：按用户决策登记 CR-012，27 张旧版笼统单元卷全部 `offline`（含 116 进行中卷，作答记录保留），发布单元卷 418→391、学生 g8 英语单元卷 17→16 且笼统卷 0，备份与验收见 §6.34.6；QA-02/QA-03 可填写材料见 §6.35）；v2.34（**全年级按教材单元补齐单元卷**：按 CR-011 切分 1–9 年级语数英上下册实际单元，补 321 道英语听力 + 335 道动态题型题，严格组卷生成并发布 **391 张**「第 N 单元卷（章节名）」，发布单元卷达 418 张（新 391 + 旧兼容 27）、空快照 0、题目 ID 缺失 0；学生接口 g8 英语可见 17 张均为 8 年级，EBG-AN00 学生端待办/考试中心可见新卷并打开 28 题听力卷播放正常、无 FATAL，详见 §6.34）；2026-11-23 v2.33（**测试环境修复**：`app/build/unit_test_assets` 内的旧版 material shader 产物导致 11 例 `shaders/ink_sparkle.frag` runtime stage 校验失败，删除缓存重编后 `flutter test` 192 例全绿，排查手册见 §6.33）；同日 v2.32（**整改回填轮**：复原质检学生画像为「小学·1 年级」并按 1 年级重绑教材、7-9 英语 320 道听力题改按单元主题词表出题（答案位置 A/B/C/D 轮转）并重生成 320 条音频、学科选择弹窗溢出修复（`isScrollControlled` + 限高 0.7 + 可滚动列表）、历史学科版本名统一「人教版（部编）」、3 条教研任务 query 换新版本口径；EBG-AN00 复验通过，见 §6.32）；同日 v2.31（**深圳初中教材版本对齐整改**：核实深圳初中英语为沪教牛津深圳版、道法为人教版统编，库内英语 7–9 原用「牛津上海版」6 单元目录且版本名标「牛津上海版」——按 8 单元新目录重建 7–9 英语章节/KP/题库并重出试卷，英语版本名统一为「沪教牛津版（2024）·深圳」、道法改为「人教版（部编）」，补 20 道书面表达、重出听力音频、修部署通道；EBG-AN00 重装真机验证通过，见 §5.3 v2.31 / §6.31）；同日 v2.03（新增 §6.30 离线练习闭环真机端到端验证：Hive 本地答题队列 + 离线判分 + 联网自动补传 `/api/learn/offline/attempts` 按 client_key 幂等入库 + 错题本离线待同步横幅，OXF-AN10 设备全链路走查通过；P2-05 证据列同步更新练习侧实现；`flutter analyze` 0 issue、`flutter test` 182 passed、离线专项 3/3 通过）；早期：D-09 方案经 PM 评审通过并转 v1.0；CR-004 决策「通过」，EX-04~EX-08 全部实施完成、L21~L26 验收通过；CR-006 已通过并实施；新增 1 个 Alembic 迁移，全量 `pytest` 432 例与 `flutter test` 170 例全绿；R-A15 / R-A16 与 M5 仍待 PM 签署）
+> **最后更新**：2026-11-25 v2.39（**主观题判分口径放宽**：练习/复习/离线的解答、计算、习作题不再要求与参考答案逐字相同，改为「关键内容（主谓宾）覆盖」判分——汉字二元组 + 单字 + 字母数字词，覆盖率 ≥50% 判对，数学式 `a²+b²=c²` 与「a 的平方加 b 的平方等于 c 的平方」等价；短答案（是/否、单值）仍走全等；后端 `learning.py` 与端上 `offline_grader.dart` 同规则，`pytest 497 passed`、`flutter test 200 passed`，见 §6.38）；v2.38（**解答题无输入框修复**：练一练第 5 题「写出勾股定理的式子」(`q_type=answer`、`options` 为空) 落到单选分支渲染成空白，提交按钮永久置灰；`SessionPage` 改为「文本题型 + 无选项兜底统一走文本框」，填空单行 / 解答·计算·习作多行，反馈卡对主观题显示「参考答案」并加自查提示；`ExamPage` 补 `composition/essay/writing`（语文习作、英语书面表达）与无选项兜底；新增 2 例 widget 回归（Flutter 全量 **195 passed**、analyze 0 issue），EBG-AN00 真机验证输入→提交→反馈全通，见 §6.37）；v2.37（**练一练提交后选中态修复**：SessionPage 单选/多选选项不再因 `onTap/onChanged=null` 进入禁用态而丢失高亮，填空题改 `readOnly`；PracticePage 同步修复；新增 widget 回归测试，Flutter 全量 **193 passed**、analyze 0 issue；已安装 EBG-AN00 实测单选/判断/错误答案提交后均保持选中并显示勾选图标（截图 `.tmp/ebg_selected_check_after.png`），记录见 §6.36）；v2.36（**QA-03 音频前置完成**：读题音频生成 4478 道、听力补 84 道，失败 0；1005 个试听抽样音频路径全部存在、缺失 0，修正听力题误用读题哈希的工具 bug；人工试听仍待 QA，记录见 §6.35.3）；v2.35（**旧版单元卷清理**：按用户决策登记 CR-012，27 张旧版笼统单元卷全部 `offline`（含 116 进行中卷，作答记录保留），发布单元卷 418→391、学生 g8 英语单元卷 17→16 且笼统卷 0，备份与验收见 §6.34.6；QA-02/QA-03 可填写材料见 §6.35）；v2.34（**全年级按教材单元补齐单元卷**：按 CR-011 切分 1–9 年级语数英上下册实际单元，补 321 道英语听力 + 335 道动态题型题，严格组卷生成并发布 **391 张**「第 N 单元卷（章节名）」，发布单元卷达 418 张（新 391 + 旧兼容 27）、空快照 0、题目 ID 缺失 0；学生接口 g8 英语可见 17 张均为 8 年级，EBG-AN00 学生端待办/考试中心可见新卷并打开 28 题听力卷播放正常、无 FATAL，详见 §6.34）；2026-11-23 v2.33（**测试环境修复**：`app/build/unit_test_assets` 内的旧版 material shader 产物导致 11 例 `shaders/ink_sparkle.frag` runtime stage 校验失败，删除缓存重编后 `flutter test` 192 例全绿，排查手册见 §6.33）；同日 v2.32（**整改回填轮**：复原质检学生画像为「小学·1 年级」并按 1 年级重绑教材、7-9 英语 320 道听力题改按单元主题词表出题（答案位置 A/B/C/D 轮转）并重生成 320 条音频、学科选择弹窗溢出修复（`isScrollControlled` + 限高 0.7 + 可滚动列表）、历史学科版本名统一「人教版（部编）」、3 条教研任务 query 换新版本口径；EBG-AN00 复验通过，见 §6.32）；同日 v2.31（**深圳初中教材版本对齐整改**：核实深圳初中英语为沪教牛津深圳版、道法为人教版统编，库内英语 7–9 原用「牛津上海版」6 单元目录且版本名标「牛津上海版」——按 8 单元新目录重建 7–9 英语章节/KP/题库并重出试卷，英语版本名统一为「沪教牛津版（2024）·深圳」、道法改为「人教版（部编）」，补 20 道书面表达、重出听力音频、修部署通道；EBG-AN00 重装真机验证通过，见 §5.3 v2.31 / §6.31）；同日 v2.03（新增 §6.30 离线练习闭环真机端到端验证：Hive 本地答题队列 + 离线判分 + 联网自动补传 `/api/learn/offline/attempts` 按 client_key 幂等入库 + 错题本离线待同步横幅，OXF-AN10 设备全链路走查通过；P2-05 证据列同步更新练习侧实现；`flutter analyze` 0 issue、`flutter test` 182 passed、离线专项 3/3 通过）；早期：D-09 方案经 PM 评审通过并转 v1.0；CR-004 决策「通过」，EX-04~EX-08 全部实施完成、L21~L26 验收通过；CR-006 已通过并实施；新增 1 个 Alembic 迁移，全量 `pytest` 432 例与 `flutter test` 170 例全绿；R-A15 / R-A16 与 M5 仍待 PM 签署）
 > **参考设计文档**：见[§1.1 参考设计文档清单](#11-参考设计文档清单)（共 10 份，含 6 份设计方案、4 份支撑文档）
 > **需求追踪**：见[§1.2 需求—设计—任务追踪矩阵](#12-需求设计任务追踪矩阵)
 > **维护人**：项目负责人（PM）
@@ -737,6 +737,7 @@ flowchart LR
 | v2.34 | 2026-11-25 | CT/AR/QA | **全年级按教材单元补齐单元卷（CR-011）**：学生端此前每科仅 1 张笼统「单元卷」，按 PM 要求改为按教材实际单元章节逐单元出卷。新增 `scripts/generate_all_unit_papers.py`（`split_units` 解析「第 N 单元/第 N 章/Unit N/中文数字」）/`scripts/backfill_unit_question_bank.py`（英语 7–9 单元各补 8 道原创听力、低年级补 1 道，共 321）/`scripts/backfill_unit_paper_supplements.py`（按 `shortages` 动态补 335 道原创题）；严格组卷 `allow_fallback=False` + `allow_band_relax=True` + 8 seed 重试 + `avoid_recent_repeats=False`。备份 `backend/ailearning_dev.db.bak-20261125-before-all-unit-papers`。干跑 `planned=391 failed=0`，正式 `succeeded=391 failed=0`；发布单元卷 **418 = 新 391 + 旧兼容 27**，空快照 0、题目 ID 缺失 0；学生接口 g8 英语 17 张均为 8 年级（`/api/exams` 无 `grade` 参数，已改用受支持 `type/subject/page` 验证）。D-11 升 v1.3 §〇c、登记 L37、§6.34 验收记录；4 个保留脚本 `ruff`/`py_compile` 通过、后端 `pytest -q` **493 passed**；EBG-AN00 真机 `xuanxuan` 待办/考试中心可见新卷，英语第 8 单元卷 28 题与听力播放正常、无 FATAL（`.tmp/ebg_unit_exam_20261125.png`）；**不新增台账任务与工时** |
 | v2.35 | 2026-11-25 | 用户/AR | **CR-012 旧版笼统单元卷全部下线**：用户对 §6.34.5 预案明确选择「27 张全部下线（含 116 进行中卷）」。备份 `backend/ailearning_dev.db.bak-20261125-before-legacy-unit-offline` 后，27 张 `published→offline` 并写 `review_note`；作答记录 14/95(`grading`)、116(`in_progress`) 保留不改。库验收：发布单元卷 **418→391**、offline 单元卷 **14→41**、旧版笼统 published **27→0**；活服务学生 g8 英语单元卷 **17→16**、笼统卷 0；admin 计数仍含 offline（141/130/161）。执行记录见 §6.34.6 |
 | v2.36 | 2026-11-25 | QA/AR | **QA-03 试听前置完成**：`build_question_audio` 生成读题音频 **4478**（跳过 5531、失败 0）+ 听力音频 **84**（跳过 1255、失败 0）；刷新 `qa_audio_checklist.md` 为 201 单元 / 1005 题，抽样音频缺失 **0**、自动备注 **0**。修正 `check_question_audio.py`：listening 题改用 `listening_script/listening_cache_key/listening_audio_rel_path`，不再误用读题哈希；新增听力路径回归用例（6 passed），ruff/编译通过。QA-03 与 T6 仍待人工试听，材料见 §6.35.2、执行记录见 §6.35.3 |
+| v2.37 | 2026-11-25 | 用户/AR | **练一练提交后选中态丢失修复**：用户反馈「选择答案后提交，答案高亮但选择被清掉」。根因不是 `_selectedKey` 被置空，而是提交后 `onTap/onChanged` 设为 `null` 使 `ListTile/CheckboxListTile` 进入禁用态，`selected` 高亮被禁用样式覆盖；填空题 `enabled:false` 同样变灰。修复：SessionPage 单选 `onTap`/多选 `onChanged` 始终非空、锁定时直接 return，单选加 `selectedTileColor` + 勾选图标，填空改 `readOnly: locked`；PracticePage 同步处理。新增 `session_page_selection_test.dart`（提交后仍 `selected=true` 且出现勾选图标）；`flutter analyze` 0 issue、全量 `flutter test` **193 passed**。EBG-AN00 真机安装 debug APK 实测单选/判断/错误答案提交后均保持选中，截图 `.tmp/ebg_selected_check_after.png`、`.tmp/ebg_selected_wrong_after.png`。记录见 §6.36 |
 
 
 
@@ -2488,7 +2489,7 @@ INVALID_ARGUMENT: Runtime stages buffer failed verification.
 | 活服务 | 重启 uvicorn 后 admin `type=unit` 的 `X-Total-Count` 仍为 141/130/161（含 offline，符合接口口径）；学生 `xuanxuan` 英语单元卷 **17 → 16**，笼统卷 **0**，新卷仍可见 |
 | 真机 | 后端重启 + App 冷启动后按 §6.34.3 路径复验即可；本轮以活服务 API 为准，未重复截图 |
 
-> **当前下一步（v2.36，覆盖上文）**：CR-012 已执行——27 张旧版笼统单元卷全部下线，发布单元卷收敛为 391 张按教材单元新卷（§6.34.6）；QA-03 音频前置已完成——读题 4478 + 听力 84、失败 0，1005 个抽样音频缺失 0（§6.35.3）。剩余仅为**人工动作**：①PM 签署 R-A15/R-A16/M5（§6.35.1）；②教研/QA 按 §6.35.2 试听并写 `qa_results.json`，合格率 ≥95% 后解除 QA-03/T6。Agent 不代签、不代填听感结论。
+> **当前下一步（v2.37，覆盖上文）**：CR-012 已执行（27 张旧卷下线，§6.34.6）；QA-03 音频前置已完成（读题 4478 + 听力 84、1005 抽样缺失 0，§6.35.3）；练一练提交后选中态已修复并通过 193 个 Flutter 测试（§6.36）。剩余仅为**人工动作**：①PM 签署 R-A15/R-A16/M5（§6.35.1）；②教研/QA 按 §6.35.2 试听并写 `qa_results.json`，合格率 ≥95% 后解除 QA-03/T6。Agent 不代签、不代填听感结论。
 
 > **历史当前下一步（v2.34，已被 v2.35 覆盖）**：CR-011 已实施并通过 DB/API 验收——1–9 年级语数英按教材实际单元生成 **391 张**新卷，发布单元卷 418 张（新 391 + 旧兼容 27），空快照 0、题目 ID 缺失 0；D-11 升 v1.3 §〇c、L37 登记完成。EBG-AN00 学生端走查也已通过（待办考试 / 考试中心可见新卷、28 题与听力播放正常、无 FATAL，证据见 §6.34.3）。下一步：①按 PM 决策是否按下线预案清理旧版笼统卷——建议保留有作答的 14/95/116、仅评估 24 张无作答卷，且需单独 CR（预案见 §6.34.5）；②QA-02（PM 签署 R-A15/R-A16/M5）与 QA-03（TT-07 人工试听）仍为 `BLOCKED`，解除条件见 §4.3 B-002 / B-001。
 
@@ -2529,4 +2530,41 @@ INVALID_ARGUMENT: Runtime stages buffer failed verification.
 | 工具修正 | `check_question_audio.py` 原先对 `listening` 题也按读题文本算哈希，导致听力题误报「音频文件缺失」；已改为按 `speech.listening_script/listening_cache_key/listening_audio_rel_path` 取听力音频，并新增听力路径回归用例（`test_check_question_audio.py` 6 passed），lint/编译通过 |
 | 仍待人工 | QA-03/TT-07：按清单逐题试听并写 `qa_results.json`，`--apply` 后合格率 ≥95% 才可解除；不得由 Agent 代填 |
 
+## 6.36 练一练提交后选中态保持（2026-11-25，v2.37）
+
+| 项 | 内容 |
+|---|---|
+| 用户反馈 | 进入练一练选择答案后提交，答案有高亮但已选答案被清掉，无法确认自己选的是哪个 |
+| 根因 | `_selectedKey` 并未在提交时清空；提交后把选项 `onTap/onChanged` 设为 `null`，`ListTile/CheckboxListTile` 因无回调进入禁用态，`selected` 高亮被禁用样式覆盖；填空题 `enabled:false` 同样变灰 |
+| 修复 | `SessionPage` 单选 `onTap`、多选 `onChanged` 始终非空，锁定后直接 `return`；单选选中项加 `selectedTileColor` + 右侧 `check_circle` 勾选图标，避免只靠淡底色辨认；填空由 `enabled:!locked` 改为 `readOnly:locked`；`PracticePage` 同步处理。另将 `QuestionReader` 在 `initState` 缓存，避免 `dispose` 里 `ref` 已销毁的测试/生命周期异常 |
+| 回归 | 新增 `app/test/session_page_selection_test.dart`：提交后仍断言 `ListTile.selected == true` 且出现 `check_circle`；`flutter analyze` **0 issue**；全量 `flutter test` **193 passed** |
+| EBG 真机 | debug APK 安装到 EBG-AN00（`2NSDU20423005421`）后实测：单选题选 C 提交后 C 仍选中并显示勾选图标；判断题选 T 提交后 T 仍选中并显示勾选图标；错误答案选 B 提交后 B 仍选中。截图 `.tmp/ebg_selected_check_after.png`、`.tmp/ebg_selected_wrong_after.png`，无 FATAL |
+| 影响面 | 仅答题交互态与读题 reader 生命周期，不改判题/提交协议、不改后端 |
+
+## 6.37 解答题（`q_type=answer`）无输入框、无法提交（2026-11-25，v2.38）
+
+| 项 | 内容 |
+|---|---|
+| 用户反馈 | 练一练第 5 题「用 a、b 表示直角边，c 表示斜边，写出勾股定理的式子。」页面只有题干和置灰的「提交答案」，没有任何输入控件，无法作答 |
+| 复现材料 | EBG-AN00（`2NSDU20423005421`）截图 + `uiautomator dump`：节点树里只有题干与 `enabled=false` 的「提交答案」按钮，无 `EditText`；题头显示「本题」（类型识别不到） |
+| 根因 | `SessionPage._buildAnswerArea` 只处理 `multiple` / `fill` / 默认单选三分支；该题 `q_type=answer`（题库真实存在，见 `docs/content-templates/daily_rerun/math/g8/math_g8_first_20261113_book.json`）且 `options` 为空 → 落到单选分支渲染出 0 个选项的空白 `Column`；`_canSubmit` 默认分支要求 `_selectedKey != null`，永远不成立 → 按钮永久置灰。`_typeLabel` 也没有 `calc/answer` 文案 |
+| 修复（前端） | `SessionPage`：新增 `_textAnswerTypes{fill,calc,answer,composition,essay,writing}` + `_usesTextAnswer()`（对 `multiple`/未知题型在 `options` 为空时兜底为文本框），填空单行、解答/计算/习作多行（4–8 行，换行键），`_canSubmit`/`_submit` 统一走文本值；`_load` 重置时清空输入框；反馈卡对主观题用「参考答案」并追加「主观题以参考答案为准，自动判分仅供参考，可对照上面内容自查」；`_typeLabel` 补 `calc`=计算题、`answer`=解答题 |
+| 同类排查 | ① `ExamPage._buildAnswerArea` 的文本分支缺 `composition/essay/writing`，而题库蓝图语文「习作」、英语「书面表达」正是 `composition` → 会同样落到无选项单选分支；已补三个题型 + 无选项兜底文本框，文本写入抽成 `_setTextAnswer()`。② `PracticePage`（旧路由 `/practice/:chapterId`，当前无任何入口跳转）仍只支持选择题并显示占位文案，且其提交走 `/api/practice/submit`（仅 `optionKey`），本次不改，登记为既有残留。③ 其余答题页（错题本复习、作业、考试报告）复用 `SessionPage`/`ExamPage`，随本次修复覆盖 |
+| 回归 | 新增 `app/test/session_page_answer_input_test.dart` 2 例：填空题输入前提交禁用、输入后可提交且 `user_answer={'value':'25'}`；`q_type=answer` 且无选项时必须有 `answer-input-*` 输入框、可提交、反馈卡出现「参考答案：」与自查提示。`flutter analyze --no-pub` **0 issue**；全量 `flutter test --no-pub` **195 passed** |
+| EBG 真机 | `build-apk.ps1 -DebugBuild -ApiBaseUrl http://127.0.0.1:18080`（36 s / 108.8 MB）→ `adb install -r` Success → 首页「继续「勾股定理的内容 · 要点」」进入第 5 题：`请写出解答过程与答案` 输入框渲染正常，输入 `a2+b2=c2` 后「提交答案」由置灰变可点，提交后反馈卡显示「参考答案：示例：a 的平方加 b 的平方等于 c 的平方」+ 解析 + 自查提示 + 「完成练习」。截图 `.tmp/ebg_answer_input.png`、`.tmp/ebg_answer_submitted.png`，无 FATAL |
+| 待决 | 练习会话的主观题仍由后端 `learning.grade_answer` 按字符串全等判分（`answer.value` 是「示例：…」参考答案），因此除非逐字相同都会判错并进错题本；考试侧主观题本就「不自动判分、走自评」（P0-30/P1-09），练习侧是否改为自评/不计分需 PM 决策，本次仅在 UI 明示「自动判分仅供参考」（**已于 §6.38 按用户决策改为关键词覆盖判分**） |
+| 影响面 | 仅前端作答区渲染与提交取值；提交协议仍是 `{'value': <text>}`，未改后端与数据库 |
+
+## 6.38 主观题判分改为「关键内容覆盖」（2026-11-25，v2.39）
+
+| 项 | 内容 |
+|---|---|
+| 用户决策 | 「要完全等，要求太高了，能否根据字符串识别出主谓宾即可？」——练习侧主观题不再要求与 `answer.value` 逐字相同 |
+| 判分规则 | 归一化（去空白/标点/「示例：」等引导语、`平方→2`/`立方→3`、上标 `²³→23`）后取两个维度的较大值：① 汉字二元组（权重 2）+ 字母数字词（权重 1）覆盖率；② 单字（去虚词）覆盖率。覆盖率 **≥0.5 判对**；`a²+b²=c²`、`a2+b2=c2`、`a的平方+b的平方=c的平方` 与参考答案「示例：a 的平方加 b 的平方等于 c 的平方」等价（符号签名相同直接判对）；参考答案关键词 <5（「是/否」「25」）退回全等；作答长度 <参考答案 30% 直接判错 |
+| 落地位置 | 后端 `app/services/learning.py`（`SUBJECTIVE_Q_TYPES` + `subjective_score()` + `_grade_subjective()`，`grade_answer` 按 `q_type` 分流）；`app/api/routes/practice.py` 的旧判分改为复用引擎，全站单一口径；端上 `app/lib/core/offline/offline_grader.dart` 同规则实现（离线练习判分不联网也一致） |
+| UI 文案 | 练习页主观题输入提示改为「主观题按要点覆盖判分：写清关键步骤或结论即可，不必与参考答案逐字一致」；反馈卡提示改为「主观题按要点覆盖判分，表述不同也可能判对；可对照参考答案自查」 |
+| 样例核验 | 判对：`a²+b²=c²`、`a2+b2=c2`、`a的平方加b的平方等于c的平方`、`大气圈、水圈、岩石圈`（参考含「的底部」等修饰）、习作「经过写清楚+细节描写+语句通顺」；判错：`三角形内角和等于180度`、`勾股定理适用于直角三角形`、`a+b=c`、`不知道`、`大气圈和水圈`（只答 2/3 项）、`今天天气很好。`（习作跑题） |
+| 已知边界 | 纯文字复述且不写变量的答案（如「两直角边的平方和等于斜边的平方」对勾股定理参考答案）覆盖率仅 0.17 仍判错；真正语义等价判断需向量/模型，本方案只做字符串层面的关键词覆盖，学生可对照参考答案自查 |
+| 回归 | 新增 `backend/tests/test_subjective_grading.py` 7 例、`app/test/offline_grader_test.dart` 新增「主观题按关键内容覆盖判分」5 例；`pytest -q` **497 passed**、`flutter analyze --no-pub` **0 issue**、`flutter test --no-pub` **200 passed** |
+| 影响面 | 主观题（answer/calc/composition/essay/writing）的 `is_correct`、掌握度 EMA、错题本回流会随之变化（判对即不入错题本）；客观题（choice/judge/fill/multiple）行为不变；不改数据库与接口协议；本地后端已重启加载新规则，EBG-AN00 上 App→`/api/learn/submit` 链路沿用 §6.37 已验证路径 |
 

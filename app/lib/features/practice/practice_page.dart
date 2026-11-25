@@ -5,6 +5,7 @@ import 'package:ai_learning/core/models/content.dart';
 import 'package:ai_learning/core/models/practice.dart';
 import 'package:ai_learning/core/providers.dart';
 import 'package:ai_learning/core/services/api_client.dart';
+import 'package:ai_learning/core/speech/question_reader.dart';
 import 'package:ai_learning/core/speech/question_speech.dart';
 import 'package:ai_learning/core/speech/speech_policy.dart';
 import 'package:ai_learning/core/theme/app_accents.dart';
@@ -30,6 +31,8 @@ class PracticePage extends ConsumerStatefulWidget {
 }
 
 class _PracticePageState extends ConsumerState<PracticePage> {
+  late final QuestionReader _questionReader;
+
   List<Question> _questions = const [];
   int _index = 0;
   int _correctCount = 0;
@@ -47,12 +50,13 @@ class _PracticePageState extends ConsumerState<PracticePage> {
   @override
   void initState() {
     super.initState();
+    _questionReader = ref.read(questionReaderProvider);
     _loadQuestions();
   }
 
   @override
   void dispose() {
-    unawaited(ref.read(questionReaderProvider).stop());
+    unawaited(_questionReader.stop());
     super.dispose();
   }
 
@@ -208,11 +212,22 @@ class _PracticePageState extends ConsumerState<PracticePage> {
             (option) => Card(
               child: ListTile(
                 selected: _selectedKey == option.key,
+                selectedTileColor: Theme.of(context)
+                    .colorScheme
+                    .primary
+                    .withValues(alpha: 0.12),
                 leading: CircleAvatar(child: Text(option.key)),
                 title: Text(option.text),
-                onTap: _result == null
-                    ? () => setState(() => _selectedKey = option.key)
+                trailing: _selectedKey == option.key
+                    ? Icon(
+                        Icons.check_circle,
+                        color: Theme.of(context).colorScheme.primary,
+                      )
                     : null,
+                onTap: () {
+                  if (_result != null) return;
+                  setState(() => _selectedKey = option.key);
+                },
               ),
             ),
           ),
@@ -264,7 +279,7 @@ class _PracticePageState extends ConsumerState<PracticePage> {
     if (!await store.autoReadEnabled(grade: grade)) return;
     if (!mounted) return;
     try {
-      await ref.read(questionReaderProvider).read(
+      await _questionReader.read(
             questionId: question.id,
             text: QuestionSpeech.questionScript(
               stem: question.stem,

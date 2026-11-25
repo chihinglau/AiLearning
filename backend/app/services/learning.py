@@ -3,6 +3,7 @@
 全部函数保持纯函数 / 显式传 db，确定性可单测。
 """
 
+import re
 from datetime import datetime, timedelta
 from typing import Any, Iterable, Optional
 
@@ -27,6 +28,162 @@ def normalize(value: Any) -> str:
     return text.replace("，", ",").replace("（", "(").replace("）", ")")
 
 
+# ---------------------------------------------------------------------------
+# 主观题（解答/计算/习作）关键词覆盖判分
+#
+# 主观题参考答案多是「示例：…」式的完整表述，学生几乎不可能逐字相同，
+# 全等判分等于永远判错。这里改为「关键内容覆盖」：把参考答案切成
+# 汉字二元组 + 字母数字词，学生作答覆盖到阈值即算答对。
+# 只做字符串层面的关键词匹配（不引入分词/NLP 依赖），并保留：
+#   - 数学写法归一：平方/立方 → 幂指数，² ³ → 数字，使「a²+b²=c²」与
+#     「a 的平方加 b 的平方等于 c 的平方」等价；
+#   - 短答案（如「是/否」「25」）仍走全等，避免宽松判分把是非题判错。
+# ---------------------------------------------------------------------------
+
+SUBJECTIVE_Q_TYPES = {"answer", "calc", "composition", "essay", "writing"}
+
+# 参考答案前缀引导语（「示例：」「参考答案：」「评分要点：」等）不参与匹配
+_ANSWER_PREFIXES = (
+    "参考答案",
+    "正确答案",
+    "评分要点",
+    "评分标准",
+    "参考",
+    "示例",
+    "例如",
+    "答案",
+)
+
+# 虚词：既不能作为关键词，也不该拼进汉字二元组
+_STOP_CHARS = set("的了是在和与及或也就都而又把被对从向这那其之并且则于等吗呢吧啊很更最将已")
+
+_POWER_WORDS = (("四次方", "4"), ("三次方", "3"), ("平方", "2"), ("立方", "3"))
+_SUPERSCRIPTS = {
+    "⁰": "0",
+    "¹": "1",
+    "²": "2",
+    "³": "3",
+    "⁴": "4",
+    "⁵": "5",
+}
+
+_LATIN_RUN = re.compile(r"[0-9a-z]+")
+_CJK_RUN = re.compile(r"[\u4e00-\u9fff]+")
+_NON_WORD = re.compile(r"[^0-9a-z\u4e00-\u9fff]+")
+
+# 参考答案少于该关键词数时不做宽松判分（是非题、单值填空等）
+SUBJECTIVE_MIN_UNITS = 5
+# 关键词覆盖率阈值：命中 50% 即视为答对（主观题二元对错，取偏宽松口径）
+SUBJECTIVE_HIT_RATIO = 0.5
+# 作答长度下限（相对参考答案），避免只写一两个关键词就判对
+SUBJECTIVE_MIN_LENGTH_RATIO = 0.3
+
+
+def _clean_subjective(text: str) -> str:
+    s = str(text).strip().lower()
+    for ch in " \t\u3000":
+        s = s.replace(ch, "")
+    for word, power in _POWER_WORDS:
+        s = s.replace(word, power)
+    for sup, digit in _SUPERSCRIPTS.items():
+        s = s.replace(sup, digit)
+    s = _NON_WORD.sub("", s)
+    changed = True
+    while changed:
+        changed = False
+        for prefix in _ANSWER_PREFIXES:
+            if s.startswith(prefix) and len(s) > len(prefix) + 1:
+                s = s[len(prefix):]
+                changed = True
+    return s
+
+
+def _keyword_units(text: str) -> dict[str, int]:
+    """「主谓宾」近似载体：汉字二元组（权重 2）+ 字母数字词（权重 1）。
+
+    汉字承载语义，权重更高；字母/数字（变量名、数值、单位）只是辅助。
+    """
+    units: dict[str, int] = {}
+    for run in _CJK_RUN.findall(text):
+        kept = "".join(ch for ch in run if ch not in _STOP_CHARS)
+        if len(kept) <= 1:
+            if kept:
+                units[kept] = 2
+        else:
+            for i in range(len(kept) - 1):
+                units[kept[i : i + 2]] = 2
+    for token in _LATIN_RUN.findall(text):
+        units[token] = 1
+    return units
+
+
+def _char_units(text: str) -> dict[str, int]:
+    """单字级关键词（去掉虚词），用于覆盖「学生只写要点名词」的作答。"""
+    units: dict[str, int] = {}
+    for run in _CJK_RUN.findall(text):
+        for ch in run:
+            if ch not in _STOP_CHARS:
+                units[ch] = 2
+    for token in _LATIN_RUN.findall(text):
+        units[token] = 1
+    return units
+
+
+def _symbol_signature(text: str) -> str:
+    """去掉汉字后的符号/数字串，用于识别等价数学式。"""
+    return "".join(ch for ch in text if not ("\u4e00" <= ch <= "\u9fff"))
+
+
+def _coverage(expected: dict[str, int], actual: dict[str, int]) -> float:
+    total = sum(expected.values())
+    if not total or not actual:
+        return 0.0
+    hit = sum(weight for unit, weight in expected.items() if unit in actual)
+    return hit / total
+
+
+def subjective_score(expected: str, actual: str) -> float:
+    """返回 0~1 的关键内容覆盖率（1 = 完全覆盖）。
+
+    取两个维度的较高值：
+      - 二元组覆盖：区分度好，适合短答案与公式类；
+      - 单字覆盖：学生只写要点名词、不写完整句时也能判对（「主谓宾」口径）。
+    """
+    e = _clean_subjective(expected)
+    a = _clean_subjective(actual)
+    if not e or not a:
+        return 0.0
+    if e == a:
+        return 1.0
+    # 数学式等价：a²+b²=c² ↔ a的平方加b的平方等于c的平方
+    e_symbols = _symbol_signature(e)
+    if len(e_symbols) >= 2 and e_symbols == _symbol_signature(a):
+        return 1.0
+    bigram = _coverage(_keyword_units(e), _keyword_units(a))
+    unigram = _coverage(_char_units(e), _char_units(a))
+    return max(bigram, unigram)
+
+
+def _grade_subjective(expected: Any, actual: Any) -> bool:
+    if isinstance(expected, list):
+        return any(_grade_subjective(item, actual) for item in expected)
+    e = _clean_subjective(expected)
+    a = _clean_subjective(actual)
+    if not e or not a:
+        return False
+    if len(_keyword_units(e)) < SUBJECTIVE_MIN_UNITS:
+        # 参考答案太短（是/否、单个数值）→ 保持全等，宽松会把是非题放水。
+        return normalize(expected) == normalize(actual)
+    if a == e or (
+        len(_symbol_signature(e)) >= 2
+        and _symbol_signature(e) == _symbol_signature(a)
+    ):
+        return True
+    if len(a) < max(2, int(len(e) * SUBJECTIVE_MIN_LENGTH_RATIO)):
+        return False
+    return subjective_score(expected, actual) >= SUBJECTIVE_HIT_RATIO
+
+
 def grade_answer(question: Question, user_answer: dict[str, Any]) -> bool:
     expected = question.answer.get("value")
     actual = user_answer.get("value")
@@ -37,6 +194,9 @@ def grade_answer(question: Question, user_answer: dict[str, Any]) -> bool:
         return normalize(actual) == normalize(expected)
     if isinstance(actual, list):
         return normalize(expected) == normalize(actual)
+    # 主观题：按关键内容覆盖判分，避免「必须逐字相同」。
+    if question.q_type in SUBJECTIVE_Q_TYPES:
+        return _grade_subjective(expected, actual)
     # 填空题：answer.value 支持「可接受答案列表」（多答案任意匹配）。
     if isinstance(expected, list):
         return any(normalize(actual) == normalize(ans) for ans in expected)

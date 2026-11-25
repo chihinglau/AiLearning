@@ -17,6 +17,7 @@ from app.schemas.practice import (
     PracticeSubmitIn,
     PracticeSubmitOut,
 )
+from app.services import learning as engine
 from app.services.usage import (
     daily_limit_status,
     limit_exceeded_detail,
@@ -26,19 +27,9 @@ from app.services.usage import (
 router = APIRouter(prefix="/practice", tags=["同步练习"])
 
 
-def _normalize(value: Any) -> str:
-    """将答案值归一化，兼容选择题选项 key、填空题文本、多选列表。"""
-    if isinstance(value, list):
-        return "|".join(sorted(_normalize(item) for item in value))
-    return str(value).strip().lower()
-
-
 def grade_answer(question: Question, user_answer: dict[str, Any]) -> bool:
-    expected = question.answer.get("value")
-    actual = user_answer.get("value")
-    if expected is None or actual is None:
-        return False
-    return _normalize(expected) == _normalize(actual)
+    """复用学情引擎的判分口径（含主观题关键词覆盖判分），保持全站一致。"""
+    return engine.grade_answer(question, user_answer)
 
 
 @router.post("/start", response_model=PracticeStartOut)
