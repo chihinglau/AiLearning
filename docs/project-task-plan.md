@@ -1,9 +1,9 @@
 # 深爱学（AiLearning）项目实施任务计划与进度跟踪
 
 > **文档性质**：项目主计划 / 进度跟踪 / 过程追溯（全程伴随开发周期）
-> **版本**：v2.35
+> **版本**：v2.36
 > **创建日期**：2026-11-06
-> **最后更新**：2026-11-25 v2.35（**旧版单元卷清理**：按用户决策登记 CR-012，27 张旧版笼统单元卷全部 `offline`（含 116 进行中卷，作答记录保留），发布单元卷 418→391、学生 g8 英语单元卷 17→16 且笼统卷 0，备份与验收见 §6.34.6；QA-02/QA-03 可填写材料见 §6.35）；v2.34（**全年级按教材单元补齐单元卷**：按 CR-011 切分 1–9 年级语数英上下册实际单元，补 321 道英语听力 + 335 道动态题型题，严格组卷生成并发布 **391 张**「第 N 单元卷（章节名）」，发布单元卷达 418 张（新 391 + 旧兼容 27）、空快照 0、题目 ID 缺失 0；学生接口 g8 英语可见 17 张均为 8 年级，EBG-AN00 学生端待办/考试中心可见新卷并打开 28 题听力卷播放正常、无 FATAL，详见 §6.34）；2026-11-23 v2.33（**测试环境修复**：`app/build/unit_test_assets` 内的旧版 material shader 产物导致 11 例 `shaders/ink_sparkle.frag` runtime stage 校验失败，删除缓存重编后 `flutter test` 192 例全绿，排查手册见 §6.33）；同日 v2.32（**整改回填轮**：复原质检学生画像为「小学·1 年级」并按 1 年级重绑教材、7-9 英语 320 道听力题改按单元主题词表出题（答案位置 A/B/C/D 轮转）并重生成 320 条音频、学科选择弹窗溢出修复（`isScrollControlled` + 限高 0.7 + 可滚动列表）、历史学科版本名统一「人教版（部编）」、3 条教研任务 query 换新版本口径；EBG-AN00 复验通过，见 §6.32）；同日 v2.31（**深圳初中教材版本对齐整改**：核实深圳初中英语为沪教牛津深圳版、道法为人教版统编，库内英语 7–9 原用「牛津上海版」6 单元目录且版本名标「牛津上海版」——按 8 单元新目录重建 7–9 英语章节/KP/题库并重出试卷，英语版本名统一为「沪教牛津版（2024）·深圳」、道法改为「人教版（部编）」，补 20 道书面表达、重出听力音频、修部署通道；EBG-AN00 重装真机验证通过，见 §5.3 v2.31 / §6.31）；同日 v2.03（新增 §6.30 离线练习闭环真机端到端验证：Hive 本地答题队列 + 离线判分 + 联网自动补传 `/api/learn/offline/attempts` 按 client_key 幂等入库 + 错题本离线待同步横幅，OXF-AN10 设备全链路走查通过；P2-05 证据列同步更新练习侧实现；`flutter analyze` 0 issue、`flutter test` 182 passed、离线专项 3/3 通过）；早期：D-09 方案经 PM 评审通过并转 v1.0；CR-004 决策「通过」，EX-04~EX-08 全部实施完成、L21~L26 验收通过；CR-006 已通过并实施；新增 1 个 Alembic 迁移，全量 `pytest` 432 例与 `flutter test` 170 例全绿；R-A15 / R-A16 与 M5 仍待 PM 签署）
+> **最后更新**：2026-11-25 v2.36（**QA-03 音频前置完成**：读题音频生成 4478 道、听力补 84 道，失败 0；1005 个试听抽样音频路径全部存在、缺失 0，修正听力题误用读题哈希的工具 bug；人工试听仍待 QA，记录见 §6.35.3）；v2.35（**旧版单元卷清理**：按用户决策登记 CR-012，27 张旧版笼统单元卷全部 `offline`（含 116 进行中卷，作答记录保留），发布单元卷 418→391、学生 g8 英语单元卷 17→16 且笼统卷 0，备份与验收见 §6.34.6；QA-02/QA-03 可填写材料见 §6.35）；v2.34（**全年级按教材单元补齐单元卷**：按 CR-011 切分 1–9 年级语数英上下册实际单元，补 321 道英语听力 + 335 道动态题型题，严格组卷生成并发布 **391 张**「第 N 单元卷（章节名）」，发布单元卷达 418 张（新 391 + 旧兼容 27）、空快照 0、题目 ID 缺失 0；学生接口 g8 英语可见 17 张均为 8 年级，EBG-AN00 学生端待办/考试中心可见新卷并打开 28 题听力卷播放正常、无 FATAL，详见 §6.34）；2026-11-23 v2.33（**测试环境修复**：`app/build/unit_test_assets` 内的旧版 material shader 产物导致 11 例 `shaders/ink_sparkle.frag` runtime stage 校验失败，删除缓存重编后 `flutter test` 192 例全绿，排查手册见 §6.33）；同日 v2.32（**整改回填轮**：复原质检学生画像为「小学·1 年级」并按 1 年级重绑教材、7-9 英语 320 道听力题改按单元主题词表出题（答案位置 A/B/C/D 轮转）并重生成 320 条音频、学科选择弹窗溢出修复（`isScrollControlled` + 限高 0.7 + 可滚动列表）、历史学科版本名统一「人教版（部编）」、3 条教研任务 query 换新版本口径；EBG-AN00 复验通过，见 §6.32）；同日 v2.31（**深圳初中教材版本对齐整改**：核实深圳初中英语为沪教牛津深圳版、道法为人教版统编，库内英语 7–9 原用「牛津上海版」6 单元目录且版本名标「牛津上海版」——按 8 单元新目录重建 7–9 英语章节/KP/题库并重出试卷，英语版本名统一为「沪教牛津版（2024）·深圳」、道法改为「人教版（部编）」，补 20 道书面表达、重出听力音频、修部署通道；EBG-AN00 重装真机验证通过，见 §5.3 v2.31 / §6.31）；同日 v2.03（新增 §6.30 离线练习闭环真机端到端验证：Hive 本地答题队列 + 离线判分 + 联网自动补传 `/api/learn/offline/attempts` 按 client_key 幂等入库 + 错题本离线待同步横幅，OXF-AN10 设备全链路走查通过；P2-05 证据列同步更新练习侧实现；`flutter analyze` 0 issue、`flutter test` 182 passed、离线专项 3/3 通过）；早期：D-09 方案经 PM 评审通过并转 v1.0；CR-004 决策「通过」，EX-04~EX-08 全部实施完成、L21~L26 验收通过；CR-006 已通过并实施；新增 1 个 Alembic 迁移，全量 `pytest` 432 例与 `flutter test` 170 例全绿；R-A15 / R-A16 与 M5 仍待 PM 签署）
 > **参考设计文档**：见[§1.1 参考设计文档清单](#11-参考设计文档清单)（共 10 份，含 6 份设计方案、4 份支撑文档）
 > **需求追踪**：见[§1.2 需求—设计—任务追踪矩阵](#12-需求设计任务追踪矩阵)
 > **维护人**：项目负责人（PM）
@@ -565,7 +565,7 @@ flowchart LR
 
 | 阻塞 ID | 日期 | 任务 | 阻塞原因 | 解除条件 | 责任人 | 预计解除 | 状态 |
 |---|---|---|---|---|---|---|---|
-| B-001 | 2026-11-10 | TT-07 / QA-03 | 读音合格率需人工试听判定（多音字/分数/单位/英文读法），Agent 只能完成自动筛查（时长/语速），无法代替听感结论 | 教研/QA 按 `backend/build/question_audio/qa_audio_checklist.md` 逐题试听（清单已按当前题库重生成：201 单元 / 1005 题；旧 133 题口径作废），在 **`qa_results.json`** 回填 `{"题目id":"ok|fail"}` 后执行 `python -m scripts.check_question_audio --results qa_results.json --apply`，生成 `rework.json`（接口自动返回 404，客户端回退系统 TTS），合格率 ≥95% 后本项与 QA-03 一并解除；可直接填写材料见 §6.35 | 教研+QA | 设备与人力排期后 | `OPEN` |
+| B-001 | 2026-11-10 | TT-07 / QA-03 | 读音合格率需人工试听判定（多音字/分数/单位/英文读法），Agent 只能完成自动筛查（时长/语速），无法代替听感结论 | 教研/QA 按 `backend/build/question_audio/qa_audio_checklist.md` 逐题试听（清单 201 单元 / 1005 题；音频已补齐、缺失 0，见 §6.35.3），在 **`qa_results.json`** 回填 `{"题目id":"ok|fail"}` 后执行 `python -m scripts.check_question_audio --results qa_results.json --apply`，生成 `rework.json`（接口自动返回 404，客户端回退系统 TTS），合格率 ≥95% 后本项与 QA-03 一并解除；可直接填写材料见 §6.35 | 教研+QA | 设备与人力排期后 | `OPEN` |
 | B-002 | 2026-11-14 | QA-02 | R-A15 / R-A16 / M5 的技术验收已通过，但里程碑签署须由 PM 本人确认；Agent 只能整理材料与登记台账，不得代签 | PM 在 §6.21 / §6.22 / 里程碑表签署位填写姓名与日期并确认；签署后 QA-02 转 `DONE`，M5 与 R-A15/R-A16 状态去掉「待 PM 签署」；可直接填写材料见 §6.35.1 | PM | PM 排期后 | `OPEN` |
 
 ---
@@ -736,6 +736,7 @@ flowchart LR
 | v2.33 | 2026-11-23 | QA | **Flutter 测试环境修复**：`app/build/unit_test_assets/shaders/ink_sparkle.frag` 为旧引擎产物（12,944 B），与 Flutter 3.47.5 / engine `af7e796e16` 不兼容，致 11 例跨模块测试报 `Runtime stages buffer failed verification`；删整个 `app/build/unit_test_assets/` 触发重编后生成 13,472 B 新产物，全量 `flutter test` **192 passed / exit 0**；排查与预防见 §6.33 |
 | v2.34 | 2026-11-25 | CT/AR/QA | **全年级按教材单元补齐单元卷（CR-011）**：学生端此前每科仅 1 张笼统「单元卷」，按 PM 要求改为按教材实际单元章节逐单元出卷。新增 `scripts/generate_all_unit_papers.py`（`split_units` 解析「第 N 单元/第 N 章/Unit N/中文数字」）/`scripts/backfill_unit_question_bank.py`（英语 7–9 单元各补 8 道原创听力、低年级补 1 道，共 321）/`scripts/backfill_unit_paper_supplements.py`（按 `shortages` 动态补 335 道原创题）；严格组卷 `allow_fallback=False` + `allow_band_relax=True` + 8 seed 重试 + `avoid_recent_repeats=False`。备份 `backend/ailearning_dev.db.bak-20261125-before-all-unit-papers`。干跑 `planned=391 failed=0`，正式 `succeeded=391 failed=0`；发布单元卷 **418 = 新 391 + 旧兼容 27**，空快照 0、题目 ID 缺失 0；学生接口 g8 英语 17 张均为 8 年级（`/api/exams` 无 `grade` 参数，已改用受支持 `type/subject/page` 验证）。D-11 升 v1.3 §〇c、登记 L37、§6.34 验收记录；4 个保留脚本 `ruff`/`py_compile` 通过、后端 `pytest -q` **493 passed**；EBG-AN00 真机 `xuanxuan` 待办/考试中心可见新卷，英语第 8 单元卷 28 题与听力播放正常、无 FATAL（`.tmp/ebg_unit_exam_20261125.png`）；**不新增台账任务与工时** |
 | v2.35 | 2026-11-25 | 用户/AR | **CR-012 旧版笼统单元卷全部下线**：用户对 §6.34.5 预案明确选择「27 张全部下线（含 116 进行中卷）」。备份 `backend/ailearning_dev.db.bak-20261125-before-legacy-unit-offline` 后，27 张 `published→offline` 并写 `review_note`；作答记录 14/95(`grading`)、116(`in_progress`) 保留不改。库验收：发布单元卷 **418→391**、offline 单元卷 **14→41**、旧版笼统 published **27→0**；活服务学生 g8 英语单元卷 **17→16**、笼统卷 0；admin 计数仍含 offline（141/130/161）。执行记录见 §6.34.6 |
+| v2.36 | 2026-11-25 | QA/AR | **QA-03 试听前置完成**：`build_question_audio` 生成读题音频 **4478**（跳过 5531、失败 0）+ 听力音频 **84**（跳过 1255、失败 0）；刷新 `qa_audio_checklist.md` 为 201 单元 / 1005 题，抽样音频缺失 **0**、自动备注 **0**。修正 `check_question_audio.py`：listening 题改用 `listening_script/listening_cache_key/listening_audio_rel_path`，不再误用读题哈希；新增听力路径回归用例（6 passed），ruff/编译通过。QA-03 与 T6 仍待人工试听，材料见 §6.35.2、执行记录见 §6.35.3 |
 
 
 
@@ -1082,7 +1083,7 @@ flowchart LR
 | T3/T4 客户端缓存 | 通过：首次播放下载落盘、命中不再请求、失败返回 null 回退系统 TTS、LRU 200 MB 按最后访问时间淘汰、播放变速 0.85；**真机 EBG-AN00**：`MediaCodec`+`AudioTrack` 播放 476,808 帧（≈10.8 s），落盘 `files/question_audio/q_1526.opus`（30 KB）；移除 `adb reverse` 后仍从缓存播放（无网络、无 TTS、无 `MissingPluginException`） | `flutter test test/question_audio_test.dart` 5 passed；`app/lib/core/speech/question_audio.dart`。注：为兼容现有 Gradle（未注册 Kotlin 扩展），`just_audio` 由 `^0.10.6` 降为 `^0.9.42`（实际解析 0.9.46 / audio_session 0.1.25），播放 API 与单测不受影响 |
 | T5 自动读题 | 通过（代码级 + 真机）：1–3 年级默认开启、设置页可关闭、同题去重、朗读失败静默；**真机**：1 年级英语练习进入即自动播放且按钮语义为「停止朗读」；「我的→学习设置」显示「自动读题 / 当前年级默认开启」 | `app/lib/core/speech/speech_settings.dart`、`learning_settings_page.dart`、`session_page.dart`/`practice_page.dart` 的 `_maybeAutoRead` |
 | T1/T5 句级高亮与点读 | 通过（估算实现）：按题干字符占比映射播放进度高亮当前句（**非字级时间戳**）；英语单词点击走系统 TTS；**真机**：播放中题干整句高亮（`.tmp/tt06_highlight.png`），点击 `letter` 先停播放器再以 `EN_US` 合成 6 字符 | `app/lib/features/speech/readable_question_text.dart`；`flutter test test/readable_question_text_test.dart` 2 passed |
-| T6 读音抽检 | 部分通过：抽检脚本、报告与试听清单已产出；2026-11-25 清单已按当前题库重生成（201 单元 / 1005 题，旧 133 题口径作废），自动筛查不能替代听感；**人工试听合格率待 QA 执行**，可直接填写材料见 §6.35.2 | `backend/scripts/check_question_audio.py`、`build/question_audio/qa_audio_report.json`、`qa_audio_checklist.md`；`pytest tests/test_check_question_audio.py` passed；§4.3 B-001 |
+| T6 读音抽检 | 前置已就绪：清单 201 单元 / 1005 题，音频缺失 0、自动备注 0；**人工试听合格率待 QA 执行**，可直接填写材料见 §6.35.2，执行记录见 §6.35.3 | `backend/scripts/check_question_audio.py`、`build/question_audio/qa_audio_report.json`、`qa_audio_checklist.md`；`pytest tests/test_check_question_audio.py` passed；§4.3 B-001 |
 | UX-03 环境诊断 | 通过（含真机）：地址持久化 + 启动生效、运行时切换立即生效、`/health` 连通性与耗时、地址非法提示；**真机 EBG-AN00** 诊断页显示 `http://127.0.0.1:18080` / `健康检查 ok · AiLearning API · 12 ms` / 登录态「小深（student）」/ 自动读题「已开启」 | `app/lib/core/services/server_config.dart`、`features/profile/environment_diagnostics_page.dart`；`flutter test test/server_config_test.dart` 2 passed |
 | 静态检查/回归 | 通过：`flutter analyze` 0 issue、`flutter test` 142 passed、后端 `pytest` 全通过；新增/变更文件 `ruff --select E,F,I` 0 issue（`learn.py` 仅修复因新增导入产生的 I001，其余 E501 长行为既有基线，不在本次范围） | 本次会话执行记录 |
 
@@ -1165,7 +1166,7 @@ flowchart LR
 
 | 项 | 内容 |
 |---|---|
-| 已产出 | `backend/build/question_audio/qa_audio_checklist.md`（2026-11-25 重生成：201 单元 / 1005 题；旧 133 题口径作废）、`qa_audio_report.json`、`backend/scripts/check_question_audio.py`（`--results/--apply`）；当前清单音频哈希与实际文件不匹配，需先按 §6.35.2 重合成读题音频 |
+| 已产出 | `backend/build/question_audio/qa_audio_checklist.md`（2026-11-25 重生成：201 单元 / 1005 题；旧 133 题口径作废）、`qa_audio_report.json`、`backend/scripts/check_question_audio.py`（`--results/--apply`）；音频前置已完成（读题 4478 + 听力 84，失败 0，抽样缺失 0），可直接人工试听，见 §6.35.3 |
 | 回填格式 | 按清单逐题试听，写 `{"<题目id>": "ok|fail"}` 到 **`qa_results.json`**（旧文 `qa_audio_results.json` 为笔误）；**不可用模板空值直接 `--apply`** |
 | 回填命令 | `python -m scripts.check_question_audio --results qa_results.json --apply`，生成 `rework.json`；`fail` 题目接口自动返回 404，客户端回退系统 TTS |
 | 解除条件 | 合格率 ≥95% 且 `rework.json` 已生成；B-001 与 QA-03 一并解除 |
@@ -2487,7 +2488,7 @@ INVALID_ARGUMENT: Runtime stages buffer failed verification.
 | 活服务 | 重启 uvicorn 后 admin `type=unit` 的 `X-Total-Count` 仍为 141/130/161（含 offline，符合接口口径）；学生 `xuanxuan` 英语单元卷 **17 → 16**，笼统卷 **0**，新卷仍可见 |
 | 真机 | 后端重启 + App 冷启动后按 §6.34.3 路径复验即可；本轮以活服务 API 为准，未重复截图 |
 
-> **当前下一步（v2.35，覆盖上文）**：CR-012 已执行——27 张旧版笼统单元卷全部下线，发布单元卷收敛为 391 张按教材单元新卷；备份与验收见 §6.34.6；QA-02（PM 签署 R-A15/R-A16/M5）与 QA-03（TT-07 人工试听）仍为 `BLOCKED`，材料见 §6.35。
+> **当前下一步（v2.36，覆盖上文）**：CR-012 已执行——27 张旧版笼统单元卷全部下线，发布单元卷收敛为 391 张按教材单元新卷（§6.34.6）；QA-03 音频前置已完成——读题 4478 + 听力 84、失败 0，1005 个抽样音频缺失 0（§6.35.3）。剩余仅为**人工动作**：①PM 签署 R-A15/R-A16/M5（§6.35.1）；②教研/QA 按 §6.35.2 试听并写 `qa_results.json`，合格率 ≥95% 后解除 QA-03/T6。Agent 不代签、不代填听感结论。
 
 > **历史当前下一步（v2.34，已被 v2.35 覆盖）**：CR-011 已实施并通过 DB/API 验收——1–9 年级语数英按教材实际单元生成 **391 张**新卷，发布单元卷 418 张（新 391 + 旧兼容 27），空快照 0、题目 ID 缺失 0；D-11 升 v1.3 §〇c、L37 登记完成。EBG-AN00 学生端走查也已通过（待办考试 / 考试中心可见新卷、28 题与听力播放正常、无 FATAL，证据见 §6.34.3）。下一步：①按 PM 决策是否按下线预案清理旧版笼统卷——建议保留有作答的 14/95/116、仅评估 24 张无作答卷，且需单独 CR（预案见 §6.34.5）；②QA-02（PM 签署 R-A15/R-A16/M5）与 QA-03（TT-07 人工试听）仍为 `BLOCKED`，解除条件见 §4.3 B-002 / B-001。
 
@@ -2510,10 +2511,22 @@ INVALID_ARGUMENT: Runtime stages buffer failed verification.
 |---|---|
 | 清单 | `backend/build/question_audio/qa_audio_checklist.md`（2026-11-25 已按当前题库重新生成；抽样种子 `20261110`，每单元 5 题，共 **201 单元 / 1005 题**，合格线 **95%**） |
 | 报告 | `backend/build/question_audio/qa_audio_report.json`（当前 `ok=0 / fail=0 / pending=1005`，须人工试听后回填） |
-| **重要前置** | 当前清单中抽样题的音频哈希与 `backend/build/question_audio/audio/` 实际文件**不匹配**，`备注` 列显示「音频文件缺失」。试听前需先按当前题干重合成读题音频，例如：`cd backend` → `.venv\Scripts\python.exe -m scripts.build_question_audio --grade 1,2,3,4,5,6,7,8,9 --subject chinese,math,english --kind reading --force --concurrency 4`，再重跑 `python -m scripts.check_question_audio` 刷新清单 |
+| **前置（已完成）** | 2026-11-25 已按当前题干重合成读题音频 **4478** 道（失败 0），并补听力音频 **84** 道（失败 0）；重跑 `python -m scripts.check_question_audio` 后，清单 1005 个抽样题音频路径**全部存在（缺失 0）**、自动筛查备注 0 条。可直接进入人工试听 |
 | 结果文件 | 在 `backend/` 下新建 `qa_results.json`，格式 `{"7650":"ok","7642":"fail"}`（题目 id → `ok`/`fail`）。**注意正确文件名是 `qa_results.json`**，§4.3 B-001 旧文「`qa_audio_results.json`」为笔误，本节为准 |
 | 回填命令 | `cd backend` → `.venv\Scripts\python.exe -m scripts.check_question_audio --results qa_results.json --apply`，生成/更新 `rework.json`；`fail` 题目接口返回 404，客户端回退系统 TTS |
 | 解除判据 | 试听结论中 `ok / sampled ≥ 95%`，`rework.json` 已生成；QA-03 转 `DONE`、TT-07 的 T6 与 §4.3 B-001 转 `RESOLVED`；§6.1 T6 与 §1.2「读题（TTS）辅助」行同步 |
 | AI 边界 | Agent 已完成清单生成、哈希核对与命令准备；**多音字/分数/单位/英文读法的听感结论必须由教研/QA 本人给出**，不得代填 |
+
+### 6.35.3 QA-03 试听前置执行记录（2026-11-25，已 `DONE`）
+
+| 项 | 结果 |
+|---|---|
+| 读题音频 dry-run | 题目总数 10009，待生成 4478、已存在 5531、空文本 0；覆盖 1–9 年级语数英（按 `reading_allowed` 真实裁剪） |
+| 读题音频合成 | `python -m scripts.build_question_audio --concurrency 4`：**生成 4478、跳过 5531、失败 0**（未用 `--force`，只补当前题干的新哈希文件） |
+| 听力音频补缺 | `python -m scripts.build_question_audio --kind listening --concurrency 4`：**生成 84、跳过 1255、失败 0** |
+| 清单刷新 | `python -m scripts.check_question_audio`：201 单元 / 1005 题；`ok=0 / fail=0 / pending=1005`（人工听感尚未开始） |
+| 完整性 | 1005 个抽样题音频路径全部存在、`MISSING_AUDIO=0`、自动筛查备注 0 条；样本音频合计约 24.2 MB |
+| 工具修正 | `check_question_audio.py` 原先对 `listening` 题也按读题文本算哈希，导致听力题误报「音频文件缺失」；已改为按 `speech.listening_script/listening_cache_key/listening_audio_rel_path` 取听力音频，并新增听力路径回归用例（`test_check_question_audio.py` 6 passed），lint/编译通过 |
+| 仍待人工 | QA-03/TT-07：按清单逐题试听并写 `qa_results.json`，`--apply` 后合格率 ≥95% 才可解除；不得由 Agent 代填 |
 
 

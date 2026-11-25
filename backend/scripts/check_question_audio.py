@@ -123,12 +123,17 @@ def sample_units(
     )
     grouped: dict[int, dict] = {}
     for question, chapter in session.execute(stmt):
-        text = speech.text_for_question(question)
+        voice = speech.voice_for_subject(question.subject)
+        if question.q_type == "listening" and question.subject in speech.LISTENING_SUBJECTS:
+            text = speech.listening_script(question)
+            key = speech.listening_cache_key(text, voice, speed)
+            path = out_dir / speech.listening_audio_rel_path(key)
+        else:
+            text = speech.text_for_question(question)
+            key = speech.cache_key(text, voice, speed)
+            path = out_dir / speech.audio_rel_path(key)
         if not text.strip():
             continue
-        voice = speech.voice_for_subject(question.subject)
-        key = speech.cache_key(text, voice, speed)
-        path = out_dir / speech.audio_rel_path(key)
         entry = grouped.setdefault(
             chapter.id,
             {

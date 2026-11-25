@@ -80,6 +80,46 @@ def test_sample_units_marks_missing_audio_failed(
     assert units[0]["items"][0]["note"] == "音频文件缺失"
 
 
+def test_sample_units_uses_listening_audio_for_listening_questions(
+    db, tmp_path: Path, monkeypatch
+) -> None:
+    textbook = Textbook(subject="english", grade=2, version="沪教牛津版", semester="first")
+    db.add(textbook)
+    db.flush()
+    chapter = Chapter(
+        textbook_id=textbook.id, grade=2, name="Unit 1", order_index=1
+    )
+    db.add(chapter)
+    db.flush()
+    question = Question(
+        chapter_id=chapter.id,
+        subject="english",
+        q_type="listening",
+        content={"stem": "听录音，选出你听到的内容。", "script": "hello world"},
+        options=[{"key": "A", "text": "hello world"}],
+        answer={"value": "A"},
+        status="published",
+    )
+    db.add(question)
+    db.flush()
+
+    voice = speech.voice_for_subject("english")
+    rel = speech.listening_audio_rel_path(
+        speech.listening_cache_key("hello world", voice, 1.0)
+    )
+    path = tmp_path / rel
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_bytes(b"OggS")
+    monkeypatch.setattr(qa, "probe_duration", lambda path: 2.0)
+
+    units = qa.sample_units(db, out_dir=tmp_path, per_unit=5)
+
+    item = units[0]["items"][0]
+    assert item["text"] == "hello world"
+    assert item["audio"] == str(rel).replace("\\", "/")
+    assert item["status"] == "pending"
+
+
 def _unit_report(count: int, sampled: int = 5) -> dict:
     return {
         "chapter_id": 1,
